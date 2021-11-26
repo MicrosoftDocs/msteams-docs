@@ -11,14 +11,22 @@ ms.author: surbhigupta
 
 The [Developer Portal for Teams](https://dev.teams.microsoft.com) is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
+:::row:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="3":::
+      ![tdp homepage](~/assets/images/tdp/tdp_home_1.png)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
+
+
 
 ## Register an app
 
-You can register and configure your Teams app in the Developer Portal.
-
 > [!NOTE]  
-> The Developer Portal will create a unique App ID and lock the ID for your registered Teams app. You can’t edit or provide an ID of your choice; this prevents scenarios where multiple apps have duplicate App IDs.
+> The Developer Portal will create a unique App ID and lock the ID for your registered Teams app. You can’t edit or provide an ID of your choice; this prevents scenarios where multiple apps have duplicate App IDs
 
  You can register a Teams app in the Developer Portal in two ways:
 
@@ -39,7 +47,17 @@ You can register and configure your Teams app in the Developer Portal.
 1. Click **Import**.
     1. If your app package has errors, you can import the app and resolve the errors before you upload or publish the app to Teams.
     1. If you see the following message while uploading the app, click **Import** to add the app package to the Developer Portal.
+
  
+ :::row:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="3":::
+      ![Register app](~/assets/images/tdp/dev_portal_register_app.png)  
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > If you create an app using the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), you can manage that app in the Developer Portal.
@@ -58,6 +76,16 @@ You can configure environments and global variables to help transition your app 
 
 If you have multiple environments, you can switch between environments by selecting an environment from the drop-drop list under **Select an environment**.
 
+:::row:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="3":::
+      ![tdp environment](~/assets/images/tdp/tdp_environment.png)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
+
 ### Variables
 You can create variables for your environment and also use existing the variable names instead of hard-coded values to set your app configurations.
 
@@ -68,11 +96,21 @@ You can create variables for your environment and also use existing the variable
     1.	To use an existing variable, enter **{{**, a dropdown with all the variables you've created for the chosen environment along with the global variables appears. Select a variable from the list.
 3. Enter a Value and click **Add**.
 
+:::row:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="3":::
+    ![tdp variable](~/assets/images/tdp/tdp_variable.png)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
+
+
 > [!NOTE]  
 > Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically.
 
 You can create global variables to reuse app configuration values across any environment. Select Global variables tab and follow steps 1 through 3 mentioned earlier.
-
 
 
 ## Identify app owners
@@ -103,14 +141,21 @@ The configure section in the developer Portal allows you to update various attri
 * Publish to org
 * Publish to store
 
-For more information, see Introduction to Microsoft Teams Developer Portal - YouTube.
-
+:::row:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="3":::
+    ![App configure](~\assets\images\tdp\tdp_configuration.png)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
 
 ## Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
 
-* On the **Overview** page, under **Dashboard**, you can see a snapshot of whether your app's configurations validate against Teams store test cases. 
+* In the **Overview** page, under **Dashboard**, you can see a snapshot of whether your app's configurations validate against Teams store test cases. 
     * Click *view details* to see additional information.
 
 * The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
@@ -132,7 +177,17 @@ From the Developer portal, you can publish your app to your org, or to the Teams
 1. In the App Overview page, under **Publish**, Select **Publish to Store**.
 1. Select **Publish**.
 
-You can download the app package using **Download app package** button from the publish to Teams Store page. 
+You can download the app package using **Download app package** button from the publish to Teams Store page.
+
+:::row:::
+   :::column span="":::
+   :::column-end:::
+   :::column span="3":::
+    ![Publish app](/assets/images/tdp/tdp_publish-app.png)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
 
 For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
@@ -158,16 +213,26 @@ The Developer Portal also includes tools to help you build some key features of 
 
     **To add a bot**
     1. In the Developer Portal, select **Tools** in the left navigation bar.
-    2. Select **Bot Management**.
-    3. In the bot management page, select **+ New Bot**.
-    4. Enter a name and select **Add**.
+    1. Select **Bot Management**.
+    1. In the bot management page, select **+ New Bot**.
+    1. Enter a name and select **Add**.
+    1. A bot is generated with a unique ID.
 
-    From Developer portal, you can navigate to [Bot framework portal](https://aka.ms/appstudionewbot) and configure your bot to update bot icon and other bot properties.
-
-    > [!NOTE]
-    > A unique ID is generated for your bot.
+    From the Developer portal, you can navigate to [Bot framework portal](https://aka.ms/appstudionewbot) and configure your bot to update bot icon and other bot properties.
 
 * **Teams store app validation**: The app validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
 ## See also
+
+## Resources
+ 
+ The Developer Portal now includes resources to help you shape your app. Choose from a list of resources, such as:
+
+  * [Teams Platform Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/)
+  * [Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+  * [Microsoft Teams UI kit](https://www.figma.com/community/file/916836509871353159)
+  * [Sample app](https://dev.teams.microsoft.com/microsoft-teams-app-sample.zip)
+  * [Data Visualization Library](https://github.com/OfficeDev/microsoft-data-visualization-library)
+  * [UI templates](https://www.npmjs.com/package/@fluentui/react-teams)
+
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
