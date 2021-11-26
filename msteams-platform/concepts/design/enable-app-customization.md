@@ -17,7 +17,8 @@ You can allow customers to customize some aspects of your Microsoft Teams app in
 Some possible examples of this feature include:
 
 * Changing the app's accent color to match an org's brand.
-* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
+* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. 
+(Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
 You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). This configures `configurableProperties`, which isn't available in versions before 1.10 of the Teams app manifest.
 
@@ -55,4 +56,3 @@ If by default, you don't want the app to be hidden, you can update the `defaultB
 
 * [App manifest schema](/microsoftteams/platform/resources/schema/manifest-schema)
 * [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
-
