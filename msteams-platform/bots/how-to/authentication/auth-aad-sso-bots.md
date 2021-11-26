@@ -165,14 +165,14 @@ Complete the following steps to update the Azure portal with the OAuth connectio
      >[!NOTE]
      > **Implicit grant** may be required in the AAD application.
 
-     1. Enter a **Name** in the **New Connection Setting** page. This is the name that is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
-     2. From the **Service Provider** drop-down, select **Azure Active Directory v2**.
-     3. Enter the client credentials, such as **Client id** and **Client secret** for the AAD a pplication.
-     4. For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
-     5. In the **Tenant ID**, enter *common*.
-     6. Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
-     7. Select **Save**.
-     8. Select **Apply**.
+    1. Enter a **Name** in the **New Connection Setting** page. This is the name that is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+    2. From the **Service Provider** drop-down, select **Azure Active Directory v2**.
+    3. Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
+    4. For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
+    5. In the **Tenant ID**, enter *common*.
+    6. Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
+    7. Select **Save**.
+    8. Select **Apply**.
    
     ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
 
