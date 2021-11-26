@@ -20,7 +20,7 @@ Collate and map requirements to Teams features:
 | User app needs | Check forecast | Notification before travel | Registered user |
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | Microsoft Graph |
+| **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Forecast website |
 | **Scope** | &nbsp; | Personal app | &nbsp; |
 | **Entry point** | &nbsp; | Chat | &nbsp; |
 |
