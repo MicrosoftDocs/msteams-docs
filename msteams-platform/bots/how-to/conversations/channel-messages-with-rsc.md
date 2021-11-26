@@ -8,13 +8,13 @@ ms.localizationpriority: medium
 
 # Receive all channel messages and group chats with RSC
 
-The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios. Bots receive all chat messages via RSC permission. Using RSC, you can  request team owners to consent for a bot to receive user messages across standard channels and group chats without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions under `webApplicationInfo.applicationPermissions` in the manifest of RSC enabled Teams app. After configuration, team owners can grant consent during the app installation process.
+The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios. Bots receive all chat messages via RSC permission. Using RSC, you can  request team owners to consent for a bot to receive user messages across standard channels and **groupchat** without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions under `webApplicationInfo.applicationPermissions` in the manifest of RSC enabled Teams app. After configuration, team owners can grant consent during the app installation process.
 
 For more information about enabling RSC for your app, see [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
 ## Enable bots to receive all channel and group chat messages
 
-The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permissions are extended to bots. With user consent, the permissions allows graph applications to get all messages in a conversation and bots to receive all channel and group chat messages without being @mentioned.
+The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permissions are extended to bots. With user consent, the permissions allows graph applications to get all messages in a conversation and bots to receive all channel and **groupchat** messages without being @mentioned.
 
 > [!NOTE]
 > * Services that need access to all Teams message data must use the Graph APIs that also provide access to archived data in channels and chats.
@@ -80,9 +80,9 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
 # [Chat messages](#tab/chat)
 
-To sideload in a team to test, whether all group chat messages in a team with RSC are received without being @mentioned:
+To sideload in a team to test, whether all **groupchat** messages in a team with RSC are received without being @mentioned:
 
-1. Select or create a group chat.
+1. Select or create a **groupchat**.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage apps** from the drop-down menu. The details appear.
 
@@ -98,11 +98,11 @@ To sideload in a team to test, whether all group chat messages in a team with RS
 
     ![Selecting app package](~/assets/images/bots/Chats_Sideload_App_FilePicker.png)
 
-1. Select **Add** from the app details pop-up, to add the bot to your selected group chat.
+1. Select **Add** from the app details pop-up, to add the bot to your selected **groupchat**.
 
     ![Adding the bot](~/assets/images/bots/Chats_Install_Dialog.png)
 
-1. Enter a message in the group chat for your bot.
+1. Enter a message in the **groupchat** for your bot.
 
    ![Bot receives message](~/assets/images/bots/Bot_ReceiveMessage.png)
 
