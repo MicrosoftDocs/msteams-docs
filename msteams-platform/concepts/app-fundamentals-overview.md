@@ -8,9 +8,9 @@ ms.author: lajanuar
 keywords: entry points extensibility use cases device capability
 ---
 
-# Plan your app with Teams capabilities
+# Plan your app with Teams features
 
-An app's design, features, and capabilities stem from its purpose. The app user and their need form the basic guideline that determines all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
+The design, features, and capabilities of an app stem from its purpose. The app user and their need form the basic guideline that determines all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
 Teams as a platform offers you toolkits, libraries, and apps at every stage of app development.
 Let's break it down to app building lifecycle:
@@ -21,7 +21,7 @@ Let's break it down to app building lifecycle:
 
 ## Before you build
 
-The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution.
+The first step for developing an app is to understand the user need and problem, determine how Teams can solve it, and form a solution.
 
 - **Understand your use case and Teams App Features**: Recognize user issues and identify the solutions to some common problems the users face. Build your Teams app by finding the right combination of Teams features to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app.
 
