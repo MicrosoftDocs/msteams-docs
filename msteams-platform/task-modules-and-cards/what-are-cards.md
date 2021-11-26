@@ -71,7 +71,7 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 
 ## Overflow menu on Adaptive Cards
 
-Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is a secondary that are placed inside the overflow menu.
+Overflow menu is added to Adaptive Cards. You can select up to six primary buttons that appear on the Adaptive Card. Any additional buttons also known as secondary buttons are placed inside the overflow menu.
 
 ## Support for AAD Object ID and UPN in user mention 
 
