@@ -40,7 +40,7 @@ For example, you can collect user input in a form built as a tab in the app. You
 Government Community Cloud is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
 
 > [!NOTE]
-> Teams store has evolved:
+> <br>Teams store has evolved:</br>
 > Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:

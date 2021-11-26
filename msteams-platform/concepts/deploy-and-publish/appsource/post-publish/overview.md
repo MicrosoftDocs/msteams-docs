@@ -25,7 +25,7 @@ Ensure the following when publishing updates:
 When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new versions of your app install automatically.
 
 > [!NOTE]
-> Teams store has evolved:
+> <br>Teams store has evolved:</br>
 > Previously, the links were copied by selecting ellipses on the app tile. With the updated Teams store experience, you will access the same from the details tab of the apps. This update will be generally available (GA) by March 01, 2022.
 
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
