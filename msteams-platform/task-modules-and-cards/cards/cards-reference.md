@@ -116,11 +116,11 @@ You can see two types of messages:
 
 1. **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
 
-  ![Error message](~/assets/images/Cards/error-message.png)
+    ![Error message](~/assets/images/Cards/error-message.png)
 
 2. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
 
-  ![Success message](~/assets/images/Cards/success-message.png)
+    ![Success message](~/assets/images/Cards/success-message.png)
 
 **Message response on mobile**
 
