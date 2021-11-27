@@ -29,9 +29,7 @@ To set up a developer tenant for testing:
 > [!Note]  
 > To verify if sideloading is enabled. Sign in to Teams, select **Apps** and check for **Upload a custom app** option.
 
-
-:::image type="content" source="images/teams-sideloading-enabled.png" alt-text="Sideloading is enabled for your tenant if you see the option to 'Upload a custom app' from the Teams 'Apps' pane"
- lightbox="images/teams-sideloading-enabled.png":::
+:::image type="content" source="images/teams-sideloading-enabled.png" alt-text="Sideloading is enabled for your tenant if you see the option to 'Upload a custom app' from the Teams 'Apps' pane" lightbox="images/teams-sideloading-enabled.png":::
 
 ## Enroll your developer tenant for Office 365 targeted releases
 
