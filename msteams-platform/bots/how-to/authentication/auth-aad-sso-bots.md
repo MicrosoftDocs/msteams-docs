@@ -8,25 +8,27 @@ ms.topic: conceptual
 
 # Single sign-on (SSO) support for bots
 
-Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign-in credentials by silently refreshing the authentication token. If a user sign in once, they don't have to sign in again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
+Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign-in credentials by silently refreshing the authentication token. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
 
 >[!NOTE]
 > OAuth 2.0 is an open standard for authentication and authorization used by AAD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
 ## Bot SSO at runtime
 
+The following image illustrates the flow of SSO in bots:
+
 ![Bot SSO at runtime diagram](../../../assets/images/bots/bots-sso-diagram.png)
 
-Complete the following steps to get authentication and bot application tokens:
+The following steps help you with authentication and bot application tokens:
 
-1. The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property. It tells Teams to obtain an authentication token for the bot application. The user receives messages at all the active user endpoints.
+1. The bot sends a message to Teams with an OAuthCard that contains `tokenExchangeResource` to obtain an authentication token for the bot application. The user receives messages at all the active user endpoints.
 
-    > [!NOTE]
-    >* A user can have more than one active endpoint at a time.
-    >* The bot token is received from every active user endpoint.
-    >* The app must be installed in personal scope for SSO support.
+    >  [!NOTE]
+    > * A user can have more than one active endpoint at a time.
+    > * The bot token is received from every active user endpoint.
+    > * The app must be installed in personal scope for SSO support.
 
-1. If the current user is using your bot application for the first time, a request prompt appears to request the user to do one of the following:
+1. If the current user is using your bot application for the first time, a request prompt appears to   the user to do one of the following:
     * Provide consent, if required.
     * Handle step-up authentication, such as two-factor authentication.
 
@@ -34,13 +36,13 @@ Complete the following steps to get authentication and bot application tokens:
 
 1. AAD sends the bot application token to the Teams application.
 
-1. Teams sends the token to the bot as part of the value object returned by the invoke activity with the name **sign-in/tokenExchange**.
+1. Teams sends the token to the bot as part of the value object returned by the invoking with **sign-in/tokenExchange**.
   
 1. The parsed token in the bot application provides the required information, such as the user's email address.
   
 ## Develop an SSO Teams bot
   
-Complete the following steps to develop an SSO Teams bot:
+The following steps guide you to develop SSO Teams bot:
 
 1. [Register your app through the AAD portal](#register-your-app-through-the-aad-portal).
 1. [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot).
@@ -48,7 +50,7 @@ Complete the following steps to develop an SSO Teams bot:
 
 ### Register your app through the AAD portal
 
-The steps to register your app through the AAD portal are similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md). Complete the following steps to register your app:
+The steps to register your app through the AAD portal are similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md). The following steps guide you to register your app:
 
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 
@@ -56,19 +58,23 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
     ![New registration](~/assets/images/authentication/SSOtabsauth/SSO-auth-step1.png)
 
-3. In the **Register an application** page, enter the following values:
-    1. Enter a **Name** for your app.
-    2. Choose the **Supported account types**, select single tenant or multitenant account type.
+3. In the **Register an application** page, do the following steps:
 
-        > [!NOTE]
-        >
-        > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
+  > [!NOTE]
+  >
+  > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
-    3. Choose **Register**.
+    1. Enter **Name** for your app.
+    2. Select **Supported account types**, such as single tenant or multitenant.
+    3. Select **Register**.
 
     ![Register an application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step2.png)
 
-4. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later.
+4. Go to overview page.
+1. Copy the value of **Application (client) ID**.
+
+   > [!TIP] 
+   > To update your app manifest later, save the **Application (client) ID** value.
 
     ![Application Id](~/assets/images/authentication/SSOtabsauth/SSO-auth-step3.png)
 
