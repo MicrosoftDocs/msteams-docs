@@ -53,7 +53,7 @@ For more information on Office 365 release options, see [Set up the Standard or 
 * To verify if your tenant has support for Teams personal tabs running on office.com and outlook.com, sign in to Microsoft 365 admin center with your test tenant credentials and check for ellipses (**...**) option on the lower left pane.
 * To verify test tenant support for messaging extensions in outlook.com, check for **More apps** option in the Outlook compose message area.
 
-[[Ellipses '...' entry point to sideloaded Teams tab apps in outlook.com](../images/outlook-web-ellipses.png)](D:/msteams/msteams-platform/m365-apps/images/outlook-web-ellipses.png#lightbox)
+[[Ellipses '...' entry point to sideloaded Teams tab apps in outlook.com]((D:/msteams/msteams-platform/m365-apps/images/outlook-web-ellipses.png)](D:/msteams/msteams-platform/m365-apps/images/outlook-web-ellipses.png#lightbox)
 
 
 > [!NOTE]
