@@ -30,8 +30,8 @@ The following steps help you with authentication and bot application tokens:
    > * The app must be installed in personal scope for SSO support.
 
 
-1. If the current user is using your bot application for the first time, a request prompt appears to   the user to do one of the following:
-    * Provide consent, if required.
+1. If the current user is using your bot application for the first time, a request prompt appears to   the user to do one of the following actions:
+    * Provide consent, if necessary.
     * Handle step-up authentication, such as two-factor authentication.
 
 1. Teams requests the bot application token from the AAD endpoint for the current user.
@@ -161,12 +161,12 @@ The following steps will guide you to update the Azure portal with the OAuth con
    >[!NOTE]
    > **Implicit grant** may be required in the AAD application.
 
-    * Enter a **Name** in the **New Connection Setting** page. This is the name that is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+    * Enter **Name** in the **New Connection Setting** page. The name is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
     * From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     * Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
     * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
     * In the **Tenant ID**, enter *common*.
-    * Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client Id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
+    * Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
     * Select **Save**.
     * Select **Apply**.
    
@@ -195,8 +195,8 @@ If the application contains a bot and a tab, then use the following code to add 
 
 **webApplicationInfo** is the parent of the following elements:
 
-* **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with AAD. Do not share this Application ID with multiple Teams apps. Create a new AAD app for each application manifest that uses `webApplicationInfo`.
-* **resource** - The domain and subdomain of your application. This is the same URI, including the `api://` protocol that you registered when creating your `scope` in [Register your app through the AAD portal](#register-your-app-through-the-aad-portal). You must not include the `access_as_user` path in your resource. The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.
+* **id** - The client ID of the application. It's the application ID that you obtained as part of registering the application with AAD. Do not share this Application ID with multiple Teams apps. Create a new AAD app for each application manifest that uses `webApplicationInfo`.
+* **resource** - The domain and subdomain of your application. It's the same URI, including the `api://` protocol that you registered when creating your `scope` in [Register your app through the AAD portal](#register-your-app-through-the-aad-portal). Don't include the `access_as_user` path in your resource. The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.
 
 ### Add the code to request and receive a bot token
 
@@ -241,7 +241,7 @@ When the user selects **Continue**, the following events occur:
 
 #### Receive the bot token
 
-The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
+The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name, **sign-in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
@@ -275,7 +275,7 @@ The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet
 
 ### Token exchange failure
 
-In case of token exchange failure, use the following code:
+If there is token exchange failure, use the following code:
 
 ```json
 {​​ 
@@ -312,7 +312,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
     }
     ```
 
-5. The bot processes the `TokenExchangeInvokeRequest` and returns a `TokenExchangeInvokeResponse` back to the client. The client must wait till it receives the `TokenExchangeInvokeResponse`.
+5. The bot processes the `TokenExchangeInvokeRequest` and returns a `TokenExchangeInvokeResponse` back to the client. The client must wait until it receives the `TokenExchangeInvokeResponse`.
 
     ```json
     {
@@ -326,7 +326,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
     }
     ```
 
-6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client does not show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). This ensures that the SSO flow falls back to normal OAuthCard flow in case of any errors or unmet dependencies like user consent.
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). This action ensures that the SSO flow falls back to normal OAuthCard flow if there are any errors or unmet dependencies like user consent.
 
 
 ### Update the auth sample
