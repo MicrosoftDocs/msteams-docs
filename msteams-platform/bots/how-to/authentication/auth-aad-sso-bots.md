@@ -56,7 +56,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 2. Select **New Registration**. The **Register an application** page appears.
 
-    ![New registration](~/assets/images/authentication/SSOtabsauth/SSO-auth-step1.png)
+    ![New registration](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
 
 3. In the **Register an application** page, do the following steps:
 
@@ -67,35 +67,28 @@ The steps to register your app through the AAD portal are similar to the [tab SS
    * Enter **Name** for your app.
    * Select **Supported account types**, such as single tenant or multitenant.
    * Select **Register**.
-    ![Register an application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step2.png)
+    ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
 
 4. Go to overview page.
 1. Copy the value of **Application (client) ID**.
+1. Under **Manage**, select **Expose an API**
+
+    ![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
 
    > [!TIP] 
    > To update your app manifest later, save the **Application (client) ID** value.
 
-    ![Application Id](~/assets/images/authentication/SSOtabsauth/SSO-auth-step3.png)
-
-5. Under **Manage**, select **API permissions**. 
-
-    ![API Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step9.png)
+    ![Application Id](~/assets/images/authentication/SSO-bots-auth/application-id.png)
 
    > [!IMPORTANT]
     > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
     > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 6. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
-
 7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
-
-1. Under **Manage**, select **Expose an API**
-
-    ![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
-
 1. Select **Add a scope**.
 
-    ![Add a Scope](~/assets/images/authentication/SSOtabsauth/SSO-auth-step5.png)
+    ![Add a Scope](~/assets/images/authentication/SSO-bots-auth/add-a-scope2.png)
 
 1. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
 
@@ -116,33 +109,38 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * **User consent display name**: Teams can access your profile and make requests on your behalf.
     * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
 
+    [admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
+
 12. Ensure that the state is set to **Enabled**.
 
-    ![State](~/assets/images/authentication/SSOtabsauth/SSO-auth-step6.png)
+    ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
 
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-    ![Add a client application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step7.png)
+1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application.
+1. Select **Add a client application**.
 
-1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
+    ![client application](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
+
+1. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-    ![Client Id](~/assets/images/authentication/Client-Id-sso-bots.png)
+    ![client id](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
 
 1. Go to **API Permissions**.
 
 1. Select **Add a permission**. 
 
-    ![API Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step9.png)
+    ![API Permissions](~/assets/images/authentication/SSO-bots-auth/add-a-permission.png)
 
 1. Select **Microsoft Graph**. 
 
-    ![Microsoft Graph](~/assets/images/authentication/SSOtabsauth/SSO-auth-step10.png)
+    ![Microsoft Graph](~/assets/images/authentication/SSO-bots-auth/microsoft-graph-api.png)
 
 1. Select **Delegated permissions**. 
 
-    ![Delegated Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step11.png)
+    ![Delegated Permissions](~/assets/images/authentication/SSO-bots-auth/delegated-permissions.png)
 
 1. Now, add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
@@ -151,19 +149,19 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * OpenId
     * profile
 
-    ![Openid permission](~/assets/images/authentication/SSOtabsauth/SSO-auth-step12.png)
+    ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions.png)
 
-1. Select **Update permission**.
+1. Select **Add permissions**.
 
 #### Update the Azure portal with the OAuth connection
 
 Complete the following steps to update the Azure portal with the OAuth connection:
 
 3. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
-4. Select **Configuration** on the left pane.
+4. Go to **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings**.
 
-    ![Configuration setting](~/assets/images/authentication/bot-configuration-SSO.png)
+    ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting.png)
 
 6. Perform the following steps to complete the **New Connection Setting** form:
 
