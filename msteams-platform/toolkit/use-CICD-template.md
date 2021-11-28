@@ -10,10 +10,8 @@ ms.date: 11/29/2021
 
 # CI/CD Support for Teams Application Developers
 
-TeamsFx helps automate your development workflow when building a Teams application. This document provides tools and pre-cooked templates for you to get started when setting up CI/CD pipelines with the most popular development platforms including Github, Azure DevOps and Jenkins.
+TeamsFx helps to automate your development workflow when building a Teams application. This document provides tools and pre-cooked templates for you to get started when setting up CI/CD pipelines with the most popular development platforms including Github, Azure DevOps and Jenkins.
 
-> Note:
-Ensure that you follow the instructions from [Enable-Preview-Features-in-Teams-Toolkit](https://github.com/OfficeDev/TeamsFx/wiki/Enable-Preview-Features-in-Teams-Toolkit) to enable preview features. CI/CD support for non-preview mode can be referred to [this link](https://aka.ms/teamsfx-cicd-guide).
 
 |Tools and Templates|Description|
 |---|---|
@@ -49,7 +47,8 @@ You may want to change:
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
 
-> Note: The provision step is not included in the CD template as it's usually executed only once. You can either execute provision Within Teams Toolkit, TeamsFx CLI, or using a seperated workflow. Please remember to commit after provisioning (results of provisioning will be deposited inside the `.fx` folder) and save the file content of `.fx/states/{YOUR_ENV_NAME}.userdata` into GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) with name `USERDATA_CONTENT` for future usage.
+> Note
+> The provision step is not included in the CD template as it's usually executed only once. You can either execute provision Within Teams Toolkit, TeamsFx CLI, or using a seperated workflow. Please remember to commit after provisioning (results of provisioning will be deposited inside the `.fx` folder) and save the file content of `.fx/states/{YOUR_ENV_NAME}.userdata` into GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) with name `USERDATA_CONTENT` for future usage.
 
 ### Environment Variables
 
@@ -167,7 +166,7 @@ Steps to create Pipeline variables in Azure DevOps:
 1. In the Pipeline editing page, click `Variables` on top right and click `New variable`.
 1. Enter Name/Value pair for your variable.
 1. Toggle the checkbox of `Keep this value secret` if necessary.
-1. Click `OK` to create the variable.
+1. Select `OK` to create the variable.
 
 |Name|Description|
 |---|---|
@@ -178,7 +177,9 @@ Steps to create Pipeline variables in Azure DevOps:
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
 |M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID][/azure/active-directory/fundamentals/active-directory-how-to-find-tenant](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
-> Note: Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
+
+> !Note
+> Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
 ## CI/CD Pipeline Templates in Jenkins
 
@@ -239,7 +240,8 @@ The scripts are pretty straightforward and most parts of them are cross-platform
 
 The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the [documentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) to customize the scripts.
 
-> Note: To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI/CD.
+> !Note
+> To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI/CD.
 
 Please keep in mind that you need to set Azure and M365 credentials in your environment variables safely. For example if you are using Github as your source code repository, you can use the [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to securely store your environment variables.
 
