@@ -23,10 +23,12 @@ The following steps help you with authentication and bot application tokens:
 
 1. The bot sends a message to Teams with an OAuthCard that contains `tokenExchangeResource` to obtain an authentication token for the bot application. The user receives messages at all the active user endpoints.
 
-    >  [!NOTE]
-    > * A user can have more than one active endpoint at a time.
-    > * The bot token is received from every active user endpoint.
-    > * The app must be installed in personal scope for SSO support.
+   > [!NOTE]
+   >
+   > * A user can have more than one active endpoint at a time.
+   > * The bot token is received from every active user endpoint.
+   > * The app must be installed in personal scope for SSO support.
+
 
 1. If the current user is using your bot application for the first time, a request prompt appears to   the user to do one of the following:
     * Provide consent, if required.
