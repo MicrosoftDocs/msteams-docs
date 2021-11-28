@@ -14,7 +14,7 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 Teams Toolkit now supports collaboration feature to allow a developer (project owner) to invite other developers (collaborators) to the TeamsFx project to debug, provision and deploy the same TeamsFx project.
 
-## Prerequisite
+## Prerequisites
 
 1. Account prerequisites
 
@@ -31,9 +31,9 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 ### As a project owner
 
 > [!NOTE]
-> Before adding collaborators for an environment, project owner needs to [provision](provision.md) project first.
+> Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
 
-* In **ENVIRONMENT** section on Teams Toolkit, mouse over environment name to find **Collaborators** buttons, one is **Add M365 Teams App (with AAD App) Owners** button, the other one is **List M365 Teams App (with AAD App) Owners** button
+* In **ENVIRONMENT** section on Teams Toolkit, mouse over environment name to find **Collaborators** buttons, one is **Add M365 Teams App (with AAD App) Owners** button, the other one is **List M365 Teams App (with AAD App) Owners** button.
 
   ![collaboration buttons](./images/collaboration-buttons.png)
 
@@ -41,11 +41,11 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
   ![input collaborator email](./images/collaboration-add-owner-email.png)
 
-* To view collaborators in current environment, click **List M365 Teams App (with AAD App) Owners** button, then collaborators will be listed in the output channel
+* To view collaborators in current environment, select **List M365 Teams App (with AAD App) Owners** button, then collaborators will be listed in the output channel
 
   ![collaboration list owners](./images/collaboration-list-owners.png)
 
-* Push project to GitHub.
+* Push the project to GitHub.
 
 > [!NOTE]
 > Newly added collaborator will not receive any notification. Project owner needs to notify collaborator.
@@ -60,22 +60,23 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 * Login Azure account which has contributor permission for all the Azure resources being used in this project.
 * Working on project code, then deploy the project to remote when you think it's time to preview your Teams app.
-* Launch remote to have a preview of the Teams app. Refer to get-start tutorial for details steps to [build and run your Teams app in remote environment][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3).
+* Launch remote to have a preview of the Teams app. Refer to get-start tutorial for detail steps to [build and run your Teams app in remote environment](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch=pr-en-us-4657)
 
 ### Limitations of Using Collaboration
 
 > [!NOTE]
 > Azure related permissions should be set manually by Azure subscription administrator on Azure portal. Azure account should have contributor role for the subscription at least so that developers can work together to provision and deploy TeamsFx project.
 
-1. Cannot delete
- You cannot remove collaborators directly from Teams Toolkit extension. If you want to remove collaborators manually, please follow the steps below:
+1. **Cannot delete:**
+You cannot remove collaborators directly from Teams Toolkit extension. If you want to remove collaborators manually, please follow the steps below:
 
-      1. Go to [Teams Developer Portal](https://dev.teams.microsoft.com/apps), find your Teams App by name or app id.
-      2. Inside the Teams App management page, click **Owners** from left panel.
+      1. Go to [Teams Developer Portal](https://  dev.teams.microsoft.com/apps), find your Teams App by name or app id.
+      2. Inside the Teams App management page, select **Owners** from left panel.
       3. Find and remove the collaborator.
-      4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), click **App registration** from left panel, and find your AAD App.
-      5. Inside the AAD App management page, click **Owners** from left panel.
+      4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your AAD App.
+      5. Inside the AAD App management page, select **Owners** from left panel.
       6. Find and remove the collaborator.
+    
 
 1. Collaboration feature only supports project hosted on Azure, SPFx hosted project will be supported in the future.
 

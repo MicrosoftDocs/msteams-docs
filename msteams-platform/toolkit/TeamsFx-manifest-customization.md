@@ -20,15 +20,15 @@ There are two manifest template files under `templates/appPackage` folder.
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 * You should already have a Teams app project opened in VS code.
 
-During provision, Teams Toolkit will load manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`. Then create a teams app in [Dev Portal](https://dev.teams.microsoft.com/apps) with this manifest.
+During provision, Teams Toolkit will load manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`. Then it creates a teams app in [Dev Portal](https://dev.teams.microsoft.com/apps) with this manifest.
 
-During local debug, Teams Toolkit will load manifest from `manifest.local.template.json`, combined with configurations from `localSettings.json`. Then create a teams app in [Dev Portal](https://dev.teams.microsoft.com/apps) with this manifest.
+During local debug, Teams Toolkit will load manifest from `manifest.local.template.json`, combined with configurations from `localSettings.json`. Then it creates a teams app in [Dev Portal](https://dev.teams.microsoft.com/apps) with this manifest.
 
 ## Supported placeholder in manifest.remote.template.json
 
 - `{{state.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. You should not modify the values in state.{env}.json.
 - `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
-  - You can add a customized parameter by following
+  - You can add a customized parameter by following:
     - Add a placeholder in manifest.remote.template.json with pattern: `{{config.manifest.xx}}`
     - Add a config value in config.{env}.json
 
@@ -46,7 +46,7 @@ During local debug, Teams Toolkit will load manifest from `manifest.local.templa
 
 ## Supported placeholder in manifest.local.template.json
 
-`{{localSettings.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `localSettings.json`. You should not modify the values in localSettings.json
+`{{localSettings.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `localSettings.json`. You should not modify the values in localSettings.json.
 
  > [!NOTE]
 > Customization of local manifest is not suggested.
