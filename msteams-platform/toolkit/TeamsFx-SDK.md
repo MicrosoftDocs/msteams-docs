@@ -100,7 +100,8 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### Credential
 
-There are 3 credential classes that are used to help simplifying authentication. They are located under [credential](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) folder.
+There are 3 credential classes located under [credential](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) folder to help simplifying authentication. 
+
 Credential classes implements `TokenCredential` interface that is broadly used in Azure library APIs. They are designed to provide access token for specific scopes.
 The credential classes represents different identity under certain scenarios.
 
@@ -318,6 +319,6 @@ setLogFunction((level: LogLevel, message: string) => {
 });
 ```
 
-## Next steps
+## Next step
 
 Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
