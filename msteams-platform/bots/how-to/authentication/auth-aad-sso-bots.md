@@ -56,7 +56,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 2. Select **New Registration**. The **Register an application** page appears.
 
-    ![New registration](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
+  ![New registration](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
 
 3. In the **Register an application** page, do the following steps:
 
@@ -64,20 +64,22 @@ The steps to register your app through the AAD portal are similar to the [tab SS
  >
  > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
-   * Enter **Name** for your app.
-   * Select **Supported account types**, such as single tenant or multitenant.
-   * Select **Register**.
-    ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
+  * Enter **Name** for your app.
+  * Select **Supported account types**, such as single tenant or multitenant.
+  * Select **Register**.
+  ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
 
 4. Go to overview page.
 1. Copy the value of **Application (client) ID**.
+
+  ![Application Id](~/assets/images/authentication/SSO-bots-auth/application-id.png)
+
 1. Under **Manage**, go to **Expose an API**
 
 
    > [!TIP] 
    > To update your app manifest later, save the **Application (client) ID** value.
 
-    ![Application Id](~/assets/images/authentication/SSO-bots-auth/application-id.png)
 
    > [!IMPORTANT]
     > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
@@ -87,7 +89,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
 1. Select **Add a scope**.
 
-    ![Add a Scope](~/assets/images/authentication/SSO-bots-auth/add-a-scope-2.png)
+  ![Add a Scope](~/assets/images/authentication/SSO-bots-auth/add-a-scope-2.png)
 
 1. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
 
@@ -108,38 +110,38 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * **User consent display name**: Teams can access your profile and make requests on your behalf.
     * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
 
-    [admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
+  [admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
 12. Ensure that the state is set to **Enabled**.
 
-    ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
+  ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
 
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
 1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 
-    ![client application](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
+  ![client application](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
 
 1. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-    ![client id](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
+  ![client id](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
 
 1. Go to **API Permissions**.
 
 1. Select **Add a permission**. 
 
-    ![API Permissions](~/assets/images/authentication/SSO-bots-auth/add-a-permission.png)
+  ![API Permissions](~/assets/images/authentication/SSO-bots-auth/add-a-permission.png)
 
 1. Select **Microsoft Graph**. 
 
-    ![Microsoft Graph](~/assets/images/authentication/SSO-bots-auth/microsoft-graph-api.png)
+  ![Microsoft Graph](~/assets/images/authentication/SSO-bots-auth/microsoft-graph-api.png)
 
 1. Select **Delegated permissions**. 
 
-    ![Delegated Permissions](~/assets/images/authentication/SSO-bots-auth/delegated-permissions.png)
+  ![Delegated Permissions](~/assets/images/authentication/SSO-bots-auth/delegated-permissions.png)
 
 1. Now, add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
@@ -148,7 +150,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * OpenId
     * profile
 
-    ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions.png)
+  ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions.png)
 
 1. Select **Add permissions**.
 
@@ -160,23 +162,23 @@ Complete the following steps to update the Azure portal with the OAuth connectio
 4. Go to **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings**.
 
-    ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting.png)
+  ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting.png)
 
 6. Perform the following steps to complete the **New Connection Setting** form:
 
-     >[!NOTE]
-     > **Implicit grant** may be required in the AAD application.
+   >[!NOTE]
+   > **Implicit grant** may be required in the AAD application.
 
-    1. Enter a **Name** in the **New Connection Setting** page. This is the name that is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
-    2. From the **Service Provider** drop-down, select **Azure Active Directory v2**.
-    3. Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
-    4. For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
-    5. In the **Tenant ID**, enter *common*.
-    6. Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
-    7. Select **Save**.
-    8. Select **Apply**.
+    * Enter a **Name** in the **New Connection Setting** page. This is the name that is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+    * From the **Service Provider** drop-down, select **Azure Active Directory v2**.
+    * Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
+    * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
+    * In the **Tenant ID**, enter *common*.
+    * Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
+    * Select **Save**.
+    * Select **Apply**.
    
-    ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
+  ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### Update your Teams application manifest for your bot
 
