@@ -28,7 +28,7 @@ TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that al
 
 Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI.
 
-* [Provision Azure-based app][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
+* [Provision Azure-based app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch=pr-en-us-4657)
 
 ## What resources will be created
 
@@ -112,7 +112,7 @@ You have two ways to customize Azure resources being created: customizing the pa
 
 #### Customize ARM template parameter files
 
-The tooling provides a set of predefined parameters for you to customize the Azure resources. The parameter files are located at `.fx/configs/azure.parameters.{env}.json` and all the available parameters and defined in the `provisionParameters` property. It's preferred to customize the parameter files if the predefined parameters satisfies your requirement.
+The tooling provides a set of predefined parameters for you to customize the Azure resources. The parameter files are located at `.fx/configs/azure.parameters.{env}.json` and all the available parameters are defined in the `provisionParameters` property. It's preferred to customize the parameter files if the predefined parameters satisfies your requirement.
 
 Here's a list of predefined parameters available:
 
@@ -202,7 +202,7 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 
 ```json
 "auth": {
-    "clientId": "<your AAD app client id",
+    "clientId": "<your AAD app client id>",
     "clientSecret": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}",
     "objectId": "<your AAD app object id>",
     "accessAsUserScopeId": "<id of the access_as_user scope>"
@@ -292,7 +292,7 @@ Consider the scenario, you want to add Azure Storage to your Azure Function back
     ``````````````````bicep
     {
         name: 'MyAppStorageAccountConnectionString'
-        value: 'DefaultEndpointsProtocol=https;AccountName=${applicationStorageAccount.name};AccountKey=${listKeys(applicationStorageAccount.id, '2021-06-01').key1}'
+        value: 'DefaultEndpointsProtocol=https;AccountName=${applicationStorageAccount.name};AccountKey=${listKeys(applicationStorageAccount.id, '2021-06-01').key[0].value}'
     }
     ```````````````````
 
@@ -300,23 +300,52 @@ Consider the scenario, you want to add Azure Storage to your Azure Function back
 
 ## FAQ
 
-### How to troubleshooting
+<br>
+
+<details>
+
+<summary><b>How to troubleshooting?</b></summary>
 
 If you met errors with Teams Toolkit in Visual Studio Code, you can click the `Get Help` button on the error notification to navigate to related help doc. If you're using TeamsFx CLI, there will be a hyper link at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
-### How can I switch to another Azure subscription when provision
+<br>
+
+</details>
+
+<details>
+
+<summary><b>How can I switch to another Azure subscription when provision?</b></summary>
 
 1. Switch subscription in current account or log out and select a new subscription.
 2. If you already provisioned current environment, you need to create a new environment and perform provision because ARM does not support moving resources.
 3. If you did not provision current environment, you can trigger provision directly.
 
-### How can I change resource group when provision
+<br>
+
+</details>
+
+<details>
+
+<summary><b>How can I change resource group when provision?</b></summary>
 
 Before provision, the tool will ask you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 
-### How can I provision SharePoint-based app?
+<br>
+
+</details>
+
+<details>
+
+<summary><b>How can I provision SharePoint-based app?</b></summary>
 
 You can follow [Provision SharePoint-based app][/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4) to provision SharePoint-based app.
+
+<br>
+
+</details>
+
+
+
 
 > [!NOTE]
 > Please note that currently building Teams App with SharePoint Framework using Teams Toolkit doesn't have direct integration with Azure, contents in this doc does not apply to SPFx based apps.

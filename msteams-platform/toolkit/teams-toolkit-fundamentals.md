@@ -1,5 +1,5 @@
 ---
-title: Teams Toolkit Fundamentals
+title: Teams Toolkit fundamentals
 author: zyxiaoyuer
 description:  Describes fundamentals of Teams Toolkit
 ms.author: zhany
@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Teams Toolkit
 
-The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a zero-configuration approach to the developer experience.  
+Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a zero-configuration approach to the developer experience.  
 
 There is a Teams Toolkit for Visual Studio and a [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) for Teams app development (called `teamsfx`).
 
@@ -20,15 +20,15 @@ There is a Teams Toolkit for Visual Studio and a [CLI tool](https://github.com/O
 
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 
-1. In the search box, enter _Teams Toolkit_.
+1. In the search box, enter **_Teams Toolkit_**.
 
-1. Select install button next to the Teams Toolkit.
+1. Select **install** button next to the Teams Toolkit.
 
 Or you can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 ## Supported Teams Apps Capabilities
 
-[Understand Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points. Your Teams app can contain one or more Teams App Capabilities. Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
+[Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points.Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
 
 * [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
 
@@ -36,9 +36,7 @@ Or you can find the Teams Toolkit on the [Visual Studio Code Marketplace](https:
 
 * [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions)
 
-Your Teams project can contain either one of the capabilities or all three capabilities from above.
-
-You can select any capability when you create the Teams Project.
+Your Teams project can contain either one of the capabilities or all three capabilities from above.You can select any capability when you create the Teams Project.
 
 ![Select capabilities to Create New Project](./images/create-project-capabilities.png)
 
@@ -55,17 +53,17 @@ Teams Toolkit provides features of Teams app development to make it easy to debu
 ## Take a Tour of Teams Toolkit for Visual Studio Code
 
 If you did not open any Teams project in VS Code, or you open a Teams
-project which is not created using Teams Toolkit v2.+, you will see the Teams Toolkit UI with limited functionalities like this picture below.
+project which is not created using Teams Toolkit v2.+, you will see the Teams Toolkit UI with limited functionalities as shown in image below.
 
 :::image type="content" source="./images/teams-toolkit-beforestart.png" alt-text="Before start Teams Toolkit":::
 
-You can click `Quick Start` to explore the Teams Toolkit, or click `Create a new Teams App` to create one Teams project, then you can user more features of Teams Toolkit.
+You can select `Quick Start` to explore the Teams Toolkit, or select `Create a new Teams App` to create one Teams project, then you can user more features of Teams Toolkit.
 
 If you have a Teams Project created by Teams Toolkit v2.+ opened in VS Code, you will see Teams Toolkit UI with more functionalities like this picture below.
 
 :::image type="content" source="./images/teams-toolkit-overview.png" alt-text="Take a tour to Teams Toolkit":::
 
-Let's take a tour of what functionalities available in Teams Toolkit.
+Let's take a tour of functionalities that are available in Teams Toolkit.
 
 * [ACCOUNTS](#accounts)
 
