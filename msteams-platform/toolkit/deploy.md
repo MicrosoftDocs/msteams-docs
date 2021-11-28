@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Deploy to the cloud
 
-Teams Toolkit helps you to deploy or upload the backend and frontend code in your application to your provisioned cloud resources in Azure.
+Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
 
 * The Tab (frontend applications) are deployed to an Azure storage and configured for static web hosting or a SharePoint site.
 * The backend APIs are deployed to Azure Functions.
@@ -19,15 +19,18 @@ Teams Toolkit helps you to deploy or upload the backend and frontend code in you
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-* Before deploy project code to cloud, you must perform the [Provision cloud resources](provision.md) steps first.
 * You should already have a Teams app project opened in VS code.
+
+> [!NOTE]
+> * Before deploy project code to cloud, you must perform the [Provision cloud resources](provision.md) steps first.
+
 
 ## Deploy Teams apps using Teams Toolkit
 
 In Get Started tutorials, there are step-by-step guides of how to do deploy using Teams Toolkit, following the guidance below to deploy your Teams app.
 
-* [Deploy your app to Azure][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
-* [Deploy your app to SharePoint][/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4)
+* [Deploy your app to Azure](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch=pr-en-us-4657)
+* [Deploy your app to SharePoint](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch=pr-en-us-4657)
 
 ## Source Code Location, Build Artifacts and Target Resources for deployment
 

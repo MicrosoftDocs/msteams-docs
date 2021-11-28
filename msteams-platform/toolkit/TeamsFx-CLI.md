@@ -154,7 +154,7 @@ Manage the resources in the current application. Supported `<resource-type>` are
 |`--function-name`| Yes | Provide a function name. The default value is: `getuserprofile`. |
 
 > [!NOTE]
-> We ask for function name because SQL needs to be accessed from server workload. If your project doesn't contain `Azure Functions` we will create one for you.
+> Function name is verified as SQL needs to be accessed from server workload. If your project doesn't contain `Azure Functions`, it will created one for you.
 
 ### Parameters for `teamsfx resource add azure-apim`
 
@@ -169,7 +169,7 @@ Manage the resources in the current application. Supported `<resource-type>` are
 |`--function-name`| Yes | Provide a function name. The default value is: `getuserprofile`. |
 
 > [!NOTE]
-> We ask for function name because `Azure API Management` needs to work with `Azure Functions` If your project doesn't contain `Azure Functions` we will create one for you.
+> We ask for function name because `Azure API Management` needs to work with `Azure Functions`. If your project doesn't contain `Azure Functions` we will create one for you.
 
 ## `teamsfx provision`
 
@@ -187,7 +187,7 @@ Provision the cloud resources in the current application.
 
 ## `teamsfx deploy`
 
-This command is used to deploy the current application. By default it will deploy entire project but it's also possible for you to deploy partially of your project. Options(Multiple) are: `frontend-hosting`, `function`, `apim`, `teamsbot`, `spfx`.
+This command is used to deploy the current application. By default it will deploy entire project but it's also possible to deploy partially. Options(Multiple) are: `frontend-hosting`, `function`, `apim`, `teamsbot`, `spfx`.
 
 ### Parameters for `teamsfx deploy`
 
@@ -256,7 +256,8 @@ teamsfx preview --remote
 teamsfx preview --remote --browser edge
 ```
 
-> Note: The logs of the background services like React will be saved in `~/.fx/cli-log/local-preview/`.
+> Note
+> * The logs of the background services like React will be saved in `~/.fx/cli-log/local-preview/`.
 
 ## `teamsfx config`
 
@@ -346,7 +347,7 @@ TeamsFx CLI provides `teamsFx permission` Commands for collaboration scenario.
 
 ### Examples for `teamsfx permission`
 
-Here are some examples for you to better handling permission for `TeamsFx` projects.
+Here are some examples, for better handling permission for `TeamsFx` projects.
 
 #### Grant Permission
 
@@ -384,14 +385,14 @@ As a Project Creator:
   teamsfx new --interactive false --app-name newapp --host-type azure
   ```
 
-- Login M365 account and Azure account
+- Login M365 account and Azure account.
 
   ```bash
   teamsfx account login azure
   teamsfx account login m365
   ```
 
-- Provision your project
+- Provision your project.
 
   ```bash
   teamsfx provision
@@ -415,14 +416,14 @@ As a Project Creator:
 
 As a Project Collaborator:
 
-- Clone the project from GitHub
+- Clone the project from GitHub.
 - Login M365 account account. Note that the M365 account should be the same as added above.
 
   ```bash
   teamsfx account login m365
   ```
 
-- Login Azure account which has contributor permission for all the Azure resources
+- Login Azure account which has contributor permission for all the Azure resources.
 
   ```bash
   teamsfx account login azure
@@ -435,5 +436,5 @@ As a Project Collaborator:
   ```
 
   ![permission status](./images/permission-status.png)
-- Update Tab code, and deploy the project to remote
-- Launch remote and the project should work fine
+- Update Tab code, and deploy the project to remote.
+- Launch remote and the project should work fine.
