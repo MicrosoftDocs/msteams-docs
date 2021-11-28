@@ -61,7 +61,7 @@ The other ways are:
 
 > If there are more than one environment, you need to select the env you want to preview.
 
-![select env](../images/select-env.png)
+![select env](./images/select-env.png)
 
 ## Sync local changes to Dev Portal
 
