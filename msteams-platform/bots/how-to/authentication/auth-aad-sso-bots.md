@@ -60,9 +60,9 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 3. In the **Register an application** page, do the following steps:
 
-  > [!NOTE]
-  >
-  > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
+   > [!NOTE]
+   >
+   > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
   * Enter **Name** for your app.
   * Select **Supported account types**, such as single tenant or multitenant.
@@ -74,35 +74,35 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. Under **Manage**, go to **Expose an API**
 
 
-  > [!TIP] 
-  > To update your app manifest later, save the **Application (client) ID** value.
+   > [!TIP] 
+   > To update your app manifest later, save the **Application (client) ID** value.
 
 
-  > [!IMPORTANT]
-  > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
-  > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+   > [!IMPORTANT]
+   > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
+   > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 6. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
 7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
 1. Select **Add a scope**.
 1. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
 
-  >[!NOTE]
-  > The "access_as_user" scope used to add a client app is for "Administrators and users".
-  >
-  > You must be aware of the following important restrictions:
-  >
-  > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
-  > * Your application's domain name must be same as the domain name that you have registered for your AAD application.
-  > * Multiple domains per app are currently not supported.
-  > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
+   >[!NOTE]
+   > The "access_as_user" scope used to add a client app is for "Administrators and users".
+   >
+   > You must be aware of the following important restrictions:
+   >
+   > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
+   > * Your application's domain name must be same as the domain name that you have registered for your AAD application.
+   > * Multiple domains per app are currently not supported.
+   > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
 
 1. In the **Who can consent?**, enter **Admins and users**.
 11. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
-    * **Admin consent display name**: Teams can access the user’s profile.
-    * **Admin consent description**: Teams can call the app’s web APIs as the current user.
-    * **User consent display name**: Teams can access your profile and make requests on your behalf.
-    * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
+   * **Admin consent display name**: Teams can access the user’s profile.
+   * **Admin consent description**: Teams can call the app’s web APIs as the current user.
+   * **User consent display name**: Teams can access your profile and make requests on your behalf.
+   * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
 
     ![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
