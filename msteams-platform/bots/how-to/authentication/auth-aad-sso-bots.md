@@ -161,7 +161,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
    >[!NOTE]
    > **Implicit grant** may be required in the AAD application.
 
-    * Enter **Name** in the **New Connection Setting** page. The name is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+    * Enter **Name** in the **New Connection Setting** page. This name is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
     * From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     * Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
     * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
@@ -213,7 +213,7 @@ If the user is using the application for the first time and user consent is requ
 
 When the user selects **Continue**, the following events occur:
 
-* If the bot defines a sign-in button, it activates the sign-in flow for bots which is similar to the sign-in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
+* If the bot defines a sign-in button, it activates the sign-in flow for bots, which is similar to the sign-in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
 
 * If the bot isn't providing a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
 
@@ -275,7 +275,7 @@ The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet
 
 ### Token exchange failure
 
-If there's token exchange failure, use the following code:
+If there's a token exchange failure, use the following code:
 
 ```json
 {​​ 
