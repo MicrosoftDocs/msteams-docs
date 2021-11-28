@@ -12,8 +12,8 @@ ms.date: 11/29/2021
 
 After scaffolding, there will be two manifest template files under `templates/appPackage` folder.
 
-- `manifest.local.template.json` - local debug teams app
-- `manifest.remote.template.json` - shared between all remote environments
+- `manifest.local.template.json` - local debug teams app.
+- `manifest.remote.template.json` - shared between all remote environments.
 
 These template files containing some placeholders, and the actual values from Teams Toolkit will be resolved in files under `.fx/configs` and `.fx/states`.
 
@@ -35,7 +35,7 @@ To preview manifest with real content, Teams Toolkit will generate preview manif
         └───manifest.local.json  - Previewed manifest of local teams app
 ```
 
-### Local Debug teams app
+### Local Debug Teams app
 
 To preview manifest file of local teams app, you need to press `F5` to run local debug first. This step will generate default local settings for you, then the app package and preview manifest will be built under `build/appPackage` folder.
 
@@ -53,15 +53,15 @@ To preview manifest file of remote teams app, you need to click `Provision in th
 
 The other ways are:
 
-- Click `Preview` in the codelens of `manifest.remote.template.json` file
-- Click `Preview manifest file` at the menu bar of `manifest.remote.template.json` file
-- Click `Zip Teams metadata package` in Treeview and select your environment
+- Click `Preview` in the codelens of `manifest.remote.template.json` file.
+- Click `Preview manifest file` at the menu bar of `manifest.remote.template.json` file.
+- Click `Zip Teams metadata package` in Treeview and select your environment.
 
 ![preview remote](./images/preview-remote.png)
 
 > If there are more than one environment, you need to select the env you want to preview.
 
-![select env](../images/select env.png)
+![select env](../images/select-env.png)
 
 ## Sync local changes to Dev Portal
 

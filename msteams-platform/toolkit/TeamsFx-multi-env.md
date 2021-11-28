@@ -14,11 +14,11 @@ ms.date: 11/29/2021
 
  With multiple environments, developers can:
 
-1. Test before production: It is a common practice to setup multiple environments (e.g., dev, test, staging) before publishing a Teams App to production environment in modern app development lifecycle.
+1. **Test before production**: It is a common practice to setup multiple environments (dev, test, staging) before publishing a Teams App to production environment in modern app development lifecycle.
 
-2. Manage app behaviors in different environments: Developers can set different behaviors for different environments. E.g., developers may want to enable telemetry in production environment but disable it in development environment.
+2. **Manage app behaviors in different environments**: Developers can set different behaviors for different environment such as developers may want to enable telemetry in production environment but disable it in development environment.
 
-## Prerequisites
+## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 * You should already have a Teams app project opened in VS code.
