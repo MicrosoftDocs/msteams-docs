@@ -28,7 +28,7 @@ TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that al
 
 Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI.
 
-* [Provision Azure-based app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch=pr-en-us-4657)
+* [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 
 ## What resources will be created
 
