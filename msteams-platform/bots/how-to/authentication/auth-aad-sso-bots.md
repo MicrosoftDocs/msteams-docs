@@ -60,7 +60,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
     ![New registration](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
 
-3. In the **Register an application** page, do the following steps:
+3. In the **Register an application**, do the following steps:
 
    > [!NOTE]
    >
@@ -87,7 +87,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 6. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
 7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
 1. Select **Add a scope**.
-1. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
+1. In the panel that prompts, enter `access_as_user` as the **Scope name**.
 
    >[!NOTE]
    > The "access_as_user" scope used to add a client app is for "Administrators and users".
@@ -100,7 +100,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
    > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
 
 1. In the **Who can consent?**, enter **Admins and users**.
-11. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
+11. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
     * **Admin consent display name**: Teams can access the user’s profile.
     * **Admin consent description**: Teams can call the app’s web APIs as the current user.
     * **User consent display name**: Teams can access your profile and make requests on your behalf.
@@ -114,7 +114,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application.
+1. In the **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 
     ![client application](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
@@ -148,7 +148,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 #### Update the Azure portal with the OAuth connection
 
-Complete the following steps to update the Azure portal with the OAuth connection:
+The following steps will guide you to update the Azure portal with the OAuth connection:
 
 3. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 4. Go to **Configuration** on the left pane.
@@ -156,7 +156,7 @@ Complete the following steps to update the Azure portal with the OAuth connectio
 
     ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting.png)
 
-6. Perform the following steps to complete the **New Connection Setting** form:
+6. The following steps will guide you to complete the **New Connection Setting** form:
 
    >[!NOTE]
    > **Implicit grant** may be required in the AAD application.
@@ -209,7 +209,7 @@ The request to get the token is a normal POST message request using the existing
 
 If the user is using the application for the first time and user consent is required, the following dialog box appears to continue with the consent experience:
 
-![Consent dialog box](../../../assets/images/bots/bots-consent-dialogbox.png)
+![Consent dialog box](~/assets/images/authentication/SSO-bots-auth/bot-consent-box.png)
 
 When the user selects **Continue**, the following events occur:
 
