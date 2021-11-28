@@ -110,7 +110,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * **User consent display name**: Teams can access your profile and make requests on your behalf.
     * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
 
-  [admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
+    [admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
 12. Ensure that the state is set to **Enabled**.
 
