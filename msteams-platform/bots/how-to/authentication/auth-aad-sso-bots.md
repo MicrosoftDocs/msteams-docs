@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 # Single sign-on (SSO) support for bots
 
-Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign-in credentials by silently refreshing the authentication token. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
+Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token to minimizes the number of times users need to enter their sign-in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically. Tabs and bots have similar flow for SSO support. But bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token) with a different protocol.
 
 >[!NOTE]
 > OAuth 2.0 is an open standard for authentication and authorization used by AAD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
@@ -326,7 +326,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
     }
     ```
 
-6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). This action ensures that the SSO flow falls back to normal OAuthCard flow if there are any errors or unmet dependencies like user consent.
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this invoke ensures that the SSO flow falls back to normal OAuthCard flow.
 
 
 ### Update the auth sample
