@@ -71,9 +71,8 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 4. Go to overview page.
 1. Copy the value of **Application (client) ID**.
-1. Under **Manage**, select **Expose an API**
+1. Under **Manage**, go to **Expose an API**
 
-    ![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
 
    > [!TIP] 
    > To update your app manifest later, save the **Application (client) ID** value.
@@ -88,7 +87,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
 1. Select **Add a scope**.
 
-    ![Add a Scope](~/assets/images/authentication/SSO-bots-auth/add-a-scope2.png)
+    ![Add a Scope](~/assets/images/authentication/SSO-bots-auth/add-a-scope-2.png)
 
 1. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
 
