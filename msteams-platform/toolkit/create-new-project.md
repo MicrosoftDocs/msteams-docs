@@ -10,26 +10,36 @@ ms.date: 11/29/2021
 
 # Create new Teams project Use Teams Toolkit
 
-You have two choices to use the Teams Toolkit to start your Teams app building, either create new project or create from samples.
+You can either **create new project** or **create from samples**, to use the Teams Toolkit to start your Teams app building.
 
 ## Create new project
 
-Follow the guidance below to create new Teams app project using Teams Toolkit.
+Follow the steps below to create a new Teams app project using Teams Toolkit.
 
-- [Create new Teams Tab app (React)][h/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
-- [Create new Teams Bot app][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
-- [Create new Message Extension app][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6)
-- [Create new Teasm Tab app (SharePoint Framework)][/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode))
+- [Create new Teams Tab app (React)](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2&branch=pr-en-us-4657)
+- [Create new Teams Bot app](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch=pr-en-us-4657)
+- [Create new Message Extension app](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch=pr-en-us-4657)
+- [Create new Teasm Tab app (SharePoint Framework)](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch=pr-en-us-4657)
 
 ## Create from samples
 
-If you do not want to start with hello world application, you can try to explore sample gallery and find something you are interested to start your own work with. Open the the Teams Toolkit for Visual Studio Code. Go to the `DEVELOPMENT` section in Tree View, click on `View samples`
+If you do not want to start with hello world application, you can try to explore sample gallery and find something you are interested to start your own work with.
+
+
+ 1. Open `Teams Toolkit` from Visual Studio Code.
+
+ 1. Select `DEVELOPMENT` section in Tree View.
+
+ 1. Select `View samples`.
+
+
+
 
 ![Teams Toolkit view samples](./images/teams-toolkit-view-samples.png)
 
-You will be redirect to sample gallery where you can explore samples and download them to play with.
+Now, you will be redirected to sample gallery where you can explore samples and download them to play with.
 
-Each sample can be downloaded and either run locally or remotely to preview in Teams web client. You can achieve this easily by following the instructions(README file) of each sample. And you can also browse the source code of samples by click "View on Github", this will redirect you to our open source repo for Samples.
+Each sample can be downloaded and either run locally or remotely to preview in Teams web client. You can achieve this easily by following the instructions(README file) of each sample. And you can also browse the source code of samples by selecting "View on Github", this will redirect you to open source repo for Samples.
 
 ## See Also
 
