@@ -102,7 +102,7 @@ The configuration page code informs Teams that the configuration requirements ar
 
 >[!NOTE]
 >
->* You have 30 sec to complete the save operation (the callback to registerOnSaveHandler) before the timeout. After the timeout, you'll see a generic error message.
+>* You have 30 seconds to complete the save operation (the callback to registerOnSaveHandler) before the timeout. After the timeout, a generic error message appears.
 >* If you register a save handler using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 
