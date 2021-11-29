@@ -39,6 +39,7 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 |TeamsTab.Delete.Group|Delete this team's tabs. |
 |TeamMember.Read.Group|Get this team's members. |
 |TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. |
+|ChannelMeeting.ReadBasic.Group|Allows the app to read basic properties such as name, schedule, organizer, join link and start/end notifications of channel meeting in the Team without a signed in user.|
 
 For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
 
@@ -150,6 +151,9 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 >
 
+> [!NOTE]
+> You need to use different RSC permission string in the bot manifest, depending on the type of the meeting.
+
 ### Example for RSC in a team
 
 ```json
@@ -170,7 +174,8 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
         "TeamMember.Read.Group",
-        "TeamsActivity.Send.Group"
+        "TeamsActivity.Send.Group", 
+        "ChannelMeeting.ReadBasic.Group"
     ]
   }
 ```

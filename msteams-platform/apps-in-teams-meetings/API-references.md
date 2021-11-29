@@ -240,10 +240,14 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "ChannelMeeting.ReadBasic.Group"
     ]
 }
  ```
+
+> [!NOTE]
+> Previously, `ChannelMeeting.ReadBasic.Group` API was in a private scheduled/recurring meeting. Now it is supported in a standard channel meeting in both scheduled and recurring.
  
 ### Query parameter
 
@@ -257,6 +261,9 @@ The Meeting Details API includes the following query parameter:
 
 The Meeting Details API includes the following examples:
 
+> [!NOTE]
+> You need to use different RSC permission string in the bot manifest, depending on the type of the meeting.
+
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -266,7 +273,21 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # [JavaScript](#tab/javascript)
 
-Not available
+```javascript
+
+this.onMessage(async(context, next) =>{
+
+  TurnContext.removeRecipientMention(context.activity);
+
+ 
+
+  const details=await TeamsInfo.getMeetingInfo(context);
+
+  await context.sendActivity(JSON.stringify(details, null, 2));
+
+});
+
+```
 
 # [JSON](#tab/json)
 
