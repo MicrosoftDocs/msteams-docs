@@ -9,9 +9,9 @@ ms.author: anclear
 
 # Use cases and Teams features
 
-Building an awesome Teams app is all about finding the right combination to meet your user's needs. At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
+In the collaborative social framework of Teams, there is a wide variety of user needs that can be solved with a Teams app. For instance, an app that bridges gaps in achieving effective collaboration is a great fit.
 
-In this collaborative social framework, there is a wide variety of user needs that can be solved with a Teams app. For instance, an app that bridges gaps in achieving effective collaboration is a great fit.
+The app user and their need are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
 ## Understand your use cases
 
