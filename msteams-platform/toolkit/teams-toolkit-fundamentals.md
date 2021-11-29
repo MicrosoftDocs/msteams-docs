@@ -20,7 +20,7 @@ There is a Teams Toolkit for Visual Studio and a [CLI tool](https://github.com/O
 
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 
-1. In the search box, enter **_Teams Toolkit_**.
+1. In the search box, enter **Teams Toolkit**.
 
 1. Select **install** button next to the Teams Toolkit.
 
