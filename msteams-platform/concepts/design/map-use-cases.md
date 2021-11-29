@@ -12,11 +12,18 @@ After you've identified the user and the problem your app will solve, it is time
 
 ## Use Cases and Teams capabilities
 
-The Microsoft Teams platform offers a large variety of capabilities and UI elements your app can take advantage of. Each feature is a way of interacting with your users in a way that makes the Teams app capability relevant to the user need.
+The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
 
 :::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
 
-Each method of interacting with your users has its strengths and weaknesses.
+For example:
+
+- Use a tab to display task modules, request device permissions, display <`iframe`> content, or using deep links.
+- Use messaging extension to send cards, unfurl links, or take action on messages.
+
+### Common use cases mapped To Teams
+
+The next is step is to corelate use case to app capabilities that meet the user need.
 
 Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
 </br>
