@@ -14,9 +14,12 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The SharePoint Framework (SPFx) is a page and web part model. It provides full support for client-side SharePoint development. You can integrate your app with SharePoint data and extend Microsoft Teams.
+    SharePoint Framework (SPFx) is a development model that you can use to build client-side solutions for Microsoft Teams and SharePoint. Your SharePoint Framework app is hosted on Microsoft 365. You don't need any other resources to host your solution. It provides full support for client-side SharePoint development. You can integrate your SharePoint Framework solution:
 
-    Start Microsoft Teams app development with SPFx by building your first app with a tab capability.
+    - with SharePoint data and extend Microsoft Teams. 
+    - with your line of business APIs secured with Azure Active Directory.
+
+    For this tutorial, start Microsoft Teams app development with SPFx by building your first app with a tab capability.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
 
