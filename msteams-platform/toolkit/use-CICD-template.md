@@ -43,7 +43,7 @@ There are some changes you can make to adapt the workflow for your project:
 You may want to change:
 
 1. How the CD flow is triggered. By default it happens when new commits are made to the `main` branch.
-1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure/M365 login credentials. The table below lists all the secrets you need to create on GitHub, and for detailed usage, please refer to the GitHub Actions [README.md](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure/Microsoft 365 login credentials. The table below lists all the secrets you need to create on GitHub, and for detailed usage, please refer to the GitHub Actions [README.md](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
 
@@ -64,12 +64,12 @@ Steps to create environment variables in GitHub:
 |AZURE_ACCOUNT_PASSWORD|The password of Azure account.|
 |AZURE_SUBSCRIPTION_ID|To identify the subscription in which the resources will be provisioned.|
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
-|M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
-|M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
-> Note: Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
+|Microsoft 365_ACCOUNT_NAME|The Microsoft 365 account for creating and publishing the Teams App.|
+|Microsoft 365_ACCOUNT_PASSWORD|The password of the Microsoft 365 account.|
+|Microsoft 365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your Microsoft 365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+> Note: Please refer to the [Configure Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
-## Setup CI/CD Pipelines with Azure DevOps
+## Set up CI/CD Pipelines with Azure DevOps
 
 You can set up automated pipelines in Azure DevOps, and make a reference on the scripts and steps below to get started:
 
@@ -104,8 +104,8 @@ The potential changes you can make for the script or workflow definition:
 
 1. Change how the CI flow is triggered. We default to when a new commit is pushed into the `dev` branch.
 1. Change the way of how to install node and npm.
-1. Use a npm build script, or customize the way you build in the automation code.
-1. Use a npm test script which returns zero for success, and/or change the test commands.
+1. Use npm build script, or customize the way you build in the automation code.
+1. Use npm test script which returns zero for success, and/or change the test commands.
 
 ### Set up CD Pipeline
 
@@ -143,8 +143,8 @@ steps:
     AZURE_ACCOUNT_PASSWORD: $(AZURE_ACCOUNT_PASSWORD)
     AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
     AZURE_TENANT_ID: $(AZURE_TENANT_ID)
-    M365_ACCOUNT_NAME: $(M365_ACCOUNT_NAME)
-    M365_ACCOUNT_PASSWORD: $(M365_ACCOUNT_PASSWORD)
+    Microsoft 365_ACCOUNT_NAME: $(Microsoft 365_ACCOUNT_NAME)
+    Microsoft 365_ACCOUNT_PASSWORD: $(Microsoft 365_ACCOUNT_PASSWORD)
   inputs:
     filePath: './others-script-cd-template.sh'
 ```
@@ -153,7 +153,7 @@ The potential changes you can make for the script or workflow definition:
 
 1. How the CD flow is triggered. By default it happens when new commits are made to the `main` branch.
 1. Change the way of how to install node and npm.
-1. Change the environment name, by default it's `staging`.
+1. Change the environment name, by default its `staging`.
 1. Ensure you have a npm build script, or customize the way you build in the automation code.
 1. Ensure you have a npm test script which returns zero for success, and/or change the test commands.
 
@@ -174,12 +174,12 @@ Steps to create Pipeline variables in Azure DevOps:
 |AZURE_ACCOUNT_PASSWORD|The password of Azure account.|
 |AZURE_SUBSCRIPTION_ID|To identify the subscription in which the resources will be provisioned.|
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
-|M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
-|M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|Microsoft 365_ACCOUNT_NAME|The Microsoft 365 account for creating and publishing the Teams App.|
+|Microsoft 365_ACCOUNT_PASSWORD|The password of the Microsoft 365 account.|
+|Microsoft 365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your Microsoft 365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 > !Note
-> Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
+> Please refer to the [Configure Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
 ## CI/CD Pipeline Templates in Jenkins
 
@@ -207,9 +207,9 @@ There are some potential changes you can make to adapt your project:
 
 You may want to change:
 
-1. Rename the template file to `Jenkinsfile` since it's a common practise, and put it under the target branch, for example, the `main` branch.
+1. Rename the template file to `Jenkinsfile` since it's a common practice, and put it under the target branch, for example, the `main` branch.
 1. How the CD flow is triggered. We default to use the triggers of `pollSCM` when a new change is pushed into the `main` branch.
-1. Create Jenkins [pipeline credentials](https://www.jenkins.io/doc/book/using/using-credentials/) to hold Azure/M365 login credentials. The table below lists all the credentials you need to create on Jenkins.
+1. Create Jenkins [pipeline credentials](https://www.jenkins.io/doc/book/using/using-credentials/) to hold Azure/Microsoft 365 login credentials. The table below lists all the credentials you need to create on Jenkins.
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
 
@@ -217,18 +217,18 @@ You may want to change:
 
 ### Environment Variables for Jenkins
 
-Please follow [using-credentials](https://www.jenkins.io/doc/book/using/using-credentials/) to create credentials on Jenkins.
+Follow [using-credentials](https://www.jenkins.io/doc/book/using/using-credentials/) to create credentials on Jenkins.
 
 |Name|Description|
 |---|---|
-|AZURE_ACCOUNT_NAME|The account name of Azure which is used to provision resources.|
+|AZURE_ACCOUNT_NAME|The account name of Azure that is used to provision resources.|
 |AZURE_ACCOUNT_PASSWORD|The password of Azure account.|
 |AZURE_SUBSCRIPTION_ID|To identify the subscription in which the resources will be provisioned.|
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
-|M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
-|M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
-> Note: Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the pipeline.
+|Microsoft 365_ACCOUNT_NAME|The M3icrosoft 365 account for creating and publishing the Teams App.|
+|Microsoft 365_ACCOUNT_PASSWORD|The password of the Microsoft 365 account.|
+|Microsoft 365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your Microsoft 365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+> Note: Please refer to the [Configure Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the pipeline.
 
 ## Getting started guide for other platforms
 
@@ -236,14 +236,14 @@ You can follow the pre-defined example bash scripts to build and customize CI/CD
 
 * [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
 * [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
-The scripts are pretty straightforward and most parts of them are cross-platform CLI, so it's easy to transform them to other types of script, for example, powershell.
+The scripts are pretty straightforward and most parts of them are cross-platform CLI, so it's easy to transform them to other types of script, for example, PowerShell.
 
 The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the [documentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) to customize the scripts.
 
 > !Note
 > To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI/CD.
 
-Please keep in mind that you need to set Azure and M365 credentials in your environment variables safely. For example if you are using Github as your source code repository, you can use the [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to securely store your environment variables.
+Ensure to set Azure and M365 credentials in your environment variables safely. For example if you are using GitHub as your source code repository, you can use the [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to securely store your environment variables.
 
 ### Reference
 
