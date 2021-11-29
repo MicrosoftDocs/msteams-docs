@@ -374,11 +374,11 @@ Form completion message is added to the Adaptive Cards. While sending a response
 
 Following are the two types of messages:
 
-* **Error**: If there is an error while sending a response to the bot, **Something went wrong, Try again** message appears.
+* **Error**: When a response is sent to the bot, **Something went wrong, Try again** message appears if there is an error.
 
     ![Error message](~/assets/images/Cards/error-message.png)
 
-* **Success**: If the response to the bot is successfully sent, **Your response was sent to the app** appears.
+* **Success**: When a response is successfully sent to the bot, **Your response was sent to the app** appears.
 
     ![Success message](~/assets/images/Cards/success-message.png)
 
