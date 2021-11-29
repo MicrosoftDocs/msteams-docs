@@ -30,7 +30,7 @@ While the web version and the desktop version of Teams are almost the same, ther
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 
-   ![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+   [![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)](~/assets/images/dev-preview/tab-and-devtools.png#lightbox)
 
 ## Access DevTools from an Android device
 
