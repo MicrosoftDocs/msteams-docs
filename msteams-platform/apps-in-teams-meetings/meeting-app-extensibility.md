@@ -162,11 +162,32 @@ The overall user experience in standard channel meetings will be same as in sche
 > * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
 > * Apps on the channel will not be available in the meeting by default.
 
+## Meeting app permissions
+
+Team owners manages the meeting app permissions through team settings:
+
+* Channel meeting app permissions are different from the team app CRUD model (not the non-channel meeting app CRUD model). If a user adds an app to a team or channel, they are able to use it in the meeting.
+* When team settings are enabled, meeting apps follow the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot add.
+* If users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
+
+> [!NOTE]
+> By adding the app outside of the meeting interface,Attendee can indirectly add apps to their meetings when the **Allow team members to add and remove apps** setting is enabled.
+
+The following image illustrates member permissions setting:
+
+:::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
+
+* Permission to add/remove meeting apps can be configured in the team settings page, by default it is enabled.
+* If enabled, members can add/remove meeting apps before, during, or after meetings.
+
+:::image type="content" source="../assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
+
 ## Participant roles in a meeting
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
 
-The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
+The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meetin
+g:
 
 * **Organizer**: Organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
 * **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
