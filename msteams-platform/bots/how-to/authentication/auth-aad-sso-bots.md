@@ -66,9 +66,9 @@ The steps to register your app through the AAD portal are similar to the [tab SS
    >
    > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
-  * Enter **Name** for your app.
-  * Select **Supported account types**, such as single tenant or multitenant.
-  * Select **Register**.
+    * Enter **Name** for your app.
+    * Select **Supported account types**, such as single tenant or multitenant.
+    * Select **Register**.
 
     ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
 
