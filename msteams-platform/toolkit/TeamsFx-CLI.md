@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx Command Line Interface
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide delightful keyboard centric experience when building Teams applications. It also enables CI/CD scenario where CLI can be easily integrated in scripts for automation.
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide delightful keyboard-centric experience when building Teams applications. It also enables CI/CD scenario where CLI can be easily integrated in scripts for automation.
 
 [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) |
 [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
@@ -29,7 +29,7 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 | `teamsFx` Commands  | Descriptions |
 |:----------------  |:-------------|
 | `teamsfx new`       | Create a new Teams application. |
-| `teamsfx account`   | Manage cloud service accounts. The supported cloud services are 'Azure' and 'M365'.          |
+| `teamsfx account`   | Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'.          |
 | `teamsfx env`       | Manage the environments. |
 | `teamsfx capability`| Add new capabilities to the current application.         |
 | `teamsfx resource`  | Manage the resources in the current application.         |
@@ -44,7 +44,7 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 
 ## `teamsfx new`
 
-`teamsfx new` will by default go into interactive mode and guide you through the process of creating a new Teams application by asking few questions. You can also do it in an non-interactive way by setting `--interactive` flag to `false`.
+`teamsfx new` will by default go into interactive mode and guide you through the process of creating a new Teams application by asking few questions. You can also do it in non-interactive mode by setting `--interactive` flag to `false`.
 
 | `teamsFx new` Commands  | Descriptions |
 |:----------------  |:-------------|
@@ -61,8 +61,8 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 |`--programming-language`| No| Programming Language for the project. Options are `javascrip` or `typescript` and default value is: `javascript`.|
 |`--folder`| No | Project directory. A sub folder with the your app name will be created under this directory. The default value is: `./`.|
 |`--spfx-framework-type`| No| Applicable if `--host-type` is set to `spfx`. Frontend Framework. Options are `none` and `react`, the default value is: `none`.|
-|`--spfx-webpart-name`| No | Applicable if `--host-type` is set to `spfx`. Webpart Name. The default value is: "helloworld". |
-|`--spfx-webpart-desp`| No | Applicable if `--host-type` is set to `spfx`. Webpart Description. The default value is: "helloworld description". |
+|`--spfx-web part-name`| No | Applicable if `--host-type` is set to `spfx`. Web part Name. The default value is: "helloworld". |
+|`--spfx-web part-desp`| No | Applicable if `--host-type` is set to `spfx`. Web part Description. The default value is: "helloworld description". |
 |`--azure-resources`| No| Applicable if `--host-type` is set to `azure`. Add Azure resources to your project. Options(Multiple) are `sql` (Azure SQL Database) and `function` (Azure Functions). |
 
 ### Examples for `teamsfx new`
@@ -89,13 +89,13 @@ teamsfx new --interactive false --app-name newapp --host-type azure --azure-reso
 
 ## `teamsfx account`
 
-Manage cloud service accounts. The supported cloud services are `azure` and `m365`.
+Manage cloud service accounts. The supported cloud services are `Azure` and `Microsoft 365`.
 
 | `teamsFx account` Commands  | Descriptions |
 |:----------------  |:-------------|
 | `teamsfx account login <service>`      | Log in to the selected cloud service. |
 | `teamsfx account logout <service>`      | log out of selected cloud service. |
-| `teamsfx account set --subscription`      | Update account settings to set an subscription id. |
+| `teamsfx account set --subscription`      | Update account settings to set a subscription ID. |
 
 ## `teamsfx env`
 
@@ -274,7 +274,7 @@ Manage the configuration data either in user scope or project scope.
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Select an existing environment for the project. |
 |`--folder`| No | Project directory. This is used when get/set project configuration. The default value is: `./`. |
-|`--global`| No | cope of configuration. If this is true, the scope is limited to user scope instead of project scope. The default value is: `false`. Currently supported global configurations including: `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
+|`--global`| No | Cope of configuration. If this is true, the scope is limited to user scope instead of project scope. The default value is: `false`. Currently supported global configurations including: `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
 
 ### Examples for `teamsfx config`
 
@@ -328,7 +328,7 @@ TeamsFx CLI provides `teamsFx permission` Commands for collaboration scenario.
 
 | `teamsFx permission` Commands | Descriptions |
 |:------------------------------|-------------|
-| `teamsfx permission grant --env --email` | Grant permission for collaborator's M365 account for the project of a specified environment. |
+| `teamsfx permission grant --env --email` | Grant permission for collaborator's Microsoft 365 account for the project of a specified environment. |
 | `teamsfx permission status` | Show permission status for the project |
 
 ### Parameters for `teamsfx permission grant`
@@ -336,7 +336,7 @@ TeamsFx CLI provides `teamsFx permission` Commands for collaboration scenario.
 | Parameters  | Required | Descriptions |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
-|`--email`| Yes | Provide collaborator's M365 email address. Note that the collaborators's account should be in the same tenant with creator. |
+|`--email`| Yes | Provide collaborator's Microsoft 365 email address. Note that the collaborator's account should be in the same tenant with creator. |
 
 ### Parameters for `teamsfx permission status`
 
@@ -357,11 +357,11 @@ Project creator and collaborators can use `teamsfx permission grant` command to 
 teamsfx permission grant --env dev --email user-email@user-tenant.com
 ```
 
-After successfully granted permission, project creator and collaborators can share the project with the new collaborator by Github, and the new collaborator will have all permission for M365 account.
+After successfully granted permission, project creator and collaborators can share the project with the new collaborator by Github, and the new collaborator will have all permission for Microsoft 365 account.
 
 #### Show Permission Status
 
-Project creator and collaborators can use `teamsfx permission status` command to view his M365 account permission for specific env.
+Project creator and collaborators can use `teamsfx permission status` command to view his Microsoft 365 account permission for specific env.
 
 ```bash
 teamsfx permission status --env dev
@@ -385,11 +385,11 @@ As a Project Creator:
   teamsfx new --interactive false --app-name newapp --host-type azure
   ```
 
-- Login M365 account and Azure account.
+- Login Microsoft 365 account and Azure account.
 
   ```bash
   teamsfx account login azure
-  teamsfx account login m365
+  teamsfx account login Microsoft 365
   ```
 
 - Provision your project.
@@ -417,10 +417,10 @@ As a Project Creator:
 As a Project Collaborator:
 
 - Clone the project from GitHub.
-- Login M365 account account. Note that the M365 account should be the same as added above.
+- Login Microsoft 365 account. Note that the Microsoft 365 account should be the same as added above.
 
   ```bash
-  teamsfx account login m365
+  teamsfx account login Microsoft 365
   ```
 
 - Login Azure account which has contributor permission for all the Azure resources.
