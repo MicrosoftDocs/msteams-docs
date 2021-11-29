@@ -69,6 +69,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
   * Enter **Name** for your app.
   * Select **Supported account types**, such as single tenant or multitenant.
   * Select **Register**.
+
     ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
 
 4. Go to overview page.
@@ -148,6 +149,9 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. Now, go to **Authentication**.
 1. In **Platform configurations**, select **Add a platform**.
 1. Select **Web**.
+
+    ![Configure platform](~/assets/images/authentication/SSO-bots-auth/configure-platform.png)
+
 1. Enter the **Redirect URIs** for your app.
 
    >[!NOTE]
