@@ -22,7 +22,7 @@ Collate and map requirements to Teams features:
 | **Capability** | Bot | &nbsp; | &nbsp; |
 | **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Forecast website |
 | **Scope** | &nbsp; | Personal app | &nbsp; |
-| **Entry point** | &nbsp; | Chat | &nbsp; |
+| **Integration point** | &nbsp; | Chat | &nbsp; |
 |
 
 **App solution**: A Teams *personal chat bot* app that uses checks and *sends forecast notification* to *registered users* before their travel date checks all requirements.
