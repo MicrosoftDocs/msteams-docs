@@ -1,14 +1,14 @@
 ---
 title: Use Teams Toolkit to provision cloud resources
 author: MuyangAmigo
-description: provision cloud resources
+description: Provision cloud resources
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Use Teams Toolkit to provision cloud resources
+# Use Teams Toolkit to Provision cloud resources
 
 TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to declaratively provision Azure resources your application needs using infrastructure as code approach.  
 
@@ -50,7 +50,7 @@ When you create a new project, an ARM template will be generated under your proj
 | Azure Storage | Host your tab app | Enables static web app feature to host your tab app |
 | App Service Plan for Simple Auth | Host the web app of Simple Auth | |
 | Web App for Simple Auth | Host simple auth server that helps you gain access to other services in your single page application | Added user assigned identity to make it easy to access other Azure resources |
-| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
+| User Assigned Identity | Authenticate Azure service-to-service requests | This is shared across different capabilities and resources |
 
 ### Resources created for Teams Bot or Messaging Extension Application
 
@@ -59,7 +59,7 @@ When you create a new project, an ARM template will be generated under your proj
 | Azure Bot Service | Registers your app as a bot with the Bot Framework | Connects the bot to Teams |
 | App Service Plan for Bot | Host the web app of Bot | |
 | Web App for Bot | Host your bot app | Adds user assigned identity to make it easy to access other Azure resources. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
-| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
+| User Assigned Identity | Authenticate Azure service-to-service requests | This is shared across different capabilities and resources |
 
 ### Resources created when including Azure Functions in the project
 
@@ -68,7 +68,7 @@ When you create a new project, an ARM template will be generated under your proj
 | App Service Plan for Function App | Host the Function App | |
 | Function App | Host your Azure Functions APIs | Adds user assigned identity to make it easy to access other Azure resources. <br /> Adds CORS rule to allow requests from your tab app. <br /> Adds authentication setting that only allows requests from your Teams app. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Azure Storage for Function App | Required when creating Function App | |
-| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
+| User Assigned Identity | Authenticate Azure service-to-service requests | This is shared across different capabilities and resources |
 
 ### Resources created when including Azure SQL in the project
 
@@ -76,7 +76,7 @@ When you create a new project, an ARM template will be generated under your proj
 |----------|--------------------------------|-----|
 | Azure SQL Server | Host the Azure SQL Database instance | Allows all Azure services to access the server |
 | Azure SQL Database | Store data for your app | Grants user assigned identity read/write permission to the database |
-| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
+| User Assigned Identity | Authenticate Azure service-to-service requests | This is shared across different capabilities and resources |
 
 ### Resources created when including Azure API Management in the project
 
@@ -86,7 +86,7 @@ When you create a new project, an ARM template will be generated under your proj
 | API Management Service | Manage your APIs hosted in Function App |
 | API Management Product | Group your APIs, define terms of use and runtime policies |
 | API Management OAuth Server | Let Microsoft Power Platform able to access your APIs hosted in Function App |
-| User Assigned Identity | Authenticate Azure service to service requests |
+| User Assigned Identity | Authenticate Azure service-to-service requests |
 
 ## Customize resource provision behavior
 
@@ -100,8 +100,8 @@ Teams Toolkit enables you to use an infrastructure as code approach to define wh
 | main.bicep | Entry point for Azure resource provision | Yes |
 | provision.bicep | Create and config Azure resources | Yes |
 | config.bicep | Add TeamsFx required configurations to Azure resources | Yes |
-| provision/xxx.bicep | Consumed by `provision.bicep` to create and config each Azure resources | Yes |
-| teamsfx/xxx.bicep | Consumed by `config.bicep` to add TeamsFx required configurations to each Azure resources | No |
+| provision/xxx.bicep | Consumed by `provision.bicep` to create and config each Azure resource | Yes |
+| teamsfx/xxx.bicep | Consumed by `config.bicep` to add TeamsFx required configurations to each Azure resource | No |
 
 > [!NOTE]
 > `teamsfx/xxx.bicep` will be regenerated when you add resources / capabilities to your project. That's why it's marked as not customizable. If you really have requirement to modify these bicep files, we suggest using Git to track your changes to `teamsfx/xxx.bicep` files so you won't lose your changes when adding resources / capabilities.
@@ -118,12 +118,12 @@ Here's a list of predefined parameters available:
 
 | Parameter name | Default Value | What can be customized by the parameter | Value constraints |
 | --- | --- | --- | --- |
-| resourceBaseName | auto generated for each environment | Default name for all resources | 2-20 lowercase letters and numbers |
+| resourceBaseName | Auto-generated for each environment | Default name for all resources | 2-20 lowercase letters and numbers |
 | simpleAuthServerFarmsName | ${resourceBaseName}simpleAuth | Name of Simple Auth App Service Plan | 1-40 alphanumerics and hyphens |
 | simpleAuthWebAppName | ${resourceBaseName}simpleAuth | Name of Simple Auth Web App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
 | simpleAuthSku | F1 | SKU of Simple Auth App Service Plan |  |
 | frontendHostingStorageName | ${resourceBaseName}tab | Name of Frontend Hosting Storage Account | 3-24 lowercase letters and numbers |
-| frontendHostingStorageSku | Standard_LRS | SKU of Frontend Hosting Storage Account | Please refer this [page][/azure/templates/microsoft.storage/storageaccounts?tabs=bicep#sku](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep) for available SKUs |
+| frontendHostingStorageSku | Standard_LRS | SKU of Frontend Hosting Storage Account | Please refer this [page][/azure/templates/microsoft.storage/storageaccounts?Tabs=bicep#sku](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep) for available SKUs |
 | functionServerfarmsName | ${resourceBaseName}api | Name of Function App's App Service Plan | 1-40 alphanumerics and hyphens |
 | functionServerfarmsSku | Y1 | SKU of FUnction App's App Service Plan |
 | functionAppName | ${resourceBaseName}api | Name of Function App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
@@ -146,20 +146,20 @@ Here's a list of predefined parameters available:
 
 In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you when you created a new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
-##### AAD application related parameters
+##### AAD application-related parameters
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| m365ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's AAD app client id created during provision | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
-| m365ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's AAD app client secret created during provision | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
-| m365TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant id of your app's AAD app | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
-| m365OauthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's AAD app | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's AAD app client id created during provision | Refer [this section](#use-an-existing-aad-app-for-your-bot) to customize the value |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's AAD app client id created during provision | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's AAD app client secret created during provision | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| Microsoft 365TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's AAD app | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| Microsoft 365 OauthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's AAD app | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's AAD app client Id created during provision | Refer [this section](#use-an-existing-aad-app-for-your-bot) to customize the value |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's AAD app client secret created during provision | Refer [this section](#use-an-existing-aad-app-for-your-bot) to customize the value |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's AAD app client id created during provision | Delete the placeholder and fill the actual value |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's AAD app client Id created during provision | Delete the placeholder and fill the actual value |
 | apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's AAD app client secret created during provision | Delete the placeholder and fill the actual value |
 
-##### Azure resource related parameters
+##### Azure resource-related parameters
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
@@ -186,11 +186,11 @@ If the predefined templates does not meet your application requirement, you can 
 > [!NOTE]
 > The ARM template is shared by all environments. You can use [conditional deployment][/azure/azure-resource-manager/bicep/conditional-resource-deployment](/azure/azure-resource-manager/bicep/conditional-resource-deployment) if the provision behavior various between environments.
 
-To ensure the TeamsFx tooling functions properly, please ensure your customized ARM template satisfies following requirement. If you uses other tooling for further development, you can ignore these requirement.
+To ensure the TeamsFx tooling functions properly, please ensure your customized ARM template satisfies following requirement. If you use other tooling for further development, you can ignore these requirements.
 
-1. Keep the folder structure and file name unchanged. The tool may append new content to existing files when you adds more resources / capabilities to your project.
-2. Keep the name of auto generated parameters as well as its property names unchanged. The auto generated parameters may be used when you adds more resources / capabilities to your project.
-3. Keep the output of auto generated ARM template unchanged. You can add additional outputs to ARM template. The output will be persisted to `.fx/states/state.{env}.json` and used in other features like deploy, validate manifest file, etc.
+1. Keep the folder structure and file name unchanged. The tool may append new content to existing files when you add more resources / capabilities to your project.
+2. Keep the name of auto-generated parameters as well as its property names unchanged. The auto-generated parameters may be used when you add more resources / capabilities to your project.
+3. Keep the output of auto-generated ARM template unchanged. You can add additional outputs to ARM template. The output will be persisted to `.fx/states/state.{env}.json` and used in other features like deploy, validate manifest file, etc.
 
 ### Customization Scenarios and Examples
 
@@ -240,7 +240,7 @@ Sometimes you may get insufficient permission error when the tool tries to add u
 
 ### Example: specifying the name of Function App instance
 
-This this example, I will specify another name `contosoteamsappapi` for Function App instance instead of using the default name.
+This example, I will specify another name `contosoteamsappapi` for Function App instance instead of using the default name.
 
 The steps are:
 

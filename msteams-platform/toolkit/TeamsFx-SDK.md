@@ -24,13 +24,13 @@ Use the library to:
 
 ## Getting started
 
-TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or cli.
+TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI.
 Please check the [README](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md) to see how to create a Teams App project.
 
 ### Prerequisites
 
 - Node.js version `10.x.x` or higher.
-- A project created by TeamsFx toolkit VS Code extension or Cli tool.
+- A project created by TeamsFx toolkit VS Code extension or CLI tool.
 - If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version `>= 4.9.3`. ([Issue - all of the BOTBUILDER packages should be the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
 ### Install the `@microsoft/teamsfx` package
@@ -102,18 +102,18 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 There are 3 credential classes located under [credential](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) folder to help simplifying authentication. 
 
-Credential classes implements `TokenCredential` interface that is broadly used in Azure library APIs. They are designed to provide access token for specific scopes.
-The credential classes represents different identity under certain scenarios.
+Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs. They are designed to provide access token for specific scopes.
+The credential classes represent different identity under certain scenarios.
 
-`TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time.
-`M365TenantCredential` represents Microsoft 365 tenant identity. It is usually used when user is not involved like time-triggered automation job.
+`TeamsUserCredential` represent Teams current user's identity. Using this credential will request user consent at the first time.
+`M365TenantCredential` represent Microsoft 365 tenant identity. It is usually used when user is not involved like time-triggered automation job.
 `OnBehalfOfUserCredential` uses on-behalf-of flow. It needs an access token and you can get a new token for different scope. It's designed to be used in Azure Function or Bot scenarios.
 
 ### Bot
 
 Bot related classes are stored under [bot](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot) folder.
 
-`TeamsBotSsoPrompt` has a good integration with Bot framework. It simplifies the authentication process when you develops bot application.
+`TeamsBotSsoPrompt` has a good integration with Bot framework. It simplifies the authentication process when you develop bot application.
 
 ### Helper Function
 
@@ -278,7 +278,7 @@ dialogs.add(
 
 ### Configure log
 
-You can set custome log level and redirect outputs when using this library.
+You can set customer log level and redirect outputs when using this library.
 Logging is turned off by default, you can turn it on by setting log level.
 
 #### Enable log by setting log level
@@ -304,7 +304,7 @@ setLogger(context.log);
 
 ##### Redirect by setting custom log function
 
-Please note that log function will not take effect if you set a custom logger.
+Note that log function will not take effect if you set a custom logger.
 
 ```ts
 setLogLevel(LogLevel.Info);
@@ -321,4 +321,4 @@ setLogFunction((level: LogLevel, message: string) => {
 
 ## Next step
 
-Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
+Take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
