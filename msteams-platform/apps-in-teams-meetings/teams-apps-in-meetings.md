@@ -18,8 +18,6 @@ The users can access apps during meetings using the tab gallery from their calen
 * Launch an in-meeting actionable dialog.
 * Create a post-meeting survey.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
-
 The following illustration gives you an idea of the meeting app extensibility features:
 
 ![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)

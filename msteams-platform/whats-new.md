@@ -3,7 +3,7 @@ title: What's new
 description: Describes all the new developer features in Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: teams what's new latest
+keywords: teams what's new latest updates and features
 ---
 
 # What's new for developers in Microsoft Teams
@@ -17,6 +17,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+| 11/24/2021| Introduced step-by-step guide to generate meeting token. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
+| 11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Static and dynamic typeahead search for desktop and mobile users.| • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Type-ahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office (Preview) | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 | 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
@@ -33,9 +35,11 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 11/17/2021| Static and dynamic typeahead search for desktop and mobile users.| • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Type-ahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
-| 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+| 11/24/2021| Introduced step-by-step guide to generate meeting token. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
+|11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
+|11/17/2021| Static and dynamic typeahead search for desktop and mobile users.| • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Type-ahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
+|11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|10/28/2021| Monetize your Teams app with a transactable SaaS offer.| Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
 |10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| Meeting stage is now available in GA. | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |

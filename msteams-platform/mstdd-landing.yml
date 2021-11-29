@@ -12,6 +12,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Microsoft Teams store validation guidelines
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
       - text: Typeahead search in Adaptive Card
@@ -47,8 +49,6 @@ landingContent:
       links:
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
-      - text: Build app with Blazor
-        url: sbs-gs-blazor.yml
       - text: Build app with SPFx
         url: sbs-gs-spfx.yml
       - text: Build app with C# or .NET
@@ -89,6 +89,14 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: Teams app scenarios
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Build scenarios for Teams app
+      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+    - text: Best practices for Teams app scenarios
+      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: Publish and distribute
   linkLists:
   - linkListType: concept

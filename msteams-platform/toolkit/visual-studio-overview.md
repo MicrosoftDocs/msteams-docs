@@ -81,8 +81,3 @@ In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), you can u
 
 - Your IT admin will review these submissions.
 - You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you can submit updates to your app or cancel any currently active submissions.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build and run your first Microsoft Teams app with Blazor](../get-started/first-app-blazor.md)
