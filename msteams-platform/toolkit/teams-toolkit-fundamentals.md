@@ -116,7 +116,7 @@ During or after the development, you should follow the process to do provision, 
 
 1. Instead of manually publishing your custom Teams app, you can use **Publish to Teams** function to call Teams api to publish Teams app. You need the permission to upload Teams app. For more information, see [publish your app to Teams](publish.md).
 
-1. Developer Portal for Teams is where you can manage and distribute your Teams app.For more information, see [developer portal](../../concepts/build-and-test/teams-developer-portal)
+1. Developer Portal for Teams is where you can manage and distribute your Teams app.For more information, see [developer portal](/microsoftteams/platform/concepts/build-and-test/teams-developer-portal)
 
 1. Teams Toolkit also provides CI/CD template for CI/CD tools like GitHub workflow, Azure Devops and Jenkins. For more information, see [build CI/CD pipelines for Teams application](use-CICD-template.md)
 
