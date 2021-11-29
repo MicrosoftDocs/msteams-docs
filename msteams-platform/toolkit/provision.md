@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Use Teams Toolkit to Provision cloud resources
+# Use Teams Toolkit to provision cloud resources
 
 TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to declaratively provision Azure resources your application needs using infrastructure as code approach.  
 
@@ -16,8 +16,7 @@ TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that al
 
 1. Account prerequisites
 
-    To provision cloud resources in Azure and Microsoft 365, you must have the following accounts with proper permissions. Refer to [Prepare accounts to build Teams app](accounts.md) for more information.
-
+    To provision cloud resources, you must have the following accounts with proper permissions. For more information, see [prepare accounts to build Teams app](accounts.md).
     * Microsoft 365
     * Azure with valid subscription
 
@@ -43,7 +42,7 @@ When you create a new project, an ARM template will be generated under your proj
 > [!NOTE]
 > Azure services incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to understand an estimate.
 
-### Resources created for Teams Tab Application
+### Resources created for Teams Tab application
 
 |Resources|Purpose of this resource| Notes |
 |----------|--------------------------------|-----|
@@ -52,7 +51,7 @@ When you create a new project, an ARM template will be generated under your proj
 | Web App for Simple Auth | Host simple auth server that helps you gain access to other services in your single page application | Added user assigned identity to make it easy to access other Azure resources |
 | User Assigned Identity | Authenticate Azure service-to-service requests | This is shared across different capabilities and resources |
 
-### Resources created for Teams Bot or Messaging Extension Application
+### Resources created for Teams Bot or Messaging Extension application
 
 |Resources|Purpose of this resource| Notes |
 |----------|--------------------------------|-----|
@@ -88,9 +87,9 @@ When you create a new project, an ARM template will be generated under your proj
 | API Management OAuth Server | Let Microsoft Power Platform able to access your APIs hosted in Function App |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
-## Customize resource provision behavior
+## Customize resource provision 
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure them. The tooling uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources being created by modifying the ARM template. Visit [bicep document][/azure/azure-resource-manager/bicep/](/azure/azure-resource-manager/bicep/) to learn more about how to use bicep to author ARM template. Provision with ARM usually involves changing two sets of files, parameters and templates:
+Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure them. The tooling uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources being created by modifying the ARM template. For more information, see [bicep document][/azure/azure-resource-manager/bicep/](/azure/azure-resource-manager/bicep/). Provision with ARM usually involves changing following two sets of files, parameters and templates:
 
 * ARM parameter files (`azure.parameters.{your_env_name}.json`) are located at `.fx/configs` folder, for passing parameters to templates.
 * ARM template files located at `templates/azure`, this folder contains following files:
@@ -192,13 +191,13 @@ To ensure the TeamsFx tooling functions properly, please ensure your customized 
 2. Keep the name of auto-generated parameters as well as its property names unchanged. The auto-generated parameters may be used when you add more resources / capabilities to your project.
 3. Keep the output of auto-generated ARM template unchanged. You can add additional outputs to ARM template. The output will be persisted to `.fx/states/state.{env}.json` and used in other features like deploy, validate manifest file, etc.
 
-### Customization Scenarios and Examples
+### Customization scenarios and examples
 
 These are some common scenarios you can customize the provision behavior.
 
 #### Use an existing AAD app for your Teams app
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an AAD app created by yourself for your Teams app. You can follow <https://aka.ms/teamsfx-existing-aad-doc> to create an AAD app that can be used here.
+You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an AAD app created by yourself for your Teams app. To create an AAD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -247,7 +246,7 @@ The steps are:
 1. Open `.fx/configs/azure.parameters.{env}.json` for your current environment.
 2. Add a new property `functionAppName` to the value of parameter `provisionParameters`.
 3. Fill "contosoteamsappapi" as value of `functionAppName`
-4. The final parameter file will looks like following
+4. The final parameter file is shown as following:
 
     ```json
     {
@@ -350,7 +349,7 @@ You can follow [Provision SharePoint-based app][/microsoftteams/platform/sbs-gs-
 > [!NOTE]
 > Please note that currently building Teams App with SharePoint Framework using Teams Toolkit doesn't have direct integration with Azure, contents in this doc does not apply to SPFx based apps.
 
-## See Also
+## See also
 
 > [!div class="nextstepaction"]
 > [Deploy Teams app to the cloud](deploy.md)

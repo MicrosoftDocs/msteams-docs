@@ -27,7 +27,7 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 
 ## Deploy Teams apps using Teams Toolkit
 
-In Get Started tutorials, there are step-by-step guides of how to do deploy using Teams Toolkit, following the guidance below to deploy your Teams app.
+In Get Started tutorials, there are step-by-step guides of how to deploy using Teams Toolkit, following the guidance below to deploy your Teams app.
 
 * [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)

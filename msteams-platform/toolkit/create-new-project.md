@@ -1,20 +1,20 @@
 ---
-title: Create new Teams project Use Teams Toolkit
+title: Create new Teams project Using Teams Toolkit
 author: zyxiaoyuer
-description:  Create new Teams project Use Teams Toolkit
+description:  Create new Teams project Using Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Create new Teams project Use Teams Toolkit
+# Create new Teams project using Teams Toolkit
 
-You can either **create new project** or **create from samples**, to use the Teams Toolkit to start your Teams app building.
+You can either **create new project** or **create from samples**, to use the Teams Toolkit for Teams app building.
 
 ## Create new project
 
-Follow the steps below to create a new Teams app project using Teams Toolkit.
+Follow the steps below to create a new Teams app project using Teams Toolkit:
 
 - [Create new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
 - [Create new Teams Bot app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
@@ -23,25 +23,22 @@ Follow the steps below to create a new Teams app project using Teams Toolkit.
 
 ## Create from samples
 
-If you do not want to start with hello world application, you can try to explore sample gallery and find something you are interested to start your own work with.
+If you don't want to start with hello world application, you can try to explore **sample gallery** and find something you are interested to start your own work with.
 
 
- 1. Open `Teams Toolkit` from Visual Studio Code.
+ 1. Open **Teams Toolkit** from Visual Studio Code.
 
- 1. Select `DEVELOPMENT` section in Tree View.
+ 1. Select **DEVELOPMENT** section in Tree View.
 
- 1. Select `View samples`.
+ 1. Select **View samples**.
 
-
-
+Now, you will be redirected to sample gallery where you can explore samples and download them to play with as shown in following image:
 
 ![Teams Toolkit view samples](./images/teams-toolkit-view-samples.png)
 
-Now, you will be redirected to sample gallery where you can explore samples and download them to play with.
-
 Each sample can be downloaded and either run locally or remotely to preview in Teams web client. You can achieve it easily by following the instructions(README file) of each sample. And you can also browse the source code of samples by selecting "View on GitHub", this will redirect you to open-source repo for Samples.
 
-## See Also
+## See also
 
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)

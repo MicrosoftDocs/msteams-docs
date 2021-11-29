@@ -86,7 +86,7 @@ When you feel your app is production ready, you can begin the process of getting
  ![Pre submission steps](./images/pre-submission-steps.png)
 
 
-## See Also
+## See also
 
 > [!div class="nextstepaction"]
 > [Manage multiple environments](TeamsFx-multi-env.md)
