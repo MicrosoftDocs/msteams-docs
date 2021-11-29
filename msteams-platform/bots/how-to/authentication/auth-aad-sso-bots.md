@@ -178,7 +178,11 @@ The following steps will guide you to update the Azure portal with the OAuth con
    >[!NOTE]
    > **Implicit grant** may be required in the AAD application.
 
-    * Enter **Name** in the **New Connection Setting** page. This name is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+    * Enter **Name** in the **New Connection Setting** page.
+
+    >[!NOTE]
+    > The **Name** is referred to the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+
     * From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     * Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
     * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
