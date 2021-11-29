@@ -368,7 +368,6 @@ The following code shows an example of sending a simple Adaptive Card:
 ### Adaptive Cards form completion
 
 > [!NOTE]
-
 > Adaptive Cards form completion is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
 Form completion message is added to the Adaptive Cards. While sending a response to the bot, a form completion message appears. The message can be of two types, Error or Success.
