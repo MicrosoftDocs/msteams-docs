@@ -369,23 +369,23 @@ The following code shows an example of sending a simple Adaptive Card:
 
 > [!NOTE]
 
-> Adaptive Cards form completion is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+> Adaptive Cards form completion is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
 Form completion message is added to the Adaptive Cards. While sending a response to the bot, a form completion message appears. The message can be of two types, Error or Success.
 
 Following are the two types of messages:
 
-* **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
+* **Error**: If there is an error while sending a response to the bot, **Something went wrong, Try again** message appears.
 
     ![Error message](~/assets/images/Cards/error-message.png)
 
-* **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
+* **Success**: If the response to the bot is successfully sent, **Your response was sent to the app** appears.
 
     ![Success message](~/assets/images/Cards/success-message.png)
 
 **Message response on mobile**
 
-The message appears at the bottom of the Adaptive Card. You can select **Close** or switch chat to dismiss the message.
+The message appears at the bottom of the Adaptive Card.
 
 # [Mobile](#tab/mobile)
 
@@ -393,9 +393,11 @@ The message appears at the bottom of the Adaptive Card. You can select **Close**
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
+[need to add an image]
 
 * * *
+
+You can select **Close** or switch chat to dismiss the message.
 
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
