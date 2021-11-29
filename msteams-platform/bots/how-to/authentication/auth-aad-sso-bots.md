@@ -353,4 +353,4 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 ## Code sample
 |**Sample name** | **Description** |**.NET** | 
 |----------------|-----------------|--------------|
-|Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
