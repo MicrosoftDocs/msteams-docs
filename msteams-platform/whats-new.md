@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|11/29/2021|Interactive mode to share meeting stage.|[Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage), [Meeting apps API references](apps-in-teams-meetings/API-references.md), and [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021| Introduced step-by-step guide to generate meeting token. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
 | 11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Static and dynamic typeahead search for desktop and mobile users.| • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Type-ahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
