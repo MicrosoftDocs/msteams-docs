@@ -145,6 +145,16 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions.png)
 
 1. Select **Add permissions**.
+1. Now, go to **Authentication**.
+1. In **Platform configurations**, select **Add a platform**.
+1. Select **Web**.
+1. Enter the **Redirect URIs** for your app.
+
+   >[!NOTE]
+   > This URI should be a fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+
+    ![Redirect uris](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
+
 
 #### Update the Azure portal with the OAuth connection
 
