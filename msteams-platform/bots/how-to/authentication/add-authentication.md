@@ -1,10 +1,11 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: How to add OAuth authentication to a bot in Microsoft Teams.
+description: How to add OAuth authentication to a bot in Microsoft Teams using AAD. Learn how to create, deploy, and integrate authentication-enabled bots.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
+keywords: resource group bot channel registration azure emulator bot manifest 
 ---
 
 # Add authentication to your Teams bot
@@ -379,30 +380,14 @@ The following wizard is displayed:
 1. Select the **Add to a team** button.
 1. In the next window, select the team where you want to use the bot.
 1. Select the **Set up a bot** button.
-
-You can use either App studio or Developer Portal to test the bot.
-
-> [!NOTE]
->  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
-
-# [App Studio](#tab/AS)
-
-11. Select the three dots (●●●) in the left panel. Then select the App Studio icon.
-12. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
-13. Also, you should be able to see the bot listed as a contact in the chat list that you can use to exchange messages with the bot.
- 
-# [Developer Portal](#tab/DP)
-
-11. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
-12. Select **Apps** in the left panel. Then select **Import App**.
-13. Select **App features** and select **Bot**. You can see the icon for the bot you uploaded.
-14. Also, you can see the bot listed as a contact in the chat list that you can use to exchange messages with the bot.
-
----
+1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **App Studio** icon.
+1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
+1. Also, you should be able to see the bot listed as a contact in the chat list
+that you can use to exchange messages with the bot.
 
 ### Testing the bot locally in Teams
 
-Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
+Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 To set up ngrok in preparation for running your Microsoft Teams app locally, follow these steps:
 
 1. In a terminal window, go the directory where you have `ngrok.exe` installed. We suggest setting the *environment variable* path to point to it.

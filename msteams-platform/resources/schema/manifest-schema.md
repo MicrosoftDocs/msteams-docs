@@ -293,7 +293,7 @@ The following schema sample shows all extensibility options:
     "team": "bot", 
     "groupchat": "bot"
   },
- "configurableProperties": {
+ "configurableProperties": [
      "name",
      "shortDescription",
      "longDescription",
@@ -303,6 +303,9 @@ The following schema sample shows all extensibility options:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
+ ],
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -551,7 +554,7 @@ Each command item is an object with the following structure:
 |`parameters.name`|string|64 characters|✔|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|string|32 characters|✔|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.value`|string|512 characters||Initial value for the parameter.|
+|`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value is not supported|
 |`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: true` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔|Title of the choice.|
@@ -718,7 +721,7 @@ When a group install scope is selected, it will define the default capability wh
 
 **Optional** - array
 
-The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
+The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom or LOB apps.
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
@@ -739,7 +742,7 @@ You can define any of the following properties:
 
 **Optional**—boolean
  
-When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.
+When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
 ## publisherDocsUrl
 
@@ -748,3 +751,21 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 **Maximum size** - 128 characters
 
 The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockUntilAdminAction` property is set to **true**, the `publisherDocsUrl` provides HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.
+
+## subscriptionOffer
+
+**Optional** - object
+
+Specifies the SaaS offer associated with your app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
+
+## See also
+
+* [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
+* [Enable app customization](~/concepts/design/enable-app-customization.md)
+* [Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Developer Preview Manifest schema reference - Teams](~/resources/schema/manifest-schema-dev-preview.md)

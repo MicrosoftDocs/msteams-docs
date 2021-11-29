@@ -1,6 +1,6 @@
 ---
 title: Send and receive files through the bot
-description: Describes how to send and receive files through the bot
+description: Learn how to send and receive files through the bot, use Graph APIs for all Teams scopes, use Teams bot APIs using code examples and samples.
 keywords: teams bots files send receive
 ms.date: 05/20/2019
 ms.localizationpriority: medium

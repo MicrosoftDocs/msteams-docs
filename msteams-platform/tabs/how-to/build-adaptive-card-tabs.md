@@ -1,10 +1,11 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Build tabs using Adaptive Cards
+description: Learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
+keywords: adaptive card personal app authentication data flow
 ---
 
 # Build tabs with Adaptive Cards
@@ -31,7 +32,7 @@ The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
 Before you start using Adaptive Cards to build tabs, you must:
 
-* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
+* Be familiar with [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
 
 ## Changes to app manifest
@@ -149,7 +150,7 @@ The following code provides examples of `tab/fetch` request and response:
                 },
                 {
                     "card": adaptiveCard2,
-                }
+                },
                 {
                     "card": adaptiveCard3
                 }  
@@ -423,6 +424,11 @@ The following code shows a reissued request example:
 |----------------|-----------------|--------------|--------------|
 | Show Adaptive Cards in Teams tab | Microsoft Teams tab sample code, which demonstrates how to show Adaptive Cards in Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+
 ## See also
 
 * [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
@@ -430,8 +436,3 @@ The following code shows a reissued request example:
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)

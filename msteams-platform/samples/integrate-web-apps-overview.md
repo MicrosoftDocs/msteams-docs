@@ -5,6 +5,7 @@ description: An overview of integrating web applications and device capabilities
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
+keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
 ---
 
 # Integrate web apps
@@ -88,7 +89,7 @@ You can also integrate Microsoft 365 identity to build external applications tha
 
 * [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
 * [Determine your app's entry points](~/concepts/extensibility-points.md)
-* [Integrate web apps](~/samples/integrating-web-apps.md)
+* [Considerations for Teams integration](~/samples/integrating-web-apps.md)
 * [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Create virtual assistant](~/samples/virtual-assistant.md)

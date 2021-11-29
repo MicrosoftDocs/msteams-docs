@@ -13,8 +13,6 @@ A bot also referred to as a chatbot or conversational bot is an app that runs si
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
-
 Conversational bots allow users to interact with your web service through text, interactive cards, and task modules.
 
 ![Invoke bot using text](~/assets/images/invokebotwithtext.png)
@@ -43,11 +41,15 @@ With Microsoft Graph APIs for calls and online meetings, Microsoft Teams apps ca
 
 You can use the Teams bot APIs to get information for one or more members of a chat or team. For more information, see [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
-## See also
-
-[Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Bots and SDKs](~/bots/bot-features.md)
+
+## See also
+
+* [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Register calls and meetings bot for Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
+* [Add authentication to your Teams bot](~/bots/how-to/authentication/add-authentication.md)
+* [Bot activity handlers](~/bots/bot-basics.md)
+* [Conversation events in your Teams bot](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
