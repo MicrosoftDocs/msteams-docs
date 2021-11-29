@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add Capabilities to Your Teams apps
 
-You can start to create a Teams app with one of the Teams app capabilities. During app development, you can use Teams Toolkit to flexibly add more capabilities to your Teams app. The table describes the most popular Teams app capabilities:
+You can start to create a Teams app with one of the Teams app capabilities. During app development, you can use Teams Toolkit to flexibly add more capabilities to your Teams app. The following table describes the Teams app capabilities:
 
 |**Capability**|**Description**|
 |--------|-------------|
@@ -21,26 +21,31 @@ You can start to create a Teams app with one of the Teams app capabilities. Duri
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-* You should already have a Teams app project opened in VS code.
+
+> [!TIP]
+> You should already have a Teams app project opened in VS code.
 
 ## Add capabilities using Teams Toolkit
 
 > [!IMPORTANT]
 > You need to perform provision for each environment after you successfully add capabilities to your Teams app.
 
-1. Select `Teams Toolkit` from left panel.
+1. Select **Teams Toolkit** from left panel:
 
     ![Activate Teams Toolkit](./images/activate-teams-toolkit.png)
   
-1. Select `Add capabilities`.
+1. Select **Add capabilities**:
 
     ![Add capabilities](./images/add-capabilities.png)
 
-      You can also open the command palette and enter **Teams: Add Capabilities**. This is an equivalent to trigger from Tree View.
+      You can also open the command palette and enter **Teams: Add Capabilities**: 
+      
+      > [!NOTE]
+      > This is an equivalent to trigger from Tree View.
 
     ![Alternate add capabilities](./images/alternate-capabilities.png)
 
-1. From the pop-up, select the capabilities to include into your project.
+1. From the pop-up, select the capabilities to include into your project:
 
     ![Select capabilities](./images/select-capabilities.png)
 
@@ -50,7 +55,7 @@ The selected capabilities are succesfully added to your project. The Teams Toolk
 
 ## Add capabilities Using TeamsFx CLI in Command Window
 
-1. Change directory to your `project directory`.
+1. Change directory to your **project directory**.
 1. Execute the following command to add different capabilities to your project:
 
    |Capability and Scenario| Command|
@@ -61,7 +66,7 @@ The selected capabilities are succesfully added to your project. The Teams Toolk
 
 ## Supported capabilities matrix
 
-Apart from the capabilities your Teams app already have, you can choose to add different new capabilities to your Teams app.The following table gives various supported Teams app capabilities: 
+Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app.The following table gives various supported Teams app capabilities: 
 
 |Existing capabilities|Other capabilities can be added|
 |--------------------|--------------------|
@@ -75,9 +80,9 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 
 ## What happens when you add capabilities
 
-After adding bot and messaging extension, the following changes happens to your project:
+After adding bot and messaging extension, the following changes in your project are:
 
-- A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a hello world bot application template into your project.
+- A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a "hello world" bot application template into your project.
 - `launch.json` and `task.json` under `.vscode` folder are updated. This includes necessary scripts for Visual Studio Code is executed when you want to debug your application locally. 
 - `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated. This includes bot related information in the manifest file that represents your application in the Teams Platform. The change includes:
   - The ID of your bot.
@@ -88,7 +93,7 @@ After adding bot and messaging extension, the following changes happens to your 
 
 After added tab, the following changes happens to your project:
 
-- A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`. This includes a hello world tab application template into your project.
+- A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`. This includes a "hello world" tab application template into your project.
 - `launch.json` and `task.json` under `.vscode` folder are updated. This includes necessary scripts for Visual Studio Code is executed when you want to debug your application locally. 
 - `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated. This includes tab-related information in the manifest file that represents your application in the Teams Platform, the changes include:
   - The configurable and static tabs.

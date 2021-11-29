@@ -10,11 +10,11 @@ ms.date: 11/29/2021
 
 # Create new Teams project using Teams Toolkit
 
-You can either **create new project** or **create from samples**, to use the Teams Toolkit for Teams app building.
+You can either **Create new project** or **Create from samples**, to use the Teams Toolkit for Teams app building.
 
 ## Create new project
 
-Follow the steps below to create a new Teams app project using Teams Toolkit:
+The following steps guide to create a new Teams app project using Teams Toolkit:
 
 - [Create new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
 - [Create new Teams Bot app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
@@ -23,20 +23,19 @@ Follow the steps below to create a new Teams app project using Teams Toolkit:
 
 ## Create from samples
 
-If you don't want to start with hello world application, you can try to explore **sample gallery** and find something you are interested to start your own work with.
-
+If you don't want to start with "hello world" application, you can try to explore **sample gallery** and find something you are interested to start your own work with. The following steps help you to create apps from samples:
 
  1. Open **Teams Toolkit** from Visual Studio Code.
 
  1. Select **DEVELOPMENT** section in Tree View.
 
- 1. Select **View samples**.
+ 1. Select **View samples**. The sample gallery appears.
 
-Now, you will be redirected to sample gallery where you can explore samples and download them to play with as shown in following image:
+In the sample gallery, you can explore samples and download as shown in following image:
 
 ![Teams Toolkit view samples](./images/teams-toolkit-view-samples.png)
 
-Each sample can be downloaded and either run locally or remotely to preview in Teams web client. You can achieve it easily by following the instructions(README file) of each sample. And you can also browse the source code of samples by selecting "View on GitHub", this will redirect you to open-source repo for Samples.
+You can download and either run apps locally or remotely to preview in Teams web client. Follow the instructions of each sample or browse the source code of samples by selecting **View on GitHub**. Then,you can open source repo for Samples.
 
 ## See also
 

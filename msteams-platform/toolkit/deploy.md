@@ -12,9 +12,9 @@ ms.date: 11/29/2021
 
 Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
 
-* The Tab (frontend applications) are deployed to an Azure storage and configured for static web hosting or a SharePoint site.
+* The Tab, such as frontend applications are deployed to Azure storage and configured for static web hosting or a SharePoint site.
 * The backend APIs are deployed to Azure Functions.
-* The Bot/Messaging Extension is deployed to Azure App Service.
+* The Bot or Messaging Extension is deployed to Azure App Service.
 
 ## Prerequisite
 
@@ -22,17 +22,17 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 * You should already have a Teams app project opened in VS code.
 
 > [!NOTE]
-> * Before deploy project code to cloud, you must perform the [Provision cloud resources](provision.md) steps first.
+> Before you deploy project code to cloud, perform the [provision cloud resources](provision.md) steps first.
 
 
 ## Deploy Teams apps using Teams Toolkit
 
-In Get Started tutorials, there are step-by-step guides of how to deploy using Teams Toolkit, following the guidance below to deploy your Teams app.
+In Get started tutorials, there are step-by-step guides of how to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
 * [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## Source Code Location, Build Artifacts and Target Resources for deployment
+## Details on Teams app workloads
 
 | Teams App Workloads| Source Code | Build Artifacts| Target Resources |
 |-------------|----------|---------------|---------------|
@@ -42,7 +42,7 @@ In Get Started tutorials, there are step-by-step guides of how to deploy using T
 |Bots and messaging extensions </br> The backend workload | `yourProjectFolder/bot` | N/A | Azure App Service |
 
 > [!NOTE]
-> When you include Azure API management resource in your project and trigger deploy, your APIs in Azure Functions will be published to Azure API Management Service.
+> When you include Azure API management resource in your project and trigger deploy. You can publish your APIs in Azure Functions to Azure API Management Service.
 
 ## See also
 
