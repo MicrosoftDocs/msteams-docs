@@ -149,7 +149,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. Now, go to **Authentication**.
 1. In **Platform configurations**, select **Add a platform**.
 
-  ![platform](~/assets/images/authentication/SSO-bots-auth/platform-configuration.png)
+    ![platform](~/assets/images/authentication/SSO-bots-auth/platform-configuration.png)
 
 1. Select **Web**.
 
