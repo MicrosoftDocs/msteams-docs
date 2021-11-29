@@ -37,17 +37,15 @@ The first step for developing an app is to understand the user need and problem,
 
 - **Create and Build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use the Teams Toolkit or other SDKs, such as Csharp, Blazor, Node.js, and more to [get started](../get-started/get-started-overview.md#get-started) with creating project workspace and scaffolding. You can build a basic app with the tab, bot, and messaging extension features.
 
-- **Use Teams as a platform**: Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
+- **Design your app**: Use Teams UI Toolkit and UI Library to [design your app's layout](~/concepts/design/design-teams-app-process.md).
+
+- **Use Teams as a platform**: Teams, as a platform, helps you build a single- or multi-capability app. Your Teams app is backed by the integrated products and services that strengthen the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
-    You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that can help automate day to day tasks and processes.
+    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, or Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that help automate tasks and processes.
 
-    Together, these capabilities bring your app solution to life.
-
-- **Design your app**:     Use Teams UI Toolkit and UI Library to [design your app's layout](~/concepts/design/design-teams-app-process.md).
-
-- **Build app features**: Develop app capabilities using extensive features capabilities.
+    Together, these capabilities bring your app solution to life. You can develop extensive features capabilities:
 
     - [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
     - [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
@@ -63,7 +61,8 @@ The first step for developing an app is to understand the user need and problem,
 - Integrate your app with Teams and other apps, such as [Microsoft 365](../m365-apps/overview.md#extend-teams-apps-across-microsoft-365), [Microsoft Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md#proactive-installation-of-apps-using-graph-api-to-send-messages), and more.
 - Use [Developer Portal](build-and-test/teams-developer-portal.md#manage-your-apps-with-the-developer-portal-for-microsoft-teams) to configure, manage, and deploy your app.
 
-## Government Community Cloud (GCC)
+<details>
+<summary>Learn about Government Community Cloud (GCC)</summary>
 
 Government Community Cloud is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
 
@@ -87,6 +86,8 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 - For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
 - For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 - For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+
+</details>
 
 ## Next step
 
