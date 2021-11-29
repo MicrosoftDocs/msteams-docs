@@ -143,7 +143,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * OpenId
     * profile
 
-    ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions.png)
+    ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions2.png)
 
 1. Select **Add permissions**.
 1. Now, go to **Authentication**.
@@ -171,7 +171,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
 4. Go to **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings**.
 
-    ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting.png)
+    ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting2.png)
 
 6. The following steps will guide you to complete the **New Connection Setting** form:
 
