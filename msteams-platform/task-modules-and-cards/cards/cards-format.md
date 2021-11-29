@@ -417,13 +417,9 @@ Overflow menu is added to Adaptive Cards. You can select up to six primary butto
 
 Following are the two types of overflow menu:
 
-* Actions: In actions, primary set of buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
+* [Actions](https://adaptivecards.io/explorer/ActionSet.html): In actions, primary set of buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
 
-   ![actions card](~/assets/images/Cards/actions1.png)
-
-* Action set: Action set is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
-
-   ![action set card](~/assets/images/Cards/actionset4.png)
+* [Action set](https://adaptivecards.io/explorer/ActionSet.html): Action set is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
 ### How to enable the overflow menu
 
