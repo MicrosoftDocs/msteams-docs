@@ -93,7 +93,7 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Understand Teams app capabilities](capabilities-overview.md)
+> [Use cases and Teams features](understand-use-cases.md)
 
 ## See also
 
