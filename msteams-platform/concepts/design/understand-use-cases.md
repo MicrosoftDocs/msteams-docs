@@ -42,6 +42,7 @@ Your Teams apps have one or all of the following core capabilities:
 
 :::row:::
    :::column span="":::
+
 #### Personal apps
 
 A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.

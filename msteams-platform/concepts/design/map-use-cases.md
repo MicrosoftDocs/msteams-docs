@@ -21,9 +21,9 @@ For example:
 - Use a tab to display task modules, request device permissions, display <`iframe`> content, or using deep links.
 - Use messaging extension to send cards, unfurl links, or take action on messages.
 
-### Common use cases mapped To Teams
+### Common use cases mapped To Teams capabilities
 
-The next is step is to corelate use case to app capabilities that meet the user need.
+The next is step is to corelate use case to app capabilities to meet the user need.
 
 Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
 </br>
@@ -85,7 +85,7 @@ Connect with your users and resolve their queries
 
 - **Decide what goes in Teams**: Whether you're building a new app or bringing an existing solution into Teams, it's important to decide if you want the entire app to be in the Teams client. If you integrate only a portion of the app, focus on sharing, collaborating, initiating, and monitoring workflows.
 
-- **Plan the onboarding experience**: Knowing who your users are, helps you to create the right experience. Craft your onboarding experience with your key users in mind. What happens when a user first configures your tab in a channel? How you introduce your conversational bot when it is installed in a channel with a thousand people, is different when it is installed in a one-to-one chat.
+- **Plan the onboarding experience**: Craft your onboarding experience with your key users in mind. What happens when a user first configures your tab in a channel? How you introduce your conversational bot when it is installed in a channel with a thousand people, is different when it is installed in a one-to-one chat.
 
 - **Plan for the future**: Identify which new features the user will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
 

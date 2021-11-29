@@ -27,9 +27,9 @@ The first step for developing an app is to understand the user need and problem,
 
 - **Map your use cases**: [Map common use cases](../concepts/design/map-use-cases.md) to Teams features based on:
 
-    - Sharing and collaborating on items in an external system.
-    - Initiating workflows and sending notifications to users.
-    - Using social platforms, conversational bots, and combining multiple features.
+  - Sharing and collaborating on items in an external system.
+  - Initiating workflows and sending notifications to users.
+  - Using social platforms, conversational bots, and combining multiple features.
 
 - **Plan responsive tabs for Teams mobile**: [Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
 
@@ -47,12 +47,12 @@ The first step for developing an app is to understand the user need and problem,
 
     Together, these capabilities bring your app solution to life. You can develop extensive features capabilities:
 
-    - [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
-    - [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
-    - [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions)
-    - [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#webhooks-and-connectors)
-    - [Cards](../task-modules-and-cards/what-are-cards.md#cards)
-    - [Task modules](../task-modules-and-cards/what-are-task-modules.md#task-modules)
+  - [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
+  - [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
+  - [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions)
+  - [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#webhooks-and-connectors)
+  - [Cards](../task-modules-and-cards/what-are-cards.md#cards)
+  - [Task modules](../task-modules-and-cards/what-are-task-modules.md#task-modules)
 
 - **Integrate device capabilities**: The enhanced Teams platform allows partners to access and integrate the native [device capabilities](device-capabilities/device-capabilities-overview.md#device-capabilities), such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
 
