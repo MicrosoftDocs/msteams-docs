@@ -13,7 +13,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Adaptive Cards form completion
-        url: ~/task-modules-and-cards/what-are-cards.md
+        url: ~/bots/how-to/conversations/conversation-messages.md
       - text: Microsoft Teams store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)

@@ -108,33 +108,6 @@ After identifying the common properties for all cards, you can now work with Ada
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
-### Adaptive Cards form completion
-
-Form completion message is added to the Adaptive Cards. This includes the error message that appears while sending a response to the Bot. In addition to the error message, the system also shows the success message when you submit a response to the Bot.
-
-You can see two types of messages:
-
-1. **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
-
-    ![Error message](~/assets/images/Cards/error-message.png)
-
-2. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
-
-    ![Success message](~/assets/images/Cards/success-message.png)
-
-**Message response on mobile**
-
-The message appears at the bottom of the Adaptive Card. You can select **Close** or switch chat to dismiss the message.
-
-# [Mobile](#tab/mobile)
-
-![Mobile interface](~/assets/images/Cards/mobile-adaptive-cards-form.png)
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
-
-* * *
 ### Support for Adaptive Cards
 
 The following table provides the features that support Adaptive Cards:
@@ -975,3 +948,4 @@ The following cards are implemented by the Bot Framework, but are not supported 
 * [Format cards](~/task-modules-and-cards/cards/cards-format.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Adaptive Cards form completion](~/bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)
