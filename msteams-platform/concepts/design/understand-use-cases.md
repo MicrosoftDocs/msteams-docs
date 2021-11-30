@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Use cases and Teams features
 
-In the collaborative social framework of Teams, there is a wide variety of user needs that can be solved with a Teams app. For instance, an app that bridges gaps in achieving effective collaboration is a great fit.
+In the collaborative social framework of Teams, there is a wide variety of user needs that you can solve with a Teams app. For instance, an app that bridges gap in achieving effective collaboration is a great fit.
 
 The app user and their need are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
@@ -19,20 +19,20 @@ If you're going to meet user needs with your app, you first need to understand t
 
 - **Understand your user**: Understand who your user is and you can identify the right distribution model. It helps you to identify how users use Teams.
 
-- **Understand the problem**: Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. You can solve wide variety of problems, provided you understand which one you're trying to solve.
+- **Understand the problem**: Every app has a core problem or a need to solve. Before you start building an app, you need to identify the user need. You can solve wide variety of problems, provided you understand which one you're trying to solve.
 
 - **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 
 ## Microsoft Teams app features
 
-There are multiple ways to extend Teams, so every app is unique. A Teams app can manifest itself to a user in different ways. An Teams app features include:
+There are multiple ways to extend Teams so every app is unique. A Teams app can manifest itself to a user in different ways. Teams app features include:
 
 - [App capabilities](#app-capabilities)
 - [App scope](#app-scope)
 
-For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot. You can only one capability, such as a webhook, while others have more than one feature to give users various options.
+For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
-These capabilities can exist across different scopes. For example, your app can display data in a central shared location, that is, the tab and present that same information through a personal conversational interface, that is, the bot.
+These capabilities can exist across different scopes. For example, your app can display data in a central shared location, that is, the tab, and present that same information through a personal conversational interface, that is, the bot.
 
 ### App capabilities
 
