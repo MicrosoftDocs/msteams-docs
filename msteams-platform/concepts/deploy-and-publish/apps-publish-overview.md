@@ -13,11 +13,11 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 
 ## Configure default install options
 
-Configure manifest schema to provide default capability that will be added to the team, group chat, or meeting. You must ensure that you have provided the selected capability in your app definition.
+You configure default install options. For example, if your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
 
 ## Create your app package
 
-To distribute your Microsoft Teams app, it requires a valid app package zip file that contains an **app manifest** and **app icons**.
+To distribute your Microsoft Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
 ## Upload your app in Teams
 
