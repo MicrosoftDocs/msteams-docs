@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# TeamsFx SDK for TypeScript/JavaScript
+# TeamsFx SDK for TypeScript or JavaScript
 
 TeamsFx aims to reduce you the tasks of implementing identity and access to cloud resources down to single-line statements with "zero configuration".
 
@@ -37,7 +37,7 @@ For more information on Teams app project, see [README](https://github.com/Offic
 
 ### Install the `@microsoft/teamsfx` package
 
-Install the TeamsFx SDK for TypeScript/JavaScript with `npm`:
+Install the TeamsFx SDK for TypeScript or JavaScript with `npm`:
 
 ```bash
 npm install @microsoft/teamsfx
