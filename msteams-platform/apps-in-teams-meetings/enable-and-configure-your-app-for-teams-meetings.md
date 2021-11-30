@@ -124,13 +124,22 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 #### Shared meeting stage
 
-Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time.
+> [!NOTE]
+> Currently, this feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The required context is `meetingStage` in the app manifest. A prerequisite is to have the `meetingSidePanel` context and it enables **Share** in the `meetingSidePanel`.
+Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. You can share your apps to the collaborative meeting stage in the following ways:
 
-![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+* [Share entire app to stage](#share-entire-app-to-stage) using the share to stage button in Teams client.
+* [Share specific parts of the app to stage](#share-specific-parts-of-the-app-to-stage) using APIs in the Teams client SDK.
 
-To enable shared meeting stage, configure your app manifest as follows:
+##### Share entire app to stage
+
+Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
+
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
 ```json
 "configurableTabs": [
@@ -148,7 +157,16 @@ To enable shared meeting stage, configure your app manifest as follows:
   ]
 ```
 
-See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+
+##### Share specific parts of the app to stage
+
+Participants can share specific parts of the app to the collaborative meeting stage by using the share to stage APIs. The APIs are available within the Teams client SDK and are invoked from the app side panel.
+
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
 ### After a meeting
 
@@ -174,3 +192,5 @@ Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate 
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Shared meeting stage experience design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Add apps to meetings via Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

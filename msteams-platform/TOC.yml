@@ -91,7 +91,37 @@
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
-    href: toolkit/visual-studio-code-overview.md
+    items:
+    - name: Teams Toolkit fundamentals
+      href: toolkit/teams-toolkit-fundamentals.md
+    - name: Create new project
+      href: toolkit/create-new-project.md
+    - name: Prepare Accounts to build Teams app
+      href: toolkit/accounts.md
+    - name: Provision Cloud Resources
+      href: toolkit/provision.md
+    - name: Deploy Teams App to the cloud
+      href: toolkit/deploy.md
+    - name: Publish Teams apps using Teams Toolkit 
+      href: toolkit/publish.md
+    - name: Add Capabilities to Teams App
+      href: toolkit/add-capability.md
+    - name: Add Cloud Resources to Teams App
+      href: toolkit/add-resource.md
+    - name: Customize Teams App Manifest
+      href: toolkit/TeamsFx-manifest-customization.md
+    - name: Preview Teams App Manifest
+      href: toolkit/TeamsFx-manifest-preview.md
+    - name: Manage Multiple Environments
+      href: toolkit/TeamsFx-multi-env.md
+    - name: Collaborating with other developers on Teams Toolkit
+      href: toolkit/TeamsFx-collaboration.md
+    - name: Use CI/CD workflow
+      href: toolkit/use-CICD-template.md
+    - name: Teams Toolkit CLI
+      href: toolkit/TeamsFx-CLI.md
+    - name: TeamsFx SDK
+      href: toolkit/TeamsFx-SDK.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
