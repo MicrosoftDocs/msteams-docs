@@ -1,6 +1,6 @@
 - name: Microsoft Teams Developer documentation
-  tocHref: /microsoftteams/platform/mstdd-landing
-  topicHref: /microsoftteams/platform/mstdd-landing
+  tocHref: /microsoftteams/platform/
+  topicHref: /microsoftteams/platform/
   items:
   - name: Get started
     tocHref: /microsoftteams/platform/get-started/get-started-overview
