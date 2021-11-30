@@ -25,18 +25,18 @@ If you're going to meet user needs with your app, you first need to understand t
 
 ## Microsoft Teams app features
 
-There are multiple ways to extend Teams so every app is unique. A Teams app can manifest itself to a user in different ways. Teams app features include:
+There are multiple ways to extend Teams so every app is unique. Teams app features include:
 
 - [App capabilities](#app-capabilities)
 - [App scope](#app-scope)
 
 For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
-These capabilities can exist across different scopes. For example, your app can display data in a central shared location, that is, the tab, and present that same information through a personal conversational interface, that is, the bot.
+These features can exist across different scopes. For example, your app can display data in a central shared location, that is, the tab, and present that same information through a personal conversational interface, that is, the bot.
 
 ### App capabilities
 
-To be able to extend your app, you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page.
+Capabilities are the core functionalities that you can build in your app. They're also called entry or extension points because they enable integration and interaction.
 
 Your Teams apps have one or all of the following core capabilities:
 
