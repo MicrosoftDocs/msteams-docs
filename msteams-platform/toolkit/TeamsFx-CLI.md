@@ -26,7 +26,7 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 
 ## Supported Commands
 
-| `teamsFx` Commands  | Descriptions |
+| `teamsfx` Commands  | Descriptions |
 |:----------------  |:-------------|
 | `teamsfx new`       | Create a new Teams application. |
 | `teamsfx account`   | Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'.          |
@@ -56,14 +56,14 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 | Parameters  | Required | Descriptions |
 |:----------------  |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
-|`--interactive`| No | Select the options interactively. Options are `true` and `false`. The default value is `false`.|
-|`--capabilities`| No| Choose Teams application capabilities. Options(multiple) are: `tab`, `bot`, `messaging-extension` and `tab-spfx`. The default value is: `tab`.|
+|`--interactive`| No | Select the options interactively. Options are `true` and `false`. The default value is `true`.|
+|`--capabilities`| No| Choose Teams application capabilities, multiple Options are: `tab`, `bot`, `messaging-extension` and `tab-spfx`. The default value is: `tab`.|
 |`--programming-language`| No| Programming Language for the project. Options are `javascrip` or `typescript` and default value is: `javascript`.|
 |`--folder`| No | Project directory. A sub folder with the your app name will be created under this directory. The default value is: `./`.|
-|`--spfx-framework-type`| No| Applicable if `--host-type` is set to `spfx`. Frontend Framework. Options are `none` and `react`, the default value is: `none`.|
-|`--spfx-web part-name`| No | Applicable if `--host-type` is set to `spfx`. Web part Name. The default value is: "helloworld". |
-|`--spfx-web part-desp`| No | Applicable if `--host-type` is set to `spfx`. Web part Description. The default value is: "helloworld description". |
-|`--azure-resources`| No| Applicable if `--host-type` is set to `azure`. Add Azure resources to your project. Options(Multiple) are `sql` (Azure SQL Database) and `function` (Azure Functions). |
+|`--spfx-framework-type`| No| Applicable if `Tab(SPfx)` capability is selected. Frontend Framework. Options are `none` and `react`, the default value is: `none`.|
+|`--spfx-web part-name`| No | Applicable if `Tab(SPfx)` capability is selected. Web part Name. The default value is: "helloworld". |
+|`--spfx-web part-desp`| No | Applicable if `Tab(SPfx)` capability is selected. Web part Description. The default value is: "helloworld description". |
+|`--azure-resources`| No| Applicable if contains `tab` capability. Add Azure resources to your project. Options(Multiple) are `sql` (Azure SQL Database) and `function` (Azure Functions). |
 
 ### Scenarios for `teamsfx new`
 
@@ -72,19 +72,19 @@ Using interactive mode to create a Teams app is super intuitive, please try it b
 #### A tab app hosted on SPFx using React
 
 ```bash
-teamsfx new --interactive false --app-name newspfxapp --host-type spfx --spfx-framework-type react
+teamsfx new --interactive false --app-name newspfxapp --capabilities tab-spfx --spfx-framework-type react
 ```
 
-#### A Teams app contains multiple capabilities
+#### A Teams app in JavaScript contains tab, bot capabilities and Azure Functions
 
 ```bash
-teamsfx new --interactive false --app-name newtabbotapp --host-type azure --capabilities tab bot
+teamsfx new --interactive false --app-name newtabbotapp --capabilities tab bot --programming-language javascript --azure-resources function
 ```
 
 #### A Teams tab app with Azure Functions and Azure SQL
 
 ```bash
-teamsfx new --interactive false --app-name newapp --host-type azure --azure-resources sql function
+teamsfx new --interactive false app-name newapp --azure-resources sql function --programming-language typescript
 ```
 
 ## `teamsfx account`
@@ -124,7 +124,7 @@ Add new capabilities to the current application.
 |:----------------  |:-------------|
 | `teamsfx capability add tab`      | Add a tab. |
 | `teamsfx capability add bot`      | Add a bot. |
-| `teamsfx capability add message-extension`      | Add a Messaging Extension. |
+| `teamsfx capability add messaging-extension`      | Add a Messaging Extension. |
 
 > [!NOTE]
 > Once your project include a bot, messaging extension cannot be added any more and it applies vice versa. You can include both bot and messaging extensions in your project when creating a new Teams app project.
@@ -179,7 +179,7 @@ Provision the cloud resources in the current application.
 
 | Parameters  | Required | Descriptions |
 |:----------------  |:-------------|:-------------|
-|`--env`| Yes| Select or create an environment for the project. |
+|`--env`| Yes| Select an environment for the project. |
 |`--subscription`| No | Specify an Azure Subscription ID. |
 |`--resource-group`| No | Set the name of an existing resource group. |
 |`--sql-admin-name`| No | Applicable when there is SQL resource in the project. Admin name of SQL.|
@@ -231,7 +231,7 @@ Preview the current application from local or remote.
 |`--env`| No | Select an existing environment for the project when parameter `--remote` appended. |
 |`--folder`| No | Project root directory. The default value is `./`. |
 |`--browser`| No | The browser to open Teams web client. Options are `chrome`, `edge` and `default` (system default browser). The default value is `default`. |
-|`--browser-args`| No | Argument to pass to the browser, requires --browser, can be used multiple times (e.g. --browser-args="--guest") |
+|`--browser-arg`| No | Argument to pass to the browser, requires --browser, can be used multiple times (e.g. --browser-args="--guest") |
 |`--sharepoint-site`| No | SharePoint site URL, like `{your-tenant-name}.sharepoint.com` (only for SPFx project remote preview). |
 
 ### Scenarios for `teamsfx preview`
