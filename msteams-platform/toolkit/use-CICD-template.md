@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# CI/CD Support for Teams Application Developers
+# CI/CD support for Teams application developers
 
 TeamsFx helps to automate your development workflow while building a Teams application. This document provides tools and pre-cooked templates for you to get started while setting up CI/CD pipelines with the most popular development platforms including GitHub, Azure Devops and Jenkins.
 
@@ -20,7 +20,7 @@ TeamsFx helps to automate your development workflow while building a Teams appli
 |[jenkins-ci-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) and [jenkins-cd-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|Jenkins CI/CD templates for a Teams app.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation everywhere else outside of GitHub. |
 
-## CI/CD Workflow Templates in GitHub
+## CI/CD workflow templates in GitHub
 
 To include CI/CD workflows to automate Teams app development process in gitHub, follow the steps:
 
