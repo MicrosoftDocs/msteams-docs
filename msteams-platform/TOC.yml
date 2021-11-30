@@ -373,19 +373,19 @@
     - name: Enable SSO for messaging extensions
       href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Device capabilities
-    items:
-    - name: Overview
-      href: concepts/device-capabilities/device-capabilities-overview.md
-    - name: Request device permissions
-      href: concepts/device-capabilities/native-device-permissions.md
-    - name: Device permissions for the browser
-      href: concepts/device-capabilities/browser-device-permissions.md
-    - name: Integrate media capabilities
-      href: concepts/device-capabilities/mobile-camera-image-permissions.md
-    - name: Integrate QR or barcode scanner capability
-      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-    - name: Integrate location capabilities
-      href: concepts/device-capabilities/location-capability.md 
+  items:
+  - name: Overview
+    href: concepts/device-capabilities/device-capabilities-overview.md
+  - name: Request device permissions
+    href: concepts/device-capabilities/native-device-permissions.md
+  - name: Device permissions for the browser
+    href: concepts/device-capabilities/browser-device-permissions.md
+  - name: Integrate media capabilities
+    href: concepts/device-capabilities/mobile-camera-image-permissions.md
+  - name: Integrate QR or barcode scanner capability
+    href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+  - name: Integrate location capabilities
+    href: concepts/device-capabilities/location-capability.md 
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
