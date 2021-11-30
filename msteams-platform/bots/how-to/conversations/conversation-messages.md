@@ -388,6 +388,8 @@ The message appears at the bottom of the Adaptive Card.
 
 # [Desktop](#tab/desktop)
 
+The message appears at the bottom of the Adaptive Card.
+
 [need to add an image]
 
 * * *

@@ -13,7 +13,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Adaptive Cards form completion
-        url: ~/bots/how-to/conversations/conversation-messages.md
+        url: ~/bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion
       - text: Interactive mode to share meeting stage
         url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
       - text: Microsoft Teams store validation guidelines
