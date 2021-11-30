@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Customize Teams App Manifest in Teams Toolkit
 
-There are two manifest template files under `templates/appPackage` folder.
+Teams Toolkit consists of two manifest template files under `templates/appPackage` folder:
 
 - `manifest.local.template.json` - local debug teams app
 - `manifest.remote.template.json` - shared in all environments
@@ -18,7 +18,9 @@ There are two manifest template files under `templates/appPackage` folder.
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-* You should already have a Teams app project opened in VS code.
+
+> [!TIP]
+> You should already have a Teams app project opened in VS code.
 
 During provision, Teams Toolkit will load manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`. Then it creates a teams app in [Dev Portal](https://dev.teams.microsoft.com/apps) with this manifest.
 
@@ -40,7 +42,7 @@ During local debug, Teams Toolkit will load manifest from `manifest.local.templa
         }
         ```
 
-    Besides each config placeholder in `manifest.remote.template.json`, there is a `Go to config file` button. You can navigate to configuration file by clicking it.
+    Besides each config placeholder in `manifest.remote.template.json`, there is a `Go to config file` button. You can navigate to configuration file by selecting it as shown in the image:
 
     ![go to config file](./images/gotoconfigfile.png)
 
@@ -49,9 +51,9 @@ During local debug, Teams Toolkit will load manifest from `manifest.local.templa
 `{{localSettings.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `localSettings.json`. You should not modify the values in localSettings.json.
 
  > [!NOTE]
-> Customization of local manifest is not suggested.
+ > Customization of local manifest is not suggested.
 
-## See Also
+## See also
 
 > [!div class="nextstepaction"]
 > [Preview Teams App Manifest in Teams Toolkit](TeamsFx-manifest-preview.md)

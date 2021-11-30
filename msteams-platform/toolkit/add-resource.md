@@ -8,34 +8,39 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add Cloud Resources to Your Teams App
+# Add cloud resources to your Teams app
 
-TeamsFx help to provision cloud resources for your application hosting. You can also optionally add more cloud resources that fits your development needs.
+TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
 
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-* You should already have a Teams app project.
+
+> [!TIP]
+> You should already have a Teams app project.
 
 ## Add cloud resources using Teams Toolkit
 
 > [!IMPORTANT]
 > You need to provision each environment after you add a resource.
 
-1. Open `Visual Studio Code`.
-1. Select `Teams Toolkit` from left panel.
+1. Open **Visual Studio Code**.
+1. Select **Teams Toolkit** from left panel:
 
     ![Activate Teams Toolkit](./images/activate-teams-toolkit.png)
 
-1. In the Teams Toolkit side bar panel, select `Add cloud resources`.
+1. In the Teams Toolkit side bar panel, select **Add cloud resources**:
 
     ![Add cloud resources](./images/add-cloud-resources.png)
 
-    You can also open the command palette and enter **Teams: Add cloud resources**. Follow the same process as it’s triggered from Tree View.
+    You can also open the command palette and enter **Teams: Add cloud resources**:
+    
+    > [!NOTE]
+    > Follow the same process as it’s triggered from Tree View:
 
     ![Alternate cloud resources](./images/alternate-cloud-resources.png)
 
-1. From the pop-up, select any cloud resources you want to add to your Teams app project.
+1. From the pop-up, select any cloud resources you want to add to your Teams app project:
 
      ![Select cloud resources](./images/select-cloud-resources.png)
 
@@ -43,7 +48,7 @@ TeamsFx help to provision cloud resources for your application hosting. You can 
 
 ## Add cloud resources using TeamsFx CLI in Command Window
 
-1. Change directory to your `project directory`.
+1. Change directory to your **project directory**.
 1. Execute command to add different capabilities.
 
 The following table describes cloud resources and the corresponding commands to add them:
@@ -83,7 +88,7 @@ In the meanwhile, there're some additional changes for each kind of resource:
 - You can only add one Function App / Azure SQL Database / APIM Service to your project.
 - You cannot add resources if your project does not contain tab app.
 
-## See Also
+## See also
 
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)
