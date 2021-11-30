@@ -62,7 +62,7 @@ Here's a checklist of important points to consider when you plan your Teams app.
 </details>
 <br>
 <details>
-<summary>Onboarding experience</summary>
+<summary>Plan onboarding experience</summary>
 
 | # | Consider... |
 | --- | --- |
