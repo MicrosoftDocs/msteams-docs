@@ -1,5 +1,5 @@
 ---
-title: CI/CD Support for Teams Application Developers
+title: CI or CD Support for Teams Application Developers
 author: MuyangAmigo
 description:  CICD templates
 ms.author: ruhe
@@ -8,31 +8,31 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# CI/CD support for Teams application developers
+# CI or CD support for Teams application developers
 
-TeamsFx helps to automate your development workflow while building a Teams application. This document provides tools and pre-cooked templates for you to get started while setting up CI/CD pipelines with the most popular development platforms including GitHub, Azure Devops and Jenkins.
+TeamsFx helps to automate your development workflow while building Teams application. The document provides tools and pre-cooked templates for you to get started while setting up CI or CD pipelines with the most popular development platforms including GitHub, Azure Devops and Jenkins.
 
 
 |Tools and Templates|Description|
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|A ready-to-use GitHub Action that integrates with TeamsFx CLI.|
-|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) and [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub CI/CD templates for a Teams app. |
-|[jenkins-ci-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) and [jenkins-cd-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|Jenkins CI/CD templates for a Teams app.|
+|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) and [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub CI or CD templates for a Teams app. |
+|[jenkins-ci-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) and [jenkins-cd-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|Jenkins CI or CD templates for a Teams app.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation everywhere else outside of GitHub. |
 
-## CI/CD workflow templates in GitHub
+## CI or CD workflow templates in GitHub
 
-To include CI/CD workflows to automate Teams app development process in gitHub, follow the steps:
+**To include CI or CD workflows to automate Teams app development process in GitHub**:
 
 1. Create a folder under `.github/workflows`
 1. Copy the template files (either one or both of them):
-    1. [github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) for CI workflow.
-    1. [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml) for CD workflow.
+    * [github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) for CI workflow.
+    * [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml) for CD workflow.
 1. Customize these workflows to fit your scenarios.
 
 ### Customize CI workflow
 
-Following are some of the changes you can make to adapt the workflow for your project:
+You can make the following changes to adapt the workflow for your project:
 
 1. Change how the CI flow is triggered. We default to when a pull request is created targeting the `dev` branch.
 1. Use a npm build script, or customize the way you build the project in the automation code.
@@ -40,10 +40,10 @@ Following are some of the changes you can make to adapt the workflow for your pr
 
 ### Customize CD workflow
 
-The following are the steps to customize CD workflow:
+The following steps to customize CD workflow:
 
-1. How the CD flow is triggered. By default it happens when new commits are made to the `main` branch.
-1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure/Microsoft 365 login credentials. The table below lists all the secrets you need to create on GitHub, and for detailed usage, please refer to the GitHub Actions [README.md](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. By default, the CD workflow is triggered, when new commits are made to the `main` branch.
+1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure or Microsoft 365 login credentials. The following table lists all the secrets you need to create on GitHub, and for detailed usage, please refer to the GitHub Actions [README.md](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
 
@@ -69,7 +69,7 @@ Steps to create environment variables in GitHub:
 |Microsoft 365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your Microsoft 365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 > Note: Please refer to the [Configure Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
-## Set up CI/CD Pipelines with Azure DevOps
+## Set up CI or CD Pipelines with Azure DevOps
 
 You can set up automated pipelines in Azure DevOps, and make a reference on the scripts. Follow the steps given below to get started:
 
@@ -182,11 +182,11 @@ Steps to create Pipeline variables in Azure DevOps:
 > !Note
 > Please refer to the [Configure Microsoft 365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
-## CI/CD Pipeline Templates in Jenkins
+## CI or CD Pipeline Templates in Jenkins
 
 To add these templates to your repository, you will need your versions of [jenkins-ci-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) and  [jenkins-cd-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) to be located in your repository by branch.
 
-Also, you need to create CI/CD pipelines in Jenkins which point to the specific **Jenkinsfile** correspondingly.
+Also, you need to create CI or CD pipelines in Jenkins which point to the specific **Jenkinsfile** correspondingly.
 
 Follow the steps to check how to connect Jenkins with different SCM platforms:
 
@@ -234,7 +234,7 @@ Follow [using-credentials](https://www.jenkins.io/doc/book/using/using-credentia
 
 ## Get started guide for other platforms
 
-You can follow the listed pre-defined example bash scripts to build and customize CI/CD pipelines on other platforms:
+You can follow the listed pre-defined example bash scripts to build and customize CI or CD pipelines on other platforms:
 
 * [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
 * [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
@@ -243,7 +243,7 @@ The scripts are pretty straightforward and most parts of them are cross-platform
 The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the [documentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) to customize the scripts.
 
 > [!Note]
-> To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI/CD.
+> To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI or CD.
 
 Ensure to set Azure and M365 credentials in your environment variables safely. For example if you are using GitHub as your source code repository, you can use the [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to securely store your environment variables.
 
