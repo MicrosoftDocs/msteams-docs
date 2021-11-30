@@ -13,14 +13,14 @@ You can test your Teams apps running in Microsoft Office and Outlook by updating
 
 With this preview, you can:
 
-- Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Microsoft Office Home (office.com).
+- Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Office on the web (office.com).
 - Extend existing Teams [search-based messaging extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
 
 For feedback and issues, continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
 
 ## Teams personal tabs in Office and Outlook
 
-With this preview, you can extend a Teams personal tab application to run in both Outlook on Windows desktop and the web, and also Microsoft Office Home (office.com).
+With this preview, you can extend a Teams personal tab application to run in both Outlook on Windows desktop and the web, and also Office on the web.
 
 After sideloading to Teams, your personal tab appears as one of your installed apps in Outlook and Office.
 

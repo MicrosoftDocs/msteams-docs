@@ -9,7 +9,7 @@ ms.topic: tutorial
 > [!NOTE]
 > *Extending a Teams personal tab across Microsoft 365* is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
 
-Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Microsoft Office Home (office.com).
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Office on the web (office.com).
 
 Updating your personal app to run in Outlook and Office Home involves these steps:
 
@@ -163,7 +163,7 @@ You can pin the app for quick access, or you can find your app in the ellipses (
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
-When you upgrade your Teams personal tab and sideload it in Teams, it will also run in Outlook desktop and web clients and Microsoft Office Home (office.com). Here's how to preview it from those Microsoft 365 experiences.
+When you upgrade your Teams personal tab and sideload it in Teams, it will also run in Outlook desktop and web clients and Office on the web (office.com). Here's how to preview it from those Microsoft 365 experiences.
 
 ### Outlook
 
@@ -179,9 +179,9 @@ To view your app in Outlook on the web, visit https://outlook.office.com and sig
 
 Click on your app icon to launch and preview your app running in Outlook on the web.
 
-### Microsoft Office Home
+### Office on the web
 
-To preview your app running in Microsoft Office Home, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+To preview your app running in Office on the web, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 
 Click on your app icon to launch your app in Office Home.
 
