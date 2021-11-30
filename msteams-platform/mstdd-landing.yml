@@ -12,7 +12,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Interactive mode to share meeting stage
+      - text: Interactive mode to share meeting stage (Preview)
         url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
       - text: Microsoft Teams store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
