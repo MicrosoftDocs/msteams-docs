@@ -1,25 +1,27 @@
 ---
-title: Map your use cases to Teams app capabilities
+title: Map your use cases to Teams app features and capabilities
 author: surbhigupta
-description: Identify how your app's use cases can work within the Teams experience.
+description: Identify how your app's use cases can work within the Teams experience, app features and capabilities, map common use cases with capabilities.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 ---
-# Map your use cases to Teams app capabilities
+# Map your use cases to Teams app features
 
-After you've identified the user and the problem your app will solve, it is time to understand and map your use cases to Teams app capabilities. Define the scope of the app and the capability best suited for your app.
+After you've identified the user problem your app will solve, it's time to understand and map your use cases to Teams app capabilities. Define the scope of the app and the capability best suited for your app.
 
-## Use Cases and Teams capabilities
+## Teams features
 
 The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
+
+Let's look at how Teams capabilities enable different features for your app.
 
 :::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
 
 For example:
 
-- Use a tab to display task modules, request device permissions, display <`iframe`> content, or using deep links.
-- Use messaging extension to send cards, unfurl links, or take action on messages.
+- Use the tab capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
+- Use the messaging extension capability to send cards, unfurl links, or take action on messages.
 
 ### Common use cases mapped To Teams capabilities
 
