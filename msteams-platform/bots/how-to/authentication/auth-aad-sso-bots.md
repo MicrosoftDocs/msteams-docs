@@ -66,9 +66,10 @@ The steps to register your app through the AAD portal are similar to the [tab SS
    >
    > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
-  * Enter **Name** for your app.
-  * Select **Supported account types**, such as single tenant or multitenant.
-  * Select **Register**.
+    * Enter **Name** for your app.
+    * Select **Supported account types**, such as single tenant or multitenant.
+    * Select **Register**.
+
     ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
 
 4. Go to overview page.
@@ -142,9 +143,25 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * OpenId
     * profile
 
-    ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions.png)
+    ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions2.png)
 
 1. Select **Add permissions**.
+1. Now, go to **Authentication**.
+1. In **Platform configurations**, select **Add a platform**.
+
+    ![platform](~/assets/images/authentication/SSO-bots-auth/platform-configuration.png)
+
+1. Select **Web**.
+
+    ![Configure platform](~/assets/images/authentication/SSO-bots-auth/configure-platform.png)
+
+1. Enter the **Redirect URIs** for your app.
+
+   >[!NOTE]
+   > This URI should be a fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+
+    ![Redirect uris](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
+
 
 #### Update the Azure portal with the OAuth connection
 
@@ -154,14 +171,18 @@ The following steps will guide you to update the Azure portal with the OAuth con
 4. Go to **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings**.
 
-    ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting.png)
+    ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting2.png)
 
 6. The following steps will guide you to complete the **New Connection Setting** form:
 
    >[!NOTE]
    > **Implicit grant** may be required in the AAD application.
 
-    * Enter **Name** in the **New Connection Setting** page. This name is referred to inside the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+    * Enter **Name** in the **New Connection Setting** page.
+
+    >[!NOTE]
+    > The **Name** is referred to the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
+
     * From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     * Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
     * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
@@ -353,4 +374,4 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 ## Code sample
 |**Sample name** | **Description** |**.NET** | 
 |----------------|-----------------|--------------|
-|Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
