@@ -26,7 +26,7 @@ Let's break it down to app building lifecycle:
 
 Understanding the user and their problem are the first indicators of how a Teams app can help. Build your use around the problem, determine how Teams can solve it, and draw a solution.
 
-- **Understand your use case and Teams App Features**: Recognize user issues and identify the solutions to some common problems the users face. Build your Teams app by finding the right combination of Teams features to meet your user's needs. Understand use cases to know how an end-user interacts with your app.
+- **Understand your use case and Teams App Features**: Understand who your user's requirement and you can identify the right features.
 
 - **Map your use cases**: Map common use cases to Teams features based on:
 

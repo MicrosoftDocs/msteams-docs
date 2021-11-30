@@ -17,9 +17,12 @@ The app user and their need are the basic guidelines that determine all app choi
 
 If you're going to meet user needs with your app, you first need to understand them.
 
-- **Understand your user**: Understand who your user is and you can identify the right distribution model. It helps you to identify how users use Teams.
+- **Understand your user**: It helps you to identify how users use Teams.
+  - Recognize user issues and identify the solutions to some common problems the users face.
+  - Build your Teams app by finding the right combination of Teams features to meet your user's needs.
+  - Understand use cases to know how an end-user interacts with your app.
 
-- **Understand the problem**: Every app has a core problem or a need to solve. Before you start building an app, you need to identify the user need. You can solve wide variety of problems, provided you understand which one you're trying to solve.
+- **Understand the problem**: Every app has a core problem or a need to solve. Before you start building an app, identify the user need. You can solve wide variety of problems, provided you understand which one you're trying to solve.
 
 - **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 
