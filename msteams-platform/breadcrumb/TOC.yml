@@ -1,11 +1,7 @@
-- name: Microsoft Teams
-  tocHref: /microsoftteams/
-  topicHref: /microsoftteams/
+- name: Microsoft Teams Developer documentation
+  tocHref: /microsoftteams/platform/mstdd-landing
+  topicHref: /microsoftteams/platform/mstdd-landing
   items:
-  - name: Microsoft Teams Developer documentation
-    tocHref: /microsoftteams/platform/mstdd-landing
-    topicHref: /microsoftteams/platform/mstdd-landing
-    items:
-    - name: Get started
-      tocHref: /microsoftteams/platform/get-started/get-started-overview
-      topicHref: /microsoftteams/platform/get-started/get-started-overview
+  - name: Get started
+    tocHref: /microsoftteams/platform/get-started/get-started-overview
+    topicHref: /microsoftteams/platform/get-started/get-started-overview
