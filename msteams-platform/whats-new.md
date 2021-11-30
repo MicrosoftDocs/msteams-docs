@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
-|11/25/2021| Introduced Adaptive Cards form completion. | Build bots > Bot conversations > Messages in bot conversations > [Adaptive Cards form completion](bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)|
+|11/30/2021| Introduced Adaptive Cards form completion. | Build bots > Bot conversations > Messages in bot conversations > [Adaptive Cards form completion](bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)|
 |11/29/2021|Interactive mode to share meeting stage.|[Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage), [Meeting apps API references](apps-in-teams-meetings/API-references.md), and [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021| Introduced step-by-step guide to generate meeting token. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
 | 11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
@@ -201,7 +201,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|11/25/2021| Introduced Adaptive Cards form completion. | Build bots > Bot conversations > Messages in bot conversations > [Adaptive Cards form completion](bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)|
+|11/30/2021| Introduced Adaptive Cards form completion. | Build bots > Bot conversations > Messages in bot conversations > [Adaptive Cards form completion](bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)|
 | 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 |11/29/2021|Interactive mode to share meeting stage.|[Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage), [Meeting apps API references](apps-in-teams-meetings/API-references.md), and [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
 |11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |

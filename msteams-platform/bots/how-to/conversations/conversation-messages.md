@@ -370,23 +370,19 @@ The following code shows an example of sending a simple Adaptive Card:
 > [!NOTE]
 > Adaptive Cards form completion is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Form completion message is added to the Adaptive Cards. While sending a response to the bot, a form completion message appears. The message can be of two types, error or success.
-
-Following are the two types of messages:
+Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
 
 * **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
 
     ![Error message](~/assets/images/Cards/error-message.png)
 
-* **Success**: When a response is successfully sent to the bot, **Your response was sent to the app** message appears.
+* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
     ![Success message](~/assets/images/Cards/success-message.png)
 
-**Message response on mobile and desktop**
+# [Mobile](#tab/mobile)
 
 The message appears at the bottom of the Adaptive Card.
-
-# [Mobile](#tab/mobile)
 
 ![Mobile interface](~/assets/images/Cards/mobile-adaptive-cards-form.png)
 
