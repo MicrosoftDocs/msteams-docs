@@ -186,7 +186,7 @@ As the Teams app manifest template is shared across all environments, we can upd
 
 ### Scenario 4: customize Azure resources for different environment
 
-You can customize Azure resources for each environment, for example specifying Azure Function name, by editing the environment corresponding `.fx/configs/azure.parameters.{env}.json` file. Click [here](provision.md#example-specifying-the-name-of-function-app-instance) to see detail steps.
+You can customize Azure resources for each environment, for example specifying Azure Function name, by editing the environment corresponding `.fx/configs/azure.parameters.{env}.json` file.
 
 For more information on BICEP template and parameter files, see [provision cloud resources](provision.md)
 
