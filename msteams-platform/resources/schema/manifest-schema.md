@@ -555,7 +555,7 @@ Each command item is an object with the following structure:
 |`parameters.name`|string|64 characters|✔|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|string|32 characters|✔|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.value`|string|512 characters||Initial value for the parameter.|
+|`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value is not supported|
 |`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: true` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔|Title of the choice.|
