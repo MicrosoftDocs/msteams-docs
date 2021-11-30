@@ -10,12 +10,12 @@ ms.date: 11/29/2021
 
 # TeamsFx Command Line Interface
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide delightful keyboard-centric experience when building Teams applications. It also enables CI/CD scenario where CLI can be easily integrated in scripts for automation.
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims you to provide keyboard-centric experience when building Teams applications. It also enables CI/CD scenario where CLI can be easily integrated in scripts for automation.
 
-[Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) |
-[Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
+* [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) 
+* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
-## Getting Started
+## Get Started
 
 Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
 
@@ -65,9 +65,9 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 |`--spfx-web part-desp`| No | Applicable if `--host-type` is set to `spfx`. Web part Description. The default value is: "helloworld description". |
 |`--azure-resources`| No| Applicable if `--host-type` is set to `azure`. Add Azure resources to your project. Options(Multiple) are `sql` (Azure SQL Database) and `function` (Azure Functions). |
 
-### Examples for `teamsfx new`
+### Scenarios for `teamsfx new`
 
-Using interactive mode to create a Teams app is super intuitive, please try it by starting with `teamsfx new`. Here are some examples for you to play with if you enjoy controlling all the parameters.
+Using interactive mode to create a Teams app is super intuitive, please try it by starting with `teamsfx new`. The following are the few scenerios on controlling all the parameters:
 
 #### A tab app hosted on SPFx using React
 
@@ -106,11 +106,11 @@ Manage the environments.
 | `teamsfx env add <new_env_name> --env <existing_env_name>` | Add a new environment by copying from the specified environment. |
 | `teamsfx env list` | List all environments. |
 
-### Examples for `teamsfx env`
+### Scenarios for `teamsfx env`
 
 #### Create a new environment
 
-Add a new environment by copying from the existing dev environment.
+Add a new environment by copying from the existing dev environment:
 
 ```bash
 teamsfx env add staging --env dev
@@ -127,7 +127,7 @@ Add new capabilities to the current application.
 | `teamsfx capability add message-extension`      | Add a Messaging Extension. |
 
 > [!NOTE]
->Once your project include a bot, messaging extension cannot be added any more and it applies vice versa. You can include both bot and messaging extensions in your project when creating a new Teams app project.
+> Once your project include a bot, messaging extension cannot be added any more and it applies vice versa. You can include both bot and messaging extensions in your project when creating a new Teams app project.
 
 ## `teamsfx resource`
 
@@ -234,11 +234,11 @@ Preview the current application from local or remote.
 |`--browser-args`| No | Argument to pass to the browser, requires --browser, can be used multiple times (e.g. --browser-args="--guest") |
 |`--sharepoint-site`| No | SharePoint site URL, like `{your-tenant-name}.sharepoint.com` (only for SPFx project remote preview). |
 
-### Examples for `teamsfx preview`
+### Scenarios for `teamsfx preview`
 
 #### Local Preview
 
-Local Preview Dependencies:
+Dependencies:
 
 - Node.js
 - .NET SDK
@@ -256,8 +256,8 @@ teamsfx preview --remote
 teamsfx preview --remote --browser edge
 ```
 
-> Note
-> * The logs of the background services like React will be saved in `~/.fx/cli-log/local-preview/`.
+> [!Note]
+> The logs of the background services like React will be saved in `~/.fx/cli-log/local-preview/`.
 
 ## `teamsfx config`
 
@@ -276,7 +276,7 @@ Manage the configuration data either in user scope or project scope.
 |`--folder`| No | Project directory. This is used when get/set project configuration. The default value is: `./`. |
 |`--global`| No | Cope of configuration. If this is true, the scope is limited to user scope instead of project scope. The default value is: `false`. Currently supported global configurations including: `telemetry`, `validate-dotnet-sdk`, `validate-func-core-tools`, `validate-node`. |
 
-### Examples for `teamsfx config`
+### Scenerios for `teamsfx config`
 
 Secrets in `.userdata` file are encrypted, `teamsfx config` could help you view / update these values.
 
@@ -310,7 +310,7 @@ teamsfx config get -g
 
 #### View all the configuration in project
 
-The secret will automatically decrypted.
+The secret will automatically decrypted:
 
 ```bash
 teamsfx config get --env dev
@@ -345,13 +345,13 @@ TeamsFx CLI provides `teamsFx permission` Commands for collaboration scenario.
 |`--env`| Yes | Provide env name. |
 |`--list-all-collaborators` | No | With this flag, Teams Toolkit CLI will print out all collaborators for this project. |
 
-### Examples for `teamsfx permission`
+### Scenarios for `teamsfx permission`
 
 Here are some examples, for better handling permission for `TeamsFx` projects.
 
 #### Grant Permission
 
-Project creator and collaborators can use `teamsfx permission grant` command to add a new collaborator to the project.
+Project creator and collaborators can use `teamsfx permission grant` command to add a new collaborator to the project:
 
 ```bash
 teamsfx permission grant --env dev --email user-email@user-tenant.com
@@ -361,7 +361,7 @@ After successfully granted permission, project creator and collaborators can sha
 
 #### Show Permission Status
 
-Project creator and collaborators can use `teamsfx permission status` command to view his Microsoft 365 account permission for specific env.
+Project creator and collaborators can use `teamsfx permission status` command to view his Microsoft 365 account permission for specific env:
 
 ```bash
 teamsfx permission status --env dev
@@ -369,15 +369,15 @@ teamsfx permission status --env dev
 
 #### List All Collaborators
 
-Project creator and collaborators can use `teamsfx permission status` command to view all collaborators for specific env.
+Project creator and collaborators can use `teamsfx permission status` command to view all collaborators for specific env:
 
 ```bash
 teamsfx permission status --env dev --list-all-collaborators
 ```
 
-#### E2E Collaboration Work Flow in CLI
+#### E2E Collaboration work flow in CLI
 
-As a Project Creator:
+As a project creator:
 
 - Create a new TeamsFx Tab project (You can also select bot), and the hosting type select Azure.
 
@@ -405,7 +405,7 @@ As a Project Creator:
   ```
 
   ![list-all-collaborators](./images/permission-status-all.png)
-- Add another account as collaborator. Note that the added account must under the same tenant.
+- Add another account as collaborator. Note that the added account must under the same tenant:
 
   ```bash
   teamsfx permission grant --env dev --email user-email@user-tenant.com
@@ -417,7 +417,7 @@ As a Project Creator:
 As a Project Collaborator:
 
 - Clone the project from GitHub.
-- Login Microsoft 365 account. Note that the Microsoft 365 account should be the same as added above.
+- Login Microsoft 365 account. Note that the Microsoft 365 account should be the same as added above:
 
   ```bash
   teamsfx account login Microsoft 365
@@ -429,7 +429,7 @@ As a Project Collaborator:
   teamsfx account login azure
   ```
 
-- Check permission status. You should find yourself have the owner permission of the project.
+- Check permission status. You should find yourself have the owner permission of the project:
 
   ```bash
   teamsfx permission status --env dev

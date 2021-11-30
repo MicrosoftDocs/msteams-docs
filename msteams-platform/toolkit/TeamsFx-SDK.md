@@ -10,28 +10,30 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK for TypeScript/JavaScript
 
-TeamsFx aims to reduce the developer tasks of implementing identity and access to cloud resources down to single-line statements with "zero configuration".
+TeamsFx aims to reduce you the tasks of implementing identity and access to cloud resources down to single-line statements with "zero configuration".
 
 Use the library to:
 
 - Access core functionalities in client and server environment in a similar way.
 - Write user authentication code in a simplified way.
 
-[Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) |
-[Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) |
-[API reference documentation](https://aka.ms/teamsfx-sdk-help) |
-[Samples](https://github.com/OfficeDev/TeamsFx-Samples)
+   * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
+   * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
+   * [API reference documentation](https://aka.ms/teamsfx-sdk-help) 
+   * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
-## Getting started
+## Get started
 
 TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI.
-Please check the [README](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md) to see how to create a Teams App project.
+For more information on Teams app project, see [README](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### Prerequisites
 
 - Node.js version `10.x.x` or higher.
-- A project created by TeamsFx toolkit VS Code extension or CLI tool.
 - If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version `>= 4.9.3`. ([Issue - all of the BOTBUILDER packages should be the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+
+> [!TIP]
+> A project created by TeamsFx toolkit VS Code extension or CLI tool.
 
 ### Install the `@microsoft/teamsfx` package
 
@@ -43,11 +45,9 @@ npm install @microsoft/teamsfx
 
 ### Create and authenticate a `MicrosoftGraphClient`
 
-To create a graph client object to access the Microsoft Graph API, you will need the credential to do authentication. The SDK provides several credential classes to choose that meets various requirements.
+To create a graph client object to access the Microsoft Graph API, you will need the credential to do authentication. The SDK provides several credential classes to choose that meets various requirements.You need to load configuration before using any credentials.
 
-Please note that you need to load configuration before using any credentials.
-
-- In browser environment, you need to explicitly pass in the config parameters. The scaffolded React project has provided environment variables to use.
+- In browser environment, you need to explicitly pass in the configuration parameters. The scaffolded React project has provided environment variables to use.
 
 ```ts
 loadConfiguration({
@@ -65,11 +65,12 @@ loadConfiguration({
 loadConfiguration();
 ```
 
-#### Using Teams App User Credential
+#### Using Teams app user credential
 
 Use the snippet below:
 
-**Note:** You can only use this credential class in browser application like Teams Tab App.
+> [Note]
+> You can only use this credential class in browser application like Teams Tab App.
 
 ```ts
 loadConfiguration({
@@ -84,7 +85,7 @@ const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // In
 const profile = await graphClient.api("/me").get();
 ```
 
-#### Using Microsoft 365 Tenant Credential
+#### Using Microsoft 365 tenant credential
 
 It doesn't require the interaction with Teams App user. You can call Microsoft Graph as application.
 Use the snippet below:
@@ -96,9 +97,9 @@ const graphClient = createMicrosoftGraphClient(credential);
 const profile = await graphClient.api("/users/{object_id_of_another_people}").get();
 ```
 
-## Core Concepts & Code Structure
+## Core concepts and code structure
 
-### Credential
+### Credentials
 
 There are 3 credential classes located under [credential](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) folder to help simplifying authentication. 
 
@@ -109,17 +110,17 @@ The credential classes represent different identity under certain scenarios.
 `M365TenantCredential` represent Microsoft 365 tenant identity. It is usually used when user is not involved like time-triggered automation job.
 `OnBehalfOfUserCredential` uses on-behalf-of flow. It needs an access token and you can get a new token for different scope. It's designed to be used in Azure Function or Bot scenarios.
 
-### Bot
+### Bots
 
 Bot related classes are stored under [bot](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot) folder.
 
 `TeamsBotSsoPrompt` has a good integration with Bot framework. It simplifies the authentication process when you develop bot application.
 
-### Helper Function
+### Helper functions
 
 TeamsFx SDK provides helper functions to ease the configuration for third-party libraries. They are located under [core](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) folder.
 
-### Error Handling
+### Error handling
 
 API will throw `ErrorWithCode` if error happens. Each `ErrorWithCode` contains error code and error message.
 
@@ -156,9 +157,9 @@ try {
 }
 ```
 
-## Examples
+## Scenarios
 
-The following sections provide several code snippets covering some of the most common scenarios, including:
+The following sections provide several code snippets covering some of the most common scenarios:
 
 - [Use Graph API in tab app](#use-graph-api-in-tab-app)
 - [Call Azure Function in tab app](#call-azure-function-in-tab-app)
@@ -319,6 +320,6 @@ setLogFunction((level: LogLevel, message: string) => {
 });
 ```
 
-## Next step
+## See also
 
-Take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
+[Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples)
