@@ -37,12 +37,15 @@ If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365
 You can sign up for the developer program by using one of the following account types:
 
 - **Microsoft account** 
+
 You can create for personal use - Provides access to all consumer-oriented Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Signing up for an Outlook.com mailbox automatically creates a Microsoft account. After a Microsoft account is created, it can be used to access consumer-related Microsoft cloud services or Azure.
 
 - **Work account**
- Admin can issue for business use - Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization. For more information, see [manage your Azure AD directory][/azure/active-directory/active-directory-administer](/azure/active-directory/fundamentals/active-directory-whatis?branch).
+
+ Admin can issue for business use - Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization.
 
 - **Visual Studio ID**
+
 You can create for your Visual Studio Professional or Enterprise subscriptions - We recommend that you use this option to join the developer program from within the Visual Studio Gallery to get the full benefits as a Visual Studio subscriber.
 
 ## Teams customer app uploading (sideloading permission) check
@@ -54,7 +57,7 @@ One of the ways to check if you have a Teams account, verify if you can sideload
 
 1. In the Teams client, select **Apps** in left bar.
 2. Select **Manage your apps**.
-3. Check whether you can see the option **Upload a custom app**.
+3. Check whether you can see the option **Upload a custom app** as shown in the image:
 
 :::image type="content" source="./images/sideload-check.png" alt-text="Diagram that shows to upload a custom app":::
 

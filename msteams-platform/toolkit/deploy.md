@@ -19,7 +19,9 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-* You should already have a Teams app project opened in VS code.
+
+> [!TIP]
+> You should already have a Teams app project opened in VS code.
 
 > [!NOTE]
 > Before you deploy project code to cloud, perform the [provision cloud resources](provision.md) steps first.

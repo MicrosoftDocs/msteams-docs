@@ -39,26 +39,26 @@ To preview manifest with real content, Teams Toolkit will generate preview manif
 
 ### Local debug Teams app
 
-To preview manifest file of local teams app, you need to press **F5** to run local debug first. This step will generate default local settings for you, then the app package and preview manifest will be built under `build/appPackage` folder.
+To preview manifest file of local teams app, you need to press **F5** to run local debug first. This step will generate default local settings for you, then the app package and preview manifest will be built under **build/appPackage** folder.
 
 The other ways are:
 
-- Select `Preview` in the codelens of `manifest.local.template.json` file
-- Select `Preview manifest file` at the menu bar of `manifest.local.template.json` file
-- Select `Zip Teams metadata package` in Treeview and select `local`
+- Select **Preview** in the codelens of **manifest.local.template.json** file
+- Select **Preview manifest file** at the menu bar of **manifest.local.template.json** file
+- Select **Zip Teams metadata package** in Treeview and select **Local**
 The preview local appears as shown in the following image:
 
 ![preview local](./images/preview.png)
 
 ### Remote environment
 
-To preview manifest file of remote teams app, you need to select `Provision in the cloud` in DEVELOPMENT panel of Teams Toolkit extension Treeview, or trigger `Teams: Provision in the cloud` from command palette first. This step will generate configurations for remote teams app, then the app package and preview manifest will be built under `build/appPackage` folder.
+To preview manifest file of remote teams app, you need to select **Provision in the cloud** in DEVELOPMENT panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette first. This step will generate configurations for remote teams app, then the app package and preview manifest will be built under **build/appPackage** folder.
 
 The other ways are:
 
-- Select `Preview` in the codelens of `manifest.remote.template.json` file.
-- Select `Preview manifest file` at the menu bar of `manifest.remote.template.json` file.
-- Select `Zip Teams metadata package` in Treeview and select your environment.
+- Select **Preview** in the codelens of **manifest.remote.template.json** file.
+- Select **Preview manifest file** at the menu bar of **manifest.remote.template.json** file.
+- Select **Zip Teams metadata package** in Treeview and select your environment.
 
 ![preview remote](./images/preview-remote.png)
 
@@ -70,9 +70,9 @@ The other ways are:
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
-- Select `Update to Teams platform` at the top left corner of `manifest.{env}.json`
-- Select `Teams: Update manifest to Teams platform` at the menu bar of `manifest.{env}.json`
-- Trigger `Teams: update manifest to Teams platform` from command palette
+- Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
+- Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
+- Trigger **Teams: update manifest to Teams platform** from command palette
 
 ![update](./images/updatetoteamsplatform.png)
 ![update-cmd](./images/update_manifest_cmp.png)
@@ -83,9 +83,9 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 If the manifest file is outdated due to configuration file change or template change, user will be asked to confirm their action:
 ![manifest-outdated](./images/manifest_outdated_dialog.png)
 
-- `Preview only`: local manifest file will be overwritten according to current configuration
-- `Preview and update`: local manifest file will be overwritten according to current configuration and also updated to Teams platform at the same time
-- `Cancel`: do nothing
+- **Preview only**: local manifest file will be overwritten according to current configuration
+- **Preview and update**: local manifest file will be overwritten according to current configuration and also updated to Teams platform at the same time
+- **Cancel**: do nothing
 
 > [!NOTE]
 > The changes will be updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.

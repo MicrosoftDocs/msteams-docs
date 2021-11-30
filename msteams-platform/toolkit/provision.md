@@ -21,7 +21,9 @@ TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that al
     * Azure with valid subscription
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-* You should already have a Teams app project opened in VS code.
+
+> [!TIP]
+> You should already have a Teams app project opened in VS code.
 
 ## Provision using Teams Toolkit
 
@@ -191,7 +193,7 @@ To ensure the TeamsFx tooling functions properly, please ensure your customized 
 * Keep the name of auto-generated parameters as well as its property names unchanged. The auto-generated parameters may be used when you add more resources / capabilities to your project.
 * Keep the output of auto-generated ARM template unchanged. You can add additional outputs to ARM template. The output will be persisted to `.fx/states/state.{env}.json` and used in other features like deploy, validate manifest file, etc.
 
-### Customization scenarios and examples
+### Customization scenarios
 
 These are some common scenarios you can customize the provision behavior.
 
@@ -341,12 +343,13 @@ Before provision, the tool will ask you if you want to create a new resource gro
 
 You can follow [Provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch) to provision SharePoint-based app.
 
+> [!NOTE]
+> Currently, the building Teams App with SharePoint Framework using Teams Toolkit doesn't have direct integration with Azure, contents in this doc does not apply to SPFx based apps.
+
+
 <br>
 
 </details>
-
-> [!NOTE]
-> Currently, the building Teams App with SharePoint Framework using Teams Toolkit doesn't have direct integration with Azure, contents in this doc does not apply to SPFx based apps.
 
 ## See also
 

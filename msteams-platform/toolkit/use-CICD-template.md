@@ -54,9 +54,9 @@ The following are the steps to customize CD workflow:
 
 Steps to create environment variables in GitHub:
 
-1. In the project `Settings` page, navigate to `Environments` section and click `New environment`.
-1. Enter a name for your environment. The default environment name provided in the template is `test_environment`. Click `Configure environment` to proceed.
-1. In the next page, click `Add Secret` to add secrets for each of the items listed in the table below.
+1. In the project **Settings** page, navigate to **Environments** section and select **New environment**.
+1. Enter a name for your environment. The default environment name provided in the template is `test_environment`. Select **Configure environment** to proceed.
+1. In the next page, Select **Add Secret** to add secrets for each of the items listed in the table below.
 
 |Name|Description|
 |---|---|
@@ -151,23 +151,23 @@ steps:
 
 The potential changes you can make for the script or workflow definition:
 
-1. How the CD flow is triggered. By default it happens when new commits are made to the `main` branch.
+1. How the CD flow is triggered. By default it happens when new commits are made to the **main** branch.
 1. Change the way of how to install node and npm.
-1. Change the environment name, by default its `staging`.
+1. Change the environment name, by default its **staging**.
 1. Ensure you have a npm build script, or customize the way you build in the automation code.
 1. Ensure you have a npm test script which returns zero for success, and/or change the test commands.
 
 > [!Note]
 > The provision step is not included in the CD template as it's usually executed only once. You can either execute provision Within Teams Toolkit, TeamsFx CLI, or using a seperated workflow. Please remember to commit after provisioning (results of provisioning will be deposited inside the `.fx` folder) and upload `.fx/states/{YOUR_ENV_NAME}.userdata` into Azure DevOps [secure files](/azure/devops/pipelines/library/secure-files) for future usage.
 
-### Environment arviables for Azure DevOps
+### Environment variables for Azure DevOps
 
 Steps to create Pipeline variables in Azure DevOps:
 
-1. In the Pipeline editing page, click `Variables` on top right and click `New variable`.
+1. In the Pipeline editing page, select **Variables** on top right and select **New variable**.
 1. Enter Name/Value pair for your variable.
-1. Toggle the checkbox of `Keep this value secret` if necessary.
-1. Select `OK` to create the variable.
+1. Toggle the checkbox of **Keep this value secret** if necessary.
+1. Select **OK** to create the variable.
 
 |Name|Description|
 |---|---|
@@ -186,9 +186,9 @@ Steps to create Pipeline variables in Azure DevOps:
 
 To add these templates to your repository, you will need your versions of [jenkins-ci-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) and  [jenkins-cd-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) to be located in your repository by branch.
 
-Also, you need to create CI/CD pipelines in Jenkins which point to the specific `Jenkinsfile` correspondingly.
+Also, you need to create CI/CD pipelines in Jenkins which point to the specific **Jenkinsfile** correspondingly.
 
-To check how to connect Jenkins with different SCM platforms:
+Follow the steps to check how to connect Jenkins with different SCM platforms:
 
 1. [Jenkins with GitHub](https://www.jenkins.io/solutions/github/)
 2. [Jenkins with Azure DevOps](https://www.dragonspears.com/blog/ci-cd-with-jenkins-and-azure-devops-services)
@@ -199,8 +199,8 @@ To check how to connect Jenkins with different SCM platforms:
 
 There are some potential changes you can make to adapt your project:
 
-1. Rename the template file to `Jenkinsfile` since it's a common practice, and put it under the target branch, for example, the `dev` branch.
-1. Change how the CI flow is triggered. We default to use the triggers of `pollSCM` when a new change is pushed into the `dev` branch.
+1. Rename the template file to **Jenkinsfile** since it's a common practice, and put it under the target branch, for example, the **dev** branch.
+1. Change how the CI flow is triggered. We default to use the triggers of **pollSCM** when a new change is pushed into the **dev** branch.
 1. Ensure you have a npm build script, or customize the way you build in the automation code.
 1. Ensure you have a npm test script which returns zero for success, and/or change the test commands.
 
@@ -208,8 +208,8 @@ There are some potential changes you can make to adapt your project:
 
 Change the following steps to customize CD pipeline:
 
-1. Rename the template file to `Jenkinsfile` since it's a common practice, and put it under the target branch, for example, the `main` branch.
-1. How the CD flow is triggered. We default to use the triggers of `pollSCM` when a new change is pushed into the `main` branch.
+1. Rename the template file to **Jenkinsfile** since it's a common practice, and put it under the target branch, for example, the **main** branch.
+1. How the CD flow is triggered. We default to use the triggers of **pollSCM** when a new change is pushed into the **main** branch.
 1. Create Jenkins [pipeline credentials](https://www.jenkins.io/doc/book/using/using-credentials/) to hold Azure/Microsoft 365 login credentials. The table below lists all the credentials you need to create on Jenkins.
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.

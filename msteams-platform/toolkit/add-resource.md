@@ -83,7 +83,7 @@ In the meanwhile, there're some additional changes for each kind of resource:
 |Azure Functions|An Azure Functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Include a hello world http trigger template into your project.</br></br> To include necessary scripts for Visual Studio Code executed when you want to debug your application locally.|
 |Azure API Management|An Open API Specification file added into a subfolder with path `yourProjectFolder/openapi`|This is the API specification file defines your API after publishing.|
 
-## Limitation
+## Limitations
 
 - You can only add one Function App / Azure SQL Database / APIM Service to your project.
 - You cannot add resources if your project does not contain tab app.

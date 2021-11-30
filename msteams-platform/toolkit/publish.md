@@ -32,7 +32,7 @@ It also lets you build an app for internal use only and share it with your team 
 
 * Build your app to *.zip app package file
 
-    You can build the app package by clicking `Zip Teams metadata package` from DEPLOYMENT panel in Treeview of Teams Toolkit. You may need to run `Provision in the cloud` at first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip` as shown in the following image:
+    You can build the app package by selecting `Zip Teams metadata package` from DEPLOYMENT panel in Treeview of Teams Toolkit. You may need to run `Provision in the cloud` at first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip` as shown in the following image:
 
  ![upload custom app](./images/sideload-check.png)
 
@@ -59,14 +59,14 @@ In the table, a newly submitted app automatically shows a Publishing status of S
 
  ![Admin approval for submitted teams app](./images/admin-approval-for-teams-app.png)
 
-Click the app name to go to the app details page. On the About tab, you can view details about the app, including description, status, submitter, and app ID:
+Select the app name to go to the app details page. On the About tab, you can view details about the app, including description, status, submitter, and app ID:
 
  ![Details about admin approved submitted teams app](./images/about-submitted-app.png)
 
 When you're ready to make the app available to users, follow the steps to publish the app:
 
 1. In the left navigation of the Microsoft Teams admin center, go to Teams apps > Manage apps.
-2. Click the app name to go to the app details page, and then in the Publishing status box, select Publish.
+2. Select the app name to go to the app details page, and then in the Publishing status box, select Publish.
 After you publish the app, the Publishing status changes to Published and the Status automatically changes to Allowed.
 
 ## Publish to Microsoft Store
