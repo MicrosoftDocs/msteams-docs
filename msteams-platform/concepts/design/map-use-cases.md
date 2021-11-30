@@ -1,14 +1,14 @@
 ---
 title: Map your use cases to Teams app features and capabilities
 author: surbhigupta
-description: Identify how your app's use cases can work within the Teams experience, app features and capabilities, map common use cases with capabilities.
+description: Identify how your app's use cases can work within the Teams experience, app features and capabilities, and map common use cases with capabilities.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 ---
 # Map your use cases to Teams app features
 
-After you've identified the user problem your app will solve, it's time to understand and map your use cases to Teams app capabilities. Define the scope of the app and the capability best suited for your app.
+Once you've determined the user requirements from your Teams app, you can draw the framework of app capabilities that meet the need. Define the scope of the app and the capability best suited for your app.
 
 ## Teams features
 
@@ -25,7 +25,7 @@ For example:
 
 ### Common use cases mapped To Teams capabilities
 
-The next is step is to corelate use case to app capabilities to meet the user need.
+The next step is to correlate use case to app capabilities to meet the user need.
 
 Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
 </br>
@@ -38,7 +38,7 @@ Apps to interact with your data
 | **If you want to...** | **Try ...** |
 | --- | --- |
 | Search external systems and share the results as an interactive card. | Messaging extensions with search commands |
-| Collect information to insert into a data store or perform advanced searches. | Messaging extensions with action commands |
+| Collect information to insert into a data store or run advanced searches. | Messaging extensions with action commands |
 | Create embedded web experiences to view, work with and share data. | Tabs |
 | Push data and send data out of the Teams client. | Connectors and webhooks|
 | Interactive modal forms from wherever you need them to collect or display information. | Task modules |
@@ -48,12 +48,12 @@ Apps to interact with your data
 <details>
 <summary>Initiate workflows and processes</summary>
 
-A quick way to initiate a process or workflow in an external system.
+A quick way to start a process or workflow in an external system.
 
 | **If you want to...** | **Try ...** |
 | --- | --- |
 | Trigger from messages, allowing your users to quickly send the contents of a message to your web services. | Messaging extensions action commands |
-| Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow. | Task modules |
+| Open messages from a tab, a bot, or a messaging extension to collect information before initiating a workflow. | Task modules |
 | Interact with your users through text and rich cards. | Conversational bots |
 | A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
 |
