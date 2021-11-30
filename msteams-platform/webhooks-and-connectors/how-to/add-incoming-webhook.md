@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 # Create Incoming Webhook
 
-Incoming Webhook allows any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single topic. Teams use cards within the following capabilities: test-pr-sarathkumar
+Incoming Webhook allows any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single topic. Teams use cards within the following capabilities:
 
 * Bots
 * Messaging extensions
