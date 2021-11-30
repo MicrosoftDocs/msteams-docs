@@ -12,6 +12,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Overflow menu on Adaptive Cards
+        url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Interactive mode to share meeting stage
         url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
       - text: Microsoft Teams store validation guidelines
