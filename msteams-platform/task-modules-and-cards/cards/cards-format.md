@@ -387,7 +387,7 @@ In an Adaptive Card, you can use the `msteams` property to add the ability to di
             "msTeams": {
               "allowExpand": true
             }
-          },
+          }
      ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.2"
