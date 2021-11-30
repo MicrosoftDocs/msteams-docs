@@ -23,6 +23,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Teams Toolkit for Visual Studio Code (Preview)
+        url: ~/toolkit/teams-toolkit-fundamentals.md
       - text: Interactive mode to share meeting stage (Preview)
         url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
       - text: Microsoft Teams store validation guidelines
