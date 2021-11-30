@@ -25,7 +25,7 @@ If you have an existing tenant, verify that sideloading is enabled by signing in
 
 :::image type="content" source="images/teams-sideloading-enabled.png" alt-text="Sideloading is enabled for your tenant if you see the option to 'Upload a custom app' from the Teams 'Apps' panel":::
 
-## Enroll your developer tenant for Office 365 targeted releases
+## Enroll your developer tenant for Office 365 Targeted releases
 
 > [!IMPORTANT]
 > Refer to the latest in [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/) to check if outlook.com and office.com support for Teams apps is available to your test tenant.
@@ -46,7 +46,7 @@ For more information on Office 365 release options, see [Set up the Standard or 
 ``
 
 > [!NOTE]
-> If you're opted in to targeted releases but you don't see these options, it's likely that preview feature support is still in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/).
+> If you're opted in to Targeted releases but you don't see these options, it's likely that preview feature support is still in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/).
 
 ## Install Beta Office apps in your test environment
 
@@ -74,7 +74,8 @@ You can verify your tenant supports Teams personal tabs running on Outlook for W
 
 Similarly, you can verify test tenant support for messaging extensions in Outlook for Windows desktop by checking for the **More apps** option in the Outlook compose message ribbon.
 
-If you're opted in to targeted releases but you don't see these ellipses options, it's likely that preview feature support is still in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/).
+> [!NOTE]
+> If you're opted in to Beta Channel releases but you don't see these ellipses options, it's likely that preview feature support is still in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/).
 
 ## Switch to the Developer Preview version of Teams
 
