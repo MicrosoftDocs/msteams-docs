@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add Capabilities to Your Teams apps
+# Add capabilities to your Teams apps
 
 You can start to create a Teams app with one of the Teams app capabilities. During app development, you can use Teams Toolkit to flexibly add more capabilities to your Teams app. The following table describes the Teams app capabilities:
 
@@ -91,7 +91,7 @@ After adding bot and messaging extension, the following changes in your project 
 - Files under `templates/azure/teamsfx` will be updated, and templates/azure/provision/xxx.bicep 	file will be regenerated.
 - File under `.fx/config` are regenerated. This ensures your project set with right configurations for newly added capability.
 
-After added tab, the following changes happens to your project:
+After added tab, the following changes in your project are:
 
 - A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`. This includes a "hello world" tab application template into your project.
 - `launch.json` and `task.json` under `.vscode` folder are updated. This includes necessary scripts for Visual Studio Code is executed when you want to debug your application locally. 
@@ -101,7 +101,7 @@ After added tab, the following changes happens to your project:
 - Files under `templates/azure/teamsfx` will be updated, and templates/azure/provision/xxx.bicep 	file will be regenerated.
 - File under `.fx/config` are regenerated. This ensures your project set with right configurations for newly added capability.
 
-## Limitations to add capabilities
+## Limitations
 
 Currently, there are limitations with TeamsFx when adding more capabilities. The limitations are as follows:
 
@@ -113,7 +113,7 @@ Currently, there are limitations with TeamsFx when adding more capabilities. The
 > [!NOTE]
 > If you want to include both bot and messaging extension capabilities, then select them at the same time. You can add them either when you create a new project or a tab application.
 
-## See Also
+## See also
 
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)

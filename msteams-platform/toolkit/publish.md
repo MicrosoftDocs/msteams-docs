@@ -16,7 +16,9 @@ After creating the app, you can distribute your app to different scope, such as 
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-* You should already have a Teams app project.
+
+> [!TIP]
+> You should already have a Teams app project.
 
 ## Publish to individual scope (sideloading permission)
 
@@ -30,13 +32,13 @@ It also lets you build an app for internal use only and share it with your team 
 
 * Build your app to *.zip app package file
 
-    You can build the app package by clicking `Zip Teams metadata package` from DEPLOYMENT panel in Treeview of Teams Toolkit. You may need to run `Provision in the cloud` at first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip`
+    You can build the app package by clicking `Zip Teams metadata package` from DEPLOYMENT panel in Treeview of Teams Toolkit. You may need to run `Provision in the cloud` at first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip` as shown in the following image:
 
  ![upload custom app](./images/sideload-check.png)
 
-## Publish to organization scope
+## Publish to your organization 
 
-When the app is ready for use in production, the developer can submit the app using the Teams App Submission API, called from Graph API, an integrated development environment (IDE) such as Visual Studio Code installed with Teams toolkit. You can either click `Publish to Teams` from DEPLOYMENT panel in TreeView of Teams Toolkit, or trigger `Teams: Publish to Teams` from command palette. Then select `Install for your organization`.
+When the app is ready for use in production, the developer can submit the app using the Teams App Submission API, called from Graph API, an integrated development environment (IDE) such as Visual Studio Code installed with Teams toolkit. You can either select **Publish to Teams** from DEPLOYMENT panel in TreeView of Teams Toolkit, or trigger **Teams: Publish to Teams** from command palette. Then select **Install for your organization** as shown in the following image:
 
 ![Install for your organization](./images/installforyourorganization.png)
 
@@ -53,15 +55,15 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
 ## Admin approval for submitted Teams apps
 
 The admin of your Teams tenant can then go to the Manage apps page in the Microsoft Teams admin center (in the left navigation, go to Teams apps > Manage apps), gives you a view into all Teams apps for your organization. The Pending approval widget at the top of the page lets you know when a custom app is submitted for approval.
-In the table, a newly submitted app automatically shows a Publishing status of Submitted and Status of Blocked. You can sort the Publishing status column in descending order to quickly find the app.
+In the table, a newly submitted app automatically shows a Publishing status of Submitted and Status of Blocked. You can sort the Publishing status column in descending order to quickly find the app:
 
  ![Admin approval for submitted teams app](./images/admin-approval-for-teams-app.png)
 
-Click the app name to go to the app details page. On the About tab, you can view details about the app, including description, status, submitter, and app ID.
+Click the app name to go to the app details page. On the About tab, you can view details about the app, including description, status, submitter, and app ID:
 
  ![Details about admin approved submitted teams app](./images/about-submitted-app.png)
 
-When you're ready to make the app available to users, publish the app.
+When you're ready to make the app available to users, follow the steps to publish the app:
 
 1. In the left navigation of the Microsoft Teams admin center, go to Teams apps > Manage apps.
 2. Click the app name to go to the app details page, and then in the Publishing status box, select Publish.
@@ -77,14 +79,13 @@ When you feel your app is production ready, you can begin the process of getting
 >[!Tip]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
 
+![Pre submission steps](./images/pre-submission-steps.png)
+
 * Review the Teams store validation guidelines to make sure your app meets Teams app and store standards.
 * Create a Partner Center developer account.
 * Prepare your store submission, which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.
 * Submit your app through Partner Center.
 * Work with Microsoft directly to resolve the issues and resubmit your app (link to resolve the issues and resubmit your app).
-
- ![Pre submission steps](./images/pre-submission-steps.png)
-
 
 ## See also
 
