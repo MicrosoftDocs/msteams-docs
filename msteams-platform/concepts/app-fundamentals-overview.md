@@ -12,9 +12,9 @@ keywords: entry points extensibility use cases device capability
 
 Building an awesome Teams app is all about finding the right combination to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. Teams as a platform offers you toolkits, libraries, and apps at every stage of app development.
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
-Let's break it down to app building lifecycle:
+Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
 
 :::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app" border="true":::
 

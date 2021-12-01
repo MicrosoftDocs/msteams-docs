@@ -35,7 +35,10 @@ There are multiple ways to extend Teams so every app is unique. Teams app featur
 
 For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
-These features can exist across different scopes. For example, your app can display data in a central shared location, that is, the tab, and present that same information through a personal conversational interface, that is, the bot.
+These features can exist across different scopes. For example:
+
+- Your app can display data in a central shared location, that is, a tab.
+- It can also present that same information through a personal conversational interface, that is, the bot.
 
 ### App capabilities
 

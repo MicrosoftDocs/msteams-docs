@@ -8,7 +8,7 @@ ms.author: anclear
 ---
 # Map your use cases to Teams app features
 
-Once you've determined the user requirements from your Teams app, you can draw the framework of app capabilities that meet the need. Define the scope of the app and the capability best suited for your app.
+A well-defined use case will help you to chart out the framework of features that you want in your Teams app. After you've determined the user requirements for your app, you can define the scope of the app and Teams capability best suited for your app.
 
 ## Teams features
 
