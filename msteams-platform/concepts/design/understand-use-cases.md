@@ -28,17 +28,10 @@ If you're going to meet user needs with your app, you first need to understand t
 
 ## Microsoft Teams app features
 
-There are multiple ways to extend Teams so every app is unique. Teams app features include:
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
 - [App capabilities](#app-capabilities)
 - [App scope](#app-scope)
-
-For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
-
-These features can exist across different scopes. For example:
-
-- Your app can display data in a central shared location, that is, a tab.
-- It can also present that same information through a personal conversational interface, that is, the bot.
 
 ### App capabilities
 
@@ -171,10 +164,17 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
 ### App scope
 
-You can choose app scope from the following:
+Your app can have one of the following scopes:
 
 - **Personal app experience**: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
 - **Shared app experience**: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
+
+App capabilities can exist across different scopes. For example:
+
+- Your app can display data in a central shared location, that is, a tab.
+- It can also present that same information through a personal conversational interface, that is, the bot.
+
+A user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
 ## Next step
 
