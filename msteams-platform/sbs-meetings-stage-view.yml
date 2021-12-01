@@ -81,30 +81,6 @@ items:
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
-- title: Set up app settings
-  durationInMinutes: 1
-  content: |
-    1. Navigate to **appsettings.json** in cloned repository.
-
-        ![App settings location](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)
-
-    1. Open **appsettings.json** in **Visual Studio Code** and update the following information:  
-
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used.
-
-             > [!NOTE]
-             > The sample works only in the current tenant.
-
-         * Set `"AzureAd"."ApplicationId"` to your bot's **Microsoft App ID**.
-         * Set `"ContentBubbleUrl"` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
-
-             > [!NOTE]
-             > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
-
-        ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
-
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
@@ -114,9 +90,9 @@ items:
     
     1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
 
-         * <<App-ID>> with some unique GUID
-         * <<BASE-URL>> with your application's base url, e.g. https://1234.ngrok.io
-         * <<VALID DOMAIN>> with your app domain e.g. *.ngrok.io
+         * '<<App-ID>>' with some unique GUID
+         * '<<BASE-URL>>' with your application's base url, e.g. https://1234.ngrok.io
+         * '<<VALID DOMAIN>>' with your app domain e.g. *.ngrok.io
          
            ![Manifest image1](place holder for image)
    
