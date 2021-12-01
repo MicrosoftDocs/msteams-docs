@@ -25,7 +25,7 @@ Collate and map requirements to Teams features:
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 |
 
-**App solution**: A Teams *personal chat bot* app that uses checks and *sends forecast notification* to *registered users* before their travel date checks all requirements.
+**App solution**: A Teams *personal chat bot* app, which checks and *sends forecast notification* to *registered users* before their travel date, checks all requirements.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-2.png" alt-text="Image showing user story" border="true":::
 
