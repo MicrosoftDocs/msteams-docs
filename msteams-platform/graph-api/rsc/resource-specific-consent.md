@@ -21,6 +21,14 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 
 The granular, Teams-specific, RSC permissions define what an application can do within a specific resource.
 
+The following are the links for Resource specific permissions of older version(placeholder for version):
+
+* [Resource-specific permissions for a team](#resource-specific-permissions-for-a-team)
+* [Resource-specific permissions for a chat](#resource-specific-permissions-for-a-chat)
+
+The following are the Resource specific permissions of latest version(placeholder for version):
+* [Delegated RSC permission](#delegated-rsc-permission)
+
 ### Resource-specific permissions for a team
 
 |Application permission| Action |
@@ -39,8 +47,6 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 |TeamsTab.Delete.Group|Delete this team's tabs. |
 |TeamMember.Read.Group|Get this team's members. |
 |TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. |
-
-For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
 
 ### Resource-specific permissions for a chat
 
@@ -62,6 +68,19 @@ The following table provides resource-specific permissions for a chat:
 | Calls.AccessMedia.Chat         | Access media streams in calls associated with this chat or meeting.                                    |
 | Calls.JoinGroupCalls.Chat         | Join calls associated with this chat or meeting.                                    |
 | TeamsActivity.Send.Chat         | Create new notifications in the activity feeds of the users in this chat. |
+
+### Delegated RSC permission
+
+| Delegated permission | Action |
+| ------- | ------- |
+| OnlineMeetingParticipant.ToggleIncomingAudio.Chat | Toggle incoming audio for participants in meetings associated with this chat |
+| CameraStream.Read.User | Read the user's camera stream |
+| OutgoingVideoStream.Write.User | Modify the user's outgoing video |
+| InAppPurchase.Allow.User | Show and complete in-app purchases |
+| MeetingStage.Write.Chat | Show content on the meeting stage of meetings associated with this chat |
+| OnlineMeetingParticipant.Read.Chat | Read participant information, including name, role, id, joined and left times, of meetings associated with this chat |
+| ChannelMeetingParticipant.Read.Group | Read participant information, including name, role, id, joined and left times, of channel meetings associated with this team |
+| ChannelMeetingStage.Write.Group | Show content on the meeting stage of channel meetings associated with this team |
 
 For more details, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
@@ -152,6 +171,66 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 > [!NOTE]
 > For version the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
 
+### Example of RSC Permission for older version and latest version(Placeholder for version)
+
+The following are the links for RSC permissions for older version:
+
+* [Example for RSC in a team](#example-for-rsc-in-a-team)
+* [Example for RSC in a chat](#example-for-rsc-in-a-chat)
+
+The following are the links for RSC permissions for latest version:
+* [Example for Delegated and Application RSC permissions](#example-for-delegated-and-application-rsc-permissions)
+
+### Example for RSC in a team
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group",
+    ]
+  }
+```
+
+### Example for RSC in a chat
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
+    ]
+  }
+```
+
 ### Example for Delegated and Application RSC permissions
 
 ```json
@@ -241,57 +320,6 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
         ]    
     }
 }
-```
-
-### Example for RSC in a team
-
-```json
-"webApplicationInfo": {
-    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource": "https://RscBasedStoreApp",
-    "applicationPermissions": [
-        "TeamSettings.Read.Group",
-        "TeamSettings.ReadWrite.Group",
-        "ChannelSettings.Read.Group",
-        "ChannelSettings.ReadWrite.Group",
-        "Channel.Create.Group",
-        "Channel.Delete.Group",
-        "ChannelMessage.Read.Group",
-        "TeamsAppInstallation.Read.Group",
-        "TeamsTab.Read.Group",
-        "TeamsTab.Create.Group",
-        "TeamsTab.ReadWrite.Group",
-        "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group",
-        "TeamsActivity.Send.Group",
-        
-    ]
-  }
-```
-
-### Example for RSC in a chat
-
-```json
-"webApplicationInfo": {
-    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource": "https://RscBasedStoreApp",
-    "applicationPermissions": [
-        "ChatSettings.Read.Chat",
-        "ChatSettings.ReadWrite.Chat",
-        "ChatMessage.Read.Chat",
-        "ChatMember.Read.Chat",
-        "Chat.Manage.Chat",
-        "TeamsTab.Read.Chat",
-        "TeamsTab.Create.Chat",
-        "TeamsTab.Delete.Chat",
-        "TeamsTab.ReadWrite.Chat",
-        "TeamsAppInstallation.Read.Chat",
-        "OnlineMeeting.ReadBasic.Chat",
-        "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat",
-        "TeamsActivity.Send.Chat"
-    ]
-  }
 ```
 
 > [!NOTE]
