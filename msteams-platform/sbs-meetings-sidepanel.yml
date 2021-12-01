@@ -433,54 +433,7 @@ items:
    
     ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
       
-- title: Enable developer preview
-  durationInMinutes: 1
-  content: |
-    **To enable developer preview in your desktop Teams client**
-
-    1. Enable uploading of apps in the admin console of your tenant.
-       1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
-       1. In the left panel, select **Show All**.
-       1. Select **Teams**.
- 
-          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)
-
-       1. In the left panel, select **Teams apps**.
-       
-       1. Select **Setup Policies**.
-
-          ![Setup policies](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) 
-
-       1. Select **Global**.
-
-          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideloadimage.png)
-
-       1. Toggle **Upload custom apps** to **On** position.
-
-          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
-
-       1. Select **Save**. 
-       
-          Your test tenant can permit custom app sideloading.
-
-          > [!NOTE]
-          > The sideloading takes some time to become active.
-
-    1. Go to **Microsoft Teams**.
-    
-    1. From the upper right corner of your Teams interface, select `...`.
-    
-    1. Select **About**. 
-    
-    1. Select **Developer preview**.
-
-        ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
-   
-    1. Select **Switch to Developer preview**.
-
-        ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
-
-- title: Add Meeting Token App to Teams
+- title: Add Meetings SidePanel App to Teams
   durationInMinutes: 1
   content: |
     **To create a Teams meeting and add Meeting Token App**
