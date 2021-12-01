@@ -433,7 +433,7 @@ items:
    
     ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
       
-- title: Add Meetings Side Panel App to Teams
+- title: Add Meetings SidePanel app to Teams
   durationInMinutes: 1
   content: |
     **To create a Teams meeting and add Meeting Token App**
