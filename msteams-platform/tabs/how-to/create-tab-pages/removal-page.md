@@ -82,7 +82,7 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 
 >[!NOTE]
 > * To ensure that an authorized user's control over a tab is not inhibited, Teams removes the tab in both success and failure cases.
-> * After you invoke the `registerOnRemoveHandler` event handler to remove an existing tab, you'll have 15 seconds to respond to the method. Teams enables the **Remove** button after five seconds by default even if the `onClick()` function is not called `setValidityState(true)`.
+> * After you invoke the `registerOnRemoveHandler` event handler to remove an existing tab, you'll have 15 seconds to respond to the method. Teams enables the **Remove** button after five seconds by default even if you don't call `setValidityState(true)`using the `onClick()` function.
 > * When the user selects **Remove**, Teams removes the tab after 30 seconds regardless of whether the actions have been completed or not.
 
 ## Next step
