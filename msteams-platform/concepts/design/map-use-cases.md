@@ -29,6 +29,49 @@ For example:
 - Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
 - Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
 
+Here's a list of common Teams app features mapped to capabilities:
+<br><br>
+<details>
+<summary>Tabs</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Deep linking | (add link for Deep linking topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+<details>
+<summary>Bots</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Send proactive messages | (add link for Send proactive messages topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+<details>
+<summary>Messaging extensions</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Send cards | (add link for Send cards topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+<details>
+<summary>Webhooks and Connectors</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Customize user experience | (add link for Customize user experience topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+
 ## Common use cases mapped To Teams capabilities
 
 The next step is to match use cases with app capabilities to meet the user need.
