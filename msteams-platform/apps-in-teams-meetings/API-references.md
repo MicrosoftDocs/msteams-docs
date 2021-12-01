@@ -20,7 +20,7 @@ The following table provides a list of APIs:
 
 |Method|Description|Source|
 |---|---|----|
-|Get user context| Get contextual information to display relevant content in a Teams tab.|Microsoft Teams client SDK|
+|[Get user context](#get-user-context-api.md)| Get contextual information to display relevant content in a Teams tab.|Microsoft Teams client SDK|
 |Get participant| Fetch participant information by meeting ID and participant ID. |Microsoft Bot Framework SDK|
 |Notification signal| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |Microsoft Bot Framework SDK|
 |Meeting details| Get static meeting metadata. |Bot SDK |
