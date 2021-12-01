@@ -23,6 +23,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Introduced new store icon
+      - url: ~/concepts/design/personal-apps.md
       - text: Teams Toolkit for Visual Studio Code (Preview)
         url: ~/toolkit/teams-toolkit-fundamentals.md
       - text: Interactive mode to share meeting stage (Preview)
