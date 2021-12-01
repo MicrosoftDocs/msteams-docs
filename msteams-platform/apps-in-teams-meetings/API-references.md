@@ -35,17 +35,17 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ## GetParticipant API
 
+Allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
+
 > [!NOTE]
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, limitation to distribution lists or roster sizes are less than 350 participants for the `GetParticipant` API.
 
-Allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
-
 ### Query parameters
 
 > [!TIP]
-> * Get a participant ID from the Tab SSO.
-> * Get a tenant ID from the Tab SSO.
+> * Get participant IDs from the Tab SSO.
+> * Get tenant IDs from the Tab SSO.
 
 The following table includes the query parameters:
 
@@ -57,7 +57,7 @@ The following table includes the query parameters:
 
 ### Example
 
-The following tabs include the different examples: 
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -103,7 +103,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-The JSON response body for `GetParticipant` API is:
+The following JSON response body for `GetParticipant` API is:
 
 ```json
 {
@@ -131,28 +131,26 @@ The JSON response body for `GetParticipant` API is:
 
 ### Response codes
 
-The `GetParticipant` API returns the following response codes:
+The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
-| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the most common error response 403. If the tenant admin disables or blocks the app during live site migration, 403 error response is triggered. |
+| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the tenant admin disables or blocks the app during live site migration, it triggers the error response 403. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
-| **404** | The meeting has either expired or participant cannot be found.|
+| **404** | The meeting has either expired or participants are not available.|
 
 ## NotificationSignal API
 
-All users in a meeting receive the notifications sent through the `NotificationSignal` API.
+All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. Y can send signal or notify based on user action, an in-meeting dialog box. The API includes query parameter, examples, and response codes.
 
 > [!NOTE]
 > * When an in-meeting dialog box is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications is not supported.
 
-`NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box. The API includes query parameter, examples, and response codes.
-
 ### Query parameter
 
-The `NotificationSignal` API includes the following query parameter:
+The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -163,11 +161,11 @@ The `NotificationSignal` API includes the following query parameter:
 The `Bot ID` is declared in the manifest and the bot receives a result object.
 
 > [!NOTE]
-> * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
-> * The `externalResourceUrl` width and height parameters must be in pixels. To ensure the dimensions are within the allowed limits, see [design guidelines](design/designing-apps-in-meetings.md).
-> * The URL is the page loaded as an `<iframe>` in the in-meeting dialog box. The domain must be in the app's `validDomains` array in your app manifest.
+> * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example.
+> * The `externalResourceUrl` width and height parameters must be in pixels. For more information, see [design guidelines](design/designing-apps-in-meetings.md).
+> * The URL is the page, which loads as `<iframe>` in the in-meeting dialog box. The domain must be in the apps' `validDomains` array in your app manifest.
 
-The `NotificationSignal` API includes the following examples:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
