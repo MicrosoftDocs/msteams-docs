@@ -295,7 +295,7 @@ Consider the scenario, you want to add Azure Storage to your Azure Function back
     ``````````````````bicep
     {
         name: 'MyAppStorageAccountConnectionString'
-        value: 'DefaultEndpointsProtocol=https;AccountName=${applicationStorageAccount.name};AccountKey=${listKeys(applicationStorageAccount.id, '2021-06-01').key[0].value}'
+        value: 'DefaultEndpointsProtocol=https;AccountName=${applicationStorageAccount.name};AccountKey=${listKeys(applicationStorageAccount.id, '2021-06-01').keys[0].value}'
     }
     ```````````````````
 
