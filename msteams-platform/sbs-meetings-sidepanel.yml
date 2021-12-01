@@ -196,7 +196,7 @@ items:
         You have successfully set up a bot in Azure Bot Service.
 
 
-- title: Update the AAD app registration for tab SSO
+- title: Update the AAD app registration
   durationInMinutes: 1
   content: |
     **To register your app through the AAD portal**  
