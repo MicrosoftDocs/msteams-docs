@@ -5,62 +5,59 @@ description: Identify the meeting apps API references with examples and Code sam
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: teams apps meetings user participant role api usercontext notification signal query 
+keywords: teams apps meetings user participant role api user context notification signal query 
 ---
 
 # Meeting apps API references
 
-The meeting extensibilities provide APIs to enhance meeting experience. You can perform the follwoing with help of the listed APIs:
+The meeting extensibility provide APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
 
 * Build apps or integrate existing apps within meeting lifecycle.
 * Use APIs to make your app aware of meeting.
-* Select required APIs to imptove the meeting experience.
+* Select required APIs to improve the meeting experience.
 
 The following table provides a list of APIs:
 
-|Method|Description|Source|
+|Method| Description| Source|
 |---|---|----|
-|[**Get user context**](#getusercontext-api)| Get contextual information to display relevant content in a Teams tab.|Microsoft Teams client SDK|
+|[**Get user context**](#getusercontext-api)| Get contextual information to display relevant content in a Teams tab.| Microsoft Teams client SDK|
 |[**Get participant**](#getparticipant-api)| Fetch participant information by meeting ID and participant ID. |Microsoft Bot Framework SDK|
 |[**Notification signal**](#notificationsignal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |Microsoft Bot Framework SDK|
 |[**Meeting details**](#meeting-details-api)| Get static meeting metadata. |Bot SDK |
 |[**Share app content to stage**](#shareappcontenttostage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |Microsoft Teams client SDK|
 |[**Get app content stage sharing state**](#getappcontentstagesharingstate-api)| Fetch information about apps' sharing state on the meeting stage. |Microsoft Teams client SDK|
 |[**Get app content stage sharing capabilities**](#getappcontentstagesharingcapabilities-api)| Fetch the apps' capabilities for sharing to the meeting stage. |Microsoft Teams client SDK|
-
-The following table provides the Bot Framework SDK methods for the APIs:
-
-|API|Bot Framework SDK method|
-|---|---|
-|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
-|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
-|**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
+|[**Real-time Teams meeting events**](#real-time-teams-meeting-events)|Fetch real-time meeting events, such as actual start and end time.| Bot SDK|
 
 ## GetUserContext API
 
-To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
+To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
 ## GetParticipant API
 
 > [!NOTE]
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
-> * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
+> * Currently, limitation to distribution lists or roster sizes are less than 350 participants for the `GetParticipant` API.
 
-The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
+Allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
 
 ### Query parameters
 
-The `GetParticipant` API includes the following query parameters:
+> [!TIP]
+> * Get a participant ID from the Tab SSO.
+> * Get a tenant ID from the Tab SSO.
+
+The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. | 
+|**participantId**| String | Yes | The participant ID is the user ID,available in Tab SSO, Bot Invoke, and Teams Client SDK. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users, available in Tab SSO, Bot Invoke, and Teams Client SDK.|
 
 ### Example
 
-The `GetParticipant` API includes the following examples:
+The following tabs include the different examples:
 
 # [C#](#tab/dotnet)
 
