@@ -1,17 +1,34 @@
 ### YamlMime:Landing
 
-title: Microsoft Teams Developer Documentation
-summary: Welcome to overview of Microsoft Teams Developer Documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
+title: Microsoft Teams Developer Documentation # < 60 chars
+summary: Welcome to overview of Microsoft Teams Developer Documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
+
 metadata:
-  title: Microsoft Teams Developer Documentation
-  description: Introducing building apps for Teams
-  ms.date: 11/10/2021
-  ms.topic: landing-page
+  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Introducing building apps for Teams # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: service #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.subservice: subservice # Optional; Remove if no subservice is used.
+  ms.topic: landing-page # Required
+  ms.collection: collection # Optional; Remove if no collection is used.
+  author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
+  ms.author: msauthor #Required; microsoft alias of author; optional team alias.
+  ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
 landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
 - title: Explore the latest
   linkLists:
     - linkListType: concept
       links:
+      - text: Teams Toolkit for Visual Studio Code (Preview)
+        url: ~/toolkit/teams-toolkit-fundamentals.md
+      - text: Interactive mode to share meeting stage (Preview)
+        url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
+      - text: Microsoft Teams store validation guidelines
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
       - text: Typeahead search in Adaptive Card
@@ -37,6 +54,8 @@ landingContent:
           url: ~/sbs-send-proactive.yml
         - text: Step-by-step guide for adding authentication to bots
           url: ~/sbs-bots-with-sso.yml
+        - text: Step-by-step guide for generating meeting token
+          url: ~/sbs-meeting-token-generator.yml
 - title: Get started
   linkLists:
     - linkListType: get-started

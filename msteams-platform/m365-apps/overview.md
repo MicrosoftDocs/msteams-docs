@@ -9,12 +9,14 @@ ms.topic: overview
 > [!NOTE]
 > This early developer preview is intended to provide Teams developers with existing applications the chance to try the new functionality and [provide feedback](/microsoftteams/platform/feedback) on this expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
 
-You can test your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client SDK v2 Preview](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](../resources/schema/manifest-schema-dev-preview.md). With this preview, you can:
+You can test your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client SDK v2 Preview](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](../resources/schema/manifest-schema-dev-preview.md).
+
+With this preview, you can:
 
 - Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Microsoft Office Home (office.com).
 - Extend existing Teams [search-based messaging extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
 
-For feedback and issues, please continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback). We look forward to hearing from you!
+For feedback and issues, continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
 
 ## Teams personal tabs in Office and Outlook
 
@@ -26,11 +28,13 @@ After sideloading to Teams, your personal tab appears as one of your installed a
 
 ## Teams messaging extensions in Outlook
 
-Also with this preview, you can extend your search-based Teams messaging extensions to Outlook on the web and Windows desktop, enabling customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
+With this preview, you can extend your search-based Teams messaging extensions to Outlook on the web and Windows desktop, enabling customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
 After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
-## Next steps
+:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in outlook.com":::
+
+## Next step
 
 Set up your dev environment for extending Teams apps across Microsoft 365:
 
