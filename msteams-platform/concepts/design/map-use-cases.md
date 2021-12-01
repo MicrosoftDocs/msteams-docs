@@ -16,62 +16,6 @@ You can map your use case based on:
   - Starting workflows and sending notifications to users.
   - Using social platforms, conversational bots, and combining multiple features.
 
-## App capabilities mapped to features
-
-The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
-
-Let's look at how Teams capabilities enable different features for your app.
-
-:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
-
-For example:
-
-- Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
-- Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
-
-Here's a list of common Teams app features mapped to capabilities:
-<br><br>
-<details>
-<summary>Tabs</summary>
-
-| Feature | Find at...|
-| --- | --- |
-| Deep linking | (add link for Deep linking topic) |
-| Other features | (add links) |
-|
-</details>
-<br>
-<details>
-<summary>Bots</summary>
-
-| Feature | Find at...|
-| --- | --- |
-| Send proactive messages | (add link for Send proactive messages topic) |
-| Other features | (add links) |
-|
-</details>
-<br>
-<details>
-<summary>Messaging extensions</summary>
-
-| Feature | Find at...|
-| --- | --- |
-| Send cards | (add link for Send cards topic) |
-| Other features | (add links) |
-|
-</details>
-<br>
-<details>
-<summary>Webhooks and Connectors</summary>
-
-| Feature | Find at...|
-| --- | --- |
-| Customize user experience | (add link for Customize user experience topic) |
-| Other features | (add links) |
-|
-</details>
-<br>
-
 ## Common use cases mapped To Teams capabilities
 
 The next step is to match use cases with app capabilities to meet the user need.
@@ -131,6 +75,64 @@ Connect with your users and resolve their queries
 | Embed your existing web portal in Teams or create a Teams-specific version for added functionality. | Tabs |
 |
 </details>
+
+## App capabilities mapped to features
+
+The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
+
+Let's look at how Teams capabilities enable different features for your app.
+
+:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
+
+For example:
+
+- Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
+- Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
+
+Here's a list of common Teams app features mapped to capabilities:
+<br><br>
+<details>
+<summary>Tabs</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Deep linking | (add link for Deep linking topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+<details>
+<summary>Bots</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Send proactive messages | (add link for Send proactive messages topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+<details>
+<summary>Messaging extensions</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Send cards | (add link for Send cards topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+<details>
+<summary>Webhooks and Connectors</summary>
+
+| Feature | Find at...|
+| --- | --- |
+| Customize user experience | (add link for Customize user experience topic) |
+| Other features | (add links) |
+|
+</details>
+<br>
+
+
 
 ## See also
 
