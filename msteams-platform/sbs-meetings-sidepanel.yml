@@ -322,7 +322,7 @@ items:
             ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
 
 
-- title: Set up app settings
+- title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
@@ -346,9 +346,6 @@ items:
 
         ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
-- title: Set up manifest file
-  durationInMinutes: 1
-  content: |
     1. Navigate to **manifest.json** in cloned repository.
 
         ![Manifest file location](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
@@ -375,26 +372,6 @@ items:
          * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**.
 
            ![Manifest image2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png)
-
-- title: Build client app using npm install
-  durationInMinutes: 1
-  content: |
-    **To build client app using npm install to generate distributable folder**
-    
-    1. Navigate to the **App** folder in cloned repository.
-    1. Copy the **App** folder path.
-    1. Open a new Command Prompt window, change the current directory to the copied **App** path.
-
-       ![App folder path](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
-
-    1. Run `npm install` to download packages and dependencies.
-    1. Run `npm run build` to build the app.
-
-       ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
-
-       The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server serves the static files from the location.
-
-       ![Distributable folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
 - title: Build and run the service
   durationInMinutes: 1
