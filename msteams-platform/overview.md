@@ -33,7 +33,6 @@ By building your app with Teams, you can:
 - Choose that build environment most suitable for your app, such as JavaScript, C#, SharePoint Framework, and other tools and SDKs.
 - Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
 - Dive deeper with user authentication, integration with other apps, Teams data from Microsoft Graph, and Developer Portal to manage your app.
-- Use the UI toolkit and library to design the app's layout.
 
 ## About Microsoft Teams Developer Documentation
 
