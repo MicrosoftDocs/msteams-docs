@@ -10,23 +10,23 @@ keywords: teams apps meetings user participant role api usercontext notification
 
 # Meeting apps API references
 
-The meeting extensibilities provide APIs to transform the meeting experience:
+The meeting extensibilities provide APIs to enhance meeting experience. You can perform the follwoing with help of the listed APIs:
 
 * Build apps or integrate existing apps within meeting lifecycle.
-* Use the APIs to make your app aware of the meeting.
-* Select the APIs you want to use to enhance the meeting experience.
+* Use APIs to make your app aware of meeting.
+* Select required APIs to imptove the meeting experience.
 
 The following table provides a list of APIs:
 
-|API|Description|Request|Source|
-|---|---|----|---|
-|**GetUserContext**| Enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
-|**GetParticipant**| Enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | Enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Meeting Details** | Enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
-|**shareAppContentToStage**| Enables you to share specific parts of the app to meeting stage from the app side panel in a meeting. |_**microsoftTeams.meeting.shareAppContentToStage((err, result) => {}, appContentUrl)**_|Microsoft Teams client SDK|
-|**getAppContentStageSharingState**| Enables you to fetch information about apps' sharing state on the meeting stage. |_**microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {}**_|Microsoft Teams client SDK|
-|**getAppContentStageSharingCapabilities**| Enables you to fetch the apps' capabilities for sharing to the meeting stage. |_**microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {}**_|Microsoft Teams client SDK|
+|Method|Description|Source|
+|---|---|----|
+|Get user context| Get contextual information to display relevant content in a Teams tab.|Microsoft Teams client SDK|
+|Get participant| Fetch participant information by meeting ID and participant ID. |Microsoft Bot Framework SDK|
+|Notification signal| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |Microsoft Bot Framework SDK|
+|Meeting details| Get static meeting metadata. |Bot SDK |
+|Share app content to stage| Share specific parts of the app to meeting stage from the app side panel in a meeting. |Microsoft Teams client SDK|
+|Get app content stage sharing state| Fetch information about apps' sharing state on the meeting stage. |Microsoft Teams client SDK|
+|Get app content stage sharing capabilities| Fetch the apps' capabilities for sharing to the meeting stage. |Microsoft Teams client SDK|
 
 The following table provides the Bot Framework SDK methods for the APIs:
 
