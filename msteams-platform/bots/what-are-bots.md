@@ -8,7 +8,7 @@ ms.author: anclear
 ---
 # Bots in Microsoft Teams
 
-A bot also referred to as a chatbot or conversational bot is an app that runs simple and repetitive automated tasks performed by the users, such as customer service or support staff. Examples of bots in everyday use include, bots that provide information about the weather, make dinner reservations, or provide travel information. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services.
+A bot also referred to as a chatbot or conversational bot is an app that runs simple and repetitive automated tasks that are performed by the users, such as customer service or support staff. Examples of bots in everyday use include, bots that provide information about the weather, make dinner reservations, or provide travel information. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services.
 
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
@@ -41,7 +41,7 @@ In addition, rate limiting is used to optimize bots used for your Teams applicat
 
 With Microsoft Graph APIs for calls and online meetings, Microsoft Teams apps can now interact with users using voice and video. For more information, see [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md). 
 
-You can use the Teams bot APIs to get information for one or more members of a chat or team. For more information, see [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+You can use the Teams bot APIs to get information for multiple members of a chat or team. For more information, see [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
 ## Next step
 
