@@ -10,6 +10,13 @@ ms.author: anclear
 
 A well-defined use case helps you to chart out the framework of features you want in the Teams app. After you've determined the user requirements, define the scope and Teams capability best suited for your app.
 
+You can map your use case based on:
+
+  - Sharing and collaborating on items in an external system.
+  - Starting workflows and sending notifications to users.
+  - Using social platforms, conversational bots, and combining multiple features.
+
+
 ## Teams features
 
 The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
@@ -82,14 +89,6 @@ Connect with your users and resolve their queries
 | Embed your existing web portal in Teams or create a Teams-specific version for added functionality. | Tabs |
 |
 </details>
-
-## Plan beyond app building
-
-- **Decide what goes in Teams**: Whether it's a new app or an existing one, check if you want the entire app within the Teams client. If you integrate only a portion of the app, focus on sharing, collaborating, initiating, and monitoring workflows.
-
-- **Plan the onboarding experience**: Craft your onboarding experience with your key users in mind. How you introduce a chat bot installed in a channel with a thousand people, is different when it's installed in a one-to-one chat.
-
-- **Plan for the future**: Identify new features the user will prefer in the current solution. Any new features may impact app design and architecture.
 
 ## See also
 

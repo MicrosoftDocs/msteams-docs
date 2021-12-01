@@ -94,3 +94,11 @@ Here's a checklist of important points to consider when you plan your Teams app.
 | 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 |
 </details>
+
+## Plan beyond app building
+
+- **Decide what goes in Teams**: Whether it's a new app or an existing one, check if you want the entire app within the Teams client. If you integrate only a portion of the app, focus on sharing, collaborating, initiating, and monitoring workflows.
+
+- **Plan the onboarding experience**: Craft your onboarding experience with your key users in mind. How you introduce a chat bot installed in a channel with a thousand people, is different when it's installed in a one-to-one chat.
+
+- **Plan for the future**: Identify new features the user will prefer in the current solution. Any new features may impact app design and architecture.
