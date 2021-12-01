@@ -329,20 +329,11 @@ items:
 
         ![App settings location](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio Code** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used.
-
-             > [!NOTE]
-             > The sample works only in the current tenant.
-
-         * Set `"AzureAd"."ApplicationId"` to your bot's **Microsoft App ID**.
-         * Set `"ContentBubbleUrl"` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
-
-             > [!NOTE]
-             > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
+         * Set `"BaseUrl"` to the fully qualified domain name.
 
         ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
@@ -350,28 +341,12 @@ items:
 
         ![Manifest file location](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
-         * Set `manifestVersion` to `1.11`.
+         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
+         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-           > [!NOTE]
-           > Provide the latest version.
-
-         * Set `$schema` to `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`.
-         * Set `resource` to `api://[WebAppDomainName]/[MicrosoftAppId]`.
-         * Replace `[companyName]` to `Contoso`.
-         * Replace the following sections to your fully qualified domain name:
-           * `[websiteUrl]`
-           * `[privacyUrl]`
-           * `[termsOfUseUrl]`
-
-
-           ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-1.png)
-
-         * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
-         * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**.
-
-           ![Manifest image2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png)
+        ![Manifest image2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -385,7 +360,7 @@ items:
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
-       1. Select **TokenApp.csproj** file from **csharp** folder.
+       1. Select **SidePanel.sln** file from **csharp** folder.
 
           ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
 
@@ -395,14 +370,14 @@ items:
 
           ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
 
-          A webpage opens with a message **App is ready!**.
+          A webpage opens with a message **Your bot is ready!**.
 
           ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
 
         
     # [Command line](#tab/cli)
 
-    Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
+    Navigate to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -413,9 +388,9 @@ items:
 - title: Add Meetings SidePanel app to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meeting Token App**
+    **To create a Teams meeting and add Meetings SidePanel App**
 
-    1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
+    1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -426,7 +401,7 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. After the meeting is created, go to the meeting details page and select **Add** **an app**.
+    1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
@@ -454,11 +429,11 @@ items:
     
     1. Select **Add an app**. 
     
-       In the app selection page, the app displays as **Meeting Token App**.
+       In the app selection page, the app displays as **Side Panel**.
   
        ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
 
-    1. Select the **Meeting Token App**.
+    1. Select the **Side Panel** app.
     
     1. Select **Save**.
 
@@ -483,7 +458,7 @@ items:
     ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
 
 - content: |
-    You've completed the tutorial to get started with a Meeting Token Generator app.
+    You've completed the tutorial to get started with a Meetings SidePanel app.
 
     See how your application looks like in a real-time scenario:
 
