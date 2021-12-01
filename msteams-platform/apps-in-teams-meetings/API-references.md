@@ -57,7 +57,7 @@ The following table includes the query parameters:
 
 ### Example
 
-The following tabs include the different examples:
+The following tabs include the different examples: 
 
 # [C#](#tab/dotnet)
 
