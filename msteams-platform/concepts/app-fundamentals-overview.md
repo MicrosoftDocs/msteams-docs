@@ -10,7 +10,7 @@ keywords: entry points extensibility use cases device capability
 
 # Plan your app with Teams features
 
-Building an awesome Teams app is all about finding the right combination to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
+Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
 At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
@@ -33,11 +33,11 @@ Understanding the user and their problem are the first indicators of how a Teams
 
 - **Map your use cases**: Map common use cases to Teams features based on sharing, collaborating, workflows, relevant social platforms, and more.
 
-- **Plan responsive tabs for Teams mobile**: Plan responsive tabs for Teams mobile covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to plan for apps on mobile. You can also learn about the different stages and different types of Teams app.
+- **Plan responsive tabs for Teams mobile**: Plan responsive tabs for Teams mobile covers common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
 
-- **Create and Build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use the Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started with creating project workspace and scaffolding. You can build a basic app with the tab, bot, and messaging extension features.
+- **Create and Build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
 - **Design your app**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
@@ -47,16 +47,9 @@ Understanding the user and their problem are the first indicators of how a Teams
 
     Your apps appear on Teams as Tabs, Bots, Messaging Extensions, or Connectors & Webhooks. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
-    Together, these capabilities bring your app solution to life. You can develop extensive features capabilities:
+    Together, these capabilities bring your app solution to life.
 
-  - Tabs
-  - Bots
-  - Messaging extensions
-  - Webhooks and connectors
-  - Cards
-  - Task modules
-
-- **Integrate device capabilities**: With enhanced Teams platform, you can integrate the native device capabilities in your app. Device capabilities include camera, QR or barcode scanner, photo gallery, microphone, and location. You can use dedicated APIs available in Microsoft Teams JavaScript client SDK for integration.
+- **Integrate device capabilities**: With enhanced Teams platform, you can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
 
 ### Post-build
 
