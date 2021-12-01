@@ -16,8 +16,7 @@ You can map your use case based on:
   - Starting workflows and sending notifications to users.
   - Using social platforms, conversational bots, and combining multiple features.
 
-
-## Teams features
+## App capabilities mapped to features
 
 The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
 
@@ -27,10 +26,10 @@ Let's look at how Teams capabilities enable different features for your app.
 
 For example:
 
-- Use the tab capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
-- Use the messaging extension capability to send cards, unfurl links, or take action on messages.
+- Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
+- Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
 
-### Common use cases mapped To Teams capabilities
+## Common use cases mapped To Teams capabilities
 
 The next step is to match use cases with app capabilities to meet the user need.
 
