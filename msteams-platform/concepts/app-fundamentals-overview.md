@@ -23,6 +23,7 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 - [Before you build](#before-you-build)
 - [During build](#during-build)
 - [Post-build](#post-build)
+- [Planning checklist](../concepts/design/planning-checklist.md)
 
 ### Before you build
 
