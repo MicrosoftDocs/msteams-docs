@@ -11,7 +11,7 @@ ms.date: 11/02/2021
 
 Learn how apps can help you help your users in Teams environment.
 
-Let's look at a scenario:
+Take a look at this scenario:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-1.png" alt-text="Image showing user story" border="true":::
 
@@ -30,7 +30,6 @@ Let’s dig deeper into this story and find out.
 
         Knowing about your user is helps you to identify how they use Teams. Ask relevant questions, such as:
         - Do the users primarily use mobile clients?
-        - Do you expect many guest users to need access your app?
         - How technically sophisticated are your primary users?
    :::column-end:::
 :::row-end:::
@@ -40,7 +39,6 @@ Let’s dig deeper into this story and find out.
 
         Identify the user problem that you want to resolve with your app. Ask relevant questions, such as:
         - What are the pros and cons of the current state system used by your users?
-        - What do your users prefer in their current system?
         - What issues do you want to address?
    :::column-end:::
    :::column span="":::
@@ -57,7 +55,6 @@ Let’s dig deeper into this story and find out.
         Determine your app's features and how you expect it to answer the user's problem. Ask relevant questions, such as:
         - Do the users need current updates regularly without having to check?
         - Do you need to authenticate users?
-        - Do you need to help users with other options?
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -67,7 +64,6 @@ Let’s dig deeper into this story and find out.
         Craft the right app experience for your users with an app that fits their requirement. Ask relevant questions, such as:
         - Should only registered users receive regular help?
         - What features would be most convenient for user experience?
-        - Did the app solve the user's problem?
    :::column-end:::
    :::column span="":::
        :::image type="content" source="../msteams-platform/assets/images/overview/us-4.png" alt-text="Image showing user story 4" border="true":::
