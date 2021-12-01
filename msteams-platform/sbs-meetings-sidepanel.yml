@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    This step-by-step guide illustrates how to implement Side Panel as an In-Meeting Experience.
+    This step-by-step guide illustrates how to implement **Side Panel** as an In-Meeting Experience.
 
     User interactions(Meeting Organizer)
 
@@ -458,7 +458,7 @@ items:
     ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
 
 - content: |
-    You've completed the tutorial to get started with a Meetings SidePanel app.
+    You've completed the tutorial to get started with a **Side Panel** app.
 
     See how your application looks like in a real-time scenario:
 
