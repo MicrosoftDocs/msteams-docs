@@ -179,4 +179,4 @@ You can choose app scope from the following:
 
 ## See also
 
-[Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+[Integrate device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
