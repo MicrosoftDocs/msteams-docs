@@ -27,6 +27,7 @@ The following are the links for Resource specific permissions of older version(p
 * [Resource-specific permissions for a chat](#resource-specific-permissions-for-a-chat)
 
 The following are the Resource specific permissions of latest version(placeholder for version):
+
 * [Delegated RSC permission](#delegated-rsc-permission)
 
 ### Resource-specific permissions for a team
@@ -171,7 +172,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 > [!NOTE]
 > For version the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
 
-### Example of RSC Permission for older version and latest version(Placeholder for version)
+### Example of RSC Permission for older version(Placeholder for version) and latest version(Placeholder for version)
 
 The following are the links for RSC permissions for older version:
 
@@ -179,7 +180,9 @@ The following are the links for RSC permissions for older version:
 * [Example for RSC in a chat](#example-for-rsc-in-a-chat)
 
 The following are the links for RSC permissions for latest version:
-* [Example for Delegated and Application RSC permissions](#example-for-delegated-and-application-rsc-permissions)
+
+* [Example for Delegated RSC permissions](#example-for-delegated-rsc-permissions)
+* [Example for Application RSC permissions](#example-for-application-rsc-permissions)
 
 ### Example for RSC in a team
 
@@ -231,7 +234,7 @@ The following are the links for RSC permissions for latest version:
   }
 ```
 
-### Example for Delegated and Application RSC permissions
+### Example for Delegated RSC permissions
 
 ```json
 "authorization": {
@@ -242,16 +245,24 @@ The following are the links for RSC permissions for latest version:
                 "type": "Delegated"
             }
             {
-                "name": "OnlineMeeting.ReadBasic.Group",
-                "type": "Application",
+                "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+                "type": "Delegated",
             }
             {
-                "name": "OnlineMeetingParticipant.Read.Chat",
-                "type": "Application",
+                "name": "CameraStream.Read.User",
+                "type": "Delegated",
             }
             {
-                "name": "ChannelMeetingParticipant.Read.Group",
-                "type": "Application",
+                "name": "OutgoingVideoStream.Write.User",
+                "type": "Delegated",
+            }
+            {
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated",
+            }
+            {
+                "name": "MeetingStage.Write.Chat",
+                "type": "Delegated",
             }
             {
                 "name": "OnlineMeetingParticipant.Read.Chat",
@@ -262,66 +273,60 @@ The following are the links for RSC permissions for latest version:
                 "type": "Delegated",
             }
             {
-                "name": "TeamSettings.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamSettings.ReadWrite.Group",
-                "type": "Application",
-            }
-            {
-                "name": "ChannelSettings.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "ChannelSettings.ReadWrite.Group",
-                "type": "Application",
-            }
-            {
-                "name": "Channel.Create.Group",
-                "type": "Application",
-            }
-            {
-                "name": "Channel.Delete.Group",
-                "type": "Application",
-            }
-            {
-                "name": "ChannelMessage.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsAppInstallation.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsTab.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsTab.Create.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsTab.ReadWrite.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsTab.Delete.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamMember.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsActivity.Send.Group",
-                "type": "Application",
+                "name": "ChannelMeetingStage.Write.Group",
+                "type": "Delegated",
             }
         ]    
     }
 }
 ```
 
+### Example for Application RSC permissions
+
+```json
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "TeamSettings.Read.Group",
+                "type": "Application"
+            }
+            {
+                "name": "TeamSettings.ReadWrite.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "ChannelSettings.Read.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "ChannelSettings.ReadWrite.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "Channel.Create.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "Channel.Delete.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "ChannelMessage.Read.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "TeamsAppInstallation.Read.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "TeamsTab.Read.Group",
+                "type": "Delegated",
+            }
+        ]    
+    }
+}
+```
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 
