@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+| 11/30/2021 | Updated Build your first app using SPFx step-by-step guide for Teams Toolkit 3.0.0 updates. | Get started > [Build your first app using SPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |Interactive mode to share meeting stage.|• Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021 | Introduced step-by-step guide to generate meeting token. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
