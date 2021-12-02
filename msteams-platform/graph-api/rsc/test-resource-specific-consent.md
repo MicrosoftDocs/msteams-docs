@@ -22,7 +22,22 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 > - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **application permissions**: RSC permissions for  your app, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
+### Example of RSC Permission for older version(Placeholder for version) and latest version(Placeholder for version)
+
+> [!NOTE]
+> For latest version(placeholder for version) the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
+The following are the links for RSC permissions for older version:
+
+* [Example for a team](#example-for-a-team)
+* [Example for a chat](#example-for-a-chat)
+
+The following are the links for RSC permissions for latest version:
+
+* [Example for RSC Delegated permissions](#example-for-rsc-delegated-permissions)
+* [Example for RSC Application permissions](#example-for-rsc-application-permissions)
+
 ## Example for a team
+
 ```json
 "webApplicationInfo":{
     "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
@@ -68,6 +83,75 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
         "TeamsActivity.Send.Chat"
     ]
    }
+```
+
+### Example for RSC Delegated permissions
+
+```json
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Delegated"
+            }
+            {
+                "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+                "type": "Delegated",
+            }
+            {
+                "name": "CameraStream.Read.User",
+                "type": "Delegated",
+            }
+            {
+                "name": "OutgoingVideoStream.Write.User",
+                "type": "Delegated",
+            }
+            {
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated",
+            }
+            {
+                "name": "MeetingStage.Write.Chat",
+                "type": "Delegated",
+            }
+            {
+                "name": "OnlineMeetingParticipant.Read.Chat",
+                "type": "Delegated",
+            }
+            {
+                "name": "ChannelMeetingParticipant.Read.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "ChannelMeetingStage.Write.Group",
+                "type": "Delegated",
+            }
+        ]    
+    }
+}
+```
+
+### Example for RSC Application permissions
+
+> [!NOTE]
+> RSC Application permission includes all the application permissions of older version [Example for a team](#example-for-a-team), [Example for a chat](#example-for-a-chat)
+
+```json
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "TeamSettings.Read.Group",
+                "type": "Application"
+            }
+            {
+                "name": "TeamSettings.ReadWrite.Group",
+                "type": "Application",
+            }
+        ]    
+    }
+}
 ```
 
 > [!IMPORTANT]

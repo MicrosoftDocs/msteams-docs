@@ -28,7 +28,8 @@ The following are the links for Resource specific permissions of older version(p
 
 The following are the Resource specific permissions of latest version(placeholder for version):
 
-* [Delegated RSC permission](#delegated-rsc-permission)
+* [RSC Delegated permission](#rsc-delegated-permission)
+* [RSC Application permission](#rsc-application-permission)
 
 ### Resource-specific permissions for a team
 
@@ -70,9 +71,9 @@ The following table provides resource-specific permissions for a chat:
 | Calls.JoinGroupCalls.Chat         | Join calls associated with this chat or meeting.                                    |
 | TeamsActivity.Send.Chat         | Create new notifications in the activity feeds of the users in this chat. |
 
-### Delegated RSC permission
+### RSC Delegated permission
 
-| Delegated permission | Action |
+| RSC Delegated permission | Action |
 | ------- | ------- |
 | OnlineMeetingParticipant.ToggleIncomingAudio.Chat | Toggle incoming audio for participants in meetings associated with this chat |
 | CameraStream.Read.User | Read the user's camera stream |
@@ -82,6 +83,11 @@ The following table provides resource-specific permissions for a chat:
 | OnlineMeetingParticipant.Read.Chat | Read participant information, including name, role, id, joined and left times, of meetings associated with this chat |
 | ChannelMeetingParticipant.Read.Group | Read participant information, including name, role, id, joined and left times, of channel meetings associated with this team |
 | ChannelMeetingStage.Write.Group | Show content on the meeting stage of channel meetings associated with this team |
+
+### RSC Application permission
+
+> [!NOTE]
+> RSC Application permission includes all the application permissions of older version [Resource-specific permissions for a team](#resource-specific-permissions-for-a-team), [Resource-specific permissions for a chat](#resource-specific-permissions-for-a-chat).
 
 For more details, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
@@ -170,7 +176,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
 > [!NOTE]
-> For version the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
+> For latest version(placeholder for version) the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
 
 ### Example of RSC Permission for older version(Placeholder for version) and latest version(Placeholder for version)
 
@@ -181,8 +187,8 @@ The following are the links for RSC permissions for older version:
 
 The following are the links for RSC permissions for latest version:
 
-* [Example for Delegated RSC permissions](#example-for-delegated-rsc-permissions)
-* [Example for Application RSC permissions](#example-for-application-rsc-permissions)
+* [Example for RSC Delegated permissions](#example-for-rsc-delegated-permissions)
+* [Example for RSC Application permissions](#example-for-rsc-application-permissions)
 
 ### Example for RSC in a team
 
@@ -234,7 +240,7 @@ The following are the links for RSC permissions for latest version:
   }
 ```
 
-### Example for Delegated RSC permissions
+### Example for RSC Delegated permissions
 
 ```json
 "authorization": {
@@ -281,7 +287,10 @@ The following are the links for RSC permissions for latest version:
 }
 ```
 
-### Example for Application RSC permissions
+### Example for RSC Application permissions
+
+> [!NOTE]
+> RSC Application permission includes all the application permissions of older version [Example for RSC in a team](#example-for-rsc-in-a-team), [Example for RSC in a chat](#example-for-rsc-in-a-chat).
 
 ```json
 "authorization": {
@@ -295,38 +304,11 @@ The following are the links for RSC permissions for latest version:
                 "name": "TeamSettings.ReadWrite.Group",
                 "type": "Application",
             }
-            {
-                "name": "ChannelSettings.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "ChannelSettings.ReadWrite.Group",
-                "type": "Application",
-            }
-            {
-                "name": "Channel.Create.Group",
-                "type": "Application",
-            }
-            {
-                "name": "Channel.Delete.Group",
-                "type": "Application",
-            }
-            {
-                "name": "ChannelMessage.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsAppInstallation.Read.Group",
-                "type": "Application",
-            }
-            {
-                "name": "TeamsTab.Read.Group",
-                "type": "Application",
-            }
         ]    
     }
 }
 ```
+
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 
