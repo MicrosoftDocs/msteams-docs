@@ -140,7 +140,7 @@ The following table provides the response codes:
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participants are not available.|
 
-## Notification signal
+## NotificationSignal API
 
 All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send signal based on user action, an in-meeting dialog box. The API includes query parameter, examples, and response codes.
 
