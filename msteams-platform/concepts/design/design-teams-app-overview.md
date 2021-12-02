@@ -2,7 +2,8 @@
 title: Designing your custom app
 author: heath-hamilton
 description: Learn how to design Microsoft Teams apps. Resources include the Microsoft Teams UI Kit, best practices, examples, and more.
-ms.author: lajanuar
+ms.localizationpriority: medium
+ms.author: surbhigupta
 ms.topic: overview
 ---
 # Designing your Microsoft Teams app
@@ -10,6 +11,12 @@ ms.topic: overview
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Conceptual image introducing the Microsoft Teams design guidelines.":::
 
 Whether you're a designer, product manager, developer, or maker using low-code tools, these guidelines can help you quickly make the right design decisions for your Microsoft Teams app.
+
+## Creating a cohesive experience
+
+Designing a Teams app is like designing a conventional web app—but also a little different. An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.
+
+These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
 
 ## Teams app design principles
 
@@ -20,7 +27,7 @@ Teams apps help people achieve more together. Use these principles to guide your
 
 ### Collaborative
 
-Teams apps help people achieve more together. Use these principles to guide your design.
+Teams app promotes collaboration through coordinated and shared activity among users.
 
    :::column-end:::
    :::column span="":::
@@ -54,7 +61,7 @@ The app focuses on core scenarios that blend with Teams workflows.
 
 ### Native or distinct
 
-The app uses native Teams design components or your own. There’s no blend of color schemes, controls, etc.
+The app uses native Teams design components or your own. There’s no blend of color schemes, controls, and so on.
 
    :::column-end:::
    :::column span="":::
@@ -78,7 +85,7 @@ The UI is easy to understand, pleasant in look and tone, and makes people more p
 
 ### Responsive
 
-The app is device and screen agnostic.
+The app is device- and screen-agnostic.
 
    :::column-end:::
 :::row-end:::
@@ -100,27 +107,9 @@ Text, icons, and images make it clear what the app is for and how to use it.
    :::column-end:::
 :::row-end:::
 
-## Creating a cohesive experience
-
-Designing a Teams app is like designing a conventional web app—but also a little different. An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.
-
-These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
-
-## Planning your app
-
-To design a high-quality Teams app, you must first understand what you want your app to do and how you think people will use it. If you haven't already, take some time to properly [plan your app](../../concepts/extensibility-points.md).
-
-## Design fundamentals
+## Teams design system
 
 Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
-
-## Basic Fluent UI components for Teams
-
-Based on Fluent UI, these are the [core elements for creating familiar Teams interfaces](design-teams-app-basic-ui-components.md).
-
-## UI templates
-
-Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
 
 ## App capabilities
 
@@ -131,12 +120,18 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 * [Messaging extensions](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Meeting extensions](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
+
+## UI templates
+
+Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
+
+## Basic UI components
+
+Based on Fluent UI, these are the [core elements](design-teams-app-basic-ui-components.md) you can use to create Teams experiences from scratch.
 
 ## Tools and samples
 
-The following tools can help designers and developers get started.
+The following tools can help designers and developers get started:
 
 ### Microsoft Teams UI Kit
 
@@ -159,18 +154,18 @@ Import these templates and related components directly into your Teams app proje
 
 ### Sample app
 
-Install a sample app to see how UI templates look and behave within Teams contexts.
+You can upload a sample app to see how apps should look and behave in the Teams client.
 
 > [!div class="nextstepaction"]
 > [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## Other resources
 
-To learn more, try one of the following resources.
+To learn more, try one of the following resources:
 
 ### Fluent UI documentation
 
-Get code samples and implementation details for the Fluent UI-based components used to build Teams experiences.
+Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.
 
 > [!div class="nextstepaction"]
 > [Try Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
@@ -181,3 +176,10 @@ Design Adaptive Cards in our web-based tool.
 
 > [!div class="nextstepaction"]
 > [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
+
+## See also
+
+* [Prerequisites and API references for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Designing your Microsoft Teams bot](~/bots/design/bots.md)
+* [Create Virtual Assistant](~/samples/virtual-assistant.md)
+* [Designing task modules for your Microsoft Teams app](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

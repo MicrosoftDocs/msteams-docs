@@ -2,6 +2,8 @@
 title: Sending and receiving files from a bot
 description: Describes how to send and receive files from a bot
 keywords: teams bots files send receive
+ms.topic: how-to
+ms.localizationpriority: medium
 ms.date: 05/20/2019
 ---
 # Send and receive files through your bot
@@ -182,7 +184,7 @@ The following table describes the content properties of the attachment:
 
 ### Basic example in C#
 
-The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog.
+The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog:
 
 ```csharp
 

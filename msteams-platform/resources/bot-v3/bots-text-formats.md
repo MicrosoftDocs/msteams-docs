@@ -2,21 +2,23 @@
 title: Supported text formatting in conversations
 description: Describes text formatting support in bot conversations
 keywords: bots conversations messaging
+ms.topic: how-to
+ms.localizationpriority: medium
 ms.date: 03/29/2018
 ---
 # Formatting bot messages
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-You can set the optional [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
+You can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 
 Microsoft Teams supports the following formatting options:
 
 | TextFormat value | Description |
 | --- | --- |
-| plain | The text should be treated as raw text with no formatting applied at all |
-| markdown | The text should be treated as Markdown formatting and rendered on the channel as appropriate; see [Formatting text content](#formatting-text-content) for supported styles |
-| xml | The text is simple XML markup; see [Formatting text content](#formatting-text-content) for supported styles |
+| plain | The text should be treated as raw text with no formatting applied at all. |
+| markdown | The text should be treated as Markdown formatting and rendered on the channel as appropriate; see [Formatting text content](#formatting-text-content) for supported styles. |
+| xml | The text is simple XML markup; see [Formatting text content](#formatting-text-content) for supported styles. |
 
 ## Formatting text content
 
@@ -26,7 +28,7 @@ Currently, the following limitations apply:
 
 * Text-only messages do not support table formatting
 
-For information on formatting in cards see the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
+For information on formatting in cards, see [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
 
 ### Cross-platform support
 
@@ -79,4 +81,4 @@ Support for text formatting varies by type of message and by platform.
 | preformatted text | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

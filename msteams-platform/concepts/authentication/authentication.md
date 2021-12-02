@@ -2,12 +2,13 @@
 title: Authenticating app users
 description: Describes authentication in Teams and how to use it in the apps
 ms.topic: conceptual
+ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO AAD
 ---
 # Authenticate users in Microsoft Teams
 
-> [!NOTE]
-> Web-based authentication on mobile clients requires version 1.4.1 or later of the Microsoft Teams JavaScript SDK.
+> [!Note]
+> Web-based authentication on mobile clients requires version 1.4.1 or later of the Teams JavaScript client SDK.
 
 To access user information protected by Azure Active Directory (AAD) and to access data from services like Facebook and Twitter, the app establishes a trusted connection with those providers. If the app uses Microsoft Graph APIs in the user scope, authenticate the user to retrieve the appropriate authentication tokens.
 
@@ -27,14 +28,33 @@ Use the web-based authentication flow for [tabs](~/tabs/what-are-tabs.md) and ch
 
 The Azure Bot Framework’s OAuthPrompt makes authentication easier for apps using conversational bots. Use Azure Bot Framework's token service to assist with token caching.
 
-For more information on using the OAuthPrompt, see:
+For more information on using OAuthPrompt, see:
 
 * [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on Teams web, desktop app, and mobile apps.
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md) describes how to add OAuth authentication to the Teams bot.
-* [.Net or C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) or [JavaScript or Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) provides Bot authentication v3 SDK sample.
+
+## Code sample
+
+provides Bot authentication v3 SDK sample.
+
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Tab, Bot and Messaging Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
+
 
 ## Configure the identity provider
 
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts, however, apply regardless of the identity provider.
+Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider. 
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
+
+## Third-party cookies on iOS
+
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps will not be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
+
+## See also
+
+* [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
+* [Single sign-on support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
+* [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)

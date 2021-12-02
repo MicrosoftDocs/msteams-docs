@@ -1,23 +1,25 @@
 ---
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
+ms.localizationpriority: medium
+ms.topic: how-to
 keywords: teams messaging extensions messaging extensions search
 ---
 # Initiate actions with messaging extensions
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Action-based messaging extensions allow your users to trigger actions in external services while inside of Teams.
+Action-based messaging extensions allow your users to trigger actions in external services while in Teams.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
-The following sections describe how to do this.
+The following sections describe how to do this:
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ### Action type message extensions
 
-To initiate actions from a  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
+To initiate actions from a messaging extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
 
 #### Complete app manifest example
 
@@ -98,11 +100,12 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
           "description": "Reassign a todo item",
           "title": "Reassign a todo item",
           "type": "action",
-          "fetchTask": true,
+          "fetchTask": false,
           "parameters": [
             {
               "name": "Name",
               "title": "Title"
+              "inputType": "text"
             }
           ]
         }
@@ -122,11 +125,11 @@ To initiate actions from a  messaging extension set the `type` parameter to `act
 
 ### Initiate actions from messages
 
-In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the contents of the message to your bot for processing, and optionally reply to that message with a response using the method described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access your messaging extension from the overflow `...` menu and then selecting `Take action` as in the image below.
+In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. This will allow you to send the message contents to your bot for processing and optionally reply to that message with a response using the method, which is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access messaging extension from the overflow `...` menu and then selecting `Take action` as in the following image:
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-To enable your messaging extension to work from a message you'll need to add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the example below. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter.
+To enable your messaging extension to work from a message, add the `context` parameter to your messaging extension's `commands` object in your app manifest as in the following example. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter:
 
 ```json
 "composeExtensions": [
@@ -218,7 +221,7 @@ Below is an example of the `value` object containing the message details that wi
 
 ### Test via uploading
 
-You can test your messaging extension by uploading your app. See [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md) for details.
+You can test your messaging extension by uploading your app. For more information, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
 
 To open your messaging extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your messaging extension.
 
@@ -230,13 +233,13 @@ There are three ways to collect information from an end user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the parameters defined in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. See the topic [Responding to submit](#responding-to-submit) for more information on the expected set of responses.
+When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the defined parameters in the manifest. On hitting Submit, a `composeExtension/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
 
 ### Dynamic input using an adaptive card
 
-In this method, your service can define a custom adaptive card to collect the end user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. Note that if you set `fetchTask` to `true` any static parameters defined for the command will be ignored.
+In this method, your service can define a custom adaptive card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set, `fetchTask` to `true` any static parameters defined for the command will be ignored.
 
-In this method your service will receive a `composeExtension/fetchTask` event and needs to respond with an adaptive card based [task module response](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object). Below is an sample response with an adaptive card:
+In this method, your service receives a `composeExtension/fetchTask` event and responds with an adaptive card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an adaptive card:
 
 ```json
 {
@@ -285,9 +288,9 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 ### Dynamic input using a web view
 
-In this method your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
+In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
-Just like in the adaptive card flow your service will be send a `fetchTask` event and needs to respond with a URL based [task module response](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object). Below is an sample response with an Adaptive card:
+Just like in the adaptive card flow your service sends a `fetchTask` event and responds with a URL based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an Adaptive card:
 
 ```json
 {
@@ -302,9 +305,9 @@ Just like in the adaptive card flow your service will be send a `fetchTask` even
 
 ### Request to install your conversational bot
 
-If your app also contains a conversational bot, it may be necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for you task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
-To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context (you could accomplish this by attempting the get roster call, for example). If your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot See the example below. Note that this requires the user to have permission to install apps in that location; if they cannot they will be presented with a message asking them to contact their administrator.
+To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
 Here's an example of the response:
 
@@ -358,11 +361,11 @@ Here's an example of the invoke:
 }
 ```
 
-You should respond to this invoke with the same task response you would have responded with if the bot was already installed.
+Respond to the invoke with the same task response you would have responded with if the bot was already installed.
 
 ## Responding to submit
 
-Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set.
+Once a user completes entering their input, bot will receive a `composeExtension/submitAction` event with the command ID and parameter values set.
 
 These are the different expected responses to a `submitAction`.
 
@@ -372,11 +375,11 @@ This is used when your extension needs to chain dialogs together to get more inf
 
 ### Compose extension auth/config response
 
-This is used when your extension needs to either authenticate or configure in order to continue. See [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section for more details.
+This is used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
 
 ### Compose extension result response
 
-This used to insert a card into the compose box as a result of a the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
+This is used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
 ```json
 {
@@ -426,14 +429,14 @@ This used to insert a card into the compose box as a result of a the command. It
 
 ### Respond with an adaptive card message sent from a bot
 
-You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. This can be very useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+Respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it, and potentially edit/interact with it as well. This can be useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
 
-1. The user clicks the messaging extension to trigger the task module.
+1. The user selects the messaging extension to trigger the task module.
 1. The user uses the task module to configure the poll.
-1. After submitting the configuration task module the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the adaptive card message before the bot will inserts it into the channel. If the bot is not already a member of the channel, clicking `Send` will add the bot.
+1. After submitting the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
+1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` will add the bot.
 1. Interacting with the adaptive card will change the message before sending it.
-1. Once the user clicks `Send` the bot will post the message to the channel.
+1. Once the user selects `Send` the bot will post the message to the channel.
 
 To enable this flow your task module should respond as in the example below, which will present the preview message to the user.
 
@@ -457,7 +460,7 @@ To enable this flow your task module should respond as in the example below, whi
 }
 ```
 
-Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you will need to process:
+Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you'll need to process:
 
 ```json
 {
@@ -488,7 +491,7 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request you should send a message to the channel containing the finalized adaptive card.
+When responding to the `edit` request, you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request, you should send a message to the channel containing the finalized adaptive card.
 
 # [TypeScript/Node.js](#tab/typescript)
 
@@ -549,8 +552,6 @@ teamChatConnector.onComposeExtensionSubmitAction((
         }
     });
 ```
-
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
 # [C#/.NET](#tab/dotnet)
 
@@ -705,3 +706,7 @@ public class MessagesController : ApiController
 
 }
 ```
+
+## See also
+
+[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

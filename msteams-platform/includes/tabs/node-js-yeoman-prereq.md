@@ -1,81 +1,98 @@
-## Prerequisites
+## Prerequisites for apps
 
-- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+You must have an understanding of the following prerequisites:
 
-  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
+- You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+
+  - If you do not currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following installed in your development environment:
 
 - Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
+- [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
-- After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
+- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
-```bash
-npm install yo gulp-cli --global
-```
+    ```bash
+    npm install yo gulp-cli --global
+    ```
 
 - Install the Microsoft Teams Apps generator by typing the following in your command prompt:
 
-```bash
-npm install generator-teams --global
-```
+    ```bash
+    npm install generator-teams --global
+    ```
 
 ## Generate your project
 
-- Open a command prompt and create a new directory for your tab project.
+**To generate your project**
 
-- To start the generator, navigate to your new directory and type the following command:
+1. Open a command prompt and create a new directory for your tab project.
 
-```bash
-yo teams
-```
+1. To start the generator, navigate to your new directory and type the following command:
 
-- Next, you'll provide a series of values that will be used in your application's **manifest.json** file:
+    ```bash
+    yo teams
+    ```
 
-![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+1. Next, provide a series of values that are used in your application's **manifest.json** file:
 
-**What is your solution name?**
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-This is your project name. You can accept the suggested name by pressing enter.
+    **What is your solution name?**
 
-**Where do you want to place the files?**
+    This is your project name. You can accept the suggested name by pressing enter.
 
-You're currently in your project directory. Press enter.
+    **Where do you want to place the files?**
 
-**Title of your Microsoft Teams app project?**
+    You're currently in your project directory. Press enter.
 
-This is your app package name and will be used in the app manifest and description.
+    **Title of your Microsoft Teams app project?**
 
-**Your (company) name? (max 32 characters)**
+    This is your app package name and will be used in the app manifest and description.
 
-Your company name will be used in the app manifest.
+    **Your (company) name? (max 32 characters)**
 
-<br>**Which manifest version would you like to use?**
+    Your company name will be used in the app manifest.
 
-Select the default schema.
+    **Which manifest version would you like to use?**
 
-**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    Select the default schema.
 
-This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    **Quick scaffolding? (Y/n)**
 
-**What do you want to add to your project?**
+    The default is yes; enter **n** to enter your Microsoft Partner Id.
 
-Select ( &ast; ) A Tab.
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-**The URL where you will host this solution?**
+    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
-By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+    **What do you want to add to your project?**
 
-**Would you like to include Test framework and initial tests? (y/N)**
+    Select ( &ast; ) A Tab.
 
-Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+    **The URL where you will host this solution?**
 
-**Would you like to use Azure Applications Insights for telemetry? (y/N)**
+    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
-Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**.
+    **Would you like show a loading indicator when your app/tab loads?**
 
-**Default Tab Name (max 16 characters)?**
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
 
-Name your tab. This tab name will be used throughout your project as a file/URL path component.
+   **Would you like personal apps to be rendered without a tab header-bar?**
+
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+
+    **Would you like to include Test framework and initial tests? (y/N)**
+
+    Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+
+    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
+
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+
+    **Default Tab Name (max 16 characters)?**
+
+    Name your tab. This tab name will be used throughout your project as a file or URL path component.
+

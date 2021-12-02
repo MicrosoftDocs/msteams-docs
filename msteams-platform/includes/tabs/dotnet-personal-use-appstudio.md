@@ -1,79 +1,79 @@
-## Upload your tab to Teams with App Studio
+## Upload your tab with App Studio
 
 >[!NOTE]
-> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit **manifest.json** if you prefer. If you do, be sure to build the solution again to create the **Tab.zip** file to upload.
+> We use **App Studio** to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit **manifest.json**. If you do, ensure that you build the solution again to create the **Tab.zip** file to upload.
 
-- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+**To upload your tab with App Studio**
 
-- Open App studio and select the **Manifest editor** tab.
+1. Go to Microsoft Teams. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-- Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It should be found here:
+1. Go to **App Studio** and select the **Manifest editor** tab.
 
-```bash
-/bin/Debug/netcoreapp2.2/Tab.zip
-```
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It is available from the following path:
 
-- Upload **Tab.zip** to App Studio.
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
+
+1. Upload **tab.zip** to **App Studio**.
 
 ### Update your app package with Manifest editor
 
-Once you've uploaded your app package into App Studio, you'll need to finish configuring it.
+After you have uploaded your app package into App Studio, you must configure it.
 
-- Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
+Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you'll need to update:
+There is a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your **manifest.json** but there are fields that you must update.
 
 #### Details: App details
 
-In the *App details* section:
+In the **App details** section:
 
-- Under *Identification* select **Generate** to generate a new App Id for your app.
+1. Under **Identification**, select **Generate** to generate a new App Id for your app.
 
-- Under *Developer information* update the **Website URL** with your *ngrok* HTTPS URL.
+1. Under **Developer information**, update the **Website** with your **ngrok** HTTPS URL.
 
-- Under *App URLs* update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+1. Under **App URLs**, update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 
-In the *Tabs* section:
+In the **Tabs** section:
 
-- Under *Add a personal tab* select ***Add***. You will be presented with a pop-up dialogue window.
+1. Under **Add a personal tab**, select **Add**. A pop-up dialog box appears.
 
-- Complete the *Name* field.
+1. Enter a name for the personal tab in **Name**.
 
-- Complete the *Entity Id* field.
+1. Enter the **Entity ID**.
 
-- Update the *Content URL* field with to `https://<yourngrokurl>/personalTab`.
+1. Update **Content URL** with `https://<yourngrokurl>/personalTab`.
 
-- Leave the *Website URL* field blank.
+    Leave the **Website URL** field blank.
 
-- Select ***Save***.
+1. Select **Save**.
 
 #### Finish: Domains and permissions
 
-In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+In the **Domains and permissions** section, the **Domains from your tabs** field must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io/`.
 
 ##### Finish: Test and distribute
 
 >[!IMPORTANT]
->In the **Description** field on the right you'll see the following warning:
+> On the right, in **Description**, you see the following warning:
 >
->&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
+> &#9888; **The 'validDomains' array cannot contain a tunneling site...**
 >
 >This warning can be ignored while testing your tab.
 
-In the *Test and distribute* section:
+1. In the **Test and Distribute** section, select **Install**.
 
-- Select **Install**.
+1. In the pop-up dialog box, select **Add** and your tab is displayed with two options.
 
-- In the pop-up window make sure that *Add for you* is set to *Yes* and *Add to a team or chat* is set to *No*.
-
-- Select **Install**.
-
-- In the next pop-up window select **Open** and your tab will be displayed.
+1. From the options in the tab, choose either **Select Gray** or **Select Red**. The tab is displayed according to the color you selected.
+ 
+    ![Personal tab ASPNETMVC uploaded](../../assets/images/tab-images/personaltabaspnetmvcuploaded.png)
 
 ## View your personal tab
 
-- In the navigation bar located at the far-left of the Teams App, select the `...` menu. You'll be presented with a list of personal apps.
+1. In the navigation bar located at the far left of the Teams app, select the ellipses &#x25CF;&#x25CF;&#x25CF;. A list of personal apps is shown.
 
-- Select your tab from the list to view.
+1. Select your tab from the list to view it.

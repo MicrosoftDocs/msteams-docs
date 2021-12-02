@@ -1,8 +1,8 @@
 ---
 title: Use Microsoft Graph to import external platform messages to Teams 
 description: Describes how to use Microsoft Graph to import messages from an external platform to Teams
-localization_priority:  Normal
-author: laujan 
+ms.localizationpriority: medium
+author: akjo 
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
@@ -10,60 +10,61 @@ keywords: teams import messages api graph microsoft migrate migration post
 
 # Import third-party platform messages to Teams using Microsoft Graph
 
->[!IMPORTANT]
-> Microsoft Graph and Microsoft Teams public previews are available for early-access and feedback. Although this release has undergone extensive testing, it is not intended for use in production.
-
 With Microsoft Graph, you can migrate users' existing message history and data from an external system into a Teams channel. By enabling the recreation of a third-party platform messaging hierarchy inside Teams, users can continue their communications in a seamless manner and proceed without interruption.
+
+> [!NOTE]
+> In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data imported.
 
 ## Import overview
 
 At a high level, the import process consists of the following:
 
-1. [Create a team with a back-in-time timestamp](#step-one-create-a-team)
-1. [Create a channel with a back-in-time timestamp](#step-two-create-a-channel)  
-1. [Import external back-in-time dated messages](#step-three-import-messages)
-1. [Complete the team and channel migration process](#step-four-complete-migration-mode)
-1. [Add team members](#step-five-add-team-members)
+1. [Create a team with a back-in-time timestamp](#step-1-create-a-team).
+1. [Create a channel with a back-in-time timestamp](#step-2-create-a-channel).
+1. [Import external back-in-time dated messages](#step-3-import-messages).
+1. [Complete the team and channel migration process](#step-4-complete-migration-mode).
+1. [Add team members](#step-five-add-team-members).
 
-## Necessary requirements
+## Prerequisites
 
 ### Analyze and prepare message data
 
-✔ Review the third-party data to decide what will be migrated.  
-✔ Extract the selected data from the third-party chat system.  
-✔ Map the third-party chat structure to the Teams structure.  
-✔ Convert import data into format needed for migration.  
+* Review the third-party data to decide what will be migrated.  
+* Extract the selected data from the third-party chat system.  
+* Map the third-party chat structure to the Teams structure.  
+* Convert import data into format needed for migration.  
 
 ### Set up your Office 365 tenant
 
-✔ Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, *see*, [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
-✔ Make sure that team members are in Azure Active Directory (AAD).  For more information *see* [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure Active Directory.
+* Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Make sure that team members are in Azure Active Directory (AAD). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to AAD.
 
-## Step One: Create a team
+## Step 1: Create a team
 
-Since existing data is being migrated, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
+Since you are migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
-> [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource  `createdDateTime`  property. Place the new team in `migration mode`, a special state that bars users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
+> [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property. Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
-> **NOTE**:  The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.
+> [!NOTE]
+> The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.
 
 <!-- markdownlint-disable MD001 -->
 
-#### Permissions
+#### Permission
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a team in migration state)
 
 ```http
-POST https://graph.microsoft.com/beta/teams
+POST https://graph.microsoft.com/v1.0/teams
 
 Content-Type: application/json
 {
   "@microsoft.graph.teamCreationMode": "migration",
-  "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
+  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
   "displayName": "My Sample Team",
   "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
@@ -74,35 +75,37 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/operations/{operationId}
-Content-Location: /teams/{teamId}
+Location: /teams/{team-id}/operations/{operation-id}
+Content-Location: /teams/{team-id}
 ```
 
-#### Error messages
+#### Error message
 
 ```http
 400 Bad Request
 ```
 
-* `createdDateTime`  set for future.
-* `createdDateTime`  correctly specified, but `teamCreationMode`  instance attribute  is missing or set to invalid value.
+You can receive the error message in the following scenarios:
 
-## Step Two: Create a channel
+* If `createdDateTime` is set for future.
+* If `createdDateTime` is correctly specified, but `teamCreationMode` instance attribute is missing or set to invalid value.
+
+## Step 2: Create a channel
 
 Creating a channel for the imported messages is similar to the create team scenario:
 
-> [Create a new channel](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property. Place the new channel in `migration mode`, a special state that bars users from most chat activities within the channel until the migration process is complete.  Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
+> [Create a new channel](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property. Place the new channel in `migration mode`, a special state that restricts users from most chat activities within the channel until the migration process is complete. Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 <!-- markdownlint-disable MD024 -->
-#### Permissions
+#### Permission
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a channel in migration state)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/channels
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
 
 Content-Type: application/json
 {
@@ -120,8 +123,8 @@ Content-Type: application/json
 HTTP/1.1 202 Accepted
 
 {
-   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
-   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels/$entity",
+   "id":"id-value",
    "createdDateTime":null,
    "displayName":"Architecture Discussion",
    "description":"This channel is where we debate all future architecture plans",
@@ -138,22 +141,24 @@ HTTP/1.1 202 Accepted
 ```http
 400 Bad Request
 ```
+You can receive the error message in the following scenarios:
 
-* `createdDateTime`  set for future.
-* `createdDateTime`  correctly specified but `channelCreationMode`  instance attribute  is missing or set to invalid value.
+* If `createdDateTime` is set for future.
+* If `createdDateTime` is correctly specified but `channelCreationMode` instance attribute is missing or set to invalid value.
 
-## Step Three: Import messages
+## Step 3: Import messages
 
-After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from`  keys in the request body. **NOTE**: messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.
+After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
 
 > [!NOTE]
+> * Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.
 > * `createdDateTime` must be unique across messages in the same thread.
 > * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has the value of `createdDateTime` set as *2020-09-16T05:50:31.0025302Z*, then it would be converted to *2020-09-16T05:50:31.002Z* when the message is ingested.
 
 #### Request (POST message that is text-only)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
    "createdDateTime":"2019-02-04T19:58:15.511Z",
@@ -177,7 +182,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
    "id":"id-value",
    "replyToId":null,
    "etag":"id-value",
@@ -213,7 +218,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-#### Error messages
+#### Error message
 
 ```http
 400 Bad Request
@@ -221,10 +226,12 @@ HTTP/1.1 200 OK
 
 #### Request (POST a message with inline image)
 
-> **Note**: There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
+> [!NOTE]
+> * There are no special permission scopes in this scenario since the request is part of `chatMessage`.
+> * The scopes for `chatMessage` apply here.
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
   "body": {
@@ -247,7 +254,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
     "id": "id-value",
     "replyToId": null,
     "etag": "id-value",
@@ -280,27 +287,14 @@ HTTP/1.1 200 OK
 }
 ```
 
-## Step Four: Complete migration mode
+## Step 4: Complete migration mode
 
-Once the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration`  method. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance.
-
-#### Request (end team migration mode)
-
-```http
-POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
-
-```
-
-#### Response
-
-```http
-HTTP/1.1 204 NoContent
-```
+After the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration` method. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team completes, all channels must be completed out of migration mode.
 
 #### Request (end channel migration mode)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMigration
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
 
 ```
 
@@ -310,22 +304,28 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMi
 HTTP/1.1 204 NoContent
 ```
 
-#### Error response
+#### Request (end team migration mode)
 
 ```http
-400 Bad Request
+POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 ```
 
-* Action called on a `team` or `channel` that is not in `migrationMode`.
+#### Response
 
-## Step Five: Add team members
+```http
+HTTP/1.1 204 NoContent
+```
 
-You can add a member to a team [using the Teams UI](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) or Microsoft Graph [Add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API:
+Action called on a `team` or `channel` that is not in `migrationMode`.
+
+## Step five: Add team members
+
+You can add a member to a team [using the Teams UI](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) or Microsoft Graph [add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API:
 
 #### Request (add member)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/members
+POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
 {
@@ -346,35 +346,36 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* You can import messages from users who are not in Teams. **NOTE**: Messages imported for users not present in the tenant will not be searchable in the Teams client or compliance portals during Public Preview.
+* After the `completeMigration` request is made, you cannot import further messages into the team.
 
-* Once the `completeMigration` request is made, you cannot import further messages into the team.
+* You can only add team members to the new team after the `completeMigration` request has returned a successful response.
 
-* Team members can only be added to the new team after the `completeMigration` request has returned a successful response.
+* Throttling: Messages import at five RPS per channel.
 
-* Throttling: Messages import at 5 RPS per channel.
-
-* If you need to make a correction to the migration results, you need to delete the team and repeat the steps to create the team and channel and re-migrate the messages.
+* If you need to make a correction to the migration results, you must delete the team and repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
 > Currently, inline images are the only type of media supported by the import message API schema.
 
 ##### Import content scope
 
+The following table provides the content scope:
+
 |In-scope | Currently out-of-scope|
 |----------|--------------------------|
 |Team and channel messages|1:1 and group chat messages|
 |Created time of the original message|Private channels|
 |Inline images as part of the message|At mentions|
-|Links to existing files in SPO/OneDrive|Reactions|
+|Links to existing files in SPO or OneDrive|Reactions|
 |Messages with rich text|Videos|
 |Message reply chain|Announcements|
 |High throughput processing|Code snippets|
-||Adaptive cards|
 ||Stickers|
 ||Emojis|
 ||Quotes|
 ||Cross posts between channels|
 
-> [!div class="nextstepaction"]
->[Learn more about Microsoft Graph and Teams integration](/graph/teams-concept-overview)
+
+## See also
+
+[Microsoft Graph and Teams integration](/graph/teams-concept-overview)

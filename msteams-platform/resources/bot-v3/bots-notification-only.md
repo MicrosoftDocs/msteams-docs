@@ -2,6 +2,8 @@
 title: Notification-only bots
 description: Describes what notification-only bots are in Microsoft Teams
 keywords: teams bots notification
+ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 01/29/2020
 ---
 # Notification-only bots in Microsoft Teams
@@ -42,4 +44,4 @@ To enable this, set `isNotificationOnly` to `true`.
 
 ## Best practices and limitations
 
-* Notification-only bots use proactive messaging to communicate with the user. See [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) for more details.
+* Notification-only bots use proactive messaging to communicate with the user. For more information, see [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).

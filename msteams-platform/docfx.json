@@ -24,7 +24,8 @@
                 "**/*.jpg",
                 "**/*.svg",
                 "**/*.gif",
-                "assets/**/*.pdf"
+                "assets/**/*.pdf",
+                "feed.atom"
             ],
             "exclude": [
                 "**/obj/**",
@@ -33,21 +34,22 @@
         }],
         "overwrite": [],
         "externalReference": [],
-        "globalMetadata": {
-            "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
-            "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
-            "extendBreadcrumb": true,
-            "manager": "billbl",
-            "author": "laujan",
-            "ms.suite": "office365",
-            "ms.prod": "msteams",
-            "ms.author": "lajanuar",
-            "searchScope": ["Teams"],
-            "feedback_system": "GitHub",
-            "feedback_github_repo": "MicrosoftDocs/msteams-docs",
-            "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
-            "titleSuffix": "Teams"
-        },
+      "globalMetadata": {
+        "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
+        "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
+        "extendBreadcrumb": true,
+        "manager": "billbl",
+        "author": "surbhigupta",
+        "ms.suite": "office365",
+        "ms.prod": "msteams",
+        "ms.author": "lajanuar",
+        "searchScope": [ "Teams" ],
+        "feedback_system": "GitHub",
+        "feedback_github_repo": "MicrosoftDocs/msteams-docs",
+        "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
+        "titleSuffix": "Teams",
+        "recommendations": false
+      },
         "fileMetadata": {
             "feedback_system": {
                 "docs-ref-autogen/**/*": "None",

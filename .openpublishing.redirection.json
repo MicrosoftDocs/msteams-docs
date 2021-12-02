@@ -313,28 +313,28 @@
           "redirect_url": "/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant"
       },
       {
-          "source_path": "msteams-platform/get-started/get-started-dotnet-app-studio.md",
-          "redirect_url": "/microsoftteams/platform/tutorials/get-started-dotnet-app-studio"
+          "source_path": "msteams-platform/tutorials/get-started-dotnet-app-studio.md",
+          "redirect_url": "/microsoftteams/platform/get-started/get-started-dotnet-app-studio"
       },
       {
           "source_path": "msteams-platform/get-started/get-started-dotnet-in-azure.md",
-          "redirect_url": "/microsoftteams/platform/tutorials/get-started-dotnet-app-studio"
+          "redirect_url": "/microsoftteams/platform/get-started/get-started-dotnet-app-studio"
       },
       {
           "source_path": "msteams-platform/get-started/get-started-dotnet.md",
-          "redirect_url": "/microsoftteams/platform/tutorials/get-started-dotnet-app-studio"
+          "redirect_url": "/microsoftteams/platform/get-started/get-started-dotnet-app-studio"
       },
       {
-          "source_path": "msteams-platform/get-started/get-started-nodejs-app-studio.md",
-          "redirect_url": "/microsoftteams/platform/tutorials/get-started-nodejs-app-studio"
+          "source_path": "msteams-platform/tutorials/get-started-nodejs-app-studio.md",
+          "redirect_url": "/microsoftteams/platform/get-started/get-started-nodejs-app-studio"
       },
       {
           "source_path": "msteams-platform/get-started/get-started-nodejs-in-azure.md",
-          "redirect_url": "/microsoftteams/platform/tutorials/get-started-nodejs-app-studio"
+          "redirect_url": "/microsoftteams/platform/get-started/get-started-nodejs-app-studio"
       },
       {
           "source_path": "msteams-platform/get-started/get-started-nodejs.md",
-          "redirect_url": "/microsoftteams/platform/tutorials/get-started-nodejs-app-studio"
+          "redirect_url": "/microsoftteams/platform/get-started/get-started-nodejs-app-studio"
       },
       {
           "source_path": "msteams-platform/get-started/get-started-tenant.md",
@@ -539,6 +539,182 @@
       {
         "source_path": "msteams-platform/moodleinstructions.md",
         "redirect_url": "/microsoftteams/platform/resources/moodleinstructions"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/app-studio-controls.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-ui-templates"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/buttons.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-basic-ui-components"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/color.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/dialogs.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-basic-ui-components"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/fields.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-basic-ui-components"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/typography.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/overview.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/post-publish/application-certification.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview"  
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-first-app-overview.md",
+        "redirect_url": "/microsoftteams/platform/get-started/prerequisites"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-and-run.md",
+        "redirect_url": "/microsoftteams/platform/get-started/prerequisites"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-personal-tab.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-app-react"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-channel-tab.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-app-react"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-bot.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-app-bot"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-messaging-extension.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-message-extension"
+      },
+      {
+        "source_path": "msteams-platform/get-started/code-samples.md",
+        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
+      },
+      {
+        "source_path": "msteams-platform/get-started/prerequisites.md",
+        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
+      },
+      {
+        "source_path": "msteams-platform/get-started/first-app-react.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-javascript-tab-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/get-started/first-app-bot.md",
+        "redirect_url": "/microsoftteams/platform//sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-javascript-bot-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/get-started/first-message-extension.md",
+        "redirect_url": "/microsoftteams/platform//sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-javascript-msgex-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/get-started/get-started-deploy-teams-app-azure.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/get-started/blazor-app-prerequisites.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-blazor"
+      },  
+      {
+        "source_path": "msteams-platform/get-started/first-app-blazor.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-blazor"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-blazor-teams-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-blazor"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-blazor-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-blazor"
+      },
+      {
+        "source_path": "msteams-platform/get-started/spfx-app-prerequisites.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-spfx"
+      },
+      {
+        "source_path": "msteams-platform/get-started/first-app-spfx.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-spfx"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-spfx-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-spfx"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-spfx-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-spfx"
+      },
+      {
+        "source_path": "msteams-platform/get-started/get-started-dotnet-app-studio.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-csharp"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-and-test-csharp-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-csharp"
+      },
+      {
+        "source_path": "msteams-platform/get-started/configure-test-csharp-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-csharp"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-csharp-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-csharp"
+      },
+      {
+        "source_path": "msteams-platform/get-started/get-started-nodejs-app-studio.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-nodejs"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-and-test-nodejs-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-nodejs"
+      },
+      {
+        "source_path": "msteams-platform/get-started/configure-test-nodejs-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-nodejs"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-nodejs-app.md",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-nodejs"
+      },
+      {
+        "source_path": "msteams-platform/get-started/get-started-yeoman.md",
+        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-blazor.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview.md"
       }
     ]
 }

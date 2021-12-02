@@ -2,6 +2,8 @@
 title: Combine bots with tabs
 description: Describes how to use tabs and bots together
 keywords: teams bots tabs development
+ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 03/15/2018
 ---
 # Combine bots with tabs
@@ -22,11 +24,12 @@ This flow works best if your identity provider implements the OAuth 2.0 protocol
 
 ## Constructing deep links to tabs in messages from your bot
 
-You may want to use tabs to show more content than can fit inside of a card, or provide a way to complete complex form-filling tasks using the tab canvas. For example, consider navigating the user to the tab when he or she clicks on the card from your bot. For this to happen, you’ll need to encode your bot’s message to include a [deep link](~/concepts/build-and-test/deep-links.md) URL, either via markup or as the target of the openUrl action.
+You may want to use tabs to show more content than can fit inside of a card, or provide a way to complete complex form-filling tasks using the tab canvas. For example, consider navigating the user to the tab when he or she clicks on the card from your bot. For this to happen, you’ll need to encode your bot’s message to include a [deep link](~/concepts/build-and-test/deep-links.md) URL, either through markup or as the target of the openUrl action.
 
-Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you ideally store some simple state (e.g. flag) on your backend indicating the tab has been created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
+Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you ideally store some simple state, For example, flag on your backend indicating the tab has been created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
 
-**Note:** in personal chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.
+> [!NOTE]
+> in personal chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.
 
 ## Sending notifications for tab updates
 

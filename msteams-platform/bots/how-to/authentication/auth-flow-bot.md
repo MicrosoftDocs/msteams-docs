@@ -1,7 +1,8 @@
 ---
 title: Microsoft Teams Authentication flow for bots
-description: Describes Microsoft Teams authentication flow in bots
+description: Describes Microsoft Teams authentication flow in bots with Code sample.
 keywords: teams authentication flow bots
+ms.localizationpriority: medium
 ms.topic: overview
 ---
 
@@ -9,7 +10,7 @@ ms.topic: overview
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams; [here's a good overview](https://aaronparecki.com/oauth-2-simplified/) that's easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots is a little different — tabs are very similar to websites so they can use OAuth 2.0 directly, while bots aren't and must do a few things differently — but the core concepts are identical.
 
-See the GitHub repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+See the GitHub repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)
 for an example that demonstrates authentication flow for bots using Node.js and the [OAuth 2.0 authorization code grant type](https://oauth.net/2/grant-types/authorization-code/).
 
 ![Bot authentication sequence diagram](../../../assets/images/authentication/bot_auth_sequence_diagram.png)
@@ -20,10 +21,10 @@ for an example that demonstrates authentication flow for bots using Node.js and 
 3. The bot constructs the URL to the start page of the authentication flow, and sends a card to the user with a `signin` action. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
     Like other application auth flows in Teams, the start page must be in a domain that's on your `validDomains` list, and in the same domain as the post-login redirect page.
     > [!IMPORTANT] 
-    > The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
-4. When the user selects the *signin* button, Teams opens a popup window and navigates to the start page.
+    > The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request, which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
+4. When the user selects the *signin* button, Teams opens a pop-up window and navigates to the start page.
    > [!NOTE]
-   > The size of the pop-up window can be controlled through width and height query string parameters in the URL. For example, if you add width=500 and height=500, the size of the pop-up window is 500x500 pixels. Teams displays the pop-up window with the given pixel size, up to a maximum that's a percentage of the size of the main window.
+   > The size of the pop-up window can be controlled through width and height query string parameters in the URL. For example, if you add width=600 and height=600, the size of the pop-up window is 600x600 pixels. The actual size of the pop-up window is capped as a percentage of the Teams main window size. If the Teams window is small, the pop-up window is smaller than the specified dimensions.
 
 5. The start page redirects the user to the identity provider's `authorize` endpoint. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
 6. On the provider's site, the user signs in and grants access to the bot.
@@ -43,14 +44,15 @@ for an example that demonstrates authentication flow for bots using Node.js and 
     > [!NOTE]
     > If you experience issues with authentication on mobile, ensure your JavaScript SDK is updated to version 1.4.1 or later.
 
-## Samples
+## Code sample
 
-For sample code showing the bot authentication process see:
+Sample code showing the bot authentication process:
 
-[Microsoft Teams bot authentication sample (Node.js)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+| **Sample name** | **Description** | **Node.js** | **.NET** | **Python** |
+|-----------------|----------------|--------------|----------|-----------|
+| Teams authentication | This sample demonstrates authentication in Microsoft Teams apps. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
+| Bot authentication | This sample demonstrates how to use authentication for a bot running in Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
-## More details
-
-For detailed implementation walkthroughs for bot authentication targeting Azure AD see:
+## See also
 
 [Add authentication to your Teams bot](add-authentication.md)

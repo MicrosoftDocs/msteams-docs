@@ -2,89 +2,144 @@
 title: Build apps with the Microsoft Teams Toolkit and Visual Studio Code
 description: Get started building great custom apps directly within Visual Studio Code with the Microsoft Teams Toolkit
 keywords: teams visual studio code toolkit
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
 ---
 # Build apps with the Teams Toolkit and Visual Studio Code
 
-The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment. The toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.
+The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a “zero-configuration” approach to the developer experience.  
 
-## Installing the Teams Toolkit
+You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).
 
-The Microsoft Teams Toolkit for Visual Studio Code is available for download from the [Visual Studio Marketplace](https://aka.ms/teams-toolkit) or directly as an extension within Visual Studio Code.
+## Install the Teams Toolkit for Visual Studio Code
 
-> [!TIP]
-> After installation, you should see the Teams Toolkit in the Visual Studio Code activity bar. If not, right-click within the activity bar and select **Microsoft Teams** to pin the toolkit for easy access.
+1. Open Visual Studio Code.
+1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+1. In the search box, enter _Teams Toolkit_.
+1. Select on the green install button next to the Teams Toolkit.
 
-## Using the toolkit
+You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+The following tools are installed by the Visual Studio Code extension when they are needed. If already installed, the installed version is used instead. If using Linux (including WSL), you must install these tools before use:
+
+- [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
+
+    Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It is installed within the project directory using the npm `devDependencies`.
+
+- [.NET SDK](/dotnet/core/install/)
+
+    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 or later SDK globally, the portable version is installed.
+
+- [ngrok](https://ngrok.com/download)
+
+    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections.  You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs.  This package is installed within the project directory (using npm `devDependencies`).
+
+## Use the Teams Toolkit for Visual Studio Code
 
 - [Set up a new project](#set-up-a-new-teams-project)
-- [Import an existing project](#import-an-existing-teams-app-project)
 - [Configure your app](#configure-your-app)
-- [Package your app](#package-your-app)
-- [Run your app locally or in Teams](#run-your-app)
+- [Run your app locally](#install-and-run-your-app-locally)
+- [Publish your app](#publish-your-app-to-teams)
 
 ## Set up a new Teams project
 
-1. Create a workspace/folder for your project in your local environment.
-1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
-1. Select **Open the Microsoft Teams Toolkit** from the command menu.
-1. Select **Create a new Teams app** from the command menu.
-1. When prompted, enter the name of the workspace . This will be used as both the name of the folder where your project will reside, and the default name of your app.
-1. Press **Enter** and you will arrive at the **Add capabilities** screen configure the properties for your new app.
-1. Select the **Finish** button to complete the configuration process.
+The Teams Toolkit can create React apps that are hosted in Azure or SPFx web parts that are hosted on your M365 SharePoint environment. To create a new React app to be hosted on Azure:
 
-## Import an existing Teams app project
+1. Open Visual Studio code.
+1. Open the Teams Toolkit by selecting the Teams icon in the sidebar:
 
-1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
-1. Select **Import app package** from the command menu.
-1. Choose your existing [Teams app package](../concepts/build-and-test/apps-package.md) zip file.
-1. Choose the **Select publishing package** button. The configuration tab of the toolkit should now be populated with your app's details.
-1. In Visual Studio Code, select **File** -> **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+
+1. Select **Create New Project**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+
+1. Select **Create a new Teams app**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
+
+1. On the **Select capabilities** step, the **Tab** capability is already selected. You can also optionally select **Bot** and **Messaging Extension**.  Press **OK**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+
+1. On the **Frontend hosting type** step, select **Azure**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
+
+1. Optionally, on the **Cloud resources** step, select cloud resources that your application uses. You can select CRUD (create, read, update, and delete) access to a SQL table or an API:
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot showing how to add cloud resources for your new app.":::
+
+1. On the **Programming Language** step, you can choose **JavaScript** or **TypeScript**:
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
+
+1. Select a workspace folder. A folder is created within your workspace folder for the project you are creating.
+
+1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
+
+Your Teams app is created within a few seconds. The scaffolded app contains code to handle single sign-on with Azure Active Directory and access to the Microsoft Graph.  If you selected Azure resources, then the code for those resources is also available.
+
+For a walk-through of the SPFx creation and publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).
 
 ## Configure your app
 
 At its core, the Teams app embraces three components:
 
   1. The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
-  1. A server that responds to requests for content that will be displayed in Teams, e.g., HTML tab content or a bot adaptive card .
-  1. A Teams [app package](/concepts/build-and-test/apps-package.md) consisting of three files:
+  1. A server that responds to requests for content that is displayed in Teams. For example, HTML tab content or a bot Adaptive Card.
+  1. A Teams app package consists of three files:
 
-  > [!div class="checklist"]
-  >
-  > - The manifest.json 
-  > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog
- > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
+      > [!div class="checklist"]
+      >
+      > - The manifest.json.
+      > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.
+      > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
 
-When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
+The manifest and icons are stored in the `.fx` folder of your project prior to being uploaded to Teams. When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
 
-1. To configure your app, navigate to the **Microsoft Teams Toolkit** tab in Visual Studio Code.
-1. Select **Edit app package** to view the **App details** page.
-1. Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package. *See* [App Studio manifest editor](https://aka.ms/teams-toolkit-manifest)
+1. To configure your app, navigate to the **Teams Toolkit** tab in Visual Studio Code.
+1. Select **Manifest Editor** in the **Project** section.
 
-## Package your app
-
-Modifying the **app details** page, **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. You'll need to include [two icons](../concepts/build-and-test/apps-package.md#app-icons) in that same folder.
+Editing the fields in the App details page updates the contents of the manifest.json file that is ultimately shipped as part of the app package.
 
 ## Install and run your app locally
 
-## Run your app
+To build and run your app locally:
 
-### Install and run your app locally
+1. From Visual Studio Code, press **F5** to run your application in debug mode.
 
-Refer to the **Build and Run* content in your project homepage for detailed instructions on how to package and test your app. In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.
+   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-### Enable development from localhost
+   The toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
-If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from <https://localhost>. Navigate to <https://localhost:3000/tab>. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
-### Run your app in Teams
+1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. You may also be prompted to switch to the Teams application at other times. Select the web app when this happens.
 
-Prerequisites: [Enable Teams developer preview mode](https://aka.ms/teams-toolkit-enable-devpreview)
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
-1. Navigate to the activity bar on the left side of the Visual Studio Code window.
-1. Select the **Run** icon to display the **Run and Debug** view.
-1. You can also use the keyboard shortcut `Ctrl+Shift+D`.
+1. You may be prompted to sign in. If so, sign in with your M365 account.
+1. When prompted to install the app onto Teams, press **Add**.
+
+Both the backend and frontend are hooked into the Visual Studio Code debugger.  This allows you to set breakpoints anywhere in your code and inspect state.  You can also use any frontend debugging tools (such as the React Developer Tools) within the browser.  For more information about debugging in Visual Studio Code, review [the documentation](https://code.visualstudio.com/Docs/editor/debugging).
+
+## Publish your app to Teams
+
+Before it can be used by other people, you must publish your app to the Developer Portal for Teams.
+
+1. To publish your app, navigate to the **Teams Toolkit** tab in Visual Studio Code.
+1. Select **Publish to Teams** in the **Project** section.
+
+If using Azure hosting, you must have provisioned and deployed to the cloud. For a walk-through of the SPFx publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).
+
+## Next step
 
 > [!div class="nextstepaction"]
-> [Next step: Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+
+## See also
+
+* [Build apps with the Teams Toolkit and Visual Studio](~/toolkit/visual-studio-overview.md)
+* [Build tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md)

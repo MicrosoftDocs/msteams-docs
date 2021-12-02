@@ -1,26 +1,29 @@
 ---
 title: Respond to search command
-author: clearab
-description: How to respond to the search command from a messaging extension in a Microsoft Teams app.
+author: surbhigupta
+description: Learn how to respond to the search command from a messaging extension in a Microsoft Teams app using code examples and samples
 ms.topic: conceptual
 ms.author: anclear
+ms.localizationpriority: none
 ---
-# Respond to the search command
+# Respond to search command
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Your web service will receive a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered:
+After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke which is triggered with the following conditions:
 
 * As characters are entered into the search box.
-* If `initialRun` is set to true in your app manifest, you'll receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
+* `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
-The request parameters itself are found in the `value` object in the request, which includes the following properties:
+This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
+
+The request parameters are found in the `value` object in the request, which includes the following properties:
 
 | Property name | Purpose |
 |---|---|
 | `commandId` | The name of the command invoked by the user, matching one of the commands declared in the app manifest. |
 | `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
-| `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
+| `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
 # [C#/.NET](#tab/dotnet)
 
@@ -70,40 +73,46 @@ The JSON below is shortened to highlight the most relevant sections.
 
 ## Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
+When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
 
-Your service should respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:
+Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:
 
 |Property name|Purpose|
 |---|---|
 |`composeExtension`|Top-level response envelope.|
-|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: asks the user to authenticate <br>`config`: asks the user to set up the messaging extension <br>`message`: displays a plain text message |
-|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
-|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: Displays a list of search results <br>`auth`: Asks the user to authenticate <br>`config`: Asks the user to set up the messaging extension <br>`message`: Displays a plain text message |
+|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently, the following types are supported: <br>`list`: A list of card objects containing thumbnail, title, and text fields <br>`grid`: A grid of thumbnail images |
+|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently, the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
 ### Response card types and previews
 
-We support the following attachment types:
+Teams supports the following card types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
+To have a better understanding and overview on cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md).
 
-To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
+To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+For additional information about the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
-* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
-* Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
+The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by its preview property. This is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or a Thumbnail card.
+* Extracting from the basic `title`, `text`, and `image` properties of the `attachment` object. The basic properties are used only if the `preview` property isn't specified.
+
+For Hero or Thumbnail card, except the invoke action other actions such as button and tap aren't supported in the preview card.
+
+To send an Adaptive Card or Ofiice 365 Connector card, you must include a preview. The `preview` property must be a Hero or Thumbnail card. If you don't specify the preview property in the `attachment` object, a preview isn't generated.
+
+For Hero and Thumbnail cards, you don't need to specify a preview property, a preview is generated by default. The following example displays link unfurling feature when a link is pasted in messaging extension:  
+![link unfurling](~/assets/images/messaging-extension/link-unfurl.gif)
 
 ### Response example
 
@@ -302,11 +311,81 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 * * *
 
+### Enable and handle tap actions
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
+{
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
+
+    var card = new ThumbnailCard
+    {
+        Title = "Card Select Item",
+        Subtitle = description
+    };
+
+    var attachment = new MessagingExtensionAttachment
+    {
+        ContentType = ThumbnailCard.ContentType,
+        Content = card,
+    };
+
+    return Task.FromResult(new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+        {
+            Type = "result",
+            AttachmentLayout = "list",
+            Attachments = new List<MessagingExtensionAttachment> { attachment }
+        }
+    });
+}
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+```typescript
+async handleTeamsMessagingExtensionSelectItem(context, obj) {
+        return {
+            composeExtension: {
+                  type: 'result',
+                  attachmentLayout: 'list',
+                  attachments: [CardFactory.thumbnailCard(obj.Item3)]
+            }
+        };
+    } 
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "name": "composeExtension/selectItem",
+    "type": "invoke",
+    "value": {
+        "Item1": "Package_Name",
+        "Item2": "Version",
+        "Item3": "Package Description"
+    },
+    .
+    .
+    .
+}
+```
+
+* * *
+
+> [!NOTE]
+> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile teams application.
+
 ## Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This can be useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
 
-The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as in the object below.
+The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
 
 ```json
 {
@@ -329,15 +408,18 @@ The default query has the same structure as any regular user query, with the `na
 }
 ```
 
-## Next Steps
+## Code sample
 
-Add authentication and/or configuration
+| Sample Name           | Description | .NET    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-* [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
-* [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
+## Next step
 
-Deploy configuration
+> [!div class="nextstepaction"]
+> [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
 
-* [Deploy your app package](~/concepts/deploy-and-publish/apps-upload.md)
+## See also
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+[Add configuration to a messaging extension](~/get-started/first-message-extension.md)

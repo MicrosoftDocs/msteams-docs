@@ -2,6 +2,7 @@
 title: Developer Preview
 description: Describes the features in the Public Developer Preview of Microsoft Teams
 ms.topic: conceptual
+ms.localizationpriority: medium
 keywords: teams preview developer features
 ---
 # Public developer preview for Microsoft Teams
@@ -13,7 +14,7 @@ Developer Preview is a public program for developers which provides early access
 
 ## Developer preview app manifest
 
-Many features enabled in developer preview will require alterations to your app manifest JSON file. To do so you'll need to use the [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) If you use this schema, you will not be able to use [App Studio](~/concepts/build-and-test/app-studio-overview.md) to make these changes, nor will you be able to use it to upload your app for testing. To upload your app you'll need to click the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method you can only upload a zipped version of your app package.
+Many features enabled in developer preview will require alterations to your app manifest JSON file. To do so you'll need to use the [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you will not be able to use [App Studio](~/concepts/build-and-test/app-studio-overview.md) to make these changes, nor will you be able to use it to upload your app for testing. To upload your app you'll need to click the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method you can only upload a zipped version of your app package.
 
 You may find it useful to use App Studio to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. Once you've added developer preview features to the `manifest.json` file you will not be able to re-import the package into App Studio.
 
@@ -45,6 +46,6 @@ To enable the public developer preview on a mobile client, you need to do the fo
 
 Use the same menu item under About → Developer preview, and click on it to turn it off.
 
-## Features available in developer preview
+## See also
 
-For a full list of the features currently enabled in developer preview see: [Features in the public developer preview](../../resources/dev-preview/developer-preview-features.md).
+[Test and debug your Microsoft Teams app](~/concepts/build-and-test/debug.md)

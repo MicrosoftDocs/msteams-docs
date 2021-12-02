@@ -1,19 +1,19 @@
 ---
-title: Developer Preview Manifest schema reference
-description: Describes the schema supported by the manifest for Microsoft Teams
+title: Public developer preview manifest schema reference
+description: Sample manifest file and description of all its components that are supported for Microsoft Teams
 ms.topic: reference
 keywords: teams manifest schema Developer Preview
-ms.date: 05/20/2019
+ms.localizationpriority: medium
+ms.date: 11/15/2021
 ---
-# Developer preview manifest schema for Microsoft Teams
+# Reference: Public developer preview manifest schema for Microsoft Teams
+
+For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> See [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) for information on the program and how you can join.
-> If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
+> If you aren't using developer preview features, including running [Teams personal tabs and messaging extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
-
-For more information on the features available see: [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
 ## Sample full manifest
 
@@ -57,8 +57,19 @@ For more information on the features available see: [Features in the Public Deve
   "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
+      "scopes": [
+        "team",
+        "groupchat"
+      ],
       "canUpdateConfiguration": true,
-      "scopes": [ "team", "groupchat" ]
+      "context":[
+        "channelTab",
+        "privateChatTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "meetingStage"
+      ]
     }
   ],
   "staticTabs": [
@@ -66,6 +77,7 @@ For more information on the features available see: [Features in the Public Deve
       "entityId": "idForPage",
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content?host=msteams",
+      "contentBotId": "Specifies to the app that tab is an Adaptive Card Tab. You can either provide the contentBotId or contentUrl.",
       "websiteUrl": "https://contoso.com/content",
       "scopes": [ "personal" ]
     }
@@ -178,7 +190,48 @@ For more information on the features available see: [Features in the Public Deve
      "contoso.com",
      "mysite.someplace.com",
      "othersite.someplace.com"
-  ]
+  ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
+   "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "developerUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ],
+  "defaultInstallScope": "meetings",
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  },
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
+  }
 }
 ```
 
@@ -188,13 +241,13 @@ The schema defines the following properties:
 
 *Optional, but recommended* &ndash; String
 
-The https:// URL referencing the JSON Schema for the manifest.
+The `https://` URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "devPreview".
+The version of the manifest schema this manifest is using. Use `m365DevPreview` only if you are previewing [Teams apps running in Office and Outlook](../../m365-apps/overview.md). Otherwise, use `devPreview` for all other Teams preview features.
 
 ## version
 
@@ -307,6 +360,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
@@ -316,13 +370,17 @@ The object is an array with all elements of the type `object`. This block is req
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
+Render tabs with Adaptive Cards by specifying `contentBotId` instead of `contentUrl` in the **staticTabs** block.
+
 The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
+
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔|The display name of the tab in the channel interface.|
 |`contentUrl`|String|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentBotId`|   | | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
@@ -344,12 +402,12 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`items.scopes`|array of enum|3|✔|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
-|`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
+|`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
 ## connectors
 
@@ -390,29 +448,29 @@ Each command item is an object with the following structure:
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|64 characters|✔|The ID for the command|
+|`id`|String|64 characters|✔|The ID for the command.|
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
-|`title`|String|32 characters|✔|The user-friendly command name|
-|`description`|String|128 characters||The description that appears to users to indicate the purpose of this command|
+|`title`|String|32 characters|✔|The user-friendly command name.|
+|`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
-|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically|
-|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command|
-|`taskInfo.title`|String|64||Initial dialog title|
-|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
-|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
-|`taskInfo.url`|String|||Initial webview URL|
-|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`context`|Array of Strings|3||Defines where the messaging extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
+|`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically.|
+|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command.|
+|`taskInfo.title`|String|64||Initial dialog title.|
+|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.url`|String|||Initial webview URL.|
+|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
 |`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`|
-|`parameter.choices`|Array of Objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`|
-|`parameter.choices.title`|String|128||Title of the choice|
-|`parameter.choices.value`|String|512||Value of the choice|
+|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
+|`parameter.choices`|Array of Objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
+|`parameter.choices.title`|String|128||Title of the choice.|
+|`parameter.choices.value`|String|512||Value of the choice.|
 
 ## permissions
 
@@ -420,8 +478,8 @@ Each command item is an object with the following structure:
 
 An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
 
-* `identity` &emsp; Requires user identity information
-* `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
+* `identity` &emsp; Requires user identity information.
+* `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
 
 Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app.
 
@@ -454,9 +512,66 @@ The object is an array with all elements of the type `string`.
 
 **Optional**
 
-Specify your AAD App ID and Graph information to help users seamlessly sign into your AAD app.
+Specify your Azure AD App ID and Graph information to help users seamlessly sign into your Auzre AD app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
-|`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+|`id`|String|36 characters|✔|Azure AD application ID of the app. This ID must be a GUID.|
+|`resource`|String|2048 characters|✔|Resource URL of the app for acquiring auth token for SSO.|
+|`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
+
+## configurableProperties
+
+**Optional** - array
+
+The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
+
+> [!NOTE]
+> A minimum of one property must be defined. You can define a maximum of nine properties in this block.
+
+You can define any of the following properties:
+
+* `name`: The app's display name.
+* `shortDescription`: The app's short description.
+* `longDescription`: The app's detailed description.
+* `smallImageUrl`: The app's outline icon.
+* `largeImageUrl`: The app's color icon.
+* `accentColor`: The color to use in conjunction with and as a background for your outline icons.
+* `developerUrl`: The HTTPS URL of the developer's website.
+* `privacyUrl`: The HTTPS URL of the developer's privacy policy.
+* `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
+
+## defaultInstallScope
+
+**Optional** - string
+
+Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## defaultGroupCapability
+
+**Optional** - object
+
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+
+## subscriptionOffer
+
+**Optional** - object
+
+Specifies the SaaS offer associated with your app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|

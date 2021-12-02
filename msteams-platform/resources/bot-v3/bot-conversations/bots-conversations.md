@@ -2,6 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 ms.topic: overview
+ms.localizationpriority: medium
 keywords: teams bots messages
 ms.date: 05/20/2019
 ---
@@ -17,8 +18,8 @@ A conversation is a series of messages sent between your bot and one or more use
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
-* [Bots in channel and group chat conversations](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) require the user to @ mention the bot to invoke it in a channel.
-* [Bots in single user conversations](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) do not require an @ mention -  the user can just type.
+* [Bots in channel and group chat conversations](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) require the user to @mention the bot to invoke it in a channel.
+* [Bots in single user conversations](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) do not require an @mention -  the user can just type.
 
 In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/resources/schema/manifest-schema.md).
 
@@ -34,7 +35,7 @@ Bots can participate in a conversation or initiate one. Most communication is in
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Bots also support event-style messages. See [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md) for more details. Speech is currently not supported.
+Bots also support event-style messages. For more information, see [Handle bot events in Microsoft Teams](~/resources/bot-v3/bots-notifications.md). Speech is currently not supported.
 
 Messages are for the most part the same in across all scopes, but there are differences in how the bot is accessed in the UI and differences behind the scenes which you will need to know about.
 
@@ -47,25 +48,25 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Format | From user to bot  | From bot to user |  Notes |
 | --- | :---: | :---: | --- |
 | Rich text | ✔ | ✔ |  |
-| Pictures | ✔ | ✔ | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported |
-| Cards | ✖ | ✔ | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
-| Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face) |
+| Pictures | ✔ | ✔ | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported. |
+| Cards | ✖ | ✔ | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis | ✖ | ✔ | Teams currently supports emojis via UTF-16 such as, U+1F600 for grinning face. |
 |
 
-For more information on the types of bot interaction supported by the Bot Framework (which bots in teams are based on), see the Bot Framework documentation on [conversation flow](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0) and related concepts in the documentation for [the Bot Builder SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) and [the Bot Builder SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0).
+For more information on the types of bot interaction supported by the Bot Framework, which bots in teams are based on, see the Bot Framework documentation on [conversation flow](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) and related concepts in the documentation for [the Bot Builder SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) and [the Bot Builder SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
 
 ## Message formatting
 
-You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) property of a `message` to control how your message's text content is rendered. See [Message formatting](~/resources/bot-v3/bots-message-format.md) for a detailed description of supported formatting in bot messages.
-You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) property to control how your message's text content is rendered.
+You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) property of a `message` to control how your message's text content is rendered. See [Message formatting](~/resources/bot-v3/bots-message-format.md) for a detailed description of supported formatting in bot messages.
+You can set the optional [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) property to control how your message's text content is rendered.
 
 For detailed information on how Teams supports text formatting in teams see [Text formatting in bot messages](~/resources/bot-v3/bots-text-formats.md).
 
-For information on formatting cards in messages, see [Card formatting](~/task-modules-and-cards/cards/cards-format.md).
+For more information on formatting cards in messages, see [Card formatting](~/task-modules-and-cards/cards/cards-format.md).
 
 ## Picture messages
 
-Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).
+Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true).
 
 Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
 
@@ -81,14 +82,14 @@ Depending on which scopes are declared, your bot can receive messages in the fol
 * **personal chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
 * **Channels** A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
 
-For incoming messages, your bot receives an [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/resources/bot-v3/bots-notifications.md#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
+For incoming messages, your bot receives an [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/resources/bot-v3/bots-notifications.md#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
 
 Your bot receives a payload that contains the user message `Text` as well as other information about the user, the source of the message, and Teams information. Of note:
 
-* `timestamp` The date and time of the message in Coordinated Universal Time (UTC)
-* `localTimestamp` The date and time of the message in the time zone of the sender
+* `timestamp` The date and time of the message in Coordinated Universal Time (UTC).
+* `localTimestamp` The date and time of the message in the time zone of the sender.
 * `channelId` Always "msteams". This refers to a bot framework channel, not a teams channel.
-* `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user
+* `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It is unique for your bot and cannot be directly used outside your bot instance in any meaningful way to identify that user.
 * `channelData.tenant.id` The tenant ID for the user.
 
 > [!NOTE]
@@ -155,13 +156,13 @@ The `channelData` object is not included in messages in personal conversations s
 
 A typical channelData object in an activity sent to your bot contains the following information:
 
-* `eventType` Teams event type; passed only in cases of [channel modification events](~/resources/bot-v3/bots-notifications.md#channel-updates)
-* `tenant.id` Azure Active Directory tenant ID; passed in all contexts
+* `eventType` Teams event type; passed only in cases of [channel modification events](~/resources/bot-v3/bots-notifications.md#channel-updates).
+* `tenant.id` Azure Active Directory tenant ID; passed in all contexts.
 * `team` Passed only in channel contexts, not in personal chat.
-  * `id` GUID for the channel
-  * `name` Name of the team; passed only in cases of [team rename events](~/resources/bot-v3/bots-notifications.md#team-name-updates)
-* `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
-  * `id` GUID for the channel
+  * `id` GUID for the channel.
+  * `name` Name of the team; passed only in cases of [team rename events](~/resources/bot-v3/bots-notifications.md#team-name-updates).
+* `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.
+  * `id` GUID for the channel.
   * `name` Channel name; passed only in cases of [channel modification events](~/resources/bot-v3/bots-notifications.md#channel-updates).
 * `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
 * `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
@@ -195,9 +196,9 @@ string tenantId = channelData.Tenant.Id;
 
 ## Sending replies to messages
 
-To reply to an existing message, call [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) in .NET or [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) in Node.js. The Bot Builder SDK handles all the details.
+To reply to an existing message, call [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_&preserve-view=true) in .NET or [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities&preserve-view=true) in Node.js. The Bot Builder SDK handles all the details.
 
-If you choose to use the REST API, you can also call the [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0) endpoint.
+If you choose to use the REST API, you can also call the [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0&preserve-view=true) endpoint.
 
 The message content itself can contain simple text or some of the Bot Framework supplied [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 

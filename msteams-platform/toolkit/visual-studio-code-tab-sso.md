@@ -2,12 +2,18 @@
 title: Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs
 description: Build a tab that supports single-sign-on and Microsoft Graph calls directly within Visual Studio Code with the Microsoft Teams Toolkit
 keywords: teams visual studio code toolkit tabs sso graph authentication Azure identity platform
+localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
 ---
 # Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs
 
-The Microsoft Teams Toolkit enables you to create single sign-on (SSO) authentication  for tab apps directly within Visual Studio Code. The toolkit guides you through the process and provides everything you need including provisioning your Microsoft identity platform registration in the Azure portal.
+> [!IMPORTANT]
+> **This document refers to an old version of Teams Toolkit**
+>
+> For current information, read the [prerequisites](../get-started/prerequisites.md) and follow  one of the newer tutorials.
+
+The Microsoft Teams Toolkit enables you to create single sign-on (SSO) authentication for tab apps directly within Visual Studio Code. The toolkit guides you through the process and provides everything you need including provisioning your Microsoft identity platform registration in the Azure portal.
 
 ## Get started — create a project
 
@@ -41,5 +47,6 @@ If you would like to learn more about how your Azure app registration will be pr
 > [!TIP]
 > You may not see the app install dialogue in the browser if pop-up windows are disabled for your browser. If this happens, enable pop-up windows and refresh the page.
 
-> [!div class="nextstepaction"]
-> [Learn more: Build apps with the Microsoft Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md)
+## See also
+
+[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md)

@@ -1,4 +1,4 @@
-## Upload your tab to Teams with App Studio
+## Upload your tab to Teams
 
 >[!NOTE]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
@@ -9,9 +9,9 @@
 
 - Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It should be found here:
 
-```bash
-/bin/Debug/netcoreapp2.2/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
 
 - Upload **tab.zip** to App Studio.
 
@@ -24,6 +24,8 @@ Once you've uploaded your app package into App Studio, you'll need to finish con
 There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you'll need to update:
 
 #### Details: App details
+
+In the *App* details section:
 
 - Under *Identification* select **Generate** to generate a new App Id for your app.
 
@@ -43,7 +45,7 @@ In the *Tabs* section:
 
 #### Finish: Domains and permissions
 
-In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+- In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
 
 #### Finish: Test and distribute
 

@@ -1,7 +1,8 @@
 ---
 title: https://review.docs.microsoft.com/help/contribute/metadata-attributes?branch=master
 author: 
-description: 
+description:
+localization_priority: Normal
 ms.topic: 
 ms.author: 
 ---

@@ -1,13 +1,14 @@
 ---
 title: Silent authentication
-description: Describes silent authentication
+description: Describes silent authentication, Single-sign-on, Azure Active Directory for tabs
 ms.topic: conceptual
-keywords: teams authentication SSO silent AAD
+ms.localizationpriority: medium
+keywords: teams authentication SSO silent AAD tab
 ---
 # Silent authentication
 
 > [!NOTE]
-> For authentication to work for your tab on mobile clients, ensure you are using at least 1.4.1 version of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, ensure that you're using at least 1.4.1 version of the Teams JavaScript SDK.
 
 Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
@@ -20,13 +21,15 @@ Even though the ADAL.js library is optimized for AngularJS applications, it also
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point your app can show a sign in button if required.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point, your app can show a sign in button if required.
 
 ## How to do silent authentication
 
 The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
 
-### include and configure ADAL
+[Initiate silent and simple authentication configurable tab using AAD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) and follow the instructions to run the sample on your local machine.
+
+### Include and configure ADAL
 
 Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:
 
@@ -61,7 +64,7 @@ if (loginHint) {
 
 ### Authenticate
 
-If ADAL has an unexpired token cached for the user, use the token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js will call your callback function with the requested token, or give an error if authentication fails.
+If ADAL has a token cached for the user that has not expired, use that token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
 
 If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.
 
@@ -112,3 +115,20 @@ if (authContext.isCallback(window.location.hash)) {
     }
 }
 ```
+
+### Handle sign out flow
+
+Use the following code to handle sign out flow in AAD Auth:
+
+> [!NOTE]
+> When you logout from Teams tab or bot, the current session is cleared.
+
+```javascript
+function logout() {
+localStorage.clear();
+window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
+}
+```
+## See also
+
+[Configure identity providers to use AAD](~/concepts/authentication/configure-identity-provider.md)

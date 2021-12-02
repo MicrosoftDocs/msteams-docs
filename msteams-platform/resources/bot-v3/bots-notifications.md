@@ -3,8 +3,10 @@ title: Handle bot events
 description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
 ms.date: 05/20/2019
+ms.topic: how-to
+ms.localizationpriority: medium
 ms.author: lajanuar
-author: laujan
+author: surbhigupta
 ---
 # Handle bot events in Microsoft Teams
 
@@ -12,11 +14,11 @@ author: laujan
 
 Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active. You can use these events to trigger service logic, such as the following:
 
-* Trigger a welcome message when your bot is added to a team
-* Query and cache group information when the bot is added to a group chat
-* Update cached information on team membership or channel information
-* Remove cached information for a team if the bot is removed
-* When a bot message is liked by a user
+* Trigger a welcome message when your bot is added to a team.
+* Query and cache group information when the bot is added to a group chat.
+* Update cached information on team membership or channel information.
+* Remove cached information for a team if the bot is removed.
+* When a bot message is liked by a user.
 
 Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object. For messages of type `message`, see [Sending and receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
@@ -37,7 +39,7 @@ The following table lists the events that your bot can receive and take action o
 
 ## Team member or bot addition
 
-The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).
+The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service, such as, sending a message to a specific user.
 
 ### Bot or user added to a team
 
@@ -358,9 +360,9 @@ Your bot is notified when a channel is created, renamed, or deleted in a team wh
 
 The channel events are as follows:
 
-* **channelCreated**&emsp;A user adds a new channel to the team
-* **channelRenamed**&emsp;A user renames an existing channel
-* **channelDeleted**&emsp;A user removes a channel
+* **channelCreated**&emsp;A user adds a new channel to the team.
+* **channelRenamed**&emsp;A user renames an existing channel.
+* **channelDeleted**&emsp;A user removes a channel.
 
 ### Full schema example: channelCreated
 

@@ -1,9 +1,11 @@
 ---
 title: Add authentication to your Teams bot
-author: clearab
-description: How to add OAuth authentication to a bot in Microsoft Teams.
+author: surbhigupta
+description: How to add OAuth authentication to a bot in Microsoft Teams using AAD. Learn how to create, deploy, and integrate authentication-enabled bots.
 ms.topic: how-to
+ms.localizationpriority: medium
 ms.author: lajanuar
+keywords: resource group bot channel registration azure emulator bot manifest 
 ---
 
 # Add authentication to your Teams bot
@@ -30,7 +32,7 @@ In this article you'll learn:
 - Knowledge of Azure and OAuth 2.0 development.
 - The current versions of Visual Studio and Git.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/free/).
-- The following sample.
+- The following sample:
 
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
@@ -120,14 +122,16 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
 
 ### Configure the identity provider connection and register it with the bot
 
-Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
+Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
 
 #### Azure AD V1
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot channel registration link.
-1. On the resource page, select **Settings**.
-1. Under **OAuth Connection Settings** near the bottom of the page, select **Add Setting**.
+1. Open the resource page and select **Configuration** under **Settings**. 
+1. Select **Add OAuth Connection Settings**.    
+The following image displays the corresponding selection in the resource page:  
+![SampleAppDemoBot configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv1*.
@@ -153,8 +157,11 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot channel registration link.
-1. On the resource page, select **Settings**.
-1. Under **OAuth Connection Settings** near the bottom of the page, select **Add Setting**.
+1. Open the resource page and select **Configuration** under **Settings**. 
+1. Select **Add OAuth Connection Settings**.  
+The following image displays the corresponding selection in the resource page:        
+![SampleAppDemoBot Configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
+
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv2*.
@@ -184,7 +191,7 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 1. Select **Accept**.
 1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
 
-  ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+    ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 The connection name is used by the bot code to retrieve user authentication tokens.
 
@@ -202,7 +209,6 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
-    - Set the `ConnectionName` to the name of the identity provider connection.
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
@@ -222,7 +228,6 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
     - Set the `connectionName` to the name of the identity provider connection.
-
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
      [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
@@ -256,7 +261,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 1. Select the **Publish** button.
 1. In the next dialog window, enter the required information. The following is an example:
 
-   ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
+    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
 1. Select **Create**.
 1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
@@ -274,11 +279,11 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
-In order for the bot sample login to work you must configure the Emulator as shown below.
+In order for the bot sample login to work you must configure the Emulator.
 
 ### Configure the Emulator for authentication
 
-If a bot requires authentication, you must configure the Emulator as shown below.
+If a bot requires authentication, you must configure the Emulator. To configure:
 
 1. Start the Emulator.
 1. In the Emulator, select the gear icon &#9881; in the bottom left, or the **Emulator Settings** tab in the upper right.
@@ -412,7 +417,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 ### TeamsAppManifest/manifest.json
 
-This manifest contains information needed by Microsoft Teams to connect with the bot.  
+This manifest contains information needed by Microsoft Teams to connect with the bot:  
 
 ```json
 {
@@ -560,17 +565,18 @@ Within the following dialog step, check for the presence of a token in the resul
 
 ---
 
-> [!div class="nextstepaction"]
-> [Learn about adding authentication via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+## See also
+
+[Add authentication through Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 
 [azure-portal]: https://ms.portal.azure.com
 
-[concept-basics]: https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true
-[concept-state]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0&preserve-view=true
-[concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
-[simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
+[concept-basics]: /azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true
+[concept-state]: /azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0&preserve-view=true
+[concept-dialogs]: /azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
+[simple-dialog]: /azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
 
 [teams-auth-bot-cs]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 

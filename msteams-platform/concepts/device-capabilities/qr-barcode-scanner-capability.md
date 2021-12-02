@@ -1,26 +1,27 @@
 ---
 title: Integrate QR or barcode scanner capability
+author: Rajeshwari-v
 description: How to use Teams JavaScript client SDK to leverage QR or barcode scanner capability
-keywords: camera media qr code qrcode bar code barcode scanner scan capabilities native device permissions 
-ms.author: lajanuar
+keywords: camera media qr code qrcode bar code barcode scanner scan capabilities native device permissions
+ms.localizationpriority: medium
+ms.topic: conceptual
+ms.author: surbhigupta
 ---
 
-# Integrate QR or barcode scanner capability 
-
-This document guides you on how to integrate the QR or barcode scanner capability. 
+# Integrate QR or barcode scanner capability
 
 Barcode is a method of representing data in a visual and machine-readable form. The barcode contains information about a product, such as a type, size, manufacturer, and Country of origin in the form of bars and spaces. The code is read using the optical scanner on your native device camera. For a richer collaborative experience, you can integrate the QR or barcode scanner capability provided in the Teams platform with your Teams app.   
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the `scanBarCode` API to integrate the scanner capability within your app. 
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API to integrate the scanner capability within your app.
 
 ## Advantage of integrating QR or barcode scanner capability
 
 Following are the advantages of integration of QR or barcode scanner capabilities: 
 
 * The integration allows web app developers on Teams platform to leverage QR or barcode scanning functionality with Teams JavaScript client SDK.
-* With this feature, the user only needs to align a QR or barcode within a frame at the center of the scanner UI and the code gets scanned automatically. The stored data is shared back with the calling web app. This avoids the inconvenience and human-errors of entering lengthy product codes or other relevant information manually.
+* With this feature, the user only needs to align a QR or barcode within a frame at the center of the scanner UI and the code gets scanned automatically. The stored data is shared back with the calling web app. This avoids the inconvenience and human errors of entering lengthy product codes or other relevant information manually.
 
-To integrate QR or barcode scanner capability, you must update the app manifest file and call the `scanBarCode` API. For effective integration, you must have a good understanding of [code snippet](#code-snippet) for calling the `scanBarCode` API, which allows you to use native QR or barcode scanner capability. The API gives an error for an unsupported barcode standard.
+To integrate QR or barcode scanner capability, you must update the app manifest file and call the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API. For effective integration, you must have a good understanding of [code snippet](#code-snippet) for calling the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API, which allows you to use native QR or barcode scanner capability. The API gives an error for an unsupported barcode standard.
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE] 
@@ -28,7 +29,7 @@ It is important to familiarize yourself with the [API response errors](#error-ha
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the QR or barcode scanner capability.
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the QR or barcode scanner capability. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -41,9 +42,9 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 ## ScanBarCode API
 
-The `ScanBarCode` API invokes scanner control that enables the user to scan different types of barcode, and returns the result as a string.
+The [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API invokes scanner control that enables the user to scan different types of barcode, and returns the result as a string.
 
-To customize the barcode scanning experience, optional barcode configuration is passed as input to `ScanBarCode` API. You can specify the scan time-out interval in seconds using `timeOutIntervalInSec`. Its default value is 30 seconds and the maximum value is 60 seconds.
+To customize the barcode scanning experience, optional [barcode configuration](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) is passed as input to [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API. You can specify the scan time-out interval in seconds using `timeOutIntervalInSec`. Its default value is 30 seconds and the maximum value is 60 seconds.
 
 The **scanBarCode()** API supports the following barcode types:
 
@@ -62,7 +63,8 @@ The **scanBarCode()** API supports the following barcode types:
 | UPC-A | Yes | Yes |
 | UPC-E | Yes | Yes |
 
-**Web app experience for `ScanBarCode` API for QR or barcode scanner capability**
+The following image depicts web app experience of QR or barcode scanner capability:
+
 ![web app experience for qr or barcode scanner capability](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
 ## Error handling
@@ -102,8 +104,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](location-capability.md)
+* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate location capabilities in Teams](location-capability.md)
+* [Integrate People Picker in Teams](people-picker-capability.md)

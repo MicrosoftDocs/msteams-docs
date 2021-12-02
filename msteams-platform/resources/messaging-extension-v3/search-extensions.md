@@ -2,17 +2,19 @@
 title: Search with messaging extensions
 description: Describes how to develop search based messaging extensions
 keywords: teams messaging extensions messaging extensions search
+ms.topic: how-to
+ms.localizationpriority: medium
 ms.date: 07/20/2019
 ---
 # Search with messaging extensions
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-Search based messaging extensions allow you to query your service and post that information in the form of a card, right into your message
+Search based messaging extensions allow you to query your service and post that information in the form of a card, right into your message.
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
-The following sections describe how to do this.
+The following sections describe how to do this:
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
@@ -93,7 +95,7 @@ If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **
 
 A messaging extension receives an `onQuery` event when anything happens in the messaging extension window or is sent to the window.
 
-If your messaging extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the messaging extension isn't configured, return a `config` response with a link to your configuration page. Be aware that the response from the configuration page is also handled by `onQuery`. (The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section.)
+If your messaging extension uses a configuration page, your handler for `onQuery` should first check for any stored configuration information; if the messaging extension isn't configured, return a `config` response with a link to your configuration page. Be aware that the response from the configuration page is also handled by `onQuery`. The sole exception is when the configuration page is called by the handler for `onQuerySettingsUrl`; see the following section:
 
 If your messaging extension requires authentication, check the user state information; if the user isn't signed in, follow the instructions in the [Authentication](#authentication) section later in this topic.
 
@@ -107,7 +109,7 @@ The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable t
 
 ![Screenshots of locations of Settings menu item](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. (This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.)
+Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
 
 ## Receive and respond to queries
 
@@ -136,7 +138,7 @@ The request parameters itself are found in the value object, which includes the 
 | Property name | Purpose |
 |---|---|
 | `commandId` | The name of the command invoked by the user, matching one of the commands declared in the app manifest. |
-| `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
+| `parameters` | Array of parameters: Each parameter object contains the parameter name, along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
 
 #### Request example
@@ -249,7 +251,7 @@ We support the following attachment types:
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
+For more information, see [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -478,7 +480,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 ```
 
 > [!NOTE]
-> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. (See [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.)
+> For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.
 
 ### Start the sign-in flow
 
@@ -490,7 +492,7 @@ As with other embedded experiences running inside Microsoft Teams, your code ins
 
 When the sign-in request completes and redirects back to your page, it should perform the following steps:
 
-1. Generate a security code. (This can be a random number.) You need to cache this code on your service, along with the credentials obtained through the sign-in flow (such as OAuth 2.0 tokens).
+1. Generate a security code. (This can be a random number.) You need to cache this code on your service, along with the credentials obtained through the sign-in flow such as, OAuth 2.0 tokens.
 2. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
 
 At this point, the window closes and control is passed to the Teams client. The client now can reissue the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
@@ -649,4 +651,7 @@ class App {
 const app = new App();
 app.run();
 ```
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+
+## See also
+
+[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

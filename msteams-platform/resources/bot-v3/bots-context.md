@@ -2,6 +2,8 @@
 title: Get context for your Microsoft Teams bot
 description: Describes how to get context for bots in Microsoft Teams
 keywords: teams bots context
+ms.topic: conceptual
+ms.localizationpriority: medium
 ms.date: 05/20/2019
 ---
 # Get context for your Microsoft Teams bot
@@ -110,8 +112,6 @@ connector.fetchMembers(
 );
 ```
 
-Also, see [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
-
 ## Fetch user profile or roster in personal or group chat
 
 You can make the API call for any personal chat to obtain the profile information of the user chatting with your bot.
@@ -218,3 +218,7 @@ var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
     await context.PostAsync($"ClientInfo: clientinfo ");
 }
 ```
+
+## See also
+
+[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
