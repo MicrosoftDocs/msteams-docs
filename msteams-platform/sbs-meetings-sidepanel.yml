@@ -237,6 +237,8 @@ items:
         > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
+
+       ![Add a scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -252,13 +254,12 @@ items:
 
          * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
-       The following image shows the fields and the values:
-
-        ![Add a scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
-
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
+
+        ![Add a scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
+
        The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
