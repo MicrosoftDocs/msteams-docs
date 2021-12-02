@@ -154,7 +154,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     
     * Select **Save** to save the changes.
 
-#### Update bot manifest in Azure portal
+#### Update manifest in Azure portal
 
 The following steps will guide you to update the bot manifest in Azure portal:
 
