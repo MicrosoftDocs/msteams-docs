@@ -85,28 +85,28 @@ To sideload in a team to test, whether all group chat messages in a team with RS
 
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The drop-down menu appears.
-1. Select **Manage apps** from the drop-down menu.
+1. Select **Manage apps** from the drop-down menu:
 
    ![Manage apps in team](~/assets/images/bots/Chats_Manage_Apps_Entry.png)
 
-1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
+1. Select **Upload a custom app** from the lower right corner of **Manage apps**:
 
     ![Uploading custom app](~/assets/images/bots/Chats_Manage_Apps_Page.png)
 
 1. Select the app package from the **Open** dialog box.
-1. Select **Open**.
+1. Select **Open**:
 
     ![Selecting app package](~/assets/images/bots/Chats_Sideload_App_FilePicker.png)
 
-1. Select **Add** from the app details pop-up, to add the bot to your selected group chat.
+1. Select **Add** from the app details pop-up, to add the bot to your selected group chat:
 
     ![Adding the bot](~/assets/images/bots/Chats_Install_Dialog.png)
 
-1. Enter a message in the group chat for your bot.
+1. Enter a message in the group chat for your bot:
 
    ![Bot receives message](~/assets/images/bots/Bot_ReceiveMessage.png)
 
-   The bot receives the message without being @mentioned.
+   The bot receives the message without being @mentioned:
 
    ![No mention](~/assets/images/bots/Bot_NoMention.png)
 
