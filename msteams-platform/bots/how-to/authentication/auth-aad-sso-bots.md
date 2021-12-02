@@ -154,7 +154,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     
     * Select **Save** to save the changes.
 
-#### Update bot manifest in Azure Portal
+#### Update bot manifest in Azure portal
 
 The following steps will guide you to update the bot manifest in Azure portal:
 
@@ -240,7 +240,7 @@ If the user is using the application for the first time and user consent is requ
 
 When the user selects **Continue**, the following events occur:
 
-* If the bot defines a sign-in button, it activates the sign-in flow for bots that is similar to the sign-in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
+* If the bot defines a sign-in button, the sign-in flow for bots is activated that is similar to the sign-in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
 
 * If the bot isn't providing a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
 
