@@ -182,7 +182,7 @@ items:
 
     1. Select **Expose an API** from the left pane.
     1. Select **Set** for the Application ID URI.
-    1. Use the **Application ID URI** shown and append **api://botid-** at the beginning of the URI.
+    1. Use the **Application ID URI** shown and append **api://** and **ngrok uri**at the beginning of the URI.
 
         ![App ID URI](~/assets/images/adaptive-cards/app-id-url.png)
 
