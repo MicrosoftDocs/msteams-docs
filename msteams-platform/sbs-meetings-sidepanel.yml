@@ -238,7 +238,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Add a scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
+       ![Select scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -268,6 +268,8 @@ items:
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
+
+        ![Select client application](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapplication.png) 
 
     1. Enter each of the following client IDs and select the authorized scope:</br>
 
