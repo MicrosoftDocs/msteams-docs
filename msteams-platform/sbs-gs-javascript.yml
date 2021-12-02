@@ -165,7 +165,7 @@ items:
         :::column-end:::
         :::column span="":::
 
-        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-mex-app.png" alt-text="Diagram showing message extension app." border="true":::](#create-your-message-extension-project-workspace)
+        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-mex-app.png" alt-text="Diagram showing message extension app." border="true":::](create-project-workspace-for-your-message-extension-app#create-your-message-extension-project-workspace)
 
         :::column-end:::
     :::row-end:::
@@ -181,7 +181,7 @@ items:
 
     In this page, you'll learn:
     1. [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project-workspace)
-    1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
+    1. [About the directory structure of your app](#take-a-tour-of-the-tab-app-source-code)
 
     ## Create your tab project workspace
 
@@ -262,7 +262,7 @@ items:
 
     ---
 
-    ## Take a tour of the source code
+    ## Take a tour of the tab app source code
 
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code.
 
@@ -419,7 +419,7 @@ items:
     In this tutorial, you'll learn:
 
     1. [How to set up a new Bot project with Teams Toolkit.](#create-your-bot-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
+    1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
     > [!IMPORTANT]
     > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
@@ -492,7 +492,7 @@ items:
 
     ---
 
-    ## Take a tour of the source code
+    ## Take a tour of the bot app source code
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
@@ -640,7 +640,7 @@ items:
     In this tutorial, you'll learn:
 
     1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
+    1. [About the directory structure of your app project.](#take-a-tour-of-messaging-extension-app-source-code)
 
     ## Create your Message Extension project workspace
 
@@ -708,7 +708,7 @@ items:
 
     ---
 
-    ## Take a tour of the source code
+    ## Take a tour of the messaging extension app source code
 
     A message extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
