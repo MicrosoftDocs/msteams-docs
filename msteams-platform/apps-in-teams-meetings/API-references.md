@@ -212,7 +212,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ### Response codes
 
-The `NotificationSignal` API includes the following response codes:
+The following table includes the response codes:
 
 |Response code|Description|
 |---|---|
