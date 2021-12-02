@@ -155,17 +155,17 @@ items:
     :::row:::
         :::column span="":::
 
-        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-tab-app.png" alt-text="Diagram showing tab app." border="true":::](xref:create-your-tab-project-workspace)
+        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-tab-app.png" alt-text="Diagram showing tab app." border="true":::](xref:Create project workspace for your tab app)
 
         :::column-end:::
         :::column span="":::
 
-        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-bot-app.png" alt-text="Diagram showing bot app." border="true":::](xref:create-your-bot-project-workspace)
+        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-bot-app.png" alt-text="Diagram showing bot app." border="true":::](xref:Create project workspace for your bot app)
 
         :::column-end:::
         :::column span="":::
 
-        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-mex-app.png" alt-text="Diagram showing message extension app." border="true":::](xref:create-your-message-extension-project-workspace)
+        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-mex-app.png" alt-text="Diagram showing message extension app." border="true":::](xref:Create project workspace for your message extension app)
 
         :::column-end:::
     :::row-end:::
