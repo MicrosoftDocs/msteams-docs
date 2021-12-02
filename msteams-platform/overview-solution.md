@@ -35,9 +35,9 @@ Collate and map requirements to Teams features:
 Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. Create a personal chat bot app.
-1. Integrate with weather forecast external API from a forecast website to connect and request forecast for specific date and location.
+1. Integrate with external API from a forecast website to connect and request forecast for specific date and location.
 1. Integrate with Microsoft Graph for registered users.
-1.Check and send forecast details on the basis of users travel date and travel location on a particular day. 
+1. Check and send forecast details on the basis of users travel date and travel location on a particular day.
 
 > [!div class="nextstepaction"]
 > [Start here](get-started/get-started-overview.md)
