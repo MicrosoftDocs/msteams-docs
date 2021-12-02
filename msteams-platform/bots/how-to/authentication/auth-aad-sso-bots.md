@@ -160,7 +160,9 @@ The following steps will guide you to update the bot manifest in Azure portal:
 
 1. Select **Manifest** from the left pane.
 1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change it's value to **2**.
+
     ![Update manifest](~/assets/images/bots/update-manifest.png)
+
 
    >[!NOTE]
    > If you are already in testing your bot in Teams, you must sign out from this app and sign out from Teams. Then sign in again to see this change.
