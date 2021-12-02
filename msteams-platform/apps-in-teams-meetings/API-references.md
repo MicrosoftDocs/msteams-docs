@@ -414,7 +414,6 @@ The JSON response body for the `getAppContentStageSharingState` API is:
   
 ```
 
-
 ### Response codes
 
 The following table provides the response codes:
@@ -471,7 +470,7 @@ The JSON response body for `getAppContentStageSharingCapabilities` API is:
 
 ### Response codes
 
-The `getAppContentStageSharingCapabilities` API returns the following response codes:
+The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
@@ -497,6 +496,32 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     ]
 }
  ```
+Your bot receives the event through the `OnEventActivityAsync` handler.
+
+To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+     
+> [!NOTE]      
+> * Get meeting ID from `turnContext.ChannelData`.    
+> * Do not use conversation ID as meeting ID.     
+> * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
+      
+The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
+
+Meeting Start Event
+```csharp
+protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
+
+Meeting End Event
+```csharp
+protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
 
 ### Example of meeting start event payload
 
@@ -604,32 +629,7 @@ The following code provides an example of meeting end event payload:
 
 ### Example of getting metadata of a meeting
 
-Your bot receives the event through the `OnEventActivityAsync` handler.
-
-To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
-     
-> [!NOTE]      
-> * Get meeting ID from `turnContext.ChannelData`.    
-> * Do not use conversation ID as meeting ID.     
-> * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
-      
-The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
-
-Meeting Start Event
-```csharp
-protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
-{
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
-```
-
-Meeting End Event
-```csharp
-protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
-{
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
-```
+Y
 
 ## Code sample
 
