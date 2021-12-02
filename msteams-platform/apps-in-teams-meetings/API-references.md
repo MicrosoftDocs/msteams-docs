@@ -504,8 +504,8 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 > [!NOTE]      
 > * Get meeting ID from `turnContext.ChannelData`.    
 > * Do not use conversation ID as meeting ID.     
-> * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
-      
+> * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
+
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
