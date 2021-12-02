@@ -89,6 +89,8 @@ For example:
 - Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
 - Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
 
+### Teams app features list
+
 Here's a list of common Teams app features mapped to capabilities:
 <br><br>
 <details>

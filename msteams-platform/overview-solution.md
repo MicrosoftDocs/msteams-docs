@@ -13,7 +13,10 @@ Now that you've had a view of Teams offerings, you can map them to user needs. L
 
 ## The user story
 
-The developer from Travel agency wants to build an app for their users, the tourists. It should check and send the forecast to users registered with the travel agency. The app should notify the users a day before the travel so they can plan.
+The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app should:
+
+- Check and send the forecast to travelers registered with the travel agency.
+- Notify the users a day before the departure date so they can plan.
 
 Collate and map requirements to Teams features:
 
@@ -29,7 +32,12 @@ Collate and map requirements to Teams features:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-2.png" alt-text="Image showing user story" border="true":::
 
-Teams offers these and many more capabilities to bring your users a feature-rich app solution.
+Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
+
+1. Create a personal chat bot app.
+1. Integrate with weather forecast external API from a forecast website to connect and request forecast for specific date and location.
+1. Integrate with Microsoft Graph for registered users.
+1.Check and send forecast details on the basis of users travel date and travel location on a particular day. 
 
 > [!div class="nextstepaction"]
 > [Start here](get-started/get-started-overview.md)
