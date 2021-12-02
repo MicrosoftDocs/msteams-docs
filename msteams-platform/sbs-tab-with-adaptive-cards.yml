@@ -274,7 +274,7 @@ items:
     1. In the Windows Explorer, Select the **Project**.
     1. Go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow** folder.
     1. Open the **appsettings.json** file.
-    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, and `ApplicationBaseUrl`.
+    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, and add your ngrok URI as `ApplicationBaseUrl`.
     1. Use the OAuth connection name as the **Connection Name**.
 
         > [!NOTE]
@@ -347,13 +347,6 @@ items:
     1. Refresh to **Sign In** again.
 
         ![Success Sign out](~/assets/images/adaptive-cards/success-sign-out.png)
-
-- title: Deploy the bot to Azure
-  durationInMinutes: 1
-  content: |
-    This step by step process demonstrates how to deploy a bot to Azure. It explains how to prepare your bot for deployment, deploy your bot to Azure, and test your bot in Web Chat.
-
-  
 
 - title: Complete challenge
   durationInMinutes: 1
