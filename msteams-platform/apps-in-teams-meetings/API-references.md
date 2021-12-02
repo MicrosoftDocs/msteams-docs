@@ -140,9 +140,9 @@ The following table provides the response codes:
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participants are not available.|
 
-## NotificationSignal API
+## Notification signal
 
-All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. Y can send signal or notify based on user action, an in-meeting dialog box. The API includes query parameter, examples, and response codes.
+All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send signal based on user action, an in-meeting dialog box. The API includes query parameter, examples, and response codes.
 
 > [!NOTE]
 > * When an in-meeting dialog box is invoked, the content is presented as a chat message.
@@ -224,10 +224,9 @@ The following table includes the response codes:
 ## Meeting Details API
 
 > [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+> Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically.
-The API is available through Bot Services.
+The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services.
 
 ### Prerequisite
 
@@ -245,7 +244,7 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
  
 ### Query parameter
 
-The Meeting Details API includes the following query parameter:
+The following table lists the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -253,7 +252,7 @@ The Meeting Details API includes the following query parameter:
 
 ### Example
 
-The Meeting Details API includes the following examples:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -323,16 +322,16 @@ To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In
 
 ### Query parameter
 
-The `shareAppContentToStage` API includes the following parameters:
+The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain a true value, in case of a successful share, or null when the share fails.|
-|**appContentURL**| String | Yes | URL that will be shared on to the stage.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, in case of a successful share, or null when the share fails.|
+|**appContentURL**| String | Yes | The URL that will be shared on to the stage.|
 
 ### Example
 
-The following codes provide examples of `shareAppContentToStage` API:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -363,7 +362,7 @@ Not available
 
 ### Response codes
 
-The `shareAppContentToStage` API returns the following response codes:
+The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
@@ -377,7 +376,7 @@ The `getAppContentStageSharingState` API enables you to fetch information about 
 
 ### Query parameter
 
-The `getAppContentStageSharingState` API includes the following parameter:
+The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -385,7 +384,7 @@ The `getAppContentStageSharingState` API includes the following parameter:
 
 ### Example
 
-The following codes provide examples of `getAppContentStageSharingState` API:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -418,7 +417,7 @@ The JSON response body for the `getAppContentStageSharingState` API is:
 
 ### Response codes
 
-The `getAppContentStageSharingState` API returns the following response codes:
+The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
@@ -432,15 +431,15 @@ The `getAppContentStageSharingCapabilities` API enables you to fetch the apps' c
 
 ### Query parameter
 
-The `getAppContentStageSharingCapabilities` includes the following parameters:
+The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The result can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The result can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
 
 ### Example
 
-The following codes provide examples of `getAppContentStageSharingCapabilities` API:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
