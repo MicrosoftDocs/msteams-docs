@@ -3,6 +3,7 @@ title: Microsoft Teams JavaScript client SDK v2 Preview
 description: Understand the changes coming with Microsoft Teams JavaScript client SDK v2 Preview
 ms.date: 11/15/2021
 ms.topic: conceptual
+ms.custom: m365apps
 ---
 # Microsoft Teams JavaScript client SDK v2 Preview
 

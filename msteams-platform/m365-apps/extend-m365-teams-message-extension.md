@@ -3,6 +3,7 @@ title: Extend a Teams message extension across Microsoft 365
 description: Here's how to update your search-based Teams messaging extension to run in Outlook
 ms.date: 11/15/2021
 ms.topic: tutorial
+ms.custom: m365apps
 ---
 # Extend a Teams message extension across Microsoft 365
 
