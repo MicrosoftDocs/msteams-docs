@@ -77,11 +77,15 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
-    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
+    1. From the **Resource group** dropdown list, select your existing resource group. 
+    
+        ![Select resource Azure bot](~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png) 
+    
+       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. Select the required location from **New resource group location** dropdown list.
 
-        ![Create resource Azure bot](~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png)
+        ![New resource group location](~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
