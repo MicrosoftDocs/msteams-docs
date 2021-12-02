@@ -496,9 +496,10 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     ]
 }
  ```
-Your bot receives the event through the `OnEventActivityAsync` handler.
 
-To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+### Example of getting meeting `MeetingStartEndEventvalue`
+
+The bot receives event through the `OnEventActivityAsync` handler. To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
      
 > [!NOTE]      
 > * Get meeting ID from `turnContext.ChannelData`.    
@@ -626,10 +627,6 @@ The following code provides an example of meeting end event payload:
     "locale": "en-US" 
 }
 ```
-
-### Example of getting metadata of a meeting
-
-Y
 
 ## Code sample
 
