@@ -165,7 +165,7 @@ items:
         :::column-end:::
         :::column span="":::
 
-        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-mex-app.png" alt-text="Diagram showing message extension app." border="true":::](create-project-workspace-for-your-message-extension-app#create-your-message-extension-project-workspace)
+        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-mex-app.png" alt-text="Diagram showing message extension app." border="true":::](#create-your-message-extension-project-workspace)
 
         :::column-end:::
     :::row-end:::
@@ -640,7 +640,7 @@ items:
     In this tutorial, you'll learn:
 
     1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-messaging-extension-app-source-code)
+    1. [About the directory structure of your app project.](#take-a-tour-of-the-messaging-extension-app-source-code)
 
     ## Create your Message Extension project workspace
 
