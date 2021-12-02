@@ -18,18 +18,10 @@ items:
 
     **Key features of Meeting Token Generator**
 
-    * Displays the current token that is being serviced in the meeting.
-    * Displays the user list sorted by the token number.
-    * Generates a token for the user upon request.
-    * Displays current user's token number.
-    * Allows the organizer to skip the current meeting token.
-
+   
     **Different ways of user interactions**
 
-    * Token: Requests token for the user.
-    * Done: Confirms token generation for the user.
-    * Skip: Skips the current user and moves to the next person in line for a token.
-
+    
        > [!NOTE]
        > Skip is available only to the meeting organizers.
     
