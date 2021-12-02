@@ -293,35 +293,35 @@ The following are the links for RSC permissions for latest version:
             }
             {
                 "name": "TeamSettings.ReadWrite.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
             {
                 "name": "ChannelSettings.Read.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
             {
                 "name": "ChannelSettings.ReadWrite.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
             {
                 "name": "Channel.Create.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
             {
                 "name": "Channel.Delete.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
             {
                 "name": "ChannelMessage.Read.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
             {
                 "name": "TeamsAppInstallation.Read.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
             {
                 "name": "TeamsTab.Read.Group",
-                "type": "Delegated",
+                "type": "Application",
             }
         ]    
     }
