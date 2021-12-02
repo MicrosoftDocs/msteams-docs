@@ -155,7 +155,8 @@ items:
     :::row:::
         :::column span="":::
 
-        [:::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-tab-app.png" alt-text="Diagram showing tab app." border="true":::](Create project workspace for your tab app#create-your-tab-project-workspace)
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-tab-app.png" alt-text="Diagram showing tab app." border="true":::
+        [Tab app](Create project workspace for your tab app#create-your-tab-project-workspace)
 
         :::column-end:::
         :::column span="":::
