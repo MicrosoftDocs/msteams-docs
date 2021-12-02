@@ -175,10 +175,10 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
+### Example of RSC Permission for older version(Placeholder for version) and latest version(Placeholder for version)
+
 > [!NOTE]
 > For latest version(placeholder for version) the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
-
-### Example of RSC Permission for older version(Placeholder for version) and latest version(Placeholder for version)
 
 The following are the links for RSC permissions for older version:
 
