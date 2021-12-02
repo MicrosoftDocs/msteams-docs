@@ -178,7 +178,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 ### Example of RSC Permission for older version(Placeholder for version) and latest version(Placeholder for version)
 
 > [!NOTE]
-> For latest version(placeholder for version) the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
+> For latest version(placeholder for version) the RSC permissions have two sections as RSC Delegated  permissions and RSC Application permission in Authorization section.
 
 The following are the links for RSC permissions for older version:
 
