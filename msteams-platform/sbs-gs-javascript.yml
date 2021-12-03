@@ -115,7 +115,7 @@ items:
 
    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
-   ### Enable sideloading option
+   ### Check for sideloading option
 
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
       
@@ -153,8 +153,6 @@ items:
 
    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
 
-   [Tab](~/sbs-gs-javascript.yml#create-your-tab-project-workspace)
-
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
@@ -190,16 +188,6 @@ items:
     1. Ensure that **Tab UI-based app** is selected as the capability that you want to build in your app. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
-
-    1. Select **Azure** as the Frontend hosting type.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png" alt-text="Select Hosting Type" border="false":::
-
-        If you want to host your app on SharePoint, you can select SharePoint Framework (SPFx) in this option.
-
-    1. Select **OK** to continue. You don't need other cloud resources for this tutorial.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-cloud-resources.png" alt-text="Cloud Resources" border="false":::
 
     1. Select **JavaScript** as the programming language.
 
