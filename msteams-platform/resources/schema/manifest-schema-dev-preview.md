@@ -6,6 +6,7 @@ keywords: teams manifest schema Developer Preview
 ms.localizationpriority: medium
 ms.date: 11/15/2021
 ---
+
 # Reference: Public developer preview manifest schema for Microsoft Teams
 
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
