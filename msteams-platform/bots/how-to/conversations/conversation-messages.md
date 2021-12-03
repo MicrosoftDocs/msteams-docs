@@ -380,7 +380,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
-    ![Success message](~/assets/images/Cards/success.png)
+    ![Error message](~/assets/images/Cards/error-message.png)
 
 You can select **Close** or switch chat to dismiss the message.    
 
