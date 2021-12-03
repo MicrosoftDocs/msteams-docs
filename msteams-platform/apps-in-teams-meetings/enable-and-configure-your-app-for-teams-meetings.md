@@ -157,7 +157,7 @@ To share the entire app to stage, in the app manifest you must configure `meetin
   ]
 ```
 
-For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
 
 ##### Share specific parts of the app to stage
 
