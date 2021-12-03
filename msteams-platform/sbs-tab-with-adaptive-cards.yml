@@ -309,8 +309,7 @@ items:
 
     1. Send a message to the tab.
 
-        (Image to be replaced once I get the output)
-        ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
+        ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
 
 - title: Interacting with the Tab in Teams
   durationInMinutes: 1
