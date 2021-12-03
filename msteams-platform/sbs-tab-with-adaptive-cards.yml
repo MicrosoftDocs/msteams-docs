@@ -26,8 +26,7 @@ items:
     
     This step-by-step guide helps you to build tabs with Adaptive Cards in desktop and mobile.
 
-    The below image will be replaced once I get the output
-    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
+    ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -41,7 +40,7 @@ items:
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
 - title: Create a Bot Registration In Azure portal
-  durationInMinutes: 5
+  durationInMinutes: 2
   content: |
     To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps for bot registration:
 
@@ -353,8 +352,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    Below image should be replaced once I get the output
-    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
+    ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
     
 - content: |
     You've completed the tutorial to get started with Adaptive cards for Microsoft Teams using the Bot Framework.
