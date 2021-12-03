@@ -14,42 +14,44 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-Bot Framework v4 file upload bot sample for Teams.
-
-This bot has been created using Bot Framework, it shows how to upload files to 
-Teams from a bot and how to receive a file sent to a bot as an attachment. It also shows how to fetch 
-inline images sent in message.
-
-This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
-
 - title: Prerequisites
 
-Ensure that you install the following tools and set up your development environment:  
-
- * Microsoft Teams is installed and you have an account
- * .NET Core SDK version 3.1
- * ngrok or equivalent tunnelling solution
- * Visual Studio 2019 or the latest version
-
-- title: Create Bot using Bot Framework.
-  durationInMinutes: 
+### YamlMime:Tutorial
+title: Teams Bot with Single sign-on
+metadata:
+  title: Teams Bot with SSO
+  description: In this tutorial, you'll learn to set up SSO in a bot for Teams.
+  audience: Developer
+  level: Beginner
+  ms.date: 08/24/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
+  nextTutorialTitle: Read more on bot authentication
+  ms.custom: mvc
+  ms.localizationpriority: none
+items:
+- durationInMinutes: 1
   content: |
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times for performing repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory (AAD) silently refreshes the authentication token. This results in reduction of the number of times users need to enter their sign-in credentials. 
+    
+    A bot behaves differently depending on the conversation it's involved in:
 
- 1.	Clone the repository
-        git clone https://github.com/Microsoft/botbuilder-samples.git
- 2.	If you are using Visual Studio
-	* Launch Visual Studio
-	* File -> Open -> Project/Solution
-	* Navigate to samples/csharp_dotnetcore/56.teams-file-upload folder
-	* Select TeamsFileUpload.csproj file
- 3.	Run ngrok - point to port 3978
-    ngrok http -host-header=rewrite 3978
+    * Bots in channel and group chat conversations require the user to @mention the bot.
+    * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
+    
+    This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
 
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
-    ```bash
-    ngrok http -host-header=rewrite 3978
-    ```
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+    Ensure that you install the following tools and set up your development environment:  
+
+    * Microsoft Teams with an account (not a guest account)
+    * [ngrok](https://ngrok.com/) or equivalent tunneling solution
+    * Visual Studio 2019 or the latest version
+    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
     **To create Azure Bot resource**
 
