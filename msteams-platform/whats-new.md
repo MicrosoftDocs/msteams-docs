@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|12/03/2021| Introduced Adaptive Cards form completion. | Build bots > Bot conversations > Messages in bot conversations > [Adaptive Cards form completion](bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)|
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/30/2021 | Updated Build your first app using SPFx step-by-step guide for Teams Toolkit 3.0.0 updates. | Get started > [Build your first app using SPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
@@ -203,7 +204,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
+|12/03/2021| Introduced Adaptive Cards form completion. | Build bots > Bot conversations > Messages in bot conversations > [Adaptive Cards form completion](bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)|
+|11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).| • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Device permissions for the browser.| App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
