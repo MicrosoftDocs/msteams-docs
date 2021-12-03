@@ -28,14 +28,6 @@ The following table provides a list of APIs:
 |**getAppContentStageSharingState**| Enables you to fetch information about apps' sharing state on the meeting stage. |_**microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {}**_|Microsoft Teams client SDK|
 |**getAppContentStageSharingCapabilities**| Enables you to fetch the apps' capabilities for sharing to the meeting stage. |_**microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {}**_|Microsoft Teams client SDK|
 
-The following table provides the Bot Framework SDK methods for the APIs:
-
-|API|Bot Framework SDK method|
-|---|---|
-|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
-|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
-|**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
-
 ## GetUserContext API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
@@ -419,7 +411,6 @@ The JSON response body for the `getAppContentStageSharingState` API is:
   }
   
 ```
-
 
 ### Response codes
 
