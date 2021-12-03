@@ -349,7 +349,7 @@ items:
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with something like this?
+    Did you come up with something like this..
 
     ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
     
