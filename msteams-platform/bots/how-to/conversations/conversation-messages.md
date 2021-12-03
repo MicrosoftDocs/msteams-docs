@@ -365,9 +365,7 @@ The following code shows an example of sending a simple Adaptive Card:
 }
 ```
 
-### Adaptive Cards form completion
-
-**Form Completion Feedback**
+### Form completion feedback
 
 > [!NOTE]
 > Adaptive Cards form completion is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
@@ -380,7 +378,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
 
-    ![Error message](~/assets/images/Cards/error-message.png)
+    ![Success message](~/assets/images/Cards/success.PNG)
 
 You can select **Close** or switch chat to dismiss the message.    
 
