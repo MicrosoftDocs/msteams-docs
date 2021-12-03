@@ -152,7 +152,7 @@ When interacting in a channel, your bot should be smart about taking certain con
 
 The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs. You should cache and use these ids as keys for local storage.
 
-The `channelData` object is not included in messages in personal conversations since these take place outside of any channel.
+The `channelData` object include only `tenant.id` in messages for personal conversations since these take place outside of any channel.
 
 A typical channelData object in an activity sent to your bot contains the following information:
 
