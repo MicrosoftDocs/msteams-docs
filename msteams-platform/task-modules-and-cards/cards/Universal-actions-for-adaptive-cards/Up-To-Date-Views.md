@@ -265,4 +265,4 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
-* [Adaptive Cards form completion](~/bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-Completion-feedback)
