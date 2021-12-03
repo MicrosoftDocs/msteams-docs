@@ -123,14 +123,16 @@ items:
 
    Verify if you can sideload apps in Teams:
 
-   1. In the Teams client, select **Store** icon.
-   1. Select **Manage your apps**.
-   1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. In the Teams client, select **Store** icon.
+    1. Select **Manage your apps**.
+       A list of apps appears in the right pane.
+    1. Select **Publish an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
-       > [!NOTE]
-       > If you don't have the option to upload a custom app, talk to your Teams administrator.
+        > [!NOTE]
+        > If you don't have the option to upload a custom app, talk to your Teams administrator.
 
    ### Create a free Teams developer tenant (optional)
 
@@ -151,7 +153,7 @@ items:
 
    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
 
-   [Tab](#create-your-tab-project-workspace)
+   [Tab](~/sbs-gs-javascript.yml#create-your-tab-project-workspace)
 
 - title: Create project workspace for your tab app
   durationInMinutes: 1
