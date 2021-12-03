@@ -151,6 +151,8 @@ items:
 
    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
 
+   [Tab](#create-your-tab-project-workspace)
+
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
