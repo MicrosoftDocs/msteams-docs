@@ -24,7 +24,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Introduced Form completion feedback
-        url: ~/bots/how-to/conversations/conversation-messages.md#form-Completion-feedback
+        url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
       - text: Teams Toolkit for Visual Studio Code (Preview)
