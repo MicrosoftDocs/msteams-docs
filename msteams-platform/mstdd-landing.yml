@@ -23,9 +23,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Introduced Adaptive Cards form completion
-        url: ~/bots/how-to/conversations/conversation-messages.md#adaptive-cards-form-completion
-build bots
+      - text: Introduced Form completion feedback
+        url: ~/bots/how-to/conversations/conversation-messages.md#form-Completion-feedback
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
       - text: Teams Toolkit for Visual Studio Code (Preview)

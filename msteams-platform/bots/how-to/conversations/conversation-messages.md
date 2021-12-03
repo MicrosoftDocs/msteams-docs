@@ -382,7 +382,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
 You can select **Close** or switch chat to dismiss the message.    
 
-**Response on Mobile**:
+**Response on mobile**:
 
 The error message appears at the bottom of the Adaptive Card.
 
