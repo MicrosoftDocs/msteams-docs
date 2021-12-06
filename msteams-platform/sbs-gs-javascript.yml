@@ -883,8 +883,6 @@ items:
         - Select **Got it** to try the app later from the list of Sideloaded apps.
         - Select **Try it** to test the app.
 
-    ### Try the messaging extension app
-
     1. Select **Try it**.
 
         The Messaging Extension app is loaded in a bot chat app.
@@ -898,13 +896,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows how to create a card" border="false":::
 
-    1. Enter the card details as shown.
+    1. Enter the card details as shown, and select **Submit**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot that shows how to add a card details" border="true":::
 
         Your card details appear in the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot that shows how to add a card details" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows how to add a card details" border="true":::
 
     1. Select the **Send** icon.
 
