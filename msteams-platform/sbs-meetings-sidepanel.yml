@@ -16,11 +16,14 @@ items:
   content: |
     This step-by-step guide illustrates how to implement **Side Panel** as an In-Meeting Experience.
 
-    User interactions(Meeting Organizer)
+    **User interactions**
 
-    * **Add New Agenda Item** - Gives provision to add new Agenda point.
-    * **Add** - Adds the agenda from Textinput to the SidePanel agenda list.
-    * **Publish Agenda** - Sends the agenda list to the meeting chat.
+    * **Add New Agenda Item**: Gives provision to add new agenda point.
+    * **Add**: Adds the agenda as a text input to the **Side Panel** agenda list.
+    * **Publish Agenda**: Sends the agenda list to the meeting chat.
+
+    > [!NOTE]
+    > Only a meeting organizer can interact with the **Side Panel** app.
 
     You'll see the following output:
 
@@ -33,10 +36,8 @@ items:
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [Visual Studio Code](https://code.visualstudio.com/download)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
-    * [Microsoft Edge](https://www.microsoft.com/edge)
 
     > [!NOTE]
     > Ensure [Microsoft Teams](https://teams.microsoft.com/) is installed and you have an account.
