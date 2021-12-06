@@ -859,9 +859,11 @@ items:
 
         </details>
 
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This can take 3-5 minutes to complete.
+            > [!NOTE]
+            > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This can take 3-5 minutes to complete.
 
-          Teams opens in a web browser.
+            Teams opens in a web browser.
+        
         1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
         1. Sign in with your Microsoft 365 account, if prompted.
         1. Select **Add** to add the app to your account.
@@ -872,8 +874,8 @@ items:
 
             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
  
-                - Select **Got it** to try the app later.
-                - Select **Try it** to test the app now.
+            - Select **Got it** to try the app later.
+            - Select **Try it** to test the app now.
 
         To Try the app now:
 
