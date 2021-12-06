@@ -66,11 +66,11 @@ items:
      ```bash
      ngrok http -host-header=localhost 3978
      ``` 
+      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok.png" alt-text="tunnel using command prompt" border="false":::
+ 
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok.png" alt-text="tunnel using command prompt" border="false":::
- 
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
