@@ -18,15 +18,15 @@ items:
 
     **Key features of Meeting Token Generator**
 
-    **Different ways of user interactions**
-
+    * Add Details for collaboration.
+    * Add status details in side panel.
     
        > [!NOTE]
-       > Skip is available only to the meeting organizers.
+       > This capability is currently available only in developer preview.
     
     This step-by-step guide helps you to generate meeting token to extend meetings in Teams. You'll see the following output:
 
-       ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
+      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings stage view" border="false":::
 
 - title: Prerequisites
   durationInMinutes: 1
