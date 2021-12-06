@@ -21,8 +21,8 @@ items:
     * Add Details for collaboration.
     * Add status details in side panel.
     
-       > [!NOTE]
-       > This capability is currently available only in developer preview.
+    > [!NOTE]
+    > This capability is currently available only in developer preview.
     
     This step-by-step guide helps you to generate Meetings Stage View to add status details for collaboration in Teams. You'll see the following output:
 
@@ -139,7 +139,10 @@ items:
        The **Manage apps** section displays the list of applications.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/list of apps.png" alt-text="list of applications" border="false":::
-   
+
+- title: Interacting with the app in Teams
+  durationInMinutes: 1
+  content: | 
     1. Go to Teams meeting.
     
     1. Select **Add an app**. 
@@ -152,22 +155,29 @@ items:
     
     1. Select **Save**.
 
-       ![Welcome App](place holder for image)
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png" alt-text="welcome to app" border="false":::
    
        The app is visible in the meeting chat. 
 
     1. Start the meeting. 
     
        The icon is visible in the meeting control bar.
+       
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png" alt-text="meeting app" border="false":::
 
-        ![Meetings Stage View](place holder for image)
-        
+       You can add the sprint status task as shown in the image:
+
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add status.png" alt-text="add status in meeting" border="false":::
+       
+       App in Side panel view:
+
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png" alt-text="panel view" border="false":::
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
-
-    ![Your Token](place holder for image)
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
 
 - content: |
     You've completed the tutorial to get started with a Meetings Stage View.
