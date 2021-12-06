@@ -16,10 +16,10 @@ items:
   content: |
     This step-by-step guide illustrates how to implement **Side Panel** as an In-Meeting Experience.
 
-    **User interactions**
+    **User interactions of Side Panel app**
 
     * **Add New Agenda Item**: Gives provision to add new agenda point.
-    * **Add**: Adds the agenda as a text input to the **Side Panel** agenda list.
+    * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
     * **Publish Agenda**: Sends the agenda list to the meeting chat.
 
     > [!NOTE]
