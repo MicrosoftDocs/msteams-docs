@@ -459,17 +459,17 @@ items:
 
     1. Select **Bot**, deselect **Tab**, and select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
     1. Select **JavaScript** in the **Programming Language** section.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
     1. Select a workspace folder. Teams Toolkit creates a folder in your workspace folder for the app project.
 
     1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
         Your Teams app with a Bot capability is created in a few seconds.
 
@@ -717,7 +717,7 @@ items:
 
         > [!NOTE]
         > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
-        
+
       <details>
       <summary>A quick recap of creating a Teams app.</summary>
       Watch this short recap for creating a Teams app.
