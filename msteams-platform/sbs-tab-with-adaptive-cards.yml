@@ -134,7 +134,7 @@ items:
 
     **To add messaging endpoint**
 
-    1. Go to **Home** page of the Azure bot that you created. Select **Configuration under **Settings**.
+    1. Go to **Home** page and select **Configuration** under **Settings** from the left pane.
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
 
@@ -174,7 +174,7 @@ items:
 
     1. Select **Expose an API** from the left pane.
     1. Select **Set** for the Application ID URI.
-    1. Use the **Application ID URI** shown and append **api://** and **ngrok uri**at the beginning of the URI.
+    1. Use the **Application ID URL** shown and append **api://** and **ngrok url** at the beginning of the URL.
 
         ![App ID URI](~/assets/images/adaptive-cards/app-id-url.png)
 
@@ -224,13 +224,16 @@ items:
     **To update manifest**
 
     1. Select **Manifest** from the left pane.
-    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change).</br>
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**.
+        
+        > [!NOTE]
+        > If you are already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
 
         ![Update Manifest](~/assets/images/adaptive-cards/manifest.png)
 
     **To set up Bot Service connection**
 
-    1. Go to **Home** page and select **Configuration** from the left pane.
+    1. Go to **Home** page and select **Configuration** under **Settings** from the left pane.
     1. Select **Add OAuth Connection Settings**.
     1. In **New Connection Setting**, enter the following details:
 
@@ -262,7 +265,7 @@ items:
 
         ![Repo Download](~/assets/images/adaptive-cards/repo-download.png)
 
-    1. Ensure that you note the Path where the repository is downloaded.
+    1. Ensure to note the Path of the repository that is downloaded.
     1. In the Windows Explorer, Select the **Project**.
     1. Go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow** folder.
     1. Open the **appsettings.json** file.
@@ -309,7 +312,7 @@ items:
   content: |
     Follow the steps to use the tab:
 
-    1. In the navigation bar located on the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
+    1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
     1. Tab showing Adaptive card with action controls.
 
         ![Tab showing Adaptive card with action controls](~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png)
