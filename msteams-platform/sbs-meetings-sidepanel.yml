@@ -36,16 +36,14 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-      > [!NOTE]
-      > Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
-
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in Real-Time
 
-    > [!TIP]
-    > Use [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in Real-Time.
+    > [!NOTE]
+    > Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -66,7 +64,7 @@ items:
     To create and register your bot in Azure Active Directory(AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret that enables SSO authentication of the bot.
+    * Create client secret to enable SSO authentication of the bot.
     * Add Microsoft Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
@@ -105,9 +103,9 @@ items:
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
-    1. If the validation passes, select **Create**.
+    1. If the validation passes, select **Create**. 
 
-        It takes a few moments for your bot service to be provisioned.
+        It takes a few moments for your bot service to be provisioned. 
 
     1. Select **Go to resource**. 
 
