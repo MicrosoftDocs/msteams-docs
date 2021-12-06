@@ -310,6 +310,7 @@ items:
 - title: Interacting with the Tab in Teams
   durationInMinutes: 1
   content: |
+    Tabs allow you to access services and content in a dedicated space within a channel or in a chat.
     Follow the steps to use the tab:
 
     1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
