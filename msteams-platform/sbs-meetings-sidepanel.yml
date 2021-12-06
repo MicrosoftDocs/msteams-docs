@@ -399,7 +399,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
+    ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
       
 - title: Add Meetings SidePanel app to Teams
   durationInMinutes: 1
