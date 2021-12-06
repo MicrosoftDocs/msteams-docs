@@ -70,7 +70,23 @@ items:
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok.png" alt-text="tunnel using command prompt" border="false":::
-   
+ 
+- title: Set up manifest file
+  durationInMinutes: 1
+  content: |
+    1. Navigate to **manifest.json** in node.js folder in cloned repository.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest path.png" alt-text="path for manifest.json" border="false":::
+
+    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
+
+         * Set `<<App-ID>>` with your bot's **Microsoft App ID**.
+         * Set `<<BASE-URL>>` with your **ngrok base url**.
+         * Set `<<VALID DOMAIN>>` with your **ngrok domain**.
+         
+           :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::
+           :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-2.png" alt-text="Manifest" border="false":::
+  
 - title: Build client app using npm install and run the service
   durationInMinutes: 1
   content: |
@@ -87,21 +103,6 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
 
-
-- title: Set up manifest file
-  durationInMinutes: 1
-  content: |
-    1. Navigate to **manifest.json** in Apppackage folder in cloned repository.
-
-        ![Manifest file location](place holder for image)
-    
-    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
-
-         * `<<App-ID>>` with some unique GUID
-         * `<<BASE-URL>>` with your application's base url, e.g. https://1234.ngrok.io
-         * `<<VALID DOMAIN>>` with your app domain e.g. *.ngrok.io
-         
-           ![Manifest image1](place holder for image)
 - title: Add Meetings Stage View to Teams
   durationInMinutes: 1
   content: |
@@ -114,39 +115,39 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/sbs-meetings-stage-view/manifest zip.png)
-    1. Create a meeting with a few presenters and attendees.
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest zip.png" alt-text="manifest" border="false":::
+    
+    1. Create a Teams meeting with a few presenters and attendees.
    
     1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
-       ![Add an app](~/assets/images/sbs-meetings-stage-view/addapp.png)
-
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png" alt-text="Add an app" border="false":::
     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/images/sbs-meetings-stage-view/meeting-stage-view-manageapps.png)
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-manageapps.png" alt-text="manage apps" border="false":::
 
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/sbs-meetings-stage-view/uploadcustomapp.png)
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/uploadcustomapp.png" alt-text="upload a file" border="false":::
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/sbs-meetings-stage-view/add an app in meeting.png)
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add an app in meeting.png" alt-text="add app in meeting" border="false":::
 
        The **Manage apps** section displays the list of applications.
 
-       ![App in Manage apps](~/assets/images/sbs-meetings-stage-view/list of apps.png)
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/list of apps.png" alt-text="list of applications" border="false":::
    
     1. Go to Teams meeting.
     
     1. Select **Add an app**. 
     
-       In the app selection page, the app displays as **Meetings Stage View**.
+       In the app selection page, the app displays as **App In Meeting**.
   
-       ![App icon in Teams](~/assets/images/sbs-meetings-stage-view/app in meeting.png)
-
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view" border="false":::
+    
     1. Select the **Meetings Stage View**.
     
     1. Select **Save**.
