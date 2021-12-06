@@ -7,6 +7,9 @@ keywords: teams authentication SSO silent AAD tab
 ---
 # Silent authentication
 
+> [!IMPORTANT]
+> All Microsoft support and development for ADAL including security fixes, ends on **June 30, 2022**. You can migrate your app that uses the ADAL.js to use MSAL.js  to continue receiving support. For more information, see [Migrate applications to the Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-migration).
+
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using at least 1.4.1 version of the Teams JavaScript SDK.
 
