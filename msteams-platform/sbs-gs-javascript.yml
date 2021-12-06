@@ -113,7 +113,7 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
    ### Check for sideloading option
 
@@ -845,8 +845,7 @@ items:
     In this section, you'll learn:
 
     - [To build and run your app locally](#to-build-and-run-your-app-locally)
-    - [To test the Messaging Extension app](#try-the-messaging-extension-app)
-    - [To run the app from Sideloaded apps](#run-the-app-from-sideloaded-apps)
+    - [To run the app from sideloaded apps](#run-the-app-from-sideloaded-apps)
 
     ### To build and run your app locally
 
@@ -906,7 +905,7 @@ items:
 
     1. Select the **Send** icon.
 
-        The app send the card on the bot chat.
+        The app sends the card on the bot chat.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent" border="false":::
 
@@ -920,7 +919,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
            
-    ### Run the app from Sideloaded apps
+    ### Run the app from sideloaded apps
 
     You can open a sideloaded Teams app from the list of sideloaded apps. 
 
@@ -930,20 +929,14 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot that shows sideloaded apps" border="false":::
 
     1. Select the three dots icon for your app, and then select **View details**. You can also copy link to the app and use it to open the app.
-    1. Select **Open** to load the app. 
+    1. Select **Open** to load the app, and then select **Try it**. 
         The app loads in Teams.
     1. Launch the message extension from three dots at the bottom of the composing area.
     1. Select your message extension app.       
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
 
-    1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
-
-    1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
+        The messaging extension app loads with the options to run a search and the create adaptive cards. 
 
         Now, you've learned how to build and run a basic message extension!         
 
