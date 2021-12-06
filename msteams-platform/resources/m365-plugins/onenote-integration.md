@@ -11,15 +11,15 @@ author: v-rpatkur
 
 The bundle of three (3) plugins allow Moodle users to take advantage of Microsoft OneNote Online. 
 
-* Includes browsing notebooks, sections, and pages; students doing assignments in OneNote and teachers providing feedback on those assignments in OneNote.
+* Includes browsing notebooks, sections, and pages; where students do assignments in OneNote and teachers provide feedback on those assignments in OneNote.
 
-* Submission or feedback events trigger OneNote creation with a section for each courses the student is enrolled.
+* Submission or feedback events trigger OneNote creation with a section for each course the student is enrolled.
 
 * Combines a digital binder for notes, assignments, and feedback for reference and review. 
 
-* Expands note taking capabilities beyond just text and links, and extends mobile usage scenarios using digital pens, photo/video media, and coauthoring with groups.
+* Expands note-taking capabilities beyond just text and links, and extends mobile usage scenarios using digital pens, photo/video media, and coauthoring with groups.
 
-* Includes a submission and feedback page for each assignment under the teacher's account. Consequently, when such a page is saved within Moodle, a copy of the HTML and any associated pictures are packaged up in a zip file.
+* Includes a submission and feedback page for each assignment under the teacher's account.When such a page is saved within Moodle, a copy of the HTML and any associated pictures are packaged up in a zip file.
 
 For more information on documentation, installation instructions, and support, see:
 
