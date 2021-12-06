@@ -20,7 +20,8 @@ The bundle of three (3) plugins allow Moodle users to take advantage of Microsof
 * Expands note taking capabilities beyond just text and links, and extends mobile usage scenarios using digital pens, photo/video media, and coauthoring with groups.
 
 * Includes a submission and feedback page for each assignment under the teacher's account. Consequently, when such a page is saved within Moodle, a copy of the HTML and any associated pictures are packaged up in a zip file.
-Find documentation, installation instructions, and support here:
+
+For more information on documentation, installation instructions, and support, see:
 
 * [OneNote Core: Moodle plugins directory: Microsoft OneNote](https://moodle.org/plugins/local_onenote)
 
