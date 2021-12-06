@@ -889,8 +889,6 @@ items:
         - If you've created a bot app before you created the messaging extension app, you can see that it is loaded in the same bot app you created. Any previous chat is visible.
         - If you created a messaging extension without creating a bot app, your app is loaded in a new bot chat.
 
-        This sample app lets you search open-source npm packages from the software registry. You can also create card that can be sent on the bot chat.
-
     1. Select **Create Card**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows how to create a card" border="false":::
@@ -903,13 +901,15 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows how to add a card details" border="true":::
 
-    1. Select the **Send** icon.
+    1. Select the **Send** icon from the compose area.
 
         The app sends the card on the bot chat.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent" border="false":::
 
     #### To run a search query
+
+        This sample app lets you search open-source npm packages from the software registry. You can also create card that can be sent on the bot chat.
 
     1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
 
