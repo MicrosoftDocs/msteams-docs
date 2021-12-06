@@ -58,7 +58,6 @@ items:
 
     **To create Azure Bot resource**
 
-    Follow the steps to create Azure Bot resource:
     1. Open [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. Search for **Azure bot** in the search box.
@@ -96,8 +95,6 @@ items:
 
     **To create client secret**
 
-    Follow the steps to create client secret:
-
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
 
         ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
@@ -118,8 +115,6 @@ items:
        
     **To add the Microsoft Teams channel**
 
-    Follow the steps to add your bot to Microsoft Teams channel:
-
     1. Go to **Home**.
 
         ![Bot home page](~/assets/images/adaptive-cards/bot-home-page.png)
@@ -139,9 +134,7 @@ items:
 
     **To add messaging endpoint**
 
-    Follow the steps to add messaging endpoint:
-    
-    1. Go to **Home** page of the Azure bot that you created, in the **Settings** on the left pane, select **Configuration**.
+    1. Go to **Home** page of the Azure bot that you created. Select **Configuration under **Settings**.
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
 
