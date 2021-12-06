@@ -95,7 +95,7 @@ items:
     1. Navigate to the app path **samples/meetings-stage-view/nodejs** folder in cloned repository.
     1. Copy the **nodejs** folder path.
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app folder path.png" alt-text="folder path" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app folder path.png" alt-text="folder path" border="false":::
 
     1. Open a new Command Prompt window, change the current directory to the copied **nodejs** path.
     1. Run `npm install` to download packages and dependencies.
