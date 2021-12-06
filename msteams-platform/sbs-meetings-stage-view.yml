@@ -88,7 +88,7 @@ items:
            :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-2.png" alt-text="Manifest" border="false":::
   
 - title: Build client app using npm install and run the service
-  durationInMinutes: 1
+  durationInMinutes: 1 
   content: |
     **To build client app using npm install to generate distributable folder**:
     
@@ -103,7 +103,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
 
-- title: Add Meetings Stage View to Teams
+- title: Add Meetings Stage View to Teams  
   durationInMinutes: 1
   content: |
     **To create a Teams meeting and add Meetings Stage View to Teams**:
