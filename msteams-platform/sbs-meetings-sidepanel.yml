@@ -455,20 +455,32 @@ items:
 
        ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
    
-       The app is visible in the meeting chat. 
+       The app is visible in the meeting side panel. 
 
-    1. Start the meeting. 
-    
-       The icon is visible in the meeting control bar.
-
-        ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+        
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with something like this?
+    Let's interact with the app in Teams!
 
-    ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+    1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
+
+       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+
+    1. Enter a new agenda item to the list and select **Add**.
+
+       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+
+       The new agenda is added in the list.
+
+    1. Select **Publish Agenda**.
+
+       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+
+       The new agenda list is displayed in the meeting chat.
+
+       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
 
 - content: |
     You've completed the tutorial to get started with a **Side Panel** app!
