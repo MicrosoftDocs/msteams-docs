@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meetings Stage view helps to enable and configure your apps for Teams meetings. It covers Shared meeting stage and also helps to enhance your meeting experience in Teams by allowing meeting participants to add status details of present, future and past tasks.
+    Meetings Stage view helps to [enable and configure your apps for Teams meetings](/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings). It covers Shared meeting stage and also helps to enhance your meeting experience in Teams by allowing meeting participants to add status details of present, future and past tasks.
 
     **Key features of Meeting Token Generator**
 
