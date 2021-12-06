@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to set up Meetings SidePanel for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 12/03/2021
+  ms.date: 12/06/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Read more to authenticate apps in Teams meeting
@@ -14,20 +14,24 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    This step-by-step guide illustrates how to implement **Side Panel** as an In-Meeting Experience.
+    The `meetingSidePanel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
 
-    **User interactions of Side Panel app**
+     > [!NOTE]
+     > Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
+
+    This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
+
+    **Meeting organizers' interaction of `meetingSidePanel`**
 
     * **Add New Agenda Item**: Gives provision to add new agenda point.
     * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
     * **Publish Agenda**: Sends the agenda list to the meeting chat.
 
-    > [!NOTE]
-    > Only a meeting organizer can interact with the **Side Panel** app.
-
     You'll see the following output:
 
      ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+
+     (Placeholder for mobile)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -456,7 +460,7 @@ items:
 
        ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
    
-       The app is visible in the meeting side panel. 
+       The app is visible in the `meetingSidePanel`. 
 
         
 
