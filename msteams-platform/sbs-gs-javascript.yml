@@ -704,11 +704,11 @@ items:
 
     1. Select **Message Extension**, deselect **Tab**, and select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-msgext.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-language-mex.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
     1. Select a workspace folder. A folder is created in your workspace folder for the project.
 
