@@ -44,9 +44,7 @@ The Microsoft Teams Meetings LTI app will help educators and students easily to 
 > [!NOTE]
 > Initial release will not support channel meetings, the display of meeting recordings, or syncing of meetings with the LMS calendar.
 
-For more information, see:
-
-https://docs.microsoft.com
+For more information, see,[Microsoft docs]https://docs.microsoft.com
 
 ## Next step
 

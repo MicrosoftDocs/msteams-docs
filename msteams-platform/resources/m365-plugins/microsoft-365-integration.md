@@ -19,7 +19,7 @@ The plugin allows administrators to validate that the integration is functioning
 * Upload a CSV file that shows how Moodle users match to Office 365 users.
 * Validate the Azure AD permissions are correctly configured.
 
-Find documentation, installation instructions, and support here:
+For more information on documentation, installation instructions, and support, see:
 [Moodle plugins directory: Microsoft 365 Integration](https://moodle.org/plugins/local_o365)
 
 ## Next step

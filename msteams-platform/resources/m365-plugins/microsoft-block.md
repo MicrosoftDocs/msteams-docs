@@ -23,7 +23,7 @@ Microsoft Block allows users to access the course SharePoint file location, view
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 2.png" alt-text="outlook calender sync settings"::: 
 
-Find documentation, installation instructions, and support here:
+For more information on documentation, installation instructions, and support, see:
 [ Moodle plugins directory: Microsoft Block](https://moodle.org/plugins/block_microsoft)
 
 ## Next step

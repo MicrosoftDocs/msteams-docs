@@ -19,7 +19,7 @@ author: v-rpatkur
 
 It also offers the benefit of using Microsoft 365 as a file repository for an institution while keeping Moodle's data structure simple.
 
-Find documentation, installation instructions, and support here:
+For more information on documentation, installation instructions, and support, see:
 [Moodle plugins directory: Microsoft 365 Repository](https://moodle.org/plugins/repository_office365)
 
 ## Next step

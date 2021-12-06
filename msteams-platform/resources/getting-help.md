@@ -32,7 +32,7 @@ author: v-rpatkur
 
 * **Video Training**
 
-    https://www.youtube.com/watch?v=pYSm935CB_I&list=PLwy6L92VmGgnykLBOhIsp1g6i0kijVA2n&t=4s
+    [video](https://www.youtube.com/watch?v=pYSm935CB_I&list=PLwy6L92VmGgnykLBOhIsp1g6i0kijVA2n&t=4s)
 
 ## Getting help: recommended email or GitHub issue template
 

@@ -18,7 +18,7 @@ The OpenID Connect provides institutions with the following sign-in workflow opt
 * Users may use their Office 365 email and password to sign in directly using Moodle’s username and password fields, without signing into Office 365
 * Users may select a link to sign in through Office 365 or the OpenID Connect provider on a Moodle page 
 
-Find documentation, installation instructions, and support here:
+For more information on documentation, installation instructions, and support, see:
 [ Moodle plugins directory: OpenID Connect ](https://moodle.org/plugins/auth_oidc)
 
 ## Next step

@@ -21,7 +21,7 @@ Teams meetings can be created using the Atto Editor in Calendar, Assignments, Fo
 
 Teams meetings do not appear on Outlook/Teams calenders, however, individual student names can be added to the invite for this purpose.
  
-Find documentation, installation instructions, and support here:
+For more information on documentation, installation instructions, and support, see:
 [Moodle plugins directory: Teams Meeting](https://moodle.org/plugins/atto_teamsmeeting)
 
 ## Next step

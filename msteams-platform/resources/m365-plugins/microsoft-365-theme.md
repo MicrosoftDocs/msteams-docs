@@ -25,7 +25,7 @@ The following features are included in the theme:
 
 * Surfaces Microsoft Team UI elements 
 
-Find documentation, installation instructions, and support here:
+Fore more information on documentation, installation instructions, and support, see:
 [Moodle plugins directory: Microsoft 365 Teams Theme](https://moodle.org/plugins/theme_boost_o365teams)
 
 ## Next step
