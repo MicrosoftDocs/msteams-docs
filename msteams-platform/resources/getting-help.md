@@ -44,6 +44,3 @@ author: v-rpatkur
 
 * **Priority:** <priority is based on organizational impact – select either P1, P2, or P3 based on the impact to your organization and the number of users who are blocked>
 
-
-
-
