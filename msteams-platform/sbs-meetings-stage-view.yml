@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meetings Stage view helps to enable and configure your apps for Teams meetings. This app covers Shared meeting stage helps to enhance your meeting experience in Teams by allowing meeting participants to add status details of present, future and past tasks.
+    Meetings Stage view helps to enable and configure your apps for Teams meetings. It covers Shared meeting stage and also helps to enhance your meeting experience in Teams by allowing meeting participants to add status details of present, future and past tasks.
 
     **Key features of Meeting Token Generator**
 
@@ -90,14 +90,14 @@ items:
 - title: Build client app using npm install and run the service
   durationInMinutes: 1
   content: |
-    **To build client app using npm install to generate distributable folder**
+    **To build client app using npm install to generate distributable folder**:
     
     1. Navigate to the app path **samples/meetings-stage-view/nodejs** folder in cloned repository.
     1. Copy the **nodejs** folder path.
+
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app folder path.png" alt-text="folder path" border="false":::
+
     1. Open a new Command Prompt window, change the current directory to the copied **nodejs** path.
-
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app folder path.png" alt-text="folder path" border="false":::
-
     1. Run `npm install` to download packages and dependencies.
     1. Run `npm run build` to build the app.
 
@@ -106,7 +106,7 @@ items:
 - title: Add Meetings Stage View to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings Stage View to Teams**
+    **To create a Teams meeting and add Meetings Stage View to Teams**:
 
     1. In your cloned repository, navigate to **samples> meetings-stage-view> nodejs> Manifest**.
 
@@ -143,6 +143,8 @@ items:
 - title: Interacting with the app in Teams
   durationInMinutes: 1
   content: | 
+  **To interact with the app in Teams**:
+    
     1. Go to Teams meeting.
     
     1. Select **Add an app**. 
@@ -157,8 +159,6 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png" alt-text="welcome to app" border="false":::
    
-       The app is visible in the meeting chat. 
-
     1. Start the meeting. 
     
        The icon is visible in the meeting control bar.
