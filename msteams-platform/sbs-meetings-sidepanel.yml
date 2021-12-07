@@ -26,9 +26,7 @@ items:
 
     You'll see the following output:
 
-     ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
-
-     (Placeholder for mobile)
+     ![Your Token](~/assets/images/meetings-side-panel/sidepaneldesktopmobile.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -427,7 +425,7 @@ items:
    
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
+       ![Upload custom app](~/assets/images/meetings-side-panel/uploadcustomapp.png)
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
@@ -455,11 +453,9 @@ items:
 
        ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
    
-       The app is visible in the `meetingSidePanel`. 
+       The app is visible in the `meetingSidePanel`.         
 
-        
-
-- title: Complete challenge
+- title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
     Let's interact with the app in Teams!
@@ -481,6 +477,14 @@ items:
        The new agenda list is displayed in the meeting chat.
 
        ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+       ![Token in Meet](~/assets/images/meetings-side-panel/sidepaneldesktopmobile.png)
+
 
 - content: |
     You've completed the tutorial to get started with a **Side Panel** app!
