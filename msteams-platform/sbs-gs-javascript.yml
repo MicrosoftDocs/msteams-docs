@@ -885,6 +885,8 @@ items:
 
         The Messaging Extension app is loaded in a chat bot app.
 
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows app sideloaded in Teams" border="false":::
+
         - If you've created a bot app before you created the messaging extension app, you can see that it is loaded in the same bot app you created. Any previous chat is visible.
         - If you created a messaging extension without creating a bot app, your app is loaded in any chat bot that is open on Teams.
 
@@ -898,11 +900,15 @@ items:
 
     1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search" border="false":::
 
     1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot that shows the search result" border="false":::
+
+    1. Select the **Send** instructions.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot that shows the search result sent on chat" border="false":::
     
         Now, you've learned how to build and run a basic messaging extension app!         
 
@@ -950,7 +956,6 @@ items:
         The messaging extension app loads with the options to run a search and create adaptive cards.
     </details>
     <br>
-
     <details>
     <summary>Run the app from sideloaded apps</summary>
 
