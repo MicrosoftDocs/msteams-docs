@@ -33,23 +33,22 @@ If you have an existing tenant, verify that sideloading is enabled by signing in
 
 To preview Teams apps running in outlook.com or office.com, opt in your test tenant to Office 365 [Targeted releases](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release).
 
-1. Sign in to Microsoft 365 admin center using credentials for your test tenant and navigate to the [Organizational profile](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile) tab. Select **Release preferences** and select one of the *Targeted release* preferences:
+1. Sign in to Microsoft 365 admin center using credentials for your test tenant and navigate to the [Organizational profile](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile) tab (*Settings* > *Org settings* >> **Organization profile**)). Select **Release preferences** and select one of the *Targeted release* preferences:
 
-:::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
+  :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
 
-For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365) in *Microsoft 365 admin center help*.
+  For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365) in *Microsoft 365 admin center help*.
 
 1. Verify your tenant has support for Teams personal tabs running on office.com and outlook.com by signing in with your test tenant credentials. If you see an ellipses (**...**) option on the side bar (the entry point for sideloaded Teams personal tabs), your tenant has support.
 
-:::image type="content" source="images/outlook-web-ellipses.png" alt-text="Ellipses '...' entry point to sideloaded Teams tab apps in outlook.com":::
+  :::image type="content" source="images/outlook-web-ellipses.png" alt-text="Ellipses '...' entry point to sideloaded Teams tab apps in outlook.com":::
 
 1. Verify test tenant support for messaging extensions in outlook.com by checking for the **More apps** option in the Outlook compose message area.
-``
 
 > [!NOTE]
 > If you're opted in to Targeted releases but you don't see these options, it's likely that preview feature support is still in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/).
 
-## Install Beta Office apps in your test environment
+## Install Office apps in your test environment
 
 > [!IMPORTANT]
 > Refer to the latest [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/) to check if Outlook for Windows desktop support for Teams message extensions is available to your test tenant.
@@ -58,8 +57,7 @@ You can preview Teams apps running in Outlook on Windows desktop by using a rece
 
 Here are the steps for installing Office 365 *Beta Channel* applications in your test environment:
 
-1. In your test environment, sign in to Microsoft 365 admin center (https://admin.microsoft.com) using the credentials that you created for your test tenant (for example, *username*@*domain*.onmicrosoft.com).
-1. From the admin center, select **Install Office** (or *Go to guided setup*) to install desktop apps in your test environment. Optionally, add a test user (useful for testing).
+1. Log into your test environment using your test tenant account.
 1. Download the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
 1. Open *configuration-Office365-x86.xml* (or the **x64.xml*, depending on your environment) in a text editor and update the *Channel* value to `BetaChannel`.
 1. From an elevated Command Prompt, run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
