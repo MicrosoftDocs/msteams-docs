@@ -898,7 +898,7 @@ items:
 
     - [Creating cards](#to-create-a-card)
     - [Running a search](#to-run-a-search-query)
-    - [Using @mention to open the app](#to-use-@mention-to-open-app)
+    - [Using @mention to open the app](#to-open-your-app-from-compose-area)
 
     #### To create a card
 
@@ -932,9 +932,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
     
-    #### To use #mention to open app
+    #### To open your app from compose area
 
-    - Enter *@<app-name> in the compose area of your app.
+    - Enter `@app-name>` in the compose area of your app.
         The app opens the search box and you can use it to run a query.
 
     ### Run the app from sideloaded apps
