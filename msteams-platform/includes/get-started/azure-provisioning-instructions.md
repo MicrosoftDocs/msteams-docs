@@ -6,7 +6,7 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 > <summary>What's the difference between Provision and Deploy?</summary>
 >
 > The **Provision** step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The **Deploy** step copies the code for your app to the resources you created during the provision step. It is common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it is separate from the deployment step.
-<details>
+</details>
 
 # [Visual Studio Code](#tab/vscode)
 
