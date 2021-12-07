@@ -81,9 +81,7 @@ items:
          * Replace `<<BASE-URL>>` with your **ngrok base url**.
          * Replace `<<VALID DOMAIN>>` with your **ngrok domain**.
          
-           :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::
-           :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-2.png" alt-text="Manifest" border="false":::
-  
+           :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::   
 - title: Build and run client app using npm 
   durationInMinutes: 1 
   content: |
@@ -105,7 +103,6 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
        
-
 - title: Add Meetings Stage View to Teams  
   durationInMinutes: 1
   content: |
