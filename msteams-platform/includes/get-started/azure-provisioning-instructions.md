@@ -75,7 +75,7 @@ Once the provisioning and deployment steps are complete:
 1. Select **Add**.
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot showing the app being installed." border="false":::
 
-   Your app is now loaded on the Azure site.
+   Your app is loaded on the Azure site.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the app being installed." border="false":::
 

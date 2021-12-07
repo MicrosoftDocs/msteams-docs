@@ -922,7 +922,7 @@ items:
 
     #### To run a search query
 
-        This sample app lets you search open-source npm packages from the software registry. You can also create card that can be sent on the bot chat.
+    This sample app lets you search open-source npm packages from the software registry. You can also create card that can be sent on the bot chat.
 
     1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
 
@@ -934,7 +934,7 @@ items:
     
     #### To open your app from compose area
 
-    - Enter `@app-name>` in the compose area of your app.
+    - Enter `@your-app-name` in the compose area of your app.
         The app opens the search box and you can use it to run a query.
 
     ### Run the app from sideloaded apps
