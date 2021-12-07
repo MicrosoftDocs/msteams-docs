@@ -104,6 +104,7 @@ items:
     1. Run `npm start` to start the app.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
+       ![Build and run](~/assets/images/sbs-meetings-stage-view/npm install.png)
 
 - title: Add Meetings Stage View to Teams  
   durationInMinutes: 1
