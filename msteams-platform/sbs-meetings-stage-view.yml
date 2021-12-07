@@ -14,15 +14,12 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meetings Stage view helps to [enable and configure your apps for Teams meetings](/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings). It covers Shared meeting stage and also helps to enhance your meeting experience in Teams by allowing meeting participants to add status details of present, future and past tasks.
+    Meetings Stage view helps to [enable and configure your apps for Teams meetings](/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings). It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
 
     **Key features of Meetings Stage View**
 
     * Add status details in side panel.
-    * Add Details for collaboration.
-    
-    > [!NOTE]
-    > This capability is currently available only in developer preview.
+    * Add details for collaboration.
     
     This step-by-step guide helps you to generate Meetings Stage View to add status details for collaboration in Teams. You'll see the following output:
 
@@ -36,7 +33,7 @@ items:
     * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
     * [Visual Studio code](https://code.visualstudio.com/Download)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt.
+    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt
     
     Ensure you have working knowledge of the following technologies:
 
@@ -66,11 +63,11 @@ items:
      ```bash
      ngrok http -host-header=localhost 3978
      ``` 
+       > [!TIP]
+       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok.png" alt-text="tunnel using command prompt" border="false":::
  
-    > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
-
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
@@ -80,14 +77,14 @@ items:
 
     1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
 
-         * Set `<<App-ID>>` with your bot's **Microsoft App ID**.
-         * Set `<<BASE-URL>>` with your **ngrok base url**.
-         * Set `<<VALID DOMAIN>>` with your **ngrok domain**.
+         * Replace **<<App-ID>>** with your bot's **Microsoft App ID**.
+         * Replace **<<BASE-URL>>** with your **ngrok base url**.
+         * Replace **<<VALID DOMAIN>>** with your **ngrok domain**.
          
            :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::
            :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-2.png" alt-text="Manifest" border="false":::
   
-- title: Build client app using npm install and run the service
+- title: Build and client app using npm 
   durationInMinutes: 1 
   content: |
     **To build client app using npm install to generate distributable folder**:
