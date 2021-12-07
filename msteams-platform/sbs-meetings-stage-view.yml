@@ -102,7 +102,7 @@ items:
 
     1. Run `npm install` to download packages and dependencies.
     
-    1. Run `npm run build` to build the app.
+    1. Run `npm run` to build the app.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
 
