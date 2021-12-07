@@ -21,11 +21,6 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 
 The granular, Teams-specific, RSC permissions define what an application can do within a specific resource.
 
-The following are the links for Resource specific permissions of older version(placeholder for version):
-
-* [Resource-specific permissions for a team](#resource-specific-permissions-for-a-team)
-* [Resource-specific permissions for a chat](#resource-specific-permissions-for-a-chat)
-
 ### Resource-specific permissions for a team
 
 |Application permission| Action |
@@ -153,24 +148,10 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 
->
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
-### Example of RSC Permission for older version(Placeholder for version) and latest version(Placeholder for version)
-
-> [!NOTE]
-> For latest version(placeholder for version) the RSC permissions have two sections as RSC Delegated  permissions and RSC Application permission in Authorization section.
-
-The following are the links for RSC permissions for older version:
-
-* [Example for RSC in a team](#example-for-rsc-in-a-team)
-* [Example for RSC in a chat](#example-for-rsc-in-a-chat)
-
-The following are the links for RSC permissions for latest version:
-
-* [Example for RSC Delegated permissions](#example-for-rsc-delegated-permissions)
-* [Example for RSC Application permissions](#example-for-rsc-application-permissions)
+## Example for requesting RSC permissions in a team and chat when the app manifest version is less than 1.x.
 
 ### Example for RSC in a team
 
@@ -192,7 +173,7 @@ The following are the links for RSC permissions for latest version:
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
         "TeamMember.Read.Group",
-        "TeamsActivity.Send.Group",
+        "TeamsActivity.Send.Group"
     ]
   }
 ```
@@ -222,25 +203,149 @@ The following are the links for RSC permissions for latest version:
   }
 ```
 
-### Example for RSC Application permissions
+## Example for requesting RSC permissions in a team and chat when the app manifest version is 1.x or greater
 
-> [!NOTE]
-> RSC Application permission includes all the application permissions of older version [Example for RSC in a team](#example-for-rsc-in-a-team), [Example for RSC in a chat](#example-for-rsc-in-a-chat).
+### Example for RSC in a team
 
 ```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
 "authorization": {
     "permissions": {
         "resourceSpecific": [
             {
                 "name": "TeamSettings.Read.Group",
                 "type": "Application"
-            }
+            },
             {
                 "name": "TeamSettings.ReadWrite.Group",
-                "type": "Application",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelMessage.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamMember.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Group",
+                "type": "Application"
             }
         ]    
     }
+}
+}
+```
+
+### Example for RSC in a chat
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "ChatSettings.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatSettings.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMessage.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMember.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Chat.Manage.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.AccessMedia.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.JoinGroupCalls.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
 }
 ```
 
