@@ -21,6 +21,9 @@ items:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
     
+    > [!NOTE]
+    > In this tutorial, you will create a tab app first, followed by a bot app, and then a messaging extension app. However, you can choose to build an app with any capability first, without hindering the functionality of other apps.
+
     In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
@@ -29,8 +32,6 @@ items:
         - The tab portion with JavaScript using React.
         - The rest of the features with Node.js.
     - How to deploy your app
-
-    You can choose to build an app with any capability first, without hindering the functionality of other apps. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -845,12 +846,6 @@ items:
 
     A messaging extension lets you interact with a web service. It takes advantage of the messaging feature and secure communication of a bot. The messaging extension app is added to a web service registered as a bot. 
     
-    In this section, you'll learn:
-
-    - [To build and run your app locally](#build-and-run-your-app-locally)
-    - [To test the messaging extension app](#test-your-app)
-    - [To run the app from sideloaded apps](#run-the-app-from-sideloaded-apps)
-
     ### Build and run your app locally
 
     1. Select **F5** in Visual Studio Code to run your application in debug mode.
@@ -888,20 +883,33 @@ items:
 
     1. Select **Try it**.
 
-        The Messaging Extension app is loaded in a chat bot.
+        The Messaging Extension app is loaded in a chat bot app.
 
         - If you've created a bot app before you created the messaging extension app, you can see that it is loaded in the same bot app you created. Any previous chat is visible.
-        - If you created a messaging extension without creating a bot app, your app is loaded in a new bot chat.
+        - If you created a messaging extension without creating a bot app, your app is loaded in any chat bot that is open on Teams.
 
     ### Test your app
 
-    The first time your app loads, the messaging extension is open for you to test. In this section covers:
+    This sample app lets you search open-source npm packages from the software registry. You can also create card that can be sent on the chat bot app.
+    
+    The first time your app loads, the messaging extension is open for you to test.
 
-    - [Creating cards](#to-create-a-card)
-    - [Running a search](#to-run-a-search-query)
-    - [Using @mention to open the app](#to-open-your-app-from-compose-area)
+    #### To run a search query
 
-    #### To create a card
+    1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
+
+    1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
+    
+        Now, you've learned how to build and run a basic messaging extension app!         
+
+    ### Optional scenarios
+
+    <details>
+    <summary>To create a card</summary>
 
     1. Select **Create Card**.
 
@@ -920,37 +928,31 @@ items:
         The app sends the card on the bot chat.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent" border="false":::
-
-    #### To run a search query
-
-    This sample app lets you search open-source npm packages from the software registry. You can also create card that can be sent on the bot chat.
-
-    1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
-
-    1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
-    
-    #### To open your app from compose area
+    </details>
+    <br>
+    <details>
+    <summary>To open your app from compose area</summary>
 
     Choose one of the following ways to open your app.
     
-    **Using `@mention`:
+    **Using `@mention`:**
     
         - Enter `@your-app-name` in the compose area of your app.
         The app opens the search box and you can use it to run a query.
     
-    **Using three-dot icon:
+    **Using three-dot icon:**
     
     1. Launch the messaging extension from three dots at the bottom of the composing area.
     1. Select your messaging extension app.       
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
 
-        The messaging extension app loads with the options to run a search and create adaptive cards. 
-    ### Run the app from sideloaded apps
+        The messaging extension app loads with the options to run a search and create adaptive cards.
+    </details>
+    <br>
+
+    <details>
+    <summary>Run the app from sideloaded apps</summary>
 
     You can open a sideloaded Teams app from the list of sideloaded apps. 
 
@@ -963,10 +965,7 @@ items:
     1. Select **Open** to load the app, and then select **Try it**. 
         
         The app loads in Teams.
-    
-
-
-        Now, you've learned how to build and run a basic messaging extension app!         
+    </details>
 
     <!-- markdownlint-disable MD033 -->
     <details>
