@@ -900,7 +900,7 @@ items:
 
     1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search" border="true":::
 
     1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
 
