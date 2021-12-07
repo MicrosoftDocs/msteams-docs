@@ -93,7 +93,7 @@ Consider the following approaches when building a landing page for the Teams app
 Once you’ve integrated the SaaS Fulfillment APIs and built your landing page where users can manage their subscriptions, it's time to officially create, test, and publish your transactable SaaS offer.
 
 > [!IMPORTANT]
-> Teams currently supports only **Per user** (user/month and user/year) pricing model for SaaS offers.
+> Teams currently supports only **Per user** (user/month and user/year) pricing model for SaaS offers. For more information, see [SaaS pricing models](/azure/marketplace/plan-saas-offer#saas-pricing-models).
 
 ### Create the offer
 
