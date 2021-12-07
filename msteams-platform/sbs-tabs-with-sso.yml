@@ -347,7 +347,7 @@ items:
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"DOMAIN-NAME" to your ngrok URL.
+         * Set `"DOMAIN-NAME"`` to your ngrok URL.
          * Set `"ConnectionName"` to the name of OAuth connection setting.
 
              > [!NOTE]
