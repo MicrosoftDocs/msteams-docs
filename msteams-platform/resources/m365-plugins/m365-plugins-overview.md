@@ -26,7 +26,39 @@ The Microsoft 365 Plugins are designed by Microsoft to support integration betwe
 | **Enable Atto Editor in Moodle to create a Teams meeting link** | Teams Meeting | atto_teamsmeeting |
 | **Enable video links in Moodle for YouTube and Vimeo** | oEmbed Filter | Filter_oembed |
 
-**Related Topics:**
+## OpenID connect
+
+It allows users to authenticate against any site or authentication tool that supports the OpenID Connect specification. It is used to provide single-sign-on support with Microsoft Office 365.
+
+## Microsoft 365 integration
+
+It allows administrators to validate that the integration is functioning properly, synchronize users between Office 365 and Moodle, configure permissions, and set up the SharePoint site for the course files.
+
+## Microsoft 365 repository
+
+Using the Microsoft 365 Repository plugin, the teachers have two choices to store the course files in OneDrive. Each course has its own folder created in OneDrive, which allows teachers to add files from the course files area of OneDrive or from their own personal space.
+
+## Teams Meetings
+
+It can be created using the Atto Editor in Calendar, Assignments, Forum posts, or wherever Atto Editor is available.
+
+## Microsoft 365 Teams theme
+
+Teams theme plugins display a custom view of the Moodle course home page within Teams. This view is only available when users access their Moodle courses within Teams.
+
+## OneNote Integration
+
+It Includes browsing notebooks, sections, and pages; where students do assignments in OneNote and teachers provide feedback on those assignments in OneNote. It also expands note-taking capabilities beyond just text and links, and extends mobile usage scenarios using digital pens, photo/video media, and co-authoring with groups.
+
+## Microsoft Block
+
+Microsoft Block allows users to access the course SharePoint file location, view the course OneNote notebook for submissions and modify their Office 365 integration preferences. Admins can configure the block to appear on every course page.
+
+## oEmbed filter
+
+The oEmbed filter is a powerful filter that simplifies the inclusion of external HTML content within Moodle.
+
+## See also
 
 * [OpenID Connect](openid-connect.md)
 * [Microsoft 365 Integration](microsoft-365-integration.md)
