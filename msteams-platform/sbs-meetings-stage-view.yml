@@ -79,7 +79,7 @@ items:
 
          * Replace `<<App-ID>>` with your bot's **Microsoft App ID**.
          * Replace `<<BASE-URL>>` with your **ngrok base url**.
-         * Replace `**<<VALID DOMAIN>>**` with your **ngrok domain**.
+         * Replace `<<VALID DOMAIN>>` with your **ngrok domain**.
          
            :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::
            :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-2.png" alt-text="Manifest" border="false":::
