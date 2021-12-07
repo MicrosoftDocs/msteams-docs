@@ -26,7 +26,7 @@ items:
 
     You'll see the following output:
 
-     ![Your Token](~/assets/images/meetings-side-panel/sidepaneldesktopmobile.png)
+     ![Your Token](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -483,7 +483,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepaneldesktopmobile.png)
+       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
 
 
 - content: |
