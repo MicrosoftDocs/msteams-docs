@@ -193,7 +193,7 @@ items:
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
     1. Select a workspace folder for the app. Teams Toolkit creates the app's directory structure in this workspace for your project.
 
@@ -966,7 +966,8 @@ items:
         
         The app loads in Teams.
     </details>
-
+    <br>
+    <br>
     <!-- markdownlint-disable MD033 -->
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
