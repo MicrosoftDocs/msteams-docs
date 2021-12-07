@@ -22,7 +22,7 @@ items:
 
     * **Add New Agenda Item**: Gives provision to add new agenda point.
     * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
-    * **Publish Agenda**: Sends the agenda list to the meeting chat.
+    * **Publish Agenda**: Sends the agenda list to the meeting chat. 
 
     You'll see the following output:
 
