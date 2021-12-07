@@ -842,12 +842,15 @@ items:
 
     ## Build and run your app in the local environment
 
+    A messaging extension lets you interact with a web service. It takes advantage of the messaging feature and secure communication of a bot. The messaging extension app is added to a web service registered as a bot. 
+    
     In this section, you'll learn:
 
-    - [To build and run your app locally](#to-build-and-run-your-app-locally)
+    - [To build and run your app locally](#build-and-run-your-app-locally)
+    - [To test the messaging extension app](#test-your-app)
     - [To run the app from sideloaded apps](#run-the-app-from-sideloaded-apps)
 
-    ### To build and run your app locally
+    ### Build and run your app locally
 
     1. Select **F5** in Visual Studio Code to run your application in debug mode.
         <!-- markdownlint-disable MD033 -->
@@ -889,6 +892,16 @@ items:
         - If you've created a bot app before you created the messaging extension app, you can see that it is loaded in the same bot app you created. Any previous chat is visible.
         - If you created a messaging extension without creating a bot app, your app is loaded in a new bot chat.
 
+    ### Test your app
+
+    The first time your app loads, the messaging extension is open for you to test. In this section covers:
+
+    - [Creating cards](#to-create-a-card)
+    - [Running a search](#to-run-a-search-query)
+    - [Using @mention to open the app](#to-use-@mention-to-open-app)
+
+    #### To create a card
+
     1. Select **Create Card**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows how to create a card" border="false":::
@@ -918,7 +931,12 @@ items:
     1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
-           
+    
+    #### To use #mention to open app
+
+    - Enter *@<app-name> in the compose area of your app.
+        The app opens the search box and you can use it to run a query.
+
     ### Run the app from sideloaded apps
 
     You can open a sideloaded Teams app from the list of sideloaded apps. 
