@@ -193,13 +193,13 @@ items:
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
     1. Select a workspace folder for the app. Teams Toolkit creates the app's directory structure in this workspace for your project.
 
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
         The Teams app is created in a few seconds.
 
