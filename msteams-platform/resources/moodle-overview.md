@@ -21,6 +21,8 @@ The Moodle LMS partners along with Microsoft Teams provide productivity services
  The following image shows different sections of Moodle LMS: 
 
 :::image type="content" source="../assets/images/MoodleInstructions/flow chart.png" alt-text="Moodle lms flow chart":::
+
+
  
 ## Scenarios
 
