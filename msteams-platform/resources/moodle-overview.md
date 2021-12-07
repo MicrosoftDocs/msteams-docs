@@ -22,8 +22,18 @@ The Moodle LMS partners along with Microsoft Teams provide productivity services
 
 :::image type="content" source="../assets/images/MoodleInstructions/flow chart.png" alt-text="Moodle lms flow chart":::
 
+* **Moodle LTI apps**
+The following are the types of Learning Tools Interoperability (LTI) available for the Moodle LMS:
+OneDrive LTI app
+Class Teams LTI app
+Teams meetings LTI app
 
- 
+* **Microsoft 365 Plugins**
+The Microsoft 365 Plugins are designed by Microsoft to support integration between Moodle sites and Microsoft Teams. There are seven types of plugins, which can be used independently, or in collaboration, to achieve various usage scenarios.
+
+* **Partner apps for Moodle**
+Partner apps for Moodle are examples of complete apps for Microsoft Teams that are currently available in the Microsoft Market. You can locate these apps within the Microsoft Teams App Store and enjoy their value immediately. Microsoft works closely with partners to certify app quality and to validate all Software as a Service (SaaS) offerings.
+
 ## Scenarios
 
 The following scenarios provide examples of accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
