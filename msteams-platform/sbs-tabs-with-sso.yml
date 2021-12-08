@@ -35,7 +35,7 @@ items:
     * Profile card: Displays profile card of the user in messaging extension.
 
     > [!NOTE]
-    > If SSO isn't performed then it the bot will do normal authentication method with a sign-in box.     
+    > If SSO isn't performed, then the bot will do normal authentication method with a sign-in box.     
 
     This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
        ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)   
@@ -468,7 +468,9 @@ items:
       
        ![Token view](~/assets/images/Tab-ME-SSO/token-view.png)
 
-    1. If SSO isn't performed, then follow the troubleshooting steps.
+   
+    > [!NOTE]
+    > If SSO isn't performed, then follow the **Troubleshooting** steps.
 
     <br>
 
