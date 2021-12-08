@@ -498,8 +498,6 @@ In this example, all the actions are marked as secondary therefore, a single ove
 
   ![Overflow menu Mobile](~/assets/images/Cards/mobile-1.png)
 
-  ![Overflow menu mobile image](~/assets/images/Cards/mobile-2.png)
-
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
