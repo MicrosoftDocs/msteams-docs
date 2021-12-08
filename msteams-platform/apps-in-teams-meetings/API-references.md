@@ -16,24 +16,24 @@ The meeting extensibility provide APIs to enhance meeting experience. You can pe
 * Use APIs to make your app aware of meeting.
 * Select required APIs to improve the meeting experience.
 
-The following table provides a list of APIs:
+The following table provides a list of APIs available across the Microsoft Teams Client (MSTC) and Microsoft Bot Framework (MSBF) SDKs:
 
 |Method| Description| Source|
 |---|---|----|
-|[**Get user context**](#getusercontext-api)| Get contextual information to display relevant content in a Teams tab.| Microsoft Teams client SDK|
-|[**Get participant**](#getparticipant-api)| Fetch participant information by meeting ID and participant ID. |Microsoft Bot Framework SDK|
-|[**Notification signal**](#notificationsignal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |Microsoft Bot Framework SDK|
-|[**Meeting details**](#meeting-details-api)| Get static meeting metadata. |Bot SDK |
-|[**Share app content to stage**](#shareappcontenttostage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |Microsoft Teams client SDK|
-|[**Get app content stage sharing state**](#getappcontentstagesharingstate-api)| Fetch information about apps' sharing state on the meeting stage. |Microsoft Teams client SDK|
-|[**Get app content stage sharing capabilities**](#getappcontentstagesharingcapabilities-api)| Fetch the apps' capabilities for sharing to the meeting stage. |Microsoft Teams client SDK|
-|[**Real-time Teams meeting events**](#real-time-teams-meeting-events)|Fetch real-time meeting events, such as actual start and end time.| Bot SDK|
+|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Teams tab.| MSTC SDK|
+|[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. |MSBF SDK|
+|[**Send Notification signal**](#send-notification-signal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |MSBF SDK|
+|[**Get Meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |Bot SDK |
+|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |MSTC SDK|
+|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about apps' sharing state on the meeting stage. |MSTC SDK|
+|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the apps' capabilities for sharing to the meeting stage. |MSTC SDK|
+|[**Get Real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| Bot SDK|
 
-## GetUserContext API
+## Get user context API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
-## GetParticipant API
+## Get participant API
 
 Allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
 
@@ -140,7 +140,7 @@ The following table provides the response codes:
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participants are not available.|
 
-## NotificationSignal API
+## Send notification signal API
 
 All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send signal based on user action, an in-meeting dialog box. The API includes query parameter, examples, and response codes.
 
@@ -221,7 +221,7 @@ The following table includes the response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Meeting Details API
+## Get meeting details API
 
 > [!NOTE]
 > Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
@@ -299,7 +299,7 @@ The JSON response body for Meeting Details API is as follows:
 } 
 ```
 
-## shareAppContentToStage API
+## Share app content to stage API
 
 The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client SDK.
 
@@ -370,7 +370,7 @@ The following table provides the response codes:
 | **501** | API is not supported in the current context.|
 | **1000** | App does not have proper permissions to allow share to stage.|
 
-## getAppContentStageSharingState API
+## Get app content stage sharing state API
 
 The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage.
 
@@ -424,7 +424,7 @@ The following table provides the response codes:
 | **501** | API is not supported in the current context.|
 | **1000** | App does not have proper permissions to allow share to stage.|
 
-## getAppContentStageSharingCapabilities API
+## Get app content stage sharing capabilities API
 
 The `getAppContentStageSharingCapabilities` API enables you to fetch the apps' capabilities for sharing to meeting stage.
 
@@ -477,7 +477,7 @@ The following table provides the response codes:
 | **500** | Internal error. |
 | **1000** | App does not have permissions to allow share to stage.|
 
-## Real-time Teams meeting events
+## Get real-time Teams meeting events API
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
 
