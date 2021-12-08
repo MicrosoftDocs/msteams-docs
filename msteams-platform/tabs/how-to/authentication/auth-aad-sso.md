@@ -60,13 +60,6 @@ Complete the following steps to develop an SSO Teams tab:
 
 ### Create your AAD application
 
-**To register your application in the [AAD portal](https://azure.microsoft.com/features/azure-portal/) overview**
-
-1. Get your [AAD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). 
-1. Specify the permissions that your application needs for the AAD endpoint and, Graph.
-1. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
-1. To preauthorize Teams, select the **Add a scope** and in the panel that opens, enter **access_as_user** as the **Scope name**.
-
 > [!NOTE]
 
 > There are some important restrictions that you must know:

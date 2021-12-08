@@ -56,11 +56,11 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 
-2. Select **New Registration**. The **Register an application** page appears.
+1. Select **New Registration**. The **Register an application** page appears.
 
     ![New registration](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
 
-3. In the **Register an application**, do the following steps:
+1. In the **Register an application**, do the following steps:
 
    > [!NOTE]
    >
@@ -72,7 +72,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
     ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
 
-4. Go to overview page.
+1. Go to overview page.
 1. Copy the value of **Application (client) ID**.
 1. Under **Manage**, go to **Expose an API**
 
@@ -85,8 +85,8 @@ The steps to register your app through the AAD portal are similar to the [tab SS
    > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
    > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-6. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
-7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
+1. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
+1. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
 1. Select **Add a scope**.
 1. In the panel that prompts, enter `access_as_user` as the **Scope name**.
 
@@ -101,7 +101,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
    > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
 
 1. In the **Who can consent?**, enter **Admins and users**.
-11. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
+1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
     * **Admin consent display name**: Teams can access the user’s profile.
     * **Admin consent description**: Teams can call the app’s web APIs as the current user.
     * **User consent display name**: Teams can access your profile and make requests on your behalf.
@@ -109,7 +109,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
     ![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
-12. Ensure that the state is set to **Enabled**.
+1. Ensure that the state is set to **Enabled**.
 
     ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
 
@@ -126,27 +126,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
     ![client id](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
 
-1. Go to **API Permissions**.
-1. Select **Add a permission**. 
-1. Select **Microsoft Graph**. 
-
-    ![Microsoft Graph](~/assets/images/authentication/SSO-bots-auth/microsoft-graph-api.png)
-
-1. Select **Delegated permissions**. 
-
-    ![Delegated Permissions](~/assets/images/authentication/SSO-bots-auth/delegated-permissions.png)
-
-1. Now, add the following permissions from Microsoft Graph API:
-    * User.Read (enabled by default)
-    * email
-    * offline_access
-    * OpenId
-    * profile
-
-    ![Openid permission](~/assets/images/authentication/SSO-bots-auth/open-id-permissions2.png)
-
-1. Select **Add permissions**.
-1. Now, go to **Authentication**.
+1. Go to **Authentication**.
 1. In **Platform configurations**, select **Add a platform**.
 
     ![platform](~/assets/images/authentication/SSO-bots-auth/platform-configuration.png)
@@ -158,22 +138,48 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. Enter the **Redirect URIs** for your app.
 
    >[!NOTE]
-   > This URI should be a fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+   > This URI should be a fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://token.botframework.com/.auth/web/redirect`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
     ![Redirect uris](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
 
+1. Add necessary **API Permissions**.
+    * Select **API permissions** from the left plane.
+    * Select **Add a platform** to add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.
+
+1. The following steps will help you to enable implicit grant:
+    * Select **Authentication** from the left pane.
+    * Select the **Access tokens** and **ID tokens** checkboxes.
+    
+    ![Grant flow](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
+    
+    * Select **Save** to save the changes.
+
+#### Update manifest in Azure portal
+
+The following steps will guide you to update the bot manifest in Azure portal:
+
+1. Select **Manifest** from the left pane.
+1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change it's value to **2**.
+
+    ![Update manifest](~/assets/images/bots/update-manifest.png)
+
+
+   >[!NOTE]
+   > If you are already in testing your bot in Teams, you must sign out from this app and sign out from Teams. Then sign in again to see this change.
+
+1. Select **Save**.
 
 #### Update the Azure portal with the OAuth connection
 
 The following steps will guide you to update the Azure portal with the OAuth connection:
 
-3. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
-4. Go to **Configuration** on the left pane.
-5. Select **Add OAuth Connection Settings**.
+1. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. Go to **Configuration** on the left pane.
+1. Select **Add OAuth Connection Settings**.
 
     ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting2.png)
 
-6. The following steps will guide you to complete the **New Connection Setting** form:
+1. The following steps will guide you to complete the **New Connection Setting** form:
 
    >[!NOTE]
    > **Implicit grant** may be required in the AAD application.
@@ -234,7 +240,7 @@ If the user is using the application for the first time and user consent is requ
 
 When the user selects **Continue**, the following events occur:
 
-* If the bot defines a sign-in button, it activates the sign-in flow for bots that is similar to the sign-in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
+* If the bot defines a sign-in button, the sign-in flow for bots is activated that is similar to the sign-in flow from an OAuth card button in a message stream. The developer must decide which permissions require user's consent. This approach is recommended if you require a token with permissions beyond `openId`. For example, if you want to exchange the token for graph resources.
 
 * If the bot isn't providing a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the user's email address.
 
