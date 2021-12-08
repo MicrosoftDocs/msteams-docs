@@ -1,24 +1,6 @@
 ### YamlMime:Tutorial
 title: Teams Bot with Single sign-on
 metadata:
-  title: Teams File Upload Bot
-  description: it shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. It also shows how to fetch inline images sent in message.
-  audience: Developer
-  level: Beginner
-  ms.date: 08/24/2021
-  ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
-  nextTutorialTitle: Read more on bot authentication
-  ms.custom: mvc
-  ms.localizationpriority: none
-items:
-- durationInMinutes: 1
-  content: |
-- title: Prerequisites
-
-### YamlMime:Tutorial
-title: Teams Bot with Single sign-on
-metadata:
   title: Teams Bot with SSO
   description: In this tutorial, you'll learn to set up SSO in a bot for Teams.
   audience: Developer
@@ -52,6 +34,23 @@ items:
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
+
+- title: Set up bot in Azure Bot Service
+  durationInMinutes: 5
+  content: |
+    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret that enables SSO authentication of the bot.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add messaging endpoint to the ngrok tunnel you created.
+
+    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+    ```bash
+    ngrok http -host-header=rewrite 3978
+    ```
 
     **To create Azure Bot resource**
 
