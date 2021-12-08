@@ -38,10 +38,10 @@ items:
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in Real-Time
+    * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
     > [!NOTE]
-    > Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
+    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -59,7 +59,7 @@ items:
 - title: Create and register your bot in AAD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory(AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure Active Directory (AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -300,7 +300,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is checked.
+        By default, **User.Read** is selected.
 
          ![User](~/assets/images/meetings-side-panel/userpermission.png)
 
