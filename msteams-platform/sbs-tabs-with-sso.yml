@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Use single sign-on (SSO) to authorize your Teams tab and messaging extension on desktop or mobile clients. The Single sign-on authentication method in Azure Active Directory (AAD) silently refreshes the authentication token to minimize the number of time users need to enter their sign-in credentials.
+    Use Single sign-on (SSO) to authorize your Teams tab and messaging extension on desktop or mobile clients. The Single sign-on authentication method in Azure Active Directory (AAD) silently refreshes the authentication token to minimize the number of time users need to enter their sign-in credentials.
 
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -444,7 +444,7 @@ items:
 
        ![Add the app](~/assets/images/Tab-ME-SSO/add-sso-app.png)
     
-    1. Send a message to the bot. The bot will do Single Sign-On and display profile card along with option prompt to view token.
+    1. Send a message to the bot. The bot will do Single sign-on and display profile card along with option prompt to view token.
 
        ![Profile card](~/assets/images/Tab-ME-SSO/Congratulation-image.png)
 
