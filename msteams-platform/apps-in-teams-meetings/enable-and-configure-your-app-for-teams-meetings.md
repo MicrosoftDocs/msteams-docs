@@ -114,7 +114,7 @@ Messaging extension works as expected when a user is in an in-meeting view. The 
 
 #### In-meeting dialog box
 
-The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](API-references.md#notificationsignal-api) API to trigger a bubble notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](API-references.md#send-notification-signal-api) API to trigger a bubble notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
 In-meeting dialog must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
 

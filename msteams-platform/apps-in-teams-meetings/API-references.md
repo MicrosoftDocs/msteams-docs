@@ -35,8 +35,6 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ## Get participant API
 
-Allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
-
 > [!NOTE]
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, limitation to distribution lists or roster sizes are less than 350 participants for the `GetParticipant` API.
