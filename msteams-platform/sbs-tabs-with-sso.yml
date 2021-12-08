@@ -417,7 +417,7 @@ items:
 - title: Upload SSO App to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meeting Token App**
+    **To Run Teams app by uploading the manifest.zip file**
 
     1. In your cloned repository, navigate to **csharp > App SSO Sample > TeamsAppManifest**.
 
