@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Use single sign-on(SSO) to authorize your Teams tab and messaging extension on desktop or mobile clients. The Single sign-on authentication method in Azure Active Directory (AAD) silently refreshes the authentication token. This reduces the number of time users need to enter their sign-in credentials.
+    Use single sign-on (SSO) to authorize your Teams tab and messaging extension on desktop or mobile clients. The Single sign-on authentication method in Azure Active Directory (AAD) silently refreshes the authentication token. This reduces the number of time users need to enter their sign-in credentials.
 
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -22,7 +22,7 @@ items:
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
     This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
-       ![Cong image](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)   
+       ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)   
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -307,7 +307,7 @@ items:
 
     1. Select **Manifest** from the left pane.
    
-    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change).</br>
 
        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
 
@@ -323,7 +323,7 @@ items:
         | ----- | ----- |
         | **Name** | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
         | **Service Provider** | Select **Azure Active Directory V2**. |
-        | **Client id** | Saved previously as your **Microsoft App ID**. |
+        | **Client Id** | Saved previously as your **Microsoft App ID**. |
         | **Client secret** | Saved previously as **Value** of the client secret ID. |
         | **Token Exchange URL** | Use the **Application ID URL** obtained previously while exposing API endpoint. |
         | **Tenant ID** | Enter **common**. |
@@ -476,9 +476,9 @@ items:
 
           ![Sign in box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
       
-      1. Select **Accept** in the concent box.
+      1. Select **Accept** in the consent box.
 
-          ![concent box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
+          ![consent box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
 
       1. Open messaging extension and select your bot.
 
