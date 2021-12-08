@@ -7,7 +7,7 @@ ms.custom: m365apps
 ---
 # Microsoft Teams JavaScript client SDK v2 Preview
 
-With the Microsoft Teams JavaScript client SDK v2 Preview, the [existing Teams SDK](/javascript/api/@microsoft/teams-js/) (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable Teams developers the ability to [extend Teams apps to run in Outlook and Office](overview.md). From a functional perspective, the TeamsJS SDK v2 Preview (`@microsoft/teams-js@next`) is a superset of the current TeamsJS SDK, it supports existing Teams app functionality while adding the ability to host Teams apps in Outlook and Office.
+With the [Microsoft Teams JavaScript client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta), the existing Teams SDK (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable Teams developers the ability to [extend Teams apps to run in Outlook and Office](overview.md). From a functional perspective, the TeamsJS SDK v2 Preview (`@microsoft/teams-js@next`) is a superset of the current TeamsJS SDK, it supports existing Teams app functionality while adding the ability to host Teams apps in Outlook and Office.
 
 There are two significant changes in the TeamsJS SDK v2 Preview that your code will need to account for in order to run in other Microsoft 365 applications:
 
@@ -356,7 +356,7 @@ You can also visualize the changes by reviewing the  [`transformLegacyContextToA
 
 ## Next steps
 
-You can also learn more about breaking changes in the [TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md).
+You can also learn more about breaking changes in the [TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md) and the [TeamsJS SDK v2 Preview API Reference](/javascript/api/overview/msteams-client?view=msteams-client-js-beta).
 
 When you're ready to test your Teams apps running in Outlook and Office, see:
 
