@@ -23,10 +23,10 @@ items:
     
      **Key features of SSO for Tabs and Messaging extension**
 
-    * Allows the user to sign in without normal authentication method.
-    * Calls graph to display user's profile.
-    * Obtains an access token for the logged-in user using SSO.
-    * Calls a web service to exchange the access token.
+    * Allow the user to sign in without normal authentication method.
+    * Call graph to display user's profile.
+    * Obtain an access token for the logged-in user using SSO.
+    * Call a web service to exchange the access token.
     
     **Different ways of user interactions**
  
