@@ -81,7 +81,7 @@ items:
          * Replace `<<BASE-URL>>` with your **ngrok base url**.
          * Replace `<<VALID DOMAIN>>` with your **ngrok domain**.
          
-        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::   
+         :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::   
 - title: Build and run client app using npm 
   durationInMinutes: 1 
   content: |
