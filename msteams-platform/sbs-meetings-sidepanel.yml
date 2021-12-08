@@ -82,7 +82,7 @@ items:
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
     1. From the **Resource group** dropdown list, select your existing resource group. 
     
-        ![Select resource Azure bot](~/assets/images/meetings-side-panel/review-plus-create.png) 
+        ![Select resource Azure bot](~/assets/images/meetings-side-panel/review-plus-create1.png) 
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
@@ -107,11 +107,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/meetings-side-panel/botdeployment.png)
+        ![Deploy App](~/assets/images/meetings-side-panel/botdeployment1.png)
 
         Your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/meetings-side-panel/bot-page.png)
+        ![Azure bot resource created](~/assets/images/meetings-side-panel/bot-page1.png)
 
     **To create client secret**
 
