@@ -81,7 +81,7 @@ items:
          * Replace `<<BASE-URL>>` with your **ngrok base url**.
          * Replace `<<VALID DOMAIN>>` with your **ngrok domain**.
          
-           :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::   
+        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::   
 - title: Build and run client app using npm 
   durationInMinutes: 1 
   content: |
@@ -94,6 +94,8 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app folder path.png" alt-text="folder path" border="false":::
 
     1. Open a new Command Prompt window, change the current directory to the copied **nodejs** path.
+
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs path.png" alt-text="path for nodejs" border="false":::
 
     1. Run `npm install` to download packages and dependencies.
     
@@ -165,7 +167,10 @@ items:
        
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png" alt-text="meeting app" border="false":::
 
-       You can add the sprint status task as shown in the image:
+    1. To update the sprint status task, add:
+
+       * **Assigned To**
+       * **Description**
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add status.png" alt-text="add status in meeting" border="false":::
        
