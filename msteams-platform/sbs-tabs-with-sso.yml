@@ -16,10 +16,10 @@ items:
   content: |
     Use Single sign-on (SSO) to authorize your Teams tab and messaging extension on desktop or mobile clients. The Single sign-on authentication method in Azure Active Directory (AAD) silently refreshes the authentication token to minimize the number of time users need to enter their sign-in credentials.
 
-    A bot behaves differently depending on the conversation it's involved in:
-
-    * Bots in channel and group chat conversations require the user to @mention the bot.
-    * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
+    > [!NOTE]
+    > A bot behaves differently depending on the conversation it's involved in:
+    > * Bots in channel and group chat conversations require the user to @mention the bot.
+    > * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
     This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
        ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)   
@@ -27,7 +27,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools to set up your development environment:  
+    Ensure you install the following tools and set up your development environment:  
 
     * Microsoft Teams with an account (not a guest account)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
