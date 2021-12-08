@@ -23,6 +23,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+        text: Overflow menu on Adaptive Cards
+        url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
       - text: Teams Toolkit for Visual Studio Code (Preview)

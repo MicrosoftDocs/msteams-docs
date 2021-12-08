@@ -488,17 +488,17 @@ In this example, all the actions are marked as secondary therefore, a single ove
   
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that is set as secondary appears in Adaptive Card.
 
-  ![desktop1](~/assets/images/Cards/desktop1.png)
+  ![desktop image](~/assets/images/Cards/desktop1.png)
 
-  ![desktop2](~/assets/images/Cards/desktop2.png)
+  ![overflow menu desktop image](~/assets/images/Cards/desktop2.png)
 
-  ![desktop3](~/assets/images/Cards/Cards\desktop3.png)
+  ![image3](~/assets/images/Cards/Cards\desktop3.png)
 
 **Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
 
-  ![Mobile1](~/assets/images/Cards/mobile1.png)
+  ![Overflow menu Mobile](~/assets/images/Cards/mobile1.png)
 
-  ![Mobile2](~/assets/images/Cards/mobile2.png)
+  ![Overflow menu mobile image](~/assets/images/Cards/mobile2.png)
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 

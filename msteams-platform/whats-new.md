@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|11/22/2021|Overflow menu on Adaptive Cards|Build cards and task modules > Build cards >[Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)|
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
 |
 
