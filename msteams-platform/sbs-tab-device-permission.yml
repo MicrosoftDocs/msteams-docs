@@ -236,7 +236,7 @@ items:
     1. Select **Save**.
     1. Select **Apply**.
 
-- title: Tab device permission
+- title: Configure and run the Tab Device Permissin app on Teams
   durationInMinutes: 1
   content: |
     Configure the tab device permission sample in Microsoft Teams.
@@ -246,16 +246,21 @@ items:
     1. Open Git Bash and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder.
     1. Open ngrok, run the below command.
+
         ```bash
     npm install
     ```
+
     1. Run the application in the ngrok using following command
+       
         ```bash
     npm start
     ```
+
     1. Begin your tunnelling service to get an https endpoint.
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
     1. Start an ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
+       
         ```bash
     ngrok http 3000 --host-header=localhost
     ```
@@ -275,25 +280,6 @@ items:
     1. Select **Get Location**.
     
     
-
-        <br>
-
-        <details>
-
-        <summary><b>Troubleshooting</b></summary>
-
-        If you get the **Unable to find package** error, follow these steps:
-
-        1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
-        1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
-        1.	Select **Add**.
-        1.	In **Name**, enter **nuget.org** and in **Source**, enter **https://api.nuget.org/v3/index.json**.
-        1.	Select **Update** and **OK**.
-        1.	Rebuild your project.
-        <br>
-
-        </details>
-
 - title: Configure and run the Teams app
   durationInMinutes: 2
   content: |
