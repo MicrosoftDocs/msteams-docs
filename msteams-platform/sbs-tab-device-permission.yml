@@ -14,15 +14,12 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location with their web apps.
-    
     Teams app that require device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
 
-    This step-by-step guide helps you to give tab device permission. You'll see the following output:
+    This step-by-step guide helps you to give tab device permission demo. You'll see the following output:
 
-    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
+    ![Mobile signed in to tab device permission](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
 
-    (Image will be added here)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -45,16 +42,14 @@ items:
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder.
     1. Open ngrok, run the below command.
 
-        ```bash
+    ```bash
     npm install
     ```
-
     1. Run the application in the ngrok using following command
        
-        ```bash
+    ```bash
     npm start
     ```
-
     1. Begin your tunnelling service to get an https endpoint.
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
     1. Start an ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
