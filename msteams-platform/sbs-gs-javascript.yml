@@ -389,7 +389,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-debug.png" alt-text="Screenshot of the completed app":::
 
-    1. Move down the page to view the user details.
+    1. Move through the page to view the user details.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-authorize.png" alt-text="Screenshot of the user information section on tab":::
         
@@ -397,7 +397,7 @@ items:
 
         Teams Toolkit requests permission to grant access.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission.png" alt-text="Screenshot of authorizing app for accessing user details":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission.png" alt-text="Screenshot of authorizing app for accessing user details":::
 
     1. Select **Accept** to let your app access user details.
 
@@ -715,6 +715,8 @@ items:
     1. Select a workspace folder. A folder is created in your workspace folder for the project.
 
     1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-name-mex.png" alt-text="Screenshot showing how to enter the app name." border="false":::
 
         Teams Toolkit creates the app in a few seconds.
 
