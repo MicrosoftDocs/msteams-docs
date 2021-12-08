@@ -37,6 +37,13 @@ Teams app that require device permissions in the browser must show instructions 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
 
+## Code sample
+
+|Sample name | Description | Node.js |
+|----------------|-----------------|--------------|
+| Tab device permissions | The sample code demonstrates how to show the device permissions for browser. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+
+
 ## See also
 
 * [Device capabilities overview](device-capabilities-overview.md)
