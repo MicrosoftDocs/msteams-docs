@@ -488,11 +488,11 @@ In this example, all the actions are marked as secondary therefore, a single ove
   
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that is set as secondary appears in Adaptive Card.
 
-  ![desktop image](~/assets/images/Cards/desktop-1.png)
+  ![desktop image](assets\images\Cards\desktop-overflow-image-1.png)
 
-  ![overflow menu desktop image](~/assets/images/Cards/desktop-2.png)
+  ![overflow menu desktop](assets\images\Cards\desktop-overflow-image-2.png)
 
-  ![image3](~/assets/images/Cards/desktop-3.png)
+  ![image3](assets\images\Cards\desktop-overflow-menu-image-3.png)
 
 **Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
 
