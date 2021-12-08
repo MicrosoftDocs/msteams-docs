@@ -27,7 +27,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure you install the following tools to set up your development environment:  
 
     * Microsoft Teams with an account (not a guest account)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
@@ -51,7 +51,7 @@ items:
 - title: Create and register your bot in AAD portal
   durationInMinutes: 5
   content: |
-    The following steps guide you to create and register your bot in Azure Active Directory(AAD), create a tunnel using ngrok, and add messaging endpoint:
+    The following steps guide you to:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
@@ -101,7 +101,7 @@ items:
 
     **To create client secret**
 
-      Perform the following steps if you have created a new **Microsoft App ID**:
+      Do the following steps if you've created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
@@ -165,7 +165,7 @@ items:
     > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
     
     > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+    > If you find **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
 
     **To add messaging endpoint**
@@ -176,7 +176,7 @@ items:
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
