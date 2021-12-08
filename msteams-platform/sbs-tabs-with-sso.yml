@@ -464,7 +464,9 @@ items:
 
        ![Profile card](~/assets/images/Tab-ME-SSO/Congratulation-image.png)
 
-    1. 
+    1. Select **yes** to view token or **no** to continue chat.
+      
+       ![Token view](~/assets/images/Tab-ME-SSO/token-view.png)
 
     1. If SSO isn't performed, then follow the troubleshooting steps.
 
