@@ -58,7 +58,8 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
-      "scopes": [ "team", "groupchat" ]
+      "scopes": [ "team", "groupchat" ]"context":[
+      ]
     }
   ],
   "staticTabs": [
@@ -349,6 +350,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 

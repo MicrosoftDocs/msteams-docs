@@ -122,34 +122,6 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### Shared meeting stage
-
-Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time.
-
-The required context is `meetingStage` in the app manifest. A prerequisite is to have the `meetingSidePanel` context and it enables **Share** in the `meetingSidePanel`.
-
-![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
-
-To enable shared meeting stage, configure your app manifest as follows:
-
-```json
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "groupchat"
-      ],
-      "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
-```
-
-See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
-
 ### After a meeting
 
 The configurations of after and [before meetings](#before-a-meeting) are the same.
@@ -174,3 +146,5 @@ Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate 
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Shared meeting stage experience design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Add apps to meetings via Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
