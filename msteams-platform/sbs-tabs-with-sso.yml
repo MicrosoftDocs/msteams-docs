@@ -51,7 +51,7 @@ items:
 - title: Create and register your bot in AAD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory(AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    The following steps guide you to create and register your bot in Azure Active Directory(AAD), create a tunnel using ngrok, and add messaging endpoint:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
@@ -78,7 +78,7 @@ items:
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+       Select **Use existing app registration** and enter **Existing app ID** and **Existing app password** for an existing application. Select **Create new Microsoft App ID** for a new application.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -286,7 +286,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
          1. Select **Web**.
@@ -307,7 +307,7 @@ items:
 
     1. Select **Manifest** from the left pane.
    
-    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change).</br>
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you're already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change).</br>
 
        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
 
@@ -444,11 +444,11 @@ items:
 
        ![Add the app](~/assets/images/Tab-ME-SSO/add-sso-app.png)
     
-    1. Send a message to the bot. The bot will perform Single Sign-on and display profile card along with option prompt to view token.
+    1. Send a message to the bot. The bot will do Single Sign-On and display profile card along with option prompt to view token.
 
        ![Profile card](~/assets/images/Tab-ME-SSO/Congratulation-image.png)
 
-    1. If the bot didn't perform SSO, then follow the troubleshooting steps.
+    1. If the bot couldn't do SSO, then follow the troubleshooting steps.
 
     <br>
 
@@ -456,7 +456,7 @@ items:
 
     <summary><b>Troubleshooting</b></summary>
 
-      1. If the bot couldn't perform SSO, then it will fallback to normal Authentication method.
+      1. If the bot couldn't do SSO, then it will fallback to normal Authentication method.
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login.png)
 
@@ -482,7 +482,7 @@ items:
 
       1. Open messaging extension and select your bot.
 
-      1. Select your profile under search box. You will see something like this:
+      1. Select your profile under search box. You'll see something like this:
 
           ![Profile](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)
 
