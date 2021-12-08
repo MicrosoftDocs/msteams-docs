@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meetings Stage view helps to [enable and configure your apps for Teams meetings](/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings). It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
+    Meetings Stage View helps to [enable and configure your apps for Teams meetings](/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings). It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
 
     **Key features of Meetings Stage View**
 
@@ -153,7 +153,7 @@ items:
   
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view" border="false":::
     
-    1. Select the **Meetings Stage View**.
+    1. Select the **App in Meeting**.
     
     1. Select **Save**.
 
