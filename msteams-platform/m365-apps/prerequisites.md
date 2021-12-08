@@ -67,6 +67,9 @@ Here are the steps for installing Office 365 *Beta Channel* applications in your
 
    :::image type="content" source="images/outlook-coming-soon.png" alt-text="'Coming Soon' button in Outlook desktop toggled to 'On'}":::
 
+  > [!NOTE]
+  > You may need to close Outlook and restart your computer for the *Coming Soon* button to appear.
+
 You can verify your tenant supports Teams personal tabs running on Outlook for Windows desktop by signing in with your test tenant credentials and looking for an ellipses (**...**) option on the side bar (the entry point for sideloaded Teams personal tabs).
 
 :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses '...' entry point to sideloaded Teams tab apps in Outlook for desktop":::
