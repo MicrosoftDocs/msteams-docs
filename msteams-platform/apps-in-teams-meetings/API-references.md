@@ -232,7 +232,8 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "ChannelMeeting.ReadBasic.Group"
     ]
 }
  ```
@@ -308,7 +309,8 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "ChannelMeeting.ReadBasic.Group"
     ]
 }
  ```
