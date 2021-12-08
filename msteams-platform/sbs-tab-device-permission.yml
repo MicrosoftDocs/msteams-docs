@@ -236,7 +236,7 @@ items:
     1. Select **Save**.
     1. Select **Apply**.
 
-- title: Try this sample
+- title: Tab device permission
   durationInMinutes: 1
   content: |
     Configure the tab device permission sample in Microsoft Teams.
@@ -246,22 +246,33 @@ items:
     1. Open Git Bash and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder.
     1. Open ngrok, run the below command.
-    (Image will be added here)
+        ```bash
+    npm install
+    ```
     1. Run the application in the ngrok using following command
-    (Image will be added here)
+        ```bash
+    npm start
+    ```
     1. Begin your tunnelling service to get an https endpoint.
+    1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
     1. Start an ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
-    (Image will be added here)
-    **To run the Teams app by uploading the manifest.zip file**
+        ```bash
+    ngrok http 3000 --host-header=localhost
+    ```
+
+    **To run the tab device permission by uploading the manifest.zip file in Teams**
+
     1. Create an app manifest.
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
     1. Open the **manifest.json** file.
     1. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part.
-    1. Zip the file of the appPackage/folder to create manifest.zip.
+    1. Zip the files in the **appPackage/folder** to create manifest.zip.
     1. Go to Teams.
-    1. To upload manifest.zip, select Apps > Upload a custom app and open manifest.zip.
-    1. Select Add to add the tab device permission to your Teams.
+    1. To upload **manifest.zip**, select **Apps > Upload a custom app and open manifest.zip**.
+    1. Select **Add** to add the tab device permission to your Teams.
     (Image will be added here)
+    1. Open **Tab Device Permission** and select **Device Permission Tab**.
+    1. Select **Get Location**.
     
     
 
