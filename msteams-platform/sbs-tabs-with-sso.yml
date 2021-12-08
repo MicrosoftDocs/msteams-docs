@@ -212,7 +212,7 @@ items:
 
        ![Set link](~/assets/images/Tab-ME-SSO/appid-uri.png)
 
-    1. Insert `botid-` between `api://` and `/{AppID}`.</br>
+    1. Insert **botid-** between `api://` and `/{AppID}`.</br>
         
     1. Select **Add a scope**. 
     
