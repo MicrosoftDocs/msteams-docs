@@ -243,25 +243,27 @@ items:
 
     **To configure and run your tab device permission sample**
 
-    1. Open Visual Studio.
-    1. In Visual Studio, select **Clone a repository**.
-    1. In the **Repository location**, enter **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
-    1. In the Windows Explorer, go to **Microsoft-Teams-Samples>samples>tab-device-permissions>nodejs** folder.
-    1. In Visual Studio, open **Terminal** or open local terminal and run the below command.
+    1. Open Git Bash and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
+    1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder.
+    1. Open ngrok, run the below command.
     (Image will be added here)
-    1. Run the application in your local terminal (or Visual Studio Code terminal) using following command
+    1. Run the application in the ngrok using following command
     (Image will be added here)
     1. Begin your tunnelling service to get an https endpoint.
     1. Start an ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
     (Image will be added here)
+    **To run the Teams app by uploading the manifest.zip file**
     1. Create an app manifest.
-
-        > [!NOTE]
-        > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
-
-        ![Appsettings json](~/assets/images/bots/appsettingsjson.png)
-
-    1. Select the **F5** key to run this project.
+    1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
+    1. Open the **manifest.json** file.
+    1. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part.
+    1. Zip the file of the appPackage/folder to create manifest.zip.
+    1. Go to Teams.
+    1. To upload manifest.zip, select Apps > Upload a custom app and open manifest.zip.
+    1. Select Add to add the tab device permission to your Teams.
+    (Image will be added here)
+    
+    
 
         <br>
 
