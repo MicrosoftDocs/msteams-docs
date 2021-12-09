@@ -42,9 +42,7 @@ To enroll your tenant for Office 365 targeted releases:
 1. Select any *Targeted release* preferences:
     1. **Target release for everyone**
     1. **Target release for select users**
-
-  :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
-
+:::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
 1. Select **Save**.
 
 For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
