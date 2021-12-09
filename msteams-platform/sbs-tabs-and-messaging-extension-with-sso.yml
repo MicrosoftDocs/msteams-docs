@@ -237,7 +237,7 @@ items:
       | **User consent display name** | Teams can access your user profile and make requests on your behalf |
       | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
 
-          ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
+      ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
 
     1. Ensure that **State** is set to **Enabled**.
 
