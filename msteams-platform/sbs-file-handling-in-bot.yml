@@ -290,16 +290,21 @@ items:
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
     1. Select **Add** to add the conversation bot to your chat.
 
-        You can interact with this bot by sending it a message. The Bot exchanges an SSO token and makes a call to the Graph API on your behalf and returns the results. It keeps you signed in unless you send a message to **logout**.
+    **Interacting with the bot in Teams**
 
-    1. Send a message to the bot. The conversation bot asks for permissions for the first time.
-
+    1. Sending a message to the bot will cause it to respond with a card that will prompt you to upload a file. The file that's being uploaded is the teams-logo.png in the Files directory in this sample.
+       The Accept and Decline events illustrated in this sample are specific to Teams. You can message the bot again to receive another prompt.
+        
+        (image needs to be replaced)
         ![Permissions to bot](~/assets/images/bots/sbsdesktop-mobile-consent-request.png)
 
-    1. Select **Continue** to accept the permissions.
+    1. You can send a file to the bot as an attachment in the message compose section in Teams.
+       This will be delivered to the bot as a Message Activity and the code in this sample fetches and saves the file.
 
-    1. Select **Accept** for **Permissions requested**.
-
+    1. You can also send an inline image in the message compose section. This will be present in the attachments of the Activity and requires 
+       the Bot's access token to fetch the image.
+        
+        (image needs to be replaced)
         ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Complete challenge
