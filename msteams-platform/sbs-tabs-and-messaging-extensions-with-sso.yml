@@ -206,7 +206,7 @@ items:
 
     1. Set the **Application ID URI** in the form of `api://botid-{AppID}`.
 
-       ![Set link](~/assets/images/Tab-ME-SSO/appid-uri.png)
+       ![Set link](~/assets/images/Tab-ME-SSO/appid-uri1.png)
         
     1. Select **Add a scope**. 
     
@@ -349,7 +349,7 @@ items:
          * Set `"AppSecret"` to your bot's client secret ID value.
          * Set `"ApplicationIdURI"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.
 
-        ![App settings](~/assets/images/Tab-ME-SSO/app-setting.png)
+        ![App settings](~/assets/images/Tab-ME-SSO/app-setting1.png)
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -382,6 +382,9 @@ items:
 
        1. Go to **Microsoft-Teams-Samples > samples > app-sso > csharp > App SSO Sample** folder.
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
+
+         ![Open file](~/assets/images/Tab-ME-SSO/project-folder.png)
+
        1. You'll see the following output:
 
           ![Token File](~/assets/images/Tab-ME-SSO/output1.png)
@@ -451,7 +454,7 @@ items:
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login.png)
 
-      1. Select messaging extension.
+      1. Select **...** to open messaging extension.
 
           ![messaging extension](~/assets/images/Tab-ME-SSO/message-extension.png)
       
