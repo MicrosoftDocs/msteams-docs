@@ -25,7 +25,7 @@ items:
     * You can select any option in the given agenda.
     * You can submit your feedback on either Content bubble/Adaptive card sent in chat.
     
-    This step-by-step guide helps you to send feedback to meeting content bubble to adaptive cards during meetings in Teams with attendees. You'll see the following output:
+    This step-by-step guide helps you to send feedback to meeting content bubble during meetings in Teams with attendees. You'll see the following output:
 
        ![Meeting content bubble introduction](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
 
@@ -308,7 +308,6 @@ items:
 
             ![Auth-end](~/assets/images/meeting-content-bubble/meeting-token-generator-configureweb.png)
 
-
 - title: Set up app settings
   durationInMinutes: 1
   content: |
@@ -330,8 +329,14 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
+    1. If you are using Visual Studio 2019.
+    1. Navigate to **File > Open > Project/Soultion**.
+    1. Navigate to `samples/meetings-content-bubble/csharp` folder.
+    1. Select `ContentBubbleBot.sln` file
+
+        ![App settings](~/assets/images/meeting-content-bubble/project-sln.png)
+        
     1. Navigate to **manifest.json** in cloned repository.
-    
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
          * Set `id` to `[MicrosoftAppId]`
