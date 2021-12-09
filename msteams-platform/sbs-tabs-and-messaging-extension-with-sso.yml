@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 12/07/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Read more to authenticate apps in Teams meeting
+  nextTutorialHref: tabs/how-to/authentication/auth-aad-sso.md
+  nextTutorialTitle: Read more on SSO authentication for apps tabs and messaging extension.
   ms.custom: mvc
   ms.localizationpriority: none
 items:
