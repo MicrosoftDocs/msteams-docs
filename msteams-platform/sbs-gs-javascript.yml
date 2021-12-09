@@ -974,7 +974,7 @@ items:
     1. Launch the messaging extension from three dots at the bottom of the composing area.
     1. Select your messaging extension app.       
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
 
         The messaging extension app loads with the options to run a search and create adaptive cards.
     </details>
