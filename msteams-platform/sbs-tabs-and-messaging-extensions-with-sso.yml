@@ -378,7 +378,7 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/Tab-ME-SSO/open-project.png)
+          ![Open file](~/assets/images/Tab-ME-SSO/open-project1.png)
 
        1. Go to **Microsoft-Teams-Samples > samples > app-sso > csharp > App SSO Sample** folder.
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
@@ -390,7 +390,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
+          ![Trust Certificate](~/assets/images/Tab-ME-SSO/certificate.png)
 
           A webpage opens with a message **App is ready!**.
 
