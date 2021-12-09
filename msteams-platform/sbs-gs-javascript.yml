@@ -919,7 +919,7 @@ items:
     ## Optional scenarios
 
     You've tested the search feature of a basic messaging extension app. Now, you can try out some other functionalities of this app. These are optional scenarios in this app.
-    
+    <br>
     <details>
     <summary>To create a card</summary>
 
@@ -945,29 +945,29 @@ items:
     <details>
     <summary>To open your app from compose area</summary>
 
-        Choose one of the following ways to open your app.
+    Choose one of the following ways to open your app.
     
-        **Using `@mention`:**
+    **Using `@mention`:**
     
-        1. Enter `@your-app-name` in the command area of your app.
+    1. Enter `@your-app-name` in the command area of your app.
         
-            The app opens the search box and you can use it to run a query.
+        The app opens the search box and you can use it to run a query.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot that shows how to @mention the messaging extension app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot that shows how to @mention the messaging extension app" border="false":::
 
-        1. Enter a search string, and select one from the search result.
+    1. Enter a search string, and select one from the search result.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot that shows how to run a search using the messaging extension app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot that shows how to run a search using the messaging extension app" border="false":::
 
-            It displays in the command area as a card.
+        It displays in the command area as a card.
 
-        1. Copy the card to paste it in the compose area.
+    1. Copy the card to paste it in the compose area.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot that shows search result in a card" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot that shows search result in a card" border="false":::
         
-        1. Send the card using the compose area.
+    1. Send the card using the compose area.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot that shows search result in a chat" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot that shows search result in a chat" border="false":::
 
     **Using three-dot icon:**
     
