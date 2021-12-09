@@ -324,8 +324,6 @@ items:
         <img src="~/assets/images/Tab-ME-SSO/new-connection-setting.png" alt="Bot Service connection" width="300"/>
 
     1. Select **Save**.
-   
-    1. Select **Apply**.
 
 - title: Set up app settings
   durationInMinutes: 1
@@ -381,6 +379,7 @@ items:
 
        1. Go to **Microsoft-Teams-Samples > samples > app-sso > csharp > App SSO Sample** folder.
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
+       1. You'll see the following output:
 
           ![Token File](~/assets/images/Tab-ME-SSO/output.png)
 
@@ -443,15 +442,9 @@ items:
       
        ![Token view](~/assets/images/Tab-ME-SSO/token-view.png)
 
-    1. If SSO isn't performed, then follow the **Troubleshooting** steps:
+    1. If SSO isn't performed, the following steps will help you to authenticate your tab:
 
-    <br>
-
-    <details>
-
-    <summary><b>Troubleshooting</b></summary>
-
-      1. If SSO isn't performed, then the bot will do normal Authentication method.
+      1. If SSO isn't performed, then it will perform default Authentication method.
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login.png)
 
@@ -467,13 +460,13 @@ items:
 
           ![Sign in](~/assets/images/Tab-ME-SSO/sign-in-sso.png)
 
-      1. Enter your credentials in sign-in box.
+      1. Enter your credentials in sign-in box, and select **Next**.
 
           ![Sign in box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
       
       1. Select **Accept** in the consent box.
 
-          ![consent box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
+          ![consent box](~/assets/images/Tab-ME-SSO/Accept-sso-permission.png)
 
       1. Open messaging extension and select your application.
 
@@ -484,10 +477,6 @@ items:
       1. Enter  **https://profile.botframework.com** in the compose box to get a profile card.
        
           ![Profile card](~/assets/images/Tab-ME-SSO/profile-card.png)
-
-    <br>
-
-    </details>
 
 - title: Complete challenge
   durationInMinutes: 1
