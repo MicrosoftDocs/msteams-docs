@@ -135,7 +135,8 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate Meetings Stage View in your Teams meeting.
 
 ## Next step
 
