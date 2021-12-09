@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meetings Stage View helps to [enable and configure your apps for Teams meetings](/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings). It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
+    Meetings Stage View helps to enable and configure your apps for Teams meetings. It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
 
     **Key features of Meetings Stage View**
 
@@ -77,7 +77,7 @@ items:
 
     1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
 
-         * Replace `<<App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace `<<App-ID>>` with your bot's **Microsoft App ID** or with some unique GUID.
          * Replace `<<BASE-URL>>` with your **ngrok base url**.
          * Replace `<<VALID DOMAIN>>` with your **ngrok domain**.
          
