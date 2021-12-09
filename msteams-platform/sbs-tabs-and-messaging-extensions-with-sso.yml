@@ -275,8 +275,6 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/Tab-ME-SSO/api-permissions-5.png)
-
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
@@ -304,7 +302,7 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. 
 
        > [!Tip]
-       > If you're already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change).</br>
+       > If you're already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
 
        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
 
