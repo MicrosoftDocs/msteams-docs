@@ -75,7 +75,7 @@ You can verify tenant support for your tenant account:
 
 * For Teams personal tabs running on office.com, outlook.com, and Outlook for Windows desktop, sign in with your tenant credentials and check for ellipses (**...**) option on the lower left pane.
 
-    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="More Apps" lightbox="images/outlook-desktop-ellipses.png":::
+    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses" lightbox="images/outlook-desktop-ellipses.png":::
 
 * For messaging extensions in outlook.com and Outlook for Windows, check for **More Apps** option in the Outlook compose message ribbon.
 
@@ -84,7 +84,7 @@ You can verify tenant support for your tenant account:
 
 ## Switch to the Developer Preview version of Teams
 
-Ensure that you switch to the [*Public Developer Preview*](https://docs.microsoft.com/microsoftteams/platform/resources/dev-preview/developer-preview-intro) from your Microsoft Teams client.
+Ensure that you switch to the [*Public Developer Preview*](/resources/dev-preview/developer-preview-intro) from your Microsoft Teams client.
 
 1. Sign in to Teams with your tenant credentials.
 1. From the ellipsis (**...**) menu next to your user profile, select **About** > **Developer preview**. A dialog appears, select **Switch to developer preview**.
