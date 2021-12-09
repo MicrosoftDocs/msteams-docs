@@ -44,8 +44,6 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-        - text: Step-by-step guide for Meetings Stage View
-          url: ~/sbs-meetings-stage-view.yml
         - text: Proactive messages
           url: ~/bots/how-to/conversations/send-proactive-messages.md
         - text: Add authentication to bots
