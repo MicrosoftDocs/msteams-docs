@@ -356,6 +356,10 @@ items:
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
+       1. Open `ContentBubbleBot.sln` file.
+
+         ![Open file](~/assets/images/meeting-token-generator/proj-sln.png)
+
        1. Press **fn+F5** to run the project.
 
           A webpage opens with a message **Your bot is ready!**.
