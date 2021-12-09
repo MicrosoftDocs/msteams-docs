@@ -8,7 +8,7 @@ metadata:
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Read more to Enable and configure your apps for Teams Meetings
+  nextTutorialTitle: Read more to enable and configure apps for meetings
   ms.custom: mvc
   ms.localizationpriority: none
 items:
@@ -175,7 +175,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add status.png" alt-text="add status in meeting" border="false":::
        
-       App in Side panel view:
+       App in side panel view:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png" alt-text="panel view" border="false":::
 

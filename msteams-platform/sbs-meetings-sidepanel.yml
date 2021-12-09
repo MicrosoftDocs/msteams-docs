@@ -8,7 +8,7 @@ metadata:
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Read more to enable and configure your apps for Teams meeting
+  nextTutorialTitle: Read more to enable and configure apps for meetings
   ms.custom: mvc
   ms.localizationpriority: none
 items:
@@ -18,7 +18,7 @@ items:
 
     This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
 
-    **Meeting organizers' interaction of `meetingSidePanel`**
+    **Meeting organizers' interaction of meeting SidePanel**
 
     * **Add New Agenda Item**: Gives provision to add new agenda point.
     * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
@@ -41,7 +41,7 @@ items:
     * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
     > [!NOTE]
-    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
+    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -453,7 +453,7 @@ items:
 
        ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
    
-       The app is visible in the `meetingSidePanel`.         
+       The app is visible in the meeting SidePanel.         
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
