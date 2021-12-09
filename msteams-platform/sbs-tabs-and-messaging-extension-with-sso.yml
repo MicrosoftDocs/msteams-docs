@@ -117,7 +117,7 @@ items:
 
     **To create client secret**
 
-      Do the following steps if you've created a new **Microsoft App ID**:
+      Perform the following steps if you've created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
@@ -220,8 +220,6 @@ items:
     1. Set the **Application ID URI** in the form of `api://botid-{AppID}`.
 
        ![Set link](~/assets/images/Tab-ME-SSO/appid-uri.png)
-
-    1. Insert `botid-` between `api://` and `/{AppID}`.</br>
         
     1. Select **Add a scope**. 
     
@@ -239,7 +237,7 @@ items:
       | **User consent display name** | Teams can access your user profile and make requests on your behalf |
       | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
 
-       ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
+          ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
 
     1. Ensure that **State** is set to **Enabled**.
 
