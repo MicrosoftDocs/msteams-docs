@@ -58,6 +58,8 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Step-by-step guide for meeting content bubble
           url: ~/sbs-meeting-content-bubble.yml
+        - text: Step-by-step guide for Meetings Stage View
+          url: ~/sbs-meetings-stage-view.yml
 - title: Get started
   linkLists:
     - linkListType: get-started
