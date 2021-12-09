@@ -18,19 +18,11 @@ items:
 
    **Key features of SSO for Tabs and Messaging extension**
 
-    * Allow the user to sign in automatically.
-    * Call Graph APIs to display user's profile.
-    * Obtain an access token for the logged-in user using SSO.
-    * Call a web service to exchange the access token.
-    
-   **Different ways of user interactions**
- 
-    * SSO authentication: Performs SSO authentication when user types anything in the chat box for the first time.
-    * Token: Displays token for the user.
-    * Profile card: Displays profile card of the user in messaging extension.
-
-   > [!NOTE]
-   > If SSO isn't performed, then the bot will do normal authentication method with a sign-in box.     
+    * Allows the user to sign in automatically.
+    * Calls Graph APIs to display user's profile.
+    * Obtains access token for the logged-in user using SSO.
+    * Calls web service to exchange the access token.
+    * Displays profile card of the user in messaging extension.    
 
    This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
        ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)   
