@@ -882,8 +882,8 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
  
-        - Select **Got it** to try the app later from the list of Sideloaded apps.
-        - Select **Try it** to test the app.
+        - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
+        - If you select **Try it**, Teams loads your app.
 
     1. Select **Try it**.
 
@@ -891,15 +891,15 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows app sideloaded in Teams" border="false":::
 
-        - If you've created a bot app before you created the messaging extension app, you can see that it is loaded in the same bot app you created. Any previous chat is visible.
-        - If you created a messaging extension without creating a bot app, your app is loaded in any chat bot that is open on Teams.
+        As messaging extension apps rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
+
+        - If you've created a bot app before you created the messaging extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
+        - If you created a messaging extension first, your app is loaded in any chat that is open on Teams.
 
     ### Test your app
 
-    This sample app lets you search open-source npm packages from the software registry. You can also create card that can be sent on the chat bot app.
+    The first time your app loads, the messaging extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
     
-    The first time your app loads, the messaging extension is open for you to test.
-
     #### To run a search query
 
     1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
@@ -918,6 +918,8 @@ items:
 
     ## Optional scenarios
 
+    You've tested the search feature of a basic messaging extension app. Now, you can try out some other functionalities of this app. These are optional scenarios in this app.
+    
     <details>
     <summary>To create a card</summary>
 
@@ -947,7 +949,7 @@ items:
     
     **Using `@mention`:**
     
-        - Enter `@your-app-name` in the compose area of your app.
+        - Enter `@your-app-name` in the command area of your app.
         The app opens the search box and you can use it to run a query.
     
     **Using three-dot icon:**
