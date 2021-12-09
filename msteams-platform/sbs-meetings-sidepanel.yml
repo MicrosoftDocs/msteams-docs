@@ -52,7 +52,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
+       ![Clone repository](~/assets/images/meetings-side-panel/clonerepository1.png)
 
     1. Select **Clone**. 
 
@@ -182,7 +182,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok.png)
+        ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok1.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
