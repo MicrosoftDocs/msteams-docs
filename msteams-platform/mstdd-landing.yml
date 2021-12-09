@@ -60,6 +60,8 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Step-by-step guide for creating meetings side panel
           url: ~/sbs-meetings-sidepanel.yml
+        - text: Step-by-step guide for Meetings Stage View
+          url: ~/sbs-meetings-stage-view.yml
 - title: Get started
   linkLists:
     - linkListType: get-started

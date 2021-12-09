@@ -134,10 +134,11 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 |Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |Meeting side panel | Sample app to show how to add agenda in a meeting side panel | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
-## Step-by-step guide
+## Step-by-step guides
 
 * Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate **meeting token** in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate **meetingSidePanel** in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate Meetings Stage View in your Teams meeting.
 
 ## Next step
 
