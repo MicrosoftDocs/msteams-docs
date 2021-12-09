@@ -274,7 +274,7 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope2.png)
+        ![Add scope](~/assets/images/meeting-token-generator/meeting-token-generator-addscope2.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
