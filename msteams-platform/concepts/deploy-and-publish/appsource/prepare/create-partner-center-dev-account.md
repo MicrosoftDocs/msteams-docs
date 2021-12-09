@@ -129,16 +129,6 @@ Remember the following about the email verification process:
 
 <details>
 
-<summary><b>How do I get further support for my account-related issues?</b></summary>
-
-See [support for the Commercial Marketplace program in Partner Center](/azure/marketplace/partner-center-portal/support) for information.
-
-<br>
-
-</details>
-
-<details>
-
 <summary><b>I've checked my mail folders and haven't received the verification email. What must I do next?</b></summary>
 
 Try the following:
