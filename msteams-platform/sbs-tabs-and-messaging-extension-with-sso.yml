@@ -14,30 +14,25 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Use Single sign-on (SSO) to authorize your Teams tab and messaging extension on desktop or mobile clients. The Single sign-on authentication method in Azure Active Directory (AAD) silently refreshes the authentication token to minimize the number of time users need to enter their sign-in credentials.
+   The Single sign-on (SSO) allows to authorize your Teams tab or task module on desktop or mobile clients. The users can automatically sign in on another device if the users have signed in once. This enhances user experience with improved performance and load time as the access token is prefetched.
 
-    > [!NOTE]
-    > A bot behaves differently depending on the conversation it's involved in:
-    > * Bots in channel and group chat conversations require the user to @mention the bot.
-    > * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
-    
-     **Key features of SSO for Tabs and Messaging extension**
+   **Key features of SSO for Tabs and Messaging extension**
 
-    * Allow the user to sign in without normal authentication method.
-    * Call graph to display user's profile.
+    * Allow the user to sign in automatically.
+    * Call Graph APIs to display user's profile.
     * Obtain an access token for the logged-in user using SSO.
     * Call a web service to exchange the access token.
     
-    **Different ways of user interactions**
+   **Different ways of user interactions**
  
     * SSO authentication: Performs SSO authentication when user types anything in the chat box for the first time.
     * Token: Displays token for the user.
     * Profile card: Displays profile card of the user in messaging extension.
 
-    > [!NOTE]
-    > If SSO isn't performed, then the bot will do normal authentication method with a sign-in box.     
+   > [!NOTE]
+   > If SSO isn't performed, then the bot will do normal authentication method with a sign-in box.     
 
-    This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
+   This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
        ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)   
 
 - title: Prerequisites
@@ -236,6 +231,7 @@ items:
       | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
       | **User consent display name** | Teams can access your user profile and make requests on your behalf |
       | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
+
 
       ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
 
