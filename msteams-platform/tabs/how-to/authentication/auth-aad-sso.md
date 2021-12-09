@@ -197,7 +197,7 @@ The above-described authentication solution only works for apps and services tha
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extension-with-sso.yml) to authenticate tabs and messaging extensions.
+Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) to authenticate tabs and messaging extensions.
 
 ## See also
 [Teams Bot with Single sign-on](../../../sbs-bots-with-sso.yml)

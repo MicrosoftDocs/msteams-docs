@@ -49,7 +49,7 @@ landingContent:
         - text: Add authentication to bots
           url: ~/bots/how-to/authentication/add-authentication.md
         - text: SSO authentication for tabs 
-          url: ~/tabs/how-to/authentication/auth-add-sso.md
+          url: tabs/how-to/authentication/auth-aad-sso.md
     - linkListType: tutorial
       links:
         - text: Step-by-step guide for Proactive messages
