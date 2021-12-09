@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
-title: Teams Bot with Single sign-on
+title: Teams File Upload Bot
 metadata:
-  title: Teams Bot with SSO
-  description: In this tutorial, you'll learn to set up SSO in a bot for Teams.
+  title: Teams Bot with Bot Framework
+  description: In this tutorial, you'll learn how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment.
   audience: Developer
   level: Beginner
-  ms.date: 08/24/2021
+  ms.date: 12/09/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Read more on bot authentication
@@ -14,12 +14,8 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times for performing repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory (AAD) silently refreshes the authentication token. This results in reduction of the number of times users need to enter their sign-in credentials. 
-    
-    A bot behaves differently depending on the conversation it's involved in:
-
-    * Bots in channel and group chat conversations require the user to @mention the bot.
-    * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
+   This bot has been created using Bot Framework, it shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. 
+   It also shows how to fetch inline images sent in message.
     
     This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
 
@@ -32,8 +28,8 @@ items:
 
     * Microsoft Teams with an account (not a guest account)
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution
+    * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Visual Studio 2019 or the latest version
-    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
 - title: Set up bot in Azure Bot Service
   durationInMinutes: 5
@@ -248,8 +244,8 @@ items:
     1. In Visual Studio, select **Clone a repository**.
     1. In the **Repository location**, enter **https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     1. Select **File > Open > Project/Solution**.
-    1. Go to **Microsoft-Teams-Samples > samples > bot-conversation-sso-quickstart > csharp_dotnetcore** folder.
-    1. Open the **BotSSOCSharp.csproj** file.
+    1. Go to **Microsoft-Teams-Samples > samples > csharp_dotnetcore > 56.teams > file > upload ** folder.
+    1. Open the **Teamsfileupload.csproj** file.
     1. Open the **appsettings.json** file.
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
 
@@ -288,7 +284,7 @@ items:
     1. In Visual Studio, go to the **appPackage/** folder.
     1. Open the **manifest.json** file.
     1. In the **manifest.json** file, find **{TODO: MicrosoftAppId}** and replace it with your Microsoft App ID.
-    1. In Windows Explorer, go to the **Microsoft-Teams-Samples > samples > bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
+    1. In Windows Explorer, go to the **Microsoft-Teams-Samples > samples > csharp_dotnetcore/56.teams > file > upload ** folder.
     1. Zip the contents of the **appPackage/** folder to create **manifest.zip**.
     1. Go to Teams.
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
