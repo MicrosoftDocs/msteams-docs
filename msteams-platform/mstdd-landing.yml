@@ -62,7 +62,7 @@ landingContent:
           url: ~/sbs-meeting-content-bubble.yml
         - text: Step-by-step guide for creating meetings side panel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Step-by-step guide for Meetings Stage View
+        - text: Step-by-step guide for meetings stage view
           url: ~/sbs-meetings-stage-view.yml
 - title: Get started
   linkLists:

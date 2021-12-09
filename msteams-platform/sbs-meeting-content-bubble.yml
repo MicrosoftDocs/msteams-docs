@@ -34,14 +34,12 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * Microsoft Teams with an valid account.
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
+    * Microsoft Teams with an valid account
+    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
-    Ensure you have working knowledge of the following technology:
-
-    [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+    Ensure you have working knowledge of [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
 
 - title: Set up local environment
   durationInMinutes: 1
