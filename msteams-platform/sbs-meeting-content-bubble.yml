@@ -27,7 +27,7 @@ items:
     
     This step-by-step guide helps you to send feedback to meeting content bubble to adaptive cards during meetings in Teams with attendees. You'll see the following output:
 
-       ![Meeting content bubble introduction](~/assets/images/meeting-token-generator/meeting-content-bubble-introduction.png)
+       ![Meeting content bubble introduction](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
 
 - title: Prerequisites
   durationInMinutes: 1
