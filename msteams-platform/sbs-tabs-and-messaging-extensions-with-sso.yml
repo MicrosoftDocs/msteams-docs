@@ -283,7 +283,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/Tab-ME-SSO/configure-platform.png)
+            ![Web](~/assets/images/Tab-ME-SSO/configure-platform1.png)
 
          1. Enter **Redirect URIs** as **https://token.botframework.com/.auth/web/redirect** and select **Configure**.
 
