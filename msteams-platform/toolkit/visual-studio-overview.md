@@ -7,73 +7,69 @@ ms.topic: overview
 ms.author: johmil
 ---
 
-# Build apps with the Teams Toolkit and Microsoft Visual Studio
+# Teams Toolkit for Visual Studio
 
-The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio integrated development environment (IDE). The Microsoft Teams toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.
+Build, test, and develop for Teams inside your IDE.
 
-## Prerequisites
+Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use TeamsFx in your IDE.
 
-1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
+## Install Teams Toolkit for Visual Studio
 
-2. Make sure that the **<span>ASP.NET</span> and web development module** has been added to your Visual Studio instance. For more information, see [Modify Visual Studio by adding or removing workloads and components](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true).
+>[!NOTE]
+> As a prerequisite, ensure you have the [TeamsFx CLI](/TeamsFx-CLI#get-started) installed.
 
-![Visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
+1. If you already have Visual Studio 2022 installed, skip to the next step. Otherwise, [install Visual Studio 2022](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2022&preserve-view=true).
+1. Open the Visual Studio Installer.
+1. Select **Modify** for your existing VS 2022 installation.
+1. Select the **ASP.NET and web development** workload.
+1. On the right, expand the **ASP.NET and web development** section and select **Microsoft Teams development tools** in the Optional list of components.
+1. Select **Install** or **Modify** in the Visual Studio Installer to complete the installation process.
 
-## Install the Teams Toolkit
+## Get started quickly with a new project
 
-The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) or directly from the **Extensions** menu within Visual Studio.
+Teams Toolkit project templates provide all code, files, and configuration you need to get started with a Teams app project.
 
-## Use the toolkit
-
-- [Set up a new project](#set-up-a-new-teams-project)
-- [Configure your app](#configure-your-app)
-- [Run your app in Teams](#install-and-run-your-app-locally)
-- [Validate your app](#validate-your-app)
-- [Publish your app](#publish-your-app-to-teams)
-
-## Set up a new Teams project
-
-1. Launch Visual Studio 2019.
-2. Select **Create a new project**.
-3. Search for **Microsoft Teams App** and select **Next**.
-4. In the **Configure your new project**, enter the **Project name**, **Location**, and **Solution name**.
-5. Select **Next** to enter a name for the app.
-6. In the Additional Information screen, enter an **Application Name** and **Developer or Company name** for your Teams app.
-
-## Configure your app
-
-At its core, the Teams app embraces three components:
-
-- The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
-- A server that responds to requests for content displayed in Teams. For example, HTML tab content or a bot adaptive card.
-- A Teams app package consists of three files:
-
-    > [!div class="checklist"]
-    >
-    > - The manifest.json
-    > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.
-    > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
-
-When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
+The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app.
 
 > [!NOTE]
->If you have not done so already, you must sign in to your Microsoft 365 account to continue with the development process.
->
 > If you do not have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's free for 90 days and renews as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
 
-### Configuration steps
+1. Launch Visual Studio 2022.
+1. In the start window, choose **Create a new project**.
+1. In the **Search for templates** box, enter Microsoft Teams App.
+1. Select the **Microsoft Teams App** template and select **Next**.
+1. In the **Configure your new project** window, type or enter _HelloTeams_ in the **Project name** box. Then, select **Create**.
+1. In the **Create a new Teams application** window, choose or add a Microsoft 365 account using the **Choose an account** selector. Then, select **Create**.
 
-1. To configure your app, select the **Project > TeamsFx > Configure for SSO...** menu.
+Visual Studio will open up your new project and Teams Toolkit will setup you new project in Teams Developer Portal. The project will be added for the Teams organization linked to the Microsoft 365 account you chose in the steps above.
 
-When prompted, sign in to your Microsoft account that has an M365 tenant.
+## Run and debug your app in Teams
 
-## Install and run your app locally
+You can launch your app project running locally in Visual Studio and debug using all the tools and techniques available for other ASP.NET Core web apps.
 
-Press F5 to start debugging. The app installation dialog box appears in the Teams client.
+1. Open or [create a Teams app project](#get-started-quickly-with-a-new-project).
+1. Press **F5** or select **Debug > Start Debugging** in Visual Studio.
 
-## Validate your app
+Visual Studio will launch your Teams app project in a browser and start debugging.
 
-The **Project > TeamsFx Validate > Teams Manifest** menu allows you to check that your app package is valid.
+## Host your Teams app in the cloud and preview it
+
+You can create and automatically configure cloud resources for hosting your app in Azure using Teams Toolkit. We'll continue adding support for different hosting scenarios and options.
+
+1. Select the **Project > Teams Toolkit > Provision** menu.
+1. In the Select your subscription window, choose the Azure subscription you want to use to create resources with.
+
+Teams Toolkit will create Azure resources in this subscription but no code is deployed during this step. To deploy your project to these new resources:
+
+1. Select the **Project > Teams Toolkit > Deploy** menu.
+
+## Preview your app running from cloud resources
+
+You can run your app in a browser using the remote resources to verify that everything works. It's not possible to debug during in this scenario yet.
+
+1. Select the **Project > Teams Toolkit > Preview Teams app** menu.
+
+Your app will open in a browser and use the resources created by the Provision and Deploy steps.
 
 ## Publish your app to Teams
 
