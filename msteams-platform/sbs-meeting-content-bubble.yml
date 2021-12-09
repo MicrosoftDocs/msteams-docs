@@ -23,25 +23,25 @@ items:
 
     * You will see agenda items listed in an Adaptive Card.
     * You can select any option in the given agenda.
-    * You can submit your feedback on either Content Bubble/Adaptive card sent in chat.
+    * You can submit your feedback on either Content bubble/Adaptive card sent in chat.
     
-    This step-by-step guide helps you to send feedback to meeting content bubble to extend meetings in Teams. You'll see the following output:
+    This step-by-step guide helps you to send feedback to meeting content bubble to adaptive cards during meetings in Teams with attendees. You'll see the following output:
 
-       [Placeholder for image]
+       ![Meeting content bubble introduction](~/assets/images/meeting-token-generator/meeting-content-bubble-introduction.png)
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * Microsoft Teams is installed and you have an account.
+    * Microsoft Teams with an valid account.
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
     
-    Ensure you have working knowledge of the following technologies:
+    Ensure you have working knowledge of the following technology:
 
-    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+    [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -169,13 +169,6 @@ items:
      ngrok http -host-header=localhost 3978
      ```
 
-    > [!NOTE]
-    > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
-    
-    > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
-
-
     **To add messaging endpoint**
 
     1. From ngrok, copy the HTTPS URL (https to io).
@@ -195,7 +188,6 @@ items:
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service.
-
 
 - title: Update the AAD app registration for tab SSO
   durationInMinutes: 1
@@ -314,7 +306,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web.png)
+            ![Auth-end](~/assets/images/meeting-content-bubble/meeting-token-generator-configureweb.png)
 
 
 - title: Set up app settings
@@ -403,36 +395,10 @@ items:
     1. The **Manage apps** section displays the list of applications.
 
        ![Add the app](~/assets/images/meeting-content-bubble/content-bubble-demo.png)
-    
-    1. Select **...** more apps in Teams meeting side panel. 
-  
-       ![More apps side panel in Teams](~/assets/images/meeting-content-bubble/more-apps-side-panel.png)
-
-    1. Select the **More apps**.
-    
-    1. Select **Manage your apps**.
-
-       ![Manage App](~/assets/images/meeting-content-bubble/manage-your-app.png)
-   
-    1. Select **Publish an app** 
-    
-        ![Publish an app](~/assets/images/meeting-content-bubble/publish-an-app.png)
-
-    1. Select **Upload a custom app** from pop-up.
-
-        ![Upload a custom app popup](~/assets/images/meeting-content-bubble/upload-custom-app-popup.png)
-
-    1. Select created app's zip folder from folder and select **open**.
-
-    1. Select **Add** 
-
-        ![Add app](~/assets/images/meeting-content-bubble/content-bubble-demo.png)
-
-    1. **Content Bubble demo** app is created in side panel of Teams.
 
     1. **Content Bubble Demo** app sends an automatic reply to you.
 
-        ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/content-bubble-reply.png)
+        ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
 
     1. Send a message to bot by **@mentioning** to bot.
     1. Bot sends you agenda items listed in an Adaptive card.
@@ -440,21 +406,24 @@ items:
     1. Bot sends **Feedback** Adaptive card.
     1. Choose **Yes** or **No** from given option and select **Submit**.
 
-        ![!Submit feedback](~/assets/images/meeting-content-bubble/submit-feedback.png)
+        ![Submit feedback](~/assets/images/meeting-content-bubble/submit-feedback.png)
       
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    [Placeholder for image]
+    ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
 
+    ![Submit feedback](~/assets/images/meeting-content-bubble/submit-feedback.png)
 
 - content: |
     You've completed the tutorial to get started with a Meeting Content Bubble app.
 
     See how your application looks like in a real-time scenario:
 
-    [Placeholder for image]
+    ![Submit feedback](~/assets/images/meeting-content-bubble/submit-feedback.png)
+
+    
 
 
