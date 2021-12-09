@@ -18,6 +18,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | Date | Update | Find here  |
 | --- | --- | --- |
 |12/09/2021| Introduced step-by-step guide for tabs and messaging extensions with Single sign-on (SSO). | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and messaging extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+| 12/09/2021| Introduced step-by-step guide to create meetings side panel. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meetings side panel in Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Introduced step-by-step guide to Meetings Stage View. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create Meetings Stage View](sbs-meetings-stage-view.yml)| 
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
 |
 
@@ -34,6 +36,8 @@ Microsoft Teams platform features that are available to all app developers.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |12/09/2021| Introduced step-by-step guide for tabs and messaging extensions with Single sign-on (SSO). | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and messaging extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+| 12/09/2021| Introduced step-by-step guide to create meetings side panel. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meetings side panel in Teams](sbs-meetings-sidepanel.yml)|
+| 12/09/2021| Introduced step-by-step guide to Meetings Stage View. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create Meetings Stage View](sbs-meetings-stage-view.yml)|
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/24/2021| Introduced step-by-step guide to generate meeting token. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
