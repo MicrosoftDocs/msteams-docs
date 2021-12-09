@@ -32,12 +32,12 @@ After you have a tenant, you need to enable sideloading for your tenant, see [en
 ## Enroll your developer tenant for Office 365 Targeted releases
 
 > [!IMPORTANT]
-> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook.com and Office.com support for Teams apps is available to your tenant.
+> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook.com and Office.com support for Teams apps is available to your test tenant.
 
-To enroll your tenant for Office 365 targeted releases:
+To enroll your test tenant for Office 365 targeted releases:
 
-1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with your tenant credentials.
-1. Go to **Settings** > **Org Settings** > **Organization profile**
+1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with your test tenant credentials.
+1. Go to **Settings** > **Org Settings** > **Organization profile**.
 1. Select **Release preferences**.
 1. Select any *Targeted release* preference:
     1. **Target release for everyone**
@@ -50,30 +50,30 @@ For more information on Office 365 release options, see [Set up the Standard or 
 ## Install Office apps in your test environment
 
 > [!IMPORTANT]
-> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook for Windows desktop support for Teams message extensions is available to your tenant.
+> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook for Windows desktop support for Teams message extensions is available to your test tenant.
 
-You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [Change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your tenant to install an Office 365 Beta Channel build.
+You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [Change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install an Office 365 Beta Channel build.
 
 To install Office 365 Beta Channel applications in your test environment:
 
-1. Sign in to your test environment with your tenant credentials.
+1. Sign in to your test environment with your test tenant credentials.
 1. Download the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
 1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor and update the *Channel* value to `BetaChannel`.
 1. Open Command Prompt and navigate to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
-1. Open Outlook (desktop client) and set up the mail account using your tenant credentials.
+1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. Open **File** > **Office Account** > **About Outlook**.  
    If the build number is **14416** or higher and the channel is *Beta Channel*, you're running Microsoft 365 beta Channel build.
 1. In the top-right corner, turn on the **Coming Soon** toggle.
     
     :::image type="content" source="images/outlook-coming-soon.png" alt-text="More Apps":::
 
-  > [!NOTE]
-  > You may need to close Outlook and restart your computer for the *Coming Soon* button to appear.
+> [!NOTE]
+> You may need to close Outlook and restart your computer for the *Coming Soon* button to appear.
 
-You can verify tenant support for your tenant account:
+You can verify test tenant support for your tenant account:
 
-* For Teams personal tabs running on office.com, outlook.com, and Outlook for Windows desktop, sign in with your tenant credentials and check for ellipses (**...**) option on the lower left pane.
+* For Teams personal tabs running on office.com, outlook.com, and Outlook for Windows desktop, sign in with your test tenant credentials and check for ellipses (**...**) option on the lower left pane.
 
     :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses" lightbox="images/outlook-desktop-ellipses.png":::
 
@@ -84,9 +84,9 @@ You can verify tenant support for your tenant account:
 
 ## Switch to the Developer Preview version of Teams
 
-Ensure that you switch to the [Public Developer Preview](/resources/dev-preview/developer-preview-intro) from your Microsoft Teams client.
+Ensure that you switch to the [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md) from your Microsoft Teams client.
 
-1. Sign in to Teams with your tenant credentials.
+1. Sign in to Teams with your sandbox tenant credentials.
 1. From the ellipsis (**...**) menu next to your user profile, select **About** > **Developer preview**. A dialog appears, select **Switch to developer preview**.
 1. After the Teams app restarts, go to the ellipsis (**...**) menu next to your user profile and check if **Developer Preview** is selected.
 
