@@ -101,6 +101,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
+          itemType: concept
+          text: Monetize your Teams app with a transactable SaaS offer
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: User authentication and SSO
