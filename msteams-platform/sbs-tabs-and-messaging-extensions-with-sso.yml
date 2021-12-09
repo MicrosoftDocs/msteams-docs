@@ -384,7 +384,7 @@ items:
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
        1. You'll see the following output:
 
-          ![Token File](~/assets/images/Tab-ME-SSO/output.png)
+          ![Token File](~/assets/images/Tab-ME-SSO/output1.png)
 
        1. Press **F5** to run the project.
     
