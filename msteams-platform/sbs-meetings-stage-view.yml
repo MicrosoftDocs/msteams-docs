@@ -8,13 +8,16 @@ metadata:
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Read more to authenticate apps in Teams meeting
+  nextTutorialTitle: Read more to Enable and configure your apps for Teams Meetings.
   ms.custom: mvc
   ms.localizationpriority: none
 items:
 - durationInMinutes: 1
   content: |
     Meetings Stage View helps to enable and configure your apps for Teams meetings. It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
+
+    >[!NOTE]
+    >Meetings Stage View capability is currently available only in developer preview.
 
     **Key features of Meetings Stage View**
 
