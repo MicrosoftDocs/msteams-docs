@@ -56,6 +56,8 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Step-by-step guide for generating meeting token
           url: ~/sbs-meeting-token-generator.yml
+        - text: Step-by-step guide for Meetings Stage View
+          url: ~/sbs-meetings-stage-view.yml
 - title: Get started
   linkLists:
     - linkListType: get-started
