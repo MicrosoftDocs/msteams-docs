@@ -67,14 +67,14 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
+       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository1.png)
 
     1. Select **Clone**. 
 
 - title: Create and register your bot in AAD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory(AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure Active Directory (AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
@@ -273,7 +273,11 @@ items:
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
-       The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+
+        ![Add scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope2.png)
+
+        > [!NOTE]
+        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) 
@@ -282,12 +286,19 @@ items:
     
     1. Select **Add a client application**. 
 
-    1. Enter each of the following client IDs and select the authorized scope:</br>
+        ![Add client app](~/assets/images/meeting-token-generator/meeting-token-generator-selectclientapp.png) 
 
-         * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or desktop application)
-         * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
+    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-         ![Add client application](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapplication.png) 
+        ![Add client application 1](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp1.png) 
+
+       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+        ![Add client application 2](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp2.png) 
+
+    1. Select **Authorized scopes**.
+
+        ![Add client application 2](~/assets/images/meeting-token-generator/meeting-token-generator-authorizedscope.png) 
 
        The following image displays the client IDs:
 
@@ -300,11 +311,13 @@ items:
 
     1. Select **Add a permission**.
 
+         ![Add permission](~/assets/images/meeting-token-generator/meeting-token-generator-addpermission.png)
+
     1. Select **Microsoft Graph**.
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is checked.
+        By default, **User.Read** is selected.
 
          ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
 
@@ -494,7 +507,7 @@ items:
 
         ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
    
-    1. Select **Switch to Developer preview**.
+    1. Select **Switch to developer preview**.
 
         ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
 
