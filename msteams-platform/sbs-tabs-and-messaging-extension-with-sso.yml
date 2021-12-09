@@ -177,13 +177,6 @@ items:
      ngrok http -host-header=localhost 3978
      ```
 
-    > [!NOTE]
-    > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
-    
-    > [!TIP]
-    > If you find **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
-
-
     **To add messaging endpoint**
 
     1. From ngrok, copy the HTTPS URL (https to io).
