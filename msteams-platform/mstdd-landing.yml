@@ -48,6 +48,8 @@ landingContent:
           url: ~/bots/how-to/conversations/send-proactive-messages.md
         - text: Add authentication to bots
           url: ~/bots/how-to/authentication/add-authentication.md
+        - text: Enable and configure apps for meetings
+          url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - linkListType: tutorial
       links:
         - text: Step-by-step guide for Proactive messages
@@ -58,6 +60,8 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Step-by-step guide for meeting content bubble
           url: ~/sbs-meeting-content-bubble.yml
+        - text: Step-by-step guide for creating meetings side panel
+          url: ~/sbs-meetings-sidepanel.yml
         - text: Step-by-step guide for Meetings Stage View
           url: ~/sbs-meetings-stage-view.yml
 - title: Get started
