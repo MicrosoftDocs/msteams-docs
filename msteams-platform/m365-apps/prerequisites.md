@@ -46,7 +46,7 @@ To enroll your tenant for Office 365 targeted releases:
 
   :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
 
-For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365) in *Microsoft 365 admin center help*.
+For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#targeted-release) in *Microsoft 365 admin center help*.
 
 ## Install Office apps in your test environment
 
