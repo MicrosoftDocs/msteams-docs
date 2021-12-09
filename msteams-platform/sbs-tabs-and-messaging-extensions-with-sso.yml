@@ -56,11 +56,11 @@ items:
   content: |
     The following steps guide you to:
 
-    * [Create Azure Bot resource to register bot with Azure Bot Service](**to-create-azure-bot-resource**)
-    * [Create client secret that enables SSO authentication of the bot]()
-    * [Add Microsoft Teams channel to deploy the bot to a Teams channel]()
-    * [Use ngrok to create a tunnel to your web server's endpoints]()
-    * [Add messaging endpoint to the ngrok tunnel you created]()
+    * Create Azure Bot resource to register bot with Azure Bot Service
+    * Create client secret that enables SSO authentication of the bot
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel
+    * Use ngrok to create a tunnel to your web server's endpoints
+    * Add messaging endpoint to the ngrok tunnel you created
 
     **To create Azure Bot resource**
 
