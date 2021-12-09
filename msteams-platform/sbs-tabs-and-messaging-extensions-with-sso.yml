@@ -383,7 +383,7 @@ items:
        1. Go to **Microsoft-Teams-Samples > samples > app-sso > csharp > App SSO Sample** folder.
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
 
-         ![Open file](~/assets/images/Tab-ME-SSO/project-folder.png)
+          ![Project folder](~/assets/images/Tab-ME-SSO/project-folder1.png)
 
        1. You'll see the following output:
 
@@ -446,7 +446,7 @@ items:
 
     1. Select **yes** to view token or **no** to continue chat.
       
-       ![Token view](~/assets/images/Tab-ME-SSO/token-view.png)
+       ![Token view](~/assets/images/Tab-ME-SSO/token-view1.png)
 
     1. If SSO isn't performed, the following steps will help you to authenticate your tab:
 
