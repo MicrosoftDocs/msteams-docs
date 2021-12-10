@@ -423,7 +423,7 @@ items:
 
     1. Bot sends **Feedback** Adaptive card.
 
-        ![Bot sends you feedback card](~/assets/images/meeting-content-bubble/push-agenda.png)
+        ![Bot sends you feedback card](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
 
     1. Choose **Yes** or **No** from given option and select **Submit**.
 
