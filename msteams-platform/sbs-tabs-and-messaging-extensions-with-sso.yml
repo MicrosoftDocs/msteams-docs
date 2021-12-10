@@ -398,7 +398,7 @@ items:
 
           ![Trust Certificate](~/assets/images/Tab-ME-SSO/certificate.png)
 
-          A webpage opens with a message **App is ready!**.
+          A webpage opens with a message **Your bot is ready!**
 
           ![App ready](~/assets/images/Tab-ME-SSO/bot-completion-explorer.png) 
 
@@ -451,11 +451,11 @@ items:
       
        ![Token view](~/assets/images/Tab-ME-SSO/token-view1.png)
 
-      1. If SSO isn't performed, then the application will perform default Authentication method.
+      1. If SSO isn't performed, then the bot will perform default Authentication method for your tab.
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login.png)
 
-      1. Select **...** to open messaging extension.
+      1. Select `**...**` to open messaging extension.
 
           ![messaging extension](~/assets/images/Tab-ME-SSO/message-extension.png)
       
