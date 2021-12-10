@@ -395,23 +395,39 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
+       ![Upload zip app](~/assets/images/meeting-content-bubble/zip.png)
+
     1. Select **Add**.
 
        ![Add the app](~/assets/images/meeting-content-bubble/content-bubble-demo.png)
 
     1. The **Manage apps** section displays the list of applications.
+
+      ![Manage apps](~/assets/images/meeting-content-bubble/Manage.png)
+
+    1. Go to meeting chat.
     
     1. **Content Bubble Demo** app sends an automatic reply to the meeting chat.
 
-        ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
+        ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png)
 
-    1. Send a message to bot by **@mentioning** to bot.
+    1. Send a **hello** message to bot.
+
+        ![Mention bot](~/assets/images/meeting-content-bubble/content-bubble-demo-second-reply.png)
+
     1. Bot sends you agenda items listed in an Adaptive card.
+
     1. Select any option and select **Push Agenda** to send reply.
+
+        ![Bot sends you adaptive card](~/assets/images/meeting-content-bubble/push-agenda.png)
+
     1. Bot sends **Feedback** Adaptive card.
+
+        ![Bot sends you feedback card](~/assets/images/meeting-content-bubble/push-agenda.png)
+
     1. Choose **Yes** or **No** from given option and select **Submit**.
 
-        ![Submit feedback](~/assets/images/meeting-content-bubble/submit-feedback.png)
+        ![Submit feedback](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
       
 - title: Complete challenge
   durationInMinutes: 1
