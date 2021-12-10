@@ -50,7 +50,7 @@ landingContent:
           url: ~/bots/how-to/authentication/add-authentication.md
         - text: Enable and configure apps for meetings
           url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-        - text: SSO authentication for tabs 
+        - text: Use SSO authentication for tabs 
           url: tabs/how-to/authentication/auth-aad-sso.md
     - linkListType: tutorial
       links:
