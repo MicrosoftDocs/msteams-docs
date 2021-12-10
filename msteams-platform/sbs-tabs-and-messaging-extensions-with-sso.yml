@@ -448,8 +448,6 @@ items:
       
        ![Token view](~/assets/images/Tab-ME-SSO/token-view1.png)
 
-    1. If SSO isn't performed, the following steps will help you to authenticate your tab:
-
       1. If SSO isn't performed, then it will perform default Authentication method.
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login.png)
