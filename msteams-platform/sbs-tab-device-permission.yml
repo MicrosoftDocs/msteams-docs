@@ -53,9 +53,11 @@ items:
     1. Begin your tunnelling service to get an https endpoint.
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
     1. Start an ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
-       
-    
-    
+
+    ```bash
+    ngrok http 3000 --host-header=localhost
+    ```  
+        
     **To run the tab device permission by uploading the manifest.zip file in Teams**
 
     1. Create an app manifest.
@@ -76,7 +78,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
+    ![tabdeviceimage](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
 
 
     
