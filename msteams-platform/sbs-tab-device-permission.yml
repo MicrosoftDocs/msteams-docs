@@ -14,9 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams app that require device permissions, such as location, camera or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
+    Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
 
-    This step-by-step guide helps you to do tab device permission demo in Microsoft Teams. You'll see the following output:
+    This step-by-step guide helps you to do tab device permission demo at Microsoft Teams. You'll see the following output:
 
       ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
 
@@ -31,12 +31,12 @@ items:
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
-- title: Configure and run the Tab Device Permissin app on Teams
+- title: Configure and run the Tab Device Permission app on Teams
   durationInMinutes: 1
   content: |
-    Configure the tab device permission sample in Microsoft Teams.
+    Configure the tab device permission app at Microsoft Teams.
 
-    **To configure and run your tab device permission sample**
+    **To configure and run your tab device permission app**
 
     1. Open Git Bash and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder.
@@ -52,10 +52,10 @@ items:
     ```
     1. Begin your tunnelling service to get an https endpoint.
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
-    1. Start an ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
+    1. Start a ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
 
     ```bash
-    ngrok http 3000 --host-header=localhost
+    ngrok http 3000--host-header=localhost
     ```  
         
     **To run the tab device permission by uploading the manifest.zip file in Teams**
