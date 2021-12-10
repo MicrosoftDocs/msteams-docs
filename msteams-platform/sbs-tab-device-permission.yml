@@ -71,7 +71,19 @@ items:
     (Image will be added here)
     1. Open **Tab Device Permission** and select **Device Permission Tab**.
     1. Select **Get Location**.
-    
+
+    # [Desktop](#tab/Desktop)
+
+    1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
+    1. Open the **manifest.json** file.
+
+    # [mobile](#tab/Desktop)
+
+    1. Go to Teams.
+    1. To upload **manifest.zip**, select **Apps > Upload a custom app and open manifest.zip**.
+
+    ---
+
 
 - title: Complete challenge
   durationInMinutes: 1
