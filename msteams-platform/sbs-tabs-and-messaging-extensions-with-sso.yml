@@ -8,7 +8,7 @@ metadata:
   ms.date: 12/07/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/authentication/auth-aad-sso.md
-  nextTutorialTitle: Read more on SSO authentication for apps tabs and messaging extension.
+  nextTutorialTitle: Read more on SSO authentication for tabs.
   ms.custom: mvc
   ms.localizationpriority: none
 items:
@@ -16,7 +16,7 @@ items:
   content: |
    The Single sign-on (SSO) allows to authorize your Teams tab on desktop or mobile clients. If the users have signed in, they can automatically sign in to other devices . This enhances user experience with improved performance and load time.
 
-   **Key features of SSO for Tabs and Messaging extension**
+   **Key features of SSO for tabs and messaging extension**
 
     * Allows the user to sign in automatically.
     * Calls Graph APIs to display user's profile.
@@ -227,15 +227,15 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
 
-       ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
-
     1. Select **Add scope** to save.
+
+       ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://botid-00000000-0000-0000-0000-000000000000/access_as_user`
 
-          ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope-final.png) 
+          ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope-final1.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -326,10 +326,10 @@ items:
         | **Token Exchange URL** | Use the **Application ID URI** obtained previously while exposing API endpoint. |
         | **Tenant ID** | Enter **common**. |
         | **Scopes** | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
+  
+    1. Select **Save**.
 
         <img src="~/assets/images/Tab-ME-SSO/new-connection-setting.png" alt="Bot Service connection" width="300"/>
-
-    1. Select **Save**.
 
 - title: Set up app settings
   durationInMinutes: 1
@@ -449,19 +449,19 @@ items:
 
        ![Profile card](~/assets/images/Tab-ME-SSO/Congratulation-image.png)
 
-    1. Select **Yes** to view token or **No** to continue chat.
+    1. Select **Yes** to view token or **No** to continue with chat.
       
        ![Token view](~/assets/images/Tab-ME-SSO/token-view1.png)
 
-      1. If SSO isn't performed, then the bot will perform default Authentication method for your tab.
+      1. If SSO isn't performed, then the bot will perform default authentication method for your tab.
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login1.png)
 
-      1. Select `...` to open messaging extension.
+      1. Select ellipses **...** to open messaging extension.
 
           ![messaging extension](~/assets/images/Tab-ME-SSO/message-extension.png)
       
-      1. Select your New SSO application.
+      1. Select your new SSO application.
 
           ![SSO app](~/assets/images/Tab-ME-SSO/recent-app-sso.png)
 
@@ -473,7 +473,7 @@ items:
 
           ![Sign in box](~/assets/images/Tab-ME-SSO/sign-in-box.png)
       
-      1. Select **Accept** in the consent box.
+      1. Select **Accept**.
 
           ![consent box](~/assets/images/Tab-ME-SSO/Accept-sso-permission.png)
 
