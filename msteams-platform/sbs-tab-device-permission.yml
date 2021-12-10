@@ -18,7 +18,7 @@ items:
 
     This step-by-step guide helps you to do tab device permission demo in Microsoft Teams. You'll see the following output:
 
-    ![Mobile signed in to tab device permission](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
+    ![desktop3](assets\images\tab-device-permission\sbs-tab-device-permission-location.PNG)
 
 
 - title: Prerequisites
@@ -45,7 +45,7 @@ items:
     ```bash
     npm install
     ```
-    1. Run the application in the ngrok using following command
+    1. Run the application in the ngrok using following command.
        
     ```bash
     npm start
@@ -54,6 +54,8 @@ items:
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
     1. Start an ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
        
+    
+    
     **To run the tab device permission by uploading the manifest.zip file in Teams**
 
     1. Create an app manifest.
@@ -74,9 +76,9 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
+    ![desktop3](assets\images\tab-device-permission\sbs-tab-device-permission-location.PNG)
 
-    (Image will be added here)
+
     
 - content: |
     You've completed the tutorial to give tab device permission for Microsoft Teams sample apps.
