@@ -363,12 +363,12 @@ items:
     
     1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
 
-         * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name.
-
-          > [!NOTE]
-          > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple time. 
-
+         * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name. 
          * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
+         
+          > [!NOTE]
+          > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple time.
+
          * Set `"resource"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.</br>
         
         ![Manifest image2](~/assets/images/Tab-ME-SSO/vs-manifest.png)
