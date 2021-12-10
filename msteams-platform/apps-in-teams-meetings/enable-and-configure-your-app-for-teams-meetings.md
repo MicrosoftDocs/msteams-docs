@@ -132,10 +132,12 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 |----------------|-----------------|--------------|----------------|
 | Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token. The token is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. The token is useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Meeting side panel | Sample app to show how to add agenda in a meeting side panel | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
-## Step-by-step guide
+## Step-by-step guides
 
-* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate **meeting token** in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate **meeting sidepanel** in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate Meetings Stage View in your Teams meeting.
 
 ## Next step
