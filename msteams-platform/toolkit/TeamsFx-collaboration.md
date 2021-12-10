@@ -78,9 +78,7 @@ You cannot remove collaborators directly from Teams Toolkit extension. Follow th
       4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your AAD App.
       5. Inside the AAD App management page, select **Owners** from left panel.
       6. Find and remove the collaborator.
-    
 
-1. Collaboration feature only supports project hosted on Azure, SPFx hosted project will be supported in the future.
 
 1. Collaborator added to your project will not receive any notification. Project owner needs to notify collaborator offline.
 
