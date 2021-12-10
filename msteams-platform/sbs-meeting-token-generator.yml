@@ -242,7 +242,7 @@ items:
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://ae57****.ngrok.io/{AppID}`</br>
         
-      The following image shows the domain name:
+       The following image shows the domain name:
         
         ![App ID URI](~/assets/images/meeting-token-generator/meeting-token-generator-appIDuri.png)
 
