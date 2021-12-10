@@ -25,7 +25,7 @@ items:
     * Displays profile card of the user in messaging extension.    
 
    This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
-       ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)   
+       ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile2.png)   
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -229,10 +229,12 @@ items:
        ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope.png)
 
     1. Select **Add scope** to save.
-       The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://botid-00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope-final.png) 
+        > [!NOTE]
+        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+
+          ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope-final.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -345,7 +347,7 @@ items:
              > [!NOTE]
              > The sample works only in the current tenant.
 
-         * Set `"ClientId"` to your bot's **Microsoft App ID**
+         * Set `"ClientId"` to your bot's **Microsoft App ID**.
          * Set `"AppSecret"` to your bot's client secret ID value.
          * Set `"ApplicationIdURI"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.
 
@@ -362,7 +364,7 @@ items:
 
          * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name.
          * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
-         * Set `"resource"` in the form of `api://584f****.ngrok.io/botid-{AppID}`</br>.
+         * Set `"resource"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.</br>
            > [!NOTE]
            > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple time. 
 
@@ -487,7 +489,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)
+       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile2.png)
     
     
 
