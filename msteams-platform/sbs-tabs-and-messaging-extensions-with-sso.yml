@@ -26,7 +26,7 @@ items:
 
    This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
 
-     ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile2.png)   
+     ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile23.png)   
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -490,7 +490,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile2.png)
+       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile23.png)
     
     
 
