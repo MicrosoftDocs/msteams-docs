@@ -243,20 +243,27 @@ items:
         ![Scope](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope.png)
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
-    
+
     1. Select **Add a client application**. 
 
-    1. Enter each of the following client IDs and select the authorized scope:</br>
+        ![Add client app](~/assets/images/meeting-token-generator/meeting-token-generator-selectclientapp.png) 
 
-         * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or desktop application)
-         * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
+    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-         ![Add client application](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png) 
+        ![Add client application 1](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp1.png) 
+
+       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+        ![Add client application 2](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp2.png) 
+
+    1. Select **Authorized scopes**.
+
+         ![Add client application](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png)
 
        The following image displays the client IDs:
 
          ![Client applications](~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png) 
-  
+
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
@@ -268,7 +275,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is checked.
+        By default, **User.Read** is selected.
 
          ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
 
@@ -301,7 +308,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/meeting-content-bubble/meeting-token-generator-configureweb.png)
+            ![Auth-end](~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web.png)
 
 
 - title: Set up app settings
@@ -338,9 +345,6 @@ items:
 
           ![Manifest image1](~/assets/images/meeting-content-bubble/manifest-set.png)
 
-         * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
-         * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**.
-
 - title: Build and run the service
   durationInMinutes: 1
   content: |
@@ -353,7 +357,7 @@ items:
 
        1. Open `ContentBubbleBot.sln` file.
 
-         ![Open file](~/assets/images/meeting-token-generator/proj-sln.png)
+          ![Open file](~/assets/images/meeting-token-generator/proj-sln.png)
 
        1. Press **fn+F5** to run the project.
 
@@ -391,11 +395,13 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-    1. The **Manage apps** section displays the list of applications.
+    1. Select **Add**.
 
        ![Add the app](~/assets/images/meeting-content-bubble/content-bubble-demo.png)
 
-    1. **Content Bubble Demo** app sends an automatic reply to you.
+    1. The **Manage apps** section displays the list of applications.
+    
+    1. **Content Bubble Demo** app sends an automatic reply to the meeting chat.
 
         ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
 
