@@ -90,7 +90,8 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-  
+    Test the tab device permission app.
+
      # [Browser](#tab/Browser)
 
     Select **Get Location** and you will see the below output.
