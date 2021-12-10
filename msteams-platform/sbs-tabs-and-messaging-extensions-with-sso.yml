@@ -248,7 +248,7 @@ items:
 
          ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application.png) 
 
-       The following image displays the client IDs:
+       The following image displays the client Id:
 
          ![Client applications](~/assets/images/Tab-ME-SSO/client-id-2.png) 
   
@@ -365,7 +365,7 @@ items:
 
          * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name. 
          * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
-         
+
           > [!NOTE]
           > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple time.
 
