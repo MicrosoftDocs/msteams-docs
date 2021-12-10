@@ -455,7 +455,7 @@ items:
 
       1. If SSO isn't performed, then the bot will perform default Authentication method for your tab.
 
-          ![No SSO](~/assets/images/Tab-ME-SSO/not-login.png)
+          ![No SSO](~/assets/images/Tab-ME-SSO/not-login1.png)
 
       1. Select `...` to open messaging extension.
 
