@@ -94,13 +94,13 @@ items:
 
      # [Browser](#tab/Browser)
 
-    Select **Get Location** and you will see the below output.
+    1. Select **Get Location** and you will see the below output.
 
       ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)
 
     # [Mobile](#tab/Mobile)
 
-    Click on respective button to test the scenario. You will get prompt to accept permission request as below.
+    1. Click on respective button to test the scenario. You will get prompt to accept permission request as below.
 
       ![mobilepromptteams](~/assets/images/tab-device-permission/sbs-prompt-mobile.png)
 
