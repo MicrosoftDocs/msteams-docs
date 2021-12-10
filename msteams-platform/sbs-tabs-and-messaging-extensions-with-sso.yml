@@ -448,7 +448,7 @@ items:
       
        ![Token view](~/assets/images/Tab-ME-SSO/token-view1.png)
 
-      1. If SSO isn't performed, then it will perform default Authentication method.
+      1. If SSO isn't performed, then the application will perform default Authentication method.
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login.png)
 
