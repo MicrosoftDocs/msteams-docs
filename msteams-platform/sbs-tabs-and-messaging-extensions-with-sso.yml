@@ -114,7 +114,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage.png)
+        ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage1.png)
 
     1. In the **Client secrets** section, select **New client secret**. 
 
