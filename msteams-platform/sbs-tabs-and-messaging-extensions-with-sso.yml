@@ -366,8 +366,8 @@ items:
          * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name. 
          * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
 
-          > [!NOTE]
-          > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple time.
+             > [!NOTE]
+             > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple time.
 
          * Set `"resource"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.</br>
         
@@ -429,7 +429,9 @@ items:
    
     1. Go to **Microsoft Teams**.
 
-    1. Select **Store > Manage your app > Publish an app**.
+    1. Select **Store.
+    1. Select **Manage your apps**.
+    1. Select **Publish an app**.
 
        ![Dotnet](~/assets/images/Tab-ME-SSO/publish-an-app.png)
 
