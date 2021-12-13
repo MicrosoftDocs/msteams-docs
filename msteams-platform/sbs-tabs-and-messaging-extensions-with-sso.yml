@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Single sign-on (SSO) helps to authorize Teams tab on desktop or mobile clients. This enhances user experience by automatically signing in multiple times and also to other devices without re-entering sign-in credentials.
+   The Single sign-on (SSO) helps to authorize Teams tab for desktop or mobile clients. This enhances user experience by automatically signing in multiple times and also to other devices without re-entering sign-in credentials.
 
    **Key features of SSO for tabs and messaging extension**
 
