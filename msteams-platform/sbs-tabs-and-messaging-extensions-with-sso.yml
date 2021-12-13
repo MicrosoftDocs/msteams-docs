@@ -329,7 +329,7 @@ items:
         | **Client secret** | Saved previously as **Value** of the client secret ID. |
         | **Token Exchange URL** | Use the **Application ID URI** obtained previously while exposing API endpoint. |
         | **Tenant ID** | Enter **common**. |
-        | **Scopes** | Enter **User.Read** and add all the **Scopes** required while specifying permissions to downstream APIs. |
+        | **Scopes** | Enter **User.Read** and add all the **Scopes** selected while specifying permissions to downstream APIs. |
   
     1. Select **Save**.
 
