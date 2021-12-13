@@ -310,7 +310,6 @@ items:
 
             ![Auth-end](~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web.png)
 
-
 - title: Set up app settings
   durationInMinutes: 1
   content: |
@@ -323,9 +322,6 @@ items:
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseURL"` to your `webAppDomain`.
-
-             > [!NOTE]
-             > `WebAppDomain` is your ngrok domain.
 
         ![App settings](~/assets/images/meeting-content-bubble/appsettings-json.png)
 
@@ -403,27 +399,27 @@ items:
 
     1. The **Manage apps** section displays the list of applications.
 
-      ![Manage apps](~/assets/images/meeting-content-bubble/Manage.png)
+       ![Manage apps](~/assets/images/meeting-content-bubble/Manage.png)
 
     1. Go to meeting chat.
     
     1. **Content Bubble Demo** app sends an automatic reply to the meeting chat.
 
-        ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png)
+       ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png)
 
     1. Send a **hello** message to bot.
 
-        ![Mention bot](~/assets/images/meeting-content-bubble/content-bubble-demo-second-reply.png)
+       ![Mention bot](~/assets/images/meeting-content-bubble/content-bubble-demo-second-reply.png)
 
     1. Bot sends you agenda items listed in an Adaptive card.
 
     1. Select any option and select **Push Agenda** to send reply.
 
-        ![Bot sends you adaptive card](~/assets/images/meeting-content-bubble/push-agenda.png)
+       ![Bot sends you adaptive card](~/assets/images/meeting-content-bubble/push-agenda.png)
 
     1. Bot sends **Feedback** Adaptive card.
 
-        ![Bot sends you feedback card](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
+       ![Bot sends you feedback card](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
 
     1. Choose **Yes** or **No** from given option and select **Submit**.
 
@@ -439,10 +435,6 @@ items:
 
 - content: |
     You've completed the tutorial to get started with a Meeting Content Bubble app.
-
-    See how your application looks like in a real-time scenario:
-
-    ![Desktop and mobile image](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
     
 
