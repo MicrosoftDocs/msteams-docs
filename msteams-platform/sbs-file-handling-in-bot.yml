@@ -26,12 +26,12 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * Microsoft Teams with an account (not a guest account)
-    * [ngrok](https://ngrok.com/) or equivalent tunneling solution
-    * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
+    * Microsoft Teams is installed and you have an account
+    * .NET Core SDK version 3.1
+    * ngrok or equivalent tunnelling solution
     * Visual Studio 2019 or the latest version
 
-- title: Set up bot in Azure Bot Service
+- title: To configure Teams file
   durationInMinutes: 5
   content: |
     To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
@@ -274,7 +274,7 @@ items:
 
         </details>
 
-- title: Configure and run the Teams app
+- title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
     The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your bot, across all scopes. You can configure and run the Teams app by uploading the **manifest.zip** file.
@@ -289,8 +289,6 @@ items:
     1. Go to Teams.
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
     1. Select **Add** to add the conversation bot to your chat.
-
-    **Interacting with the bot in Teams**
 
     1. Sending a message to the bot will cause it to respond with a card that will prompt you to upload a file. The file that's being uploaded is the teams-logo.png in the Files directory in this sample.
        The Accept and Decline events illustrated in this sample are specific to Teams. You can message the bot again to receive another prompt.
