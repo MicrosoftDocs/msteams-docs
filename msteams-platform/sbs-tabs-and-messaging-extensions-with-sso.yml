@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Single sign-on (SSO) for Tabs and Messaging extension
+title: Single sign-on (SSO) for tabs and messaging extension
 metadata:
-  title: Single sign-on (SSO) for Tabs and Messaging extension
+  title: Single sign-on (SSO) for tabs and messaging extension
   description: In this tutorial, you'll learn to set up SSO for tabs.
   audience: Developer
   level: Beginner
@@ -57,11 +57,11 @@ items:
   content: |
     The following steps guide you to:
 
-    * Create Azure Bot resource to register bot with Azure Bot Service
-    * Create client secret that enables SSO authentication of the bot
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel
-    * Use ngrok to create a tunnel to your web server's endpoints
-    * Add messaging endpoint to the ngrok tunnel you created
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret that enables SSO authentication of the bot.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
@@ -244,11 +244,15 @@ items:
     1. Enter each of the following client IDs and select the authorized scope:</br>
 
          * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or desktop application)
+
+           ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application.png) 
+
          * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
 
-         ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application.png) 
+           ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application2.png) 
+        
 
-       The following image displays the **Client Id**:
+       The following image displays the **Client Ids**:
 
          ![Client applications](~/assets/images/Tab-ME-SSO/client-id-2.png) 
   
@@ -305,7 +309,7 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. 
 
        > [!Tip]
-       > If you're already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
+       > If you're already in testing your bot in Teams, you must sign out this app and sign out of Teams. Then sign in again to see this change.
 
        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
 
@@ -325,7 +329,7 @@ items:
         | **Client secret** | Saved previously as **Value** of the client secret ID. |
         | **Token Exchange URL** | Use the **Application ID URI** obtained previously while exposing API endpoint. |
         | **Tenant ID** | Enter **common**. |
-        | **Scopes** | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
+        | **Scopes** | Enter **User.Read** and add all the **Scopes** required while specifying permissions to downstream APIs. |
   
     1. Select **Save**.
 
@@ -344,10 +348,6 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"DOMAIN-NAME"` to your ngrok URL.
          * Set `"ConnectionName"` to the name of OAuth connection setting.
-
-             > [!NOTE]
-             > The sample works only in the current tenant.
-
          * Set `"ClientId"` to your bot's **Microsoft App ID**.
          * Set `"AppSecret"` to your bot's client secret ID value.
          * Set `"ApplicationIdURI"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.
@@ -367,9 +367,9 @@ items:
          * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
 
              > [!NOTE]
-             > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple time.
+             > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
 
-         * Set `"resource"` in the form of `api://584f****.ngrok.io/botid-{AppID}`.</br>
+         * Set `"resource"` as `api://584f****.ngrok.io/botid-{AppID}`.</br>
         
         ![Manifest image2](~/assets/images/Tab-ME-SSO/vs-manifest.png)
 
@@ -385,7 +385,6 @@ items:
     
           ![Open file](~/assets/images/Tab-ME-SSO/open-project1.png)
 
-       1. Go to **Microsoft-Teams-Samples > samples > app-sso > csharp > App SSO Sample** folder.
        1. Select **App SSO Sample.csproj** file from **csharp** folder.
 
           ![Project folder](~/assets/images/Tab-ME-SSO/project-folder1.png)
@@ -418,7 +417,7 @@ items:
 - title: Upload SSO App to Teams
   durationInMinutes: 1
   content: |
-    **To Run Teams app by uploading the manifest.zip file**
+    **To run Teams app by uploading the manifest.zip file**
 
     1. In your cloned repository, navigate to **csharp > App SSO Sample > TeamsAppManifest**.
 
@@ -426,6 +425,8 @@ items:
        * manifest.json
        * icon-outline.png
        * icon-color.png
+
+         ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso.png)
    
     1. Go to **Microsoft Teams**.
 
@@ -441,13 +442,14 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso.png)
+       ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso-open.png)
 
     1. Select **Add**.
 
        ![Add the app](~/assets/images/Tab-ME-SSO/add-sso-app.png)
     
-    1. Send a message to the bot. The bot will perform Single sign-on and display profile card along with option prompt to view token.
+    1. Send a message to the bot. 
+    1. The bot will perform Single sign-on and display profile card along with option prompt to view token.
 
        ![Profile card](~/assets/images/Tab-ME-SSO/Congratulation-image.png)
 
@@ -485,7 +487,7 @@ items:
 
           ![Profile](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)
 
-      1. Send **https://profile.botframework.com** to the application get a profile card.
+      1. Send **https://profile.botframework.com** to the application to get a profile card.
        
           ![Profile card](~/assets/images/Tab-ME-SSO/profile-card.png)
 
