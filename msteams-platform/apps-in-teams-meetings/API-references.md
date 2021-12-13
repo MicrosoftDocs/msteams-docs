@@ -304,7 +304,8 @@ Actual start and end time of a meeting are different from scheduled start and en
 ### Prerequisite
 
 > [!NOTE] 
-> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
+
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
 
 ```json
