@@ -27,8 +27,8 @@ items:
     Ensure that you install the following tools and set up your development environment:  
 
     * Microsoft Teams is installed and you have an account
-    * .NET Core SDK version 3.1
-    * ngrok or equivalent tunnelling solution
+    * [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download)
+    * [ngrok](https://ngrok.com/) or equivalent tunnelling solution
     * Visual Studio 2019 or the latest version
 
 - title: Configure and run Teams file bot
