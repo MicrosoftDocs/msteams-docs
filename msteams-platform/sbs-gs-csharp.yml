@@ -275,7 +275,9 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you build and test your Teams app, you can test it using Developer Portal.  Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
+    After you build and test your Teams app, you can test it using Developer Portal.
+    
+    Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
     **Publish option in Visual Studio 2019**
 
