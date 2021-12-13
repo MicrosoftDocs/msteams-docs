@@ -225,6 +225,9 @@ The API is available through Bot Services.
 
 ### Prerequisite
 
+> [!NOTE] 
+> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings).
+
 To use the Meeting Details API, you must obtain RSC permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
 
 ```json
@@ -236,7 +239,6 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     ]
 }
  ```
- 
 ### Query parameter
 
 The Meeting Details API includes the following query parameter:
@@ -300,6 +302,9 @@ The user can receive real-time meeting events. As soon as any app is associated 
 Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 ### Prerequisite
+
+> [!NOTE] 
+> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings).
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
 
