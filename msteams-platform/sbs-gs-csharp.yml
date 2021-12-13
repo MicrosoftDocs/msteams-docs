@@ -277,13 +277,15 @@ items:
 
     After you build and test your Teams app, you can test it using Developer Portal.  Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
-    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
+    **Publish option in Visual Studio 2019**
 
-    ## Publish option in Visual Studio 2019
-
-    Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
+    This tutorial uses Developer Portal to configure and publish your app. However, Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
+
+    If you use this option, you can enter the details of the Azure site and Azure resources and publish your app. For this tutorial, you do not need to use this step.
+
+    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
 
     ## Configure the app package in Developer Portal
 
