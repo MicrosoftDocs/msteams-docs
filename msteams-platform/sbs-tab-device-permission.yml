@@ -61,8 +61,8 @@ items:
     **To run the tab device permission by uploading the manifest.zip file in Teams**
 
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
-    1. Open the **manifest.json** file.
-    1. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part.
+    1. Open the **manifest.json** file in visual studio code.
+    1. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
       ![ngrok](~/assets/assets\images\tab-device-permission\ngrok tunnel.PNG)
 
@@ -77,6 +77,10 @@ items:
     1. Open **Tab Device Permission** and select **Device Permission Tab**.
     1. Also open mobile teams and you will see the below outputs:
 
+    # [Desktop](#tab/Desktop)
+
+      ![desktopteams](~/assets/images\tab-device-permission\dekstop-tab-device-permission.png)
+    
     # [Browser](#tab/Browser)
 
       ![getlocationbrowserteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
@@ -94,11 +98,17 @@ items:
   content: |
     Test the tab device permission app.
 
-     # [Browser](#tab/Browser)
+     # [Desktop](#tab/Desktop)
 
-    1. Select **Get Location** and you will see the below outputs.
+    1. Select **App Permission icon** and you will see the below outputs.
+
+      ![desktoppermissionteams](~/assets/images\tab-device-permission\desktop-teams-permission.png)
 
       ![locationpermissionteams](~/assets/images/tab-device-permission/Permisison.PNG)
+
+      # [Browser](#tab/Browser)
+
+    1. Select **Get Location** and you will see the below outputs.
 
       ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)
 
