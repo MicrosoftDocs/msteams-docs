@@ -85,7 +85,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
    The bot receives the message without being @mentioned.
 
-    ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage-noatmention.png)
+    ![Bot without at mention](~/bots/how-to/conversations/Media/botreceivingmessage-noatmention.png)
 
 # [Chat messages](#tab/chat)
 
