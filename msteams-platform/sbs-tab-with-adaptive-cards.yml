@@ -39,7 +39,7 @@ items:
     * Visual Studio 2019 or the latest version.
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
-- title: Create a Bot Registration In Azure portal
+- title: Create a Bot Registration in Azure portal
   durationInMinutes: 2
   content: |
     To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps for bot registration:
