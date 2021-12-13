@@ -10,7 +10,7 @@ keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission 
 
 # Create a personal tab
 
-Here's a list of tools you'll need for building and deploying your personal tab.
+Here's a list of tools you'll need for building your personal tab.
 
 
 | &nbsp; | Install | For using... |
@@ -19,7 +19,26 @@ Here's a list of tools you'll need for building and deploying your personal tab.
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |    
+| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+
+::: zone pivot="winui3-packaged-csharp"
+
+### Key concepts
+
+[!INCLUDE [Packaged apps, Unpackaged apps](../../windows-app-sdk/includes/glossary/packaged-unpackaged-include.md)]
+
+## Instructions for packaged C# WinUI 3 apps
+
+To create a packaged WinUI 3 desktop app with C# and .NET 5 using Windows App SDK 1.0:
+
+1. In Visual Studio, select **File** -> **New** -> **Project**.
+
+2. In the project drop-down filters, select **C#**, **Windows**, and **WinUI**, respectively.
+
+3. Select one of the following project types and click **Next**.
+
+::: zone-end
 
 ## Create a custom personal tab
 
