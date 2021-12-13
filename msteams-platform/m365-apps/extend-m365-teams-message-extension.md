@@ -3,6 +3,7 @@ title: Extend a Teams message extension across Microsoft 365
 description: Here's how to update your search-based Teams messaging extension to run in Outlook
 ms.date: 11/15/2021
 ms.topic: tutorial
+ms.custom: m365apps
 ---
 # Extend a Teams message extension across Microsoft 365
 
@@ -36,7 +37,9 @@ To complete this tutorial, you'll need:
 
 If you have an existing messaging extension, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID).
 
-If you'd like to use sample code to complete this tutorial, follow the setup steps in [Teams messaging extension search sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) to quickly build and register a bot.
+If you'd like to use sample code to complete this tutorial, follow the setup steps in [Teams messaging extension search sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) to quickly build a Microsoft Teams search-based messaging extension. Or, you can start with the same [Teams Messaging Extensions Search sample updated for TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) and proceed to [Preview your messaging extension in Outlook](#preview-your-message-extension-in-outlook). The updated sample is also available within Teams Toolkit extension: *Development* > *View samples* > **NPM Search Connector**.
+
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="NPM Search Connector sample in Teams Toolkit":::
 
 ## Update the app manifest
 
