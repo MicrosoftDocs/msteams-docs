@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Single sign-on (SSO) allows to authorize your Teams tab on desktop or mobile clients. The users can automatically sign in multiple times and to other devices without entering sign-in credentials. This enhances user experience with improved performance and load time.
+   The Single sign-on (SSO) helps to authorize Teams tab on desktop or mobile clients. This enhances user experience by automatically signing in multiple times and also to other devices without re-entering sign-in credentials.
 
    **Key features of SSO for tabs and messaging extension**
 
@@ -292,7 +292,7 @@ items:
 
             ![Web](~/assets/images/Tab-ME-SSO/configure-platform1.png)
 
-         1. Enter **Redirect URIs** as **https://token.botframework.com/.auth/web/redirect** and select **Configure**.
+         1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect`.
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -309,7 +309,7 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. 
 
        > [!Tip]
-       > If you're already in testing your bot in Teams, you must sign out this app and sign out of Teams. Then sign in again to see this change.
+       > If you're already testing your bot in Teams, you must sign out of the bot and sign out of Teams. Then sign in again to see this change.
 
        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
 
@@ -426,7 +426,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-         ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso.png)
+       ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso.png)
    
     1. Go to **Microsoft Teams**.
 
@@ -461,7 +461,7 @@ items:
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login1.png)
 
-      1. Select ellipses **(...)** to open messaging extension.
+      1. Select ellipses **...** to open messaging extension.
 
           ![messaging extension](~/assets/images/Tab-ME-SSO/message-extension.png)
       
@@ -479,7 +479,7 @@ items:
       
       1. Select **Accept**.
 
-          ![consent box](~/assets/images/Tab-ME-SSO/Accept-sso-permission.png)
+          ![consent box](~/assets/images/Tab-ME-SSO/concent-box.png)
 
       1. Open messaging extension and select your application.
 
@@ -487,7 +487,7 @@ items:
 
           ![Profile](~/assets/images/Tab-ME-SSO/hello-megan-profile.png)
 
-      1. Send **https://profile.botframework.com** to the application to get a profile card.
+      1. Send `https://profile.botframework.com` to the application to get a profile card.
        
           ![Profile card](~/assets/images/Tab-ME-SSO/profile-card.png)
 
@@ -504,6 +504,4 @@ items:
     You've completed the tutorial to get started with SSO for tab and messaging extension app.
 
     See how your application looks like in a real-time scenario:
-
-    ![Real time](~/assets/images/Tab-ME-SSO/real-time1.png)
 
