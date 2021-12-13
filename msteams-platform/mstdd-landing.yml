@@ -23,6 +23,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Guidelines for app linked to SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
       - text: Teams Toolkit for Visual Studio Code (Preview)
