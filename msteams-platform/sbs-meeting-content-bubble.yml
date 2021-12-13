@@ -427,7 +427,7 @@ items:
 
     1. Choose **Yes** or **No** from given option and select **Submit**.
 
-        ![Submit feedback](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
+        Bot sends you feedback message as **
       
 - title: Complete challenge
   durationInMinutes: 1
