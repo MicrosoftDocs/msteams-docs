@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
-|12/13/2021 | Introduced guidelines for app linked to SaaS offer | • Distribute your app > Publish to the Teams store > Review store validation guidelines > [Guidelines for app linked to SaaS offer](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+|12/13/2021 | Introduced guidelines for app linked to SaaS offer | Distribute your app > Publish to the Teams store > Review store validation guidelines > [Guidelines for app linked to SaaS offer](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 | 12/09/2021| Introduced step-by-step guide to create meeting sidepanel. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting sidepanel in Teams](sbs-meetings-sidepanel.yml)|
 | 12/09/2021| Introduced step-by-step guide to Meetings Stage View. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create Meetings Stage View](sbs-meetings-stage-view.yml)| 
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
@@ -35,7 +35,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|12/13/2021 | Introduced guidelines for app linked to SaaS offer | • Distribute your app > Publish to the Teams store > Review store validation guidelines > [Guidelines for app linked to SaaS offer](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+|12/13/2021 | Introduced guidelines for app linked to SaaS offer | Distribute your app > Publish to the Teams store > Review store validation guidelines > [Guidelines for app linked to SaaS offer](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 | 12/09/2021| Introduced step-by-step guide to create meeting sidepanel. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting sidepanel in Teams](sbs-meetings-sidepanel.yml)|
 | 12/09/2021| Introduced step-by-step guide to Meetings Stage View. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create Meetings Stage View](sbs-meetings-stage-view.yml)|
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
