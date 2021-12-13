@@ -132,41 +132,6 @@ items:
 
         You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
 
-- title: Test your app
-  durationInMinutes: 1
-  content: |
-    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams.
-
-    **To configure and run your bot sample**
-
-    1. Open the **appsettings.json** file.
-    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
-
-        > [!NOTE]
-        > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
-
-        ![Appsettings json](~/assets/images/bots/appsettingsjson.png)
-
-    1. Select the **F5** key to run this project.
-
-        <br>
-
-        <details>
-
-        <summary><b>Troubleshooting</b></summary>
-
-        If you get the **Unable to find package** error, follow these steps:
-
-        1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
-        1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
-        1.	Select **Add**.
-        1.	In **Name**, enter **nuget.org** and in **Source**, enter **https://api.nuget.org/v3/index.json**.
-        1.	Select **Update** and **OK**.
-        1.	Rebuild your project.
-        <br>
-
-        </details>
-
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
@@ -176,7 +141,7 @@ items:
     
     1. In Visual Studio, go to the **appPackage/** folder.
     1. Open the **manifest.json** file.
-    1. In the **manifest.json** file, find **{TODO: MicrosoftAppId}** and replace it with your Microsoft App ID.
+    1. In the **manifest.json** file, find **{TODO: MicrosoftAppId}** and replace it with your Microsoft App ID.(depending on the scenario the Microsoft App Id may occur multiple times in the manifest.json)
     1. In Windows Explorer, go to the **Microsoft-Teams-Samples > samples > csharp_dotnetcore/56.teams > file > upload ** folder.
     1. Zip the contents of the **appPackage/** folder to create **manifest.zip**.
     1. Go to Teams.
