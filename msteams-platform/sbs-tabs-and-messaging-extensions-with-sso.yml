@@ -26,7 +26,7 @@ items:
 
    This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
 
-     ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile24.png)   
+     ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -249,7 +249,7 @@ items:
 
          * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
 
-           ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application2.png) 
+           ![Add client application](~/assets/images/Tab-ME-SSO/add-client-application21.png) 
         
 
        The following image displays the **Client Ids**:
@@ -412,7 +412,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run.png)
+    ![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
       
 - title: Upload SSO App to Teams
   durationInMinutes: 1
@@ -496,7 +496,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile24.png)
+       ![SSO profile](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)
     
     
 
