@@ -18,15 +18,15 @@ For more information about enabling RSC for your app, see [resource-specific con
 
 With user consent, the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC enables graph applications, which are defined in a Teams app manifest. You can get all messages in channels and chats, and conversations where the app has been installed. If a bot is defined in an app manifest with one or both of these permissions, users will receive all messages without being @mentioned in conversations where permissions apply. The app has to be consented and installed.
 
-> [!NOTE]
-> * Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats.
-> * Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users in the team or they will not pass the store approval. The app description must include how the bot uses the data it reads.
-> * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions may not be used by bots to extract large amounts of customer data.
-
 | **RSC Permission** | **Conversation Context** | **Graph App** | **Bot** |
 | -------- | --------- | ---------| --------- |
 | `ChannelMessage.Read.Group` | Teams & Channels | Get all messages through Graph API in channels within team where Teams app is installed | Receive all messages sent in standard channels without being @mentioned within team where Teams app is installed |
 | `ChatMessage.Read.Chat` | Chats (user:user, groups, and meetings) | Get all messages through Graph API in chats  where Teams app is installed | Receive all messages sent in chat without being @mentioned where Teams app is installed |
+
+> [!NOTE]
+> * Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats.
+> * Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users in the team or they will not pass the store approval. The app description must include how the bot uses the data it reads.
+> * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions may not be used by bots to extract large amounts of customer data.
 
 ## Update app manifest
 
