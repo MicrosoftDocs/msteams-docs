@@ -289,6 +289,9 @@ items:
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow > AppPackage** to open the folder.
     1. Open the **manifest.json** file in Visual Studio Code.
     1. In the **manifest.json** file, find **{TODO: contentBotId}** and add your Microsoft App ID and save.
+
+        ![Manifest config](~/assets/images/adaptive-cards/manifest-vsc.png)
+
     1. In Windows Explorer, go to the **AppPackage** folder.
     1. Zip the contents of the **AppPackage** folder to create **manifest.zip**.
 
