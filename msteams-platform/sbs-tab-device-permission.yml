@@ -64,7 +64,7 @@ items:
     1. Open the **manifest.json** file in visual studio code.
     1. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
-      ![ngrok](~/assets/assets\images\tab-device-permission\ngrok tunnel.PNG)
+      ![ngrok](~/assets/assets/images/tab-device-permission/ngrok tunnel.PNG)
 
     1. Zip the files in the **appPackage/folder** as manifest.zip.
     1. Go to Teams.
