@@ -24,7 +24,7 @@ items:
     
     This step-by-step guide helps you to send feedback to content bubble bot during meetings in Teams with attendees. You'll see the following output:
 
-       ![Meeting content bubble introduction](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
+       ![Meeting content bubble introduction](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -434,16 +434,15 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![Content Bubble Demo reply](~/assets/images/meeting-content-bubble/meeting-content-bubble-introduction.png)
+    ![Content Bubble Demo desktop and mobile](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
-    ![Submit feedback](~/assets/images/meeting-content-bubble/submit-feedback.png)
 
 - content: |
     You've completed the tutorial to get started with a Meeting Content Bubble app.
 
     See how your application looks like in a real-time scenario:
 
-    ![Submit feedback](~/assets/images/meeting-content-bubble/submit-feedback.png)
+    ![Desktop and mobile image](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
     
 
