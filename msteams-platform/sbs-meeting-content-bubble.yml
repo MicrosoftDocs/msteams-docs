@@ -364,7 +364,7 @@ items:
 - title: Add Meeting content bubble App to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meeting Token App**
+    **To create a Teams meeting and add Meeting content bubble**
 
     1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
 
