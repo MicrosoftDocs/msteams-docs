@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 12/03/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-  nextTutorialTitle: Read more about apps in Teams meeting
+  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialTitle: Read more to enable and configure apps for meetings 
   ms.custom: mvc
   ms.localizationpriority: none
 items:
@@ -421,7 +421,9 @@ items:
 
     1. Bot sends **Feedback** Adaptive card.
 
-    1. Choose **Yes** or **No** from given option and select **Submit**.
+    1. Select **Yes** or **No**.
+    
+    1. Select **Submit**.
 
        ![Bot sends you feedback card](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
 
