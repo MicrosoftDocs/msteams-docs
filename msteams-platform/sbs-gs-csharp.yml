@@ -607,8 +607,7 @@ items:
     1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon.
     1. Select **Manage your apps**.
        Your app is listed in the sideloaded apps. 
-    1. Find your app using the search box.
-    1. Select the three-dots in its row.
+    1. Find your app using the search box, select the three-dots in its row.
     1. Select the **View** option.
         The **Add** page appears for your app.
     1. Select **Add** to install the app on Teams.
