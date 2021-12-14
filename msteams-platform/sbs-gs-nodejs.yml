@@ -249,7 +249,7 @@ items:
     You can use `gulp CLI` to build the app package for Node.js.
 
     1. Open a terminal window.
-    1. Ensure that you are in the directory where the `node.js` is cloned. This is the folder where `gulfile.js` is placed. 
+    1. Ensure that you are in the directory where the `node.js` is cloned. This is the folder where `gulpfile.js` is placed. 
     1. Run the following command to build the Node.js app package.
 
         ```$ gulp```
