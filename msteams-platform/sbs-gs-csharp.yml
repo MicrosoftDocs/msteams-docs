@@ -399,9 +399,9 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png" alt-text="Image showing Hello tab details" border="false":::
 
         Enter the following details:
-        - **Name**: Hello tab
-        - **Content URL** and **Website URL**: the forwarding address in ngrok console session
-        - **Context**: Select **Personal tab**
+        - **Name**: Hello tab.
+        - **Content URL** and **Website URL**: the forwarding address in ngrok console session.
+        - **Context**: Select **Personal tab**.
 
     1. Select **Update**.
 
