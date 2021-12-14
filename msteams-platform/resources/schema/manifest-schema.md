@@ -626,7 +626,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only with SharePoint tabs and store apps.
+> `isFullScreen` works only for apps published to your organization.
 
 ## activities
 
