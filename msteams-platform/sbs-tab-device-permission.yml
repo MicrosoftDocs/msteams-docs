@@ -31,7 +31,7 @@ items:
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
-- title: Configure and run the Tab Device Permission app on Teams
+- title: Configure and run the Tab device permission app on Teams
   durationInMinutes: 1
   content: |
     Configure the tab device permission app at Microsoft Teams.
