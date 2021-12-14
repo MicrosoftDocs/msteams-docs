@@ -317,7 +317,7 @@ items:
 
     1. Open the app package **helloworldapp.zip** from the following path in your C# sample repo directory structure:
 
-        `<path to cloned node.js sample repo>\\Source\Repos\Microsoft-Teams-Samples\samples\app-hello-world\nodejs\manifest`
+        `<path to cloned node.js sample repo>\Source\Repos\Microsoft-Teams-Samples\samples\app-hello-world\nodejs\manifest`
 
         The **Hello World** app is imported in Developer Portal.
 
@@ -392,8 +392,9 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-add-tab.png" alt-text="Image showing Hello tab details" border="false":::
 
         Enter the following details:
-        - Name: Hello tab
-        - Content URL and Website URL: the forwarding address in ngrok console session
+        - **Name**: Hello tab.
+        - **Content URL** and **Website URL**: the forwarding address in ngrok console session.
+        - **Context**: Select **Personal tab**.
 
     1. Select **Update**.
 
