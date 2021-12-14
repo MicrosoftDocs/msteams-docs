@@ -41,15 +41,17 @@ items:
     1. Open Git Bash and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder.
     1. Open **command prompt**, run the below command.
+    
+    ```command-prompt
+    npm install
+    ```
 
-      ```command-prompt
-      npm install
-      ```
     1. Run the application in the **command prompt** using following command.
-       
-      ```command-prompt
-      npm start
-      ```
+    
+    ```command-prompt
+    npm start
+    ```
+    
     1. Begin your tunnelling service to get an https endpoint.
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
     1. Start a ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
