@@ -16,11 +16,11 @@ For more information about enabling RSC for your app, see [resource-specific con
 
 ## Enable bots to receive all channel or chat messages
 
-With user consent, the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC enables graph applications, which are defined in a Teams app manifest. You can get all messages in channels and chats, and conversations where the app has been installed. If a bot is defined in an app manifest with one or both of these permissions, users will receive all messages without being @mentioned in conversations where permissions apply. The app has to be consented and installed.
+The ChannelMessage.Read.Group and ChatMessage.Read.Chat RSC permissions in a Teams app manifest enable a specified graph application to get all messages in channels and chats respectively, where the Teams app has been consented to, and installed. A bot defined in an app manifest with one or both RSC permissions, receives all messages without being @mentioned in conversations where the permissions apply.
 
 |**RSC Permission** | **Conversation Context** | **Graph App** | **Bot** |
 | -------- | --------- | ---------| --------- |
-|`ChannelMessage.Read.Group` | Teams & Channels | Get all messages through Graph API in channels within team where Teams app is installed | Receive all messages sent in standard channels without being @mentioned within team where Teams app is installed |
+|`ChannelMessage.Read.Group` | Teams & Channels | Get all messages through Graph API in channels where Teams app is installed | Receive all messages sent in standard channels without being @mentioned where Teams app is installed |
 |`ChatMessage.Read.Chat` | Chats (user:user, groups, and meetings) | Get all messages through Graph API in chats  where Teams app is installed | Receive all messages sent in chat without being @mentioned where Teams app is installed |
 
 > [!NOTE]
