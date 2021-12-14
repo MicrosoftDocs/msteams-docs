@@ -441,7 +441,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tools-bot-card.png" alt-text="Image showing bot management pane" border="false":::
 
-    1. Select **New Bot** on the **Bot management** pane.
+    1. Select **+ New Bot** on the **Bot management** pane.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-management-new-bot.png" alt-text="Image showing new bot option" border="false":::
 
@@ -610,7 +610,7 @@ items:
     1. Find your app using the search box, select the three-dots in its row.
     1. Select the **View** option.
         The **Add** page appears for your app.
-    1. Select **Add** to install the app on Teams.
+    1. Select **Add** to load the app on Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-nodejs-app-sideload.png" alt-text="Image showing Add app dialog" border="false":::
 
