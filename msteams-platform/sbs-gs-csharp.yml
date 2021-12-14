@@ -604,15 +604,13 @@ items:
 
         The Developer Portal informs you that your app is sideloaded successfully.
 
-    1. Select **Publish** from the left pane, and select **Download app package** to download the configured app package from Developer Portal.
-    1. Save the app package zip file. The file name is Hello World.zip.
     1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon.
     1. Select **Manage your apps**.
-    1. Select **Upload a custom app**.
-    1. Select Hello World.zip to upload it to Teams in the local environment.
-
+       Your app is listed in the sideloaded apps. 
+    1. Find your app using the search box.
+    1. Select the three-dots in its row.
+    1. Select the **View** option.
         The **Add** page appears for your app.
-
     1. Select **Add** to install the app on Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-nodejs-app-sideload.png" alt-text="Image showing Add app dialog" border="false":::
