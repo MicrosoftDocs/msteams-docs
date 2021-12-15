@@ -23,7 +23,9 @@ For more information on documentation, installation instructions, and support, s
 
 ## See also
 
-[Partner apps for Moodle](partner-apps-for-moodle.md)
+* [Microsoft 365 theme](m365-plugins/microsoft-365-theme.md)
+* [oEmbed Filter](m365-plugins/oEmbed-filter.md)
+* [Partner apps for Moodle](partner-apps-for-moodle.md)
 
 ## Next step
 
