@@ -377,6 +377,10 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 4. Zip the manifest with the profile images and install it in Teams.
 
+## Step-by-step guide
+
+Follow [Step-by-step guide](../../../sbs-bots-with-sso.yml) to authenticate bots.
+
 ## Code sample
 |**Sample name** | **Description** |**.NET** | 
 |----------------|-----------------|--------------|
