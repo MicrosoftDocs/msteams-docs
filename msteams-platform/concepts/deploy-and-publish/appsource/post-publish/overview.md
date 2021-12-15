@@ -12,6 +12,11 @@ With your app listed on the Microsoft Teams store, start thinking about how you'
 
 ## Publish updates to your app
 
+> [!NOTE]
+> Teams store has evolved:
+> 
+> Previously, the links were copied by selecting ellipses on the app tile. With the updated Teams store experience, you will access the same from the details tab of the apps. This update will be generally available (GA) by March 01, 2022.
+
 You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes requires a new review process.
 
 Ensure the following when publishing updates:
@@ -23,7 +28,6 @@ Ensure the following when publishing updates:
 ### App updates requiring user consent
 
 When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new versions of your app install automatically.
-
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.
