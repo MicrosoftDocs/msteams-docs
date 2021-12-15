@@ -41,7 +41,7 @@ items:
     1. Open **command prompt** and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     2. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
     3. In the **command prompt**, enter **cd location (node js folder location)** and run this command.
-    4. Run the below command in the **command prompt**.
+    4. Run the below command in the **command prompt**
     
        ```command-prompt
         npm install
