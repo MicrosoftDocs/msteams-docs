@@ -34,28 +34,34 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
+    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
     | &nbsp; | [Install Git](https://git-scm.com/downloads) | Sample C# app repo from GitHub |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and messaging extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
-    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+    |
+
 
     ## Verify git installation
 
     If Visual Studio installation prompts you to add `git` to the path, select it. 
-    In a terminal window, run the following command to verify the `git` installation:
+   
+    To verify the verson of git installed:
 
-    ```bash
-    $ git --version
-    git version 2.17.1.windows.2
+    1. Open a terminal window. 
+    2. Run the following command to verify the `git` installation:
 
-    ```
+        ```bash
+        $ git --version
+        git version 2.17.1.windows.2
+
+        ```
 
     ## Install the Teams Toolkit
 
-    The Teams Toolkit helps simplify the development process with tools to create a project scaffolding for your app.
+    The Teams Toolkit helps simplify the development process with tools to create a project scaffolding for your app. It creates the necessary directory structure for all selected capabilities with the required files in place, ready to build the project.
 
     The Teams Toolkit is available as a Visual Studio 2019 extension.
 
@@ -281,7 +287,7 @@ items:
 
     **Publish option in Visual Studio 2019**
 
-    This tutorial uses Developer Portal to configure and publish your app. However, Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
+    This tutorial uses Developer Portal to configure app capabilities and publish your app. However, Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
 
