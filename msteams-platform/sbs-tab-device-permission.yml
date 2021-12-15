@@ -34,13 +34,13 @@ items:
 - title: Configure and run the Tab device permission app on Teams
   durationInMinutes: 1
   content: |
-    Configure the tab device permission app at Microsoft Teams.
+    The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app, across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
 
     **To configure and run your tab device permission app**
 
     1. Open **command prompt** and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     2. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
-    3. In the **command prompt**, enter **cd location (node js folder location)**.
+    3. In the **command prompt**, enter **cd location (node js folder location)** and run this command.
     4. Run the below command in the **command prompt**.
     
        ```command-prompt
@@ -100,7 +100,7 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-    Test the tab device permission app.
+    To ensure that the tab device permission sample app enables user to give the permission, you must test the app after uploading the app into teams successfully. To test the tab device permisison sample app, do the following steps.
 
      # [Desktop](#tab/Desktop)
 
