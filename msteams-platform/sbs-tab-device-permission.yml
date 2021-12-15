@@ -78,7 +78,7 @@ items:
        ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)
 
     9. Open **Tab Device Permission** and select **Device Permission Tab**.
-    10. Open mobile teams and desktop teams, you will see the below outputs.
+    10. Open mobile teams and desktop teams to see the below outputs.
 
     # [Desktop](#tab/Desktop)
 
@@ -104,7 +104,7 @@ items:
 
      # [Desktop](#tab/Desktop)
 
-    1. Select **App Permission icon** and you will see the below outputs.
+    1. Select **App Permission icon** to see the following outputs.
 
        ![desktoppermissionteams](~/assets/images\tab-device-permission\desktop-teams-permission.png)
 
@@ -112,13 +112,13 @@ items:
 
       # [Browser](#tab/Browser)
 
-    1. Select **Get Location** and you will see the below outputs.
+    1. Select **Get Location** to see the following outputs.
 
        ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)
 
      # [Mobile](#tab/Mobile)
 
-    1. Click on respective button to test the scenario. You will get prompt to accept permission request as below.
+    1. Click on respective button to test the scenario and get the following prompts to accept permission request.
 
        ![mobilepromptteams](~/assets/images/tab-device-permission/sbs-prompt-mobile.png)
 
