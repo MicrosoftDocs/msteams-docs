@@ -13,20 +13,18 @@ Teams theme plugins display a custom view of the Moodle course home page within 
 
 :::image type="content" source="../../assets/images/MoodleInstructions/teams theme.png" alt-text=" microsoft teams theme":::
 
-The theme plugin offers users an unified experience in Microsoft Teams. 
+The theme plugin offers users an unified enhanced experience in Microsoft Teams. 
 
 The following features are included in the theme:
 
-* Adapts to Microsoft Teams theme changes (default, dark, and high contrast)
+* Adapts to Microsoft Teams theme changes, such as default, dark, and high contrast.
+* Provides focus on the course activities.
+* Removes Moodle blocks, navigation, header, and footer.
+* Provides Microsoft Team UI elements.
 
-* Provides a focus on the course activities
+## See also
 
-* Removes Moodle blocks, navigation, header, and footer
-
-* Surfaces Microsoft Team UI elements 
-
-Fore more information on documentation, installation instructions, and support, see:
-[Moodle plugins directory: Microsoft 365 Teams Theme](https://moodle.org/plugins/theme_boost_o365teams)
+[Moodle plugins with Microsoft 365 Teams Theme](https://moodle.org/plugins/theme_boost_o365teams)
 
 ## Next step
 

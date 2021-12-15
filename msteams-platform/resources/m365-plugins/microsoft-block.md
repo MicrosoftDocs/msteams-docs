@@ -9,22 +9,21 @@ author: v-rpatkur
 
 # Microsoft Block
 
-Microsoft Block allows users to access the course SharePoint file location, view the course OneNote notebook for submissions,and modify their Office 365 integration preferences. Admins can configure the block to appear on every course page.
+Microsoft Block enhances user experience by providing UI to modify Microsoft 365 integration features and access to various resources. The admins can configure the block to appear on every course page. The Block allows users to perform the following activities:
 
-* Accessing the course SharePoint and OneNote Notebook
+* Access the course SharePoint file location and OneNote Notebook
+* view the course on OneNote notebook for submissions
+* Configure the Outlook calendar sync
+* Manage the connection to Office 365
+* Customize personal Office 365 integration preferences
 
-* Configuring the Outlook calendar sync
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 1.png" alt-text="microsoft block":::
 
-* Managing the connection to Office 365
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 2.png" alt-text="outlook calender sync settings":::
 
-* Setting personal Office 365 preferences
+## See also
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 1.png" alt-text="microsoft block"::: 
-
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 2.png" alt-text="outlook calender sync settings"::: 
-
-For more information on documentation, installation instructions, and support, see:
-[ Moodle plugins directory: Microsoft Block](https://moodle.org/plugins/block_microsoft)
+[Moodle plugins with Microsoft Block](https://moodle.org/plugins/block_microsoft)
 
 ## Next step
 
