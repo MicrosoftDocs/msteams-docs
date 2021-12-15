@@ -1,7 +1,7 @@
 ---
 title: In-app purchase flow for the monetizeable apps
 description: Learn the basic tasks and concepts needed to implement in-app purchases and trial functionality in teams apps.
-author: heath-hamilton
+author: 
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal 
@@ -17,5 +17,23 @@ The Microsoft Teams provide APIs you can use to implement the following feature 
 
 ## Implement in-app purchases
 
-To offer an in-app purchase experience to the customers using your app, ensure your app is built on [Teams client SDK library](https://github.com/OfficeDev/microsoft-teams-library-js)
+To offer an in-app purchase experience to the users of your app, ensure your app is built on [Teams client SDK library](https://github.com/OfficeDev/microsoft-teams-library-js)
+
+### Update your app manifest
+
+The RSC permissions are added to your app manifest to achieve in-app purchase experience for your users. The app manifest must include the following code snippet:
+
+```json
+
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+             "name": "InAppPurchase.Allow.User",
+             "type": "Delegated"
+            }
+        ]
+}
+```
+
 
