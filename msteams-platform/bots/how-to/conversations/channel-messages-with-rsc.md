@@ -47,7 +47,7 @@ The following code provides an example of the app manifest:
 "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
 "resource": "https://AnyString",
 "applicationPermissions": [
-"ChannelMessage.Read.Group"
+"ChannelMessage.Read.Group",
 "ChatMessage.Read.Chat"
     ]
   }
