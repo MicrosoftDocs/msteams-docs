@@ -41,7 +41,7 @@ items:
     1. Open **command prompt** and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
     2. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
     3. In the **command prompt**, enter **cd location (node js folder location)** and run this command.
-    4. Run the below command in the **command prompt**
+    4. Run the following command in the **command prompt**
     
        ```command-prompt
         npm install
@@ -78,21 +78,21 @@ items:
        ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)
 
     9. Open **Tab Device Permission** and select **Device Permission Tab**.
-    10. Open mobile teams and desktop teams to see the below outputs.
+    10. Open mobile teams and desktop teams to see the following outputs.
 
     # [Desktop](#tab/Desktop)
 
-       ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
+          ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
     
     # [Browser](#tab/Browser)
 
-       ![getlocationbrowserteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
+          ![getlocationbrowserteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
 
     # [Mobile](#tab/Mobile)
 
-       ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)
+          ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)
 
-       ![mobileteams](~/assets/images/tab-device-permission/mobile-teams.png)
+          ![mobileteams](~/assets/images/tab-device-permission/mobile-teams.png)
       
 
     ---
