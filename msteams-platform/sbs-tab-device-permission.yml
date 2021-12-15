@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
+    Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
 
     This step-by-step guide helps you to do tab device permission demo at Microsoft Teams. You'll see the following output:
 
@@ -100,7 +100,7 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-    To ensure that the tab device permission sample app enables user to give the permission, you must test the app after uploading the app into teams successfully. To test the tab device permisison sample app, do the following steps.
+    To ensure that the tab device permission sample app enables user to give the permission, you must test the app after you uploaded the app into the Teams successfully. To test the tab device permission sample app, do the following steps.
 
      # [Desktop](#tab/Desktop)
 
