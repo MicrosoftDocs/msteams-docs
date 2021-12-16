@@ -18,7 +18,7 @@ Teams meetings can be created using the Atto editor in calendar, assignments, fo
 
 ## See also
 
-[Moodle plugins directory: Teams Meeting](https://moodle.org/plugins/atto_teamsmeeting)
+[Moodle plugins with Teams Meeting](https://moodle.org/plugins/atto_teamsmeeting)
 
 ## Next step
 

@@ -30,6 +30,4 @@ The following table provides the common GitHub issues and the templates used for
 | Contact details| Include contact details of someone who can work with support to resolve the issue, which can require screen sharing|
 | Priority| Select P1, P2, or P3 to confirm the impact to your organization and the number of users who are blocked. The priority is based on organizational impact|
 
-## Video Training
 
-For more information, see [SSO with OpenID](https://www.youtube.com/watch?v=pYSm935CB_I&list=PLwy6L92VmGgnykLBOhIsp1g6i0kijVA2n&t=4s)

@@ -24,9 +24,7 @@ The bundle of three plugins allow Moodle users to take advantage of Microsoft On
 ## See also:
 
 * [OneNote Core: Moodle plugins directory: Microsoft OneNote](https://moodle.org/plugins/local_onenote)
-
 * [OneNote Submissions: Moodle plugins directory: OneNote submissions](https://moodle.org/plugins/assignsubmission_onenote)
-
 * [OneNote Feedback: Moodle plugins directory: OneNote Feedback](https://moodle.org/plugins/assignfeedback_onenote)
 
 ## Next step

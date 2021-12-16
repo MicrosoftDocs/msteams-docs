@@ -33,4 +33,4 @@ Watch the following video to understand how to get started with mConnect and Tea
 
 ## See also
 
-[SKOOLER – mConnect - How to](https://skooler.com/mconnect/how-to/)
+[SKOOLER](https://skooler.com/mconnect/how-to/)

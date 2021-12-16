@@ -26,10 +26,9 @@ The users can perform the following actions with Microsoft 365 integration:
 * Upload a CSV file that shows how Moodle users match to Office 365 users.
 * Validate the Azure AD permissions are correctly configured.
 
-For more information on documentation, installation instructions, and support, see:
-[Moodle plugins directory: Microsoft 365 Integration](https://moodle.org/plugins/local_o365)
-
 ## See also
+
+[Moodle plugins with Microsoft 365 Integration](https://moodle.org/plugins/local_o365)
 
 ## Next step
 
