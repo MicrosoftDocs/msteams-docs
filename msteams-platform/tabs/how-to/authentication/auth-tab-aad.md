@@ -11,15 +11,15 @@ keywords: teams authentication tabs AAD
 > [!NOTE]
 > To authenticate tab for mobile clients, ensure you're using version 1.4.1 or later of the Teams JavaScript SDK.
 
-There are many services that you may want to consume inside your Teams app. Most of theses services require authentication and authorization to get access. Services includes Facebook, Twitter, and Teams. Teams user profile information is stored in Azure Active Directory (Azure AD) using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+There are many services that you want to use in your Teams app. Most of the services such as Facebook, Twitter, and Teams require authentication and authorization to get access. Teams uses Microsoft Graph to store user profile information in Azure Active Directory (AAD). This document will help you to authentication your tab using AAD to access the user profile information.
 
-OAuth 2.0 is an open standard for authentication used by Azure Active Directory(AAD) and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and AAD. For more information on code, see: [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD. Usage of the OAuth 2.0 Implicit Grant flow with the goal to read user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0 is an open standard for authentication used by Azure Active Directory (AAD) and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and AAD. For more information on code, see: [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from AAD. Usage of the OAuth 2.0 Implicit Grant flow with the goal to read user's profile information from AAD and Microsoft Graph.
 
-For a general overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Authentication flow in tabs differs slightly from authentication flow in bots.
+Authentication flow in tabs is different from authentication flow in bots. For a general overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
-## Configuring an application to use Azure Active Directory (AAD) as an identity provider
+## Configuring identity provider
 
-For general overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
+Configure an application to use Azure Active Directory (AAD) as an identity provider, see [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ### Prerequisite
 
@@ -28,39 +28,20 @@ The applications must be registered. The identity providers supporting OAuth 2.0
 **To configure application with AAD:**
 
 1. Go to [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
-
-2. Select **New Registration**.
-
-    ![New registration](~/assets/images/authentication/Azureadtabsauthentication/AzureAdauthnewregistration.png)
-
-3. Provide user-facing display name for this application. The name can be changed later.
-
-    ![Display name](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthnamedisplay.png)
-
-4. Find **Redirect URIs** section for the app.
-
-    ![Redirect URI](~/assets/images/authentication/Azureadtabsauthentication/AzureaddauthredirectURI.png)
-
-5. Select **Add a Redirect URI**, you’ll be directed to Platform Configurations. 
-
-6. Now, select **Add a platform**.
-
-    ![Platform Configuration](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthaddplatform.png)
-
-7. Select **Web** in Configure Platforms.
-
-    ![Web](~/assets/images/authentication/Azureadtabsauthentication/Azureaddwebinconfigure.png)
-
-8. Update the URL to authentication endpoint. For example, the redirect URI for TypeScript/Node.js and C# sample apps on GitHub is as follows:
+1. Select **New Registration**.
+1. Provide user-facing display name for this application. The name can be changed later.
+1. Find **Redirect URIs** section for the app.
+1. Select **Add a Redirect URI**, you’ll be directed to Platform Configurations.
+1. Now, select **Add a platform**.
+1. Select **Web** in Configure Platforms.
+1. Update the URL to authentication endpoint. For example, the redirect URI for TypeScript/Node.js and C# sample apps on GitHub is as follows:
 
     Redirect URL: `https://<hostname>/bot-auth/simple-start`
 
     > [!NOTE]
     > Replace `<hostname>` with your actual host. This `<hostname>` might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`.
 
-9. Select **Configure**. 
-
-    ![Configure](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthconfigure.png)
+1. Select **Configure**.
 
 ## Other authentication providers
 
