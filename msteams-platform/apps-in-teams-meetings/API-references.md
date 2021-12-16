@@ -485,7 +485,7 @@ Actual start and end time of a meeting are different from scheduled start and en
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events.
 
-You can choose to receive the meeting start and end events through regular calendar meetings, channel meetings in Teams or both. You can update the manifest with the following RSC permissions to receive the meeting start and end events:
+You can choose to receive the meeting start and end events through regular calendar meetings, channel meetings in Teams or both. Update the manifest with the following RSC permissions to receive the meeting start and end events:
 * `OnlineMeeting.ReadBasic.Chat` - To receive meeting events through regular calendar meetings.
 * `ChannelMeeting.ReadBasic.Group` - To receive meeting events through channel meetings in Teams.
 
