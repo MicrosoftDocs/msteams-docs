@@ -384,7 +384,7 @@
       href: messaging-extensions/how-to/add-authentication.md
     - name: Enable SSO for messaging extensions
       href: messaging-extensions/how-to/enable-SSO-auth-me.md  
-- name: Utilize Teams data with Microsoft Graphconcepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+- name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
     href: https://docs.microsoft.com/graph/teams-concept-overview
