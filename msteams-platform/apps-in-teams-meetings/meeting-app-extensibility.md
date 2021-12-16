@@ -137,7 +137,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ### Integrate bots into the meeting lifecycle
 
-Bots that are enabled in groupchat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Bots that are enabled in `groupchat` scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### Integrate messaging extensions into the meeting lifecycle
 
@@ -145,15 +145,53 @@ To implement messaging extension, start with [build a messaging extension](../me
 
 The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
 
+### Supported capabilities in meeting
+
+The overall user experience in standard channel meetings will be same as in scheduled private meetings, however the capability differs. The following table lists the support availability in meetings for mobile and desktop:
+
+| Capability | Support available | In-tenant | Guest | Federated or external | Anonymous |
+| :-- | :-- | :-- | :-- | :-- |
+| **Mobile** | | | | |
+| Scheduled private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| **Desktop** | | | | |
+| Scheduled private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+
+> [!NOTE]
+> * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
+> * Apps on the channel will not be available in the meeting by default.
+
+## Meeting app permissions
+
+Team owners manages the meeting app permissions through team settings:
+
+* Channel meeting app permissions are different from the team app CRUD model (not the non-channel meeting app CRUD model). If a user adds an app to a team or channel, they are able to use it in the meeting.
+* When team settings are enabled, meeting apps follow the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot add.
+* If users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
+
+> [!NOTE]
+> By adding the app outside of the meeting interface,Attendee can indirectly add apps to their meetings when the **Allow team members to add and remove apps** setting is enabled.
+
+The following image illustrates member permissions setting:
+
+:::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
+
+* Permission to add/remove meeting apps can be configured in the team settings page, by default it is enabled.
+* If enabled, members can add/remove meeting apps before, during, or after meetings.
+
+:::image type="content" source="../assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
+
 ## Participant roles in a meeting
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
 
-The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
+The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meetin
+g:
 
-* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
-* **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
-* **Attendee**: An attendee is a user who has been invited to attend a meeting. But attendees aren't authorized to act as a presenter. Attendees can interact with other meeting members but can't manage any of the meeting settings or share the content.
+* **Organizer**: Organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
+* **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
+* **Attendee**: An attendee is invited to attend a meeting but can't act as a presenter. Attendees can interact with other meeting members but can't manage any of the meeting settings or share the content.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
@@ -169,11 +207,13 @@ User types, such as organizer, presenter, or attendee in a meeting can do one of
 > [!NOTE]
 > The user type is not included in the **getParticipantRole** API.
 
+User types, such as, organizer, presenter, or attendee in a meeting can be [a participant in a meeting](#participant-roles-in-a-meeting).
+
 The following list details the various user types along with their accessibility and performance:
 
 * **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
-* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
-* **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
+* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD. They have the same Teams capabilities as a native team member with access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
+* **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
@@ -181,7 +221,7 @@ The following list details the various user types along with their accessibility
     > [!IMPORTANT]
     > Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
-* **Anonymous**: Anonymous users don't have an AAD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
+* **Anonymous**: Anonymous users don't have an AAD identity and aren't federated with a tenant. The anonymous participants are like guests, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
