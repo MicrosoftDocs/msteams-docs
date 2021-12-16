@@ -65,9 +65,9 @@ After you enable your app for Teams meetings, you must configure your app for a 
 
 Teams meetings provide a collaborative experience for your organization. Configure your app for different meeting scenarios and to enhance the meeting experience. Now you can identify what actions can be taken in the following meeting scenarios:
 
-* [Pre-meeting](#before-a-meeting)
-* [In-meeting](#during-a-meeting)
-* [Post-meeting](#after-a-meeting)
+* [Pre-meeting](#pre-meeting)
+* [In-meeting](#in-meeting)
+* [Post-meeting](#post-meeting)
 
 ### Pre-meeting
 
@@ -124,7 +124,7 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 ### Post-meeting
 
-The configurations of post and [pre-meetings](#before-a-meeting) are the same.
+The configurations of post and [Pre-meeting](#pre-meeting) are the same.
 
 ## Code sample
 
