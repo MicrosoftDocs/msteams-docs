@@ -78,18 +78,28 @@ In a pre-meeting app experience, users can add tabs, bots, and messaging extensi
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    ![Add a tab](~/assets/images/apps-in-meetings/add-tab.png)
 
-1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
+1. Select the app that you want to add and follow the steps as required. The app is installed as a tab.
+
+    ![Tab gallery](~/assets/images/apps-in-meetings/tab-gallery.png)
 
 **To add a messaging extension to a meeting**
 
-1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat.
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the compose message area in the chat.
 1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
+
+   ![Messaging extensions](~/assets/images/apps-in-meetings/messagingextensions.png)
 
 **To add a bot to a meeting**
 
-In a meeting chat, @mention and select **Get bots**.
+1. In a meeting chat, @mention and select **Get bots**.
+
+   ![Add a bot](~/assets/images/apps-in-meetings/get-bots.png)
+
+2. Select the app that you want to add and follow the steps as required. The app is installed as a bot.
+
+   ![Bot gallery](~/assets/images/apps-in-meetings/bot-gallery.png)
 
 > [!NOTE]
 > * The content bubble posts an Adaptive Card or a card simultaneously in the meeting chat that users can access. This helps the users when the meeting or the Teams app is minimized.
@@ -136,9 +146,9 @@ The configurations of post and [pre-meeting](#pre-meeting) are the same.
 
 ## Step-by-step guides
 
-* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate **meeting token** in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate **meeting sidepanel** in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate Meetings Stage View in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting sidepanel in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate meetings stage view in your Teams meeting.
 
 ## Next step
 
