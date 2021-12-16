@@ -138,7 +138,7 @@ items:
     - Using Git Bash
     - Using Visual Studio 2019
     
-    **To use Git Bash to clone sample repo**
+    **To use Git Bash to clone the sample repo**
     
     - Run the following command in a terminal window to clone the sample repository to your computer:
 
@@ -154,9 +154,9 @@ items:
 
         You can view the cloned repository by opening it in Visual Studio 2019. 
 
-    **To use Visual Studio clone sample repo**
+    **To use Visual Studio 2019 to clone the sample repo**
 
-    1. Open Visual Studio 2019
+    1. Open Visual Studio 2019.
     1. Select **Clone a repository**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-clone-repo.png" alt-text="Clone sample repo for c# Teams app" border="false":::

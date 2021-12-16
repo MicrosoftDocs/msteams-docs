@@ -93,6 +93,7 @@ items:
 
         Output example: 
         `CLI version 2.3.0`
+        
         `Local version 4.0.2`
 
     6. Run the following command to verify the version number of Visual Studio Code:
@@ -103,6 +104,7 @@ items:
 
         Output example:
         `1.28.2`
+        
         `929bacba01ef658b873545e26034d1a8067445e9`
 
     You can use a different version of these applications without any problem.
@@ -157,11 +159,15 @@ items:
 
     ## Download the sample
 
-    You can use the [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) sample to get started. In a terminal window, run the following command to clone the sample repository to your local machine:
+    You can use the [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) sample to get started. 
+    
+    **To use Git Bash to clone the sample repo**
+    
+    - Run the following command in a terminal window to clone the sample repository to your computer:
 
-    ```bash
-    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-    ```
+        ```bash
+        git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+        ```
 
     > [!TIP]
     > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) if you want to modify and check in your changes to your GitHub repo for future reference.
