@@ -7,25 +7,23 @@ ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
-# OneNote Integrations
+# OneNote Integration
 
-The bundle of three plugins allow Moodle users to take advantage of Microsoft OneNote Online.
+OneNote integration helps with access to texts, graphics and audio repositories. The advantages of the bundle of plugins are as follows:
 
-* Includes browsing notebooks, sections, and pages; where students do assignments in OneNote and teachers provide feedback on those assignments in OneNote.
+* Include browsing notebooks, sections, and pages, where students work on assignments and teachers provide feedback on those assignments in OneNote.
+* Combine digital binder for notes, assignments, and feedback for reference and review.
+* Expand drafting capabilities beyond text and links, and extend mobile usage scenarios using digital pens, photo or video media, and co-author with groups.
+* Include submission and feedback page for each assignment under the teacher's account. When such a page is saved within Moodle, a copy of the HTML and any associated pictures are packaged up in a zip file.
 
-* Submission or feedback events trigger OneNote creation with a section for each course the student is enrolled.
+> [!NOTE]
+> Submission or feedback events trigger OneNote creation with a section for each course the student is enrolled.
 
-* Combines a digital binder for notes, assignments, and feedback for reference and review. 
+## See also
 
-* Expands note-taking capabilities beyond just text and links, and extends mobile usage scenarios using digital pens, photo/video media, and coauthoring with groups.
-
-* Includes a submission and feedback page for each assignment under the teacher's account.When such a page is saved within Moodle, a copy of the HTML and any associated pictures are packaged up in a zip file.
-
-## See also:
-
-* [OneNote Core: Moodle plugins directory: Microsoft OneNote](https://moodle.org/plugins/local_onenote)
-* [OneNote Submissions: Moodle plugins directory: OneNote submissions](https://moodle.org/plugins/assignsubmission_onenote)
-* [OneNote Feedback: Moodle plugins directory: OneNote Feedback](https://moodle.org/plugins/assignfeedback_onenote)
+* [Moodle plugins with OneNote Core](https://moodle.org/plugins/local_onenote)
+* [Moodle plugins with OneNote Submissions](https://moodle.org/plugins/assignsubmission_onenote)
+* [Moodle plugins with OneNote Feedback](https://moodle.org/plugins/assignfeedback_onenote)
 
 ## Next step
 
