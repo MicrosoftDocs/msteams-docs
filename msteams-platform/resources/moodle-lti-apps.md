@@ -46,7 +46,7 @@ The Microsoft Teams Meetings LTI app will help educators and students easily to 
 
 ## See also
 
-[Microsoft docs]https://docs.microsoft.com
+[Microsoft docs](https://docs.microsoft.com)
 
 ## Next step
 
