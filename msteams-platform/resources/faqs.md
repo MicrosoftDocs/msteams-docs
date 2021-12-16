@@ -32,7 +32,7 @@ Each Moodle course must have at least one teacher and one Student in Moodle, who
 
 The users have multiple sign-in options from the page. If the users prefer to sign-in exclusively using Microsoft 365 credentials then you will need to enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled,you'll directly see the Microsoft sign-in page. The users can manually sign-in to the Moodle portal by using https://{moodle_url}.site/login/index.php?Noredirect=1 
 
-[Path:](https://{moodle_url}/admin/settings.php?Section=authsettingoidc)
+https://{moodle_url}/admin/settings.php?Section=authsettingoidc
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 1.png" alt-text="SSO":::
 
@@ -140,7 +140,7 @@ Consequently, if the **Client secret** has expired, then you need to generate a 
 
 Administrators may change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance.
 
->[!NOTE]:
+>[!NOTE]
 >If you use Course reset to archive a team by mistake, you can link it back to the previous team.
 
 [Place holder for url]
