@@ -17,10 +17,10 @@ Get answers to some common questions in Moodle learning management system.
 
 <summary><b>What should I do if one or more of the course teams were not created after synchronization?</b></summary>
 
-Each Moodle Course must have at least one teacher and at least one Student in Moodle who can each be matched to a Microsoft 365 AAD UPN account. If the synchronization did not find a match for them, this will prevent the team from being created.
+Each Moodle course must have at least one teacher and one Student in Moodle, who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
 
-> [!IMPORTANT]
-> Every team course instance must have an Owner, and the synchronization sets the teacher as the Owner (which also assumes the teacher has a Microsoft Teams license):<br>
+> [!NOTE]
+> Every team course instance must have an Owner, and the synchronization sets the teacher as the Owner, with assumption that the teacher has a Microsoft Teams license.
 
 <br>
 
@@ -30,11 +30,9 @@ Each Moodle Course must have at least one teacher and at least one Student in Mo
 
 <summary><b>What should we do to remove the Moodle login page when working from Microsoft Teams? Can we force single sign-on (SSO)?</b></summary>
 
-You have multiple sign-in options from the page. If you prefer, users sign-in exclusively using their Microsoft 365 credentials then you will need to enable the “Force redirect” configuration settings for the **auth_oidc plugin**. If it is enabled, the index page will be skipped in favor of the Microsoft sign-in page.
+The users have multiple sign-in options from the page. If the users prefer to sign-in exclusively using Microsoft 365 credentials then you will need to enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled,you'll directly see the Microsoft sign-in page. The users can manually sign-in to the Moodle portal by using https://{moodle_url}.site/login/index.php?Noredirect=1 
 
- Users wanting to manually sign in to the Moodle portal may do so using this special url: https://{moodle_url}.site/login/index.php?Noredirect=1 
-
-[Path:](Url not found) https://{moodle_url}/admin/settings.php?Section=authsettingoidc
+[Path:](https://{moodle_url}/admin/settings.php?Section=authsettingoidc)
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 1.png" alt-text="SSO":::
 
@@ -44,9 +42,12 @@ You have multiple sign-in options from the page. If you prefer, users sign-in ex
 
 <details>
 
-<summary><b>I don’t want all Azure AD users synchronized with the Moodle site. How can I specify which specific users to sync?</b></summary>
+<summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle site. </b></summary>
 
-You may specify which specific users will be synchronized in the configuration options of the **local_o365** plugin, using the **User Creation Restriction** field. The dropdown menu to the left of the filter value offers many options such as Country, Company Name, and Language. We do recommended creating a dynamic Microsoft 365 Group whenever there is the need to filter by multiple profile properties.
+You can specify the users by synchronizing the configuration options of the **local_o365** plugin, using **User Creation Restriction**. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language. 
+
+> [!TIP]
+> Create a dynamic Microsoft 365 Group whenever there is the need to filter by multiple profile properties.
 
 [Place holer for URL]
 
