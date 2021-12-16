@@ -9,19 +9,17 @@ localization_priority: Normal
 
 # In-app purchases
 
-The Microsoft Teams provide APIs you can use to implement the following feature to make money from your Teams apps:
+The Microsoft Teams provide APIs you can use to implement the in-app purchases to make money from your Teams apps.
 
 * **In-app purchases**&nbsp;&nbsp;Whether your app is free or not, you can sell content or new app functionality (such as additional features of the app) from right within the app.
-
------------------Placeholder, if we need to discuss something or scenario that we followed till now before adding this feature--------------------
 
 ## Implement in-app purchases
 
 To offer an in-app purchase experience to the users of your app, ensure your app is built on [Teams client SDK library](https://github.com/OfficeDev/microsoft-teams-library-js)
 
-### Update your app manifest
+### Update manifest
 
-The RSC permissions are added to your app manifest to achieve in-app purchase experience for your users. The app manifest must include the following code snippet:
+Update your Teams app manifest.json file by adding the RSC permissions to achieve in-app purchase experience. It allows your app users to upgrade to a paid version of your app and start using new functionalities. The update for app manifest is as follows::
 
 ```json
 
@@ -36,4 +34,49 @@ The RSC permissions are added to your app manifest to achieve in-app purchase ex
 }
 ```
 
+### Purchase Experience API
+
+You must call `openPurchaseExperience` API from your web app to enable in-app purchase for the app.
+
+Following is an example of calling the API from the app:
+
+```json
+
+
+
+```
+### 
+
+
+
+
+## End-user in-app purchasing experience
+
+The following example shows how users can have an in-app purchasing experience for a Teams app called Polly.
+
+1.) In the Teams store, find and select the Polly app.
+
+2.) In the app details dialog, select **Add to a team**.
+
+    :::image type="content" source="~/assets/images/saas-offer/inapppurchase.png" alt-text="Buying the subscription for the selected app.":::
+
+3.) Polly app is added to a team. Select **Upgrade**.
+
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Buying the subscription for the selected app.":::
+
+4.) Complete the subscription process in the redirected polly website.
+
+
+[!NOTE]
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Preview testing of monetizable apps](/office/dev/store/add-in-submission-guide)
+
+## See also
+
+[Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
+
+[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 
