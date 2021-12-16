@@ -45,7 +45,7 @@ Following is an example of calling the API from the app:
 
 
 ```
-### 
+### Permissions
 
 
 
@@ -57,12 +57,10 @@ The following example shows how users can have an in-app purchasing experience f
 1.) In the Teams store, find and select the Polly app.
 
 2.) In the app details dialog, select **Add to a team**.
-
-    :::image type="content" source="~/assets/images/saas-offer/inapppurchase.png" alt-text="Buying the subscription for the selected app.":::
+![Add to a team](~/assets/images/saas-offer/inapppurchase.png)
 
 3.) Polly app is added to a team. Select **Upgrade**.
-
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Buying the subscription for the selected app.":::
+![Upgrade](~/assets/images/saas-offer/upgradeapp.png)
 
 4.) Complete the subscription process in the redirected polly website.
 
