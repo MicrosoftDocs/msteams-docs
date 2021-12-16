@@ -54,3 +54,7 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 
 > [!div class="nextstepaction"]
 > [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
+
+## See also
+
+* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
