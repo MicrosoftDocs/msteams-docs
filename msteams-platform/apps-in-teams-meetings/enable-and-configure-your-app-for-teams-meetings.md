@@ -59,19 +59,19 @@ The `context` property determines what must be shown when a user invokes an app 
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
 | **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile or Teams room clients. |
 
-After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
+After you enable your app for Teams meetings, you must configure your app for a pre-meeting, in-meeting, and post-meeting experience.
 
 ## Configure your app for meeting scenarios
 
 Teams meetings provide a collaborative experience for your organization. Configure your app for different meeting scenarios and to enhance the meeting experience. Now you can identify what actions can be taken in the following meeting scenarios:
 
-* [Before a meeting](#before-a-meeting)
-* [During a meeting](#during-a-meeting)
-* [After a meeting](#after-a-meeting)
+* [Pre-meeting](#before-a-meeting)
+* [In-meeting](#during-a-meeting)
+* [Post-meeting](#after-a-meeting)
 
-### Before a meeting
+### Pre-meeting
 
-Before a meeting, users can add tabs, bots, and messaging extensions. Users with organizer and presenter roles can add tabs to a meeting.
+In a pre-meeting app experience, users can add tabs, bots, and messaging extensions. Users with organizer and presenter roles can add tabs to a meeting.
 
 **To add a tab to a meeting**
 
@@ -97,9 +97,9 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
 > * Role assignments can be changed while a meeting is in progress. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-### During a meeting
+### In-meeting
 
-During a meeting, you can use the `meetingSidePanel` or the in-meeting dialog box to build unique experiences for your apps.
+In an in-meeting experience, you can use the `meetingSidePanel` or the in-meeting dialog box to build unique experiences for your apps.
 
 #### Meeting SidePanel
 
@@ -122,9 +122,9 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-### After a meeting
+### Post-meeting
 
-The configurations of after and [before meetings](#before-a-meeting) are the same.
+The configurations of post and [pre-meetings](#before-a-meeting) are the same.
 
 ## Code sample
 
