@@ -104,7 +104,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
 
 | Field | Value |
-| ----- | ----- |
+| -------- | -------- |
 | **Admin consent display name** | Teams can access the user’s profile |
 | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
 | **User consent display name** | Teams can access your user profile and make requests on your behalf |
@@ -193,7 +193,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
     > The **Name** is referred to the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
 
 | Field | Value or description |
-| ----- | ----- |
+| ----- | ---------- |
 | Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
 | Service Provider | Select **Azure Active Directory V2**. |
 | Client id | Saved previously as your **Microsoft App ID**. |
