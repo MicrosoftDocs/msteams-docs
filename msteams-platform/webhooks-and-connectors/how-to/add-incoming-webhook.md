@@ -1,11 +1,11 @@
 ---
 title: Create an Incoming Webhook
-author: laujan
+author: v-rpatkur
 description: describes how to add Incoming Webhook to Teams app and post external requests to Teams with incoming webhooks
 keywords: teams tabs outgoing webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.author: lajanuar
+ms.author: surbhigupta
 ---
 
 # Create Incoming Webhook
@@ -60,9 +60,7 @@ The webhook is available in the Teams channel.
 
 **To remove an Incoming Webhook from a Teams channel**
 
-1. Go to the channel.
-1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
-1. Select **Connectors** from the dropdown menu.
+1. Go to the channel > &#8226;&#8226;&#8226; **More options** > **Connectors**
 1. On the left, under **Manage**, select **Configured**.
 1. Select the **<*1*> Configured** to see a list of your current connectors:
 
