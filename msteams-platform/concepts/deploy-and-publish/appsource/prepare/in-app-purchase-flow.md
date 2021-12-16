@@ -54,15 +54,17 @@ Following is an example of calling the API from the app:
 
 The following example shows how users can have an in-app purchasing experience for a Teams app called Polly.
 
-1.) In the Teams store, find and select the Polly app.
+1. In the Teams store, find and select the Polly app.
 
-2.) In the app details dialog, select **Add to a team**.
-![Add to a team](~/assets/images/saas-offer/inapppurchase.png)
+1. In the app details dialog, select **Add to a team**.
 
-3.) Polly app is added to a team. Select **Upgrade**.
-![Upgrade](~/assets/images/saas-offer/upgradeapp.png)
+    ![Add to a team](~/assets/images/saas-offer/inapppurchase.png)
 
-4.) Complete the subscription process in the redirected polly website.
+1. Polly app is added to a team. Select **Upgrade**.
+
+    ![Upgrade](~/assets/images/saas-offer/upgradeapp.png)
+
+1. Complete the subscription process in the redirected polly website.
 
 
 [!NOTE]

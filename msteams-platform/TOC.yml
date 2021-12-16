@@ -384,7 +384,7 @@
       href: messaging-extensions/how-to/add-authentication.md
     - name: Enable SSO for messaging extensions
       href: messaging-extensions/how-to/enable-SSO-auth-me.md  
-- name: Utilize Teams data with Microsoft Graph
+- name: Utilize Teams data with Microsoft Graphconcepts/deploy-and-publish/appsource/prepare/monetize-overview.md
   items:
   - name: Overview
     href: https://docs.microsoft.com/graph/teams-concept-overview
@@ -410,6 +410,12 @@
     href: m365-apps/extend-m365-teams-personal-tab.md
   - name: Enable a Teams messaging extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
+- name: Monetization of your app
+  items:
+  - name: Overview
+    href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+  - name: In-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
 - name: Test your app
   items:
   - name: Overview
