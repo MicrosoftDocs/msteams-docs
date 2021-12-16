@@ -89,7 +89,7 @@ In a pre-meeting app experience, users can add tabs, bots, and messaging extensi
 
 **To add a bot to a meeting**
 
-In a meeting chat, enter the **@** key and select **Get bots**.
+In a meeting chat, @mention and select **Get bots**.
 
 > [!NOTE]
 > * The content bubble posts an Adaptive Card or a card simultaneously in the meeting chat that users can access. This helps the users when the meeting or the Teams app is minimized.
@@ -110,7 +110,7 @@ To use the `userContext` API to route requests, see [Teams SDK](../tabs/how-to/a
 Messaging extension works as expected when a user is in an in-meeting view. The user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
 
 > [!NOTE]
-> Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
+> Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to access the side panel.
 
 #### In-meeting dialog box
 
@@ -124,7 +124,7 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 ### Post-meeting
 
-The configurations of post and [Pre-meeting](#pre-meeting) are the same.
+The configurations of post and [pre-meeting](#pre-meeting) are the same.
 
 ## Code sample
 
