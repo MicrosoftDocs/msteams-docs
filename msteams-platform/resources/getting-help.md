@@ -9,27 +9,27 @@ author: v-rpatkur
 
 # Getting Help
 
-Microsoft Teams community of developers use Stack Overflow to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use one of the following contacts or sites, depending on the type of support required to submit your queries, doubts, or clarifications. You can also get product-specific information, such as issues, limitations, and general questions about Moodle LMS:
+Microsoft Teams community of developers use Stack Overflow to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use one of the following contacts or sites, depending on the type of support required to submit your queries, doubts, or clarifications. The following table provides product-specific information, such as issues, limitations, and general questions about Moodle LMS:
 
 |Support type| contact|
 |------------|--------|
-| Microsoft 365 Plugins Directory | https://moodle.org/plugins/?q=set:microsoft-365|
+| Microsoft 365 plugins Directory | https://moodle.org/plugins/?q=set:microsoft-365|
 | Reporting issues related to Microsoft 365 plugins| https://github.com/enovation/moodle-atto_teamsmeeting/issues| 
-| Partner apps| Partner apps are supported by the authoring agencies. See the application description page in the marketplace for details on how to get help with apps published there|
-| mConnect: customer support| mConnect is supported by a Microsoft Partner, Skooler. An optional enterprise SLA can be purchased to extend support options. Reach out for assistance by emailing: moodle.support@skooler.com|
-| mConnect: Installation Documentation| https://skooler.com/mconnect/how-to/|
+| Partner apps| Partner apps are supported by the authoring agencies. See the application description page in the marketplace for details on how to get help with publishing apps|
+| mConnect: customer support| mConnect is supported by Skooler, a Microsoft partner. An optional enterprise SLA can be purchased to extend support options. For further assistance, email at moodle.support@skooler.com|
+| mConnect: Installation Documentation| For more information on installation, see: https://skooler.com/mconnect/how-to/|
    
-## Getting help: recommended email or GitHub issue template
+## GitHub issue
+
+The following table provides the common GitHub issues and the templates used for the same:
 
 |Issue| Template|
 |-----|---------|
-| Issue category| <clarify which plugin and/or feature is impacted>|
-| Issue description| <explain the problem, issue, and/or error messages observed (with date and times) and the impact to your organization. Be sure to clarify the desired outcome>|
-| Contact details| <include contact details of someone who can work with support to resolve the issue, which may require screen sharing>|
-| Priority| <priority is based on organizational impact – select either P1, P2, or P3 based on the impact to your organization and the number of users who are blocked>|
+| Issue category| Clarify the plugins and impacted features|
+| Issue description| Explain the problem, issue, and error messages observed with date and time, and the impact to your organization. Ensure to clarify the desired outcome|
+| Contact details| Include contact details of someone who can work with support to resolve the issue, which can require screen sharing|
+| Priority| Select P1, P2, or P3 to confirm the impact to your organization and the number of users who are blocked. The priority is based on organizational impact|
 
 ## Video Training
 
-[video](https://www.youtube.com/watch?v=pYSm935CB_I&list=PLwy6L92VmGgnykLBOhIsp1g6i0kijVA2n&t=4s)
-
-
+For more information, see [SSO with OpenID](https://www.youtube.com/watch?v=pYSm935CB_I&list=PLwy6L92VmGgnykLBOhIsp1g6i0kijVA2n&t=4s)
