@@ -75,10 +75,12 @@ items:
     
         Visual Studio 2019 is installed, but the changes are available after you close Visual Studio 2019. It's required as Visual Studio 2019 must restart after the installing the extension.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/toolkit-installed.png" alt-text="Image shows installation done for Teams Toolkit":::
-
     1. Select **Close**.
+    
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/toolkit-installed.png" alt-text="Image shows installation done for Teams Toolkit":::
+    
     1. Close Visual Studio 2019.
+        
         The VSIX installer opens with instructions for installing the extension.
 
     1. Follow the instructions of VSIX installer to complete the installation of the toolkit.
