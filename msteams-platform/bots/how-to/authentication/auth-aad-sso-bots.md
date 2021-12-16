@@ -382,6 +382,7 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 Follow [Step-by-step guide](../../../sbs-bots-with-sso.yml) to authenticate bots.
 
 ## Code sample
+
 |**Sample name** | **Description** |**.NET** | 
 |----------------|-----------------|--------------|
 |Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|

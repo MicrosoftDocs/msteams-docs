@@ -242,8 +242,6 @@
       href: bots/how-to/authentication/add-authentication.md
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: Step-by-step guide for bots with SSO
-      href: sbs-bots-with-sso.yml
 
   - name: Bot conversations
     items:

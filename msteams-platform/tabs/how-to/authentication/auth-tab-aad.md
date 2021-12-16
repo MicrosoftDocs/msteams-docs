@@ -29,7 +29,7 @@ The applications must be registered. The identity providers supporting OAuth 2.0
 
 1. Go to [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 1. Select **New Registration**.
-1. Provide user-facing display name for this application. The name can be changed later.
+1. Enter **Name** for the application. The name can be changed later.
 1. Find **Redirect URIs** section for the app.
 1. Select **Add a Redirect URI**, you’ll be directed to Platform Configurations.
 1. Now, select **Add a platform**.
@@ -39,7 +39,7 @@ The applications must be registered. The identity providers supporting OAuth 2.0
     Redirect URL: `https://<hostname>/bot-auth/simple-start`
 
     > [!NOTE]
-    > Replace `<hostname>` with your actual host. This `<hostname>` might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`.
+    > Replace `<hostname>` with your actual host. This `<hostname>` might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `https://abcd1234.ngrok.io`.
 
 1. Select **Configure**.
 
