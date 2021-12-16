@@ -34,16 +34,15 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)<br> Install one of the two workloads:<br> • **ASP.NET and web development** • **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
-    | &nbsp; | [Git](https://git-scm.com/downloads) | Use Git to use the Sample C# app repo from GitHub. |
+    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)<br> Install one of the two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
+    | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample C# app repo from GitHub. |
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and messaging extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
-    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Use Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     |
-
 
     ## Verify git installation
 
