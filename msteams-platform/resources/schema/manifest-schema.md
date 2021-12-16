@@ -626,7 +626,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only with SharePoint tabs and store apps.
+> `isFullScreen` works only for apps published to your organization.
 
 ## activities
 
@@ -750,7 +750,7 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Maximum size** - 128 characters
 
-The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockUntilAdminAction` property is set to **true**, the `publisherDocsUrl` provides HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.
+The `publisherDocsUrl` is a HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default. It can also be used to provide any instructions or information about the app which can be useful for the tenant admin.
 
 ## subscriptionOffer
 
