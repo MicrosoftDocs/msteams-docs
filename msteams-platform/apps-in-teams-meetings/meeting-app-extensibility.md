@@ -159,7 +159,7 @@ The overall user experience in standard channel meetings will be same as in sche
 | Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
-> * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
+> * On mobile, anonymous users will not be able to access apps in standard channel meetings.
 > * Apps on the channel will not be available in the meeting by default.
 
 ## Meeting app permissions
