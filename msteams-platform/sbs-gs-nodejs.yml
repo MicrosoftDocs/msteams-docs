@@ -41,6 +41,7 @@ items:
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
     | &nbsp; | [Install Git](https://git-scm.com/downloads) | Sample Node.js app repo from GitHub |
     | &nbsp; |  [gulp](https://gulpjs.com/docs/en/getting-started/quick-start) | Open-source JavaScript toolkit. Install version 4.0.0 or later. |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Use Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. | 
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Browser tools for tabs development with JavaScript. |
@@ -52,34 +53,53 @@ items:
 
     ## Verify version numbers for installed tools
 
-    Verify that the tools are available by running the following in a terminal window:
+    Use the following commands to verify that the installed versions for the tools are as needed.
 
     > [!NOTE]
     > Use the terminal window that you are most comfortable with on your platform. These examples use Git Bash (which is included in Git installation), but these scripts will run on most platforms.
 
-    ```bash
-    $ git --version
-    git version 2.19.0.windows.1
+    To verify the version numbers of tools installed:
 
-    $ node -v
-    v8.9.3
+    1. Open a terminal window. 
+    2. Run the following command to verify the `git` version installed on your machine:
 
-    $ npm -v
-    5.5.1
+        ```bash
+        $ git --version
+        git version 2.19.0.windows.1
+        ```
 
-    $ gulp -v
-    CLI version 2.3.0
-    Local version 4.0.2
-    ```
+    3. Run the following command to verify the `node.js` version:
+        
+        ```bash
+        $ node -v
+        v8.9.3
+        ```
+
+    4. Verify the version number of `npm`:
+
+        ```bash
+        $ npm -v
+        5.5.1
+        ```
+
+    5. Verify the version number of `gulp`:
+        
+        ```bash
+        $ gulp -v
+        CLI version 2.3.0
+        Local version 4.0.2
+        ```
+
+    6. Run the following command to verify the version number of Visual Studio Code:
+
+        ```bash
+        code --version
+        1.28.2
+        929bacba01ef658b873545e26034d1a8067445e9
+        ```
+
     You can use a different version of these applications without any problem.
 
-    If you have installed Visual Studio Code, you can verify the installation by running:
-
-    ```bash
-    code --version
-    1.28.2
-    929bacba01ef658b873545e26034d1a8067445e9
-    ```
 
     ## Set up your Teams development tenant
 
