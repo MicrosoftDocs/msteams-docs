@@ -19,8 +19,6 @@ Microsoft Block enhances user experience by providing UI to modify Microsoft 365
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 1.png" alt-text="microsoft block":::
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 2.png" alt-text="outlook calender sync settings":::
-
 ## See also
 
 [Moodle plugins with Microsoft Block](https://moodle.org/plugins/block_microsoft)

@@ -38,7 +38,7 @@ Partner apps for Moodle are examples of complete apps for Microsoft Teams that a
 
 The following scenarios provide examples of accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
 
-* **Facilitate hybrid remote meetings** : With Teams meetings and extensibility options, instructors can present in-person and remotely to students seamlessly. All students must have access to shared views, apps, and polls. For enhanced follow-up task, you must include the option for multi-language transcription and audio or video course recordings. Teams and Moodle are game changers, working together to share roosters, activities, and tasks. For more information, see (place holder for link).
+* **Facilitate hybrid remote meetings** : With Teams meetings and extensibility options, instructors can present in-person and remotely to students seamlessly. All students must have access to shared views, apps, and polls. For enhanced follow-up task, you must include the option for multi-language transcription and audio or video course recordings. Teams and Moodle are game changers, working together to share roosters, activities, and tasks.
 
 * **Personalize meeting panels and apps** : You can use Teams Graph API endpoints to create unique collaborative learning experiences. For special initiatives in school such as, hackathon, the users can interview all freshman students by categorizing submissions using custom polls and share quizzes directly in Teams while pushing updates to the Moodle portal asynchronously.
 
