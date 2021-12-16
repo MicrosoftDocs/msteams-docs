@@ -47,7 +47,7 @@ The users have multiple sign-in options from the page. If the users prefer to si
 You can specify the users by synchronizing the configuration options of the **local_o365** plugin, using **User Creation Restriction**. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language. 
 
 > [!TIP]
-> Create a dynamic Microsoft 365 Group whenever there is the need to filter by multiple profile properties.
+> Create a dynamic Microsoft 365 Group to enable the **filter** option with multiple profile properties.
 
 [Place holer for URL]
 
@@ -63,7 +63,15 @@ You can specify the users by synchronizing the configuration options of the **lo
 
 <summary><b>We would like our faculty to be able to synchronize courses to Microsoft Teams? Are Moodle Administrators the only ones who can control synchronization of courses?</b></summary>
 
-By default only Moodle Administrators can configure synchronization. However, if the “Allow configure course sync in course” is enabled (see path and screenshot in enabled state below), then the Team Owner can control if a course is synchronized to Teams or not (by default this is the course teacher). Please Refer to the Microsoft 365 Block within the Moodle Course interface (shown in second screenshot below). Important: The block will only show the configuration option to individuals with the appropriate owner permissions.
+Currently, by default only Moodle Administrators can configure synchronization. The Team Owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled.
+
+> [!NOTE]
+> In this case, the team owner is the course teacher.
+
+For more information,see Microsoft 365 Block within the Moodle Course interface.
+
+>[!NOTE]
+>The block will only show the configuration option to individuals with the appropriate owner permissions.
 
 [Place holder for url]
 
@@ -78,16 +86,16 @@ By default only Moodle Administrators can configure synchronization. However, if
 
 <details>
 
-<summary><b>We have followed the documentation but User accounts are still not syncing between AAD and Moodle. What should we do?</b></summary>
+<summary><b>We have followed the documentation but the user accounts fail to sync AAD and Moodle. What should we do?</b></summary>
 
-Validate the following dependencies in the checklist shown below. In most cases, the issue will be resolved before needing a Delta Token Clean up as a final troubleshooting step. Therefore, we recommend that you perform these actions in the order shown below: 
+In most cases, the issue will be resolved before teh users need **Delta token clean up** as a final troubleshooting step. The following table provides the actions and dependencies to be performed and validated:
 
-| Action| Description| Reference|
+| Dependency | Action | Reference|
 |-------|------------|----------|
-| Stable Version| Verify that your version of Moodle is listed as a 'stable' version by Moodle| [version support](https://docs.moodle.org/dev/Releases#Version_support)|
+| Stable version| Verify that the version of Moodle is listed as a **stable**| [Version support](https://docs.moodle.org/dev/Releases#Version_support)|
 |Permissions| Verify that the Azure application has the necessary permissions to run the sync|[Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions)|
-| Full Sync| Verify that **"Perform a full sync each run"** is enabled, and review the **Task Logs** for "Sync Users with Azure AD"| Enable Full Sync: {moodle_url}\local_o365\task\usersync </br>Check Task Logs: {moodleurl}/admin/tasklogs.php |
-| Token Refresh|Clean the User Sync Delta Token in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken|
+| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**| Enable full sync: {moodle_url}\local_o365\task\usersync </br>Check task logs: {moodleurl}/admin/tasklogs.php |
+| Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken|
 
 <br>
 
@@ -97,12 +105,12 @@ Validate the following dependencies in the checklist shown below. In most cases,
 
 <summary><b>One or more users are unable to sign-in using their Microsoft 365 credentials, although most users can sign-in without an issue. What would cause this inconsistency?</b></summary>
 
-Inconsistencies with Users being able to sign-in may be related to the User mapping operation during synchronization. Follow the listed steps to resolve this problem:
+Inconsistencies with users being able to sign-in can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
-**OpenID?** Validate that the Moodle User authentication type is OpenID 
-**User Name?** Validate that the Moodle username matches the AAD username
-**Token Issue?** Clean up token issues via {moodle_url}/auth/oidc/cleanupoidctokens.php and retry
-**Permissions?** Validate that Users have permissions to access the Azure application  
+* Validate the Moodle user authentication type is **OpenID**
+* Validate the Moodle **User Name** matches the AAD username
+* Clean up **Token Issue** through [place holder for url] and retry
+* Validate the users have **Permissions** to access the Azure application
 
 <br>
 
@@ -110,17 +118,17 @@ Inconsistencies with Users being able to sign-in may be related to the User mapp
 
 <details>
 
-<summary><b>All Users are unable to sign-in using their Microsoft 365 credentials, although they could sign-in before. What can we do to resolve this?</b></summary>
+<summary><b>All users are unable to re-sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
 
-If Users who were able to sign in start to report issues, please validate that the Application Client Secret has not expired. The error message will appear as shown in image:
+If users who were able to sign in start to report the issue, validate the Application **Client secret** has not expired. The following image shows the error message:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 6.png" alt-text="report issue":::
 
-This will also be obvious in the Azure portal as shown the image:
+The following image shows the error in Azure portal:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 7.png" alt-text="azure portal":::
 
-Consequently, if the Client Secret has expired, then you need to generate a new Client Secret, and update the configuration found on this page: {moodle_url}/admin/settings.php?Section=authsettingoidc. Users should be able to sign in again after the Client Secret has been updated, but this may take up to 24 hours to reprovision
+Consequently, if the **Client secret** has expired, then you need to generate a new Client secret, and update the configuration found on this page:[Place holder for url]. The users can  sign in again after the Client secret has been updated, which may take up to 24 hours to re-provision.
 
 <br>
 
@@ -128,9 +136,12 @@ Consequently, if the Client Secret has expired, then you need to generate a new 
 
 <details>
 
-<summary><b>How to we change the teams instance that is linked to a course?</b></summary>
+<summary><b>How to change the teams instance that is linked to a course?</b></summary>
 
-Administrators may change the teams instance associated with a course via the **Manage Teams Connections** page (path and screenshot shown below). Select on the **Connect** link on the page next to the course you wish to change, and then select a teams instance. Note: This is especially helpful if you have archived a team by mistake (using Course Reset) and want to link it back to the previous team.
+Administrators may change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance.
+
+>[!NOTE]:
+>If you use Course reset to archive a team by mistake, you can link it back to the previous team.
 
 [Place holder for url]
 
@@ -144,20 +155,24 @@ Administrators may change the teams instance associated with a course via the **
 
 <summary><b>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b></summary>
 
-This may be due to the icon reference being missing in the **Toolbar config**. After installing the plugin, please update the **Toolbar config** line to include **teams meeting** which will display the Teams icon within the Atto editor. 
+The user can face the issue if the icon reference is missing in the **Toolbar config**. which will display the Teams icon within the Atto editor. 
 
-*Toolbar icon shown here after Toolbar config adjustment:*
+* Install the plugin
+* Update **Toolbar config** with **teams meeting**
+
+The following image shows Toolbar icon after Toolbar config adjustment:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 9.png" alt-text="tool bar":::
 
 [Place holder for url]
 
-Notice that we have added teams meeting to the right of the links icons:
+>[!NOTE]
+> Add teams meeting to the right of the links icons.
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 10.png" alt-text="links icon":::
 
-For more information regarding editing the Atto toolbar, see: 
-* [Atto editor - MoodleDocs](https://docs.moodle.org/311/en/Atto_editor)[]
+For more information on editing Atto toolbar, see: 
+* [Atto editor - MoodleDocs](https://docs.moodle.org/311/en/Atto_editor)
 * [Icon Mapping](https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201)
 
 <br>
@@ -166,10 +181,10 @@ For more information regarding editing the Atto toolbar, see:
 
 <details>
 
-<summary><b>Do meetings that I schedule through this integration appear in my Outlook or Teams calendars? and Do they expire after some specific period of time?</b></summary>
+<summary><b>Do the meetings scheduled through integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
 
-Meetings scheduled through the app do not appear in the scheduler’s Outlook or Teams calendar as they behave similar to Channel Meetings. All the members in the course channel can attend directly from the embedded channel link, but they will not see the meeting on their calendar. For more information, see [channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
+The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend directly from the embedded channel link. For more information, see [channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you may open the invite and manually add participant names to the Required or Optional lines of the meeting invitation, which will in turn display the remote meeting on their calendars. 
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars.
 
-Meetings scheduled through the application will follow the standard timelines based on the date(s) you enter when the meeting is created. For more information, see [meetings](/microsoftteams/limits-specifications-teams)
+The standard timelines based on the date(s) the user enters when the meeting is created is followed. For more information, see [meetings](/microsoftteams/limits-specifications-teams)
