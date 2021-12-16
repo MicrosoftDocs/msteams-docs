@@ -186,8 +186,7 @@ The following image illustrates member permissions setting:
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
 
-The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meetin
-g:
+The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
 * **Organizer**: Organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
 * **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
