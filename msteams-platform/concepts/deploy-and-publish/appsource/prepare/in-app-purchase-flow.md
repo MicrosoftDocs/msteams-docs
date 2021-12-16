@@ -64,7 +64,7 @@ The following example shows how users can have an in-app purchasing experience f
 
     ![Upgrade](~/assets/images/saas-offer/upgradeapp.png)
 
-1. Complete the subscription process in the redirected polly website.
+1. Complete the payment and subscription process in the redirected polly website.
 
 
 [!NOTE]
