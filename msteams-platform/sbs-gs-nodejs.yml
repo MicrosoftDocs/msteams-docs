@@ -39,7 +39,7 @@ items:
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-    | &nbsp; | [Git](https://git-scm.com/downloads) | You need use Git to use the Sample Node.js app repo from GitHub. |
+    | &nbsp; | [Git](https://git-scm.com/downloads) | Use Git to use the Sample Node.js app repo from GitHub. |
     | &nbsp; |  [gulp](https://gulpjs.com/docs/en/getting-started/quick-start) | Open-source JavaScript toolkit. Install version 4.0.0 or later. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Use Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. | 
     | **Optional** | &nbsp; | &nbsp; |
