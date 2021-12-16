@@ -102,12 +102,15 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 1. In the **Who can consent?**, enter **Admins and users**.
 1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
-    * **Admin consent display name**: Teams can access the user’s profile.
-    * **Admin consent description**: Teams can call the app’s web APIs as the current user.
-    * **User consent display name**: Teams can access your profile and make requests on your behalf.
-    * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
 
-    ![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
+| Field | Value |
+| ----- | ----- |
+| **Admin consent display name** | Teams can access the user’s profile |
+| **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
+| **User consent display name** | Teams can access your user profile and make requests on your behalf |
+| **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
+
+![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
 1. Ensure that the state is set to **Enabled**.
 
@@ -189,15 +192,17 @@ The following steps will guide you to update the Azure portal with the OAuth con
     >[!NOTE]
     > The **Name** is referred to the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
 
-    * From the **Service Provider** drop-down, select **Azure Active Directory v2**.
-    * Enter the client credentials, such as **Client Id** and **Client secret** for the AAD application.
-    * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this AAD application is configured for SSO.
-    * In the **Tenant ID**, enter *common*.
-    * Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
-    * Select **Save**.
-    * Select **Apply**.
+| Field | Value or description |
+| ----- | ----- |
+| Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
+| Service Provider | Select **Azure Active Directory V2**. |
+| Client id | Saved previously as your **Microsoft App ID**. |
+| Client secret | Saved previously as **Value** of the client secret ID. |
+| Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
+| Tenant ID | Enter **common**. |
+| Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
    
-    ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
+![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### Update your Teams application manifest for your bot
 
