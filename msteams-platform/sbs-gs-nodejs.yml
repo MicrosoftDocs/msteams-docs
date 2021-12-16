@@ -65,38 +65,45 @@ items:
 
         ```bash
         $ git --version
-        git version 2.19.0.windows.1
         ```
 
+        Output example: `git version 2.19.0.windows.1`
+        
     3. Run the following command to verify the `node.js` version:
         
         ```bash
         $ node -v
-        v8.9.3
         ```
+
+        Output example: `v8.9.3`
 
     4. Verify the version number of `npm`:
 
         ```bash
         $ npm -v
-        5.5.1
         ```
+
+        Output example: `5.5.1`
 
     5. Verify the version number of `gulp`:
         
         ```bash
         $ gulp -v
-        CLI version 2.3.0
-        Local version 4.0.2
         ```
+
+        Output example: 
+        `CLI version 2.3.0`
+        `Local version 4.0.2`
 
     6. Run the following command to verify the version number of Visual Studio Code:
 
         ```bash
         code --version
-        1.28.2
-        929bacba01ef658b873545e26034d1a8067445e9
         ```
+
+        Output example:
+        `1.28.2`
+        `929bacba01ef658b873545e26034d1a8067445e9`
 
     You can use a different version of these applications without any problem.
 
