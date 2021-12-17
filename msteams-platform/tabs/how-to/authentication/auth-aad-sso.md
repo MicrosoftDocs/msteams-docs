@@ -83,8 +83,8 @@ Complete the following steps to develop an SSO Teams tab:
     * Enter a **Name** for your app.
     * Select the **Supported account types**, such as **Single tenant** or **Multitenant**.
     * Leave**Redirect URI** empty.
+    * Select **Register**.
 
-1. Select **Register**.
 1. Go to overview page. 
 
    > [!Tip]
@@ -125,13 +125,14 @@ Complete the following steps to develop an SSO Teams tab:
 1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 1. Enter each of the following client IDs and select the authorized scopes:
-  * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
-     ![ID one](~/assets/images/authentication/add-client-application.png)
+   * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
- * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+        ![ID one](~/assets/images/authentication/add-client-application.png)
 
-     ![ID two](~/assets/images/authentication/add-client-application21.png)
+   * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+        ![ID two](~/assets/images/authentication/add-client-application21.png)
 
 1. Go to **API Permissions**.
 

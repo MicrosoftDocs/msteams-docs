@@ -98,14 +98,16 @@ The following steps will help you to create and register your application in AAD
 
 1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
+
 1. Enter each of the following client IDs and select the authorized scopes:
-  * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
-     ![ID one](~/assets/images/authentication/add-client-application.png)
+   * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
- * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+        ![ID one](~/assets/images/authentication/add-client-application.png)
 
-     ![ID two](~/assets/images/authentication/add-client-application21.png)
+   * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+        ![ID two](~/assets/images/authentication/add-client-application21.png)
 
 1. Go to **API Permissions**.
 
