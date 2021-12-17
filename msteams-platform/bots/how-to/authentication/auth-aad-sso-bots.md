@@ -71,7 +71,28 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * Leave the **Redirect URI** empty.
     * Select **Register**.
 
-1. Go to overview page.
+   You'll be directed to overview page.
+
+1. Go to **Certificates & secrets**.
+1. In the **Client secrets** section, select **New client secret**.
+
+   ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
+
+   The **Add a client secret** window appears.  
+
+1. Enter **Description**.
+
+1. Select **Add**.
+
+   ![Add client secret to app](~/assets/images/Tab-ME-SSO/add-client-id.png)
+
+1. In the **Value** column, select **Copy to clipboard**.
+
+   ![Value of client secret](~/assets/images/Tab-ME-SSO/client-ids.png)
+
+   > [!TIP]
+   > Save the **Client secrets** value or app password for future reference.
+
 1. Under **Manage**, go to **Expose an API**
 
 

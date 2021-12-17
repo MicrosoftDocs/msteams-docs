@@ -64,11 +64,42 @@ Before you work with adding authentication to your Teams bot, you must have an u
 1. If the validation passes, select **Create**.
    It takes a few moments for your bot service to be provisioned.
 
-1. Select **Go to resource**. 
+1. Select **Go to resource**.
 
    ![Deploy App1](~/assets/images/Tab-ME-SSO/go-to-resource.png)
 
-Your Azure bot is created.
+ Your Azure bot is created.
+
+ Perform the following steps if you've created a new **Microsoft App ID**:
+
+1. In the left panel, select **Configuration**.
+
+   > [!TIP]
+   > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+1. Next to **Microsoft App ID**, select **Manage**.
+
+   ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage1.png)
+
+1. Go to **Certificates & secrets**.
+1. In the **Client secrets** section, select **New client secret**.
+
+   ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
+
+ The **Add a client secret** window appears.  
+
+1. Enter **Description**.
+
+1. Select **Add**.
+
+   ![Add client secret to app](~/assets/images/Tab-ME-SSO/add-client-id.png)
+
+1. In the **Value** column, select **Copy to clipboard**.
+
+   ![Value of client secret](~/assets/images/Tab-ME-SSO/client-ids.png)
+
+   > [!TIP]
+   > Save the **Client secrets** value or app password for future reference.
 
 ## Create the service plan
 
@@ -82,13 +113,16 @@ Your Azure bot is created.
      | -------- | -------- |
      | **Subscription** | You can use an existing subscription. |
      | **Resource Group** | Select the group you created earlier. |
-     | **Name** | Enter the name for the service plan. An example could be *TeamsServicePlan*. Remember that the name must be unique, within the group. |
+     | **Name** | Enter the name for the service plan. For example, *TeamsServicePlan*. Remember that the name must be unique, within the group. |
      |**Operating System** | Select **Windows** or your applicable OS. |
      | **Region** | Select **West US** or a region close to your applications. |
      | **Pricing Tier** | Make sure that **Standard S1** is selected. This should be the default value. |
 
-1. Select the **Review and create** button. You will see a banner that reads *Validation passed*.
-1. Select **Create**. It will take a few minutes to create the app service plan. The plan will be listed in the resource group.
+1. Select the **Review + create**.
+1. If the Validation passes, select **Create**.
+
+   > [!Note]
+   > It will take a few minutes to create the app service plan. The plan will be listed in the resource group.
 
 ## Create the identity provider
 
@@ -97,32 +131,49 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
 **To create the identity provider**
 
 1. In the [**Azure portal**][azure-portal], on the left pane, select **Azure Active Directory**.
+
     > [!TIP]
     > You must create and register this AAD resource in a tenant.
     > You can consent to delegate permissions requested by an application.
     > For instruction on creating a tenant, see [access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+
 1. In the left pane, select **App registrations**.
-1. In the right pane in the upper left, select the **New registration** tab.
-1. You will be asked to provide the following information:
-   1. Enter the **Name** for the application. An example could be *BotTeamsIdentity*. Remember that the name must be unique.
-   1. Select the **Supported account types** for your application. Select **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**.
-   1. For the **Redirect URI**:<br/>
-       &#x2713; Select **Web**. <br/>
-       &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
-   1. Select **Register**.
+1. Select your bot in **Owned applications**.
+1. Go to **Authentication**.
+1. In **Platform configurations**, select **Add a platform**.
+1. Select **Web**.
+
+    ![Configure platform1](~/assets/images/authentication/configure-platform1.png)
+
+1. Enter the **Redirect URIs** for your app.
+
+   >[!NOTE]
+   > This URI should be a fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://token.botframework.com/.auth/web/redirect`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+
+1. Enable implicit grant and hybrid flow by selecting the following checkboxes:
+    * **Access tokens**
+    * **ID tokens**
+
+     >[!NOTE]
+     > **Implicit grant** may be required in the AAD application.
+
+1. Select **Configure**.
+
+    ![Configure platform](~/assets/images/authentication/configure-web.png)
 
 1. After it is created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
 
     1. The **Application (client) ID** value. You will use this value later as the *Client ID* when you register this Azure identity application with your bot.
     1. The **Directory (tenant) ID** value. You will also use this value later as the *Tenant ID* to register this Azure identity application with your bot.
 
-1. In the left pane, select **Certificates & secrets** to create a client secret for your application.
+
+1. In the left pane, select **Certificates & secrets**.
 
    1. Under **Client secrets**, select &#x2795; **New client secret**.
    1. Add a description to identify this secret from others that you must create for this app, such as *Bot identity app in Teams*.
    1. Set **Expires** to your selection.
    1. Select **Add**.
-   1. Before leaving this page, **record the secret**. You will use this value later as the _Client secret_ when you register your AAD application with your bot.
+   1. You will use this value later as the _Client secret_ when you register your AAD application with your bot.
 
 ### Configure the identity provider connection and register it with the bot
 
@@ -589,11 +640,10 @@ Within the following dialog, check for the presence of a token in the result fro
 
 ## Code samples
 
-| Sample | BotBuilder version | Demonstrates |
-|:---|:---:|:---|
-| **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] | v4 | OAuthCard support |
-| **Bot authentication** in [js-auth-sample][teams-auth-bot-js] | v4| OAuthCard support  |
-| **Bot authentication** in [py-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
+| Sample | BotBuilder version | Demonstrates | .Net | Node.js | Python |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| **Bot authentication** | v4 | OAuthCard support | [View][teams-auth-bot-cs] | [View][teams-auth-bot-js] | [View][teams-auth-bot-py] |
+
 
 ## See also
 
