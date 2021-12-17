@@ -143,12 +143,12 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * **Access tokens**
     * **ID tokens**
 
-    ![Configure platform](~/assets/images/authentication/configure-web.png)
-
-1. Select **Save** to save the changes.
-
      >[!NOTE]
      > **Implicit grant** may be required in the AAD application.
+
+1. Select **Configure**.
+
+    ![Configure platform](~/assets/images/authentication/configure-web.png)
 
 1. Add necessary **API Permissions**.
     * Select **API permissions** from the left plane.
