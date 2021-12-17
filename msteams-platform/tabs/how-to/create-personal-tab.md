@@ -53,37 +53,37 @@ To create a personal tab with Node.js:
 
 1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
 
-  >  ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-  >  **What is your solution name?**
+    **What is your solution name?**
 
-  >  The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
 
-  >  **Where do you want to place the files?**
+    **Where do you want to place the files?**
 
-  >  You're currently in your project directory. Select **Enter**.
+    You're currently in your project directory. Select **Enter**.
 
-  >  **Title of your Microsoft Teams app project?**
+    **Title of your Microsoft Teams app project?**
 
-  >  The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+    The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
 
-  >  **Your (company) name? (max 32 characters)**
+    **Your (company) name? (max 32 characters)**
 
-  >  Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+    Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
-  >  **Which manifest version would you like to use?**
+    **Which manifest version would you like to use?**
 
-  >  Select the default schema.
+    Select the default schema.
 
-  >  **Quick scaffolding? (Y/n)**
+    **Quick scaffolding? (Y/n)**
 
-  >  The default is yes; enter **n** to enter your Microsoft Partner ID.
+    The default is yes; enter **n** to enter your Microsoft Partner ID.
 
-  >  **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-  >  This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
-  >  **What do you want to add to your project?**
+    **What do you want to add to your project?**
 
     Select **( &ast; ) A Tab**.
 
