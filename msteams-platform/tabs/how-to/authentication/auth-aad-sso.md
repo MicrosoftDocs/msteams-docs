@@ -81,8 +81,9 @@ Complete the following steps to develop an SSO Teams tab:
 
 1. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
-    1. Select the **Supported account types**, select single tenant or multitenant account  type. ¹ 
-        * Leave**Redirect URI** empty.
+    1. Select the **Supported account types**.
+       * select **Single tenant** or **Multitenant**.
+       * Leave**Redirect URI** empty.
     1. Select **Register**.
 1. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later.
 1. Go to **Manage** and select **Expose an API**.
@@ -90,39 +91,63 @@ Complete the following steps to develop an SSO Teams tab:
    > [!NOTE]
    > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`.
+
+   > [!Note]
+   > Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+
 1. Select **Save and Continue**.
-1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
-1. In the **Who can consent?** box, enter **Admins and users**.
-1. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
-    * **Admin consent display name:** Teams can access the user’s profile.
-    * **Admin consent description**: Teams can call the app’s web APIs as the current user.
-    * **User consent display name**: Teams can access your profile and make requests on your behalf.
-    * **User consent description:** Teams can call this app’s APIs with the same rights as you have.
-1. Ensure that **State** is set to **Enabled**.
-1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
-1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+1. Select **Add a scope**.
+1. In the panel that prompts, enter `access_as_user as` the **Scope name**.
+1. In the **Who can consent?**, enter **Admins and users**.
+1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
+
+     | Field | Value |
+     | -------- | -------- |
+     | **Admin consent display name** | Teams can access the user’s profile |
+     | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
+     | **User consent display name** | Teams can access your user profile and make requests on your behalf |
+     | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
+
+1. Ensure that the state is set to **Enabled**.
+1. Select **Add scope** to save the details.
+
+     ![Admin and user](~/assets/images/authentication/add-a-scope.png)
+
+
+     > [!Note]
+     > The **Scope name** must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
+1. Select **Add a client application**.
+1. Enter each of the following client IDs and select the authorized scopes:
+     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+
+         ![ID one](~/assets/images/authentication/add-client-application.png)
+
+     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+         ![ID two](~/assets/images/authentication/add-client-application21.png)
+
 1. Go to **API Permissions**.
 1. Select **Add a permission**.
 1. Select **Microsoft Graph**.
 1. Select **Delegated permissions**
-1. Now, add the following permissions from Graph API:
-    * User enabled by default
+1. Add the following permissions from Graph API:
+    * User (enabled by default)
     * email
     * offline_access
     * OpenId
     * profile
 
-
-###### Enter a redirect URI:
+###### To enter a redirect URI:
 
 1. Go to **Authentication**.
     Users must provide consent for the first time when they use an app.
     
     > [!IMPORTANT]
     > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
+
 1. Select **Add a platform**.
 2. Select **web**.
 3. Select **Configure**.

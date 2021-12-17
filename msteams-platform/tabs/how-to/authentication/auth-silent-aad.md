@@ -32,7 +32,7 @@ For silent authentication in tabs, use [Teams authentication sample node](https:
 
 The following steps will help you to create and register your application in AAD.
 
-1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
+1. Register a new application in the [AAD – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 
 1. Select **New Registration**. The **Register an application** page appears.
 
@@ -47,8 +47,12 @@ The following steps will help you to create and register your application in AAD
     * Enter **Name** for your app.
     * Select **Supported account types**, such as single tenant or multitenant.
     * Select **Register**.
-1. Select the **Supported account types**, select single tenant or multitenant account  type. ¹ 
+
+1. Select the **Supported account types**
+    * Select **Single tenant** or **Multitenant**. 
     * Leave**Redirect URI** empty.
+
+1. Select **Register**.
 1. Go to overview page.
 1. Copy the value of **Application (client) ID**.
 1. Under **Manage**, go to **Expose an API**
@@ -60,8 +64,11 @@ The following steps will help you to create and register your application in AAD
    > [!NOTE]
    > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
-1. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
+1. Select **Set** to generate the Application ID URI.
+
+   > [!Note]
+   > Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+
 1. Select **Add a scope**.
 1. In the panel that prompts, enter `access_as_user` as the **Scope name**.
 
@@ -97,13 +104,13 @@ The following steps will help you to create and register your application in AAD
 1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 1. Enter each of the following client IDs and select the authorized scopes:
-     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+  * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
-         ![ID one](~/assets/images/authentication/add-client-application.png)
+     ![ID one](~/assets/images/authentication/add-client-application.png)
 
-     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+ * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-         ![ID two](~/assets/images/authentication/add-client-application21.png)
+     ![ID two](~/assets/images/authentication/add-client-application21.png)
 
 1. Go to **API Permissions**.
 
@@ -119,9 +126,6 @@ The following steps will help you to create and register your application in AAD
     * **offline_access**
     * **OpenId**
     * **profile**
-
-1. Go to **Authentication**.
-    Users must provide consent for the first time when they use an app.
 
 1. Go to **Authentication**.
     
