@@ -18,7 +18,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select a subscription to use for the Azure resources.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/select-resource.png" alt-text="Screenshot showing resources for provisioning" border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning" border="false":::
 
    > [!NOTE]
    > There are always some Azure resources used for hosting your app.
