@@ -70,11 +70,12 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
 1. If the validation passes, select **Create**.
    It takes a few moments for your bot service to be provisioned.
-1. Select **Go to resource**. 
-    ![Deploy App1](~/assets/images/Tab-ME-SSO/go-to-resource.png)
-   Your Azure bot is created.
 
-   ![Deploy App](~/assets/images/Tab-ME-SSO/app-overview.png)
+1. Select **Go to resource**. 
+
+   ![Deploy App1](~/assets/images/Tab-ME-SSO/go-to-resource.png)
+
+   Your Azure bot is created.
 
 Perform the following steps if you've created a new **Microsoft App ID**:
 
@@ -106,8 +107,10 @@ Perform the following steps if you've created a new **Microsoft App ID**:
    > [!TIP]
    > Save the **Client secrets** value or app password for future reference.
     **To add the Microsoft Teams channel**
+
 1. Select **Home**.
-     ![Home page](~/assets/images/Tab-ME-SSO/home.png)
+
+   ![Home page](~/assets/images/Tab-ME-SSO/home.png)
 
 1. Select your bot from **Recent resources**.
 
@@ -126,7 +129,7 @@ Perform the following steps if you've created a new **Microsoft App ID**:
    ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
 
    > [!TIP]
-   > As with the resources you will create later in this tutorial, it is a good idea to pin this resource group to your dashboard for easy access. To do this, select the pin icon &#128204; in the upper right of the dashboard.
+   > As with the resources you will create later in this document, it is a good idea to pin this resource group to your dashboard for easy access. To do this, select the pin icon &#128204; in the upper right of the dashboard.
 
 ## Create the service plan
 
