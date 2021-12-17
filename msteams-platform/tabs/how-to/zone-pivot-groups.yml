@@ -4,9 +4,9 @@ groups:
   title: Personal tab environment type
   prompt: "Choose the type of environment in which you want to build a personal tab:"
   pivots:
-    - id: Node.js
+    - id: node-js
       title: Node.js
-    - id: ASP.NET Core
+    - id: asp-net-core
       title: ASP.NET Core
-    - id: ASP.NET Core MVC
+    - id: asp-net-core-mvc
       title: ASP.NET Core MVC
