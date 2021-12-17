@@ -190,7 +190,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
 
 1. Select **Save**
    
-![Connection setting](~/assets/images/authentication/new-connection-setting.png)
+   ![Connection setting](~/assets/images/authentication/new-connection-setting.png)
 
 ### Update your Teams application manifest for your bot
 
