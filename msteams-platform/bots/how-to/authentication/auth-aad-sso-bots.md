@@ -103,14 +103,14 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. In the **Who can consent?**, enter **Admins and users**.
 1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
 
- | Field | Value |
- | -------- | -------- |
- | **Admin consent display name** | Teams can access the user’s profile |
- | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
- | **User consent display name** | Teams can access your user profile and make requests on your behalf |
- | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
+     | Field | Value |
+     | -------- | -------- |
+     | **Admin consent display name** | Teams can access the user’s profile |
+     | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
+     | **User consent display name** | Teams can access your user profile and make requests on your behalf |
+     | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
 
- ![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
+     ![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
 1. Ensure that the state is set to **Enabled**.
 
@@ -156,6 +156,9 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     ![Grant flow](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
     
     * Select **Save** to save the changes.
+  
+     >[!NOTE]
+     > **Implicit grant** may be required in the AAD application.
 
 #### Update manifest in Azure portal
 
@@ -184,23 +187,15 @@ The following steps will guide you to update the Azure portal with the OAuth con
 
 1. The following steps will guide you to complete the **New Connection Setting** form:
 
-   >[!NOTE]
-   > **Implicit grant** may be required in the AAD application.
-
-    * Enter **Name** in the **New Connection Setting** page.
-
-    >[!NOTE]
-    > The **Name** is referred to the settings of your bot service code in *step 5* of [Bot SSO at runtime](#bot-sso-at-runtime).
-
-| Field | Value or description |
-| ----- | ---------- |
-| Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
-| Service Provider | Select **Azure Active Directory V2**. |
-| Client id | Saved previously as your **Microsoft App ID**. |
-| Client secret | Saved previously as **Value** of the client secret ID. |
-| Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
-| Tenant ID | Enter **common**. |
-| Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
+     | Field | Value or description |
+     | ----- | ---------- |
+     | Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
+     | Service Provider | Select **Azure Active Directory V2**. |
+     | Client id | Saved previously as your **Microsoft App ID**. |
+     | Client secret | Saved previously as **Value** of the client secret ID. |
+     | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
+     | Tenant ID | Enter **common**. |
+     | Scopes | Enter **User.Read** and the **Scopes** selected while specifying permissions to downstream APIs.|
    
 ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
 
