@@ -228,7 +228,7 @@ The Meeting Details API enables your app to get static meeting metadata. The met
 
 ### Prerequisite
 
-To use the Meeting Details API, you must obtain RSC permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
+To use the Meeting Details API, you must obtain resource specific consent (RSC) permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
 
 ```json
 "webApplicationInfo": {
@@ -477,17 +477,13 @@ The following table provides the response codes:
 
 ## Get real-time Teams meeting events API
 
-The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
-
-Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 ### Prerequisite
 
-Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events.
-
-You can choose to receive the meeting start and end events through regular calendar meetings, channel meetings in Teams or both. Update the manifest with the following RSC permissions to receive the meeting start and end events:
-* `OnlineMeeting.ReadBasic.Chat` - To receive meeting events from regular calendar meetings or private meetings.
-* `ChannelMeeting.ReadBasic.Group` - To receive meeting events from channel meetings in Teams.
+Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. You can choose to receive the meeting start and end events through regular calendar meetings, channel meetings or both in Teams. Update the manifest with the following RSC permissions to receive the meeting start and end events:
+* `OnlineMeeting.ReadBasic.Chat` - To receive actual meeting events from regular calendar meetings or private meetings.
+* `ChannelMeeting.ReadBasic.Group` - To receive meeting events from channel meetings.
 
 Use the following example to configure your manifest:
 
@@ -502,7 +498,7 @@ Use the following example to configure your manifest:
 }
  ```
 
-### Example of getting meeting `MeetingStartEndEventvalue`
+### Example of meeting start and end event value
 
 The bot receives event through the `OnEventActivityAsync` handler. To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
      
