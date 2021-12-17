@@ -28,7 +28,119 @@ The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. T
 
 For silent authentication in tabs, use [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) from the Teams sample app.
 
-[Initiate silent and simple authentication configurable tab using AAD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) and follow the instructions to run the sample on your local machine.
+### Create and register your AAD application
+
+The following steps will help you to create and register your application in AAD.
+
+1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
+
+1. Select **New Registration**. The **Register an application** page appears.
+
+    ![New registration](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
+
+1. In the **Register an application**, do the following steps:
+
+   > [!NOTE]
+   >
+   > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
+
+    * Enter **Name** for your app.
+    * Select **Supported account types**, such as single tenant or multitenant.
+    * Select **Register**.
+1. Select the **Supported account types**, select single tenant or multitenant account  type. ¹ 
+    * Leave**Redirect URI** empty.
+1. Go to overview page.
+1. Copy the value of **Application (client) ID**.
+1. Under **Manage**, go to **Expose an API**
+
+
+   > [!TIP]
+   > To update your app manifest later, save the **Application (client) ID** value.
+
+   > [!NOTE]
+   > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+
+1. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
+1. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
+1. Select **Add a scope**.
+1. In the panel that prompts, enter `access_as_user` as the **Scope name**.
+
+   >[!NOTE]
+   > The "access_as_user" scope used to add a client app is for "Administrators and users".
+   >
+   > You must be aware of the following important restrictions:
+   >
+   > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
+   > * Your application's domain name must be same as the domain name that you have registered for your AAD application.
+   > * Multiple domains per app are currently not supported.
+   > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
+
+1. In the **Who can consent?**, enter **Admins and users**.
+1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
+
+     | Field | Value |
+     | -------- | -------- |
+     | **Admin consent display name** | Teams can access the user’s profile |
+     | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
+     | **User consent display name** | Teams can access your user profile and make requests on your behalf |
+     | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
+
+1. Ensure that the state is set to **Enabled**.
+1. Select **Add scope** to save the details.
+
+     ![Admin and user](~/assets/images/authentication/add-a-scope.png)
+
+
+     > [!Note]
+     > The **Scope name** must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
+1. Select **Add a client application**.
+1. Enter each of the following client IDs and select the authorized scopes:
+     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+
+         ![ID one](~/assets/images/authentication/add-client-application.png)
+
+     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+         ![ID two](~/assets/images/authentication/add-client-application21.png)
+
+1. Go to **API Permissions**.
+
+1. Select **Add a permission**.
+
+1. Select **Microsoft Graph**.
+
+1. Select **Delegated permissions**
+
+1. Add the following permissions from Graph API:
+    * **User.Read** (enabled by default)
+    * **email**
+    * **offline_access**
+    * **OpenId**
+    * **profile**
+
+1. Go to **Authentication**.
+    Users must provide consent for the first time when they use an app.
+
+1. Go to **Authentication**.
+    
+   > [!IMPORTANT]
+   > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
+
+1. In **Platform configurations**, select **Add a platform**.
+1. Select **Web**.
+
+    ![Configure platform1](~/assets/images/authentication/configure-platform1.png)
+
+1. Enter the **Redirect URIs** for your app.
+
+   Redirect URI: `https://ab****.ngrok.io/auth-end`
+
+    > [!NOTE]
+    > This URI is the same fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+
+1. Select **Configure**.
 
 ### Include and configure ADAL
 
@@ -137,3 +249,11 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 
 > [!NOTE]
 > While sign out for Teams tab or bot is done, the current session is also cleared.
+
+## Code sample
+
+Sample code showing the tab authentication process using AAD:
+
+| **Sample name** | **description** | **.NET** | **Node.js** |
+|-----------------|-----------------|-------------|
+| Microsoft Teams tab silent authentication | Initiate silent authentication for tab using AAD | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) |
