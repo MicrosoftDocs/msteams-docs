@@ -37,23 +37,96 @@ Before you work with adding authentication to your Teams bot, you must have an u
     | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] | v4| OAuthCard support  |
     | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
 
-## Create the resource group
+## Create an Azure bot
 
-The resource group and the service plan are not strictly necessary, but they allow you to conveniently release the resources you create. This is good practice for keeping your resources organized and manageable.
+1. Go to the [Azure portal](https://portal.azure.com/).
+1. Select **Create a resource**.
+1. In the search box, enter **Azure Bot**.
+1. Select **Enter**.
+1. Select **Azure Bot**.
 
-You use a resource group to create individual resources for the Bot Framework. For performance, ensure that these resources are located in the same Azure region.
+   ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
 
-1. In your browser, sign into the [**Azure portal**][azure-portal].
-1. In the left pane, select **Resource groups**.
-1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You will be prompted to provide the following:
-    1. **Subscription**: Use your existing subscription.
-    1. **Resource group**: Enter the name for the resource group. An example is *TeamsResourceGroup*. Remember that the name must be unique.
-    1. From the **Region** drop-down menu, select **West US**, or a region close to your applications.
-    1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
-    1. Select the **Create** button. It may take a few minutes to create the resource group.
+1. Select **Create**.
+1. Enter required bot handle name in **Bot handle**.
+1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
+1. From the **Resource group** dropdown list, select your existing resource group. 
 
-> [!TIP]
-> As with the resources you will create later in this tutorial, it is a good idea to pin this resource group to your dashboard for easy access. To do this, select the pin icon &#128204; in the upper right of the dashboard.
+   >[!Note]
+   > You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
+
+   ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
+
+1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
+
+    Select **Use existing app registration** and enter **Existing app ID** and **Existing app password** for an existing application. Select **Create new Microsoft App ID** for a new application.
+
+       > [!NOTE]
+       > You can't create more than one bot with the same **Microsoft App ID**.
+
+1. Select **Review + create**.
+
+   ![Register bot](~/assets/images/Tab-ME-SSO/register-bot-2.png)
+
+1. If the validation passes, select **Create**.
+   It takes a few moments for your bot service to be provisioned.
+1. Select **Go to resource**. 
+    ![Deploy App](~/assets/images/Tab-ME-SSO/go-to-resource.png)
+   Your Azure bot is created.
+
+   ![Deploy App](~/assets/images/Tab-ME-SSO/app-overview.png)
+
+Perform the following steps if you've created a new **Microsoft App ID**:
+
+1. In the left panel, select **Configuration**. 
+
+    > [!TIP]
+    > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+1. Next to **Microsoft App ID**, select **Manage**.
+
+   ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage1.png)
+
+1. In the **Client secrets** section, select **New client secret**. 
+
+   ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
+
+   The **Add a client secret** window appears.  
+
+1. Enter **Description**.
+
+1. Select **Add**.
+
+        ![Add client secret to app](~/assets/images/Tab-ME-SSO/add-client-id.png)
+
+1. In the **Value** column, select **Copy to clipboard**.
+
+   ![Value of client secret](~/assets/images/Tab-ME-SSO/client-ids.png)
+
+   > [!TIP]
+   > Save the **Client secrets** value or app password for future reference.
+    **To add the Microsoft Teams channel**
+1. Select **Home**.
+     ![Home page](~/assets/images/Tab-ME-SSO/home.png)
+
+1. Select your bot from **Recent resources**.
+
+1. Select **Channels** in the left pane. 
+
+1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+
+1. Select the checkbox to accept the **Terms of Service**.
+
+1. Select **Agree**.
+
+   ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
+
+1. Select **Save**.
+
+   ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
+
+   > [!TIP]
+   > As with the resources you will create later in this tutorial, it is a good idea to pin this resource group to your dashboard for easy access. To do this, select the pin icon &#128204; in the upper right of the dashboard.
 
 ## Create the service plan
 
@@ -69,20 +142,6 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. **Pricing Tier**. Make sure that **Standard S1** is selected. This should be the default value.
     1. Select the **Review and create** button. You will see a banner that reads *Validation passed*.
     1. Select **Create**. It will take a few minutes to create the app service plan. The plan will be listed in the resource group.
-
-## Create the bot channels registration
-
-If you have a Microsoft App ID and App password (client secret), the bot channels registration registers your web service as a bot with the Bot Framework.
-
-> [!IMPORTANT]
-> You must register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [AppStudio](~/concepts/build-and-test/app-studio-overview.md) your bot is not registered in Azure.
-
-[!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
-
-> [!NOTE]
-> The Bot Channels Registration resource will show the **Global** region even if you selected West US. This is expected.
-
-For more information, see [create a bot for Teams](../create-a-bot-for-teams.md).
 
 ## Create the identity provider
 
