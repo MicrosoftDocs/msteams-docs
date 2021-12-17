@@ -61,17 +61,17 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
     Select **Use existing app registration** and enter **Existing app ID** and **Existing app password** for an existing application. Select **Create new Microsoft App ID** for a new application.
 
-       > [!NOTE]
-       > You can't create more than one bot with the same **Microsoft App ID**.
+   > [!NOTE]
+   > You can't create more than one bot with the same **Microsoft App ID**.
 
 1. Select **Review + create**.
 
-   ![Register bot](~/assets/images/Tab-ME-SSO/register-bot-2.png)
+   ![Register bot1](~/assets/images/Tab-ME-SSO/register-bot-2.png)
 
 1. If the validation passes, select **Create**.
    It takes a few moments for your bot service to be provisioned.
 1. Select **Go to resource**. 
-    ![Deploy App](~/assets/images/Tab-ME-SSO/go-to-resource.png)
+    ![Deploy App1](~/assets/images/Tab-ME-SSO/go-to-resource.png)
    Your Azure bot is created.
 
    ![Deploy App](~/assets/images/Tab-ME-SSO/app-overview.png)
@@ -97,7 +97,7 @@ Perform the following steps if you've created a new **Microsoft App ID**:
 
 1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/Tab-ME-SSO/add-client-id.png)
+   ![Add client secret to app](~/assets/images/Tab-ME-SSO/add-client-id.png)
 
 1. In the **Value** column, select **Copy to clipboard**.
 
