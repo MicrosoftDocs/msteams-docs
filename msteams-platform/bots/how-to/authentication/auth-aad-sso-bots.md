@@ -125,46 +125,39 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     ![client application](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
 
 1. Enter each of the following client IDs and select the authorized scopes:
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+   * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
          ![ID one](~/assets/images/authentication/add-client-application.png)
 
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+  * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
          ![ID two](~/assets/images/authentication/add-client-application21.png)
 
-    ![client id](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
-
 1. Go to **Authentication**.
 1. In **Platform configurations**, select **Add a platform**.
-
-    ![platform](~/assets/images/authentication/SSO-bots-auth/platform-configuration.png)
-
 1. Select **Web**.
 
-    ![Configure platform](~/assets/images/authentication/SSO-bots-auth/configure-platform.png)
+    ![Configure platform](~/assets/images/authentication/configure-platform1.png)
 
 1. Enter the **Redirect URIs** for your app.
 
    >[!NOTE]
    > This URI should be a fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://token.botframework.com/.auth/web/redirect`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-    ![Redirect uris](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
+1. Enable implicit grant and hybrid flow by selecting the following checkboxes:
+    * **Access tokens**
+    * **ID tokens**
+
+    ![Configure platform](~/assets/images/authentication/configure-web.png)
+   
+1. Select **Save** to save the changes.
+
+     >[!NOTE]
+     > **Implicit grant** may be required in the AAD application.
 
 1. Add necessary **API Permissions**.
     * Select **API permissions** from the left plane.
     * Select **Add a platform** to add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.
-
-1. The following steps will help you to enable implicit grant:
-    * Select **Authentication** from the left pane.
-    * Select the **Access tokens** and **ID tokens** checkboxes.
-    
-    ![Grant flow](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
-    
-    * Select **Save** to save the changes.
-  
-     >[!NOTE]
-     > **Implicit grant** may be required in the AAD application.
 
 #### Update manifest in Azure portal
 
