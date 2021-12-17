@@ -33,6 +33,8 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="false":::
 
+    If you want you can view the provisioned resources. For this tutorial, you don't need to view resources.
+
     The provisioned resource appears in the **Environment** section.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog." border="false":::
