@@ -50,8 +50,11 @@ The following table includes the query parameters:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| String | Yes | The participant ID is the user ID,available in Tab SSO, Bot Invoke, and Teams Client SDK. |
+|**participantId**| String | Yes | The participant ID is the user ID, available in Tab SSO, Bot Invoke, and Teams Client SDK. |
 |**tenantId**| String | Yes | The tenant ID is required for the tenant users, available in Tab SSO, Bot Invoke, and Teams Client SDK.|
+
+> [!NOTE]
+> It's recommended to get participant ID and tenant ID from the Tab SSO.
 
 ### Example
 
@@ -497,11 +500,11 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 ### Example of getting meeting `MeetingStartEndEventvalue`
 
-The bot receives event through the `OnEventActivityAsync` handler. To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
-     
-> [!NOTE]      
-> * Get meeting ID from `turnContext.ChannelData`.    
-> * Do not use conversation ID as meeting ID.     
+The bot receives event through the `OnEventActivityAsync` handler. To deserialize the JSON payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+
+> [!NOTE]
+> * Get meeting ID from `turnContext.ChannelData`.
+> * Do not use conversation ID as meeting ID.
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
 
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
@@ -628,7 +631,7 @@ The following code provides an example of meeting end event payload:
 
 ## Code sample
 
-|Sample name | Description | C# | Node.js | 
+|Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
