@@ -25,15 +25,231 @@ Here's a list of tools you'll need for building your personal tab.
 
 ::: zone pivot="node-js"
 
-## Instructions for packaged C# WinUI 3 apps
+## Instructions to create a personal tab with Node.js
 
-To create a packaged WinUI 3 desktop app with C# and .NET 5 using Windows App SDK 1.0:
+To create a personal tab with Node.js:
 
-1. In Visual Studio, select **File** -> **New** -> **Project**.
+1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
 
-2. In the project drop-down filters, select **C#**, **Windows**, and **WinUI**, respectively.
+    ```cmd
+    npm install yo gulp-cli --global
+    ```
 
-3. Select one of the following project types and click **Next**.
+2. Install the Microsoft Teams App generator by entering the following command in your command prompt:
+
+    ```cmd
+    npm install generator-teams --global
+    ```
+
+### Generate your personal tab
+
+1. At a command prompt, create a new directory for your personal tab.
+
+1. To start the Microsoft Teams App generator, enter the following command in your new directory
+
+    ```cmd
+    yo teams
+    ```
+
+1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
+
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+
+    **What is your solution name?**
+
+    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+
+    **Where do you want to place the files?**
+
+    You're currently in your project directory. Select **Enter**.
+
+    **Title of your Microsoft Teams app project?**
+
+    The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+
+    **Your (company) name? (max 32 characters)**
+
+    Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+
+    **Which manifest version would you like to use?**
+
+    Select the default schema.
+
+    **Quick scaffolding? (Y/n)**
+
+    The default is yes; enter **n** to enter your Microsoft Partner ID.
+
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+
+    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+
+    **What do you want to add to your project?**
+
+    Select **( &ast; ) A Tab**.
+
+    **The URL where you will host this solution?**
+
+    By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
+
+    **Would you like show a loading indicator when your app/tab loads?**
+
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+
+    **Would you like personal apps to be rendered without a tab header-bar?**
+
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+
+    **Would you like to include Test framework and initial tests? (y/N)**
+
+    Choose **not** to include a test framework for this project. The default is no, enter **n**.
+
+    **Would you like to include ESLint support? (y/N)**
+
+    Choose not to include ESLint support. The default is no, enter **n**.
+
+    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
+
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+
+    **Default Tab Name (max 16 characters)?**
+
+    Name your tab. This tab name is used throughout your project as a file or URL path component.
+
+    **What kind of Tab would you like to create?**
+
+    Use the arrow keys to select **Personal (static)**.
+
+    **Do you require Azure AD Single-Sign-On support for the tab?**
+
+    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+
+### Manifest update
+
+To add a personal tab to this application, create a content page, and update existing files
+
+1. In your code editor, create a new **personal.html** file with the following markup:
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>
+                <!-- Todo: add your a title here -->
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- inject:css -->
+            <!-- endinject -->
+        </head>
+            <body>
+                <h1>Personal Tab</h1>
+                <p><img src="/assets/icon.png"></p>
+                <p>This is your personal tab!</p>
+            </body>
+    </html>
+    ```
+
+1. Save **personal.html** in your application's public folder in the following location:
+
+    ```
+    ./src/public/<yourDefaultTabNameTab>/personal.html
+    ```
+
+1. Open **manifest.json** from the following location in your code editor:
+
+    ```
+    ./src/manifest/manifest.json
+    ```
+
+1. Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
+
+    ```json
+    {
+        "entityId": "personalTab",
+        "name": "Personal Tab ",
+        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{HOSTNAME}}",
+        "scopes": ["personal"]
+    }
+    ```
+
+1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
+
+1. Save the updated **manifest.json** file.
+
+1. To provide your content page in an IFrame, open **yourDefaultTabNameTab.ts** in your code editor from the following path:
+
+    ```
+    ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
+    ```
+
+1. Add the following to the list of IFrame decorators:
+
+    ```
+    @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
+    ```
+
+1. Save the updated file. Your tab code is complete.
+
+### Build and run your application
+
+You must have an [app package](~/concepts/build-and-test/apps-package.md) to build and run your application in Teams.
+
+#### Create the app package
+
+The package is created through a gulp task that validates the manifest.json file and generates the zip folder in the **./package directory. In the command prompt, enter the following command:
+
+    ```
+    gulp manifest
+    ```
+
+#### Build your application
+
+The build command transpiles your solution into the ./dist folder. Enter the following command in the command prompt:
+
+    ```
+    gulp build
+    ```
+
+#### Run your application
+
+1. Start a local web server by entering the following command in the command prompt:
+
+    ```
+    gulp serve
+    ```
+
+1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page as shown in the following image:
+
+    ![home page screenshot](~/assets/images/tab-images/homePage.png)
+
+1. To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
+
+    ![Personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
+
+1. To establish a secure tunnel to your tab, exit the localhost and enter the following command:
+
+    ```
+    gulp ngrok-serve
+    ```
+
+### Upload your application to Teams
+
+To upload your application to Teams
+
+1. Go to your Microsoft Teams
+
+1. From the lower left corner, select Apps.
+
+1. From the lower left corner, choose Upload a custom app.
+
+1. Go to your project directory, browse to the ./package folder, select the zip folder, and choose Open.
+
+    ![Adding your personal tab](../../assets/images/tab-images/addingpersonaltab.png)
+
+1. Select Add in the pop-up dialog box. Your tab is uploaded to Teams.
+
+    ![Personal tab uploaded](../../assets/images/tab-images/personaltabuploaded.png)
 
 ::: zone-end
 
