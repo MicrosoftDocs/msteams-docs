@@ -16,12 +16,7 @@ items:
   content: |
     Calling and Meeting Bot provides basic functionality like create a call, join a call, transfer/redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
     
-    A bot behaves differently depending on the conversation it's involved in:
-
-    * Bots in channel and group chat conversations require the user to @mention the bot.
-    * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
-    
-    This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
+    This step-by-step guide helps you to create a bot with calling and meeting functionality. You'll see the following output:
 
     ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
@@ -30,12 +25,13 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * Microsoft Teams with an account (not a guest account)
-    * [ngrok](https://ngrok.com/) or equivalent tunneling solution
-    * Visual Studio 2019 or the latest version
-    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
+    * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+    * [ngrok](https://ngrok.com/) or equivalent tunneling solution.
+    * Visual Studio 2019 or the latest version.
+    * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
+    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with appropriate permissions to install an app.
 
-- title: Set up bot in Azure Bot Service
+- title: Register an App in Azure
   durationInMinutes: 5
   content: |
     To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
@@ -46,11 +42,44 @@ items:
     * Add Microsoft Teams channel to deploy the bot to a Teams channel.
     * Add messaging endpoint to the ngrok tunnel you created.
 
+    Add and register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph.
+
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
     ```bash
     ngrok http -host-header=rewrite 3978
     ```
+
+    1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
+    1. Select the **Azure Active Directory** service, and then select **App registrations** and then select **New registration**.
+    1. **Register an application** page opens. Enter your application's registration information.
+    1. Enter a meaningful application **Name** that will be displayed to users of the app.
+    1. In **Supported account types**, select the accounts you would like your application to support.
+    1. In Redirect URI (optional) field, select the type of app, Web or Public client(mobile & desktop), and then enter the redirect URI for your application.
+
+        > [!NOTE]
+        > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
+
+    1. Select **Register**.
+
+    **To create client secret**
+
+    1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (Application client ID) for future reference.
+    1. Adjacent to **Microsoft App ID**, select **Manage**.
+
+        ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
+
+    1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
+
+    1. Enter **Description** and select **Add**.
+ 
+        <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="500"/>
+
+    1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
+
+        ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+
+    Create a policy for a demo tenant user for creating the online meeting on behalf of that user using the following powershell script.
 
     **To create Azure Bot resource**
 
@@ -71,6 +100,7 @@ items:
         > [!NOTE]
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
 
+    1. Select **Use existing app registration** and add **App ID** and **App secret** that you retrieved from app registration.
     1. Select **Review + create**.
 
         <img src="~/assets/images/bots/Azurebotcreate.png" alt="Create resource Azure bot" width="700"/>
@@ -90,7 +120,7 @@ items:
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-         ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
+        ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
@@ -100,7 +130,7 @@ items:
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
 
-         ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+        ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
        
     **To add the Microsoft Teams channel**
 
@@ -110,11 +140,11 @@ items:
 
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
-          ![Open Teams from channels](~/assets/images/bots/channel-teams.png)    
-          ![Select Teams](~/assets/images/bots/select-teams.png)    
+        ![Open Teams from channels](~/assets/images/bots/channel-teams.png)    
+        ![Select Teams](~/assets/images/bots/select-teams.png)    
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
-          ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
+        ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
 
     **To add messaging endpoint**
 
