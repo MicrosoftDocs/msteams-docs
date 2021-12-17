@@ -253,6 +253,46 @@ To upload your application to Teams
 
 ::: zone-end
 
+::: zone pivot="asp-net-core"
+
+To create a personal tab with Node.js:
+
+1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
+
+    ```cmd
+    npm install yo gulp-cli --global
+    ```
+
+2. Install the Microsoft Teams App generator by entering the following command in your command prompt:
+
+    ```cmd
+    npm install generator-teams --global
+    ```
+
+### Generate your personal tab
+
+1. At a command prompt, create a new directory for your personal tab.
+
+1. To start the Microsoft Teams App generator, enter the following command in your new directory
+
+    ```cmd
+    yo teams
+    ```
+
+1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
+
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+
+    **What is your solution name?**
+
+    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+
+    **Where do you want to place the files?**
+
+    You're currently in your project directory. Select **Enter**.
+
+::: zone-end
+
 ## Create a custom personal tab
 
 
