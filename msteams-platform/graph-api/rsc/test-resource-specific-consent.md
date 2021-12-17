@@ -35,6 +35,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
         "Channel.Create.Group",
         "Channel.Delete.Group",
         "ChannelMessage.Read.Group",
+        "ChannelMeeting.ReadBasic.Group",
         "TeamsAppInstallation.Read.Group",
         "TeamsTab.Read.Group",
         "TeamsTab.Create.Group",
