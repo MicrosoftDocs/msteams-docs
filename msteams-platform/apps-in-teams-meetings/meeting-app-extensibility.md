@@ -8,13 +8,13 @@ ms.localizationpriority: none
 
 # Unified meetings apps
 
-Teams unified meetings apps are based on the following concepts:
+Teams unified meetings apps are based on the following:
 
-* Meeting lifecycle has different stages: pre-meeting, in-meeting, and post-meeting.  
+* Meeting lifecycle has three different stages: pre-meeting, in-meeting, and post-meeting.  
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting: in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
 
-This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
+This document covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
 
 ## Meeting lifecycle
 
@@ -38,11 +38,15 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 **To add tabs to an existing meeting**
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
+1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    ![Add a tab](~/assets/images/apps-in-meetings/add-tab.png)
 
-1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
+   The tab gallery appears.
+
+    ![Tab gallery](~/assets/images/apps-in-meetings/tab-gallery.png)
+
+1. Select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
    > [!NOTE]
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
