@@ -98,7 +98,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 > [!NOTE]
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
-> * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
+> * Your [app manifest](../resources/schema/manifest-schema.md) specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
 
 The following image illustrates the in-meeting side panel:
 
@@ -233,11 +233,11 @@ A guest or anonymous user can't add, remove, or uninstall apps.
 
 The following table provides the user types and lists the features that each user can access:
 
-| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage | 
+| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage |
+| Anonymous user | Not available | Not available | Not available | Only the meeting chat interactions are allowed. | Only the meeting chat interactions from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage |
 | Guest, part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage |
-| Federated user, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage |
+| Federated user | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage |
 
 ## Next step
 
