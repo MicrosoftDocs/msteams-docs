@@ -11,6 +11,8 @@ zone_pivot_groups: personal-tab
 
 # Create a personal tab
 
+::: zone pivot="node-js"
+
 Here's a list of tools you'll need for building your personal tab.
 
 
@@ -22,8 +24,6 @@ Here's a list of tools you'll need for building your personal tab.
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
-
-::: zone pivot="node-js"
 
 ## Instructions to create a personal tab with Node.js
 
@@ -255,7 +255,18 @@ To upload your application to Teams
 
 ::: zone pivot="asp-net-core"
 
-To create a personal tab with Node.js:
+Here's a list of tools you'll need for building your personal tab.
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
+| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+
+## To create a personal tab with ASP.NET:
 
 1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
 
