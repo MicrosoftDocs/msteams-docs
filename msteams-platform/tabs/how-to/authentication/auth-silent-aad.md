@@ -32,7 +32,7 @@ For silent authentication in tabs, use [Teams authentication sample node](https:
 
 The following steps will help you to create and register your application in AAD.
 
-1. Register a new application in the [AAD – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
+1. Register a new application in the [AAD App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 
 1. Select **New Registration**. The **Register an application** page appears.
 
@@ -45,16 +45,11 @@ The following steps will help you to create and register your application in AAD
    > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
     * Enter **Name** for your app.
-    * Select **Supported account types**, such as single tenant or multitenant.
-    * Select **Register**.
-
-1. Select the **Supported account types**
-    * Select **Single tenant** or **Multitenant**. 
+    * Select **Supported account types**, such as **Single tenant** or **Multitenant**.
     * Leave**Redirect URI** empty.
 
 1. Select **Register**.
 1. Go to overview page.
-1. Copy the value of **Application (client) ID**.
 1. Under **Manage**, go to **Expose an API**
 
 
@@ -126,25 +121,6 @@ The following steps will help you to create and register your application in AAD
     * **offline_access**
     * **OpenId**
     * **profile**
-
-1. Go to **Authentication**.
-    
-   > [!IMPORTANT]
-   > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
-
-1. In **Platform configurations**, select **Add a platform**.
-1. Select **Web**.
-
-    ![Configure platform1](~/assets/images/authentication/configure-platform1.png)
-
-1. Enter the **Redirect URIs** for your app.
-
-   Redirect URI: `https://ab****.ngrok.io/auth-end`
-
-    > [!NOTE]
-    > This URI is the same fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
-
-1. Select **Configure**.
 
 ### Include and configure ADAL
 

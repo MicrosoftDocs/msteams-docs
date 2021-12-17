@@ -54,7 +54,7 @@ The following steps guide you to develop SSO Teams bot:
 
 The steps to register your app through the AAD portal are similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md). The following steps guide you to register your app:
 
-1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
+1. Register a new application in the [AAD App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 
 1. Select **New Registration**. The **Register an application** page appears.
 
@@ -71,7 +71,6 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * Select **Register**.
 
 1. Go to overview page.
-1. Copy the value of **Application (client) ID**.
 1. Under **Manage**, go to **Expose an API**
 
 

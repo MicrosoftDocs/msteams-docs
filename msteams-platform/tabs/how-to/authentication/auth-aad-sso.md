@@ -80,12 +80,16 @@ Complete the following steps to develop an SSO Teams tab:
 1. Select **New Registration**. The **Register an application** page appears.
 
 1. In the **Register an application** page, enter the following values:
-    1. Enter a **Name** for your app.
-    1. Select the **Supported account types**.
-       * select **Single tenant** or **Multitenant**.
-       * Leave**Redirect URI** empty.
-    1. Select **Register**.
-1. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later.
+    * Enter a **Name** for your app.
+    * Select the **Supported account types**, such as **Single tenant** or **Multitenant**.
+    * Leave**Redirect URI** empty.
+
+1. Select **Register**.
+1. Go to overview page. 
+
+   > [!Tip]
+   > Copy and save the **Application (client) ID** to update your app manifest later.
+
 1. Go to **Manage** and select **Expose an API**.
 
    > [!NOTE]
@@ -121,42 +125,47 @@ Complete the following steps to develop an SSO Teams tab:
 1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 1. Enter each of the following client IDs and select the authorized scopes:
-     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+  * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
-         ![ID one](~/assets/images/authentication/add-client-application.png)
+     ![ID one](~/assets/images/authentication/add-client-application.png)
 
-     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+ * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-         ![ID two](~/assets/images/authentication/add-client-application21.png)
+     ![ID two](~/assets/images/authentication/add-client-application21.png)
 
 1. Go to **API Permissions**.
-1. Select **Add a permission**.
-1. Select **Microsoft Graph**.
-1. Select **Delegated permissions**
-1. Add the following permissions from Graph API:
-    * User (enabled by default)
-    * email
-    * offline_access
-    * OpenId
-    * profile
 
-###### To enter a redirect URI:
+1. Select **Add a permission**.
+
+1. Select **Microsoft Graph**.
+
+1. Select **Delegated permissions**
+
+1. Add the following permissions from Graph API:
+    * **User.Read** (enabled by default)
+    * **email**
+    * **offline_access**
+    * **OpenId**
+    * **profile**
 
 1. Go to **Authentication**.
-    Users must provide consent for the first time when they use an app.
     
-    > [!IMPORTANT]
-    > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
+   > [!IMPORTANT]
+   > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
 
-1. Select **Add a platform**.
-2. Select **web**.
-3. Select **Configure**.
+1. In **Platform configurations**, select **Add a platform**.
+1. Select **Web**.
 
-Complete the app registration prerequisites to continue with your tab SSO app.
+    ![Configure platform1](~/assets/images/authentication/configure-platform1.png)
 
-   * Enter the **redirect URI** for your app. This URI is the same fully qualified domain name that you entered in step 5. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
-   * Select configure
+1. Enter the **Redirect URIs** for your app.
 
+   Redirect URI: `https://ab****.ngrok.io/auth-end`
+
+    > [!NOTE]
+    > This URI is the same fully qualified domain name. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+
+1. Select **Configure**.
 
 > [!NOTE]
 > Implicit grant is not required for tab SSO.
