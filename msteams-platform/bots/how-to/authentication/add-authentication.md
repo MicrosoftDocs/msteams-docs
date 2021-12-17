@@ -25,17 +25,10 @@ The document scope includes:
 
 Before you work with adding authentication to your Teams bot, you must have an understanding of the following:
 
-- Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
-- Knowledge of Azure and OAuth 2.0 development.
-- The current versions of Visual Studio and Git.
-- Azure account. If required, you can create an [Azure free account](https://azure.microsoft.com/free/).
-- The following samples enable you to use the Bot Framework support for OAuth in your bot:
-
-    | Sample | BotBuilder version | Demonstrates |
-    |:---|:---:|:---|
-    | **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] | v4 | OAuthCard support |
-    | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] | v4| OAuthCard support  |
-    | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
+* Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
+* Knowledge of Azure and OAuth 2.0 development.
+* The current versions of Visual Studio and Git.
+* Azure account. If required, you can create an [Azure free account](https://azure.microsoft.com/free/).
 
 ## Create an Azure bot
 
@@ -50,10 +43,10 @@ Before you work with adding authentication to your Teams bot, you must have an u
 1. Select **Create**.
 1. Enter required bot handle name in **Bot handle**.
 1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
-1. From the **Resource group** dropdown list, select your existing resource group. 
+1. From the **Resource group** dropdown list, Create new or select your existing resource group.
 
-   >[!Note]
-   > You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
+   >[!Tip]
+   > You can create a new resource group (select **Create new** > enter resource name > select **OK**).
 
    ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
 
@@ -75,76 +68,27 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
    ![Deploy App1](~/assets/images/Tab-ME-SSO/go-to-resource.png)
 
-   Your Azure bot is created.
-
-Perform the following steps if you've created a new **Microsoft App ID**:
-
-1. In the left panel, select **Configuration**. 
-
-    > [!TIP]
-    > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-1. Next to **Microsoft App ID**, select **Manage**.
-
-   ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage1.png)
-
-1. In the **Client secrets** section, select **New client secret**. 
-
-   ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
-
-   The **Add a client secret** window appears.  
-
-1. Enter **Description**.
-
-1. Select **Add**.
-
-   ![Add client secret to app](~/assets/images/Tab-ME-SSO/add-client-id.png)
-
-1. In the **Value** column, select **Copy to clipboard**.
-
-   ![Value of client secret](~/assets/images/Tab-ME-SSO/client-ids.png)
-
-   > [!TIP]
-   > Save the **Client secrets** value or app password for future reference.
-    **To add the Microsoft Teams channel**
-
-1. Select **Home**.
-
-   ![Home page](~/assets/images/Tab-ME-SSO/home.png)
-
-1. Select your bot from **Recent resources**.
-
-1. Select **Channels** in the left pane. 
-
-1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-
-1. Select the checkbox to accept the **Terms of Service**.
-
-1. Select **Agree**.
-
-   ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
-
-1. Select **Save**.
-
-   ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
-
-   > [!TIP]
-   > As with the resources you will create later in this document, it is a good idea to pin this resource group to your dashboard for easy access. To do this, select the pin icon &#128204; in the upper right of the dashboard.
+Your Azure bot is created.
 
 ## Create the service plan
 
 1. In the [**Azure portal**][azure-portal], on the left navigation pane, select **Create a resource**.
-1. In the search box, enter **App Service Plan**. Select the **App Service Plan** card from the search results.
+1. In the search box, enter **App Service Plan**.
+1. Select the **App Service Plan** card from the search results.
 1. Select **Create**.
-1. You will be asked to provide the following information:
-    1. **Subscription**. You can use an existing subscription.
-    1. **Resource Group**. Select the group you created earlier.
-    1. **Name**. Enter the name for the service plan. An example could be *TeamsServicePlan*. Remember that the name must be unique, within the group.
-    1. **Operating System**. Select **Windows** or your applicable OS.
-    1. **Region**. Select **West US** or a region close to your applications.
-    1. **Pricing Tier**. Make sure that **Standard S1** is selected. This should be the default value.
-    1. Select the **Review and create** button. You will see a banner that reads *Validation passed*.
-    1. Select **Create**. It will take a few minutes to create the app service plan. The plan will be listed in the resource group.
+1. Provide the following information:
+
+     | Field | Value |
+     | -------- | -------- |
+     | **Subscription** | You can use an existing subscription. |
+     | **Resource Group** | Select the group you created earlier. |
+     | **Name** | Enter the name for the service plan. An example could be *TeamsServicePlan*. Remember that the name must be unique, within the group. |
+     |**Operating System** | Select **Windows** or your applicable OS. |
+     | **Region** | Select **West US** or a region close to your applications. |
+     | **Pricing Tier** | Make sure that **Standard S1** is selected. This should be the default value. |
+
+1. Select the **Review and create** button. You will see a banner that reads *Validation passed*.
+1. Select **Create**. It will take a few minutes to create the app service plan. The plan will be listed in the resource group.
 
 ## Create the identity provider
 
@@ -642,6 +586,14 @@ Within the following dialog, check for the presence of a token in the result fro
 [!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
+
+## Code samples
+
+| Sample | BotBuilder version | Demonstrates |
+|:---|:---:|:---|
+| **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] | v4 | OAuthCard support |
+| **Bot authentication** in [js-auth-sample][teams-auth-bot-js] | v4| OAuthCard support  |
+| **Bot authentication** in [py-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
 
 ## See also
 
