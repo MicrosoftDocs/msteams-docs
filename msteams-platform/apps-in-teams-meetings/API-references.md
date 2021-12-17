@@ -239,7 +239,7 @@ To use the Meeting Details API, you must obtain resource specific consent (RSC) 
     ]
 }
  ```
- 
+
 ### Query parameter
 
 The following table lists the query parameter:
