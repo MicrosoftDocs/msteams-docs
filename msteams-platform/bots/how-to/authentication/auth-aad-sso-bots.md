@@ -132,7 +132,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. In **Platform configurations**, select **Add a platform**.
 1. Select **Web**.
 
-    ![Configure platform](~/assets/images/authentication/configure-platform1.png)
+    ![Configure platform1](~/assets/images/authentication/configure-platform1.png)
 
 1. Enter the **Redirect URIs** for your app.
 
