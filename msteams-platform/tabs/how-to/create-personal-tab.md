@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
-zone_pivot_groups: winui3-version
+zone_pivot_groups: personal-tab
 ---
 
 # Create a personal tab
@@ -23,7 +23,7 @@ Here's a list of tools you'll need for building your personal tab.
 | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
-::: zone pivot="winui3-packaged-csharp"
+::: zone pivot="Node.js"
 
 ## Instructions for packaged C# WinUI 3 apps
 

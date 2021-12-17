@@ -1,14 +1,12 @@
 ### YamlMime:ZonePivotGroups
 groups:
-- id: winui3-version
-  title: WinUI 3 application type
-  prompt: "Choose the type of WinUI 3 application you want to build:"
+- id: personal-tab
+  title: Personal tab environment type
+  prompt: "Choose the type of environment in which you want to build a personal tab:"
   pivots:
-    - id: winui3-packaged-csharp
-      title: C# Packaged
-    - id: winui3-unpackaged-csharp
-      title: C# Unpackaged
-    - id: winui3-packaged-cpp
-      title: C++ Packaged
-    - id: winui3-unpackaged-cpp
-      title: C++ Unpackaged
+    - id: Node.js
+      title: Node.js
+    - id: ASP.NET Core
+      title: ASP.NET Core
+    - id: ASP.NET Core MVC
+      title: ASP.NET Core MVC
