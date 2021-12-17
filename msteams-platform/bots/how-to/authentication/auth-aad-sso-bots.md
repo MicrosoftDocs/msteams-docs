@@ -103,14 +103,14 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. In the **Who can consent?**, enter **Admins and users**.
 1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
 
-| Field | Value |
-| -------- | -------- |
-| **Admin consent display name** | Teams can access the user’s profile |
-| **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
-| **User consent display name** | Teams can access your user profile and make requests on your behalf |
-| **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
+ | Field | Value |
+ | -------- | -------- |
+ | **Admin consent display name** | Teams can access the user’s profile |
+ | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
+ | **User consent display name** | Teams can access your user profile and make requests on your behalf |
+ | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
 
-![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
+ ![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
 
 1. Ensure that the state is set to **Enabled**.
 
