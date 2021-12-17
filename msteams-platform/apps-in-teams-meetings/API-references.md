@@ -501,8 +501,8 @@ Use the following example to configure your manifest:
 ### Example of meeting start and end event value
 
 The bot receives event through the `OnEventActivityAsync` handler. To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
-     
-> [!NOTE]      
+
+> [!NOTE]
 > * Get meeting ID from `turnContext.ChannelData`.
 > * Do not use conversation ID as meeting ID.
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
