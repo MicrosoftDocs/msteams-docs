@@ -110,13 +110,14 @@ The steps to register your app through the AAD portal are similar to the [tab SS
      | **User consent display name** | Teams can access your user profile and make requests on your behalf |
      | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
 
-     ![admin and users](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
-
 1. Ensure that the state is set to **Enabled**.
+1. 1. Select **Add scope** to save the details.
 
-    ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
+  ![Admin and user](~/assets/images/authentication/add-a-scope.png)
 
-1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+  > [!Note]
+  > The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
 1. In the **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
@@ -171,7 +172,7 @@ The following steps will guide you to update the bot manifest in Azure portal:
 
 
    >[!NOTE]
-   > If you are already in testing your bot in Teams, you must sign out from this app and sign out from Teams. Then sign in again to see this change.
+   > If you are already in testing your bot in Teams, you must sign out from the app and sign out from Teams. Then sign in again to see this change.
 
 1. Select **Save**.
 
