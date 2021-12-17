@@ -24,10 +24,6 @@ Here's a list of tools you'll need for building your personal tab.
 
 ::: zone pivot="winui3-packaged-csharp"
 
-### Key concepts
-
-[!INCLUDE [Packaged apps, Unpackaged apps](../../windows-app-sdk/includes/glossary/packaged-unpackaged-include.md)]
-
 ## Instructions for packaged C# WinUI 3 apps
 
 To create a packaged WinUI 3 desktop app with C# and .NET 5 using Windows App SDK 1.0:
