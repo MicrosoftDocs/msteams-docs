@@ -70,14 +70,12 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * Select **Supported account types**, such as single tenant or multitenant.
     * Select **Register**.
 
-    ![Register an application](~/assets/images/authentication/SSO-bots-auth/register-application.png)
-
 1. Go to overview page.
 1. Copy the value of **Application (client) ID**.
 1. Under **Manage**, go to **Expose an API**
 
 
-   > [!TIP] 
+   > [!TIP]
    > To update your app manifest later, save the **Application (client) ID** value.
 
 
@@ -121,15 +119,12 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
-
-    ![client application](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
-
 1. Enter each of the following client IDs and select the authorized scopes:
-   * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
          ![ID one](~/assets/images/authentication/add-client-application.png)
 
-  * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
          ![ID two](~/assets/images/authentication/add-client-application21.png)
 
@@ -149,7 +144,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     * **ID tokens**
 
     ![Configure platform](~/assets/images/authentication/configure-web.png)
-   
+
 1. Select **Save** to save the changes.
 
      >[!NOTE]
@@ -181,10 +176,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
 1. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 1. Go to **Configuration** on the left pane.
 1. Select **Add OAuth Connection Settings**.
-
-    ![Configuration setting](~/assets/images/authentication/SSO-bots-auth/auth-setting2.png)
-
-1. The following steps will guide you to complete the **New Connection Setting** form:
+1. Enter the following values:
 
      | Field | Value or description |
      | ----- | ---------- |
@@ -195,8 +187,10 @@ The following steps will guide you to update the Azure portal with the OAuth con
      | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
      | Tenant ID | Enter **common**. |
      | Scopes | Enter **User.Read** and the **Scopes** selected while specifying permissions to downstream APIs.|
+
+1. Select **Save**
    
-![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
+![Connection setting](~/assets/images/authentication/new-connection-setting.png)
 
 ### Update your Teams application manifest for your bot
 

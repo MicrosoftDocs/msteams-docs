@@ -31,9 +31,7 @@ The applications must be registered. The identity providers supporting OAuth 2.0
 1. Select **New Registration**.
 1. Enter **Name** for the application. The name can be changed later.
 1. Navigate to **Redirect URIs**
-1. Select **Add a Redirect URI**.
-1. Now, select **Add a platform**.
-1. Select **Web** in Configure Platforms.
+1. Select **Web** from the dropdown.
 1. Update the URI to authentication endpoint. For example, the redirect URI for TypeScript/Node.js and C# sample apps on GitHub is as follows:
 
     Redirect URI: `https://<hostname>/bot-auth/simple-start`
