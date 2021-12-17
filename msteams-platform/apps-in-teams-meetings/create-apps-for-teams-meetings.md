@@ -260,7 +260,7 @@ Currently, both private scheduled or recurring meetings and channel scheduled or
 
 #### Prerequisite
 
-To use the `Meeting Details` API, you must obtain RSC permissions. You need to use different RSC permission based on the scope of any meeting, such as private meeting or channel meeting, 
+To use the `Meeting Details` API, you must obtain RSC permissions. You need to use different RSC permission based on the scope of any meeting, such as private meeting or channel meeting. 
 
 Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
@@ -285,7 +285,8 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
     ]
 }
  ```
- 
+Note: Adding this RSC to the manifest will also enable the bot to automatically receive meeting start/end events. The bot will receive events from all the meetings created in all the channels for the team the bot is installed to.
+
 #### Query parameter
 
 The `Meeting Details` API includes the following query parameter:
