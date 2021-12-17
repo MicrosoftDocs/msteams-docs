@@ -377,10 +377,6 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Add the app to Teams":::
 
-    1. Select the web app version, if you're asked to switch to Teams desktop. Run your app in the Teams web client. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
-
     1. Congratulations, your first app is running on Teams!
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-debug.png" alt-text="Screenshot of the completed app":::
@@ -622,8 +618,6 @@ items:
         Your web browser starts to run the app.
 
     1. Sign in with your Microsoft 365 account, if prompted.
-
-        > You may be asked to open Teams desktop. Select **Cancel** to remain in the browser.
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
@@ -868,7 +862,6 @@ items:
 
         Teams opens in a web browser.
         
-    1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
