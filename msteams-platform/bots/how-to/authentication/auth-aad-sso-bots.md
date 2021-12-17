@@ -111,22 +111,27 @@ The steps to register your app through the AAD portal are similar to the [tab SS
      | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
 
 1. Ensure that the state is set to **Enabled**.
-1. 1. Select **Add scope** to save the details.
+1. Select **Add scope** to save the details.
 
-  ![Admin and user](~/assets/images/authentication/add-a-scope.png)
+     ![Admin and user](~/assets/images/authentication/add-a-scope.png)
 
 
-  > [!Note]
-  > The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+     > [!Note]
+     > The **Scope name** must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-1. In the **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
+1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
 
     ![client application](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
 
-1. Enter each of the following client IDs and select the authorized scope you created in the previous step:
+1. Enter each of the following client IDs and select the authorized scopes:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+
+         ![ID one](~/assets/images/authentication/add-client-application.png)
+
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+         ![ID two](~/assets/images/authentication/add-client-application21.png)
 
     ![client id](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
 
