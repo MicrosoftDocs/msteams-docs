@@ -86,9 +86,6 @@ Perform the following steps if you've created a new **Microsoft App ID**:
 
 1. Go to **Certificates & secrets**.
 1. In the **Client secrets** section, select **New client secret**.
-
-   ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
-
 1. Enter **Description**.
 
 1. Select **Add**.
@@ -129,7 +126,7 @@ Perform the following steps if you've created a new **Microsoft App ID**:
    ![Microsoft Graph](~/assets/images/Tab-ME-SSO/microsoft-graph.png)
 
 1. Select **Delegated permissions**.
-1. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph. For example, User.Read, OpenID, email and other permissions.
+1. Select the permissions that your application needs for the AAD endpoint. Such as, **User.Read**, **OpenID**, **email** and other permissions.
 
 ## Create the service plan
 
@@ -204,7 +201,7 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
 
      | Field | Value or description |
      | ----- | ---------- |
-     |**Name**. Enter a name for the connection. For example *BotTeamsAuthADv1* |
+     |**Name** | Enter a name for the connection. For example *BotTeamsAuthADv1* |
      | **Service Provider** | Select **Azure Active Directory**.  |
      | **Client id** |Saved previously as your **Microsoft App ID** |
      | **Client secret** | Saved previously as **Value** of the client secret ID. |
@@ -245,11 +242,11 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
 1. Select the connection entry to open the connection you created.
 1. Select **Test Connection** at the top of the **Service Provider Connection Setting** pane.
 1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
-1. You will be asked to allow the identity provider to use your data or credentials. The following image is an example:
+1. You will be asked to allow the identity provider to use your data or credentials. Select **Accept**.
 
-    ![teams bot auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+   ![AAD v2](~/assets/images/Tab-ME-SSO/concent-box.png)
 
-1. Select **Accept**.
+
 1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
 
     ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
