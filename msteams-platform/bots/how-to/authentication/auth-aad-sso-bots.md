@@ -88,8 +88,6 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 1. In the **Value** column, select **Copy to clipboard**.
 
-   ![Value of client secret](~/assets/images/Tab-ME-SSO/client-ids.png)
-
    > [!TIP]
    > Save the **Client secrets** value or app password for future reference.
 

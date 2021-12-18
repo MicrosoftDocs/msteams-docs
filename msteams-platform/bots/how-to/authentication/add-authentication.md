@@ -68,14 +68,17 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
    ![Deploy App1](~/assets/images/Tab-ME-SSO/go-to-resource.png)
 
- Your Azure bot is created.
+Your Azure bot is created.
 
- Perform the following steps if you've created a new **Microsoft App ID**:
+> [!Important]
+> Save the **Microsoft App ID**. You'll use this value as the *Client ID* in future.
+> Save **Directory (tenant) ID**. You'll use this value later as the *Tenant ID* to register this Azure identity application with your bot.
+
+**To add a Client secret**
+
+Perform the following steps if you've created a new **Microsoft App ID**:
 
 1. In the left panel, select **Configuration**.
-
-   > [!TIP]
-   > Save the **Microsoft App ID** or **Client ID** for future reference.
 
 1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -86,8 +89,6 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
    ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
 
- The **Add a client secret** window appears.  
-
 1. Enter **Description**.
 
 1. Select **Add**.
@@ -96,10 +97,39 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
 1. In the **Value** column, select **Copy to clipboard**.
 
-   ![Value of client secret](~/assets/images/Tab-ME-SSO/client-ids.png)
-
    > [!TIP]
    > Save the **Client secrets** value or app password for future reference.
+
+**To set Application ID**
+
+1. Under **Manage**, go to **Expose an API**
+
+   > [!TIP]
+   > To update your app manifest later, save the **Application (client) ID** value.
+
+
+   > [!IMPORTANT]
+   > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
+   > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+
+1. Select **Set** to generate the Application ID URI.
+
+   > [!Note]
+   > Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+
+1. Go to **API permissions**.
+
+   > [!NOTE]
+   > Users need to consent to these permissions only if the AAD app is registered in a different tenant.
+
+1. Select **Add a permission**.
+
+1. Select **Microsoft Graph**.
+
+   ![Microsoft Graph](~/assets/images/Tab-ME-SSO/microsoft-graph.png)
+
+1. Select **Delegated permissions**.
+1. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph. For example, User.Read, OpenID, email and other permissions.
 
 ## Create the service plan
 
@@ -161,20 +191,6 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
 
     ![Configure platform](~/assets/images/authentication/configure-web.png)
 
-1. After it is created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
-
-    1. The **Application (client) ID** value. You will use this value later as the *Client ID* when you register this Azure identity application with your bot.
-    1. The **Directory (tenant) ID** value. You will also use this value later as the *Tenant ID* to register this Azure identity application with your bot.
-
-
-1. In the left pane, select **Certificates & secrets**.
-
-   1. Under **Client secrets**, select &#x2795; **New client secret**.
-   1. Add a description to identify this secret from others that you must create for this app, such as *Bot identity app in Teams*.
-   1. Set **Expires** to your selection.
-   1. Select **Add**.
-   1. You will use this value later as the _Client secret_ when you register your AAD application with your bot.
-
 ### Configure the identity provider connection and register it with the bot
 
 > [!NOTE]
@@ -182,61 +198,47 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
 
 #### Azure AD V1
 
-1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
-1. Select your bot channel registration link.
-1. Open the resource page and select **Configuration** under **Settings**.
+1. Go to **Configuration** on the left pane.
 1. Select **Add OAuth Connection Settings**.
+1. Enter the following values:
 
-    The following image displays the corresponding selection in the resource page:  
-    ![SampleAppDemoBot configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
-
-1. Complete the form as follows:
-
-    1. **Name**. Enter a name for the connection. You will use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv1*.
-    1. **Service Provider**: Select **Azure Active Directory**. After you select this, the AAD-specific fields will be displayed.
-    1. **Client id**: Enter the Application (client) ID that you recorded for your Azure identity provider app in the earlier steps.
-    1. **Client secret**: Enter the secret that you recorded for your Azure identity provider app in the earlier steps.
-    1. **Grant Type**: Enter `authorization_code`.
-    1. **Login URL**: Enter `https://login.microsoftonline.com`.
-    1. **Tenant ID**: Enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
-
-        - If you selected either **Accounts in this organizational directory only (Microsoft only - Single tenant)** or **Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)** enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
-
-        - If you selected **Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)** enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
-
-    1. **Resource URL**: Enter `https://graph.microsoft.com/`. This is not used in the current code sample.  
-    1. **Scopes**: Leave it blank. The following image is an example:
-
-    ![teams bots app auth connection string adv1 view](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+     | Field | Value or description |
+     | ----- | ---------- |
+     |**Name**. Enter a name for the connection. For example *BotTeamsAuthADv1* |
+     | **Service Provider** | Select **Azure Active Directory**.  |
+     | **Client id** |Saved previously as your **Microsoft App ID** |
+     | **Client secret** | Saved previously as **Value** of the client secret ID. |
+     | **Grant Type** | `authorization_code`|
+     | **Login URL** | `https://login.microsoftonline.com`|
+     | **Tenant ID** |Enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app  if you selected either **Accounts in this organizational directory only (Microsoft only - Single tenant)** or **common** if you selected **Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)**. |
+     |**Resource URL** | Enter `https://graph.microsoft.com/`. This is not used in the current code sample. |  
+     | **Scopes** | Leave it blank. |
 
 1. Select **Save**.
+
+   ![AAD v1](~/assets/images/Tab-ME-SSO/new-connection-bot-v1.png)
+
 
 #### Azure AD V2
 
-1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
-1. Select your bot channel registration link.
-1. Open the resource page and select **Configuration** under **Settings**.
+1. Go to **Configuration** on the left pane.
 1. Select **Add OAuth Connection Settings**.
+1. Enter the following values:
 
-    The following image displays the corresponding selection in the resource page:
-    ![SampleAppDemoBot Configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
-
-1. Complete the form as follows:
-
-    1. **Name**: Enter a name for the connection. You will use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv2*.
-    1. **Service Provider**: Select **Azure Active Directory v2**. After you select this, the AAD-specific fields will be displayed.
-    1. **Client id**: Enter the Application client ID that you recorded for your Azure identity provider app.
-    1. **Client secret**: Enter the secret that you recorded for your Azure identity provider app.
-    1. **Token Exchange URL**: Leave this blank.
-    1. **Tenant ID**: Enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
-
-        - If you selected either **Accounts in this organizational directory only (Microsoft only - Single tenant)** or **Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)** enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
-
-        - If you selected **Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)** enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
-
-    1. **Scopes**: Enter a space-delimited list of graph permissions this application requires, for example, User.Read User.ReadBasic.All Mail.Read.
+     | Field | Value or description |
+     | ----- | ---------- |
+     |**Name** | Enter a name for the connection. For example *BotTeamsAuthADv2*. |
+     | **Service Provider** | Select **Azure Active Directory v2**. |
+     | **Client id** | Saved previously as your **Microsoft App ID**. |
+     | **Client secret** |  Saved previously as **Value** of the client secret ID. |
+     | **Token Exchange URL** | Leave this blank. |
+     | **Tenant ID** | Enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app  if you selected either **Accounts in this organizational directory only (Microsoft only - Single tenant)** or **common** if you selected **Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)**. |
+     | **Scopes** | Enter a space-delimited list of graph permissions this application requires, for example, User.Read User.ReadBasic.All Mail.Read. |
 
 1. Select **Save**.
+
+   ![AAD v2](~/assets/images/Tab-ME-SSO/new-connection-bot-v2.png)
+
 
 ### Test the connection
 
