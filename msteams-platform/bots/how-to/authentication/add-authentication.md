@@ -126,7 +126,7 @@ Perform the following steps if you've created a new **Microsoft App ID**:
    ![Microsoft Graph](~/assets/images/Tab-ME-SSO/microsoft-graph.png)
 
 1. Select **Delegated permissions**.
-1. Select the permissions that your application needs for the AAD endpoint. Such as, **User.Read**, **OpenID**, **email** and other permissions.
+1. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph. For example, User.Read, OpenID, email and other permissions.
 
 ## Create the service plan
 
