@@ -126,7 +126,7 @@ Perform the following steps if you've created a new **Microsoft App ID**:
    ![Microsoft Graph](~/assets/images/Tab-ME-SSO/microsoft-graph.png)
 
 1. Select **Delegated permissions**.
-1. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph. For example, User.Read, OpenID, email and other permissions.
+1. Select the permissions that your application needs for the AAD endpoint, such as, **User.Read**, **OpenID**, **email** and other permissions.
 
 ## Create the service plan
 
@@ -244,7 +244,7 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
 1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
 1. You will be asked to allow the identity provider to use your data or credentials. Select **Accept**.
 
-   ![AAD v2](~/assets/images/Tab-ME-SSO/concent-box.png)
+   ![permission box](~/assets/images/Tab-ME-SSO/concent-box.png)
 
 
 1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
