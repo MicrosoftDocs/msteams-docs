@@ -461,7 +461,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user to be authenticated.  
 1. Select **Confirm**.
 1. If asked, select the applicable user's account.
-1. Select the **Yes** button to display your authentication token. The following image is an example:
+1. Select **Yes** to view token and **No** to continue with chat.
 1. Enter **logout** to sign out.
 
 > [!NOTE]
