@@ -244,8 +244,8 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
      | **Client secret** | Saved previously as **Value** of the client secret ID. |
      | **Grant Type** | `authorization_code`|
      | **Login URL** | `https://login.microsoftonline.com`|
-     | **Tenant ID** |Enter the **Directory (tenant) ID** that you saved previously for your Azure identity app if you selected either **Single tenant** type of app or enter **common** if you selected **Multi tenant** type of app. |
-     |**Resource URL** | Enter `https://graph.microsoft.com/`. This is not used in the current code sample. |  
+     | **Tenant ID** | Enter the **Directory (tenant) ID** that you saved previously for your Azure identity app if you selected either **Single tenant** type of app or enter **common** if you selected **Multi tenant** type of app. |
+     |**Resource URL** | Enter `https://graph.microsoft.com/`. |  
      | **Scopes** | Leave it blank. |
 
 1. Select **Save**.
@@ -266,7 +266,7 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
      | **Client id** | Saved previously as your **Microsoft App ID**. |
      | **Client secret** |  Saved previously as **Value** of the client secret ID. |
      | **Token Exchange URL** | Leave this blank. |
-     | **Tenant ID** ||Enter the **Directory (tenant) ID** that you saved previously for your Azure identity app if you selected either **Single tenant** type of app or enter **common** if you selected **Multi tenant** type of app. |
+     | **Tenant ID** | Enter the **Directory (tenant) ID** that you saved previously for your Azure identity app if you selected either **Single tenant** type of app or enter **common** if you selected **Multi tenant** type of app. |
      | **Scopes** | Enter a space-delimited list of graph permissions this application requires, for example, User.Read User.ReadBasic.All Mail.Read. |
 
 1. Select **Save**.
@@ -276,17 +276,24 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
 
 ### Test the connection
 
-1. Select the connection entry to open the connection you created.
+1. Select **Configuration**.
+1. Select the name of connection in **Add OAuth Connection Settings**, for example, *BotTeamsAuthADv1*.
+
+   ![connection name](~/assets/images/Tab-ME-SSO/connection-check.png)
+
 1. Select **Test Connection** at the top of the **Service Provider Connection Setting** pane.
+
+   ![Test connection](~/assets/images/Tab-ME-SSO/test-connection.png) 
+
 1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
 1. You will be asked to allow the identity provider to use your data or credentials. Select **Accept**.
 
-   ![permission box](~/assets/images/Tab-ME-SSO/concent-box.png)
+   ![permission box](~/assets/images/Tab-ME-SSO/consent-box2.png)
 
 
 1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
 
-    ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+   ![Web token](~/assets/images/Tab-ME-SSO/web-token.png)
 
 The connection name is used by the bot code to retrieve user authentication tokens.
 
@@ -351,23 +358,25 @@ Alternatively, in Visual Studio, you can follow these steps:
 
 1. In Visual Studio **Solution Explorer**, select and hold (or right-click) the project name.
 1. In the drop-down menu, select **Publish**.
-1. In the displayed window, select the **New** link.
+1. In the displayed window, select the **Add a publish profile**.
+1. In the next window that prompts, select **Azure**.
+1. Select your Azure app service.
 1. In the dialog window, select **App Service** on the left and **Create New** on the right.
+ 
+    ![create-app-service1](~/assets/images/Tab-ME-SSO/create-app-service.png)
+
 1. Select the **Publish** button.
 1. In the next dialog window, enter the required information. The following is an example:
 
-    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
+    ![auth-app-service](~/assets/images/Tab-ME-SSO/app-service.png)
 
 1. Select **Create**.
-1. If the deployment completes successfully, you will see it reflected in Visual Studio. A page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
+1. If the deployment completes successfully, you will see it reflected in Visual Studio. A page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`, save the url.
 1. In your browser, go to the [**Azure portal**][azure-portal].
-1. Check your resource group, the bot should be listed along with the other resources. The following image is an example:
-
-    ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
-
-1. In the resource group, select the bot channel registration name (link).
-1. In the left pane, select **Settings**.
-1. In **Messaging endpoint**, enter the URL obtained above followed by `api/messages`. This is an example: `https://botteamsauth.azurewebsites.net/api/messages`.
+1. Check your resource group, the bot should be listed along with the other resources.
+1. In the resource group, select the bot.
+1. In the left pane, select **Configuration**.
+1. In **Messaging endpoint**, enter the URL obtained above followed by `api/messages`. For example: `https://botteamsauth.azurewebsites.net/api/messages`.
 1. Select the **Save** button in the upper left.
 
 ## Test the bot using the Emulator
@@ -407,26 +416,32 @@ After you have configured the authentication mechanism, you can perform the actu
 1. Select **Connect**.
 1. After the bot is up and running, enter any text to display the sign-in card.
 1. Select the **Sign in** button.
+
+    ![sign-in-bot1](~/assets/images/Tab-ME-SSO/sign-in-bot.png)
+
 1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user to be authenticated.  
 1. Select **Confirm**.
+
+    ![confirm1](~/assets/images/Tab-ME-SSO/confirm-url.png)
+
 1. If asked, select the applicable user's account.
 1. Depending which configuration you used for the Emulator, you get one of the following:
     1. **Using sign-in verification code**  
-      &#x2713; A window is opened displaying the validation code.  
-      &#x2713; Copy and enter the validation code into the chat box to complete sign in.
+       * A window is opened displaying the validation code.  
+       * Copy and enter the validation code into the chat box to complete sign in.
     1. **Using authentication tokens**.  
-      &#x2713; You are logged in based on your credentials.
+       * You are logged in based on your credentials.
 
-    The following image is an example of the bot UI after you have logged in:
-
-    ![auth bot login emulator](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
+       ![login1](~/assets/images/Tab-ME-SSO/login.png)
 
 1. If you select **Yes** when the bot asks **Would you like to view your token?**, you will get a response similar to the following:
 
-    ![auth bot login emulator token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
+    ![token2](~/assets/images/Tab-ME-SSO/token-view2.png)
 
 1. Enter **logout** in the input chat box to sign out.
     This releases the user token, and the bot will not be able to act on your behalf until you sign in again.
+
+    ![logout1](~/assets/images/Tab-ME-SSO/logout.png)
 
 > [!NOTE]
 > Bot authentication requires use of the **Bot Connector Service**. The service accesses the bot channels registration information for your bot.
@@ -445,17 +460,8 @@ and when for these, and just reference that from here, along with the set of ste
 1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user to be authenticated.  
 1. Select **Confirm**.
 1. If asked, select the applicable user's account.
-    The following image is an example of the bot UI after you have logged in:
-
-    ![Auth bot login deployed](../../../assets/images/authentication/auth-bot-login-deployed.PNG).
-
 1. Select the **Yes** button to display your authentication token. The following image is an example:
-
-    ![Auth bot login deployed token](../../../assets/images/authentication/auth-bot-login-deployed-token.PNG).
-
 1. Enter **logout** to sign out.
-
-    ![Auth bot deployed logout](../../../assets/images/authentication/auth-bot-deployed-logout.PNG)
 
 > [!NOTE]
 > If you are having problems signing in, try to test the connection again as described in the earlier steps. This recreates the authentication token.
