@@ -485,7 +485,7 @@ The following steps will help you to set up ngrok in preparation for running you
 
 1. From ngrok, copy the HTTPS URL (https to io).
 
-   ![ngrok](~/assets/images/Tab-ME-SSO/ngrok-bot.png)
+   ![ngrok](~/assets/images/Tab-ME-SSO/ngrok-bots.png)
 
 **To update messaging endpoint**
 
@@ -506,7 +506,7 @@ In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit `manifest.
 **To upload the app to Teams**
 
 1. Start your bot locally, for example in Visual Studio debug mode.
-1. In your bot project, ensure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
+1. Go to `TeamsAppManifest` folder.
 1. Select and zip the `manifest.json`, `outline.png`, and `color.png` files.
 1. Go to Teams.
 1. In the left pane, in the lower left corner, select **Apps**.
@@ -517,19 +517,12 @@ In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit `manifest.
 
    ![add bot](~/assets/images/Tab-ME-SSO/add-bot.png)
 
-You should be able to see the bot listed as a contact in the chat list.
-exchange messages with the bot
+You will see the bot listed as a contact in the chat list.
+Exchange messages with the bot
 
+   ![int](~/assets/images/Tab-ME-SSO/int-bot.png)
 
-### Testing the bot locally in Teams
-
-
-1. 
-1. Test the bot while running locally using the Bot Framework portal's **Test Web chat**. Like the Emulator, this test does not allow you to access Teams-specific functionality.
-1. In the terminal window where `ngrok` is running, you can see HTTP traffic between the bot and the web chat client. If you want a more detailed view, in a browser window, enter `http://127.0.0.1:4040` that you obtained from the previous terminal window.
-
-> [!NOTE]
-> If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you are using, you must update all URL references. 
+You have successfully uploaded your bot to teams.
 
 ## Additional information
 
