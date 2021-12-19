@@ -215,7 +215,7 @@ If you don't receive the UPN in the returned access token:
 * You can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD. 
 For more information, see [access tokens](/azure/active-directory/develop/access-tokens)
 
-   ![Admin and user](~/assets/images/Tab-ME-SSO/tabs-sso-prompt1.png)
+   ![sso prompt](~/assets/images/Tab-ME-SSO/tabs-sso-prompt1.png)
 
 ## Code sample
 
