@@ -22,14 +22,6 @@ The Azure Bot Framework’s OAuthPrompt makes authentication easier for apps usi
 
 - [SSO authentication](auth-aad-sso-bots.md) in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign-in credentials by silently refreshing the authentication token. If users agree to use your app, they need not provide consent again on another device and can sign in automatically.
 
-## Code sample
-
-The following table provides bot authentication v3 SDK sample:
-
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-
 ## See also
 
 [Add authentication to the Teams bot](add-authentication.md)
