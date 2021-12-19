@@ -102,12 +102,7 @@ The following steps will help you to create and register your application in AAD
 1. Enter each of the following client IDs and select the authorized scopes:
 
    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
-
-        ![ID one](~/assets/images/authentication/add-client-application.png)
-
    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
-
-        ![ID two](~/assets/images/authentication/add-client-application21.png)
 
 1. Go to **API Permissions**.
 

@@ -22,15 +22,6 @@ Teams has different authentication flows for the app. Use the web-based authenti
 * [Silent authentication AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) describes how to reduce sign in or consent prompts in the app using AAD.
 * [Single Sign-on authentication in tabs](auth-aad-sso.md) describes how to authorize Teams tab or task module on desktop or mobile client.
 
-## Code sample
-
-The following table lists tab SSO authentication v3 SDK code samples:
-
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|
-| Tab SSO | This sample shows SSO for Tab- search, action, linkunfurl. | Not available | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
-
-
 ## See also
 
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)

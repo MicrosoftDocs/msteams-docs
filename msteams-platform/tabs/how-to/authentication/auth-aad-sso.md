@@ -127,12 +127,7 @@ Complete the following steps to develop an SSO Teams tab:
 1. Enter each of the following client IDs and select the authorized scopes:
 
    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
-
-        ![ID one](~/assets/images/authentication/add-client-application.png)
-
    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
-
-        ![ID two](~/assets/images/authentication/add-client-application21.png)
 
 1. Go to **API Permissions**.
 
@@ -218,11 +213,9 @@ After you receive the access token in the success callback:
 Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. 
 If you don't receive the UPN in the returned access token:
 * You can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD. 
-For more information, see [access tokens](/azure/active-directory/develop/access-tokens
+For more information, see [access tokens](/azure/active-directory/develop/access-tokens)
 
-<p>
-    <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
-</p>
+   ![Admin and user](~/assets/images/Tab-ME-SSO/tabs-sso-prompt1.png)
 
 ## Code sample
 
