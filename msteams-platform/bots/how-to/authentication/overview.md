@@ -24,6 +24,6 @@ The Azure Bot Framework’s OAuthPrompt makes authentication easier for apps usi
 
 ## See also
 
-[Add authentication to your Teams bot](add-authentication.md)
-[Authentication flow for bots in Microsoft Teams](auth-flow-bot.md)
-[Single sign-on (SSO) support for bots](auth-aad-sso-bots.md)
+* [Add authentication to your Teams bot](add-authentication.md)
+* [Authentication flow for bots in Microsoft Teams](auth-flow-bot.md)
+* [Single sign-on (SSO) support for bots](auth-aad-sso-bots.md)
