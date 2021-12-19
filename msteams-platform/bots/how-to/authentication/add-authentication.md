@@ -27,6 +27,7 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
 * Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
 * Knowledge of Azure and OAuth 2.0 development.
+* [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
 * The current versions of Visual Studio and Git.
 * Azure account. If required, you can create an [Azure free account](https://azure.microsoft.com/free/).
 
@@ -473,66 +474,55 @@ Microsoft Teams is an entirely cloud-based product, it requires all services it 
 
 **To set up ngrok in preparation for running your Microsoft Teams app locally**
 
+The following steps will help you to set up ngrok in preparation for running your Microsoft Teams app locally:
+
 1. In a terminal window, go to the directory where you have `ngrok.exe` installed. We suggest setting the *environment variable* path to point to it.
-1. Run, for example, `ngrok http 3978 --host-header=localhost:3978`. Replace the port number as required.
+1. Run the following command in the terminal window:
 
      ```bash
      ngrok http -host-header=localhost 3978
      ```
 
-1. Select the **Set up a bot** button.
-1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **App Studio** icon.
-1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
-1. Also, you should be able to see the bot listed as a contact in the chat list
-that you can use to exchange messages with the bot.
+1. From ngrok, copy the HTTPS URL (https to io).
 
+   ![ngrok](~/assets/images/Tab-ME-SSO/ngrok-bot.png)
+
+**To update messaging endpoint**
+
+1. Go to the [**Azure portal**][azure-portal]
+1. Select your bot from **Recent resources**.
+1. Select **Configuration**.
+1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**. For example, `https://ab1e-110-235-239-61.ngrok.io/api/messages`
+
+   > [!Note]
+   > This is the **Messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
+
+1. Select **Apply**.
+
+**To update manifest.jason**
+
+In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit `manifest.json` by assigning `id` and `botId` with you **Microsoft app ID**.
+
+**To upload the app to Teams**
+
+1. Start your bot locally, for example in Visual Studio debug mode.
 1. In your bot project, ensure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
 1. Select and zip the `manifest.json`, `outline.png`, and `color.png` files.
 1. Go to Teams.
 1. In the left pane, in the lower left corner, select **Apps**.
-1. In the **Apps** sector, in the lower left corner, select **Upload a custom app**.
-1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
+1. In the **Apps** section, in the lower left corner, select **Upload a custom app**.
+1. Select **Publish an app**.
+1. Go to the `TeamsAppManifest` folder and select the zipped manifest.
+1. A window will prompt, select **Add**.
 
-    The following wizard is displayed:
+   ![add bot](~/assets/images/Tab-ME-SSO/add-bot.png)
 
-    ![Auth bot teams upload](../../../assets/images/authentication/auth-bot-teams-upload.png)
+You should be able to see the bot listed as a contact in the chat list.
+Exchange messages with the bot:
 
-1. Select **Add to a team**.
-1. In the next window, select the team where you want to use the bot.
-1. Select **Set up a bot**.
-1. Select the ellipses (&#x25cf;&#x25cf;&#x25cf;) in the left pane and select **App Studio**.
-1. Select the **Manifest editor** tab. You will see the icon for the bot you uploaded.
-    Also, you will be able to see the bot listed as a contact in the chat list that you can use to exchange messages with the bot.
+   ![int bot](~/assets/images/Tab-ME-SSO/int-bot.png)
 
-### Testing the bot locally in Teams
-
-
-
-
-### Testing the bot locally in Teams
-
-Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
-To set up ngrok in preparation for running your Microsoft Teams app locally, follow these steps:
-
-This launches ngrok to listen on the port you specify. In return, it gives an externally addressable URL, valid for as long as ngrok is running. The following image is an example:
-
-![Teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
-
-1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
-1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
-1. Update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. Perform these steps:
-    1. In your browser, go to the [**Azure portal**][azure-portal].
-    1. Select your **Bot Channel Registration**.
-    1. In the left pane, select **Settings**.
-    1. In the right pane, in the **Messaging endpoint** box, enter the ngrok URL, in our example, `https://dea822bf.ngrok.io/api/messages`.
-1. Start your bot locally, for example in Visual Studio debug mode.
-1. Test the bot while running locally using the Bot Framework portal's **Test Web chat**. Like the Emulator, this test does not allow you to access Teams-specific functionality.
-1. In the terminal window where `ngrok` is running, you can see HTTP traffic between the bot and the web chat client. If you want a more detailed view, in a browser window, enter `http://127.0.0.1:4040` that you obtained from the previous terminal window. The following image is an example:
-
-    ![auth bot teams ngrok testing](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
-
-> [!NOTE]
-> If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you are using, you must update all URL references. 
+Congratulation!! You have successfully uploaded your bot to Teams.
 
 ## Additional information
 
@@ -581,8 +571,12 @@ This manifest contains information required by Microsoft Teams to connect with t
     "identity",
     "messageTeamMembers"
   ],
-  "validDomains": [ "token.botframework.com" ]
+  "validDomains": [ 
+    "token.botframework.com",
+    "*.ngrok.io"
+  ]
 }
+
 ```
 
 With authentication, Teams behaves slightly differently than other channels, as explained later.
