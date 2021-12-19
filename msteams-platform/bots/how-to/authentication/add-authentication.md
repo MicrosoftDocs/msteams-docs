@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Add authentication to your Teams bot
 
-This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. You can create bots in Microsoft Teams that can access resources on behalf of the user, such as a mail service.
+This document helps you to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. You can create bots in Microsoft Teams that can access resources on behalf of the user, such as a mail service.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
@@ -470,9 +470,7 @@ and when for these, and just reference that from here, along with the set of ste
 
 ## Upload and test the bot in Teams
 
-Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. To enable the bot (our sample) to work in Teams, you must either publish the code to the cloud of your choice, or make a locally running instance externally accessible using a **tunneling** tool. [ngrok](https://ngrok.com/download) is recommended as it creates an externally addressable URL for a port you open locally on your machine.
-
-**To set up ngrok in preparation for running your Microsoft Teams app locally**
+**To set up ngrok**
 
 The following steps will help you to set up ngrok in preparation for running your Microsoft Teams app locally:
 
@@ -492,7 +490,8 @@ The following steps will help you to set up ngrok in preparation for running you
 1. Go to the [**Azure portal**][azure-portal]
 1. Select your bot from **Recent resources**.
 1. Select **Configuration**.
-1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**. For example, `https://ab1e-110-235-239-61.ngrok.io/api/messages`
+1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**. 
+   For example, `https://ab1e-110-235-239-61.ngrok.io/api/messages`
 
    > [!Note]
    > This is the **Messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
