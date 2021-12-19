@@ -70,7 +70,7 @@ Before you work with adding authentication to your Teams bot, you must have an u
 
 Your Azure bot is created.
 
-> [!Important]
+> [!Tip]
 > Save the **Microsoft App ID**. You'll use this value as the *Client ID* in future.
 > Save **Directory (tenant) ID**. You'll use this value later as the *Tenant ID* to register this Azure identity application with your bot.
 
@@ -97,22 +97,59 @@ Perform the following steps if you've created a new **Microsoft App ID**:
    > [!TIP]
    > Save the **Client secrets** value or app password for future reference.
 
-**To set Application ID**
-
 1. Under **Manage**, go to **Expose an API**
 
    > [!TIP]
    > To update your app manifest later, save the **Application (client) ID** value.
 
+1. Select **Set** to generate the Application ID URI.
 
    > [!IMPORTANT]
    > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
    > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Select **Set** to generate the Application ID URI.
+1. Select **Add a scope**.
+1. In the panel that prompts, enter `access_as_user` as the **Scope name**.
+
+   >[!NOTE]
+   > The "access_as_user" scope used to add a client app is for "Administrators and users".
+   >
+   > You must be aware of the following important restrictions:
+   >
+   > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions).
+   > * Your application's domain name must be same as the domain name that you have registered for your AAD application.
+   > * Multiple domains per app are currently not supported.
+   > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
+
+1. In the **Who can consent?**, enter **Admins and users**.
+1. Enter the following details to configure the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
+
+     | Field | Value |
+     | -------- | -------- |
+     | **Admin consent display name** | Teams can access the user’s profile |
+     | **Admin consent description** | Allows Teams to call the app’s web APIs as the current user. |
+     | **User consent display name** | Teams can access your user profile and make requests on your behalf |
+     | **User consent description** | Enable Teams to call this app’s APIs with the same rights that you have. |
+
+1. Ensure that the state is set to **Enabled**.
+1. Select **Add scope** to save the details.
+
+   ![Admin and user](~/assets/images/authentication/add-a-scope.png)
+
 
    > [!Note]
-   > Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+   > The **Scope name** must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
+1. Select **Add a client application**.
+1. Enter each of the following client IDs and select the authorized scopes:
+     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+
+         ![ID one](~/assets/images/authentication/add-client-application.png)
+
+     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+         ![ID two](~/assets/images/authentication/add-client-application21.png)
 
 1. Go to **API permissions**.
 
@@ -207,7 +244,7 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
      | **Client secret** | Saved previously as **Value** of the client secret ID. |
      | **Grant Type** | `authorization_code`|
      | **Login URL** | `https://login.microsoftonline.com`|
-     | **Tenant ID** |Enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app  if you selected either **Accounts in this organizational directory only (Microsoft only - Single tenant)** or **common** if you selected **Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)**. |
+     | **Tenant ID** |Enter the **Directory (tenant) ID** that you saved previously for your Azure identity app if you selected either **Single tenant** type of app or enter **common** if you selected **Multi tenant** type of app. |
      |**Resource URL** | Enter `https://graph.microsoft.com/`. This is not used in the current code sample. |  
      | **Scopes** | Leave it blank. |
 
@@ -229,7 +266,7 @@ You will use an Azure AD identity provider for authentication; other Azure AD su
      | **Client id** | Saved previously as your **Microsoft App ID**. |
      | **Client secret** |  Saved previously as **Value** of the client secret ID. |
      | **Token Exchange URL** | Leave this blank. |
-     | **Tenant ID** | Enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app  if you selected either **Accounts in this organizational directory only (Microsoft only - Single tenant)** or **common** if you selected **Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)**. |
+     | **Tenant ID** ||Enter the **Directory (tenant) ID** that you saved previously for your Azure identity app if you selected either **Single tenant** type of app or enter **common** if you selected **Multi tenant** type of app. |
      | **Scopes** | Enter a space-delimited list of graph permissions this application requires, for example, User.Read User.ReadBasic.All Mail.Read. |
 
 1. Select **Save**.

@@ -135,11 +135,11 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 1. Ensure that the state is set to **Enabled**.
 1. Select **Add scope** to save the details.
 
-     ![Admin and user](~/assets/images/authentication/add-a-scope.png)
+   ![Admin and user](~/assets/images/authentication/add-a-scope.png)
 
 
-     > [!Note]
-     > The **Scope name** must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+   > [!Note]
+   > The **Scope name** must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
 1. In **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
 1. Select **Add a client application**.
