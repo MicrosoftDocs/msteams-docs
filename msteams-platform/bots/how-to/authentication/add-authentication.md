@@ -518,11 +518,18 @@ In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit `manifest.
    ![add bot](~/assets/images/Tab-ME-SSO/add-bot.png)
 
 You should be able to see the bot listed as a contact in the chat list.
-Exchange messages with the bot:
+exchange messages with the bot
 
-   ![int bot](~/assets/images/Tab-ME-SSO/int-bot.png)
 
-Congratulation!! You have successfully uploaded your bot to Teams.
+### Testing the bot locally in Teams
+
+
+1. 
+1. Test the bot while running locally using the Bot Framework portal's **Test Web chat**. Like the Emulator, this test does not allow you to access Teams-specific functionality.
+1. In the terminal window where `ngrok` is running, you can see HTTP traffic between the bot and the web chat client. If you want a more detailed view, in a browser window, enter `http://127.0.0.1:4040` that you obtained from the previous terminal window.
+
+> [!NOTE]
+> If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you are using, you must update all URL references. 
 
 ## Additional information
 
