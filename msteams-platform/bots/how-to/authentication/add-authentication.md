@@ -426,10 +426,10 @@ After you have configured the authentication mechanism, you can perform the actu
 
 1. If asked, select the applicable user's account.
 1. Depending which configuration you used for the Emulator, you get one of the following:
-    1. **Using sign-in verification code**  
+    - **Using sign-in verification code**  
        * A window is opened displaying the validation code.  
        * Copy and enter the validation code into the chat box to complete sign in.
-    1. **Using authentication tokens**.  
+    - **Using authentication tokens**.  
        * You are logged in based on your credentials.
 
        ![login1](~/assets/images/Tab-ME-SSO/login.png)
