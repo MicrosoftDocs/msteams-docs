@@ -42,8 +42,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 ### Query parameters
 
 > [!TIP]
-> * Get participant IDs from the Tab SSO.
-> * Get tenant IDs from the Tab SSO.
+> Get participant IDs and tenant IDs from the Tab SSO.
 
 The following table includes the query parameters:
 
@@ -52,9 +51,6 @@ The following table includes the query parameters:
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
 |**participantId**| String | Yes | The participant ID is the user ID, available in Tab SSO, Bot Invoke, and Teams Client SDK. |
 |**tenantId**| String | Yes | The tenant ID is required for the tenant users, available in Tab SSO, Bot Invoke, and Teams Client SDK.|
-
-> [!NOTE]
-> It's recommended to get participant ID and tenant ID from the Tab SSO.
 
 ### Example
 
