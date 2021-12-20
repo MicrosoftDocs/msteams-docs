@@ -27,8 +27,8 @@ For example, the authentication flow for tabs and bots using Node and the [OAuth
 4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, such as `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` for Azure AD. Replace `<tenant id>` with your own tenant id that is `context.tid`.
 Similar to other application auth flows in Teams, the start page must be on a domain that is in its `validDomains` list, and on the same domain as the post sign-in redirect page.
 
-> [!NOTE]
-> The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request, which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples use a randomly-generated GUID for the `state` data.
+    > [!NOTE]
+    > The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request, which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples use a randomly-generated GUID for the `state` data.
 
 5. On the provider's site, the user sign in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth 2.0 redirect page with an access token.

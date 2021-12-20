@@ -15,7 +15,7 @@ Teams establishes a trusted connection with providers to access data from servic
 
 ## Web-based authentication flow
 
-Use the web-based authentication flow for [tabs](~/tabs/what-are-tabs.md). Use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in a web content page embedded in tab to enable authentication. After enabling authentication, embed the [content page](~/tabs/how-to/create-tab-pages/content-page.md) in a tab, a configuration page, or a task module. For more information on web-based authentication flow, see:
+Teams has different authentication flows for the app. Use the web-based authentication flow for [tabs](~/tabs/what-are-tabs.md). Use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in a web content page to enable authentication. After enabling authentication, embed the [content page](~/tabs/how-to/create-tab-pages/content-page.md) in a tab, a configuration page, or a task module. For more information on web-based authentication flow, see:
 
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md) describes how tab authentication works in Teams. This section shows a typical web-based authentication flow used for tabs.
 * [AAD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md) describes how to connect to AAD from within a tab in the app in Teams.
