@@ -193,11 +193,11 @@ The following image illustrates member permissions setting:
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
 * **Organizer**: The roles of an organizer are as follows:
-  * Schedules a meeting.
-  * Sets the meeting options.
-  * Assigns meeting roles.
-  * Starts the meeting.
-  * Changes the settings for a specific meeting if required.
+  * Schedule a meeting.
+  * Set the meeting options.
+  * Assign meeting roles.
+  * Start the meeting.
+  * Change the settings for a specific meeting if required.
 
   Organizers can make these changes on the **Meeting options** web page.
 
