@@ -1,12 +1,12 @@
 ---
-title: Create Office 365 Connectors
-author: laujan
-description: Describes how to get started with Office 365 Connectors in Microsoft Teams
-keywords: teams o365 connector
+title: Create and send messages
+author: v-rpatkur
+description: Describes how to create and send messages in Microsoft Teams
 ms.localizationpriority: medium
-ms.topic: conceptual
-ms.date: 06/16/2021
+ms.topic: Creating and sending messages
+ms.author: surbhigupta
 ---
+
 # Create Office 365 Connectors
 
 With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).

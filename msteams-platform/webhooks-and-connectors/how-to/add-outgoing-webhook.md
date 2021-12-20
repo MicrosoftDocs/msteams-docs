@@ -1,16 +1,15 @@
 ---
 title: Create an Outgoing Webhook
-author: laujan
+author: v-rpatkur
 description: describes how to create an Outgoing Webhook
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: lajanuar
-keywords: teams tabs outgoing webhook actionable message verify webhook
+ms.author: surbhigupta
 ---
 
 # Create Outgoing Webhook
 
-The Outgoing Webhook acts as a bot and search for messages in channels using **@mention**. It sends notifications to external web services and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
+The Outgoing Webhook acts as a bot and search for messages in channels using **@mention**. It sends notifications to external web services and responds with messages, which include cards and images. It enhances the process of creating bots using [Microsoft bot framework](https://dev.botframework.com/).
 
 ## Key features of Outgoing Webhook
 
