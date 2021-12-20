@@ -188,20 +188,15 @@ The following image illustrates member permissions setting:
 
 ## Participant roles in a meeting
 
-![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
-
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
-
-| Participant role | Role description |
-| :--------------- | :--------------- |
-| Organizer | • Can schedule a meeting. </br> • Can set the meeting options. </br> • Can assign meeting roles. </br> • Can start a meeting. </br> • Can change settings for a specific meeting if required.</br> • Can add, remove, or uninstall apps. </br></br>Organizers can make these changes on the **Meeting options** web page.|
-| Presenter | Presenters have same capabilities of organizers with the following exclusions:</br> • Can't remove an organizer from a session. </br> • Can't modify meeting options for the session.</br></br>By default, participants joining a meeting have the presenter role.|
-| Attendee | • Can interact with other meeting members. </br> • Can't manage any of the meeting settings. </br> • Can't share the content.|
+  * **Organizer**
+  * **Presenter**
+  * **Attendee**
 
   > [!NOTE]
   > Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions.
 
-For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+Read more about the participants' [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
 
