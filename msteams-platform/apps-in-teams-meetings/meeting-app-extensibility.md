@@ -181,8 +181,8 @@ The following image illustrates member permissions setting:
 
 :::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
 
-* Permission to add/remove meeting apps can be configured in the team settings page, by default it is enabled.
-* If enabled, members can add/remove meeting apps before, during, or after meetings.
+* Permission to add or remove meeting apps can be configured in the team settings page, by default it is enabled.
+* If enabled, members can add or remove meeting apps in pre-meeting, in-meeting, or post-meeting experiences.
 
 :::image type="content" source="../assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
 
@@ -201,8 +201,6 @@ Read more about the [participant roles in a Teams meeting](https://support.micro
 After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
 
 ## User types in a meeting
-
-User types, such as organizer, presenter, or attendee in a meeting can do one of the [participant roles in a meeting](#participant-roles-in-a-meeting).
 
 > [!NOTE]
 > The user type is not included in the **getParticipantRole** API.
