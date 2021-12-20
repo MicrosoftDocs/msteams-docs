@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Add authentication to your Teams bot
 
-This document helps you to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0, and makes it easier to develop a bot that can use authentication tokens based on the user's credentials. You can create bots in Teams that can access resources for the user, such as a mail service.
+This document helps you to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0, which makes it easier to develop a bot that can use authentication tokens based on the user's credentials. You can create bots in Teams that can access resources for the user, such as a mail service.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
@@ -668,7 +668,7 @@ Within the dialog, use `begin_dialog` to start the OAuth prompt, which asks the 
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=48-49)]
 
-Within the following dialog, check for the presence of a token in the result from the previous step. If it is not null, the user successfully signed in.
+Within the following dialog, check for the presence of a token in the result from the previous step. If it isn't null, the user successfully signed in.
 
 [!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=51-61)]
 
