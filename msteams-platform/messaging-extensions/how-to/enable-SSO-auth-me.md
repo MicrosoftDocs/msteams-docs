@@ -110,6 +110,11 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
     
     ```    
 
+## Code sample
+|**Sample name** | **Description** |**.NET** |
+|----------------|-----------------|--------------|
+|Messaging extensions SSO | A Messaging Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)|
+
 ## See also
 
 * [Add authentication to your messaging extensions](add-authentication.md)
