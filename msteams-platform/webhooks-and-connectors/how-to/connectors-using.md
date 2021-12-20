@@ -1,5 +1,5 @@
 ---
-title: Create and send messages
+title: Create and send messages using webhooks
 author: v-rpatkur
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.localizationpriority: medium

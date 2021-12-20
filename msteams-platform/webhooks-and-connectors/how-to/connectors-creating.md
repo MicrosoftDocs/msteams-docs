@@ -1,5 +1,5 @@
 ---
-title: Create and send messages
+title: Create and send messages using connectors
 author: v-rpatkur
 description: Describes how to create and send messages in Microsoft Teams
 ms.localizationpriority: medium
