@@ -1,18 +1,17 @@
 ---
-title: Authenticate bots in Microsoft Teams
+title: Authenticate bots 
 description: An overview of Microsoft Teams authentication of bots
 keywords: teams authentication flow bots
 localization_priority: Normal
 ms.topic: overview
 ---
 
-# Authenticate bots in Microsoft Teams
+# Authenticate bots
 
 This article describes how authentication works within a bot in the app in Teams. The authentication flow for tabs and bots is different. Tabs authentication flow is like websites, so, tabs can directly use OAuth 2.0. Bot authentication flow is different, but the core concepts are identical. For more information, see [authentication flow for bots in Microsoft Teams](auth-flow-bot.md).
 
 > [!NOTE]
 > Microsoft Graph APIs help authenticate the user to retrieve the appropriate authentication token.
-
 
 The Azure Bot Framework’s OAuthPrompt makes authentication easier for apps using conversational bots. Use Azure Bot Framework's token service to assist with token caching. Use Microsoft Graph APIs for authenticating the user. Follow these steps to add authentication to your bot:
 
