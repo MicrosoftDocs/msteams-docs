@@ -148,7 +148,8 @@ The configurations of post and [pre-meeting](#pre-meeting) are the same.
 
 * Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting sidepanel in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate meetings stage view in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate meeting stage view in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate meeting content bubble in your Teams meeting.
 
 ## Next step
 
