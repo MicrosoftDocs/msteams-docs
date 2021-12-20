@@ -63,7 +63,7 @@ items:
         
     **To run the tab device permission by uploading the manifest.zip file in Teams:**
 
-    1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
+    1. In the **Windows Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
     2. Open the **manifest.json** file in visual studio code.
     3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
