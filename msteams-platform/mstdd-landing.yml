@@ -60,9 +60,11 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Step-by-step guide for generating meeting token
           url: ~/sbs-meeting-token-generator.yml
+        - text: Step-by-step guide for meeting content bubble
+          url: ~/sbs-meeting-content-bubble.yml
         - text: Step-by-step guide for creating meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Step-by-step guide for Meetings Stage View
+        - text: Step-by-step guide for meeting stage view
           url: ~/sbs-meetings-stage-view.yml
         - text: Step-by-step guide with SSO for tabs and messaging extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
