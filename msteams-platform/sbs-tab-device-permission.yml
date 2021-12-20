@@ -36,23 +36,23 @@ items:
   content: |
     The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app, across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
 
-    **To configure and run your tab device permission app**
+    **To configure and run your tab device permission app:**
 
     1. Open **command prompt** and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
-    2. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
+    2. In the **Windows Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
     3. In the **command prompt**, enter **cd location (node js folder location)** and run this command.
-    4. Run the following command in the **command prompt**.
+    4. Run the following command in the **command prompt**:
     
        ```command-prompt
         npm install
         ```
-    5. Run the application in the **command prompt** using following command.
+    5. Run the application in the **command prompt** using following command:
     
        ```command-prompt
        npm start
        ```
 
-    **Begin your tunneling service to get an https endpoint**
+    **Begin your tunneling service to get an https endpoint:**
 
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
     2. Open **ngrok** terminal and start a ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
@@ -61,7 +61,7 @@ items:
        ngrok http 3000 --host-header=localhost
        ```  
         
-    **To run the tab device permission by uploading the manifest.zip file in Teams**
+    **To run the tab device permission by uploading the manifest.zip file in Teams:**
 
     1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
     2. Open the **manifest.json** file in visual studio code.
@@ -77,46 +77,40 @@ items:
 
        ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)
 
-    9. Open **Tab Device Permission** and select **Device Permission Tab**.
-    10. Open mobile teams and desktop teams to see the following outputs.
+    9. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
 
-         # [Desktop](#tab/Desktop)
+        ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
 
-         ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
-    
-         # [Browser](#tab/Browser)
+    10. Open mobile teams to see the following outputs:
 
-         ![getlocationbrowserteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
+        ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)
 
-         # [Mobile](#tab/Mobile)
+        ![mobileteams](~/assets/images/tab-device-permission/mobile-teams.png)
 
-         ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)
+    11. Open desktop teams to see the following output:  
 
-         ![mobileteams](~/assets/images/tab-device-permission/mobile-teams.png)
-      
-
-         ---
+        ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
 
 - title: Test your app
   durationInMinutes: 1
   content: |
-    To ensure that the tab device permission sample app enables user to give the permission, you must test the app after you uploaded the app into the Teams successfully. To test the tab device permission sample app, do the following steps.
+    To ensure that the tab device permission sample app enables user to give the permission, you must test the app after you uploaded the app into the Teams successfully. To test the tab device permission sample app, do the following steps:
 
      # [Desktop](#tab/Desktop)
 
-    1. Select **App Permission icon** to see the following outputs.
+      Select **App Permission icon** to see the following outputs.
 
        ![desktoppermissionteams](~/assets/images\tab-device-permission\desktop-teams-permission.png)
 
       # [Browser](#tab/Browser)
 
-    1. Select **Get Location** to see the following outputs.
+      Select **Get Location** to see the following outputs.
 
        ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)
 
      # [Mobile](#tab/Mobile)
 
-    1. Click on respective button to test the scenario and get the following prompts to accept permission request.
+      Select the respective button to test the scenario and get the following prompts to accept permission request.
 
        ![mobilepromptteams](~/assets/images/tab-device-permission/sbs-prompt-mobile.png)
 
