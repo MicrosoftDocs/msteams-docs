@@ -196,7 +196,7 @@ The default participant settings are determined by an organization's IT administ
   > [!NOTE]
   > Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions.
 
-Read more about the participants' [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+Read more about the [participant roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 After you design your app based on participant roles in a meeting, you can identify each user type for meetings and select what they can access.
 
