@@ -20,13 +20,13 @@ The prerequisite to enable SSO for messaging extensions and link unfurling are a
 - You must have an [Azure](https://azure.microsoft.com/free/) account.
 - You must Configure your app through the AAD portal, and update Teams application manifest your bot as defined in [register your app through the AAD portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
 - Ensure that you give the following permission while registering your app through AAD:
-* email
-* openid
-* profile
-* Mail.Read
-* User.Read
-* User.ReadBasic.All
-* Mail.Send.Shared
+ * email
+ * openid
+ * profile
+ * Mail.Read
+ * User.Read
+ * User.ReadBasic.All
+ * Mail.Send.Shared
 
 
 
