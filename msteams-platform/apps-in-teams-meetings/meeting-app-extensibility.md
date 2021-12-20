@@ -192,23 +192,14 @@ The following image illustrates member permissions setting:
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
-* **Organizer**: The roles of an organizer are as follows:
-  * Schedule a meeting.
-  * Set the meeting options.
-  * Assign meeting roles.
-  * Start the meeting.
-  * Change the settings for a specific meeting if required.
-
-  Organizers can make these changes on the **Meeting options** web page.
+| Participant role | Role description |
+| :--------------- | :--------------- |
+| Organizer | • Can schedule a meeting. </br> • Can set the meeting options. </br> • Can assign meeting roles. </br> • Can start a meeting. </br> • Can change settings for a specific meeting if required.</br> • Can add, remove, or uninstall apps. </br></br>Organizers can make these changes on the **Meeting options** web page.|
+| Presenter | Presenters have same capabilities of organizers with the following exclusions:</br> • Can't remove an organizer from a session. </br> • Can't modify meeting options for the session.</br></br>By default, participants joining a meeting have the presenter role.|
+| Attendee | • Can interact with other meeting members. </br> • Can't manage any of the meeting settings. </br> • Can't share the content.|
 
   > [!NOTE]
   > Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions.
-
-* **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
-* **Attendee**: An attendee is invited to attend a meeting but can't act as a presenter. Attendees can interact with other meeting members but can't manage any of the meeting settings or share the content.
-
-> [!NOTE]
-> Only an organizer or presenter can add, remove, or uninstall apps.
 
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
