@@ -1,6 +1,6 @@
 ---
 title: Create and send messages
-author: laujan
+author: v-rpatkur
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ You can create actionable messages and send it through Incoming Webhook or Offic
 
 ## Create actionable messages
 
-The actionable messages include six visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
+The actionable messages include six visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list.
 
 The connector cards support the following actions:
 
@@ -238,11 +238,14 @@ This message provides the following card in the channel:
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds.
 
 ### Transactions per second thresholds
 
 The following table provides the time based transaction details:
+
+> [!NOTE]
+> The client connection is throttled until the window refreshes for the duration of the fixed rate.
 
 | Time in seconds  | Maximum allowed requests  |
 |---|---|
@@ -251,8 +254,6 @@ The following table provides the time based transaction details:
 | 3600   | 100  |
 | 7200 | 150  |
 | 86400  | 1800  |
-
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md) to avoid hitting the rate limits.
 
 > [!NOTE]
 > A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
