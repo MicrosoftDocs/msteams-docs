@@ -291,7 +291,7 @@ Use the information masking property to mask specific information, such as passw
 > [!NOTE]
 > The feature only supports client side information masking. The masked input text is sent as clear text to the HTTPS endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
 
-To mask information in Adaptive Cards, add the `isMasked` property to **type** `Input.Text`, and set its value to **true**.
+To mask information in Adaptive Cards, add the `style` property to **type** `input.text`, and set its value to **Password**.
 
 #### Sample Adaptive Card with masking property
 
