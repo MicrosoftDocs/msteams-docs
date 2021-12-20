@@ -8,15 +8,16 @@ keywords: teams authentication flow tabs
 # Microsoft Teams authentication flow for tabs
 
 > [!NOTE]
-> For authentication to work for your tab on mobile clients, you must use 1.4.1 version of the Microsoft Teams JavaScript SDK or later.
-> Teams SDK launches a separate window for authentication flow. Set the `SameSite` attribute to **Lax**. Teams desktop client or older versions of Chrome or Safari do not support `SameSite`=None.
+> * To authenticate your tab on mobile clients requires Teams JavaScript client SDK version 1.4.1 or later.
+> * Teams SDK launches a separate window for authentication flow. Set the `SameSite` attribute to **Lax**. Teams desktop client or older versions of Chrome or Safari do not support `SameSite`=None.
+> * A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
-OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/) that is easier to follow than the [complete specification](https://oauth.net/2/). The authentication flow for tabs and bots is different. Tabs authentication flow is like websites, so, tabs can directly use OAuth 2.0. Bot authentication flow is different, but the core concepts are identical.
+OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and other identity providers. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/). The authentication flow for tabs and bots is different. Tabs authentication flow is like websites, so, tabs can directly use OAuth 2.0. Bot authentication flow is different, but the core concepts are identical.
 
 For example, the authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
 
 > [!NOTE]
-> Wait for the SDK initialization to complete. Then, call `microsoftTeams.authentication.authenticate` API in response to selecting the button and displaying **Login**. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
+> Before showing a **Login** button to the user and calling the `microsoftTeams.authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
 
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
