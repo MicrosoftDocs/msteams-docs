@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Single sign-on support for messaging extensions
  
-Single sign-on (SSO) support is now available for messaging extensions and link unfurling. Enabling Single sign-on for messaging extensions refreshes the authentication token to minimizes the number of times you need to enter the sign-in credentials for Microsoft Teams.
+Single sign-on (SSO) support is now available for messaging extensions and link unfurling. Enabling Single sign-on for messaging extensions refreshes the authentication token to minimize the number of times you need to enter the sign-in credentials for Microsoft Teams.
 
 This document guides you on how to enable the SSO and store your authentication token, if necessary.
 
@@ -18,7 +18,7 @@ This document guides you on how to enable the SSO and store your authentication 
 The prerequisite to enable SSO for messaging extensions and link unfurling are as follows:
 
 - You must have an [Azure](https://azure.microsoft.com/free/) account.
-- Configure your app through the Azure Active Directory portal, and update Teams application manifest your bot as defined in [register your app through the AAD portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
+- Configure your app through the Azure Active Directory (AAD) portal, and update Teams application manifest your bot as defined in [register your app through the AAD portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
 - Ensure that you give the following permission while registering your app through Azure Active Directory:
    * **email**
    * **openid**
