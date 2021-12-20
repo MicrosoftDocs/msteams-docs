@@ -43,6 +43,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) |  A Visual Studio Code extension that creates a project scaffolding for your app. Use latest version. |
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
@@ -50,7 +51,6 @@ items:
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
    |
 
 
@@ -121,9 +121,8 @@ items:
 
    Verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select **Store** icon.
+    1. In the Teams client, select the **Store** icon.
     1. Select **Manage your apps**.
-       A list of apps appears in the right pane.
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
@@ -190,8 +189,6 @@ items:
     1. Select **JavaScript** as the programming language.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
-
-    1. Select a workspace folder for the app. Teams Toolkit creates the app's directory structure in this workspace for your project.
 
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
@@ -458,8 +455,6 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
-    1. Select a workspace folder. Teams Toolkit creates a folder in your workspace folder for the app project.
-
     1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name." border="false":::
@@ -701,8 +696,6 @@ items:
     1. Select **JavaScript** as the programming language.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-language-mex.png" alt-text="Screenshot showing how to select the programming language." border="false":::
-
-    1. Select a workspace folder. A folder is created in your workspace folder for the project.
 
     1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
 
