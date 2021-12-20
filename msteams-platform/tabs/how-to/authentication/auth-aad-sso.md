@@ -254,3 +254,10 @@ The [authentication solution](#develop-an-sso-microsoft-teams-tab) works for app
 
 > [!NOTE]
 > SSO is supported for customer owned apps within the AAD B2C tenants.
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) to authenticate tabs and messaging extensions.
+
+## See also
+[Teams Bot with Single sign-on](../../../sbs-bots-with-sso.yml)
