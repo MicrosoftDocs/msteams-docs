@@ -251,16 +251,13 @@ The `NotificationSignal` API includes the following response codes:
 ### Meeting Details API
 
 > [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+> Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The `Meeting Details` API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically.
-The API is available through Bot Services.
-
-Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively. 
+The `Meeting Details` API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
 #### Prerequisite
 
-To use the `Meeting Details` API, you must obtain RSC permissions. You need to use different RSC permission based on the scope of any meeting, such as private meeting or channel meeting. 
+To use the `Meeting Details` API, you must obtain different RSC permission based on the scope of any meeting such as private meeting or channel meeting.
 
 Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
@@ -285,7 +282,9 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
     ]
 }
  ```
-Note: Adding this RSC to the manifest will also enable the bot to automatically receive meeting start/end events. The bot will receive events from all the meetings created in all the channels for the team the bot is installed to.
+
+> [!NOTE]
+> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
 
 #### Query parameter
 
@@ -347,7 +346,7 @@ The JSON response body for the `Meeting Details` API is as follows:
 ## Real-time Teams meeting events
 
 > [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+> Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.
 
@@ -503,6 +502,8 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 }
 ```
 
+=======
+>>>>>>> master
 * Have parameters `meetingId`, `userId`, and `tenantId` in meeting API URL. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * Have a bot registration and ID in the `GetParticipant` API to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
@@ -513,13 +514,19 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * Be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
 
+After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
+
+> [!NOTE]
+> Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+
 ## See also
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Meeting apps API references](API-references.md)
+* [Teams bot API changes to fetch team or chat members](~/resources/team-chat-member-api-changes.md)
