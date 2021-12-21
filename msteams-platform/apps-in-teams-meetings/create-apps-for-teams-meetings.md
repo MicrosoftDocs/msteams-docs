@@ -527,4 +527,4 @@ After you've gone through the prerequisites, you can use the meeting apps API re
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [Teams bot API changes to fetch team or chat members](~/resources/team-chat-member-api-changes.md)
+* [Teams bot API changes to fetch team or chat members](~/resources/team-chat-member-api-changes.md) 
