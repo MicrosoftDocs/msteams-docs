@@ -223,11 +223,13 @@ The following table includes the response codes:
 > [!NOTE]
 > Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services.
+The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
 ### Prerequisite
 
-To use the Meeting Details API, you must obtain RSC permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
+To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+
+Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
 ```json
 "webApplicationInfo": {
@@ -238,6 +240,21 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     ]
 }
  ```
+ 
+ Use the following example to configure your app manifest's `webApplicationInfo` property for any channel meeting:
+
+```json
+"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "ChannelMeeting.ReadBasic.Group"
+    ]
+}
+ ```
+
+> [!NOTE]
+> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
  
 ### Query parameter
 
@@ -476,9 +493,7 @@ The following table provides the response codes:
 
 ## Get real-time Teams meeting events API
 
-The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
-
-Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 ### Prerequisite
 
@@ -494,7 +509,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 }
  ```
 
-### Example of getting meeting `MeetingStartEndEventvalue`
+### Example of getting `MeetingStartEndEventvalue`
 
 The bot receives event through the `OnEventActivityAsync` handler. To deserialize the JSON payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
 

@@ -50,7 +50,7 @@ Microsoft Teams platform features that are available to all app developers.
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
 |10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| Meeting stage is now available in GA. | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|10/20/2021| Meeting Details API and real-time Teams meeting events. | Build apps for Teams meetings > [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/20/2021| Meeting Details API and real-time Teams meeting events. | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |10/18/2021| Tabs link unfurling and stage view. | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |10/08/2021| New best practices for designing Adaptive Cards. | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
 |10/05/2021| Hide Teams app until Admin allows to un-hide the app.| Design your app > [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |

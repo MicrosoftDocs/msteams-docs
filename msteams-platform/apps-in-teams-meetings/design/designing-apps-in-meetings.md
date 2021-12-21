@@ -175,8 +175,6 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 * **Width**: You can specify the width of the dialog's iframe anywhere within the supported size range.
 * **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. You also can allow users to scroll vertically if your app content exceeds the maximum height.
 
-To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) key.
-
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
 
 ## Use the shared meeting stage
