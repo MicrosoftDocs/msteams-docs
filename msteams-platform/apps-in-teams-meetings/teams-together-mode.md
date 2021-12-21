@@ -9,8 +9,8 @@ ms.localizationpriority: none
 
 Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 
-* Bring people together and encourage them to turn on their video. 
-* Combine participants digitally into a single virtual scene. 
+* Bring people together and encourage them to turn on their video.
+* Combine participants digitally into a single virtual scene.
 * Place the participants' video streams in pre-determined seats designed and fixed by the scene creator.
 
 In custom Together Mode scenes, the scene is an artifact. The scene is created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. Scene only apps are recommended as the experience for such apps is clear.
@@ -22,7 +22,7 @@ The following process gives an overview to create a scene only app:
 A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 > [!NOTE]
-> Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop. 
+> Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop.
 
 ## Prerequisites
 
@@ -45,7 +45,11 @@ Consider the following practices for a scene building experience:
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
+Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+
+ ![Scenes Studio](~/assets/images/apps-in-meetings/scene_studio.png)
+
+This document refers to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
 
 A scene in the context of the Scene studio is an artifact that contains the following elements:
 

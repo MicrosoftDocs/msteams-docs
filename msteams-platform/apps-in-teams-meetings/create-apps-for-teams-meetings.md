@@ -43,7 +43,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * Be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
 
-After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
+For more information, read on [Meeting apps API references](API-references.md) .
 
 > [!NOTE]
 > Use version 1.10 or later of Teams JavaScript SDK for SSO to work in meeting side panel.
