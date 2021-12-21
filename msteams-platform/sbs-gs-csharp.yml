@@ -73,7 +73,7 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/install-teams-toolkit-vs19.png" alt-text="Image shows installation for Teams Toolkit"::: 
     
-        Visual Studio 2019 is installed, but the changes are available after you close Visual Studio 2019. It's required as Visual Studio 2019 must restart after the installing the extension.
+        The changes are available after you close Visual Studio 2019. It's required as Visual Studio 2019 must restart after the installing the extension.
 
     1. Select **Close**.
     
@@ -145,17 +145,17 @@ items:
     
     To use this sample, clone the sample repo in one of the following ways:
     
-    - Using Git Bash
-    - Using Visual Studio 2019
+    - [Using Git Bash](#to-use-git-bash-to-clone-the-sample-repo)
+    - [Using Visual Studio 2019](#to-use-visual-studio-2019-to-clone-the-sample-repo)
     
-    **To use Git Bash to clone the sample repo**
+    ### To use Git Bash to clone the sample repo
     
     - Run the following command in a terminal window to clone the sample repository to your computer:
 
         ```bash
         git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
         ```
-        The sample repo for C# app is cloned on your computer in the default location C:\Users\<user name>\Source\Repos
+        The sample repo for C# app is cloned on your computer in the default location.
 
         > [!TIP]
         > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repository](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub.
@@ -164,7 +164,7 @@ items:
 
         You can view the cloned repository by opening it in Visual Studio 2019. 
 
-    **To use Visual Studio 2019 to clone the sample repo**
+    ### To use Visual Studio 2019 to clone the sample repo
 
     1. Open Visual Studio 2019.
     1. Select **Clone a repository**.
@@ -211,7 +211,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="false":::
 
-    1. Move through the screen to view the Web server settings section.
+    1. Move through the screen to view the **Web Server Settings**.
 
     1. Make the following settings in **Debug** pane:
         - Set **App URL** to `http://localhost:3333/`.
@@ -266,14 +266,14 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="false":::
 
-        *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
+        Ngrok listens to requests from the internet and routes them to your app running on port 3333.
 
     To verify the app's local deployment:
 
     1. Open the browser.
     1. Load your app using the following URL:
 
-        `https://<forwarding address in ngrok console session>/hello`
+        `https://<forwarding address in ngrok console session>/`
 
         Here's an example of the URL:
 
@@ -292,9 +292,11 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you build and test your Teams app, you can test it using Developer Portal.
+    After you build and test your Teams app, you can configure and preview it using Developer Portal.
     
     Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
+
+    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
 
     **Publish option in Visual Studio 2019**
 
@@ -303,8 +305,6 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
 
     If you use this option, you can enter the details of the Azure site and Azure resources and publish your app. For this tutorial, you do not need to use this step.
-
-    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
 
     ## Configure the app package in Developer Portal
 
@@ -337,7 +337,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-app.png" alt-text="Developer Portal app" border="false":::
 
-    1. Select **Import an existing app**.
+    1. Select **Import app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
@@ -478,7 +478,7 @@ items:
 
         Developer Portal generates a password for the bot.
 
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password, and save it in a text file.
+        You can use the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password. For this tutorial, you don't need to copy it.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-client-secret-generated.png" alt-text="Image showing Client secret generated" border="false":::
 
