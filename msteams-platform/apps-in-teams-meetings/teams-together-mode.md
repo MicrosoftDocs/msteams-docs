@@ -71,7 +71,12 @@ The following image shows each seat represented as an avatar for building the sc
 
     Alternately, to open Scene studio you can go to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home):
     * Select **Create custom scenes for meetings**.
+
+      ![Create custom scenes](~/assets/images/apps-in-meetings/create_custom_scenes.png)
+
     * Select **Tools** from the left-hand section, and select **Scene studio** from the **Tools** section.
+
+      ![Tools section](~/assets/images/apps-in-meetings/tools_scene.png)
 
 1. In **Scenes Editor**, select **Create a new scene**.
 
