@@ -24,7 +24,7 @@ With Outgoing Webhooks, you can send text messages from a channel to the web ser
 
 ### Incoming Webhooks
 
-Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
+Incoming Webhooks help in posting messages from apps to Microsoft Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts formatted JSON script and posts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 
 ## Connectors
 

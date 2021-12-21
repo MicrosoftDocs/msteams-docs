@@ -9,11 +9,11 @@ ms.author: surbhigupta
 
 # Create and send messages
 
-You can create actionable messages and send it through Incoming Webhook or Office 365 Connector.
+You can create actionable messages and send it through [Incoming Webhook](add-incoming-webhook.md#create-incoming-webhook) or [Office 365 Connectors](connectors-creating.md#create-office-365-connectors).
 
 ## Create actionable messages
 
-The actionable messages include six visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list.
+The actionable messages include 6 visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list.
 
 The connector cards support the following actions:
 
@@ -167,7 +167,7 @@ This message provides the following card in the channel:
 
 # [PowerShell](#tab/PowerShell)
 
- Prerequisite: Installation of PowerShell and familiarization with its basic usage.
+ Prerequisite: [Installation of PowerShell](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2) and familiarization with its basic usage.
 
 **To post a message to the webhook with PowerShell**
 
