@@ -260,11 +260,15 @@ items:
     1. Open the browser.
     1. Load your app using the following URL:
 
-        `https://<forwarding address in ngrok console session>/hello`
+        `https://<forwarding address in ngrok console session>/`
 
         Here's an example of the URL:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel-verify.png" alt-text="Image showing node.js app running locally on ngrok tunnel" border="false":::
+
+        You can try adding `hello`, `first`, or `second` to the ngrok tunnel url to view different tab pages of the app.
+
+        Ngrok listens to requests from the internet and routes them to your app running on port 3333.        
 
     1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
 
@@ -312,11 +316,13 @@ items:
         > [!NOTE]
         > Search for the app package file, helloworldapp.zip, if the location is not clear in the tool you are using.
 
-- title: Deploy your first Node.js app using Dev Portal
+- title: Configure your first Node.js app using Developer Portal
   durationInMinutes: 1
   content: |
 
-    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams and configure app capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+
+    After you build and test your Teams app, you can configure and preview it using Developer Portal.
 
     Updating the app package includes:
 
@@ -488,7 +494,7 @@ items:
 
         Developer Portal generates a password for the bot.
 
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password, and save it in a text file.
+        You can use the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password. For this tutorial, you don't need to copy it.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-client-secret-generated.png" alt-text="Image showing Client secret generated" border="false":::
 
