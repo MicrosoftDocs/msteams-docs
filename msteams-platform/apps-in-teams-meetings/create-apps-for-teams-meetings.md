@@ -31,7 +31,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
 
-After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
+* After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
 
 ## Meeting apps API references
 
@@ -502,8 +502,6 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 }
 ```
 
-=======
->>>>>>> master
 * Have parameters `meetingId`, `userId`, and `tenantId` in meeting API URL. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * Have a bot registration and ID in the `GetParticipant` API to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
