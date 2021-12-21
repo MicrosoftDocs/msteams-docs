@@ -12,15 +12,17 @@ keywords: teams apps meetings user participant role api
 
 With apps for Teams meetings, you can expand the capabilities of your apps across the meeting lifecycle. Before you work with apps for Teams meetings, you must fulfill the following prerequisites:
 
-* Know how to develop Teams apps. For more information on how to develop Teams app, see [Teams app development](../overview.md).
+* Ensure you have the knowledge to develop Teams apps. For more information on how to develop Teams app, see [Teams app development](../overview.md).
 
 * Update the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).
 
-* Use your app that supports configurable tabs in the groupchat scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
+* Use your app that supports configurable tabs in the group chat scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
 
 * Adhere to general Teams tab design guidelines for pre- and post-meeting scenarios. For experiences during meetings, refer to the in-meeting tab and in-meeting dialog design guidelines. For more information, see [Teams tab design guidelines](../tabs/design/tabs.md), [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab), and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* Support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats. With the pre-meeting app experience, you can find and add meeting apps and do the pre-meeting tasks. With the post-meeting app experience, you can view the results of the meeting, such as poll survey results or fee
+* Support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats.
+   * With the pre-meeting app experience, you can find and add meeting apps and do the pre-meeting tasks.
+   * With the post-meeting app experience, you can view the results of the meeting, such as poll survey results or fee.
 * Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
@@ -44,7 +46,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
 
 > [!NOTE]
-> Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
+> Use version 1.10 or later of Teams JavaScript SDK for SSO to work in meeting side panel.
 
 ## Next step
 
