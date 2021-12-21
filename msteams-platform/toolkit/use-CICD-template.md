@@ -64,7 +64,7 @@ Steps to create secrets by environment in GitHub:
 |AZURE_SUBSCRIPTION_ID|To identify the subscription in which the resources will be provisioned.|
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 
-For more information on Azure service principals, [see](#create-azure-service-principals).
+For more information on Azure service principals, see [Create Azure service principles](#create-azure-service-principles).
 
 ## Set up CI or CD Pipelines with Azure DevOps
 
@@ -170,7 +170,7 @@ Steps to create Pipeline variables in Azure DevOps:
 |AZURE_SUBSCRIPTION_ID|To identify the subscription in which the resources will be provisioned.|
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 
-For more information on Azure service principals, [see](#create-azure-service-principals)
+For more information on Azure service principals, see [Create Azure service principles](#create-azure-service-principles)
 
 ## CI or CD Pipeline Templates in Jenkins
 
@@ -248,13 +248,13 @@ The following are the steps used to create Azure service principles:
 3. Create a new Azure AD application secret.
 4. Grab your tenant id, application id(AZURE_SERVICE_PRINCIPAL_NAME), and the secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) for use.
 
-For detailed guidelines, refer to [the official document](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal). There're three ways to create service principal:
+For detailed guidelines, refer to [the official document][/azure/active-directory/develop/howto-create-service-principal-portal](/azure/active-directory/develop/howto-create-service-principal-portal). There're three ways to create service principal:
 
-* [Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)
+* [Azure portal][/azure/active-directory/develop/howto-create-service-principal-portal](/azure/active-directory/develop/howto-create-service-principal-portal)
 
-* [PowerShell](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
+* [PowerShell][/azure/active-directory/develop/howto-authenticate-service-principal-powershell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
 
-* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli)
+* [Azure CLI][/cli/azure/create-an-azure-service-principal-azure-cli](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## Publish Teams app using Teams Developer Portal
 
