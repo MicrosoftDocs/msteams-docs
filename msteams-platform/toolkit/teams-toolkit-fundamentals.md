@@ -33,7 +33,7 @@ Or you can find the Teams Toolkit on the [Visual Studio Code Marketplace](https:
 
 [Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points.Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
 
-* [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
+* [Tabs](../tabs/what-are-tabs.md#build-tabs-for-microsoft-teams)
 
 * [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
 
