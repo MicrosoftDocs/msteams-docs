@@ -30,7 +30,7 @@ The following table provides the features and description of Incoming Webhook:
 |Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the insertion of malicious code.|
 
 > [!NOTE]
->  Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
+> Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 
 Teams bots, messaging extensions, Incoming Webhook, and the Bot Framework support [Adaptive Cards](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#work-with-universal-actions-for-adaptive-cards). For more information on cards and webhooks, see [Adaptive cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
@@ -38,27 +38,30 @@ Teams bots, messaging extensions, Incoming Webhook, and the Bot Framework suppor
 
 **To add an Incoming Webhook to a Teams channel**
 
-1. Go to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
-
-    ![Select Connector](~/assets/images/addincomingwebhook.png)
-
+1. Go to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar:
 1. Select **Connectors** from the dropdown menu:
 
     ![Select Connector](~/assets/images/connectors.png)
 
 1. Search for **Incoming Webhook** and select **Add**.
+
+    ![Select add](~/assets/images/addincomingwebhook.png)
+
 1. Select **Configure**, provide a name, and upload an image for your webhook if required:
 
     ![Configure button](~/assets/images/configure.png)
 
-1. The dialog window presents a unique URL that maps to the channel. Copy and save the webhook URL, to send information to Microsoft Teams and select **Done**:
+1. The dialog window presents a unique URL that maps to the channel and select **Done**:
 
     ![Unique URL](~/assets/images/url.png)
+
+ > [TIP]
+ > Copy and save the webhook URL, to send information to Microsoft Teams.
 
 The webhook is available in the Teams channel.
 
 > [!NOTE]
-> In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
+> In Teams, to allow any team member to add, modify, or delete a connector, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**.
 
 ## Remove Incoming Webhook
 
