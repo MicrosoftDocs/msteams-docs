@@ -1,6 +1,6 @@
 ---
 title: Authentication flow for tabs
-description: Describes authentication flow in tabs
+description: Describes authentication flow in tabs, OAuth by AAD, and provides code sample 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication flow tabs
@@ -8,12 +8,12 @@ keywords: teams authentication flow tabs
 # Microsoft Teams authentication flow for tabs
 
 > [!NOTE]
-> For authentication to work for your tab on mobile clients, you must ensure you are using at least 1.4.1 version of the Microsoft Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, you need to ensure that you're using at least 1.4.1 version of the Microsoft Teams JavaScript SDK.  
 > Teams SDK launches separate window for authentication flow. Set the `SameSite` attribute to **Lax**. Teams desktop client or older versions of Chrome or Safari do not support `SameSite`=None.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/) that is easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots are different because tabs are similar to websites so they can use OAuth 2.0 directly. Bots do a few things differently, but the core concepts are identical.
 
-For an example of authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
+For example, the authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
 
 > [!NOTE]
 > Before showing a **Login** button to the user and calling the `microsoftTeams.authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
@@ -29,7 +29,7 @@ Similar to other application auth flows in Teams, the start page must be on a do
     > [!NOTE]
     > The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request, which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples use a randomly-generated GUID for the `state` data.
 
-5. On the provider's site, the user signs in and grants access to the tab.
+5. On the provider's site, the user sign in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth 2.0 redirect page with an access token.
 7. The tab checks that the returned `state` value matches what was saved earlier, and calls `microsoftTeams.authentication.notifySuccess()`, which in turn calls the `successCallback` function registered in step 3.
 8. Teams closes the pop-up window.
@@ -37,7 +37,7 @@ Similar to other application auth flows in Teams, the start page must be on a do
 
 ## Treat tab context as hints
 
-Although the tab context provides helpful information regarding the user, do not use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context simply as hints and validate them before use. Refer to the notes in [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
+Although the tab context provides helpful information regarding the user, do not use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context as a  hint and validate it before using. Refer to the notes in [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
 
 ## Code sample
 
@@ -47,7 +47,7 @@ Sample code showing the tab authentication process:
 |-----------------|-----------------|-------------|------------|
 | Teams tab authentication | Authentication process for tabs using AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## More details
+## See also
 
 For a detailed implementation for tab authentication using AAD, see:
 

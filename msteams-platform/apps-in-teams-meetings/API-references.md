@@ -1,11 +1,11 @@
 ---
 title: Meeting apps API references
 author: surbhigupta
-description: Identify meeting apps API references 
+description: Identify the meeting apps API references with examples and Code samples
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: teams apps meetings user participant role api 
+keywords: teams apps meetings user participant role api usercontext notification signal query 
 ---
 
 # Meeting apps API references
@@ -20,18 +20,10 @@ The following table provides a list of APIs:
 
 |API|Description|Request|Source|
 |---|---|----|---|
-|**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams Client SDK|
-|**GetParticipant**| This API enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
-
-The following table provides the Bot Framework SDK methods for the APIs:
-
-|API|Bot Framework SDK method|
-|---|---|
-|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
-|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
-|**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
+|**GetUserContext**| Enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
+|**GetParticipant**| Enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**NotificationSignal** | Enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**Meeting Details** | Enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
 ## GetUserContext API
 
@@ -53,7 +45,7 @@ The `GetParticipant` API includes the following query parameters:
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
 |**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. | 
 
 ### Example
 
@@ -233,6 +225,9 @@ The API is available through Bot Services.
 
 ### Prerequisite
 
+> [!NOTE] 
+> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
+
 To use the Meeting Details API, you must obtain RSC permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
 
 ```json
@@ -244,7 +239,6 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     ]
 }
  ```
- 
 ### Query parameter
 
 The Meeting Details API includes the following query parameter:
@@ -301,17 +295,16 @@ The JSON response body for Meeting Details API is as follows:
     }
 } 
 ```
-
 ## Real-time Teams meeting events
-
-> [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
 
 Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 ### Prerequisite
+
+> [!NOTE] 
+> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
 
@@ -469,6 +462,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 |Meeting Events Sample|Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Meeting Recruitment Sample|Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |App installation using QR code|Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
+
 
 ## See also
 

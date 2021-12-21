@@ -38,13 +38,15 @@ When you feel your app is production ready, you can begin the process of getting
    :::column-end:::
 :::row-end:::
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Review store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+
 ## See also
 
 * [Publishing to Microsoft 365 App Stores](/office/dev/store/)
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Review store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Plan onboarding experience for users](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Distributing tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams Authentication flow for bots
-description: Describes Microsoft Teams authentication flow in bots
+description: Describes Microsoft Teams authentication flow in bots with Code sample.
 keywords: teams authentication flow bots
 ms.localizationpriority: medium
 ms.topic: overview
@@ -21,8 +21,8 @@ for an example that demonstrates authentication flow for bots using Node.js and 
 3. The bot constructs the URL to the start page of the authentication flow, and sends a card to the user with a `signin` action. ([View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
     Like other application auth flows in Teams, the start page must be in a domain that's on your `validDomains` list, and in the same domain as the post-login redirect page.
     > [!IMPORTANT] 
-    > The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
-4. When the user selects the *signin* button, Teams opens a popup window and navigates to the start page.
+    > The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request, which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
+4. When the user selects the *signin* button, Teams opens a pop-up window and navigates to the start page.
    > [!NOTE]
    > The size of the pop-up window can be controlled through width and height query string parameters in the URL. For example, if you add width=600 and height=600, the size of the pop-up window is 600x600 pixels. The actual size of the pop-up window is capped as a percentage of the Teams main window size. If the Teams window is small, the pop-up window is smaller than the specified dimensions.
 

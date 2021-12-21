@@ -1,7 +1,7 @@
 ---
 title: Link unfurling
 author: surbhigupta
-description: How to perform link unfurling with messaging extension in a Microsoft Teams app.
+description: Learn how to add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually using code examples and samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how to add link unfurling to your app manifest using App studio and manually. With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
+This document guides you on how to add link unfurling to your app manifest using App studio and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
 
 > [!NOTE]
 > * Currently, link unfurling is not supported on Mobile clients.
@@ -25,7 +25,7 @@ The Azure DevOps messaging extension uses link unfurling to look for URLs pasted
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array either with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
 > [!NOTE]
-> Donot add domains that are not in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. Also, the top-level domains are prohibited. For example, `*.com`, `*.org`.
+> Don't add domains that are not in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. Also, the top-level domains are prohibited. For example, `*.com`, `*.org`.
 
 ### Add link unfurling using App Studio
 
@@ -34,6 +34,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 1. On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section. The following image explains the process:
 
     ![message handlers section in App Studio](~/assets/images/link-unfurling.png)
+
     
 ### Add link unfurling manually
 
@@ -73,7 +74,7 @@ The following card types are supported:
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property. The preview property is not necessary if the results are already Hero or Thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card fails and nothing is displayed.
+For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### Example
 

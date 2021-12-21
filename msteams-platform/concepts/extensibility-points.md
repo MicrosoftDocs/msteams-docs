@@ -1,7 +1,7 @@
 ---
 title: Entry points for Teams apps
 author: heath-hamilton
-description: Describes where people can discover and use your app in Teams.
+description: Describes entry points for your app, such as team, channel, and chat in personal and shared app experience
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Entry points for Teams apps
 
-The Teams platform provides a flexible set of entry points, such as team, channel, and chat where people can discover and use your app. Your app can be as simple as embedding existing web content in a tab or a multi-faceted app that users interact with across several contexts.
+The Teams platform provides a flexible set of entry points, such as team, channel, and chat, where people can discover and use your app. Your app can be as simple as embedding existing web content in a tab or a multi-faceted app that users interact with across several contexts.
 The most successful apps are native to Teams, so choose your app's entry points carefully.
 
 ## Shared app experiences
@@ -40,12 +40,12 @@ The following list shows how Teams capabilities are commonly used in personal co
 
 * [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience that is meaningful to the user looking at it.
 
-## See also
-
-[Teams app design guidelines](../concepts/design/design-teams-app-overview.md) <br>
-[Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Understand use cases](../concepts/design/understand-use-cases.md)
+
+## See also
+
+* [Teams app design guidelines](../concepts/design/design-teams-app-overview.md) <br>
+* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

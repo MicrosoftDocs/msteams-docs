@@ -8,15 +8,15 @@ keywords: teams authentication tabs AAD
 # Authenticate a user in a Microsoft Teams tab
 
 > [!Note]
-> For authentication to work for your tab on mobile clients, you need to ensure you're using version 1.4.1 or later of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, you need to ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
 
-There are many services that you may wish to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and Teams. Teams user profile information is stored in Azure Active Directory (Azure AD) using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow with the goal of eventually reading the user's profile information from Azure AD and Microsoft Graph.
 
 The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
-For a general overview of authentication flow for tabs see the topic [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
+For general overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
 Authentication flow in tabs differs slightly from authentication flow in bots.
 
@@ -52,11 +52,11 @@ microsoftTeams.authentication.authenticate({
 
 * Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
 
-* Failing to use `microsoftTeams.authentication.authenticate()` will cause a problem with the popup not closing at the end of the sign in process.
+* Failing to use `microsoftTeams.authentication.authenticate()` will cause a problem with the pop-up not closing at the end of the sign in process.
 
-## Navigate to the authorization page from your popup page
+## Navigate to the authorization page from your pop-up page
 
-When your popup page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information which can be passed to Azure AD.
+When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -87,7 +87,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 ### Notes
 
-* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
+* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign in, which means the user might need to type less. Remember that you should not use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 * Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback does not match the parameter you sent during the call the return call is not verified and should be terminated.
 * It is not necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
@@ -134,10 +134,10 @@ This code parses the key-value pairs received from Azure AD in `window.location.
 
 `NotifyFailure()` has the following predefined failure reasons:
 
-* `CancelledByUser` the user closed the popup window before completing the authentication flow.
-* `FailedToOpenWindow` the popup window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a popup blocker.
+* `CancelledByUser` the user closed the pop-up window before completing the authentication flow.
+* `FailedToOpenWindow` the pop-up window could not be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a pop-up blocker.
 
-If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, display an error message.
+If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, it displays an error message.
 
 Your app can set its own session cookie so that the user need not sign in again when they return to your tab on the current device.
 
@@ -156,3 +156,11 @@ Sample code showing the tab authentication process using Azure AD:
 | **Sample name** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teams tab authentication | Tab authentication process using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+
+## See also
+
+* [Plan user authentication](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Design your tab for Microsoft Teams](~/tabs/design/tabs.md)
+* [Silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)
+* [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)
+* [Single sign-on (SSO) support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)

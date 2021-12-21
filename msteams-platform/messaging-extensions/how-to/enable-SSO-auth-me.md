@@ -1,23 +1,23 @@
 ---
 title: SSO support for your messaging extensions
 author: KirtiPereira
-description: How to enable SSO support for your messaging extensions
+description: Learn how to enable SSO support for your messaging extensions with Code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Single sign-on (SSO) support for messaging extensions
+# Single sign-on support for messaging extensions
  
-Single sign-on support is now available for messaging extensions and link unfurling. Enabling Single sign-on (SSO) for messaging extensions silently refreshes the authentication token, which minimizes the number of times you need to enter your sign in credentials for Microsoft Teams.
+Single sign-on (SSO) support is now available for messaging extensions and link unfurling. Enabling Single sign-on for messaging extensions by default refreshes the authentication token, which minimizes the number of times you need to enter the sign in credentials for Microsoft Teams.
 
-This document guides you on how to enable the SSO and store your authentication token, if required.
+This document guides you on how to enable the SSO and store your authentication token, if necessary.
 
 ## Prerequisites
 
 The prerequisite to enable SSO for messaging extensions and link unfurling are as follows:
 * You must have an [Azure](https://azure.microsoft.com/free/) account.
-* You must configure your app through the AAD portal, and update your Teams application manifest for your bot as defined in [register your app through the AAD portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
+* You must Configure your app through the AAD portal, and update Teams application manifest your bot as defined in [register your app through the AAD portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
 
 > [!NOTE]
 > For more information on creating an Azure account and updating your app manifest, see [Single sign-on (SSO) support for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
@@ -48,7 +48,7 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
     
      ```
   
-    If you are using the OAuth connection, add the following code to the TeamsMessagingExtensionsSearchAuthConfigBot.cs file to update or add the token in the store:
+    If you're using the OAuth connection, add the following code to the TeamsMessagingExtensionsSearchAuthConfigBot.cs file to update or add the token in the store:
     
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -82,15 +82,16 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
                 JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
                 var tokenExchangeRequest =
                 ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
-                tokenExchangeResponse = await (turnContext.Adapter as IExtendedUserTokenProvider).ExchangeTokenAsync(
-                 turnContext,
-                 _connectionName,
-                 turnContext.Activity.From.Id,
-                 new TokenExchangeRequest
+                var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+                tokenExchangeResponse = await userTokenClient.ExchangeTokenAsync(
+                                turnContext.Activity.From.Id,
+                                 _connectionName,
+                                 turnContext.Activity.ChannelId,
+                                 new TokenExchangeRequest
                  {
                      Token = tokenExchangeRequest.Token,
                  },
-                 cancellationToken).ConfigureAwait(false);
+                  cancellationToken).ConfigureAwait(false);
             }
     #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
             catch
@@ -114,4 +115,3 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
 * [Add authentication to your messaging extensions](add-authentication.md)
 * [Use SSO for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [Link unfurling](link-unfurling.md)
-

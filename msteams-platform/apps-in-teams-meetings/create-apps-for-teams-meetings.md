@@ -30,7 +30,6 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 * The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`.
 
 * For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
-
 After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
 
 ## Meeting apps API references
@@ -513,13 +512,19 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * Be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
 
+After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
+
+> [!NOTE]
+> Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+
 ## See also
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Meeting apps API references](API-references.md)
+* [Teams bot API changes to fetch team or chat members](~/resources/team-chat-member-api-changes.md)

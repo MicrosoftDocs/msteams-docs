@@ -1,13 +1,13 @@
 ---
 title: Create and send the task module
 author: surbhigupta
-description: How to handle the initial invoke action and respond with a task module from an action messaging extension command
+description: Learn how to handle the initial invoke action and respond with a task module from an action messaging extension command using code examples and samples. 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
 # Create and send the task module
-
+ 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process called the initial invoke request. This document covers 
@@ -983,13 +983,11 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## See also
-
-[Define action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-
-
 ## Next step
 
 > [!div class="nextstepaction"] 
 > [Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
+## See also
+
+[Define action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)

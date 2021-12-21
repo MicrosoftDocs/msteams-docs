@@ -1,9 +1,9 @@
 ---
 title: DevTools for Microsoft Teams tabs
-description: Describes how to get to the DevTools when using the Microsoft Teams Desktop Client
+description: Describes how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: devtools debug mobile chrome desktop client developer tools
+keywords: devtools debug mobile chrome desktop client developer tools tab 
 ---
 
 # DevTools for Microsoft Teams tabs
@@ -30,7 +30,7 @@ While the web version and the desktop version of Teams are almost the same, ther
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 
-   ![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+   [![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)](~/assets/images/dev-preview/tab-and-devtools.png#lightbox)
 
 ## Access DevTools from an Android device
 

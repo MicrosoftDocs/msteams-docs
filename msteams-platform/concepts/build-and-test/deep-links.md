@@ -184,7 +184,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## Deep linking to an app
 
-Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the following URL to your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app. 
+Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app. 
   
 ## Deep linking for SharePoint Framework tabs
 
@@ -244,6 +244,9 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
 
+> [!NOTE]
+> Currently, deeplink to call is not supported on Teams mobile devices.
+
 ### Generate a deep link to a call
 
 | Deep link | Format | Example |
@@ -266,5 +269,5 @@ Following are the query parameters:
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
-
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Moodle LMS](~/resources/moodleinstructions.md)

@@ -73,7 +73,6 @@ The following is a sample tab removal code block:
     }
   </script>
 </body>
-
 ```
 
 When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an IFrame. The user is shown a button loaded with the `onClick()` function that calls `microsoftTeams.settings.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page IFrame.
@@ -82,8 +81,13 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 
 >[!NOTE]
 > * To ensure that an authorized user's control over a tab is not inhibited, Teams removes the tab in both success and failure cases.
-> * Teams enables the **Remove** button after five seconds, even if your tab has not called `setValidityState()`.
+> * After you invoke the `registerOnRemoveHandler` event handler, you'll have 15 seconds to respond to the method. By default, Teams enables the **Remove** button after five seconds even if you don't call `setValidityState(true)`. 
 > * When the user selects **Remove**, Teams removes the tab after 30 seconds regardless of whether the actions have been completed or not.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 
 ## See also
 
@@ -91,8 +95,3 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Tabs on mobile](~/tabs/design/tabs-mobile.md)

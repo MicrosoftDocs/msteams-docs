@@ -1,10 +1,11 @@
 ---
 title: Designing your meeting extension
 author: heath-hamilton
-description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit.
+description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit, in-meeting tab and use cases, responsive behavior and shared meeting stage, and theme and navigation.
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
+keywords: UI kit template in-meeting responsive behavior shared meeting stage
 ---
 # Designing your Microsoft Teams meeting extension
 
@@ -185,7 +186,7 @@ Shared meeting stage helps meeting participants to interact and collaborate with
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
 > [!NOTE]
-> Currently, if an app is shared to stage on desktop it will show for the users on mobile meeting only.
+> All the users in meeting can see the app when shared from desktop. Currently, mobile users can't share app content to the meeting stage.
  
 ### Use cases
 

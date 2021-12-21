@@ -5,6 +5,7 @@ description: Understand how Teams admins can customize your app for their org.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
+keywords: accent color brand hide app approval
 ---
 
 # Customize your Teams app
@@ -16,7 +17,8 @@ You can allow customers to customize some aspects of your Microsoft Teams app in
 Some possible examples of this feature include:
 
 * Changing the app's accent color to match an org's brand.
-* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
+* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. 
+(Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
 You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). This configures `configurableProperties`, which isn't available in versions before 1.10 of the Teams app manifest.
 
@@ -31,6 +33,11 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 ## Hide Teams app until admin approves
 
 To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
+
+> [!NOTE]
+> Teams store has evolved:
+> 
+> Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
@@ -47,4 +54,5 @@ If by default, you don't want the app to be hidden, you can update the `defaultB
 
 ## See also
 
-[Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
+* [App manifest schema](/microsoftteams/platform/resources/schema/manifest-schema)
+* [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)

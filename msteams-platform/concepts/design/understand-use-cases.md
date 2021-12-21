@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases
 author: heath-hamilton
-description: When planning your Microsoft Teams app, you should first understand what problems your app is trying to solve.
+description: Plan your app, understand your user and their need, understand the user problems that your app would solve, plan user authentication and their onboarding experience
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -13,22 +13,22 @@ The Microsoft Teams platform offers a large variety of [entry points and UI elem
 > [!NOTE]
 > Before you start building your use cases, you must have a good understanding of Teams capabilities and what is possible on the Teams platform using them.
 
-Each method of interacting with your users has its strengths and weaknesses. Building an awesome Teams app is all about finding the right combination to meet your user's needs. If you are going to meet those needs, you first need to understand them.
+Each method of interacting with your users has its strengths and weaknesses. Building an awesome Teams app is all about finding the right combination to meet your user's needs. If you're going to meet those needs, you first need to understand them.
 
 ## Understand the problem
 
-Every good app has a core problem or a need it is trying to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that bridge gaps in achieving effective collaboration are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you are trying to solve. Before you start building an app, ask relevant questions, such as:
+Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that bridge gaps in achieving effective collaboration are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you're trying to solve. Before you start building an app, ask relevant questions, such as:
 
 * What are the pros and cons of the current state system used by your users?
-* What are the pain points your users face as of today that you wish to address?
+* What are the issues faced by your users that you want to address?
 * What features or capabilities your users like and love in their current way of doing the process?
 
 ## Understand your user
 
-Understand who your user is and you can identify the right distribution model but more importantly, it helps you to identify how users use Teams. Ask relevant questions, such as:
+Understand who your user is and you can identify the right distribution model. It helps you to identify how users use Teams. Ask relevant questions, such as:
 
 * Are the users primarily front-line workers on mobile clients?
-* Do you expect a lot of guest users to need access to your app?
+* Do you expect many guest users to need access to your app?
 * Do they use teams and channels or primarily group chats?
 * How technically sophisticated are your primary users?
 * Do you need a thorough onboarding experience or a few pointers might do?
@@ -37,7 +37,7 @@ Sometimes the answer is, *We want to solve this problem for all Teams users ever
 
 ## Understand the limitations of the app
 
-Knowing the limitations of the apps in terms of data accessibility and data residency requirement will help you design better apps. This is important, as having information on who owns the data and availability of APIs impacts the solution architecture. Again, ask relevant questions, such as:
+Knowing the limitations of the apps for data accessibility and data residency requirement will help you design better apps. This is important, as having information on who owns the data and availability of APIs impacts the solution architecture. Again, ask relevant questions, such as:
 
 * What are the challenges with back end integration of the current app?
 * Who owns the back end data? In-house or third-party.
@@ -60,13 +60,13 @@ Remember who your users are and the problem you are trying to solve. Do they alr
 
 ## Plan the onboarding experience
 
-Your onboarding experience can be the difference between success or failure for your app. For each capability of your app and each context that capability can be installed in, you must have a plan for how you are going to introduce yourself. How you introduce your conversational bot when it is installed in a channel with a thousand people, is different when it is installed in a one-to-one chat. What happens when a user first configures your tab in a channel? If you are sharing cards with a messaging extension, does it make sense to add a small link to a **learn more** page to help introduce users to what else your app can do?
+Your onboarding experience can be difference between success or failure for your app. For each capability of your app and each context that capability can be installed in, you must have a plan for how you are going to introduce yourself. How you introduce your conversational bot when it is installed in a channel with a thousand people, is different when it is installed in a one-to-one chat. What happens when a user first configures your tab in a channel? If you are sharing cards with a messaging extension, does it make sense to add a small link to a **learn more** page to help introduce users to what else your app can do?
 
-Knowing who your users are helps you to craft the right experience. Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? Are they coming to your app with no prior knowledge? Craft your onboarding experience with your key users in mind.
+Knowing who your users are, helps you to craft the right experience. Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? Are they coming to your app with no prior knowledge? Craft your onboarding experience with your key users in mind.
 
-Remember, users can discover your app in a variety of ways. They might be the ones installing it or they might be introduced to your app when another user uses it to share content. If you want more users to use your app, you must look for ways to introduce yourself to everyone.
+Remember, users can discover your app in a various ways. They might be the ones installing it or they might be introduced to your app when another user uses it to share content. If you want more users to use your app, you must look for ways to introduce yourself to everyone.
 
-Above all, remember that nobody likes spam. Blasting away with personal and channel messages is a good way to get un-installed quickly!
+Above all, remember nobody likes spam. Blasting away with personal and channel messages is a good way to get un-installed quickly!
 
 ## Plan for the future
 
@@ -76,3 +76,7 @@ Identify which new features the user will prefer to have in the current solution
 
 > [!div class="nextstepaction"]
 > [Map your use cases](../../concepts/design/map-use-cases.md)
+
+## See also
+
+[Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)

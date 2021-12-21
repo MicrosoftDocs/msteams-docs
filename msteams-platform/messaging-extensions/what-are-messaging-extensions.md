@@ -14,6 +14,9 @@ The following image displays the locations from where messaging extensions are i
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
+> [!NOTE]
+> @mentioning message extensions is no longer supported in the compose box.
+
 ## Scenarios where messaging extensions are used
 
 | Scenario | Example |
@@ -66,19 +69,17 @@ The following images display link unfurling feature when a link is pasted in mes
 ## Code sample
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|------------|-------------|----------------|------------|
+|------------|-------------|----------------|------------|------------|
 | Messaging extension with action-based commands | This sample illustrates how to build an action-based messaging extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Messaging extension with search-based commands | This sample illustrates how to build a Search-based Messaging Extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-
-## See also
-
-[Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
-
+|Messaging extension action for task scheduling|This sample illustrates how to schedule a task from messaging extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
-> [!div class="nextstepaction"]
-> [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+## See also
+
+* [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
