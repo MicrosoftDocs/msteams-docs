@@ -17,7 +17,7 @@ Microsoft Block enhances user experience by providing UI to modify Microsoft 365
 * Manage the connection to Office 365
 * Customize personal Office 365 integration preferences
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 1.png" alt-text="microsoft block":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block":::
 
 ## See also
 
