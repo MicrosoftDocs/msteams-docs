@@ -135,11 +135,11 @@ items:
 - title: Test your app
   durationInMinutes: 2
   content: |
-  
-    The most comprehensive way to test your app is by creating an app package and uploading it to Teams. 
-    This method is the only way to test the full functionality available to your app, across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
 
-    To test the Teams file bot you need to upload the manifest.zip file in Teams.
+    The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app,
+    across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
+
+    To run the Teams file bot you need to upload the manifest.zip file in Teams.
 
     1. In the Windows Explorer, go to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload > TeamsAppManifest-folder.
     
