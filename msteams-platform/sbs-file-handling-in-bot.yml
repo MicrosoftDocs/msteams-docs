@@ -134,8 +134,8 @@ items:
 
        You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
     
-  title: Configure and run Teams file bot
-  durationInMinutes: 5
+  title: Test and run Teams file bot
+  durationInMinutes: 
   content:
 
     To run the Teams file bot you need to upload the manifest.zip file in Teams:**
@@ -144,7 +144,7 @@ items:
     
     2. Open the manifest.json file in visual studio code.
 
-    3. In the manifest.json file, find <<YOUR-MICROSOFT-APP-ID>> and replace it with your Microsoft App Id (that was created when you registered your bot earlier) every where you see the place holder string and save it.
+    3. In the manifest.json file, find YOUR-MICROSOFT-APP-ID and replace it with your App Id (that was created when you registered your bot earlier) every where you see the place holder string and save it.
        (Image needs to be added) 
 
     4. Zip up the contents of the `TeamsAppManifest' folder to create **manifest.zip**.
