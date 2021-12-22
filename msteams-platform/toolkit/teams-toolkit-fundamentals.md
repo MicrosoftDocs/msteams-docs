@@ -13,33 +13,31 @@ ms.date: 11/29/2021
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
 
-Teams Toolkit for Visual Studio Code helps the developers to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a zero-configuration approach to the developer experience.  
-
-There is a Teams Toolkit for Visual Studio and a [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) for Teams app development (called `teamsfx`).
+Teams Toolkit for Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a zero-configuration approach to the developer experience. Similar to Teams Toolkit for Visual Studio, a [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) for Teams app development consists of Toolkit `teamsfx`.
 
 ## Install the Teams Toolkit for Visual Studio Code
 
 1. Open **Visual Studio Code.**
-
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-
 1. In the search box, enter **Teams Toolkit**.
 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install teamstoolkit.png" alt-text="Extension View":::
+
 1. Select **install** button next to the Teams Toolkit.
+  
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="Install Teams Toolkit":::
 
-Or you can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+You can also install Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Support Teams apps capabilities
+## Teams apps capabilities
 
-[Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points.Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
+[Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points.Teams Toolkit for Visual Studio Code supports you to work on project with the following Teams App Capabilities:
 
 * [Tabs](../tabs/what-are-tabs.md#build-tabs-for-microsoft-teams)
-
 * [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
-
 * [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions) 
 
-Your Teams project can contain either one of the capabilities or all three capabilities from above. You can select any capability when you create the Teams Project.
+Your Teams project can contain either one of the capabilities or all three capabilities from above. You can select any of the required capability when you create the Teams Project.
 
 ![Select capabilities to Create New Project](./images/create-project-capabilities.png)
 
