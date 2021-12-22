@@ -136,7 +136,7 @@ items:
     
 - title: Test and run Teams file bot
   durationInMinutes: 2
-  content:
+  content: |
 
     To run the Teams file bot you need to upload the manifest.zip file in Teams.
 
@@ -157,7 +157,7 @@ items:
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
-  content:
+  content: |
 
     1. Sending a message to the bot will cause it to respond with a card that will prompt you to upload a file. The file that's being uploaded is the teams-logo.png in the Files directory in this sample. 
     The Accept and Decline events illustrated in this sample are specific to Teams. You can message the bot again to receive another prompt.
