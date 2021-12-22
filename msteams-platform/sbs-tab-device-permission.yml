@@ -51,6 +51,9 @@ items:
        ```command-prompt
        npm start
        ```
+    6. You can see the following output in the browser:
+
+       ![react](~/assets/images/tab-device-permission/sbs-react.PNG)
 
     **Begin your tunneling service to get an https endpoint:**
 
@@ -85,7 +88,9 @@ items:
 
         ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)
 
-    11. Open desktop Teams to see the following output:  
+    11. Open desktop Teams.
+    12. To upload **manifest.zip**, select **Apps > Upload a custom app** and open **manifest.zip**.
+    13. Select **Add** to add the tab device permission app and you will see the following output:  
 
         ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
 
