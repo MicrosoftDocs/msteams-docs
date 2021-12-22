@@ -36,14 +36,12 @@ items:
     * Microsoft Teams with an account (not a guest account).
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
-    * Visual Studio 2019 or the latest version.
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
 - title: Create a Bot Registration in Azure portal
   durationInMinutes: 2
   content: |
-    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps for bot registration:
-
+    Adaptive Card tabs would require Azure Bot Service to build tabs in teams. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps for bot registration
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
@@ -107,7 +105,9 @@ items:
 
         ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
 
-    1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
+    1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
+
+        ![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
 
     1. Enter **Description** and select **Add**.
  
@@ -144,7 +144,7 @@ items:
 
         ![ngrok HTTPS URL](~/assets/images/adaptive-cards/ngrok-url.png)
 
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
+    1. In **Messaging endpoint**, add the HTTPS URL generated from ngrok and at the end of the URL add **/api/messages**.
 
         ![Messaging endpoint](~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png)
 
@@ -178,11 +178,11 @@ items:
 
     1. Select **Expose an API** from the left pane.
     1. Select **Set** for the Application ID URI.
-    1. Use the **Application ID URL** shown and append **api://** and **ngrok url** at the beginning of the URL.
+    1. Use the **Application ID URL** shown and append **api://** instead of **https://** in the **ngrok url** and add at the beginning of the App ID URL.
 
         ![App ID URI](~/assets/images/adaptive-cards/app-id-url.png)
 
-    1. Select **Save**. Save the **Application ID URI** for future reference.
+    1. Select **Save**.
     1. Select **Add a scope**.
     1. In **Scope name**, enter **access_as_user**.
     1. In **Who can consent?**, switch to **Admins and users**.
@@ -212,6 +212,8 @@ items:
     **To add any necessary API permissions for downstream calls**
 
     1. Select **API permissions** from the left pane.
+    1. Select **Add a permission**. **Request API permissions** window appears.
+    1. Select **Microsoft API's**. Then select **Microsoft Graph** and select **Delegated permissions**.
     1. Add any user **Delegated permissions** that your app requires to downstream APIs, for example, User.Read.</br>
 
         ![API permissions](~/assets/images/adaptive-cards/add-permissions.png)
@@ -263,14 +265,14 @@ items:
 
     **To configure and run your bot sample**
 
-    1. Go to the repo.
+    1. Go to the repo https://github.com/OfficeDev/Microsoft-Teams-Samples.git.
     1. Select **Code** and select the dropdown.
     1. Select **Download ZIP**.
 
         ![Repo Download](~/assets/images/adaptive-cards/repo-download.png)
 
     1. Ensure to note the Path of the repository that is downloaded.
-    1. In the Windows Explorer, Select the **Project**.
+    1. In the File Explorer, Select the **Project**.
     1. Go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow** folder.
     1. Open the **appsettings.json** file.
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, and add your ngrok URI as `ApplicationBaseUrl`.
@@ -290,13 +292,13 @@ items:
 
     **To run the Teams app by uploading the manifest.zip file**
     
-    1. In the Windows Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow > AppPackage** to open the folder.
+    1. In the File Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow > AppPackage** to open the folder.
     1. Open the **manifest.json** file in Visual Studio Code.
     1. In the **manifest.json** file, find **{TODO: contentBotId}** and add your Microsoft App ID and save.
 
         ![Manifest config](~/assets/images/adaptive-cards/manifest-vsc.png)
 
-    1. In Windows Explorer, go to the **AppPackage** folder.
+    1. In the File Explorer, go to the **AppPackage** folder.
     1. Zip the contents of the **AppPackage** folder to create **manifest.zip**.
 
         > [!NOTE]
