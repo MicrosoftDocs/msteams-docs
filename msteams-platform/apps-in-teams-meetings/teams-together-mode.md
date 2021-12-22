@@ -139,7 +139,7 @@ After preview, the scene is shipped as an app to Teams by following the steps fo
 
 Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A **.zip** file, that is the scene package, is downloaded. Scene package includes a **scene.json** and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
 
-![Export a scene](../assets/images/apps-in-meetings/build-a-scene.png)
+![Export a scene](../assets/images/apps-in-meetings/build-a-scene1.png)
 
 A complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample.
 
