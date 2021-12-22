@@ -58,6 +58,7 @@ The following table describes cloud resources and the corresponding commands to 
 | Azure function|`teamsfx resource add azure-function --function-name your-func-name`|
 | Azure SQL database|`teamsfx resource add --function-name your-func-name`|
 | Azure API management|`teamsfx resource add azure-apim`|
+| Azure Key Vault|`teamsfx resource add azure-keyvault`|
 
 ## What cloud resources can be added
 
@@ -66,6 +67,7 @@ TeamsFx provides seamless integrations with Azure services that are common for t
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
 - [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A fully managed platform as a service (PaaS) database engine to serve as your Teams applications data store.
 - [Azure API management](/azure/azure-sql/database/sql-database-paas-overview): An API gateway that can be used to administer APIs created for Teams applications and publish them to consume on other applications, such as Power Apps.
+- [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
 
 ## What happens when you add resources
 
