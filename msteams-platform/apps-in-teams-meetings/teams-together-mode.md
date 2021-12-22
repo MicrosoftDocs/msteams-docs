@@ -89,7 +89,7 @@ The following image shows each seat represented as an avatar for building the sc
     * You can select **Close** to toggle between closing or reopening the right pane.
     * You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
-    ![New Scene](~/assets/images/apps-in-meetings/scene_ready1.png)
+    ![New Scene](~/assets/images/apps-in-meetings/scene_ready2.png)
 
 1. Select **Add images** to add the image into the environment:
 
