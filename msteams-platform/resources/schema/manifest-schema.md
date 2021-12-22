@@ -554,7 +554,7 @@ Each command item is an object with the following structure:
 |`parameters.name`|string|64 characters|✔|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|string|32 characters|✔|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.value`|string|512 characters||Initial value for the parameter.|
+|`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value is not supported|
 |`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: true` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔|Title of the choice.|
@@ -626,7 +626,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only with SharePoint tabs and store apps.
+> `isFullScreen` works only for apps published to your organization.
 
 ## activities
 
@@ -750,7 +750,7 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Maximum size** - 128 characters
 
-The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockUntilAdminAction` property is set to **true**, the `publisherDocsUrl` provides HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.
+The `publisherDocsUrl` is a HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default. It can also be used to provide any instructions or information about the app which can be useful for the tenant admin.
 
 ## subscriptionOffer
 
