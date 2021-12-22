@@ -132,13 +132,13 @@ items:
 
     1. Select **Apply**.
 
-       You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.   
+       You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
+    
+- title: Test and run Teams file bot
+  durationInMinutes: 2
+  content:
 
-  title: Test and run Teams file bot
-  durationInMinutes: 1
-  content: 
-
-    To run the Teams file bot you need to upload the manifest.zip file in Teams:**
+    To run the Teams file bot you need to upload the manifest.zip file in Teams:
 
     1. In the Windows Explorer, go to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload > TeamsAppManifest-folder.
     
