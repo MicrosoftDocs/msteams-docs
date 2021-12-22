@@ -48,9 +48,7 @@ items:
       * Go to **Microsoft-Teams-Samples > samples > csharp_dotnetcore > 56.teams > file > upload ** folder.
       * Open the **Teamsfileupload.csproj** file.
 
-    3. Open ngrok terminal and start a ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
-
-    Run  ngrok - Point to port 3978
+    3. Open ngrok terminal and start an ngrok tunnel with the following command:
 
     ```
     ngrok http -host-header=rewrite 3978
@@ -136,7 +134,11 @@ items:
 
        You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
     
-    **To run the Teams file bot you need to upload the manifest.zip file in Teams:**
+  title: Configure and run Teams file bot
+  durationInMinutes: 5
+  content:
+
+    To run the Teams file bot you need to upload the manifest.zip file in Teams:**
 
     1. In the Windows Explorer, go to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload > TeamsAppManifest-folder.
     
