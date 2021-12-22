@@ -3,13 +3,14 @@ title: Extend a Teams personal tab app across Microsoft 365
 description: Extend a Teams personal tab app across Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
+ms.custom: m365apps
 ---
 # Extend a Teams personal tab across Microsoft 365
 
 > [!NOTE]
 > *Extending a Teams personal tab across Microsoft 365* is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
 
-Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Microsoft Office Home (office.com).
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Office on the web (office.com).
 
 Updating your personal app to run in Outlook and Office Home involves these steps:
 
@@ -46,7 +47,7 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in [Getting Started with Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code. Or, you can start with the same [Todo List Sample updated for TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) and proceed to [Preview your personal tab in other Microsoft 365 experiences](#preview-your-personal-tab-in-other-microsoft-365-experiences). The updated sample is  also available within Teams Toolkit extension: *Development* > *View samples* > **Todo List (Works in Teams, Outlook and Office)**.
 
-:::image type="content" source="images/toolkit-todo-sample.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit":::
 
 
 ## Update the app manifest
@@ -78,14 +79,14 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update SDK references
 
-To run in Outlook and Office, your app will need to depend on the npm package `@microsoft/teams-js@2.0.0-beta.1` or higher. While code with downlevel versions of `@microsoft/teams-js` is supported in Outlook and Office, deprecation warnings will be logged, and support for downlevel versions of `@microsoft/teams-js` in Outlook and Office will eventually cease.
+To run in Outlook and Office, your app will need to depend on the npm package `@microsoft/teams-js@2.0.0-beta.1` (or a later *beta* version). While code with downlevel versions of `@microsoft/teams-js` is supported in Outlook and Office, deprecation warnings will be logged, and support for downlevel versions of `@microsoft/teams-js` in Outlook and Office will eventually cease.
 
 You can use Teams Toolkit to help automate some of the code changes to adopt the next version of `@microsoft/teams-js`, but if you would like to do the steps manually, see [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Upon completion, the utility will have updated your `package.json` file with the TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta.1`) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+Upon completion, the utility will have updated your `package.json` file with the TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta.1` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
 > * `package.json` references to TeamsJS SDK Preview
@@ -163,7 +164,7 @@ You can pin the app for quick access, or you can find your app in the ellipses (
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
-When you upgrade your Teams personal tab and sideload it in Teams, it will also run in Outlook desktop and web clients and Microsoft Office Home (office.com). Here's how to preview it from those Microsoft 365 experiences.
+When you upgrade your Teams personal tab and sideload it in Teams, it will also run in Outlook desktop and web clients and Office on the web (office.com). Here's how to preview it from those Microsoft 365 experiences.
 
 ### Outlook
 
@@ -179,9 +180,9 @@ To view your app in Outlook on the web, visit https://outlook.office.com and sig
 
 Click on your app icon to launch and preview your app running in Outlook on the web.
 
-### Microsoft Office Home
+### Office on the web
 
-To preview your app running in Microsoft Office Home, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+To preview your app running in Office on the web, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 
 Click on your app icon to launch your app in Office Home.
 

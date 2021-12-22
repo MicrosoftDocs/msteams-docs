@@ -51,13 +51,6 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
 ### 1. Create your AAD application
 
-**To register your application in the [AAD portal](https://azure.microsoft.com/features/azure-portal/) overview**
-
-1. Get your [AAD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). 
-1. Specify the permissions that your application needs for the AAD endpoint and, optionally, Graph.
-1. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
-1. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter **access_as_user** as the **Scope name**.
-
 > [!NOTE]
 > There are some important restrictions that you must know:
 >
@@ -201,3 +194,10 @@ The above-described authentication solution only works for apps and services tha
 
 > [!NOTE]
 > SSO is supported for customer owned apps within the AAD B2C tenants.
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) to authenticate tabs and messaging extensions.
+
+## See also
+[Teams Bot with Single sign-on](../../../sbs-bots-with-sso.yml)

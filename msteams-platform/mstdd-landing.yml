@@ -23,12 +23,12 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Guidelines for apps linked to SaaS offer
+        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
       - text: Teams Toolkit for Visual Studio Code (Preview)
         url: ~/toolkit/teams-toolkit-fundamentals.md
-      - text: Interactive mode to share meeting stage (Preview)
-        url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
       - text: Microsoft Teams store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
@@ -50,6 +50,10 @@ landingContent:
           url: ~/bots/how-to/conversations/send-proactive-messages.md
         - text: Add authentication to bots
           url: ~/bots/how-to/authentication/add-authentication.md
+        - text: Enable and configure apps for meetings
+          url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+        - text: Use SSO authentication for tabs 
+          url: tabs/how-to/authentication/auth-aad-sso.md
     - linkListType: tutorial
       links:
         - text: Step-by-step guide for Proactive messages
@@ -58,6 +62,14 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Step-by-step guide for generating meeting token
           url: ~/sbs-meeting-token-generator.yml
+        - text: Step-by-step guide for meeting content bubble
+          url: ~/sbs-meeting-content-bubble.yml
+        - text: Step-by-step guide for creating meeting sidepanel
+          url: ~/sbs-meetings-sidepanel.yml
+        - text: Step-by-step guide for meeting stage view
+          url: ~/sbs-meetings-stage-view.yml
+        - text: Step-by-step guide with SSO for tabs and messaging extensions
+          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
 - title: Get started
   linkLists:
     - linkListType: get-started
