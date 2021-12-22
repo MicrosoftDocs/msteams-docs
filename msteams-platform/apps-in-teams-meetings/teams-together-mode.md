@@ -93,7 +93,7 @@ The following image shows each seat represented as an avatar for building the sc
 
 1. Select **Add images** to add the image into the environment:
 
-    ![Add images into environment](../assets/images/apps-in-meetings/addimages1.png)
+    ![Add images into environment](../assets/images/apps-in-meetings/addimages2.png)
 
     >[!NOTE]
     > * You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
