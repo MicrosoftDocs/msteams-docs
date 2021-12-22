@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
-zone_pivot_groups: personal-tab
+zone_pivot_groups: teams-app-environment-nodejs-aspnetcore-aspnetcoremvc
 ---
 
 # Create a personal tab
 
-::: zone pivot="node-js"
+::: zone pivot="environment-nodejs"
 
 ### Prerequisites for Teams apps
 
@@ -260,7 +260,7 @@ In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;
 
 ::: zone-end
 
-::: zone pivot="asp-net-core"
+::: zone pivot="environment-aspnetcore"
 
 ### Prerequisites for Teams apps
 
@@ -313,7 +313,7 @@ Here's a list of tools you'll need for building your personal tab.
 
 ::: zone-end
 
-::: zone pivot="asp-net-core-mvc"
+::: zone pivot="environment-aspnetcoremvc"
 
 ### Prerequisites for Teams apps
 
