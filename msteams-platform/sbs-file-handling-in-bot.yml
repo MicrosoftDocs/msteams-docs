@@ -132,10 +132,10 @@ items:
 
        You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
     
-- title: Test and run Teams file bot
+- title: Test your app
   durationInMinutes: 2
   content: |
-
+  
     The most comprehensive way to test your app is by creating an app package and uploading it to Teams. 
     This method is the only way to test the full functionality available to your app, across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
 
