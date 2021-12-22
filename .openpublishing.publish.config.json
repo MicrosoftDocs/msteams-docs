@@ -15,6 +15,7 @@
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
+        "ZonePivotGroups": "Toc",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
