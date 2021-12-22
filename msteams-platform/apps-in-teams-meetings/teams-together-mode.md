@@ -84,7 +84,7 @@ The following image shows each seat represented as an avatar for building the sc
 
 1. Select a suitable template.
 
-    ![Choose template](~/assets/images/apps-in-meetings/template.png)
+    ![Choose a template](~/assets/images/apps-in-meetings/template.png)
 
 1. In **Scene Name**, enter a name for the scene.
 
