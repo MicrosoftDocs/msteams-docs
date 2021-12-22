@@ -89,7 +89,7 @@ When you create a new project, you get all the Azure resources to be created. Th
 | API Management OAuth Server | Enables Microsoft Power Platform to access your APIs hosted in Function App |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
-## Customize resource provision 
+## Customize resource provision
 
 Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure them. The tooling uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources created by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md). Provision with ARM involves changing following two sets of files, parameters and templates:
 
