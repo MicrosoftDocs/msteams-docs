@@ -135,7 +135,7 @@ items:
        You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
     
   title: Test and run Teams file bot
-  durationInMinutes: 
+  durationInMinutes: 2
   content:
 
     To run the Teams file bot you need to upload the manifest.zip file in Teams:**
