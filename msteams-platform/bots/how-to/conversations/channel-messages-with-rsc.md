@@ -132,3 +132,4 @@ The following steps guide you to sideload and validate bot that receives all cha
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
 * [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
+
