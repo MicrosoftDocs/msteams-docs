@@ -78,12 +78,20 @@ The following image shows each seat represented as an avatar for building the sc
 
       ![Tools section](~/assets/images/apps-in-meetings/tools_scene.png)
 
-1. In **Scenes Editor**, select **Create a new scene**.
+1. Select **Create a new scene**.
+
+    ![Create scene](~/assets/images/apps-in-meetings/create_scene.png)
+
+1. Select a suitable template.
+
+    ![Template](~/assets/images/apps-in-meetings/template.png)
 
 1. In **Scene Name**, enter a name for the scene.
 
     * You can select **Close** to toggle between closing or reopening the right pane.
     * You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
+
+    ![New Scene](~/assets/images/apps-in-meetings/scene_new.png)
 
 1. Select **Add images** to add the image into the environment:
 
