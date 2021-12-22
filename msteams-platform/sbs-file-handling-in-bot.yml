@@ -138,7 +138,7 @@ items:
   durationInMinutes: 2
   content:
 
-    To run the Teams file bot you need to upload the manifest.zip file in Teams:
+    To run the Teams file bot you need to upload the manifest.zip file in Teams.
 
     1. In the Windows Explorer, go to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload > TeamsAppManifest-folder.
     
