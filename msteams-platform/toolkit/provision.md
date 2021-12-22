@@ -151,7 +151,7 @@ Here's a list of predefined parameters available:
 | apimServiceSku | Consumption | SKU of APIM Service | Please refer this [page](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch)for available SKUs |
 | apimProductName | ${resourceBaseName} | Name of APIM Product | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 | apimOauthServerName | ${resourceBaseName} | Name of APIM OAuth Server | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
-| keyVaultSkuName | standard | SKU name of Azure Key Vault Service | |
+| keyVaultSkuName | standard | SKU name of Azure Key Vault Service| |
 
 In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you when you created a new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 

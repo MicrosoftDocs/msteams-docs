@@ -53,7 +53,7 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
 The following table describes cloud resources and the corresponding commands to add them:
 
-|Cloud Resources|Command|
+|Cloud Resources|Command |
 |---------------|----------|
 | Azure function|`teamsfx resource add azure-function --function-name your-func-name`|
 | Azure SQL database|`teamsfx resource add --function-name your-func-name`|

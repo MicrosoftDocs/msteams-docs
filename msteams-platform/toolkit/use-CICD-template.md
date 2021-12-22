@@ -246,7 +246,7 @@ The following are the steps used to create Azure service principles:
 1. Register an Azure AD application in single tenant, and it requires sufficient permissions in your Azure AD tenant.
 2. Assign a role to your Azure AD application to access your Azure subscription, and `Contributor` role is recommended.
 3. Create a new Azure AD application secret.
-4. Grab your tenant id, application id(AZURE_SERVICE_PRINCIPAL_NAME), and the secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) for use.
+4. Grab your tenant id, application id(AZURE_SERVICE_PRINCIPAL_NAME), and the secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) for use. 
 
 For detailed guidelines, refer to [the official document][/azure/active-directory/develop/howto-create-service-principal-portal](/azure/active-directory/develop/howto-create-service-principal-portal). There're three ways to create service principal:
 
