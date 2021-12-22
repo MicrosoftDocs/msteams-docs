@@ -93,7 +93,7 @@ The following image shows each seat represented as an avatar for building the sc
 
 1. Select **Add images** to add the image into the environment:
 
-    ![Add images into environment](../assets/images/apps-in-meetings/addimages2.png)
+    ![Add images into environment](~/assets/images/apps-in-meetings/addimages2.png)
 
     >[!NOTE]
     > * You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
@@ -102,7 +102,7 @@ The following image shows each seat represented as an avatar for building the sc
 
 1. From the right pane, select an alignment for the image or use **Resize** to adjust the image size:
 
-    ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
+    ![Alignment for images](~/assets/images/apps-in-meetings/image-alignment1.png)
 
 1. Select an area outside of the image.
 
@@ -110,16 +110,18 @@ The following image shows each seat represented as an avatar for building the sc
 
 1. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow.
 
+    ![Participants](~/assets/images/apps-in-meetings/participants_layers.png)
+
 1. Select any participant image, and select **Assign Spot** to assign the spot to the participant.
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
-    ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
+    ![Assign spot](~/assets/images/apps-in-meetings/assign-spot1.png)
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
 
     * Selecting **View in Teams** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
-    * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. You can go to  **Apps** from the menu and access the automatically created app package.
+    * Selecting **View in Teams** automatically creates an app package that is **appmanifest.json** behind the scene. You can go to  **Apps** from the menu and access the automatically created app package.
     * To delete a scene you created, select **Delete scene** on the top bar.
 
 1. In **View in Teams**, select **Preview in Teams**.
@@ -135,7 +137,7 @@ Optionally, you can select **Share** from the **Save** drop-down menu. You can c
 
 After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. The app package is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
 
-Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A **.zip** file, that is the scene package, is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
+Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A **.zip** file, that is the scene package, is downloaded. Scene package includes a **scene.json** and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
 
 ![Export a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
@@ -143,11 +145,11 @@ A complex scene that uses the Z-axis is demonstrated in the step-by-step getting
 
 ## Sample scene.json
 
-Scene.json along with the images indicate the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system. The X-axis points to the right and the Y-axis points downwards.
+The sample **scene.json** along with the images indicate the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system. The X-axis points to the right and the Y-axis points downwards.
 
 Custom Together Mode scenes support zooming in on the current participants. This feature is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera. Each participant has its own video feed, which is segmented so only the foreground is rendered.
 
-The following code is the scene.json sample:
+The following code is the **scene.json** sample:
 
 ```json
 {
@@ -216,7 +218,7 @@ Each scene has a unique ID and name. The scene JSON also contains information on
 
 The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the `zOrder`.
 
-Now that you've gone through the sample scene.json, you can activate the custom Together Mode scenes to engage in scenes.
+Now that you've gone through the sample **scene.json**, you can activate the custom Together Mode scenes to engage in scenes.
 
 ## Activate custom Together Mode scenes
 
