@@ -7,19 +7,24 @@ ms.localizationpriority: none
 
 # Custom Together Mode scenes in Teams
 
-Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
+Custom Together Mode scenes in Microsoft Teams create a live meeting experience by providing an immersive and engaging meeting environment with the following actions:
 
 * Bring people together and encourage them to turn on their video.
 * Combine participants digitally into a single virtual scene.
 * Place the participants' video streams in pre-determined seats designed and fixed by the scene creator.
 
-In custom Together Mode scenes, the scene is an artifact. The scene is created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos are rendered in those seats. Scene only apps are recommended as the experience for such apps is clear.
+In custom Together Mode scenes, the scene is an artifact which is created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams. The videos of participants are rendered in those seats.
+
+ ![Launch custom Together Mode scenes](../assets/images/apps-in-meetings/launchtogethermode.png)
+
+> [!NOTE]
+> Scene only apps are recommended for custom Together Mode scenes.
 
 The following process gives an overview to create a scene only app:
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
-A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
+A scene only app is an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 > [!NOTE]
 > Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop.
@@ -38,10 +43,10 @@ You must have a basic understanding of the following to use custom Together Mode
 Consider the following practices for a scene building experience:
 
 * Ensure that all images are in PNG format.
-* Ensure that the final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
+* Ensure that the final package with all the images put together must not exceed 1920x1080 resolution for scenes to be shown successfully. Resolution must always be an even number.
 * Ensure that the maximum scene size is 10 MB.
 * Ensure that the maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image.
-* Ensure to select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as **Transparent** to indicate that they're overlapping images in the scene.
+* Ensure to select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images in the scene must be marked as **Transparent**.
 
 ## Build a scene using the Scene studio
 
