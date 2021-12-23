@@ -35,7 +35,7 @@ items:
   durationInMinutes: 5
   content: |
 
-  
+
     To configure and run your Teams file bot app
     
     1. Open command prompt and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git
@@ -156,6 +156,8 @@ items:
     6. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
 
     7. Select **Add** to add the bot to your chat.
+
+    8. Run your bot, either from Visual Studio with `F5` or using `dotnet run` in the appropriate folder
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
