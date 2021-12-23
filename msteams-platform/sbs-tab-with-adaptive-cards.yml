@@ -158,13 +158,13 @@ items:
   content: |
     To ensure that the Bot Service enables user to sign in and access the bot, you must configure SSO for your bot. To do so, perform the following:
     
-    * To add Redirect URI to the Azure bot resource
-    * To expose API endpoint
-    * To authorize client applications
-    * To add any necessary API permissions for downstream calls
-    * To enable implicit grant
-    * To update manifest
-    * To set up Bot Service connection
+    1. Add Redirect URI to the Azure bot resource
+    1. Expose API endpoint
+    1. Authorize client applications
+    1. Add any necessary API permissions for downstream calls
+    1. Enable implicit grant
+    1. Update manifest
+    1. Set up Bot Service connection
 
     **To add Redirect URI to the Azure bot resource**
 
