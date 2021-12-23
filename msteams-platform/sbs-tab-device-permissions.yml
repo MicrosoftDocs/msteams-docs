@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to give tab device permissions for Microsoft Teams sample apps.
   audience: Developer
   level: Beginner
-  ms.date: 12/10/2021
+  ms.date: 12/23/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Read more on bot authentication
