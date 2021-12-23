@@ -34,6 +34,7 @@ items:
     Ensure that you install the following tools and set up your development environment
 
     * Microsoft Teams with an account (not a guest account).
+    * [Visual Studio Code](https://code.visualstudio.com/)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
@@ -70,9 +71,9 @@ items:
         
         To create a new resource group, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
 
-    1. Select **Type of App** as **Single Tenant** for **Microsoft App ID**.
+    1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
-        ![Single Tenant](~/assets/images/adaptive-cards/single-tenant.png)
+        ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
 
         > [!NOTE]
         > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you have already registered a bot. Enter Microsoft App ID in **Existing app id** field, and enter value in **Existing app password** field.
@@ -256,9 +257,8 @@ items:
         :::image type="content" source="./assets/images/adaptive-cards/oauth-connection-setting.png" alt-text="Bot service connection":::
 
     1. Select **Save**.
-    1. Select **Apply**.
 
-- title: Configure and run the bot
+- title: Configure the bot
   durationInMinutes: 1
   content: |
     Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams.
@@ -274,7 +274,7 @@ items:
     1. Ensure to note the Path of the repository that is downloaded.
     1. In the File Explorer, Select the **Project**.
     1. Go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow** folder.
-    1. Open the **appsettings.json** file.
+    1. Open the **appsettings.json** file in Visual Studio Code.
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, and add your ngrok URI as `ApplicationBaseUrl`.
     1. Use the OAuth connection name as the **Connection Name**.
 
@@ -283,7 +283,7 @@ items:
 
         ![Appsettings Json](~/assets/images/adaptive-cards/appsettings-json.png)
 
-    1. Select the **F5** key to run this project.
+    1. Select **Save**.
 
 - title: Configure and upload the app in Teams
   durationInMinutes: 2
@@ -294,7 +294,7 @@ items:
     
     1. In the File Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow > AppPackage** to open the folder.
     1. Open the **manifest.json** file in Visual Studio Code.
-    1. In the **manifest.json** file, find **{TODO: contentBotId}** and add your Microsoft App ID and save.
+    1. In the **manifest.json** file, find **{contentBotId}** and add your Microsoft App ID and save.
 
         ![Manifest config](~/assets/images/adaptive-cards/manifest-vsc.png)
 
@@ -362,4 +362,3 @@ items:
     
 - content: |
     You've completed the tutorial to get started with Adaptive cards for Microsoft Teams using the Bot Framework.
-
