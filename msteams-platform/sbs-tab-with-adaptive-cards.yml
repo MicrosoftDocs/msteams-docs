@@ -24,7 +24,7 @@ items:
     * Identifies how the invoke activity requests and sends information in tab with Adaptive Cards.
     * Effect on the task module workflow.
     
-    This step-by-step guide helps you to build tabs with Adaptive Cards on desktop and mobile.
+    This step-by-step guide helps you to build tabs with Adaptive Cards on desktop and mobile. You'll see the following output:
 
     ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
 
@@ -42,12 +42,12 @@ items:
 - title: Create a Bot Registration in Azure portal
   durationInMinutes: 2
   content: |
-    Adaptive Card tabs would require Azure Bot Service to build tabs in teams. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps for bot registration
-    * Use ngrok to create a tunnel to your web server's endpoints.
-    * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret that enables SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    Adaptive Card tabs would require Azure Bot Service to build tabs in teams. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following:
+    1. Use ngrok to create a tunnel to your web server's endpoints.
+    1. Create Azure Bot resource to register bot with Azure Bot Service.
+    1. Create client secret that enables SSO authentication of the bot.
+    1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    1. Add messaging endpoint to the ngrok tunnel you created.
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -156,8 +156,16 @@ items:
 - title: Set up bot service connection
   durationInMinutes: 5
   content: |
-    To ensure that the Bot Service enables user to sign in and access the bot, you must configure SSO for your bot. To do so, perform the following steps:
+    To ensure that the Bot Service enables user to sign in and access the bot, you must configure SSO for your bot. To do so, perform the following:
     
+    * To add Redirect URI to the Azure bot resource
+    * To expose API endpoint
+    * To authorize client applications
+    * To add any necessary API permissions for downstream calls
+    * To enable implicit grant
+    * To update manifest
+    * To set up Bot Service connection
+
     **To add Redirect URI to the Azure bot resource**
 
     1. Select **Manage** next to **Microsoft App ID**.

@@ -368,8 +368,6 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
-    - name: Step-by-step guide for tabs with adaptive cards
-      href: sbs-tab-with-adaptive-cards.yml
   - name: Bots
     items:
     - name: Authentication flow in bots
