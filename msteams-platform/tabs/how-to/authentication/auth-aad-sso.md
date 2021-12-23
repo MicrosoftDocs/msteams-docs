@@ -195,7 +195,7 @@ The above-described authentication solution only works for apps and services tha
 > [!NOTE]
 > SSO is supported for customer owned apps within the AAD B2C tenants.
 
-## Step-by-step guide
+## Step-by-step guides
 
 * Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) to authenticate tabs and messaging extensions.
 * Follow the [step-by-step guide](../../../sbs-tab-with-adaptive-cards.yml) to create tab with adaptive cards.
