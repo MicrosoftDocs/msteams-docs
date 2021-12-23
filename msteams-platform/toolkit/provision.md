@@ -89,14 +89,7 @@ When you create a new project, you get all the Azure resources to be created. Th
 | API Management OAuth Server | Enables Microsoft Power Platform to access your APIs hosted in Function App |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
-### Resources created when including Azure Key Vault in the project
-
-|Resources|Purpose of this resource|
-|----------|--------------------------------|
-| Azure Key Vault Service | Manage secrets (e.g. AAD app client secret) used by other Azure Services |
-| User Assigned Identity | Authenticate Azure service-to-service requests |
-
-## Customize resource provision 
+## Customize resource provision
 
 Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure them. The tooling uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources created by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md). Provision with ARM involves changing following two sets of files, parameters and templates:
 
@@ -151,7 +144,6 @@ Here's a list of predefined parameters available:
 | apimServiceSku | Consumption | SKU of APIM Service | Please refer this [page](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch)for available SKUs |
 | apimProductName | ${resourceBaseName} | Name of APIM Product | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 | apimOauthServerName | ${resourceBaseName} | Name of APIM OAuth Server | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
-| keyVaultSkuName | standard | SKU name of Azure Key Vault Service | |
 
 In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you when you created a new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
