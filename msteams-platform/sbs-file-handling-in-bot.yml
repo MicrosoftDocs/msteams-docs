@@ -149,15 +149,17 @@ items:
     3. In the manifest.json file, find YOUR-MICROSOFT-APP-ID and replace it with your App Id (that was created when you registered your bot earlier) every where you see the place holder string and save it.
        (Image needs to be added) 
 
-    4. Zip up the contents of the `TeamsAppManifest' folder to create **manifest.zip**.
+    4. Run your bot, either from Visual Studio with `F5` or using `dotnet run` in the appropriate folder
 
-    5. Upload the manifest.zip to Teams (in the Apps view click "Upload a custom app")
+    5. Zip up the contents of the `TeamsAppManifest' folder to create **manifest.zip**.
 
-    6. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
+    6. Upload the manifest.zip to Teams (in the Apps view click "Upload a custom app")
 
-    7. Select **Add** to add the bot to your chat.
+    7. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
 
-    8. Run your bot, either from Visual Studio with `F5` or using `dotnet run` in the appropriate folder
+    8. Select **Add** to add the bot to your chat.
+
+    
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
