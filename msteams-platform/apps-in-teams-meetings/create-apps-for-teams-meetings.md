@@ -14,6 +14,8 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * Ensure you have the knowledge to develop Teams apps. For more information on how to develop Teams app, see [Teams app development](../overview.md).
 
+* Ensure you have Scene studio installed in your system to create [Custom Together Mode scenes in Teams](teams-together-mode.md) using scene only app.
+
 * Update the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).
 
 * Use your app that supports configurable tabs in the group chat scope. For more information, see [group chat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
