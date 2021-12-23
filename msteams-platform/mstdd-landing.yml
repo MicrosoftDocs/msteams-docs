@@ -56,6 +56,8 @@ landingContent:
           url: tabs/how-to/authentication/auth-aad-sso.md
     - linkListType: tutorial
       links:
+        - text: Step-by-step guide for Tab device permissions
+          url: ~/sbs-tab-device-permissions.yml
         - text: Step-by-step guide for Proactive messages
           url: ~/sbs-send-proactive.yml
         - text: Step-by-step guide for adding authentication to bots

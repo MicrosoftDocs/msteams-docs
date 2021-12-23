@@ -50,6 +50,9 @@
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: Integrate location capabilities
       href: concepts/device-capabilities/location-capability.md
+    - name: Step-by-step guide for Tab device permissions
+      href: sbs-tab-device-permissions.yml
+
 - name: Design your app
   items:
   - name: Overview

@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Tab device permission demo
+title: Tab device permissions demo
 metadata:
-  title: Tab device permission demo
-  description: In this tutorial, you'll learn to give tab device permission for Microsoft Teams sample apps.
+  title: Tab device permissions demo
+  description: In this tutorial, you'll learn to give tab device permissions for Microsoft Teams sample apps.
   audience: Developer
   level: Beginner
   ms.date: 12/10/2021
@@ -16,7 +16,7 @@ items:
   content: |
     Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
 
-    This step-by-step guide helps you to do tab device permission demo at Microsoft Teams. You'll see the following output:
+    This step-by-step guide helps you to do tab device permissions demo at Microsoft Teams. You'll see the following output:
 
       ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
 
@@ -31,15 +31,15 @@ items:
     * Visual Studio Code or the latest version.
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
-- title: Configure and run the Tab device permission app on Teams
+- title: Configure and run the Tab device permissions app on Teams
   durationInMinutes: 1
   content: |
     The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app, across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
 
-    **To configure and run your tab device permission app:**
+    **To configure and run your tab device permissions app:**
 
     1. Open **command prompt** and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
-    2. In the **Windows Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
+    2. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
     3. In the **command prompt**, enter **cd location (node js folder location)** and run this command.
     4. Run the following command in the **command prompt**:
     
@@ -64,9 +64,9 @@ items:
        ngrok http 3000 --host-header=localhost
        ```  
         
-    **To run the tab device permission by uploading the manifest.zip file in Teams:**
+    **To run the tab device permissions by uploading the manifest.zip file in Teams:**
 
-    1. In the **Windows Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
     2. Open the **manifest.json** file in visual studio code.
     3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
