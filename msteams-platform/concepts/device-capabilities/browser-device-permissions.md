@@ -43,6 +43,9 @@ Teams app that require device permissions in the browser must show instructions 
 |----------------|-----------------|--------------|
 | Tab device permissions for browser | The sample code demonstrates how to show the device permissions for browser. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-tab-device-permissions.yml) to do tab device permission in Microsoft Teams.
 
 ## See also
 
