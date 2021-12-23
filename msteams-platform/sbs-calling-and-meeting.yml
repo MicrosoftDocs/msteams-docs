@@ -33,23 +33,21 @@ items:
     Ensure that you install the following tools and set up your development environment:  
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-    * [ngrok](https://ngrok.com/) or equivalent tunneling solution.
-    * Visual Studio 2019 or the latest version.
+    * [ngrok](https://ngrok.com/) or equivalent tunnelling solution.
+    * Visual Studio Code.
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with appropriate permissions to install an app.
 
 - title: Register an App in Azure
   durationInMinutes: 5
   content: |
-    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+    Add and register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following steps:
 
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
     * Add Microsoft Teams channel to deploy the bot to a Teams channel.
     * Add messaging endpoint to the ngrok tunnel you created.
-
-    Add and register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph.
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
