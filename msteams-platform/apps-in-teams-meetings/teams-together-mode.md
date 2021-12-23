@@ -132,11 +132,11 @@ The following image shows each seat represented as an avatar for building the sc
 1. In **View in Teams**, select **Preview in Teams**.
 1. In the dialog box that appears, select **Add**.
 
-    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes):
-
-    ![Launch custom Together Mode scenes](../assets/images/apps-in-meetings/launchtogethermode.png)
+    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes).
 
     The scene can then be viewed in the custom Together Mode scenes gallery.
+
+    ![Launch custom Together Mode scenes](../assets/images/apps-in-meetings/launchtogethermode.png)
 
 Optionally, you can select **Share** from the **Save** drop-down menu. You can create a shareable link to distribute your scenes for others to use. The user can open the link to install the scene and start using it.
 
