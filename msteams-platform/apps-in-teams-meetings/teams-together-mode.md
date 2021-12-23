@@ -43,7 +43,7 @@ You must have a basic understanding of the following to use custom Together Mode
 Consider the following practices for a scene building experience:
 
 * Ensure that all images are in PNG format.
-* Ensure that the final package with all the images put together must not exceed 1920x1080 resolution for scenes to be shown successfully. Resolution must always be an even number.
+* Ensure that the final package with all the images put together must not exceed 1920x1080 resolution for scenes to be shown successfully. Resolution must be an even number.
 * Ensure that the maximum scene size is 10 MB.
 * Ensure that the maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image.
 * Ensure to select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images in the scene must be marked as **Transparent**.
