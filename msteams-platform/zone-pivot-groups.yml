@@ -1,12 +1,12 @@
 ### YamlMime:ZonePivotGroups
 groups:
-- id: teams-app-environment-nodejs-aspnetcore-aspnetcoremvc
-  title: Environment Types
-  prompt: Choose your environment type to build a personal tab
+- id: personal-tab
+  title: Personal tab environment type
+  prompt: "Choose the type of environment in which you want to build a personal tab:"
   pivots:
-    - id: environment-nodejs
+    - id: node-js
       title: Node.js
-    - id: environment-aspnetcore
+    - id: asp-net-core
       title: ASP.NET Core
-    - id: environment-aspnetcoremvc
+    - id: asp-net-core-mvc
       title: ASP.NET Core MVC
