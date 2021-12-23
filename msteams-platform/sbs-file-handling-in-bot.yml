@@ -34,9 +34,10 @@ items:
 - title: Configure and run Teams file bot
   durationInMinutes: 5
   content: |
-  
-To configure and run your Teams file bot app
 
+  
+    To configure and run your Teams file bot app
+    
     1. Open command prompt and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git
 
     2. In Visual Studio
