@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to give tab device permissions for Microsoft Teams apps.
   audience: Developer
   level: Beginner
-  ms.date: 12/23/2021
+  ms.date: 12/24/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
   nextTutorialTitle: Read more on Device permissions for browser
