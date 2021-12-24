@@ -272,7 +272,7 @@ items:
 
     8. Select **Add** to add the bot to your chat.
 
-    9. Before sending a message to the bot in the the File Explorer, go to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload 
+    9. Before sending a message to the bot, go to File Explorer, navigate to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload 
 
     6. Open TeamsFileUpload.csproj in visual studio and ensure you are in 'Teams file upload'
 
