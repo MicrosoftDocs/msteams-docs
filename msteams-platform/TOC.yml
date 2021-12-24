@@ -50,7 +50,6 @@
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: Integrate location capabilities
       href: concepts/device-capabilities/location-capability.md
-
 - name: Design your app
   items:
   - name: Overview
