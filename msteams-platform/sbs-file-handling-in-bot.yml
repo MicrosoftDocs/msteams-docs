@@ -19,7 +19,7 @@ items:
     
     This step-by-step guide helps you to do Teams File Upload Bot demo at Microsoft Teams. You'll see the following output:
 
-   ![output result](~/assets/images/sbs- output.png)
+  ![output result](~/assets/images/sbs- output.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -298,7 +298,7 @@ items:
   content: |
     Did you come up with something like this?
     
-    ![sbs output](~/assets/images/sbs- output.png)
+  ![sbs output](~/assets/images/sbs- output.png)
 
 - content: |
     You've completed the tutorial to get started with Teams file upload bot in Microsoft Teams.
