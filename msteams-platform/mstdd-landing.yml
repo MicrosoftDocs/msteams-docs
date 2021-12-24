@@ -61,6 +61,8 @@ landingContent:
       links:
         - text: Step-by-step guide for Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
+        - text: Step-by-step guide for tabs with adaptive cards
+          url: ~/sbs-tab-with-adaptive-cards.yml
         - text: Step-by-step guide for Proactive messages
           url: ~/sbs-send-proactive.yml
         - text: Step-by-step guide for adding authentication to bots
