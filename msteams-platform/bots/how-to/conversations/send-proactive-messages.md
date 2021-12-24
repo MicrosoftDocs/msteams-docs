@@ -275,7 +275,7 @@ The following table provides a simple code sample that incorporate basic convers
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-send-proactive.yml), which helps you to send a proactive message from a bot.
+Follow the [step-by-step guide](../../../sbs-send-proactive.yml), which helps you to send a proactive message from a bot.
 
 ## Next step
 
