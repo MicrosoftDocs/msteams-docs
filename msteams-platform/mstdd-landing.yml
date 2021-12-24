@@ -54,8 +54,13 @@ landingContent:
           url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
         - text: Use SSO authentication for tabs 
           url: tabs/how-to/authentication/auth-aad-sso.md
+        - text: Device permission for browser 
+          url: concepts/device-capabilities/browser-device-permissions.md
+
     - linkListType: tutorial
       links:
+        - text: Step-by-step guide for Tab device permissions
+          url: ~/sbs-tab-device-permissions.yml
         - text: Step-by-step guide for tabs with adaptive cards
           url: ~/sbs-tab-with-adaptive-cards.yml
         - text: Step-by-step guide for Proactive messages
