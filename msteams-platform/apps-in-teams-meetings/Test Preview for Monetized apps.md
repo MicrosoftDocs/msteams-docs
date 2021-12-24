@@ -1,7 +1,7 @@
 ---
 title: Test Preview for Monetized apps 
 author: v-ypalikila
-description: Create, test and preview SaaS offers for Teams app before pushing the offer live.
+description: Create and test SaaS Preview offers for Teams app before pushing the offer live.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ keywords: teams apps SaaS offer preview offer  app source preview
 
 # Test Preview for Monetized apps
 
-As a developer, you can create a software as a service (SaaS) offer with the Teams app and test the end-to-end purchase experience of their Teams apps within teams before pushing the offer live. Anyone who has been added to the preview audience can test the preview offer withing Teams.
+As a developer, you can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience of a Teams app before pushing the offer live. Only users who have been added as the preview audience for the Teams app can test the preview offer.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ As a developer, you can create a software as a service (SaaS) offer with the Tea
 
 ## Create a preview offer ID
 
-You need to create a preview offer ID for the SaaS offer using the **App Source preview link** in the Partner Center .
+You need to create a preview offer ID for the SaaS offer using the **App Source preview link** in the Partner Center.
 
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.
@@ -55,7 +55,7 @@ The subscriptionOffer property is added to your app manifest.
 
 ## Sideload the app to Teams
 
-After configuring your app with the preview offer ID, create an updated app package and upload the app package to Teams for the preview audience to test purchasing the app. For more information see [Upload your app in Microsoft Teams](/concepts/deploy-and-publish/apps-upload).
+After configuring your app with the preview offer ID, create an updated app package and upload the app package to Teams for the preview audience to test purchasing the app. For more information, see [Upload your app in Microsoft Teams](/concepts/deploy-and-publish/apps-upload).
  
 You can also select **Preview in Teams** in the developer portal to launch your app quickly in the Teams client.
 
