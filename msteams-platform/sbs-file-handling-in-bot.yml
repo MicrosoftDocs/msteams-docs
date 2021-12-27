@@ -1,23 +1,23 @@
 ### YamlMime:Tutorial
-title: Teams File Upload Bot test demo
+title: Teams File Upload Bot
 metadata:
-  title: Teams File Upload Bot test demo
+  title: Teams File Upload Bot 
   description: In this tutorial, you'll learn how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment.
   audience: Developer
   level: Beginner
   ms.date: 24/12/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
-  nextTutorialTitle: Read more on How Microsoft Teams bots work
+  nextTutorialHref: bots/how-to/bots-filesv4.md
+  nextTutorialTitle: Read more on send and receive files through the bot
   ms.custom: mvc
   ms.localizationpriority: none
 items:
 - durationInMinutes: 1
   content: |
-   This bot has been created using Bot Framework, it shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. 
+   The bot is created using Bot Framework. It shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. 
    It also shows how to fetch inline images sent in message.
     
-   This step-by-step guide helps you to do Teams File Upload Bot demo at Microsoft Teams. You'll see the following output:
+   This step-by-step guide helps you to do Teams File Upload Bot at Microsoft Teams. You'll see the following output:
 
    ![sbs output](~/assets/images/sbs-output.png)
 
@@ -35,7 +35,14 @@ items:
   durationInMinutes: 5
   content: |
 
-
+    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+    
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret that enables SSO authentication of the bot.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add messaging endpoint to the ngrok tunnel you created.
+    
     To configure and run your Teams file bot app
     
     1. Open command prompt and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git
@@ -137,7 +144,8 @@ items:
   durationInMinutes: 5
   content: |
 
-    To ensure that the Bot Service enables user to sign in and access the bot, you must configure SSO for your bot. To do so, perform the following:
+    To ensure that the Bot Service enables user to sign in and access the bot, you must configure SSO for your bot. 
+    To set up bot service connection, perform the following:
     
     1. Add Redirect URI to the Azure bot resource
     1. Expose API endpoint
@@ -252,7 +260,7 @@ items:
 
     To run the Teams file bot you need to upload the manifest.zip file in Teams.
 
-    1. In the File Explorer, go to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload > appsettings.
+    1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **56.teams-file-upload** > **appsettings**.
 
     2. Open the appsettings in visual studio and update the appsettings.json configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, `MicrosoftAppType`, `MicrosoftAppTenantID`
 
@@ -272,9 +280,9 @@ items:
 
     8. Select **Add** to add the bot to your chat.
 
-    9. Before sending a message to the bot, go to File Explorer, navigate to botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload 
+    9. Before sending a message to the bot, go to **File Explorer**, navigate to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **56.teams-file-upload**
 
-    6. Open TeamsFileUpload.csproj in visual studio and ensure you are in 'Teams file upload'
+    6. Open **TeamsFileUpload.csproj** in visual studio and ensure you are in 'Teams file upload'
 
       ![Visual code](~/assets/images/visual-studio-teams-file-upload-bot.png)
 
@@ -285,6 +293,11 @@ items:
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
+  
+    Following steps will help you on how to interact with the bot:
+
+> [!NOTE]
+        > his manifest.json specified that the bot will be installed in "personal" scope which is why you immediately entered a one on one chat conversation with the bot. Please refer to Teams documentation for more details.
 
     1. Sending a message to the bot will cause it to respond with a card that will prompt you to upload a file. The file that's being uploaded is the teams-logo.png in the Files directory in this sample. 
     The Accept and Decline events illustrated in this sample are specific to Teams. You can message the bot again to receive another prompt.
