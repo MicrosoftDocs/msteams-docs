@@ -18,6 +18,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | Date | Update | Find here  |
 | --- | --- | --- |
 |01/03/2022| Updated RSC permissions to receive meeting start and end events from channel meetings.| •[Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
+|12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
+|12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards.| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
 | 12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduced step-by-step guide for tabs and messaging extensions with Single sign-on (SSO). | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and messaging extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
 | 12/20/2021| Introduced step-by-step guide to create meeting content bubble. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting content bubble](sbs-meeting-content-bubble.yml) |
@@ -39,7 +41,9 @@ Microsoft Teams platform features that are available to all app developers.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |01/03/2022| Updated RSC permissions to receive meeting start and end events from channel meetings.| •[Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
-| 12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
+|12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
+|12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards.| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
+|12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduced step-by-step guide for tabs and messaging extensions with Single sign-on (SSO). | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and messaging extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
 |12/20/2021| Introduced step-by-step guide to create meeting content bubble. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting content bubble](sbs-meeting-content-bubble.yml) |
 |12/09/2021| Introduced step-by-step guide to meeting stage view. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meetings stage view](sbs-meetings-stage-view.yml)|
@@ -210,7 +214,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
+|12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
+|11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).| • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Device permissions for the browser.| App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
