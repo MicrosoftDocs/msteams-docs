@@ -232,6 +232,16 @@
     href: bots/bot-features.md
   - name: Bot activity handlers
     href: bots/bot-basics.md
+  - name: Authenticate bots
+    items: 
+    - name: Overview
+      href: bots/how-to/authentication/overview.md
+    - name: Authentication flow in bots
+      href: bots/how-to/authentication/auth-flow-bot.md
+    - name: Add authentication to your bot
+      href: bots/how-to/authentication/add-authentication.md
+    - name: Use SSO authentication
+      href: bots/how-to/authentication/auth-aad-sso-bots.md
   - name: Bot conversations
     items:
     - name: Overview

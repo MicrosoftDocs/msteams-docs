@@ -15,7 +15,7 @@ OAuth 2.0 is an open standard for authentication and authorization used by Azure
 For example, the authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
 
 > [!NOTE]
-> Before showing a **Login** button to the user and calling the `microsoftTeams.authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes. 
+> Before showing a **Login** button to the user and calling the `microsoftTeams.authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
 
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
