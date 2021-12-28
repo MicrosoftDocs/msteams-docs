@@ -46,14 +46,14 @@ items:
     
     1. Open **command prompt** and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git
 
-    2. In Visual Studio
+    1. In Visual Studio
 
       * Open Visual Studio.
       * Select **File > Open > Project/Solution**.
       * Go to **Microsoft-Teams-Samples > samples > csharp_dotnetcore > 56.teams > file > upload ** folder.
       * Open the **Teamsfileupload.csproj** file.
 
-    3. Open ngrok terminal and start an ngrok tunnel with the following command:
+    1. Open ngrok terminal and start an ngrok tunnel with the following command:
 
     ```
     ngrok http -host-header=rewrite 3978
@@ -97,7 +97,7 @@ items:
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-         ![Microsoft App ID](~/assets/images/bots/manage-sec.png)
+         ![Microsoft App ID](~/assets/images/manage-sec.png)
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
