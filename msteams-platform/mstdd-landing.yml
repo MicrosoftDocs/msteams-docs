@@ -83,8 +83,8 @@ landingContent:
       links:
       - text: Get started with building apps
         url: ../msteams-platform/get-started/get-started-overview.md
-      - text: Get started with Git
-        url: https://docs.microsoft.com/contribute/additional-resources
+      - text: Get started with GitHub
+        url: /contribute/additional-resources
     - linkListType: tutorial
       links:
       - text: Build app with JavaScript
