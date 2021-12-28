@@ -133,7 +133,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        <img src="~/assets/images/messaging-endpoint.png"" alt="Messaging endpoint" width="600"/>
+        ![Messaging end point](~/assets/images/messaging-endpoint.png)
 
     1. Select **Apply**.
 
@@ -157,7 +157,7 @@ items:
 
     1. Select **Manage** next to **Microsoft App ID**.
 
-        ![Manage Bot](~/assets/images/config-manage.png)
+        ![Manage Bot](~/assets/images/manage-sec.png)
 
     1. Select **Authentication** from the left pane of your bot resource.
     1. In **Platform configurations**, select **Add a platform**.
@@ -193,7 +193,7 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
 
-        ![Add a scope](~/assets/images/expose-an-api.png)
+        ![Add a scope](~/assets/images/expo.png)
 
     1. Select **Add scope**. The scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
@@ -242,7 +242,7 @@ items:
         | Client id | Enter the **Microsoft App ID**. |
         | Client secret | Enter the **Value** of the client secret ID. |
         | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
-        | Tenant ID | Enter **common**. |
+        | Tenant ID | Enter **Tenant Id**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
         :::image type="content" source="./assets/images/oauth-settings.png" alt-text="Bot service connection":::
