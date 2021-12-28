@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|12/28/2021| Introduced step-by-step guide to do Teams file upload bot | Build bots > Send and receive files > [step-by-step guide to grant Teams file upload bot](sbs-file-handling-in-bot.yml) |
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards.| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
 | 12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
@@ -211,6 +212,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|12/28/2021| Introduced step-by-step guide to do Teams file upload bot | Build bots > Send and receive files > [step-by-step guide to grant Teams file upload bot](sbs-file-handling-in-bot.yml) |
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
