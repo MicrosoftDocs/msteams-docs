@@ -168,7 +168,7 @@ items:
 
         The Redirect URI is added to the Azure bot resource.
 
-        ![Display web redirect url](~/assets/images/web-redirect.png)
+        ![Display web redirect url](~/assets/images/bots/redirectURIadded.png)
         
     **To expose API endpoint**
 
