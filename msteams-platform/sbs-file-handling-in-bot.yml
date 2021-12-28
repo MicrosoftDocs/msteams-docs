@@ -34,30 +34,30 @@ items:
 - title: Create a bot Registration in Azure Portal
   durationInMinutes: 5
   content: |
-    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+    To authenticate the bot, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
     
-    1. Use ngrok to create a tunnel to your web server's endpoints.
-    1. Create Azure Bot resource to register bot with Azure Bot Service.
-    1. Create client secret that enables SSO authentication of the bot.
-    1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    1. Add messaging endpoint to the ngrok tunnel you created.
+    1. Configure and run your Teams file bot app.
+    1. Create Azure Bot resource.
+    1. Create client secret.
+    1. Add Microsoft Teams channel.
+    1. Add messaging endpoint.
     
-    **To configure and run your Teams file bot app.**
+    **To configure and run your Teams file bot app:**
     
-    1. Open **command prompt** and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git
-
+    1. Open **command prompt** and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git. Ensure that you note the Path where the repository is cloned.
+    
     1. In Visual Studio
 
-      * Open Visual Studio.
-      * Select **File > Open > Project/Solution**.
-      * Go to **Microsoft-Teams-Samples > samples > csharp_dotnetcore > 56.teams > file > upload ** folder.
-      * Open the **Teamsfileupload.csproj** file.
+        * Open Visual Studio.
+        * Select **File > Open > Project/Solution**.
+        * Go to **botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload ** folder.
+        * Open the **Teamsfileupload.csproj** file.
 
     1. Open ngrok terminal and start an ngrok tunnel with the following command:
 
-    ```
-    ngrok http -host-header=rewrite 3978
-    ```
+        ```
+        ngrok http -host-header=rewrite 3978
+        ```
 
     **To create Azure Bot resource**
 
@@ -66,7 +66,7 @@ items:
     1. In the search box, enter **Azure bot** and select the Enter key.
     1. Select **Azure Bot**.
 
-        ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+        ![Create Azure bot card](~/assets/images/bots/azure-bot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -77,7 +77,7 @@ items:
 
         > [!NOTE]
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
-
+    
     1. Select **Review + create**.
 
         <img src="~/assets/images/create-az-bot.png" alt="Create resource Azure bot" width="700"/>
@@ -118,10 +118,10 @@ items:
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
           ![Open Teams from channels](~/assets/images/chanels-teams.png)    
-          ![Select Teams](~/assets/images/bots/select-teams.png)    
+          ![Select Teams](~/assets/images/bots/confi-micro-teams.png)    
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
-          ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
+          ![Terms of service](~/assets/images/agreement.png)
 
     **To add messaging endpoint**
 
@@ -231,7 +231,7 @@ items:
 
     **To set up Bot Service connection**
 
-    1. Go to **Home** page and select **Configuration** under **Settings** from the left pane.
+    1. Go to **Home** page of your bot and select **Configuration** under **Settings** from the left pane.
     1. Select **Add OAuth Connection Settings**.
     1. In **New Connection Setting**, enter the following details:
 
@@ -239,8 +239,8 @@ items:
         | ----- | ----- |
         | Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
         | Service Provider | Select **Azure Active Directory V2**. |
-        | Client id | Saved previously as your **Microsoft App ID**. |
-        | Client secret | Saved previously as **Value** of the client secret ID. |
+        | Client id | Enter the **Microsoft App ID**. |
+        | Client secret | Enter the **Value** of the client secret ID. |
         | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
         | Tenant ID | Enter **common**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
@@ -259,7 +259,7 @@ items:
 
     1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **56.teams-file-upload** > **appsettings**.
 
-    1. Open the appsettings in visual studio and update the appsettings.json configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, `MicrosoftAppType`, `MicrosoftAppTenantID`
+    1. Open the appsettings in visual studio and update the appsettings.json configuration for the bot to use the `MicrosoftAppId (Bot Id)`, `MicrosoftAppPassword(Value of the client secret ID)`, `MicrosoftAppType`, `MicrosoftAppTenantID`
 
        ![app settings](~/assets/images/app-settings.png)
     
