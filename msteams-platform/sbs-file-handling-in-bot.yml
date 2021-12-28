@@ -66,7 +66,7 @@ items:
     1. In the search box, enter **Azure bot** and select the Enter key.
     1. Select **Azure Bot**.
 
-        ![Create Azure bot card](~/assets/images/bots/azure-bot.png)
+        ![Create Azure bot card](~/assets/images/azure-bot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -118,7 +118,7 @@ items:
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
           ![Open Teams from channels](~/assets/images/chanels-teams.png)    
-          ![Select Teams](~/assets/images/bots/confi-micro-teams.png)    
+          ![Select Teams](~/assets/images/confi-micro-teams.png)    
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
           ![Terms of service](~/assets/images/agreement.png)
