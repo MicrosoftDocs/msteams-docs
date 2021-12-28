@@ -321,7 +321,7 @@ The following code sample demonstrates how to obtain file consent and upload fil
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to do Teams File Upload Bot at Microsoft Teams.
+Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to do Teams file upload bot at Microsoft Teams.
 
 ## Next step
 

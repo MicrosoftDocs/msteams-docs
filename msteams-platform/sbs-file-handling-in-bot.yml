@@ -17,7 +17,7 @@ items:
    The bot is created using Bot Framework. It shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. 
    It also shows how to fetch inline images sent in message.
     
-   This step-by-step guide helps you to do Teams File Upload Bot at Microsoft Teams. You'll see the following output:
+   This step-by-step guide helps you to do Teams file upload bot at Microsoft Teams. You'll see the following output:
 
    ![sbs output](~/assets/images/sbs-output.png)
 
