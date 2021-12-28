@@ -43,9 +43,9 @@ items:
     * Add Microsoft Teams channel to deploy the bot to a Teams channel.
     * Add messaging endpoint to the ngrok tunnel you created.
     
-    To configure and run your Teams file bot app
+    **To configure and run your Teams file bot app.**
     
-    1. Open command prompt and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git
+    1. Open **command prompt** and clone a repository *git clone* https://github.com/Microsoft/botbuilder-samples.git
 
     2. In Visual Studio
 
@@ -258,7 +258,7 @@ items:
     The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app,
     across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
 
-    To run the Teams file bot you need to upload the manifest.zip file in Teams.
+    **To run the Teams file bot you need to upload the manifest.zip file in Teams.**
 
     1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **56.teams-file-upload** > **appsettings**.
 
@@ -266,7 +266,7 @@ items:
 
        ![app settings](~/assets/images/app-settings.png)
     
-    3. Open the manifest.json file in visual studio.
+    3. Open the **manifest.json** file in visual studio.
 
     4. In the manifest.json file, find YOUR-MICROSOFT-APP-ID and replace it with your App Id (that was created when you registered your bot earlier) every where you see the place holder string and save it.
        
@@ -294,7 +294,7 @@ items:
   durationInMinutes: 2
   content: |
   
-    Following steps will help you on how to interact with the bot:
+  Following steps will help you on how to interact with the bot:
 
         > [!NOTE]
         > This manifest.json specified that the bot will be installed in "personal" scope which is why you immediately entered a one on one chat conversation with the bot. Please refer to Teams documentation for more details.
