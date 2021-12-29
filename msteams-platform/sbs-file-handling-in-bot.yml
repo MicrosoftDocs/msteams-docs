@@ -79,7 +79,7 @@ items:
     
     1. Select **Review + create**.
 
-         ![Review and create](~/assets/images/create-az-bot.png)
+         ![Review and create](~/assets/images/reg-azure-1.png)
 
     1. If the validation passes, select **Create**.It takes a few moments for your bot service to be provisioned.
 
