@@ -8,11 +8,12 @@ keywords: teams authentication flow tabs
 # Microsoft Teams authentication flow for tabs
 
 > [!NOTE]
-> * To authenticate your tab on mobile clients, you require Teams JavaScript client SDK version 1.4.1 or later. 
-> * Teams SDK launches separate window for authentication flow. Set the `SameSite` attribute to **Lax**. Teams desktop client or older versions of Chrome or Safari do not support `SameSite`=None.
-> * A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+> To authenticate your tab on mobile clients, you require Teams JavaScript client SDK version 1.4.1 or later. Teams SDK launches separate window for authentication flow. Set the `SameSite` attribute to **Lax**. Teams desktop client or older versions of Chrome or Safari do not support `SameSite`=None.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and other identity providers. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/). The authentication flow for tabs and bots is different, but the core concepts are identical. Tabs authentication flow is like websites, so, tabs can directly use OAuth 2.0.
+
+> [!NOTE]
+> A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
 To know about the implicit grant type in OAuth 2.0, see [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/).
 
