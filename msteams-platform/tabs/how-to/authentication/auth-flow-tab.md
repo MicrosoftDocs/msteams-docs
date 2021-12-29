@@ -22,16 +22,16 @@ To know about the implicit grant type in OAuth 2.0, see [OAuth 2.0 implicit gran
 
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
-1. The user interacts with the content on the tab configuration or content page, commonly a **Sign in** or **Log in** button.
+1. The user interacts with the content on the tab configuration or content page, commonly displayed as a **Sign in** or **Log in** button.
 2. The tab constructs the URL for its auth start page. Optionally, it uses information from URL placeholders or calls `microsoftTeams.getContext()` Teams client SDK method to streamline the authentication experience for the user. For example, when authenticating with AAD, if the `login_hint` parameter is set to the user's email address, the user does not have to sign in if they have done so recently. This is because AAD uses the user's cached credentials. The pop-up window is shown briefly and then disappears.
 3. The tab then calls the `microsoftTeams.authentication.authenticate()` method and registers the `successCallback` and `failureCallback` functions.
 4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, such as `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` for Azure AD. Replace `<tenant id>` with your own tenant id that is context.tid.
-Similar to other application auth flows in Teams, the start page must be on a domain that is in its `validDomains` list, and on the same domain as the post sign in redirect page.
+Similar to other application auth flows in Teams, the start page must be on a domain that is in its `validDomains` list, and on the same domain as the redirect page that appears after signing in.
 
     > [!NOTE]
     > The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request, which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples use a randomly-generated GUID for the `state` data.
 
-5. On the provider's site, the user sign in and grants access to the tab.
+5. On the provider's site, the user signs in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth 2.0 redirect page with an access token.
 7. The tab checks that the returned `state` value matches what was saved earlier, and calls `microsoftTeams.authentication.notifySuccess()`, which in turn calls the `successCallback` function registered in step 3.
 8. Teams closes the pop-up window.
