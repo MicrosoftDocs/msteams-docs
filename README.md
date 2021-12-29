@@ -14,7 +14,7 @@ Teams documentation is part of the Microsoft Docs technical documentation librar
 You can also contribute to Microsoft docs, see [Microsoft Docs contributor guide overview](https://docs.microsoft.com/en-us/contribute/).
 
 ### Contributor License Agreement (CLA)
-    CLA bot is a good guideline for the distinction between "small" and "large" contributions. PRs that do not require the CLA to be signed are likely "small." PRs that do require the CLA are likely "large."
+CLA bot is a good guideline for the distinction between "small" and "large" contributions. PRs that do not require the CLA to be signed are likely "small." PRs that do require the CLA are likely "large."
 
 ### Microsoft Open Source Code of Conduct
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
@@ -28,7 +28,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 * [Create new Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/create-new-project/)t
 * [Use Teams Toolkit to provision cloud resources](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/provision/)
 * [Publish Teams apps using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/publish/)
-* [Collaborate on Teams project using Teams Toolkit](vhttps://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-collaboration/)
+* [Collaborate on Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-collaboration/)
 * [Teams Toolkit Command Line Interface](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-cli/)
 * [TeamsFx SDK for TypeScript or JavaScript](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk/)
 * [Teams Toolkit for Visual Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/visual-studio-overview/)
