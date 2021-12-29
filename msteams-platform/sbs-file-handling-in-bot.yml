@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Teams File Upload Bot
+title: Upload files from bot
 metadata:
   title: Teams File Upload Bot 
   description: In this tutorial, you'll learn how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment.
@@ -17,7 +17,7 @@ items:
    The bot is created using Bot Framework. It shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. 
    It also shows how to fetch inline images sent in message.
     
-   This step-by-step guide helps you to do Teams file upload bot at Microsoft Teams. You'll see the following output:
+   This step-by-step guide helps you to upload files from a bot to Microsoft Teams. You'll see the following output:
 
    ![sbs output](~/assets/images/sbs-output.png)
 
@@ -66,7 +66,7 @@ items:
     1. In the search box, enter **Azure bot** and select the Enter key.
     1. Select **Azure Bot**.
 
-        ![Create Azure bot card](~/assets/images/azure-bot.png)
+        ![Create Azure bot card](~/assets/images/azure-new.png)
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select the subscription.
@@ -104,7 +104,7 @@ items:
  
         <img src="~/assets/images/client-secret.png" alt="Add client secret to app" width="500"/>
 
-    1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
+    1. In the **Value** column, select **Copy to clipboard** and save the value of client secret ID for future reference.
 
          ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
        
@@ -123,7 +123,7 @@ items:
 
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
-    
+
           ![Terms of service](~/assets/images/terms-of-service.png)
 
     **To add messaging endpoint**
