@@ -79,7 +79,7 @@ items:
     
     1. Select **Review + create**.
 
-         <img src="~/assets/images/create-az-bot.png" alt="Create resource Azure bot" width="700"/>
+         ![Review and create](~/assets/images/create-az-bot.png)
 
     1. If the validation passes, select **Create**.It takes a few moments for your bot service to be provisioned.
 
