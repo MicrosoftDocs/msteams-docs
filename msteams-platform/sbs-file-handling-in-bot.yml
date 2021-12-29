@@ -79,16 +79,15 @@ items:
     
     1. Select **Review + create**.
 
-
-        <img src="~/assets/images/create-az-bot.png" alt="Create resource Azure bot" width="700"/>
+         <img src="~/assets/images/create-az-bot.png" alt="Create resource Azure bot" width="700"/>
 
     1. If the validation passes, select **Create**.It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        Now your Azure bot has been created.
+       Now your Azure bot has been created.
 
-        ![Azure bot resource created](~/assets/images/resource-group.png)
+         ![Azure bot resource created](~/assets/images/resource-group.png)
 
     **To create client secret**
 
