@@ -115,14 +115,15 @@ items:
         <img src="~/assets/images/home-png.png" alt="Home page" width="600"/>
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** 
+    1. Select **Channels** in the left pane and select **Microsoft Teams** 
 
           ![Open Teams from channels](~/assets/images/chanels-teams.png)  
 
-          ![Select Teams](~/assets/images/confi-micro-teams.png)  
+          ![Select Teams](~/assets/images/configure-microsoft-teams.png)  
 
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
+    
           ![Terms of service](~/assets/images/terms-of-service.png)
 
     **To add messaging endpoint**
