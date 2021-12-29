@@ -100,7 +100,7 @@ items:
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
     1. Enter **Description** and select **Add**.
-
+    
  
         <img src="~/assets/images/client-secret.png" alt="Add client secret to app" width="500"/>
 
@@ -112,22 +112,15 @@ items:
 
     1. Go to **Home**.
 
-
         <img src="~/assets/images/home-png.png" alt="Home page" width="600"/>
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** 
-    
-    <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
-
-          ![Open Teams from channels](~/assets/images/chanels-teams.png) 
-
-          ![Select Teams](~/assets/images/confi-micro-teams.png)   
-
+    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
+          ![Open Teams from channels](~/assets/images/chanels-teams.png)    
+          ![Select Teams](~/assets/images/confi-micro-teams.png)    
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
-
-          ![Terms of service](~/assets/images/agreement.png)
+          ![Terms of service](~/assets/images/terms-of-service.png)
 
     **To add messaging endpoint**
 
@@ -223,9 +216,7 @@ items:
     
     1. Select **Authentication** from the left pane.
     1. Select **Access tokens** and **ID tokens** checkboxes.</br>
-
         ![Authentication Tokens](~/assets/images/access-tokens.png)
-        
     1. Select **Save** to save the changes.
 
     **To update manifest**
@@ -298,7 +289,7 @@ items:
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    Following steps will help you on how to interact with the bot: 
+    Following steps will help you on how to interact with the bot in different ways. Like what response you get when you sends a message, a file or an inline message to the bot.
 
     > [!NOTE]
     > This manifest.json specified that the bot will be installed in "personal" scope which is why you immediately entered a one on one chat conversation with the bot. Please refer to Teams documentation for more details.
