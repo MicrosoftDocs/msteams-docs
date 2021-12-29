@@ -34,9 +34,9 @@ items:
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
     * [ngrok](https://ngrok.com/) or equivalent tunnelling solution.
-    * Visual Studio Code.
+    * [Visual Studio Code]((https://code.visualstudio.com/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
-    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with appropriate permissions to install an app.
+    * Microsoft Teams with an account (not a guest account).
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
@@ -59,7 +59,6 @@ items:
     **Register an App in Azure**
 
     1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
-
     1. Select the **Azure Active Directory** service, and select **App registrations** and then select **New registration**.
     
         ![Azure active directory](~/assets/images/calls-and-meetings/azure-active-directory.png)
