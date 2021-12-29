@@ -115,9 +115,12 @@ items:
         <img src="~/assets/images/home-png.png" alt="Home page" width="600"/>
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
-          ![Open Teams from channels](~/assets/images/chanels-teams.png)    
-          ![Select Teams](~/assets/images/confi-micro-teams.png)    
+    1. Select **Channels** in the left pane and select **Teams** 
+
+          ![Open Teams from channels](~/assets/images/chanels-teams.png)  
+
+          ![Select Teams](~/assets/images/confi-micro-teams.png)  
+
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
           ![Terms of service](~/assets/images/terms-of-service.png)
@@ -210,7 +213,7 @@ items:
     1. Select **Microsoft API's**. Then select **Microsoft Graph** and select **Delegated permissions**.
     1. Add any user **Delegated permissions** that your app requires to downstream APIs, for example, User.Read.</br>
 
-        ![API permissions](~/assets/images/Api-permissions.png)
+        ![API permissions](~/assets/images/delegated-permission-1.png)
 
     **To enable implicit grant**
     
