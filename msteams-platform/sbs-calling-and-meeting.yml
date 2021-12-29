@@ -61,7 +61,7 @@ items:
     1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
     1. Select the **Azure Active Directory** service, and select **App registrations** and then select **New registration**.
     
-        ![Azure active directory](~/assets/images/calls-and-meetings/azure-active-directory.png)
+        :::image type="content" source="/assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory":::
     
     1. **Register an application** page opens. Enter your application's registration information.
     1. Enter a meaningful application **Name** that will be displayed to users of the app.
