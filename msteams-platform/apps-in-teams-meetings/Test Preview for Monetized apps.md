@@ -14,13 +14,13 @@ As a developer, you can create a Software as a Service (SaaS) offer and test the
 
 ## Prerequisites
 
-1. [Developer account](/office/developer-program/microsoft-365-developer-program-get-started)
+1. [Microsoft 365 developer account](/office/developer-program/microsoft-365-developer-program-get-started)
 1. [Create a SaaS offer](/azure/marketplace/create-saas-dev-test-offer)
 1. [Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview)
 
 ## Create a preview offer ID
 
-You need to create a preview offer ID for the SaaS offer using the **App Source preview link** in the Partner Center.
+You need to create a preview offer ID for the SaaS offer using the **AppSource preview link** in the Partner Center.
 
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.
@@ -61,33 +61,25 @@ You can also select **Preview in Teams** in the developer portal to launch your 
 
 :::image type="content" source="../assets/images/apps-in-meetings/Preview-in-teams.png" alt-text="Preview offer in Teams":::
 
-## App scenarios when sideloading the app to Teams
 
 
-### Scenario 1: User is not a preview audience
+* If the user is not part of the **preview audience** defined in the app manifest, a warning message appears and the **Buy a Subscription** button isn't available for the user.
 
-If the user is not part of the **preview audience** defined in the app manifest, a warning message is displayed and the **Buy a Subscription** button isn't available for the user.
+    >[!WARNING]
+    > No plans found with **-preview**. Make sure you're in the preview audience.
 
->[!WARNING]
-> No plans found with **-preview**. Make sure you're in the preview audience.
+    :::image type="content" source="../assets/images/apps-in-meetings/preview-testing-no-audience.png" alt-text="No preview audience":::
 
-:::image type="content" source="../assets/images/apps-in-meetings/preview-testing-no-audience.png" alt-text="No preview audience":::
+* If the offer ID specified in the app manifest is not a preview offer, a warning message appears and the user won't be able to sideload the app to Teams.
 
-### Scanario 2: Offer ID is not a preview offer
+    >[!WARNING]
+    > This isn't a preview offer. Be sure to append the **-preview** to the Offerid..
 
-If the offer ID specified in the app manifest is not a preview offer, a warning message is displayed and the user won't be able to sideload the app to Teams.
+    :::image type="content" source="../assets/images/apps-in-meetings/Preview-testing-no-iffer-id.png" alt-text="No preview offer ID":::
 
->[!WARNING]
-> This isn't a preview offer. Be sure to append the **-preview** to the Offerid..
+* If the preview offer and preview audience is specified in the app manifest, the **Buy a Subscription** button is available for the user.
 
-:::image type="content" source="../assets/images/apps-in-meetings/Preview-testing-no-iffer-id.png" alt-text="No preview offer ID":::
-
-
-### Scenario 3: Preview offer ID and preview audience available
-
-If the preview offer and preview audience is specified in the app manifest, the **Buy a Subscription** button is available for the user.
-
-:::image type="content" source="../assets/images/apps-in-meetings/preview-testing-offer-audience-available.png" alt-text="offer ID and preview audience specified":::
+    :::image type="content" source="../assets/images/apps-in-meetings/preview-testing-offer-audience-available.png" alt-text="offer ID and preview audience specified":::
 
 ## Next step
 
