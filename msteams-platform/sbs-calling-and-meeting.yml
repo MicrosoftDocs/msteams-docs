@@ -34,7 +34,7 @@ items:
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
     * [ngrok](https://ngrok.com/) or equivalent tunnelling solution.
-    * [Visual Studio Code]((https://code.visualstudio.com/)
+    * [Visual Studio Code](https://code.visualstudio.com/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Microsoft Teams with an account (not a guest account).
 
@@ -61,7 +61,7 @@ items:
     1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
     1. Select the **Azure Active Directory** service, and select **App registrations** and then select **New registration**.
     
-        :::image type="content" source="/assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory":::
+        :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory.":::
     
     1. **Register an application** page opens. Enter your application's registration information.
     1. Enter a meaningful application **Name** that will be displayed to users of the app.
