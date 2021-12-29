@@ -73,27 +73,27 @@ items:
 
     1. Select **Register**.
 
-        ![Register an app](~/assets/images/calls-and-meetings/reg-app.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/reg-app.png" alt-text="Register an app.":::
 
     **To create client secret**
 
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (Application client ID) for future reference.
     
-        ![Microsoft App ID](~/assets/images/calls-and-meetings/microsoft-app-id.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id.png" alt-text="Microsoft App ID.":::
     
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-        ![Manage](~/assets/images/calls-and-meetings/manage.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/manage.png" alt-text="Manage.":::
 
     1. In **Certificates & secrets** section, select **Client secrets** and select **New client secret**. The **Add a client secret** window appears.  
 
     1. Enter **Description** and select **Add**.
  
-        ![Add Client secret](~/assets/images/calls-and-meetings/add-client.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/add-client.png" alt-text="Add Client secret.":::
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
 
-        ![Value](~/assets/images/calls-and-meetings/client-secret.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/client-secret.png" alt-text="Value.":::
 
     1. Create a policy for a demo tenant user for creating the online meeting using the following powershell script.
 
@@ -117,7 +117,7 @@ items:
         `OnlineMeetings.ReadWrite.All`
     1. Select **Add permissions**.
 
-        ![Add API permissions](~/assets/images/calls-and-meetings/add-api-permissions.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/add-api-permissions.png" alt-text="Add API permissions.":::
 
     **Create Bot Channel Registeration in Azure account**
 
@@ -126,7 +126,7 @@ items:
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
 
-        ![Azure bot card](~/assets/images/calls-and-meetings/azure-bot-homepage.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/azure-bot-homepage.png" alt-text="Azure bot card.":::
 
     1. Select **Create**.
     1. Enter bot handle name in **Bot handle** field.
@@ -135,7 +135,7 @@ items:
 
         To create a new resource group, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
 
-        ![Create Azure Bot](~/assets/images/calls-and-meetings/create-azure-bot.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Create Azure Bot.":::
 
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
@@ -145,19 +145,19 @@ items:
     1. Select **Use existing app registration** and enter **App ID** and **App secret** of your azure app registered in demo tenant.
     1. Select **Review + create**.
 
-        ![Multi tenant](~/assets/images/calls-and-meetings/review-create.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/review-create.png" alt-text="Multi tenant.":::
 
     1. If the validation passes, select **Create**.
 
        It takes a few moments for your bot service to be provisioned.
 
-        ![Validation](~/assets/images/calls-and-meetings/validation.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/validation.png" alt-text="Validation.":::
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
         Now your Azure bot has been created.
 
-        ![Go to resource](~/assets/images/calls-and-meetings/go-to-resource.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource.png" alt-text="Go to resource.":::
 
     **To add the Microsoft Teams channel**
 
@@ -165,20 +165,20 @@ items:
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> from the list of available channels.    
         
-        ![Channels Teams](~/assets/images/calls-and-meetings/channels-teams.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/channels-teams.png" alt-text="Channels Teams.":::
     
     1. Select the checkbox to accept the terms of service and select **Agree**.
 
-        ![Terms of service](~/assets/images/calls-and-meetings/terms-of-service.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/terms-of-service.png" alt-text="Terms of service.":::
 
     1. Select **Save**.
     1. Select **Microsoft Teams** and select **Calling** tab on Teams channel page.
 
-        ![Configure Teams](~/assets/images/calls-and-meetings/configure-teams.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/configure-teams.png" alt-text="Configure Teams.":::
     
     1. Select **Enable calling**, and then update **Webhook** with your HTTPS ngrok url (https://yourNgrok/api/callback) and add `/api/callback` at the end.
 
-        ![Enable calling](~/assets/images/calls-and-meetings/enable-calling.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/enable-calling.png" alt-text="Enable calling.":::
 
     1. Select **Save**.
 
@@ -188,11 +188,11 @@ items:
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
         
-        ![Ngrok](~/assets/images/calls-and-meetings/ngrok.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/ngrok.png" alt-text="Ngrok.":::
 
     1. In **Messaging endpoint**, add the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
         
-        ![Messaging endpoint](~/assets/images/calls-and-meetings/messaging-endpoint.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/messaging-endpoint.png" alt-text="Messaging endpoint.":::
 
     1. Select **Apply**.
 
@@ -209,7 +209,7 @@ items:
     1. Select **Code** and select the dropdown.
     1. Select **Download ZIP**.
 
-        ![Repo download](~/assets/images/calls-and-meetings/repo-download.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/repo-download.png" alt-text="Repo download.":::
 
     1. Ensure to note the Path of the repository that is downloaded.
     1. In the File Explorer, Select the **Project**.
@@ -222,7 +222,7 @@ items:
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
 
-        ![Appsettings Json](~/assets/images/calls-and-meetings/appsettings.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/appsettings.png" alt-text="Appsettings Json.":::
 
     1. Select **Save**.
 
@@ -232,7 +232,7 @@ items:
     1. Open the **manifest.json** file in Visual Studio Code.
     1. In the **manifest.json** file, find **{contentBotId}** and add your Microsoft App ID and save.
 
-        ![Manifest](~/assets/images/calls-and-meetings/manifest.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/manifest.png" alt-text="Manifest.":::
 
     1. Zip the contents of the **Manifest** folder to create **manifest.zip**.
     
@@ -243,7 +243,7 @@ items:
     1. To upload **manifest.zip**, select **Store > Manage your apps > Publish an app > Upload a custom app** and open **manifest.zip** from the repo folder in File explorer.
     1. Select **Add** to install Calling Bot in Teams.
 
-        ![Add Output](~/assets/images/calls-and-meetings/output.png)
+        :::image type="content" source="./assets/images/calls-and-meetings/output.png" alt-text="Add Output.":::
 
         You can interact with this bot by sending it a message.
 
