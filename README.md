@@ -1,7 +1,6 @@
 ## Microsoft Teams
 
-
-
+Microsoft Teams is a cloud-based communications platform that combines different services for collaboration, such as chat, meetings, calling, and files. Teams is tightly integrated into Microsoft 365 and combines multiple workloads into a unified communication and collaboration system. In addition, Teams offers integration capabilities for other tools and third-party products.
 
 ## Microsoft Teams docset/repo
 
