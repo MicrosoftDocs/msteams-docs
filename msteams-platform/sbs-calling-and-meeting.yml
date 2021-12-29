@@ -261,15 +261,15 @@ items:
     1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
     1. Bot will throw welcome Text with Adaptive Card as shown below.
 
-        (image)
+        :::image type="content" source="./assets/images/calls-and-meetings/bot-adaptive-card.png" alt-text="Adaptive card in bot.":::
 
     1. You can ask Bot to Create a call or Transfer a call.
 
-        (image)
+        :::image type="content" source="./assets/images/calls-and-meetings/calling-bot.png" alt-text="Calling bot.":::
 
     1. You can ask Bot to schedule a Meeting and invite the participants.
 
-        (Image)
+        :::image type="content" source="./assets/images/calls-and-meetings/meeting.png" alt-text="Meeting bot.":::
 
 - title: Complete challenge
   durationInMinutes: 1
