@@ -59,6 +59,8 @@ landingContent:
 
     - linkListType: tutorial
       links:
+        - text: Step-by-step guide for bot with calling and meeting
+          url: ~/sbs-calling-and-meeting.yml
         - text: Step-by-step guide for Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Step-by-step guide for tabs with adaptive cards
