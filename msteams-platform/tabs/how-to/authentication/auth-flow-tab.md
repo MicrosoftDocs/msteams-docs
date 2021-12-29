@@ -12,7 +12,7 @@ keywords: teams authentication flow tabs
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/) which is easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots are different though the core concepts are identical. Tabs are similar to websites so they can use OAuth 2.0 directly unlike bots.
 
-For example, the authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
+To know about the implicit grant type in OAuth 2.0, read on [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/).
 
 > [!NOTE]
 > Before showing a **Login** button to the user and calling the `microsoftTeams.authentication.authenticate` API in response to selecting the button, you must wait for the SDK initialization to complete. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
