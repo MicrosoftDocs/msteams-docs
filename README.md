@@ -12,7 +12,8 @@ Teams documentation is part of the Microsoft Docs technical documentation librar
 
 Several of the Microsoft documentation sets are open source and hosted on GitHub. Not all document sets are completely open source but many have public-facing repos where you can make suggested changes via pull requests. For more information see [Microsoft Docs contributor guide overview](https://docs.microsoft.com/en-us/contribute/).
 
-
+** Contributor License Agreement (CLA)**
+    CLA bot is a good guideline for the distinction between "small" and "large" contributions. PRs that do not require the CLA to be signed are likely "small." PRs that do require the CLA are likely "large."
 
 ## Git source control resources
 * [Git basics](https://go.microsoft.com/fwlink/?linkid=853939): This has a basic overview of how git works.
