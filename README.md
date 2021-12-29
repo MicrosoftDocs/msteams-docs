@@ -2,13 +2,13 @@
 
 Microsoft Teams is a cloud-based communications platform that combines different services for collaboration, such as chat, meetings, calling, and files. Teams is tightly integrated into Microsoft 365 and combines multiple workloads into a unified communication and collaboration system. In addition, Teams offers integration capabilities for other tools and third-party products.
 
-## Microsoft Teams docset/repo
+## Microsoft Teams Developer Documentation
 
-Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. For Microsoft Teams docset/repo see [docset/repo](https://docs.microsoft.com/en-us/microsoftteams/platform/mstdd-landing/).
+Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps. See [Microsoft Teams Developer Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/mstdd-landing/).
 
 ## How to contribute 
 
-Teams documentation is part of the Microsoft Docs technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity, see [Contribute to Teams documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/teams-contributor-reference/).
+Teams documentation is part of the Microsoft Docs technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. You can ask questions and provide suggestion or updates on Microsoft Team documentation, see [Contribute to Teams documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/teams-contributor-reference/).
 
 You can also contribute to Microsoft docs, see [Microsoft Docs contributor guide overview](https://docs.microsoft.com/en-us/contribute/).
 
@@ -21,7 +21,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 ## Resources
 
-### Tools and SDK's
+### Tools
 
 * [Teams Toolkit fundamentals](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals/)
 * [Create new Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/create-new-project/)
@@ -29,8 +29,12 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 * [Publish Teams apps using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/publish/)
 * [Collaborate on Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-collaboration/)
 * [Teams Toolkit Command Line Interface](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-cli/)
-* [TeamsFx SDK for TypeScript or JavaScript](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk/)
 * [Teams Toolkit for Visual Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/visual-studio-overview/)
+* [Microsoft style guide](https://docs.microsoft.com/en-us/style-guide/welcome/)
+
+### SDK's
+
+* [TeamsFx SDK for TypeScript or JavaScript](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk/)
 * [Teams JavaScript client SDK](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/using-teams-client-sdk/)
 * [Teams JavaScript client SDK v2 preview](https://docs.microsoft.com/en-us/microsoftteams/platform/m365-apps/using-teams-client-sdk-preview?tabs=manifest-teams-toolkit%2Cjavascript/)
 * [Microsoft Graph SDKs](https://docs.microsoft.com/en-us/graph/sdks/sdks-overview/)
@@ -38,12 +42,12 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 * [Messaging extensions SDK (v3)](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/messaging-extension-v3/messaging-extensions-overview/)
 
 ### Git source control resources
-* [Git basics](https://go.microsoft.com/fwlink/?linkid=853939): This has a basic overview of how git works.
+* [Git basics](https://go.microsoft.com/fwlink/?linkid=853939): This has a basic overview of how Git works.
 * [Pro Git e-book (web)](https://go.microsoft.com/fwlink/?linkid=853940): This is a thorough git reference, in HTML format.
 * [Pro Git e-book (PDF)](https://progit2.s3.amazonaws.com/en/2016-03-22-f3531/progit-en.1084.pdf): Same as the preceding link, in PDF form.
-* [Learn Git course from Codecademy](https://www.codecademy.com/learn/learn-git): Git tutorial from Codeacademy.
+* [Learn Git course from Codeacademy](https://www.codecademy.com/learn/learn-git): Git tutorial from Codeacademy.
 * [Try Git course from Code School on Pluralsight](https://www.pluralsight.com/courses/code-school-git-real): Git tutorial from Code School on Pluralsight.
-* [Git and Github course from Udacity](https://www.udacity.com/course-how-to-use-git-and-github--ud775): Git and Github tutorial from Udacity.
+* [Git and GitHub course from Udacity](https://www.udacity.com/course-how-to-use-git-and-github--ud775): Git and GitHub tutorial from Udacity.
 
 ### GitHub resources
 
