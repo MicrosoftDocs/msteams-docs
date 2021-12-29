@@ -4,7 +4,7 @@ Microsoft Teams is a cloud-based communications platform that combines different
 
 ## Microsoft Teams docset/repo
 
-Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.For Microsoft Teams docset/repo see [docset/repo](https://docs.microsoft.com/en-us/microsoftteams/platform/mstdd-landing/).
+Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. For Microsoft Teams docset/repo see [docset/repo](https://docs.microsoft.com/en-us/microsoftteams/platform/mstdd-landing/).
 
 ## How to contribute 
 
@@ -24,7 +24,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 ### Tools and SDK's
 
 * [Teams Toolkit fundamentals](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals/)
-* [Create new Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/create-new-project/)t
+* [Create new Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/create-new-project/)
 * [Use Teams Toolkit to provision cloud resources](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/provision/)
 * [Publish Teams apps using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/publish/)
 * [Collaborate on Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-collaboration/)
