@@ -293,7 +293,7 @@ items:
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    Following steps will help you on how to interact with the bot in different ways. Like what response you get when you send a message, a file or an inline message to the bot.
+    Following steps will help you on how to interact with the bot in different ways. Like what response you get when you sends a message, a file or an inline message to the bot.
 
     > [!NOTE]
     > This manifest.json specified that the bot will be installed in "personal" scope which is why you immediately entered a one on one chat conversation with the bot. Please refer to Teams documentation for more details.
