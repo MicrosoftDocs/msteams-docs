@@ -251,10 +251,6 @@ To upload your application to Teams
 
 In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app.
 
-::: zone-end
-
-::: zone pivot="asp-net-core"
-
 ### Prerequisites for Teams apps
 
 Here's a list of tools you'll need for building your personal tab.
