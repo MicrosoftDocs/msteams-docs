@@ -292,6 +292,12 @@ The example payload which contains static and dynamic typeahead search with sing
 }
 ```
 
+## Code sample
+
+|Sample name | Description | C# | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Type ahead search control on Adaptive Cards | Demonstrate the feature of type ahead search (static and dynamic) control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) |
+
 ## See also
 
 * [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)
