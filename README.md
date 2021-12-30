@@ -8,6 +8,8 @@ Teams documentation is part of the Microsoft Docs technical documentation librar
 
 To contribute to Microsoft docs, see [Microsoft Docs contributor guide overview](https://docs.microsoft.com/en-us/contribute/).
 
+To know more about Microsoft standards and style guide, see [Microsoft style guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
+
 Most contributions require you to agree to a **Contributor License Agreement (CLA)** declaring that you have the right to, and actually do, grant us the rights to use your contribution, see [CLA](https://cla.microsoft.com/).
 
 This project has adopted the [Microsoft Open Source code of conduct](https://opensource.microsoft.com/codeofconduct/), see [code of conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or comments.
@@ -17,19 +19,12 @@ This project has adopted the [Microsoft Open Source code of conduct](https://ope
 ### Tools and SDKs
 
 * [Teams Toolkit fundamentals](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals/)
-* [Create new Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/create-new-project/)
-* [Use Teams Toolkit to provision cloud resources](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/provision/)
-* [Publish Teams apps using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/publish/)
-* [Collaborate on Teams project using Teams Toolkit](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-collaboration/)
-* [Teams Toolkit Command Line Interface](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-cli/)
 * [Teams Toolkit for Visual Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/visual-studio-overview/)
 * [TeamsFx SDK for TypeScript or JavaScript](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teamsfx-sdk/)
-* [Teams JavaScript client SDK](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/using-teams-client-sdk/)
-* [Teams JavaScript client SDK v2 preview](https://docs.microsoft.com/en-us/microsoftteams/platform/m365-apps/using-teams-client-sdk-preview?tabs=manifest-teams-toolkit%2Cjavascript/)
+* [Teams JavaScript client SDK](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/using-teams-client-sdk/) and [Teams JavaScript client SDK v2 preview](https://docs.microsoft.com/en-us/microsoftteams/platform/m365-apps/using-teams-client-sdk-preview?tabs=manifest-teams-toolkit%2Cjavascript/)
 * [Microsoft Graph SDKs](https://docs.microsoft.com/en-us/graph/sdks/sdks-overview/)
 * [Bots SDK (v3)](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/bot-v3/bots-overview/)
 * [Messaging extensions SDK (v3)](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/messaging-extension-v3/messaging-extensions-overview/)
-* [Microsoft style guide](https://docs.microsoft.com/en-us/style-guide/welcome/)
 
 See [Additional Git and GitHub resources](https://docs.microsoft.com/en-us/contribute/additional-resources).
 
