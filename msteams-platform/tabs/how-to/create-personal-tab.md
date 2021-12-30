@@ -9,24 +9,17 @@ keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission 
 zone_pivot_groups: personal-tab
 ---
 
-# Create a personal tab
+# Personal tab
 
-::: zone pivot="node-js"
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
-### Prerequisites for Teams apps
+Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**.
 
-Here's a list of tools you'll need for building your personal tab.
+## Create a personal tab
 
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+# [Node.js](#tab/nodejs)
 
-## Create a personal tab with Node.js
+### Create a personal tab with Node.js
 
 To create a personal tab with Node.js:
 
@@ -311,24 +304,9 @@ Here's a list of tools you'll need for building your personal tab.
 
     You're currently in your project directory. Select **Enter**.
 
-::: zone-end
+# [ASP.NET Core](#tab/aspnetcore)
 
-::: zone pivot="asp-net-core-mvc"
-
-### Prerequisites for Teams apps
-
-Here's a list of tools you'll need for building your personal tab.
-
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
-
-## Create a personal tab with ASP.NET:
+### Create a personal tab with ASP.NET:
 
 1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
 
@@ -364,7 +342,21 @@ Here's a list of tools you'll need for building your personal tab.
 
     You're currently in your project directory. Select **Enter**.
 
-::: zone-end
+# [ASP.NET Core MVC](#tab/aspnetcoremvc)
+
+1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
+
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+
+    **What is your solution name?**
+
+    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+
+    **Where do you want to place the files?**
+
+    You're currently in your project directory. Select **Enter**.
+
+---
 
 ## Next step
 
