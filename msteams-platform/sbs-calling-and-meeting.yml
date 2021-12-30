@@ -92,23 +92,8 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/client-secret.png" alt-text="Value.":::
 
     1. Create a policy for a demo tenant user for creating the online meeting using the following powershell script.
-
-        ```powershell
-        Import-Module MicrosoftTeams
-	    $userCredential = Get-Credential
-	    Connect-MicrosoftTeams -Credential $userCredential
-
-	    New-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>” -AppIds "<<azure-client-id>>" -Description "<<Policy-description>>"
-	    Grant-CsApplicationAccessPolicy -PolicyName “<<policy-identity/policy-name>>” -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted >>"
-
-        ex:
-        Import-Module MicrosoftTeams
-	    $userCredential = Get-Credential
-	    Connect-MicrosoftTeams -Credential $userCredential
-
-	    New-CsApplicationAccessPolicy -Identity Meeting-policy-dev -AppIds "d0bdaa0f-8be2-4e85-9e0d-2e446676b88c" -Description "Online meeting policy - contoso town"
-	    Grant-CsApplicationAccessPolicy -PolicyName Meeting-policy-dev -Identity "782f076f-f6f9-4bff-9673-ea1997283e9c"
-	    ```
+        
+        (Add powershell script)
 
     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in powershell script.
     1. Run Windows Powershell PSI as an administrator and execute the script.
