@@ -38,7 +38,6 @@
         "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
         "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
         "extendBreadcrumb": true,
-        "zone_pivot_group_filename": "msteams-platform/zone-pivot-groups.json",
         "manager": "billbl",
         "author": "surbhigupta",
         "ms.suite": "office365",
