@@ -12,7 +12,7 @@ keywords: teams apps meetings user participant role api
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
-The users can access apps during meetings using the tab gallery from their calendar, such as:
+The following list provides examples where users can access apps during meetings using the tab gallery from their calendar:
 
 * Pre-stage a Kanban board.
 * Launch an in-meeting actionable dialog.
@@ -22,13 +22,13 @@ The following illustration gives you an idea of the meeting app extensibility fe
 
 ![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-This document provides an overview of [meeting app extensibility](meeting-app-extensibility.md), [API references](API-references.md), [enable and configure apps for meetings](enable-and-configure-your-app-for-teams-meetings.md), and [custom Together Mode](teams-together-mode.md) scenes in Teams.
+The document provides an overview of meeting app extensibility, [API references](API-references.md), enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
+Enhance your meeting experience by using the [meeting app extensibility](meeting-app-extensibility.md) feature which enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
 
-To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
+To customize Teams with apps for meetings, [enable your apps for Teams meetings by updating the app manifest and configure the apps for meeting scenarios](enable-and-configure-your-app-for-teams-meetings.md).
 
-The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
+The new [custom Together Mode](teams-together-mode.md) scenes feature enables users to collaborate in a meeting with their team in one place.
 
 ## Next step
 
