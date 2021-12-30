@@ -126,6 +126,7 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 
 ## Universal actions for search based messaging extensions
 
+Universal actions now bring the enhanced user experience available for adaptive cards to messaging extensions. To enable universal actions for search based messaging extensions, the app should have the [Schema for Universal Actions](/adaptive-cards/authoring-cards/universal-action-model#schema) along with the following requirements:
 
 1. The app should have a conversation bot defined in their app manifest.
 1. If you already have a conversational bot, the bot should be the same that is used in your messaging extension.
@@ -160,7 +161,7 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 ```
 ### Automatic Refresh for Adaptive Cards in search based MEs
 
-You can automatically update adaptive cards in messaging extensions to ensure users always see up to date data. To allow an Adaptive Card to automatically refresh, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format  in the `refresh` property. The search based messaging extensions are now dynamic with the inclusion of Refresh property.
+You can automatically update adaptive cards in messaging extensions to ensure users always see up to date data. To allow an Adaptive Card to automatically refresh, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format  in the `refresh` property.
 
 **Example**
 
@@ -227,6 +228,10 @@ You can select a card and post it in to the compose box and perform JIT to send 
 
 >[!NOTE]
 > For apps that don’t have the action. Execute and refresh schema defined, the install prompt will not be shown to the users.
+
+End user 
+
+
 
 ## Next step
 
