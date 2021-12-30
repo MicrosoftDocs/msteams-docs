@@ -56,7 +56,7 @@ items:
          ```ngrok
         ngrok http -host-header=rewrite 3978
         ```
-    **Register an App in Azure**
+    **Register an App in Azure:**
 
     1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
     1. Select the **Azure Active Directory** service, and select **App registrations** from the left pane and then select **New registration**.
@@ -75,7 +75,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/reg-app.png" alt-text="Register an app.":::
 
-    **To create client secret**
+    **To create client secret:**
 
     1. In Overview page of your bot, select **Essentials**. Save the **Application client ID** (Microsoft App ID) for future reference.
     
@@ -98,7 +98,7 @@ items:
     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in powershell script.
     1. Run Windows Powershell PSI as an administrator and execute the script.
 
-    **To add API permissions for downstream calls**
+    **To add API permissions for downstream calls:**
 
     1. Select **API permissions** from the left pane.
     1. Select **Add a permission**. **Request API permissions** window appears.
@@ -115,7 +115,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/add-api-permissions.png" alt-text="Add API permissions.":::
 
-    **Create Bot Channel Registration in Azure account**
+    **Create Bot Channel Registration in Azure account:**
 
     1. Open [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
@@ -155,7 +155,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource.png" alt-text="Go to resource.":::
 
-    **To add the Microsoft Teams channel**
+    **To add the Microsoft Teams channel:**
 
     1. Go to **Home**.
     1. Open your bot, which is listed in the **Recent resources** section.
@@ -178,7 +178,7 @@ items:
 
     1. Select **Save**.
 
-    **To add messaging endpoint**
+    **To add messaging endpoint:**
 
     1. Go to **Home** page of your bot and select **Configuration** under **Settings** from the left pane.
     1. Go to ngrok.
@@ -198,8 +198,11 @@ items:
   durationInMinutes: 1
   content: |
     Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams and create the Teams App Package and upload it to the organisation.
+    
+    1. Update appsettings.json in Visual Studio Code.
+    1. Update manifest.json in Visual Studio Code and compress it to the zip file in File explorer.
 
-    **Update appsettings for calling Bot**
+    **Update appsettings for calling Bot:**
 
     1. Go to the repo https://github.com/OfficeDev/Microsoft-Teams-Samples.git.
     1. Select **Code** and select the dropdown.
@@ -222,7 +225,7 @@ items:
 
     1. Select **Save**.
 
-    **To update manifest**
+    **To update manifest:**
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
     1. Open the **manifest.json** file in Visual Studio Code.
