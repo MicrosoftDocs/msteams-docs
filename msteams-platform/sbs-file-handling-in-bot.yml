@@ -300,11 +300,7 @@ items:
 
     1. When you send a message to the bot, it will respond with a card asking you to upload a file. in this example, the Team's-logo.png file is being uploaded to the files directory. The occurence of accept and decline in this sample are unique to the Teams. You can send another message to the bot to get a new prompt.
        
-         ![Final output](~/assets/images/final-output.png)
-
     1. You can send a file to the bot as an attachment in the message compose section in Teams. This will be delivered to the bot as a Message Activity and the code in this sample fetches and saves the file.
-        
-         ![Second final output](~/assets/images/second-final-output.png)
 
     1. You can also send an inline image in the message compose section. This will be among the activity's attachments and will require the bot's access token to retrieve the image.  
        
