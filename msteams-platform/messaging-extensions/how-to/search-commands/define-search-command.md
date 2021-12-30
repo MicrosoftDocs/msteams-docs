@@ -5,6 +5,7 @@ description: Learn about messaging extension search commands for Microsoft Teams
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
+zone_pivot_groups: personal-tab
 ---
 # Define messaging extension search commands
 
@@ -14,6 +15,21 @@ Messaging extension search commands allow users to search external systems and i
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
+
+
+::: zone pivot="<node-js>"
+
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+::: zone-end
+
+::: zone pivot="<asp-net-core>"
+
+[!include[Feedback](~/includes/feedback.md)]
+
+::: zone-end
+
+
 
 ## Select search command invoke locations
 
