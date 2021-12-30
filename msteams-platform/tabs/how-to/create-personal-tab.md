@@ -19,7 +19,7 @@ Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**
 
 # [Node.js](#tab/nodejs)
 
-## Create a personal tab with Node.js
+### Create a personal tab with Node.js
 
 To create a personal tab with Node.js:
 
@@ -225,9 +225,9 @@ gulp build
 
 1. To establish a secure tunnel to your tab, exit the localhost and enter the following command:
 
-```cmd
-gulp ngrok-serve
-```
+    ```cmd
+    gulp ngrok-serve
+    ```
 
 > [!IMPORTANT]
 > After your tab has been uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
@@ -253,7 +253,7 @@ In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;
 
 # [ASP.NET Core](#tab/aspnetcore)
 
-## Create a personal tab with ASP.NET:
+### Create a personal tab with ASP.NET:
 
 1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
 
