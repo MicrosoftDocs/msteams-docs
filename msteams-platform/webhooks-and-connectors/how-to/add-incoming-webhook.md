@@ -60,6 +60,8 @@ Teams bots, messaging extensions, Incoming Webhook, and the Bot Framework suppor
 
 The webhook is available in the Teams channel.
 
+You can create and send actionable messages through Incoming Webhook or Office 365 Connector. For more information, see [Create and send messages](/webhooks-and-connectors/how-to/connectors-using?tabs=cURL).
+
 > [!NOTE]
 > In Teams, to allow any team member to add, modify, or delete a connector, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**.
 
