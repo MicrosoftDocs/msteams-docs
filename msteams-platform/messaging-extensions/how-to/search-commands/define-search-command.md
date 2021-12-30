@@ -17,15 +17,15 @@ Messaging extension search commands allow users to search external systems and i
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
 
 
-::: zone pivot="<node-js>"
+::: zone pivot= node-js
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+[!include [v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ::: zone-end
 
-::: zone pivot="<asp-net-core>"
+::: zone pivot= asp-net-core
 
-[!include[Feedback](~/includes/feedback.md)]
+[!include [v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ::: zone-end
 
