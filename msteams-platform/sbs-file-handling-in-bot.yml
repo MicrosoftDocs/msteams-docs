@@ -302,7 +302,7 @@ items:
        
     1. You can send a file to the bot as an attachment in the message compose section in Teams. This will be delivered to the bot as a Message Activity and the code in this sample fetches and saves the file.
 
-    1. You can also send an inline image in the message compose section. This will be among the activity's attachments and will require the bot's access token to retrieve the message.  
+    1. You can also send an inline image in the message compose section. This will be among the activity's attachments and will require the bot's access token to retrieve the image.  
        
 - title: Complete challenge
   durationInMinutes: 1
