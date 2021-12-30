@@ -208,7 +208,7 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/repo-download.png" alt-text="Repo download.":::
 
     1. Ensure to note the Path of the repository that is downloaded.
-    1. In the File Explorer, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** folder.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** folder.
     1. Open the **appsettings.json** file in Visual Studio Code.
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, `AppId` and `AppSecret` with your client_id and client_secret registered in demo tenant.
     1. Update `BotBaseUrl` with your `ngrok` URL.
@@ -224,7 +224,7 @@ items:
 
     **To update manifest**
 
-    1. In the File Explorer, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
     1. Open the **manifest.json** file in Visual Studio Code.
     1. In the **manifest.json** file, find **{contentBotId}** and add your Microsoft App ID and add your ngrok url in **validDomains** excluding https:// and save.
 
