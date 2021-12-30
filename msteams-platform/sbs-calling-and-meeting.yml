@@ -226,7 +226,7 @@ items:
 
     1. In the File Explorer, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
     1. Open the **manifest.json** file in Visual Studio Code.
-    1. In the **manifest.json** file, find **{contentBotId}** and add your Microsoft App ID and save.
+    1. In the **manifest.json** file, find **{contentBotId}** and add your Microsoft App ID and add your ngrok url in **validDomains** excluding https:// and save.
 
         :::image type="content" source="./assets/images/calls-and-meetings/manifest.png" alt-text="Manifest.":::
 
