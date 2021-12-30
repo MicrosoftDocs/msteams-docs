@@ -293,12 +293,12 @@ items:
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    The instructions below will show you how to communicate with the bot in various ways. When you send a message, a file or an inline message to the bot, you'll get a response similar to this.
+    The following instructions will show you how to communicate with the bot in various ways. When you send a message, a file or an inline message to the bot, you'll get a response similar to this:
 
     > [!NOTE]
     > This manifest.json specified that the bot will be installed in "personal" scope which is why you immediately entered a one on one chat conversation with the bot. Please refer to Teams documentation for more details.
 
-    1. When you send a message to the bot, it will respond with a card asking you to submit a file. in this example, the Team's-logo.png file is being uploaded to the files directory. The occurence of accept and decline in this sample are unique to the Teams. You can send another message to the bot to get a new prompt.
+    1. When you send a message to the bot, it will respond with a card asking you to upload a file. in this example, the Team's-logo.png file is being uploaded to the files directory. The occurence of accept and decline in this sample are unique to the Teams. You can send another message to the bot to get a new prompt.
        
     1. You can send a file to the bot as an attachment in the message compose section in Teams. This will be delivered to the bot as a Message Activity and the code in this sample fetches and saves the file.
 
