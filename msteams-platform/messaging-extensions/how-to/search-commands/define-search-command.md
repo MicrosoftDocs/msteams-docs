@@ -18,15 +18,11 @@ Messaging extension search commands allow users to search external systems and i
 
 
 ::: zone pivot="node-js"
-
-[!include [v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
-
+[!INCLUDE [v4-to-v3-SDK-pointer](includes/how-to/search-commands/respond-to-search.md)]
 ::: zone-end
 
 ::: zone pivot="asp-net-core"
-
-[!include [v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
-
+[!INCLUDE [v4-to-v3-SDK-pointer](includes/how-to/search-commands/respond-to-search.md)]
 ::: zone-end
 
 
