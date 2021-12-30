@@ -253,13 +253,22 @@ In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;
 
 # [ASP.NET Core](#tab/aspnetcore)
 
-### Create a personal tab with ASP.NET:
+### Create a personal tab with ASP.NET Core
 
-1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
+You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with Node.js:
+
+1. At a command prompt, create a new directory for your tab project.
+
+1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extracting the files:
 
     ```cmd
-    npm install yo gulp-cli --global
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
+### Generate your personal tab
+
+1. Open Visual Studio and select **Open a project or solution**.
+
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** in Visual Studio
 
 2. Install the Microsoft Teams App generator by entering the following command in your command prompt:
 
