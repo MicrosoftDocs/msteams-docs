@@ -124,6 +124,110 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
+## Universal actions for search based messaging extensions
+
+
+1. The app should have a conversation bot defined in their app manifest.
+1. If you already have a conversational bot, the bot should be the same that is used in your messaging extension.
+1. If the card is sent in a group, the users should have group specific permissions to read the card.  Specify `team` and `groupchat` depending on scenarios you plan to support.
+
+**Example**
+
+```json
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.11",
+    "version": "1.0.0",
+    "id": "%MICROSOFT-APP-ID%",
+    "packageName": "com.example.myapp",
+    "bots": [
+        {
+            "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
+            "scopes": [
+                    "team",
+                    "personal",
+                    "groupchat"
+                ]
+        }
+    ],
+    "composeExtensions": [
+        {
+            "canUpdateConfiguration": true,
+            "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%", // Use the same bot as what is specified in the bots section above
+        }
+    ]
+}
+```
+### Automatic Refresh for Adaptive Cards in search based MEs
+
+You can automatically update adaptive cards in messaging extensions to ensure users always see up to date data. To allow an Adaptive Card to automatically refresh, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format  in the `refresh` property. The search based messaging extensions are now dynamic with the inclusion of Refresh property.
+
+**Example**
+
+    ```json
+    {
+        "type": "AdaptiveCard",
+        "refresh": {
+            "userIds": [
+                "<8:orgId:<AADID>>",
+                "29:<id>"
+            ],
+            "action": {
+                "type": "Action.Execute",
+                "data": {}
+            }
+        },
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "Hello World!",
+                "wrap": true
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Execute",
+                "data": {},
+                "title": "Hello"
+            }
+        ]
+    }
+    ```  
+
+Skipping userIds would enable refresh for everyone in the group chat/channel with size <= 60. For conversations (group chat/channel) of size more than 60, automatic refresh would not be enabled and users will be provided with an option to refresh manually from the message options menu.
+ 
+    ```json
+    {
+        "type": "AdaptiveCard",
+        "refresh": {
+            "action": {
+                "type": "Action.Execute",
+                "data": {}
+            }
+        },
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "Hello World!",
+                "wrap": true
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Execute",
+                "data": {},
+                "title": "Hello"
+            }
+        ]
+    }
+    ```
+### Just-in Time Install (JIT install)
+
+You can select a card and post it in to the compose box and perform JIT to send the card into the chat. Performing JIT will install the card to all the users and the card is send after the installation is complete.
+
+>[!NOTE]
+> For apps that don’t have the action. Execute and refresh schema defined, the install prompt will not be shown to the users.
+
 ## Next step
 
 > [!div class="nextstepaction"]
