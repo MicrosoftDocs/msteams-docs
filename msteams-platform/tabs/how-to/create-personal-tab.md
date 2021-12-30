@@ -259,7 +259,7 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 1. At a command prompt, create a new directory for your tab project.
 
-1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extracting the files:
+1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
@@ -269,6 +269,8 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 1. Open Visual Studio and select **Open a project or solution**.
 
 1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** in Visual Studio
+
+1. To test your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
 
 2. Install the Microsoft Teams App generator by entering the following command in your command prompt:
 
@@ -300,17 +302,23 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
-1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
 
-    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with Node.js:
 
-    **What is your solution name?**
+1. At a command prompt, create a new directory for your tab project.
 
-    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
-    **Where do you want to place the files?**
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
+### Generate your personal tab
 
-    You're currently in your project directory. Select **Enter**.
+1. Open Visual Studio and select **Open a project or solution**.
+
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** in Visual Studio
+
+1. To test your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
 
 ---
 
