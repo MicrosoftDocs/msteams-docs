@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Upload files from bot
+title: Teams file upload bot
 metadata:
   title: Teams File Upload Bot 
   description: In this tutorial, you'll learn how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment.
