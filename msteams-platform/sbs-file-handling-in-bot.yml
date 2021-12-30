@@ -293,16 +293,16 @@ items:
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    Following steps will help you on how to interact with the bot in different ways. Like what response you get when you sends a message, a file or an inline message to the bot.
+    The instructions below will show you how to communicate with the bot in various ways. When you send a message, a file or an inline message to the bot, you'll get a response similar to this.
 
     > [!NOTE]
     > This manifest.json specified that the bot will be installed in "personal" scope which is why you immediately entered a one on one chat conversation with the bot. Please refer to Teams documentation for more details.
 
-    1. Sending a message to the bot will cause it to respond with a card that will prompt you to upload a file. The file that's being uploaded is the teams-logo.png in the Files directory in this sample. The Accept and Decline events illustrated in this sample are specific to Teams. You can message the bot again to receive another prompt.
+    1. When you send a message to the bot, it will respond with a card asking you to submit a file. in this example, the Team's-logo.png file is being uploaded to the files directory. The occurence of accept and decline in this sample are unique to the Teams. You can send another message to the bot to get a new prompt.
        
     1. You can send a file to the bot as an attachment in the message compose section in Teams. This will be delivered to the bot as a Message Activity and the code in this sample fetches and saves the file.
 
-    1. You can also send an inline image in the message compose section. This will be present in the attachments of the Activity and requires the Bot's access token to fetch the image.      
+    1. You can also send an inline image in the message compose section. This will be among the activity's attachments and will require the bot's access token to retrieve the message.  
        
 - title: Complete challenge
   durationInMinutes: 1
