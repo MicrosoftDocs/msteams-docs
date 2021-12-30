@@ -19,7 +19,7 @@ Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**
 
 # [Node.js](#tab/nodejs)
 
-### Create a personal tab with Node.js
+## Create a personal tab with Node.js
 
 To create a personal tab with Node.js:
 
@@ -191,7 +191,7 @@ You must have an [app package](~/concepts/build-and-test/apps-package.md) to bui
 
 #### Create the app package
 
-The package is created through a gulp task that validates the manifest.json file and generates the zip folder in the **./package directory. In the command prompt, enter the following command:
+The package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. In the command prompt, enter the following command:
 
 ```cmd
 gulp manifest
@@ -251,58 +251,9 @@ To upload your application to Teams
 
 In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app.
 
-### Prerequisites for Teams apps
-
-Here's a list of tools you'll need for building your personal tab.
-
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
-
-## Create a personal tab with ASP.NET:
-
-1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
-
-    ```cmd
-    npm install yo gulp-cli --global
-    ```
-
-2. Install the Microsoft Teams App generator by entering the following command in your command prompt:
-
-    ```cmd
-    npm install generator-teams --global
-    ```
-
-### Generate your personal tab
-
-1. At a command prompt, create a new directory for your personal tab.
-
-1. To start the Microsoft Teams App generator, enter the following command in your new directory
-
-    ```cmd
-    yo teams
-    ```
-
-1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
-
-    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
-
-    **What is your solution name?**
-
-    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
-
-    **Where do you want to place the files?**
-
-    You're currently in your project directory. Select **Enter**.
-
 # [ASP.NET Core](#tab/aspnetcore)
 
-### Create a personal tab with ASP.NET:
+## Create a personal tab with ASP.NET:
 
 1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command:
 
