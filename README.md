@@ -13,7 +13,7 @@ Teams documentation is part of the Microsoft Docs technical documentation librar
 You can also contribute to Microsoft docs, see [Microsoft Docs contributor guide overview](https://docs.microsoft.com/en-us/contribute/).
 
 ### Contributor License Agreement (CLA)
-CLA bot is a good guideline for the distinction between "small" and "large" contributions. PRs that do not require the CLA to be signed are likely "small." PRs that do require the CLA are likely "large."
+CLA bot is a good guideline for the distinction between **small** and **large** contributions. PRs that do not require the CLA to be signed are likely **small**. PRs that do require the CLA are likely **large**, see [CLA](https://cla.microsoft.com/).
 
 ### Microsoft Open Source Code of Conduct
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
