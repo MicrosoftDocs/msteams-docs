@@ -270,35 +270,43 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** in Visual Studio
 
-1. To test your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
+1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
-2. Install the Microsoft Teams App generator by entering the following command in your command prompt:
-
-    ```cmd
-    npm install generator-teams --global
+    ```HTML
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-### Generate your personal tab
+1. Open **PersonalTab.cshtml** from **Pages** folder and inside the `<script>` tags add `microsoftTeams.initialize()` and save.
 
-1. At a command prompt, create a new directory for your personal tab.
+### Run your application
 
-1. To start the Microsoft Teams App generator, enter the following command in your new directory
+In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
+
+In a browser, go to the following URLs to verify if the application has loaded properly:
+
+* http://localhost:44325/
+* http://localhost:44325/personalTab
+* http://localhost:44325/privacy
+* http://localhost:44325/tou
+
+### Establish a secure tunnel to your tab for Teams
+
+To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
 
     ```cmd
-    yo teams
+    ngrok http https://localhost:44312 -host-header="localhost:44312"
     ```
 
-1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
+### Upload your tab to Teams
 
-    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+1. Navigate to your **Developer portal** in Teams.
 
-    **What is your solution name?**
+1. Open **Apps** and select **+ New app**.
 
-    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+1. Enter your desired name for the app, select **Add**.
 
-    **Where do you want to place the files?**
-
-    You're currently in your project directory. Select **Enter**.
+1. 
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
