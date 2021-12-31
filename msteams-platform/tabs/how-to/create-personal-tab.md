@@ -294,9 +294,9 @@ In a browser, go to the following URLs to verify if the application has loaded p
 
 To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
 
-    ```cmd
-    ngrok http https://localhost:44312 -host-header="localhost:44312"
-    ```
+```cmd
+ngrok http https://localhost:44312 -host-header="localhost:44312"
+```
 
 ### Upload your tab to Teams
 
