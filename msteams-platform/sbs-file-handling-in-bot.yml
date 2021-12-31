@@ -53,7 +53,7 @@ items:
         * Go to **botbuilder-samples > samples > csharp_dotnetcore > 56.teams-file-upload ** folder.
         * Open the **Teamsfileupload.csproj** file.
 
-    1. Open ngrok terminal and start an ngrok tunnel with the following command:
+    1. Open ngrok terminal and start a ngrok tunnel with the following command:
 
         ```
         ngrok http -host-header=rewrite 3978
@@ -81,7 +81,7 @@ items:
 
          ![Review and create](~/assets/images/reg-azure-1.png)
 
-    1. If the validation passes, select **Create**.It takes a few moments for your bot service to be provisioned.
+    1. If the validation passes, select **Create**. It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
@@ -112,7 +112,7 @@ items:
 
          ![Home](~/assets/images/home-png.png)
 
-    1. Open your bot, which is listed in the **Recent resources** section.
+    1. Open your bot from the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Microsoft Teams** 
 
           ![Open Teams from channels](~/assets/images/chanels-teams.png)  
@@ -258,7 +258,7 @@ items:
     The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app,
     across all scopes. You can configure and run the Teams app by uploading the manifest.zip file.
 
-    **To run the Teams file bot you need to upload the manifest.zip file in Teams.**
+    **To run the Teams file bot, you need to upload the manifest.zip file in Teams. Perform the following steps:**
 
     1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **56.teams-file-upload** > **appsettings**.
 
@@ -268,7 +268,7 @@ items:
     
     1. Open the **manifest.json** file in visual studio.
 
-    1. In the manifest.json file, find YOUR-MICROSOFT-APP-ID and replace it with your App Id (that was created when you registered your bot earlier) every where you see the place holder string and save it.
+    1. In the manifest.json file, find YOUR-MICROSOFT-APP-ID and replace it with your App Id (that was created when you registered your bot earlier) everywhere you see the place holder string and save it.
        
        ![manifest json](~/assets/images/manifest-json.png)
 
@@ -293,17 +293,27 @@ items:
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    The following instructions will show you how to communicate with the bot in various ways. When you send a message, a file or an inline message to the bot, you'll get a response similar to this:
-
     > [!NOTE]
     > This manifest.json specified that the bot will be installed in "personal" scope which is why you immediately entered a one on one chat conversation with the bot. Please refer to Teams documentation for more details.
 
-    1. When you send a message to the bot, it will respond with a card asking you to upload a file. in this example, the Team's-logo.png file is being uploaded to the files directory. The occurence of accept and decline in this sample are unique to the Teams. You can send another message to the bot to get a new prompt.
-       
-    1. You can send a file to the bot as an attachment in the message compose section in Teams. This will be delivered to the bot as a Message Activity and the code in this sample fetches and saves the file.
+    This guide shows how to communicate with the bot in various ways. Following are the steps, which demonstrates the bot activities:
 
-    1. You can also send an inline image in the message compose section. This will be among the activity's attachments and will require the bot's access token to retrieve the image.  
+    1. Send a message to the bot: it responds with a card for the permission to upload the file.
        
+         ![prompt1](~/assets/images/sbs-1.png)
+
+    1. Select **Allow**, a teams-logo.png file is uploaded to the file directory, which is ready to download.
+
+         ![message prompt](~/assets/images/sbs-2.png)
+
+    1. Send a file to the bot as an attachment in Teams: It responds with a message **Received and Saved**. You can view the attachment from the **Files** tab.
+
+         ![file prompt](~/assets/images/sbs-3.png)
+
+    1. Send an image as an attachment: It responds with a message **Received and saved**. You can view the image on the chat window and from **Files** tab.
+       
+         ![Image prompt](~/assets/images/sbs-4.png)
+    
 - title: Complete challenge
   durationInMinutes: 1
   content: |
