@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Teams Task Module
+title: Teams task module bot
 metadata:
-  title: Teams Task Module
+  title: Teams task module bot
   description: In this tutorial, you'll learn to set up Teams task module.
   audience: Developer
   level: Beginner
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Teams Task Module shows how to fetch a Task Module from a Hero Card or Adaptive Card and receive input from the Task Module in the bot. You can interact with this bot by sending it a message. The bot responds with a Hero Card and Adaptive Card with buttons which display a Task Module when selected. A Task Module demonstrates retrieving input from a user, or displaying custom web page content.
+    The Teams task module bot shows how to fetch a task module from a Hero Card or Adaptive Card and receive input from the task module in the bot. You can interact with this bot by sending it a message. The bot responds with a Hero Card or Adaptive Card with buttons which display a task module. A task module demonstrates retrieving input from a user, or displaying custom web page content.
 
     You'll see the following output:
 
