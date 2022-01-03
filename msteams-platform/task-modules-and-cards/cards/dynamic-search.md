@@ -292,9 +292,9 @@ The example payload which contains static and dynamic typeahead search with sing
 }
 ```
 
-## Code snippets for invoke request and response:
+## Code snippets for invoke request and response
 
-Invoke Request:
+**Invoke Request:**
 
 {
     "name": "application/search",
@@ -311,7 +311,8 @@ Invoke Request:
     "localTimezone": "America/Los_Angeles",
     // …. other fields
 }
-Response (nodejs)
+
+**Response (nodejs):**
 
 {
     status: 200,
