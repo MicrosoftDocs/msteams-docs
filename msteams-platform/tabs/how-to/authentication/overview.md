@@ -15,8 +15,15 @@ The two different authentication flows for tabs in Teams are as follows:
   1. Use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in a web content page to enable authentication.
   1. After enabling authentication, embed the [content page](~/tabs/how-to/create-tab-pages/content-page.md) in a tab, a configuration page, or a task module.
 
- > [!NOTE]
- > Web-based authentication on mobile clients requires Teams JavaScript client SDK version 1.4.1 or later.
+## Prerequisites
+
+  Here is a list of points to ensure before proceeding with authentication:
+ * Web-based authentication on mobile clients requires Teams JavaScript client SDK version 1.4.1 or later.
+   > [!NOTE]
+   > Teams SDK launches separate window for authentication flow. Set the SameSite attribute to Lax. Teams desktop client or older versions of Chrome or Safari do not support SameSite=None.
+ * A basic understanding of OAuth 2.0 is required to work with authentication in Teams.
+
+## Authentication for tabs
 
 To know more about tab authentication, see:
 
@@ -27,4 +34,5 @@ To know more about tab authentication, see:
 
 ## See also
 
-* [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
+* [Authenticate bots](../../../bots/how-to/authentication/overview.md)
+* [Authenticate messaging extensions](../../../messaging-extensions/how-to/overview.md)

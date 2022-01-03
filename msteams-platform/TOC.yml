@@ -379,36 +379,6 @@
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
     - name: Use task modules from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
-- name: Add authentication
-  items:
-  - name: Overview
-    href: concepts/authentication/authentication.md
-  - name: Configure identity providers
-    href: concepts/authentication/configure-identity-provider.md
-  - name: Tabs
-    items:
-    - name: Authentication flow in tabs
-      href: tabs/how-to/authentication/auth-flow-tab.md
-    - name: Use Azure AD authentication
-      href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Use silent authentication
-      href: tabs/how-to/authentication/auth-silent-aad.md
-    - name: Use SSO authentication
-      href: tabs/how-to/authentication/auth-aad-sso.md
-  - name: Bots
-    items:
-    - name: Authentication flow in bots
-      href: bots/how-to/authentication/auth-flow-bot.md
-    - name: Add authentication to your bot
-      href: bots/how-to/authentication/add-authentication.md
-    - name: Use SSO authentication
-      href: bots/how-to/authentication/auth-aad-sso-bots.md
-  - name: Messaging extensions
-    items:
-    - name: Add authentication to your messaging extension
-      href: messaging-extensions/how-to/add-authentication.md
-    - name: Enable SSO for messaging extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview

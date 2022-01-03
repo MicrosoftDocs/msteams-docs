@@ -7,22 +7,16 @@ keywords: teams authentication flow tabs
 ---
 # Microsoft Teams authentication flow for tabs
 
-> [!NOTE]
-> To authenticate your tab on mobile clients, you require Teams JavaScript client SDK version 1.4.1 or later. Teams SDK launches separate window for authentication flow. Set the `SameSite` attribute to **Lax**. Teams desktop client or older versions of Chrome or Safari do not support `SameSite`=None.
-
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and other identity providers. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/). The authentication flow for tabs and bots is different, but the core concepts are identical. Tabs authentication flow is like websites, so, tabs can directly use OAuth 2.0.
-
-> [!NOTE]
-> A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
 To know about the implicit grant type in OAuth 2.0, see [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/).
 
 > [!NOTE]
-> You must wait for the SDK initialization to complete and then show a **Login** button to the user. When the user selects the **Login** button, in response, call the `microsoftTeams.authentication.authenticate` API. You can pass a callback to the `microsoftTeams.initialize` API when initialization completes.
+> You must wait for the SDK initialization to complete and then show **Log in** to the user. When the user selects **Log in**, in response, call the `microsoftTeams.authentication.authenticate` API. You can pass a callback to the `microsoftTeams.initialize` API when initialization completes.
 
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
-1. The user interacts with the content on the tab configuration or content page, commonly displayed as a **Sign in** or **Log in** button.
+1. The user interacts with the content on the tab configuration or content page, commonly displayed as **Sign in** or **Log in**.
 2. The tab constructs the URL for its auth start page. Optionally, it uses information from URL placeholders or calls `microsoftTeams.getContext()` Teams client SDK method to streamline the authentication experience for the user. For example, when authenticating with AAD, if the `login_hint` parameter is set to the user's email address, the user does not have to sign in if they have done so recently. This is because AAD uses the user's cached credentials. The pop-up window is shown briefly and then disappears.
 3. The tab then calls the `microsoftTeams.authentication.authenticate()` method and registers the `successCallback` and `failureCallback` functions.
 4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, such as `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` for Azure AD. Replace `<tenant id>` with your own tenant id that is context.tid.
