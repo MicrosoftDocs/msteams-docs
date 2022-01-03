@@ -294,8 +294,9 @@ The example payload which contains static and dynamic typeahead search with sing
 
 ## Code snippets for invoke request and response
 
-**Invoke Request:**
+### Invoke Request
 
+```json
 {
     "name": "application/search",
     "type": "invoke",
@@ -311,9 +312,13 @@ The example payload which contains static and dynamic typeahead search with sing
     "localTimezone": "America/Los_Angeles",
     // …. other fields
 }
+```
 
-**Response (nodejs):**
+### Response
 
+#### [Node.js](#tab/nodejs)
+
+```nodejs
 {
     status: 200,
     body : {
@@ -332,8 +337,11 @@ The example payload which contains static and dynamic typeahead search with sing
         }
     }
 }
-Response - csharp
+```
 
+#### [C#](#tab/csharp)
+
+```csharp
 InvokeResponse adaptiveCardResponse;
 var packages = 
 [
@@ -360,6 +368,9 @@ adaptiveCardResponse = new InvokeResponse()
     Status = 200,
     Body = jsonData
 };
+```
+
+---
 
 ## Code sample
 
