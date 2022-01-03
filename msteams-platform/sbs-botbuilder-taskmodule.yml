@@ -30,7 +30,6 @@ items:
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
 
-
 - title: Set up local environment
   durationInMinutes: 1
   content: |
