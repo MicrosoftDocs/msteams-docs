@@ -292,6 +292,74 @@ The example payload which contains static and dynamic typeahead search with sing
 }
 ```
 
+## Code snippets for invoke request and response:
+
+Invoke Request:
+
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+Response (nodejs)
+
+{
+    status: 200,
+    body : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": A very extensive set of extension methods...",
+                    "title": "FluentAssertions"
+                },
+                {
+                    "value": "item-2",
+                    "title": "result item 2"
+                }
+            ]
+        }
+    }
+}
+Response - csharp
+
+InvokeResponse adaptiveCardResponse;
+var packages = 
+[
+  {
+	id: "FluentAssertions",
+	description: "A very extensive set of extension methods that allow you to more naturally specify the expected outcome of a TDD..."
+  }
+]
+  
+var packageList = packages.Select(item => { var obj = new { title = item.id, value = item.description }; return obj; }).ToList();
+  
+var searchResponseData = new
+{
+    type = "application/vnd.microsoft.search.searchResponse",
+    value = new
+    {
+        results = packageList
+    }
+};
+var jsonString = JsonConvert.SerializeObject(searchResponseData);
+JObject jsonData = JObject.Parse(jsonString);
+adaptiveCardResponse = new InvokeResponse()
+{
+    Status = 200,
+    Body = jsonData
+};
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
