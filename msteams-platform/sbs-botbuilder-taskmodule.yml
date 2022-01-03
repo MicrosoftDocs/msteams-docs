@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Teams Task Module shows how to fetch a Task Module from Hero Card or Adaptive Card and receive input from the Task Module in the bot. 
+    The Teams Task Module shows how to fetch a Task Module from a Hero Card or Adaptive Card and receive input from the Task Module in the bot. You can interact with this bot by sending it a message. The bot responds with a Hero Card and Adaptive Card with buttons which display a Task Module when selected. A Task Module demonstrates retrieving input from a user, or displaying custom web page content.
 
     You'll see the following output:
 
