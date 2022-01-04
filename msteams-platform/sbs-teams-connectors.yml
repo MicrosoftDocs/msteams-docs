@@ -20,9 +20,11 @@ items:
       * ConnectorController.cs - Setup & Save actions
       * TaskController.cs - Create & Update actions
 
-This application simulates a real task management system and allows users to create and view tasks. The content is randomly generated to simulate how notification can be sent into Microsoft Teams channel using connector.
-
-For more information on developing apps for Microsoft Teams,see [Microsoft Teams developer documentation](/microsoftteams/platform/overview).
+    The following are the functions of Microsoft Teams Connectors:
+   * Simulates a real task management system
+   * Allows users to create and view tasks
+   
+   The content is randomly generated to simulate how notification can be sent into Microsoft Teams channel using connector. For more information on developing apps for Microsoft Teams,see [Microsoft Teams developer documentation](/microsoftteams/platform/overview).
     
     You'll see the following output:
 
@@ -39,7 +41,7 @@ For more information on developing apps for Microsoft Teams,see [Microsoft Teams
 
     > [!NOTE]
     > some features in the sample require that you using Public Developer Preview mode in Microsoft Teams.
-    
+
 - title: Set up local environment
   durationInMinutes: 1
   content: |
