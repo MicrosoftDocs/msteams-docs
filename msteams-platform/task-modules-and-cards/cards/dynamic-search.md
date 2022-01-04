@@ -326,7 +326,7 @@ The example payload which contains static and dynamic typeahead search with sing
         "value": {
            "results": [
                 {
-                    "value": A very extensive set of extension methods...",
+                    "value": "A very extensive set of extension methods...",
                     "title": "FluentAssertions"
                 },
                 {
