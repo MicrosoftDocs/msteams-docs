@@ -389,12 +389,12 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
         "value": {
            "results": [
                 {
-                    "value": "A very extensive set of extension methods...",
-                    "title": "FluentAssertions"
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
                 },
                 {
-                    "value": "item-2",
-                    "title": "result item 2"
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
                 }
             ]
         }
