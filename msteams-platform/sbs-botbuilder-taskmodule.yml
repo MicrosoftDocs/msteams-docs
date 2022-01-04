@@ -14,7 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Teams task module bot shows how to fetch task module from Hero Card or Adaptive Card and receive input from the task module in the bot. You can interact with the bot by sending message. The bot responds with Hero Card or Adaptive Card with buttons which display a task module. A task module demonstrates retrieving input from a user and displaying custom web page content.
+    Task modules can be invoked from Microsoft Teams bots using hero, thumbnail, or Office 365 Connector buttons on Adaptive Cards or Bot Framework cards. You can interact with the bot by sending message.
+    
+    **Key features of task modules**
+    * Provide better user experience than multiple conversation steps.
+    * Demonstrate retrieving input from a user and displaying custom web page content.
+
+    This step-by-step guide shows how to fetch task module from Hero Card or Adaptive Card and receive input from the task module in the bot.
 
     You'll see the following output:
 
