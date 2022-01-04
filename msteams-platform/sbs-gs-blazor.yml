@@ -223,7 +223,7 @@ items:
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of Visual Studio 2019.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-app-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019." border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019." border="false":::
 
     Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
 
