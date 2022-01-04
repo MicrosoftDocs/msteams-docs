@@ -20,7 +20,7 @@ items:
     * Provide better user experience than multiple conversation steps.
     * Demonstrate retrieving input from a user and displaying custom web page content.
 
-    This step-by-step guide shows how to fetch task module from Hero Card or Adaptive Card and receive input from the task module in the bot.
+    This step-by-step guide helps you to create a sample bot for Teams task module using Bot Framework registration.
 
     You'll see the following output:
 
