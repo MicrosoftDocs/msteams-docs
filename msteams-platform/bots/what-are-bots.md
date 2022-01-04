@@ -46,6 +46,15 @@ You can use the Teams bot APIs to get information for one or more members of a c
 > [!div class="nextstepaction"]
 > [Bots and SDKs](~/bots/bot-features.md)
 
+## Code sample
+
+|Sample name | Description | C# | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Bot daily task reminder| Demonstrate the user to schedule a recurring task and get a reminder on the scheduled time. | [View]https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+
+
+
+
 ## See also
 
 * [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
