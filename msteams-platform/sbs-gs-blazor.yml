@@ -152,38 +152,53 @@ items:
 
     ## Create your project
 
-    Use the Teams Toolkit to create your first project:
+    Use the Teams Toolkit to create your first project. Teams Toolkit takes you through a series of pages to create and configure your Teams app project.
 
     1. Open Visual Studio 2019.
-    1. Select **Create a new project**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-project.png" alt-text="Illustration shows the option to create a new project." border="false":::
 
-    1. Select **Microsoft Teams** from **All project types** dropdown list.  
+    1. Select **Create a new project**.
+
+        The **Create a new project** page appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+
+        1. Select **Microsoft Teams** from **All platforms** dropdown list.  
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
 
-    1. Select **Microsoft Teams App** as the template, and select **Next**.
-        The **Configure your new project** screen appears.
+        1. Select **Microsoft Teams App** as the template. 
+        
+      1. Select **Next**.
+        
+          The **Configure your new project** screen appears.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-configure-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
-    
-    1. Enter a suitable name for your project.
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-configure-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
-    1. Select the folder path where you want to create the project workspace.
+          Configure the following project details:
 
-    1. Select the name for the solution you're creating, and select **Next**.
-        The **Additional information** screen appears.
+        1. Enter a suitable name for your project.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-add-info-create.png" alt-text="Illustration shows the option to provide additional information." border="false":::
+          > [!NOTE] 
+          > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name.
 
-    1. Enter the application name.
+        1. Select the folder path where you want to create the project workspace.
 
-    1. Enter the company name.
-      The application name and company name are displayed to your end users.
+        1. Enter the different name if you want.
 
     1. Select **Create**. 
         
+        The **Create a new Teams application** screen appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-create-teams-tab-app.png" alt-text="Illustration shows the options to configure new project." border="false":::
+
+        1. Select the **Tab app** as the capability for your app.
+
+        1. Ensure that the correct Microsoft 365 account is selected for registering your app with Developer Portal. 
+
+    1. Select **Create**.
+    
         Your Teams app is created in a few seconds.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-tab-app.png" alt-text="Illustration shows the app project created in Visual Studio 2019." border="false":::
