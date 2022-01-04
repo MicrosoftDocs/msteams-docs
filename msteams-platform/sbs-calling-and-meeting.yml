@@ -240,7 +240,7 @@ items:
     
     1. Upload your manifest in your demo tenant for organisation and run your solution in Visual Studio Code.
     1. Go to Teams.
-    1. To upload **manifest.zip**, select **Store > Manage your apps > Publish an app > Upload a custom app** and open **manifest.zip** from the repo folder in File explorer.
+    1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip** from the repo folder in File explorer.
     1. Select **Add** to install Calling Bot in Teams.
 
         :::image type="content" source="./assets/images/calls-and-meetings/output.png" alt-text="Add Output.":::
