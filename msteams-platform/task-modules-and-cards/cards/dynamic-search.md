@@ -324,9 +324,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
     if (turnContext.Activity.Name == "application/search")
     {
 	var packages = new[] {
-	    new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
-	    new { title = "Fluent UI Library", value = "FluentUI" }
-	};
+			new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+			new { title = "Fluent UI Library", value = "FluentUI" }};
+
 	var searchResponseData = new
 	{
 	    type = "application/vnd.microsoft.search.searchResponse",
@@ -355,22 +355,22 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
     if (context._activity.name == 'application/search') {
       // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
       var successResult = {
-	status: 200,
-	body: {
-	  "type": "application/vnd.microsoft.search.searchResponse",
-	  "value": {
-	    "results": [
-	      {
-		"value": "FluentAssertions",
-		"title": "A very extensive set of extension methods"
-	      },
-	      {
-		"value": "FluentUI",
-		"title": "Fluent UI Library"
-	      }
-	    ]
-	  }
-	}
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
       }
 
       return successResult;
