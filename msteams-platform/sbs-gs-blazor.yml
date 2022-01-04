@@ -225,16 +225,15 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-app-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019." border="false":::
 
-    The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, the Teams Toolkit maintains:
+    Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
 
-    - App icons: The app icons are stored as PNG files in `color.png` and `outline.png`.
-    - `manifest.json`: The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`.
-    - `BackendController.cs`: A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
-
-    The Teams Toolkit scaffolds all the necessary code for a basic tab as a Blazor Server.
-
-    - `Pages/Tab.razor`: is the front-end application's entry point.
-    - `TeamsFx.cs` and `JS/src/index.js`: is used for initializing communications with the Teams host.
+    | Folder name | Contents |
+    | --- | --- |
+    | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
+    | `manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
+    | `Pages/Tab.razor` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `TeamsFx.cs` and `JS/src/index.js` | is used for initializing communications with the Teams host. |
 
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
