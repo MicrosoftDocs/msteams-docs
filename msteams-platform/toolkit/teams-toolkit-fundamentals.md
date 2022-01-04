@@ -39,7 +39,7 @@ You can also install Teams Toolkit on the [Visual Studio Code Marketplace](https
 
 Your Teams project can contain either one of the capabilities or all three capabilities from above. You can select any of the required capability when you create the Teams Project:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select capabilities":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
 
 Teams Toolkit provides flexibility to add more capabilities in further process of Teams app development as shown in the following image:
 
