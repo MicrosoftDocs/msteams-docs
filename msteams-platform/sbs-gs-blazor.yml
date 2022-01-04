@@ -166,8 +166,6 @@ items:
 
           1. Select **Microsoft Teams** from **All platforms** dropdown list.  
         
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
-
           1. Select **Microsoft Teams App** as the template. 
         
       1. Select **Next**.
