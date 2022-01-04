@@ -164,11 +164,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
 
-        1. Select **Microsoft Teams** from **All platforms** dropdown list.  
+          1. Select **Microsoft Teams** from **All platforms** dropdown list.  
         
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
 
-        1. Select **Microsoft Teams App** as the template. 
+          1. Select **Microsoft Teams App** as the template. 
         
       1. Select **Next**.
         
@@ -178,14 +178,14 @@ items:
 
           Configure the following project details:
 
-        1. Enter a suitable name for your project.
+          1. Enter a suitable name for your project.
 
-          > [!NOTE] 
-          > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name.
+            > [!NOTE] 
+            > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name.
 
-        1. Select the folder path where you want to create the project workspace.
+          1. Select the folder path where you want to create the project workspace.
 
-        1. Enter the different name if you want.
+          1. Enter the different name if you want.
 
     1. Select **Create**. 
         
@@ -198,7 +198,7 @@ items:
         1. Ensure that the correct Microsoft 365 account is selected for registering your app with Developer Portal. 
 
     1. Select **Create**.
-    
+
         Your Teams app is created in a few seconds.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-tab-app.png" alt-text="Illustration shows the app project created in Visual Studio 2019." border="false":::
