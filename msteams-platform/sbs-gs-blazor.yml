@@ -21,7 +21,7 @@ items:
 
     Each of your app will have a capability, which comes with its own UI and UX:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
 
     > [!NOTE]
     > Currently, Teams Toolkit offers a template only for a Tab app and a Bot app with Visual Studio 2019 and Blazor. The Message Extension capability isn't available.
@@ -36,7 +36,10 @@ items:
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET |
+    | &nbsp; | [Visual Studio 2019](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202019), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Community 2019 (version 16.11). |
+    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
