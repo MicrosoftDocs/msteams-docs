@@ -292,6 +292,92 @@ The example payload which contains static and dynamic typeahead search with sing
 }
 ```
 
+## Code snippets for invoke request and response
+
+### Invoke Request
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+```
+
+### Response
+
+#### [Node.js](#tab/nodejs)
+
+```nodejs
+{
+    status: 200,
+    body : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": "A very extensive set of extension methods...",
+                    "title": "FluentAssertions"
+                },
+                {
+                    "value": "item-2",
+                    "title": "result item 2"
+                }
+            ]
+        }
+    }
+}
+```
+
+#### [C#](#tab/csharp)
+
+```csharp
+InvokeResponse adaptiveCardResponse;
+var packages = 
+[
+  {
+	id: "FluentAssertions",
+	description: "A very extensive set of extension methods that allow you to more naturally specify the expected outcome of a TDD..."
+  }
+]
+  
+var packageList = packages.Select(item => { var obj = new { title = item.id, value = item.description }; return obj; }).ToList();
+  
+var searchResponseData = new
+{
+    type = "application/vnd.microsoft.search.searchResponse",
+    value = new
+    {
+        results = packageList
+    }
+};
+var jsonString = JsonConvert.SerializeObject(searchResponseData);
+JObject jsonData = JObject.Parse(jsonString);
+adaptiveCardResponse = new InvokeResponse()
+{
+    Status = 200,
+    Body = jsonData
+};
+```
+
+---
+
+## Code sample
+
+|Sample name | Description | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Type ahead search control on Adaptive Cards | The sample shows the features of static and dynamic type ahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+
 ## See also
 
 * [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)
