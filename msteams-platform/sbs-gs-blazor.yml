@@ -147,12 +147,17 @@ items:
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
     In this tutorial, you'll learn:
+    
     1. [How to set up a new tab project with Teams Toolkit](#create-your-project)
     1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
     ## Create your project
 
-    Use the Teams Toolkit to create your first project. Teams Toolkit takes you through a series of pages to create and configure your Teams app project.
+    Use the Teams Toolkit to create your first project. Teams Toolkit takes you through a series of pages to create and configure your Teams app project:
+
+    - **Creating a new project**: In this page, you select the project type.
+    - **Configure your new project**: In this page, you enter the project details.
+    - **Create a new Teams application**: In this page, you select the Teams app capabilities and the Microsoft 365 credentials. 
 
     1. Open Visual Studio 2019.
 
@@ -163,6 +168,8 @@ items:
         The **Create a new project** page appears.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+
+          Select the project type:
 
           1. Select **Microsoft Teams** from **All platforms** dropdown list.  
         
@@ -185,11 +192,15 @@ items:
 
           1. Enter the different name if you want.
 
+          1. Check the option to save the project and solution in the same folder, if your want. For this tutorial, you don't need this option. 
+
     1. Select **Create**. 
         
         The **Create a new Teams application** screen appears.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-create-teams-tab-app.png" alt-text="Illustration shows the options to configure new project." border="false":::
+
+        Select Teams app capabilities and Microsoft 365 details: 
 
         1. Select the **Tab app** as the capability for your app.
 
