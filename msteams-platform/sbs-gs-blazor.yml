@@ -21,10 +21,10 @@ items:
 
     Each of your app will have a capability, which comes with its own UI and UX:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers a template only for a Tab app and a Bot app with Visual Studio 2019 and Blazor. The Message Extension capabilities are not available.
+    > Currently, Teams Toolkit offers a template only for a Tab app and a Bot app with Visual Studio 2019 and Blazor. The Message Extension capability isn't available.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -138,6 +138,10 @@ items:
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
+    Start Microsoft Teams app development by creating your first app. This app uses the Tab capability.
+    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
+
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
     In this tutorial, you'll learn:
