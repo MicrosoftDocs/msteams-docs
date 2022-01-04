@@ -206,12 +206,12 @@
       href: tabs/how-to/authentication/overview.md
     - name: Authentication flow in tabs
       href: tabs/how-to/authentication/auth-flow-tab.md
+    - name: Use SSO authentication
+      href: tabs/how-to/authentication/auth-aad-sso.md
     - name: Use Azure AD authentication
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Use silent authentication
       href: tabs/how-to/authentication/auth-silent-aad.md
-    - name: Use SSO authentication
-      href: tabs/how-to/authentication/auth-aad-sso.md
   - name: Tabs on mobile
     href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
