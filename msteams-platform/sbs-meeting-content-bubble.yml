@@ -17,7 +17,7 @@ items:
     Microsoft Teams helps you to interact with content bubble bot in Teams meeting.
 
     > [!NOTE]
-    > Meeting content bubble is only available for AAD users and not for anonymous users.
+    > Meeting content bubble is available only for AAD users and not for anonymous users.
 
     **Key features of meeting content bubble**
 
