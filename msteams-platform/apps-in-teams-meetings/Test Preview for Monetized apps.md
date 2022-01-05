@@ -61,7 +61,7 @@ You can also select **Preview in Teams** in the developer portal to launch your 
 
 :::image type="content" source="../assets/images/apps-in-meetings/Preview-in-teams.png" alt-text="Preview offer in Teams":::
 
-* If the preview offer and preview audience are specified in the app manifest, the user can see the **Buy a Subscription** button .
+* If the preview offer and preview audience are specified in the app manifest, the user can see the **Buy a Subscription** button.
 
     :::image type="content" source="../assets/images/apps-in-meetings/preview-testing-offer-audience-available.png" alt-text="offer ID and preview audience specified":::
 
