@@ -1,5 +1,5 @@
 ---
-title: Test Preview for Monetized apps 
+title: Test preview for monetized apps 
 author: v-ypalikila
 description: Create and test SaaS Preview offers for Teams app before pushing the offer live.
 ms.topic: conceptual
@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 keywords: teams apps SaaS offer preview offer  app source preview
 ---
 
-# Test Preview for Monetized apps
+# Test preview for monetized apps
 
-As a developer, you can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience of a Teams app before pushing the offer live. Only users who are added as the preview audience for the Teams app can test the preview offer.
+As a developer, you can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience of an offer in the Teams app before pushing the offer live. Only users who are added as the preview audience for the Teams app can test the preview offer.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ As a developer, you can create a Software as a Service (SaaS) offer and test the
 
 ## Create a preview offer ID
 
-You need to create a preview offer ID for the SaaS offer using the **AppSource preview link** in the Partner Center.
+Create a preview offer ID for the SaaS offer using the **AppSource preview link** in the Partner Center.
 
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.
@@ -32,7 +32,7 @@ You need to create a preview offer ID for the SaaS offer using the **AppSource p
 
 ## Configure your app with the Preview offer ID
 
-After you've generated your Preview offer ID, you must link the offer ID to your Teams app for the audience to view your Preview offer in the Teams Store.
+After you've generated your Preview offer ID, you must link the offer ID to your Teams app to view your Preview offer in the Teams Store.
 
 1. Go to [Developer Portal](https://dev.teams.microsoft.com/).
 1. Select **Apps** from the left pane.
@@ -51,7 +51,7 @@ The subscriptionOffer property is added to your app manifest.
      }
 ```
 >[!NOTE]
-> You can identify the preview offer with the label *preview offer* next to **Apps Subscription**.
+> Check for the label *preview offer* next to **Apps Subscription** to confirm if the offer is a preview offer.
 
 ## Sideload the app to Teams
 
@@ -61,23 +61,21 @@ You can also select **Preview in Teams** in the developer portal to launch your 
 
 :::image type="content" source="../assets/images/apps-in-meetings/Preview-in-teams.png" alt-text="Preview offer in Teams":::
 
-
-
-* If the user is not part of the **preview audience** defined in the app manifest, a warning message appears and the **Buy a Subscription** button isn't available for the user.
+* If the user isn't part of the **preview audience** defined in the app manifest, a warning message appears and the **Buy a Subscription** button isn't available for the user.
 
     >[!WARNING]
     > No plans found with **-preview**. Make sure you're in the preview audience.
 
     :::image type="content" source="../assets/images/apps-in-meetings/preview-testing-no-audience.png" alt-text="No preview audience":::
 
-* If the offer ID specified in the app manifest is not a preview offer, a warning message appears and the user won't be able to sideload the app to Teams.
+* If the offer ID specified in the app manifest isn't a preview offer, a warning message appears and the user can't sideload the app to Teams.
 
     >[!WARNING]
     > This isn't a preview offer. Be sure to append the **-preview** to the Offerid..
 
     :::image type="content" source="../assets/images/apps-in-meetings/Preview-testing-no-iffer-id.png" alt-text="No preview offer ID":::
 
-* If the preview offer and preview audience is specified in the app manifest, the **Buy a Subscription** button is available for the user.
+* If the preview offer and preview audience are specified in the app manifest, the **Buy a Subscription** button is available for the user.
 
     :::image type="content" source="../assets/images/apps-in-meetings/preview-testing-offer-audience-available.png" alt-text="offer ID and preview audience specified":::
 
