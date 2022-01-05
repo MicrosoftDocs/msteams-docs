@@ -332,7 +332,7 @@ items:
 
     1. Select **Azure App Service (Windows)** and select **Next**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-app-service.png" alt-text="Select Azure App Service as the publishing target" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-vs-app-service.png" alt-text="Select Azure App Service as the publishing target" border="false":::
 
     1. Select **+** to create a new App Service instance.
 
@@ -362,7 +362,7 @@ items:
 
     1. Select **Publish**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish.png" alt-text="Publish your app to app service" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-publish.png" alt-text="Publish your app to app service" border="false":::
 
           Visual Studio 2019 deploys the app to your Azure App Service, and the web app loads in your browser.  
     
@@ -374,7 +374,7 @@ items:
       
     1. Select the **Copy** icon next to the site URL and save it in a text file.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-azure-site-url.png" alt-text="Blazor app site URL" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-azure-site-url.png" alt-text="Blazor app site URL" border="false":::
 
 - title: Preview and test your app in Teams 
   durationInMinutes: 1
