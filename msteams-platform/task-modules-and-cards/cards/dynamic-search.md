@@ -316,58 +316,90 @@ The example payload which contains static and dynamic typeahead search with sing
 
 ### Response
 
-#### [Node.js](#tab/nodejs)
+#### [C#](#tab/csharp)
 
-```nodejs
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
 {
-    status: 200,
-    body : {
+    if (turnContext.Activity.Name == "application/search")
+    {
+	var packages = new[] {
+			new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+			new { title = "Fluent UI Library", value = "FluentUI" }};
+
+	var searchResponseData = new
+	{
+	    type = "application/vnd.microsoft.search.searchResponse",
+	    value = new
+	    {
+		results = packages
+	    }
+	};
+	var jsonString = JsonConvert.SerializeObject(searchResponseData);
+	JObject jsonData = JObject.Parse(jsonString);
+	return new InvokeResponse()
+	{
+	    Status = 200,
+	    Body = jsonData
+	};
+    }
+
+    return null;
+}
+```
+
+#### [Node.js](#tab/nodejs)
+ 
+```nodejs
+  async onInvokeActivity(context) {
+    if (context._activity.name == 'application/search') {
+      // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
+      var successResult = {
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
+      }
+
+      return successResult;
+
+    }
+  }
+```
+
+####  [JSON](#tab/json)
+
+```json
+{
+    "status": 200,
+    "body" : {
         "type": "application/vnd.microsoft.search.searchResponse",
         "value": {
            "results": [
                 {
-                    "value": "A very extensive set of extension methods...",
-                    "title": "FluentAssertions"
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
                 },
                 {
-                    "value": "item-2",
-                    "title": "result item 2"
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
                 }
             ]
         }
     }
 }
-```
-
-#### [C#](#tab/csharp)
-
-```csharp
-InvokeResponse adaptiveCardResponse;
-var packages = 
-[
-  {
-	id: "FluentAssertions",
-	description: "A very extensive set of extension methods that allow you to more naturally specify the expected outcome of a TDD..."
-  }
-]
-  
-var packageList = packages.Select(item => { var obj = new { title = item.id, value = item.description }; return obj; }).ToList();
-  
-var searchResponseData = new
-{
-    type = "application/vnd.microsoft.search.searchResponse",
-    value = new
-    {
-        results = packageList
-    }
-};
-var jsonString = JsonConvert.SerializeObject(searchResponseData);
-JObject jsonData = JObject.Parse(jsonString);
-adaptiveCardResponse = new InvokeResponse()
-{
-    Status = 200,
-    Body = jsonData
-};
 ```
 
 ---
