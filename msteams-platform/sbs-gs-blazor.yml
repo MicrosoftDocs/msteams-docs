@@ -186,11 +186,11 @@ items:
           1. Enter a suitable name for your project.
 
               > [!NOTE] 
-              > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name.
+              > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name with no impact on project name.
 
           1. Select the folder path where you want to create the project workspace.
 
-          1. Enter the different name if you want.
+          1. Enter a different solution name if you want. 
 
           1. Check the option to save the project and solution in the same folder, if your want. For this tutorial, you don't need this option. 
 
@@ -324,11 +324,11 @@ items:
 
     1. In Solution Explorer, right-click the project node and select **Publish**. You can also use the **Build** > **Publish** menu item.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-build-publish.png" alt-text="Select the Publish operation for the project" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-publish.png" alt-text="Select the Publish operation for the project" border="false":::
 
     1. Select **Azure** and select **Next** in the **Publish** window.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-publish.png" alt-text="Select Azure as the publishing target" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-vs-publish.png" alt-text="Select Azure as the publishing target" border="false":::
 
     1. Select **Azure App Service (Windows)** and select **Next**.
 
@@ -336,7 +336,7 @@ items:
 
     1. Select **+** to create a new App Service instance.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-app-subscription.png" alt-text="Create a new instance." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-publish-app-subscription.png" alt-text="Create a new instance." border="false":::
 
         In the **App Service (Windows)** dialog, the **Name**, **Subscription name**, **Resource Group**, and **Hosting Plan** entry fields are populated. If you've already got an App Service running, existing settings are selected. You can opt to create a new resource group and hosting plan.
 
