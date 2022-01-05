@@ -342,23 +342,23 @@ items:
 
     1. Select **Create** when you're ready.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-service-create-new.png" alt-text="Select hosting plan and subscription" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/app-service-create-new.png" alt-text="Select hosting plan and subscription" border="false":::
 
         You'll notice that the newly created instance has been automatically selected in the **Publish** dialog.
 
     1. Select **Finish** when you're ready.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-app-instance.png" alt-text="Select the new instance." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-publish-app-instance.png" alt-text="Select the new instance." border="false":::
 
     1. Select the **Edit** (pencil) icon next to **Deployment Mode**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-deploy-mode.png" alt-text="Select deployment mode." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-publish-deploy-mode.png" alt-text="Select deployment mode." border="false":::
           
           The Publish dialog appears.
 
     1. Select **Self-contained** as the **Deployment Mode**, and select **Save**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-setting.png" alt-text="Select self-contained deployment mode." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-publish-setting.png" alt-text="Select self-contained deployment mode." border="false":::
 
     1. Select **Publish**.
 
@@ -368,13 +368,13 @@ items:
     
     1. Add `/tab` to the end of the URL to see your page, as shown in the image. The tab page does not appear unless you add `/tab` to the URL.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-tab-app.png" alt-text="Blazor tab app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-tab-app-azure.png" alt-text="Blazor tab app" border="false":::
 
         The **Publish** properties in the **Hosting** pane of Visual Studio shows the site URL and other details. 
       
     1. Select the **Copy** icon next to the site URL and save it in a text file.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-site-url.png" alt-text="Blazor app site URL" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-azure-site-url.png" alt-text="Blazor app site URL" border="false":::
 
 - title: Preview and test your app in Teams 
   durationInMinutes: 1
