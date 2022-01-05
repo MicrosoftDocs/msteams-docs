@@ -40,7 +40,7 @@ items:
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-    | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
@@ -234,7 +234,7 @@ items:
     | Properties/`manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
     | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
     | `Pages/Tab.razor` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | `TeamsFx.cs` and `JS/src/index.js` | is used for initializing communications with the Teams host. |
+    | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
     |
 
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
@@ -503,4 +503,89 @@ items:
     1. [How to set up a new bot project with Teams Toolkit](#create-your-project)
     1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
-    
+    ## Create your project
+
+    Use the Teams Toolkit to create your first project. Teams Toolkit takes you through a series of pages to create and configure your Teams app project:
+
+    - **Creating a new project**: In this page, you select the project type.
+    - **Configure your new project**: In this page, you enter the project details.
+    - **Create a new Teams application**: In this page, you select the Teams app capabilities and the Microsoft 365 credentials. 
+
+    1. Open Visual Studio 2019.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-project.png" alt-text="Illustration shows the option to create a new project." border="false":::
+
+    1. Select **Create a new project**.
+
+        The **Create a new project** page appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+
+          Select the project type:
+
+          1. Select **Microsoft Teams** from **All platforms** dropdown list.  
+        
+          1. Select **Microsoft Teams App** as the template. 
+        
+      1. Select **Next**.
+        
+          The **Configure your new project** page appears.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-configure-bot-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
+
+          Configure the following project details:
+
+          1. Enter a suitable name for your project.
+
+              > [!NOTE] 
+              > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name with no impact on project name.
+
+          1. Select the folder path where you want to create the project workspace.
+
+          1. Enter a different solution name if you want. 
+
+          1. Check the option to save the project and solution in the same folder, if your want. For this tutorial, you don't need this option. 
+
+    1. Select **Create**. 
+        
+        The **Create a new Teams application** page appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-create-teams-tab-app.png" alt-text="Illustration shows the options to configure new project." border="false":::
+
+        Select Teams app capabilities and Microsoft 365 details: 
+
+        1. Select the **Bot app** as the capability for your app.
+
+        1. Ensure that the correct Microsoft 365 account is selected for registering your app with Developer Portal.
+
+    1. Select **Create**.
+
+        Your Teams app is created in a few seconds.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-bot-app.png" alt-text="Illustration shows the app project created in Visual Studio 2019." border="false":::
+
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/blazor-tab-app.gif)
+    </details>
+
+    ## Take a tour of the source code
+
+    After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of Visual Studio 2019.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-bot-app-solution-explorer.png" alt-text="Screenshot showing app project files for a bot app in Visual Studio 2019." border="false":::
+
+    Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
+
+    | Folder name | Contents |
+    | --- | --- |
+    | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
+    | Properties/`manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
+    | Bots | The code for the Teams bot app. |
+    | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
+    |
+
+    You can add backend functionality by adding other ASP.NET Core controllers to your application.
