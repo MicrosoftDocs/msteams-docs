@@ -69,7 +69,7 @@ The following are the features of UserIds in refresh:
 
 * You can fetch Teams conversation member's user MRIs. For more information on how to add in userIds list in refresh section of Adaptive Card, see [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
- Following is the sample to get the User MRI for Channel, Group Chat or 1:1 chat.
+ You can get the user MRI for channel, Group Chat or 1:1 chat using the following example:
 
  1. Using TurnContext  
 
