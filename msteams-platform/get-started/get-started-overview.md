@@ -9,13 +9,16 @@ keywords: Microsoft Teams developer samples
 
 Welcome to Get started for building and deploying customized apps for Microsoft Teams!
 
-Walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced features.
+Walk through the steps to build a basic, real-world Teams app. The Get started introduces you to common tools and fundamental concepts.
 
 Here's an idea of what you'll learn:
 
 - Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
 - Get experience with the Toolkit and SDKs.
 - Configure and build different types of Teams apps.
+
+> [!NOTE]
+> **A note about Teams Toolkit**: Teams Toolkit comes with features for creating apps for extending Teams capabilities. The Get started module does not cover all these features. It focuses on basic functionality that enables building an app and running it local environment. For more information on the advanced features of Teams Toolkit, you can see Teams Toolkit guide in the Tools and SDK module.
 
 Let's take a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
 
@@ -38,7 +41,6 @@ If you are already familiar with Yeoman workflow, you may prefer using [YoTeams 
 > [!NOTE]
 > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps.
 
-
 ## Build your first Teams app
 
 Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
@@ -57,5 +59,5 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 
 ## See also
 
-* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Git and GitHub resources](/contribute/additional-resources)
+- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Git and GitHub resources](/contribute/additional-resources)
