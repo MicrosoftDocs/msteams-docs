@@ -10,14 +10,15 @@ ms.date: 11/29/2021
 
 # TeamsFx Command Line Interface
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims you to provide keyboard-centric experience when building Teams applications. It also enables CI/CD scenario where CLI can be easily integrated in scripts for automation.
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims you to provide keyboard-centric experience while building Teams applications. It also enables CI/CD scenario where CLI can be easily integrated in scripts for automation.
 
+For more information,see:
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) 
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
 ## Get Started
 
-Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
+Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
 
 ```bash
   npm install -g @microsoft/teamsfx-cli
@@ -26,18 +27,18 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 
 ## Supported Commands
 
-| `teamsfx` Commands  | Descriptions |
+| `teamsfx` Commands  | Description |
 |:----------------  |:-------------|
 | `teamsfx new`       | Create a new Teams application. |
 | `teamsfx account`   | Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'.          |
 | `teamsfx env`       | Manage the environments. |
-| `teamsfx capability`| Add new capabilities to the current application.         |
-| `teamsfx resource`  | Manage the resources in the current application.         |
-| `teamsfx provision` | Provision the cloud resources in the current application.             |
+| `teamsfx capability`| Add new capabilities to the current application.|
+| `teamsfx resource`  | Manage the resources in the current application.|
+| `teamsfx provision` | Provision the cloud resources in the current application.|
 | `teamsfx deploy`    | Deploy the current application.  |
-| `teamsfx package`   | Build your Teams app into a package for publishing.         |
-| `teamsfx validate`  | Validate the current application.             |
-| `teamsfx publish`   | Publish the app to Teams.             |
+| `teamsfx package`   | Build your Teams app into a package for publishing.|
+| `teamsfx validate`  | Validate the current application.|            |
+| `teamsfx publish`   | Publish the app to Teams.|
 | `teamsfx preview`   | Preview the current application. |
 | `teamsfx config`    | Manage the configuration data. |
 | `teamsfx permission`| Collaborate with other developers in same project.|
@@ -46,14 +47,14 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 
 `teamsfx new` will by default go into interactive mode and guide you through the process of creating a new Teams application by asking few questions. You can also do it in non-interactive mode by setting `--interactive` flag to `false`.
 
-| `teamsFx new` Commands  | Descriptions |
+| `teamsFx new` Command | Description |
 |:----------------  |:-------------|
 | `teamsfx new template <template-name>`     | Create an app from an existing template |
 | `teamsfx new template list`     | List all the available templates |
 
 ### Parameters for `teamsfx new`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
 |`--interactive`| No | Select the options interactively. Options are `true` and `false`. The default value is `true`.|
@@ -67,7 +68,7 @@ Let's start by installing `teamsfx-cli` from `npm` and run `teamsfx -h` to check
 
 ### Scenarios for `teamsfx new`
 
-Using interactive mode to create a Teams app is super intuitive, please try it by starting with `teamsfx new`. The following are the few scenerios on controlling all the parameters:
+Using interactive mode to create a Teams app is super intuitive, let us start with `teamsfx new`. The following are the few scenerios on controlling all the parameters:
 
 #### A tab app hosted on SPFx using React
 
@@ -75,7 +76,7 @@ Using interactive mode to create a Teams app is super intuitive, please try it b
 teamsfx new --interactive false --app-name newspfxapp --capabilities tab-spfx --spfx-framework-type react
 ```
 
-#### A Teams app in JavaScript contains tab, bot capabilities and Azure Functions
+#### A Teams app in JavaScript with tab, bot capabilities and Azure Functions
 
 ```bash
 teamsfx new --interactive false --app-name newtabbotapp --capabilities tab bot --programming-language javascript --azure-resources function
@@ -91,7 +92,7 @@ teamsfx new --interactive false app-name newapp --azure-resources sql function -
 
 Manage cloud service accounts. The supported cloud services are `Azure` and `Microsoft 365`.
 
-| `teamsFx account` Commands  | Descriptions |
+| `teamsFx account` Command | Description |
 |:----------------  |:-------------|
 | `teamsfx account login <service>`      | Log in to the selected cloud service. |
 | `teamsfx account logout <service>`      | log out of selected cloud service. |
@@ -101,7 +102,7 @@ Manage cloud service accounts. The supported cloud services are `Azure` and `Mic
 
 Manage the environments.
 
-| `teamsfx env` Commands  | Descriptions |
+| `teamsfx env` Command  | Description |
 |:----------------  |:-------------|
 | `teamsfx env add <new_env_name> --env <existing_env_name>` | Add a new environment by copying from the specified environment. |
 | `teamsfx env list` | List all environments. |
@@ -120,7 +121,7 @@ teamsfx env add staging --env dev
 
 Add new capabilities to the current application.
 
-| `teamsFx capability` Commands  | Descriptions |
+| `teamsFx capability` Command  | Description |
 |:----------------  |:-------------|
 | `teamsfx capability add tab`      | Add a tab. |
 | `teamsfx capability add bot`      | Add a bot. |
@@ -133,7 +134,7 @@ Add new capabilities to the current application.
 
 Manage the resources in the current application. Supported `<resource-type>` are: `azure-sql`, `azure-function` and `azure-apim` .
 
-| `teamsFx resource` Commands  | Descriptions |
+| `teamsFx resource` Command  | Description |
 |:----------------  |:-------------|
 | `teamsfx resource add <resource-type>`      | Add a resource into current application.|
 | `teamsfx resource show <resource-type>`      | Show configuration details of the resource. |
@@ -141,7 +142,7 @@ Manage the resources in the current application. Supported `<resource-type>` are
 
 ### Parameters for `teamsfx resource add azure-function`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--function-name`| Yes | Provide a function name. The default value is: `getuserprofile`. |
 
@@ -149,7 +150,7 @@ Manage the resources in the current application. Supported `<resource-type>` are
 
 #### `--function-name`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--function-name`| Yes | Provide a function name. The default value is: `getuserprofile`. |
 
@@ -161,7 +162,7 @@ Manage the resources in the current application. Supported `<resource-type>` are
 > [!TIP]
 > Below options will take effect when you try to use an existing `APIM` instance. By default, you don't have to specify any options and it will create a new instance during `teamsfx provision` step.
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--subscription`| Yes | Select an Azure subscription|
 |`--apim-resource-group`| Yes| The name of resource group. |
@@ -177,7 +178,7 @@ Provision the cloud resources in the current application.
 
 ### Parameters for `teamsfx provision`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an environment for the project. |
 |`--subscription`| No | Specify an Azure Subscription ID. |
@@ -191,7 +192,7 @@ This command is used to deploy the current application. By default it will deplo
 
 ### Parameters for `teamsfx deploy`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an existing environment for the project. |
 |`--open-api-document`| No | Applicable when there is APIM resource in the project. The Open API document file path. |
@@ -224,7 +225,7 @@ Preview the current application from local or remote.
 
 ### Parameters for `teamsfx preview`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--local`| No | Preview the application from local. `--local` is exclusive with `--remote`. |
 |`--remote`| No | Preview the application from remote. `--remote` is exclusive with `--local`. |
@@ -263,14 +264,14 @@ teamsfx preview --remote --browser edge
 
 Manage the configuration data either in user scope or project scope.
 
-| `teamsfx config` Commands  | Descriptions |
+| `teamsfx config` Command  | Description |
 |:----------------  |:-------------|
 | `teamsfx config get [option]` | View the configuration value of option |
 | `teamsfx config set <option> <value>` | Update the configuration value of option |
 
 ### Parameters for `teamsfx config`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Select an existing environment for the project. |
 |`--folder`| No | Project directory. This is used when get/set project configuration. The default value is: `./`. |
@@ -326,21 +327,21 @@ teamsfx config set fx-resource-aad-app-for-teams.clientSecret xxx --env dev
 
 TeamsFx CLI provides `teamsFx permission` Commands for collaboration scenario.
 
-| `teamsFx permission` Commands | Descriptions |
+| `teamsFx permission` Command | Description |
 |:------------------------------|-------------|
 | `teamsfx permission grant --env --email` | Grant permission for collaborator's Microsoft 365 account for the project of a specified environment. |
 | `teamsfx permission status` | Show permission status for the project |
 
 ### Parameters for `teamsfx permission grant`
 
-| Parameters  | Required | Descriptions |
+| Parameter  | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--email`| Yes | Provide collaborator's Microsoft 365 email address. Note that the collaborator's account should be in the same tenant with creator. |
 
 ### Parameters for `teamsfx permission status`
 
-| Parameters  | Required | Descriptions |
+| Parameter | Requirement | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--list-all-collaborators` | No | With this flag, Teams Toolkit CLI will print out all collaborators for this project. |
@@ -412,6 +413,7 @@ As a project creator:
   ```
 
   ![add-new-collaborator](./images/permission-grant.png)
+
 - Push your project to GitHub
 
 As a Project Collaborator:
@@ -436,6 +438,7 @@ As a Project Collaborator:
   ```
 
   ![permission status](./images/permission-status.png)
+
 - Update Tab code, and deploy the project to remote.
 - Launch remote and the project should work fine.
  

@@ -17,10 +17,11 @@ Use the library to:
 - Access core functionalities in client and server environment in a similar way.
 - Write user authentication code in a simplified way.
 
-   * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-   * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-   * [API reference documentation](https://aka.ms/teamsfx-sdk-help) 
-   * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
+For more information,see:
+* [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
+* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
+* [API reference documentation](https://aka.ms/teamsfx-sdk-help) 
+* [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ## Get started
 
@@ -45,7 +46,7 @@ npm install @microsoft/teamsfx
 
 ### Create and authenticate a `MicrosoftGraphClient`
 
-To create a graph client object to access the Microsoft Graph API, you will need the credential to do authentication. The SDK provides several credential classes to choose that meets various requirements.You need to load configuration before using any credentials.
+To create a graph client object to access the Microsoft Graph API, you will need the credentials to do authentication. The SDK provides several credential classes to choose that meets various requirements.You need to load configuration before using any credentials.
 
 - In browser environment, you need to explicitly pass in the configuration parameters. The scaffolded React project has provided environment variables to use.
 
@@ -69,7 +70,7 @@ loadConfiguration();
 
 Use the snippet below:
 
-> [Note]
+> ![Note]
 > You can only use this credential class in browser application like Teams Tab App.
 
 ```ts
@@ -284,7 +285,7 @@ Logging is turned off by default, you can turn it on by setting log level.
 
 #### Enable log by setting log level
 
-When log level is set, logging is enabled. It prints log information to console by default.
+Logging is enabled only when you set log level. By default, it prints log information to console.
 
 Set log level using the snippet below:
 
@@ -305,7 +306,8 @@ setLogger(context.log);
 
 ##### Redirect by setting custom log function
 
-Note that log function will not take effect if you set a custom logger.
+> ![Note]
+> Log function will not take effect, if you set a custom logger.
 
 ```ts
 setLogLevel(LogLevel.Info);
