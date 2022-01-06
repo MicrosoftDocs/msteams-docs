@@ -10,15 +10,18 @@ ms.date: 11/29/2021
 
 # Use Teams Toolkit to provision cloud resources
 
-TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to declaratively provision Azure resources your application needs using infrastructure as code approach.  
+TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources your application needs using infrastructure as code approach.  
 
 ## Prerequisites
 
 * Account prerequisites
 
-    To provision cloud resources, you must have the following accounts with proper permissions. For more information, see [prepare accounts to build Teams app](accounts.md).
+    To provision cloud resources, you must have the following accounts with proper permissions.
+
     * Microsoft 365
     * Azure with valid subscription
+
+ For more information, see [prepare accounts to build Teams app](accounts.md).
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
@@ -42,7 +45,7 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get 
 When you create a new project, you get all the Azure resources to be created. The generated ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [adds new capability/resource](./add-resource.md) to an existing project, the updated ARM template reflects the latest change.
 
 > [!NOTE]
-> Azure services incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to understand an estimate.
+> Azure services incur costs in your subscription, for more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
 ### Resource creation for Teams Tab application
 

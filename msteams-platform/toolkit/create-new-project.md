@@ -30,8 +30,8 @@ The following step-by-step guide helps you to create a new Teams app project usi
  1. Select **DEVELOPMENT** section in Tree View.
 
  1. Select **View samples**. The sample gallery appears as shown in the following image:
-
-    ![Teams Toolkit view samples](./images/teams-toolkit-view-samples.png)
+   
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="samples":::
 
 You can explore and download samples and either run apps locally or remotely to preview in Teams web client. Follow the instructions of each sample or browse the source code of samples by selecting **View on GitHub**. Then,you can open source repo for Samples.
 

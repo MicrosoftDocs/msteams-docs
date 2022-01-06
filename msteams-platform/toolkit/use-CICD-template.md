@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 TeamsFx helps to automate your development workflow while building Teams application. The document provides tools and pre-cooked templates for you to get started while setting up CI or CD pipelines with the most popular development platforms including GitHub, Azure Devops and Jenkins.
 
-|Tools and Templates|Description|
+|Tools and Templates|Description| 
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|A ready-to-use GitHub Action that integrates with TeamsFx CLI.|
 |[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) and [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub CI or CD templates for a Teams app. |

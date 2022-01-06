@@ -25,24 +25,21 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 > You need to provision each environment after you add a resource.
 
 1. Open **Visual Studio Code**.
-1. Select **Teams Toolkit** from left panel:
-
-    ![Activate Teams Toolkit](./images/activate-teams-toolkit.png)
-
+1. Select **Teams Toolkit** from left pane
 1. In the Teams Toolkit side bar panel, select **Add cloud resources**:
 
-    ![Add cloud resources](./images/add-cloud-resources.png)
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add cloudresources.png" alt-text="Add resources":::
 
     You can also open the command palette and enter **Teams: Add cloud resources**:
     
     > [!NOTE]
     > Follow the same process as it’s triggered from Tree View:
 
-    ![Alternate cloud resources](./images/alternate-cloud-resources.png)
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addresources.png" alt-text="tree view":::
 
 1. From the pop-up, select any cloud resources you want to add to your Teams app project:
 
-     ![Select cloud resources](./images/select-cloud-resources.png)
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addresources.png" alt-text="add":::
 
 1. Select **OK**.
 
@@ -85,7 +82,7 @@ In the meanwhile, there're some additional changes for each kind of resource:
 
 ## Limitations
 
-- You can only add one Function App / Azure SQL Database / APIM Service to your project.
+- You can only add one Function App or Azure SQL Database or APIM Service to your project.
 - You cannot add resources if your project does not contain tab app.
 
 ## See also

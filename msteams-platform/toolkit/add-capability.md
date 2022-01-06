@@ -30,21 +30,18 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 > [!IMPORTANT]
 > You need to perform provision for each environment after you successfully add capabilities to your Teams app.
 
-1. Select **Teams Toolkit** from left panel:
-
-    ![Activate Teams Toolkit](./images/activate-teams-toolkit.png)
-  
+1. Select **Teams Toolkit** from left panel
 1. Select **Add capabilities**:
 
-    ![Add capabilities](./images/add-capabilities.png)
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
 
       You can also open the command palette and enter **Teams: Add Capabilities**: 
       
-    ![Alternate add capabilities](./images/alternate-capabilities.png)
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Alternate capabilities":::
 
 1. From the pop-up, select the capabilities to include into your project:
 
-    ![Select capabilities](./images/select-capabilities.png)
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
 
 1. Select **OK**.
 
@@ -65,7 +62,7 @@ The selected capabilities are succesfully added to your project. The Teams Toolk
 
 Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app.The following table gives various supported Teams app capabilities: 
 
-|Existing capabilities|Other capabilities can be added|
+|Existing capabilities|Other supported capabilities can be added|
 |--------------------|--------------------|
 |Tabs with SPFx|None|
 |Tabs with Azure|Bots and messaging extensions|

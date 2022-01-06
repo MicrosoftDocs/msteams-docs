@@ -18,7 +18,7 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 * Account prerequisites
 
-    To provision cloud resources in Azure and Microsoft 365, you must have the following accounts with proper permissions. Refer to [Prepare accounts to build Teams app](accounts.md) for more information.
+    To provision cloud resources in Azure and Microsoft 365, you must have the following accounts with proper permissions. For more information, see [prepare accounts to build Teams app](accounts.md).
 
     * Microsoft 365
     * Azure with valid subscription

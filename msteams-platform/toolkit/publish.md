@@ -71,21 +71,9 @@ After you publish the app, the Publishing status changes to Published and the St
 
 ## Publish to Microsoft Store
 
-You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
-Apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
-Understand the publishing process
-When you feel your app is production ready, you can begin the process of getting it listed on the Teams store.
+You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.Apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
->[!Tip]
-> Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
-
-![Pre submission steps](./images/pre-submission-steps.png)
-
-* Review the Teams store validation guidelines to make sure your app meets Teams app and store standards.
-* Create a Partner Center developer account.
-* Prepare your store submission, which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.
-* Submit your app through Partner Center.
-* Work with Microsoft directly to resolve the issues and resubmit your app (link to resolve the issues and resubmit your app).
+For more information, see [Publish to microsoft Teams store]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
 
 ## See also
 

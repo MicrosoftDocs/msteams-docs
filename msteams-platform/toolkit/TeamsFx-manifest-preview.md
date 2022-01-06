@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Preview Teams app Manifest in Teams Toolkit
 
-After scaffolding, you get two manifest template files under `templates/appPackage` folder.
+After scaffolding, you get the following two manifest template files under `templates/appPackage` folder:
 
 - `manifest.local.template.json` - local debug teams app.
 - `manifest.remote.template.json` - shared between all remote environments.

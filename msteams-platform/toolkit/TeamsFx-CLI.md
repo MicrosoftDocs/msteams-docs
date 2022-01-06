@@ -438,3 +438,4 @@ As a Project Collaborator:
   ![permission status](./images/permission-status.png)
 - Update Tab code, and deploy the project to remote.
 - Launch remote and the project should work fine.
+ 

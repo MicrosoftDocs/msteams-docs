@@ -11,7 +11,7 @@ ms.date: 11/29/2021
 
 # Prepare accounts to build Teams apps
 
-To develop a Teams app, at least one Microsoft 365 account with a valid subscription is needed. If you want to host your backend resources on Azure, an Azure account is also needed. Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application to Teams platform.
+To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application to Teams platform.
 
 ## Microsoft 365 Account
 

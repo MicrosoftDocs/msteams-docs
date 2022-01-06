@@ -21,11 +21,11 @@ Teams Toolkit for Visual Studio Code helps you to create and deploy Teams apps w
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 1. Enter **Teams Toolkit** in the search box:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="install toolkit":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install teamstoolkit.png" alt-text="Install":::
    
 1. Select **install** button next to the Teams Toolkit:
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install teamstoolkit.png" alt-text="Install":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="install toolkit":::
 
 You can also install Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -57,6 +57,7 @@ If you don't open any Teams project in VS Code, or you open any project that is 
 
 :::image type="content" source="./images/teams-toolkit-beforestart.png" alt-text="Before start Teams Toolkit":::
 
+
 You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. If you have a Teams Project created by Teams Toolkit v2.+ opened in VS Code, you will see Teams Toolkit UI with all functionalities as shown in the following image:
 
 :::image type="content" source="./images/teams-toolkit-overview.png" alt-text="Take a tour to Teams Toolkit":::
@@ -77,7 +78,7 @@ Let's take a tour of functionalities that are available in Teams Toolkit:
 
 Developers must have a Microsoft 365 account to build Teams app. If you don't have one, you can get free Teams developer account by joining the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program):
 
-![Teams Toolkit Take a Tour - Accounts](./images/teams-toolkit-accounts.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/accounts.png" alt-text="Account in toolkit":::
 
 Azure account is commonly used in Teams app development. If you wish to host your Teams app or access resources on Azure, you must have an Azure account. Teams Toolkit support integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
@@ -87,15 +88,15 @@ Azure account is commonly used in Teams app development. If you wish to host you
 
 Teams Toolkit helps you to manage multiple environments. You can add, configure, and customize environments. You can choose to add collaborators for each environment:
 
-![Teams Toolkit Take a Tour - Environment](./images/teams-toolkit-env.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/environment.png" alt-text="Environment in toolkit":::
 
- For more information, see [manage multiple environments](TeamsFx-multi-env.md) and [collaborate with other developers on Teams project](TeamsFx-collaboration.md).
+For more information, see [manage multiple environments](TeamsFx-multi-env.md) and [collaborate with other developers on Teams project](TeamsFx-collaboration.md).
 
 ### Development
 
 Teams Toolkit provides convenience for you to create and customize your Teams app project that makes the Teams app development work easily and quickly: 
 
-![Teams Toolkit Take a Tour - Development](./images/teams-toolkit-development.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/development.png" alt-text="Development in tookit":::
 
 1. **Create a new Teams app**, helps to start Teams app development work with either a "hello world" template project or a sample project. For more information, see [create new Teams project](create-new-project.md)
 1. **View samples**, shows a set of Teams sample apps for you to explore, refer, and develop.
@@ -125,7 +126,7 @@ During or after the development, you should follow the process to do provision, 
 
 In this section, you can easily find the documentation and resources you need. You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to browse and ask questions:
 
-![Teams Toolkit Take a Tour - Help](./images/teams-toolkit-help.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/help and feedback.png" alt-text="Help":::
 
 ## See also
 
