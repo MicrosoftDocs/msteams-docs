@@ -22,7 +22,7 @@ After creating the app, you can distribute your app to different scope, such as 
 
 ## Publish to individual scope (sideloading permission)
 
-Users can add custom app to Teams by uploading an app package in a .zip file directly to a team or in personal context. Adding a custom app by uploading an app package, also known as side loading, allows you test app as it's being developed, before it's ready to be widely distributed as mentioned in the following scenarios:
+Users can add custom app to Teams by uploading an app package in a *.zip file directly to a team or in personal context. Adding a custom app by uploading an app package, also known as side loading, allows you test app as it's being developed, before it's ready to be widely distributed as mentioned in the following scenarios:
 
 * Test and debug an app locally yourself or with other developers.
 * Built an app just for yourself. For example, to automate a workflow.
