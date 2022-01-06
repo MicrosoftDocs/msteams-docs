@@ -10,9 +10,6 @@ keywords: teams proactive messaging chat installation Graph
 
 # Proactive installation of apps using Graph API to send messages
 
->[!IMPORTANT]
-> Microsoft Graph and Microsoft Teams public previews are available for early access and feedback. Although this release has undergone extensive testing, it is not intended for use in production.
-
 ## Proactive messaging in Teams
 
 Proactive messages are initiated by bots to start conversations with a user. They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications. Proactive messages in Teams can be delivered as either **ad-hoc** or **dialog-based** conversations:
@@ -158,7 +155,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
     **HTTP GET** request:
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
     ```
 
     The **id** property of the response is the `teamsAppInstallationId`.
@@ -168,7 +165,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
     **HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
     ```
 
     The **id** property of the response is the `chatId`.
@@ -178,7 +175,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
     **HTTP GET** request (permission — `Chat.Read.All`):
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
     ```
 
 ### Send proactive messages
