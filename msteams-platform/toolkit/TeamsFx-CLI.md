@@ -27,8 +27,8 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## Supported Commands
 
-| `teamsfx` Commands  | Description |
-|:----------------  |:-------------|
+| `teamsfx` Command | Description |
+|---------------- |-------------|
 | `teamsfx new`       | Create a new Teams application. |
 | `teamsfx account`   | Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'.          |
 | `teamsfx env`       | Manage the environments. |
