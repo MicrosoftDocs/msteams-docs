@@ -40,12 +40,12 @@ items:
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot) require inbound connections. You can connect your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
-    | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
+    | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run. It includes the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
     | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
 
     > [!TIP]
@@ -136,7 +136,7 @@ items:
 
     If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-    Now you’ve got all tools and set up your accounts. Next, let's set up your development environment and start building!
+    Now you've got all tools and set up your accounts. Next, let's set up your development environment and start building!
 
 - title: Create project workspace for your tab app
   durationInMinutes: 1
@@ -154,11 +154,11 @@ items:
 
     ## Create your project
 
-    Use the Teams Toolkit to create your first project. Teams Toolkit takes you through a series of pages to create and configure your Teams app project:
+    Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
-    - **Creating a new project**: In this page, you select the project type.
-    - **Configure your new project**: In this page, you enter the project details.
-    - **Create a new Teams application**: In this page, you select the Teams app capabilities and the Microsoft 365 credentials. 
+    - **Creating a new project** page: You select the project type.
+    - **Configure your new project** page: You enter the project details.
+    - **Create a new Teams application** page: You select the Teams app capabilities and the Microsoft 365 credentials.
 
     1. Open Visual Studio 2019.
 
@@ -187,13 +187,13 @@ items:
           1. Enter a suitable name for your project.
 
               > [!NOTE] 
-              > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name with no impact on project name.
+              > You'll note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
 
           1. Select the folder path where you want to create the project workspace.
 
-          1. Enter a different solution name if you want. 
+          1. Enter a different solution name, if you want.
 
-          1. Check the option to save the project and solution in the same folder, if your want. For this tutorial, you don't need this option. 
+          1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option. 
 
     1. Select **Create**. 
         
@@ -257,10 +257,10 @@ items:
         When you select **F5**, the Teams Toolkit:
 
         1. Registers your application with Azure Active Directory.
-        1. Registers your application for "sideloading" in Microsoft Teams.
+        1. Registers your application for "sideloading" in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
-        1. Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
 
         </details>
     1. Install the self-signed SSL certificate for local debugging, if requested.
@@ -538,13 +538,13 @@ items:
           1. Enter a suitable name for your project.
 
               > [!NOTE] 
-              > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name with no impact on project name.
+              > You'll note that your project name is also automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
 
           1. Select the folder path where you want to create the project workspace.
 
           1. Enter a different solution name if you want. 
 
-          1. Check the option to save the project and solution in the same folder, if your want. For this tutorial, you don't need this option. 
+          1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option. 
 
     1. Select **Create**. 
         
@@ -608,10 +608,10 @@ items:
         When you select **F5**, the Teams Toolkit:
 
         1. Registers your application with Azure Active Directory.
-        1. Registers your application for "sideloading" in Microsoft Teams.
+        1. Registers your application for "sideloading" in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
-        1. Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
 
         </details>
     1. Install the self-signed SSL certificate for local debugging, if requested.
