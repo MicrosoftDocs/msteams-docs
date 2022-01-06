@@ -57,22 +57,22 @@ The following are the two different ways to enable sideloading:
 
 * **Using Visual studio code**
 
-1. Open **Visual Studio Code**.
-1. Select **Teams Toolkit** from left panel.
-1. Select **Accounts**.
-1. Check whether you can see the option **Sideloading enabled** as shown in the image:
+    1. Open **Visual Studio Code**.
+    1. Select **Teams Toolkit** from left panel.
+    1. Select **Accounts**.
+    1. Check whether you can see the option **Sideloading enabled** as shown in the image:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
 
 * **Using Teams account**
 
-1. Open **Microsoft Teams**.
-2. select **Apps** in left bar.
-3. Select **Publish an app**.
+    1. Open **Microsoft Teams**.
+    2. select **Apps** in left bar.
+    3. Select **Publish an app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publish an app":::
 
-4. Check whether you can see the option **Upload a custom app** as shown in the image:
+    4. Check whether you can see the option **Upload a custom app** as shown in the image:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app":::
 
