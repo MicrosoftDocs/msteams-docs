@@ -58,23 +58,23 @@ The following are the two different ways to enable sideloading:
 * **Using Visual studio code**
 
 1. Open **Visual Studio Code**.
-1. Select **Teams Toolkit** from left panel:
+1. Select **Teams Toolkit** from left panel.
 1. Select **Accounts**.
 1. Check whether you can see the option **Sideloading enabled** as shown in the image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
 
 * **Using Teams account**
 
 1. Open **Microsoft Teams**.
-1. select **Apps** in left bar.
-1. Select **Publish an app**:
+2. select **Apps** in left bar.
+3. Select **Publish an app**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publish an app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publish an app":::
 
-1. Check whether you can see the option **Upload a custom app** as shown in the image:
+4. Check whether you can see the option **Upload a custom app** as shown in the image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app":::
 
 If you cannot see **Upload a custom app** option, this indicates that you don't have permission for sideloading. Without sideloading permission, you won’t be able to do any local or remote debugging. So it’s very important to get the sideloading permission for your account before you do any debugging for your Teams app. If you are admin for your tenant, you can open the sideloading setting for your tenant or organization. If you are not an admin, please contact your tenant admin for the permission.
 
