@@ -39,6 +39,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|01/06/2022| Test preview for monetized apps.| Build apps for Teams meetings > [Test preview for monetized apps](apps-in-teams-meetings/Test-preview-for-monetized-apps.md)|
 |12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards.| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
 |12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduced step-by-step guide for tabs and messaging extensions with Single sign-on (SSO). | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and messaging extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|

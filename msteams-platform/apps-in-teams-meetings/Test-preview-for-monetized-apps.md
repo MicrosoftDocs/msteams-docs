@@ -85,4 +85,4 @@ You can also select **Preview in Teams** in the developer portal to launch your 
 
 ## See also
 
-* [Configure SaaS offer properties](/azure/marketplace/create-new-saas-offer-properties).
+* [Include a SaaS offer with your Microsoft Teams app](../concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).

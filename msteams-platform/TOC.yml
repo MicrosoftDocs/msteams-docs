@@ -298,7 +298,9 @@
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
   - name: Custom Together Mode scenes in Teams
-    href: apps-in-teams-meetings/teams-together-mode.md   
+    href: apps-in-teams-meetings/teams-together-mode.md
+  - name: Test preview for monetized apps
+    href: ~/apps-in-teams-meetings/Test-preview-for-monetized-apps.md   
 - name: Build webhooks and connectors
   items:
   - name: Overview
