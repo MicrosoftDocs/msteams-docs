@@ -64,4 +64,4 @@ You can select **Preview in Teams** in the developer portal to launch your app q
 ## See also
 
 * [Include a SaaS offer with your Microsoft Teams app](include-saas-offer.md).
-* [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps.
+* [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps).
