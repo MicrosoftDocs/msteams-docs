@@ -10,23 +10,23 @@ ms.date: 11/29/2021
 
 # Preview Teams app Manifest in Teams Toolkit
 
-After scaffolding, you get the following two manifest template files under `templates/appPackage` folder:
+After scaffolding, the following are the manifest template files available under `templates/appPackage` folder:
 
 - `manifest.local.template.json` - local debug teams app.
 - `manifest.remote.template.json` - shared between all remote environments.
 
-These template files containing some placeholders, and the actual values from Teams Toolkit will be resolved in files under `.fx/configs` and `.fx/states`.
+The Template files consisting placeholders, and the actual values from Teams Toolkit are resolved in files under `.fx/configs` and `.fx/states`.
 
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> You should already have a Teams app project opened in VS code.
+> Ensure you have Teams app project opened in VS code.
 
 ## Preview Manifest
 
-To preview manifest with real content, Teams Toolkit will generate preview manifest files under `build/appPackage` folder:
+To preview manifest with real content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
 
 ```text
 └───build
@@ -37,32 +37,32 @@ To preview manifest with real content, Teams Toolkit will generate preview manif
         └───manifest.local.json  - Previewed manifest of local teams app
 ```
 
-### Local debug Teams app
+### Preview local manifest file
+To preview manifest file of local teams app, you need to press **F5** to run local debug. It generates default local settings for you, then the app package and preview manifest builds under **build/appPackage** folder.
 
-To preview manifest file of local teams app, you need to press **F5** to run local debug first. This step will generate default local settings for you, then the app package and preview manifest will be built under **build/appPackage** folder.
+You can also preview local manifest by following steps:
 
-The other ways are:
-
-- Select **Preview** in the codelens of **manifest.local.template.json** file
-- Select **Preview manifest file** at the menu bar of **manifest.local.template.json** file
-- Select **Zip Teams metadata package** in Treeview and select **Local**
-The preview local appears as shown in the following image:
+1. Select **Preview** in the codelens of **manifest.local.template.json** file
+2. Select **Preview manifest file** at the menu bar of **manifest.local.template.json** file
+3. Select **Zip Teams metadata package** in Treeview and select **Local**
+The preview local appears as shown in the image:
 
 ![preview local](./images/preview.png)
 
-### Remote environment
+### To preview manifest in remote environment
 
-To preview manifest file of remote teams app, you need to select **Provision in the cloud** in DEVELOPMENT panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette first. This step will generate configurations for remote teams app, then the app package and preview manifest will be built under **build/appPackage** folder.
+To preview manifest file of remote teams app, select **Provision in the cloud** in `DEVELOPMENT` panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette. It generates configuration for remote teams app, and builds package and preview manifest under **build/appPackage** folder.
 
-The other ways are:
+You can also preview manifest in remote environment by following the steps:
 
-- Select **Preview** in the codelens of **manifest.remote.template.json** file.
-- Select **Preview manifest file** at the menu bar of **manifest.remote.template.json** file.
-- Select **Zip Teams metadata package** in Treeview and select your environment.
+1. Select **Preview** in the codelens of **manifest.remote.template.json** file.
+2. Select **Preview manifest file** at the menu bar of **manifest.remote.template.json** file.
+3. Select **Zip Teams metadata package** in Treeview and select your environment.
+The preview in remote environment appears as shown in the image:
 
 ![preview remote](./images/preview-remote.png)
 
-> If there are more than one environment, you need to select the env you want to preview as shown in the image:
+If there are more than one environment, you need to select the environment you want to preview as shown in the image:
 
 ![select env](./images/select-env.png)
 
@@ -70,17 +70,18 @@ The other ways are:
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
-- Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
-- Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
-- Trigger **Teams: update manifest to Teams platform** from command palette
+1.  Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
+2. Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
+3. Trigger **Teams: update manifest to Teams platform** from command palette
 
-![update](./images/updatetoteamsplatform.png)
-![update-cmd](./images/update_manifest_cmp.png)
+   ![update](./images/updatetoteamsplatform.png)
+   ![update-cmd](./images/update_manifest_cmp.png)
 
 > [!NOTE]
 > Trigger from editor codelens or title button will update current manifest file to Teams platform. Trigger from command palette will require selecting target environment.
 
-If the manifest file is outdated due to configuration file change or template change, user will be asked to confirm their action:
+If the manifest file is outdated due to configuration file change or template change, ensure to confirm the following action:
+
 ![manifest-outdated](./images/manifest_outdated_dialog.png)
 
 - **Preview only**: local manifest file will be overwritten according to current configuration

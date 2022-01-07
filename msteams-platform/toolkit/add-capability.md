@@ -30,12 +30,13 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 > [!IMPORTANT]
 > You need to perform provision for each environment after you successfully add capabilities to your Teams app.
 
-1. Select **Teams Toolkit** from left panel
+1. Open **Visual Studio Code**.
+1. Select **Teams Toolkit** from left panel.
 1. Select **Add capabilities**:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
 
-      You can also open the command palette and enter **Teams: Add Capabilities**: 
+   You can also open the command palette and enter **Teams: Add Capabilities**: 
       
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Alternate capabilities":::
 
