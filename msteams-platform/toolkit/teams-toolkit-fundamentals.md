@@ -67,15 +67,15 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 Let's take a tour of the topics covered in this document:
 
-* [Accounts](#accounts)
+## Accounts
 
-* [Environment](#environment)
+## Environment
 
-* [Development](#development)
+## Development
 
-* [Deployment](#deployment)
+## Deployment
 
-* [Help and Feedback](#help-and-feedback)
+## Help and Feedback
 
 ### Help and Feedback
 
