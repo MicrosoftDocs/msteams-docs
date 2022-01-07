@@ -66,12 +66,12 @@ For more information, see [build and run your Teams app in remote environment](/
 
 You can't remove collaborators directly from Teams Toolkit extension. Follow the steps to remove collaborators manually:
 
-      1. Go to Teams Developer Portal and select your Teams App by name or app id.
-      2. Select **Owners** from left panel.
-      3. Select and remove the collaborator.
-      4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your AAD App.
-      5. Select **Owners** from left panel in AAD App management page.
-      6. Select and remove the collaborator.
+  1. Go to Teams Developer Portal and select your Teams app by name or app id.
+  2. Select **Owners** from left panel.
+  3. Select and remove the collaborator.
+  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your AAD App.
+  5. Select **Owners** from left panel in AAD App management page.
+  6. Select and remove the collaborator.
 
 Collaborator added to your project will not receive any notification. Project owner needs to notify collaborator offline.
 
