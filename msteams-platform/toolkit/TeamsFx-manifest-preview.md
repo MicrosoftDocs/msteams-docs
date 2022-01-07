@@ -44,10 +44,10 @@ You can also preview local manifest by following steps:
 
 1. Select **Preview** in the codelens of **manifest.local.template.json** file
 2. Select **Preview manifest file** at the menu bar of **manifest.local.template.json** file
-3. Select **Zip Teams metadata package** in Treeview and select **Local**
+3. Select **Zip Teams metadata package** in Treeview and select **Local**.
 The preview local appears as shown in the image:
 
-![preview local](./images/preview.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="Preview":::
 
 ### To preview manifest in remote environment
 
@@ -58,9 +58,6 @@ You can also preview manifest in remote environment by following the steps:
 1. Select **Preview** in the codelens of **manifest.remote.template.json** file.
 2. Select **Preview manifest file** at the menu bar of **manifest.remote.template.json** file.
 3. Select **Zip Teams metadata package** in Treeview and select your environment.
-The preview in remote environment appears as shown in the image:
-
-![preview remote](./images/preview-remote.png)
 
 If there are more than one environment, you need to select the environment you want to preview as shown in the image:
 
