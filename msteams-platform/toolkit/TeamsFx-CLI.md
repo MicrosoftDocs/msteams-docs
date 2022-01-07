@@ -28,19 +28,19 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 ## Supported Commands
 
 | Command | Description |
-|---------------- |-------------|
-| `teamsfx new`       | Create a new Teams application. |
-| `teamsfx account`   | Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
-| `teamsfx env`       | Manage the environments. |
+|----------------|-------------|
+| `teamsfx new`| Create a new Teams application.|
+| `teamsfx account`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
+| `teamsfx env` | Manage the environments. |
 | `teamsfx capability`| Add new capabilities to the current application.|
 | `teamsfx resource`  | Manage the resources in the current application.|
 | `teamsfx provision` | Provision the cloud resources in the current application.|
-| `teamsfx deploy`    | Deploy the current application.  |
-| `teamsfx package`   | Build your Teams app into a package for publishing.|
-| `teamsfx validate`  | Validate the current application.|            |
-| `teamsfx publish`   | Publish the app to Teams.|
-| `teamsfx preview`   | Preview the current application. |
-| `teamsfx config`    | Manage the configuration data. |
+| `teamsfx deploy` | Deploy the current application.  |
+| `teamsfx package` | Build your Teams app into a package for publishing.|
+| `teamsfx validate` | Validate the current application.|
+| `teamsfx publish` | Publish the app to Teams.|
+| `teamsfx preview` | Preview the current application. |
+| `teamsfx config`  | Manage the configuration data. |
 | `teamsfx permission`| Collaborate with other developers in same project.|
 
 ## `teamsfx new`
