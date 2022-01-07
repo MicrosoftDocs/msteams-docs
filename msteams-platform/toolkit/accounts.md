@@ -53,13 +53,13 @@ You can create for your Visual Studio Professional or Enterprise subscriptions -
 > [!IMPORTANT]
 > During development, you must load your app within your Teams without distributing it. This is known as **sideloading**.
 
-The following are the two different ways to enable sideloading:
+The following are the two different ways to check whether sideloading permission is enabled:
 
 * **Using Visual studio code**
 
     1. Open **Visual Studio Code**.
     1. Select **Teams Toolkit** from left panel.
-    1. Select **Accounts**.
+    1. Select **Accounts** and log in to your M365 account.
     1. Check whether you can see the option **Sideloading enabled** as shown in the image:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
