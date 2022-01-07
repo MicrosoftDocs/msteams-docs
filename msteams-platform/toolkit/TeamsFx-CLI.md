@@ -410,7 +410,7 @@ As a project creator:
   teamsfx permission status --env dev --list-all-collaborators
   ```
 
-  ![list-all-collaborators](./images/permission-status-all.png)
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission":::
 
 - To add another account as collaborator. Ensure the added account is under the same tenant:
 
@@ -418,7 +418,7 @@ As a project creator:
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  ![add-new-collaborator](./images/permission-grant.png)
+  :::image type="content" source="images/permission-grant.png" alt-text="grant":::
 
 - To push your project to GitHub
 

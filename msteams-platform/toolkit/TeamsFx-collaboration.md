@@ -35,15 +35,15 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 * In **ENVIRONMENT** section on Teams Toolkit, select **Collaborators**. It displays the options **Add M365 Teams App (with AAD App) Owners** and **List M365 Teams App (with AAD App) Owners** as shown in the following image:
 
-  ![collaboration buttons](./images/collaboration-buttons.png)
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
 
 * Select **Add M365 Teams App (with AAD App) Owners** and add other M365 account email address as collaborator. The account to be added **must be on the same tenant as project owner for remote debug** as shown in the image:
 
-  ![input collaborator email](./images/collaboration-add-owner-email.png)
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/env.png" alt-text="environment":::
 
 * To view collaborators in current environment, select **List M365 Teams App (with AAD App) Owners**, then collaborators will be listed in the output channel as shown in following image:
 
-  ![collaboration list owners](./images/collaboration-list-owners.png)
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="colloborators list":::
 
 * Push the project to GitHub.
 
