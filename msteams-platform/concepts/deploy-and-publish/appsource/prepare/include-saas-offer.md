@@ -116,7 +116,7 @@ See [create a SaaS offer](/azure/marketplace/create-new-saas-offer) for complete
 We strongly recommend that you verify the end-to-end purchasing experience before publishing your SaaS offer. You can do this by creating a separate offer just for testing. For complete information, see [test offer overview](/azure/marketplace/plan-saas-offer#test-offer), [create a test offer](/azure/marketplace/create-saas-dev-test-offer), and [preview your offer](/azure/marketplace/test-publish-saas-offer).
 
 > [!IMPORTANT]
-> You must test your transactable SaaS offer in AppSource. Currently, you can't test an end-to-end transaction in Teams until your app completes store validation.
+> You can test an end-to-end transaction in Teams until your app completes store validation. For more information see, [Test preview for monetized apps](Test-preview-for-monetized-apps.md).
 
 From a Teams standpoint, these tests must verify that the number of licenses and assignments match what’s in the Teams admin center when users:
 

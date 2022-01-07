@@ -10,18 +10,11 @@ keywords: teams apps SaaS offer preview offer  app source preview
 
 # Test preview for monetized apps
 
-As a developer, you can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience of an offer in the Teams app before pushing the offer live. Users who are added as the preview audience for the Teams app can test the preview offer.
-
-## Prerequisites
-
-1. [Microsoft 365 developer account](/office/developer-program/microsoft-365-developer-program-get-started)
-1. [Create a SaaS offer](/azure/marketplace/create-saas-dev-test-offer)
-1. [Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview)
-
+As a developer, you can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience of an offer in Teams before publishing the offer. Users who are added as the preview audience for the Teams app can test the preview offer, see [ Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview).
 
 ## Configure your app with the Preview offer ID
 
-After adding the preview audience to your SaaS offer, link the offer ID to your Teams app to preview the offer in the in developer portal.
+After adding the preview audience to your SaaS offer, link the offer ID to your Teams app for users to see your subscription plans in the Teams store.
 
 1. Go to [Developer Portal](https://dev.teams.microsoft.com/).
 1. Select **Apps** from the left pane.
@@ -31,7 +24,7 @@ After adding the preview audience to your SaaS offer, link the offer ID to your 
 1. Select **View** to preview your subscription plans.
 1. Review the plans listed under **Apps Subscription** and click **Save**.
 
-:::image type="content" source="../assets/images/apps-in-meetings/Plans-and-pricing-preview-offer.png" alt-text="preview offer label":::
+    :::image type="content" source="../../../../assets/images/saas-offer/Plans-and-pricing-preview-offer.png" alt-text="configure preview offer":::
 
 The subscriptionOffer property is added to your app manifest.
 
@@ -51,28 +44,24 @@ You can select **Preview in Teams** in the developer portal to launch your app q
 
 * If the preview offer and preview audience are specified in the app manifest, the user can see the **Buy a Subscription** button.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/preview-testing-offer-audience-available.png" alt-text="offer ID and preview audience specified":::
+    :::image type="content" source="../../../../assets/images/saas-offer/preview-testing-offer-audience-available.png" alt-text="offerid and audeince available":::
 
 * If the offer ID is specified, but the user isn't part of the **preview audience** defined in the app manifest, the **Buy a Subscription** button isn't visible and the app shows a warning message to the user.
 
     >[!WARNING]
     > No plans found with **-preview**. Make sure you're in the preview audience.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/preview-testing-no-audience.png" alt-text="No preview audience":::
+    :::image type="content" source="../../../../assets/images/saas-offer/preview-testing-no-audience.png" alt-text="no preview audience":::
 
 * If the offer ID specified in the app manifest isn't a preview offer, the app shows a warning message to the user and sideloading is disabled.
 
     >[!WARNING]
     > This isn't a preview offer. Be sure to append the **-preview** to the Offer ID.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/Preview-testing-no-iffer-id.png" alt-text="No preview offer ID":::
+    :::image type="content" source="../../../../assets/images/saas-offer/Preview-testing-no-iffer-id.png" alt-text="no preview offer id":::
 
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps).
 
 ## See also
 
 * [Include a SaaS offer with your Microsoft Teams app](../concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
+* [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps).
