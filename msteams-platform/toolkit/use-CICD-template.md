@@ -66,7 +66,7 @@ Steps to create secrets by environment in GitHub:
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 > [!NOTE]
 > Currently, a non-interactive authentication style for M365 is used in CI/CD workflows, so please ensure that your M365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
@@ -171,7 +171,7 @@ Steps to create Pipeline variables in Azure DevOps:
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 > [!NOTE]
 > Currently, a non-interactive authentication style for M365 is used in CI/CD workflows, so please ensure that your M365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
@@ -226,13 +226,10 @@ Follow [using-credentials](https://www.jenkins.io/doc/book/using/using-credentia
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 > [!NOTE]
 > Currently, a non-interactive authentication style for M365 is used in CI/CD workflows, so please ensure that your M365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
-
-> [!NOTE]
-> Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](##how-to-create-azure-service-principals-for-use).
 
 ## Get started guide for other platforms
 
@@ -244,11 +241,9 @@ The scripts are pretty straightforward and most parts of them are cross-platform
 
 The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the [documentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) to customize the scripts.
 
-> [!NOTE]
-> To enable M365 account login by non-interactive mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`.
-
-> [!NOTE]
-> To enable `@microsoft/teamsfx-cli` running in non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In non-interactive mode, `@microsoft/teamsfx-cli` will not ask questions for inputs interactively.
+> [!Note]
+> * To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI or CD.
+> * To enable `@microsoft/teamsfx-cli` running in non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In non-interactive mode, `@microsoft/teamsfx-cli` will not ask questions for inputs interactively.
 
 Ensure to set Azure and M365 credentials in your environment variables safely. For example if you are using GitHub as your source code repository, you can use the [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to securely store your environment variables.
 
@@ -261,10 +256,10 @@ Briefly, the steps include:
 3. Create a new Azure AD application secret.
 4. Grab your tenant id, application id(AZURE_SERVICE_PRINCIPAL_NAME), and the secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) for use.
 
-For detailed guidelines, refer to [the official document](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal). There're three ways to create service principal: 
-* [Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)
-* [PowerShell](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
-* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli)
+For detailed guidelines, refer to [the official document](/azure/active-directory/develop/howto-create-service-principal-portal). There're three ways to create service principal: 
+* [Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
+* [PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
+* [Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## Publish Teams app using Teams Developer Portal
 If there's any changes related to Teams app's manifest file, you may want to publish the Teams app again to update the manifest.
@@ -282,4 +277,4 @@ Steps:
 * [Quick Start for GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Create your first Jenkins Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [Manage your apps with the Developer Portal for Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal)
+* [Manage your apps with the Developer Portal for Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
