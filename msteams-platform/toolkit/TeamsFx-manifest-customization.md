@@ -44,7 +44,7 @@ During local debug, Teams Toolkit loads manifest from `manifest.local.template.j
 
     Besides each config placeholder in `manifest.remote.template.json`, there is a `Go to config file`. You can navigate to configuration file by selecting it as shown in the image:
 
-    ![go to config file](./images/gotoconfigfile.png)
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add manifest.png" alt-text="manifest":::
 
 ## Supported placeholder in manifest.local.template.json
 

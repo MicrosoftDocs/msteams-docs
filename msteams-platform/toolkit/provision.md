@@ -15,12 +15,11 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 ## Prerequisites
 
 * Account prerequisites
+  To provision cloud resources, you must have the following accounts:
 
-To provision cloud resources, you must have the following accounts:
- * Microsoft 365 account with valid subscription
- * Azure with valid subscription
-
- For more information, see [how to prepare accounts for building Teams app](accounts.md).
+    * Microsoft 365 account with valid subscription
+    * Azure with valid subscription
+  For more information, see [how to prepare accounts for building Teams app](accounts.md).
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
