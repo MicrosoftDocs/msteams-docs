@@ -39,11 +39,11 @@ Follow the steps to upload app package:
 2. Select **Manage your apps**.
 3. Select **publish an app**
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="Publish an app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 
 4. Select **Upload a custom app** as shown in the image:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app"
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="upload":::
 
 ## Publish to your organization 
 
@@ -65,13 +65,13 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
 The admin of your Teams tenant can then go to the Manage apps page in the Microsoft Teams admin center (in the left navigation, go to Teams apps > Manage apps), gives you a view into all Teams apps for your organization. The Pending approval widget at the top of the page lets you know when a custom app is submitted for approval.
 In the table, a newly submitted app automatically shows a Publishing status of Submitted and Status of Blocked. You can sort the Publishing status column in descending order to quickly find the app:
 
- :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="":::
+ :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="approval":::
 
 Select the app name to go to the app details page. On the About tab, you can view details about the app, including description, status, submitter, and app ID:
 
  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app-1.png" alt-text="submitted app":::
 
-Follow the steps to publish the app:
+Follow the steps to publish the app :
 
 1. In the left navigation of the Microsoft Teams admin center, go to Teams apps > Manage apps.
 2. Select the app name to go to the app details page, and then in the Publishing status box, select Publish.
