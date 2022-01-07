@@ -41,11 +41,26 @@ You must call `openPurchaseExperience` API from your web app to enable in-app pu
 Following is an example of calling the API from the app:
 
 ```json
-
-
-
+<body> 
+<div> 
+<div class="sectionTitle">openPurchaseExperience</div> 
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button> 
+</div> 
+</body> 
+<script> 
+    function openPurchaseExperience() { 
+        microsoftTeams.initialize(); 
+        let callbackcalled = false; 
+        microsoftTeams.monetization.openPurchaseExperience((e) => { 
+        console.log("callback is being called"); 
+        callbackcalled = true; 
+        return; 
+    }); 
+console.log("after callback: ",callbackcalled); 
+} 
+</script> 
 ```
-### Permissions
+
 
 
 
@@ -65,9 +80,6 @@ The following example shows how users can have an in-app purchasing experience f
     ![Upgrade](~/assets/images/saas-offer/upgradeapp.png)
 
 1. Complete the payment and subscription process in the redirected polly website.
-
-
-[!NOTE]
 
 ## Next step
 
