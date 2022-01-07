@@ -11,28 +11,27 @@ ms.date: 11/29/2021
 
 # Publish Teams apps using Teams Toolkit
 
-After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. The distribution depends on multiple factors, including needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app need to go through for security and compliance concerns.
+After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. The distribution depends on multiple factors, including needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> You should already have a Teams app project.
+> Ensure you have Teams app project in VS code.
 
 ## Publish to individual scope (sideloading permission)
 
-Users can add custom app to Teams by uploading an app package in a *.zip file directly to a team or in personal context. Adding a custom app by uploading an app package, also known as side loading, allows you test app as it's being developed, before it's ready to be widely distributed as mentioned in the following scenarios:
+The users can add custom app to Teams by uploading an app package in a *.zip file directly to a team or in personal context. Adding a custom app by uploading an app package, also known as side loading, allows you to test app as it's being developed, before it's ready to be widely distributed as mentioned in the following scenarios:
 
 * Test and debug an app locally yourself or with other developers.
-* Built an app just for yourself. For example, to automate a workflow.
-* You built an app for a small set of users, such as, your work group.
+* Build an app for yourself. For example, to automate a workflow.
+* Build an app for a small set of users, such as, your work group.
 
-It also lets you build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store.
+You can build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store.
 
-* Build your app to *.zip app package file
-
-    You can build the app package by selecting `Zip Teams metadata package` from DEPLOYMENT panel in Treeview of Teams Toolkit. You may need to run `Provision in the cloud` at first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip` as shown in the following image:
+**To build your app to *.zip app package file**
+You can build the app package by selecting `Zip Teams metadata package` from DEPLOYMENT panel in Treeview of Teams Toolkit. You need to run `Provision in the cloud` first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip` as shown in the following image:
 
  ![upload custom app](./images/sideload-check.png)
 
