@@ -10,8 +10,7 @@ ms.date: 11/29/2021
 
 # CI or CD support for Teams application developers
 
-TeamsFx helps to automate your development workflow while building Teams application. The document provides tools and pre-cooked templates for you to get started while setting up CI or CD pipelines with the most popular development platforms including GitHub, Azure Devops and Jenkins.
-
+TeamsFx helps to automate your development workflow while building Teams application. The document provides tools and templates for you to get started with setting up CI or CD pipelines with GitHub, Azure Devops and Jenkins.
 
 |Tools and Templates|Description|
 |---|---|
@@ -231,6 +230,10 @@ Follow [using-credentials](https://www.jenkins.io/doc/book/using/using-credentia
 > [!NOTE]
 > Currently, a non-interactive authentication style for M365 is used in CI/CD workflows, so please ensure that your M365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
+> [!NOTE]
+> Currently, service principal for Azure is used in CI/CD workflows. For more information, see [create Azure service principals](#create-azure-service-principals)
+
+
 ## Get started guide for other platforms
 
 You can follow the listed pre-defined example bash scripts to build and customize CI or CD pipelines on other platforms:
@@ -241,7 +244,7 @@ The scripts are pretty straightforward and most parts of them are cross-platform
 
 The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the [documentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) to customize the scripts.
 
-> [!Note]
+> [!NOTE]
 > * To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI or CD.
 > * To enable `@microsoft/teamsfx-cli` running in non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In non-interactive mode, `@microsoft/teamsfx-cli` will not ask questions for inputs interactively.
 
