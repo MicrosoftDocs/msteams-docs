@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Collaborate on Teams project using Teams Toolkit
 
-Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and AAD App.Teams Toolkit now supports collaboration feature to allow a developer (project owner) to invite other developers (collaborators) to the TeamsFx project to debug, provision and deploy the same TeamsFx project.
+Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and AAD App.Teams Toolkit now supports collaboration feature to allow a developer (project owner) to invite other developers (collaborators) to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
 ## Prerequisites
 
@@ -53,20 +53,21 @@ Multiple developers can work together to debug, provision and deploy for the sam
 ### As a project collaborator
 
 * Clone the project from GitHub
-* Login to M365 account
-* Login to Azure account which has contributor permission for all the Azure resources being used in this project.
+* Log in to M365 account
+* Log in to Azure account, which has contributor permission for all the Azure resources being used in this project.
 * To preview your Teams app, deploy the project to remote.
-* Launch remote to have a preview of the Teams app. 
+* Launch remote to have a preview of the Teams app.
+
 For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
 > [!NOTE]
-> Collaborators should login using the account added by project owner which is **under the same tenant with project owner**.
+> Collaborators should log in using the account added by project owner which is **under the same tenant with project owner**.
 
 ### Limitation
 
 You can't remove collaborators directly from Teams Toolkit extension. Follow the steps to remove collaborators manually:
 
-  1. Go to Teams Developer Portal and select your Teams app by name or app id.
+  1. Go to Teams Developer Portal and select your Teams app by name or app ID.
   2. Select **Owners** from left panel.
   3. Select and remove the collaborator.
   4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your AAD App.
@@ -76,7 +77,7 @@ You can't remove collaborators directly from Teams Toolkit extension. Follow the
 Collaborator added to your project will not receive any notification. Project owner needs to notify collaborator offline.
 
 > [!NOTE]
-> Azure related permissions should be set manually by Azure subscription administrator on Azure portal. Azure account should have contributor role for the subscription so that developers can work together to provision and deploy TeamsFx project.
+> Azure related permissions should be set manually by Azure subscription administrator on Azure portal. Azure account should have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
 
 ## See also
 
