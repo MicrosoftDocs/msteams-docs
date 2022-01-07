@@ -18,7 +18,7 @@ Here's an idea of what you'll learn:
 - Configure and build different types of Teams apps.
 
 > [!NOTE]
-> **A note about Teams Toolkit**: Teams Toolkit comes with features for creating apps for extending Teams capabilities. The Get started module does not cover all these features. It focuses on basic functionality that enables building an app and running it local environment. For more information on the advanced features of Teams Toolkit, you can see Teams Toolkit guide in the Tools and SDK module.
+> **A note about Teams Toolkit**: Teams Toolkit comes with features for creating apps for extending Teams capabilities. The Get started module does not cover all these features. It focuses on basic functionality that enables building an app and running it local environment. For more information on the advanced features of Teams Toolkit, you can see Teams Toolkit section in the Tools and SDK module.
 
 Let's take a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
 
