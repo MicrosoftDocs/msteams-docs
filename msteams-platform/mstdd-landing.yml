@@ -24,7 +24,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Test preview for monetized apps
-        url: ~/apps-in-teams-meetings/Test-preview-for-monetized-apps.md
+        url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
       - text: Guidelines for apps linked to SaaS offer
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Introduced new store icon
