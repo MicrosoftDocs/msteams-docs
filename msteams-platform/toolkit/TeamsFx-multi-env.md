@@ -35,18 +35,18 @@ After creating new project, Teams Toolkit by default creates:
 > [!NOTE]
 > Each project can have only one `local` environment but multiple remote environments.
 
-To add another remote environment, select the Teams icon in the sidebar, select [place holder for icon] the under Environment section, and follow the questions to create as shown in the following image:
+To add another remote environment, select the Teams icon in the sidebar, select create new environment the under Environment section as shown in the following image:
 
-![add-env](./images/create-env.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 
 > [!NOTE]
-> If you have more than one existing environments, you will need to select an existing environment to create the same. The command will copy file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment being created.
+> If you have more than one existing environments, you need to select an existing environment to create the same. The command will copy file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment being created.
 
 ## Select target environment 
 
-With environment concept introduced in Teams Toolkit, for all environment-related operations, you can select the target environment to perform the operations. The toolkit prompts and ask for a target environment when you have multiple remote environments as shown in the following image:
+You can select the target environment for all environment-related operations. The toolkit prompts and ask for a target environment when you have multiple remote environments as shown in the following image:
 
-![select env](./images/select-env.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add env":::
 
 ## Project folder structure 
 

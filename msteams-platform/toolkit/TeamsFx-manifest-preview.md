@@ -63,7 +63,7 @@ You can also preview manifest in remote environment by following the steps:
 
 If there are more than one environment, you need to select the environment you want to preview as shown in the image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/env.png" alt-text="Add environment":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 
 ## Sync local changes to Dev Portal
 
@@ -71,17 +71,17 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
 1.  Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
 2. Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
-3. Trigger **Teams: update manifest to Teams platform** from command palette
 
-   ![update](./images/updatetoteamsplatform.png)
-   ![update-cmd](./images/update_manifest_cmp.png)
+ You can also trigger **Teams: update manifest to Teams platform** from command palette
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="Tree view":::
 
 > [!NOTE]
 > Trigger from editor codelens or **title** will update current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
 
 If the manifest file is outdated due to configuration file change or template change, ensure to confirm the following action:
 
-![manifest-outdated](./images/manifest_outdated_dialog.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-4.png" alt-text="Template":::
 
 - **Preview only**: local manifest file will be overwritten according to current configuration
 - **Preview and update**: local manifest file will be overwritten according to current configuration and also updated to Teams platform

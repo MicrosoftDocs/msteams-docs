@@ -41,11 +41,11 @@ The following list guides us to understand the collaboration process and its lim
 
 * Select **Add M365 Teams App (with AAD App) Owners** and add other M365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/env.png" alt-text="environment":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
 * To view collaborators in current environment, select **List M365 Teams App (with AAD App) Owners**, then collaborators are listed in the output channel as shown in following image:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="colloborators list":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
 * Push the project to GitHub.
 
