@@ -42,7 +42,7 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
 The selected resources are succesfully added to your project.
 
-## Add cloud resources using TeamsFx CLI in Command Window
+## Add cloud resources using TeamsFx CLI in command window
 
 1. Change directory to your **project directory**.
 1. Execute the following command to add different resources in your project:
@@ -53,12 +53,12 @@ The selected resources are succesfully added to your project.
 | Azure SQL database|`teamsfx resource add --function-name your-func-name`|
 | Azure API management|`teamsfx resource add azure-apim`|
 
-## What cloud resources can be added
+## Types of cloud resources
 
-TeamsFx integrates with Azure services that are common for the following application scenarios:
+TeamsFx integrates with Azure services for the following scenarios:
 
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
-- [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A fully managed platform as a service (PaaS) database engine to serve as your Teams applications data store.
+- [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
 - [Azure API management](/azure/azure-sql/database/sql-database-paas-overview): An API gateway that can be used to administer APIs created for Teams applications and publish them to consume on other applications, such as Power apps.
 
 ## Add Cloud resources
@@ -67,19 +67,19 @@ After adding any resource, the changes in your project are as follows:
 
 - New parameters may be added to azure.parameter.{env}.json to provide required information for provision.
 - New content are appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
-- Files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up-to-date for added Azure resources.
+- The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
 - `.fx/projectSettings.json` is updated to track the resources present in your project.
 
 After adding resouces, the additional changes in your project are as follows:
 
-|Resources Added|Changes|Why these changes are made|
+|Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
-|Azure Functions|An Azure Functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Include a hello world http trigger template into your project.</br></br> To include necessary scripts for Visual Studio Code executed when you want to debug your application locally.|
-|Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|This is the API specification file defines your API after publishing.|
+|Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
+|Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it is the API specification file .|
 
 ## Limitations
 
-- You can't add cloud resource more than once
+- You can't add cloud resource for more than one instance.
 - You can't add resources if your project does not contain tab app.
 
 ## See also
