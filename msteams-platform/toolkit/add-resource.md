@@ -80,7 +80,7 @@ After adding resouces, the additional changes in your project are as follows:
 ## Limitations
 
 - You can't add cloud resource for more than one instance.
-- You can't add resources if your project does not contain tab app.
+- You can't add resources if your project doesn't contain tab app.
 
 ## See also
 

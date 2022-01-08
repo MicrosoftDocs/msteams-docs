@@ -38,34 +38,36 @@ To preview manifest with real content, Teams Toolkit generates preview manifest 
 ```
 
 ### Preview local manifest file
+
 To preview manifest file of local teams app, you need to press **F5** to run local debug. It generates default local settings for you, then the app package and preview manifest builds under **build/appPackage** folder.
 
-You can also preview local manifest by following steps:
+You can also preview local manifest by following the steps:
 
-1. Select **Preview** in the codelens of **manifest.local.template.json** file
-2. Select **Preview manifest file** at the menu bar of **manifest.local.template.json** file
+1. Select **Preview** in the codelens of **manifest.local.template.json** file.
+2. Select **Preview manifest file** at the menu bar of **manifest.local.template.json** file.
 3. Select **Zip Teams metadata package** in Treeview and select **Local**.
 The preview local appears as shown in the image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="Preview":::
 
-### To preview manifest in remote environment
+### Preview manifest in remote environment
 
-To preview manifest file of remote teams app, select **Provision in the cloud** in `DEVELOPMENT` panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette. It generates configuration for remote teams app, and builds package and preview manifest under **build/appPackage** folder.
+To preview manifest file of remote teams app, select **Provision in the cloud** in **DEVELOPMENT** panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette. It generates configuration for remote teams app, and builds package and preview manifest under **build/appPackage** folder.
 
 You can also preview manifest in remote environment by following the steps:
 
 1. Select **Preview** in the codelens of **manifest.remote.template.json** file.
 2. Select **Preview manifest file** at the menu bar of **manifest.remote.template.json** file.
-3. Select **Zip Teams metadata package** in Treeview and select your environment.
+3. Select **Zip Teams metadata package** in Treeview.
+4. Select your environment.
 
 If there are more than one environment, you need to select the environment you want to preview as shown in the image:
 
-![select env](./images/select-env.png)
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/env.png" alt-text="Add environment":::
 
 ## Sync local changes to Dev Portal
 
-After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
+After previewing the manifest file, you can sync your local changes to Dev Portal by following the steps:
 
 1.  Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
 2. Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
@@ -75,14 +77,14 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
    ![update-cmd](./images/update_manifest_cmp.png)
 
 > [!NOTE]
-> Trigger from editor codelens or title button will update current manifest file to Teams platform. Trigger from command palette will require selecting target environment.
+> Trigger from editor codelens or **title** will update current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
 
 If the manifest file is outdated due to configuration file change or template change, ensure to confirm the following action:
 
 ![manifest-outdated](./images/manifest_outdated_dialog.png)
 
 - **Preview only**: local manifest file will be overwritten according to current configuration
-- **Preview and update**: local manifest file will be overwritten according to current configuration and also updated to Teams platform at the same time
+- **Preview and update**: local manifest file will be overwritten according to current configuration and also updated to Teams platform
 - **Cancel**: do nothing
 
 > [!NOTE]

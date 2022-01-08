@@ -22,15 +22,15 @@ Teams Toolkit consists of the following manifest template files under `templates
 > [!TIP]
 > Ensure you have Teams app project opened in VS Code.
 
-During provision, Teams Toolkit loads manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`, and creates a teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+During provision, Teams Toolkit loads manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
-During local debug, Teams Toolkit loads manifest from `manifest.local.template.json`, combined with configurations from `localSettings.json`, and creates a teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+During local debug, Teams Toolkit loads manifest from `manifest.local.template.json`, combined with configurations from `localSettings.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 ## Supported placeholder in manifest.remote.template.json
 
 - `{{state.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json.
 - `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
-  - You can add a customized parameter by following:
+  - You can add a customized parameter as follows:
     - Add a placeholder in manifest.remote.template.json with pattern: `{{config.manifest.xx}}`
     - Add a config value in config.{env}.json
 
@@ -42,9 +42,7 @@ During local debug, Teams Toolkit loads manifest from `manifest.local.template.j
         }
         ```
 
-    Besides each config placeholder in `manifest.remote.template.json`, there is a `Go to config file`. You can navigate to configuration file by selecting it as shown in the image:
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add manifest.png" alt-text="manifest":::
+    Besides each config placeholder in `manifest.remote.template.json`, there is a `Go to config file`. You can navigate to configuration file by selecting it.
 
 ## Supported placeholder in manifest.local.template.json
 
