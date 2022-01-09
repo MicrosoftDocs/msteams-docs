@@ -17,6 +17,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|01/10/2022| Azure Key vault feature.| • Tools and SDKs > Teams Toolkit for Visual Studio Code> [Add cloud resources to Teams app](toolkit/add-resource.md) </br> • Tools and SDKs > Teams Toolkit for Visual Studio Code> [Provision Cloud resources](toolkit/provision.md)|
+|01/10/2022| Updated CI/CD workflow.| • Tools and SDKs > Teams Toolkit for Visual Studio Code> [Use CI/CD workflow](toolkit/use-CICD-template.md)|
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards.| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
 | 12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
@@ -39,6 +41,8 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|01/10/2022| Azure Key vault feature.| • Tools and SDKs > Teams Toolkit for Visual Studio Code> [Add cloud resources to Teams app](toolkit/add-resource.md) </br> • Tools and SDKs > Teams Toolkit for Visual Studio Code> [Provision Cloud resources](toolkit/provision.md)|
+|01/10/2022| Updated CI/CD workflow.| • Tools and SDKs > Teams Toolkit for Visual Studio Code> [Use CI/CD workflow](toolkit/use-CICD-template.md)|
 |12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards.| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
 |12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduced step-by-step guide for tabs and messaging extensions with Single sign-on (SSO). | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and messaging extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|

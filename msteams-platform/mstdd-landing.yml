@@ -23,6 +23,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Azure Key vault feature
+        url: • toolkit/add-resource.md#Add-cloud-resources-using-TeamsFx-CLI-in-command-window </br> • toolkit/provision.md#Resources-created-when-including-Azure-Key-Vault-in-the-project
       - text: Guidelines for apps linked to SaaS offer
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Introduced new store icon
