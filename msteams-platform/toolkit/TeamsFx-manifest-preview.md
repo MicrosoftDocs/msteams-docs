@@ -92,5 +92,4 @@ If the manifest file is outdated due to configuration file change or template ch
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md)
+[Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md)

@@ -53,5 +53,4 @@ During local debug, Teams Toolkit loads manifest from `manifest.local.template.j
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Preview Teams App Manifest in Teams Toolkit](TeamsFx-manifest-preview.md)
+[Preview Teams App Manifest in Teams Toolkit](TeamsFx-manifest-preview.md)

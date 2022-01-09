@@ -354,11 +354,6 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Deploy Teams app to the cloud](deploy.md)
-
-> [!div class="nextstepaction"]
-> [Manage multiple environments](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Deploy Teams app to the cloud](deploy.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
+* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

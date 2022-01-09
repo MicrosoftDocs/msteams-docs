@@ -35,17 +35,8 @@ You can explore and download samples and either run apps locally or remotely to 
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Provision cloud resources](provision.md)
-
-> [!div class="nextstepaction"]
-> [Deploy Teams app to the cloud](deploy.md)
-
-> [!div class="nextstepaction"]
-> [Publish your Teams app](TeamsFx-collaboration.md)
-
-> [!div class="nextstepaction"]
-> [Manage multiple environments](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Provision cloud resources](provision.md)
+* [Deploy Teams app to the cloud](deploy.md)
+* [Publish your Teams app](TeamsFx-collaboration.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
+* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

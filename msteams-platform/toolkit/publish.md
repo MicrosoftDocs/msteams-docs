@@ -86,8 +86,5 @@ For more information, see [publish to microsoft Teams store]([Publish your app t
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Manage multiple environments](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
+* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

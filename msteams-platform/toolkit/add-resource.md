@@ -84,5 +84,4 @@ After adding resouces, the additional changes in your project are as follows:
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Provision cloud resources](provision.md)
+[Provision cloud resources](provision.md)

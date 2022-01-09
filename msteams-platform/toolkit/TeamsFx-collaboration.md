@@ -82,11 +82,6 @@ You can't remove collaborators directly from Teams Toolkit extension. Perform th
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Provision cloud resources](provision.md)
-
-> [!div class="nextstepaction"]
-> [Deploy Teams app to the cloud](deploy.md)
-
-> [!div class="nextstepaction"]
-> [Manage multiple environments](TeamsFx-multi-env.md)
+* [Provision cloud resources](provision.md)
+* [Deploy Teams app to the cloud](deploy.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)

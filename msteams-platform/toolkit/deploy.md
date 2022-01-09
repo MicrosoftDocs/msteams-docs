@@ -44,17 +44,8 @@ The get started guides help you to deploy using Teams Toolkit. You can use the f
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Add more cloud resources](add-resource.md)
-
-> [!div class="nextstepaction"]
-> [Add more Teams app capabilities](add-capability.md)
-
-> [!div class="nextstepaction"]
-> [Deploy project code with CI/CD pipelines](use-CICD-template.md)
-
-> [!div class="nextstepaction"]
-> [Manage multiple environments](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Add more cloud resources](add-resource.md)
+* [Add more Teams app capabilities](add-capability.md)
+* [Deploy project code with CI/CD pipelines](use-CICD-template.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
+* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

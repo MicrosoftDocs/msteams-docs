@@ -196,11 +196,6 @@ For more information on Bicep template and parameter files, see [provision cloud
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Provision cloud resources](provision.md)
-
-> [!div class="nextstepaction"]
-> [Add more cloud resources](add-resource.md)
-
-> [!div class="nextstepaction"]
-> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Provision cloud resources](provision.md)
+* [Add more cloud resources](add-resource.md)
+* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
