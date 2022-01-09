@@ -418,7 +418,7 @@ As a project creator:
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  :::image type="content" source="images/permission-grant.png" alt-text="grant":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
 
 - To push your project to GitHub
 
