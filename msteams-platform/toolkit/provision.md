@@ -90,6 +90,13 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
 | User assigned identity | Authenticate Azure service-to-service requests |
 
+### Resources created when including Azure Key Vault in the project
+
+|Resources|Purpose of this resource|
+|----------|--------------------------------|
+| Azure Key Vault Service | Manage secrets (e.g. AAD app client secret) used by other Azure Services |
+| User Assigned Identity | Authenticate Azure service-to-service requests |
+
 ## Customize resource provision
 
 Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md). 
@@ -147,6 +154,7 @@ The following table provides a list of available predefined parameters:
 | apimServiceSku | Consumption | SKU of APIM service | [Available SKUs](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch) |
 | apimProductName | ${resourceBaseName} | Name of APIM product | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 | apimOauthServerName | ${resourceBaseName} | Name of APIM OAuth server | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
+| keyVaultSkuName | standard | SKU name of Azure Key Vault Service| |
 
 In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
