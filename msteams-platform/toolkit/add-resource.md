@@ -63,7 +63,6 @@ TeamsFx integrates with Azure services for the following scenarios:
 - [Azure API management](/azure/azure-sql/database/sql-database-paas-overview): An API gateway that can be used to administer APIs created for Teams applications and publish them to consume on other applications, such as Power apps.
 - [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
 
-
 ## Add Cloud resources
 
 After adding any resource, the changes in your project are as follows:
