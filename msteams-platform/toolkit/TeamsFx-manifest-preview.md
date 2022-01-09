@@ -74,7 +74,7 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
  You can also trigger **Teams: update manifest to Teams platform** from command palette
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="Tree view":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-4.png" alt-text="preview":::
 
 > [!NOTE]
 > Trigger from editor codelens or **title** will update current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
