@@ -33,22 +33,6 @@ Teams Toolkit for Visual Studio Code helps you to create and deploy Teams apps w
 > [!TIP]
 > You can install Teams Toolkit from [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Teams apps capabilities
-
-[Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points. Teams Toolkit for Visual Studio Code supports you to work on project with the following Teams app capabilities:
-
-* [Tabs](../tabs/what-are-tabs.md#build-tabs-for-microsoft-teams)
-* [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
-* [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions) 
-
-You can select required capabilities to create Teams app. Your Teams project can contain either one of the capabilities or all three capabilities from above. You can select any of the required capability when you create the Teams Project:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
-
-You can add more capabilities if required for Teams app development by selecting **Add capabilities**:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add capabilities.png" alt-text="add":::
-
 ## User journey of Teams Toolkit
 
 Teams Toolkit provides features of Teams app development to make it easy to debug, deploy, and publish. It automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
@@ -76,6 +60,8 @@ To develop a Teams app, you need at least one Microsoft 365 account with a valid
 Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.
 
 ### TeamsFx Collaboration
+
+It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
 ## Development
 
@@ -125,7 +111,7 @@ TeamsFx CLI is a text-based command line interface that accelerates Teams applic
 
 It lets you reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
 
-### Help and Feedback
+## Help and Feedback
 
 In this section, you can find the documentation and resources you need. You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 
