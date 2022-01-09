@@ -410,7 +410,7 @@ As a project creator:
   teamsfx permission status --env dev --list-all-collaborators
   ```
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission status":::
 
 - To add another account as collaborator. Ensure the added account is under the same tenant:
 
