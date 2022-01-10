@@ -94,15 +94,13 @@ If you can't see **Upload a custom app** option, this indicates that you don't h
 
 3. Navigate to **Teams apps** > **Setup Policies** > **Global**.
 
-:::image type="content" source="./images/teams-setup-policy.png" alt-text="Diagram that shows setup policy for Teams":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/acct.png" alt-text="account setting":::
 
 4. Toggle Upload custom apps to the **On** position.
 
-:::image type="content" source="./images/turn-on-sideload.png" alt-text="Diagram that shows to turn on sideload":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/act.png" alt-text="upload":::
 
 5. Select **Save**. 
-
-:::image type="content" source="./images/save-sideload.png" alt-text="Diagram that shows save option":::
 
 > [!Note]
 > It can take up to 24 hours for the sideloading to be active. In the meantime, you can use **[upload for your tenant]** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
