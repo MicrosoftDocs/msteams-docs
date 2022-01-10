@@ -106,7 +106,7 @@ Needs to be updated to:
 ```js
 import { app, Context } from "@microsoft/teams-js";
 
-app.getContext().then((context: Context) => {
+app.getContext().then((context) => {
     /*...*/
 });
 ```
