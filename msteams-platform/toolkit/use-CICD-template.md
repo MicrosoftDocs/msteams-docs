@@ -8,16 +8,16 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# CI or CD support for Teams application developers
+# CI/CD guide
 
 TeamsFx helps to automate your development workflow while building Teams application. The document provides tools and templates for you to get started with setting up CI or CD pipelines with GitHub, Azure Devops and Jenkins.
 
 |Tools and Templates|Description|
 |---|---|
-|[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|A ready-to-use GitHub Action that integrates with TeamsFx CLI.|
-|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) and [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub CI or CD templates for a Teams app. |
+|[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Action that integrates with TeamsFx CLI.|
+|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) and [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub CI or CD templates for Teams app. |
 |[jenkins-ci-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) and [jenkins-cd-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|Jenkins CI or CD templates for a Teams app.|
-|[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation everywhere else outside of GitHub. |
+|[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub. |
 
 ## CI or CD workflow templates in GitHub
 
@@ -27,35 +27,40 @@ TeamsFx helps to automate your development workflow while building Teams applica
 1. Copy an one of the following template files:
     * [github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) for CI workflow.
     * [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml) for CD workflow.
-1. Customize the workflows to fit your scenarios.
+1. Customize the workflows that fit your scenarios.
 
 ### Customize CI workflow
 
-Follow the steps to adapt the workflow for your project:
+Perform the following steps to adapt the workflow for your project:
 
-1. Change how the CI flow is triggered. 
-1. Use a npm build script, or customize the way you build the project in the automation code.
-1. Use a npm test script which returns zero for success, and change the test commands.
+1. Change the CI flow. 
+1. Use npm build script, or customize the way you build the project in automation code.
+1. Use npm test script which returns zero for success, and change the test commands.
 
 ### Customize CD workflow
 
-Follow the steps to customize CD workflow:
+Perform the following the steps to customize CD workflow:
 
 1. By default, the CD workflow is triggered, when new commits are made to the `main` branch.
-1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure service principal and M365 account login credentials. For mor information,[GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure service principal and M365 account login credentials. For more information,see [GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Change the build scripts if necessary.
-1. Remove the test scripts if you don't have any.
+1. Remove the test scripts as required.
 
 > [!NOTE]
-> The provision step is not included in the CD template as it's usually executed only once. You can either execute provision Within Teams Toolkit, TeamsFx CLI, or using a separate workflow. Ensure to commit after provisioning. The results of provisioning are deposited in `.fx` folder.
+> The provision step is not included in the CD template as it's usually executed only once. You can either execute provision within Teams Toolkit, TeamsFx CLI, or using a separate workflow. Ensure to commit after provisioning. The results of provisioning are deposited in `.fx` folder.
 
 ### Github secrets
 
-The following table lists all the secrets you need to create secrets by environment in GitHub:
+The following table lists all the secrets you need to create environment in GitHub:
 
-1. In the project **Settings** page, navigate to **Environments** section and select **New environment**.
-1. Enter a name for your environment. The default environment name provided in the template is `test_environment`. Select **Configure environment**.
-1. Select **Add Secret** to add secrets for each of the items listed in the table below.
+1. Select **Settings**.
+1. Go to **Environments** section.
+1. Select **New environment**.
+1. Enter a name for your environment. The default environment name provided in the template is `test_environment`. 
+1. Select **Configure environment**.
+1. Select **Add Secret**.
+
+The following table lists all the secrets required to create environment:
 
 |Name|Description|
 |---|---|
@@ -63,24 +68,26 @@ The following table lists all the secrets you need to create secrets by environm
 |AZURE_SERVICE_PRINCIPAL_PASSWORD|The password of Azure service principal.|
 |AZURE_SUBSCRIPTION_ID|To identify the subscription in which the resources will be provisioned.|
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
-|M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
+|M365_ACCOUNT_NAME|The M365 account to create and publish Teams app.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. For more information, see [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 > [!NOTE]
-> Currently, a non-interactive authentication style for M365 is used in CI/CD workflows, ensure that your M365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled.For more information, see [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled multi-factor authentication and security defaults for the credentials used in the workflow.
+> Currently, the non-interactive authentication style for M365 is used in CI or CD workflows, ensure that your M365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. For more information, see [Configure M365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled multi-factor authentication and security defaults for the credentials used in the workflow.
 
 > [!NOTE]
-> Currently, service principal for Azure is used in CI/CD workflows,  for more information, see[create azure service principles](#create-azure-service-principals).
+> Currently, service principal for Azure is used in CI/CD workflows. For more information, see[create azure service principles](#create-azure-service-principals).
 
-## Set up CI or CD Pipelines with Azure DevOps
+## Set up CI or CD pipelines with Azure DevOps
 
-You can set up automated pipelines in Azure DevOps, and make a reference on the scripts. Follow the steps to get started:
+You can set up automated pipelines in Azure DevOps, and make a reference on the scripts.
+
+Perform the following steps to get started:
 
 * [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
 * [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
 
-### Set up CI Pipeline
+### Set up CI pipeline
 
 1. Add [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) to your Azure DevOps repository, and do necessary customizations as you may infer from the comments in the script file.
 1. Follow the [steps to create your Azure DevOps Pipeline for CI](/azure/devops/pipelines/create-first-pipeline).
@@ -104,17 +111,17 @@ steps:
     filePath: './others-script-ci-template.sh'
 ```
 
-The potential changes you can make for the script or workflow definition:
+The following are the changes you can make for the script or workflow definition:
 
-1. Change how the CI flow is triggered. We default to when a new commit is pushed into the `dev` branch.
+1. Change the CI flow. We default to when a new commit is pushed into the `dev` branch.
 1. Change the way of how to install node and npm.
 1. Use npm build script, or customize the way you build in the automation code.
 1. Use npm test script which returns zero for success, and change the test commands.
 
-### Set up CD Pipeline
+### Set up CD pipeline
 
 1. Add [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh) into your Azure DevOps repository, and do necessary customizations as you may infer from the comments in the script file.
-1. Create your Azure DevOps Pipeline for CD, for more information,see [create first pipeline](/azure/devops/pipelines/create-first-pipeline). The Pipeline's definition can be referred to the following example definition for CI Pipeline.
+1. Create your Azure DevOps pipeline for CD. For more information,see [create first pipeline](/azure/devops/pipelines/create-first-pipeline). The Pipeline's definition can be referred to the following example definition for CI Pipeline.
 1. Add necessary variables by [Define variables](/azure/devops/pipelines/process/variables), and make them as secrets if necessary.
 
 ```yml
@@ -142,7 +149,7 @@ steps:
     filePath: './others-script-cd-template.sh'
 ```
 
-The potential changes you can make for the script or workflow definition:
+The following are the changes you can make for the script or workflow definition:
 
 1. How the CD flow is triggered. By default it happens when new commits are made to the **main** branch.
 1. Change the way of how to install node and npm.
@@ -152,7 +159,7 @@ The potential changes you can make for the script or workflow definition:
 
 ### Pipeline variables for Azure DevOps
 
-Steps to create Pipeline variables in Azure DevOps:
+Perform the following steps to create Pipeline variables in Azure DevOps:
 
 1. In the Pipeline editing page, select **Variables** and select **New variable**.
 1. Enter Name or Value pair for your variable.
@@ -169,7 +176,7 @@ Steps to create Pipeline variables in Azure DevOps:
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
 |M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
-## CI or CD Pipeline Templates in Jenkins
+## CI or CD pipeline templates in Jenkins
 
 To add these templates to your repository, you rquire the versions of [jenkins-ci-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) and  [jenkins-cd-template.Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) to be located in your repository by branch.
 
@@ -182,22 +189,22 @@ Follow the steps to check how to connect Jenkins with different SCM platforms:
 3. [Jenkins with GitLab](https://docs.gitlab.com/ee/integration/jenkins.html)
 4. [Jenkins with Bitbucket](https://medium.com/ampersand-academy/integrate-bitbucket-jenkins-c6e51103d0fe)
 
-### Customize CI Pipeline
+### Customize CI pipeline
 
-The following are some of the potential changes you can make to adapt your project:
+The following are some of the changes you can make to adapt your project:
 
 1. Rename the template file to **Jenkinsfile**, and place it under the target branch, for example, the **dev** branch.
 1. Change how the CI flow is triggered. We default to use the triggers of **pollSCM** when a new change is pushed into the **dev** branch.
 1. Ensure you have a npm build script, or customize the way you build in the automation code.
 1. Ensure you have a npm test script which returns zero for success, and/or change the test commands.
 
-### Customize CD Pipeline
+### Customize CD pipeline
 
-Follow the steps to customize the CD pipeline:
+Perform the following steps to customize the CD pipeline:
 
 1. Rename the template file to **Jenkinsfile**, and place it under the target branch, for example, the **main** branch.
-1. How the CD flow is triggered. We default to use the triggers of **pollSCM** when a new change is pushed into the **main** branch.
-1. Create Jenkins [pipeline credentials](https://www.jenkins.io/doc/book/using/using-credentials/) to hold Azure service principal and M365 account login credentials. The table below lists all the credentials you need to create on Jenkins.
+1. Change the CD flow. We default to use the triggers of **pollSCM** when a new change is pushed into the **main** branch.
+1. Create Jenkins [pipeline credentials](https://www.jenkins.io/doc/book/using/using-credentials/) to hold Azure service principal and M365 account login credentials.
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
 
@@ -228,16 +235,19 @@ The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI
 > * To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI or CD.
 > * To enable `@microsoft/teamsfx-cli` running in non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In non-interactive mode, `@microsoft/teamsfx-cli` will not ask questions for inputs interactively.
 
-Ensure to set Azure and M365 credentials in your environment variables safely. For example if you are using GitHub as your source code repository, you can use the [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to securely store your environment variables.
+Ensure to set Azure and M365 credentials in your environment variables safely. For example if you are using GitHub as your source code repository. For more information, see [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 ## Create Azure service principals
+
 To provision and deploy resources targeting Azure inside CI/CD, you must create an Azure service principal for use.
 
-Follow the steps to create Azure service principals:
-1. Register an Azure AD application in single tenant, and it requires sufficient permissions in your Azure AD tenant.
+Perform the following steps to create Azure service principals:
+1. Register an Azure AD application in single tenant.
 2. Assign a role to your Azure AD application to access your Azure subscription, and `Contributor` role is recommended. 
 3. Create a new Azure AD application secret.
-4. Save your tenant id, application id(AZURE_SERVICE_PRINCIPAL_NAME), and the secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) for use.
+
+> [!TIP]
+> Save your tenant id, application id(AZURE_SERVICE_PRINCIPAL_NAME), and the secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) for future use.
 
 For more information, see [Azure service principals guidelines](/azure/active-directory/develop/howto-create-service-principal-portal). The following are the three ways to create service principal: 
 * [Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
@@ -249,8 +259,8 @@ If there's any changes related to Teams app's manifest file, you may want to pub
 
 To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-Follow the steps to publish your app:
-1. Sign in [Developer Portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
+Perform the following steps to publish your app:
+1. Sign in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 2. Import your app package in zip by selecting `App -> Import app -> Replace`.
 3. Select the target app in app list.
 4. Publish your app by selecting `Publish -> Publish to your org`
