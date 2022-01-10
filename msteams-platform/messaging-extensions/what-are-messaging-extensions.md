@@ -8,7 +8,9 @@ ms.author: anclear
 ---
 # Messaging extensions
 
-Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card. This document gives an overview of the messaging extension, tasks performed under different scenarios, working of messaging extension, action and search commands, and link unfurling.
+Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card.
+
+This document gives an overview of the messaging extension, tasks performed under different scenarios, working of messaging extension, action and search commands, and link unfurling.
 
 The following image displays the locations from where messaging extensions are invoked:
 
@@ -47,9 +49,9 @@ The action commands are triggered from the compose message area, the command box
 
 ### Search commands
 
-Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area, and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
+Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
-The cards are triggered from the compose message area or the command box and not triggered from a message. They can not be triggered from a message.
+The cards are triggered from the compose message area or the command box and not triggered from a message. They cannot be triggered from a message.
 The following image displays the messaging extension search command task module:
 
 ![messaging extension search command](~/assets/images/search-extension.png)
