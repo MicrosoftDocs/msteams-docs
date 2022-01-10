@@ -116,7 +116,7 @@
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: Use CI/CD workflow
+    - name: CI/CD guide
       href: toolkit/use-CICD-template.md
     - name: Teams Toolkit CLI
       href: toolkit/TeamsFx-CLI.md
