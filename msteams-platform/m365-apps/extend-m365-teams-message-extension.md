@@ -122,7 +122,7 @@ As you test your messaging extension, you can identify the source (originating f
 
 To preview your app running in Outlook on the web, log in to [outlook.com](https://www.outlook.com) using credentials for your test tenant. Click on **New message**. Open the **More apps** flyout menu on the bottom of the composition window. Your message extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
-:::image type="content" source="{images/outlook-web-compose-more-apps.png}" alt-text="Click on the 'More apps' button on the bottom of the outlook.com mail composition window to start using your message extension.":::
+:::image type="content" source="{images/outlook-web-compose-more-apps.png}"alt-text="Click on the 'More apps' button on the bottom of the outlook.com mail composition window to start using your message extension.":::
 
 ### Outlook
 
