@@ -11,7 +11,7 @@ ms.date: 11/29/2021
 
 # Prepare accounts to build Teams apps
 
-To develop a Teams app, at least one Microsoft 365 account with a valid subscription is needed. If you want to host your backend resources on Azure, an Azure account is also needed. Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application to Teams platform.
+To develop a Teams app, you require at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application to Teams platform.
 
 ## Microsoft 365 Account
 
@@ -19,15 +19,15 @@ If you don’t have an existing Microsoft 365 account with a valid subscription,
 
 ## Azure account
 
-If you wish to host your app related resources or access resources **within Azure**, you must have an Azure subscription. You can [create a free account](https://azure.microsoft.com/free/) before you begin.
+If you want to host your app related resources or access resources **within Azure**, you must have an Azure subscription. You can [create a free account](https://azure.microsoft.com/free/) before you begin.
 
 ## Join Microsoft 365 Developer program 
 
 If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-2. Select **Join Now** and follow the onscreen instructions.
-3. In the welcome screen, select **Set up E5 subscription**.
+2. Select **Join Now**.
+3. Select **Set up E5 subscription**.
 4. Set up your administrator account. After you finish, you should see the following screen:
 
 :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows microsoft m365 program":::
@@ -76,7 +76,7 @@ The following list provides steps to check whether sideloading app permission is
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app":::
 
-If you cannot see **Upload a custom app** option, this indicates that you don't have permission for sideloading. Without sideloading permission, you won’t be able to do any local or remote debugging. So it’s very important to get the sideloading permission for your account before you do any debugging for your Teams app. If you are admin for your tenant, you can open the sideloading setting for your tenant or organization. If you are not an admin, please contact your tenant admin for the permission.
+If you can't see **Upload a custom app** option, this indicates that you don't have permission for sideloading. Without sideloading permission, you won’t be able to do any local or remote debugging. So it’s very important to get the sideloading permission for your account before you do any debugging for your Teams app. If you are admin for your tenant, you can open the sideloading setting for your tenant or organization. If you are not an admin, contact your tenant admin for the permission.
 
 ## Enable custom app uploading (sideloading)  for your organization
 
@@ -100,7 +100,7 @@ If you cannot see **Upload a custom app** option, this indicates that you don't 
 
 :::image type="content" source="./images/turn-on-sideload.png" alt-text="Diagram that shows to turn on sideload":::
 
-5. Select **Save**. Your test tenant can permit custom app sideloading.
+5. Select **Save**. 
 
 :::image type="content" source="./images/save-sideload.png" alt-text="Diagram that shows save option":::
 
@@ -111,8 +111,5 @@ For more information, see [manage custom app policies and settings in Teams](/mi
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Create new Teams project](create-new-project.md)
-
-> [!div class="nextstepaction"]
-> [Provision cloud resources](provision.md)
+* [Create new Teams project](create-new-project.md)
+* [Provision cloud resources](provision.md)
