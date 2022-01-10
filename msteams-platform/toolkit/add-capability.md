@@ -48,7 +48,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 
 The selected capabilities are succesfully added to your project. The Teams Toolkit generate source code for newly added capabilities.
 
-## Add capabilities Using TeamsFx CLI in Command Window
+## Add capabilities using TeamsFx CLI in command window
 
 1. Change directory to your **project directory**.
 1. Execute the following command to add different capabilities to your project:

@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# TeamsFx Command Line Interface
+# TeamsFx command line interface
 
 TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
@@ -25,7 +25,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
   teamsfx -h
 ```
 
-## Supported Commands
+## Supported commands
 
 | Command | Description |
 |----------------|-------------|

@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Customize Teams App Manifest in Teams Toolkit
+# Customize app manifest in Teams Toolkit
 
 Teams Toolkit consists of the following manifest template files under `templates/appPackage` folder:
 

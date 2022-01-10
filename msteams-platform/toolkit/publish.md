@@ -78,7 +78,7 @@ Perform the following steps to publish the app :
 2. Select the app name to go to the app details page, and then in the status box, select **Publish**.
 After you publish the app, the publishing status changes to published and the status automatically changes to allowed.
 
-## Publish to Microsoft Store
+## Publish to Microsoft store
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers. The apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 

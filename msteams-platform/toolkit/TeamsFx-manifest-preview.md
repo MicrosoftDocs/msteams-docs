@@ -24,7 +24,7 @@ The Template files consisting placeholders, and the actual values from Teams Too
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
 
-## Preview Manifest
+## Preview manifest
 
 To preview manifest with real content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
 
@@ -65,9 +65,9 @@ If there are more than one environment, you need to select the environment you w
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 
-## Sync local changes to Dev Portal
+## Sync local changes to Dev portal
 
-After previewing the manifest file, you can sync your local changes to Dev Portal by following the steps:
+After previewing the manifest file, you can sync your local changes to Dev portal by following the steps:
 
 1.  Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
 2. Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
