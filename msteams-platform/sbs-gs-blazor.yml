@@ -36,7 +36,7 @@ items:
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Visual Studio 2019](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202019), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Community 2019 (version 16.11). |
-    | &nbsp; | **Visual Studio Code Extensions** | •  [Azure Functions Core Tools](/azure/azure-functions/functions-run-local): Backend components locally during a local debug run. It includes the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). </br> •  [.NET SDK](/dotnet/core/install/): Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+    | &nbsp; | - Visual Studio Code Extensions | •  [Azure Functions Core Tools](/azure/azure-functions/functions-run-local): Backend components locally during a local debug run. It includes the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). </br> •  [.NET SDK](/dotnet/core/install/): Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot) require inbound connections. You can connect your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
@@ -69,7 +69,7 @@ items:
 
     To install the Teams Toolkit extension:
 
-    1. Open Visual Studio 2019.
+    1. Open Visual Studio 2019 using the **Continue without code ->** option on the opening page.
     1. Select **Extensions** > **Manage Extensions**.
     1. In the search box, enter **Teams Toolkit**.
     1. Select the Teams Toolkit extension and select **Download**. The extension is downloaded.
@@ -168,7 +168,7 @@ items:
 
     1. Select **Create a new project**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-project.png" alt-text="Illustration shows the option to create a new project." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-project.png" alt-text="Illustration shows the option to create a new project." border="false":::
 
         The **Create a new project** page appears.
 
@@ -186,7 +186,7 @@ items:
         
           The **Configure your new project** page appears.
 
-    1.  Configure the following project details.     
+    1.  Configure the new project details.     
 
           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-configure-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
