@@ -23,28 +23,20 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Introduced Azure Key vault feature for Toolkit in VS Code
-        url: • ~/toolkit/add-resource.md#add-cloud-resources-using-teamsfx-cli-in-command-window </br> • ~/toolkit/provision.md#resources-created-when-including-azure-key-vault-in-the-project
-      - text: Introduced CI/CD Update
-        url: ~/toolkit/use-CICD-template.md
+      - text: Teams Toolkit for Visual Studio Code (Preview)
+        url: ~/toolkit/teams-toolkit-fundamentals.md
       - text: Guidelines for apps linked to SaaS offerS
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
-      - text: Teams Toolkit for Visual Studio Code (Preview)
-        url: ~/toolkit/teams-toolkit-fundamentals.md
       - text: Microsoft Teams store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
       - text: Typeahead search in Adaptive Card
         url: ~/task-modules-and-cards/cards/dynamic-search.md
-      - text: Enable bots to receive all channel messages using resource-specific consent (RSC)
-        url: ~/bots/how-to/conversations/channel-messages-with-rsc.md  
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: Create low-code custom apps
-        url: ~/samples/teams-low-code-solutions.md
 
 - title: Tutorials
   linkLists:
