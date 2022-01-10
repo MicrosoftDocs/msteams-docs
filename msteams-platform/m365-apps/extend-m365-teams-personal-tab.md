@@ -182,6 +182,9 @@ Click on your app icon to launch and preview your app running in Outlook on the 
 
 ### Office on the web
 
+> [!IMPORTANT]
+> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Office.com support for Teams personal apps is available to your test tenant.
+
 To preview your app running in Office on the web, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 
 Click on your app icon to launch your app in Office Home.
