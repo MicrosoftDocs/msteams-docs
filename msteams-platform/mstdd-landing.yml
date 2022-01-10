@@ -23,8 +23,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Azure Key vault feature
-        url: toolkit/add-resource.md
+      - text: Azure Key vault feature for Toolkit in VS Code
+        url: ~/toolkit/add-resource.md
       - text: CI/CD Update
         url: ~/toolkit/use-CICD-template.md
       - text: Guidelines for apps linked to SaaS offerS
