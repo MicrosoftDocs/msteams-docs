@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Preview Teams app Manifest in Teams Toolkit
+# Preview Teams app manifest in Teams Toolkit
 
 After scaffolding, the following are the manifest template files available under `templates/appPackage` folder:
 
