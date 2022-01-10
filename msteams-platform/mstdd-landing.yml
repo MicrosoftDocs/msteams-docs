@@ -24,7 +24,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Azure Key vault feature
-        url: ~/toolkit/add-resource.md
+        url: toolkit/add-resource.md
       - text: CI/CD Update
         url: ~/toolkit/use-CICD-template.md
       - text: Guidelines for apps linked to SaaS offerS
