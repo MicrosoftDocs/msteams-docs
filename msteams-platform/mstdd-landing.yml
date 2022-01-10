@@ -24,13 +24,13 @@ landingContent:
     - linkListType: concept
       links:
       - text: Azure Key vault feature
-        url: • ~/toolkit/add-resource.md </br> • ~/toolkit/provision.md
+        url: ~/toolkit/add-resource.md
       - text: CI/CD Update
         url: ~/toolkit/use-CICD-template.md
       - text: Guidelines for apps linked to SaaS offerS
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Introduced new store icon
-        url: ~/concepts/design/personal-apps.mdS
+        url: ~/concepts/design/personal-apps.md
       - text: Teams Toolkit for Visual Studio Code (Preview)
         url: ~/toolkit/teams-toolkit-fundamentals.md
       - text: Microsoft Teams store validation guidelines
