@@ -24,7 +24,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Introduced Azure Key vault feature for Toolkit in VS Code
-        url: • ~/toolkit/add-resource.md </br> • ~/toolkit/provision.md
+        url: • ~/toolkit/add-resource.md#add-cloud-resources-using-teamsfx-cli-in-command-window </br> • ~/toolkit/provision.md#resources-created-when-including-azure-key-vault-in-the-project
       - text: Introduced CI/CD Update
         url: ~/toolkit/use-CICD-template.md
       - text: Guidelines for apps linked to SaaS offerS
@@ -40,8 +40,12 @@ landingContent:
       - text: Typeahead search in Adaptive Card
         url: ~/task-modules-and-cards/cards/dynamic-search.md
       - text: Enable bots to receive all channel messages using resource-specific consent (RSC)
-        url: ~/bots/how-to/conversations/channel-messages-with-rsc.md        
-        
+        url: ~/bots/how-to/conversations/channel-messages-with-rsc.md  
+      - text: Monetize your Teams app with a transactable SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: Create low-code custom apps
+        url: ~/samples/teams-low-code-solutions.md
+
 - title: Tutorials
   linkLists:
     - linkListType: concept
