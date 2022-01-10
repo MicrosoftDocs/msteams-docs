@@ -162,6 +162,8 @@ items:
     1. **Configure your new project** page: You enter the project details.
     1. **Create a new Teams application** page: You select the Teams app capabilities and the Microsoft 365 credentials.
 
+    **To create your tab project workspace**
+
     1. Open Visual Studio 2019.
 
     1. Select **Create a new project**.
