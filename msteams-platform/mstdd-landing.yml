@@ -25,18 +25,26 @@ landingContent:
       links:
       - text: Teams Toolkit for Visual Studio Code (Preview)
         url: ~/toolkit/teams-toolkit-fundamentals.md
-      - text: Guidelines for apps linked to SaaS offerS
-        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
-      - text: Microsoft Teams store validation guidelines
-        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
       - text: Typeahead search in Adaptive Card
         url: ~/task-modules-and-cards/cards/dynamic-search.md
+      
+
+- title: All time favorites
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Guidelines for apps linked to SaaS offerS
+        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
+      - text: Microsoft Teams store validation guidelines
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: Explore low-code apps for Teams
+        url:  ~/samples/teams-low-code-solutions  
 
 - title: Tutorials
   linkLists:
