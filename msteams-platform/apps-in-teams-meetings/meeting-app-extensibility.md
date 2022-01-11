@@ -211,7 +211,7 @@ The following list details the various user types along with their accessibility
 
 * **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
 * **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD. They have the same Teams capabilities as a native team member with access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
-* **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
+* **Federated or external**: A [federated user](https://docs.microsoft.com/en-us/microsoftteams/non-standard-users#external-federated-users) is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
@@ -228,11 +228,11 @@ A guest or anonymous user can't add, remove, or uninstall apps.
 
 The following table provides the user types and lists the features that each user can access:
 
-| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Not available | Only the meeting chat interactions are allowed. | Only the meeting chat interactions from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage |
-| Guest, part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage |
-| Federated user | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage |
+| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage | Content bubble |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Anonymous user | Not available | Not available | Not available | Only the meeting chat interactions are allowed. | Only the meeting chat interactions from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
+| Guest, part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
+| Federated user. | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
 
 ## Next step
 
