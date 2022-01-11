@@ -16,6 +16,9 @@ items:
   content: |
     Microsoft Teams helps you to interact with content bubble bot in Teams meeting.
 
+    > [!NOTE]
+    > Meeting content bubble is available only for AAD users and not for anonymous users.
+
     **Key features of meeting content bubble**
 
     * You will see agenda items listed in an Adaptive Card.
@@ -36,6 +39,9 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
     Ensure you have working knowledge of [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
 
 - title: Set up local environment
@@ -114,6 +120,8 @@ items:
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
     1. Next to **Microsoft App ID**, select **Manage**.
+
+    1. Select **Multitenant** under **App Type**.
 
         ![Microsoft App ID](~/assets/images/meeting-content-bubble/meeting-content-bubble-view-configuration.png)
 
