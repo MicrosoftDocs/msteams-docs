@@ -31,35 +31,35 @@ If the prerequisites are in place, let's begin!
 # [Visual Studio Code](#tab/vsc)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Create a new Teams app**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. Select **Create a new Teams app** to create an app using Teams Toolkit.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="false":::
 
 1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
 1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
     The Teams tab app is created in a few seconds.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="Screenshot showing the app created." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
     After your app is created, Teams Toolkit displays a message to indicate the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
 
     The message offers two options:
         
@@ -106,7 +106,7 @@ If the prerequisites are in place, let's begin!
 
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/hw-folder-structure-tab.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/hw-folder-structure-tab.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
 
     Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
@@ -124,7 +124,7 @@ If the prerequisites are in place, let's begin!
     | - `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
     | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
     | - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
-    | - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../msteams-platform/tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
+    | - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
     | - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
     | - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
     | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
@@ -147,7 +147,7 @@ If the prerequisites are in place, let's begin!
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
         Your default web browser opens to let you sign in to the account.
@@ -158,7 +158,7 @@ If the prerequisites are in place, let's begin!
 
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. Teams Toolkit displays **Sideloading enabled** if sideloading is enabled for your Microsoft 365 account.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
         Now you're ready to build the app and run it in the local environment!
 
@@ -208,7 +208,7 @@ If the prerequisites are in place, let's begin!
 
         </details>
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
     > [!NOTE]
     > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
@@ -217,11 +217,11 @@ If the prerequisites are in place, let's begin!
 
     1. Select **Yes** if the following dialog appears:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
     Or select **Continue**, depending on your operating system:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
 
     Teams web client opens in a browser window.
 
@@ -229,27 +229,27 @@ If the prerequisites are in place, let's begin!
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Add the app to Teams":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Add the app to Teams":::
 
     1. Congratulations, your first app is running on Teams!
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-debug.png" alt-text="Screenshot of the completed app":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-local-debug.png" alt-text="Screenshot of the completed app":::
 
     1. Move through the page to view the user details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-authorize.png" alt-text="Screenshot of the user information section on tab":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-local-authorize.png" alt-text="Screenshot of the user information section on tab":::
         
     1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
         The app requests permission to grant access for displaying user details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission.png" alt-text="Screenshot of authorizing app for accessing user details":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission.png" alt-text="Screenshot of authorizing app for accessing user details":::
 
     1. Select **Accept** to let your app access user details.
 
         Your photograph and details appear in your personal tabs.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-user-info.png" alt-text="Screenshot of the user information on tab":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-user-info.png" alt-text="Screenshot of the user information on tab":::
 
         You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
@@ -296,35 +296,35 @@ If the prerequisites are in place, let's begin!
     # [Visual Studio Code](#tab/vscde)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
     1. Select **Bot**, deselect **Tab**, and select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
     1. Select **JavaScript** in the **Programming Language** section.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
     1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
         Your Teams app with a Bot capability is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created." border="false":::
 
         After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
 
         The message offers two options:
 
@@ -369,7 +369,7 @@ If the prerequisites are in place, let's begin!
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hw-folder-structure-bot.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/hw-folder-structure-bot.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
 
     | Folder name | Contents |
     | --- | --- |
@@ -402,7 +402,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 # [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
 1. Select **Sign in to M365**.
 
     Your default web browser opens to let you sign in to the account.
@@ -413,7 +413,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
     Now you're ready to build the app and run it locally!
 
@@ -462,7 +462,7 @@ To build and run your app in the local environment:
 
 </details>
 
-:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
 
 > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
 
@@ -472,15 +472,15 @@ Your web browser starts to run the app.
 
 1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
 
     Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot showing the bot is running on Teams client.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot showing the bot is running on Teams client.":::
 
     You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
 
     You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then, type some text.
 
@@ -511,8 +511,8 @@ Messaging Extension capability lets you interact with a web service. Use the com
 
 There are two types of Teams **messaging extensions**:
 
-- [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
-- [Action commands](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
+- [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
+- [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
 Let's create a messaging extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
 
@@ -536,35 +536,35 @@ If the prerequisites are in place, let's begin!
 # [Visual Studio Code](#tab/vsc)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Create New Project** from the left-hand side of the Toolkit.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. Select **Create New Project** to create an app using the Teams Toolkit.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
 1. Select **Messaging Extension**, deselect **Tab**, and select **OK**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-language-mex.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/select-language-mex.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
 1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-name-mex.png" alt-text="Screenshot showing how to enter the app name." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/enter-name-mex.png" alt-text="Screenshot showing how to enter the app name." border="false":::
 
 Teams Toolkit creates the app in a few seconds.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot showing the app created." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot showing the app created." border="false":::
 
     After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This is the default location specified in Visual Studio Code settings.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
 
     The message offers two options:
         
@@ -610,7 +610,7 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 A messaging extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/hw-folder-structure-mex.png" alt-text="File layout of a bot project" border="false":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hw-folder-structure-mex.png" alt-text="File layout of a bot project" border="false":::
 
 | Folder name | Contents |
 | --- | --- |
@@ -643,7 +643,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 # [Visual Studio Code](#tab/vcode)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
 1. Select **Sign in to M365**.
 
     Your default web browser opens to let you sign in to the account.
@@ -654,7 +654,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
     The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Teams Toolkit displays **Sideloading enabled** if sideloading is enabled for your Microsoft 365 account.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
     Now you're ready to build the app and run it locally!
 
@@ -703,7 +703,7 @@ When you select **F5**, the Teams Toolkit:
 
 </details>
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
 
 > [!NOTE]
 > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
@@ -713,11 +713,11 @@ Teams opens in a web browser.
 1. Sign in with your Microsoft 365 account, if prompted.
 1. Select **Add** to add the app to your account.
     
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png" alt-text="Screenshot shows message to add the app" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png" alt-text="Screenshot shows message to add the app" border="false":::
 
     The toolkit displays a message to indicate that the app is added to Teams.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
  
     - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
     - If you select **Try it**, Teams loads your app.
@@ -726,7 +726,7 @@ Teams opens in a web browser.
 
     The Messaging Extension app is loaded in a chat bot app.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows app sideloaded in Teams" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows app sideloaded in Teams" border="false":::
 
     As messaging extension apps rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
 
@@ -741,15 +741,15 @@ The first time your app loads, the messaging extension app is open for you to te
 
 1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search" border="true":::
 
 1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot that shows the search result" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
 1. Select the **Send** instructions.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot that shows the search result sent on chat" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot that shows the search result sent on chat" border="false":::
     
     Now, you've learned how to build and run a basic messaging extension app!         
 
@@ -763,21 +763,21 @@ You've tested the search feature of a basic messaging extension app. Now, you ca
 
 1. Select **Create Card**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows how to create a card" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows how to create a card" border="false":::
 
 1. Enter the card details as shown, and select **Submit**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot that shows how to add a card details" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot that shows how to add a card details" border="true":::
 
     Your card details appear in the compose area.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows how to add a card details" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows how to add a card details" border="true":::
 
 1. Select the **Send** icon from the compose area.
 
     The app sends the card on the bot chat.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent" border="false":::
 </details>
     <br>
 <details>
@@ -791,28 +791,28 @@ Choose one of the following ways to open your app.
         
     The app opens the search box and you can use it to run a query.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot that shows how to @mention the messaging extension app" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot that shows how to @mention the messaging extension app" border="false":::
 
 1. Enter a search string, and select one from the search result.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot that shows how to run a search using the messaging extension app" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot that shows how to run a search using the messaging extension app" border="false":::
 
 It displays in the command area as a card.
 
 1. Copy the card to paste it in the compose area.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot that shows search result in a card" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot that shows search result in a card" border="false":::
         
 1. Send the card using the compose area.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot that shows search result in a chat" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot that shows search result in a chat" border="false":::
 
 **Using three-dot icon:**
 
 1. Launch the messaging extension from three dots at the bottom of the composing area.
 1. Select your messaging extension app.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
 
     The messaging extension app loads with the options to run a search and create adaptive cards.
 </details>
@@ -825,7 +825,7 @@ You can open a sideloaded Teams app from the list of sideloaded apps.
 1. Select the **Store** icon from the Teams sidebar.
 1. Select the **Manage apps**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot that shows sideloaded apps" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot that shows sideloaded apps" border="false":::
 
 1. Select the three dots icon for your app, and then select **View details**. You can also copy link to the app and use it to open the app.
 1. Select **Open** to load the app, and then select **Try it**. 
