@@ -96,27 +96,27 @@
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Create new project
       href: toolkit/create-new-project.md
-    - name: Prepare Accounts to build Teams app
+    - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
-    - name: Provision Cloud Resources
+    - name: Provision cloud resources
       href: toolkit/provision.md
-    - name: Deploy Teams App to the cloud
+    - name: Deploy Teams app to the cloud
       href: toolkit/deploy.md
     - name: Publish Teams apps using Teams Toolkit 
       href: toolkit/publish.md
-    - name: Add Capabilities to Teams App
+    - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
-    - name: Add Cloud Resources to Teams App
+    - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
-    - name: Customize Teams App Manifest
+    - name: Customize Teams app manifest
       href: toolkit/TeamsFx-manifest-customization.md
-    - name: Preview Teams App Manifest
+    - name: Preview Teams app manifest
       href: toolkit/TeamsFx-manifest-preview.md
-    - name: Manage Multiple Environments
+    - name: Manage multiple environments
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: Use CI/CD workflow
+    - name: CI/CD guide
       href: toolkit/use-CICD-template.md
     - name: Teams Toolkit CLI
       href: toolkit/TeamsFx-CLI.md
