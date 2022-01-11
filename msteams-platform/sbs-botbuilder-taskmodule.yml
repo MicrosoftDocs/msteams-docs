@@ -148,7 +148,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/meetings-side-panel/gotohome.png)
+        ![Home page](~/assets/images/Teams-task-module/gotohome.png)
 
     1. Select your bot from **Recent resources**.
 
@@ -181,7 +181,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok1.png)
+        ![ngrok HTTPS URL](~/assets/images/Teams-task-module/ngrok.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -191,7 +191,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/meetings-side-panel/messaging-endpoint.png)
+        ![Messaging Endpoint](~/assets/images/Teams-task-module/messaging-endpoint.png)
 
     1. Select **Apply**.
 
@@ -210,24 +210,24 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/meetings-side-panel/appregister.png)
+       ![App registration](~/assets/images/Teams-task-module/appregister.png)
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/meetings-side-panel/exposeanapi.png)
+       ![Expose an API](~/assets/images/Teams-task-module/exposeanapi.png)
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/meetings-side-panel/setlink.png)
+       ![Set link](~/assets/images/Teams-task-module/setlink.png)
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://ae57****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/meetings-side-panel/appIDuri.png)
+        ![App ID URI](~/assets/images/Teams-task-module/appIDuri.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
