@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to set up Connectors for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 12/06/2021
+  ms.date: 01/15/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: 
   nextTutorialTitle: Read more on Webhooks and Connectors
@@ -114,15 +114,36 @@ items:
 
        ![sln path](~/assets/images/sbs-connector/sln.png)
 
+    1. Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+     ```bash
+     ngrok http -host-header=localhost 3978
+     ``` 
+       > [!TIP]
+       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+
+       ![ngrok path](~/assets/images/sbs-connector/ngrok.png)
+
+    1. Perform the steps to register a new connector in the Connector Developer Portal:
+
+       1. Fill in all the basic details such as name, logo, descriptions etc. for the new connector.
+       1. For the configuration page, you'll use our sample code's setup endpoint: https://[BASE_URI]/connector/setup.
+       1. For Valid domains, make enter your domain's http or https URL, e.g. XXXXXXXX.ngrok.io.
+       1. Enable the action on connector card by selecting the Yes radio button and enter the update endpoint: https://[BASE_URI]/Task/Update.
+       1. Click on Save. After the save completes, you will see your connector id.
+
+    1. In the Web.config file, set the configuration.appSettings.Base_Uri variable to the ngrok https forwarding url from the above.
+    1. In Visual Studio, click the play button.
+    1. Now you can sideload your app package and test your new connector.
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
-
+       [Place holder for image]
 
 - content: |
-    You've completed the tutorial to get started with a **Side Panel** app!
+    You've completed the tutorial to get started with a **Microsoft Teams Connectors**!
 
 
