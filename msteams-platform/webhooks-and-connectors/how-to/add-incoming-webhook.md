@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 # Create Incoming Webhook
 
-Incoming Webhook allows any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards[Cards](../../task-modules-and-cards/what-are-cards.md#cards) are user interface containers that include content and actions related to a single topic. Teams use cards within the following capabilities:
+Incoming Webhook allows any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you can send a JSON payload with a message in card(../../task-modules-and-cards/what-are-cards.md#cards) format. Teams use cards within the following capabilities:
 
 * Bots
 * Messaging extensions
@@ -20,7 +20,7 @@ Incoming Webhook allows any external apps to share content in Teams channels. Th
 
 The following table provides the features and description of Incoming Webhook:
 
-| Features | Description |
+| Feature | Description |
 | ------- | ----------- |
 |Adaptive Cards using an Incoming Webhook|Adaptive Cards can be sent through Incoming Webhooks. For more information, see [Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
 |Actionable messaging support|Actionable message cards are supported in all Office 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
