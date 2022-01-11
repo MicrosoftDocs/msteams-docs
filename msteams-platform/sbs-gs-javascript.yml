@@ -441,7 +441,7 @@ items:
     > [!NOTE]
     > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
 
-    # [Visual Studio Code](#tab/vscde)
+    # [Visual Studio Code](#tab/vscd)
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.

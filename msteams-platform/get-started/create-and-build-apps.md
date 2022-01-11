@@ -1,7 +1,7 @@
 ---
 description: Learn to build Hello World app with JavaScript.
 title: Create a new project that uses the Windows App SDK 
-ms.date: 11/01/2022
+ms.date: 01/11/2022
 zone_pivot_groups: teams-app-type
 ms.topic: article
 keywords: Teams app, tab, bots, messaging extension, JavaScript
@@ -28,7 +28,7 @@ If the prerequisites are in place, let's begin!
 > [!NOTE]
 > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
 
-# [Visual Studio Code](#tab/vsc)
+# [Visual Studio Code](#tab/vscd)
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
@@ -274,7 +274,7 @@ You've built your tab app. Now let's create your first bot app.
     
 The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted." border="false":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted." border="false":::
     
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
@@ -293,7 +293,7 @@ If the prerequisites are in place, let's begin!
 > [!NOTE]
 > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
 
-# [Visual Studio Code](#tab/vscde)
+# [Visual Studio Code](#tab/vs)
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
@@ -369,7 +369,7 @@ If the prerequisites are in place, let's begin!
 
 After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/hw-folder-structure-bot.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/hw-folder-structure-bot.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
 
 | Folder name | Contents |
 | --- | --- |
@@ -703,7 +703,7 @@ When you select **F5**, the Teams Toolkit:
 
 </details>
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
 
 > [!NOTE]
 > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
@@ -771,7 +771,7 @@ You've tested the search feature of a basic messaging extension app. Now, you ca
 
     Your card details appear in the compose area.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows how to add a card details" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows adding a card details" border="true":::
 
 1. Select the **Send** icon from the compose area.
 
