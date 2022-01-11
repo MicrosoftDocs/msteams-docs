@@ -158,7 +158,7 @@ items:
 
     ::: zone pivot="tab-app"
 
-    ## Create your tab app workspace
+    ## Create your tab app
 
     Start Microsoft Teams app development by creating your first app. This app uses the Tab capability.
 
@@ -168,7 +168,7 @@ items:
     1. [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project-workspace)
     1. [About the directory structure of your app](#take-a-tour-of-the-tab-app-source-code)
 
-    ## Create your tab project workspace
+    ### Create your tab project workspace
 
     If the prerequisites are in place, let's begin!
 
@@ -249,7 +249,7 @@ items:
 
     ---
 
-    ## Take a tour of the tab app source code
+    ### Take a tour of the tab app source code
 
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
@@ -282,12 +282,12 @@ items:
 
     When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
-    ## Build your tab app
-
+    ### Build and run your tab app locally
+    
     After you set up your project workspace with Teams Toolkit, build your tab project. 
     You'll need to sign in to your Microsoft 365 account.
 
-    ## Sign in to your Microsoft 365 account
+    #### Sign in to your Microsoft 365 account
 
     Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
@@ -333,7 +333,7 @@ items:
 
     ---
 
-    ## Build and run your app locally in Visual Studio Code
+    #### Build and run your app in local environment
 
     To build and run your app locally:
 
@@ -411,11 +411,11 @@ items:
 
       You know how to use Toolkit to set up a tab app and run it locally. Next, let's learn how to build a conversational chat bot with Toolkit!
 
-      ::: zone-end
+    ::: zone-end
 
-- title: Create project workspace for your bot app
-  durationInMinutes: 1
-  content: |
+    ::: zone pivot="bot-app"
+
+    ## Create your bot app 
 
     You've built your tab app. Now let's create your first bot app.
     
@@ -433,7 +433,7 @@ items:
     > [!IMPORTANT]
     > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
 
-    ## Create your bot project workspace
+    ### Create your bot project workspace
 
     If the prerequisites are in place, let's begin!
 
@@ -512,7 +512,7 @@ items:
 
     ---
 
-    ## Take a tour of the bot app source code
+    ### Take a tour of the bot app source code
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
@@ -538,13 +538,11 @@ items:
     > [!Tip]
     > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
 
-- title: Build and run your first bot app
-  durationInMinutes: 1
-  content: |
+    ### Build and run your first bot app locally
 
     After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
 
-    ## Sign in to your Microsoft 365 account
+    #### Sign in to your Microsoft 365 account
 
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
@@ -590,7 +588,7 @@ items:
 
     ---
 
-    ## Build and run your first bot app locally
+    #### Build and run your first bot app locally
 
     To build and run your app in the local environment:
 
@@ -647,9 +645,11 @@ items:
       > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
       </details> 
 
-- title: Create project workspace for your messaging extension app
-  durationInMinutes: 1
-  content: |
+    ::: zone-end
+
+    ::: zone pivot="mex-app"
+
+    ## Create your Messaging Extension app
 
     You've built your bot app. Now, let's create your first messaging extension app.
 
@@ -675,7 +675,7 @@ items:
     1. [How to set up a new Messaging Extension project with Teams Toolkit.](#create-your-messaging-extension-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-messaging-extension-app-source-code)
 
-    ## Create your messaging extension project workspace
+    ### Create your messaging extension project workspace
 
     If the prerequisites are in place, let's begin!
 
@@ -755,7 +755,7 @@ items:
 
     ---
 
-    ## Take a tour of the messaging extension app source code
+    ### Take a tour of the messaging extension app source code
 
     A messaging extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
@@ -781,13 +781,11 @@ items:
     > [!Tip]
     > Familiarize yourself with bots and messaging extension outside of Teams before you integrate your app within Teams.
 
-- title: Build and run your first messaging extension app
-  durationInMinutes: 1
-  content: |
+    ### Build and run your first Messaging Extension app locally
 
-    After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
+    After you set up your project workspace with Teams Toolkit, build your project. You'll need to sign in to your Microsoft 365 account.
 
-    ## Sign in to your Microsoft 365 account
+    #### Sign in to your Microsoft 365 account
 
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
@@ -833,7 +831,7 @@ items:
 
     ---
 
-    ## Build and run your app in the local environment
+    ### Build and run your app in the local environment
 
     A messaging extension lets you interact with a web service. It takes advantage of the messaging feature and secure communication of a bot. The messaging extension app is added to a web service registered as a bot. 
     
@@ -991,6 +989,8 @@ items:
 
     To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. You can learn more about sideloading in the Prerequisites section.
     </details>
+
+::: zone-end
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
