@@ -65,13 +65,13 @@ landingContent:
           url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
-        - text: Step-by-step guide for generating meeting token
+        - text: Generate a meeting token to extend a meeting
           url: ~/sbs-meeting-token-generator.yml
-        - text: Step-by-step guide for creating meeting sidepanel
+        - text: Create a meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Step-by-step guide for meeting stage view
+        - text: Generate a Meetings Stage View
           url: ~/sbs-meetings-stage-view.yml
-        - text: Step-by-step guide for meeting content bubble
+        - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
         
 - title: Get started
