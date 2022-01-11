@@ -1,7 +1,7 @@
 ---
 description: Learn to build Hello World app with JavaScript.
 title: Create a new project that uses the Windows App SDK 
-ms.date: 11/1/2022
+ms.date: 11/01/2022
 zone_pivot_groups: teams-app-type
 ms.topic: article
 keywords: Teams app, tab, bots, messaging extension, JavaScript
@@ -268,73 +268,73 @@ If the prerequisites are in place, let's begin!
 
    ::: zone pivot="bot-app"
 
-    ## Create your bot app
+## Create your bot app
 
-    You've built your tab app. Now let's create your first bot app.
+You've built your tab app. Now let's create your first bot app.
     
-    The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
+The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted." border="false":::
     
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
+As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
-    In this tutorial, you'll learn:
+In this tutorial, you'll learn:
 
-    1. [How to set up a new Bot project with Teams Toolkit.](#create-your-bot-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
+1. [How to set up a new Bot project with Teams Toolkit.](#create-your-bot-project-workspace)
+1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
-    > [!IMPORTANT]
-    > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
+> [!IMPORTANT]
+> Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
 
-    ### Create your bot project workspace
+### Create your bot project workspace
 
-    If the prerequisites are in place, let's begin!
+If the prerequisites are in place, let's begin!
+
+> [!NOTE]
+> The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
+
+# [Visual Studio Code](#tab/vscde)
+
+1. Open Visual Studio Code.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+
+1. Select **Create a new Teams app**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+
+1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
+
+1. Select **Bot**, deselect **Tab**, and select **OK**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
+
+1. Select **JavaScript** in the **Programming Language** section.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+
+1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name." border="false":::
+
+    Your Teams app with a Bot capability is created in a few seconds.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created." border="false":::
+
+    After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
+
+    The message offers two options:
+
+    - **Change location**
+    - **Local Debug**
+
+    For this tutorial, you don't need to use these options.
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
-
-    # [Visual Studio Code](#tab/vscde)
-
-    1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
-
-    1. Select **Create a new Teams app**.
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
-
-    1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
-
-    1. Select **Bot**, deselect **Tab**, and select **OK**.
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
-
-    1. Select **JavaScript** in the **Programming Language** section.
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="Screenshot showing how to select the programming language." border="false":::
-
-    1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name." border="false":::
-
-        Your Teams app with a Bot capability is created in a few seconds.
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created." border="false":::
-
-        After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings.
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
-
-        The message offers two options:
-
-        - **Change location**
-        - **Local Debug**
-
-        For this tutorial, you don't need to use these options.
-
-        > [!NOTE]
-        > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
+    > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
@@ -365,31 +365,31 @@ If the prerequisites are in place, let's begin!
 
     ---
 
-    ### Take a tour of the bot app source code
+### Take a tour of the bot app source code
 
-    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/hw-folder-structure-bot.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
 
-    | Folder name | Contents |
-    | --- | --- |
-    | `.fx/configs` | Configuration files that user can customize for the Teams app. |
-    | `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
-    | `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
-    | `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
-    | `.fx/configs/localSettings.json` | Configuration file for local debugging. |
-    | `.fx/states` | Provision output that is generated by the Toolkit.  The toolkit creates this folder after you provision resources for your app. |
-    | `.fx/states/state.<envName>.json` | Provision output file for every environment. |
-    | `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
-    | `bot` |  Code for the Bot capability needed at runtime. |
-    | `bot/teamsBot.js` | Main entry point for the bot app. |
-    | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
-    | `templates/appPackage/manifest.local.template.json` | App manifest for running the app in local environment  |
-    | `templates/appPackage/manifest.remote.template.json` | App manifest for running the app in remote environment, such as Azure site |
-    | `templates/azure` | BICEP template files |
+| Folder name | Contents |
+| --- | --- |
+| `.fx/configs` | Configuration files that user can customize for the Teams app. |
+| `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
+| `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
+| `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
+| `.fx/configs/localSettings.json` | Configuration file for local debugging. |
+| `.fx/states` | Provision output that is generated by the Toolkit.  The toolkit creates this folder after you provision resources for your app. |
+| `.fx/states/state.<envName>.json` | Provision output file for every environment. |
+| `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
+| `bot` |  Code for the Bot capability needed at runtime. |
+| `bot/teamsBot.js` | Main entry point for the bot app. |
+| `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
+| `templates/appPackage/manifest.local.template.json` | App manifest for running the app in local environment  |
+| `templates/appPackage/manifest.remote.template.json` | App manifest for running the app in remote environment, such as Azure site |
+| `templates/azure` | BICEP template files |
 
-    > [!Tip]
-    > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
+> [!Tip]
+> Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
 
 ### Build and run your first bot app locally
 
@@ -451,14 +451,14 @@ To build and run your app in the local environment:
 <details>
 <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-    In case you're wondering, when you press the **F5** key, the Teams Toolkit:
+In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
-    - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-    - *Sideloads* the app in Teams.
-    - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-    - Starts the app's frontend hosted locally.
-    - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-    - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+- Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
+- *Sideloads* the app in Teams.
+- Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+- Starts the app's frontend hosted locally.
+- Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
+- An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
 </details>
 
@@ -507,7 +507,7 @@ You've built your bot app. Now, let's create your first messaging extension app.
 
 Messaging Extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. messaging extension is highlighted." border="false":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. messaging extension is highlighted." border="false":::
 
 There are two types of Teams **messaging extensions**:
 
@@ -558,7 +558,7 @@ If the prerequisites are in place, let's begin!
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/enter-name-mex.png" alt-text="Screenshot showing how to enter the app name." border="false":::
 
-Teams Toolkit creates the app in a few seconds.
+    Teams Toolkit creates the app in a few seconds.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot showing the app created." border="false":::
 
@@ -567,10 +567,10 @@ Teams Toolkit creates the app in a few seconds.
     :::image type="content" source="../assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
 
     The message offers two options:
-        
+
     - **Change location**
     - **Local Debug**
-        
+
     For this tutorial, you don't need to use these options.
 
     > [!NOTE]
@@ -718,7 +718,7 @@ Teams opens in a web browser.
     The toolkit displays a message to indicate that the app is added to Teams.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
- 
+
     - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
     - If you select **Try it**, Teams loads your app.
 
@@ -779,16 +779,16 @@ You've tested the search feature of a basic messaging extension app. Now, you ca
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent" border="false":::
 </details>
-    <br>
+<br>
 <details>
 <summary>To open your app from compose area</summary>
 
 Choose one of the following ways to open your app.
-    
+
 **Using `@mention`:**
-    
+
 1. Enter `@your-app-name` in the command area of your app.
-        
+
     The app opens the search box and you can use it to run a query.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot that shows how to @mention the messaging extension app" border="false":::
