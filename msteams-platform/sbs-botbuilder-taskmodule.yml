@@ -148,7 +148,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/Teams-task-module/gotohome.png)
+        ![Home page](~/assets/images/meetings-side-panel/gotohome.png)
 
     1. Select your bot from **Recent resources**.
 
@@ -160,11 +160,11 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/Teams-task-module/terms.png)
+          ![Terms of service](~/assets/images/meetings-side-panel/terms.png)
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/Teams-task-module/config-teams.png)   
+          ![Select Teams](~/assets/images/meetings-side-panel/config-teams.png)   
     
     **To create tunnel for local web server**
 
@@ -181,7 +181,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/Teams-task-module/ngrok1.png)
+        ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok1.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -191,7 +191,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/Teams-task-module/messaging-endpoint.png)
+        ![Messaging Endpoint](~/assets/images/meetings-side-panel/messaging-endpoint.png)
 
     1. Select **Apply**.
 
@@ -210,24 +210,24 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/Teams-task-module/appregister.png)
+       ![App registration](~/assets/images/meetings-side-panel/appregister.png)
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/Teams-task-module/exposeanapi.png)
+       ![Expose an API](~/assets/images/meetings-side-panel/exposeanapi.png)
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/Teams-task-module/setlink.png)
+       ![Set link](~/assets/images/meetings-side-panel/setlink.png)
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://ae57****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/Teams-task-module/appIDuri.png)
+        ![App ID URI](~/assets/images/meetings-side-panel/appIDuri.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -235,7 +235,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/Teams-task-module/selectscope.png)
+       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -255,35 +255,35 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/Teams-task-module/addascope.png)
+        ![Add a scope](~/assets/images/meetings-side-panel/addascope.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/Teams-task-module/scopes.png) 
+        ![Scopes](~/assets/images/meetings-side-panel/scopes.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/Teams-task-module/selectclientapp.png) 
+        ![Select client application](~/assets/images/meetings-side-panel/selectclientapp.png) 
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        ![Add client application 1](~/assets/images/Teams-task-module/addclientapplication1.png) 
+        ![Add client application 1](~/assets/images/meetings-side-panel/addclientapplication1.png) 
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        ![Add client application 2](~/assets/images/Teams-task-module/addclientapplication2.png) 
+        ![Add client application 2](~/assets/images/meetings-side-panel/addclientapplication2.png) 
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/Teams-task-module/authorizedscope.png) 
+        ![Add client application 2](~/assets/images/meetings-side-panel/authorizedscope.png) 
 
        The following image displays the client IDs:
 
-        ![Client applications](~/assets/images/Teams-task-module/clientapps.png) 
+        ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
   
     1. In the left panel, select **API Permissions**. 
 
@@ -292,7 +292,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/Teams-task-module/addpermission.png)
+        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
 
     1. Select **Microsoft Graph**.
 
@@ -300,7 +300,7 @@ items:
 
         By default, **User.Read** is selected.
 
-         ![User](~/assets/images/Teams-task-module/userpermission.png)
+         ![User](~/assets/images/meetings-side-panel/userpermission.png)
 
     1. Add the following permissions:</br>
          * **email**
@@ -310,7 +310,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/Teams-task-module/other-permissions.png)
+         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions.png)
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -320,7 +320,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/Teams-task-module/webauth.png)
+            ![Web](~/assets/images/meetings-side-panel/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://ae57****.ngrok.io/auth-end`. </br>
@@ -331,14 +331,14 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/Teams-task-module/authend.png)
+            ![Auth-end](~/assets/images/meetings-side-panel/authend.png)
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/Teams-task-module/appsettingslocation.png)
+        ![App settings location](~/assets/images/meetings-side-panel/appsettingslocation.png)
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
@@ -346,18 +346,18 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        ![App settings](~/assets/images/Teams-task-module/appsettings.png)
+        ![App settings](~/assets/images/meetings-side-panel/appsettings.png)
 
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/Teams-task-module/manifestlocation.png)
+        ![Manifest file location](~/assets/images/meetings-side-panel/manifestlocation.png)
     
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/Teams-task-module/manifest-2.png)
+        ![Manifest image2](~/assets/images/meetings-side-panel/manifest-2.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -373,7 +373,7 @@ items:
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/Teams-task-module/Tokenfileready.png)
+          ![Solution File](~/assets/images/meetings-side-panel/Tokenfileready.png)
 
        1. Press **F5** to run the project.
     
@@ -383,7 +383,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/Teams-task-module/appisready.png) 
+          ![App ready](~/assets/images/meetings-side-panel/appisready.png) 
 
         
     # [Command line](#tab/cli)
@@ -394,7 +394,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/Teams-task-module/dotnetruncmd.png)
+    ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
 
 
 
