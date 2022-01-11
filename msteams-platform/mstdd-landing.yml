@@ -55,15 +55,15 @@ landingContent:
         
     - linkListType: tutorial
       links:
-        - text: Step-by-step guide for Tab device permissions
+        - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
-        - text: Step-by-step guide with SSO for tabs and messaging extensions
+        - text: Configure SSO for tabs and messaging extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
-        - text: Step-by-step guide for tabs with adaptive cards
+        - text: Build tabs with adaptive cards
           url: ~/sbs-tab-with-adaptive-cards.yml
-        - text: Step-by-step guide for Proactive messages
+        - text: Build a bot to send Proactive messages
           url: ~/sbs-send-proactive.yml
-        - text: Step-by-step guide for adding authentication to bots
+        - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
         - text: Step-by-step guide for generating meeting token
           url: ~/sbs-meeting-token-generator.yml
