@@ -11,6 +11,7 @@ metadata:
   nextTutorialTitle: Back to Get started overview
   ms.custom: mvc
   ms.localizationpriority: none
+  zone_pivot_groups: teams-app-type
 items:
 - durationInMinutes: 1
   content: |
@@ -151,9 +152,13 @@ items:
 
    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first.
 
-- title: Create project workspace for your tab app
+- title: Create and build your app
   durationInMinutes: 1
   content: |
+
+    ::: zone pivot="tab-app"
+
+    ## Create your tab app workspace
 
     Start Microsoft Teams app development by creating your first app. This app uses the Tab capability.
 
@@ -277,9 +282,7 @@ items:
 
     When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
-- title: Build and run your first tab app
-  durationInMinutes: 1
-  content: |
+    ## Build your tab app
 
     After you set up your project workspace with Teams Toolkit, build your tab project. 
     You'll need to sign in to your Microsoft 365 account.
@@ -406,7 +409,9 @@ items:
 
       </details>
 
-      You know how to use Toolkit to set up a tab app and run it locally. Next, let’s learn how to build a conversational chat bot with Toolkit!
+      You know how to use Toolkit to set up a tab app and run it locally. Next, let's learn how to build a conversational chat bot with Toolkit!
+
+      ::: zone-end
 
 - title: Create project workspace for your bot app
   durationInMinutes: 1
