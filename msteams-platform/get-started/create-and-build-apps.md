@@ -1,10 +1,10 @@
 ---
+title: Create and build a Teams app with JavaScript
 description: Learn to build Hello World app with JavaScript.
-title: Create a new project that uses the Windows App SDK 
+
+ms.topic: article 
 ms.date: 01/11/2022
 zone_pivot_groups: teams-app-type
-ms.topic: article
-keywords: Teams app, tab, bots, messaging extension, JavaScript
 ---
 
 # Create and build your first Teams apps
