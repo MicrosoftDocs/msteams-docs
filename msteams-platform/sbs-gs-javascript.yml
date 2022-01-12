@@ -491,7 +491,7 @@ items:
     ![Create a Teams app](~/assets/videos/javascript-bot-app.gif)
     </details>
 
-    # [Command line](#tab/cline)
+    # [Command line](#tab/cmdline)
 
     Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
 
@@ -565,7 +565,7 @@ items:
 
         Now you're ready to build the app and run it locally!
 
-    # [Command line](#tab/cline)
+    # [Command line](#tab/cmd)
 
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
@@ -1026,7 +1026,7 @@ items:
         Congratulations, you have created three types of Teams apps! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
-    # [Command line](#tab/cline)
+    # [Command line](#tab/command)
 
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
