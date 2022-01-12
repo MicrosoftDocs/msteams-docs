@@ -293,7 +293,7 @@ If the prerequisites are in place, let's begin!
 > [!NOTE]
 > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
 
-# [Visual Studio Code](#tab/vs)
+# [Visual Studio Code](#tab/vstudio)
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
@@ -533,7 +533,7 @@ If the prerequisites are in place, let's begin!
 > [!NOTE]
 > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
 
-# [Visual Studio Code](#tab/vsc)
+# [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
@@ -640,7 +640,7 @@ After you set up your project workspace with Teams Toolkit, build your project. 
 
 Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-# [Visual Studio Code](#tab/vcode)
+# [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
