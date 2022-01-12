@@ -408,7 +408,91 @@ items:
    
     ![Dotnet](~/assets/images/Teams-task-module/dotnetruncmd.png)
 
+- title: Upload Task Module app
+  durationInMinutes: 1
+  content: |
+    **To add Task Module app to Teams**
 
+    1. In your cloned repository, navigate to **csharp_dotnetcore > 54.teams-task-module > TeamsAppManifest**.
+
+    1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       ![Zip file](~/assets/images/Teams-task-module/zipfile.png) 
+    
+    1. Create a meeting with a few presenters and attendees.
+   
+    1. After the meeting is created, go to the meeting details page and select **Add an app**.
+
+       ![Add an app](~/assets/images/meetings-side-panel/addanapp.png) 
+   
+    1. In the pop-up that opens, select **Manage apps**.
+
+       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
+   
+    1. Select **Upload a custom app**. 
+
+       ![Upload custom app](~/assets/images/meetings-side-panel/uploadcustomapp.png)
+
+    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+
+       ![Select zip file](~/assets/images/meetings-side-panel/selectzip.png)
+
+    1. Select **Add**.
+
+       ![Add the app](~/assets/images/meetings-side-panel/addtheapp.png)
+
+       The **Manage apps** section displays the list of applications.
+
+       ![App in Manage apps](~/assets/images/meetings-side-panel/manageappsection.png)
+   
+    1. Go to Teams meeting.
+    
+    1. Select **Add an app**. 
+    
+       In the app selection page, the app displays as **Side Panel**.
+  
+       ![App icon in Teams](~/assets/images/meetings-side-panel/appicon.png)
+
+    1. Select the **Side Panel** app.
+    
+    1. Select **Save**.
+
+       ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
+   
+       The app is visible in the meeting SidePanel.         
+
+- title: Interact with the app in Teams
+  durationInMinutes: 1
+  content: |
+    Let's interact with the app in Teams!
+
+    1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
+
+       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+
+    1. Enter a new agenda item to the list and select **Add**.
+
+       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+
+       The new agenda is added in the list.
+
+    1. Select **Publish Agenda**.
+
+       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+
+       The new agenda list is displayed in the meeting chat.
+
+       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
 
 - content: |
     You've completed the tutorial to get started with a **Side Panel** app!
