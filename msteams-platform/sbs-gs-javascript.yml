@@ -491,7 +491,7 @@ items:
     ![Create a Teams app](~/assets/videos/javascript-bot-app.gif)
     </details>
 
-    # [Command line](#tab/cli)
+    # [Command line](#tab/cline)
 
     Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
 
@@ -808,7 +808,7 @@ items:
 
         Now you're ready to build the app and run it locally!
 
-    # [Command line](#tab/cline)
+    # [Command line](#tab/commline)
 
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 

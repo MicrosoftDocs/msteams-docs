@@ -293,7 +293,7 @@ If the prerequisites are in place, let's begin!
 > [!NOTE]
 > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
 
-# [Visual Studio Code](#tab/vstudio)
+# [Visual Studio Code](#tab/vstudioc)
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
@@ -343,7 +343,7 @@ If the prerequisites are in place, let's begin!
     ![Create a Teams app](~/assets/videos/javascript-bot-app.gif)
     </details>
 
-    # [Command line](#tab/cli)
+    # [Command line](#tab/commandline)
 
     Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
 
