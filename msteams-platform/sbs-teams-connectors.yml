@@ -124,7 +124,12 @@ items:
 
        ![ngrok path](~/assets/images/sbs-connector/ngrok.png)
 
-    1. Perform the steps to register a new connector in the Connector Developer Portal:
+    1. Go to Connector Developer Portal.
+    1. Select connector.
+     
+      ![Add new connector](~/assets/images/sbs-connector/connector.png)
+      
+    1. Perform the steps to register a new connector in the :
 
        1. Fill in all the basic details such as name, logo, descriptions etc. for the new connector.
        1. For the configuration page, you'll use our sample code's setup endpoint: https://[BASE_URI]/connector/setup.
