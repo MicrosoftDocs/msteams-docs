@@ -400,7 +400,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
+    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 54.teams-task-module** in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
