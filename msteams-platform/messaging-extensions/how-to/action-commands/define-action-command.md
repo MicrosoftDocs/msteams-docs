@@ -24,11 +24,20 @@ Before creating the action command, you must decide the following factors:
 First, you must decide the location from where your action command must be invoked. By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
-* Command box: By @mentioning your app in the command box. 
+
+    Command context = compose
+
+* Command box: By @mentioning your app in the command box.
+
+    Commands context = commandBox
+
    > [!NOTE]
    > If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
 
-* Message: Directly from an existing message through the `...` overflow menu on a message. 
+* Message: Directly from an existing message through the `...` overflow menu on a message.
+
+    Commands context = message
+
     > [!NOTE] 
     > The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
 
