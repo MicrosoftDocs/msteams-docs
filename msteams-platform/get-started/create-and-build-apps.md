@@ -80,25 +80,25 @@ If the prerequisites are in place, let's begin!
 
 # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
+Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
 
-    ``` bash
-    teamsfx new
-    ```
+``` bash
+teamsfx new
+```
 
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
-    1. Select **Create a new Teams app**.
-    1. Select the **Tab** capability.
-    1. Select **Azure** frontend hosting.
-    1. Don't select any cloud resources.
-    1. Select **JavaScript** as the programming language.
-    1. Press **Enter** to select the default workspace folder.
-    1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
+1. Select **Create a new Teams app**.
+1. Select the **Tab** capability.
+1. Select **Azure** frontend hosting.
+1. Don't select any cloud resources.
+1. Select **JavaScript** as the programming language.
+1. Press **Enter** to select the default workspace folder.
+1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
 
-    After you've answered all the questions, your project is created.
+After you've answered all the questions, your project is created.
 
 ---
 
@@ -162,7 +162,7 @@ Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 
 
     Now you're ready to build the app and run it in the local environment!
 
-# [Command line](#tab/cline)
+# [Command line](#tab/cmdline)
 
 1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
@@ -199,14 +199,14 @@ To build and run your app locally:
 
 In case you're wondering, when you press the **F5** key, Teams Toolkit:
 
-    - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-    - *Sideloads* the app in Teams.
-    - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-    - Starts the app's frontend hosted locally.
-    - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-    - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+- Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
+- *Sideloads* the app in Teams.
+- Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+- Starts the app's frontend hosted locally.
+- Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
+- An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
-    </details>
+</details>
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
@@ -262,7 +262,7 @@ To successfully run your app in Teams, ensure that you've enabled sideloading in
 
 </details>
 
-    You know how to use Toolkit to set up a tab app and run it locally. Next, let's learn how to build a conversational chat bot with Toolkit!
+You know how to use Toolkit to set up a tab app and run it locally. Next, let's learn how to build a conversational chat bot with Toolkit!
 
 ::: zone-end
 
@@ -271,11 +271,11 @@ To successfully run your app in Teams, ensure that you've enabled sideloading in
 ## Create your bot app
 
 You've built your tab app. Now let's create your first bot app.
-    
+
 The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted." border="false":::
-    
+
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
 In this tutorial, you'll learn:
@@ -347,19 +347,19 @@ If the prerequisites are in place, let's begin!
 
 Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
 
-    ``` bash
-    teamsfx new
-    ```
+``` bash
+teamsfx new
+```
 
 You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
 For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
-    1. Select **Create a new Teams app**.
-    1. Select **Bot** and deselect **Tab**.
-    1. Select **JavaScript** as the programming language.
-    1. Select **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `HelloBot`.  The name of the app must consist only of alphanumeric characters.
+1. Select **Create a new Teams app**.
+1. Select **Bot** and deselect **Tab**.
+1. Select **JavaScript** as the programming language.
+1. Select **Enter** to select the default workspace folder.
+1. Enter a suitable name for your app, like `HelloBot`.  The name of the app must consist only of alphanumeric characters.
 
 After you've answered all questions, your project is created.
 
@@ -481,7 +481,7 @@ Your web browser starts to run the app.
 
     You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::
 
     You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then, type some text.
 
@@ -584,7 +584,7 @@ If the prerequisites are in place, let's begin!
     ![Create a Teams app](~/assets/videos/javascript-msg-ext-app.gif)
       </details>
 
-# [Command line](#tab/cli)
+# [Command line](#tab/commandline)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
 
@@ -658,7 +658,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
     Now you're ready to build the app and run it locally!
 
-# [Command line](#tab/cline)
+# [Command line](#tab/cmd)
 
 1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
