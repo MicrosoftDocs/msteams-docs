@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-types
 # Create and build your first Teams apps
 
 ::: zone pivot="tab-app"
-[!INCLUDE [Launch browser](~/includes/browser-private-launch.md)]
+Start Microsoft Teams app development by creating your first app. This app uses the Tab capability.
 ::: zone-end
 
 ::: zone pivot="bot-app"
