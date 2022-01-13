@@ -421,46 +421,36 @@ items:
        * icon-color.png
 
        ![Zip file](~/assets/images/Teams-task-module/zipfile.png) 
-   
-    1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
-       ![Add an app](~/assets/images/meetings-side-panel/addanapp.png) 
-   
-    1. In the pop-up that opens, select **Manage apps**.
+    1. Go to **Microsoft Teams**.
 
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
-   
-    1. Select **Upload a custom app**. 
+    1. Select **Apps** or **Store**.
 
-       ![Upload custom app](~/assets/images/meetings-side-panel/uploadcustomapp.png)
+       ![Zip file](~/assets/images/Teams-task-module/AppStore.png)
+   
+    1. In the lower left corner, select **Manage your apps**.
+
+       ![Manage apps](~/assets/images/Teams-task-module/manageapps.png)
+   
+    1. Select **Upload an app to your org's app catalog** or **Upload a custom app**. 
+
+       ![Upload custom app](~/assets/images/Teams-task-module/uploadapp.png)
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/meetings-side-panel/selectzip.png)
+       ![Select zip file](~/assets/images/Teams-task-module/selectzip.png)
 
     1. Select **Add**.
 
        ![Add the app](~/assets/images/meetings-side-panel/addtheapp.png)
 
-       The **Manage apps** section displays the list of applications.
-
-       ![App in Manage apps](~/assets/images/meetings-side-panel/manageappsection.png)
+       A chat displays.
    
-    1. Go to Teams meeting.
-    
-    1. Select **Add an app**. 
-    
-       In the app selection page, the app displays as **Side Panel**.
-  
-       ![App icon in Teams](~/assets/images/meetings-side-panel/appicon.png)
+    1. Enter any text. 
 
-    1. Select the **Side Panel** app.
+       ![Chat](~/assets/images/Teams-task-module/chatready.png)
     
-    1. Select **Save**.
-
-       ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
-   
-       The app is visible in the meeting SidePanel.         
+       The app displays **Task Module Invocation from Hero Card** and **Task Module Invocation from Adaptive Card**.         
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
