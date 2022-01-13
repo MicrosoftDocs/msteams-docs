@@ -1317,7 +1317,17 @@ turnContext, CancellationToken cancellationToken) {
 
 # [TypeScript](#tab/typescript)
 
-Not available
+```typescript
+async onInstallationUpdateActivity(context: TurnContext) {
+        var activity = context.activity.action;
+        if(activity == "Add") {
+            await context.sendActivity(MessageFactory.text("Added"));
+        }
+        else {
+            await context.sendActivity(MessageFactory.text("Uninstalled"));
+        }
+    }
+```
 
 # [JSON](#tab/json)
 
@@ -1376,7 +1386,13 @@ Not available
 
 # [Python](#tab/python)
 
-Not available
+```python
+async def on_installation_update(self, turn_context: TurnContext):
+   if turn_context.activity.action == "add":   
+       await turn_context.send_activity(MessageFactory.text("Added"))
+   else:
+       await turn_context.send_activity(MessageFactory.text("Uninstalled"))
+```
 
 ---
 
