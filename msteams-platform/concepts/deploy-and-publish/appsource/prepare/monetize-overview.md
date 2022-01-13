@@ -19,9 +19,9 @@ Microsoft Teams app Store provide features that enable you to make money from yo
     :::column-end:::
     :::column span="2":::
 
-**Charge a price for your app**
+**Include a SaaS offer with your app**
 
-You can charge a price for your app up front. We support a comprehensive range of price tiers, including the option to set per-market prices. You can even schedule a sale to reduce the price of your app for a limited period of time.
+With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. For example, say you have a free app anyone can get in the store. Now you can offer premium and enterprise plans for users who want more features.
 
     :::column-end:::
 :::row-end:::
@@ -34,7 +34,7 @@ You can charge a price for your app up front. We support a comprehensive range o
 
 **Free trials**
 
-You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including the first level of a game), show ads, or specify a time-limited trial.
+You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week), show ads, or specify a time-limited trial.
 
     :::column-end:::
 :::row-end:::

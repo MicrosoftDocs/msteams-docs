@@ -9,7 +9,7 @@ localization_priority: Normal
 
 # In-app purchases
 
-The Microsoft Teams provide APIs you can use to implement the in-app purchases to make money from your Teams apps.
+Microsoft Teams provide API's you can use to implement the in-app purchases to make money from your Teams apps.
 
 * **In-app purchases**&nbsp;&nbsp;Whether your app is free or not, you can sell content or new app functionality (such as additional features of the app) from right within the app.
 
@@ -63,19 +63,33 @@ console.log("after callback: ",callbackcalled);
 
 ## End-user in-app purchasing experience
 
-The following example shows how users can have an in-app purchasing experience for a Teams app called Polly.
+The following example shows how users can purchase subscription plans for a fictional Teams app called *Contoso Tasks for Teams*
 
-1. In the Teams store, find and select the Polly app.
+1. In the Teams store, find and select the app.
 
-1. In the app details dialog, select **Add to a team**.
+1. In the app details dialog, select **Buy a subscription**. 
 
-    ![Add to a team](~/assets/images/saas-offer/inapppurchase.png)
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app.":::
 
-1. Polly app is added to a team. Select **Upgrade**.
+    You can also offer a free trial version of your app and later users can choose to **Upgrade** it to a paid version.
 
-    ![Upgrade](~/assets/images/saas-offer/upgradeapp.png)
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app.":::
 
-1. Complete the payment and subscription process in the redirected polly website.
+1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**.
+
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan.":::
+
+1. In the **Checkout** dialog, provide any required information and select **Place order**.
+
+    :::image type="content" source="~/assets/images/saas-offer/placesubscriptionordercontoso.png" alt-text="Placing the subscription order.":::
+
+1. When prompted, select **Configure now** to set up your subscription.
+
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription.":::
+
+1. User would be redirected to the Get started page
+
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Setting up the subscription.":::
 
 ## Next step
 
@@ -83,8 +97,6 @@ The following example shows how users can have an in-app purchasing experience f
 > [Preview testing of monetizable apps](/office/dev/store/add-in-submission-guide)
 
 ## See also
-
-[Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 
