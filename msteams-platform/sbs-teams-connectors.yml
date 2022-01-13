@@ -124,8 +124,7 @@ items:
 
 - title: Configure your own connector
   durationInMinutes: 1
-  content: |
-    
+  content: | 
     To create your own connector:
 
     1. Navigate to **TeamsToDoAppConnector.sln** in cloned repository.
