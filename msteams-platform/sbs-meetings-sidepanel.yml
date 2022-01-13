@@ -37,6 +37,10 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+    
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
@@ -123,6 +127,8 @@ items:
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
     1. Next to **Microsoft App ID**, select **Manage**.
+
+    1. Select **Multitenant** under **App Type**.
 
         ![Microsoft App ID](~/assets/images/meetings-side-panel/config.png)
 

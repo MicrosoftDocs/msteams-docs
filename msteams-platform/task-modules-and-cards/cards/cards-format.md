@@ -227,7 +227,6 @@ Incoming webhooks start to support user mention in Adaptive Cards with the AAD O
 > [!NOTE]    
 > * Enable user mention in the schema for Incoming webhooks to support AAD Object ID and UPN. 
 > * UI/UX changes are not required for user mentions with AAD Object ID and UPN.      
-> * The activity feed notification for Incoming Webhook with user mention will be available in the future release.
 
 ##### Example 
 
