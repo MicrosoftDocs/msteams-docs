@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|01/13/2022| People Picker in Adaptive Cards. | [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker-adaptive-card.md), [Build Cards and Task modules-Overview](task-modules-and-cards/cards-and-task-modules.md), and [Build Cards-Overview](task-modules-and-cards/what-are-cards.md)|
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards.| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
 | 12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0. | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
@@ -211,8 +212,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|01/13/2022| People Picker in Adaptive Cards. | [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker-adaptive-card.md), [Build Cards and Task modules-Overview](task-modules-and-cards/cards-and-task-modules.md), and [Build Cards-Overview](task-modules-and-cards/what-are-cards.md)|
 |11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
-|11/12/2021| People Picker in Adaptive Cards. | [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker-adaptive-card.md), [Build Cards and Task modules-Overview](task-modules-and-cards/cards-and-task-modules.md), and [Build Cards-Overview](task-modules-and-cards/what-are-cards.md)
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md)|
 |10/19/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
