@@ -97,7 +97,7 @@ The following properties are the new additions to the `Input.ChoiceSet` schema t
 
 #### Data.Query
 
-|Property |Type |Required |Description |
+|Property |Type |Required |Description|
 |--|--|--|--|
 |**dataset** |String |Yes |The type of data that must be fetched dynamically.|   
 
