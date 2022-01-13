@@ -89,7 +89,7 @@ The following example shows how users can purchase subscription plans for a fict
 
 1. User would be redirected to the Get started page
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Setting up the subscription.":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription.":::
 
 ## Next step
 

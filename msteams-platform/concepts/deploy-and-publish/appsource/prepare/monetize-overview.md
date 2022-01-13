@@ -1,7 +1,7 @@
 ---
 title: Teams app monetization overview
 description: Learn how to monetize your Microsoft Teams app.
-author: 
+author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal 
