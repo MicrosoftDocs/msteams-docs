@@ -24,7 +24,7 @@ items:
       * Simulates a real task management system
       * Allows users to create and view tasks
 
-    The content is randomly generated to simulate how notification can be sent into Microsoft Teams channel using connector. For more information on developing apps for Microsoft Teams,see [Microsoft Teams developer documentation](/microsoftteams/platform/overview).
+    The content is randomly generated to simulate how notification can be sent into Microsoft Teams channel using connector.
     
      [Place holder for image]
 
@@ -131,7 +131,7 @@ items:
 
        ![sln path](~/assets/images/sbs-connector/sln.png)
 
-    1. Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    2. Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
@@ -141,12 +141,12 @@ items:
 
        ![ngrok path](~/assets/images/sbs-connector/ngrok.png)
 
-    1. Go to [Connector Developer Portal](https://outlook.office.com/connectors/Home/Login#!/show/133adfba-f620-475e-a192-19e9f10c476c).
-    1. Select connector.
+    3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/Home/Login#!/show/133adfba-f620-475e-a192-19e9f10c476c).
+    4. Select connector.
      
        ![Add new connector](~/assets/images/sbs-connector/connector.png)
       
-    1. Register a new connector:
+    5. Register a new connector:
 
        1. Fill in all the basic details such as name, logo, descriptions etc. for the new connector.
           
@@ -165,22 +165,22 @@ items:
 
          ![output screen](~/assets/images/sbs-connector/output.png) 
 
-    1. Navigate to **Web.config file** in cloned repository.
+    6. Navigate to **Web.config file** in cloned repository.
 
        ![Navigation path](~/assets/images/sbs-connector/webnavigation.png) 
 
-    1. Open it in Visual studio.
+    7. Open it in Visual studio.
 
-    1. Replace the `configuration.appSettings.Base_Uri` variable to the **ngrok https forwarding url**.
+    8. Replace the `configuration.appSettings.Base_Uri` variable to the **ngrok https forwarding url**.
        
        ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
 
-    1. Select F5.
-    1. Sideload your app package.
+    9. Select F5.
+    10. Sideload your app package.
 
       ![Sideloading](~/assets/images/sbs-connector/apppackage.png) 
 
-    1. Test your new connector(link to heading).
+    11. Test your new connector(link to heading).
 
 - title: Complete challenge
   durationInMinutes: 1
