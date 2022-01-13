@@ -135,5 +135,5 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 
 ## See also
 
-* [Configure identity providers to use Azure AD](~/concepts/authentication/configure-identity-provider.md)
-* [Know about Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-overview)
+* [Configure identity providers to use Azure AD](../../../concepts/authentication/configure-identity-provider.md)
+* [Know about Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
