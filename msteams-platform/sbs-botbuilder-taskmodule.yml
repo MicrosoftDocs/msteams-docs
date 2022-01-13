@@ -24,7 +24,7 @@ items:
 
     You'll see the following output:
 
-     (Placeholder for image)
+     ![Task module](~/assets/images/Teams-task-module/final1.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -457,32 +457,58 @@ items:
   content: |
     Let's interact with the app in Teams!
 
-    1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
+    1. Select **Adaptive Card** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+       ![Adaptive card](~/assets/images/Teams-task-module/adaptivecard.png)
 
-    1. Enter a new agenda item to the list and select **Add**.
+    1. Enter any text.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+    1. Select **Submit**.
 
-       The new agenda is added in the list. 
+       ![Adaptive card text](~/assets/images/Teams-task-module/adaptivecardtext.png)
 
-    1. Select **Publish Agenda**.
+       **Adaptive Card** sends an acknowledgement message.
 
-       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+       ![Adaptive card submit](~/assets/images/Teams-task-module/adaptivecardsubmit.png)
 
-       The new agenda list is displayed in the meeting chat.
+    1. Select **Custom Form** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+       ![Custom form](~/assets/images/Teams-task-module/customform.png)
+
+    1. Enter the details.
+
+    1. Select **Sign up**.
+
+       ![Custom Form text](~/assets/images/Teams-task-module/customtext.png)
+
+       **Custom Form** sends an acknowledgement message.
+
+       ![Sign up](~/assets/images/Teams-task-module/customonsignup.png)
+
+       The following data appears in chat:
+
+       ![Chat](~/assets/images/Teams-task-module/adaptivecustomchat.png)
+
+    1. Select **You Tube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
+
+       ![YouTube](~/assets/images/Teams-task-module/youtube.png)
+
+    1. Select play button.
+
+       ![YouTube select](~/assets/images/Teams-task-module/youtubeselect.png)
+
+      The video plays.
+
+       ![YouTube play](~/assets/images/Teams-task-module/youtubeplay.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
+       ![Task module](~/assets/images/Teams-task-module/final1.png)
 
 - content: |
-    You've completed the tutorial to get started with a **Side Panel** app!
+    You've completed the tutorial to get started with Teams task module app!
 
 
