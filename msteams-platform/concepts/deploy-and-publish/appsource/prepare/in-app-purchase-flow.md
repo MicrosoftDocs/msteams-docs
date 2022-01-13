@@ -9,9 +9,9 @@ localization_priority: Normal
 
 # In-app purchases
 
-Microsoft Teams provide API's you can use to implement the in-app purchases to make money from your Teams apps.
+Microsoft Teams provide APIs that you can use to implement the in-app purchases to make money from your Teams apps.
 
-* **In-app purchases**&nbsp;&nbsp;Whether your app is free or not, you can sell content or new app functionality (such as additional features of the app) from right within the app.
+**In-app purchases**, whether your app is free or not, you can sell content or new app functionality (such as additional features of the app) from right within the app.
 
 ## Implement in-app purchases
 
@@ -19,7 +19,7 @@ To offer an in-app purchase experience to the users of your app, ensure your app
 
 ### Update manifest
 
-Update your Teams app manifest.json file by adding the RSC permissions to achieve in-app purchase experience. It allows your app users to upgrade to a paid version of your app and start using new functionalities. The update for app manifest is as follows::
+Update your Teams app **manifest.json** file by adding the RSC permissions to achieve in-app purchase experience. It allows your app users to upgrade to a paid version of your app and start using new functionalities. The update for app manifest is as follows:
 
 ```json
 
@@ -63,31 +63,31 @@ console.log("after callback: ",callbackcalled);
 
 ## End-user in-app purchasing experience
 
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Contoso Tasks for Teams*
+The following example shows the users to purchase subscription plans for a fictional Teams app called *Contoso Tasks for Teams*.
 
-1. In the Teams store, find and select the app.
+1. In the Teams **Store**, find and select the app.
 
 1. In the app details dialog, select **Buy a subscription**. 
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app.":::
 
-    You can also offer a free trial version of your app and later users can choose to **Upgrade** it to a paid version.
+    Offer a free trial version of the app and later users can choose to **Upgrade** it to a paid version.
 
     :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app.":::
 
-1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**.
+1. In the **Choose a subscription plan** dialog, choose the plan and select **Checkout**.
 
     :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan.":::
 
-1. In the **Checkout** dialog, provide any required information and select **Place order**.
+1. In the **Checkout** dialog, provide the required information and select **Place order**.
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionordercontoso.png" alt-text="Placing the subscription order.":::
 
-1. When prompted, select **Configure now** to set up your subscription.
+1. After the transaction is complete, select **Configure now** to set up your subscription.
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription.":::
 
-1. User would be redirected to the Get started page
+1. User is redirected to the **Get started** page.
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription.":::
 
