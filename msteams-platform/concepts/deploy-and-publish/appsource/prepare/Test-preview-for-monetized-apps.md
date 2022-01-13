@@ -15,9 +15,10 @@ As a developer, you can create a Software as a Service (SaaS) offer and test the
 ## Create a preview offer
 
 >[!NOTE]
-> Ensure that the SaaS offer you want to preview is in the [Preview creation phase](/azure/marketplace/review-publish-offer)
+> * Ensure that the SaaS offer you want to preview is in the [Preview creation phase](/azure/marketplace/review-publish-offer).
+> * Unlike a public Offer ID, the preview Offer ID can be recognized with the *-preview* suffix. For example, **westleysystemsinc1614967134606.pig_latin-preview**.
 
-After adding the preview audience to your SaaS offer, create a Preview Offer in the Partner Center.
+Create a preview offer ID for the SaaS offer using the **AppSource preview link** in the Partner Center.
 
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.
@@ -35,11 +36,11 @@ After you've generated your Preview Offer, link the offer to your Teams app for 
 1. Select **Apps** from the left pane.
 1. Select the app to link the SaaS offer to.
 1. Select **Plans and pricing** and enter the **Publisher ID** and **Offer ID**.
-    1. Ensure the offer ID contains *-Preview* suffix.
+    1. Ensure the offer ID contains *-preview* suffix.
 1. Select **View** to preview your subscription plans.
 1. Review the plans listed under **Apps Subscription** and select **Save**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/Plans-and-pricing-preview-offer.png" alt-text="configure preview offer":::
+     <!---Contoso Screenshot --->
 
 The subscriptionOffer property is added to your app manifest.
 
@@ -58,23 +59,25 @@ After configuring your app with the Preview Offer ID, create an updated app pack
  
 You can select **Preview in Teams** in the developer portal to launch your app quickly in the Teams client.
 
+### App error scenarios 
+
 * If the Preview Offer and preview audience are specified in the app manifest, the user can see the **Buy a Subscription** button.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/preview-testing-offer-audience-available.png" alt-text="offerid and audience available":::
+    <!---Contoso Screenshot --->
 
 * If the offer ID is specified, but the user isn't part of the **preview audience** defined in the partner center, the **Buy a Subscription** button isn't visible and the app shows a warning message to the user.
 
     >[!WARNING]
     > No plans found with **-preview**. Make sure you're in the preview audience.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/preview-testing-no-audience.png" alt-text="no preview audience":::
+    <!---Contoso Screenshot --->
 
 * If the offer ID specified in the app manifest isn't a Preview Offer, the app shows a warning message to the user and sideloading is disabled.
 
     >[!WARNING]
     > This isn't a preview offer. Be sure to append the **-preview** to the Offer ID.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/Preview-testing-no-iffer-id.png" alt-text="no preview offer id":::
+    <!---Contoso Screenshot --->
 
 ## See also
 
