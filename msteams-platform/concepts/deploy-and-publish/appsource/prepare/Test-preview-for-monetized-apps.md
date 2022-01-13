@@ -10,19 +10,34 @@ keywords: teams apps SaaS offer preview offer  app source preview
 
 # Test preview for monetized apps
 
-As a developer, you can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience of an offer in Teams before you publish the offer. Users who are added as the preview audience for the Teams app can test the preview offer, see [ Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview).
+As a developer, you can create a Software as a Service (SaaS) offer and test the end-to-end purchase experience in Teams before you publish the offer. Users who are added as the preview audience for the Teams app can test the preview offer, see [Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview).
+
+## Create a preview offer
+
+>[!NOTE]
+> Ensure that the SaaS offer you want to preview is in the [Preview creation phase](/azure/marketplace/review-publish-offer)
+
+After adding the preview audience to your SaaS offer, create a preview offer in the Partner Center.
+
+1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
+1. Select **Marketplace offers**.
+1. Select the SaaS offer you want to preview.
+1. Select **App source preview** under **Go Live** to generate a Preview Offer link.
+1. Copy the offer from the URL along with the *-Preview* suffix.
+
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id":::
 
 ## Configure your app with the Preview offer ID
 
-After adding the preview audience to your SaaS offer, link the offer ID to your Teams app for users to see your subscription plans in the Teams store.
+After you've generated your Preview Offer, link the offer to your Teams app for users to see your subscription plans in the Teams store.
 
-1. Go to [Developer Portal](https://dev.teams.microsoft.com/).
+1. Go to [Developer Portal](https://dev.teams.microsoft.com/) and sign in using a developer account with preview audience.
 1. Select **Apps** from the left pane.
 1. Select the app to link the SaaS offer to.
 1. Select **Plans and pricing** and enter the **Publisher ID** and **Offer ID**.
-  1. Add the *-Preview* suffix to the offer ID.
+    1. Ensure the offer ID contains *-Preview* suffix.
 1. Select **View** to preview your subscription plans.
-1. Review the plans listed under **Apps Subscription** and click **Save**.
+1. Review the plans listed under **Apps Subscription** and select **Save**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/Plans-and-pricing-preview-offer.png" alt-text="configure preview offer":::
 
@@ -30,9 +45,10 @@ The subscriptionOffer property is added to your app manifest.
 
 ```json
 "subscriptio(nOffer": {
-     "offerId": "publisherId.offerId"-preview  
+     "offerId": "publisherId.offerId -preview"  
      }
 ```
+
 >[!NOTE]
 > Check for the label *preview offer* next to **Apps Subscription** to confirm if the offer is a preview offer.
 
@@ -46,7 +62,7 @@ You can select **Preview in Teams** in the developer portal to launch your app q
 
     :::image type="content" source="../../../../assets/images/saas-offer/preview-testing-offer-audience-available.png" alt-text="offerid and audeince available":::
 
-* If the offer ID is specified, but the user isn't part of the **preview audience** defined in the app manifest, the **Buy a Subscription** button isn't visible and the app shows a warning message to the user.
+* If the offer ID is specified, but the user isn't part of the **preview audience** defined in the partner center, the **Buy a Subscription** button isn't visible and the app shows a warning message to the user.
 
     >[!WARNING]
     > No plans found with **-preview**. Make sure you're in the preview audience.
@@ -59,7 +75,6 @@ You can select **Preview in Teams** in the developer portal to launch your app q
     > This isn't a preview offer. Be sure to append the **-preview** to the Offer ID.
 
     :::image type="content" source="../../../../assets/images/saas-offer/Preview-testing-no-iffer-id.png" alt-text="no preview offer id":::
-
 
 ## See also
 
