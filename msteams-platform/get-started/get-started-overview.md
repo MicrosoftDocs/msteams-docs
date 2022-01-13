@@ -19,7 +19,7 @@ Here's an idea of what you'll learn:
 
 Let's take a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app.":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
 
 ## App capabilities and development tools
 
@@ -54,3 +54,8 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 
 > [!div class="nextstepaction"]
 > [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
+
+## See also
+
+* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git and GitHub resources](/contribute/additional-resources)

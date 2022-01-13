@@ -227,7 +227,6 @@ Incoming webhooks start to support user mention in Adaptive Cards with the AAD O
 > [!NOTE]    
 > * Enable user mention in the schema for Incoming webhooks to support AAD Object ID and UPN. 
 > * UI/UX changes are not required for user mentions with AAD Object ID and UPN.      
-> * The activity feed notification for Incoming Webhook with user mention will be available in the future release.
 
 ##### Example 
 
@@ -291,7 +290,7 @@ Use the information masking property to mask specific information, such as passw
 > [!NOTE]
 > The feature only supports client side information masking. The masked input text is sent as clear text to the HTTPS endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
 
-To mask information in Adaptive Cards, add the `isMasked` property to **type** `Input.Text`, and set its value to **true**.
+To mask information in Adaptive Cards, add the `style` property to **type** `input.text`, and set its value to **Password**.
 
 #### Sample Adaptive Card with masking property
 
