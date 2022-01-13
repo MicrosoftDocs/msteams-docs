@@ -1,10 +1,11 @@
 ---
 title: Create a command menu for your bot
 author: surbhigupta
-description: How to create a command menu for your Microsoft Teams bot
+description: Learn how to create a command menu for your Microsoft Teams bot with Code samples.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
+keywords: command menu compose message conversation @mention 
 ---
 
 # Bot command menus
@@ -33,13 +34,13 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 **To create a command menu for your bot using App Studio**
 
-1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**. 
+1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**.
    > [!NOTE]
    > If you do not have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/deploy-csharp-app-studio.md).
 
 3. In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.
 
@@ -157,7 +158,7 @@ You must handle menu commands in your bot code as you handle any message from us
 
 ## Handle menu commands in your bot code
 
-Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text returned. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.

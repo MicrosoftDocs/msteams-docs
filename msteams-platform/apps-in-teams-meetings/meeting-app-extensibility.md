@@ -1,7 +1,7 @@
 ---
 title: Unified meetings apps
 author: surbhigupta
-description: Understand unified meetings apps 
+description: Learn about Meeting lifecycle, building user's meeting experience throughout meeting lifecycle in desktop and mobile environment, participant roles and user types. In addition, learn about integrating bots and messaging extension in meeting lifecycle.
 ms.topic: conceptual
 ms.localizationpriority: none
 ---
@@ -13,8 +13,6 @@ Teams unified meetings apps are based on the following concepts:
 * Meeting lifecycle has different stages: pre-meeting, in-meeting, and post-meeting.  
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting: in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
 This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
 
@@ -110,11 +108,13 @@ The following image illustrates the in-meeting side panel:
 
 ---
 
-The following table describes the behavior of app when it is approved and not approved:
+The following table describes the behavior of app when it is validated and not validated:
 
-|App capability | App is approved | App isn't approved |
+|App capability | App is validated | App isn't validated |
 |---|---|---|
 | Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
+
+For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 #### Post-meeting app experience
 
@@ -190,11 +190,16 @@ A guest or anonymous user can't add, remove, or uninstall apps.
 
 The following table provides the user types and lists the features that each user can access:
 
-| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage | 
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available | Can view but cannot interact with app on the meeting stage |
-| Guest that is part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available | Can view and interact with app on the meeting stage |
-| Federated user. For more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage |
+| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage | Content bubble |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
+| Guest, part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
+| Federated user, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 
 ## See also
 
@@ -202,8 +207,3 @@ The following table provides the user types and lists the features that each use
 * [Bot](../bots/what-are-bots.md)
 * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)

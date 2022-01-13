@@ -19,10 +19,12 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You can initiate an authentication flow from Azure Active Directory (AAD) or other identity provider. You don't require the user to enter their username again. For more information, see [authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
+* You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again.
+
+For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
-> Although this user information can help provide a smooth user experience, you must not use it as proof of identity. For example, an attacker can load your page in a browser and render harmful information or requests.
+> Although this user information can help provide a smooth user experience, you must not use it as proof of identity.  For example, an attacker can load your page in a browser and render harmful information or requests.
 
 ## Access context information
 
@@ -43,7 +45,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 group in which the tab stays.
 * {tid}: The AAD tenant ID of the current user.
-* {locale}: The current locale of the user formatted as languageId-countryId. For example, en-us.
+* {locale}: The current locale of the user formatted as languageId-countryId(en-us).
 
 > [!NOTE]
 > The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{loginHint}`.
@@ -101,7 +103,8 @@ The following code provides an example of context variable:
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -110,7 +113,9 @@ The following code provides an example of context variable:
 > [!NOTE]
 > Private channels are currently in private developer preview.
 
-When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. The following fields are changed when your content page is in a private channel:
+When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel.
+
+The following fields are changed when your content page is in a private channel:
 
 | Property | Description |
 |----------|--------------|
@@ -129,7 +134,7 @@ If your page makes use of any of these values, you must check the `channelType` 
 ## Get context in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
-For shared channels, the `groupId` value is `null`, since the host team's groupId does not accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. `hostTeam` refers to the Team that created the shared channel. `currentTeam` refers to Team that the current user is accessing the shared channel from. 
+For shared channels, the `groupId` value is `null`, since the host team's groupId does not accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. `hostTeam` refers to the Team that created the shared channel. `currentTeam` refers to Team that the current user is accessing the shared channel from.
 
 For more information about these concepts, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
 
@@ -141,13 +146,13 @@ Use the following `getContext` properties in shared channels:
 |`channelType`| The property is set to `sharedChannel` for shared channels.|
 |`groupId`|The property is `null` for shared Channels.|
 |`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
-|`hostTeamGroupId`| The property is newly added and describes the host team’s AAD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. | 
-|`teamId`|The property is newly added and set to the thread ID of the current shared team. | 
+|`hostTeamGroupId`| The property is newly added and describes the host team’s AAD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. |
+|`teamId`|The property is newly added and set to the thread ID of the current shared team. |
 |`teamName`|The property is set to current shared team's `teamName`. |
 |`teamType`|The property is set to current shared team's `teamType`.|
-|`teamSiteUrl`|The property describes the shared channel's `channelSiteUrl`.| 
-|`teamSitePath`| The property describes the shared channel's `channelSitePath`.| 
-|`teamSiteDomain`| The property describes the shared channel's `channelSiteDomain`.| 
+|`teamSiteUrl`|The property describes the shared channel's `channelSiteUrl`.|
+|`teamSitePath`| The property describes the shared channel's `channelSitePath`.|
+|`teamSiteDomain`| The property describes the shared channel's `channelSiteDomain`.|
 |`tenantSKU`| The property describes the host team’s `tenantSKU`.|
 |`tid`|  The property describes the current user’s tenant ID.|
 |`userObjectId`|  The property describes current user’s ID.|
@@ -160,12 +165,15 @@ For more information on shared channels, see [Shared channels](~/concepts/build-
 You can register your app to be informed if the theme changes by calling `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+
 ## See also
 
 * [Tab design guidelines](../../tabs/design/tabs.md)
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-
-
-
+* [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

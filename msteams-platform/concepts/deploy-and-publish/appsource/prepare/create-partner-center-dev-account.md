@@ -1,6 +1,6 @@
 ---
 title: Create your Partner Center developer account  
-description: To publish your app to the Microsoft Teams store, you need a Partner Center developer account.
+description: FAQs for creating a Partner Center developer account for publishing your app to the Microsoft Teams store.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
@@ -122,16 +122,6 @@ Remember the following about the email verification process:
 * The email verification link is only valid for seven days.
 * You can request to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.
 * To ensure you receive the email, safe-list **microsoft.com** as a secure domain and check your junk email folders.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>How do I get further support for my account-related issues?</b></summary>
-
-See [support for the Commercial Marketplace program in Partner Center](/azure/marketplace/partner-center-portal/support) for information.
 
 <br>
 

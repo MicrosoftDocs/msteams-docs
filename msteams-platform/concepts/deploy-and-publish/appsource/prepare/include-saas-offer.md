@@ -12,9 +12,6 @@ localization_priority: Normal
 :::row:::
    :::column span="3":::
 
-> [!NOTE]
-> This feature is currently available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
-
 With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. For example, say you have a free app anyone can get in the store. Now you can offer premium and enterprise plans for users who want more features.
 
 Here's a general idea of how to monetize your app:
@@ -55,13 +52,13 @@ When planning how to monetize your Teams app, here are some things to consider:
 
 Integrating with the SaaS Fulfillment APIs is required for monetizing your Teams app. These APIs help you manage the lifecycle of a subscription plan once it’s purchased by a user.
 
-For complete instructions and API reference, see the [SaaS Fulfillment APIs documentation](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2). In general, you’ll implement the following steps using the APIs once a subscription is purchased:
+For complete instructions and API reference, see the [SaaS Fulfillment APIs documentation](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis). In general, you’ll implement the following steps using the APIs once a subscription is purchased:
 
-1.	Receive a [*purchase identification token*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2#purchased-but-not-yet-activated-pendingfulfillmentstart) via the URL to your landing page.
+1. Receive a [*purchase identification token*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart) via the URL to your landing page.
 
-1.	Use the token to retrieve subscription details.
+1. Use the token to retrieve subscription details.
 
-1.	Notify the commercial marketplace that the subscription is activated.
+1. Notify the commercial marketplace that the subscription is activated.
 
 ### Best practices for implementing subscription management
 
@@ -94,6 +91,9 @@ Consider the following approaches when building a landing page for the Teams app
 ## Create your SaaS offer
 
 Once you’ve integrated the SaaS Fulfillment APIs and built your landing page where users can manage their subscriptions, it's time to officially create, test, and publish your transactable SaaS offer.
+
+> [!IMPORTANT]
+> Teams currently supports only **Per user** (user/month and user/year) pricing model for SaaS offers. For more information, see [SaaS pricing models](/azure/marketplace/plan-saas-offer#saas-pricing-models).
 
 ### Create the offer
 
@@ -200,4 +200,4 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 ## See also
 
-* [Maintaining and supporting your published app](../post-publish/overview.md)
+[Maintaining and supporting your published app](../post-publish/overview.md)

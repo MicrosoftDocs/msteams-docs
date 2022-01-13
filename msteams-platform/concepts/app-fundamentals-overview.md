@@ -1,10 +1,11 @@
 ---
 title: App development fundamentals overview
 author: heath-hamilton
-description: Describe the foundational concepts of Teams platform development.
+description: Describe the foundational concepts of Teams platform development, such as app capabilities and entry points, understanding use cases and mapping them to app capabilities, and planning apps.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
+keywords: entry points extensibility use cases device capability
 ---
 
 # Microsoft Teams app development fundamentals
@@ -13,7 +14,7 @@ Microsoft Teams app fundamentals give the direction you need to create your cust
 
 ## Capabilities and entry points
 
-You can extend your Teams app in multiple ways. To be able to extend your app you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
+You can extend your Teams app in multiple ways. To be able to extend your app, you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
 
 ## Understand your use cases
 
@@ -32,19 +33,18 @@ You can recognize user issues and identify the answers to some common problems t
 You can customize the app permission for external members in shared channel, if your app shares important information. App permissions in [shared channels](~/concepts/build-and-test/shared-channels.md) follow host team's app roster and host tenant's app policy.
 
 ## Plan responsive tabs for Teams mobile
-[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different satges and different types of Teams app.
+[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
 
 ## Integrate device capabilities
 
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK. 
-
-## See also
-
-* [Integrate web apps with Teams](../samples/integrating-web-apps.md)
-* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md) 
+Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Understand Teams app capabilities](capabilities-overview.md)
 
+## See also
+
+* [Considerations for Teams integration](../samples/integrating-web-apps.md)
+* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

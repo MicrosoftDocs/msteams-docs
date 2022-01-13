@@ -1,19 +1,19 @@
 ---
 title: Public developer preview manifest schema reference
-description: Describes the schema supported by the manifest for Microsoft Teams
+description: Sample manifest file and description of all its components that are supported for Microsoft Teams
 ms.topic: reference
 keywords: teams manifest schema Developer Preview
 ms.localizationpriority: medium
-ms.date: 05/20/2019
+ms.date: 11/15/2021
 ---
 # Reference: Public developer preview manifest schema for Microsoft Teams
 
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> If you aren't using developer preview features, use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
+> If you aren't using developer preview features, including running [Teams personal tabs and messaging extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
 ## Sample full manifest
 
@@ -58,7 +58,8 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
-      "scopes": [ "team", "groupchat" ]
+      "scopes": [ "team", "groupchat" ]"context":[
+      ]
     }
   ],
   "staticTabs": [
@@ -230,13 +231,13 @@ The schema defines the following properties:
 
 *Optional, but recommended* &ndash; String
 
-The https:// URL referencing the JSON Schema for the manifest.
+The `https://` URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "devPreview".
+The version of the manifest schema this manifest is using. Use `m365DevPreview` only if you are previewing [Teams apps running in Office and Outlook](../../m365-apps/overview.md). Otherwise, use `devPreview` for all other Teams preview features.
 
 ## version
 
@@ -349,6 +350,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`configurationUrl`|String|2048 characters|✔|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Array of enum|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
@@ -441,7 +443,7 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
-|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
+|`context`|Array of Strings|3||Defines where the messaging extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically.|
 |`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|

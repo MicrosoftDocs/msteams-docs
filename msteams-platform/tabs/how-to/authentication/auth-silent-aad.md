@@ -1,9 +1,9 @@
 ---
 title: Silent authentication
-description: Describes silent authentication
+description: Describes silent authentication, Single-sign-on, Azure Active Directory for tabs
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication SSO silent AAD
+keywords: teams authentication SSO silent AAD tab
 ---
 # Silent authentication
 
@@ -21,7 +21,7 @@ Even though the ADAL.js library is optimized for AngularJS applications, it also
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point your app can show a sign in button if required.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point, your app can show a sign in button if required.
 
 ## How to do silent authentication
 
@@ -129,3 +129,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## See also
+
+[Configure identity providers to use AAD](~/concepts/authentication/configure-identity-provider.md)

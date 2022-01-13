@@ -1,6 +1,6 @@
 ---
 title: Invoke and dismiss task modules
-description: Invoke and dismiss task modules.
+description: Learn about invoking and dismissing task modules, task info object, task module sizing, task module deep link syntax using Code samples
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -224,14 +224,14 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 |Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 |Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+
 ## See also
 
 * [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

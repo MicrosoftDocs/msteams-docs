@@ -1,7 +1,7 @@
 ---
 title: Define messaging extension action commands
 author: surbhigupta
-description: An overview of messaging extension action commands
+description: An overview of messaging extension action commands with app manifest example
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -24,11 +24,20 @@ Before creating the action command, you must decide the following factors:
 First, you must decide the location from where your action command must be invoked. By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
-* Command box: By @mentioning your app in the command box. 
+
+    Command context = compose
+
+* Command box: By @mentioning your app in the command box.
+
+    Commands context = commandBox
+
    > [!NOTE]
    > If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
 
-* Message: Directly from an existing message through the `...` overflow menu on a message. 
+* Message: Directly from an existing message through the `...` overflow menu on a message.
+
+    Commands context = message
+
     > [!NOTE] 
     > The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
 
@@ -118,56 +127,6 @@ The following image displays command addition for messaging extension:
 
 1. Select **Save**.
 1. To add more parameters, select the **Add** button in the **Parameters** section.
-
-# [Developer Portal](#tab/DP)
-
-**To create an action command using Developer Portal**
-
-1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
-	
-	  ![Screenshot of TDP](~/assets/images/tdp/tdp_home_1.png)
-
-1. Go to **Apps**.
-	
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-	
-1. If you have already created your app package in **Developer Portal**, select it from the list. If  not, select **Import an existing app**.
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Go to **App features**. 
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Select **Messaging extensions** from **App features**. A pop-up window appears to set up the messaging extension.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
- 
-1. Select **an message extension bot** from the drop down list under **Messag extensions ID** and select **Save**.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Select **Add a command**. A pop-up window appears to add a command.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Select the type of the command as **Action-based** to configure the messaging extension. Select **Dynamic parameters** to create dynamic action command.
-
-    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
-
-1. Select **Static parameters** to create static action command.   
-
-    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
-
-1. Enter the command fields. 
-
-    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
-
-1. Enter parameter fields and select **Save**.
-
-    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
- 
----
 
 ### Create an action command manually
 
@@ -271,4 +230,3 @@ If you are using the parameters or an embedded web view with a `taskInfo` object
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-
