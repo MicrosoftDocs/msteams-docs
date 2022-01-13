@@ -94,7 +94,7 @@ items:
     1. Create a policy for a demo tenant user for creating the online meeting using the following powershell script.
     
         (Add powershell script)
-        
+
     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in powershell script.
     1. Run Windows Powershell PSI as an administrator and execute the script.
     1. Run the following command to verify whether the policy is created successfully or not. Replace **"azure-client-Id"** with your App ID.
