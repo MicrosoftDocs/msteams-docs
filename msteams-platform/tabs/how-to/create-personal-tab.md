@@ -167,6 +167,11 @@ To add a personal tab to this application, create a content page, and update exi
     }
     ```
 
+> [!IMPORTANT]
+> The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+>
+> For example: DefaultTabName is **MyTab** then **/MyTabTab/**
+
 1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
 
 1. Save the updated **manifest.json** file.
@@ -180,7 +185,7 @@ To add a personal tab to this application, create a content page, and update exi
 1. Add the following to the list of IFrame decorators:
 
     ```typescript
-     @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
+     @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
     ```
 
 1. Save the updated file. Your tab code is complete.
@@ -268,7 +273,14 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** in Visual Studio
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** 
+
+In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs :
+
+* http://localhost:3978/
+* http://localhost:3978/personalTab
+* http://localhost:3978/privacy
+* http://localhost:3978/tou
 
 1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
@@ -283,19 +295,12 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-In a browser, go to the following URLs to verify if the application has loaded properly:
-
-* http://localhost:44325/
-* http://localhost:44325/personalTab
-* http://localhost:44325/privacy
-* http://localhost:44325/tou
-
 ### Establish a secure tunnel to your tab for Teams
 
 To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
 
 ```cmd
-ngrok http https://localhost:44312 -host-header="localhost:44312"
+ngrok http https://localhost:3978 -host-header="localhost:3978"
 ```
 
 ### Upload your tab to Teams
@@ -306,7 +311,7 @@ ngrok http https://localhost:44312 -host-header="localhost:44312"
 
 1. Enter your desired name for the app, select **Add**.
 
-1. 
+1. A default **App ID** is created and populated in **Basic information** 
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
