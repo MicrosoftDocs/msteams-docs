@@ -292,12 +292,6 @@ The example payload which contains static and dynamic typeahead search with sing
 }
 ```
 
-## Code sample
-
-|Sample name | Description | C# | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Typeahead search control on Adaptive Cards | Demonstrate the feature of typeahead search (static and dynamic) control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
-=======
 ## Code snippets for invoke request and response
 
 ### Invoke Request
@@ -412,9 +406,10 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## Code sample
 
-|Sample name | Description | C# | Node.js |
+|**Sample name** | **Description** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
 | Type ahead search control on Adaptive Cards | The sample shows the features of static and dynamic type ahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+
 
 ## See also
 
