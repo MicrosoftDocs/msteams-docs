@@ -56,6 +56,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 * Connector cards: Used as part of Office 365 Connectors.
 * Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
 
+### People Picker in Adaptive Cards
+
+[People Picker](~/task-modules-and-cards/cards/people-picker-adaptive-card.md) added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience. 
+
 ### Type-ahead search in Adaptive Cards  
 
 Type ahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience. 
