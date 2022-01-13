@@ -21,7 +21,7 @@ Microsoft Teams app Store provide features that enable you to make money from yo
 
 **Include a SaaS offer with your app**
 
-With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. For example, say you have a free app anyone can get in the store. Now you can offer premium and enterprise plans for users who want more features.
+With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams store listing
 
     :::column-end:::
 :::row-end:::
@@ -51,3 +51,7 @@ Whether you charge a price for your app or offer it for free, you can use in-app
 [Use in-app purchases](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
     :::column-end:::
 :::row-end:::
+
+## Next step
+
+[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
