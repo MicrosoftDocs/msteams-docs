@@ -1318,7 +1318,6 @@ turnContext, CancellationToken cancellationToken) {
 # [TypeScript](#tab/typescript)
 
 ```typescript
-
 async onInstallationUpdateActivity(context: TurnContext) {
         var activity = context.activity.action;
         if(activity == "Add") {
