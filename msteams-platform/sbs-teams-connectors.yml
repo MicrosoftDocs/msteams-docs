@@ -40,6 +40,19 @@ items:
     > [!NOTE]
     > Some features in the sample require that you using Public Developer Preview mode in Microsoft Teams.
 
+- title: Set up local environment
+  durationInMinutes: 1
+  content: |
+   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+
+    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+    1. Select **Code**.
+    1. From the dropdown menu, select **Open with GitHub Desktop**.
+
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone repository.png" alt-text="cloning the repository" border="false":::
+
+    1. Select **Clone**. 
+
 - title: To test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
@@ -56,11 +69,10 @@ items:
        ![Manifest zip](~/assets/images/sbs-connector/zip.png)
    
     1. Go to Microsoft Teams app.
-    1. Select **Store** and select **Manage apps**.
+    1. Select **Apps** and select **Manage apps**.
 
        ![Manage Apps](~/assets/images/sbs-connector/manage apps.png)
 
-    1. Select **Publish an apps**.
     1. In the pop-up that opens, **select Upload a custom app**
  
        ![Upload a custom app](~/assets/images/sbs-connector/upload.png)
@@ -89,26 +101,32 @@ items:
 
        ![notification message](~/assets/images/sbs-connector/notification.png)
 
-    1. Go to Task Manager portal and select **Create New** and enter the task details.
+    1. Go to Task Manager portal.
 
-       [Place holder for image]
+       ![Task manager portal](~/assets/images/sbs-connector/taskportal.png)
+
+    1. select **Create New**.
+       
+       ![create new task](~/assets/images/sbs-connector/task.png)
+       
+    1. Enter the task details.
+
+       ![Task details](~/assets/images/sbs-connector/details.png)
 
     1. Select save.
-    1. You will see the MessageCard in the registered Teams channel.
+    1. You will see the MessageCard in the registered Teams channel as shown below:
 
-       [Place holder for image]
+       ![Message](~/assets/images/sbs-connector/messagecard.png)
 
     1. You can try the actionable buttons available on the message card.
 
-       [Place holder for image]
-    
+       ![Message](~/assets/images/sbs-connector/update.png)
 
 - title: Configure your own connector
   durationInMinutes: 1
   content: |
-    The sample shows a simple implementation of a connector registration implementation. It also sends a connector card to the registered connector via a process triggered "externally."
     
-    Perform the following steps to create your own connector.
+    To create your own connector:
 
     1. Navigate to **TeamsToDoAppConnector.sln** in cloned repository.
 
@@ -120,26 +138,50 @@ items:
      ngrok http -host-header=localhost 3978
      ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
        ![ngrok path](~/assets/images/sbs-connector/ngrok.png)
 
-    1. Go to Connector Developer Portal.
+    1. Go to [Connector Developer Portal](https://outlook.office.com/connectors/Home/Login#!/show/133adfba-f620-475e-a192-19e9f10c476c).
     1. Select connector.
      
-      ![Add new connector](~/assets/images/sbs-connector/connector.png)
+       ![Add new connector](~/assets/images/sbs-connector/connector.png)
       
-    1. Perform the steps to register a new connector in the :
+    1. Register a new connector:
 
        1. Fill in all the basic details such as name, logo, descriptions etc. for the new connector.
-       1. For the configuration page, you'll use our sample code's setup endpoint: https://[BASE_URI]/connector/setup.
-       1. For Valid domains, make enter your domain's http or https URL, e.g. XXXXXXXX.ngrok.io.
-       1. Enable the action on connector card by selecting the Yes radio button and enter the update endpoint: https://[BASE_URI]/Task/Update.
-       1. Click on Save. After the save completes, you will see your connector id.
+          
+          * Enter `Configuration page for your connector` as **https://[BASE_URI]/connector/setup**.
+          * Enter `Valid Domains` as **https Base URL**.
 
-    1. In the Web.config file, set the configuration.appSettings.Base_Uri variable to the ngrok https forwarding url from the above.
-    1. In Visual Studio, click the play button.
-    1. Now you can sideload your app package and test your new connector.
+       1. Enable the action on connector card by selecting Yes.
+
+          * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
+
+       1. Select save. 
+
+          ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
+
+       After completion of registration, you will see the following screen:
+
+         ![output screen](~/assets/images/sbs-connector/output.png) 
+
+    1. Navigate to **Web.config file** in cloned repository.
+
+       ![Navigation path](~/assets/images/sbs-connector/webnavigation.png) 
+
+    1. Open it in Visual studio.
+
+    1. Replace the `configuration.appSettings.Base_Uri` variable to the **ngrok https forwarding url**.
+       
+       ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
+
+    1. Select F5.
+    1. Sideload your app package.
+
+      ![Sideloading](~/assets/images/sbs-connector/apppackage.png) 
+
+    1. Test your new connector(link to heading).
 
 - title: Complete challenge
   durationInMinutes: 1
