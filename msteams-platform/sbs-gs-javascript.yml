@@ -292,7 +292,7 @@ items:
 
     Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    # [Visual Studio Code](#tab/viscode)
+    # [Visual Studio Code](#tab/visscode)
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
@@ -1005,7 +1005,7 @@ items:
 
     Use this account to access the Azure portal and to provision new cloud resources to support your app.
 
-    # [Visual Studio Code](#tab/viscode)
+    # [Visual Studio Code](#tab/visualcode)
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the tab app.
