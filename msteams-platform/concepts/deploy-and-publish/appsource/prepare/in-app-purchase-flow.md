@@ -1,7 +1,7 @@
 ---
 title: In-app purchase flow for the monetizeable apps
 description: Learn the basic tasks and concepts needed to implement in-app purchases and trial functionality in teams apps.
-author: 
+author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal 
@@ -60,10 +60,6 @@ console.log("after callback: ",callbackcalled);
 } 
 </script> 
 ```
-
-
-
-
 
 ## End-user in-app purchasing experience
 
