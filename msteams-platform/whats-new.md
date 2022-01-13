@@ -15,7 +15,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
 
-| Date | Update | Find here  |
+| Date | Update | Find here |
 | --- | --- | --- |
 |01/13/2022| People Picker in Adaptive Cards. | [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker-adaptive-card.md), [Build Cards and Task modules-Overview](task-modules-and-cards/cards-and-task-modules.md), and [Build Cards-Overview](task-modules-and-cards/what-are-cards.md)|
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
