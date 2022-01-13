@@ -87,7 +87,7 @@ People Picker is implemented as an extension of the [Input.ChoiceSet](https://ad
 
 ### Update schema
 
-The following properties are the new additions to the `Input.ChoiceSet` schema to enable People Picker experience on the card:  
+The following properties are additions to the `Input.ChoiceSet` schema to enable People Picker experience on the card:  
 
 #### Input.ChoiceSet control
 

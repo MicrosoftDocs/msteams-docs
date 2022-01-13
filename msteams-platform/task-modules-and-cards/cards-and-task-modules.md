@@ -25,7 +25,7 @@ The following types of cards are supported in bots for Teams:
 
 You can format card text using a subset of XML or HTML formatting or Markdown depending on the card type.
 
-[People Picker in Adaptive Cards](cards/people-picker.md#people-picker-in-adaptive-cards) help to search, select, reassign, and preselect users within chat  or channel.
+People Picker in Adaptive Card helps to search, select, reassign, and preselect users within chat or channel.
 
 You can add and respond to card actions that:
 * Open a URL
