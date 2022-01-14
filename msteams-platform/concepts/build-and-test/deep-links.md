@@ -63,6 +63,10 @@ Use the following format for a deep link that you can use in a bot, connector, o
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
+Use the following format for a deep link to your tab within the app added to a meeting:
+
+`https://teams.microsoft.com/l/entity/<meetingId>/<entityId>?context={"chatId": "<meetingId>","contextType":"chat"}`
+
 > [!NOTE]
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
 > If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab is not opened.
@@ -78,6 +82,7 @@ The query parameters are:
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). | 
 | `subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
 | `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `meetingId`&emsp; |Meeting Id used by tab when running in meeting context. The meeting identifier is available through Bot Invoke and Teams Client SDK.| 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYtODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
 
 Examples:
 
