@@ -48,7 +48,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
  
-       ![Clone repository](~/assets/images/sbs-outgoing-webhooks/clone repository.png)
+       ![Clone](~/assets/images/sbs-outgoing-webhooks/clone repository.png)
 
     1. Select **Clone**. 
 
@@ -59,7 +59,7 @@ items:
 
     * Select the appropriate team and then select Manage team from the (•••) drop-down menu.
 
-      ![Manage team](~/assets/images/sbs-outgoing-webhooks/Manage team.png)
+      ![Manage](~/assets/images/sbs-outgoing-webhooks/Manage team.png)
     * Choose the Apps tab from the navigation bar.
     * From the window's lower-right corner, select Create an outgoing webhook.
     * In the resulting pop-up window, complete the required fields:
@@ -76,7 +76,7 @@ items:
         * Select the Create button from lower-right corner of the pop-up window and the outgoing webhook will be added to the current team's channels.
         * The next dialog window will display an Hash-based Message Authentication Code security token that will be used to authenticate calls between Teams and the designated outside service. This token in used in AuthProvider.cs.
 
-          ![Security](~/assets/images/sbs-outgoing-webhooks/Security.png)
+          ![security](~/assets/images/sbs-outgoing-webhooks/Security token.png)
         * If the URL is valid and the server and client authentication tokens are equal (i.e., an HMAC handshake), the outgoing webhook will be available to the team's users.
 
    
@@ -100,13 +100,14 @@ items:
 
        1. Update the HMAC in AuthProvider.cs file.
 
-          ![Update](~/assets/images/sbs-outgoing-webhooks/UpdateHMAC.png)
+          ![update](~/assets/images/sbs-outgoing-webhooks/UpdateHMAC.png)
       
     
        1. Press **F5** to run the project.
 
 
        1. Select **Yes** if the following dialog appears:
+
           ![Trust Certificate](~/assets/images//sbs-outgoing-webhooks/Outgoingwebhook-certificate.png)
 
           A webpage opens with a message **Your bot is ready!**.
@@ -134,7 +135,7 @@ items:
 
     1. Enter @ and the app you created for an outgoing webhook.
 
-       ![Enter](~/assets/images/sbs-outgoing-webhooks/Type mention.png)
+       ![message](~/assets/images/sbs-outgoing-webhooks/Type mention.png)
 
        The new message received is displayed in the meeting chat.
 
@@ -145,7 +146,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/Oustput.png)
+       ![ready](~/assets/images/sbs-outgoing-webhooks/Output.png)
 
 
 - content: |
