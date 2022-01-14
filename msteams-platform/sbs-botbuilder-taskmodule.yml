@@ -14,11 +14,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Task modules can be invoked from Microsoft Teams bots using hero, thumbnail, or Office 365 Connector buttons on Adaptive Cards or Bot Framework cards. You can interact with the bot by sending message.
+    Microsoft Teams bots invokes Task modules using hero, thumbnail, or Office 365 Connector on Adaptive Cards or Bot Framework cards. You can interact with the bot by sending messages.
     
     **Key features of task modules**
-    * Provide better user experience than multiple conversation steps.
-    * Demonstrate retrieving input from a user and displaying custom web page content.
+    * Enhances user experience by avoiding multiple steps.
+    * Retrieves input from user and displays custom web page content.
 
     This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module.
 
@@ -273,7 +273,7 @@ items:
 
         ![Add client application 1](~/assets/images/meetings-side-panel/addclientapplication1.png) 
 
-       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+       Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
         ![Add client application 2](~/assets/images/meetings-side-panel/addclientapplication2.png) 
 
@@ -302,7 +302,7 @@ items:
 
          ![User](~/assets/images/meetings-side-panel/userpermission.png)
 
-    1. Add the following permissions:</br>
+    1. Select the following permissions:</br>
          * **email**
          * **offline_access**
          * **OpenId**
@@ -400,7 +400,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 54.teams-task-module** in a Command Prompt window and enter the following command:
+    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 54.teams-task-module** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
