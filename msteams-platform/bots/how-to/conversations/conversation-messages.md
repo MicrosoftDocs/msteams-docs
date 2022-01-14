@@ -207,7 +207,7 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 * `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
-### Example channelData object or channelCreated event
+### Example channelData object/channelCreated event
 
 The following code shows an example of channelData object:
 
@@ -227,22 +227,20 @@ The following code shows an example of channelData object:
 }
 ```
 
-Messages received from or sent to your bot can include different types of message content.
-
 ## Message content
+
+Messages received from or sent to your bot can include different types of message content.
 
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text | ✔                | ✔                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
 | Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.  |
 | Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
-
-You can also add notifications to your message using the `Notification.Alert` property.
+| Emojis    | ✔                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ## Notifications to your message
 
-Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner, or both a banner and an email.
+You can also add notifications to your message using the `Notification.Alert` property.Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner, or both a banner and an email.
 
 > [!NOTE]
 > The **Summary** field displays any text from the user as a notification message in the feed.
