@@ -14,11 +14,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams Connectors is an MVC sample task management application generated using the [ASP.NET Web Application (.NET Framework)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) template. The majority of the code is related to either basic MVC configuration or Task management.
+    Microsoft Teams Connectors is Model-View-Controller (MVC) sample task management application generated using the [ASP.NET Web Application (.NET Framework)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) template. The majority of the code is related to either basic MVC configuration or Task management.
     
     The main connector code is found here:
-      * ConnectorController.cs - Setup & Save actions
-      * TaskController.cs - Create & Update actions
+      * ConnectorController.cs - Setup and Save actions
+      * TaskController.cs - Create and Update actions
 
     The following are the functions of Microsoft Teams Connectors:
       * Simulates a real task management system
