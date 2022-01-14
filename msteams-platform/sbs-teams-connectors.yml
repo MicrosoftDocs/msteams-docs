@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 01/15/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: webhooks-and-connectors/how-to/connectors-creating.md
   nextTutorialTitle: Read more on Webhooks and Connectors
   ms.custom: mvc
   ms.localizationpriority: none
@@ -16,17 +16,21 @@ items:
   content: |
     Microsoft Teams Connectors is Model-View-Controller (MVC) sample task management application generated using the [ASP.NET Web Application (.NET Framework)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) template. The majority of the code is related to either basic MVC configuration or Task management.
     
-    The main connector code is found here:
+    **Types of main connector code**
+
       * ConnectorController.cs - Setup and Save actions
       * TaskController.cs - Create and Update actions
 
-    The following are the functions of Microsoft Teams Connectors:
+    **Key features of Meeting Token Generator**
+
       * Simulates a real task management system
       * Allows users to create and view tasks
 
-    The content is randomly generated to simulate how notification can be sent into Microsoft Teams channel using connector.
+    The content generates randomly and simulates the notification to be sent to Microsoft Teams channel using connector. 
     
-     [Place holder for image]
+    This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
+       
+       
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -36,9 +40,6 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-
-    > [!NOTE]
-    > Some features in the sample require that you using Public Developer Preview mode in Microsoft Teams.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -53,10 +54,58 @@ items:
 
     1. Select **Clone**. 
 
+- title: Enable developer preview
+  durationInMinutes: 1
+  content: |
+    **To enable developer preview in your desktop Teams client**
+
+    1. Enable uploading of apps in the admin console of your tenant.
+       1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
+       1. In the left panel, select **Show All**.
+       1. Select **Teams**.
+ 
+          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)
+
+       1. In the left panel, select **Teams apps**.
+       
+       1. Select **Setup Policies**.
+
+          ![Setup policies](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) 
+
+       1. Select **Global**.
+
+          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideloadimage.png)
+
+       1. Toggle **Upload custom apps** to **On** position.
+
+          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
+
+       1. Select **Save**. 
+       
+          Your test tenant can permit custom app sideloading.
+
+          > [!NOTE]
+          > The sideloading takes some time to become active.
+
+    1. Go to **Microsoft Teams**.
+    
+    1. From the upper right corner of your Teams interface, select `...`.
+    
+    1. Select **About**. 
+    
+    1. Select **Developer preview**.
+
+        ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
+   
+    1. Select **Switch to developer preview**.
+
+        ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
+
 - title: To test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
-    Perform the following steps to test the connector in Microsoft Teams:
+    **To test the connector in Microsoft Teams**
+
     1. Navigate to **manifest.json** in cloned repository.
 
        ![Manifest location](~/assets/images/sbs-connector/manifestnavigation.png)
@@ -68,12 +117,12 @@ items:
 
        ![Manifest zip](~/assets/images/sbs-connector/zip.png)
    
-    1. Go to Microsoft Teams app.
-    1. Select **Apps** and select **Manage apps**.
+    1. Go to **Microsoft Teams**.
+    1. In the left panel, select **Store** and select **Manage your apps**.
 
        ![Manage Apps](~/assets/images/sbs-connector/manageapp.png)
 
-    1. In the pop-up that opens, **select Upload a custom app**
+    1. Select Upload a custom app.
  
        ![Upload a custom app](~/assets/images/sbs-connector/upload.png)
       
@@ -113,8 +162,7 @@ items:
 
        ![Task details](~/assets/images/sbs-connector/details.png)
 
-    1. Select save.
-    1. You will see the MessageCard in the registered Teams channel as shown below:
+    1. Select save. The MessageCard appears in registered Teams channel.
 
        ![Message](~/assets/images/sbs-connector/messagecard.png)
 
@@ -175,7 +223,7 @@ items:
        
        ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
 
-    9. Select F5.
+    9. Press F5 to run the project.
     10. Sideload your app package.
 
         ![Sideloading](~/assets/images/sbs-connector/apppackage.png) 
