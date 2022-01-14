@@ -18,7 +18,7 @@ items:
 
     You'll see the following output:
 
-     (Placeholder for image)
+     ![Your Result](~/assets/images/sbs outgoing webhooks/Output.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -58,18 +58,23 @@ items:
     To create an outgoing webhook, perform the following steps:
 
     * Select the appropriate team and then select Manage team from the (•••) drop-down menu.
+
       ![Manage team](~/assets/images/sbs outgoing webhooks/Manage team.png)
     * Choose the Apps tab from the navigation bar.
     * From the window's lower-right corner, select Create an outgoing webhook.
     * In the resulting pop-up window, complete the required fields:
-      ![Create outgoing webhook](~/assets/images/sbs outgoing webhooks/Create outgoing webhook.png)
+
+      ![Create outgoing webhook](~/assets/images/sbs outgoing webhooks/Select.png)
     
         * Name - The webhook title and @mention tap.
         * Callback URL - The HTTPS endpoint that accepts JSON payloads and will receive POST requests from Teams.
+            * Enter ngrok URL/api/sample.
+            * For authenticated sample, enter ngrok URL/authenticatedSample?id=contoso.
         * Description - A detailed string that will appear in the profile card and the team-level App dashboard.
         * Profile Picture (optional) an app icon for your webhook.
         * Select the Create button from lower-right corner of the pop-up window and the outgoing webhook will be added to the current team's channels.
         * The next dialog window will display an Hash-based Message Authentication Code security token that will be used to authenticate calls between Teams and the designated outside service. This token in used in AuthProvider.cs.
+
           ![Security](~/assets/images/sbs outgoing webhooks/Security.png)
         * If the URL is valid and the server and client authentication tokens are equal (i.e., an HMAC handshake), the outgoing webhook will be available to the team's users.
 
@@ -86,24 +91,26 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+          ![Open file](~/assets/images//sbs outgoing webhooks/outgoing-webhooks-VSopenfile.png)
 
        1. Select **WebhookSampleBot.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/meetings-side-panel/Tokenfileready.png)
+          ![Solution File](~/assets/images//sbs outgoing webhooks/openproject.png)
 
        1. Update the HMAC in AuthProvider.cs file.
-       Press **F5** to run the project.
+
+          ![Update](~/assets/images/sbs outgoing webhooks/UpdateHMAC.png)
+      
     
        1. Press **F5** to run the project.
 
 
        1. Select **Yes** if the following dialog appears:
-          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
+          ![Trust Certificate](~/assets/images//sbs outgoing webhooks/Outgoingwebhook-certificate.png)
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/meetings-side-panel/appisready.png) 
+          ![App ready](~/assets/images//sbs outgoing webhooks/appisready.png) 
 
        1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -120,33 +127,27 @@ items:
   content: |
     Let's interact with the app in Teams!
 
-    1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
+    1. Select **General** to start a new conversation.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+    1. Select **New conversation** to begin a conversation.
 
-    1. Enter a new agenda item to the list and select **Add**.
+    1. Enter @ and the app you created for an outgoing webhook.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+       ![Enter](~/assets/images/sbs outgoing webhooks/Type mention.png)
 
-       The new agenda is added in the list.
+       The new message received is displayed in the meeting chat.
 
-    1. Select **Publish Agenda**.
-
-       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
-
-       The new agenda list is displayed in the meeting chat.
-
-       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+       ![Your Result](~/assets/images/sbs outgoing webhooks/Output.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
+       ![Your Result](~/assets/images/sbs outgoing webhooks/Output.png)
 
 
 - content: |
-    You've completed the tutorial to get started with a **Side Panel** app!.
+    You've completed the tutorial to get started with a **Outgoing Webhook** app!.
 
 
