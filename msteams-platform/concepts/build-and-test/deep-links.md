@@ -63,7 +63,7 @@ Use the following format for a deep link that you can use in a bot, connector, o
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
-Use the following format for a deep link to your tab within the app added to a meeting:
+Use the following format for a deep link to your tab in the app added to a meeting:
 
 `https://teams.microsoft.com/l/entity/<meetingId>/<entityId>?context={"chatId": "<meetingId>","contextType":"chat"}`
 
@@ -90,6 +90,7 @@ Examples:
 * Link to a task item within the configurable tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
 * Link to a static tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
 * Link to a task item within the static tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* Link to a tab added to a meeting: `https://teams.microsoft.com/l/entity/19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYtODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2/Post-it?context={"chatId": "19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYtODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Ensure that all query parameters are properly URI encoded. You must follow the preceeding examples using the last example:
