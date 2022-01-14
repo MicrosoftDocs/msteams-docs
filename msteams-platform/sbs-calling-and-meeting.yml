@@ -25,7 +25,7 @@ items:
     To use these Graph APIs in a Teams app, you create a bot and specify some additional information and permissions.
     This step-by-step guide helps you to create a bot with calling and meeting functionality. You'll see the following output:
 
-    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
+    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Final output.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -34,9 +34,10 @@ items:
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
     * [ngrok](https://ngrok.com/) or equivalent tunnelling solution.
-    * [Visual Studio Code](https://code.visualstudio.com/)
+    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Microsoft Teams with an account (not a guest account).
+    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install).
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
@@ -92,14 +93,20 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/client-secret.png" alt-text="Value.":::
 
     1. Create a policy for a demo tenant user for creating the online meeting using the following powershell script.
-    
+
+        > [!NOTE]
+        > Run Windows Powershell PSI as an administrator and execute the script.
+
         (Add powershell script)
 
+        :::image type="content" source="./assets/images/calls-and-meetings/powershell.png" alt-text="PowerShell.":::
+
     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in powershell script.
-    1. Run Windows Powershell PSI as an administrator and execute the script.
-    1. Run the following command to verify whether the policy is created successfully or not. Replace **"azure-client-Id"** with your App ID.
+    1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace **"azure-client-Id"** with your App ID.
     
-        Get-CsApplicationAccessPolicy -PolicyName Meeting-policy-dev -Identity "azure-client-Id"
+        ```powershell
+        Get-CsApplicationAccessPolicy -PolicyName Meeting-policy-dev -Identity "<<azure-client-Id>>"
+        ```
 
     **To add API permissions for downstream calls:**
 
@@ -219,7 +226,7 @@ items:
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId`, `MicrosoftAppPassword`, `AppId` and `AppSecret` with your client_id and client_secret registered in demo tenant.
     1. Update `BotBaseUrl` with your `ngrok` URL.
     1. Update `Tenant ID` that you got from app registration.
-    1. Update `UserId` and `DisplayName` of the users from where you want to initiate the call and to whom you want to redirect or transfer the call.
+    1. Update `UserId` with tenant ID of the Teams account from where you want to initiate the call, and `DisplayName` and `UserId` of the users to whom you want to redirect or transfer the call.
 
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
@@ -248,11 +255,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/output.png" alt-text="Add Output.":::
 
-        You can interact with this bot by sending it a message.
-
-    1. Send a message to the bot.
-
-        (Image desktop/mobile)
+        You can interact with this bot after debugging in Visual Studio.
 
 - title: Interaction with the Calling and Meeting Bot
   durationInMinutes: 2
@@ -266,9 +269,13 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Adaptive card in bot.":::
 
-    1. You can ask Bot to Create a call or Transfer a call.
+    1. You can ask Bot to Create a call.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/calling-bot.png" alt-text="Calling bot.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/placed-call.png" alt-text="Placed Call.":::
+
+    1. You can ask Bot to Transfer the call.
+
+        :::image type="content" source="./assets/images/calls-and-meetings/transfer-call.png" alt-text="Transfer Call.":::
 
     1. You can ask Bot to schedule a Meeting and invite the participants.
 
@@ -279,7 +286,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    (image)
+    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Final output.":::
     
 - content: |
     You've completed the tutorial to get started with bot calling and meeting app for Microsoft Teams.
