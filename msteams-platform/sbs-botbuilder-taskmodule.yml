@@ -20,11 +20,11 @@ items:
     * Provide better user experience than multiple conversation steps.
     * Demonstrate retrieving input from a user and displaying custom web page content.
 
-    This step-by-step guide helps you to create a sample Azure bot for Teams task module.
+    This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module.
 
     You'll see the following output:
 
-     ![Task module](~/assets/images/Teams-task-module/final1.png)
+     ![Task module](~/assets/images/Teams-task-module/final_image.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -506,7 +506,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Task module](~/assets/images/Teams-task-module/final1.png)
+       ![Task module](~/assets/images/Teams-task-module/final_image.png)
 
 - content: |
     You've completed the tutorial to get started with Teams task module app!
