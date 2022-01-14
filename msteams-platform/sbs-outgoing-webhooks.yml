@@ -18,7 +18,7 @@ items:
 
     You'll see the following output:
 
-     ![Your Result](~/assets/images/sbs-outgoing-webhooks/Output.png)
+     ![ready](~/assets/images/sbs-outgoing-webhooks/Output.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -68,6 +68,7 @@ items:
     
         * Name - The webhook title and @mention tap.
         * Callback URL - The HTTPS endpoint that accepts JSON payloads and will receive POST requests from Teams.
+            1. To use api/sample and authenticated sample, do the following:
             * Enter ngrok URL/api/sample.
             * For authenticated sample, enter ngrok URL/authenticatedSample?id=contoso.
         * Description - A detailed string that will appear in the profile card and the team-level App dashboard.
@@ -137,14 +138,14 @@ items:
 
        The new message received is displayed in the meeting chat.
 
-       ![Your Result](~/assets/images/sbs-outgoing-webhooks/Output.png)
+       ![ready](~/assets/images/sbs-outgoing-webhooks/Output.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Your Result](~/assets/images/sbs-outgoing-webhooks/Output.png)
+       ![ready](~/assets/images/sbs-outgoing-webhooks/Oustput.png)
 
 
 - content: |
