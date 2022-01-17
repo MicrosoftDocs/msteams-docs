@@ -68,8 +68,8 @@ items:
     
         * Name - The webhook title and @mention tap.
         * Callback URL - The HTTPS endpoint that accepts JSON payloads and will receive POST requests from Teams.
-            1. To use api/sample and authenticated sample, do the following:
-            * Enter ngrok URL/api/sample.
+            1. To use the api/sample or authenticated sample, do the following:
+            * For api/sample, enter ngrok URL/api/sample.
             * For authenticated sample, enter ngrok URL/authenticatedSample?id=contoso.
         * Description - A detailed string that will appear in the profile card and the team-level App dashboard.
         * Profile Picture (optional) an app icon for your webhook.
