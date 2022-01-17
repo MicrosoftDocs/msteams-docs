@@ -4,6 +4,7 @@ description: Here are the prerequisites for extending your Teams apps across Mic
 ms.date: 11/15/2021
 ms.topic: how-to
 ms.custom: m365apps
+ms.localizationpriority: medium
 ---
 # Set up your dev environment for extending Teams apps across M365
 

@@ -3,7 +3,7 @@ title: Bots in Microsoft Teams
 author: surbhigupta
 description: An overview of bots in Microsoft Teams.
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
 ---
 # Bots in Microsoft Teams
