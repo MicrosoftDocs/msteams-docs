@@ -3,7 +3,7 @@ title: Typeahead search in Adaptive Cards
 author: Rajeshwari-v
 description: Describes typeahead search with Input.ChoiceSet control in Adaptive Cards 
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 

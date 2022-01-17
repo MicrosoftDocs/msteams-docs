@@ -4,6 +4,7 @@ description: Extend your Teams app experiences to other high-usage areas of Micr
 ms.date: 11/15/2021
 ms.topic: overview
 ms.custom: m365apps
+ms.localizationpriority: medium
 ---
 # Extend Teams apps across Microsoft 365
 
