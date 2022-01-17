@@ -251,7 +251,7 @@ items:
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://aaaa****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/Teams-link-unfurling/scopes.png) 
+        ![Scopes](~/assets/images/Teams-link-unfurling/scope.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
