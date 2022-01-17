@@ -89,8 +89,7 @@ items:
 
         * The next dialog window will display an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that will be used to authenticate calls between Teams and the designated outside service. This token in used in AuthProvider.cs.
 
-          ![security](~/assets/images/sbs-outgoing-webhooks/security-token.png)
-
+          ![token](~/assets/images/sbs-outgoing-webhooks/security-token.png)
         * If the URL is valid and the server and client authentication tokens are equal (i.e., an HMAC handshake), the outgoing webhook will be available to the team's users.
 
 - title: Build and run the service
