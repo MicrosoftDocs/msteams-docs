@@ -128,8 +128,7 @@ items:
      ```bash
      ngrok http -host-header=rewrite 3978
      ```
-   
-   # [Command line](#tab/cli)
+    # [Command line](#tab/cli)
 
     Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
 
