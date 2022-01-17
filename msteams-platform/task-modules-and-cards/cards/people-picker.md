@@ -104,10 +104,7 @@ The following table provides predefined values as **dataset** for people picker:
 |dataset|Search Scope
 |--|--|
 |**graph.microsoft.com/users** |Search all members across the organization.|
-|**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|      
-
-> [!NOTE]
-> Currently, the search functionality for all the members across the organization is supported in 1:1 chats with bots, Adaptive Card task modules and tabs only. It is not supported in other 1:1 chats, group chats or channels.  
+|**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|        
 
 ### Example
 The code example for creating People Picker with organization search is as follows:
@@ -159,8 +156,8 @@ The format of the value submitted to the bot depends on the value of the `isMult
 
 |value of `isMultiSelect`|Format|
 |--|--|
-|false _(single select)_|<selected_AAD_ID>.|
-|true _(multi select)_|<selected_AAD_ID_1>,<selected_AAD_ID_2>,<selected_AAD_ID_3>.|  
+|false _(single select)_|<selected_AAD_ID>|
+|true _(multi select)_|<selected_AAD_ID_1>,<selected_AAD_ID_2>,<selected_AAD_ID_3>|  
 
 With the `AAD ID`, People Picker preselects the corresponding user. 
 
