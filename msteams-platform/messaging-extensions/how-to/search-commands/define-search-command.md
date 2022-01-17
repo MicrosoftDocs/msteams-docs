@@ -58,7 +58,7 @@ The following image displays command addition for messaging extension:
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be invoked. Selecting **message** does not currently alter the behavior of your search command. The following image displays the search command invoke location:
+1. Select the location from where your search command must be invoked. The following image displays the search command invoke location:
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 

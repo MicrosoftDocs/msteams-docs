@@ -292,6 +292,125 @@ The example payload which contains static and dynamic typeahead search with sing
 }
 ```
 
+## Code snippets for invoke request and response
+
+### Invoke Request
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+```
+
+### Response
+
+#### [C#](#tab/csharp)
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "application/search")
+    {
+	var packages = new[] {
+			new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+			new { title = "Fluent UI Library", value = "FluentUI" }};
+
+	var searchResponseData = new
+	{
+	    type = "application/vnd.microsoft.search.searchResponse",
+	    value = new
+	    {
+		results = packages
+	    }
+	};
+	var jsonString = JsonConvert.SerializeObject(searchResponseData);
+	JObject jsonData = JObject.Parse(jsonString);
+	return new InvokeResponse()
+	{
+	    Status = 200,
+	    Body = jsonData
+	};
+    }
+
+    return null;
+}
+```
+
+#### [Node.js](#tab/nodejs)
+ 
+```nodejs
+  async onInvokeActivity(context) {
+    if (context._activity.name == 'application/search') {
+      // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
+      var successResult = {
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
+      }
+
+      return successResult;
+
+    }
+  }
+```
+
+####  [JSON](#tab/json)
+
+```json
+{
+    "status": 200,
+    "body" : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
+                },
+                {
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
+                }
+            ]
+        }
+    }
+}
+```
+
+---
+
+## Code sample
+
+|**Sample name** | **Description** | **C#** | **Node.js** |
+|----------------|-----------------|--------------|----------------|
+| Typeahead search control on Adaptive Cards | The sample shows the features of static and dynamic typeahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+
+
 ## See also
 
 * [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)
