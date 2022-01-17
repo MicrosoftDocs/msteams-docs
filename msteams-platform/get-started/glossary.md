@@ -66,18 +66,15 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| Deep linking |  |
-| Developer Portal for Teams |  |
-| Developer Preview |  |
-| Deploy |  |
-| Device capabilities |  <br>**See also**: Capability; Media capability |
+| Deep linking | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
+| Developer Portal for Teams | The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
+| Developer Preview | Developer Preview is a public program for developers which provides early access to unreleased features in Microsoft Teams. This allows you to explore and test upcoming features for potential inclusion in your Microsoft Teams app. |
+| Deploy | Deployment is a two-step process. You provision the resources on internet, and then deploy or upload the backend and frontend code for the application.  At Deployment, your code for your app is copied to the resources you created during the provision step. <br>**See also**: Provision |
+| Device capabilities | A mobile or desktop has built-in devices, such as camera and microphone, called capabilities. You can access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). <br>**See also**: Capability; Media capability |
 | Device permissions |  <br>**See also**: App permissions |
 | Dev environment |  <br>**See also** Environment; Local environment |
 | DevTools |  |
 | Dynamic search | <br>**See also**: Static search |
-| E5 account |  <br>**See also**: Microsoft 365 account |
-| Entry point |  |
-| Environment |  <br>**See also**: Local environment; Dev environment |
 | 
 </details>
 <br>
@@ -86,4 +83,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
+| E5 account |  <br>**See also**: Microsoft 365 account |
+| Entry point |  |
+| Environment |  <br>**See also**: Local environment; Dev environment |
 | 
