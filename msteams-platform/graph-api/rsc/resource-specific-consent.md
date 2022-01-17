@@ -151,7 +151,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
-## Example for requesting RSC permissions in a team and chat when the app manifest version is less than 1.x.
+## Example for requesting RSC permissions in a team and chat when the app manifest version is earlier or equal to 1.11.
 
 ### Example for RSC in a team
 
@@ -203,7 +203,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
   }
 ```
 
-## Example for requesting RSC permissions in a team and chat when the app manifest version is 1.x or greater
+## Example for requesting RSC permissions in a team and chat when the app manifest version is later or equal to 1.12
 
 ### Example for RSC in a team
 
