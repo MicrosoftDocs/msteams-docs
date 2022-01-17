@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.BotFramework.com urls.
+    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.botframework.com urls.
 
     You'll see the following output:
 
