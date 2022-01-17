@@ -63,7 +63,7 @@ items:
     * Choose the Apps tab from the navigation bar.
     * From the window's lower-right corner, select Create an outgoing webhook.
 
-      ![create](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
+      ![create](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).
     * In the resulting pop-up window, complete the required fields:
 
       ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
@@ -84,7 +84,7 @@ items:
    
            
        
-- title: Build and run the service
+- title: Build and run the service.
   durationInMinutes: 1
   content: |
     **To build and run the service using Visual Studio 2019 or Command line**
