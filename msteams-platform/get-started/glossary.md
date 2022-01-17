@@ -37,5 +37,5 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | Blazor | Blazor is a free and open-source web framework that enables developers to create web apps using C# and HTML. It lets you build interactive web UIs using C# instead of JavaScript. Blazor apps are composed of reusable web UI components implemented using C#, HTML, and CSS. It is being developed by Microsoft. |
 | Bicep | Bicep is a declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
-| Bot | A bot is an app that performs programmed repetitive tasks. |
+| Bot | A bot is an app that performs programmed repetitive tasks. <br> **See also**: Conversational bot; Chat bot |
 
