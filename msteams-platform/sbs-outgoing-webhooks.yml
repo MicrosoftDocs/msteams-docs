@@ -150,8 +150,7 @@ items:
        The new message received is displayed in the meeting chat.
 
        ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
-
+       
 - title: Complete challenge
   durationInMinutes: 1
   content: |
