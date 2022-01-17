@@ -10,6 +10,9 @@ ms.author: surbhigupta
 
 # People Picker in Adaptive Cards
 
+>[!NOTE]
+> Currently, People Picker in Adaptive Cards is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) only for mobile and generally available (GA) for desktop.
+
 People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. People Picker supports the following features:        
 
 * Searches single or multiple users.
