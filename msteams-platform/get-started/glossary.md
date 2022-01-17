@@ -40,6 +40,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | Bot | A bot is an app that performs programmed repetitive tasks. <br> **See also**: Conversational bot; Chat bot |
 | Bot Emulator | Bot Framework Emulator is a desktop application that allows you to test and debug bots, either locally or remotely. |
 | Bot Framework | The Bot Framework is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. |
+|
 </details>
 <br>
 <details>
@@ -57,7 +58,32 @@ Common terms and definitions used in Teams Developer Documentation.
 | Connectors | Connectors allow users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: Webhooks |
 | Conversation | A conversation is a series of messages sent between your Microsoft Teams bot and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: One-on-one chat; Group chat |
 | Conversational bot |  Conversational bots allow users to interact with your web service using text, interactive cards, and task modules. <br>**See aso** Chat bot |
+|
 </details>
 <br>
 <details>
 <summary>D</summary>
+
+| Term | Definition |
+| --- | --- |
+| Deep linking |  |
+| Developer Portal for Teams |  |
+| Developer Preview |  |
+| Deploy |  |
+| Device capabilities |  <br>**See also**: Capability; Media capability |
+| Device permissions |  <br>**See also**: App permissions |
+| Dev environment |  <br>**See also** Environment; Local environment |
+| DevTools |  |
+| Dynamic search | <br>**See also**: Static search |
+| E5 account |  <br>**See also**: Microsoft 365 account |
+| Entry point |  |
+| Environment |  <br>**See also**: Local environment; Dev environment |
+| 
+</details>
+<br>
+<details>
+<summary>E</summary>
+
+| Term | Definition |
+| --- | --- |
+| 
