@@ -14,17 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Single sign-on (SSO) helps to authorize Teams tab for desktop or mobile clients. This enhances user experience by automatically signing in multiple times and also to other devices without re-entering sign-in credentials.
+   The Azure Active Directory Single sign-on (AAD SSO) helps to authenticate Teams tab for desktop or mobile clients. This enhances user experience by automatically signing in multiple times and also to other devices without re-entering sign-in credentials.
 
-   **Key features of SSO for tabs and messaging extension**
+   **Key features of AAD SSO for tabs and messaging extension**
 
-    * Allows the user to sign in automatically.
-    * Calls Graph APIs to display user's profile.
-    * Obtains access token for the logged-in user using SSO.
-    * Calls web service to exchange the access token.
-    * Displays profile card of the user in messaging extension.    
+    * After the first sign-in, AAD SSO allows the user to sign in automatically, multiple times.
+    * Allows the user to sign in to other devices without re-entering sign-in credentials.
+    * Obtains access token for the logged-in user using AAD SSO.   
 
-   This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
+   This step-by-step guide helps you to create tabs and messaging extensions with AAD SSO authentication enabled. You'll see the following output:
 
      ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
 
