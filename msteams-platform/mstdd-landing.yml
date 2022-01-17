@@ -48,7 +48,7 @@ landingContent:
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       - text: Explore low-code apps for Teams
-        url:  ~/samples/teams-low-code-solutions  
+        url: ~/samples/teams-low-code-solutions.md
 
 - title: Tutorials
   linkLists:
