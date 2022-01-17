@@ -53,7 +53,11 @@ Common terms and definitions used in Teams Developer Documentation.
 | Channel | A channel is a single place for a team to share messages, tools, and files. In Teams, teamwork and communication happen in channels.  |
 | Client secret | The Client secret/password or a public or private key pair that is Certificate. This is not required for native apps. <br> **See also**: Bot |
 | Cloud resources | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
-| Collaboration app |  <br> **See also**: Standalone app |
-| Connectors |  <br> **See also**: Webhooks |
+| Collaboration app | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: Standalone app |
+| Connectors | Connectors allow users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: Webhooks |
 | Conversation | A conversation is a series of messages sent between your Microsoft Teams bot and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: One-on-one chat; Group chat |
 | Conversational bot |  Conversational bots allow users to interact with your web service using text, interactive cards, and task modules. <br>**See aso** Chat bot |
+</details>
+<br>
+<details>
+<summary>D</summary>
