@@ -69,7 +69,7 @@ items:
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
     1. From the **Resource group** dropdown list, select your existing resource group. 
     
-        ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create.png) 
+        ![Select resource Azure bot](~/assets/images/Teams-link-unfurling/review-plus-create.png) 
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
@@ -94,11 +94,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/Teams-task-module/botdeployment.png)
+        ![Deploy App](~/assets/images/Teams-link-unfurling/botdeployment.png)
 
         Your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/Teams-task-module/bot-page.png)
+        ![Azure bot resource created](~/assets/images/Teams-link-unfurling/bot-page.png)
 
     **To create client secret**
 
@@ -113,7 +113,7 @@ items:
 
     1. Select **Multitenant** under App Type.
 
-        ![Microsoft App ID](~/assets/images/Teams-task-module/config.png)
+        ![Microsoft App ID](~/assets/images/Teams-link-unfurling/config.png)
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -125,11 +125,11 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/Teams-task-module/clientsecret.png)
+        ![Add client secret to app](~/assets/images/Teams-link-unfurling/clientsecret.png)
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/Teams-task-module/clientvalue.png)
+         ![Value of client secret](~/assets/images/Teams-link-unfurling/clientvalue.png)
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -138,7 +138,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/Teams-task-module/gotohome.png)
+        ![Home page](~/assets/images/Teams-link-unfurling/gotohome.png)
 
     1. Select your bot from **Recent resources**.
 
@@ -171,7 +171,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/Teams-task-module/ngrok.png)
+        ![ngrok HTTPS URL](~/assets/images/Teams-link-unfurling/ngrok.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -181,7 +181,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/Teams-task-module/messaging-endpoint.png)
+        ![Messaging Endpoint](~/assets/images/Teams-link-unfurling/messaging-endpoint.png)
 
     1. Select **Apply**.
 
@@ -200,24 +200,24 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/Teams-task-module/appregister.png)
+       ![App registration](~/assets/images/Teams-link-unfurling/appregister.png)
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/Teams-task-module/exposeanapi.png)
+       ![Expose an API](~/assets/images/Teams-link-unfurling/exposeanapi.png)
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/Teams-task-module/setlink.png)
+       ![Set link](~/assets/images/Teams-link-unfurling/setlink.png)
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://d4b8****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/Teams-task-module/appIDuri.png)
+        ![App ID URI](~/assets/images/Teams-link-unfurling/appIDuri.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -245,13 +245,13 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/Teams-task-module/addascope.png)
+        ![Add a scope](~/assets/images/Teams-link-unfurling/addascope.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/Teams-task-module/scopes.png) 
+        ![Scopes](~/assets/images/Teams-link-unfurling/scopes.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -269,7 +269,7 @@ items:
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/Teams-task-module/authorizedscope.png) 
+        ![Add client application 2](~/assets/images/Teams-link-unfurling/authorizedscope.png) 
 
        The following image displays the client IDs:
 
@@ -310,7 +310,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/Teams-task-module/webauth.png)
+            ![Web](~/assets/images/Teams-link-unfurling/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://d4b8****.ngrok.io/auth-end`. </br>
@@ -321,7 +321,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/Teams-task-module/authend.png)
+            ![Auth-end](~/assets/images/Teams-link-unfurling/authend.png)
 
 - content: |
     You've completed the tutorial to get started with Teams link unfurling app!
