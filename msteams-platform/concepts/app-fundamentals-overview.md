@@ -29,7 +29,7 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 
 Understanding the user and their problem are the first indicators of how a Teams app can help. Build your use around the problem, determine how Teams can solve it, and draw a solution.
 
-- **Understand your use case and Teams App Features**: Understand who your user's requirement and you can identify the right features.
+- **Understand your use case and Teams App Features**: Understand your user's requirement and you can identify the right features.
 
 - **Map your use cases**: Map common use cases to Teams features based on sharing, collaborating, workflows, relevant social platforms, and more.
 
