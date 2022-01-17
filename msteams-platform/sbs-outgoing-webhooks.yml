@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Webhooks are a great way for Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. In Teams, outgoing webhooks provide a simple way to allow users to send messages to your web service without having to go through the full process of creating bots via the Microsoft Bot Framework. Outgoing webhooks post data from Teams to any chosen service capable of accepting a JSON payload. Once an outgoing webhook is added to a team, it acts like bot, listening in channels for messages using @mention, sending notifications to external web services, and responding with rich messages that can include cards and images. 
+    Webhooks help Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. In Teams, outgoing webhooks allow users to send messages to your web service without having to go through the full process of creating bots via the [Microsoft Bot Framework](https://dev.botframework.com/). Outgoing webhooks post data from Teams to any chosen service capable of accepting a JSON payload. Once an outgoing webhook is added to a team, it acts like bot, listening in channels for messages using @mention, sending notifications to external web services, and responding with rich messages that can include cards and images. 
 
     You'll see the following output:
 
@@ -37,7 +37,7 @@ items:
     * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
     > [!NOTE]
-    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
+    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support outgoing webhooks.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -65,7 +65,7 @@ items:
 
     * From the window's lower-right corner, select Create an outgoing webhook.
 
-      ![create](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
+      ![outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
 
     * In the resulting pop-up window, complete the required fields:
 
@@ -78,7 +78,7 @@ items:
             1. To use the api/sample or authenticated sample, do the following:
 
             * For api/sample, enter ngrok URL/api/sample.
-            
+
             * For authenticated sample, enter ngrok URL/authenticatedSample?id=contoso.
 
         * Description - A detailed string that will appear in the profile card and the team-level App dashboard.
@@ -87,7 +87,7 @@ items:
 
         * Select the Create button from lower-right corner of the pop-up window and the outgoing webhook will be added to the current team's channels.
 
-        * The next dialog window will display an Hash-based Message Authentication Code security token that will be used to authenticate calls between Teams and the designated outside service. This token in used in AuthProvider.cs.
+        * The next dialog window will display an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that will be used to authenticate calls between Teams and the designated outside service. This token in used in AuthProvider.cs.
 
           ![security](~/assets/images/sbs-outgoing-webhooks/security-token.png)
 
@@ -110,7 +110,7 @@ items:
 
           ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
 
-       1. Update the HMAC in AuthProvider.cs file.
+       1. Update the HMAC in AuthProvider.cs file.  
 
           ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac.png)
       
@@ -143,12 +143,13 @@ items:
 
     1. Select **New conversation** to begin a conversation.
 
-    1. Enter @ and the app you created for an outgoing webhook.
+    1. Enter @ and the app you created for an outgoing webhook. The @mention supports adaptive cards, thumbnails, hero, etc.
 
        ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
 
        The new message received is displayed in the meeting chat.
 
+       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
        ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
 
 - title: Complete challenge
