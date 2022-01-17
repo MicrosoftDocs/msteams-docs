@@ -51,7 +51,7 @@ The following image shows the reassignment scenario:
 # [Mobile](#tab/mobile)
 
 > [!NOTE]
-> Currently, this feature is available in **public developer preview** only.
+> Currently, this feature is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) only.
 
 Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other user selection experience in mobile.
 
