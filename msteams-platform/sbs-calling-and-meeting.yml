@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Calling and Meeting Bot provides basic functionality like create a call, join a call, transfer/redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
+    Calling and Meeting Bot provides basic functionality like create a call, join a call, transfer or redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
     
     Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
@@ -65,7 +65,7 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory.":::
     
     1. **Register an application** page opens. Enter your application's registration information.
-    1. Enter a meaningful application **Name** that will be displayed to users of the app.
+    1. Enter a meaningful application **Name** that is displayed to users of the app.
     1. In **Supported account types**, select the accounts you would like your application to support.
     1. In Redirect URI (optional) field, select the type of app **Web or Public client(mobile & desktop)**, and then enter the redirect URI for your application.
 
@@ -78,7 +78,7 @@ items:
 
     **To create client secret:**
 
-    1. In Overview page of your bot, select **Essentials**. Save the **Application client ID** (Microsoft App ID) for future reference.
+    1. In **Overview** page of your bot, select **Essentials**. Save the **Application client ID** (Microsoft App ID) for future reference.
     
         :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new.png" alt-text="Microsoft App ID.":::
     
@@ -102,10 +102,10 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/powershell.png" alt-text="PowerShell.":::
 
     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in powershell script.
-    1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace **"azure-client-Id"** with your App ID.
+    1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace policy name.
     
         ```powershell
-        Get-CsApplicationAccessPolicy -PolicyName Meeting-policy-dev -Identity "<<azure-client-Id>>"
+        Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
 
     **To add API permissions for downstream calls:**
