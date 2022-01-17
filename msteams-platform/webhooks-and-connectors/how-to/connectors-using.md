@@ -3,7 +3,7 @@ title: Create and send messages
 author: laujan
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams o365 connector
 ---
 

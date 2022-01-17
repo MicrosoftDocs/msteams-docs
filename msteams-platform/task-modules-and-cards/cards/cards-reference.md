@@ -1,7 +1,7 @@
 ---
 title: Types of cards
 description: Describes all the cards and card actions available to bots in Teams
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: bots cards reference
 ms.topic: reference
 ---
