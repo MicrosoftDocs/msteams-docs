@@ -30,7 +30,11 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * Active Microsoft Teams account with profile picture. Ensure it is not a guest account.
+    * Active Microsoft Teams account with profile picture.
+
+      > [!TIP]
+      > Ensure the Microsoft Teams account is not a guest account.
+
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution
 
       > [!NOTE]
