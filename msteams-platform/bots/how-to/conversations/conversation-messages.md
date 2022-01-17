@@ -132,15 +132,17 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```typescript
 
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
-            await context.sendActivity('Hello and welcome!');
-            await next();
-        });
-    }
-}
+    this.onMembersAddedActivity(async (context, next) => {
+        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
+            if (member.id !== context.activity.recipient.id) {
+                await context.sendActivity(
+                    `Welcome to the team ${member.givenName} ${member.surname}`
+                );
+            }
+        }));
+
+        await next();
+    });
 ```
 
 # [Python](#tab/python)
