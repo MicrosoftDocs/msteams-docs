@@ -48,3 +48,13 @@ Common terms and definitions used in Teams Developer Documentation.
 | Term | Definition |
 | --- | --- |
 | Call bot | A bot that participates in audio or video calls and online meetings. <br> **See also**: Chat bot; Meeting bot |
+| Capability | The feature of a Teams app are called as Capability. An app may have one or more core capabilities, such as tab, bot, messaging extensions. <br>**See also**: Device capability; Media capability |
+| Chat bot | A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. <br> **See also**: Conversational bot. |
+| Chat session |  |
+| Channel |  |
+| Client secret |  <br> **See also**: Bot |
+| Cloud resources |  |
+| Collaboration app |  <br> **See also**: Standalone app |
+| Connectors |  <br> **See also**: Webhooks |
+| Conversation | A conversation is a series of messages sent between your Microsoft Teams bot and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: One-on-one chat; Group chat |
+| Conversational bot |  
