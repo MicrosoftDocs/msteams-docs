@@ -22,7 +22,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 > - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **application permissions**: RSC permissions for  your app, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
-## Example for requesting RSC permissions in a team and chat when the app manifest version is less than 1.x.
+## Example for requesting RSC permissions in a team and chat when the app manifest version is earlier oreual to 1.11.
 
 ### Example for RSC in a team
 
@@ -74,8 +74,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
   }
 ```
 
-## Example for requesting RSC permissions in a team and chat when the app manifest version is 1.x or greater
-
+## Example for requesting RSC permissions in a team and chat when the app manifest later or equal to 1.12.
 ### Example for RSC in a team
 
 ```json
