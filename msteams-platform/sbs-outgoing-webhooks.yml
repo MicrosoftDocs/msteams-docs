@@ -111,7 +111,7 @@ items:
 
        1. Update the HMAC in AuthProvider.cs file.  
 
-          ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac.png)
+          ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
       
        1. Press **F5** to run the project.
 
