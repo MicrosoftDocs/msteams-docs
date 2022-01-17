@@ -33,7 +33,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|01/17/2022| People Picker in Adaptive cards | Build cards and task modules > Build cards > [People Picker in Adaptive Cards for desktop](#tab/desktop)(task-modules-and-cards/cards/people-picker.md#desktoptabdesktop)
+|01/17/2022| People Picker in Adaptive cards | Build cards and task modules > Build cards > [People Picker in Adaptive cards for desktop](task-modules-and-cards/cards/people-picker.md#desktoptabdesktop)
 <br>
 
 <details>
@@ -215,7 +215,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|01/17/2022| People Picker in Adaptive cards  | Build cards and task modules > Build cards > [People Picker in Adaptive Cards for mobile](#tab/mobile)(task-modules-and-cards/cards/people-picker.md#mobiletabmobile)|
+|01/17/2022| People Picker in Adaptive cards  | Build cards and task modules > Build cards > [People Picker in Adaptive cards for mobile](task-modules-and-cards/cards/people-picker.md#mobiletabmobile)|
 |01/10/2022 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
