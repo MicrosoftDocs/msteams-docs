@@ -38,4 +38,13 @@ Common terms and definitions used in Teams Developer Documentation.
 | Blazor | Blazor is a free and open-source web framework that enables developers to create web apps using C# and HTML. It lets you build interactive web UIs using C# instead of JavaScript. Blazor apps are composed of reusable web UI components implemented using C#, HTML, and CSS. It is being developed by Microsoft. |
 | Bicep | Bicep is a declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
 | Bot | A bot is an app that performs programmed repetitive tasks. <br> **See also**: Conversational bot; Chat bot |
+| Bot Emulator | Bot Framework Emulator is a desktop application that allows you to test and debug bots, either locally or remotely. |
+| Bot Framework | The Bot Framework is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. |
+</details>
+<br>
+<details>
+<summary>C</summary>
 
+| Term | Definition |
+| --- | --- |
+| Call bot | A bot that participates in audio or video calls and online meetings. <br> **See also**: Chat bot; Meeting bot |
