@@ -128,9 +128,16 @@ items:
      ```bash
      ngrok http -host-header=rewrite 3978
      ```
+   
+   # [Command line](#tab/cli)
 
-      1. Run your tab, either from Visual Studio with F5 or using dotnet run in the appropriate folder.
+    Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
 
+    ```bash
+    dotnet run
+    ```
+   
+    ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
             
 
 - title: Interact with the app in Teams
