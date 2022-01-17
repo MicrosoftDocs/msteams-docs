@@ -84,7 +84,7 @@ items:
    
            
        
-- title: Build and run the service.
+- title: Build and run the service
   durationInMinutes: 1
   content: |
     **To build and run the service using Visual Studio 2019 or Command line**
