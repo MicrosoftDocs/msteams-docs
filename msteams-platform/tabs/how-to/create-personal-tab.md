@@ -17,6 +17,9 @@ Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**
 
 ## Create a personal tab
 
+> [!div class="nextstepaction"]
+> [Node.js](~/tabs/how-to/create-personal-tab-node-js.md)
+
 # [Node.js](#tab/nodejs)
 
 ### Create a personal tab with Node.js
