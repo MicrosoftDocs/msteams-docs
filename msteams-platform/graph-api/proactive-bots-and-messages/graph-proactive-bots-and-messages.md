@@ -182,6 +182,55 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
 
 Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) after the bot has been added for a user or a team, and has received all the user information.
 
+## Code snippets
+
+The following code provides an example of sending proactive messages:
+
+# [Node.js](#tab/nodejs)
+
+```typescript
+
+async SendNotificationToAllUsersAsync(context) {
+    const TeamMembers = await TeamsInfo.getPagedMembers(context);
+    let Sent_msg_Cout = TeamMembers.members.length;
+    TeamMembers.members.map(async member => {
+        const ref = TurnContext.getConversationReference(context.activity);
+        ref.user = member;
+        await context.adapter.createConversation(ref, async (context) => {
+            const ref = TurnContext.getConversationReference(context.activity);
+            await context.adapter.continueConversation(ref, async (context) => {
+                await context.sendActivity("Proactive hello.");
+            });
+        });
+    });
+    await context.sendActivity(MessageFactory.text("Message sent:" + Sent_msg_Cout));
+}
+```
+
+# [C#](#tab/dotnet)
+
+```csharp
+
+public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+        {
+            int msgSentCount = 0;
+ 
+            // Send notification to all the members
+            foreach (var conversationReference in _conversationReferences.Values)
+            {
+                await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
+                msgSentCount++;
+            }
+ 
+            return msgSentCount;
+        }
+
+private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
+        {
+            await turnContext.SendActivityAsync("Proactive hello.");
+        }
+```
+
 ## Code sample
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** |
