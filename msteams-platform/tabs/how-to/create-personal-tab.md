@@ -350,6 +350,8 @@ ngrok http 3978 --host-header=localhost
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
+### Create a personal tab with ASP.NET Core
+
 You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC:
 
 1. At a command prompt, create a new directory for your tab project.
@@ -359,6 +361,7 @@ You can create a custom personal tab using C# and ASP.NET Core MVC. To create a 
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
+
 ### Generate your personal tab
 
 1. Open Visual Studio and select **Open a project or solution**.
@@ -433,6 +436,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
 
+![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetmvccoreuploaded.png)
 
 ---
 
