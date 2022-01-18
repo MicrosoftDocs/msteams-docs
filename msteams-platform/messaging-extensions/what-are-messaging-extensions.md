@@ -45,6 +45,81 @@ Action commands are used to present the users with a modal popup to collect or d
 The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the messaging extension action command task module:
 ![messaging extension action command task module](~/assets/images/task-module.png)
 
+## Code snippets for action commands
+
+The following code provides an example of action based for messaging extensions:
+
+# [Node.js](#tab/nodejs)
+
+```typescript
+
+    async handleTeamsMessagingExtensionFetchTask(context, action) {
+        switch (action.commandId) {
+            case 'Static HTML':
+                return staticHtmlPage();
+        }
+    }
+
+    staticHtmlPage(){
+        return {
+            task: {
+                type: 'continue',
+                value: {
+                    width: 450,
+                    height: 125,
+                    title: 'Task module Static HTML',
+                    url: `${baseurl}/StaticPage.html`
+                }
+            }
+        };
+    }
+
+```
+
+# [C#](#tab/dotnet)
+
+```csharp
+ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+        {
+            // Handle different actions using switch
+            switch (action.CommandId)
+            {
+                case "HTML":
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Height = 200,
+                                Width = 400,
+                                Title = "Task Module HTML Page",
+                                Url = baseUrl + "/htmlpage.html",
+                            },
+                        },
+                    };
+                // return TaskModuleHTMLPage(turnContext, action);
+                default:
+                    string memberName = "";
+                    var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
+                    memberName = member.Name;
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Card = <<AdaptiveAction card json>>,
+                                Height = 200,
+                                Width = 400,
+                                Title = $"Welcome {memberName}",
+                            },
+                        },
+                    };
+            }
+```
+---
+
 ### Search commands
 
 Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area, and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
@@ -53,6 +128,84 @@ The cards are triggered from the compose message area or the command box and not
 The following image displays the messaging extension search command task module:
 
 ![messaging extension search command](~/assets/images/search-extension.png)
+
+## Code snippets for search commands
+
+The following code provides an example of search based for messaging extensions:
+
+# [Node.js](#tab/nodejs)
+
+```typescript
+
+async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;     
+        const attachments = [];
+                const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+                
+                response.data.objects.forEach(obj => {
+                        const heroCard = CardFactory.heroCard(obj.package.name);
+                        const preview = CardFactory.heroCard(obj.package.name);
+                        preview.content.tap = { type: 'invoke', value: { description: obj.package.description } };
+                        const attachment = { ...heroCard, preview };
+                        attachments.push(attachment);
+                });
+    
+                return {
+                    composeExtension:  {
+                           type: 'result',
+                           attachmentLayout: 'list',
+                           attachments: attachments
+                    }
+                };
+            }       
+        }
+```
+
+# [C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+        {
+            var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
+
+            var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+            // We take every row of the results and wrap them in cards wrapped in MessagingExtensionAttachment objects.
+            // The Preview is optional, if it includes a Tap, that will trigger the OnTeamsMessagingExtensionSelectItemAsync event back on this bot.
+            var attachments = packages.Select(package =>
+            {
+                var previewCard = new ThumbnailCard { Title = package.title, Tap = new CardAction { Type = "invoke", Value = package } };
+                if (!string.IsNullOrEmpty(package.title))
+                {
+                    previewCard.Images = new List<CardImage>() { new CardImage(package.title, "Icon") };
+                }
+
+                var attachment = new MessagingExtensionAttachment
+                {
+                    ContentType = HeroCard.ContentType,
+                    Content = new HeroCard { Title = package.title },
+                    Preview = previewCard.ToAttachment()
+                };
+
+                return attachment;
+            }).ToList();
+
+            // The list of MessagingExtensionAttachments must we wrapped in a MessagingExtensionResult wrapped in a MessagingExtensionResponse.
+            return new MessagingExtensionResponse
+            {
+                ComposeExtension = new MessagingExtensionResult
+                {
+                    Type = "result",
+                    AttachmentLayout = "list",
+                    Attachments = attachments
+                }
+            };
+        }
+```
+---
 
 > [!NOTE]
 > For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
