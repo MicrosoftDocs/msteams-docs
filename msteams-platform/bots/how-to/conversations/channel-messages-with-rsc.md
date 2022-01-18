@@ -78,6 +78,8 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
 ## Code snippets
 
+The following code provides an example of RSC permissions:
+
 # [Node.js](#tab/nodejs)
 
 ```
