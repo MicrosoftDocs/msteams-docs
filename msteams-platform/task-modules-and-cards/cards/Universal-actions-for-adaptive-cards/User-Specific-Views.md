@@ -188,7 +188,6 @@ var adaptiveCardResponse = JObject.FromObject(new
     type = "application/vnd.microsoft.adaptive.card",
     value = card
  });
-
 ```
 ### [nodejs](#tab/nodejs)
 
@@ -205,7 +204,6 @@ const cardRes = {
         body: cardRes
     };
     return res;
-
 ```    
 
 Card design guidelines to keep in mind while designing User Specific Views:
