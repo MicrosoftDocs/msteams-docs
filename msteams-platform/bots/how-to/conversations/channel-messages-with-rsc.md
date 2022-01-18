@@ -80,7 +80,7 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
 # [Node.js](#tab/nodejs)
 
-```
+```typescript
 // Handle when a message is addressed to the bot. 
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 	this.onMessage(async (context, next) => {
