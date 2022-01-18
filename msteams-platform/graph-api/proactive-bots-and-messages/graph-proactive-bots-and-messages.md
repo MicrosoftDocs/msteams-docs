@@ -210,7 +210,6 @@ async SendNotificationToAllUsersAsync(context) {
 # [C#](#tab/dotnet)
 
 ```csharp
----
 
 public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
@@ -231,6 +230,7 @@ private async Task BotCallback(ITurnContext turnContext, CancellationToken cance
             await turnContext.SendActivityAsync("Proactive hello.");
         }
 ```
+---
 
 ## Code sample
 
