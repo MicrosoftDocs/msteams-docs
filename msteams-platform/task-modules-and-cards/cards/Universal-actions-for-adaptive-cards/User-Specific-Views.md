@@ -176,7 +176,9 @@ The following code provides an example of an adaptiveCard/action invoke response
 
 The following code provides an example of an invoke response to return Adaptive Cards:
 
-```C#
+# [C#](#tab/C#)
+
+```
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -186,7 +188,25 @@ var adaptiveCardResponse = JObject.FromObject(new
     type = "application/vnd.microsoft.adaptive.card",
     value = card
  });
+ 
 ```
+# [nodejs](#tab/nodejs#)
+
+```
+var card = "<adaptive card json>";
+ 
+const cardRes = {
+        statusCode: 200,
+        type: 'application/vnd.microsoft.card.adaptive',
+        value: card
+    };
+    const res = {
+        status: 200,
+        body: cardRes
+    };
+    return res;
+
+```    
 
 Card design guidelines to keep in mind while designing User Specific Views:
 
