@@ -76,14 +76,7 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
     ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
-## Code sample
-
-| Sample name | Description | C# |Node.js|
-|-------------|-------------|------|----|
-|Channel messages with RSC permissions|	Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
-
-
-### Code snippets for RSC permissions
+## Code snippets for RSC permissions
 
 # [Node.js](#tab/nodejs)
 
@@ -106,6 +99,12 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 			await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channles in team without being @mentioned."));
         }
  ```
+
+## Code sample
+
+| Sample name | Description | C# |Node.js|
+|-------------|-------------|------|----|
+|Channel messages with RSC permissions|	Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## See also
 
