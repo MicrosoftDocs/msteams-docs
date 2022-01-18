@@ -4,6 +4,7 @@ description: Here's how to update your search-based Teams messaging extension to
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
+ms.localizationpriority: medium
 ---
 # Extend a Teams message extension across Microsoft 365
 
