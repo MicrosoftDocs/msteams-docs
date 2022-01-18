@@ -150,7 +150,7 @@ items:
 
     1. Enter @ and the app you created for an outgoing webhook. The @mention supports adaptive cards, thumbnails, hero, etc.
 
-       ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
+       ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)picture.
 
        The new message received is displayed in the meeting chat.
 
