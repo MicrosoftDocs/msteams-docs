@@ -1,6 +1,6 @@
 ---
-title: Create a personal tab
-author: laujan
+title: Create a personal tab with Node.js
+author: v-npaladugu
 description: A quickstart guide to creating a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
 ms.localizationpriority: medium
 ms.topic: quickstart
@@ -9,17 +9,7 @@ keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission 
 zone_pivot_groups: personal-tab
 ---
 
-# Personal tab
-
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
-
-Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**.
-
-## Create a personal tab
-
-# [Node.js](#tab/nodejs)
-
-### Create a personal tab with Node.js
+# Create a personal tab with Node.js
 
 To create a personal tab with Node.js:
 
@@ -35,7 +25,7 @@ To create a personal tab with Node.js:
     npm install generator-teams --global
     ```
 
-### Generate your personal tab
+## Generate your personal tab
 
 1. At a command prompt, create a new directory for your personal tab.
 
@@ -117,7 +107,7 @@ To create a personal tab with Node.js:
 
     Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
 
-### Manifest update
+## Manifest update
 
 To add a personal tab to this application, create a content page, and update existing files
 
@@ -190,11 +180,11 @@ To add a personal tab to this application, create a content page, and update exi
 
 1. Save the updated file. Your tab code is complete.
 
-### Build and run your application
+## Build and run your application
 
 You must have an [app package](~/concepts/build-and-test/apps-package.md) to build and run your application in Teams.
 
-#### Create the app package
+### Create the app package
 
 The package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. In the command prompt, enter the following command:
 
@@ -202,7 +192,7 @@ The package is created through a gulp task that validates the **manifest.json** 
 gulp manifest
 ```
 
-#### Build your application
+### Build your application
 
 The build command transpiles your solution into the **./dist** folder. Enter the following command in the command prompt:
 
@@ -210,7 +200,7 @@ The build command transpiles your solution into the **./dist** folder. Enter the
 gulp build
 ```
 
-#### Run your application
+### Run your application
 
 1. Start a local web server by entering the following command in the command prompt:
 
@@ -226,7 +216,7 @@ gulp build
 
     ![Personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
-### Establish a secure tunnel to your tab
+## Establish a secure tunnel to your tab
 
 1. To establish a secure tunnel to your tab, exit the localhost and enter the following command:
 
@@ -237,7 +227,7 @@ gulp build
 > [!IMPORTANT]
 > After your tab has been uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
 
-### Upload your application to Teams
+## Upload your application to Teams
 
 To upload your application to Teams
 
@@ -255,130 +245,3 @@ To upload your application to Teams
 ### View your personal tab
 
 In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app.
-
-# [ASP.NET Core](#tab/aspnetcore)
-
-### Create a personal tab with ASP.NET Core
-
-You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with Node.js:
-
-1. At a command prompt, create a new directory for your tab project.
-
-1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
-
-    ```cmd
-    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-    ```
-### Generate your personal tab
-
-1. Open Visual Studio and select **Open a project or solution**.
-
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** 
-
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs :
-
-* http://localhost:3978/
-* http://localhost:3978/personalTab
-* http://localhost:3978/privacy
-* http://localhost:3978/tou
-
-1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
-
-    ```HTML
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-    ```
-
-1. Open **PersonalTab.cshtml** from **Pages** folder and inside the `<script>` tags add `microsoftTeams.initialize()` and save.
-
-### Run your application
-
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
-
-### Establish a secure tunnel to your tab for Teams
-
-To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
-
-```cmd
-ngrok http 3978 --host-header=localhost
-```
-
-### Update your app package with Developer Portal
-
-1. Navigate to your **Developer portal** in Teams.
-
-1. Open **Apps** and select **Import app**.
-
-1. The name of your app package is **tab.zip**. It's available in the following path:
-
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Select **tab.zip** and open it in the Developer Portal.
-
-1. A default **App ID** is created and populated in **Basic information** section.
-
-1. Add the Short and Long description  for your app in **Descriptions**.
-
-1. In **Dveloper Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
-
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou>` and save.
-
-1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank. 
-
-1. Select Save.
-
-1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
-
-### Preview your app in Teams
-
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
-
-1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
-
-1. Find your app using the search box, select the three-dots in its row
-
-1. Select the **View** option. The **Add** page appears for your app.
-
-1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
-
-
-
-![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetuploaded.png)
-
-# [ASP.NET Core MVC](#tab/aspnetcoremvc)
-
-You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with Node.js:
-
-1. At a command prompt, create a new directory for your tab project.
-
-1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
-
-    ```cmd
-    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-    ```
-### Generate your personal tab
-
-1. Open Visual Studio and select **Open a project or solution**.
-
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** in Visual Studio
-
-1. To test your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
-
----
-
-> [!div class="nextstepaction"]
-> [Node.js](~/tabs/how-to/create-personal-tab-node-js.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-
-## See also
-
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
