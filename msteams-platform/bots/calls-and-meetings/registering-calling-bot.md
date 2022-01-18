@@ -9,7 +9,7 @@ keywords: calling bot audio/video audio video media
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [developer preview](../../resources/dev-preview/developer-preview-intro.md) version of the Teams app manifest.
+* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [ Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
@@ -23,7 +23,7 @@ Calls and online meetings bots have the following two additional settings in the
 If you want your IDE to properly validate the manifest.json schema for your calls and meetings bot for these values, you can change the `$schema` attribute as follows:
 
 ```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
 ```
 
 The next section enables you to create a new bot or add calling capabilities to your existing bot.
