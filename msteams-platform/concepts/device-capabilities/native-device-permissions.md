@@ -176,8 +176,8 @@ For example:
              })
          }
      });
- } 
-    ```
+    } 
+  ```
 
 * To use the microphone, Teams mobile asks permission when you call `selectMedia()`:
 
@@ -201,7 +201,7 @@ For example:
              let audioData = "data:" + audioResult.mimeType + ";base64," + audioResult.preview
          }
      });
- }
+     }
     ```
 
 * To prompt the user to share location on the map interface, Teams mobile asks permission when you call `getLocation()`:
@@ -211,7 +211,7 @@ For example:
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
          let currentLocation = JSON.stringify(location);
      });
- } 
+     } 
     ```
 
 # [Mobile](#tab/mobile)
