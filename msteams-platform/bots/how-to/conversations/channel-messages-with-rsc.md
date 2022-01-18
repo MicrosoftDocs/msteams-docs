@@ -96,7 +96,7 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
        });
 ```
 
-# [C#](#tab/c#)
+# [C#](#tab/dotnet)
 
 ```
 // Handle when a message is addressed to the bot. 
