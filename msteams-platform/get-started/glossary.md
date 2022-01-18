@@ -90,20 +90,11 @@ Common terms and definitions used in Teams Developer Documentation.
 </details>
 <br>
 <details>
-<summary>F</summary>
-
-| Term | Definition |
-| --- | --- |
-| Framework SDK |  |
-|
-</details>
-<br>
-<details>
 <summary>G</summary>
 
 | Term | Definition |
 | --- | --- |
-| Group chat |   |
+| Group chat | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: One-on-one chat; Chat bot |
 |
 </details>
 <br>
@@ -112,7 +103,63 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| Identity provider |  |
+| Identity provider | An identity Provider is an entity which stores and provides credentials to the user. It also allows users to register themselves. |
 | Incoming webhooks |  |
 | In-meeting app experience |  |
+|
+</details>
+<br>
+<details>
+<summary>L</summary>
 
+| Term | Definition |
+| --- | --- |
+| Link unfurling |  |
+| Local environment | <br>**See also**: Environment; Dev environment |
+| Local workbench | <br>**See also**: Workbench; Teams workbench |
+| Location capability | <br>**See also**: Capability; Media capability; Device Capability |
+| Low code apps |  |
+|
+</details>
+<br>
+<details>
+<summary>M</summary>
+
+| Term | Definition |
+| --- | --- |
+| Media capability |  |
+| Meeting bot |  |
+| Meeting lifecycle |  |
+| Meeting stage |  |
+| Messaging extension |  |
+| Meeting extension |  |
+| Microsoft 365 account |  |
+| Microsoft 365 developer program |  |
+| Microsoft Graph Explorer |  |
+| Microsoft Teams |  |
+| Microsoft Teams Platform |  |
+| Microsoft Teams UI Library |  |
+| Microsoft Teams UI Toolkit |  |
+| Microsoft Store |  |
+|
+</details>
+<br>
+<details>
+<summary>O</summary>
+
+| Term | Definition |
+| --- | --- |
+| Office 365 Connectors |  |
+| Outgoing webhooks |  |
+| Outlook channel |  |
+| One-on-one chat |  |
+|
+</details>
+<br>
+<details>
+<summary>P</summary>
+
+| Term | Definition |
+| --- | --- |
+| Personal app |  |
+| 
