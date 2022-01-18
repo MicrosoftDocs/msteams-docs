@@ -82,6 +82,31 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 |-------------|-------------|------|----|
 |Channel messages with RSC permissions|	Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
+
+### Code snippets for RSC permissions
+
+# [Node.js](#tab/nodejs)
+
+```
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+	this.onMessage(async (context, next) => {
+           await context.sendActivity(MessageFactory.text("Using RSC the bot can recieve messages across channles in team without being @mentioned."))
+           await next();
+       });
+```
+
+# [C#](#tab/c#)
+
+```
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+        {
+			await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channles in team without being @mentioned."));
+        }
+ ```
+
 ## See also
 
 * [Bot conversations](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
