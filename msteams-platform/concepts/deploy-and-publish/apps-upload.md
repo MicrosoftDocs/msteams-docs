@@ -4,7 +4,7 @@ description: Learn how to sideload your app in Microsoft Teams. Sideloading is c
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 
 # Upload your app in Microsoft Teams
