@@ -83,8 +83,8 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| E5 account |  <br>**See also**: Microsoft 365 account |
-| Entry point |  |
+| E5 developer account | E5 developer subscription includes 25 user licenses, including the administrator, for development purposes only for building apps to extend Microsoft 365.  <br>**See also**: Microsoft 365 account |
+| Entry point | An access point, such as team, channel, and chat, for a Teams app where users can discover and use your app. |
 | Environment | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default - local environment and dev environment. <br>**See also**: Local environment; Dev environment |
 |
 </details>
@@ -133,14 +133,14 @@ Common terms and definitions used in Teams Developer Documentation.
 | Meeting stage | A feature of meeting extension app. It is a shared space .accessible during meeting to all participants. It helps participants interact and collaborate with app content in real time. |
 | Messaging extension | Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. <br>**See also**: Search commands; Action commands |
 | Meeting extension | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more.  |
-| Microsoft 365 account |  |
-| Microsoft 365 developer program |  |
-| Microsoft Graph Explorer |  |
-| Microsoft Teams |  |
-| Microsoft Teams Platform |  |
-| Microsoft Teams UI Library |  |
-| Microsoft Teams UI Toolkit |  |
-| Microsoft Store |  |
+| Microsoft 365 account | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only.  |
+| Microsoft 365 developer program | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365.  |
+| Microsoft Graph Explorer | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
+| Microsoft Teams | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
+| Microsoft Teams Platform | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus by reducing context switching, and create collaboration around existing content and workflows. |
+| Microsoft Teams UI Library | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
+| Microsoft Teams UI Toolkit | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
+| Microsoft Store | Microsoft Store is a digital distribution platform owned by Microsoft. |
 |
 </details>
 <br>
