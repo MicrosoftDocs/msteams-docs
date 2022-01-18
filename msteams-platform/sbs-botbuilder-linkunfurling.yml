@@ -330,13 +330,14 @@ items:
 
         ![App settings location](~/assets/images/Teams-link-unfurling/appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio 2019**.
+    
+    1. Update the following information:  
 
          * Set `"MicrosoftAppType"` to `"MultiTenant"`.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
-         * Set `"BaseUrl"` to the fully qualified domain name.
+         * Set `"MicrosoftAppTenantId"` as blank.
 
         ![App settings](~/assets/images/Teams-link-unfurling/appsettings.png)
 
@@ -344,10 +345,9 @@ items:
 
         ![Manifest file location](~/assets/images/Teams-link-unfurling/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio 2019**.
 
-         * Replace all occurrences of `YourDeployedBotUrl.com` with your `WebAppDomain` name.
-         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
+    1. Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
         ![Manifest image2](~/assets/images/Teams-link-unfurling/manifest.png)
 
