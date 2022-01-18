@@ -45,7 +45,7 @@ Action commands are used to present the users with a modal popup to collect or d
 The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the messaging extension action command task module:
 ![messaging extension action command task module](~/assets/images/task-module.png)
 
-## Code snippets for action commands
+#### Code snippets for action commands
 
 The following code provides an example of action based for messaging extensions:
 
@@ -129,7 +129,7 @@ The following image displays the messaging extension search command task module:
 
 ![messaging extension search command](~/assets/images/search-extension.png)
 
-## Code snippets for search commands
+#### Code snippets for search commands
 
 The following code provides an example of search based for messaging extensions:
 
