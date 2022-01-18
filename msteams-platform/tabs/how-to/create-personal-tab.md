@@ -263,7 +263,7 @@ In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;
 
 ### Create a personal tab with ASP.NET Core
 
-You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with Node.js:
+You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with ASP.NET Core Razor pages:
 
 1. At a command prompt, create a new directory for your tab project.
 
@@ -276,9 +276,9 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** 
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln**.
 
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs :
+In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
 * http://localhost:3978/
 * http://localhost:3978/personalTab
@@ -324,9 +324,96 @@ ngrok http 3978 --host-header=localhost
 
 1. Add the Short and Long description  for your app in **Descriptions**.
 
-1. In **Dveloper Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
 
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou>` and save.
+1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
+
+1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank. 
+
+1. Select Save.
+
+1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+
+### Preview your app in Teams
+
+1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
+
+1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
+
+1. Find your app using the search box, select the three-dots in its row
+
+1. Select the **View** option. The **Add** page appears for your app.
+
+1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
+
+![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetuploaded.png)
+
+# [ASP.NET Core MVC](#tab/aspnetcoremvc)
+
+You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC:
+
+1. At a command prompt, create a new directory for your tab project.
+
+1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
+
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
+### Generate your personal tab
+
+1. Open Visual Studio and select **Open a project or solution**.
+
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
+
+In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+
+* http://localhost:3978
+* http://localhost:3978/personalTab
+* http://localhost:3978/privacy
+* http://localhost:3978/tou
+
+1. Go to the **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
+
+    ```HTML
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
+
+1. Open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and inside the `<script>` tags add `microsoftTeams.initialize()` and save.
+
+### Run your application
+
+In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
+
+### Establish a secure tunnel to your tab for Teams
+
+To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
+
+```cmd
+ngrok http 3978 --host-header=localhost
+```
+
+### Update your app package with Developer Portal
+
+1. Navigate to your **Developer portal** in Teams.
+
+1. Open **Apps** and select **Import app**.
+
+1. The name of your app package is **tab.zip**. It's available in the following path:
+
+    ```
+    /bin/Debug/netcoreapp3.1/tab.zip
+    ```
+
+1. Select **tab.zip** and open it in the Developer Portal.
+
+1. A default **App ID** is created and populated in **Basic information** section.
+
+1. Add the Short and Long description  for your app in **Descriptions**.
+
+1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+
+1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
 1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank. 
 
@@ -347,32 +434,7 @@ ngrok http 3978 --host-header=localhost
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
 
 
-
-![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetuploaded.png)
-
-# [ASP.NET Core MVC](#tab/aspnetcoremvc)
-
-You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with Node.js:
-
-1. At a command prompt, create a new directory for your tab project.
-
-1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
-
-    ```cmd
-    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-    ```
-### Generate your personal tab
-
-1. Open Visual Studio and select **Open a project or solution**.
-
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln** in Visual Studio
-
-1. To test your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
-
 ---
-
-> [!div class="nextstepaction"]
-> [Node.js](~/tabs/how-to/create-personal-tab-node-js.md)
 
 ## Next step
 
