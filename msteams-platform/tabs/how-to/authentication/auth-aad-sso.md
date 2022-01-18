@@ -2,7 +2,7 @@
 title: Single sign-on support for tabs
 description: Describes single sign-on (SSO) for tabs
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication SSO AAD single sign-on api
 ---
 
@@ -227,7 +227,7 @@ For more information, see [access tokens](/azure/active-directory/develop/access
 
 ### Get an access token with Graph permissions
 
-Currently, SSO only grants consent for user-level permissions. To get the required permissions for Graph call, SSO solutions must implement a custom web service to exchange the token from Teams JavaScript SDK for a token that includes the necessary. Use AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
+Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
 
 #### Tenant Admin Consent
 
