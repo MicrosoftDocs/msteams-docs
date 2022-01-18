@@ -185,15 +185,15 @@ gulp build
 
 To establish a secure tunnel to your tab, exit the localhost and enter the following command:
 
-    ```cmd
-    gulp ngrok-serve
-    ```
+```cmd
+gulp ngrok-serve
+```
 
 > [!IMPORTANT]
 > After your tab has been uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends. If you restart your ngrok session, you must update your app with the new URL. 
 
 ### Upload your application to Teams
-ii
+
 **To upload your application to Teams**
 
 1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
@@ -214,107 +214,29 @@ ii
 
 ### Create a custom channel or group tab with ASP.NET Core
 
-You can create a custom channel or group tab using C# and ASP.Net Core Razor page. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
+You can create a custom channel or group tab using C# and ASP.NET Core Razor pages. To create a channel or group tab with ASP.NET Core Razor pages:
 
-### Prerequisites for Teams apps
+1. At a command prompt, create a new directory for your tab project.
 
-You must have an understanding of the following prerequisites:
+1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
-- You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
 
-    > [!NOTE]
-    > If you do not currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription remains active as long as you are using it for ongoing development.
 
-- Use App Studio to import your application to Teams. To install App Studio, select **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) at the lower left corner of the Teams app, and search for **App Studio**. After you find the tile, select it and choose **Add** in the pop-up dialog box to install it.
+### Generate your personal tab
 
-In addition, this project requires that you have the following installed in your development environment:
+1. Open Visual Studio and select **Open a project or solution**.
 
-- The current version of the Visual Studio IDE with the **.NET CORE cross-platform development** workload installed. If you do not already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln**.
 
-- The [ngrok](https://ngrok.com) reverse proxy tool. Use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. You can [download ngrok](https://ngrok.com/download).
+In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-### Get the source code
-
-At a command prompt, create a new directory for your tab project. A simple project is provided to get you started. Clone the sample repository into your new directory using the following command:
-
-```bash
-git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
-```
-
-Alternately, you can retrieve the source code by downloading the zip folder and extracting the files.
-
-**To build and run the tab project**
-
-1. After you have the source code, go to Visual Studio and select **Open a project or solution**.
-1. Go to the tab application directory and open **ChannelGroupTab.sln**.
-1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
-1. In a browser, go to the following URLs and verify the application loaded properly:
-
-    - `http://localhost:44355`
-    - `http://localhost:44355/privacy`
-    - `http://localhost:44355/tou`
-
-### Review the source code
-
-#### Startup.cs
-
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
-
-```csharp
-public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
-public void Configure(IApplicationBuilder app)
-  {
-    app.UseStaticFiles();
-    app.UseMvc();
-  }
-```
-
-#### wwwroot folder
-
-In ASP.NET Core, the web root folder is where the application looks for static files.
-
-#### Index.cshtml
-
-ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
-
-#### Tab.cs
-
-This C# file contains a method that is called from **Tab.cshtml** during configuration.
-
-#### AppManifest folder
-
-This folder contains the following required app package files:
-
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your app.
-
-These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams loads the `configurationUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
-
-#### .csproj
-
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
-
-```xml
-<PropertyGroup>
-    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="AppManifest\icon-outline.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppManifest\icon-color.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppManifest\manifest.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-```
+* http://localhost:3978/
+* http://localhost:3978/personalTab
+* http://localhost:3978/privacy
+* http://localhost:3978/tou
 
 ### Establish a secure tunnel to your tab for Teams
 
