@@ -161,11 +161,11 @@ Universal actions now bring the enhanced user experience available for adaptive 
 ```
 ### Automatic Refresh for Adaptive Cards in search based MEs
 
-You can automatically update adaptive cards in messaging extensions to ensure users always see up to date data. To allow an Adaptive Card to automatically refresh, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format  in the `refresh` property.
+You can automatically update adaptive cards in messaging extensions to ensure users always see up to date data. To allow an Adaptive Card to automatically refresh, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property.
 
 **Example**
 
-    ```json
+```json
     {
         "type": "AdaptiveCard",
         "refresh": {
@@ -193,11 +193,10 @@ You can automatically update adaptive cards in messaging extensions to ensure us
             }
         ]
     }
-    ```  
-
-Skipping userIds would enable refresh for everyone in the group chat/channel with size <= 60. For conversations (group chat/channel) of size more than 60, automatic refresh would not be enabled and users will be provided with an option to refresh manually from the message options menu.
+```
+Automatic refresh is enabled for all users in the group chat/channel with size <= 60. For conversations (group chat/channel) of size more than 60, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
  
-    ```json
+```json
     {
         "type": "AdaptiveCard",
         "refresh": {
@@ -221,20 +220,30 @@ Skipping userIds would enable refresh for everyone in the group chat/channel wit
             }
         ]
     }
-    ```
-### Just-in Time Install (JIT install)
+```
 
-You can select a card and post it in to the compose box and perform JIT to send the card into the chat. Performing JIT will install the card to all the users and the card is send after the installation is complete.
+### Just-in Time (JIT) Install
+
+When a user selects a card and sends it in a group chat/channel, a **Just-in Time (JIT)** Installation prompt appears. After the users selects send, the card goes into a sending state and performs installation in the background for all the users in the group.
 
 >[!NOTE]
-> For apps that don’t have the action. Execute and refresh schema defined, the install prompt will not be shown to the users.
+> For apps that don’t have `action. Execute` and `refresh` schema defined, the install prompt will not be shown to the users.
 
-End user 
+The following example shows a dynamic scenario for JIT install:
 
+1. The users selects a card.
 
+    :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-post-card.jpg" alt-text="user selects card":::
+
+1. The card is posted in to the compose box and a JIT Installation prompt is shown to the user.
+
+    :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-install-prompt.jpg" alt-text="app shows installation prompt":::
+
+1. After the user selects **send**, the bot installs the card in the background and sends it to the users after the installation in complete.
+
+    :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-sent.jpg" alt-text="card is sent to users":::
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-
