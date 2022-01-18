@@ -210,6 +210,7 @@ async SendNotificationToAllUsersAsync(context) {
 # [C#](#tab/dotnet)
 
 ```csharp
+---
 
 public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
