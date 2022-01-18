@@ -65,6 +65,52 @@ Bots work better in a channel in the following cases:
 * Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
 * Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 
+## Code snippets
+
+The following code provides an example of bot activity:
+
+# [Node.js](#tab/nodejs)
+
+```typescript
+
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+    } as Mention;
+
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+# [C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+    };
+
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
+
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+}
+
+```
+---
+
 ### In a group chat
 
 Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it is `@mentioned` directly.
@@ -79,6 +125,34 @@ One-to-one chat is a traditional way for a conversational bot to interact with a
 * bots that tell jokes
 * bots that take notes
 Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
+
+## Code snippets
+
+The following code provides an example of bot activity:
+
+# [Node.js](#tab/nodejs)
+
+```typescript
+
+        this.onMessage(async (context, next) => {
+            await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+            await next();
+        });
+```
+
+# [C#](#tab/dotnet)
+
+```csharp
+
+// Handle message activity
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+        {
+            turnContext.Activity.RemoveRecipientMention();
+            var text = turnContext.Activity.Text.Trim().ToLower();
+			await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+        }
+```
+---
 
 ## Disadvantages of bots
 
