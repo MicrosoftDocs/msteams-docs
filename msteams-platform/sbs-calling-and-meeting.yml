@@ -57,7 +57,7 @@ items:
     ```bash
     ngrok http -host-header=rewrite 3978
     ```
-    
+
     **Register an App in Azure:**
 
     1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
@@ -98,7 +98,7 @@ items:
         > [!NOTE]
         > Run Windows Powershell PSI as an administrator and execute the script.
 
-        (Add powershell script)
+        :::image type="content" source="./assets/images/calls-and-meetings/powershell-script.png" alt-text="PowerShell script.":::
 
         :::image type="content" source="./assets/images/calls-and-meetings/powershell.png" alt-text="PowerShell.":::
 
