@@ -323,6 +323,125 @@ items:
 
             ![Auth-end](~/assets/images/Teams-link-unfurling/authend.png)
 
+- title: Set up app settings and manifest files
+  durationInMinutes: 1
+  content: |
+    1. Navigate to **appsettings.json** in cloned repository.
+
+        ![App settings location](~/assets/images/Teams-link-unfurling/appsettingslocation.png)
+
+    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+
+         * Set `"MicrosoftAppType"` to `"MultiTenant"`.
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
+         * Set `"BaseUrl"` to the fully qualified domain name.
+
+        ![App settings](~/assets/images/Teams-task-module/appsettings.png)
+
+    1. Navigate to **manifest.json** in cloned repository.
+
+        ![Manifest file location](~/assets/images/Teams-task-module/manifestlocation.png)
+    
+    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+
+         * Replace all occurrences of `YourDeployedBotUrl.com` with your `WebAppDomain` name.
+         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
+
+        ![Manifest image2](~/assets/images/Teams-task-module/manifest.png)
+
+- title: Build and run the service
+  durationInMinutes: 1
+  content: |
+    **To build and run the service using Visual Studio 2019 or Command line**
+
+    # [Visual Studio 2019](#tab/vs2019)
+
+       1. Launch **Visual Studio 2019**.
+       1. Navigate to **File** > **Open** > **Project/Solution**.
+    
+          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+
+       1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
+
+          ![CS proj file](~/assets/images/Teams-task-module/csprojfileopen.png)
+
+       1. Open **Solution Explorer** from **View**.
+
+          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer.png)
+
+       1. Right-click to select **TeamsTaskModule**.
+
+       1. Select **Set as Startup Project**.
+
+          ![Solution Explorer](~/assets/images/Teams-task-module/startup.png)
+
+       1. Press **F5** to run the project.
+    
+       1. Select **Yes** if the following dialog appears:
+
+          ![Trust Certificate](~/assets/images/Teams-task-module/certificate.png)
+
+          A webpage opens with a message **Your bot is ready!**.
+
+          ![App ready](~/assets/images/Teams-task-module/appisready.png) 
+
+        
+    # [Command line](#tab/cli)
+
+    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 54.teams-task-module** in Command Prompt window and enter the following command:
+
+    ```bash
+    dotnet run
+    ```
+   
+    ![Dotnet](~/assets/images/Teams-task-module/dotnetruncmd.png)
+
+- title: Upload Task Module app
+  durationInMinutes: 1
+  content: |
+    **To add Task Module app to Teams**
+
+    1. In your cloned repository, navigate to **csharp_dotnetcore > 54.teams-task-module > TeamsAppManifest**.
+
+    1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       ![Zip file](~/assets/images/Teams-task-module/zipfile.png) 
+
+    1. Go to **Microsoft Teams**.
+
+    1. Select **Apps** or **Store**.
+
+       ![Zip file](~/assets/images/Teams-task-module/AppStore.png)
+   
+    1. In the lower left corner, select **Manage your apps**.
+
+       ![Manage apps](~/assets/images/Teams-task-module/manageapps.png)
+   
+    1. Select **Upload an app to your org's app catalog** or **Upload a custom app**. 
+
+       ![Upload custom app](~/assets/images/Teams-task-module/uploadapp.png)
+
+    1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
+
+       ![Select zip file](~/assets/images/Teams-task-module/selectzip.png)
+
+    1. Select **Add**.
+
+       ![Add the app](~/assets/images/Teams-task-module/addapp.png)
+
+       A chat displays.
+   
+    1. Enter any text. 
+
+       ![Chat](~/assets/images/Teams-task-module/chatready.png)
+    
+       The app displays **Task Module Invocation from Hero Card** and **Task Module Invocation from Adaptive Card**.         
+
 - content: |
     You've completed the tutorial to get started with Teams link unfurling app!
 
