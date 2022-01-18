@@ -194,7 +194,7 @@ You can automatically update adaptive cards in messaging extensions to ensure us
         ]
     }
 ```
-Automatic refresh is enabled for all users in the group chat/channel with size <= 60. For conversations (group chat/channel) of size more than 60, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
+Automatic refresh is enabled for all users in the group chat/channel with size <=60. For conversations (group chat/channel) of size more than 60, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
  
 ```json
     {
@@ -239,7 +239,7 @@ The following example shows a dynamic scenario for JIT install:
 
     :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-install-prompt.jpg" alt-text="app shows installation prompt":::
 
-1. After the user selects **send**, the bot installs the card in the background and sends it to the users after the installation in complete.
+1. After the user selects send, the bot installs the card in the background and sends it to the users after the installation in complete.
 
     :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-sent.jpg" alt-text="card is sent to users":::
 
