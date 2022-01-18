@@ -70,7 +70,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | Developer Portal for Teams | The primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
 | Developer Preview | A public program for developers which provides early access to unreleased features in Microsoft Teams. This allows you to explore and test upcoming features for potential inclusion in your Microsoft Teams app. |
 | Deploy | A process to upload the backend and frontend code for the application. At Deployment, your code for your app is copied to the resources you created during the provision step. <br>**See also**: Provision |
-| Device capabilities | Built-in devices, such as camera and microphone in a mobile or desktop. You can access the following device capabilities on mobile or desktop through dedicated APIs available in Microsoft Teams JavaScript client SDK. <br>**See also**: Capability; Media capability |
+| Device capabilities | Built-in devices, such as camera, microphone, barcode scanner, photo gallery, in a mobile or desktop. You can access the following device capabilities on mobile or desktop through dedicated APIs available in Microsoft Teams JavaScript client SDK. <br>**See also**: Capability; Media capability |
 | Device permission | If an app needs to utilize a native device capability, it must request permission to access the capability. You can manage device permissions in Teams settings. <br>**See also**: App permissions |
 | Dev environment | A type of development environment that Teams Toolkit creates by default to represent remote or cloud environment configurations. A project can have multiple remote environments. You can add more dev environments to your project using Teams Toolkit. <br>**See also** Environment; Local environment |
 | DevTools | Browser's Devtools are used to view console logs, view or modify runtime network requests, add breakpoints to code (JavaScript) and perform interactive debugging for a Teams app. The feature is only available for desktop and Android clients after the Developer Preview has been enabled. |
@@ -105,7 +105,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | Identity provider | An entity which stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: Authentication |
 | Incoming webhooks | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: Webhooks; Outgoing webhooks |
-| In-meeting app experience | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box.  |
+| In-meeting app experience | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: Meeting lifecycle |
 |
 </details>
 <br>
@@ -127,12 +127,12 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| Media capability |  |
-| Meeting bot |  |
-| Meeting lifecycle |  |
-| Meeting stage |  |
-| Messaging extension |  |
-| Meeting extension |  |
+| Media capability | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: Capability; Device capability |
+| Meeting bot | Bots that interact with Teams calls and meetings using real-time voice, video, and screen sharing. <br>**See also**: Call bot; Chat bot |
+| Meeting lifecycle | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle. <br>**See also**: In-meeting experience |
+| Meeting stage | A feature of meeting extension app. It is a shared space .accessible during meeting to all participants. It helps participants interact and collaborate with app content in real time. |
+| Messaging extension | Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. <br>**See also**: Search commands; Action commands |
+| Meeting extension | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more.  |
 | Microsoft 365 account |  |
 | Microsoft 365 developer program |  |
 | Microsoft Graph Explorer |  |
