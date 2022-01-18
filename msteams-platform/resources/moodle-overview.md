@@ -7,7 +7,9 @@ ms.author: surbhigupta
 keywords: moodle LMS mConnect deep links
 ---
 
-# Overview
+# Moodle Learning Management System (LMS)
+
+## Overview
 
 [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system. With over 30 years of experience in remote learning, Moodle has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams results in modern superpowers by enhancing learning experiences.
  
