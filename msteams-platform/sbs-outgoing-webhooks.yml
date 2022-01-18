@@ -18,7 +18,7 @@ items:
 
     You'll see the following output:
 
-     ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
+     ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -154,14 +154,14 @@ items:
 
        The new message received is displayed in the meeting chat.
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
+       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
        
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
+       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
 
 
 - content: |
