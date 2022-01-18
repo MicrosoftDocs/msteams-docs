@@ -67,7 +67,7 @@ Bots work better in a channel in the following cases:
 
 #### Code snippets for Team scope
 
-The following code provides an example of bot activity for a channel:
+The following code provides an example of bot activity for a channel team scope:
 
 # [Node.js](#tab/nodejs)
 
