@@ -37,7 +37,7 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Microsoft Teams with an account (not a guest account).
-    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install).
+    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install) by executing all the commands.
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
@@ -253,6 +253,8 @@ items:
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip** from the repo folder in File explorer.
     1. Select **Add** to install Calling Bot in Teams.
 
+        :::image type="content" source="./assets/images/calls-and-meetings/powershell-script.png" alt-text="PowerShell script.":::
+        
         :::image type="content" source="./assets/images/calls-and-meetings/output.png" alt-text="Add Output.":::
 
         You can interact with this bot after debugging in Visual Studio.
