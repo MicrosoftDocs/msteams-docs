@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api  
 ---
 
-# Apps for Teams meetings
+# Apps for Teams meetings 
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 

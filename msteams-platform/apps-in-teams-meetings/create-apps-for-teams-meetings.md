@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api 
 ---
 
-# Prerequisites for apps in Teams meetings
+# Prerequisites for apps in Teams meetings 
 
 With apps for Teams meetings, you can expand the capabilities of your apps across the meeting lifecycle. Before you work with apps for Teams meetings, you must fulfill the following prerequisites:
 

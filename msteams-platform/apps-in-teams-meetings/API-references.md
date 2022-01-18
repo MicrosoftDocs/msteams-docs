@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api usercontext notification signal query 
 ---
 
-# Meeting apps API references
+# Meeting apps API references 
 
 The meeting extensibilities provide APIs to transform the meeting experience:
 

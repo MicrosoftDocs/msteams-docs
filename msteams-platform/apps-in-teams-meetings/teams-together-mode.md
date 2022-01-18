@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ---
 
-# Custom Together Mode scenes in Teams
+# Custom Together Mode scenes in Teams 
 
 Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 

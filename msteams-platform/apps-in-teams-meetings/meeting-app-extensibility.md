@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: none
 ---
 
-# Unified meetings apps
+# Unified meetings apps 
 
 Teams unified meetings apps are based on the following concepts:
 
