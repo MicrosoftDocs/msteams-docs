@@ -363,7 +363,7 @@ items:
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
-       1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
+       1. Select **TeamsLinkUnfurling.csproj** file from **55.teams-link-unfurling** folder.
 
           ![CS proj file](~/assets/images/Teams-link-unfurling/csprojfileopen.png)
 
@@ -371,7 +371,7 @@ items:
 
           ![Solution Explorer](~/assets/images/Teams-link-unfurling/solutionexplorer.png)
 
-       1. Right-click to select **TeamsTaskModule**.
+       1. Right-click to select **TeamsLinkUnfurling**.
 
        1. Select **Set as Startup Project**.
 
@@ -390,7 +390,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 54.teams-task-module** in Command Prompt window and enter the following command:
+    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 55.teams-link-unfurling** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
