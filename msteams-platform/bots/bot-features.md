@@ -65,7 +65,7 @@ Bots work better in a channel in the following cases:
 * Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
 * Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 
-#### Code snippets for channel
+#### Code snippets for Team scope
 
 The following code provides an example of bot activity for a channel:
 
