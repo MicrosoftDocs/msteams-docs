@@ -76,7 +76,7 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
     ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
-## Code snippets for RSC permissions
+## Code snippets
 
 # [Node.js](#tab/nodejs)
 
