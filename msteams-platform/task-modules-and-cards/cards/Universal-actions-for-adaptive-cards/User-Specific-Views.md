@@ -205,6 +205,7 @@ const cardRes = {
     };
     return res;
 ```    
+---
 
 Card design guidelines to keep in mind while designing User Specific Views:
 
