@@ -71,11 +71,11 @@ Common terms and definitions used in Teams Developer Documentation.
 | Developer Preview | Developer Preview is a public program for developers which provides early access to unreleased features in Microsoft Teams. This allows you to explore and test upcoming features for potential inclusion in your Microsoft Teams app. |
 | Deploy | Deployment is a two-step process. You provision the resources on internet, and then deploy or upload the backend and frontend code for the application.  At Deployment, your code for your app is copied to the resources you created during the provision step. <br>**See also**: Provision |
 | Device capabilities | A mobile or desktop has built-in devices, such as camera and microphone, called capabilities. You can access the following device capabilities on mobile or desktop through dedicated APIs available in Microsoft Teams JavaScript client SDK. <br>**See also**: Capability; Media capability |
-| Device permissions |  <br>**See also**: App permissions |
-| Dev environment |  <br>**See also** Environment; Local environment |
-| DevTools |  |
-| Dynamic search | <br>**See also**: Static search |
-| 
+| Device permission | If an app needs to utilize a native device capability, it must request permission to access the capability. You can manage device permissions in Teams settings. <br>**See also**: App permissions |
+| Dev environment | Dev environment is a type of development environment that Teams Toolkit creates by default to represent remote or cloud environment configurations. A project can have multiple remote environments. You can add more dev environments to your project using Teams Toolkit. <br>**See also** Environment; Local environment |
+| DevTools | Browser's Devtools are used to view console logs, view or modify runtime network requests, add breakpoints to code (JavaScript) and perform interactive debugging for a Teams app. The feature is only available for desktop and Android clients after the Developer Preview has been enabled. |
+| Dynamic search | Dynamic search is a search feature for Adaptive Cards that is useful to search and select data from large data sets. It helps to filter out the choices as the user types. <br>**See also**: Static search |
+|
 </details>
 <br>
 <details>
@@ -85,5 +85,34 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | E5 account |  <br>**See also**: Microsoft 365 account |
 | Entry point |  |
-| Environment |  <br>**See also**: Local environment; Dev environment |
-| 
+| Environment | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default - local environment and dev environment. <br>**See also**: Local environment; Dev environment |
+|
+</details>
+<br>
+<details>
+<summary>F</summary>
+
+| Term | Definition |
+| --- | --- |
+| Framework SDK |  |
+|
+</details>
+<br>
+<details>
+<summary>G</summary>
+
+| Term | Definition |
+| --- | --- |
+| Group chat |   |
+|
+</details>
+<br>
+<details>
+<summary>I</summary>
+
+| Term | Definition |
+| --- | --- |
+| Identity provider |  |
+| Incoming webhooks |  |
+| In-meeting app experience |  |
+
