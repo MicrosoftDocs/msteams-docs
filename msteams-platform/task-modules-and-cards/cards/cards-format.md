@@ -2,7 +2,7 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
 ---
@@ -227,7 +227,6 @@ Incoming webhooks start to support user mention in Adaptive Cards with the AAD O
 > [!NOTE]    
 > * Enable user mention in the schema for Incoming webhooks to support AAD Object ID and UPN. 
 > * UI/UX changes are not required for user mentions with AAD Object ID and UPN.      
-> * The activity feed notification for Incoming Webhook with user mention will be available in the future release.
 
 ##### Example 
 

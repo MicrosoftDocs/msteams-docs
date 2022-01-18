@@ -1,7 +1,7 @@
 ---
 title: Get started - Overview
 description: Overview to Get started for Microsoft Teams Developer Documentation
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---
@@ -57,4 +57,5 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 
 ## See also
 
-[Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git and GitHub resources](/contribute/additional-resources)
