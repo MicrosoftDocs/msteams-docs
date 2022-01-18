@@ -176,7 +176,7 @@ The following code provides an example of an adaptiveCard/action invoke response
 
 The following code provides an example of an invoke response to return Adaptive Cards:
 
-# [C#](#tab/C#)
+## [C#](#tab/C#)
 
 ```
 string cardJson = "<adaptive card json>";
@@ -188,9 +188,9 @@ var adaptiveCardResponse = JObject.FromObject(new
     type = "application/vnd.microsoft.adaptive.card",
     value = card
  });
- 
+
 ```
-# [nodejs](#tab/nodejs#)
+## [nodejs](#tab/nodejs#)
 
 ```
 var card = "<adaptive card json>";
