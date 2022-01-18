@@ -178,7 +178,7 @@ The following code provides an example of an invoke response to return Adaptive 
 
 ### [C#](#tab/C)
 
-```
+```csharp
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -189,9 +189,10 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
 ### [nodejs](#tab/nodejs)
 
-```
+```nodejs
 var card = "<adaptive card json>";
  
 const cardRes = {
@@ -204,7 +205,7 @@ const cardRes = {
         body: cardRes
     };
     return res;
-```    
+```
 ---
 
 Card design guidelines to keep in mind while designing User Specific Views:
