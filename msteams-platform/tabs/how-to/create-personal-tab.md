@@ -350,7 +350,7 @@ ngrok http 3978 --host-header=localhost
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
-### Create a personal tab with ASP.NET Core
+### Create a personal tab with ASP.NET Core MVC
 
 You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC:
 
@@ -439,6 +439,98 @@ ngrok http 3978 --host-header=localhost
 ![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetmvccoreuploaded.png)
 
 ---
+## Reorder static personal tabs
+
+Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
+
+If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web or desktop depending on where you add the **conversation** tab in the `staticTabs` array.
+
+``` JSON
+
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+
+```
+
+## Add `registerOnFocused` API for tabs or personal apps
+
+The `registerOnFocused` SDK API allows you to use a keyboard on Teams. You can return to a personal app and maintain focus on a tab or personal app with the help of Ctrl, Shift, and F6 keys. For example, you can move away from the personal app to search for something, and then return to the personal app or use Ctrl+F6 to go around the required places.
+
+The following code provides an example of handler definition on `registerFocusEnterHandler` SDK when the focus must be returned to the tab or personal app:
+
+``` C#
+
+export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
+void {
+  HandlersPrivate.focusEnterHandler = handler;
+  handler && sendMessageToParent('registerHandler', ['focusEnter']);
+}
+function handleFocusEnter(navigateForward: boolean): void
+ {
+  if (HandlersPrivate.focusEnterHandler)
+   {
+    HandlersPrivate.focusEnterHandler(navigateForward);
+  }
+}
+
+```
+
+After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines the type of events. The `focusEnterHandler` is invoked only by Ctrl+F6 and not by the tab key.
+The keys useful for move events within Teams are as follows:
+
+* Forward event -> Ctrl+F6 keys
+* Backward event -> Ctrl+Shift+F6 keys
+
+``` C#
+
+case 'focusEnter':     
+this.registerFocusEnterHandler((navigateForward: boolean = true) => {
+this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
+// Set focus on iframe or webview
+if (this.frame && this.frame.sourceElem) {
+  this.frame.sourceElem.focus();
+}
+return true;
+});
+}
+
+// callback function to be passed to the handler
+private focusEnterHandler: (navigateForward: boolean) => boolean;
+
+// function that gets invoked after handler is registered.
+private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
+this.focusEnterHandler = focusEnterHandler;
+this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
+}
+
+```
+
+### Personal app
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="false":::
+
+#### Personal app - Forward event
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Example shows options for adding registerOnFocussed API forward move" border="false":::
+
+#### Personal app - Backward event
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Example shows options for adding registerOnFocussed API backward move" border="false":::
+
+### Tab
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Example shows options for adding registerOnFocussed API for tab" border="false":::
 
 ## Next step
 
