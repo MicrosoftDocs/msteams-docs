@@ -65,9 +65,9 @@ Bots work better in a channel in the following cases:
 * Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
 * Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 
-## Code snippets
+## Code snippets in a channel
 
-The following code provides an example of bot activity:
+The following code provides an example of bot activity for a channel:
 
 # [Node.js](#tab/nodejs)
 
@@ -126,9 +126,9 @@ One-to-one chat is a traditional way for a conversational bot to interact with a
 * bots that take notes
 Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
 
-## Code snippets
+## Code snippets in a one-to-one chat
 
-The following code provides an example of bot activity:
+The following code provides an example of bot activity for a one-to-one chat:
 
 # [Node.js](#tab/nodejs)
 
