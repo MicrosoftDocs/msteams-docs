@@ -83,7 +83,7 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 # [Nodejs](#tab/nodejs)
 
 ```javascript
-onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
        // code for handling
        await next()
     });
