@@ -4,6 +4,7 @@ description: Understand the changes coming with Microsoft Teams JavaScript clien
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
+ms.localizationpriority: medium
 ---
 # Microsoft Teams JavaScript client SDK v2 Preview
 
@@ -106,7 +107,7 @@ Needs to be updated to:
 ```js
 import { app, Context } from "@microsoft/teams-js";
 
-app.getContext().then((context: Context) => {
+app.getContext().then((context) => {
     /*...*/
 });
 ```
