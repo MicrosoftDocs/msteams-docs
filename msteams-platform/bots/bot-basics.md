@@ -48,7 +48,7 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 The code snippets for Teams activity handlers:
 
-OnTeamsChannelCreatedAsync
+`OnTeamsChannelCreatedAsync`
 
 # [C#](#tab/dotnet)
 
@@ -70,7 +70,7 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
 
 ---
 
-OnTeamsTeamRenamedAsync
+`OnTeamsTeamRenamedAsync`
 
 # [C#](#tab/dotnet)
 
@@ -92,7 +92,7 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 
 ---
 
-OnTeamsMembersAddedAsync
+`OnTeamsMembersAddedAsync`
 
 # [C#](#tab/dotnet)
 
@@ -114,7 +114,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 ---
 
-OnTeamsMembersRemovedAsync
+`OnTeamsMembersRemovedAsync`
 
 # [C#](#tab/dotnet)
 
