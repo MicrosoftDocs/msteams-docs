@@ -407,7 +407,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-### Overflow menu on Adaptive Cards 
+### Adaptive Cards overflow menu 
 
 > [!NOTE]
 > Overflow menu on Adaptive Cards is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
@@ -422,13 +422,13 @@ Following are the two types of overflow menu:
 
 * [Action set](https://adaptivecards.io/explorer/ActionSet.html): Action set is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
-### How to enable the overflow menu
+### Enable overflow menu
 
-To specify primary or secondary buttons, configure `mode` to `primary` or `secondary`. Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
+To enable overflow menu you need to specify primary or secondary buttons, configure `mode` to `primary` or `secondary`. Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
 
 **Actions**
 
-In this example, there are two primary actions (by default) and one secondary action. The secondary action creates an overflow menu. 
+In the following example, there are two primary actions (by default) and one secondary action. The secondary action creates an overflow menu. 
 
 ``` json
 {
@@ -457,7 +457,7 @@ In this example, there are two primary actions (by default) and one secondary ac
 
 **Action set**
 
-In this example, all the actions are marked as secondary therefore, a single overflow menu appears on the card.
+In the following example, all the actions are marked as secondary therefore, a single overflow menu appears on the card.
 
 ``` json
 {
@@ -485,7 +485,7 @@ In this example, all the actions are marked as secondary therefore, a single ove
 }
 ```
   
-**Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that is set as secondary appears in Adaptive Card.
+**Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that are set as secondary appears in Adaptive Card.
 
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-overflow-image-1.png)
 
@@ -493,7 +493,7 @@ In this example, all the actions are marked as secondary therefore, a single ove
 
   ![desktop3](~/assets/images/Cards/desktop-overflow-menu-image-3.png)
 
-**Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
+**Overflow menu on mobile**: When a user selects overflow menu on mobile, Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
 
   ![Overflow menu Mobile](~/assets/images/Cards/mobile-1.png)
 

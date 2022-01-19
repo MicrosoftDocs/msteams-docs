@@ -24,7 +24,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Overflow menu on Adaptive Cards
+      - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Introduced new store icon
         url: ~/concepts/design/personal-apps.md
