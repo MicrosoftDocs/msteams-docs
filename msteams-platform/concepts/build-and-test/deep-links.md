@@ -59,14 +59,16 @@ Provide the following fields:
 > [!NOTE]
 > Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
 
-Use the following format for a deep link that you can use in a bot, connector, or messaging extension card:
+Use the following formats for a deep link that you can use:
+
+* In a bot, connector, or messaging extension card:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
-Use the following format for a deep link to your tab in the app added to a meeting:
+* An app added to a meeting with a [tab capability](~/concepts/capabilities-overview.md):
 
 `https://teams.microsoft.com/l/entity/<meetingId>/<entityId>?context={"chatId": "<meetingId>","contextType":"chat"}`
-
+ 
 > [!NOTE]
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
 > If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab is not opened.
@@ -79,10 +81,10 @@ The query parameters are:
 | `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). | 
-| `subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
-| `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
-| `meetingId`&emsp; |Meeting Id used by tab when running in meeting context. The meeting identifier is available through Bot Invoke and Teams Client SDK.| 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYt ODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
+| `context.subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
+| `context.channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `meetingId`&emsp; | Meeting Id used by tab when running in meeting context. The meeting identifier is available through Bot Invoke and Teams Client SDK. | 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYt ODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
+| `chatId`&emsp; | The Microsoft Teams ID for the chat with which the content is associated ||
 
 Examples:
 
