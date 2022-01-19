@@ -224,12 +224,11 @@ You can create a custom channel or group tab using C# and ASP.NET Core Razor pag
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-
 ### Generate your personal tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln**.
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-channel-group** > **razor-csharp** folder and open **channelGroupTab.sln**.
 
 In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
