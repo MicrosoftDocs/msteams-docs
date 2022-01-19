@@ -65,7 +65,50 @@ Bots work better in a channel in the following cases:
 * Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
 * Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 
-#### Code snippets for Team scope
+### In a group chat
+
+Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it is `@mentioned` directly.
+
+In the cases where bots work better in a channel also work better in a group chat.
+
+### In a one-to-one chat
+
+One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
+* Q&A bots
+* bots that initiate workflows in other systems 
+* bots that tell jokes
+* bots that take notes
+Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
+
+## Disadvantages of bots
+
+An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, is not successful or viewed positively by users.
+
+### Have multi-turn experiences in chat
+
+An extensive dialog requires the developer to maintain state. To exit this state a user must either time-out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
+
+USER: Schedule a meeting with Megan.
+
+BOT: I’ve found 200 results, please include a first and last name.
+
+USER: Schedule a meeting with Megan Bowen.
+
+BOT: OK, what time would you like to meet with Megan Bowen?
+
+USER: 1:00 pm.
+
+BOT: On which day?
+
+### Support too many commands
+
+As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
+
+### Maintain a large knowledge base
+
+One of the disadvantages of bots is that it is difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+
+## Code snippets
 
 The following code provides an example of bot activity for a channel team scope:
 
@@ -109,24 +152,6 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 
 ```
----
-
-### In a group chat
-
-Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it is `@mentioned` directly.
-
-In the cases where bots work better in a channel also work better in a group chat.
-
-### In a one-to-one chat
-
-One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
-* Q&A bots
-* bots that initiate workflows in other systems 
-* bots that tell jokes
-* bots that take notes
-Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
-
-#### Code snippets for one-to-one chat
 
 The following code provides an example of bot activity for a one-to-one chat:
 
@@ -153,34 +178,6 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
         }
 ```
 ---
-
-## Disadvantages of bots
-
-An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, is not successful or viewed positively by users.
-
-### Have multi-turn experiences in chat
-
-An extensive dialog requires the developer to maintain state. To exit this state a user must either time-out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
-
-USER: Schedule a meeting with Megan.
-
-BOT: I’ve found 200 results, please include a first and last name.
-
-USER: Schedule a meeting with Megan Bowen.
-
-BOT: OK, what time would you like to meet with Megan Bowen?
-
-USER: 1:00 pm.
-
-BOT: On which day?
-
-### Support too many commands
-
-As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
-
-### Maintain a large knowledge base
-
-One of the disadvantages of bots is that it is difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
 ## Code sample
 
