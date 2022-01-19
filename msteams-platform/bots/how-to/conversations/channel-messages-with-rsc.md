@@ -82,7 +82,7 @@ The following code provides an example of RSC permissions:
 
 # [Node.js](#tab/nodejs)
 
-```typescript
+```javascript
 
 // Handle when a message is addressed to the bot. 
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
