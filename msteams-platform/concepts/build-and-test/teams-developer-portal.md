@@ -103,7 +103,7 @@ This chart enumerates the number of active users/tenants that have opened/used t
 * Weekly Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
 * Daily Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
 
-    :::image type="content" source="./assets/images/tdp/usage-by-time-period.png" alt-text="PowerShell.":::
+    :::image type="content" source="~/assets/images/tdp/usage-by-time-period.png" alt-text="PowerShell.":::
 
 #### Usage by Platform and OS
 
@@ -115,7 +115,7 @@ This chart shows you your app(s) active usage across various endpoints. The same
 * Android – Active Users/Tenants that have opened/used your app on Android
 * Web – Active Users/Tenants that have opened/used your app on Web
 
-    :::image type="content" source="./assets/images/tdp/usage-by-platform-OS.png" alt-text="PowerShell.":::
+    :::image type="content" source="~/assets/images/tdp/usage-by-platform-OS.png" alt-text="PowerShell.":::
 
 #### Usage by Retention State
 
@@ -126,7 +126,7 @@ This chart lets you track four key retention/churn metrics over time.
 * Returning Users/Tenants - Active users or tenants who used your app during a given R30 time period and the previous R30 time period.
 * Lapsed Users/Tenants - Active users or tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
 
-    :::image type="content" source="./assets/images/tdp/usage-by-retention-state.png" alt-text="PowerShell.":::
+    :::image type="content" source="~/assets/images/tdp/usage-by-retention-state.png" alt-text="PowerShell.":::
 
 #### Usage Intensity
 
@@ -136,13 +136,13 @@ This chart shows you key usage intensity metrics:
 * Median Days Used per Month - The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period.
 * DAU/MAU - The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app
 
-    :::image type="content" source="./assets/images/tdp/usage-intensity.png" alt-text="PowerShell.":::
+    :::image type="content" source="~/assets/images/tdp/usage-intensity.png" alt-text="PowerShell.":::
 
 #### App Dashboard
 
 The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
 
-    :::image type="content" source="./assets/images/tdp/app-dashboard.png" alt-text="PowerShell.":::
+    :::image type="content" source="~/assets/images/tdp/app-dashboard.png" alt-text="PowerShell.":::
 
 ## Use tools to create app features
 
