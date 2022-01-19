@@ -57,7 +57,7 @@ items:
   content: |
     To create an outgoing webhook, perform the following steps:
 
-    * Select the appropriate team and then select Manage team from the (•••) dropdown menu.
+    * Select the appropriate team, and then select Manage team from the (•••) dropdown menu.
 
       ![Manage](~/assets/images/sbs-outgoing-webhooks/manage-team.png)
 
@@ -65,32 +65,34 @@ items:
 
     * From the window's lower-right corner, select Create an outgoing webhook.
 
-      ![outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
+      ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
 
-    * In the resulting pop-up window, complete the required fields:
+    * Type the following details in the **Create an Outgoing Webhook** page:
+     
+        * Name - The webhook title and @mention tab.
 
-      ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
-    
-        * Name - The webhook title and @mention tap.
-
-        * Callback URL - The HTTPS endpoint that accepts JSON payloads and will receive POST requests from Teams.
+        * Callback URL - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
 
             1. To use the api/sample or authenticated sample, do the following:
 
-            * For api/sample, enter ngrok URL/api/sample.
+            * For api/sample, Copy-and-Paste ngrok URL and append it with /api/sample.
 
-            * For authenticated sample, enter ngrok URL/authenticatedSample?id=contoso.
+            * For authenticated sample, Copy-and-Paste ngrok URL and append it with /authenticatedSample?id=contoso.
 
         * Description - A detailed string that will appear in the profile card and the team-level App dashboard.
 
         * Profile Picture (optional) an app icon for your webhook.
 
-        * Select the Create button from lower-right corner of the pop-up window and the outgoing webhook will be added to the current team's channels.
+        * Select **Create**. The Outgoing Webhook is added to the current team's channel:
 
-        * The next dialog window will display an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that will be used to authenticate calls between Teams and the designated outside service. This token in used in AuthProvider.cs.
+      ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
+
+        * A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It is a security tokenmused to authenticate calls between Teams and the designated outside service.
+         The security token is used in AuthProvider.cs file.
 
           ![token](~/assets/images/sbs-outgoing-webhooks/security-token.png)
-        * If the URL is valid and the server and client authentication tokens are equal (i.e., an HMAC handshake), the outgoing webhook will be available to the team's users.
+       >[!NOTE]
+       > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -136,7 +138,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
+    ![Dotnet](~/assets/images/outgoing-webhooks/dotnetruncmd.png)
             
 
 - title: Interact with the app in Teams
@@ -148,11 +150,14 @@ items:
 
     1. Select **New conversation** to begin a conversation.
 
-    1. Enter @ and the app you created for an outgoing webhook. The @mention supports adaptive cards, thumbnails, hero, etc.
+    1. Enter **\@mention** the name of the Outgoing Webhook to invoke it in the channel. 
 
        ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
 
-       The new message received is displayed in the meeting chat.
+    > [!NOTE]
+    > * You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
+
+    1. The new message received is displayed in the meeting chat.
 
        ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
        
