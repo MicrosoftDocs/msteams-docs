@@ -45,7 +45,28 @@ Action commands are used to present the users with a modal popup to collect or d
 The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the messaging extension action command task module:
 ![messaging extension action command task module](~/assets/images/task-module.png)
 
-#### Code snippets for action commands
+### Search commands
+
+Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area, and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
+
+The cards are triggered from the compose message area or the command box and not triggered from a message. They can not be triggered from a message.
+The following image displays the messaging extension search command task module:
+
+![messaging extension search command](~/assets/images/search-extension.png)
+
+> [!NOTE]
+> For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
+
+## Link unfurling
+
+A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Microsoft Teams client.
+The following images display link unfurling feature when a link is pasted in messaging extension:
+ 
+![unfurl link](../assets/images/messaging-extension/unfurl-link.png)
+
+![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
+
+## Code snippets
 
 The following code provides an example of action based for messaging extensions:
 
@@ -79,6 +100,7 @@ The following code provides an example of action based for messaging extensions:
 # [C#](#tab/dotnet)
 
 ```csharp
+
  protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
         {
             // Handle different actions using switch
@@ -119,17 +141,6 @@ The following code provides an example of action based for messaging extensions:
             }
 ```
 ---
-
-### Search commands
-
-Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area, and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
-
-The cards are triggered from the compose message area or the command box and not triggered from a message. They can not be triggered from a message.
-The following image displays the messaging extension search command task module:
-
-![messaging extension search command](~/assets/images/search-extension.png)
-
-#### Code snippets for search commands
 
 The following code provides an example of search based for messaging extensions:
 
@@ -206,18 +217,6 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
         }
 ```
 ---
-
-> [!NOTE]
-> For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
-
-## Link unfurling
-
-A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Microsoft Teams client.
-The following images display link unfurling feature when a link is pasted in messaging extension:
- 
-![unfurl link](../assets/images/messaging-extension/unfurl-link.png)
-
-![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
 ## Code sample
 
