@@ -111,9 +111,10 @@ One of the disadvantages of bots is that it is difficult to maintain a large ret
 ## Code snippets
 
 The following code provides an example of bot activity for a channel team scope:
+
 # [Node.js](#tab/nodejs)
 
-```typescript
+```javascript
 
 this.onMessage(async (turnContext, next) => {
     const mention = {
@@ -152,11 +153,13 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
+---
+
 The following code provides an example of bot activity for a one-to-one chat:
 
 # [Node.js](#tab/nodejs)
 
-```typescript
+```javascript
 
         this.onMessage(async (context, next) => {
             await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
