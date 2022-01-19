@@ -365,7 +365,25 @@ The following code shows an example of sending a simple Adaptive Card:
 }
 ```
 
-To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
+### Form completion feedback
+
+Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+
+* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
+
+    ![Error message](~/assets/images/Cards/error-message.png)
+
+* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
+
+    ![Success message](~/assets/images/Cards/success.PNG)
+
+You can select **Close** or switch chat to dismiss the message.    
+
+**Response on mobile**:
+
+The error message appears at the bottom of the Adaptive Card.
+
+For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
 ## Status code responses
 
