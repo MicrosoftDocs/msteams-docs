@@ -46,6 +46,96 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 ---
 
+The code snippets for Teams activity handlers.
+
+OnTeamsChannelCreatedAsync
+
+# [C#](#tab/dotnet)
+
+```csharp
+protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+# [Nodejs](#tab/nodejs)
+
+```typescript
+onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+        await next()
+    });
+```
+
+---
+
+OnTeamsTeamRenamedAsync
+
+# [C#](#tab/dotnet)
+
+```csharp
+protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+		{
+			// Code logic here
+		}
+```
+
+# [Nodejs](#tab/nodejs)
+
+```typescript
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+---
+
+OnTeamsMembersAddedAsync
+
+# [C#](#tab/dotnet)
+
+```csharp
+ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+		{
+			// Code logic here
+		}
+```
+
+# [Nodejs](#tab/nodejs)
+
+```typescript
+onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
+       // code for handling
+	   await next();
+    });
+```
+
+---
+
+OnTeamsMembersRemovedAsync
+
+# [C#](#tab/dotnet)
+
+```csharp
+ protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
+		{
+			// Code logic here
+		}
+```
+
+# [Nodejs](#tab/nodejs)
+
+```typescript
+onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
+       // code for handling
+	   await next();
+    });
+```
+
+---
+
 ## Bot logic
 
 The bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. This is still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
