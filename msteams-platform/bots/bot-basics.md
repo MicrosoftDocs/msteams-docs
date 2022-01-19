@@ -46,7 +46,7 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 ---
 
-The code snippets for Teams activity handlers.
+The code snippets for Teams activity handlers:
 
 OnTeamsChannelCreatedAsync
 
