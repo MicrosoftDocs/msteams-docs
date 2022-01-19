@@ -495,7 +495,7 @@ In the following example, all the actions are marked as secondary therefore, a s
 
 **Overflow menu on mobile**: When a user selects overflow menu on mobile, Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
 
-  ![Overflow menu Mobile](~/assets/images/Cards/mobile-1.png)
+  ![Overflow menu Mobile](~/assets/images/over-flow-menu-mob-1.png)
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
