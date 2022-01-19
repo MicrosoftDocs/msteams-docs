@@ -1,0 +1,16 @@
+C:\msteamsdocs\bin\Debug\net5.0\msteamsdocs.exe
+C:\msteamsdocs\bin\Debug\net5.0\msteamsdocs.deps.json
+C:\msteamsdocs\bin\Debug\net5.0\msteamsdocs.runtimeconfig.json
+C:\msteamsdocs\bin\Debug\net5.0\msteamsdocs.runtimeconfig.dev.json
+C:\msteamsdocs\bin\Debug\net5.0\msteamsdocs.dll
+C:\msteamsdocs\bin\Debug\net5.0\ref\msteamsdocs.dll
+C:\msteamsdocs\bin\Debug\net5.0\msteamsdocs.pdb
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.csproj.AssemblyReference.cache
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.GeneratedMSBuildEditorConfig.editorconfig
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.AssemblyInfoInputs.cache
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.AssemblyInfo.cs
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.csproj.CoreCompileInputs.cache
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.dll
+C:\msteamsdocs\obj\Debug\net5.0\ref\msteamsdocs.dll
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.pdb
+C:\msteamsdocs\obj\Debug\net5.0\msteamsdocs.genruntimeconfig.cache
