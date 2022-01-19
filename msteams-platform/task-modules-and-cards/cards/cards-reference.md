@@ -1,7 +1,7 @@
 ---
 title: Types of cards
 description: Describes all the cards and card actions available to bots in Teams
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: bots cards reference
 ms.topic: reference
 ---
@@ -949,3 +949,5 @@ The following cards are implemented by the Bot Framework, but are not supported 
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Overflow menu on Adaptive Cards](~/task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+

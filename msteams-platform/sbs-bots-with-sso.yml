@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Read more on bot authentication
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -32,6 +32,10 @@ items:
 
     * Microsoft Teams with an account (not a guest account)
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution
+
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
@@ -88,6 +92,7 @@ items:
     **To create client secret**
 
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
+    
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
          ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)

@@ -3,7 +3,7 @@ title: Create an Outgoing Webhook
 author: laujan
 description: describes how to create an Outgoing Webhook
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 keywords: teams tabs outgoing webhook actionable message verify webhook
 ---
