@@ -14,6 +14,7 @@ Common terms and definitions used in Teams Developer Documentation.
 :::row:::
 
     :::column span="":::
+        
         <details>
         <summary>A</summary>
         
