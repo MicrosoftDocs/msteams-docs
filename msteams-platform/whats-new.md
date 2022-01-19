@@ -18,6 +18,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | Date | Update | Find here  |
 | --- | --- | --- |
 |01/19/2022| Introduced Form completion feedback. | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
+|01/17/2022| People Picker in Adaptive cards (developer preview for mobile and GA for desktop) | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |
 
@@ -38,7 +39,9 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 
 <details>
-
+|01/17/2022| People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
+</details>
+  
 <br>
 
 <details>
@@ -220,6 +223,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|01/17/2022| People Picker in Adaptive cards for mobile  | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
