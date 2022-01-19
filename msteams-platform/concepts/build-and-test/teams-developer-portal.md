@@ -142,7 +142,7 @@ This chart shows you key usage intensity metrics:
 
 The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
 
-    :::image type="content" source="~/assets/images/tdp/app-dashboard.png" alt-text="Dashboard.":::
+    :::image type="content" source="./assets/images/tdp/app-dashboard.png" alt-text="Dashboard.":::
 
 ## Use tools to create app features
 
