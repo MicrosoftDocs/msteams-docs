@@ -72,7 +72,7 @@ The following code provides an example of action based for messaging extensions:
 
 # [Node.js](#tab/nodejs)
 
-```typescript
+```javascript
 
     async handleTeamsMessagingExtensionFetchTask(context, action) {
         switch (action.commandId) {
@@ -146,7 +146,7 @@ The following code provides an example of search based for messaging extensions:
 
 # [Node.js](#tab/nodejs)
 
-```typescript
+```javascript
 
 async handleTeamsMessagingExtensionQuery(context, query) {
         const searchQuery = query.parameters[0].value;     
