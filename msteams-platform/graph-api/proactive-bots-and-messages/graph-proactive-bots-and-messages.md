@@ -188,7 +188,7 @@ The following code provides an example of sending proactive messages:
 
 # [Node.js](#tab/nodejs)
 
-```typescript
+```javascript
 
 async SendNotificationToAllUsersAsync(context) {
     const TeamMembers = await TeamsInfo.getPagedMembers(context);
