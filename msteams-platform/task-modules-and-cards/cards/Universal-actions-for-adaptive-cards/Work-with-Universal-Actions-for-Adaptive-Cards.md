@@ -119,3 +119,4 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Sequential Workflows](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
