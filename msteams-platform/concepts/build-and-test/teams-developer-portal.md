@@ -72,7 +72,73 @@ On the **Overview** page, you can see the total number of active users for your 
 | *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
 | *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
 
-Monthly and daily usage is shown for the past seven, 30 days, and 60 days. You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
+You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
+
+You can click “View Details” or navigate directly to the Analytics page to deep dive into who is using your app and how they’re using it to be able to answer questions like:
+
+    - How many monthly, weekly, and daily active users do I have?
+    - Are these new users, returning users, resurrected users, or lapsed users?
+    - Are these users using my app more than 5 days in a month?
+    - What is the active user breakdown by platform/operating system?
+
+### Filtering for Aggregation Type and App
+
+At the top of the report, you will see a Filter button that allows you to slice and dice all subsequent metrics by the following:
+
+1. Aggregation Type – Each of the metrics on the page have been aggregated by user counts and tenant counts (count of unique customers using your app). You can choose which aggregation type you’d like to explore for each of the subsequent metrics.
+1. Platform
+1. Operating System
+1. Area
+
+(Image)
+
+You can find more details on each individual widget below.
+
+#### Usage by Time Period
+
+This chart enumerates the number of active users/tenants that have opened/used this app across different time periods:
+    - Monthly R30 Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL30 (Rolling 30 day) period.
+    - Monthly R28 Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL28 (Rolling 28 day) period.
+    - Weekly Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
+    - Daily Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
+
+(Image)
+
+#### Usage by Platform and OS
+
+This chart shows you your app(s) active usage across various endpoints. The same user/tenant can use an app on multiple endpoints. 
+    - Windows – Active Users/Tenants that have opened/used your app on Windows
+    - Mac – Active Users/Tenants that have opened/used your app on Mac
+    - iOS – Active Users/Tenants that have opened/used your app on iOS
+    - Android – Active Users/Tenants that have opened/used your app on Android
+    - Web – Active Users/Tenants that have opened/used your app on Web
+
+(Image)
+
+#### Usage by Retention State
+
+This chart lets you track four key retention/churn metrics over time.
+    - New Users /Tenants - Active users or tenants who are new this month and have not used this app before (based on a historical start date of June 1, 2020).
+    - Resurrected Users/Tenants - Active users or tenants who have used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period.
+    - Returning Users/Tenants - Active users or tenants who used your app during a given R30 time period and the previous R30 time period.
+    - Lapsed Users/Tenants - Active users or tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
+
+(Image)
+
+#### Usage Intensity
+
+This chart shows you key usage intensity metrics:
+    - % of 5+ Days Usage - The % of Active Users that have opened/used the app more than 5 days in the last RL30 (Rolling 30 day) period.
+    - Median Days Used per Month - The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period.
+    - DAU/MAU - The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app
+
+(Image)
+
+#### App Dashboard
+
+The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
+
+(Image)
 
 ## Use tools to create app features
 
