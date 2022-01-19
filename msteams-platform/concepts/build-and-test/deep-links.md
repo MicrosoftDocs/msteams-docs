@@ -61,13 +61,13 @@ Provide the following fields:
 
 Use the following formats for a deep link that you can use:
 
-* In a bot, connector, or messaging extension card:
+* In a bot, connector, or messaging extension card
 
-`https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+    `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
-* An app added to a meeting with a [tab capability](~/concepts/capabilities-overview.md):
+* An app added to a meeting with a tab [capability](~/concepts/capabilities-overview.md)
 
-`https://teams.microsoft.com/l/entity/<meetingId>/<entityId>?context={"chatId": "<meetingId>","contextType":"chat"}`
+    `https://teams.microsoft.com/l/entity/<meetingId>/<entityId>?context={"chatId": "<meetingId>","contextType":"chat"}`
  
 > [!NOTE]
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
