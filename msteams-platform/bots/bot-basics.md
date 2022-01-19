@@ -61,13 +61,12 @@ protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, Team
 
 # [Nodejs](#tab/nodejs)
 
-```typescript
+```javascript
 onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
        // code for handling
         await next()
     });
 ```
-
 ---
 
 `OnTeamsTeamRenamedAsync`
@@ -83,13 +82,12 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 
 # [Nodejs](#tab/nodejs)
 
-```typescript
+```javascript
 onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
        // code for handling
        await next()
     });
 ```
-
 ---
 
 `OnTeamsMembersAddedAsync`
@@ -105,13 +103,12 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 
 # [Nodejs](#tab/nodejs)
 
-```typescript
+```javascript
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
 	   await next();
     });
 ```
-
 ---
 
 `OnTeamsMembersRemovedAsync`
@@ -127,13 +124,12 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 # [Nodejs](#tab/nodejs)
 
-```typescript
+```javascript
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
 	   await next();
     });
 ```
-
 ---
 
 ## Bot logic
