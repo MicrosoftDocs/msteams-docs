@@ -163,7 +163,7 @@ The following code provides an example of token exchange using MSAL library :
 
 # [Node.js](#tab/nodejs)
 
-```typescript
+```javascript
 // Exchange cliend side token with server token
   app.post('/getProfileOnBehalfOf', function(req, res) {
         var tid = < "Tenand id" >
