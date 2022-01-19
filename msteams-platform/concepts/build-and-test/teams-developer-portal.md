@@ -74,16 +74,16 @@ On the **Overview** page, you can see the total number of active users for your 
 
 You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
 
-You can click “View Details” or navigate directly to the Analytics page to deep dive into who is using your app and how they’re using it to be able to answer questions like:
+You can click **View Details** or navigate directly to the Analytics page to deep dive into who is using your app and how they’re using it to be able to answer questions like:
 
-    - How many monthly, weekly, and daily active users do I have?
-    - Are these new users, returning users, resurrected users, or lapsed users?
-    - Are these users using my app more than 5 days in a month?
-    - What is the active user breakdown by platform/operating system?
+* How many monthly, weekly, and daily active users do I have?
+* Are these new users, returning users, resurrected users, or lapsed users?
+* Are these users using my app more than 5 days in a month?
+* What is the active user breakdown by platform/operating system?
 
 ### Filtering for Aggregation Type and App
 
-At the top of the report, you will see a Filter button that allows you to slice and dice all subsequent metrics by the following:
+At the top of the report, you will see a **Filter** button that allows you to slice and dice all subsequent metrics by the following:
 
 1. Aggregation Type – Each of the metrics on the page have been aggregated by user counts and tenant counts (count of unique customers using your app). You can choose which aggregation type you’d like to explore for each of the subsequent metrics.
 1. Platform
