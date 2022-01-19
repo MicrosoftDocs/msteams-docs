@@ -157,12 +157,6 @@ After you receive access token in success callback, decode access token to view 
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
 
-## Code sample
-
-|**Sample name**|**Description**|**C#**|**Node.js**|
-|---------------|---------------|------|--------------|
-| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
-
 ## Code snippets
 
 The following code provides an example of token exchange using MSAL library :
@@ -223,6 +217,13 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
         }
 ```
 ---
+
+## Code sample
+
+|**Sample name**|**Description**|**C#**|**Node.js**|
+|---------------|---------------|------|--------------|
+| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+
 ## Known limitations
 
 ### Get an access token with Graph permissions
