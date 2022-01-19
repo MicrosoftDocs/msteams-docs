@@ -100,9 +100,10 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/powershell-script.png" alt-text="PowerShell script.":::
 
+    1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in powershell script.
+
         :::image type="content" source="./assets/images/calls-and-meetings/powershell.png" alt-text="PowerShell.":::
 
-    1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in powershell script.
     1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name.
     
         ```powershell
