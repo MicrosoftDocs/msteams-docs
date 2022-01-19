@@ -90,7 +90,7 @@ At the top of the report, you will see a **Filter** button that allows you to sl
 1. Operating System
 1. Area
 
-    :::image type="content" source="./assets/images/tdp/dev-analytics-filter.PNG" alt-text="filter.":::
+    :::image type="content" source="~/assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter.":::
 
 You can find more details on each individual widget below:
 
