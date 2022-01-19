@@ -168,10 +168,10 @@ Common terms and definitions used in Teams Developer Documentation.
         
         | Term | Definition |
         | --- | --- |
-        | Personal app |  <br>**See also**: Shared app |
-        | Power Virtual Agents |  |
-        | Proactive messages |  |
-        | Provision |  |
+        | Personal app | A personal app can be a bot, private workspace, or both. Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that's theirs when the app has been configured as a tab in multiple channels. <br>**See also**: Shared app |
+        | Power Virtual Agents | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. |
+        | Proactive messages | A message sent by a bot that isn't in response to a request from a user. This can include messages, such as welcome messages, notifications, scheduled messages. |
+        | Provision | It's a process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. <br>**See also**: Deploy |
         |
         </details>
         <br>
@@ -180,7 +180,7 @@ Common terms and definitions used in Teams Developer Documentation.
         
         | Term | Definition |
         | --- | --- |
-        | Rate-limiting |  |
+        | Rate-limiting | A method to limit messages to a certain maximum frequency to ensure that number of messages are sufficient and don't appear as spam. |
         | Role-based views |  |
         | RSC permission |  |
         |
