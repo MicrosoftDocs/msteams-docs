@@ -63,10 +63,11 @@ items:
 
     * Choose the Apps tab from the navigation bar.
 
+      ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
+
     * From the window's lower-right corner, select Create an outgoing webhook.
 
       ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
-
     * Type the following details in the **Create an Outgoing Webhook** page:
      
         * Name - The webhook title and @mention tab.
@@ -138,7 +139,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/outgoing-webhooks).
+    ![Dotnet]
             
 
 - title: Interact with the app in Teams
