@@ -2,12 +2,12 @@
 title: Microsoft Teams tabs
 author: surbhigupta
 description: An overview of custom tabs on the Teams platform
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
 ---
 
-# Microsoft Teams tabs
+# Build Tabs for Microsoft Teams
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
@@ -31,7 +31,7 @@ You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) 
 You can build tabs with Adaptive Cards and centralize all Teams app capabilities by eliminating the need for a different backend for your bots and tabs. [Stage View](~/tabs/tabs-link-unfurling.md) is a new UI component that allows you to render the content opened in full screen in Teams and pinned as a tab. The existing [link unfurling](~/tabs/tabs-link-unfurling.md) service is updated, so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. You can [create conversational tabs](~/tabs/how-to/conversational-tabs.md) using conversational sub-entities that allow users to have conversations about sub-entities in your tab, such as specific task, patient, and sales opportunity, instead of discussing the entire tab. You can make changes to [tab margins](~/resources/removing-tab-margins.md) to enhance the developer's experience when building apps. You can drag the tab and place it in the desired position to interchange the tab positions within your personal apps and channel or group chats. 
 
 > [!NOTE]
-> **Posts**, **Files**, and **Chat** tabs can't be moved from their positions.
+> **Posts** and **Files** can't be moved from their positions.
 
 ## Tab features
 
