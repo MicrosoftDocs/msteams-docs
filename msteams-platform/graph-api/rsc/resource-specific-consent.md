@@ -204,7 +204,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
     ]
   }
 ```
-## Examples  
+## Example 
 
 ### Request RSC permissions in a team and chat when the app manifest version is later or equal to 1.12
 
