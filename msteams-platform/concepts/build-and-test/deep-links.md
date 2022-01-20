@@ -85,7 +85,7 @@ The query parameters are:
 | `context.channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `meetingId`&emsp; | Meeting Id used by tab when running in meeting context. The meeting identifier is available through Bot Invoke and Teams Client SDK. | 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYt ODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
 | `chatId`&emsp; | The Microsoft Teams ID for the chat with which the content is associated | 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYt ODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
-| `contextType`&emsp; |  Chat is the only supported contextType | chat |
+| `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
 
 Examples:
 
