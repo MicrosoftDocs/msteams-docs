@@ -59,7 +59,7 @@ protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, Team
         }
 ```
 
-# [Nodejs](#tab/nodejs)
+# [Node.js](#tab/node.js)
 
 ```javascript
 onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
@@ -81,7 +81,7 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
         }
 ```
 
-# [Nodejs](#tab/nodejs)
+# [Node.js](#tab/node.js)
 
 ```javascript
 onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
@@ -103,7 +103,7 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 		}
 ```
 
-# [Nodejs](#tab/nodejs)
+# [Node.js](#tab/node.js)
 
 ```javascript
 onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
@@ -125,7 +125,7 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 		}
 ```
 
-# [Nodejs](#tab/nodejs)
+# [Node.js](#tab/node.js)
 
 ```javascript
 onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
@@ -147,7 +147,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 		}
 ```
 
-# [Nodejs](#tab/nodejs)
+# [Node.js](#tab/node.js)
 
 ```javascript
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
@@ -169,7 +169,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 		}
 ```
 
-# [Nodejs](#tab/nodejs)
+# [Node.js](#tab/node.js)
 
 ```javascript
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
