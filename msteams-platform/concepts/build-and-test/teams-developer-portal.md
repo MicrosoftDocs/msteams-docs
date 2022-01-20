@@ -74,11 +74,11 @@ You can see the total number of active users and other metrics for your app's pu
 | *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
 | *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
 
-The App usage for a given day is reflected within 24-48 hours and usage data for new apps can take up to 3-5 days.
+The app usage for a given day is reflected within 24-48 hours and usage data for new apps can take up to 3-5 days.
 
 **To view your apps analytics**
 
-1. Go to developer portal.
+1. Go to <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a>.
 1. Select **Apps** from the left pane.
 1. Select an app from the list.
 1. Go to **Analytics** or you can also select **View Details** under the active users card.
@@ -101,7 +101,7 @@ The **Filter** button in the analytics page allows you to analyze your app with 
 
  :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
 
-Analytics page in the developer portal gives you the app usage data with the following individual widgets:
+Analytics page gives you the app usage data with the following individual widgets:
 
 * **Usage by time period**
 * **Usage by platform and OS**
