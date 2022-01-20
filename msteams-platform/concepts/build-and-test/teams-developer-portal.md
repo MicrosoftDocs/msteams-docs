@@ -65,9 +65,7 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-You can analyze your app's usage data and metrics in the **Analytics** page under the app **Overview** page.
-
-You can see the total number of active users and other metrics for your app's published to the Teams store or an org's app catalog through Developer Portal.
+You can view your app's usage and metrics from the **Analytics** section in Teams Developer Portal. Check the total number of active users and other metrics for your app published to the Teams store or an org's app catalog.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -76,23 +74,21 @@ You can see the total number of active users and other metrics for your app's pu
 
 The app usage for a given day is reflected within 24-48 hours and usage data for new apps can take up to 3-5 days.
 
-**To view your apps analytics**
+**To view your apps usage**
 
 1. Go to <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a>.
 1. Select **Apps** from the left pane.
 1. Select an app from the list.
-1. Go to **Analytics** or you can also select **View Details** under the active users card.
+1. Go to **Analytics** from the left pane or select **View Details** under the active users card.
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
 
-You can learn more about app usage and also check the following metrics:
+You can use the **Analytics** dashboard to learn more about app usage such as:
 
 * Active users of your apps per monthly, weekly, and daily basis
 * Are these new users lapsed, revived, or returned users?
 * Do these users use my app more than five times each month?
 * What is the breakdown of active users by platform/operating system?
-
-**Filtering for aggregation type and app**
 
 The **Filter** button in the analytics page allows you to analyze your app with all the subsequent metrics by the following:
 
