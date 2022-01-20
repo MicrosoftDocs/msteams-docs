@@ -76,7 +76,7 @@ You can see the total number of active users and other metrics for your app's pu
 
 The App usage for a given day is reflected within 24-48 hours and usage data for new apps can take up to 3-5 days.
 
-**To view app analytics**
+**To view your apps analytics**
 
 1. Go to developer portal.
 1. Select **Apps** from the left pane.
@@ -85,16 +85,16 @@ The App usage for a given day is reflected within 24-48 hours and usage data for
 
 You can learn more about app usage and also check the following metrics:
 
-* App active users per monthly, weekly, and daily basis?
+* Active users of your apps per monthly, weekly, and daily basis
 * Are these new users lapsed, revived, or returned users?
 * Do these users use my app more than five times each month?
 * What is the breakdown of active users by platform/operating system?
 
-### Filtering for aggregation type and app
+**Filtering for aggregation type and app**
 
-The **Filter** button allows you to analyze all the subsequent metrics by the following:
+The **Filter** button in the analytics page allows you to analyze your app with all the subsequent metrics by the following:
 
-1. Aggregation Type – Each of the metrics on the page have been aggregated by user counts and tenant counts (count of unique customers using your app). You can choose which aggregation type you’d like to explore for each of the subsequent metrics.
+1. Aggregation Type
 1. Platform
 1. Operating System
 1. Area
@@ -103,14 +103,14 @@ The **Filter** button allows you to analyze all the subsequent metrics by the fo
 
 Analytics page in the developer portal gives you the app usage data with the following individual widgets:
 
-* Usage by time period
-* Usage by platform and OS
-* Usage by retention state
-* Usage intensity
+* **Usage by time period**
+* **Usage by platform and OS**
+* **Usage by retention state**
+* **Usage intensity**
 
-#### Usage by time period
+### Usage by time period
 
-This chart enumerates the number of active users/tenants that have opened/used this app across different time periods:
+This chart shows you the number of active users/tenants that have opened/used this app across different time periods:
 
  :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
 
@@ -119,21 +119,21 @@ This chart enumerates the number of active users/tenants that have opened/used t
 * Weekly Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
 * Daily Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
 
-#### Usage by platform and OS
+### Usage by platform and OS
 
 This chart shows you your app(s) active usage across various endpoints. The same user/tenant can use an app on multiple endpoints.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
 
-* Windows – Active Users/Tenants that have opened/used your app on Windows
-* Mac – Active Users/Tenants that have opened/used your app on Mac
-* iOS – Active Users/Tenants that have opened/used your app on iOS
-* Android – Active Users/Tenants that have opened/used your app on Android
-* Web – Active Users/Tenants that have opened/used your app on Web
+* Windows – Active Users/Tenants that have opened/used your app on Windows.
+* Mac – Active Users/Tenants that have opened/used your app on Mac.
+* iOS – Active Users/Tenants that have opened/used your app on iOS.
+* Android – Active Users/Tenants that have opened/used your app on Android.
+* Web – Active Users/Tenants that have opened/used your app on Web.
 
-#### Usage by retention state
+### Usage by retention state
 
-This chart lets you track four key retention/churn metrics over time.
+This chart lets you track four key retention/churn metrics of your app over time.
 
 :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Retention":::
 
@@ -142,9 +142,9 @@ This chart lets you track four key retention/churn metrics over time.
 * Returning Users/Tenants - Active users or tenants who used your app during a given R30 time period and the previous R30 time period.
 * Lapsed Users/Tenants - Active users or tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
 
-#### Usage intensity
+### Usage intensity
 
-This chart shows you key usage intensity metrics.
+This chart shows you key usage intensity metrics of your app.
 
  :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="Intensity":::
 
@@ -154,7 +154,7 @@ This chart shows you key usage intensity metrics.
 
 ### App dashboard
 
-The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
+The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can select each of these rows to see trends over time.
 
  :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="app":::
 
