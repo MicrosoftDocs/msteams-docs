@@ -347,14 +347,12 @@ items:
     
     1. Open **manifest.json** in **Visual Studio 2019**.
 
-    1. Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
-
     1. Add the following code snippet to your manifest file, if not already present:
 
        ```json
        "bots": [
         {
-          "botId": "9980545d-d7fc-4fe3-88d8-82280436b1ca",
+          "botId": "<<YOUR-MICROSOFT-APP-ID>>",
           "scopes": [
             "personal",
             "team",
@@ -364,6 +362,8 @@ items:
           "isNotificationOnly": false
         }      
        ```
+
+    1. Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
         ![Manifest image2](~/assets/images/Teams-link-unfurling/manifest.png)
 
