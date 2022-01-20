@@ -18,7 +18,7 @@ items:
 
     You'll see the following output:
 
-     ![Link unfurling](~/assets/images/Teams-task-module/final_image.png)
+     ![Link unfurling](~/assets/images/Teams-link-unfurling/final_image.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -456,14 +456,14 @@ items:
 
        The link unfurls as shown in the following image:
 
-       ![Chat](~/assets/images/Teams-task-module/result.png)
+       ![Chat](~/assets/images/Teams-link-unfurling/result.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Link unfurling](~/assets/images/Teams-task-module/final_image.png)
+       ![Link unfurling](~/assets/images/Teams-link-unfurling/final_image.png)
 
 - content: |
     You've completed the tutorial to get started with Teams link unfurling app!
