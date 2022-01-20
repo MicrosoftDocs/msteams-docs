@@ -17,9 +17,9 @@ Common terms and definitions used in Teams Developer Documentation.
         
         <details>
         <summary>A</summary>
+
         | Term | Definition |
         | --- | --- |
-        
         | Action command | A type of messaging extension app that is used to present the users with a popup to collect or display information. <br>**See also**: Messaging extension; Search commands |
         | Adaptive Card | An actionable snippet of content that you can add to a conversation through a bot or messaging extension. Using text, graphics, and buttons, these cards provide rich communication to your audience. |
         | App Catalog | It stores the apps for SharePoint and office for our organization's internal use. |
