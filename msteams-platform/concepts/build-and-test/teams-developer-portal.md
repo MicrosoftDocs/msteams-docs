@@ -74,16 +74,16 @@ On the **Overview** page, you can see the total number of active users for your 
 
 You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
 
-Click **View Details** or navigate to the **Analytics** page to learn more about who's using your app and how they're using it to answer queries like:
+Select **View Details** or go to **Analytics** page to learn more about who's using your app and how they're using it to answer the following:
 
 * How many active users do I have on a monthly, weekly, and daily basis?
 * Are these new users lapsed, revived, or returned users?
 * Do these users use my app more than five times each month?
 * What is the breakdown of active users by platform/operating system?
 
-### Filtering for Aggregation Type and App
+### Filtering for aggregation type and app
 
-At the top of the report, you will see a **Filter** button that allows you to slice and dice all subsequent metrics by the following:
+The **Filter** button allows you to analyze all the subsequent metrics by the following:
 
 1. Aggregation Type – Each of the metrics on the page have been aggregated by user counts and tenant counts (count of unique customers using your app). You can choose which aggregation type you’d like to explore for each of the subsequent metrics.
 1. Platform
@@ -94,7 +94,7 @@ At the top of the report, you will see a **Filter** button that allows you to sl
 
 You can find more details on each individual widget below:
 
-#### Usage by Time Period
+#### Usage by time period
 
 This chart enumerates the number of active users/tenants that have opened/used this app across different time periods:
 
@@ -105,7 +105,7 @@ This chart enumerates the number of active users/tenants that have opened/used t
 * Weekly Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
 * Daily Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
 
-#### Usage by Platform and OS
+#### Usage by platform and OS
 
 This chart shows you your app(s) active usage across various endpoints. The same user/tenant can use an app on multiple endpoints.
 
@@ -117,7 +117,7 @@ This chart shows you your app(s) active usage across various endpoints. The same
 * Android – Active Users/Tenants that have opened/used your app on Android
 * Web – Active Users/Tenants that have opened/used your app on Web
 
-#### Usage by Retention State
+#### Usage by retention state
 
 This chart lets you track four key retention/churn metrics over time.
 
@@ -128,7 +128,7 @@ This chart lets you track four key retention/churn metrics over time.
 * Returning Users/Tenants - Active users or tenants who used your app during a given R30 time period and the previous R30 time period.
 * Lapsed Users/Tenants - Active users or tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
 
-#### Usage Intensity
+#### Usage intensity
 
 This chart shows you key usage intensity metrics.
 
@@ -138,7 +138,7 @@ This chart shows you key usage intensity metrics.
 * Median Days Used per Month - The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period.
 * DAU/MAU - The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app
 
-#### App Dashboard
+#### App dashboard
 
 The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
 
