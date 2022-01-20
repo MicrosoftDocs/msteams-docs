@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to set up Teams link unfurling bot.
   audience: Developer
   level: Beginner
-  ms.date: 01/07/2021
+  ms.date: 01/20/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: task-modules-and-cards/task-modules/task-modules-bots.md
   nextTutorialTitle: Read more on task modules from bots
@@ -14,11 +14,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.botframework.com urls.
+    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.BotFramework.com urls.
 
     You'll see the following output:
 
-     (Placeholder for image)
+     ![Link unfurling](~/assets/images/Teams-task-module/final_image.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -413,6 +413,57 @@ items:
     ```
    
     ![Dotnet](~/assets/images/Teams-link-unfurling/dotnetruncmd.png)
+
+- title: Upload Link Unfurling app
+  durationInMinutes: 1
+  content: |
+    **To add Link Unfurling app to Teams**
+
+    1. In your cloned repository, navigate to **csharp_dotnetcore > 55.teams-link-unfurling > TeamsAppManifest**.
+
+    1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       ![Zip file](~/assets/images/Teams-link-unfurling/zipfile.png) 
+
+    1. Go to **Microsoft Teams**.
+
+    1. Select **Apps** or **Store**.
+
+       ![Zip file](~/assets/images/Teams-link-unfurling/AppStore.png)
+   
+    1. In the lower left corner, select **Manage your apps**.
+
+       ![Manage apps](~/assets/images/Teams-link-unfurling/manageapps.png)
+   
+    1. Select **Upload an app to your org's app catalog** or **Upload a custom app**. 
+
+       ![Upload custom app](~/assets/images/Teams-link-unfurling/uploadapp.png)
+
+    1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
+
+       ![Select zip file](~/assets/images/Teams-link-unfurling/selectzip.png)
+
+    1. Select **Add**.
+
+       ![Add the app](~/assets/images/Teams-link-unfurling/addapp.png)
+
+       A chat displays.
+   
+    1. In the compose message area, enter `https://www.BotFramework.com`.
+
+       The link unfurls as shown in the following image:
+
+       ![Chat](~/assets/images/Teams-task-module/result.png)
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+       ![Link unfurling](~/assets/images/Teams-task-module/final_image.png)
 
 - content: |
     You've completed the tutorial to get started with Teams link unfurling app!
