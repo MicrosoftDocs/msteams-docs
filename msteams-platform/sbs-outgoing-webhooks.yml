@@ -16,7 +16,7 @@ items:
   content: |
     Webhooks help Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. In Teams, outgoing webhooks allow users to send messages to your web service without having to go through the full process of creating bots via the [Microsoft Bot Framework](https://dev.botframework.com/). Outgoing webhooks post data from Teams to any chosen service capable of accepting a JSON payload. Once an outgoing webhook is added to a team, it acts like bot, listening in channels for messages using @mention, sending notifications to external web services, and responding with rich messages that can include cards and images. 
 
-    You'll see the following output:
+     This step-by-step guide helps you to generate Outgoing Webhook in Teams. You'll see the following output:
 
      ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
 
@@ -27,7 +27,7 @@ items:
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * Asp.net Core
+    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -70,11 +70,11 @@ items:
       ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
     * Type the following details in the **Create an Outgoing Webhook** page:
      
-        * Name - The webhook title and @mention tab.
+        * Name - The webhook title that would be used in @mention tab.
 
-        * Callback URL - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
+        * Callback URL - The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams.
 
-            1. To use the api/sample or authenticated sample, do the following:
+        * To use the api/sample or authenticated/sample, do the following:
 
             * For api/sample, Copy-and-Paste ngrok URL and append it with /api/sample.
 
