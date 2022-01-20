@@ -12,11 +12,11 @@ Common terms and definitions used in Teams Developer Documentation.
 <br>
 
 :::row:::
-
     :::column span="":::
-        
         <details>
         <summary>A</summary>
+
+        ## A
 
         | Term | Definition |
         | --- | --- |
@@ -210,18 +210,16 @@ Common terms and definitions used in Teams Developer Documentation.
         
         | Term | Definition |
         | --- | --- |
-        | Tabs |  |
-        | Tab chat |  |
-        | Task modules |  |
-        | Thread discussion |  |
-        | Teams |  |
-        | Teams developer tenant |  |
-        | Teams Toolkit |  |
-        | TeamsFx |  |
-        | TeamsFx CLI |  |
-        | TeamsFx SDK |  |
-        | Teams Mobile |  |
-        | Teams workbench | <br>**See also**: Workbench; Local workbench |
+        | Tab | Tabs are Teams-aware webpages embedded in Microsoft Teams that point to domains declared in manifest. You can add it inside a team, group chat, or personal app. |
+        | Tab chat | A type of tab that lets a user have a focused conversation experience in dynamic tabs. |
+        | Task modules | A feature of Teams app to create modal popup for completing tasks, displaying videos or dashboard. |
+        | Thread discussion | A conversation posted on a channel or chat between users. |
+        | Teams | Microsoft Teams is the ultimate messaging app for your organization—a workspace for real-time collaboration and communication, meetings, file and app sharing. |
+        | Teams Toolkit | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
+        | TeamsFx | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
+        | TeamsFx SDK | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
+        | Teams Mobile | Microsoft Teams available as a mobile app. |
+        | Teams workbench | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: Workbench; Local workbench |
         |
         </details>
         <br>
@@ -230,9 +228,9 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | UI components |  |
-        | UI templates |  |
-        | Universal Actions for Adaptive Cards |  |
+        | UI components | For Teams app development, you can use Fluent UI components to build your app from scratch. |
+        | UI templates | For Teams app development, you can use Teams UI templates to design your apps quickly. |
+        | Universal Actions for Adaptive Cards | A way to implement Adaptive Cards across platforms and applications. It uses a bot as a common backend for handling actions. |
         | 
         </details>
         <br>
@@ -241,7 +239,7 @@ Common terms and definitions used in Teams Developer Documentation.
         
         | Term | Definition |
         | --- | --- |
-        | Virtual Assistant |  |
+        | Virtual Assistant | A Microsoft open-source template that enables you to create a robust conversational solution. |
         |
         </details>
         <br>
@@ -250,14 +248,10 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Web app |  |
-        | Web service |  |
-        | Webhook | <br>**See also**: Incoming webhook; outgoing webhook |
-        | Web part | <br>**See also**: SPFx |
-        | Workbench | <br>**See also**: Local workbench; Teams workbench |
-        | Workflow | <br>**See also**: Sequential workflow |
-        | Workspace |  |
-        |
+        | Web app | An app that runs on a web server. It can be integrated with Microsoft Teams Platform. |
+        | Webhook | It is a feature of a Teams app used to integrate it with external apps. <br>**See also**: Incoming webhook; outgoing webhook |
+        | Web part | A UI component used to build a page or a site in a Teams app created using SharePoint. <br>**See also**: SPFx |
+        | Workbench | Overall Visual Studio Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: Local workbench; Teams workbench |
         </details>
         <br>
         <details>
@@ -265,10 +259,11 @@ Common terms and definitions used in Teams Developer Documentation.
     
         | Term | Definition |
         | --- | --- |
-        | Yeoman |  |
-        | YoTeams |  |
+        | YoTeams | A development toolkit for building Microsoft Teams applications based on TypeScript and node.js. |
         |
         </details>
         
     :::column-end:::
 :::row-end:::
+
+<!--Cross-ref links-->
