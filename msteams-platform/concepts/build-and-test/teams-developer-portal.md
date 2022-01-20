@@ -98,18 +98,16 @@ You can find more details on each individual widget below:
 
 This chart enumerates the number of active users/tenants that have opened/used this app across different time periods:
 
-    :::image type="content" source="~/assets/images/tdp/usage-by-time-period.png" alt-text="Period.":::
-
 * Monthly R30 Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL30 (Rolling 30 day) period.
 * Monthly R28 Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL28 (Rolling 28 day) period.
 * Weekly Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
 * Daily Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
 
+    :::image type="content" source="~/assets/images/tdp/usage-by-time-period.png" alt-text="Period.":::
+
 #### Usage by Platform and OS
 
 This chart shows you your app(s) active usage across various endpoints. The same user/tenant can use an app on multiple endpoints.
-
-    :::image type="content" source="~/assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform.":::
 
 * Windows – Active Users/Tenants that have opened/used your app on Windows
 * Mac – Active Users/Tenants that have opened/used your app on Mac
@@ -117,32 +115,34 @@ This chart shows you your app(s) active usage across various endpoints. The same
 * Android – Active Users/Tenants that have opened/used your app on Android
 * Web – Active Users/Tenants that have opened/used your app on Web
 
+    :::image type="content" source="~/assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform.":::
+
 #### Usage by Retention State
 
 This chart lets you track four key retention/churn metrics over time.
-
-    :::image type="content" source="~/assets/images/tdp/usage-by-retention-state.png" alt-text="Retention.":::
 
 * New Users /Tenants - Active users or tenants who are new this month and have not used this app before (based on a historical start date of June 1, 2020).
 * Resurrected Users/Tenants - Active users or tenants who have used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period.
 * Returning Users/Tenants - Active users or tenants who used your app during a given R30 time period and the previous R30 time period.
 * Lapsed Users/Tenants - Active users or tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
 
+    :::image type="content" source="~/assets/images/tdp/usage-by-retention-state.png" alt-text="Retention.":::
+
 #### Usage Intensity
 
 This chart shows you key usage intensity metrics:
-
-    :::image type="content" source="~/assets/images/tdp/usage-intensity.png" alt-text="Intensity.":::
 
 * % of 5+ Days Usage - The % of Active Users that have opened/used the app more than 5 days in the last RL30 (Rolling 30 day) period.
 * Median Days Used per Month - The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period.
 * DAU/MAU - The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app
 
+    :::image type="content" source="~/assets/images/tdp/usage-intensity.png" alt-text="Intensity.":::
+
 #### App Dashboard
 
 The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
 
-    :::image type="content" source="~/assets/images/tdp/app-dashboard.png" alt-text="Dashboard":::
+    :::image type="content" source="~/assets/images/tdp/app-dashboard.png" alt-text="Dashboard.":::
 
 ## Use tools to create app features
 
