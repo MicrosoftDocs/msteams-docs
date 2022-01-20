@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2021-12-22T01:15:01+05:30</updated>
+	<updated>2022-01-19T12:04:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://docs.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
-	<category term="updated"/>
+	<category term="updated"/>	
+	<entry>
+		<title type="html"><![CDATA[People Picker in Adaptive Cards]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/people-picker?tabs=desktop</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/people-picker?tabs=desktop?referrer=whats.new.rssfeed"/>
+		<updated>2022-01-17T12:41:01+05:30</updated>
+		<summary type="html"><![CDATA[People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. This feature is available in public developer preview only for mobile and generally available (GA) for desktop.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20c8cc6c1f-7946-e074-e2c3-da2d24e0acc6%0A*%20Version%20Independent%20ID%3A%20c8cc6c1f-7946-e074-e2c3-da2d24e0acc6%0A*%20Content%3A%20%5BPeople%20Picker%20in%20Adaptive%20Cards%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftask-modules-and-cards%2Fcards%2Fpeople-picker%3Ftabs%3Ddesktop)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftask-modules-and-cards%2Fcards%2Fpeople-picker.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftask-modules-and-cards%2Fcards%2Fpeople-picker.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Teams Toolkit]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?referrer=whats.new.rssfeed"/>
+		<updated>2022-01-10T12:41:01+05:30</updated>
+		<summary type="html"><![CDATA[Teams Toolkit for Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, similar to Teams Toolkit for Visual Studio, you can use CLI tool which consists of Toolkit teamsfx.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20b743e43d-95cc-3d1e-b142-31a16369f97e%0A*%20Version%20Independent%20ID%3A%20b743e43d-95cc-3d1e-b142-31a16369f97e%0A*%20Content%3A%20%5BTeams%20Toolkit%20fundamentals%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-fundamentals)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2Fteams-toolkit-fundamentals.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fteams-toolkit-fundamentals.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40zyxiaoyuer%0A*%20Microsoft%20Alias%3A%20**zhany**">feedback</a>? It is important to us. ]]></summary>
+		<category label="updated" term="updated"/>
+	</entry>	
 	<entry>
 		<title type="html"><![CDATA[Validation Guidelines for apps linked to SaaS offer]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines#apps-linked-to-saas-offer</id>
@@ -37,14 +53,6 @@
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-meetings-stage-view?referrer=whats.new.rssfeed"/>
 		<updated>2021-12-09T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Introduced step-by-step guide to Meetings Stage View. Meetings Stage View helps to enable and configure your apps for Teams meetings. It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%209420bfcb-48ce-7cbb-f423-a99d0665f182%0A*%20Version%20Independent%20ID%3A%209420bfcb-48ce-7cbb-f423-a99d0665f182%0A*%20Content%3A%20%5BMeetings%20Stage%20View%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetings-stage-view)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fsbs-meetings-stage-view.yml%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fsbs-meetings-stage-view.yml)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Teams Toolkit]]></title>
-		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals</id>
-		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?referrer=whats.new.rssfeed"/>
-		<updated>2021-11-30T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams Toolkit for Visual Studio Code helps the developers to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a zero-configuration approach to the developer experience.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20b743e43d-95cc-3d1e-b142-31a16369f97e%0A*%20Version%20Independent%20ID%3A%20b743e43d-95cc-3d1e-b142-31a16369f97e%0A*%20Content%3A%20%5BTeams%20Toolkit%20fundamentals%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-fundamentals)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2Fteams-toolkit-fundamentals.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftoolkit%2Fteams-toolkit-fundamentals.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40zyxiaoyuer%0A*%20Microsoft%20Alias%3A%20**zhany**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -117,14 +125,6 @@
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/plan-responsive-tabs-for-teams-mobile?referrer=whats.new.rssfeed"/>
 		<updated>2021-10-05T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Explore how to plan your responsive web pages on Teams mobile. Understand the key information to plan building apps for Teams mobile.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%205f26123e-5bb1-6930-c02a-38200a9196c9%0A*%20Version%20Independent%20ID%3A%20544936b5-8187-d864-69e8-88e3c62ddf36%0A*%20Content%3A%20%5BPlan%20for%20Teams%20mobile%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**v-abirade**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Developer Portal General Availability]]></title>
-		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal</id>
-		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed"/>
-		<updated>2021-10-04T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[Teams App Studio has evolved. Configure, publish, and manage your Teams apps through Developer Portal.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%207da63b6f-15d7-a6dd-82fc-d183afaeb816%0A*%20Version%20Independent%20ID%3A%2082d1ca83-28dd-220e-ab0c-a4833f8f8143%0A*%20Content%3A%20%5BManage%20your%20apps%20with%20the%20Developer%20Portal%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
