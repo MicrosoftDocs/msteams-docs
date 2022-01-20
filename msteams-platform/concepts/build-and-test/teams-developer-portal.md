@@ -65,18 +65,27 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal and scoped to the app ID.
+You can analyze your app's usage data and metrics in the **Analytics** page under the app **Overview** page.
+
+You can see the total number of active users and other metrics for your app's published to the Teams store or an org's app catalog through Developer Portal.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
 | *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
 
-You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
+The App usage for a given day is reflected within 24-48 hours and usage data for new apps can take up to 3-5 days.
 
-Select **View Details** or go to **Analytics** page to learn more about who's using your app and how they're using it to answer the following:
+**To view app analytics**
 
-* How many active users do I have on a monthly, weekly, and daily basis?
+1. Go to developer portal.
+1. Select **Apps** from the left pane.
+1. Select an app from the list.
+1. Go to **Analytics** or you can also select **View Details** under the active users card.
+
+You can learn more about app usage and also check the following metrics:
+
+* App active users per monthly, weekly, and daily basis?
 * Are these new users lapsed, revived, or returned users?
 * Do these users use my app more than five times each month?
 * What is the breakdown of active users by platform/operating system?
@@ -92,7 +101,12 @@ The **Filter** button allows you to analyze all the subsequent metrics by the fo
 
  :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
 
-You can find more details on each individual widget below:
+Analytics page in the developer portal gives you the app usage data with the following individual widgets:
+
+* Usage by time period
+* Usage by platform and OS
+* Usage by retention state
+* Usage intensity
 
 #### Usage by time period
 
@@ -138,7 +152,7 @@ This chart shows you key usage intensity metrics.
 * Median Days Used per Month - The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period.
 * DAU/MAU - The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app
 
-#### App dashboard
+### App dashboard
 
 The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
 
