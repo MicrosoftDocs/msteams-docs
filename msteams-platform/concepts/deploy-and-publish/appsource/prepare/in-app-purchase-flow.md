@@ -11,11 +11,15 @@ localization_priority: Normal
 
 Microsoft Teams provide APIs that you can use to implement the in-app purchases to make money from your Teams apps.
 
-**In-app purchases**, whether your app is free or not, you can sell content or new app functionality (such as additional features of the app) from right within the app.
+In-app purchase allows you to convert users from free to paid plans or upsell to a new subscription plan directly from within your app.
 
 ## Implement in-app purchases
 
-To offer an in-app purchase experience to the users of your app, ensure your app is built on [Teams client SDK library](https://github.com/OfficeDev/microsoft-teams-library-js)
+To offer an in-app purchase experience to the users of your app, ensure the following:
+
+* App is built on [Teams client SDK library](https://github.com/OfficeDev/microsoft-teams-library-js).
+
+* App is enabled with a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
 ### Update manifest
 
@@ -36,7 +40,7 @@ Update your Teams app **manifest.json** file by adding the RSC permissions to ac
 
 ### Purchase Experience API
 
-You must call `openPurchaseExperience` API from your web app to enable in-app purchase for the app.
+To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app
 
 Following is an example of calling the API from the app:
 
