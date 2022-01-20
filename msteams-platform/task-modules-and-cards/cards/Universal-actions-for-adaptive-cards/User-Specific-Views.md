@@ -206,3 +206,4 @@ Card design guidelines to keep in mind while designing User Specific Views:
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [Up to date views](Up-To-Date-Views.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
