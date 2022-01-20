@@ -83,6 +83,8 @@ The app usage for a given day is reflected within 24-48 hours and usage data for
 1. Select an app from the list.
 1. Go to **Analytics** or you can also select **View Details** under the active users card.
 
+ :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
+
 You can learn more about app usage and also check the following metrics:
 
 * Active users of your apps per monthly, weekly, and daily basis
