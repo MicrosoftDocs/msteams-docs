@@ -74,12 +74,12 @@ On the **Overview** page, you can see the total number of active users for your 
 
 You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
 
-You can click **View Details** or navigate directly to the Analytics page to deep dive into who is using your app and how they’re using it to be able to answer questions like:
+You can click **View Details** or navigate to the **Analytics** page to learn more about who's using your app and how they're using it so you can answer queries like:
 
-* How many monthly, weekly, and daily active users do I have?
-* Are these new users, returning users, resurrected users, or lapsed users?
-* Are these users using my app more than 5 days in a month?
-* What is the active user breakdown by platform/operating system?
+* How many active users do I have on a monthly, weekly, and daily basis?
+* Are these new users lapsed, revived, or returned users?
+* Do these users use my app more than five times each month?
+* What is the breakdown of active users by platform/operating system?
 
 ### Filtering for Aggregation Type and App
 
@@ -142,7 +142,7 @@ This chart shows you key usage intensity metrics:
 
 The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can click into each of these rows to see trends over time.
 
-    :::image type="content" source="./assets/images/tdp/app-dashboard.png" alt-text="Dashboard.":::
+    :::image type="content" source="~/assets/images/tdp/app-dashboard.png" alt-text="Dashboard.":::
 
 ## Use tools to create app features
 
