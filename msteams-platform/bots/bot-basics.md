@@ -67,14 +67,37 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
         await next()
     });
 ```
+
 ---
 
-`OnTeamsTeamRenamedAsync`
+`OnTeamsChannelDeletedAsync`
 
 # [C#](#tab/dotnet)
 
 ```csharp
-protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+# [Nodejs](#tab/nodejs)
+
+```javascript
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+---
+
+`OnTeamsChannelRenamedAsync`
+
+# [C#](#tab/dotnet)
+
+```csharp
+ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
 		}
@@ -88,6 +111,29 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
        await next()
     });
 ```
+
+---
+
+`OnTeamsTeamRenamedAsync`
+
+# [C#](#tab/dotnet)
+
+```csharp
+ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+		{
+			// Code logic here
+		}
+```
+
+# [Nodejs](#tab/nodejs)
+
+```javascript
+onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
 ---
 
 `OnTeamsMembersAddedAsync`
@@ -95,7 +141,7 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
- protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+  protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
 		}
@@ -109,6 +155,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 	   await next();
     });
 ```
+
 ---
 
 `OnTeamsMembersRemovedAsync`
@@ -130,6 +177,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 	   await next();
     });
 ```
+
 ---
 
 ## Bot logic
