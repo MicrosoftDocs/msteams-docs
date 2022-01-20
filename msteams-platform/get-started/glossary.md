@@ -17,13 +17,13 @@ Common terms and definitions used in Teams Developer Documentation.
         
         <details>
         <summary>A</summary>
-        
         | Term | Definition |
         | --- | --- |
+        
         | Action command | A type of messaging extension app that is used to present the users with a popup to collect or display information. <br>**See also**: Messaging extension; Search commands |
         | Adaptive Card | An actionable snippet of content that you can add to a conversation through a bot or messaging extension. Using text, graphics, and buttons, these cards provide rich communication to your audience. |
         | App Catalog | It stores the apps for SharePoint and office for our organization's internal use. |
-        | App manifest | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json. |
+        | App manifest | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json.). |
         | App package | A Teams app package is a zip file that contains the App manifest file and app icons - color icon and outline icon. |
         | App permission | In Teams, it lets you enable the app's device permissions for your app. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: Device permissions |
         | App scope | The purview within which your app interacts with your users. An app can have Personal scope, Channel scope, or Team scope. A Teams app can exist across scopes. |
