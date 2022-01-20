@@ -74,7 +74,7 @@ items:
 
         * Callback URL - The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams.
 
-        * To use the api/sample or authenticated/sample, do the following:
+        * To use the api/Sample or api/authenticatedSample, do the following:
 
             * For api/sample, Copy-and-Paste ngrok URL and append it with /api/sample.
 
