@@ -17,9 +17,9 @@ Conversational bots allow users to interact with your web service using text, in
 
 :::image type="content" source="~/assets/images/buildbots-revamp/overview-1.png" alt-text="Invoke bot using text.":::
 
-![Invoke bot using card](~/assets/images/invokebotwithcard.png)
+:::image type="content" source="~/assets/images/buildbots-revamp/results-feedback.png" alt-text="Invoke bot using card.":::
 
-<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
+:::image type="content" source="~/assets/images/buildbots-revamp/task-module.png" alt-text="Invoke bot using task module.":::
 
 Conversational bots are incredibly flexible. Bots can handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can be part of a larger application or be standalone.
 

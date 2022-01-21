@@ -54,27 +54,29 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage team** from the drop-down menu. The details appear.
 
-   ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
+   
+
+   :::image type="content" source="~/assets/images/buildbots-revamp/manage-team.png" alt-text="Managing apps in team.":::
 
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner.
 
-    ![Uploading custom app](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
+   :::image type="content" source="~/assets/images/buildbots-revamp/upload-custom-app.png" alt-text="Uploading custom app.":::
 
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.
 
-    ![Selecting app package](~/bots/how-to/conversations/Media/selectapppackage.png)
+    :::image type="content" source="~/assets/images/buildbots-revamp/select-open.png" alt-text="Selecting app package.":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-    ![Adding the bot](~/bots/how-to/conversations/Media/addingbot.png)
+    :::image type="content" source="~/assets/images/buildbots-revamp/select-add.png" alt-text="Adding the bot.":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-    ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+    :::image type="content" source="~/assets/images/buildbots-revamp/select-channel.png" alt-text="Bot receives message.":::
 
 ## Code sample
 

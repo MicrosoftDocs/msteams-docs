@@ -93,11 +93,11 @@ As a best practice, acknowledge the file upload by sending a message back to the
 
 The following desktop message contains a simple attachment object requesting user permission to upload the file:
 
-![Consent card requesting user permission to upload file](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="~/assets/images/buildbots-revamp/contoso-send-receive-files.png" alt-text="Consent card requesting user permission to upload file.":::
 
 The following mobile message contains an attachment object requesting user permission to upload the file:
 
-<img src="../../assets/images/bots/mobile-bot-file-consent-card.png" alt="Consent card requesting user permission to upload file on mobile" width="350"/>
+:::image type="content" source="~/assets/images/buildbots-revamp/upload-the-file.png" alt-text="Consent card requesting user permission to upload file on mobile.":::
 
 ```json
 {
@@ -194,7 +194,7 @@ The following table describes the content properties of the attachment:
 
 Fetch inline images that are part of the message using the Bot's access token.
 
-![Inline image](../../assets/images/bots/inline-image.png)
+:::image type="content" source="~/assets/images/buildbots-revamp/test-inline-message.png" Inline image.":::
 
 The following code shows an example of fetching inline images from message:
 
@@ -233,7 +233,7 @@ private static Attachment GetInlineAttachment()
 }​​​​​
 ```
 
-### Basic example in C#
+### Basic example in C #
 
 The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
 
