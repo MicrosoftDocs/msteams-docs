@@ -74,7 +74,7 @@ The following table lists the common scenarios supported for customized provisio
 | --- | --- | --- |
 | Customize Azure Resource | <ul> <li>Bicep files under `templates/azure`.</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [Customize ARM parameters and templates](provision.md#customize-arm-parameters-and-templates). |
 | Reuse existing Azure AD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`.</li> </ul> |  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app). |
-| Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`.</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-aad-app-for-your-bot). |
+| Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`.</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot). |
 | Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`.</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database). |
 | Customize app manifest | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` section in`.fx/config.<envName>.json`.</li>  </ul> | [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md). |
 
