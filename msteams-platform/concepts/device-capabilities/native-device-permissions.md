@@ -120,19 +120,19 @@ Leverage appropriate HTML5 or Teams API, to display a prompt for getting consent
 For example:
  * To prompt the user to access their location you must call `getCurrentPosition()`:
 
-    ```Javascript
+    ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
  * To prompt the user to access their camera on desktop or web you must call `getUserMedia()`:
 
-    ```Javascript
+    ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
  * To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
 
-    ```Javascript
+    ```JavaScript
             function captureImage() {
             microsoftTeams.media.captureImage((error, files) => {
                 // If there's any error, an alert shows the error message/code
@@ -153,7 +153,7 @@ For example:
 
  * Notifications will prompt the user when you call `requestPermission()`:
 
-    ```Javascript
+    ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
