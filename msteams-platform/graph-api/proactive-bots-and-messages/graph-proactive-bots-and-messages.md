@@ -186,49 +186,44 @@ Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proa
 
 The following code provides an example of sending proactive messages:
 
-# [Node.js](#tab/nodejs)
-
-```javascript
-
-async SendNotificationToAllUsersAsync(context) {
-    const TeamMembers = await TeamsInfo.getPagedMembers(context);
-    let Sent_msg_Cout = TeamMembers.members.length;
-    TeamMembers.members.map(async member => {
-        const ref = TurnContext.getConversationReference(context.activity);
-        ref.user = member;
-        await context.adapter.createConversation(ref, async (context) => {
-            const ref = TurnContext.getConversationReference(context.activity);
-            await context.adapter.continueConversation(ref, async (context) => {
-                await context.sendActivity("Proactive hello.");
-            });
-        });
-    });
-    await context.sendActivity(MessageFactory.text("Message sent:" + Sent_msg_Cout));
-}
-```
-
 # [C#](#tab/dotnet)
 
 ```csharp
-
 public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-        {
-            int msgSentCount = 0;
- 
-            // Send notification to all the members
-            foreach (var conversationReference in _conversationReferences.Values)
-            {
-                await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
-                msgSentCount++;
-            }
- 
-            return msgSentCount;
-        }
+{
+   int msgSentCount = 0;
+
+   // Send notification to all the members
+   foreach (var conversationReference in _conversationReferences.Values)
+   {
+       await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
+       msgSentCount++;
+   }
+
+   return msgSentCount;
+}
 
 private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
-        {
-            await turnContext.SendActivityAsync("Proactive hello.");
-        }
+{
+   await turnContext.SendActivityAsync("Proactive hello.");
+}
+```
+
+# [Node.js](#tab/nodejs)
+
+```javascript
+server.get('/api/notify', async (req, res) => {
+    for (const conversationReference of Object.values(conversationReferences)) {
+        await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
+            await context.sendActivity('proactive hello');
+        });
+    }
+
+    res.setHeader('Content-Type', 'text/html');
+    res.writeHead(200);
+    res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
+    res.end();
+});
 ```
 ---
 
