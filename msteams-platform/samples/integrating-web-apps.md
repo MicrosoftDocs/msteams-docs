@@ -44,10 +44,8 @@ Integrating all features of an existing application into Teams often leads to a 
 
 **Prerequisites to integrate your app with Teams**
 
-Following are the prerequisites to integrate your app with Teams.
-
 1. [Map your app's use cases to Teams platform capabilities](../concepts/design/map-use-cases.md).
-1. [Determine your app's entry points](../concepts/extensibility-points.md). Is it for personal use, collaboration, or both?
+1. [Determine your app's entry points](../concepts/extensibility-points.md). Is it for personal use, for collaboration, or for both?
 
 ## Understand SharePoint requirements and options
 
