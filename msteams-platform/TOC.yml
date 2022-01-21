@@ -2,6 +2,8 @@
   href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
+- name: Glossary
+  href: get-started/glossary.md  
 - name: Overview
   expanded: false 
   items:
@@ -20,8 +22,6 @@
     href: sbs-gs-csharp.yml
   - name: Build your first app using Node.js
     href: sbs-gs-nodejs.yml
-  - name: Glossary
-    href: get-started/glossary.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals

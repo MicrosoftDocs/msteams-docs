@@ -38,7 +38,7 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>B</summary>
         
-        ##B
+        ## B
 
         | Term | Definition |
         | --- | --- |
