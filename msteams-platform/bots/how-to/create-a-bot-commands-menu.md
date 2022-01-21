@@ -16,7 +16,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 # [Desktop](#tab/desktop)
 
-    :::image type="content" source="~/assets/images/buildbots-revamp/select-send.png" alt-text="Bot command menu.":::
+:::image type="content" source="~/assets/images/buildbots-revamp/select-send.png" alt-text="Bot command menu.":::
 
 # [Mobile](#tab/mobile)
 
