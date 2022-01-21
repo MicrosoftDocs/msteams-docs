@@ -15,7 +15,7 @@ A bot is also referred to as a chatbot or conversational bot. It is an app that 
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
-:::image type="content" source="./assets/images/buildbots-revamp/overview-1.png" alt-text="Invoke bot using text.":::
+:::image type="content" source="~/assets/images/buildbots-revamp/overview-1.png" alt-text="Invoke bot using text.":::
 
 ![Invoke bot using card](~/assets/images/invokebotwithcard.png)
 
