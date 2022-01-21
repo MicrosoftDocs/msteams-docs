@@ -163,21 +163,20 @@ The following code provides an example of bot activity for a one-to-one chat:
 
 // Handle message activity
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-        {
-            turnContext.Activity.RemoveRecipientMention();
-            var text = turnContext.Activity.Text.Trim().ToLower();
-			await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
-        }
+{
+    turnContext.Activity.RemoveRecipientMention();
+    var text = turnContext.Activity.Text.Trim().ToLower();
+		await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+}
 ```
 
 # [Node.js](#tab/nodejs)
 
 ```javascript
-
-        this.onMessage(async (context, next) => {
-            await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
-            await next();
-        });
+this.onMessage(async (context, next) => {
+    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await next();
+});
 ```
 
 ---
