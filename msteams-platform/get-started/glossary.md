@@ -53,24 +53,28 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>C</summary>
         
+        ## C
+
         | Term | Definition |
         | --- | --- |
-        | Call bot | A bot that participates in audio or video calls and online meetings. <br> **See also**: Chat bot; Meeting bot |
-        | Capability | The feature of a Teams app are called as Capability. An app may have one or more core capabilities, such as tab, bot, messaging extensions. <br>**See also**: Device capability; Media capability |
-        | Chat bot | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. <br> **See also**: Conversational bot. |
+        | [Call bot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | A bot that participates in audio or video calls and online meetings. <br> **See also**: Chat bot; Meeting bot |
+        | [Capability](../toolkit/add-capability.md) | The feature of a Teams app are called as Capability. An app may have one or more core capabilities, such as tab, bot, messaging extensions. <br>**See also**: Device capability; Media capability |
+        | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. <br> **See also**: Conversational bot. |
         | Channel | A single place for a team to share messages, tools, and files. In Teams, teamwork and communication happen in channels.  |
-        | Client secret | The Client secret/password or a public or private key pair that is Certificate. It is not required for native apps. <br> **See also**: Bot |
-        | Cloud resources | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
-        | Collaboration app | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: Standalone app |
-        | Connector | It allows users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: Webhooks |
-        | Conversation | A series of messages sent between your Microsoft Teams bot and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: One-on-one chat; Group chat |
-        | Conversational bot |  It allows a user to interact with your web service using text, interactive cards, and task modules. <br>**See also** Chat bot |
+        | [Client secret](../bots/how-to/authentication/add-authentication.md) | The Client secret/password or a public or private key pair that is Certificate. It is not required for native apps. <br> **See also**: Bot |
+        | [Cloud resources](../toolkit/add-resource.md) | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
+        | [Collaboration app](../concepts/extensibility-points.md) | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: Standalone app |
+        | [Connector](../platform/webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors) | It allows users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: Webhooks |
+        | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: One-on-one chat; Group chat |
+        | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It allows a user to interact with your web service using text, interactive cards, and task modules. <br>**See also** Chat bot |
         |
         </details>
         <br>
         <details>
         <summary>D</summary>
         
+        ## D
+
         | Term | Definition |
         | --- | --- |
         | Deep linking | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
@@ -88,6 +92,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>E</summary>
         
+        ## E
+
         | Term | Definition |
         | --- | --- |
         | E5 developer account | E5 developer subscription includes 25 user licenses, including the administrator, for development purposes only for building apps to extend Microsoft 365.  <br>**See also**: Microsoft 365 account |
@@ -99,6 +105,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>G</summary>
         
+        ## G
+
         | Term | Definition |
         | --- | --- |
         | Group chat | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: One-on-one chat; Chat bot |
@@ -108,6 +116,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>I</summary>
         
+        ## I
+
         | Term | Definition |
         | --- | --- |
         | Identity provider | An entity which stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: Authentication |
@@ -119,6 +129,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>L</summary>
         
+        ## L
+
         | Term | Definition |
         | --- | --- |
         | Link unfurling | A feature used with messaging extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in an Adaptive Card or in the meeting stage view.  |
@@ -159,18 +171,22 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>O</summary>
         
+        ## O
+
         | Term | Definition |
         | --- | --- |
         | Office 365 Connector | It lets you create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You can send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. |
         | Outgoing webhook | It acts as a bot and search for messages in channels using @mention. It sends notifications to external web services and responds with rich messages, which include cards and images. <br>**See also**: Webhook; Incoming webhook |
         | Outlook channel | A feature of Teams messaging extension app that lets the users interact with it from Microsoft Outlook. |
-        | One-on-one chat | A type of chat between a Teams personal bot app and a single user. <br>**See also**: Group chat; Chat bot |
+        | [One-on-one chat](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | A type of chat between a Teams personal bot app and a single user. <br>**See also**: Group chat; Chat bot |
         |
         </details>
         <br>
         <details>
         <summary>P</summary>
         
+        ## P
+
         | Term | Definition |
         | --- | --- |
         | Personal app | A personal app can be a bot, private workspace, or both. <br>**See also**: Shared app |
@@ -183,6 +199,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>R</summary>
         
+        ## R
+
         | Term | Definition |
         | --- | --- |
         | Rate-limiting | A method to limit messages to a certain maximum frequency to ensure that number of messages are sufficient and don't appear as spam. |
@@ -194,6 +212,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>S</summary>
         
+        ## S
+
         | Term | Definition |
         | --- | --- |
         | Search commands | A type of messaging extension app that lets users search external systems and include the search result into a message using a card. <br>**See also**: Messaging extensions; Action commands |
@@ -212,6 +232,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>T</summary>
         
+        ## T
+
         | Term | Definition |
         | --- | --- |
         | Tab | Tabs are Teams-aware webpages embedded in Microsoft Teams that point to domains declared in manifest. You can add it inside a team, group chat, or personal app. |
@@ -230,6 +252,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>U</summary>
 
+        ## U
+
         | Term | Definition |
         | --- | --- |
         | UI components | For Teams app development, you can use Fluent UI components to build your app from scratch. |
@@ -241,6 +265,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>V</summary>
         
+        ## V
+
         | Term | Definition |
         | --- | --- |
         | Virtual Assistant | A Microsoft open-source template that enables you to create a robust conversational solution. |
@@ -249,6 +275,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <br>
         <details>
         <summary>W</summary>
+
+        ## W
 
         | Term | Definition |
         | --- | --- |
@@ -261,6 +289,8 @@ Common terms and definitions used in Teams Developer Documentation.
         <details>
         <summary>Y</summary>
     
+        ## Y
+
         | Term | Definition |
         | --- | --- |
         | YoTeams | A development toolkit for building Microsoft Teams applications based on TypeScript and node.js. |
