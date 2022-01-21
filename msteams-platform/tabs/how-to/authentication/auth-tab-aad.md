@@ -3,7 +3,7 @@ title: Authentication for tabs using Azure Active Directory
 description: Describes authentication in Teams and how to use it in tabs
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication tabs AAD
+keywords: teams authentication tabs Azure AD
 ---
 # Authenticate a user in a Microsoft Teams tab
 

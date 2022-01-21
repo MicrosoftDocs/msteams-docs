@@ -76,7 +76,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 >[!NOTE]
 >If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 
->If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the AAD app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
+>If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Azure AD app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
 
 ## Test added RSC permissions to a team using the Postman app
 
@@ -100,7 +100,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
-* `tenantId`: The name or the AAD Object ID of your tenant.
+* `tenantId`: The name or the Azure AD Object ID of your tenant.
 * `chatId`: You can get the chat thread id from the Teams *web* client as follows:
 
     1. In the Teams web client, select **Chat** from the far left navigation bar.

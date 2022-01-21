@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: How to add OAuth authentication to a bot in Microsoft Teams using AAD. Learn how to create, deploy, and integrate authentication-enabled bots.
+description: How to add OAuth authentication to a bot in Microsoft Teams using Azure AD. Learn how to create, deploy, and integrate authentication-enabled bots.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
@@ -142,9 +142,9 @@ The following image displays the corresponding selection in the resource page:
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the Azure AD app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This is not used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
@@ -171,9 +171,9 @@ The following image displays the corresponding selection in the resource page:
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the Azure AD app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     1. For **Scopes**, enter a space-delimited list of graph permissions this application requires e.g.: User.Read User.ReadBasic.All Mail.Read 
 
