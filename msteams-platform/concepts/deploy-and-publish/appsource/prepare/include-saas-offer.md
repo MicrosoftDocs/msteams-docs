@@ -4,7 +4,7 @@ description: Learn how to monetize your Microsoft Teams app with subscription pl
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal 
+ms.localizationpriority: medium
 ---
 
 # Include a SaaS offer with your Microsoft Teams app
@@ -91,6 +91,9 @@ Consider the following approaches when building a landing page for the Teams app
 ## Create your SaaS offer
 
 Once you’ve integrated the SaaS Fulfillment APIs and built your landing page where users can manage their subscriptions, it's time to officially create, test, and publish your transactable SaaS offer.
+
+> [!IMPORTANT]
+> Teams currently supports only **Per user** (user/month and user/year) pricing model for SaaS offers. For more information, see [SaaS pricing models](/azure/marketplace/plan-saas-offer#saas-pricing-models).
 
 ### Create the offer
 

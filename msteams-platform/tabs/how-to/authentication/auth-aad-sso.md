@@ -2,7 +2,7 @@
 title: Single sign-on support for tabs
 description: Describes single sign-on (SSO)
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication SSO AAD single sign-on api
 ---
 
@@ -50,13 +50,6 @@ The SSO API also works in [task modules](../../../task-modules-and-cards/what-ar
 This section describes the tasks involved in creating a Teams tab that uses SSO. These tasks are language- and framework-agnostic.
 
 ### 1. Create your AAD application
-
-**To register your application in the [AAD portal](https://azure.microsoft.com/features/azure-portal/) overview**
-
-1. Get your [AAD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). 
-1. Specify the permissions that your application needs for the AAD endpoint and, optionally, Graph.
-1. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
-1. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter **access_as_user** as the **Scope name**.
 
 > [!NOTE]
 > There are some important restrictions that you must know:
@@ -174,7 +167,7 @@ After you receive access token in success callback, decode access token to view 
 
 ### Get an access token with Graph permissions
 
-Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token got from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
+Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
 
 #### Tenant Admin Consent
 
@@ -201,3 +194,11 @@ The above-described authentication solution only works for apps and services tha
 
 > [!NOTE]
 > SSO is supported for customer owned apps within the AAD B2C tenants.
+
+## Step-by-step guides
+
+* Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) to authenticate tabs and messaging extensions.
+* Follow the [step-by-step guide](../../../sbs-tab-with-adaptive-cards.yml) to create tab with adaptive cards.
+
+## See also
+[Teams Bot with Single sign-on](../../../sbs-bots-with-sso.yml)

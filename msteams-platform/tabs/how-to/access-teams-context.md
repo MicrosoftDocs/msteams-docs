@@ -19,7 +19,9 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again. For more information, see [authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
+* You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again. 
+
+For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you must not use it as proof of identity.  For example, an attacker can load your page in a browser and render harmful information or requests.
@@ -43,7 +45,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 group in which the tab resides.
 * {tid}: The AAD tenant ID of the current user.
-* {locale}: The current locale of the user formatted as languageId-countryId. For example, en-us.
+* {locale}: The current locale of the user formatted as languageId-countryId(en-us).
 
 > [!NOTE]
 > The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{loginHint}`.
@@ -101,7 +103,8 @@ The following code provides an example of context variable:
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -110,7 +113,9 @@ The following code provides an example of context variable:
 > [!Note]
 > Private channels are currently in private developer preview.
 
-When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. The following fields are changed when your content page is in a private channel:
+When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. 
+
+The following fields are changed when your content page is in a private channel:
 
 * `groupId`: Undefined for private channels
 * `teamId`: Set to the threadId of the private channel
