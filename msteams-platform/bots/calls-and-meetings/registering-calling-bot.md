@@ -38,7 +38,7 @@ For information on creating bots, see [create a bot for Teams](../how-to/create-
 1. Add the Teams channel.
 1. Select the **Calling** tab on the Teams channel page. Select **Enable calling**, and then update **Webhook (for calling)** with your HTTPS URL where you receive incoming notifications, for example `https://contoso.com/teamsapp/api/calling`. For more information, see [configuring channels](/bot-framework/portal-configure-channels).
    
-:::image type="content" source="./assets/images/buildbots-revamp/channels.png" alt-text="Configure Teams channel information.":::
+    :::image type="content" source="./assets/images/buildbots-revamp/channels-revamp.png" alt-text="Configure Teams channel information.":::
 
 The next section provides a list of application permissions supported for calls and online meetings.
 
