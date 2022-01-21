@@ -50,7 +50,7 @@ The code snippets for Teams activity handlers:
 
 `OnTeamsChannelCreatedAsync`
 
-# [C#](#tab/dotnet)
+[C#](#tab/csharp)
 
 ```csharp
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -59,7 +59,7 @@ protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, Team
         }
 ```
 
-# [JavaScript](#tab/javascript)
+[JavaScript](#tab/javascript)
 
 ```javascript
 onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
@@ -72,7 +72,7 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsChannelDeletedAsync`
 
-# [C#](#tab/dotnet)
+# [C#](#tab/csharp)
 
 ```csharp
 protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -94,7 +94,7 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsChannelRenamedAsync`
 
-# [C#](#tab/dotnet)
+# [C#](#tab/csharp)
 
 ```csharp
  protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
