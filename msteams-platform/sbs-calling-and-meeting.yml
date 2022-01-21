@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Teams calling and meeting
+title: Teams calling and meeting bot
 metadata:
   title: Teams Bot with calling and meeting
   description: In this tutorial, you'll learn to set up calling and meeting in a bot for Teams.
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Calling and Meeting Bot provides basic functionality like create a call, join a call, transfer or redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
+    Calling and Meeting Bot provides basic functionalities like create a call, join a call, transfer or redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
     
     Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
@@ -22,9 +22,9 @@ items:
     * Call control.
     * Access to real-time audio and video streams, including desktop and app sharing.
 
-    To use these Graph APIs in a Teams app, you create a bot and specify some additional information and permissions.
-    
-    This step-by-step guide helps you to create a bot with calling and meeting functionality. You'll see the following output:
+    Create a bot and specify some additional information and permissions to use these Graph APIs in a Teams app.
+ 
+    This step-by-step guide helps you to create a bot with calling and meeting functionality. By the end of this tutorial you can achieve the following output:
 
     :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Final output.":::
 
@@ -34,7 +34,7 @@ items:
     Ensure that you install the following tools and set up your development environment:  
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-    * [ngrok](https://ngrok.com/) or equivalent tunnelling solution.
+    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution.
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Microsoft Teams with an account (not a guest account).
@@ -43,7 +43,7 @@ items:
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
   content: |
-    Add and register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following steps:
+    Register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following steps:
 
     1. Use ngrok to create a tunnel to your web server's endpoints.
     1. Create Azure Bot resource to register bot with Azure Bot Service.
@@ -107,7 +107,7 @@ items:
         (PowerShell script should be added to copy)
         :::image type="content" source="./assets/images/calls-and-meetings/powershell-script.png" alt-text="PowerShell script.":::
 
-    1. Replace `azure-client-id` with your **Microsoft App ID** of your bot and `object-id` with the **Tenant ID** of your account used to login to the Teams (Copy the link as shown in the following image and you can find the Tenant ID of your Teams account).
+    1. Replace `azure-client-id` with your **Microsoft App ID** of your bot and `object-id` with the **Tenant ID** of your account used to login to the Teams (Copy the link as shown in the following image and you can find the Tenant ID of your Teams account in the link obtained).
 
         :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new.png" alt-text="Teams Link.":::
 
@@ -115,7 +115,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/powershell.png" alt-text="PowerShell.":::
 
-    1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name.
+    1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
     
         ```powershell
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
@@ -198,7 +198,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/configure-teams.png" alt-text="Configure Teams.":::
     
-    1. Select **Enable calling**, and then update **Webhook** with your HTTPS ngrok url (https://yourNgrok/api/callback) and add `/api/callback` at the end.
+    1. Select **Enable calling**, and then update **Webhook** with your HTTPS ngrok URL (https://yourNgrok/api/callback) and add `/api/callback` at the end.
 
         :::image type="content" source="./assets/images/calls-and-meetings/enable-calling.png" alt-text="Enable calling.":::
 
@@ -248,7 +248,7 @@ items:
         * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) site.
             * Login to the page using your Teams account and add `Users` at the end of the URl in the search box and select **Run query**.
             * Display names and User IDs linked to your account are generated.
-            * Pick three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
+            * Pick any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
 
             :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer.png" alt-text="Graph Explorer.":::
 
@@ -281,7 +281,7 @@ items:
     
     1. Go to Teams.
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip** from the repo folder in File explorer.
-    1. Select **Add** to install Calling Bot in Teams.
+    1. Select **Add** to install Calling bot in Teams.
 
         :::image type="content" source="./assets/images/calls-and-meetings/output.png" alt-text="Add Output.":::
 
@@ -299,15 +299,15 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Adaptive card in bot.":::
 
-    1. You can ask Bot to Create a call.
+    1. You can ask bot to Create a call.
 
         :::image type="content" source="./assets/images/calls-and-meetings/placed-call.png" alt-text="Placed Call.":::
 
-    1. You can ask Bot to Transfer the call.
+    1. You can ask bot to Transfer the call.
 
         :::image type="content" source="./assets/images/calls-and-meetings/transfer-call.png" alt-text="Transfer Call.":::
 
-    1. You can ask Bot to schedule a Meeting and invite the participants.
+    1. You can ask bot to Schedule a Meeting and invite the participants.
 
         :::image type="content" source="./assets/images/calls-and-meetings/meeting.png" alt-text="Meeting bot.":::
 
