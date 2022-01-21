@@ -50,7 +50,7 @@ The code snippets for Teams activity handlers:
 
 `OnTeamsChannelCreatedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -72,7 +72,7 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsChannelDeletedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -94,7 +94,7 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsChannelRenamedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
  protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -116,7 +116,7 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsTeamRenamedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
  protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -138,7 +138,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 `OnTeamsMembersAddedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
   protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -160,7 +160,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 `OnTeamsMembersRemovedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
  protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
