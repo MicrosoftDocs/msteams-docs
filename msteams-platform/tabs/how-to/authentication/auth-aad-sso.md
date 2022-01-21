@@ -174,9 +174,35 @@ Our current implementation for SSO only grants consent for user-level permission
 
 The following code provides an example of on-behalf-of flow to fetch access token using MSAL library :
 
+### [C#](#tab/dotnet)
+
+```csharp
+
+IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
+                                                .WithClientSecret(<"Client secret">)
+                                                .WithAuthority($"https://login.microsoftonline.com/<"Tenant id">")
+                                                .Build();
+ 
+            try
+            {
+                var idToken = <"Client side token">;
+                UserAssertion assert = new UserAssertion(idToken);
+                List<string> scopes = new List<string>();
+                scopes.Add("https://graph.microsoft.com/User.Read");
+                var responseToken = await app.AcquireTokenOnBehalfOf(scopes, assert).ExecuteAsync();
+                return responseToken.AccessToken.ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+```
+
 ### [Node.js](#tab/nodejs)
 
 ```javascript
+
 // Exchange cliend side token with server token
   app.post('/getProfileOnBehalfOf', function(req, res) {
         var tid = < "Tenand id" >
@@ -203,31 +229,6 @@ The following code provides an example of on-behalf-of flow to fetch access toke
                 reject({ "error": error.errorCode });
             });
         });
-```
-
-### [C#](#tab/dotnet)
-
-```csharp
-
-IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
-                                                .WithClientSecret(<"Client secret">)
-                                                .WithAuthority($"https://login.microsoftonline.com/<"Tenant id">")
-                                                .Build();
- 
-            try
-            {
-                var idToken = <"Client side token">;
-                UserAssertion assert = new UserAssertion(idToken);
-                List<string> scopes = new List<string>();
-                scopes.Add("https://graph.microsoft.com/User.Read");
-                var responseToken = await app.AcquireTokenOnBehalfOf(scopes, assert).ExecuteAsync();
-                return responseToken.AccessToken.ToString();
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
 ```
 ---
 
