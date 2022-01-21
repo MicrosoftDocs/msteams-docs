@@ -50,7 +50,7 @@ The code snippets for Teams activity handlers:
 
 `OnTeamsChannelCreatedAsync`
 
-# [C#](#tab/csharp)
+# [Csharp](#tab/csharp)
 
 ```csharp
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
