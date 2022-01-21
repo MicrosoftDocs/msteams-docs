@@ -302,16 +302,17 @@ When end users enable captions in a Microsoft Teams meeting, the CART API displa
 
 ### Base URL
 
-You can get the Base URL for the POST endpoint from the **Meeting options** page in a Microsoft Teams meeting. For more information, see [CART captions in a Microsoft Teams meeting](/office/use-live-captions-in-a-teams-meeting-4be2d304-f675-4b57-8347-cbd000a21260?storagetype=live). You don't need to modify the base URL to use CART captions.
+You can get the Base URL for the POST endpoint from the **Meeting options** page in a Microsoft Teams meeting. For more information, see [CART captions in a Microsoft Teams meeting](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). You don't need to modify the base URL to use CART captions.
 
-### Query Parameter
+#### Query Parameter
 
 The Base URL includes the following query parameters:
 
+
 |Value|Type|Required|Description|
 |---|---|----|----|
-|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and Teams Client SDK. For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
-|**token**| String | Yes |Authorization token. For example, token=04751eac |
+|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and Teams Client SDK. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**token**| String | Yes |Authorization token.<br/> For example, token=04751eac |
 
 #### Example
 ```http
@@ -327,7 +328,7 @@ The Base URL includes the following query parameters:
 > [!NOTE]
 > The content type for all requests must be in a plain text format with UTF-8 encoding. The body of request must not contain anything except captions.
 
-### Request
+#### Example
 ```http
 POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1
 Host: api.captions.office.microsoft.com
@@ -348,7 +349,7 @@ The CART API includes the following error codes:
 | **400** | Bad request. The response body has more information. For example, not of all required parameters presented.|
 | **401** | Unauthorized. Bad or expired token. If you receive this error, generate a new CART URL in Teams. |
 | **404** | Meeting not found or not started. If you receive this error, ensure that you start the meeting and select start captions. After captions are enabled in the meeting, you can begin POSTing captions into the meeting.|
-| **500** |Internal Server Error. For more information, Contact [support](../feedback.md).|
+| **500** |Internal Server Error. For more information, contact [support](../feedback.md).|
 
 ## Real-time Teams meeting events
 
