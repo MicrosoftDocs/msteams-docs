@@ -16,9 +16,12 @@ items:
   content: |
     The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.BotFramework.com urls.
 
+    > [!NOTE]
+    > Currently, link unfurling is not supported on Mobile clients.
+
     You'll see the following output:
 
-     ![Link unfurling](~/assets/images/Teams-link-unfurling/final_image.png)
+     ![Link unfurling](~/assets/images/Teams-link-unfurling/finalimage.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -463,7 +466,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Link unfurling](~/assets/images/Teams-link-unfurling/final_image.png)
+       ![Link unfurling](~/assets/images/Teams-link-unfurling/finalimage.png)
 
 - content: |
     You've completed the tutorial to get started with Teams link unfurling app!
