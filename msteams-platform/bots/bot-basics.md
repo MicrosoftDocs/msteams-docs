@@ -138,7 +138,7 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsTeamRenamedAsync`
 
-# [C#](#tab/dotnet)
+# [C#](#tab/csharp)
 
 ```csharp
  protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -160,7 +160,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 `OnTeamsMembersAddedAsync`
 
-# [C#](#tab/dotnet)
+# [C#](#tab/csharp)
 
 ```csharp
   protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -182,7 +182,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 `OnTeamsMembersRemovedAsync`
 
-# [C#](#tab/dotnet)
+# [C#](#tab/csharp)
 
 ```csharp
  protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
