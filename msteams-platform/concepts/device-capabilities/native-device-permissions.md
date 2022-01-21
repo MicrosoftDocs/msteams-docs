@@ -133,22 +133,22 @@ For example:
  * To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
 
     ```Javascript
-            function captureImage() {
-            microsoftTeams.media.captureImage((error, files) => {
-                // If there's any error, an alert shows the error message/code
-                if (error) {
-                    if (error.message) {
-                        alert(" ErrorCode: " + error.errorCode + error.message);
-                    } else {
-                        alert(" ErrorCode: " + error.errorCode);
-                    }
-                } else if (files) {
-                    image = files[0].content;
-                    // Adding this image string in src attr of image tag will display the image on web page.
-                    let imageString = "data:" + item.mimeType + ";base64," + image;
+    function captureImage() {
+        microsoftTeams.media.captureImage((error, files) => {
+            // If there's any error, an alert shows the error message/code
+            if (error) {
+                if (error.message) {
+                    alert(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    alert(" ErrorCode: " + error.errorCode);
                 }
-            });
-        } 
+            } else if (files) {
+                image = files[0].content;
+                // Adding this image string in src attr of image tag will display the image on web page.
+                let imageString = "data:" + item.mimeType + ";base64," + image;
+            }
+        });
+    } 
     ```
 
  * Notifications will prompt the user when you call `requestPermission()`:
@@ -161,46 +161,46 @@ For example:
 
     ```JavaScript
      function selectMedia() {
-     microsoftTeams.media.selectMedia(mediaInput, (error, attachments) => {
-         // If there's any error, an alert shows the error message/code
-         if (error) {
-             if (error.message) {
-                 alert(" ErrorCode: " + error.errorCode + error.message);
-             } else {
-                 alert(" ErrorCode: " + error.errorCode);
+         microsoftTeams.media.selectMedia(mediaInput, (error, attachments) => {
+             // If there's any error, an alert shows the error message/code
+             if (error) {
+                 if (error.message) {
+                     alert(" ErrorCode: " + error.errorCode + error.message);
+                 } else {
+                     alert(" ErrorCode: " + error.errorCode);
+                 }
+             } else if (attachments) {
+                 // creating image array which contains image string for all attached images. 
+                 const imageArray = attachments.map((item, index) => {
+                     return ("data:" + item.mimeType + ";base64," + item.preview)
+                 })
              }
-         } else if (attachments) {
-             // creating image array which contains image string for all attached images. 
-             const imageArray = attachments.map((item, index) => {
-                 return ("data:" + item.mimeType + ";base64," + item.preview)
-             })
-         }
-     });
-    } 
+         });
+        } 
   ```
 
 * To use the microphone, Teams mobile asks permission when you call `selectMedia()`:
 
     ```JavaScript
      function selectMedia() {
-     microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-         // If there's any error, an alert shows the error message/code
-         if (error) {
-             if (error.message) {
-                 alert(" ErrorCode: " + error.errorCode + error.message);
-             } else {
-                 alert(" ErrorCode: " + error.errorCode);
+         microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+             // If there's any error, an alert shows the error message/code
+             if (error) {
+                 if (error.message) {
+                     alert(" ErrorCode: " + error.errorCode + error.message);
+                 } else {
+                     alert(" ErrorCode: " + error.errorCode);
+                 }
              }
-         }
 
-         if (attachments) {
-             // taking the first attachment  
-             let audioResult = attachments[0];
+             if (attachments) {
+                 // taking the first attachment  
+                 let audioResult = attachments[0];
 
-             // setting audio string which can be used in Video tag
-             let audioData = "data:" + audioResult.mimeType + ";base64," + audioResult.preview
-         }
-     });
+                 // setting audio string which can be used in Video tag
+                 let audioData = "data:" + audioResult.mimeType + ";base64," + audioResult.preview
+             }
+         });
      }
     ```
 
@@ -208,9 +208,9 @@ For example:
 
     ```JavaScript 
      function getLocation() {
-     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-         let currentLocation = JSON.stringify(location);
-     });
+         microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+             let currentLocation = JSON.stringify(location);
+         });
      } 
     ```
 
