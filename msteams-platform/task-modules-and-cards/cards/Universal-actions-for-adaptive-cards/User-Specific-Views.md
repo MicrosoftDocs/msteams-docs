@@ -193,7 +193,6 @@ var adaptiveCardResponse = JObject.FromObject(new
 ### [Node.js](#tab/nodejs)
 
 ```javascript
-
 var card = "<adaptive card json>";
  
 const cardRes = {
