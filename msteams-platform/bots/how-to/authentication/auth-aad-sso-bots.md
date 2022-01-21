@@ -46,7 +46,7 @@ The following steps help you with authentication and bot application tokens:
   
 The following steps guide you to develop SSO Teams bot:
 
-1. [Register your app through the Azure AD portal](#register-your-app-through-the-aad-portal).
+1. [Register your app through the Azure AD portal](#register-your-app-through-the-azure-ad-portal).
 1. [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot).
 1. [Add the code to request and receive a bot token](#add-the-code-to-request-and-receive-a-bot-token).
 
@@ -221,7 +221,7 @@ If the application contains a bot and a tab, then use the following code to add 
 **webApplicationInfo** is the parent of the following elements:
 
 * **id** - The client ID of the application. It's the application ID that you obtained as part of registering the application with Azure AD. Don't share this Application ID with multiple Teams apps. Create a new Azure AD app for each application manifest that uses `webApplicationInfo`.
-* **resource** - The domain and subdomain of your application. It's the same URI, including the `api://` protocol that you registered when creating your `scope` in [Register your app through the Azure AD portal](#register-your-app-through-the-aad-portal). Don't include the `access_as_user` path in your resource. The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.
+* **resource** - The domain and subdomain of your application. It's the same URI, including the `api://` protocol that you registered when creating your `scope` in [Register your app through the Azure AD portal](#register-your-app-through-the-azure-ad-portal). Don't include the `access_as_user` path in your resource. The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.
 
 ### Add the code to request and receive a bot token
 

@@ -70,11 +70,11 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 ## Enable RSC in your application
 
-1. [Configure consent settings in the Azure AD portal](#configure-consent-settings-in-the-aad-portal).
+1. [Configure consent settings in the Azure AD portal](#configure-consent-settings-in-the-azure-ad-portal).
     1. [Configure group owner consent settings for RSC in a team](#configure-group-owner-consent-settings-for-rsc-in-a-team).
     1. [Configure user consent settings for RSC in a chat](#configure-user-consent-settings-for-rsc-in-a-chat).
-1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).
-1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-aad-portal).
+1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 1. [Install your app directly in Teams](#sideload-your-app-in-teams).
@@ -141,7 +141,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 
