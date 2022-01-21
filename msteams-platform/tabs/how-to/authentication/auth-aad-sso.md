@@ -157,11 +157,24 @@ After you receive access token in success callback, decode access token to view 
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
 
-## Code snippets
 
-The following code provides an example of token exchange using MSAL library :
+## Code sample
 
-# [Node.js](#tab/nodejs)
+|**Sample name**|**Description**|**C#**|**Node.js**|
+|---------------|---------------|------|--------------|
+| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+
+## Known limitations
+
+### Get an access token with Graph permissions
+
+Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
+
+### Code snippets
+
+The following code provides an example of on-behalf-of flow to fetch access token using MSAL library :
+
+### [Node.js](#tab/nodejs)
 
 ```javascript
 // Exchange cliend side token with server token
@@ -192,7 +205,7 @@ The following code provides an example of token exchange using MSAL library :
         });
 ```
 
-# [C#](#tab/dotnet)
+### [C#](#tab/dotnet)
 
 ```csharp
 
@@ -218,19 +231,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 ```
 ---
 
-## Code sample
-
-|**Sample name**|**Description**|**C#**|**Node.js**|
-|---------------|---------------|------|--------------|
-| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
-
-## Known limitations
-
-### Get an access token with Graph permissions
-
-Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
-
-#### Tenant Admin Consent
+### Tenant Admin Consent
 
 A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 
