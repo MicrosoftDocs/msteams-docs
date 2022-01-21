@@ -70,33 +70,6 @@ The following images display link unfurling feature when a link is pasted in mes
 
 The following code provides an example of action based for messaging extensions:
 
-# [Node.js](#tab/nodejs)
-
-```javascript
-
-    async handleTeamsMessagingExtensionFetchTask(context, action) {
-        switch (action.commandId) {
-            case 'Static HTML':
-                return staticHtmlPage();
-        }
-    }
-
-    staticHtmlPage(){
-        return {
-            task: {
-                type: 'continue',
-                value: {
-                    width: 450,
-                    height: 125,
-                    title: 'Task module Static HTML',
-                    url: `${baseurl}/StaticPage.html`
-                }
-            }
-        };
-    }
-
-```
-
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -140,37 +113,37 @@ The following code provides an example of action based for messaging extensions:
                     };
             }
 ```
----
-
-The following code provides an example of search based for messaging extensions:
 
 # [Node.js](#tab/nodejs)
 
 ```javascript
 
-async handleTeamsMessagingExtensionQuery(context, query) {
-        const searchQuery = query.parameters[0].value;     
-        const attachments = [];
-                const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
-                
-                response.data.objects.forEach(obj => {
-                        const heroCard = CardFactory.heroCard(obj.package.name);
-                        const preview = CardFactory.heroCard(obj.package.name);
-                        preview.content.tap = { type: 'invoke', value: { description: obj.package.description } };
-                        const attachment = { ...heroCard, preview };
-                        attachments.push(attachment);
-                });
-    
-                return {
-                    composeExtension:  {
-                           type: 'result',
-                           attachmentLayout: 'list',
-                           attachments: attachments
-                    }
-                };
-            }       
+    async handleTeamsMessagingExtensionFetchTask(context, action) {
+        switch (action.commandId) {
+            case 'Static HTML':
+                return staticHtmlPage();
         }
+    }
+
+    staticHtmlPage(){
+        return {
+            task: {
+                type: 'continue',
+                value: {
+                    width: 450,
+                    height: 125,
+                    title: 'Task module Static HTML',
+                    url: `${baseurl}/StaticPage.html`
+                }
+            }
+        };
+    }
+
 ```
+
+---
+
+The following code provides an example of search based for messaging extensions:
 
 # [C#](#tab/dotnet)
 
@@ -216,6 +189,35 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
             };
         }
 ```
+
+# [Node.js](#tab/nodejs)
+
+```javascript
+
+async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;     
+        const attachments = [];
+                const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+                
+                response.data.objects.forEach(obj => {
+                        const heroCard = CardFactory.heroCard(obj.package.name);
+                        const preview = CardFactory.heroCard(obj.package.name);
+                        preview.content.tap = { type: 'invoke', value: { description: obj.package.description } };
+                        const attachment = { ...heroCard, preview };
+                        attachments.push(attachment);
+                });
+    
+                return {
+                    composeExtension:  {
+                           type: 'result',
+                           attachmentLayout: 'list',
+                           attachments: attachments
+                    }
+                };
+            }       
+        }
+```
+
 ---
 
 ## Code sample
