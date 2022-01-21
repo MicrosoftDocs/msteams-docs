@@ -190,9 +190,10 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-### [nodejs](#tab/nodejs)
+### [Node.js](#tab/nodejs)
 
-```nodejs
+```javascript
+
 var card = "<adaptive card json>";
  
 const cardRes = {
@@ -205,7 +206,9 @@ const cardRes = {
         body: cardRes
     };
     return res;
+
 ```
+
 ---
 
 Card design guidelines to keep in mind while designing User Specific Views:
