@@ -297,7 +297,7 @@ The JSON response body for Meeting Details API is as follows:
 ```
 ## CART API 
 
-The Communication access real-time translation (CART) API enables your app to expose a POST endpoint for Microsoft Teams CART captions.
+The communication access real-time translation (CART) API enables your app to expose a POST endpoint for Microsoft Teams CART captions.
 When end users enable captions in a Microsoft Teams meeting, the CART API displays the text content sent to the endpoint.
 
 ### Base URL
@@ -323,7 +323,7 @@ The Base URL includes the following query parameters:
 
 |Resource|Method|Description|
 |----|----|----|
-|/cartcaption|POST|Handle captions for meeting which was started|
+|/cartcaption|POST|Handle captions for meeting, which was started|
 
 > [!NOTE]
 > The content type for all requests must be in a plain text format with UTF-8 encoding. The body of request must not contain anything except captions.
@@ -338,7 +338,7 @@ Hello I’m Cortana, welcome to my meeting.
 ```
 
 > [!Note]  
-> Each POST request generates a new line of captions. To ensure the end user has enough time to read the content, limit each POST request body to 80-120 characters. 
+> Each POST request generates a new line of captions. To ensure that the end user has enough time to read the content, limit each POST request body to 80-120 characters. 
 
 ### Error codes
 
