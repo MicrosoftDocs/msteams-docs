@@ -112,6 +112,26 @@ One of the disadvantages of bots is that it is difficult to maintain a large ret
 
 The following code provides an example of bot activity for a channel team scope:
 
+# [C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+    };
+
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
+
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+}
+
+```
+
 # [Node.js](#tab/nodejs)
 
 ```javascript
@@ -133,39 +153,9 @@ this.onMessage(async (turnContext, next) => {
 
 ```
 
-# [C#](#tab/dotnet)
-
-```csharp
-
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-{
-    var mention = new Mention
-    {
-        Mentioned = turnContext.Activity.From,
-        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
-    };
-
-    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
-    replyActivity.Entities = new List<Entity> { mention };
-
-    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
-}
-
-```
-
 ---
 
 The following code provides an example of bot activity for a one-to-one chat:
-
-# [Node.js](#tab/nodejs)
-
-```javascript
-
-        this.onMessage(async (context, next) => {
-            await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
-            await next();
-        });
-```
 
 # [C#](#tab/dotnet)
 
@@ -179,6 +169,17 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 			await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
         }
 ```
+
+# [Node.js](#tab/nodejs)
+
+```javascript
+
+        this.onMessage(async (context, next) => {
+            await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+            await next();
+        });
+```
+
 ---
 
 ## Code sample
