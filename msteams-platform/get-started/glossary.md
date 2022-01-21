@@ -42,11 +42,11 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Blazor | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
-        | Bicep | A declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
-        | Bot | A bot is an app that executes programmed repetitive tasks. <br> **See also**: Conversational bot; Chat bot |
-        | Bot Emulator | A desktop application that allows you to test and debug bots, either locally or remotely. |
-        | Bot Framework | A rich SDK used to create bots using C#, Java, Python, and JavaScript. If you have a bot that is based on the Bot Framework, you can modify it to work in Teams. |
+        | [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
+        | [Bicep](../toolkit/provision.md) | A declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
+        | [Bot](../bots/what-are-bots.md) | A bot is an app that executes programmed repetitive tasks. <br> **See also**: Conversational bot; Chat bot |
+        | [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that allows you to test and debug bots, either locally or remotely. |
+        | [Bot Framework](../bots/bot-features.md) | A rich SDK used to create bots using C#, Java, Python, and JavaScript. If you have a bot that is based on the Bot Framework, you can modify it to work in Teams. |
         |
         </details>
         <br>
