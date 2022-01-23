@@ -2,7 +2,7 @@
 title: Upload your custom app
 description: Learn how to sideload your app in Microsoft Teams. Sideloading is common when testing and debugging an app during development.
 ms.topic: how-to
-author: KirtiPereira
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
 ---

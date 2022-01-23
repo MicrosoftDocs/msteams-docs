@@ -6,7 +6,7 @@ ms.localizationpriority: high
 keywords: teams deep link deeplink
 ---
 
-# Create deep links 
+# Create deep links
 
 You can create links to information and features within Teams. The scenarios where creating deep links are useful are as follows:
 
@@ -38,7 +38,7 @@ Alternatively, you can also generate deep links programmatically, using the form
 > [!NOTE]
 > This deep link is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
 
->[!NOTE]
+>[!IMPORTANT]
 > Currently, shareDeepLink does not work on mobile platforms.
 
 ### Show a deep link to an item within your tab
@@ -67,6 +67,17 @@ Use the following format for a deep link that you can use in a bot, connector, o
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
 > If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab is not opened.
 
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused. 
+* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
+* List items in the table are not formatted well in output.
+* Some headings use -ing verbs.
+* Example values and some URLs should be in backticks and not emphasized.
+* Codeblock are missing language.
+* Check for markdownlint errors.
+* Table with just a row is not really needed. Provide the content without tabulating it.
+--->
+
 The query parameters are:
 
 | Parameter name | Description | Example |
@@ -75,7 +86,7 @@ The query parameters are:
 | `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). |
 | `subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
 | `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
@@ -156,19 +167,21 @@ The query parameters are:
 * `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Name of the service, app ID. For example, teams.
 * `threadId`: The threadId is the team ID of the team where the file is stored. It is optional and cannot be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e 
+* `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e
 
 > [!NOTE]
 > You can see `threadId` and `groupId` in the URL from the channel.  
 
 The following deep link format is used in a bot, connector, or messaging extension card:
+
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
-The following example format shows the deeplink to files:
+The following example format illustrates the deeplink to files:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
-### Serialization of this object:
+### Serialization of this object
+
 ```
 {
 fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
@@ -197,13 +210,13 @@ The following deep link format can be used in a bot, connector or messaging exte
 
 The query parameters are:
 
-* `appID`: Your manifest ID, for example **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `appID`: Your manifest ID, for example `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
 
-* `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
+* `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, `tasklist123`.
 * `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`.
 * `entityName`: A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
 
-Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
+Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
 ## Deep linking to the scheduling dialog
 
