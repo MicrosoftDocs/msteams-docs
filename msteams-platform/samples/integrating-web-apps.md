@@ -7,11 +7,12 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 title: Considerations for Teams integration
 ---
-# Considerations for Teams integration 
+# Considerations for Teams integration
 
 You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.
   
 The different types of apps which you can integrate with Teams are as follows:
+
 * **Standalone apps**: A stand alone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
 * **SharePoint**: A SharePoint page you want to surface in Teams.
@@ -42,8 +43,7 @@ Your Teams app must include required and expected collaborative features. To wor
 
 Integrating all features of an existing application into Teams often leads to a forced or unnatural user experience, particularly in larger apps. Start with the most impactful features and those that integrates more naturally with Teams. You can allow users to launch the main app and access its full set of features.
 
-**Prerequisites to integrate your app with Teams** 
-Following are the prerequisites to integrate your app with Teams. 
+The following are the prerequisites to integrate your app with Teams. 
 
 1. [Map your app's use cases to Teams platform capabilities](../concepts/design/map-use-cases.md).
 1. [Determine your app's entry points](../concepts/extensibility-points.md). Is it for personal use, collaboration, or both?
