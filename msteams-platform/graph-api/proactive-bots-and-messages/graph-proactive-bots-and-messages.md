@@ -182,6 +182,51 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
 
 Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) after the bot has been added for a user or a team, and has received all the user information.
 
+## Code snippets
+
+The following code provides an example of sending proactive messages:
+
+# [C#](#tab/dotnet)
+
+```csharp
+public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+   int msgSentCount = 0;
+
+   // Send notification to all the members
+   foreach (var conversationReference in _conversationReferences.Values)
+   {
+       await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
+       msgSentCount++;
+   }
+
+   return msgSentCount;
+}
+
+private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
+{
+   await turnContext.SendActivityAsync("Proactive hello.");
+}
+```
+
+# [Node.js](#tab/nodejs)
+
+```javascript
+server.get('/api/notify', async (req, res) => {
+    for (const conversationReference of Object.values(conversationReferences)) {
+        await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
+            await context.sendActivity('proactive hello');
+        });
+    }
+
+    res.setHeader('Content-Type', 'text/html');
+    res.writeHead(200);
+    res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
+    res.end();
+});
+```
+---
+
 ## Code sample
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** |
