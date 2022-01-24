@@ -14,15 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams bots invokes task modules using hero, thumbnail, or Office 365 Connector on Adaptive Cards or Bot Framework cards. You can interact with the bot by sending messages.
-    
+    You can invoke task modules from Microsoft Teams bots using Adaptive Cards or Bot Framework cards. You can keep track of the bot state and allow the user to interrupt or cancel the sequence, which provides better user experience. 
+
     **Key features of task modules**
     * Enhances user experience by avoiding multiple steps.
     * Retrieves input from user and displays custom web page content.
 
-    This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module.
-
-    You'll see the following output:
+    This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module. You'll see the following output:
 
      ![Task module](~/assets/images/Teams-task-module/final_image.png)
 
@@ -424,7 +422,7 @@ items:
 
     1. Go to **Microsoft Teams**.
 
-    1. Select **Apps** or **Store**.
+    1. Select **Apps**.
 
        ![Zip file](~/assets/images/Teams-task-module/AppStore.png)
    
@@ -432,7 +430,7 @@ items:
 
        ![Manage apps](~/assets/images/Teams-task-module/manageapps.png)
    
-    1. Select **Upload an app to your org's app catalog** or **Upload a custom app**. 
+    1. Select **Upload an app to your org's app catalog**. 
 
        ![Upload custom app](~/assets/images/Teams-task-module/uploadapp.png)
 
@@ -444,7 +442,7 @@ items:
 
        ![Add the app](~/assets/images/Teams-task-module/addapp.png)
 
-       A chat displays.
+       The app opens in a chat.
    
     1. Enter any text. 
 
@@ -475,7 +473,13 @@ items:
 
        ![Custom form](~/assets/images/Teams-task-module/customform.png)
 
-    1. Enter the details.
+    1. Enter the required information:
+
+       * **Name**
+       * **Email**
+       * **Favorite book**
+       * **Password**
+       * **Confirm Password**
 
     1. Select **Sign up**.
 
@@ -485,7 +489,7 @@ items:
 
        ![Sign up](~/assets/images/Teams-task-module/customonsignup.png)
 
-       The following data appears in chat:
+       The following information appears in chat:
 
        ![Chat](~/assets/images/Teams-task-module/adaptivecustomchat.png)
 
@@ -493,7 +497,7 @@ items:
 
        ![YouTube](~/assets/images/Teams-task-module/youtube.png)
 
-    1. Select play button.
+    1. Select **Play**.
 
        ![YouTube select](~/assets/images/Teams-task-module/youtubeselect.png)
 
