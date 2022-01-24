@@ -280,10 +280,10 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Web app | An app that runs on a web server. It can be integrated with Microsoft Teams Platform. |
-        | Webhook | It is a feature of a Teams app used to integrate it with external apps. <br>**See also**: Incoming webhook; outgoing webhook |
-        | Web part | A UI component used to build a page or a site in a Teams app created using SharePoint. <br>**See also**: SPFx |
-        | Workbench | Overall Visual Studio Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: Local workbench; Teams workbench |
+        | [Web app](../samples/integrate-web-apps-overview.md) | An app that runs on a web server. It can be integrated with Microsoft Teams Platform. |
+        | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It is a feature of a Teams app used to integrate it with external apps. <br>**See also**: Incoming webhook; outgoing webhook |
+        | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using SharePoint. <br>**See also**: [SPFx](#s) |
+        | [Workbench](../sbs-gs-spfx.yml) | Overall Visual Studio Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
         </details>
         <br>
         <details>
@@ -293,7 +293,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | YoTeams | A development toolkit for building Microsoft Teams applications based on TypeScript and node.js. |
+        | [YoTeams](../get-started/get-started-overview.md) | A development toolkit for building Microsoft Teams applications based on TypeScript and node.js. |
         |
         </details>
         
