@@ -50,9 +50,10 @@ The code snippets for Teams activity handlers:
 
 `OnTeamsChannelCreatedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
+
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -72,9 +73,10 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsChannelDeletedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
+
 protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -94,9 +96,10 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsChannelRenamedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
+
  protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
@@ -116,9 +119,10 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 
 `OnTeamsTeamRenamedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
+
  protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
@@ -138,9 +142,10 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 `OnTeamsMembersAddedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
+
   protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
@@ -160,9 +165,10 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 `OnTeamsMembersRemovedAsync`
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
+
  protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
 		{
 			// Code logic here
