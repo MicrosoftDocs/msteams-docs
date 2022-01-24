@@ -69,57 +69,35 @@ Teams Toolkit provides two default environments:
 - **local**: <!--Add content-->
 - **dev**: <!--Add content-->
 
-## Development
+### Development
 
 Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.
 
-### Create a new Teams app
+- **Create a new Teams app**: It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
 
-It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
+- **View samples**: <!-- Add content-->
 
-### View samples
+- **Add capabilities**: It helps to add other required Teams capabilities to Teams app during development process.
 
-<!-- Add content-->
+- **Add cloud resources**: It helps you to optionally add cloud resources that fits your development needs.
 
-### Add capabilities
+- **Edit manifest file**: It helps you to edit the Teams app integration with Teams client.
 
-It helps to add other required Teams capabilities to Teams app during development process.
-
-### Add cloud resources
-
-It helps you to optionally add cloud resources that fits your development needs.
-
-### Edit manifest file
-
-It helps you to edit the Teams app integration with Teams client.
-
-## Deployment
+### Deployment
 
 During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.
 
-### Provision in the cloud
+- **Provision in the cloud**: It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
 
-It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
+- **Zip Teams metadata package**: <!-- Add content-->
 
-### Zip Teams metadata package
+- **Deploy to the cloud**: It helps you to deploy the source code to Azure.
 
-<!-- Add content-->
+- **Publish to Teams**: After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
 
-### Deploy to the cloud
+- **Developer Portal for Teams**: <!-- Add content-->
 
- It helps you to deploy the source code to Azure.
-
-### Publish to Teams
-
-After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
-
-### Developer Portal for Teams
-
-<!-- Add content-->
-
-### CI/CD guide
-
-It helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates for you to get started while setting up CI or CD pipelines.
+- **CI/CD guide**: It helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates for you to get started while setting up CI or CD pipelines.
 
 ## Help and Feedback
 
@@ -138,7 +116,6 @@ TeamsFx CLI is a text-based command line interface that accelerates Teams applic
 ### TeamsFx SDK
 
 It helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
-
 
 ## See also
 
