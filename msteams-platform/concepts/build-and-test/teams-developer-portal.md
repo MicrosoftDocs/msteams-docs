@@ -78,33 +78,33 @@ The app usage for a given day is reflected within 24-48 hours and usage data for
 
 1. Go to <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a>.
 1. Select **Apps** from the left pane.
-1. Select an app from the list.
-1. Go to **Analytics** from the left pane or select **View Details** under the active users card.
+1. Select the required app from the main page.
+1. Select **Analytics** under the overview or select **View Details** under the active users card.
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
 
-You can use the **Analytics** dashboard to learn more about app usage such as:
+You can use the **Analytics** dashboard to learn more about app usage, such as:
 
 * Active users of your apps per monthly, weekly, and daily basis
-* Are these new users lapsed, revived, or returned users?
-* Do these users use my app more than five times each month?
+* Are these new users, lapsed users, resurrected users, or returned users?
+* Are these users use your app more than five times each month?
 * What is the breakdown of active users by platform/operating system?
 
 The **Filter** button in the analytics page allows you to analyze your app with all the subsequent metrics by the following:
 
 1. Aggregation Type
 1. Platform
-1. Operating System
+1. Operating system
 1. Area
 
  :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
 
 Analytics page gives you the app usage data with the following individual widgets:
 
-* **Usage by time period**
-* **Usage by platform and OS**
-* **Usage by retention state**
-* **Usage intensity**
+* Usage by time period
+* Usage by platform and OS
+* Usage by retention state
+* Usage intensity
 
 ### Usage by time period
 
@@ -112,22 +112,22 @@ This chart shows you the number of active users/tenants that have opened/used th
 
  :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
 
-* Monthly R30 Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL30 (Rolling 30 day) period.
-* Monthly R28 Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL28 (Rolling 28 day) period.
-* Weekly Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
-* Daily Active Users/Tenants: The count of distinct users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
+* **Monthly R30**: The count of distinct active users/tenants who have opened your app in a given RL30 (Rolling 30 day) period.
+* **Monthly R28**: The count of distinct active users/tenants who have opened your app in a given RL28 (Rolling 28 day) period.
+* **Weekly**: The count of distinct active users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
+* **Daily**: The count of distinct active users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
 
 ### Usage by platform and OS
 
-This chart shows you your app(s) active usage across various endpoints. The same user/tenant can use an app on multiple endpoints.
+This chart shows your app(s) active usage across various endpoints. The same user/tenant can use an app on multiple endpoints.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
 
-* Windows – Active Users/Tenants that have opened/used your app on Windows.
-* Mac – Active Users/Tenants that have opened/used your app on Mac.
-* iOS – Active Users/Tenants that have opened/used your app on iOS.
-* Android – Active Users/Tenants that have opened/used your app on Android.
-* Web – Active Users/Tenants that have opened/used your app on Web.
+* **Windows** – Active Users/Tenants that have opened/used your app on Windows.
+* **Mac** – Active Users/Tenants that have opened/used your app on Mac.
+* **iOS** – Active Users/Tenants that have opened/used your app on iOS.
+* **Android** – Active Users/Tenants that have opened/used your app on Android.
+* **Web** – Active Users/Tenants that have opened/used your app on Web.
 
 ### Usage by retention state
 
@@ -135,10 +135,10 @@ This chart lets you track four key retention/churn metrics of your app over time
 
 :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Retention":::
 
-* New Users /Tenants - Active users or tenants who are new this month and have not used this app before (based on a historical start date of June 1, 2020).
-* Resurrected Users/Tenants - Active users or tenants who have used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period.
-* Returning Users/Tenants - Active users or tenants who used your app during a given R30 time period and the previous R30 time period.
-* Lapsed Users/Tenants - Active users or tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
+* **New Users/Tenants** - Active users/tenants who are new (based on a historical start date of June 1, 2020).
+* **Resurrected Users/Tenants** - Active users/tenants who used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period..
+* **Returning Users/Tenants** - Active users/tenants who used your app during a given R30 time period and the previous R30 time period.
+* **Lapsed Users/Tenants** - Active users/tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
 
 ### Usage intensity
 
@@ -146,9 +146,9 @@ This chart shows you key usage intensity metrics of your app.
 
  :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="Intensity":::
 
-* % of 5+ Days Usage - The % of Active Users that have opened/used the app more than 5 days in the last RL30 (Rolling 30 day) period.
-* Median Days Used per Month - The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period.
-* DAU/MAU - The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app
+* **% of 5+ Days Usage** - The % of Active Users that have opened/used the app more than 5 days in the last RL30 (Rolling 30 day) period.
+* **Median Days Used per Month** - The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period.
+* **DAU/MAU** - The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app.
 
 ### App dashboard
 
