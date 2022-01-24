@@ -121,4 +121,4 @@ In this section, you can find the documentation and resources you need. You can 
 * [Prepare accounts to build Teams apps](accounts.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Deploy to the cloud](deploy.md)
+* [Deploy to the cloud](deploy.md).
