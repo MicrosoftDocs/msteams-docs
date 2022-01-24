@@ -43,7 +43,7 @@ items:
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
   content: |
-    Register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following steps:
+    Register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
 
     1. Use ngrok to create a tunnel to your web server's endpoints.
     1. Create Azure Bot resource to register bot with Azure Bot Service.
@@ -294,7 +294,7 @@ items:
     Follow the steps to use the bot:
 
     1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
-    1. Bot will throw welcome Text with Adaptive Card as shown below.
+    1. Bot will send welcome Text with Adaptive Card as shown below.
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Adaptive card in bot.":::
 
