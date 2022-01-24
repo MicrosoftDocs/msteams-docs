@@ -53,7 +53,7 @@ Let's take a tour of the topics covered in this document:
 
 ## Accounts
 
-To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit support integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
 ## Environment
 
@@ -105,7 +105,7 @@ It helps to automate your development workflow while building Teams application.
 
 #### TeamsFx CLI
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+It is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 #### TeamsFx SDK
 
@@ -121,4 +121,4 @@ In this section, you can find the documentation and resources you need. You can 
 * [Prepare accounts to build Teams apps](accounts.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Deploy to the cloud](deploy.md).
+* [Deploy to the cloud](deploy.md)
