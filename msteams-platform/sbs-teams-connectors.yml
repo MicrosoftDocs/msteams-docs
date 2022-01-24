@@ -200,7 +200,7 @@ items:
        * Enter all the basic details such as name, logo, description for the new connector.
        * Enter `Configuration page for your connector` as **https://[BASE_URI]/connector/setup**.
        * Enter `Valid Domains` as **https Base URL**.
-       * Enable the action on connector card by selecting Yes.
+       * Enable the action on connector card by selecting **Yes**.
        * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
        * Select save. 
 
@@ -212,7 +212,7 @@ items:
       
        > [!TIP]
        > Save the Connector ID for future reference.
-       
+
     6. Navigate to **Web.config file** in cloned repository.
 
        ![Navigation path](~/assets/images/sbs-connector/webnavigation.png) 
