@@ -148,12 +148,12 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Media capability | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: Capability; Device capability |
-        | Meeting bot | Bots that interact with Teams calls and meetings using real-time voice, video, and screen sharing. <br>**See also**: Call bot; Chat bot |
-        | Meeting lifecycle | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle. <br>**See also**: In-meeting experience |
-        | Meeting stage | A feature of meeting extension app. It is a shared space .accessible during meeting to all participants. It helps participants interact and collaborate with app content in real time. |
-        | Messaging extension | Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. <br>**See also**: Search commands; Action commands |
-        | Meeting extension | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more.  |
+        | [Media capability](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: [Capability](#c); [Device capability](#d) |
+        | [Meeting bot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots that interact with Teams calls and meetings using real-time voice, video, and screen sharing. <br>**See also**: [Call bot](#c); [Chat bot](#c) |
+        | [Meeting lifecycle](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle. <br>**See also**: [In-meeting experience](#i) |
+        | [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It is a shared space .accessible during meeting to all participants. It helps participants interact and collaborate with app content in real time. |
+        | [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md) | Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
+        | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more.  |
         | Microsoft 365 account | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only.  |
         | Microsoft 365 developer program | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365.  |
         | Microsoft Graph Explorer | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
