@@ -120,6 +120,36 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 ---
 
+## Code snippets
+
+The following code provides an example of RSC permissions:
+
+# [C#](#tab/dotnet)
+
+```csharp
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+		await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels in team without being @mentioned."));
+}
+```
+
+# [Node.js](#tab/nodejs)
+
+```javascript
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+this.onMessage(async (context, next) => {
+   await context.sendActivity(MessageFactory.text("Using RSC the bot can receive messages across channels in team without being @mentioned."))
+   await next();
+});
+```
+
+---
+
 ## Code sample
 
 | Sample name | Description | C# |Node.js|
@@ -132,4 +162,3 @@ The following steps guide you to sideload and validate bot that receives all cha
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
 * [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
-
