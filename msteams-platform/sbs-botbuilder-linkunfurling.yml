@@ -16,12 +16,10 @@ items:
   content: |
     With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions.
     
-    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.BotFramework.com URLs.
-
     > [!NOTE]
     > Currently, link unfurling is not supported on Mobile clients.
 
-    You'll see the following output:
+    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.BotFramework.com URLs. You'll see the following output:
 
      ![Link unfurling](~/assets/images/Teams-link-unfurling/final-image.png)
 
