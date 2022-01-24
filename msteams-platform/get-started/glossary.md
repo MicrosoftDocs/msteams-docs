@@ -189,10 +189,10 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Personal app | A personal app can be a bot, private workspace, or both. <br>**See also**: Shared app |
-        | Power Virtual Agents | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. |
-        | Proactive messages | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
-        | Provision | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. <br>**See also**: Deploy |
+        | [Personal app](../concepts/design/personal-apps.md) | A personal app can be a bot, private workspace, or both. <br>**See also**: [Shared app](#s) |
+        | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
+        | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
+        | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. <br>**See also**: [Deploy](#d) |
         |
         </details>
         <br>
@@ -203,9 +203,9 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Rate-limiting | A method to limit messages to a certain maximum frequency to ensure that number of messages are sufficient and don't appear as spam. |
-        | Role-based views | A feature of tabs where the tab experience may be different for users depending on their permission level. |
-        | RSC permission | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
+        | [Rate-limiting](../bots/how-to/rate-limit.md) | A method to limit messages to a certain maximum frequency to ensure that number of messages are sufficient and don't appear as spam. |
+        | [Role-based views](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md) | A feature of tabs where the tab experience may be different for users depending on their permission level. |
+        | [RSC permission](../graph-api/rsc/resource-specific-consent.md) | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
         |
         </details>
         <br>
@@ -216,16 +216,16 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Search commands | A type of messaging extension app that lets users search external systems and include the search result into a message using a card. <br>**See also**: Messaging extensions; Action commands |
-        | Sequential workflow | A workflow that let a bot carry out a conversation with a user based on the user response. |
-        | Shared app | An app that exists in a team, channel, or chat where everyone can collaborate. <br>**See also:** Personal app |
-        | SharePoint site collection | It is a collection site for SharePoint apps. You need to have an administrator account for this site before you can deploy your SPFx-based app on the SharePoint site. <br>**See also**: SPFx |
-        | Sideloading | A process where a Teams app is loaded to Teams at the time of build to test it in Teams environment before distributing it. |
-        | SidePanel | A feature of Teams meeting app that enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions.  |
-        | SPFx | SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. |
-        | Stage view | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It is invoked to surface web content within Teams. |
-        | Standalone app | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: Collaboration aap |
-        | Static search | A method of typeahead search that lets users search from pre-specified values in the Adaptive Card payload. <br>**See also**: Dynamic search |
+        | [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) | A type of messaging extension app that lets users search external systems and include the search result into a message using a card. <br>**See also**: [Messaging extensions](#m); [Action commands](#a) |
+        | [Sequential workflow](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | A workflow that let a bot carry out a conversation with a user based on the user response. |
+        | [Shared app](../concepts/extensibility-points.md#shared-app-experiences) | An app that exists in a team, channel, or chat where everyone can collaborate. <br>**See also:** Personal app |
+        | [SharePoint site collection](../sbs-gs-spfx.yml) | It is a collection site for SharePoint apps. You need to have an administrator account for this site before you can deploy your SPFx-based app on the SharePoint site. <br>**See also**: SPFx |
+        | [Sideloading](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | A process where a Teams app is loaded to Teams at the time of build to test it in Teams environment before distributing it. |
+        | [SidePanel](../sbs-meetings-sidepanel.yml) | A feature of Teams meeting app that enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. |
+        | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. |
+        | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It is invoked to surface web content within Teams. |
+        | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: Collaboration aap |
+        | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Card payload. <br>**See also**: [Dynamic search](#d) |
         |
         </details>
         <br>
