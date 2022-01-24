@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Single sign-on (SSO) for tabs and messaging extension
+title: AAD SSO for tabs and messaging extension
 metadata:
-  title: Single sign-on (SSO) for tabs and messaging extension
-  description: In this tutorial, you'll learn to set up SSO for tabs.
+  title: AAD SSO for tabs and messaging extension
+  description: In this tutorial, you'll learn to set up AAD SSO for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
@@ -18,7 +18,7 @@ items:
 
    **Key features of AAD SSO for tabs and messaging extension**
 
-    * After the first sign-in, AAD SSO allows the user to sign in automatically, multiple times.
+    * After the first sign-in, AAD SSO allows the user to sign in automatically.
     * Allows the user to sign in to other devices without re-entering sign-in credentials.
     * Obtains access token for the logged-in user using AAD SSO.   
 
