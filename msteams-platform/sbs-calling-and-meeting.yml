@@ -16,11 +16,11 @@ items:
   content: |
     Calling and Meeting Bot provides basic functionalities like create a call, join a call, transfer or redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
     
-    Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
+    Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
     * Interactive Voice Response (IVR).
     * Call control.
-    * Access to real-time audio and video streams, including desktop and app sharing.
+    * Access to real time audio and video streams, including desktop and app sharing.
 
     Create a bot and specify some additional information and permissions to use these Graph APIs in a Teams app.
  
@@ -72,7 +72,7 @@ items:
     1. **Register an application** page opens. Enter your application's registration information.
     1. Enter a meaningful application **Name** that is displayed to users of the app.
     1. In **Supported account types**, select the accounts you would like your application to support.
-    1. In Redirect URI (optional) field, select the type of app **Web or Public client(mobile & desktop)**, and then enter the redirect URI for your application.
+    1. In **Redirect URI** (optional) field, select the type of app **Web or Public client(mobile & desktop)**, and then enter the redirect URI for your application.
 
         > [!NOTE]
         > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
@@ -83,7 +83,7 @@ items:
 
     **To create client secret:**
 
-    1. In **Overview** page of your bot, select **Essentials**. Save the **Application client ID** (Microsoft App ID) for future reference.
+    1. In **Overview** page of your bot, select **Essentials** and save the **Application client ID** (Microsoft App ID) for future reference.
     
         :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new.png" alt-text="Microsoft App ID.":::
     
@@ -104,7 +104,6 @@ items:
         > [!NOTE]
         > Run Windows PowerShell PSI as an administrator and execute the script.
 
-        (PowerShell script should be added to copy)
         :::image type="content" source="./assets/images/calls-and-meetings/powershell-script.png" alt-text="PowerShell script.":::
 
     1. Replace `azure-client-id` with your **Microsoft App ID** of your bot and `object-id` with the **Tenant ID** of your account used to login to the Teams (Copy the link as shown in the following image and you can find the Tenant ID of your Teams account in the link obtained).
