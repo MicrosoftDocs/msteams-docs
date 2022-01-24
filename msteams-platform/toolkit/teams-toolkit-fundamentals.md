@@ -45,18 +45,18 @@ After Toolkit installation, you will see the Teams Toolkit UI as shown in follow
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini functions":::
 
-You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. If you have a Teams project created by Teams Toolkit v2.+ opened in VS Code, you will see Teams Toolkit UI with all functionalities as shown in the following image:
+You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. If you've opened a Teams project created by Teams Toolkit v2.+ in Visual Studio Code, you'll see Teams Toolkit UI with all features as shown in the following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
 
-Let's explore Teams Toolkit Features:
+Let's explore Teams Toolkit Features!
 
 ### Accounts
 
 To build a Teams app, you need:
 
-- Microsoft 365 account: At least, one Microsoft 365 account with a valid subscription.
-- Azure account: If you want to host your backend resources on Azure, an Azure account is also needed.
+- **Microsoft 365 account**: You need at least one Microsoft 365 account with a valid E5 subscription to build a Teams app.
+- **Azure account**: If you want to host your app on Azure, you need an Azure account.
 
 Teams Toolkit support integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
@@ -66,8 +66,10 @@ Teams Toolkit helps you to create and manage multiple environments, provision, a
 
 Teams Toolkit provides two default environments:
 
-- **local**: <!--Add content-->
-- **dev**: <!--Add content-->
+- **local**: The local environment represents the local machine environment configurations.
+- **dev**: The dev environment represents the remote or cloud environment configurations.
+
+You can create more dev environments, as you need.
 
 ### Development
 
@@ -75,7 +77,7 @@ Teams Toolkit helps you to create and customize your Teams app project that make
 
 - **Create a new Teams app**: It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
 
-- **View samples**: <!-- Add content-->
+- **View samples**: Teams Toolkit displays 12 sample apps. You can select any one of them. Teams Toolkit downloads the app code from GitHub, and you can build the sample app.
 
 - **Add capabilities**: It helps to add other required Teams capabilities to Teams app during development process.
 
