@@ -53,6 +53,7 @@ The code snippets for Teams activity handlers:
 # [C#](#tab/dotnet)
 
 ```csharp
+
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -62,6 +63,7 @@ protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, Team
 # [JavaScript](#tab/javascript)
 
 ```javascript
+
 onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
        // code for handling
         await next()
@@ -75,6 +77,7 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
+
 protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -84,6 +87,7 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 # [JavaScript](#tab/javascript)
 
 ```javascript
+
 onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
        // code for handling
        await next()
@@ -97,7 +101,8 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
- protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+
+protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
 		}
@@ -106,6 +111,7 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 # [JavaScript](#tab/javascript)
 
 ```javascript
+
 onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
        // code for handling
        await next()
@@ -119,7 +125,8 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
- protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+
+protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
 		}
@@ -128,6 +135,7 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 # [JavaScript](#tab/javascript)
 
 ```javascript
+
 onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
        // code for handling
        await next()
@@ -141,7 +149,8 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
-  protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+
+protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
 		}
@@ -150,6 +159,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 # [JavaScript](#tab/javascript)
 
 ```javascript
+
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
 	   await next();
@@ -163,7 +173,8 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
- protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
+
+protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
 		{
 			// Code logic here
 		}
@@ -172,6 +183,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 # [JavaScript](#tab/javascript)
 
 ```javascript
+
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
 	   await next();
