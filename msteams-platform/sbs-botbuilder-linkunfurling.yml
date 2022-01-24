@@ -433,7 +433,7 @@ items:
 
     1. Go to **Microsoft Teams**.
 
-    1. Select **Apps** or **Store**.
+    1. Select **Apps**.
 
        ![Zip file](~/assets/images/Teams-link-unfurling/AppStore.png)
    
@@ -441,7 +441,7 @@ items:
 
        ![Manage apps](~/assets/images/Teams-link-unfurling/manageapps.png)
    
-    1. Select **Upload an app to your org's app catalog** or **Upload a custom app**. 
+    1. Select **Upload an app to your org's app catalog**. 
 
        ![Upload custom app](~/assets/images/Teams-link-unfurling/uploadapp.png)
 
