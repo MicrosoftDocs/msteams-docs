@@ -236,16 +236,16 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Tab | Tabs are Teams-aware webpages embedded in Microsoft Teams that point to domains declared in manifest. You can add it inside a team, group chat, or personal app. |
-        | Tab chat | A type of tab that lets a user have a focused conversation experience in dynamic tabs. |
-        | Task modules | A feature of Teams app to create modal popup for completing tasks, displaying videos or dashboard. |
-        | Thread discussion | A conversation posted on a channel or chat between users. |
-        | Teams | Microsoft Teams is the ultimate messaging app for your organization—a workspace for real-time collaboration and communication, meetings, file and app sharing. |
-        | Teams Toolkit | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
-        | TeamsFx | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
-        | TeamsFx SDK | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
-        | Teams Mobile | Microsoft Teams available as a mobile app. |
-        | Teams workbench | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: Workbench; Local workbench |
+        | [Tab](../tabs/what-are-tabs.md) | Tabs are Teams-aware webpages embedded in Microsoft Teams that point to domains declared in manifest. You can add it inside a team, group chat, or personal app. |
+        | [Tab chat](../tabs/how-to/conversational-tabs.md) | A type of tab that lets a user have a focused conversation experience in dynamic tabs. |
+        | [Task modules](../task-modules-and-cards/what-are-task-modules.md) | A feature of Teams app to create modal popup for completing tasks, displaying videos or dashboard. |
+        | [Thread discussion](../tabs/design/tabs.md#thread-discussion) | A conversation posted on a channel or chat between users. |
+        | [Teams](../overview.md) | Microsoft Teams is the ultimate messaging app for your organization—a workspace for real-time collaboration and communication, meetings, file and app sharing. |
+        | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
+        | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
+        | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
+        | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
+        | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
         |
         </details>
         <br>
@@ -256,9 +256,9 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | UI components | For Teams app development, you can use Fluent UI components to build your app from scratch. |
-        | UI templates | For Teams app development, you can use Teams UI templates to design your apps quickly. |
-        | Universal Actions for Adaptive Cards | A way to implement Adaptive Cards across platforms and applications. It uses a bot as a common backend for handling actions. |
+        | [UI components](../concepts/design/design-teams-app-basic-ui-components.md) | For Teams app development, you can use Fluent UI components to build your app from scratch. |
+        | [UI templates](../concepts/design/design-teams-app-ui-templates.md) | For Teams app development, you can use Teams UI templates to design your apps quickly. |
+        | [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) | A way to implement Adaptive Cards across platforms and applications. It uses a bot as a common backend for handling actions. |
         | 
         </details>
         <br>
@@ -269,7 +269,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Virtual Assistant | A Microsoft open-source template that enables you to create a robust conversational solution. |
+        | [Virtual Assistant](../samples/virtual-assistant.md) | A Microsoft open-source template that enables you to create a robust conversational solution. |
         |
         </details>
         <br>
