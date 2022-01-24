@@ -51,7 +51,6 @@ To create graph client object for accessing Microsoft Graph API, you will need t
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -71,7 +70,6 @@ Use the following snippet:
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -166,7 +164,6 @@ Use `TeamsUserCredential` and `createMicrosoftGraphClient`.
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -183,7 +180,6 @@ Use `axios` library to make HTTP request to Azure Function.
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
