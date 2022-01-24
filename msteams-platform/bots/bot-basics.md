@@ -53,7 +53,6 @@ The code snippets for Teams activity handlers:
 # [C#](#tab/dotnet)
 
 ```csharp
-
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -76,7 +75,6 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
-
 protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -99,7 +97,6 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
-
  protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
@@ -122,7 +119,6 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
-
  protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
@@ -145,7 +141,6 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
-
   protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 		{
 			// Code logic here
@@ -168,7 +163,6 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 # [C#](#tab/dotnet)
 
 ```csharp
-
  protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
 		{
 			// Code logic here
