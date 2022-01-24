@@ -436,3 +436,4 @@ The following code shows a reissued request example:
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

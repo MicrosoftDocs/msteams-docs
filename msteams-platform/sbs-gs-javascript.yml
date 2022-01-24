@@ -11,8 +11,7 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
   ms.custom: mvc
-  ms.localizationpriority: none
-  
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
