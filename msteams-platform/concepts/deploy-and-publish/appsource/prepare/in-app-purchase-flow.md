@@ -9,9 +9,7 @@ localization_priority: Normal
 
 # In-app purchases
 
-Microsoft Teams provide APIs that you can use to implement the in-app purchases to make money from your Teams apps.
-
-In-app purchase allows you to convert users from free to paid plans or upsell to a new subscription plan directly from within your app.
+Microsoft Teams provide APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans or upsell to a new subscription plan directly from within your app.
 
 ## Implement in-app purchases
 
@@ -40,7 +38,7 @@ Update your Teams app **manifest.json** file by adding the RSC permissions to ac
 
 ### Purchase Experience API
 
-To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app
+To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app.
 
 Following is an example of calling the API from the app:
 
@@ -71,11 +69,12 @@ The following example shows the users to purchase subscription plans for a ficti
 
 1. In the Teams **Store**, find and select the app.
 
-1. In the app details dialog, select **Buy a subscription**. 
+1. In the app details dialog, select **Buy a subscription** or **Add for me**. 
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app.":::
 
-    Offer a free trial version of the app and later users can choose to **Upgrade** it to a paid version.
+    
+1. **Add for me** offers a free trial version of the app and later users can choose to **Upgrade** it to a paid version.
 
     :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app.":::
 
