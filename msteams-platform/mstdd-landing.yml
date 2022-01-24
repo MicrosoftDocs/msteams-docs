@@ -86,6 +86,8 @@ landingContent:
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
+        - text: Perform link unfurling in Teams
+          url: ~/sbs-botbuilder-linkunfurling.yml
         
 - title: Get started
   linkLists:
