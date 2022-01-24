@@ -96,9 +96,9 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | E5 developer account | E5 developer subscription includes 25 user licenses, including the administrator, for development purposes only for building apps to extend Microsoft 365.  <br>**See also**: Microsoft 365 account |
-        | Entry point | An access point, such as team, channel, and chat, for a Teams app where users can discover and use your app. |
-        | Environment | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default - local environment and dev environment. <br>**See also**: Local environment; Dev environment |
+        | [E5 developer account](../toolkit/accounts.md) | E5 developer subscription includes 25 user licenses, including the administrator, for development purposes only for building apps to extend Microsoft 365.  <br>**See also**: [Microsoft 365 account](#m) |
+        | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can discover and use your app. |
+        | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default - local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
         |
         </details>
         <br>
@@ -109,7 +109,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Group chat | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: One-on-one chat; Chat bot |
+        | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
         |
         </details>
         <br>
@@ -120,9 +120,9 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Identity provider | An entity which stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: Authentication |
-        | Incoming webhooks | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: Webhooks; Outgoing webhooks |
-        | In-meeting app experience | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: Meeting lifecycle |
+        | [Identity provider](../concepts/authentication/configure-identity-provider.md) | An entity which stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: [Authentication](#a) |
+        | [Incoming webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing webhook](#o) |
+        | [In-meeting app experience](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
         |
         </details>
         <br>
@@ -133,11 +133,11 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Link unfurling | A feature used with messaging extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in an Adaptive Card or in the meeting stage view.  |
-        | Local environment | A default development environment created by Teams Toolkit  <br>**See also**: Environment; Dev environment |
-        | Local workbench | The default option to run and debug an Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: Workbench; Teams workbench |
-        | Location capability | <br>**See also**: Capability; Media capability; Device Capability |
-        | Low code apps | A custom Teams app built from scratch using Microsoft Power Platform that require little or no coding, and can be developed and deployed quickly.  |
+        | [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with messaging extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in an Adaptive Card or in the meeting stage view.  |
+        | [Local environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A default development environment created by Teams Toolkit  <br>**See also**: [Environment](#e); [Dev environment](#d) |
+        | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug an Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
+        | [Location capability](../concepts/device-capabilities/location-capability.md) | <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d) |
+        | [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that require little or no coding, and can be developed and deployed quickly.  |
         |
         </details>
         <br>
