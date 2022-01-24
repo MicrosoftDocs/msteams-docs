@@ -114,7 +114,7 @@ This chart shows you the number of active users/tenants that have opened/used th
 
 * **Monthly R30**: The count of distinct active users/tenants who have opened your app in a given RL30 (Rolling 30 day) period.
 * **Monthly R28**: The count of distinct active users/tenants who have opened your app in a given RL28 (Rolling 28 day) period.
-* **Weekly**: The count of distinct active users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
+* **Weekly RL7**: The count of distinct active users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
 * **Daily**: The count of distinct active users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
 
 ### Usage by platform and OS
@@ -136,7 +136,7 @@ This chart lets you track four key retention/churn metrics of your app over time
 :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Retention":::
 
 * **New Users/Tenants** - Active users/tenants who are new (based on a historical start date of June 1, 2020).
-* **Resurrected Users/Tenants** - Active users/tenants who used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period..
+* **Resurrected Users/Tenants** - Active users/tenants who used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period.
 * **Returning Users/Tenants** - Active users/tenants who used your app during a given R30 time period and the previous R30 time period.
 * **Lapsed Users/Tenants** - Active users/tenants who were not seen during a given R30 time period but were seen during the previous R30 time period.
 
@@ -152,7 +152,7 @@ This chart shows you key usage intensity metrics of your app.
 
 ### App dashboard
 
-The App Dashboard shows you the latest value for each of these metrics, as well as the Month over Month (MoM) change. You can select each of these rows to see trends over time.
+The App Dashboard shows you the latest value for each of these metrics and the Month over Month (MoM) change. You can select each of these rows to see trends over time.
 
  :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="app":::
 
