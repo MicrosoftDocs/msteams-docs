@@ -68,6 +68,8 @@ landingContent:
         
     - linkListType: tutorial
       links:
+        - text: Create Calling and meeting bot
+          url: ~/sbs-calling-and-meeting.yml
         - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and messaging extensions

@@ -86,6 +86,10 @@ You can rely on an administrator to grant the permissions your app needs at the 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
 
+## Step-by-step guide
+
+* Follow the [step-by-step guide](../../../sbs-calling-and-meeting.yml) to set up calling and meeting in a bot.
+
 ## Next step
 
 > [!div class="nextstepaction"]
