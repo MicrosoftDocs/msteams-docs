@@ -7,14 +7,16 @@ metadata:
   level: Beginner
   ms.date: 01/20/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: task-modules-and-cards/task-modules/task-modules-bots.md
-  nextTutorialTitle: Read more on task modules from bots
+  nextTutorialHref: messaging-extensions/how-to/link-unfurling.md
+  nextTutorialTitle: Read more on link unfurling
   ms.custom: mvc
   ms.localizationpriority: none
 items:
 - durationInMinutes: 1
   content: |
-    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.BotFramework.com urls.
+    With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions.
+    
+    The Teams link unfurling step-by-step guide demonstrates how to create a simple bot that performs link unfurling in Teams for *.BotFramework.com URLs.
 
     > [!NOTE]
     > Currently, link unfurling is not supported on Mobile clients.
