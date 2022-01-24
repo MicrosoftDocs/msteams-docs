@@ -18,18 +18,19 @@ items:
     
     **Types of main connector code**
 
-      * ConnectorController.cs - Setup and Save actions
-      * TaskController.cs - Create and Update actions
+      * ConnectorController.cs - Setup and Save actions.
+      * TaskController.cs - Create and Update actions.
 
     **Key features of Meeting Token Generator**
 
-      * Simulates a real task management system
-      * Allows users to create and view tasks
+      * Simulates a real task management system.
+      * Allows users to create and view tasks.
 
     The content generates randomly and simulates the notification to be sent to Microsoft Teams channel using connector. 
     
     This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
        
+       [Place holder for image]
        
 
 - title: Prerequisites
@@ -57,7 +58,7 @@ items:
 - title: Enable developer preview
   durationInMinutes: 1
   content: |
-    **To enable developer preview in your desktop Teams client**
+   To enable developer preview in your desktop Teams client:
 
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
@@ -142,7 +143,7 @@ items:
 
        ![configure notification](~/assets/images/sbs-connector/configure.png)
 
-    1. Select either **Create** or **Update** on the registration page and select save.
+    1. Select either **Created** or **Updated** on the registration page and select save.
 
        ![select](~/assets/images/sbs-connector/create.png)
 
@@ -196,23 +197,22 @@ items:
       
     5. Register a new connector:
 
-       1. Fill in all the basic details such as name, logo, descriptions etc. for the new connector.
-          
-          * Enter `Configuration page for your connector` as **https://[BASE_URI]/connector/setup**.
-          * Enter `Valid Domains` as **https Base URL**.
+       * Enter all the basic details such as name, logo, description for the new connector.
+       * Enter `Configuration page for your connector` as **https://[BASE_URI]/connector/setup**.
+       * Enter `Valid Domains` as **https Base URL**.
+       * Enable the action on connector card by selecting Yes.
+       * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
+       * Select save. 
 
-       1. Enable the action on connector card by selecting Yes.
+         ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
 
-          * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
-
-       1. Select save. 
-
-          ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
-
-       After completion of registration, you will see the following screen:
+       You have successfully registered a new connector. The window appears with registered connector ID.
 
          ![output screen](~/assets/images/sbs-connector/output.png) 
-
+      
+       > [!TIP]
+       > Save the Connector ID for future reference.
+       
     6. Navigate to **Web.config file** in cloned repository.
 
        ![Navigation path](~/assets/images/sbs-connector/webnavigation.png) 
