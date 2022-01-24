@@ -76,6 +76,36 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
     ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
 
+## Code snippets
+
+The following code provides an example of RSC permissions:
+
+# [C#](#tab/dotnet)
+
+```csharp
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+		await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channles in team without being @mentioned."));
+}
+```
+
+# [Node.js](#tab/nodejs)
+
+```javascript
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+this.onMessage(async (context, next) => {
+   await context.sendActivity(MessageFactory.text("Using RSC the bot can recieve messages across channles in team without being @mentioned."))
+   await next();
+});
+```
+
+---
+
 ## Code sample
 
 | Sample name | Description | C# |Node.js|
