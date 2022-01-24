@@ -154,14 +154,14 @@ Common terms and definitions used in Teams Developer Documentation.
         | [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It is a shared space .accessible during meeting to all participants. It helps participants interact and collaborate with app content in real time. |
         | [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md) | Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
         | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more.  |
-        | Microsoft 365 account | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only.  |
-        | Microsoft 365 developer program | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365.  |
-        | Microsoft Graph Explorer | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
-        | Microsoft Teams | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
-        | Microsoft Teams Platform | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus by reducing context switching, and create collaboration around existing content and workflows. |
-        | Microsoft Teams UI Library | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
-        | Microsoft Teams UI Toolkit | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
-        | Microsoft Store | Microsoft Store is a digital distribution platform owned by Microsoft. |
+        | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
+        | [Microsoft 365 developer program](../toolkit/accounts.md#join-microsoft-365-developer-program) | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365.  |
+        | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data. |
+        | [Microsoft Teams](../overview.md) | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
+        | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
+        | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
+        | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
+        | [Microsoft Store](../concepts/deploy-and-publish/appsource/publish.md) | Microsoft Store is a digital distribution platform owned by Microsoft. |
         |
         </details>
         <br>
@@ -175,10 +175,10 @@ Common terms and definitions used in Teams Developer Documentation.
 
         | Term | Definition |
         | --- | --- |
-        | Office 365 Connector | It lets you create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You can send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. |
-        | Outgoing webhook | It acts as a bot and search for messages in channels using @mention. It sends notifications to external web services and responds with rich messages, which include cards and images. <br>**See also**: Webhook; Incoming webhook |
-        | Outlook channel | A feature of Teams messaging extension app that lets the users interact with it from Microsoft Outlook. |
-        | [One-on-one chat](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | A type of chat between a Teams personal bot app and a single user. <br>**See also**: Group chat; Chat bot |
+        | [Office 365 Connector](../webhooks-and-connectors/how-to/connectors-creating.md) | It lets you create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You can send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. |
+        | [Outgoing webhook](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | It acts as a bot and search for messages in channels using @mention. It sends notifications to external web services and responds with rich messages, which include cards and images. <br>**See also**: [Webhook](#w); [Incoming webhook](#i) |
+        | [Outlook channel](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | A feature of Teams messaging extension app that lets the users interact with it from Microsoft Outlook. |
+        | [One-on-one chat](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | A type of chat between a Teams personal bot app and a single user. <br>**See also**: [Group chat](#g); [Chat bot](#c) |
         |
         </details>
         <br>
