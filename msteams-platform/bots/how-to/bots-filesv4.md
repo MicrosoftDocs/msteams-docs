@@ -194,7 +194,7 @@ The following table describes the content properties of the attachment:
 
 Fetch inline images that are part of the message using the Bot's access token.
 
-  :::image type="content" source="./assets/images/buildbots-revamp/inline-message.png" alt-text="Inline image.":::
+  :::image type="content" source="./assets/images/buildbots-revamp/inline-message.png" alt-text="test inline message.":::
 
 The following code shows an example of fetching inline images from message:
 
