@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams bots invokes Task modules using hero, thumbnail, or Office 365 Connector on Adaptive Cards or Bot Framework cards. You can interact with the bot by sending messages.
+    Microsoft Teams bots invokes task modules using hero, thumbnail, or Office 365 Connector on Adaptive Cards or Bot Framework cards. You can interact with the bot by sending messages.
     
     **Key features of task modules**
     * Enhances user experience by avoiding multiple steps.
