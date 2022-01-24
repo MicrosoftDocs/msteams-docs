@@ -124,15 +124,17 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## Universal actions for search based messaging extensions
+## Universal Actions for search based messaging extensions
 
-Universal actions now bring the enhanced user experience available for adaptive cards to messaging extensions. To enable universal actions for search based messaging extensions, the app should have the [Schema for Universal Actions](/adaptive-cards/authoring-cards/universal-action-model#schema) along with the following requirements:
+The Universal Actions now bring the enhanced user experience available for adaptive cards to messaging extensions. To enable Universal Actions for search based messaging extensions, the app must have the [Schema for Universal Actions](/adaptive-cards/authoring-cards/universal-action-model#schema) along with the following requirements:
 
-1. The app should have a conversation bot defined in their app manifest.
-1. If you already have a conversational bot, the bot should be the same that is used in your messaging extension.
-1. If the card is sent in a group, the users should have group specific permissions to read the card.  Specify `team` and `groupchat` depending on scenarios you plan to support.
+1. The app must have a conversation bot defined in their app manifest.
+1. If you already have a conversational bot, the bot must be the same that is used in your messaging extension.
+1. If the card is sent in a group, the users must have group specific permissions to read the card.  Specify `team` and `groupchat` depending on scenarios you plan to support.
 
 **Example**
+
+The following is an example of a json schema with `team` and `groupchat`values:
 
 ```json
 {
@@ -159,11 +161,13 @@ Universal actions now bring the enhanced user experience available for adaptive 
     ]
 }
 ```
-### Automatic Refresh for Adaptive Cards in search based MEs
+### Automatic refresh for Adaptive Cards in search based MEs
 
-You can automatically update adaptive cards in messaging extensions to ensure users always see up to date data. To allow an Adaptive Card to automatically refresh, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property.
+Enable automatic refresh in Adaptive Cards in messaging extensions to ensure users always see up to date data. To enable, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property.
 
 **Example**
+
+The following is an example of `userIds` array in the `refresh` property:
 
 ```json
     {
@@ -194,7 +198,8 @@ You can automatically update adaptive cards in messaging extensions to ensure us
         ]
     }
 ```
-Automatic refresh is enabled for all users in the group chat/channel with size <=60. For conversations (group chat/channel) of size more than 60, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
+> [!NOTE]
+> Automatic refresh is enabled for all users in the group chat or channel with more than or equal to 60 users. For conversations (group chat or channel) with more than 60 users, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
  
 ```json
     {
@@ -222,24 +227,24 @@ Automatic refresh is enabled for all users in the group chat/channel with size <
     }
 ```
 
-### Just-in Time (JIT) Install
+### Just-In Time (JIT) install
 
-When a user selects a card and sends it in a group chat/channel, a **Just-in Time (JIT)** Installation prompt appears. After the users selects send, the card goes into a sending state and performs installation in the background for all the users in the group.
+When a user selects a card and sends it in a group chat or channel, a **Just-In Time (JIT)** installation prompt appears. After the user selects the **send** option, the bot installs the card in the background for all the users in the group.
 
->[!NOTE]
-> For apps that don’t have `action. Execute` and `refresh` schema defined, the install prompt will not be shown to the users.
+> [!NOTE]
+> For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt is not shown to the users.
 
-The following example shows a dynamic scenario for JIT install:
+The following is an example of a dynamic scenario for JIT install:
 
-1. The users selects a card.
+1. The users selects a card in a group chat or channel.
 
     :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-post-card.jpg" alt-text="user selects card":::
 
-1. The card is posted in to the compose box and a JIT Installation prompt is shown to the user.
+1. The card is posted in to the compose box and a JIT installation prompt appears.
 
     :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-install-prompt.jpg" alt-text="app shows installation prompt":::
 
-1. After the user selects send, the bot installs the card in the background and sends it to the users after the installation in complete.
+1. After the user selects send, the bot installs the card in the background for all the users in the group.
 
     :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-sent.jpg" alt-text="card is sent to users":::
 
