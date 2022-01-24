@@ -40,7 +40,7 @@ Calls in Teams can be purely audio or audio and video. Instead of audio or video
 
 Calls are either peer-to-peer between a person and your bot, or multiparty between your bot and two or more people in a group call.
 
-      :::image type="content" source="./assets/images/buildbots-revamp/call-types.png" alt-text="Calling types.":::
+      :::image type="content" source="~/assets/images/buildbots-revamp/call-types.png" alt-text="Calling types.":::
 
 Following are the different call types and permissions required for the call:
 
@@ -58,7 +58,7 @@ There are two types of signals, incoming call and in-call. Following are the dif
 
 * To receive an incoming call, you enter an endpoint in your bot settings. This endpoint receives a notification when an incoming call is initiated. You can answer the call, reject it, or redirect it to someone else.
 
-      :::image type="content" source="./assets/images/buildbots-revamp/call-transfer.png" alt-text="call transfer.":::
+      :::image type="content" source="~/assets/images/buildbots-revamp/call-transfer.png" alt-text="call transfer.":::
 
 * When a bot is in a call, there are APIs for muting and unmuting the bot and to start or stop sharing video or desktop content with other participants.
 * The bot can also access the list of participants, invite new participants, and mute them.
