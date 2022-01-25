@@ -49,9 +49,9 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
 
-Let's explore Teams Toolkit Features!
+Let's explore Teams Toolkit features!
 
-| Teams Toolkit Features | Includes | What can you do |
+| Teams Toolkit Features | Includes... | What you can do |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
 | &nbsp; | Microsoft 365 account | Log in to your Microsoft 365 account with a valid E5 subscription for building your app. |
@@ -85,7 +85,7 @@ Let's explore Teams Toolkit Features!
 
 Microsoft Teams Framework is a library encapsulating common functionality and integration patterns (like simplified access to Microsoft Identity) for developers building apps for Microsoft Teams.
 
-## TeamsFx Collaboration
+### TeamsFx Collaboration
 
 It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
