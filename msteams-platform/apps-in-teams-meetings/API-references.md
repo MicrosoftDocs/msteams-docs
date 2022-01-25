@@ -485,7 +485,7 @@ The following code provides an example of meeting end event payload:
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
