@@ -146,8 +146,8 @@ items:
 
        ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
 
-    > [!NOTE]
-    >  You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
+       > [!NOTE]
+       >  You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
 
     1. The new message received is displayed in the meeting chat.
 
