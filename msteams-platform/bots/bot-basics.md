@@ -28,29 +28,9 @@ In the Teams activity handler class, there are two primary Teams activity handle
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There is no base implementation for these handlers, therefore, you must add the logic that you want in your override.
 
-# [JavaScript](#tab/javascript)
-
-Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
-
-In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
-
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()` you ensure that the next handler runs.
-
-# [Python](#tab/python)
-
-Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `on_conversation_update_activity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
-
-In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
-
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There is no base implementation for these handlers, therefore, you must add the logic that you want in your override.
-
----
-
 The code snippets for Teams activity handlers:
 
 `OnTeamsChannelCreatedAsync`
-
-# [C#](#tab/dotnet)
 
 ```csharp
 
@@ -60,21 +40,7 @@ protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, Team
         }
 ```
 
-# [JavaScript](#tab/javascript)
-
-```javascript
-
-onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
-       // code for handling
-        await next()
-    });
-```
-
----
-
 `OnTeamsChannelDeletedAsync`
-
-# [C#](#tab/dotnet)
 
 ```csharp
 
@@ -84,21 +50,7 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
         }
 ```
 
-# [JavaScript](#tab/javascript)
-
-```javascript
-
-onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
-       // code for handling
-       await next()
-    });
-```
-
----
-
 `OnTeamsChannelRenamedAsync`
-
-# [C#](#tab/dotnet)
 
 ```csharp
 
@@ -108,21 +60,7 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 		}
 ```
 
-# [JavaScript](#tab/javascript)
-
-```javascript
-
-onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
-       // code for handling
-       await next()
-    });
-```
-
----
-
 `OnTeamsTeamRenamedAsync`
-
-# [C#](#tab/dotnet)
 
 ```csharp
 
@@ -132,21 +70,7 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 		}
 ```
 
-# [JavaScript](#tab/javascript)
-
-```javascript
-
-onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
-       // code for handling
-       await next()
-    });
-```
-
----
-
 `OnTeamsMembersAddedAsync`
-
-# [C#](#tab/dotnet)
 
 ```csharp
 
@@ -156,21 +80,7 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 		}
 ```
 
-# [JavaScript](#tab/javascript)
-
-```javascript
-
-onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
-       // code for handling
-	   await next();
-    });
-```
-
----
-
 `OnTeamsMembersRemovedAsync`
-
-# [C#](#tab/dotnet)
 
 ```csharp
 
@@ -182,6 +92,66 @@ protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> te
 
 # [JavaScript](#tab/javascript)
 
+Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
+
+In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
+
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()` you ensure that the next handler runs.
+
+The code snippets for Teams activity handlers:
+
+```javascript
+
+`OnTeamsChannelCreatedAsync`
+
+onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+        await next()
+    });
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```javascript
+
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```javascript
+
+onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```javascript
+
+onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsMembersAddedAsync`
+
+```javascript
+
+onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
+       // code for handling
+	   await next();
+    });
+```
+
+`OnTeamsMembersRemovedAsync`
+
 ```javascript
 
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
@@ -189,6 +159,14 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 	   await next();
     });
 ```
+
+# [Python](#tab/python)
+
+Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `on_conversation_update_activity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
+
+In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
+
+To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There is no base implementation for these handlers, therefore, you must add the logic that you want in your override.
 
 ---
 
