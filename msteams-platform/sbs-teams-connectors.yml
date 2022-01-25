@@ -21,7 +21,7 @@ items:
       * ConnectorController.cs - Setup and Save actions.
       * TaskController.cs - Create and Update actions.
 
-    **Key features of Meeting Token Generator**
+    **Key features of Meeting Teams Connectors**
 
       * Simulates a real task management system.
       * Allows users to create and view tasks.
