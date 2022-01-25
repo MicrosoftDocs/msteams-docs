@@ -17,7 +17,7 @@ As a developer, you can [create a Software as a Service (SaaS) offer](/azure/mar
 
 ## Create a preview offer ID
 
-Create a Preview offer ID for the SaaS offer using the **AppSource preview** link in the Partner Center. Ensure that the SaaS offer is in the [Preview creation phase](/azure/marketplace/review-publish-offer).
+Select the **AppSource preview** link to find the Preview offer ID in the browser address bar with *publisherId.offerId-preview* format. Ensure that the SaaS offer is in the [Preview creation phase](/azure/marketplace/review-publish-offer).
 
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.
@@ -27,12 +27,12 @@ Create a Preview offer ID for the SaaS offer using the **AppSource preview** lin
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id":::
 
->[!NOTE] 
-> Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **westleysystemsinc1614967134606.pig_latin-preview**.
+> [!NOTE] 
+> Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
 
 ## Configure your app with the preview offer ID
 
->[!NOTE]
+> [!NOTE]
 > Sign in to the **Developer Portal** using a developer account with **preview audience** for users to see your subscription plans in the Teams store.
 
 After you've generated your Preview offer ID, link the offer ID to your Teams app.
