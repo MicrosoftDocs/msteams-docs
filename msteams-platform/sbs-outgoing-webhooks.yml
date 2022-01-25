@@ -89,11 +89,17 @@ items:
       ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
 
         * A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It is a security token used to authenticate calls between Teams and the designated outside service.
-         The security token is used in AuthProvider.cs file.
+         The security token is used in **AuthProvider.cs** file.
 
           ![token](~/assets/images/sbs-outgoing-webhooks/security-token.png)
        >[!NOTE]
        > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
+
+           ```bash
+     ngrok http -host-header=rewrite 3978
+     ```
+         
+
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -112,7 +118,7 @@ items:
 
           ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
 
-       1. Update the HMAC in AuthProvider.cs file.  
+       1. Update the "contoso" to "M365x712764" and HMAC **AuthProvider.cs** file.  
 
           ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
       
@@ -128,10 +134,7 @@ items:
 
        1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
-     ```bash
-     ngrok http -host-header=rewrite 3978
-     ```
-         
+              
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
