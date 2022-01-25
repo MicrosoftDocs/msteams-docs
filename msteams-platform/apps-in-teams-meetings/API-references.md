@@ -14,7 +14,7 @@ The meeting extensibility provide APIs to enhance meeting experience. You can pe
 
 * Build apps or integrate existing apps within meeting lifecycle.
 * Use APIs to make your app aware of meeting.
-* Select required APIs to improve the meeting experience.
+* Select required APIs to improve the meeting experience. 
 
 The following table provides a list of APIs available across the Microsoft Teams Client (MSTC) and Microsoft Bot Framework (MSBF) SDKs:
 
