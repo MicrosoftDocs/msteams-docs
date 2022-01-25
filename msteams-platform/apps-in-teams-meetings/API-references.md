@@ -298,7 +298,7 @@ The JSON response body for Meeting Details API is as follows:
 
 ## CART API
 
-The CART API exposes a POST endpoint for Microsoft Teams CART captions – human-typed closed captions. Text content sent to this endpoint will be displayed to end users in a Microsoft Teams meeting when they have captions enabled. 
+The CART API exposes a POST endpoint for Microsoft Teams CART captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
 
 ### CART URL
 
