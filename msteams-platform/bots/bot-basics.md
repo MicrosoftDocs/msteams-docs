@@ -100,9 +100,9 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 The code snippets for Teams activity handlers:
 
-```javascript
-
 `OnTeamsChannelCreatedAsync`
+
+```javascript
 
 onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
        // code for handling
