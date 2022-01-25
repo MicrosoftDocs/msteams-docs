@@ -122,7 +122,7 @@ items:
 
           ![Trust Certificate](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
 
-          A webpage opens as shown in the below image.
+          A webpage opens as shown in the below
 
           ![App ready](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png) 
 
@@ -131,16 +131,7 @@ items:
      ```bash
      ngrok http -host-header=rewrite 3978
      ```
-    # [Command line](#tab/cli)
-
-    Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
-
-    ```bash
-    dotnet run
-    ```
-   
-    ![Dotnet]
-            
+         
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
