@@ -53,19 +53,19 @@ Let's explore Teams Toolkit Features!
 
 | Teams Toolkit Features | Includes | What can you do |
 | --- | --- | --- |
-| **Accounts** | To build and deploy a Teams app, you need: | &nbsp; |
+| **Accounts** | &nbsp; | &nbsp; |
 | &nbsp; | - Microsoft 365 account | You need at least one Microsoft 365 account with a valid E5 subscription |
 | &nbsp; | - Azure account | If you want to host your app on Azure, you need an Azure account. Teams Toolkit supports integrated experience to sign in for provisioning and deployment of Azure resources. |
-| **Environment** | Teams Toolkit helps you to create and manage multiple environments. You can create as many environments as you need. You can provision, and deploy artifacts to the target environment for Teams App. <br> Teams Toolkit provides two default environments: | &nbsp; |
-| &nbsp; | local | The local environment represents the local machine environment configurations. |
-| &nbsp; | dev | The dev environment represents the remote or cloud environment configurations. |
-| **Development** | Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler. | &nbsp; |
+| **Environment** | Use, create, and manage multiple environments. You can create as many environments as you need. <br> Teams Toolkit provides two default environments: | &nbsp; |
+| &nbsp; | local | Deploy your app in the local environment with local machine environment configurations. |
+| &nbsp; | dev | Deploy your app in the local environment in the dev environment with remote or cloud environment configurations. |
+| **Development** | &nbsp; | &nbsp; |
 | &nbsp; | Create a new Teams app | It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**. |
 | &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. Teams Toolkit downloads the app code from GitHub, and you can build the sample app. |
 | &nbsp; | Add capabilities | Add other required Teams capabilities to Teams app during development process. |
 | &nbsp; | Add cloud resources | Add optional cloud resources that suit your app development. |
 | &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
-| **Deployment** | During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users. | &nbsp; |
+| **Deployment** | &nbsp; | &nbsp; |
 | &nbsp; | Provision in the cloud | Provision Azure resources that your application needs for code approach. Teams Toolkit integrates with Azure resource manager to let you provision. |
 | &nbsp; | Zip Teams metadata package | <!-- Add content--> |
 | &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
