@@ -163,7 +163,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
             $creds = Get-Credential
 
-            # Connecting to AAD PowerShell
+            # Connecting to Azure AD PowerShell
             Connect-AzureAD -Credential $creds | Out-Null
 
             # Connect to Microsoft Teams PowerShell

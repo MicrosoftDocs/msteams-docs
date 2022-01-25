@@ -19,7 +19,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again. 
+* You initiate an authentication flow from Azure Active Directory or other identity provider, and you do not require the user to enter their username again. 
 
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -39,12 +39,12 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within this tab. This must be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
-* {loginHint}: A value suitable as a login hint for AAD. This is usually the login name of the current user in their home tenant.
+* {loginHint}: A value suitable as a login hint for Azure AD. This is usually the login name of the current user in their home tenant.
 * {userPrincipalName}: The User Principal Name of the current user in the current tenant.
-* {userObjectId}: The AAD object ID of the current user in the current tenant.
+* {userObjectId}: The Azure AD object ID of the current user in the current tenant.
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 group in which the tab resides.
-* {tid}: The AAD tenant ID of the current user.
+* {tid}: The Azure AD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId(en-us).
 
 > [!NOTE]
