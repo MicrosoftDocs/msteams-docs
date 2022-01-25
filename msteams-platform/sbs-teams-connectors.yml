@@ -221,13 +221,13 @@ items:
 
        ![Navigation path](~/assets/images/sbs-connector/webnavigation.png) 
 
-    7. Open it in Visual studio.
+    7. Open in Visual studio.
 
     8. Replace the `configuration.appSettings.Base_Uri` variable to the **ngrok https forwarding url**.
        
        ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
 
-    9. Press F5 to run the project.
+    9. Press **F5** to run the project.
     10. Sideload your app package.
 
         ![Sideloading](~/assets/images/sbs-connector/apppackage.png) 
