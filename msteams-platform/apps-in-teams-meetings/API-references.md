@@ -5,51 +5,53 @@ description: Identify the meeting apps API references with examples and Code sam
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: teams apps meetings user participant role api usercontext notification signal query 
+keywords: teams apps meetings user participant role api user context notification signal query 
 ---
 
 # Meeting apps API references
 
-The meeting extensibilities provide APIs to transform the meeting experience:
+The meeting extensibility provide APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
 
 * Build apps or integrate existing apps within meeting lifecycle.
-* Use the APIs to make your app aware of the meeting.
-* Select the APIs you want to use to enhance the meeting experience.
+* Use APIs to make your app aware of meeting.
+* Select required APIs to improve the meeting experience.
 
-The following table provides a list of APIs:
+The following table provides a list of APIs available across the Microsoft Teams Client (MSTC) and Microsoft Bot Framework (MSBF) SDKs:
 
-|API|Description|Request|Source|
-|---|---|----|---|
-|**GetUserContext**| Enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
-|**GetParticipant**| Enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | Enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Meeting Details** | Enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|Method| Description| Source|
+|---|---|----|
+|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Teams tab.| MSTC SDK|
+|[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. |MSBF SDK|
+|[**Send Notification signal**](#send-notification-signal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |MSBF SDK|
+|[**Get Meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |Bot SDK |
+|[**Get Real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| Bot SDK|
 
-## GetUserContext API
+## Get user context API
 
-To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
+To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
-## GetParticipant API
+## Get participant API
 
 > [!NOTE]
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
-> * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
-
-The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
+> * Currently, limitation to distribution lists or roster sizes are less than 350 participants for the `GetParticipant` API.
 
 ### Query parameters
 
-The `GetParticipant` API includes the following query parameters:
+> [!TIP]
+> Get participant IDs and tenant IDs from the Tab SSO.
+
+The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. | 
+|**participantId**| String | Yes | The participant ID is the user ID, available in Tab SSO, Bot Invoke, and Teams Client SDK. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users, available in Tab SSO, Bot Invoke, and Teams Client SDK.|
 
 ### Example
 
-The `GetParticipant` API includes the following examples:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -95,7 +97,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-The JSON response body for `GetParticipant` API is:
+The following JSON response body for `GetParticipant` API is:
 
 ```json
 {
@@ -123,28 +125,26 @@ The JSON response body for `GetParticipant` API is:
 
 ### Response codes
 
-The `GetParticipant` API returns the following response codes:
+The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
-| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the most common error response 403. If the tenant admin disables or blocks the app during live site migration, 403 error response is triggered. |
+| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the tenant admin disables or blocks the app during live site migration, it triggers the error response 403. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
-| **404** | The meeting has either expired or participant cannot be found.|
+| **404** | The meeting has either expired or participants are not available.|
 
-## NotificationSignal API
+## Send notification signal API
 
-All users in a meeting receive the notifications sent through the `NotificationSignal` API.
+All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send signal based on user action, an in-meeting dialog box. The API includes query parameter, examples, and response codes.
 
 > [!NOTE]
 > * When an in-meeting dialog box is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications is not supported.
 
-`NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box. The API includes query parameter, examples, and response codes.
-
 ### Query parameter
 
-The `NotificationSignal` API includes the following query parameter:
+The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -155,11 +155,11 @@ The `NotificationSignal` API includes the following query parameter:
 The `Bot ID` is declared in the manifest and the bot receives a result object.
 
 > [!NOTE]
-> * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
-> * The `externalResourceUrl` width and height parameters must be in pixels. To ensure the dimensions are within the allowed limits, see [design guidelines](design/designing-apps-in-meetings.md).
-> * The URL is the page loaded as an `<iframe>` in the in-meeting dialog box. The domain must be in the app's `validDomains` array in your app manifest.
+> * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example.
+> * The `externalResourceUrl` width and height parameters must be in pixels. For more information, see [design guidelines](design/designing-apps-in-meetings.md).
+> * The URL is the page, which loads as `<iframe>` in the in-meeting dialog box. The domain must be in the apps' `validDomains` array in your app manifest.
 
-The `NotificationSignal` API includes the following examples:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -206,7 +206,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ### Response codes
 
-The `NotificationSignal` API includes the following response codes:
+The following table includes the response codes:
 
 |Response code|Description|
 |---|---|
@@ -215,20 +215,18 @@ The `NotificationSignal` API includes the following response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Meeting Details API
+## Get meeting details API
 
 > [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+> Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically.
-The API is available through Bot Services.
+The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
 ### Prerequisite
 
-> [!NOTE] 
-> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
+To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
-To use the Meeting Details API, you must obtain RSC permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
+Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
 ```json
 "webApplicationInfo": {
@@ -239,9 +237,25 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     ]
 }
  ```
+ 
+ Use the following example to configure your app manifest's `webApplicationInfo` property for any channel meeting:
+
+```json
+"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "ChannelMeeting.ReadBasic.Group"
+    ]
+}
+ ```
+
+> [!NOTE]
+> The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+ 
 ### Query parameter
 
-The Meeting Details API includes the following query parameter:
+The following table lists the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -249,7 +263,7 @@ The Meeting Details API includes the following query parameter:
 
 ### Example
 
-The Meeting Details API includes the following examples:
+The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -295,16 +309,20 @@ The JSON response body for Meeting Details API is as follows:
     }
 } 
 ```
-## Real-time Teams meeting events
+Run the following code to determine the value of msGraphResourceId:
 
-The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
+```bash
+MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
+```
+> ![TIP]
+> The value of msGraphResourceId is same as Meeting id.
 
-Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
+## Get real-time Teams meeting events API
+
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time. The possible values of meeting type are **Private Meeting** and **Channel Meeting**.
 
 ### Prerequisite
-
-> [!NOTE] 
-> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
 
@@ -317,6 +335,33 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     ]
 }
  ```
+
+### Example of getting `MeetingStartEndEventvalue`
+
+The bot receives event through the `OnEventActivityAsync` handler. To deserialize the JSON payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+
+> [!NOTE]
+> * Get meeting ID from `turnContext.ChannelData`.
+> * Do not use conversation ID as meeting ID.
+> * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
+
+The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
+
+Meeting Start Event
+```csharp
+protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
+
+Meeting End Event
+```csharp
+protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
 
 ### Example of meeting start event payload
 
@@ -422,38 +467,9 @@ The following code provides an example of meeting end event payload:
 }
 ```
 
-### Example of getting metadata of a meeting
-
-Your bot receives the event through the `OnEventActivityAsync` handler.
-
-To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
-     
-> [!NOTE]      
-> * Get meeting ID from `turnContext.ChannelData`.    
-> * Do not use conversation ID as meeting ID.     
-> * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
-      
-The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
-
-Meeting Start Event
-```csharp
-protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
-{
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
-```
-
-Meeting End Event
-```csharp
-protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
-{
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
-```
-
 ## Code sample
 
-|Sample name | Description | C# | Node.js | 
+|Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
