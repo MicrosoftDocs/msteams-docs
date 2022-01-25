@@ -80,7 +80,7 @@ The Developer Portal also includes tools to help you build some key features of 
 
 * **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
-* **Microsoft identity platform management**: Register your apps with Azure Active Directory (Azure AD) to help users sign in and provide access to APIs.
+* **Microsoft identity platform management**: Register your apps with Azure Active Directory to help users sign in and provide access to APIs.
 
 ## See also
 
