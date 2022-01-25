@@ -418,7 +418,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/Teams-task-module/zipfile.png) 
+       ![Zip file](~/assets/images/Teams-task-module/zip-file.png) 
 
     1. Go to **Microsoft Teams**.
 
@@ -428,25 +428,25 @@ items:
    
     1. In the lower left corner, select **Manage your apps**.
 
-       ![Manage apps](~/assets/images/Teams-task-module/manageapps.png)
+       ![Manage apps](~/assets/images/Teams-task-module/manage-apps.png)
    
     1. Select **Upload an app to your org's app catalog**. 
 
-       ![Upload custom app](~/assets/images/Teams-task-module/uploadapp.png)
+       ![Upload custom app](~/assets/images/Teams-task-module/upload-app.png)
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       ![Select zip file](~/assets/images/Teams-task-module/selectzip.png)
+       ![Select zip file](~/assets/images/Teams-task-module/select-zip.png)
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/Teams-task-module/addapp.png)
+       ![Add the app](~/assets/images/Teams-task-module/add-app.png)
 
        The app opens in a chat.
    
     1. Enter any text. 
 
-       ![Chat](~/assets/images/Teams-task-module/chatready.png)
+       ![Chat](~/assets/images/Teams-task-module/chat-ready.png)
     
        The app displays **Task Module Invocation from Hero Card** and **Task Module Invocation from Adaptive Card**.         
 
@@ -457,21 +457,21 @@ items:
 
     1. Select **Adaptive Card** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Adaptive card](~/assets/images/Teams-task-module/adaptivecard.png)
+       ![Adaptive card](~/assets/images/Teams-task-module/adaptive-card.png)
 
     1. Enter any text.
 
     1. Select **Submit**.
 
-       ![Adaptive card text](~/assets/images/Teams-task-module/adaptivecardtext.png)
+       ![Adaptive card text](~/assets/images/Teams-task-module/adaptive-card-text.png)
 
        **Adaptive Card** sends an acknowledgement message.
 
-       ![Adaptive card submit](~/assets/images/Teams-task-module/adaptivecardsubmit.png)
+       ![Adaptive card submit](~/assets/images/Teams-task-module/adaptive-card-submit.png)
 
     1. Select **Custom Form** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       ![Custom form](~/assets/images/Teams-task-module/customform.png)
+       ![Custom form](~/assets/images/Teams-task-module/custom-form.png)
 
     1. Enter the required information:
 
@@ -483,15 +483,15 @@ items:
 
     1. Select **Sign up**.
 
-       ![Custom Form text](~/assets/images/Teams-task-module/customtext.png)
+       ![Custom Form text](~/assets/images/Teams-task-module/custom-text.png)
 
        **Custom Form** sends an acknowledgement message.
 
-       ![Sign up](~/assets/images/Teams-task-module/customonsignup.png)
+       ![Sign up](~/assets/images/Teams-task-module/custom-on-sign-up.png)
 
        The following information appears in chat:
 
-       ![Chat](~/assets/images/Teams-task-module/adaptivecustomchat.png)
+       ![Chat](~/assets/images/Teams-task-module/adaptive-custom-chat.png)
 
     1. Select **You Tube** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
@@ -499,11 +499,11 @@ items:
 
     1. Select **Play**.
 
-       ![YouTube select](~/assets/images/Teams-task-module/youtubeselect.png)
+       ![YouTube select](~/assets/images/Teams-task-module/youtube-select.png)
 
       The video plays.
 
-       ![YouTube play](~/assets/images/Teams-task-module/youtubeplay.png)
+       ![YouTube play](~/assets/images/Teams-task-module/youtube-play.png)
 
 - title: Complete challenge
   durationInMinutes: 1
