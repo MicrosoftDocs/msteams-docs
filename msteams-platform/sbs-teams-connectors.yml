@@ -30,7 +30,7 @@ items:
     
     This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
        
-       [Place holder for image]
+    ![output image](~/assets/images/sbs-connector/mobile.png)
        
 
 - title: Prerequisites
@@ -141,31 +141,31 @@ items:
 
     1. Select **Set up a connector**.
 
-    1. Search **Teams ToDo Notification connector** in search bar in left panel and select **Configure**.
+    1. In the left panel, search **Teams ToDo Notification connector** in search bar and select **Configure**.
 
        ![configure notification](~/assets/images/sbs-connector/configure.png)
 
-    1. Select either **Created** or **Updated** on the registration page and select Save.
+    1. Select either **Created** or **Updated** on the registration page and select **Save**.
 
        ![select](~/assets/images/sbs-connector/create.png)
 
-    1. Once the connector is configured, you will get a notification in channel with link to the Task Manager application.
+      After configuration, a notification in channel with link to the Task Manager application is displayed..
 
-       ![notification message](~/assets/images/sbs-connector/notification.png)
+      ![notification message](~/assets/images/sbs-connector/notification.png)
 
     1. Go to **Task Manager Portal**.
 
        ![Task manager portal](~/assets/images/sbs-connector/taskportal.png)
 
-    1. select **Create New**.
+    1. Select **Create New**.
        
        ![create new task](~/assets/images/sbs-connector/tasks.png)
        
-    1. Enter the task details.
+    1. Enter the new task details.
 
        ![Task details](~/assets/images/sbs-connector/details.png)
 
-    1. Select Save. 
+    1. Select **Save**. 
       
        The MessageCard appears in registered Teams channel.
 
@@ -239,7 +239,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       [Place holder for image]
+    ![Complete output](~/assets/images/sbs-connector/finaloutput.png)
 
 - content: |
     You've completed the tutorial to get started with a **Microsoft Teams Connectors**!
