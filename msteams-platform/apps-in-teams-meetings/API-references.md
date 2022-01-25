@@ -45,7 +45,7 @@ The `GetParticipant` API includes the following query parameters:
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
 |**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. | 
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
 
@@ -296,18 +296,17 @@ The JSON response body for Meeting Details API is as follows:
 } 
 ```
 
-## CART API 
+## CART API
 
-The communication access real-time translation (CART) API enables your app to expose a POST endpoint for Microsoft Teams CART captions.
-When end users enable captions in a Microsoft Teams meeting, the CART API displays the text content sent to the endpoint.
+The CART API exposes a POST endpoint for Microsoft Teams CART captions – human-typed closed captions. Text content sent to this endpoint will be displayed to end users in a Microsoft Teams meeting when they have captions enabled. 
 
-### Base URL
+### CART URL
 
-You can get the Base URL for the POST endpoint from the **Meeting options** page in a Microsoft Teams meeting. For more information, see [CART captions in a Microsoft Teams meeting](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). You don't need to modify the base URL to use CART captions.
+You can get the CART URL for the POST endpoint from the **Meeting options** page in a Microsoft Teams meeting. For more information, see [CART captions in a Microsoft Teams meeting](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). You don't need to modify the CART URL to use CART captions.
 
 #### Query Parameter
 
-The Base URL includes the following query parameters:
+The CART URL includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|----|
