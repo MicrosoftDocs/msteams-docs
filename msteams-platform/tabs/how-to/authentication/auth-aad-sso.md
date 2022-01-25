@@ -157,6 +157,68 @@ After you receive access token in success callback, decode access token to view 
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
 
+## Code snippets
+
+The following code provides an example of on-behalf-of flow to fetch access token using MSAL library :
+
+### [C#](#tab/dotnet)
+
+```csharp
+
+IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
+                                                .WithClientSecret(<"Client secret">)
+                                                .WithAuthority($"https://login.microsoftonline.com/<"Tenant id">")
+                                                .Build();
+ 
+            try
+            {
+                var idToken = <"Client side token">;
+                UserAssertion assert = new UserAssertion(idToken);
+                List<string> scopes = new List<string>();
+                scopes.Add("https://graph.microsoft.com/User.Read");
+                var responseToken = await app.AcquireTokenOnBehalfOf(scopes, assert).ExecuteAsync();
+                return responseToken.AccessToken.ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+```
+
+### [Node.js](#tab/nodejs)
+
+```javascript
+
+// Exchange cliend side token with server token
+  app.post('/getProfileOnBehalfOf', function(req, res) {
+        var tid = < "Tenand id" >
+    var token = < "Client side token" >
+    var scopes = ["https://graph.microsoft.com/User.Read"];
+
+        // Creating MSAL client
+        const msalClient = new msal.ConfidentialClientApplication({
+            auth: {
+                clientId: < "Client ID" >,
+                clientSecret: < "Client Secret" >
+      }
+        });
+
+        var oboPromise = new Promise((resolve, reject) => {
+            msalClient.acquireTokenOnBehalfOf({
+                authority: `https://login.microsoftonline.com/${tid}`,
+                oboAssertion: token,
+                scopes: scopes,
+                skipCache: true
+            }).then(result => {
+                console.log("Token is: " + result.accessToken);
+            }).catch(error => {
+                reject({ "error": error.errorCode });
+            });
+        });
+```
+---
+
 ## Code sample
 
 |**Sample name**|**Description**|**C#**|**Node.js**|
@@ -169,7 +231,7 @@ After you receive access token in success callback, decode access token to view 
 
 Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
 
-#### Tenant Admin Consent
+### Tenant Admin Consent
 
 A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 
