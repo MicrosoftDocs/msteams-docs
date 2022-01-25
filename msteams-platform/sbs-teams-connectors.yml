@@ -102,10 +102,10 @@ items:
 
         ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
 
-- title: To test connector in Microsoft Teams
+- title: Test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
-    **To test the connector in Microsoft Teams**
+    To test the connector in Microsoft Teams:
 
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -139,11 +139,13 @@ items:
 
        ![select channel](~/assets/images/sbs-connector/channel.png)
 
-    1. Configure the **Teams ToDo Notification connector**.
+    1. Select **Set up a connector**.
+
+    1. Search **Teams ToDo Notification connector** in search bar in left panel and select **Configure**.
 
        ![configure notification](~/assets/images/sbs-connector/configure.png)
 
-    1. Select either **Created** or **Updated** on the registration page and select save.
+    1. Select either **Created** or **Updated** on the registration page and select Save.
 
        ![select](~/assets/images/sbs-connector/create.png)
 
@@ -151,7 +153,7 @@ items:
 
        ![notification message](~/assets/images/sbs-connector/notification.png)
 
-    1. Go to Task Manager portal.
+    1. Go to **Task Manager Portal**.
 
        ![Task manager portal](~/assets/images/sbs-connector/taskportal.png)
 
@@ -163,7 +165,9 @@ items:
 
        ![Task details](~/assets/images/sbs-connector/details.png)
 
-    1. Select save. The MessageCard appears in registered Teams channel.
+    1. Select Save. 
+      
+       The MessageCard appears in registered Teams channel.
 
        ![Message](~/assets/images/sbs-connector/messagecard.png)
 
@@ -202,7 +206,7 @@ items:
        * Enter `Valid Domains` as **https Base URL**.
        * Enable the action on connector card by selecting **Yes**.
        * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
-       * Select save. 
+       * Select Save. 
 
          ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
 
