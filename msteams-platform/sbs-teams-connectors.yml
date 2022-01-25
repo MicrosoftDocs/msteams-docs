@@ -151,27 +151,27 @@ items:
 
        After configuration, a notification in channel with link to the Task Manager application is displayed..
 
-      ![notification message](~/assets/images/sbs-connector/notification.png)
+       ![notification message](~/assets/images/sbs-connector/notification.png)
 
-    1. Go to **Task Manager Portal**.
+    12. Go to **Task Manager Portal**.
 
        ![Task manager portal](~/assets/images/sbs-connector/taskportal.png)
 
-    1. Select **Create New**.
+    13. Select **Create New**.
        
        ![create new task](~/assets/images/sbs-connector/tasks.png)
        
-    1. Enter the new task details.
+    14. Enter the new task details.
 
        ![Task details](~/assets/images/sbs-connector/details.png)
 
-    1. Select **Save**. 
+    15. Select **Save**. 
       
        The MessageCard appears in registered Teams channel.
 
        ![Message](~/assets/images/sbs-connector/messagecard.png)
 
-    1. You can try the actionable buttons available on the message card.
+       You can try the actionable buttons available on the message card.
 
        ![Message](~/assets/images/sbs-connector/update.png)
 
