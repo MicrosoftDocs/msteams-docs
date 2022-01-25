@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card.
+    Messaging extension search commands allow users to search external systems and insert the results of the search into a message in the form of a card.
 
     This step-by-step guide helps you to build a search-based messaging extension.
 
