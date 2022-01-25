@@ -210,7 +210,9 @@ items:
 
        ![App registration](~/assets/images/Teams-task-module/appregister.png)
 
-    1. Under **Manage**, select **Expose an API**.
+    1. Select **Manage**.
+    
+    1. In the left panel, select **Expose** **an API**.
 
     1. Select **Set**.
 
