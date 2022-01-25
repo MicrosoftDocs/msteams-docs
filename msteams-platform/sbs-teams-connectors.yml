@@ -208,7 +208,7 @@ items:
        * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
        * Select Save. 
 
-      ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
+       ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
 
        You have successfully registered a new connector. The window appears with registered connector ID.
 
