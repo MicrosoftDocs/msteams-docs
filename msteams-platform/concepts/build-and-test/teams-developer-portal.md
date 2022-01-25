@@ -83,13 +83,6 @@ The app usage for a given day is reflected within 24-48 hours and usage data for
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
 
-You can use the **Analytics** dashboard to learn more about app usage, such as:
-
-* Active users of your apps per monthly, weekly, and daily basis
-* Are these new users, lapsed users, resurrected users, or returned users?
-* Are these users use your app more than five times each month?
-* What is the breakdown of active users by platform/operating system?
-
 The **Filter** button in the analytics page allows you to analyze your app with all the subsequent metrics by the following:
 
 1. Aggregation Type
