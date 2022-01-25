@@ -212,7 +212,7 @@ items:
 
        You have successfully registered a new connector. The window appears with registered connector ID.
 
-         ![output screen](~/assets/images/sbs-connector/output.png) 
+       ![Output screen](~/assets/images/sbs-connector/output.png)
       
        > [!TIP]
        > Save the Connector ID for future reference.
