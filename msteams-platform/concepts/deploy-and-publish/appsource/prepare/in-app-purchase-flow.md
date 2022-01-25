@@ -50,16 +50,20 @@ Following is an example of calling the API from the app:
 </div> 
 </body> 
 <script> 
-    function openPurchaseExperience() { 
-        microsoftTeams.initialize(); 
-        let callbackcalled = false; 
-        microsoftTeams.monetization.openPurchaseExperience((e) => { 
-        console.log("callback is being called"); 
-        callbackcalled = true; 
-        return; 
-    }); 
-console.log("after callback: ",callbackcalled); 
-} 
+   function openPurchaseExperience() {
+      microsoftTeams.initialize();
+      let callbackcalled = false;
+      microsoftTeams.monetization.openPurchaseExperience((e) => {
+      console.log("callback is being called");
+      callbackcalled = true;  
+      if (!!e && typeof e !== "string") {
+            e = JSON.stringify(e);
+            alert(e);
+        }
+        return;
+      });
+      console.log("after callback: ",callbackcalled);
+    } 
 </script> 
 ```
 
