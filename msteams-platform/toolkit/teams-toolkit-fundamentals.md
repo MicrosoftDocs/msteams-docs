@@ -56,7 +56,7 @@ Let's explore Teams Toolkit Features!
 | **Accounts** | &nbsp; | &nbsp; |
 | &nbsp; | - Microsoft 365 account | Log in to your Microsoft 365 account with a valid E5 subscription for building your app. |
 | &nbsp; | - Azure account | Log in to your Azure account for deploying app on Azure. |
-| **Environment** | Use, create, and manage multiple environments. You can create as many environments as you need. <br> Teams Toolkit provides two default environments: | &nbsp; |
+| **Environment** | Use, create, and manage multiple environments. <br> Teams Toolkit provides two default environments: | &nbsp; |
 | &nbsp; | local | Deploy your app in the local environment with local machine environment configurations. |
 | &nbsp; | dev | Deploy your app in the local environment in the dev environment with remote or cloud environment configurations. |
 | **Development** | &nbsp; | &nbsp; |
@@ -75,7 +75,7 @@ Let's explore Teams Toolkit Features!
 | **Help and Feedback** | Find the documentation and resources you need. | &nbsp; |
 | &nbsp; | Quick Start | <!-- Add content--> |
 | &nbsp; | Documentation | <!-- Add content--> |
-| &nbsp; | Report issues on GitHub | You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback. |
+| &nbsp; | Report issues on GitHub | Get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback. |
 |
 
 ## Teams Fx
