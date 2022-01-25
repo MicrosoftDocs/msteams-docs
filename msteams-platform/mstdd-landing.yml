@@ -76,8 +76,7 @@ landingContent:
       links:
         - text: Step-by-step guide for Teams file upload bot
           url: ~/sbs-file-handling-in-bot.yml
-        - text: Step-by-step guide for Tab device permissions
-          url: ~/sbs-tab-device-permission.yml
+       
     - linkListType: tutorial
       links:
         - text: Configure Tab device permissions
