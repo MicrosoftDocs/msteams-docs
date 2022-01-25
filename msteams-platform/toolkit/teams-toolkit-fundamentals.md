@@ -56,7 +56,7 @@ Let's explore Teams Toolkit Features!
 | **Accounts** | &nbsp; | &nbsp; |
 | &nbsp; | - Microsoft 365 account | Log in to your Microsoft 365 account with a valid E5 subscription for building your app. |
 | &nbsp; | - Azure account | Log in to your Azure account for deploying app on Azure. |
-| **Environment** | Use, create, and manage multiple environments. <br> Teams Toolkit provides two default environments: | &nbsp; |
+| **Environment** | Teams Toolkit provides two default environments: | &nbsp; |
 | &nbsp; | local | Deploy your app in the local environment with local machine environment configurations. |
 | &nbsp; | dev | Deploy your app in the local environment in the dev environment with remote or cloud environment configurations. |
 | **Development** | &nbsp; | &nbsp; |
