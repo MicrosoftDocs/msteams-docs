@@ -54,11 +54,11 @@ Let's explore Teams Toolkit Features!
 | Teams Toolkit Features | Includes | What can you do |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
-| &nbsp; | - Microsoft 365 account | Log in to your Microsoft 365 account with a valid E5 subscription for building your app. |
-| &nbsp; | - Azure account | Log in to your Azure account for deploying app on Azure. |
-| **Environment** | Teams Toolkit provides two default environments: | &nbsp; |
-| &nbsp; | local | Deploy your app in the local environment with local machine environment configurations. |
-| &nbsp; | dev | Deploy your app in the local environment in the dev environment with remote or cloud environment configurations. |
+| &nbsp; | Microsoft 365 account | Log in to your Microsoft 365 account with a valid E5 subscription for building your app. |
+| &nbsp; | Azure account | Log in to your Azure account for deploying app on Azure. |
+| **Environment** | &nbsp; | &nbsp; |
+| &nbsp; | local | Deploy your app in the default local environment with local machine environment configurations. |
+| &nbsp; | dev | Deploy your app in the default remote environment in the dev environment with remote or cloud environment configurations. You can create more environments as you need. |
 | **Development** | &nbsp; | &nbsp; |
 | &nbsp; | Create a new Teams app | Use the toolkit wizard to start prepare project scaffolding for app development. |
 | &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
@@ -67,20 +67,25 @@ Let's explore Teams Toolkit Features!
 | &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
 | **Deployment** | &nbsp; | &nbsp; |
 | &nbsp; | Provision in the cloud | Provision Azure resources for your application. Teams Toolkit integrates with ARM to let you provision. |
-| &nbsp; | Zip Teams metadata package | <!-- Add content--> |
+| &nbsp; | Zip Teams metadata package | Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.  |
 | &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
 | &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
-| &nbsp; | Developer Portal for Teams | <!-- Add content--> |
+| &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
 | &nbsp; | CI/CD guide | Automate your development workflow while building Teams application. |
-| **Help and Feedback** | Find the documentation and resources you need. | &nbsp; |
-| &nbsp; | Quick Start | <!-- Add content--> |
-| &nbsp; | Documentation | <!-- Add content--> |
-| &nbsp; | Report issues on GitHub | Get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback. |
+| **Help and Feedback** | &nbsp; | &nbsp; |
+| &nbsp; | Quick Start | View the Teams Toolkit Quick Start help within Visual Studio Code.  |
+| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
+| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 |
 
-## Teams Fx
+> [!TIP]
+> Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 
-### TeamsFx Collaboration
+## TeamsFx
+
+Microsoft Teams Framework is a library encapsulating common functionality and integration patterns (like simplified access to Microsoft Identity) for developers building apps for Microsoft Teams.
+
+## TeamsFx Collaboration
 
 It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
