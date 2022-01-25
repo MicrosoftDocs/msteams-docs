@@ -58,7 +58,7 @@ items:
 - title: Enable developer preview
   durationInMinutes: 1
   content: |
-   To enable developer preview in your desktop Teams client:
+   **To enable developer preview in your desktop Teams client:**
 
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
@@ -105,7 +105,7 @@ items:
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
-    To test the connector in Microsoft Teams:
+    **To test the connector in Microsoft Teams:**
 
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -161,7 +161,11 @@ items:
        
         ![create new task](~/assets/images/sbs-connector/tasks.png)
        
-    14. Enter the new task details.
+    14. Enter the new task details:
+
+        * Title
+        * Description
+        * Assign To
 
         ![Task details](~/assets/images/sbs-connector/details.png)
 
@@ -178,7 +182,7 @@ items:
 - title: Configure your own connector
   durationInMinutes: 1
   content: | 
-    To create your own connector:
+    **To create your own connector:**
 
     1. Navigate to **TeamsToDoAppConnector.sln** in cloned repository.
 
@@ -195,7 +199,7 @@ items:
        ![ngrok path](~/assets/images/sbs-connector/ngrok.png)
 
     3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/Home/Login#!/show/133adfba-f620-475e-a192-19e9f10c476c).
-    4. Select connector.
+    4. Select **New Connector**.
      
        ![Add new connector](~/assets/images/sbs-connector/connector.png)
       
@@ -204,7 +208,7 @@ items:
        * Enter all the basic details such as name, logo, description for the new connector.
        * Enter `Configuration page for your connector` as **https://[BASE_URI]/connector/setup**.
        * Enter `Valid Domains` as **https Base URL**.
-       * Enable the action on connector card by selecting **Yes**.
+       * Select **Yes** to enable the action on connector card.
        * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
        * Select Save. 
 
@@ -221,7 +225,7 @@ items:
 
        ![Navigation path](~/assets/images/sbs-connector/webnavigation.png) 
 
-    7. Open in Visual studio.
+    7. Open in Visual Studio.
 
     8. Replace the `configuration.appSettings.Base_Uri` variable to the **ngrok https forwarding url**.
        
@@ -239,9 +243,9 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![Complete output](~/assets/images/sbs-connector/finaloutput.png)
+    ![Complete output](~/assets/images/sbs-connector/mobile.png)
 
 - content: |
-    You've completed the tutorial to get started with a **Microsoft Teams Connectors**!
+    You've completed the tutorial to get started with **Microsoft Teams Connectors**!
 
 
