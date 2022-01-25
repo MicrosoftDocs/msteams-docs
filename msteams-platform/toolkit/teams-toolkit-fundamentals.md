@@ -61,18 +61,18 @@ Let's explore Teams Toolkit Features!
 | &nbsp; | dev | The dev environment represents the remote or cloud environment configurations. |
 | **Development** | Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler. | &nbsp; |
 | &nbsp; | Create a new Teams app | It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**. |
-| &nbsp; | View samples | Teams Toolkit displays 12 sample apps. You can select any one of them. Teams Toolkit downloads the app code from GitHub, and you can build the sample app. |
-| &nbsp; | Add capabilities | It helps to add other required Teams capabilities to Teams app during development process. |
-| &nbsp; | Add cloud resources | It helps you to optionally add cloud resources that fits your development needs. |
-| &nbsp; | Edit manifest file | It helps you to edit the Teams app integration with Teams client. |
+| &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. Teams Toolkit downloads the app code from GitHub, and you can build the sample app. |
+| &nbsp; | Add capabilities | Add other required Teams capabilities to Teams app during development process. |
+| &nbsp; | Add cloud resources | Add optional cloud resources that suit your app development. |
+| &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
 | **Deployment** | During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users. | &nbsp; |
-| &nbsp; | Provision in the cloud | It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach. |
+| &nbsp; | Provision in the cloud | Provision Azure resources that your application needs for code approach. Teams Toolkit integrates with Azure resource manager to let you provision. |
 | &nbsp; | Zip Teams metadata package | <!-- Add content--> |
-| &nbsp; | Deploy to the cloud | It helps you to deploy the source code to Azure. |
-| &nbsp; | Publish to Teams | After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app. |
+| &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
+| &nbsp; | Publish to Teams | Publish your developed app. Distribute your app to different scope, such as individual, team, organization, or anyone.  |
 | &nbsp; | Developer Portal for Teams | <!-- Add content--> |
-| &nbsp; | CI/CD guide | It helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates for you to get started while setting up CI or CD pipelines. |
-| **Help and Feedback** | In this section, you can find the documentation and resources you need. | &nbsp; |
+| &nbsp; | CI/CD guide | Automate your development workflow while building Teams application. CI/CD guide provides tools and templates for you to get started while setting up CI or CD pipelines. |
+| **Help and Feedback** | Find the documentation and resources you need. | &nbsp; |
 | &nbsp; | Quick Start | <!-- Add content--> |
 | &nbsp; | Documentation | <!-- Add content--> |
 | &nbsp; | Report issues on GitHub | You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback. |
