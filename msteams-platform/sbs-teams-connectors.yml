@@ -123,7 +123,7 @@ items:
 
        ![Manage Apps](~/assets/images/sbs-connector/manageapp.png)
 
-    1. Select Upload a custom app.
+    1. Select **Upload a custom app**.
  
        ![Upload a custom app](~/assets/images/sbs-connector/upload.png)
       
@@ -149,7 +149,7 @@ items:
 
        ![select](~/assets/images/sbs-connector/create.png)
 
-      After configuration, a notification in channel with link to the Task Manager application is displayed..
+       After configuration, a notification in channel with link to the Task Manager application is displayed..
 
       ![notification message](~/assets/images/sbs-connector/notification.png)
 
