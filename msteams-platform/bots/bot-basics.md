@@ -28,6 +28,68 @@ In the Teams activity handler class, there are two primary Teams activity handle
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There is no base implementation for these handlers, therefore, you must add the logic that you want in your override.
 
+The code snippets for Teams activity handlers:
+
+`OnTeamsChannelCreatedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+		{
+			// Code logic here
+		}
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+		{
+			// Code logic here
+		}
+```
+
+`OnTeamsMembersAddedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+		{
+			// Code logic here
+		}
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
+		{
+			// Code logic here
+		}
+```
+
 # [JavaScript](#tab/javascript)
 
 Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
@@ -35,6 +97,68 @@ Bots are created using the Bot Framework. If the bots receive a message activity
 In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()` you ensure that the next handler runs.
+
+The code snippets for Teams activity handlers:
+
+`OnTeamsChannelCreatedAsync`
+
+```javascript
+
+onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+        await next()
+    });
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```javascript
+
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```javascript
+
+onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```javascript
+
+onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsMembersAddedAsync`
+
+```javascript
+
+onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
+       // code for handling
+	   await next();
+    });
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```javascript
+
+onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
+       // code for handling
+	   await next();
+    });
+```
 
 # [Python](#tab/python)
 
