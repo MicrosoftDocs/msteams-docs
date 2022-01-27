@@ -101,14 +101,9 @@ Once you have selected your desired filter(s), you can explore the following ind
 
 ### Usage by time period
 
-This chart shows you the number of active users/tenants that have opened/used this app across different time periods:
+This chart shows you the number of active users/tenants that have opened/used this app across different time periods.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
-
-* **Monthly R30**: The count of distinct active users/tenants who have opened your app in a given RL30 (Rolling 30 day) period.
-* **Monthly R28**: The count of distinct active users/tenants who have opened your app in a given RL28 (Rolling 28 day) period.
-* **Weekly RL7**: The count of distinct active users/tenants who have opened your app in a given RL7 (Rolling 7 day) period.
-* **Daily**: The count of distinct active users/tenants who have opened your app in a given RL1 (Rolling 1 day) period.
 
 ### Usage by platform and OS
 
