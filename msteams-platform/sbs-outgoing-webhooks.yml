@@ -60,24 +60,29 @@ items:
   content: |
     To create Outgoing Webhooks, perform the following steps:
 
-    * Select the appropriate team, and then select Manage team from the (•••) dropdown menu.
+    1. Select the appropriate team, and then select Manage team from the (•••) dropdown menu.
 
       ![Manage](~/assets/images/sbs-outgoing-webhooks/manage-team.png)
 
-    * Choose the Apps tab from the navigation bar.
+    1. Choose the Apps tab from the navigation bar.
 
       ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
 
-    * From the window's lower-right corner, select Create outgoing webhooks.
+    1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+        ```bash
+        ngrok http -host-header=localhost 3978
+        ```
+
+    1. From the window's lower-right corner, select Create outgoing webhooks.
 
       ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
-    * Type the following details in the **Create an Outgoing Webhooks** page:
+
+    1. Enter the following details:
      
         * Name - The webhook title that would be used in @mention tab.
 
-        * Callback URL - The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams.
-
-        * To use the api/Sample or api/authenticatedSample, do the following:
+        * Callback URL - The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams. To use the api/Sample or api/authenticatedSample, do the following:
 
             * For api/sample, Copy-and-Paste ngrok URL and append it with /api/sample.
 
@@ -87,24 +92,15 @@ items:
 
         * Profile Picture (optional) an app icon for your webhook.
 
-        * Select **Create**. The Outgoing Webhook is added to the current team's channel:
+    1. Select **Create**. The Outgoing Webhook is added to the current team's channel:
 
       ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
 
-        * A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It is a security token used to authenticate calls between Teams and the designated outside service.
-         The security token is used in **AuthProvider.cs** file.
+     A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. You can use the security token to authenticate calls between Teams and any designated outside service. You can use the security token in **AuthProvider.cs** file.
 
           ![token](~/assets/images/sbs-outgoing-webhooks/security-token.png)
        >[!NOTE]
        > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
-
-       Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-        ```bash
-        ngrok http -host-header=localhost 3978
-        ```
-         
-
 
 - title: Build and run the service
   durationInMinutes: 1
