@@ -26,9 +26,18 @@ For Teams app development, similar to Teams Toolkit for Visual Studio, you can u
 
 ## User journey of Teams Toolkit
 
-Teams Toolkit provides features of Teams app development to debug, deploy, and publish. It automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
+Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
 
 ![Teams Toolkit User Journey](./images/teams-toolkit-user-journey.png)
+
+The main milestones of this journey are:
+
+1. Start by creating a new project or trying a sample Teams app.
+    1. Add capabilities or edit manifest file as needed.
+1. Use Microsoft 365 account to build and debug your Teams app.
+1. Use Azure account to provision and deploy your app to cloud.
+    1. Create an app metadata package, if needed.
+1. Publish your app to Teams.
 
 ## Install Teams Toolkit for Visual Studio Code
 
