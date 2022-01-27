@@ -23,7 +23,8 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 1. Select **Marketplace offers**.
 1. Select the SaaS offer you want to preview.
 1. Select **AppSource preview** link under **Go Live** to find the Preview offer ID in the browser address bar with *publisherId.offerId-preview* format.
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id" border="true" :::
+
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id" border="true" :::
 
 1. Copy the Preview offer ID from the browser address bar.
 
@@ -45,7 +46,8 @@ After you've generated your Preview offer ID, link the offer ID to your Teams ap
     1. Ensure the offer ID contains *-preview* suffix.
 1. Select **View** to preview your subscription plans.
 1. Review the plans listed under **Apps Subscription** and select **Save**.
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="add offer id" border="true" :::
+
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="add offer id" border="true" :::
 
 The subscriptionOffer property is added to your app manifest.
 
