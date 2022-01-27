@@ -120,8 +120,8 @@ This chart lets you track four key retention/churn metrics of your app over time
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | New Users/Tenants | Active users/tenants who are new (based on a historical start date of June 1, 2020). |
-| Resurrected Users/Tenants | Active users/tenants who used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period. |
 | Returning Users/Tenants | Active users/tenants who used your app during a given R30 time period and the previous R30 time period. |
+| Resurrected Users/Tenants | Active users/tenants who used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period. |
 | Lapsed Users/Tenants | Active users/tenants who were not seen during a given R30 time period but were seen during the previous R30 time period. |
 
 ### Usage intensity
@@ -132,8 +132,8 @@ This chart shows you key usage intensity metrics of your app.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| % of 5+ Days Usage | The % of Active Users that have opened/used the app more than 5 days in the last RL30 (Rolling 30 day) period. |
 | Median Days Used per Month | The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period. |
+| % of 5+ Days Usage | The % of Active Users that have opened/used the app more than 5 days in the last RL30 (Rolling 30 day) period. |
 | DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app. |
 
 ### App dashboard
