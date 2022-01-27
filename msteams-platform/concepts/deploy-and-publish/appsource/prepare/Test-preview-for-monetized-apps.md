@@ -60,7 +60,7 @@ The subscriptionOffer property is added to your app manifest.
 
 ## Sideload the app to Teams
 
-After configuring your app with the Preview Offer ID, create an updated app package and upload the app package to Teams for the preview audience to test the end-to-end purchase experience in Teams. For more information, see [Upload your app in Microsoft Teams](/concepts/deploy-and-publish/apps-upload). You can also select **Preview in Teams** in the Developer Portal for Teams to launch your app quickly in the Teams client.
+After you configure your app with the Preview Offer ID, create an updated app package and upload it to Teams to test the end-to-end purchase experience. For more information, see [Upload your app in Microsoft Teams](/concepts/deploy-and-publish/apps-upload). You can also select **Preview in Teams** in the Developer Portal for Teams to launch your app quickly in the Teams client.
 
 If the Preview offer is specified in the app manifest and the preview audience is defined in the Partner center for the offer, the user can see the **Buy a Subscription** button.
 
