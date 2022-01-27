@@ -48,7 +48,7 @@ The `GetParticipant` API includes the following query parameters:
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
 |**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. | 
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
 
@@ -228,6 +228,9 @@ The API is available through Bot Services.
 
 ### Prerequisite
 
+> [!NOTE] 
+> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
+
 To use the Meeting Details API, you must obtain RSC permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
 
 ```json
@@ -239,7 +242,6 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     ]
 }
  ```
- 
 ### Query parameter
 
 The Meeting Details API includes the following query parameter:
@@ -297,183 +299,63 @@ The JSON response body for Meeting Details API is as follows:
 } 
 ```
 
-## shareAppContentToStage API
+## CART API
 
-The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client SDK.
+The CART API exposes a POST endpoint for Microsoft Teams CART captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
 
-### Prerequisite
+### CART URL
 
-To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
+You can get the CART URL for the POST endpoint from the **Meeting options** page in a Microsoft Teams meeting. For more information, see [CART captions in a Microsoft Teams meeting](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47). You don't need to modify the CART URL to use CART captions.
 
-```json
-"authorization": {
-    "permission": { 
-    "resourceSpecific": [
-      { 
-      "name": "MeetingStage.Write.Chat",
-      "type": "Delegated"
-      }
-    ]
-   }
-}
- ```
+#### Query Parameter
 
-### Query parameter
-
-The `shareAppContentToStage` API includes the following parameters:
+The CART URL includes the following query parameters:
 
 |Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain a true value, in case of a successful share, or null when the share fails.|
-|**appContentURL**| String | Yes | URL that will be shared on to the stage.|
+|---|---|----|----|
+|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and Teams Client SDK. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**token**| String | Yes |Authorization token.<br/> For example, token=04751eac |
 
-### Example
+#### Example
 
-The following codes provide examples of `shareAppContentToStage` API:
-
-# [C#](#tab/dotnet)
-
-Not available
-
-# [JavaScript](#tab/javascript)
-
-```typescript
-
-const appContentUrl = "https://www.bing.com/";
-
-microsoftTeams.meeting.shareAppContentToStage ((err, result) => {
-if(result) {
-  this.setState({ isAppSharing: true });
- }
-if(err) {
-  this.setState({ sharingError: err, isAppSharing: false })
- }
-}, appContentUrl); 
-
+```http
+https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
 ```
 
-# [JSON](#tab/json)
+### Method
 
-Not available
+|Resource|Method|Description|
+|----|----|----|
+|/cartcaption|POST|Handle captions for meeting, which was started|
 
----
+> [!NOTE]
+> Ensure that the content type for all requests is plain text with UTF-8 encoding. The body of request contains only captions.
 
-### Response codes
+#### Example
 
-The `shareAppContentToStage` API returns the following response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API is not supported in the current context.|
-| **1000** | App does not have proper permissions to allow share to stage.|
-
-## getAppContentStageSharingState API
-
-The `getAppContentStageSharingState` API enables you to fetch information about apps' sharing on the meeting stage.
-
-### Query parameter
-
-The `getAppContentStageSharingState` API includes the following parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
-
-### Example
-
-The following codes provide examples of `getAppContentStageSharingState` API:
-
-# [C#](#tab/dotnet)
-
-Not available
-
-# [JavaScript](#tab/javascript)
-
-```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
-  if(result.isAppSharing) {
-    this.setState({ isGameSessionOver: false });
-   }
-  });
-``` 
-
-# [JSON](#tab/json)
-
-Not available
-
----
-
-The JSON response body for the `getAppContentStageSharingState` API is:
-
-```json
-{
-   "isAppSharing":true
-  }
-  
+```http
+POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1
+Host: api.captions.office.microsoft.com
+Content-Type: text/plain
+Content-Length: 22
+Hello I’m Cortana, welcome to my meeting. 
 ```
 
 ### Response codes
 
-The `getAppContentStageSharingState` API returns the following response codes:
+> [!Note]  
+> Each POST request generates a new line of captions. To ensure that the end user has enough time to read the content, limit each POST request body to 80-120 characters.
 
-|Response code|Description|
+### Error codes
+
+The CART API includes the following error codes:
+
+|Error code|Description|
 |---|---|
-| **500** | Internal error. |
-| **501** | API is not supported in the current context.|
-| **1000** | App does not have proper permissions to allow share to stage.|
-
-## getAppContentStageSharingCapabilities API
-
-The `getAppContentStageSharingCapabilities` API enables you to fetch the apps' capabilities for sharing to meeting stage.
-
-### Query parameter
-
-The `getAppContentStageSharingCapabilities` includes the following parameters:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The result can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
-
-### Example
-
-The following codes provide examples of `getAppContentStageSharingCapabilities` API:
-
-# [C#](#tab/dotnet)
-
-Not available
-
-# [JavaScript](#tab/javascript)
-
-```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
-  if(result.doesAppHaveSharePermission) {
-    this.setState({ isAppAllowedToShare: true });
-   }
-  });
-``` 
-
-# [JSON](#tab/json)
-
-Not available
-
----
-
-The JSON response body for `getAppContentStageSharingCapabilities` API is:
-
-```json
-{
-   "doesAppHaveSharePermission":true
-  }
-  
-```
-
-### Response codes
-
-The `getAppContentStageSharingCapabilities` API returns the following response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **1000** | App does not have permissions to allow share to stage.|
+| **400** | Bad request. The response body has more information. For example, not of all required parameters presented.|
+| **401** | Unauthorized. Bad or expired token. If you receive this error, generate a new CART URL in Teams. |
+| **404** | Meeting not found or not started. If you receive this error, ensure that you start the meeting and select start captions. After captions are enabled in the meeting, you can begin POSTing captions into the meeting.|
+| **500** |Internal server error. For more information, [contact support or provide feedback](../feedback.md).|
 
 ## Real-time Teams meeting events
 
@@ -482,6 +364,9 @@ The user can receive real-time meeting events. As soon as any app is associated 
 Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 ### Prerequisite
+
+> [!NOTE] 
+> Check if your app meets all the prerequisites listed in [Prerequisites for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md).
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
 

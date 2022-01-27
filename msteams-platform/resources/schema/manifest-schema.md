@@ -3,7 +3,7 @@ title: Manifest schema reference
 description: Describes the manifest schema for Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams manifest schema
 ---
 
@@ -602,11 +602,11 @@ The object is an array with all elements of the type `string`.
 
 **Optional**—object
 
-Provide your Azure Active Directory (AAD) App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in AAD, you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
+Provide your Azure Active Directory App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Azure AD, you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|string|36 characters|✔|AAD application ID of the app. This ID must be a GUID.|
+|`id`|string|36 characters|✔|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|string|2048 characters|✔|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you are not using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, https://notapplicable to avoid an error response. |
 |`applicationPermissions`|array of strings|128 characters||Specify granular [resource specific consent](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions).|
 
@@ -626,7 +626,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
-> `isFullScreen` works only with SharePoint tabs and store apps.
+> `isFullScreen` works only for apps published to your organization.
 
 ## activities
 
@@ -750,7 +750,7 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Maximum size** - 128 characters
 
-The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockUntilAdminAction` property is set to **true**, the `publisherDocsUrl` provides HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.
+The `publisherDocsUrl` is a HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default. It can also be used to provide any instructions or information about the app which can be useful for the tenant admin.
 
 ## subscriptionOffer
 

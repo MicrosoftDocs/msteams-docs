@@ -58,18 +58,8 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
   "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
       "canUpdateConfiguration": true,
-      "context":[
-        "channelTab",
-        "privateChatTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel",
-        "meetingStage"
+      "scopes": [ "team", "groupchat" ]"context":[
       ]
     }
   ],

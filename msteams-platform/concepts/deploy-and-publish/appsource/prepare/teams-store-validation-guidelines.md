@@ -4,7 +4,7 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # Microsoft Teams store validation guidelines
 
@@ -265,7 +265,7 @@ The Teams app manifest defines your app's configuration.
 
 * Your manifest must conform to a publicly released manifest schema. For more information, see [manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the manifest.
 * If your app includes a bot or messaging extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Azure Active Directory for authentication, include the Azure AD Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### App icons
 
@@ -414,6 +414,47 @@ Support URLs must include your contact details or a way forward for users to rai
 [*Mandatory Fix*]
 
 If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
+
+## Apps linked to SaaS offer
+
+* ISVs must support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant. 
+* The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759) for Teams apps linked to a SaaS offer. 
+* The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas). 
+* `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.          
+* Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
+
+### Offer metadata 
+
+* Offer metadata must match across the Teams manifest, the Teams app listing in AppSource, and the SaaS offer in AppSource.
+* Teams app and SaaS offer must be from the same publisher or developer. The SaaS offer referenced in the App manifest must belong to the same publisher as the Teams app is submitted to the commercial marketplace. 
+* As your submitted offer is a Teams app linked to SaaS offer, you must select **Additional purchases** as **Yes, my product requires purchase of a service or offers additional in-app purchases​** in Partner Center product set-up section of your offer listing.     
+* Plan descriptions and pricing details must provide enough information for users to clearly understand the offer listings.   
+* Any limitations, dependencies on additional services and exceptions to features offered must be accurately called out in plan descriptions.     
+* The Teams apps linked to SaaS offer are designed to support licenses assigned on a named, per-user basis. Sometimes, the SaaS offer is built with other method or has specialized purchase flows. You must clearly mention in the app metadata and subscription plan details about the method and purchase flows.
+* SaaS offer must provide messages and guidance to all users in all applicable states of purchase flow.
+
+### SaaS offer home page and license management  
+
+* Provide introduction to subscribers on how to use the product. 
+* Allow the subscriber to assign licenses. 
+* Provide different ways to engage with support for issues, such as FAQ, knowledgebase, and email address.          
+* Validate users to ensure that they don’t already have license assigned through another user. 
+* Notify users after license assignment. 
+* Guide users through Teams chat bot or email, on how to add the app to Teams and get started. 
+
+### Usability and functionality  
+
+* After successful purchase and assignment of licenses, you must provide the following:
+    * Access to users for subscribed plan features.   
+    * Value addition and significant benefits of subscription plan to users.   
+* From your Teams app, provide link to the SaaS application home page for subscribers to manage the licenses in the future. 
+
+### Configure and test SaaS application
+
+If setup of your app for testing purposes is complex, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your "Notes for Certification".    
+
+> [!TIP]  
+> You can add a video on how your app and license management works to assist the team for testing. 
 
 ## Tabs
 > [!NOTE]  
@@ -1376,7 +1417,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program: 
 
-  * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory (Azure AD) consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+  * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
 :::row::: 
     :::column span="":::
