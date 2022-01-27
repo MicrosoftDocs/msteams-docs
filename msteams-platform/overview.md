@@ -15,7 +15,7 @@ Apps are how you extend Teams capabilities to fit your needs. Create something b
 
 ## An App that fits
 
-//--Add details for Business benefits and different business scenarios--//
+||Add details for different business scenarios and business benefits||
 
 ## Choose what suits you
 
@@ -23,7 +23,7 @@ You can build and integrate a Teams app with your business and organizational ne
 
 A Teams app offers you the flexibility of choosing your build environment, tools, platform, language to approach your app development.
 
-//--Add mind map diagram--//
+||Add mind map diagram||
 
 - **Teams Toolkit**: An extension in Visual Studio Code and Visual Studio, it creates a project scaffolding for your Teams app project. It supports you with tools throughout the development lifecycle, even deploying your app to cloud all in one place.
 - **Developer Portal**: Create, configure, and manage your Teams apps with Developer Portal.
