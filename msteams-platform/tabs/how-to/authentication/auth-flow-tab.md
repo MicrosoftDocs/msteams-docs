@@ -1,6 +1,6 @@
 ---
 title: Authentication flow for tabs
-description: Describes authentication flow in tabs, OAuth by AAD, and provides code sample 
+description: Describes authentication flow in tabs, OAuth by Azure AD, and provides code sample 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication flow tabs
@@ -41,11 +41,11 @@ Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams tab authentication | Authentication process for tabs using AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teams tab authentication | Authentication process for tabs using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## See also
 
-For a detailed implementation for tab authentication using AAD, see:
+For a detailed implementation for tab authentication using Azure AD, see:
 
 * [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)

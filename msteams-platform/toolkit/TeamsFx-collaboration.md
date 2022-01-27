@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Collaborate on Teams project using Teams Toolkit
 
-Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and AAD App.Teams Toolkit supports collaboration feature to allow  developers and project owner to invite other developers or collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
+Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and Azure AD App.Teams Toolkit supports collaboration feature to allow  developers and project owner to invite other developers or collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
 ## Prerequisites
 
@@ -18,8 +18,8 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
     To provision cloud resources, you must have the following accounts. For more information, see, [prepare accounts to build Teams app](accounts.md).
 
-    * Microsoft 365 subscription
-    * Azure with valid subscription
+  * Microsoft 365 subscription
+  * Azure with valid subscription
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
@@ -72,8 +72,8 @@ You can't remove collaborators directly from Teams Toolkit extension. Perform th
   1. Go to Teams Developer Portal and select your Teams app by name or app ID.
   2. Select **Owners** from left panel.
   3. Select and remove the collaborator.
-  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your AAD App.
-  5. Select **Owners** from left panel in AAD App management page.
+  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
+  5. Select **Owners** from left panel in Azure AD App management page.
   6. Select and remove the collaborator.
 
 > [!NOTE]
