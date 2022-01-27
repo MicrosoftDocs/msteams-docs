@@ -3,7 +3,7 @@ title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
 description: Get an overview of how developers can extend Microsoft Teams features with custom apps.
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
 ---
