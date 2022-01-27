@@ -126,9 +126,11 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Select **Multitenant** under **Bot Type**.
 
-    1. Select **Multitenant** under **App Type**.
+        ![Bot type](~/assets/images/meetings-side-panel/bot-type.png)
+
+    1. Next to **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/meetings-side-panel/config.png)
 
