@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Meetings SidePanel
+title: Messaging extensions 
 metadata:
-  title: Meetings SidePanel
+  title: Messaging extensions 
   description: In this tutorial, you'll learn to set up Meetings SidePanel for Teams.
   audience: Developer
   level: Beginner
@@ -20,7 +20,7 @@ items:
    
     You'll see the following output:
 
-     ![Your Token](~/assets/images/sbs-messagingextension-action/sidepanelondesktopmobile.png)
+     ![Your Token](~/assets/images/sbs-messagingextension-action/outout-card.png)
 
 - title: Prerequisites
   durationInMinutes: 1
