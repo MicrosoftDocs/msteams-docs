@@ -210,7 +210,7 @@ User types, such as, organizer, presenter, or attendee in a meeting can be [a pa
 The following list details the various user types along with their accessibility and performance:
 
 * **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
-* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD. They have the same Teams capabilities as a native team member with access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
+* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD. They have the same Teams capabilities as a native team member with access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A [federated user](/microsoftteams/non-standard-users#external-federated-users)  is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
@@ -219,7 +219,7 @@ The following list details the various user types along with their accessibility
     > [!IMPORTANT]
     > Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
-* **Anonymous**: Anonymous users don't have an AAD identity and aren't federated with a tenant. The anonymous participants are like guests, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
+* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
