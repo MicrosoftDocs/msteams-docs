@@ -28,7 +28,7 @@ items:
     
     This step-by-step guide helps you to generate Outgoing Webhooks in Teams. You'll see the following output:
 
-     ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
+    ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -51,7 +51,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
  
-       ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)
+      ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)
 
     1. Select **Clone**. 
 
@@ -76,7 +76,7 @@ items:
 
     1. From the window's lower-right corner, select Create outgoing webhooks.
 
-      ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
+      ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).
 
     1. Enter the following details:
      
