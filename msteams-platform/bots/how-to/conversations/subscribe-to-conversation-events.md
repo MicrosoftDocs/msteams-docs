@@ -1341,7 +1341,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
   "serviceUrl": "https://smba.trafficmanager.net/amer/", 
   "from": { 
     "id": "sample id", 
-    "aadObjectId": "sample AAD Object ID" 
+    "aadObjectId": "sample Azure AD Object ID" 
   },
   "conversation": { 
     "isGroup": true, 
