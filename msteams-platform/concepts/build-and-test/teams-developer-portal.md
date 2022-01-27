@@ -65,7 +65,7 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-On the Overview page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal (or App Studio) and scoped to the app ID.
+On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal (or App Studio) and scoped to the app ID.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -107,10 +107,10 @@ This chart shows you the number of active users/tenants that have opened/used th
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| Monthly R30 | The count of distinct active users/tenants who have opened your app in a given RL30 (Rolling 30 day) period. |
-| Monthly R28 | The count of distinct active users/tenants who have opened your app in a given RL28 (Rolling 28 day) period. |
-| Weekly RL7| The count of distinct active users/tenants who have opened your app in a given RL7 (Rolling 7 day) period. |
-| Daily | The count of distinct active users/tenants who have opened your app in a given RL1 (Rolling 1 day) period. |
+| Monthly R30 | Each data point represents a given RL30 (Rolling 30 day) period. |
+| Monthly R28 | Each data point represents a given RL28 (Rolling 28 day) period. |
+| Weekly RL7| Each data point represents a given RL7 (Rolling 7 day) period. |
+| Daily | Each data point represents a given RL1 (Rolling 1 day) period. |
 
 ### Usage by platform and OS
 
