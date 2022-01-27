@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 14/01/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Read more to enable and configure apps for meetings
+  nextTutorialHref: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+  nextTutorialTitle: Read more on outgoing webhooks
   ms.custom: mvc
   ms.localizationpriority: none
 items:
@@ -62,11 +62,11 @@ items:
 
     1. Select the appropriate team, and then select Manage team from the (•••) dropdown menu.
 
-      ![Manage](~/assets/images/sbs-outgoing-webhooks/manage-team.png)
+       ![Manage](~/assets/images/sbs-outgoing-webhooks/manage-team.png)
 
     1. Choose the Apps tab from the navigation bar.
 
-      ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
+       ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
 
     1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -76,7 +76,7 @@ items:
 
     1. From the window's lower-right corner, select Create outgoing webhooks.
 
-      ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).
+       ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).
 
     1. Enter the following details:
      
@@ -94,11 +94,11 @@ items:
 
     1. Select **Create**. The Outgoing Webhook is added to the current team's channel:
 
-      ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
+        ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
 
      A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. You can use the security token to authenticate calls between Teams and any designated outside service. You can use the security token in **AuthProvider.cs** file.
 
-          ![token](~/assets/images/sbs-outgoing-webhooks/security-token.png)
+        ![token](~/assets/images/sbs-outgoing-webhooks/security-token.png)
        >[!NOTE]
        > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
 
@@ -113,32 +113,32 @@ items:
 
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-VSopenfile.png)
+           ![Open file](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-VSopenfile.png)
 
        1. Select **WebhookSampleBot.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
+           ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
 
        1. Update the "contoso" to "M365x712764" and HMAC **AuthProvider.cs** file.  
 
-          ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
+           ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
       
        1. Press **F5** to run the project.
 
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
+           ![Trust Certificate](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
 
           A webpage opens as shown in the below image.
 
-          ![App ready](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png) 
+           ![App ready](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png) 
 
                    
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    Let's interact with the app in Teams!
+    **To interact with the app in Teams**
 
     1. Select **General** to start a new conversation.
 
