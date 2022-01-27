@@ -95,9 +95,11 @@ items:
        >[!NOTE]
        > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
 
-           ```bash
-     ngrok http -host-header=rewrite 3978
-     ```
+       Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+        ```bash
+        ngrok http -host-header=localhost 3978
+        ```
          
 
 
@@ -132,9 +134,7 @@ items:
 
           ![App ready](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png) 
 
-       1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-              
+                   
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
