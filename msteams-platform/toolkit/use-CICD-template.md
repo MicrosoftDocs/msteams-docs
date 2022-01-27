@@ -70,7 +70,7 @@ The following table lists all the secrets required to create environment:
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account to create and publish Teams app.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. For more information, see [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multitenant account and you want to use another tenant. For more information, see [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 
 > [!NOTE]
@@ -172,7 +172,7 @@ Perform the following steps to create Pipeline variables in Azure DevOps:
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multitenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 ## CI or CD pipeline templates in Jenkins
 
@@ -218,7 +218,7 @@ Follow [using-credentials](https://www.jenkins.io/doc/book/using/using-credentia
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multitenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 
 ## Get started guide for other platforms
 

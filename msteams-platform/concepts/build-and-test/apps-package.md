@@ -20,7 +20,7 @@ When publishing to the Teams store, make sure your manifest references to the la
 
 ## App icons
 
-Your app package must include two PNG versions of your app icon: A color and outline version.
+Your app package must include two .png versions of your app icon: A color and outline version.
 
 > [!Note]
 > If your app has a bot or messaging extension, your icons also will be included in your Microsoft Azure Bot Service registration.

@@ -31,9 +31,9 @@ You can create links to information and features within Teams. The scenarios whe
 
 ## Deep linking to your tab
 
-You can create deep links to entities in Teams. This is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list, team members can create and share links to individual tasks. When you select the link, it navigates to your tab which focuses on the specific item. To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
+You can create deep links to entities in Teams. This is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list, team members can create and share links to individual tasks. When you select the link, it navigates to your tab that focuses on the specific item. To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
-Alternatively, you can also generate deep links programmatically, using the format specified later in this topic. You can use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it.
+Alternatively, you can also generate deep links programmatically, using the format specified later in this article. You can use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it.
 
 > [!NOTE]
 > This deep link is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
@@ -47,9 +47,9 @@ To show a dialog box that contains a deep link to an item within your tab, call 
 
 Provide the following fields:
 
-* `subEntityId`: A unique identifier for the item within your tab to which you are deep linking.
+* `subEntityId`: A unique identifier for the item within your tab to which you're deep linking.
 * `subEntityLabel`: A label for the item to use for displaying the deep link.
-* `subEntityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering the tab.
+* `subEntityWebUrl`: An optional field with a fallback URL to use if the client doesn't support rendering the tab.
 
 ### Generate a deep link to your tab
 
@@ -84,11 +84,11 @@ The query parameters are:
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from your manifest. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
-| `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
+| `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). |
 | `subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
-| `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn’t available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 Examples:
 
@@ -114,7 +114,7 @@ The [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext
 
 ## Deep linking from your tab
 
-You can deeplink to content in Teams from your tab. This is useful if your tab needs to link to other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. To trigger a deeplink from your tab you should call:
+You can deep link to content in Teams from your tab. This is useful if your tab needs to link to other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. To trigger a deeplink from your tab, call:
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
@@ -132,9 +132,9 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## Deep linking to a chat
 
-You can create deep links to private chats between users by specifying the set of participants. If a chat does not exist with the specified participants, the link navigates the user to an empty new chat. New chats are  created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it does not already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+You can create deep links to private chats between users by specifying the set of participants. If a chat doesn’t exist with the specified participants, the link navigates the user to an empty new chat. New chats are  created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
-As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
+As an example use case, if you’re returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
 
 ### Generate a deep link to a chat
 
@@ -147,7 +147,7 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 The query parameters are:
 
 * `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Azure AD UserPrincipalName, such as an email address only.
-* `topicName`: An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name is based on the names of the participants.
+* `topicName`: An optional field for chat's display name, in the case of a chat with 3 or more users. If this field isn’t specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
@@ -160,14 +160,14 @@ The following deep link format can be used in a bot, connector, or messaging ext
 
 The query parameters are:
 
-* `fileId`: Unique file ID from Sharepoint Online, aka sourcedoc. For example 1FA202A5-3762-4F10-B550-C04F81F6ACBD
-* `tenantId`: Tenant ID example, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
-* `fileType`: Supported file type, such as docx, pptx, xlsx, and pdf
-* `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`
-* `serviceName`: Name of the service, app ID. For example, teams.
-* `threadId`: The threadId is the team ID of the team where the file is stored. It is optional and cannot be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `tenantId`: Tenant ID such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `fileType`: Supported file type, such as .docx, .pptx, .xlsx, and .pdf.
+* `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
+* `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`.
+* `serviceName`: Name of the service, app ID. For example, `teams`.
+* `threadId`: The threadId is the team ID of the team where the file is stored. It is optional and cannot be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `groupId`: Group ID of the file. For example `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
 > You can see `threadId` and `groupId` in the URL from the channel.  

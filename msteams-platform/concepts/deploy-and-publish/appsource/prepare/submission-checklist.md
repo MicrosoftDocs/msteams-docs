@@ -147,8 +147,8 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 Remember the following best practices about screenshots:
 
 * You can have up to five screenshots per listing.
-* Supported file types include PNG, JPEG, and GIF.
-* Dimensions should be 1366x768 pixels.
+* Supported file types include .png, .jpeg, and gif image formats.
+* Dimensions should be 1366 x 768 pixels.
 * Maximum size of 1,024 KB.
 
 For best practices, see the following resources:

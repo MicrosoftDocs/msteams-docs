@@ -212,6 +212,6 @@ As a Teams admin, you can upload and pre-install the app package for your organi
 
 As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
-### Multi-tenant distribution
+### Multitenant distribution
 
 Distribution to Microsoft AppSource is not supported during this early developer preview of Outlook- and Office-enabled Teams personal tabs.

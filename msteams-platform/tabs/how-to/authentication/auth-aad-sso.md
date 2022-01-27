@@ -73,7 +73,7 @@ To register your app through the Azure AD portal, follow these steps:
 1. Select **New Registration**. The **Register an application** page appears.
 1. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
-    2. Choose the **Supported account types**, select single tenant or multi-tenant account type. ¹
+    2. Choose the **Supported account types**, select single tenant or multitenant account type. ¹
     * Leave **Redirect URI** empty.
     3. Choose **Register**.
 1. On the overview page, copy and save the **Application (client) ID**. You must have it later when updating your Teams application manifest.

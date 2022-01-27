@@ -59,11 +59,11 @@ To integrate an existing [SharePoint page](/MicrosoftTeams/teams-standalone-stat
 
 Alternatively, you can build a Teams tab [using the SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
-## Aim towards multi-tenancy
+## Aim towards multitenancy
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-If your app is used by multiple organizations, consider multi-tenant hosting. It makes your product scalable and simplifies the distribution.
+If your app is used by multiple organizations, consider multitenant hosting. It makes your product scalable and simplifies the distribution.
 
 ## Review your APIs
 
