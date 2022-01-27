@@ -65,16 +65,16 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal (or App Studio) and scoped to the app ID.
+You can view the total number of active users for your app, on the **Overview** page. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal for Teams or App Studio and scoped to the app ID.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
+| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30 day window in UTC. |
 | *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
 
-The app usage for a given day is reflected within 24-48 hours and usage data for new apps can take up to 3-5 days.
+The app usage for a given day is reflected within 24 to 48 hours and usage data for new apps can take up to 3 to 5 days.
 
-**To view additional details about your app(s) usage**
+You can view your apps usage and other additional insights from the **Analytics** page, to view:
 
 1. Go to <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a>.
 1. Select **Apps** from the left pane.
@@ -83,7 +83,7 @@ The app usage for a given day is reflected within 24-48 hours and usage data for
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
 
-As you explore individual metrics on this page, you can use the **Filter** button to slice and dice all subsequent metrics by the following:
+As you explore individual metrics on this page, you can use the **Filter** button to view your apps usage by the following filter options:
 
 1. Aggregation Type
 1. Platform
@@ -92,7 +92,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 
  :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
 
-Once you have selected your desired filter(s), you can explore the following individual widgets:
+Once you have selected your desired filters, you can explore the following individual widgets:
 
 * Usage by time period
 * Usage by platform and OS
@@ -114,7 +114,7 @@ This chart shows you the number of active users/tenants that have opened/used th
 
 ### Usage by platform and OS
 
-This chart shows your app(s) active usage across various endpoints – Windows, Mac, iOS, Android, and Web. The same user/tenant can use an app on multiple endpoints.
+This chart shows your apps active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user/tenant can use an app on multiple endpoints.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
 
