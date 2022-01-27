@@ -67,9 +67,12 @@ Following is an example of calling the API from the app:
 </script> 
 ```
 
+> [!NOTE]
+>  Ensure to enable **Show in-app purchase offers** from **Permissions** section of your **Developer Portal**.
+
 ## End-user in-app purchasing experience
 
-The following example shows the users to purchase subscription plans for a fictional Teams app called *Contoso Tasks for Teams*.
+The following example shows the users to purchase subscription plans for a fictional Teams app called *Contoso Tasks for Teams*:
 
 1. In the Teams **Store**, find and select the app.
 
