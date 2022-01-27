@@ -1,26 +1,25 @@
 ---
-title: Extend a Teams message extension across Microsoft 365
+title: Extend a Teams messaging extension across Microsoft 365
 description: Here's how to update your search-based Teams messaging extension to run in Outlook
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.localizationpriority: medium
 ---
-# Extend a Teams message extension across Microsoft 365
+# Extend a Teams messaging extension across Microsoft 365
 
 > [!NOTE]
-> *Extending a Teams message extension across Microsoft 365* is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
+> *Extending a Teams messaging extension across Microsoft 365* is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
 
-Search-based [messaging extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. By [extending your Teams apps across Microsoft 365 (preview)](overview.md), you can now bring your search-based Teams message extensions to Outlook for Windows desktop and web experiences.
+Search-based [messaging extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. By [extending your Teams apps across Microsoft 365 (preview)](overview.md), you can now bring your search-based Teams messaging extensions to Outlook for Windows desktop and web experiences.
 
-The process to update your search-based Teams message extension to run Outlook involves these steps:
+The process to update your search-based Teams messaging extension to run Outlook involves these steps:
 
 > [!div class="checklist"]
 > * Update your app manifest
 > * Add an Outlook channel for your bot
 > * Sideload your updated app in Teams
 
-The rest of this guide will walk you through these steps and show you how to preview your message extension in both Outlook for Windows desktop and web.
+The rest of this guide will walk you through these steps and show you how to preview your messaging extension in both Outlook for Windows desktop and web.
 
 ## Prerequisites
 
@@ -107,11 +106,11 @@ The final step is to sideload your updated messaging extension ([app package](/m
 
 Once sideloaded through Teams, your messaging extension will be available in Outlook on the web.
 
-## Preview your message extension in Outlook
+## Preview your messaging extension in Outlook
 
 You're now ready to test your messaging extension running in Outlook on Windows desktop and the web. While your updated messaging extension will continue to run in Teams with full [feature support for messaging extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), there are limitations in this early preview of the Outlook-enabled experience to be aware of:
 
-* Messaging extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box is not supported.
+* Messaging extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams messaging extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a messaging extension from the global Outlook *Search* box is not supported.
 * [Action-based messaging extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands are not supported in Outlook. If your app has both search- and action-based commands, it will surface in Outlook but the action menu will not be available.
 * [Single sign-on silent authentication](/microsoftteams/platform/messaging-extensions/how-to/enable-sso-auth-me) is not supported for messaging extensions in Outlook.
 * Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email is not supported; Adaptive Cards v1.4 and later are not supported.
@@ -119,18 +118,13 @@ You're now ready to test your messaging extension running in Outlook on Windows 
 
 As you test your messaging extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which will have the value of `msteams` or `outlook`, depending from where the bot request originates. For more, see  [Search based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
 
-### Outlook on the web
-
-To preview your app running in Outlook on the web, log in to [outlook.com](https://www.outlook.com) using credentials for your test tenant. Click on **New message**. Open the **More apps** flyout menu on the bottom of the composition window. Your message extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
-
-:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Click on the 'More apps' button on the bottom of the outlook.com mail composition window to start using your message extension.":::
-
 ### Outlook
 
-> [!IMPORTANT]
-> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook for Windows desktop support for Teams message extensions is available to your test tenant.
+To preview your app running in Outlook on Windows desktop, open Outlook logged in with credentials for your test tenant. Click on **New Email**. Open the **More apps** flyout menu on the top ribbon. Your messaging extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
-To preview your app running in Outlook on Windows desktop, open Outlook logged in with credentials for your test tenant. Click on **New Email**. Open the **More apps** flyout menu on the top ribbon. Your message extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
+### Outlook on the web
+
+To preview your app running in Outlook on the web, log in to [outlook.com](https://www.outlook.com) using credentials for your test tenant. Click on **New message**. Open the **More apps** flyout menu on the bottom of the composition window. Your messaging extension will be listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
 ## Next steps
 
@@ -154,4 +148,4 @@ As a global admin, you can upload and pre-install the app package from https://a
 
 ### Multi-tenant distribution
 
-Distribution to Microsoft AppSource is not yet supported during this early developer preview of Outlook-enabled Teams message extensions.
+Distribution to Microsoft AppSource is not yet supported during this early developer preview of Outlook-enabled Teams messaging extensions.
