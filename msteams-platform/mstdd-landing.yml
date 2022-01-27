@@ -24,8 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Introduced new store icon 
-        url: ~/concepts/design/personal-apps.md
+      - text: Revised Interactive mode 
+        url: ~/resources/schema/manifest-schema-dev-preview.md
       - text: Adaptive Cards form completion feedback
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: People Picker in Adaptive Cards
