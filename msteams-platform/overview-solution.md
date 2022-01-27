@@ -43,7 +43,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 :::row:::
     :::column span="1":::
-        ### Start building
+        #### Start building
     :::column-end:::
     :::column span="2":::
         Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
@@ -55,7 +55,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 :::row:::
     :::column span="1":::
-        ### Integrate with Teams
+        #### Integrate with Teams
     :::column-end:::
     :::column span="2":::
         Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
@@ -67,7 +67,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 :::row:::
     :::column span="1":::
-        ### A little code goes a long way
+        #### A little code goes a long way
     :::column-end:::
     :::column span="2":::
         You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
@@ -79,7 +79,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 :::row:::
     :::column span="1":::
-        ### Get ideas for your app
+        #### Get ideas for your app
     :::column-end:::
     :::column span="2":::
         Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
@@ -91,7 +91,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 :::row:::
     :::column span="1":::
-        ### Test your app running across Microsoft 365
+        #### Test your app running across Microsoft 365
     :::column-end:::
     :::column span="2":::
         You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
