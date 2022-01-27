@@ -25,7 +25,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Revised Interactive mode 
-        url: ~/resources/schema/manifest-schema-dev-preview.md
+        url: ~/apps-in-teams-meetings/API-references.md
       - text: Adaptive Cards form completion feedback
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: People Picker in Adaptive Cards
