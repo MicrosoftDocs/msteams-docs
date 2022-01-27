@@ -14,16 +14,10 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The `meetingSidePanel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
+   Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client.
 
-    This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
-
-    **Meeting organizers' interaction of meeting SidePanel**
-
-    * **Add New Agenda Item**: Gives provision to add new agenda point.
-    * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
-    * **Publish Agenda**: Sends the agenda list to the meeting chat. 
-
+    This step-by-step guide illustrates how to build an Action-based Messaging Extension.
+   
     You'll see the following output:
 
      ![Your Token](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
@@ -35,7 +29,6 @@ items:
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -50,7 +43,7 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+   Clone `BotBuilder-Samples` repository to your local GitHub:  
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
@@ -466,23 +459,34 @@ items:
   content: |
     Let's interact with the app in Teams!
 
-    1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
+    1. Select **Create Card** command from the compose box command list.
 
        ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
 
-    1. Enter a new agenda item to the list and select **Add**.
+    1. Enter your information in the modal popup.
 
        ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
 
-       The new agenda is added in the list.
-
-    1. Select **Publish Agenda**.
+    1. Select **Submit**.
 
        ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
 
-       The new agenda list is displayed in the meeting chat.
+    1. Select ... overflow menu from an existing message.
 
-       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+
+    1. Point to **More actions**.
+
+       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+    1. Select **Share Message**.
+
+
+       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+
+    1. Select the checkbox if you need to include image and submit.
+
+       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+
 
 - title: Complete challenge
   durationInMinutes: 1
