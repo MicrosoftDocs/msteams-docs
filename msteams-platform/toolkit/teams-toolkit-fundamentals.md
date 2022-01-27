@@ -22,21 +22,22 @@ Teams Toolkit lets you create, debug, and deploy your Teams app right from Visua
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
-For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
+For Teams app development, similar to Teams Toolkit for Visual Studio Code, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 
 ## User journey of Teams Toolkit
 
 Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
 
-![Teams Toolkit User Journey](./images/teams-toolkit-user-journey.png)
+:::image type="complex" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams Toolkit User Journey" border="true":::
 
 The main milestones of this journey are:
 
 1. Start by creating a new project or trying a sample Teams app.
-    1. Add capabilities or edit manifest file as needed.
+    - Add capabilities or edit manifest file as needed.
 1. Use Microsoft 365 account to build and debug your Teams app.
 1. Use Azure account to provision and deploy your app to cloud.
-    1. Create an app metadata package, if needed.
+    - Add cloud resources or update manifest, as needed.
+    - Create an app metadata package, if needed.
 1. Publish your app to Teams.
 
 ## Install Teams Toolkit for Visual Studio Code
@@ -97,7 +98,7 @@ Let's explore Teams Toolkit features.
 |
 
 > [!TIP]
-> Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
+> Browse existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 
 ## TeamsFx
 
