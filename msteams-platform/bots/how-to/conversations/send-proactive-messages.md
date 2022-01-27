@@ -3,7 +3,7 @@ title: Send proactive messages
 description: Describes how to send proactive messages with your Microsoft Teams bot.
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: medium
+ms.localizationpriority: high
 Keywords: send a message get user ID channel ID conversation ID
 ---
 # Proactive messages
