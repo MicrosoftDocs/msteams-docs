@@ -35,20 +35,13 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
-
-    > [!NOTE]
-    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support outgoing webhooks.
-
 - title: Set up local environment
   durationInMinutes: 1
   content: |
