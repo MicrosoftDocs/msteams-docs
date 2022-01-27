@@ -65,16 +65,16 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-You can view the total number of active users for your app, on the **Overview** page. These metrics are available for apps published to the Teams store or an org's app catalog through **Developer Portal for Teams** or App Studio and scoped to the app ID.
+On the **Overview** page, you can view the total number of active users for your app, which is published to the Teams store or an org's app catalog through **Developer Portal for Teams** or App studio and scoped to the app ID.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *Monthly R30* | The default usage metric. It shows the count of unique active users that used your app within that rolling 30 day window in UTC. |
-| *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
+| *Daily* | It shows you the count of unique active users that used your app in a given day in UTC. |
 
-The app usage for a given day is reflected within 24 to 48 hours and usage data for new apps can take up to 3 to 5 days.
+The app usage for a given day is reflected within 24 to 48 hours and usage data for new app's can take up to 3 to 5 days.
 
-You can view your apps usage and other additional insights from the **Analytics** page, to view:
+You can view your app's usage and other additional insights from the **Analytics** page, to view:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
@@ -83,7 +83,7 @@ You can view your apps usage and other additional insights from the **Analytics*
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
 
-As you explore individual metrics on this page, you can use the **Filter** button to view your apps usage by the following filter options:
+As you explore individual metrics on this page, you can use the **Filter** button to view and analyze your app's usage from the following filter options:
 
 1. Aggregation Type
 1. Platform
@@ -101,7 +101,7 @@ Once you have selected your desired filters, you can explore the following indiv
 
 ### Usage by time period
 
-This chart shows you the number of active users or tenants that have opened or used this app across different time periods.
+The **Usage by time period** chart shows you the number of active users or tenants that have opened or used this app across different time periods.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
 
@@ -114,13 +114,13 @@ This chart shows you the number of active users or tenants that have opened or u
 
 ### Usage by platform and OS
 
-This chart shows your apps active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user or tenant can use an app on multiple endpoints.
+The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user or tenant can use an app on multiple endpoints.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
 
 ### Usage by retention state
 
-This chart lets you track four key retention or churn metrics of your app over time.
+The **Usage by retention state** chart lets you track four key retention or churn metrics of your app over time.
 
 :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Retention":::
 
@@ -133,7 +133,7 @@ This chart lets you track four key retention or churn metrics of your app over t
 
 ### Usage intensity
 
-This chart shows you key usage intensity metrics of your app.
+The **Usage intensity** chart shows you key usage intensity metrics of your app.
 
  :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="Intensity":::
 
