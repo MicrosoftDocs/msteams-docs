@@ -78,35 +78,28 @@ The following example shows the users to purchase subscription plans for a ficti
 
 1. In the app details dialog, select **Buy a subscription** or **Add for me**. 
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app.":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app." border="true":::
 
     
-1. **Add for me** offers a free trial version of the app and later users can choose to **Upgrade** it to a paid version.
+1. **Add for me** offers a free trial version of the app and later **Upgrade** it to a paid version.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app.":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app." border="true":::
 
 1. In the **Choose a subscription plan** dialog, choose the plan and select **Checkout**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan.":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan." border="true":::
 
-1. In the **Checkout** dialog, provide the required information and select **Place order**.
+1. Complete the transaction and select **Configure now** to set up your subscription.
 
-    :::image type="content" source="~/assets/images/saas-offer/placesubscriptionordercontoso.png" alt-text="Placing the subscription order.":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription." border="true":::
 
-1. After the transaction is complete, select **Configure now** to set up your subscription.
-
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription.":::
-
-1. User is redirected to the **Get started** page.
-
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription.":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription." border="true":::
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Preview testing of monetizable apps](/office/dev/store/add-in-submission-guide)
+> [Preview testing of monetizable apps](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 
 ## See also
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
-
