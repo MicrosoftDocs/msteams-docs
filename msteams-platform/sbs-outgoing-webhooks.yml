@@ -14,9 +14,20 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Webhooks help Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. In Teams, outgoing webhooks allow users to send messages to your web service without having to go through the full process of creating bots via the [Microsoft Bot Framework](https://dev.botframework.com/). Outgoing webhooks post data from Teams to any chosen service capable of accepting a JSON payload. Once an outgoing webhook is added to a team, it acts like bot, listening in channels for messages using @mention, sending notifications to external web services, and responding with rich messages that can include cards and images. 
-
-     This step-by-step guide helps you to generate Outgoing Webhook in Teams. You'll see the following output:
+    
+    Webhooks help Teams to integrate with external apps. In Teams, the Outgoing Webhooks act as bot and search for messages in channels using @mention. In Teams, outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through [Microsoft Bot Framework](https://dev.botframework.com/). Outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
+    
+    Key features of Outgoing Webhooks:
+    
+    * Send notifications to any external web service.
+    * Respond with rich messages including cards and images. 
+    * Receive messages in public channels and not within the personal or private scope.
+    * Send HTTP POST to web service and get response. 
+    
+     > [!NOTE]
+     > The Outgoing Webhooks cannot access any other APIs, such as retrieve the roster or list of channels in a team.
+    
+    This step-by-step guide helps you to generate Outgoing Webhooks in Teams. You'll see the following output:
 
      ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
 
@@ -52,10 +63,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create an outgoing webhook
+- title: Create Outgoing Webhooks
   durationInMinutes: 5
   content: |
-    To create an outgoing webhook, perform the following steps:
+    To create Outgoing Webhooks, perform the following steps:
 
     * Select the appropriate team, and then select Manage team from the (•••) dropdown menu.
 
@@ -65,10 +76,10 @@ items:
 
       ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
 
-    * From the window's lower-right corner, select Create an outgoing webhook.
+    * From the window's lower-right corner, select Create outgoing webhooks.
 
       ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png)
-    * Type the following details in the **Create an Outgoing Webhook** page:
+    * Type the following details in the **Create an Outgoing Webhooks** page:
      
         * Name - The webhook title that would be used in @mention tab.
 
