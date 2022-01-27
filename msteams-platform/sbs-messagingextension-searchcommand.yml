@@ -75,7 +75,7 @@ items:
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
     1. From the **Resource group** dropdown list, select your existing resource group. 
     
-        ![Select resource Azure bot](~/assets/images/meetings-side-panel/review-plus-create.png) 
+        ![Select resource Azure bot](~/assets/images/Teams-Messaging-Extensions-Search/review-plus-create.png) 
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
@@ -100,11 +100,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/meetings-side-panel/botdeployment.png)
+        ![Deploy App](~/assets/images/Teams-Messaging-Extensions-Search/botdeployment.png)
 
         Your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/meetings-side-panel/bot-page.png)
+        ![Azure bot resource created](~/assets/images/Teams-Messaging-Extensions-Search/bot-page.png)
 
     **To create client secret**
 
@@ -115,11 +115,13 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
+    1. Select **Multitenant** under **Bot Type**.
+
+        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png)    
+
     1. Next to **Microsoft App ID**, select **Manage**.
 
-    1. Select **Multitenant** under **App Type**.
-
-        ![Microsoft App ID](~/assets/images/meetings-side-panel/config.png)
+        ![Microsoft App ID](~/assets/images/Teams-Messaging-Extensions-Search/config.png)
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -131,11 +133,11 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/meetings-side-panel/clientsecret.png)
+        ![Add client secret to app](~/assets/images/Teams-Messaging-Extensions-Search/clientsecret.png)
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/meetings-side-panel/clientvalue.png)
+         ![Value of client secret](~/assets/images/Teams-Messaging-Extensions-Search/clientvalue.png)
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -144,7 +146,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/meetings-side-panel/gotohome.png)
+        ![Home page](~/assets/images/Teams-Messaging-Extensions-Search/gotohome.png)
 
     1. Select your bot from **Recent resources**.
 
@@ -160,7 +162,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/meetings-side-panel/config-teams.png)   
+          ![Select Teams](~/assets/images/Teams-Messaging-Extensions-Search/config-teams.png)   
     
     **To create tunnel for local web server**
 
@@ -177,7 +179,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok1.png)
+        ![ngrok HTTPS URL](~/assets/images/Teams-Messaging-Extensions-Search/ngrok.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -187,7 +189,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/meetings-side-panel/messaging-endpoint.png)
+        ![Messaging Endpoint](~/assets/images/Teams-Messaging-Extensions-Search/messaging-endpoint.png)
 
     1. Select **Apply**.
 
