@@ -5,7 +5,7 @@ description: How to add OAuth authentication to a bot in Microsoft Teams using A
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: resource group bot channel registration azure emulator bot manifest 
+keywords: resource group bot registration azure emulator bot manifest 
 ---
 
 # Add authentication to your Teams bot
@@ -85,23 +85,41 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select your **Subscription** from the dropdown list.
 1. Select your **Resource group** from the dropdown list.
 1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
+
     ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
+
 1. Select **Review + create**.
+
     ![Create Azure Bot](~/assets/images/adaptive-cards/create-azure-bot.png)
+
 1. If the validation passes, select **Create**.
+
     It takes a few moments for your bot service to be provisioned.
+
     ![Azure Bot validation](~/assets/images/adaptive-cards/validation-pane.png)
+
 1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
+
     ![Go to resource](~/assets/images/adaptive-cards/go-to-resource-card.png)
+
     Now your Azure bot is created.
+    
     ![Azure bot resource created](~/assets/images/adaptive-cards/azure-bot-ui.png)
+
 **To create client secret**
+
 1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
+
     ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+
 1. Adjacent to **Microsoft App ID**, select **Manage**.
+
     ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
-1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
+
+1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.
+
     ![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
+
 1. Enter **Description** and select **Add**.
  
     ![Client secret](~/assets/images/adaptive-cards/client-secret.png)
@@ -128,11 +146,6 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select **Save**.
 
     ![Select Teams](~/assets/images/adaptive-cards/select-teams.png)
-
-[!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
-
-> [!NOTE]
-> The Bot Channels Registration resource will show the **Global** region even if you selected West US. This is expected.
 
 For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md).
 
@@ -176,7 +189,7 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 #### Azure AD V1
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
-1. Select your bot channel registration link.
+1. Select your bot registration link.
 1. Open the resource page and select **Configuration** under **Settings**. 
 1. Select **Add OAuth Connection Settings**.    
 The following image displays the corresponding selection in the resource page:  
@@ -204,9 +217,8 @@ The following image displays the corresponding selection in the resource page:
 
 #### Azure AD V2
 
-1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
-1. Select your bot channel registration link.
-1. Open the resource page and select **Configuration** under **Settings**. 
+1. In the [**Azure portal**][azure-portal], select your Azure Bot from the dashboard.
+1. In the resource page, select **Configuration** under **Settings**. 
 1. Select **Add OAuth Connection Settings**.  
 The following image displays the corresponding selection in the resource page:        
 ![SampleAppDemoBot Configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
@@ -255,15 +267,15 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 1. From the toolbar select **File -> Open -> Project/Solution** and open the bot project.
 1. In C# Update **appsettings.json** as follows:
 
-    - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
-    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
-    - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
+    - Set `ConnectionName` to the name of the identity provider connection you added to the bot registration. The name we used in this example is *BotTeamsAuthADv1*.
+    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
+    - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
+1. In the Solution Explorer, navigate to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration.
 
 # [JavaScript](#tab/node-js)
 
@@ -274,14 +286,14 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 `npm install`
 1. Update the **.env** configuration as follows:
 
-    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
-    - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
+    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
+    - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
     - Set the `connectionName` to the name of the identity provider connection.
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
      [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
 
-1. In the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot channel registration.
+1. In the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot registration.
 
 # [Python](#tab/python)
 
@@ -319,7 +331,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
     ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
 
-1. In the resource group, select the bot channel registration name (link).
+1. In the resource group, select the bot registration name (link).
 1. In the left panel, select **Settings**.
 1. In the **Messaging endpoint** box, enter the URL obtained above followed by `api/messages`. This is an example: `https://botteamsauth.azurewebsites.net/api/messages`.
 1. Select the **Save** button in the upper left.
@@ -415,7 +427,7 @@ and when for these, and just reference that from here, along with the set of ste
 
 1. In your bot project, ensure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
 1. In Solution Explorer, navigate to the `TeamsAppManifest` folder. Edit `manifest.json` by assigning the following values:
-    1. Ensure that the **bot App ID** you received at the time of the bot channel registration is assigned to `id` and `botId`.
+    1. Ensure that the **bot App ID** you received at the time of the bot registration is assigned to `id` and `botId`.
     1. Assign this value: `validDomains: [ "token.botframework.com" ]`.
 1. Select and **zip** the `manifest.json`, `outline.png`, and `color.png` files.
 1. Open **Microsoft Teams**.
@@ -447,9 +459,9 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
 1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
-1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So **let's perform these steps:
+1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So let's perform these steps:
     1. In your browser navigate to the [**Azure portal**][azure-portal].
-    1. Select your **Bot Channel Registration**.
+    1. Select your **Bot Registration**.
     1. In the left panel, select **Settings**.
     1. In the right panel, in the **Messaging endpoint** box, enter the ngrok URL, in our example, `https://dea822bf.ngrok.io/api/messages`.
 1. Start your bot locally, for example in Visual Studio debug mode.
