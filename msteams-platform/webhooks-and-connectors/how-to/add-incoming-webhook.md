@@ -3,7 +3,7 @@ title: Create an Incoming Webhook
 author: laujan
 description: describes how to add Incoming Webhook to Teams app and post external requests to Teams with incoming webhooks
 keywords: teams tabs outgoing webhook
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -52,6 +52,8 @@ The following table provides the features and description of Incoming Webhook:
     ![Unique URL](~/assets/images/url.png)
 
 The webhook is available in the Teams channel.
+
+You can create and send actionable messages through Incoming Webhook or Office 365 Connector. For more information, see [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
