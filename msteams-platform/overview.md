@@ -19,6 +19,8 @@ Collaboration and communication are key elements for an organization. Concise, i
 
 Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
+:::image type="content" source="../msteams-platform/assets/images/overview/KeyMessage_StayFocused.jpg" alt-text="Teams app":::
+
 Let's look at some benefits of building an app with Microsoft Teams.
 
 - **Development benefit**: Mobile app – Just build an app, and the desktop, web, and mobile experience comes with it!
@@ -41,11 +43,11 @@ You can build and integrate a Teams app with your business and organizational ne
 
 A Teams app offers you the flexibility of choosing your build environment, tools, framework, language to approach your app development.
 
-||Add mindmap||
+:::image type="content" source="../msteams-platform/assets/images/overview/app-mindmap.png" alt-text="Business need app" border="true":::
 
 Build your Teams app in the environment that suits your business needs. You can even choose a combination of these to meet the requirement.
 
-For example: You can create use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+For example: You can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
 || Add use cases relevant to business needs: internal and external.||
 
