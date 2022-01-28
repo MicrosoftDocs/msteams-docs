@@ -332,6 +332,34 @@ items:
 
             ![Auth-end](~/assets/images/Teams-Messaging-Extensions-Search/authend.png)
 
+- title: Set up app settings and manifest files
+  durationInMinutes: 1
+  content: |
+    1. Navigate to **appsettings.json** in cloned repository.
+
+        ![App settings location](~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation.png)
+
+    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+
+         * Set `"MicrosoftAppType"` **MultiTenant**.
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppTenantId"` as blank.
+         * Set `"BaseUrl"` to the fully qualified domain name.
+
+        ![App settings](~/assets/images/Teams-Messaging-Extensions-Search/appsettings.png)
+
+    1. Navigate to **manifest.json** in cloned repository.
+
+        ![Manifest file location](~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation.png)
+    
+    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+
+         * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
+         * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
+
+        ![Manifest](~/assets/images/Teams-Messaging-Extensions-Search/manifest.png)
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
