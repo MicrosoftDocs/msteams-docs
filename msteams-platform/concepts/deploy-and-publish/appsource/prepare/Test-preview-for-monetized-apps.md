@@ -24,6 +24,7 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 1. Go to [Partner Center](https://go.microsoft.com/fwlink/?linkid=2166002) and sign in using your developer credentials.
 1. Select **Marketplace offers**.
 1. Select the SaaS offer you want to preview.
+1. Add a [preview audience](/azure/marketplace/create-new-saas-offer-preview) for your SaaS offer. 
 1. Select **AppSource preview** link under **Go Live** to find the Preview offer ID in the browser address bar with *publisherId.offerId-preview* format.
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id" border="true" :::
