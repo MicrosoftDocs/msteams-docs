@@ -278,7 +278,7 @@ items:
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/authorizedscope.png) 
+        ![Add client application 2](~/assets/images/Teams-Messaging-Extensions-Search/authorizedscope.png) 
 
        The following image displays the client IDs:
 
@@ -319,7 +319,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/meetings-side-panel/webauth.png)
+            ![Web](~/assets/images/Teams-Messaging-Extensions-Search/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://9179****.ngrok.io/auth-end`. </br>
@@ -330,7 +330,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/meetings-side-panel/authend.png)
+            ![Auth-end](~/assets/images/Teams-Messaging-Extensions-Search/authend.png)
 
 - title: Complete challenge
   durationInMinutes: 1
