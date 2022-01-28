@@ -33,15 +33,15 @@ Let's look at some benefits of building an app with Microsoft Teams.
     - Finance
     - Engineering
 
-You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app. 
+You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 ## Choose what suits you
 
 You can build and integrate a Teams app with your business and organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
 
-A Teams app offers you the flexibility of choosing your build environment, tools, platform, language to approach your app development.
+A Teams app offers you the flexibility of choosing your build environment, tools, framework, language to approach your app development.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/app-mindmap.png" alt-text="Business needs for app" border="true":::
+||Add mindmap||
 
 Build your Teams app in the environment that suits your business needs. You can even choose a combination of these to meet the requirement.
 
