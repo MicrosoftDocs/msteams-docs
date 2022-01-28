@@ -1,4 +1,4 @@
-### YamlMime:Tutorial
+# YamlMime:Tutorial
 
 title: Messaging extensions
 metadata:
