@@ -209,24 +209,24 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/meetings-side-panel/appregister.png)
+       ![App registration](~/assets/images/Teams-Messaging-Extensions-Search/appregister.png)
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/meetings-side-panel/exposeanapi.png)
+       ![Expose an API](~/assets/images/Teams-Messaging-Extensions-Search/exposeanapi.png)
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/meetings-side-panel/setlink.png)
+       ![Set link](~/assets/images/Teams-Messaging-Extensions-Search/setlink.png)
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://9179****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/meetings-side-panel/appIDuri.png)
+        ![App ID URI](~/assets/images/Teams-Messaging-Extensions-Search/appIDuri.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -254,13 +254,13 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/meetings-side-panel/addascope.png)
+        ![Add a scope](~/assets/images/Teams-Messaging-Extensions-Search/addascope.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://9179****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/meetings-side-panel/scopes.png) 
+        ![Scopes](~/assets/images/Teams-Messaging-Extensions-Search/scopes.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
