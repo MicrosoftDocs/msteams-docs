@@ -1,6 +1,6 @@
 # YamlMime:Tutorial
 
-title: Messaging extensions
+title: Messaging extensions Messaging extensions Messaging extensionsMessaging extensions
 metadata:
   title: Messaging extensions
   description: In this tutorial, you'll learn to set up  Messaging extensions for Teams.
