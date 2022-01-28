@@ -311,7 +311,7 @@ items:
     1. Select **Add permissions**.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
-
+s
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
