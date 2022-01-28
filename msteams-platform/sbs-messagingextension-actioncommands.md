@@ -1,4 +1,5 @@
 ### YamlMime:Tutorial
+
 title: Messaging extensions
 metadata:
   title: Messaging extensions
@@ -27,17 +28,16 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-   *[.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-   *[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-   *[ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+      * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+      * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+      * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    *[Microsoft Teams](https://teams.microsoft.com/) with valid account
-*[SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
+      * [Microsoft Teams](https://teams.microsoft.com/) with valid account
 
-    > [!NOTE]
+   > [!NOTE]
     > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
 
 - title: Set up local environment
@@ -77,13 +77,13 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
-    1. From the **Resource group** dropdown list, select your existing resource group. 
+    1. From the **Resource group** dropdown list, select your existing resource group.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/create-azure-bot.png" alt-text="create.":::
 
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
+    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
 
      You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
@@ -97,9 +97,9 @@ items:
          :::image type="content" source="assets/images/sbs-messagingextension-action/create-microsoft-id.png"alt-text="createmicrosoftid.":::
 
 1. If the validation passes, select **Create**
-        It takes a few moments for your bot service to be provisioned. 
+        It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. 
+    1. Select **Go to resource**.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/resource-file.png" alt-text="resource.":::
 
@@ -110,7 +110,7 @@ items:
 
       Perform the following steps if you have created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left panel, select **Configuration**.
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -147,12 +147,12 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane.
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
     1. Select the checkbox to accept the **Terms of Service**.
-    
+
     1. Select **Agree**.
 
            :::image type="content" source="./assets/images/sbs-messagingextension-action/agree.png" alt-text="agree.":::
@@ -222,7 +222,7 @@ items:
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
         > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
-    1. Select **Add a scope**. 
+    1. Select **Add a scope**.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/addascope.png" alt-text="add a scope.":::
 
@@ -252,13 +252,13 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
   
-    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
+    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application.
 
-    1. Select **Add a client application**. 
+    1. Select **Add a client application**.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
+    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
@@ -274,7 +274,7 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
   
-    1. In the left panel, select **API Permissions**. 
+    1. In the left panel, select **API Permissions**.
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -292,16 +292,16 @@ items:
          :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
     1. Add the following permissions:</br>
-         ***email**
-         ***offline_access**
-         ***OpenId**
-         ***profile**
+         - **email**
+         - **offline_access**
+         - **OpenId**
+         - **profile**
 
     1. Select **Add permissions**.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 s
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left panel, select **Authentication** to set a redirect URI.
 
        > [!NOTE]
        > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
@@ -311,7 +311,7 @@ s
 
             :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br>
            `https://ae57****.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
@@ -330,9 +330,9 @@ s
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
-       *Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-       *Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-       *Set `"BaseUrl"` to the fully qualified domain name.
+           * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+           * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+           * Set `"BaseUrl"` to the fully qualified domain name.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
@@ -374,7 +374,7 @@ s
           :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
 
-    #[Command line](#tab/cli)
+       #[Command line](#tab/cli)
 
     Navigate to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
 
@@ -389,7 +389,7 @@ s
 
     1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
 
-    1. Create a .zip with the following files that are present in the **Manifest** folder: 
+    1. Create a .zip with the following files that are present in the **Manifest** folder:
        *manifest.json
        *icon-outline.png
        *icon-color.png
@@ -406,7 +406,7 @@ s
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-    1. Select **Upload a custom app**. 
+    1. Select **Upload a custom app**.
 
       :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
@@ -480,4 +480,3 @@ s
 
 - content: |
     You've completed the tutorial to get started with a **Side Panel** app!
-
