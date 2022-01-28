@@ -20,7 +20,7 @@ items:
    
     You'll see the following output:
 
-       :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border=true":::
+       :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="output" "border=true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -49,7 +49,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/sbs-messagingextension-action/botbuilder-sample.png)
+        :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="output" "border=true":::
 
     1. Select **Clone**. 
 
@@ -93,6 +93,7 @@ items:
     1. Select **Review + create**.
 
         ![Create Microsoft App ID]
+
          :::image type="content" source="assets/images/sbs-messagingextension-action/create-microsoft-id.png"alt-text="createmicrosoftid.":::
         
 
@@ -234,7 +235,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/addascope.png" alt-text="add a scope.":::
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
