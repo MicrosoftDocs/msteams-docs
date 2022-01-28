@@ -391,7 +391,7 @@ After you have configured the authentication mechanism, you can perform the actu
 This releases the user token, and the bot won't be able to act on your behalf until you sign in again.
 
 > [!NOTE]
-> Bot authentication requires use of the **Bot Connector Service**. The service accesses the bot channels registration information for your bot.
+> Bot authentication requires use of the **Bot Connector Service**. The service accesses the bots registration information for your bot.
 
 ## Test the deployed bot
 
