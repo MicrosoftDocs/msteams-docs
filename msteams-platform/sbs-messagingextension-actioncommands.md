@@ -6,7 +6,7 @@ metadata:
   description: In this tutorial, you'll learn to set up  Messaging extensions for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 12/06/2021
+  ms.date: 12/01/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
@@ -49,7 +49,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-        :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="output" "border=true":::
+        :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="output.":::
 
     1. Select **Clone**.
 
