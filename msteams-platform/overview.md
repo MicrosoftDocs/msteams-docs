@@ -17,6 +17,22 @@ Apps are how you extend Teams capabilities to fit your needs. Create something b
 
 ||Add details for different business scenarios and business benefits||
 
+Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. 
+
+- **Development benefit**: Mobile app – Just build an app, and the desktop, web, and mobile experience comes with it!
+
+- **Security & compliance**: Your app’s customers’ data is secure Compliant 
+
+- **Business benefit and opportunities**: More users and customers for your service!
+    - Extending existing apps and system – e.g. Adobe for Teams 
+    - Startups, rely on another platforms – e.g. Polly 
+- **Work productivity benefit (internal apps)**
+    - Sales & accounting
+    - Finance
+    - Engineering
+
+You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app. 
+
 ## Choose what suits you
 
 You can build and integrate a Teams app with your business and organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the way you want to build your app.
@@ -24,6 +40,12 @@ You can build and integrate a Teams app with your business and organizational ne
 A Teams app offers you the flexibility of choosing your build environment, tools, platform, language to approach your app development.
 
 ||Add mind map diagram||
+
+
+| Platform | Framework | Tools | Languages |
+| --- | --- | --- | --- |
+| Teams Platform | Blazor | Teams Toolkit | JavaScript |
+
 
 - **Teams Toolkit**: An extension in Visual Studio Code and Visual Studio, it creates a project scaffolding for your Teams app project. It supports you with tools throughout the development lifecycle, even deploying your app to cloud all in one place.
 - **Developer Portal**: Create, configure, and manage your Teams apps with Developer Portal.
