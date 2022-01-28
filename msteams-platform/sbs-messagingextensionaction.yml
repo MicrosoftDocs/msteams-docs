@@ -13,19 +13,17 @@ metadata:
   ms.custom: mvc
   ms.localizationpriority: high
 items:
- durationInMinutes: 1
+  durationInMinutes: 1
   content: |
    Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client.
 
     This step-by-step guide illustrates how to build an Action-based Messaging Extension.
-   
     You'll see the following output:
 
        :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="output" "border=true":::
-
-- title: Prerequisites
-  durationInMinutes: 1
-  content: |
+   title: Prerequisites
+   durationInMinutes: 1
+   content: |
     Ensure you install the following tools and set up your development environment:  
 
       * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
@@ -37,12 +35,13 @@ items:
 
       * [Microsoft Teams](https://teams.microsoft.com/) with valid account
 
-   > [!NOTE]
+    > [!NOTE]
     > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
 
-- title: Set up local environment
-  durationInMinutes: 1
-  content: |
+     title: Set up local environment
+     durationInMinutes: 1
+     content: |
+
    Clone `BotBuilder-Samples` repository to your local GitHub:  
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
@@ -53,39 +52,39 @@ items:
 
     1. Select **Clone**.
 
-- title: Create and register your bot in Azure AD portal
-  durationInMinutes: 5
-  content: |
+    title: Create and register your bot in Azure AD portal
+    durationInMinutes: 5
+    content: |
     To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
-    *Create Azure Bot resource to register bot with Azure Bot Service.
-    *Create client secret to enable SSO authentication of the bot.
-    *Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    *Use ngrok to create a tunnel to your web server's endpoints.
-    *Add messaging endpoint to the ngrok tunnel you created.
+      *Create Azure Bot resource to register bot with Azure Bot Service.
+      *Create client secret to enable SSO authentication of the bot.
+      *Add Microsoft Teams channel to deploy the bot to a Teams channel.
+      *Use ngrok to create a tunnel to your web server's endpoints.
+      *Add messaging endpoint to the ngrok tunnel you created.
 
-    **To create Azure Bot resource**
+     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
-    1. Select **Create a resource**.
-    1. In the search box, enter **Azure Bot**.
-    1. Select **Enter**.
-    1. Select **Azure Bot**.
+     1. Go to the [Azure portal](https://portal.azure.com/).
+     1. Select **Create a resource**.
+     1. In the search box, enter **Azure Bot**.
+     1. Select **Enter**.
+     1. Select **Azure Bot**.
 
      :::image type="content" source="./assets/images/sbs-messagingextension-action/azure-bot.png" alt-text="select.":::
 
-    1. Select **Create**.
-    1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
-    1. From the **Resource group** dropdown list, select your existing resource group.
+      1. Select **Create**.
+      1. Enter required bot handle name in **Bot handle**.
+      1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
+      1. From the **Resource group** dropdown list, select your existing resource group.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/create-azure-bot.png" alt-text="create.":::
 
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
+      1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
 
-     You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+      You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -96,7 +95,7 @@ items:
 
          :::image type="content" source="assets/images/sbs-messagingextension-action/create-microsoft-id.png"alt-text="createmicrosoftid.":::
 
-1. If the validation passes, select **Create**
+    1. If the validation passes, select **Create**
         It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**.
@@ -139,7 +138,7 @@ items:
 
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
-**To add the Microsoft Teams channel**
+    **To add the Microsoft Teams channel**
 
     1. Select **Home**.
 
@@ -164,7 +163,7 @@ items:
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
-   > [!TIP]
+    > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
     **To add messaging endpoint**
 
@@ -186,9 +185,9 @@ items:
 
         You have successfully set up a bot in Azure Bot Service.
 
-- title: Update the Azure AD app registration
-  durationInMinutes: 1
-  content: |
+    title: Update the Azure AD app registration
+    durationInMinutes: 1
+    content: |
     **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
@@ -300,7 +299,7 @@ items:
     1. Select **Add permissions**.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
-s
+
     1. From the left panel, select **Authentication** to set a redirect URI.
 
        > [!NOTE]
@@ -321,9 +320,9 @@ s
 
             :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-- title: Set up app settings and manifest files
-  durationInMinutes: 1
-  content: |
+    title: Set up app settings and manifest files
+    durationInMinutes: 1
+    content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
@@ -347,9 +346,9 @@ s
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-- title: Build and run the service
-  durationInMinutes: 1
-  content: |
+    title: Build and run the service
+    durationInMinutes: 1
+    content: |
     **To build and run the service using Visual Studio 2019 or Command line**
 
     #[Visual Studio 2019](#tab/vs2019)
@@ -382,9 +381,9 @@ s
     dotnet run
     :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-- title: Add Meetings SidePanel app to Teams
-  durationInMinutes: 1
-  content: |
+    title: Add Meetings SidePanel app to Teams
+    durationInMinutes: 1
+    content: |
     **To create a Teams meeting and add Meetings SidePanel App**
 
     1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
@@ -426,7 +425,7 @@ s
 
     1. Select **Add an app**.
 
-   In the app selection page, the app displays as **Side Panel**.
+    In the app selection page, the app displays as **Side Panel**.
   
        :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
@@ -438,9 +437,9 @@ s
 
        The app is visible in the meeting SidePanel.
 
-- title: Interact with the app in Teams
-  durationInMinutes: 1
-  content: |
+    title: Interact with the app in Teams
+    durationInMinutes: 1
+    content: |
     Let's interact with the app in Teams!
 
     1. Select **Create Card** command from the compose box command list.
@@ -471,12 +470,12 @@ s
 
       :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-- title: Complete challenge
-  durationInMinutes: 1
-  content: |
+    title: Complete challenge
+    durationInMinutes: 1
+    content: |
     Did you come up with something like this?
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/applicationurl.png" alt-text="application url.":::
 
-- content: |
+    content: |
     You've completed the tutorial to get started with a **Side Panel** app!
