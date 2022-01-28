@@ -73,12 +73,61 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Select **Create**. It may take a few minutes to create the app service plan. The plan will be listed in the resource group.
 
-## Create the bot channels registration
+## Create Azure Bot resource registration
 
-The bot channels registration registers your web service as a bot with the Bot Framework, provided you have a Microsoft App Id and App password (client secret).
+The Azure Bot resource registration registers your web service as a bot with the Bot Framework, provided with a Microsoft App Id and App password (client secret).
 
 > [!IMPORTANT]
 > You only need to register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [Developer Portal](../../../concepts/build-and-test/teams-developer-portal.md) your bot isn't registered in Azure.
+
+1. Select **Create**.
+1. Enter bot handle name in **Bot handle** field.
+1. Select your **Subscription** from the dropdown list.
+1. Select your **Resource group** from the dropdown list.
+1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
+    ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
+1. Select **Review + create**.
+    ![Create Azure Bot](~/assets/images/adaptive-cards/create-azure-bot.png)
+1. If the validation passes, select **Create**.
+    It takes a few moments for your bot service to be provisioned.
+    ![Azure Bot validation](~/assets/images/adaptive-cards/validation-pane.png)
+1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
+    ![Go to resource](~/assets/images/adaptive-cards/go-to-resource-card.png)
+    Now your Azure bot is created.
+    ![Azure bot resource created](~/assets/images/adaptive-cards/azure-bot-ui.png)
+**To create client secret**
+1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
+    ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+1. Adjacent to **Microsoft App ID**, select **Manage**.
+    ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
+1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
+    ![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
+1. Enter **Description** and select **Add**.
+ 
+    ![Client secret](~/assets/images/adaptive-cards/client-secret.png)
+
+1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
+
+    ![Client secret value](~/assets/images/adaptive-cards/client-secret-value.png)
+       
+**To add the Microsoft Teams channel**
+
+1. Go to **Home**.
+
+    ![Bot home page](~/assets/images/adaptive-cards/bot-home-page.png)
+
+1. Open your bot, which is listed in the **Recent resources** section.
+1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+
+    ![Channel Teams](~/assets/images/adaptive-cards/channel-teams.png)
+
+1. Select the checkbox to accept the terms of service and select **Agree**.</br>
+
+    ![Select terms of service](~/assets/images/adaptive-cards/select-terms-of-service.png)
+
+1. Select **Save**.
+
+    ![Select Teams](~/assets/images/adaptive-cards/select-teams.png)
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
