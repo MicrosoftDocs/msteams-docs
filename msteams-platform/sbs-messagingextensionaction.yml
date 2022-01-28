@@ -1,18 +1,18 @@
-# YamlMime:Tutorial
-title: Messaging extensions
+### YamlMime:Tutorial
+title: Meetings SidePanel
 metadata:
-  title: Messaging extensions
-  description: In this tutorial, you'll learn to set up  Messaging extensions for Teams.
+  title: Meetings SidePanel
+  description: In this tutorial, you'll learn to set up Meetings SidePanel for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 12/01/2022
+  ms.date: 12/06/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
   ms.custom: mvc
   ms.localizationpriority: high
 items:
-  durationInMinutes: 1
+- durationInMinutes: 1
   content: |
    Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client.
 
