@@ -2,7 +2,7 @@
 title: Outgoing webhooks
 metadata:
   title: Outgoing webhooks
-  description: In this tutorial, you'll learn to set up Outgoing webhooks for Teams.
+  description: In this tutorial, you'll learn to set up outgoing webhooks for Teams.
   audience: Developer
   level: Beginner
   ms.date: 14/01/2022
@@ -14,9 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Webhooks help Teams to integrate with external apps. In Teams, the Outgoing Webhooks act as bot and search for messages in channels using @mention. In Teams, outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through [Microsoft Bot Framework](https://dev.botframework.com/). Outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
+    Webhooks help Teams to integrate with external apps. In Teams, the outgoing webhooks act as bot and search for messages in channels using **@mention**. The outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through [Microsoft Bot Framework](https://dev.botframework.com/). The outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
     
-    Key features of Outgoing Webhooks:
+    Key features of outgoing webhooks:
     
     * Send notifications to any external web service.
     * Respond with rich messages including cards and images. 
@@ -24,9 +24,9 @@ items:
     * Send HTTP POST to web service and get response. 
     
      > [!NOTE]
-     > The Outgoing Webhooks cannot access any other APIs, such as retrieve the roster or list of channels in a team.
+     > The outgoing webhooks cannot access any other APIs, such as retrieve the roster or list of channels in a team.
     
-    This step-by-step guide helps you to generate Outgoing Webhooks in Teams. You'll see the following output:
+    This step-by-step guide helps you to create outgoing webhooks in Teams. You'll see the following output:
 
     ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
 
@@ -55,10 +55,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create Outgoing Webhooks
+- title: Create outgoing webhooks
   durationInMinutes: 5
   content: |
-    To create Outgoing Webhooks, perform the following steps:
+    To create outgoing webhooks, perform the following steps:
 
     1. Select the appropriate team, and then select Manage team from the (•••) dropdown menu.
 
@@ -92,7 +92,7 @@ items:
 
         * Profile Picture (optional) an app icon for your webhook.
 
-    1. Select **Create**. The Outgoing Webhook is added to the current team's channel:
+    1. Select **Create**. The outgoing webhooks is added to the current team's channel:
 
         ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
 
@@ -119,7 +119,7 @@ items:
 
            ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
 
-       1. Update the "contoso" to "M365x712764" and HMAC **AuthProvider.cs** file.  
+       1. Update the **"contoso"** to "M365x712764" and HMAC in **AuthProvider.cs** file.  
 
            ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
       
@@ -144,12 +144,12 @@ items:
 
     1. Select **New conversation** to begin a conversation.
 
-    1. Enter **\@mention** the name of the Outgoing Webhook to invoke it in the channel. 
+    1. Enter **\@mention** the name of the outgoing webhook to invoke it in the channel. 
 
        ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
 
        > [!NOTE]
-       >  You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
+       >  You can send Adaptive Card, Hero card, and text messages as attachment with outgoing webhook.
 
     1. The new message received is displayed in the meeting chat.
 
@@ -164,6 +164,6 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a **Outgoing Webhook** app!
+    You've completed the tutorial to get started with a **outgoing webhook** app!
 
 
