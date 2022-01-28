@@ -5,7 +5,7 @@
 - name: Overview
   expanded: false 
   items:
-  - name: Build apps for Microsoft Teams
+  - name: An app that fits
     href: overview.md
   - name: It starts with an idea
     href: overview-story.md

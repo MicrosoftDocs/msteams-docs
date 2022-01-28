@@ -24,11 +24,11 @@ Collate and map requirements to Teams features:
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
 | **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Forecast website |
-| **Scope** | &nbsp; | Personal app | &nbsp; |
+| **Scope** | &nbsp; | Personal app; Adaptive Card | &nbsp; |
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 |
 
-**Teams app solution**: A Teams *personal chat bot* app, which checks and *sends forecast notification* to *registered users* before their travel date, checks all requirements.
+**Teams app solution**: A Teams *personal chat bot* app, which checks and *sends forecast notification* in an *Adaptive Card* to *registered users* before their travel date, checks all requirements.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-2.png" alt-text="Image showing user story" border="true":::
 
@@ -38,6 +38,27 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 1. Integrate with external API from a forecast website to connect and request forecast for specific date and location.
 1. Integrate with Microsoft Graph for registered users.
 1. Check and send forecast details on the basis of users travel date and travel location on a particular day.
+
+## Teams Collaborative Platform
+
+A Teams app brings your users the advantages of a collaborative workspace.
+
+As a platform for building apps, Teams offers the full range of apps and toolkits. From planning your app to distributing it, the Teams framework supports you at every stage.
+
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
+
+By building your app with Teams, you can:
+
+- Design your app with Teams UI Toolkit and UI Library.
+- Build personal apps, a shared or collaborative apps, or custom apps.
+- Use the benefits of Teams Toolkit that scaffolds the basic app workspace for you with minimal effort.
+- Try ready made solutions.
+- Integrate with low-code and no-code Apps in Teams.
+- Automate tasks and low-code applications.
+- Integrate your existing apps with Teams.
+- Choose that build environment most suitable for your app, such as JavaScript, C#, SharePoint Framework, and other tools and SDKs.
+- Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
+- Dive deeper with user authentication, integration with other apps, Teams data from Microsoft Graph, and Developer Portal to manage your app.
 
 ## Useful Links
 

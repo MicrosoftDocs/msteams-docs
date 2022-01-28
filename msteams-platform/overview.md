@@ -7,17 +7,19 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
 ---
-# Build apps with Microsoft Teams
+# An App that fits
 
-Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
+Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend Teams capabilities to fit your needs. Create something brand new or integrate an existing app — and you utilize benefits of Microsoft Teams platform for your particular business needs.
 
-Apps are how you extend Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
-
-## An App that fits
+## Build apps with Microsoft Teams platform
 
 ||Add details for different business scenarios and business benefits||
 
-Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. 
+Collaboration and communication are key elements for an organization. Concise, integrated with necessary services, and accessible on-the-go are reasons that people are increasingly choosing to rely on apps. Organizations use it to connect with their customers, provide services, and share information.But that's not all! Apps have become the meeting place for people to work together. A well-placed app helps build a cohesive environment for external and internal business needs.
+
+Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
+
+Let's look at some benefits of building an app with Microsoft Teams.
 
 - **Development benefit**: Mobile app – Just build an app, and the desktop, web, and mobile experience comes with it!
 
@@ -35,45 +37,17 @@ You can build apps with Teams Developer platform by extending Teams capabilities
 
 ## Choose what suits you
 
-You can build and integrate a Teams app with your business and organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the way you want to build your app.
+You can build and integrate a Teams app with your business and organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
 
 A Teams app offers you the flexibility of choosing your build environment, tools, platform, language to approach your app development.
 
-||Add mind map diagram||
+:::image type="content" source="../msteams-platform/assets/images/overview/app-mindmap.png" alt-text="Business needs for app" border="true":::
 
+Build your Teams app in the environment that suits your business needs. You can even choose a combination of these to meet the requirement.
 
-| Platform | Framework | Tools | Languages |
-| --- | --- | --- | --- |
-| Teams Platform | Blazor | Teams Toolkit | JavaScript |
+For example: You can create use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
-
-- **Teams Toolkit**: An extension in Visual Studio Code and Visual Studio, it creates a project scaffolding for your Teams app project. It supports you with tools throughout the development lifecycle, even deploying your app to cloud all in one place.
-- **Developer Portal**: Create, configure, and manage your Teams apps with Developer Portal.
-- **Bot Framework**: Create sophisticated conversational experience with the open-source, visual authoring canvas for developers. You can even build conversational AI experiences for your Teams bot app, and deploy using Azure Bot service.
-- **Languages and Tools**: Choose the language best suited to your project needs from C#, JavaScript, TypeScript. You can also choose to build the app using platforms, frameworks, and tools, such as SharePoint, Blazor, and Node.js.
-
-## Teams Collaborative Platform
-
-A Teams app brings your users the advantages of a collaborative workspace.
-
-As a platform for building apps, Teams offers the full range of apps and toolkits. From planning your app to distributing it, the Teams framework supports you at every stage.
-
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
-
-<!--
-By building your app with Teams, you can:
-
-- Design your app with Teams UI Toolkit and UI Library.
-- Build personal apps, a shared or collaborative apps, or custom apps.
-- Use the benefits of Teams Toolkit that scaffolds the basic app workspace for you with minimal effort.
-- Try ready made solutions.
-- Integrate with low-code and no-code Apps in Teams.
-- Automate tasks and low-code applications.
-- Integrate your existing apps with Teams.
-- Choose that build environment most suitable for your app, such as JavaScript, C#, SharePoint Framework, and other tools and SDKs.
-- Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
-- Dive deeper with user authentication, integration with other apps, Teams data from Microsoft Graph, and Developer Portal to manage your app.
--->
+|| Add use cases relevant to business needs: internal and external.||
 
 ## About Microsoft Teams Developer Documentation
 
@@ -83,4 +57,3 @@ This document describes Teams features and how you can use them to build your ap
 - Step-by-step guides.
 - Guidelines to publish and distribute your app to Teams store.
 - Best practices for Teams app scenarios.
-
