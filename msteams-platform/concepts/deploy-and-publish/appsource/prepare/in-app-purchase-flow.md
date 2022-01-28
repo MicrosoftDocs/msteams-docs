@@ -9,7 +9,7 @@ localization_priority: Normal
 
 # In-app purchases
 
-Microsoft Teams provide APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans or upsell to a new subscription plan directly from within your app.
+Microsoft Teams provide APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
 
 ## Implement in-app purchases
 
@@ -19,9 +19,11 @@ To offer an in-app purchase experience to the users of your app, ensure the foll
 
 * App is enabled with a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
+In-app purchase experience can be enabled either by updating **manifest.json** file or by enabling **Show in-app purchase offers** from **Permissions** section of your **Developer Portal**.
+
 ### Update manifest
 
-Update your Teams app **manifest.json** file by adding the RSC permissions to achieve in-app purchase experience. It allows your app users to upgrade to a paid version of your app and start using new functionalities. The update for app manifest is as follows:
+To enable in-app purchase experience update your Teams app **manifest.json** file by adding the RSC permissions to achieve in-app purchase experience. It allows your app users to upgrade to a paid version of your app and start using new functionalities. The update for app manifest is as follows:
 
 ```json
 
@@ -66,9 +68,6 @@ Following is an example of calling the API from the app:
     } 
 </script> 
 ```
-
-> [!NOTE]
->  Ensure to enable **Show in-app purchase offers** from **Permissions** section of your **Developer Portal**.
 
 ## End-user in-app purchasing experience
 
