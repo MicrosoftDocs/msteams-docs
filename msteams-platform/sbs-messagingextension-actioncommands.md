@@ -72,20 +72,20 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/sbs-messagingextension-action/createazurebot.png)
+          :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
     1. From the **Resource group** dropdown list, select your existing resource group. 
     
-        ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/review-plus-create.png) 
+         :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        ![New resource group location](~/assets/images/sbs-messagingextension-action/newresource.png)
+         :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -96,8 +96,9 @@ items:
 
     1. Select **Review + create**.
 
-        ![Create Microsoft App ID](~/assets/images/sbs-messagingextension-action/meeting-token-generator-appidcreate.png)
-        <img src="~/assets/images/sbs-messagingextension-action/appidcreate.png">
+        ![Create Microsoft App ID]
+         :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
+        
 
     1. If the validation passes, select **Create**. 
 
@@ -124,11 +125,11 @@ items:
 
     1. Select **Multitenant** under **App Type**.
 
-        ![Microsoft App ID](~/assets/images/sbs-messagingextension-action/config.png)
+        ![Microsoft App ID] :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/sbs-messagingextension-action/newclientsecret.png)
+        ![New client secret] :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
     
        The **Add a client secret** window appears.  
 
@@ -136,11 +137,11 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/sbs-messagingextension-action/clientsecret.png)
+        ![Add client secret to app] :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/sbs-messagingextension-action/clientvalue.png)
+         ![Value of client secret]( :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -149,7 +150,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/sbs-messagingextension-action/gotohome.png)
+            :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png"alt-text="output style="border: 1px solid black":::
 
     1. Select your bot from **Recent resources**.
 
