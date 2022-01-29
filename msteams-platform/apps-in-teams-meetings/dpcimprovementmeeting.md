@@ -11,7 +11,8 @@ ms.localizationpriority: none
    
     You'll see the following output:
 
-       :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="Output card.":::
+       
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="Add API permissions."::  
 
 - title: Prerequisites
   durationInMinutes: 1
