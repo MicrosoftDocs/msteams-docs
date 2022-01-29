@@ -11,7 +11,7 @@ ms.localizationpriority: none
    
     You'll see the following output:
 
-       :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="Output":::
+       :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="Output card.":::
 
 - title: Prerequisites
   durationInMinutes: 1
