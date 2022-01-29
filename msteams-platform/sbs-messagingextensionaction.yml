@@ -12,7 +12,7 @@ metadata:
   ms.custom: mvc
   ms.localizationpriority: high
 items:
-- durationInMinutes: 1 minute
+- durationInMinutes: 1 
   content: |
    Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client.
 
