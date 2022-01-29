@@ -38,7 +38,3 @@ ms.localizationpriority: none
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
-
-        :::image type="content" source="assets/images/sbs-messagingextension-action/output-card.png alt-text="Output":::
-
-    1. Select **Clone**.
