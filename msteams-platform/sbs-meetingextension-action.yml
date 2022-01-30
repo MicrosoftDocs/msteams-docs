@@ -27,6 +27,7 @@ items:
     You'll see the following output:
 
      ![Your Token](~/assets/images/sbs-messagingextension-action/output-card.png)
+      border-image: url(~/assets/images/sbs-messagingextension-action/output-card.png)
 
 - title: Prerequisites
   durationInMinutes: 1
