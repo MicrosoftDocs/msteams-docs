@@ -56,7 +56,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meetings-side-panel/clonerepository1.png)
+       ![Clone repository](~/assets/images/sbs-messagingextension-action/clonerepository1.png)
 
     1. Select **Clone**. 
 
@@ -86,13 +86,13 @@ items:
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
     1. From the **Resource group** dropdown list, select your existing resource group. 
     
-        ![Select resource Azure bot](~/assets/images/meetings-side-panel/review-plus-create.png) 
+        ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/review-plus-create.png) 
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        ![New resource group location](~/assets/images/meetings-side-panel/newresource.png)
+        ![New resource group location](~/assets/images/sbs-messagingextension-action/newresource.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -111,7 +111,7 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/meetings-side-panel/botdeployment.png)
+        ![Deploy App](~/assets/images/sbs-messagingextension-action/botdeployment.png)
 
         Your Azure bot is created.
 
@@ -130,11 +130,11 @@ items:
 
     1. Select **Multitenant** under **App Type**.
 
-        ![Microsoft App ID](~/assets/images/meetings-side-panel/config.png)
+        ![Microsoft App ID](~/assets/images/sbs-messagingextension-action/config.png)
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
+        ![New client secret](~/assets/images/sbs-messagingextension-action/newclientsecret.png)
     
        The **Add a client secret** window appears.  
 
@@ -142,11 +142,11 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/meetings-side-panel/clientsecret.png)
+        ![Add client secret to app](~/assets/images/sbs-messagingextension-action/clientsecret.png)
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/meetings-side-panel/clientvalue.png)
+         ![Value of client secret](~/assets/images/sbs-messagingextension-action/clientvalue.png)
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -155,7 +155,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/meetings-side-panel/gotohome.png)
+        ![Home page](~/assets/images/sbs-messagingextension-action/gotohome.png)
 
     1. Select your bot from **Recent resources**.
 
@@ -167,11 +167,11 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/meetings-side-panel/terms.png)
+          ![Terms of service](~/assets/images/sbs-messagingextension-action/terms.png)
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/meetings-side-panel/config-teams.png)   
+          ![Select Teams](~/assets/images/sbs-messagingextension-action/config-teams.png)   
     
     **To create tunnel for local web server**
 
@@ -188,7 +188,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok1.png)
+        ![ngrok HTTPS URL](~/assets/images/sbs-messagingextension-action/ngrok1.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -198,7 +198,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/meetings-side-panel/messaging-endpoint.png)
+        ![Messaging Endpoint](~/assets/images/sbs-messagingextension-action/messaging-endpoint.png)
 
     1. Select **Apply**.
 
@@ -218,24 +218,24 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/meetings-side-panel/appregister.png)
+       ![App registration](~/assets/images/sbs-messagingextension-action/appregister.png)
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/meetings-side-panel/exposeanapi.png)
+       ![Expose an API](~/assets/images/sbs-messagingextension-action/exposeanapi.png)
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/meetings-side-panel/setlink.png)
+       ![Set link](~/assets/images/sbs-messagingextension-action/setlink.png)
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://ae57****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/meetings-side-panel/appIDuri.png)
+        ![App ID URI](~/assets/images/sbs-messagingextension-action/appIDuri.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -243,7 +243,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+       ![Select scope](~/assets/images/sbs-messagingextension-action/selectscope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -263,35 +263,35 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/meetings-side-panel/addascope.png)
+        ![Add a scope](~/assets/images/sbs-messagingextension-action/addascope.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/meetings-side-panel/scopes.png) 
+        ![Scopes](~/assets/images/sbs-messagingextension-action/scopes.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/meetings-side-panel/selectclientapp.png) 
+        ![Select client application](~/assets/images/sbs-messagingextension-action/selectclientapp.png) 
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        ![Add client application 1](~/assets/images/meetings-side-panel/addclientapplication1.png) 
+        ![Add client application 1](~/assets/images/sbs-messagingextension-action/addclientapplication1.png) 
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/addclientapplication2.png) 
+        ![Add client application 2](~/assets/images/sbs-messagingextension-action/addclientapplication2.png) 
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/authorizedscope.png) 
+        ![Add client application 2](~/assets/images/sbs-messagingextension-action/authorizedscope.png) 
 
        The following image displays the client IDs:
 
-        ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
+        ![Client applications](~/assets/images/sbs-messagingextension-action/clientapps.png) 
   
     1. In the left panel, select **API Permissions**. 
 
@@ -300,7 +300,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+        ![Add permission](~/assets/images/sbs-messagingextension-action/addpermission.png)
 
     1. Select **Microsoft Graph**.
 
@@ -308,7 +308,7 @@ items:
 
         By default, **User.Read** is selected.
 
-         ![User](~/assets/images/meetings-side-panel/userpermission.png)
+         ![User](~/assets/images/sbs-messagingextension-action/userpermission.png)
 
     1. Add the following permissions:</br>
          * **email**
@@ -318,7 +318,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions.png)
+         ![Other permissions](~/assets/images/sbs-messagingextension-action/other-permissions.png)
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -328,7 +328,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/meetings-side-panel/webauth.png)
+            ![Web](~/assets/images/sbs-messagingextension-action/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://ae57****.ngrok.io/auth-end`. </br>
@@ -339,7 +339,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/meetings-side-panel/authend.png)
+            ![Auth-end](~/assets/images/sbs-messagingextension-action/authend.png)
 
 
 - title: Set up app settings and manifest files
@@ -347,7 +347,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/meetings-side-panel/appsettingslocation.png)
+        ![App settings location](~/assets/images/sbs-messagingextension-action/appsettingslocation.png)
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
@@ -355,18 +355,18 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        ![App settings](~/assets/images/meetings-side-panel/appsettings.png)
+        ![App settings](~/assets/images/sbs-messagingextension-action/appsettings.png)
 
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/meetings-side-panel/manifestlocation.png)
+        ![Manifest file location](~/assets/images/sbs-messagingextension-action/manifestlocation.png)
     
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/meetings-side-panel/manifest-2.png)
+        ![Manifest image2](~/assets/images/sbs-messagingextension-action/manifest-2.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -382,7 +382,7 @@ items:
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/meetings-side-panel/Tokenfileready.png)
+          ![Solution File](~/assets/images/sbs-messagingextension-action/Tokenfileready.png)
 
        1. Press **F5** to run the project.
     
@@ -392,7 +392,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/meetings-side-panel/appisready.png) 
+          ![App ready](~/assets/images/sbs-messagingextension-action/appisready.png) 
 
         
     # [Command line](#tab/cli)
@@ -403,7 +403,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
+    ![Dotnet](~/assets/images/sbs-messagingextension-action/dotnetruncmd.png)
       
 - title: Add Meetings SidePanel app to Teams
   durationInMinutes: 1
@@ -417,13 +417,13 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/meetings-side-panel/zipfile.png) 
+       ![Zip file](~/assets/images/sbs-messagingextension-action/zipfile.png) 
     
     1. Create a meeting with a few presenters and attendees.
    
     1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
-       ![Add an app](~/assets/images/meetings-side-panel/addanapp.png) 
+       ![Add an app](~/assets/images/sbs-messagingextension-action/addanapp.png) 
    
     1. In the pop-up that opens, select **Manage apps**.
 
@@ -431,19 +431,19 @@ items:
    
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/meetings-side-panel/uploadcustomapp.png)
+       ![Upload custom app](~/assets/images/sbs-messagingextension-action/uploadcustomapp.png)
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/meetings-side-panel/selectzip.png)
+       ![Select zip file](~/assets/images/sbs-messagingextension-action/selectzip.png)
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/meetings-side-panel/addtheapp.png)
+       ![Add the app](~/assets/images/sbs-messagingextension-action/addtheapp.png)
 
        The **Manage apps** section displays the list of applications.
 
-       ![App in Manage apps](~/assets/images/meetings-side-panel/manageappsection.png)
+       ![App in Manage apps](~/assets/images/sbs-messagingextension-action/manageappsection.png)
    
     1. Go to Teams meeting.
     
@@ -451,13 +451,13 @@ items:
     
        In the app selection page, the app displays as **Side Panel**.
   
-       ![App icon in Teams](~/assets/images/meetings-side-panel/appicon.png)
+       ![App icon in Teams](~/assets/images/sbs-messagingextension-action/appicon.png)
 
     1. Select the **Side Panel** app.
     
     1. Select **Save**.
 
-       ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
+       ![Welcome App](~/assets/images/sbs-messagingextension-action/welcomeapp.png)
    
        The app is visible in the meeting SidePanel.         
 
@@ -468,28 +468,28 @@ items:
 
     1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+       ![Token in Meet](~/assets/images/sbs-messagingextension-action/sidepanelinmeet.png)
 
     1. Enter a new agenda item to the list and select **Add**.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+       ![Token in Meet](~/assets/images/sbs-messagingextension-action/newagenda.png)
 
        The new agenda is added in the list.
 
     1. Select **Publish Agenda**.
 
-       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+       ![Your Token](~/assets/images/sbs-messagingextension-action/youragenda.png)
 
        The new agenda list is displayed in the meeting chat.
 
-       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+       ![Your Token](~/assets/images/sbs-messagingextension-action/agendainchat.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
+       ![Token in Meet](~/assets/images/sbs-messagingextension-action/sidepanelondesktopmobile.png)
 
 
 - content: |
