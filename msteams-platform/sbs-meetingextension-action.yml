@@ -93,6 +93,7 @@ items:
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
         ![New resource group location](~/assets/images/sbs-messagingextension-action/newresource.png)
+        border-image: url(~/assets/images/sbs-messagingextension-action/newresource.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
