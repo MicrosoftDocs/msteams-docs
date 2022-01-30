@@ -79,7 +79,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/sbs-messagingextension-action/create-azure-bot.png)
+         ![Create Azure bot card](~/assets/images/sbs-messagingextension-action/create-azure-bot.png)<div id="bitmap">This element is surrounded by a bitmap-based border image!</div>
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
