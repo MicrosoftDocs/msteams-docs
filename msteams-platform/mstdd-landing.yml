@@ -55,7 +55,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-        - text: Upload files to Teams from a bot 
+        - text: Teams file upload bot 
           url: bots/how-to/bots-filesv4.md
         - text: Device permission for browser 
           url: concepts/device-capabilities/browser-device-permissions.md
@@ -76,7 +76,7 @@ landingContent:
           
     - linkListType: tutorial
       links:
-        - text: Teams file upload bot
+        - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
         - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
