@@ -65,7 +65,7 @@ It allows developers and project owners to invite other collaborators to the Tea
 
 ## Development
 
-Teams Toolkit helps you to create and customize your Teams app project, and makes simplifies Teams app development.
+Teams Toolkit helps you to create and customize your Teams app project, and simplifies Teams app development.
 
 ### Create a new Teams app
 
@@ -81,15 +81,15 @@ It helps you to optionally add cloud resources according to your development nee
 
 ### Edit manifest file 
 
-It helps you to configure how the Teams app will be integrated with the Teams client.
+It helps you to configure the Teams apps that will be integrated with the Teams client.
 
 ## Deployment
 
-During or after development make sure to provision, deploy, and publish your Teams app to make it accessible to users.
+During or after development ensure to provision, deploy, and publish your Teams app to make it accessible to users.
 
 ### Provision in the cloud
 
-It integrates with Azure resource manager, enabling you to provision Azure resources needed by your application.
+It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
 
 ### Deploy to the cloud
 
