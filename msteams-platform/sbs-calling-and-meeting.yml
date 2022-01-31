@@ -1,26 +1,26 @@
 ### YamlMime:Tutorial
 title: Teams calling and meeting bot
 metadata:
-  title: Teams Bot with calling and meeting
+  title: Teams bot with calling and meeting
   description: In this tutorial, you'll learn to set up calling and meeting in a bot for Teams.
   audience: Developer
   level: Beginner
   ms.date: 01/31/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
-  nextTutorialTitle: Register a calling Bot
+  nextTutorialTitle: Register a calling bot
   ms.custom: mvc
   ms.localizationpriority: none
 items:
 - durationInMinutes: 1
   content: |
-    Calling and Meeting Bot provides basic functionalities like create a call, join a call, transfer or redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
+    Calling and Meeting bot provides basic functionalities like create a call, join a call, transfer or redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
     
     Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
-    * Interactive Voice Response (IVR).
-    * Call control.
-    * Access to real time audio and video streams, including desktop and app sharing.
+        Interactive Voice Response (IVR).
+        Call control.
+        Access to real time audio and video streams, including desktop and app sharing.
 
     Create a bot and specify some additional information and permissions to use these Graph APIs in a Teams app.
  
@@ -33,7 +33,7 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+    * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
     * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution.
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
