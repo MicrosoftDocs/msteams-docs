@@ -39,13 +39,13 @@ You can build apps with Teams Developer platform by extending Teams capabilities
 
 ## Choose what suits you
 
-You can build and integrate a Teams app with your business and organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
+You can build a Teams app as per your personal or organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
 
-A Teams app offers you the flexibility of choosing your build environment, tools, framework, language to approach your app development.
+A Teams app offers you the flexibility of choosing your build environment. This includes tools, framework, and languages to approach your app development.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/app-mindmap.png" alt-text="Business need app" border="true":::
 
-Build your Teams app in the environment that suits your business needs. You can even choose a combination of these to meet the requirement.
+Build your Teams app in the environment that works for your particular requirements. You can even choose a combination of tools and .
 
 For example: You can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
