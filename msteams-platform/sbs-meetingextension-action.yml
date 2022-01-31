@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Meetings SidePanel
+title: Teams Messaging Extensions Action
 metadata:
-  title: Meetings SidePanel
-  description: In this tutorial, you'll learn to set up Meetings SidePanel for Teams.
+  title: Teams Messaging Extensions Action
+  description: In this tutorial, you'll learn to set up Teams Messaging Extensions Action for Teams.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -14,16 +14,16 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The `meetingSidePanel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
+    Messaging extensions allow the users to interact with web service through buttons and forms in the Microsoft Teams client.  
+    The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
 
-    This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
+    This step-by-step guide illustrates how to create **Teams Messaging Extensions Action** app to add and get a response.
 
-    **Meeting organizers' interaction of meeting SidePanel**
+     **Key features of Teams Messaging Extensions Action**
 
-    * **Add New Agenda Item**: Gives provision to add new agenda point.
-    * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
-    * **Publish Agenda**: Sends the agenda list to the meeting chat. 
-
+    * Presents the user with a modal popup to collect or display information.
+    * The action commands are triggered from the compose message area, the command box, or from a message. 
+    
     You'll see the following output:
 
      ![output](~/assets/images/sbs-messagingextension-actionsharemessageoutput1.png)
@@ -34,26 +34,23 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
-
     > [!NOTE]
     > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
 
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+   Clone `BotBuilder-Samples` repository to your local GitHub:  
 
-    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+    1. Open [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples).
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
