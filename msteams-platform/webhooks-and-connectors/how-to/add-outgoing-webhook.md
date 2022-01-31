@@ -56,7 +56,7 @@ Create Outgoing Webhooks and add custom bots to Teams.
 
     ![create Outgoing Webhook](~/assets/images/outgoingwebhook.png)
 
-A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It is a security token used to authenticate calls between Teams and the designated outside service.
+A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It is a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token does not expire and is unique per configuration.
 
 >[!NOTE]
 > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
