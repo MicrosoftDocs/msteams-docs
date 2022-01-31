@@ -52,7 +52,7 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in AAD portal
+- title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
     The following steps guide you to:
@@ -189,7 +189,7 @@ items:
 - title: Configure SSO for your tab 
   durationInMinutes: 1
   content: |
-    **To register your app through the AAD portal**  
+    **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -259,7 +259,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
