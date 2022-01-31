@@ -68,10 +68,11 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 |Tabs with SPFx|None|
 |Tabs with Azure|Bots and messaging extensions|
 |Bots|Tabs|
-|Messaging extensions|Tabs|
+|Messaging extensions| |Tab and Bot||
 |Tabs and bots|None|
 |Tabs and messaging extensions|None|
 |Tabs, bots, and messaging extensions|None|
+|Tabs |Tabs and Bot|
 
 ## Add capabilities
 
@@ -96,13 +97,12 @@ After adding tab, the changes in your project are as follows:
 - The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
 - The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
 
-## Limitations
+## Limitation
 
 The limitations with TeamsFx while adding more capabilities are as follows:
 
 - You can't add project capability for more than one instance.
-- You can't add bot capabilities if your project contains messaging extension.
-- You can't add messaging extension if your project contains a bot.
+
 
 > [!NOTE]
 > If you want to include both bot and messaging extension capabilities, then select them at the same time. You can only add them either when you create a new project or a tab application.
