@@ -98,7 +98,6 @@ items:
 
     1. A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. You can use the security token to authenticate calls between Teams and any designated outside service. 
         You can use the security token in **AuthProvider.cs** file.
-
               
         ![security]](~/assets/images/sbs-outgoing-webhooks/security-token.png)
 
