@@ -112,9 +112,13 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
+    1. Select **MultiTenant** under **Bot Type**.
+
+        ![Bot Type](~/assets/images/Tab-ME-SSO/bot-type.png)
+
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage1.png)
+        ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage.png)
 
     1. In the **Client secrets** section, select **New client secret**. 
 
