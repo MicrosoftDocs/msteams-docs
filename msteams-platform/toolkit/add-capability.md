@@ -69,9 +69,9 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 |Tabs with Azure|Bots and messaging extensions|
 |Bots|Tabs|
 |Messaging extensions| |Tab and Bot||
-|Tabs and bots|None|
-|Tabs and messaging extensions|None|
-|Tabs, bots, and messaging extensions|None|
+|Tabs and bots|Tab and Bot|
+|Tabs and messaging extensions|Tab and Bot|
+|Tabs, bots, and messaging extensions|Tab and Bot|
 |Tabs |Tabs and Bot|
 
 ## Add capabilities
