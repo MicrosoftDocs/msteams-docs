@@ -88,13 +88,10 @@ items:
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
-
-        ![New resource group location](~/assets/images/sbs-messagingextension-action/create-microsoft-id.png)
-        
-
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
-    
+     
+        ![New group](~/assets/images/sbs-messagingextension-action/create-microsoft-id.png)
+
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
        > [!NOTE]
@@ -404,7 +401,7 @@ items:
    
     ![Dotnet](~/assets/images/sbs-messagingextension-action/dotnetruncmd.png)
       
-- title: Add Meetings SidePanel app to Teams
+- title: Add Messaging Extensions Action app to Teams
   durationInMinutes: 1
   content: |
     **To create a Teams meeting and add Meetings SidePanel App**
