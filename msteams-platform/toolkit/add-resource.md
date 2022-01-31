@@ -79,7 +79,9 @@ After adding resouces, the additional changes in your project are as follows:
 |Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
 |Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it is the API specification file .|
 
+## Limitation
 
+- You can't add resources if your project is SPFx.
 
 ## See also
 
