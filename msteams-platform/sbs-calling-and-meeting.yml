@@ -18,9 +18,9 @@ items:
     
     Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
-        * Interactive Voice Response (IVR).
-        * Call control.
-        * Access to real time audio and video streams, including desktop and app sharing.
+    * Interactive Voice Response (IVR)
+    * Call control
+    * Access to real time audio and video streams, including desktop and app sharing
 
     Create a bot and specify some additional information and permissions to use these Graph APIs in a Teams app.
  
@@ -34,11 +34,11 @@ items:
     Ensure that you install the following tools and set up your development environment:  
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
-    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution.
+    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
-    * Microsoft Teams with an account (not a guest account).
-    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install) by executing all the commands.
+    * Microsoft Teams with an account (not a guest account)
+    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install) by executing all the commands
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5

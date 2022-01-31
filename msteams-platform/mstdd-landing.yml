@@ -55,7 +55,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-        - text: Create Calling and meeting bot 
+        - text: Teams calling and meeting bot 
           url: bots/calls-and-meetings/registering-calling-bot.md
         - text: Device permission for browser 
           url: concepts/device-capabilities/browser-device-permissions.md
