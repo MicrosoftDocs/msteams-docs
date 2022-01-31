@@ -76,7 +76,7 @@ landingContent:
           
     - linkListType: tutorial
       links:
-        - text: Upload files to Teams from a bot
+        - text: Teams file upload bot
           url: ~/sbs-file-handling-in-bot.yml
         - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
