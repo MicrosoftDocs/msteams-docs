@@ -90,8 +90,6 @@ items:
     
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
      
-        ![New group](~/assets/images/sbs-messagingextension-action/create-microsoft-id.png)
-
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
        > [!NOTE]
@@ -99,7 +97,7 @@ items:
 
     1. Select **Review + create**.
 
-        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/create-microsoft-id.png)
+        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/create-appid.png)
 
     1. If the validation passes, select **Create**. 
 
@@ -124,7 +122,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-    1. Select **Multitenant** under **App Type**.
+    1. Select **MultiTenant** under **Bot Type**.
 
         ![Microsoft App ID](~/assets/images/sbs-messagingextension-action/manage.png)
 
@@ -184,7 +182,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/sbs-messagingextension-action/ngrok1.png)
+        ![ngrok HTTPS URL](~/assets/images/sbs-messagingextension-action/ngrok.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -271,7 +269,7 @@ items:
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/sbs-messagingextension-action/selectclientapp.png) 
+        ![Select client application](~/assets/images/sbs-messagingextension-action/clientapps.png) 
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
