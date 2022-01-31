@@ -80,7 +80,8 @@ The Azure Bot resource registration registers your web service as a bot with the
 > [!IMPORTANT]
 > You only need to register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [Developer Portal](../../../concepts/build-and-test/teams-developer-portal.md) your bot isn't registered in Azure.
 
-1. Select **Create**.
+1. Visit [**Azure portal**][azure-portal] and search for **Azure Bot** in **Create a resource** section.
+1. Open the **Azure Bot** and select **Create**.
 1. Enter bot handle name in **Bot handle** field.
 1. Select your **Subscription** from the dropdown list.
 1. Select your **Resource group** from the dropdown list.
