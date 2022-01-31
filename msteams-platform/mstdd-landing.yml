@@ -55,6 +55,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+        - text: Teams file upload bot 
+          url: bots/how-to/bots-filesv4.md
         - text: Device permission for browser 
           url: concepts/device-capabilities/browser-device-permissions.md
         - text: Use SSO authentication for tabs 
@@ -71,14 +73,11 @@ landingContent:
           url: concepts/device-capabilities/browser-device-permissions.md
         - text: Send and receive files
           url: bots/how-to/bots-filesv4.md
-            
+          
     - linkListType: tutorial
       links:
         - text: Step-by-step guide for Teams file upload bot
           url: ~/sbs-file-handling-in-bot.yml
-       
-    - linkListType: tutorial
-      links:
         - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and messaging extensions
