@@ -15,17 +15,19 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 
 ||Add details for different business scenarios and business benefits||
 
-Collaboration and communication are key elements for an organization. Concise, integrated with necessary services, and accessible on-the-go are reasons that people are increasingly choosing to rely on apps. Organizations use it to connect with their customers, provide services, and share information.But that's not all! Apps have become the meeting place for people to work together. A well-placed app helps build a cohesive environment for external and internal business needs.
+Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
+
+Organizations use it to connect with their customers, provide services, and share information. But that's not all! Apps are the meeting place for people to work together. A well-placed app helps build a cohesive environment for external and internal business needs.
 
 Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/KeyMessage_StayFocused.jpg" alt-text="Teams app":::
+:::image type="content" source="../msteams-platform/assets/images/overview/KeyMessage_StayFocused.jpg" alt-text="Teams app" border="false":::
 
 Let's look at some benefits of building an app with Microsoft Teams.
 
 - **Development benefit**: Mobile app – Just build an app, and the desktop, web, and mobile experience comes with it!
 
-- **Security & compliance**: Your app’s customers’ data is secure Compliant 
+- **Security & compliance**: Your app’s customers’ data is secure Compliant.
 
 - **Business benefit and opportunities**: More users and customers for your service!
     - Extending existing apps and system – e.g. Adobe for Teams 
