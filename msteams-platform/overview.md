@@ -45,7 +45,27 @@ Microsoft Teams apps help your collaborative workspace to be more productive by 
 
 :::image type="content" source="../msteams-platform/assets/images/overview/KeyMessage_StayFocused.jpg" alt-text="Teams app" border="false":::
 
+Here's why Teams is best-suited for your app needs:
 
+- **Communication & collaboration**
+
+    Most successful Teams apps involve either some form of pulling information in from another system, having a conversation about it, and allowing users to take action about that information from directly within the Teams client, or pushing information to a targeted audience based on an event or action in an external system.
+
+- **Social interactions**
+
+    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Apps that send polls, let people send feedback to each other, connect them together, or are just for fun (don't underestimate the power of a few "just for fun" apps can have on team morale).
+
+- **Common business processes**
+
+    Things like creating and sharing a sales call report, tracking your time against a project, reserving common resources, submitting help desk requests and more can make for effective Teams apps.
+
+- **Surface existing app**
+
+    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application it may make sense to enable some or all of it in Teams.
+
+- **Personal apps with tabs and bots**
+
+    One-to-one conversational bots are one of the more open-ended extensibility points within Microsoft Teams. The conversation is just between the bot and your user, you have the flexibility of including task modules to simplify complex sets of information.
 
 ## About Microsoft Teams Developer Documentation
 
