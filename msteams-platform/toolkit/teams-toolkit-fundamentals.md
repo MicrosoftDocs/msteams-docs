@@ -13,7 +13,7 @@ ms.date: 11/29/2021
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
 
-Teams Toolkit for Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
+The Teams Toolkit for Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a zero-configuration approach. For Teams app development from the command line you can also use the Teams Toolkit through the `TeamsFx` [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md).
 
 ## Install Teams Toolkit for Visual Studio Code
 
@@ -35,7 +35,7 @@ Teams Toolkit for Visual Studio Code helps you to create and deploy Teams apps w
 
 ## User journey of Teams Toolkit
 
-Teams Toolkit provides features of Teams app development to debug, deploy, and publish. It automates manual work and provides great integration of Teams and Azure resources. The following image shows Teams Toolkit user journey:
+Teams Toolkit provides features of Teams app development to debug, deploy, and publish. It automates manual work and provides great integration with Teams and Azure resources. The following image shows the Teams Toolkit user journey:
 
 ![Teams Toolkit User Journey](./images/teams-toolkit-user-journey.png)
 
@@ -53,39 +53,39 @@ Let's take a tour of the topics covered in this document:
 
 ## Accounts
 
-To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit support integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+To develop a Teams app you need a Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports an integrated sign-in experience to provision and deploy Azure resources. If needed, you can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
 ## Environment
 
-Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.
+Teams Toolkit helps you to create and manage multiple environments, provision resources, and deploy artifacts to the target environment for the Teams app.
 
 ### TeamsFx Collaboration
 
-It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
+It allows developers and project owners to invite other collaborators to the TeamsFx project to debug, provision, and deploy the project.
 
 ## Development
 
-Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.
+Teams Toolkit helps you to create and customize your Teams app project, and simplifies Teams app development.
 
 ### Create a new Teams app
 
-It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
+It helps you to get started with Teams app development by creating a new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
 
 ### Add capabilities
 
-It helps to add other required Teams capabilities to Teams app during development process.
+It helps to add other required Teams capabilities to Teams apps during the development process.
 
 ### Add cloud resources
 
-It helps you to optionally add cloud resources that fits your development needs.
+It helps you to optionally add cloud resources according to your development needs.
 
 ### Edit manifest file 
 
-It helps you to edit the Teams app integration with Teams client.
+It helps you to configure the Teams apps that will be integrated with the Teams client.
 
 ## Deployment
 
-During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.
+During or after development ensure to provision, deploy, and publish your Teams app to make it accessible to users.
 
 ### Provision in the cloud
 
@@ -93,23 +93,23 @@ It integrates with Azure resource manager that enables you to provision Azure re
 
 ### Deploy to the cloud
 
- It helps you to deploy the source code to Azure.
+It helps you to deploy source code to Azure.
 
 ### Publish to Teams
 
-After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
+After creating the app, you can distribute your app to different scopes such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
 
 ### CI/CD guide
 
-It helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates for you to get started while setting up CI or CD pipelines.
+It helps to automate your development workflow while building Teams applications. The CI/CD guide provides tools and templates for you to get started  setting up CI or CD pipelines.
 
 #### TeamsFx CLI
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenarios where you can include CLI commands in scripts for automation.
 
 #### TeamsFx SDK
 
-It helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
+It helps you to reduce the complexity of implementing identity and access to cloud resources with single-line statements and zero configuration.
 
 ## Help and Feedback
 
@@ -117,7 +117,7 @@ In this section, you can find the documentation and resources you need. You can 
 
 ## See also
 
-* [Create new project use Teams Toolkit](create-new-project.md)
+* [Create new project using Teams Toolkit](create-new-project.md)
 * [Prepare accounts to build Teams apps](accounts.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
