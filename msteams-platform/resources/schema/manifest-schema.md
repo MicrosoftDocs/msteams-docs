@@ -793,7 +793,6 @@ Specify meeting extension definition.
 |`name`|string|128 characters|✔|The name of the AV filter.|
 |`thumbnail`|||✔|relative file path to a A/V filter's thumbnail.|
 
-
 ## See also
 
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
