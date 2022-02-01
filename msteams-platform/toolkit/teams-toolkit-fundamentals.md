@@ -100,7 +100,7 @@ Let's explore Teams Toolkit features.
 
 ## See also
 
-* [Create new project use Teams Toolkit](create-new-project.md)
+* [Create new project using Teams Toolkit](create-new-project.md)
 * [Prepare accounts to build Teams apps](accounts.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
