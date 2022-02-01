@@ -15,8 +15,6 @@ keywords: teams apps SaaS offer preview offer test preview monetized saas
 
 You can  create a Software as a Service (SaaS) offer and test the end-to-end purchase experience for your monetized apps  in Teams. Users who are added as the preview audience for the Teams app can review your SaaS offer before you publish.
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-flow.png" alt-text="Preview offer creation" border="false" :::
-
 ## Create a Preview offer ID
 
 You can generate the Preview offer ID from the **AppSource preview** link in the Partner Center. Ensure that the SaaS offer is in the Preview creation phase. To generate the preview offer ID:
