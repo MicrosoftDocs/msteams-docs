@@ -26,7 +26,7 @@ items:
     
     You'll see the following output:
 
-     ![output](~/assets/images/sbs-messagingextension-actionsharemessageoutput1.png)
+      ![output](~/assets/images/sbs-messagingextension-actionsharemessageoutput1.png)
     
 
 - title: Prerequisites
@@ -345,8 +345,10 @@ items:
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
+         * Set `"MicrosoftAppType"` to your "MultiTenant".
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
         ![App settings](~/assets/images/sbs-messagingextension-action/json-file.png)
