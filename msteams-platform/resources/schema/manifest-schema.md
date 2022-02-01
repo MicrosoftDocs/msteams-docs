@@ -766,14 +766,7 @@ Specifies the SaaS offer associated with your app.
 
 **Optional**- object
 
-[Placeholder for description]
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`meetingExtensionDefinition`|array of objects|5 items|`id`, `name`, `file`, `preview`, `maxAudience`, and `seatsReservedForOrganizersOrPresenters`||
-
-> [!NOTE]
-> The value for `uniqueItems` is set to true.
+Placeholder for description
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
