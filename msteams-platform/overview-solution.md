@@ -39,6 +39,18 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 1. Integrate with Microsoft Graph for registered users.
 1. Check and send forecast details on the basis of users travel date and travel location on a particular day.
 
+## Choose what suits you
+
+You can build a Teams app as per your personal or organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
+
+A Teams app offers you the flexibility of choosing your build environment. This includes tools, framework, and languages to approach your app development.
+
+:::image type="content" source="../msteams-platform/assets/images/overview/app-mindmap.png" alt-text="Business need app" border="true":::
+
+Build your Teams app in the environment that works for your particular requirements. You can even choose a combination of tools and .
+
+For example: You can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+
 ## Teams Collaborative Platform
 
 A Teams app brings your users the advantages of a collaborative workspace.
