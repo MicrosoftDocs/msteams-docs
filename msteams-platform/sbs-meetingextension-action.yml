@@ -412,9 +412,17 @@ items:
        * icon-color.png
 
        ![Zip file](~/assets/images/sbs-messagingextension-action/zipfile.png) 
+
+    1. Go to **Microsoft Teams**.
     
-    1. Select **Apps**, then select **Manage your apps** and Upload a custom app.
+    1. Select **Apps**.
+
+    1. Select **Manage your apps** 
+    
+    1. Select **Upload a custom app**.
    
+       ![Upload](~/assets/images/sbs-messagingextension-action/uploadcustomapp.png)
+
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
        ![Select zip file](~/assets/images/sbs-messagingextension-action/selectzip.png)
@@ -423,17 +431,13 @@ items:
 
        ![Add the app](~/assets/images/sbs-messagingextension-action/add.png)
 
-    1. Go to Teams meeting.
+    1. Action Messaging Extension app is added to the Teams.
     
-    1. Select Add when prompted to sideload the app onto Teams on your local machine.
-    
-       ![App icon in Teams](~/assets/images/sbs-messagingextension-action/appicon.png)
-
-             
+                    
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    Let's interact with the app in Teams!
+    **Let's interact with the app in Teams!**
 
     1. Select **Create Card** command from the compose box command list.
 
@@ -475,6 +479,6 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a **Side Panel** app!
+    You've completed the tutorial to get started with a **Action Messaging Extension** app!
 
 
