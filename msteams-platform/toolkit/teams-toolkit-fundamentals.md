@@ -33,11 +33,9 @@ Teams Toolkit automates manual work and provides great integration of Teams and 
 The main milestones of this journey are:
 
 1. Start by creating a new project or trying a sample Teams app.
-    - Add capabilities or edit manifest file as needed.
+1. Add capabilities or edit manifest file as needed.
 1. Use Microsoft 365 account to build and debug your Teams app.
 1. Use Azure account to provision and deploy your app to cloud.
-    - Add cloud resources or update manifest, as needed.
-    - Create an app metadata package, if needed.
 1. Publish your app to Teams.
 
 ## Install Teams Toolkit for Visual Studio Code
@@ -99,18 +97,6 @@ Let's explore Teams Toolkit features.
 
 > [!TIP]
 > Browse existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
-
-## TeamsFx
-
-Microsoft Teams Framework (TeamsFx) is a library encapsulating common functionality and integration patterns (like simplified access to Microsoft Identity). You can build apps for Microsoft Teams with zero configuration.
-
-Here's a list of main TeamsFx features:
-
-- **TeamsFx Collaboration**: Let developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
-
-- **TeamsFx CLI**: It accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
-
-- **TeamsFx SDK**: TeamsFx Software Development Kit (SDK) is the main TeamsFx code library encapsulating simple authentication for both client and server-side code tailored for Teams developers.
 
 ## See also
 
