@@ -14,8 +14,8 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extensions allow the users to interact with web service through buttons and forms in the Microsoft Teams client.  
-    The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, hence must register your web service as a bot in the Bot Framework.
+    Messaging extensions allow the users to interact with your web service through text and interactive cards in the Microsoft Teams client.  
+    The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, hence you must register your web service as a bot in the Bot Framework.
 
     This step-by-step guide illustrates how to create **Teams action messaging extension** to initiate actions from compose message and message area.
 
@@ -453,7 +453,7 @@ items:
 
        ![submit](~/assets/images/sbs-messagingextension-action/submit.png)
 
-    1. Select ... from the overflow menu.
+    1. Select (...) from the overflow menu.
        
     1. Point to **More actions**.
 
@@ -465,7 +465,7 @@ items:
 
        ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput.png)
 
-    1. The bot responds as shown below
+    1. The app responds as shown below
 
        ![output1](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
        
