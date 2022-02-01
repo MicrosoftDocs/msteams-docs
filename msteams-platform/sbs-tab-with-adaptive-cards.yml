@@ -102,6 +102,9 @@ items:
 
         ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
 
+        > [!NOTE]
+        > Ensure **MultiTenant** is selected under **Bot Type**.
+
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
         ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
