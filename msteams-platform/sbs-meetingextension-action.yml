@@ -374,7 +374,7 @@ items:
     
           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
 
-       1. Select **SidePanel.sln** file from **csharp** folder.
+       1. Select **TeamsMessagingExtensionsAction.csproj** file from **csharp_dotnet** folder.
 
           ![Solution File](~/assets/images/sbs-messagingextension-action/openproject.png)
 
