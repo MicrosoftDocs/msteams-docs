@@ -26,7 +26,7 @@ Latest teams client SDK beta: "@microsoft/teams-js": "^1.11.0-beta.7"
 To enable Share-in-Teams button in the personal tab or app,
 call microsoftTeams.sharing.shareWebContent with a payload like this:
 
-```javascript
+```json
 microsoftTeams.sharing.shareWebContent({
         content: [
           {
@@ -42,11 +42,24 @@ microsoftTeams.sharing.shareWebContent({
 
 ## Test the feature
 
-To test the feature, perform the following step:
+To test the Share-in-Teams button added to your personal app or tab, perform the following step:
 
-1. Open personal app and click ellipse.
+1. Open personal app and go to task which you need to share.
+1. Click the ellipse.
+
+:::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-button":::
+
 1. Select Share-in-Teams button.
 1. Add recipient (a person or group, or channel).
-1. Add a note or message in the **say something about this** textbox.
+
+:::image type="content" source="../../assets/images/share-in-teams/add-recepient.PNG" alt-text="add-recipient":::
+
+1. You can also add a note or message in the **say something about this** textbox.
+
+:::image type="content" source="../../assets/images/share-in-teams/add-notes.PNG" alt-text="add-note":::
+
 1. Select **Share** button.
+
+:::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="link-shared":::
+
 1. Now you can see the chat window of person or group or channel to check your message and link is shared.
