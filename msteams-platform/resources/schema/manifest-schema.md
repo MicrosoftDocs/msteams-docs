@@ -758,24 +758,41 @@ The `publisherDocsUrl` is a HTTPS URL to an information page for admins to get g
 
 Specifies the SaaS offer associated with your app.
 
-|Name| Type| Maximum size | Required | Description|
+|Name| Type|Maximum size|Required|Description|
 |---|---|---|---|---|
 |`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## meetingExtensionDefinition
 
-**Optional**- object
+**Optional** - object
 
-Placeholder for description
+Specify meeting extension definition.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`scenes`| object ||| Meeting supported scenes.|
-|`id`|||| The unique identifier for the scene. This id must be a GUID. |
-|`name`| string | 128 characters || The name of the scene. |
-|`file`|||| The relative file path to the scene metadata json file. |
-|`preview`|||| The relative file path to the a scene PNG preview icon. |
-|`maxAudience`| integer | 50 digits || The maximum audiences supported in scene. |
+|`scenes`|array of objects| 5 items||Meeting supported scenes.|
+|`filters`|array of objects| 100 items||Meeting supported A/V filters.|
+|`videoAppContentUrl`|string|2048 characters||The url to indicate A/V filters' video app content.|
+
+### meetingExtensionDefinition.scenes
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`id`|||✔| The unique identifier for the scene. This id must be a GUID. |
+|`name`| string | 128 characters |✔| The name of the scene. |
+|`file`|||✔| The relative file path to the scene metadata json file. |
+|`preview`|||✔| The relative file path to the a scene PNG preview icon. |
+|`maxAudience`| integer | 50 digits |✔| The maximum audiences supported in scene. |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 digits |✔| The number of seats reserved for organizers or presenters.|
+
+### meetingExtensionDefinition.filters
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`id`|||✔|The unique identifier for the A/V filter. This id must be a GUID.|
+|`name`|string|128 characters|✔|The name of the AV filter.|
+|`thumbnail`|||✔|relative file path to a A/V filter's thumbnail.|
+
 
 ## See also
 
