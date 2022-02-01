@@ -68,6 +68,9 @@ landingContent:
         
     - linkListType: tutorial
       links:
+
+        - text: Create outgoing webhooks
+          url: ~/sbs-outgoing-webhooks.yml
         - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and messaging extensions
@@ -86,8 +89,7 @@ landingContent:
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
-        - text: Create outgoing webhooks
-          url: ~/sbs-outgoing-webhooks.yml
+        
         
 - title: Get started
   linkLists:
