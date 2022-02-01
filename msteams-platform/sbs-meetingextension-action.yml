@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Read more to enable and configure apps for meetings
+  nextTutorialHref: messaging-extensions/how-to/action-commands/define-action-command.md
+  nextTutorialTitle: Read more to enable messaging extension action commands
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -402,7 +402,7 @@ items:
 - title: Add Messaging Extensions Action app to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings SidePanel App**
+    **To add Messaging Extensions Action App**
 
     1. In your cloned repository, navigate to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
 
@@ -413,20 +413,8 @@ items:
 
        ![Zip file](~/assets/images/sbs-messagingextension-action/zipfile.png) 
     
-    1. Create a meeting with a few presenters and attendees.
+    1. Select **Apps**, then select **Manage your apps** and Upload a custom app.
    
-    1. After the meeting is created, go to the meeting details page and select **Add an app**.
-
-       ![Add an app](~/assets/images/sbs-messagingextension-action/uploadcustomapp.png) 
-   
-    1. In the pop-up that opens, select **Manage apps**.
-
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
-   
-    1. Select **Upload a custom app**. 
-
-       ![Upload custom app](~/assets/images/sbs-messagingextension-action/uploadcustomapp.png)
-
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
        ![Select zip file](~/assets/images/sbs-messagingextension-action/selectzip.png)
@@ -435,26 +423,13 @@ items:
 
        ![Add the app](~/assets/images/sbs-messagingextension-action/add.png)
 
-       The **Manage apps** section displays the list of applications.
-
-       ![App in Manage apps](~/assets/images/sbs-messagingextension-action/manageappsection.png)
-   
     1. Go to Teams meeting.
     
-    1. Select **Add an app**. 
+    1. Select Add when prompted to sideload the app onto Teams on your local machine.
     
-       In the app selection page, the app displays as **Side Panel**.
-  
        ![App icon in Teams](~/assets/images/sbs-messagingextension-action/appicon.png)
 
-    1. Select the **Side Panel** app.
-    
-    1. Select **Save**.
-
-       ![Welcome App](~/assets/images/sbs-messagingextension-action/welcomeapp.png)
-   
-       The app is visible in the meeting SidePanel.         
-
+             
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
@@ -472,7 +447,7 @@ items:
 
        ![submit](~/assets/images/sbs-messagingextension-action/submit.png)
 
-    1. Select ... overflow menu from an existing message.
+    1. Select ... from the overflow menu.
        
     1. Point to **More actions**.
 
