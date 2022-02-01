@@ -19,7 +19,7 @@ items:
     
    This step-by-step guide helps you to upload files from a bot to Microsoft Teams. You'll see the following output:
 
-   :::image type="content" source="~/assets/images/output-desktop-mobile.png" alt-text="teams bot final output.":::
+   :::image type="content" source="~/assets/images/sbs-output-mob-desktop.png" alt-text="teams bot final output.":::
 
 - title: Prerequisites
   durationInMinutes: 1 
@@ -319,8 +319,8 @@ items:
   content: |
     Did you come up with something like this?
     
-    :::image type="content" source="~/assets/images/output-desktop-mobile.png" alt-text="teams bot final output.":::
-    
+    :::image type="content" source="~/assets/images/sbs-output-mob-desktop.png" alt-text="teams bot final output.":::
+
 - content: |
     You have completed the tutorial. Now you can upload files from bot to Microsoft Teams.
 
