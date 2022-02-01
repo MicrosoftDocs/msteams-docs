@@ -345,7 +345,7 @@ items:
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
-         * Set `"MicrosoftAppType"` to your "MultiTenant".
+         * Set `"MicrosoftAppType"` to "MultiTenant".
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
