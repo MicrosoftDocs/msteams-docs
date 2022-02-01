@@ -29,6 +29,16 @@ items:
   content: |
     At every stage of the story, asking relevant questions can help analyze the user requirement.
 
+    **Understand your user**
+
+      :::image type="content" source="../msteams-platform/assets/images/overview/us-1.png" alt-text="Image showing user story 1" border="true":::
+
+    Knowing about your user is helps you to identify how they use Teams. Ask relevant questions, such as: 
+    - Do the users primarily use mobile clients? 
+    - How technically sophisticated are your primary users?
+
+
+
     | &nbsp; | &nbsp; |
     | --- | --- |
     | :::image type="content" source="../msteams-platform/assets/images/overview/us-1.png" alt-text="Image showing user story 1" border="true"::: | **Understand your user** <br> Knowing about your user is helps you to identify how they use Teams. Ask relevant questions, such as: <br> - Do the users primarily use mobile clients? <br> - How technically sophisticated are your primary users? |
@@ -36,7 +46,7 @@ items:
     | :::image type="content" source="../msteams-platform/assets/images/overview/us-3.png" alt-text="Image showing user story 3" border="true"::: | **List App Requirements and Benefits** <br> Determine your app's features and how you expect it to answer the user's problem. Ask relevant questions, such as: <br>- Do the users need current updates regularly without having to check? <br>- Do you need to authenticate users? |
     | **User-centric solution** <br> Craft the right app experience for your users with an app that fits their requirement. Ask relevant questions, such as: <br>- Should only registered users receive regular help? <br>- What features would be most convenient for user experience? | :::image type="content" source="../msteams-platform/assets/images/overview/us-4.png" alt-text="Image showing user story 4" border="true"::: |
     |
-    
+
     Let's look at Teams features that help you build a solution.
 
 - title: Explore Teams as a platform
