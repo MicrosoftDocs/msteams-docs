@@ -24,7 +24,7 @@ To offer an in-app purchase experience to the users of your app, ensure the foll
 
 * App is enabled with [RSC permissions](#update-manifest).
 
-* App is invoked with [`openPurchaseExperience` API](#purchase-experience-API).
+* App is invoked with [`openPurchaseExperience` API](#purchase-experience-api).
 
 In-app purchase experience can be enabled either by updating **manifest.json** file or by enabling **Show in-app purchase offers** from **Permissions** section of your **Developer Portal**.
 
