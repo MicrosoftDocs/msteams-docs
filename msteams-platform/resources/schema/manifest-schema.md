@@ -9,7 +9,7 @@ keywords: teams manifest schema
 
 # Reference: Manifest schema for Microsoft Teams
 
-The Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,..., and 1.11 are also supported (using "v1.x" in the URL).
+The Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,..., and 1.12 are also supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following schema sample shows all extensibility options:
@@ -18,8 +18,8 @@ The following schema sample shows all extensibility options:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.11",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.12",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -322,7 +322,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required**—string
 
-The version of manifest schema this manifest is using. It must be 1.10.
+The version of manifest schema this manifest is using.
 
 ## version
 
@@ -761,6 +761,30 @@ Specifies the SaaS offer associated with your app.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
+
+## meetingExtensionDefinition
+
+**Optional**- object
+
+[Placeholder for description]
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`meetingExtensionDefinition`|array of objects|5 items|`id`, `name`, `file`, `preview`, `maxAudience`, and `seatsReservedForOrganizersOrPresenters`||
+
+> [!NOTE]
+> The value for `uniqueItems` is set to true.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`scenes`|object|||Meeting supported scenes.|
+|`id`||||The unique identifier for the scene. This id must be a GUID.|
+|`name`|string|128 characters|| The name of the scene.|
+|`file`||||The relative file path to the scene metadata json file.|
+|`preview`||||The relative file path to the a scene PNG preview icon.|
+|`maxAudience`|integer|50 digits ||The maximum audiences supported in scene.|
+|`seatsReservedForOrganizersOrPresenters`|integer| 50 digits||The number of seats reserved for organizers or presenters.|
+
 
 ## See also
 
