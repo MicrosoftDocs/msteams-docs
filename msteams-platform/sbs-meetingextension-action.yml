@@ -97,7 +97,7 @@ items:
 
     1. Select **Review + create**.
 
-        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/create-appid.png)
+        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/review-create.png)
 
     1. If the validation passes, select **Create**. 
 
@@ -165,7 +165,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/sbs-messagingextension-action/configure-ms.teamss.png)   
+          ![Select Teams](~/assets/images/sbs-messagingextension-action/configure-msteams.png)   
     
     **To create tunnel for local web server**
 
@@ -285,7 +285,7 @@ items:
 
        The following image displays the client IDs:
 
-        ![Client applications](~/assets/images/sbs-messagingextension-action/clientapps.png) 
+        ![Client applications](~/assets/images/sbs-messagingextension-action/clientapp.png) 
   
     1. In the left panel, select **API Permissions**. 
 
