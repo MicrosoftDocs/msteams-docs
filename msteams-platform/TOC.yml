@@ -305,6 +305,8 @@
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+  - name: Create Outgoing webhooks
+    href: sbs-outgoing-webhooks.yml
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
   - name: Create Office 365 Connectors
