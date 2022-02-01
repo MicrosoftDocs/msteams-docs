@@ -11,6 +11,36 @@ ms.date: 11/02/2021
 
 The Microsoft Teams Platform is a powerful, flexible platform for creating apps for Microsoft Teams. It provides a vast suite of development environments and tools to support app development.
 
+## The user story
+
+Now that you've had a view of Teams offerings, you can map them to user needs. Let’s revisit the user scenario.
+
+The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app should:
+
+- Check and send the forecast to travelers registered with the travel agency.
+- Notify the users a day before the departure date so they can plan.
+
+Collate and map requirements to Teams features:
+
+| User app needs | Check forecast | Notification before travel | Registered user |
+| --- |:---:|:---:|:---:|
+| **Capability** | Bot | &nbsp; | &nbsp; |
+| **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Forecast website |
+| **Scope** | &nbsp; | Personal app; Adaptive Card | &nbsp; |
+| **Integration point** | &nbsp; | Chat | &nbsp; |
+|
+
+**Teams app solution**: A Teams *personal chat bot* app, which checks and *sends forecast notification* in an *Adaptive Card* to *registered users* before their travel date, checks all requirements.
+
+:::image type="content" source="../msteams-platform/assets/images/overview/user-story-2.png" alt-text="Image showing user story" border="true":::
+
+Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
+
+1. Create a personal chat bot app.
+1. Integrate with external API from a forecast website to connect and request forecast for specific date and location.
+1. Integrate with Microsoft Graph for registered users.
+1. Check and send forecast details on the basis of users travel date and travel location on a particular day.
+
 ## Choose what suits you
 
 You can build a Teams app as per your personal or organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
@@ -48,7 +78,7 @@ By building your app with Teams, you can:
 
 :::row:::
     :::column span="1":::
-        #### Start building
+        **Start building**
     :::column-end:::
     :::column span="2":::
         Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
@@ -60,7 +90,7 @@ By building your app with Teams, you can:
 
 :::row:::
     :::column span="1":::
-        #### Integrate with Teams
+        **Integrate with Teams**
     :::column-end:::
     :::column span="2":::
         Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
@@ -72,7 +102,7 @@ By building your app with Teams, you can:
 
 :::row:::
     :::column span="1":::
-        #### A little code goes a long way
+        **A little code goes a long way**
     :::column-end:::
     :::column span="2":::
         You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
@@ -84,7 +114,7 @@ By building your app with Teams, you can:
 
 :::row:::
     :::column span="1":::
-        #### Get ideas for your app
+        **Get ideas for your app**
     :::column-end:::
     :::column span="2":::
         Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
@@ -96,7 +126,7 @@ By building your app with Teams, you can:
 
 :::row:::
     :::column span="1":::
-        #### Test your app running across Microsoft 365
+        **Test your app running across Microsoft 365**
     :::column-end:::
     :::column span="2":::
         You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
