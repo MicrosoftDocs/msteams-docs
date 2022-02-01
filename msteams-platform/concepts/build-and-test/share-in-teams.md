@@ -13,7 +13,7 @@ When you select Share-in-Teams button, it launches the Share-in-Teams experience
 
 The following image displays the Share-in-Teams pop-up experience:
 
-:::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams":::
+:::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams-experience":::
 
 This document guides you on how to create and add a Share-in-Teams button for your personal app or tab.
 
@@ -47,7 +47,7 @@ To test the Share-in-Teams button added to your personal app or tab, perform the
 1. Open personal app and go to task, which you need to share.
 2. Select the ellipse button.
 
-:::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-button":::
+:::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button-":::
 
 3. Select Share-in-Teams button.
 4. Add recipient (a person or group, or channel).
@@ -60,6 +60,6 @@ To test the Share-in-Teams button added to your personal app or tab, perform the
 
 6. Select **Share** button.
 
-:::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="link-shared":::
+:::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="share-in-teams-link-shared":::
 
 7. Now you can see the chat window of person or group or channel to check your message and link is shared.
