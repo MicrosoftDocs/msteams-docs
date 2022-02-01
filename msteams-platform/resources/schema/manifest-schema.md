@@ -770,13 +770,13 @@ Placeholder for description
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`scenes`|object|||Meeting supported scenes.|
-|`id`||||The unique identifier for the scene. This id must be a GUID.|
-|`name`|string|128 characters|| The name of the scene.|
-|`file`||||The relative file path to the scene metadata json file.|
-|`preview`||||The relative file path to the a scene PNG preview icon.|
-|`maxAudience`|integer|50 digits ||The maximum audiences supported in scene.|
-|`seatsReservedForOrganizersOrPresenters`|integer| 50 digits||The number of seats reserved for organizers or presenters.|
+|`scenes`| object ||| Meeting supported scenes.|
+|`id`|||| The unique identifier for the scene. This id must be a GUID. |
+|`name`| string | 128 characters || The name of the scene. |
+|`file`|||| The relative file path to the scene metadata json file. |
+|`preview`|||| The relative file path to the a scene PNG preview icon. |
+|`maxAudience`| integer | 50 digits || The maximum audiences supported in scene. |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 digits || The number of seats reserved for organizers or presenters.|
 
 
 ## See also
