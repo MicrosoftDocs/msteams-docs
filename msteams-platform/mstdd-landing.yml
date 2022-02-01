@@ -55,7 +55,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-        - text: Teams file upload bot 
+        - text: Send and receive files 
           url: bots/how-to/bots-filesv4.md
         - text: Device permission for browser 
           url: concepts/device-capabilities/browser-device-permissions.md
