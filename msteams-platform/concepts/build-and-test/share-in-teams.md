@@ -7,29 +7,38 @@ keywords: Share Teams Share-in-Teams
 ---
 # Create Share-in-Teams button
 
-Share-in-Teams is used to share the link from a personal app or tab to other user in Teams. Share-in-teams button to be embedded to the personal app or tab. 
+Share-in-Teams is used to share the link from a personal app or tab to other user in Teams, you can also add this button to the personal app or tab.
 
-When you select Share-in-Teams button, it launches the Share-in-Teams experience in a pop-up window. This allows you to share a link to the other user through any chat or channel in Teams. The pop-up window allows you to add notes or message also. 
-This document guides you on how to create and embed a Share-in-Teams button for your personal app or tab.
+When you select Share-in-Teams button, it launches the Share-in-Teams experience in a pop-up window. This allows you to share a link to the other user through a chat or channel in Teams, it also allows you to add notes.
+
+The following image displays the Share-in-Teams pop-up experience:
+
+:::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams":::
+
+This document guides you on how to create and add a Share-in-Teams button for your personal app or tab.
 
 ## Prerequisites
 
-* latest teams client SDK beta: "@microsoft/teams-js": "^1.11.0-beta.7"
+Latest teams client SDK beta: "@microsoft/teams-js": "^1.11.0-beta.7"
 
 ## Enable Share-in-Teams button
 
-To enable Share-in-Teams button in the personal tab or app, 
+To enable Share-in-Teams button in the personal tab or app,
 call microsoftTeams.sharing.shareWebContent with a payload like this:
 
+```javascript
 microsoftTeams.sharing.shareWebContent({
         content: [
           {
             type: 'URL',
-            url: ’https://www.microsoft.com/en-ca/'
+            url: 'https://www.microsoft.com/en-ca/'
             preview: true
           }
         ]
       });
+```
+
+---
 
 ## Test the feature
 
