@@ -611,7 +611,7 @@ Specifies the SaaS offer associated with your app.
 
 **Optional** - object
 
-Specify meeting extension definition.
+Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md)
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -625,8 +625,8 @@ Specify meeting extension definition.
 |`name`| string | 128 characters |✔| The name of the scene. |
 |`file`|||✔| The relative file path to the scenes' metadata json file. |
 |`preview`|||✔| The relative file path to the scenes' PNG preview icon. |
-|`maxAudience`| integer | 50 digits |✔| The maximum number of audiences supported in the scene. |
-|`seatsReservedForOrganizersOrPresenters`| integer | 50 digits |✔| The number of seats reserved for organizers or presenters.|
+|`maxAudience`| integer | 50  |✔| The maximum number of audiences supported in the scene. |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| The number of seats reserved for organizers or presenters.|
 
 ## authorization
 
@@ -649,25 +649,38 @@ Specify and consolidate authorization related information for the app.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> Application permission: [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md) <br> Delegated permission: [authorization.permissions.delegated](#authorizationpermissionsdelegated)|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more information, see [Application permission](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-resource-specific-permissions)|
 
-### authorization.permissions.delegated
+### Delegated resource specific permissions
 
-* **Teams Permissions**
+* **Resource-specific permissions for teams**
 
-    * `ChannelMeetingParticipant.Read.Group`: Show the participants of the teams' channel meetings.
-    * `ChannelMeetingStage.Write.Group`: Show content on the meeting stage of channel meetings associated with the team.
-    * `InAppPurchase.Allow.Group`: Show and complete in-app purchases for users in the team.
+|**Application permission**|**Action**|
+|---|---|
+|`ChannelMeetingParticipant.Read.Group`| Read the participants of the teams' channel meetings.|
+|`InAppPurchase.Allow.Group`| Show and complete in-app purchases for users in the team.|
+|`ChannelMeetingStage.Write.Group`| Show content on the meeting stage of channel meetings associated with the team.|
 
-* **Chat/Meeting Permissions**
+* **Resource-specific permissions for chats or meetings**
 
-    * `InAppPurchase.Allow.Chat`: Show and complete in-app purchases for users in the chat and any associated meeting.
-    * `MeetingStage.Write.Chat`: Show content on the meeting stage of meetings associated with the chat.
-    * `OnlineMeetingParticipant.Read.Chat`: Show the participants of the meetings associated with the chat.
-    * `OnlineMeetingParticipant.ToggleIncomingAudio.Chat`: Toggle incoming audio for participants in meetings associated with the chat.
+|**Application permission**|**Action**|
+|---|---|
+|`InAppPurchase.Allow.Chat`|Show and complete in-app purchases for users in the chat and any associated meeting.|
+|`MeetingStage.Write.Chat`|Show content on the meeting stage of meetings associated with the chat.|
+|`OnlineMeetingParticipant.Read.Chat`|Read the participants of the meetings associated with the chat.|
+|`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Toggle incoming audio for participants in meetings associated with the chat.|
 
-* **User Permissions**
+* **Resource-specific permissions for users**
 
-    * `CameraStream.Read.User`: Show the users' camera stream.
-    * `InAppPurchase.Allow.User`: Show and complete in-app purchases.
-    * `OutgoingVideoStream.Write.User`: Modify the users' outgoing video.
+|**Application permission**|**Action**|
+|---|---|
+|`CameraStream.Read.User`|Read the users' camera stream.|
+|`InAppPurchase.Allow.User`|Show and complete in-app purchases.|
+|`OutgoingVideoStream.Write.User`|Modify the users' outgoing video.|
+
+## See also
+
+* [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
+* [Enable app customization](~/concepts/design/enable-app-customization.md)
+* [Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
