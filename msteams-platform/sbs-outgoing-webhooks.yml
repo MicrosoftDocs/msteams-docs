@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Webhooks help Teams to integrate with external apps. In Teams, the outgoing webhooks act as bot and search for messages in channels using **@mention**. The outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through [Microsoft Bot Framework](https://dev.botframework.com/). The outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
+    Webhooks help Teams to integrate with external apps. In Teams, the outgoing webhooks act as bot and search for messages in channels using **@mention**. The outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through Microsoft Bot Framework. The outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
     
     Key features of outgoing webhooks:
     
@@ -96,7 +96,7 @@ items:
 
         ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
 
-    1. A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. You can use the security token to authenticate calls between Teams and any designated outside service. 
+    1. A `Hash-based Message Authentication Code (HMAC)` dialogue box appears. You can use the security token to authenticate calls between Teams and any designated outside service. 
         You can use the security token in **AuthProvider.cs** file.
               
          ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)
@@ -158,7 +158,7 @@ items:
 
     1. The meeting chat displays new message.
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
+       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
        
 - title: Complete challenge
   durationInMinutes: 1
