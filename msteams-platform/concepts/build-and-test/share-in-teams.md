@@ -23,8 +23,8 @@ Latest Teams client SDK beta: "@microsoft/teams-js": "^1.11.0-beta.7"
 
 ## Enable Share-in-Teams button
 
-To enable Share-in-Teams button in the personal tab or app,
-call microsoftTeams.sharing.shareWebContent with a payload like this:
+To enable Share-in-Teams button in your personal tab or app,
+call `microsoftTeams.sharing.shareWebContent` with a payload like this:
 
 ```json
 microsoftTeams.sharing.shareWebContent({
