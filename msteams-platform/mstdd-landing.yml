@@ -28,6 +28,8 @@ landingContent:
         url: ~/apps-in-teams-meetings/API-references.md#get-real-time-teams-meeting-events-api
       - text: Guidelines for apps linked to SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+      - text: In-app purchase flow for monetization of apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Adaptive Cards form completion feedback
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: People Picker in Adaptive Cards
