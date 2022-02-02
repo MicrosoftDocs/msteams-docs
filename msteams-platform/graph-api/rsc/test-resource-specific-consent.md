@@ -17,7 +17,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 
 ## Prerequisite
 
-Ensure that you verify the app manifest changes for resource-specific consent before testing.
+Ensure that you verify the following app manifest changes for resource-specific consent before testing:
 
 <br>
 
