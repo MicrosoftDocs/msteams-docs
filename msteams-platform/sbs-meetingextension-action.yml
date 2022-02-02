@@ -15,14 +15,14 @@ items:
 - durationInMinutes: 1
   content: |
     Messaging extensions allow the users to interact with your web service through text and interactive cards in the Microsoft Teams client.  
-    The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, hence you must register your web service as a bot in the Bot Framework.
+    The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
-    This step-by-step guide illustrates how to create **Teams action messaging extension** to initiate actions from compose message and message area.
-
-     **Key features of Teams action messaging extension**
+    **Key features of Teams action messaging extension**
 
     * Presents the user with a modal popup to collect or display information.
     * The action commands can be triggered from the compose message area, the command box, or from a message. 
+
+    This step-by-step guide illustrates how to build Teams action messaging extension to initiate actions from compose message and message area.
     
     You'll see the following output:
 
