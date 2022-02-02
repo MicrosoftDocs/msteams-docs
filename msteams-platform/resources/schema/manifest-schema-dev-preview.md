@@ -611,7 +611,7 @@ Specifies the SaaS offer associated with your app.
 
 **Optional** - object
 
-Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md)
+Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -655,28 +655,28 @@ Specify and consolidate authorization related information for the app.
 
 * **Resource-specific permissions for teams**
 
-|**Application permission**|**Action**|
-|---|---|
-|`ChannelMeetingParticipant.Read.Group`| Read the participants of the teams' channel meetings.|
-|`InAppPurchase.Allow.Group`| Show and complete in-app purchases for users in the team.|
-|`ChannelMeetingStage.Write.Group`| Show content on the meeting stage of channel meetings associated with the team.|
+    |**Application permission**|**Action**|
+    |---|---|
+    |`ChannelMeetingParticipant.Read.Group`| Read the participants of the teams' channel meetings.|
+    |`InAppPurchase.Allow.Group`| Show and complete in-app purchases for users in the team.|
+    |`ChannelMeetingStage.Write.Group`| Show content on the meeting stage of channel meetings associated with the team.|
 
 * **Resource-specific permissions for chats or meetings**
 
-|**Application permission**|**Action**|
-|---|---|
-|`InAppPurchase.Allow.Chat`|Show and complete in-app purchases for users in the chat and any associated meeting.|
-|`MeetingStage.Write.Chat`|Show content on the meeting stage of meetings associated with the chat.|
-|`OnlineMeetingParticipant.Read.Chat`|Read the participants of the meetings associated with the chat.|
-|`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Toggle incoming audio for participants in meetings associated with the chat.|
+    |**Application permission**|**Action**|
+    |---|---|
+    |`InAppPurchase.Allow.Chat`|Show and complete in-app purchases for users in the chat and any associated meeting.|
+    |`MeetingStage.Write.Chat`|Show content on the meeting stage of meetings associated with the chat.|
+    |`OnlineMeetingParticipant.Read.Chat`|Read the participants of the meetings associated with the chat.|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Toggle incoming audio for participants in meetings associated with the chat.|
 
 * **Resource-specific permissions for users**
 
-|**Application permission**|**Action**|
-|---|---|
-|`CameraStream.Read.User`|Read the users' camera stream.|
-|`InAppPurchase.Allow.User`|Show and complete in-app purchases.|
-|`OutgoingVideoStream.Write.User`|Modify the users' outgoing video.|
+    |**Application permission**|**Action**|
+    |---|---|
+    |`CameraStream.Read.User`|Read the users' camera stream.|
+    |`InAppPurchase.Allow.User`|Show and complete in-app purchases.|
+    |`OutgoingVideoStream.Write.User`|Modify the users' outgoing video.|
 
 ## See also
 
