@@ -18,7 +18,6 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | Date | Update | Find here  |
 | --- | --- | --- |
 |02/02/2022| Introduced step-by-step guide to create a bot to perform link unfurling in Teams | Build messaging extensions > Add link unfurling > [Teams link unfurling bot](sbs-botbuilder-linkunfurling.yml)|
-|02/01/2022| In-app purchase flow for monetization of apps (developer preview) | Monetization of your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |01/25/2022| CART API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#cart-api)|
 |01/19/2022| Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| People Picker in Adaptive cards (developer preview for mobile and GA for desktop) | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
