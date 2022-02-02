@@ -95,9 +95,16 @@ items:
 
     **To create client secret**
 
-    1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
+    1. In **Settings**, select **Configuration**.
+
+       > [!TIP]
+       > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+    1. Select **MultiTenant** under **Bot Type**.
+
+         ![Bot Type](~/assets/images/bots/bot-type.png)
     
-    1. Adjacent to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage**.
 
          ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
 
