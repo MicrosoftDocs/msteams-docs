@@ -471,8 +471,6 @@
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     - name: Include a SaaS offer with your app
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    - name: In-app purchases
-      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
 - name: App manifest
   items:
     - name: App manifest schema
