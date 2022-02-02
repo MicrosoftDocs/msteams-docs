@@ -1,13 +1,13 @@
 ---
-title: Create Share-in-Teams button
-description: Learn to add the Share in Teams embedded button on your website, with a website preview, using Code samples 
+title: Share-in-Teams
+description: Learn to add the Share in Teams embedded button on your personal app or tab
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share Teams Share-in-Teams
 ---
 # Share-in-Teams
 
-Share-in-Teams is used to share the content from a personal app or tab to other user in Teams, you can also add this button to the personal app or tab.
+Share-in-Teams is used to share the content from your personal app or tab to other user in Teams, you can also add this button to the personal app or tab.
 
 When you select Share-in-Teams button, it launches the Share-in-Teams experience in a pop-up window. This button allows you to share a link to the other user through a chat or channel in Teams, it also allows you to add notes.
 
@@ -42,12 +42,12 @@ microsoftTeams.sharing.shareWebContent({
 
 To test the Share-in-Teams button added to your personal app or tab, perform the following step:
 
-1. Open personal app and go to task, which you need to share.
+1. Open personal app and go to required task.
 2. Select the ellipse button.
 
 :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button-":::
 
-3. Select Share-in-Teams button.
+3. Select **Share-in-Teams** button.
 4. Add recipient (a person or group, or channel).
 
 :::image type="content" source="../../assets/images/share-in-teams/add-recepient.PNG" alt-text="add-recipient":::
@@ -60,4 +60,4 @@ To test the Share-in-Teams button added to your personal app or tab, perform the
 
 :::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="share-in-teams-link-shared":::
 
-7. Now you can see the chat window of person or group or channel to check your message and link is shared.
+7. Select **View** button and see the chat window of personal or group or channel to check the shared link.
