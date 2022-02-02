@@ -423,7 +423,7 @@ items:
     
     1. Select **Upload a custom app**.
    
-       ![Upload](~/assets/images/sbs-messagingextension-action/uploadcustomapp1.png)
+       ![Upload](~/assets/images/sbs-messagingextension-action/uploadacustomapp1.png)
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
