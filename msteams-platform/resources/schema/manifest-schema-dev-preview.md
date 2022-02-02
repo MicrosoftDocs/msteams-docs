@@ -618,7 +618,7 @@ Specify and consolidates authorization related information for the App.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|string||✔| The type of the resource-specific permission. Options are Application and Delegated.|
+|`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 characters|✔|The name of the resource-specific permission. <br> Application permission: [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md) <br> Delegated permission: [authorization.permissions.delegated](#authorizationpermissionsdelegated)|
 
 ### authorization.permissions.delegated
