@@ -793,6 +793,29 @@ Specify meeting extension definition.
 |`name`|string|128 characters|✔|The name of the AV filter.|
 |`thumbnail`|||✔|relative file path to a A/V filter's thumbnail.|
 
+## authorization
+
+**Optional** — object
+
+Specify and consolidates authorization related information for the App.
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`permissions`||| List of permissions that the app needs to function.|
+
+### authorization.permissions
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`resourceSpecific`| array of objects|16 items|Permissions that guard data access on resource instance level.|
+
+### authorization.permissions.resourceSpecific
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`type`|string||✔| The type of the resource-specific permission. Specify granular [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md)
+|`name`|string|128 characters|✔|The name of the resource-specific permission, options are Application and Delegated.|
+
 ## See also
 
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
