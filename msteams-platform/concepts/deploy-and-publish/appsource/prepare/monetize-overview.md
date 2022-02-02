@@ -15,7 +15,7 @@ Microsoft Teams app Store provide features that enable you to monetize your apps
 
 :::row:::
     :::column:::
-        ![Charge a price for your app](~/assets/images/saas-offer/pricing-charge-price.png)
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="In-app purchases":::
     :::column-end:::
     :::column span="2":::
 
@@ -28,7 +28,7 @@ With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-p
 
 :::row:::
     :::column:::
-     ![Free trials](~/assets/images/saas-offer/pricing-free-trial.png)
+     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="In-app purchases":::
     :::column-end:::
     :::column span="2":::
 
@@ -41,7 +41,9 @@ You can offer a free trial version of your app to get more customers to try it. 
 
 :::row:::
     :::column:::
-        ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+        
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-in-app-purchases.png" alt-text="In-app purchases":::
+
     :::column-end:::
     :::column span="2":::
 
@@ -56,7 +58,7 @@ Whether you charge a price for your app or offer it for free, you can use in-app
 
 :::row:::
     :::column:::
-        ![Charge a price for your app](~/assets/images/saas-offer/pricing-charge-price.png)
+        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="Test preview":::
     :::column-end:::
     :::column span="2":::
 
@@ -68,10 +70,6 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
     :::column-end:::
 :::row-end:::
-
-## Test preview for monetized app
-
-With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish. For more information, see [Test preview for monetized apps](Test-preview-for-monetized-apps.md)
 
 ## Next step
 
