@@ -140,13 +140,7 @@ For more information, see [get access on behalf of a user](/graph/auth-v2-user?v
 
 ## Update your Teams app manifest
 
-The RSC permissions are declared in your app manifest JSON file. Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
-
-|Name| Type | Description|
-|---|---|---|
-|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
+The RSC permissions are declared in your app manifest JSON file. 
 
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
@@ -158,6 +152,19 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 <details>
 
 <summary><b>RSC permissions for app manifest version 1.12</b></summary>
+
+Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+
+|Name| Type | Description|
+|---|---|---|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
+
+Specify and consolidate authorization related information for the app.
+
+|Name| Type | Description|
+|---|---|---|
+|`authorisation`|Object|List of permissions that the app needs to function. For more information, see [placeholder for link- authorisation in manifest]
 
 Example for RSC in a team
 
@@ -311,6 +318,13 @@ Example for RSC in a chat
 
 <summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
 
+Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+
+|Name| Type | Description|
+|---|---|---|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 Example for RSC in a team
 
 ```json
