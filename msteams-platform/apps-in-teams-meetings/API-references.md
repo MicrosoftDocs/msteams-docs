@@ -404,9 +404,7 @@ The following table includes the query parameters:
 
 The following tabs include the examples:
 
-# [JavaScript](#tab/javascript)
-
-```typescript
+```javascript
 
 const appContentUrl = "https://www.bing.com/";
 
@@ -420,8 +418,6 @@ if(err) {
 }, appContentUrl); 
 
 ```
-
----
 
 ### Response codes
 
@@ -449,17 +445,13 @@ The following table includes the query parameters:
 
 The following tabs include the examples:
 
-# [JavaScript](#tab/javascript)
-
-```
+```javascript
 microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
   if(result.isAppSharing) {
     this.setState({ isAppSharing: false });
    }
   });
 ``` 
-
----
 
 The JSON response body for the `getAppContentStageSharingState` API is:
 
@@ -496,17 +488,14 @@ The following table includes the query parameters:
 
 The following tabs include the examples:
 
-# [JavaScript](#tab/javascript)
 
-```
+```javascript
 microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
   if(result.doesAppHaveSharePermission) {
     this.setState({ isAppAllowedToShare: true });
    }
   });
 ``` 
-
----
 
 The JSON response body for `getAppContentStageSharingCapabilities` API is:
 
