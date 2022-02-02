@@ -782,8 +782,6 @@ Specify meeting extension definition.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
-|`filters`|array of objects| 100 items||Meeting supported A/V filters.|
-|`videoAppContentUrl`|string|2048 characters||The url to indicate A/V filters' video app content.|
 
 ### meetingExtensionDefinition.scenes
 
@@ -823,22 +821,22 @@ Specify and consolidates authorization related information for the App.
 
 * **Teams Permissions**
 
-* `ChannelMeetingParticipant.Read.Group`: Read the participants of the team's channel meetings.
-* `ChannelMeetingStage.Write.Group`: Show content on the meeting stage of channel meetings associated with the team.
-* `InAppPurchase.Allow.Group`: Show and complete in-app purchases for users in th team.
+    * `ChannelMeetingParticipant.Read.Group`: Read the participants of the team's channel meetings.
+    * `ChannelMeetingStage.Write.Group`: Show content on the meeting stage of channel meetings associated with the team.
+    * `InAppPurchase.Allow.Group`: Show and complete in-app purchases for users in th team.
 
 * **Chat/Meeting Permissions**
 
-* `InAppPurchase.Allow.Chat`: Show and complete in-app purchases for users in the chat and any associated meeting.
-* `MeetingStage.Write.Chat`: Show content on the meeting stage of meetings associated with the chat.
-* `OnlineMeetingParticipant.Read.Chat`: Read the participants of the meetings associated with the chat.
-* `OnlineMeetingParticipant.ToggleIncomingAudio.Chat`: Toggle incoming audio for participants in meetings associated with the chat.
+    * `InAppPurchase.Allow.Chat`: Show and complete in-app purchases for users in the chat and any associated meeting.
+    * `MeetingStage.Write.Chat`: Show content on the meeting stage of meetings associated with the chat.
+    * `OnlineMeetingParticipant.Read.Chat`: Read the participants of the meetings associated with the chat.
+    * `OnlineMeetingParticipant.ToggleIncomingAudio.Chat`: Toggle incoming audio for participants in meetings associated with the chat.
 
 * **User Permissions**
 
-* `CameraStream.Read.User`: Read the user's camera stream.
-* `InAppPurchase.Allow.User`: Show and complete in-app purchases.
-* `OutgoingVideoStream.Write.User`: Modify the user's outgoing video.
+    * `CameraStream.Read.User`: Read the user's camera stream.
+    * `InAppPurchase.Allow.User`: Show and complete in-app purchases.
+    * `OutgoingVideoStream.Write.User`: Modify the user's outgoing video.
 
 ## See also
 
