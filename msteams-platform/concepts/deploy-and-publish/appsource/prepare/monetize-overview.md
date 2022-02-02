@@ -7,7 +7,7 @@ ms.topic: how-to
 localization_priority: Normal 
 ---
 
-# Monetize you app
+# Monetize your app
 
 Microsoft Teams app Store provide features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
 
