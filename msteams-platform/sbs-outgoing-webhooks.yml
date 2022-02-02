@@ -96,9 +96,8 @@ items:
 
         ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
 
-    1. A `Hash-based Message Authentication Code (HMAC)` dialogue box appears. You can use the security token to authenticate calls between Teams and any designated outside service. 
-        You can use the security token in **AuthProvider.cs** file.
-              
+    1. A `Hash-based Message Authentication Code (HMAC)` dialogue box appears. You can use the security token in **AuthProvider.cs** file to authenticate calls between Teams and any designated outside service. 
+                    
          ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)
 
         > [!NOTE]
