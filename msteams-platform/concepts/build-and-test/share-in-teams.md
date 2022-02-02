@@ -5,9 +5,9 @@ ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share Teams Share-in-Teams
 ---
-# Create Share-in-Teams button
+# Share-in-Teams
 
-Share-in-Teams is used to share the link from a personal app or tab to other user in Teams, you can also add this button to the personal app or tab.
+Share-in-Teams is used to share the content from a personal app or tab to other user in Teams, you can also add this button to the personal app or tab.
 
 When you select Share-in-Teams button, it launches the Share-in-Teams experience in a pop-up window. This button allows you to share a link to the other user through a chat or channel in Teams, it also allows you to add notes.
 
@@ -19,7 +19,7 @@ This document guides you on how to create and add a Share-in-Teams button for yo
 
 ## Prerequisites
 
-Latest Teams client SDK beta: "@microsoft/teams-js": "^1.11.0-beta.7"
+Get latest [Microsoft Teams JavaScript client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true) (`@microsoft/teams-js@1.11.0-beta.7`)
 
 ## Enable Share-in-Teams button
 
@@ -37,8 +37,6 @@ microsoftTeams.sharing.shareWebContent({
         ]
       });
 ```
-
----
 
 ## Test the feature
 
