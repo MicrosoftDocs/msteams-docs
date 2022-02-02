@@ -804,21 +804,41 @@ Specify and consolidates authorization related information for the App.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`permissions`||| List of permissions that the app needs to function.|
+|`permissions`||||List of permissions that the app needs to function.|
 
 ### authorization.permissions
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`resourceSpecific`| array of objects|16 items|Permissions that guard data access on resource instance level.|
+|`resourceSpecific`| array of objects|16 items||Permissions that guard data access on resource instance level.|
 
 ### authorization.permissions.resourceSpecific
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|string||✔| The type of the resource-specific permission. Options are Application and Delegated. 
-|`name`|string|128 characters|✔|The name of the resource-specific permission.
-Application permission [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md)|
+|`type`|string||✔| The type of the resource-specific permission. Options are Application and Delegated.|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> Application permission: [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md) <br> Delegated permission: [authorization.permissions.delegated](#authorizationpermissionsdelegated)|
+
+### authorization.permissions.delegated
+
+* **Teams Permissions**
+
+* `ChannelMeetingParticipant.Read.Group`: Read the participants of the team's channel meetings.
+* `ChannelMeetingStage.Write.Group`: Show content on the meeting stage of channel meetings associated with the team.
+* `InAppPurchase.Allow.Group`: Show and complete in-app purchases for users in th team.
+
+* **Chat/Meeting Permissions**
+
+* `InAppPurchase.Allow.Chat`: Show and complete in-app purchases for users in the chat and any associated meeting.
+* `MeetingStage.Write.Chat`: Show content on the meeting stage of meetings associated with the chat.
+* `OnlineMeetingParticipant.Read.Chat`: Read the participants of the meetings associated with the chat.
+* `OnlineMeetingParticipant.ToggleIncomingAudio.Chat`: Toggle incoming audio for participants in meetings associated with the chat.
+
+* **User Permissions**
+
+* `CameraStream.Read.User`: Read the user's camera stream.
+* `InAppPurchase.Allow.User`: Show and complete in-app purchases.
+* `OutgoingVideoStream.Write.User`: Modify the user's outgoing video.
 
 ## See also
 
