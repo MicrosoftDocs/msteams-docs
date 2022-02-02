@@ -151,64 +151,15 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
-## Examples  
+## Examples for RSC in team and chat
 
-### Request RSC permissions in a team and chat when the app manifest version is earlier or equal to 1.11.
+<br>
 
-### Example for RSC in a team
+<details>
 
-```json
-"webApplicationInfo": {
-    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource": "https://RscBasedStoreApp",
-    "applicationPermissions": [
-        "TeamSettings.Read.Group",
-        "TeamSettings.ReadWrite.Group",
-        "ChannelSettings.Read.Group",
-        "ChannelSettings.ReadWrite.Group",
-        "Channel.Create.Group",
-        "Channel.Delete.Group",
-        "ChannelMessage.Read.Group",
-        "TeamsAppInstallation.Read.Group",
-        "TeamsTab.Read.Group",
-        "TeamsTab.Create.Group",
-        "TeamsTab.ReadWrite.Group",
-        "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group",
-        "TeamsActivity.Send.Group"
-    ]
-  }
-```
+<summary><b>RSC permissions for app manifest version 1.12</b></summary>
 
-### Example for RSC in a chat
-
-```json
-"webApplicationInfo": {
-    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource": "https://RscBasedStoreApp",
-    "applicationPermissions": [
-        "ChatSettings.Read.Chat",
-        "ChatSettings.ReadWrite.Chat",
-        "ChatMessage.Read.Chat",
-        "ChatMember.Read.Chat",
-        "Chat.Manage.Chat",
-        "TeamsTab.Read.Chat",
-        "TeamsTab.Create.Chat",
-        "TeamsTab.Delete.Chat",
-        "TeamsTab.ReadWrite.Chat",
-        "TeamsAppInstallation.Read.Chat",
-        "OnlineMeeting.ReadBasic.Chat",
-        "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat",
-        "TeamsActivity.Send.Chat"
-    ]
-  }
-```
-## Example 
-
-### Request RSC permissions in a team and chat when the app manifest version is later or equal to 1.12
-
-### Example for RSC in a team
+Example for RSC in a team
 
 ```json
 "webApplicationInfo": {
@@ -277,10 +228,9 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
         ]    
     }
 }
-}
 ```
 
-### Example for RSC in a chat
+Example for RSC in a chat
 
 ```json
 "webApplicationInfo": {
@@ -349,8 +299,72 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
         ]    
     }
 }
-}
 ```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
+
+Example for RSC in a team
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
+    ]
+  }
+```
+
+Example for RSC in a chat
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
+    ]
+  }
+```
+
+<br>
+
+</details>
+
 
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
