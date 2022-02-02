@@ -226,67 +226,41 @@ To use the Meeting Details API, you must obtain different RSC permission based o
 
 <summary><b>For app manifest version 1.12</b></summary>
 
-Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
+Use the following example to configure your app manifest's `webApplicationInfo`  and `authorization` properties for any private meeting:
 
 ```json
 "webApplicationInfo": {
-
     "id": "<bot id>",
-
     "resource": "https://RscPermission",
-
-    },
-
+},
 "authorization": {
-
     "permissions": {
-
         "resourceSpecific": [
-
             {
-
                 "name": "OnlineMeeting.ReadBasic.Chat",
-
                 "type": "Application"
-
             }
-
-        ]    
-
+        ]
     }
-
 }
  ```
 
-Use the following example to configure your app manifest's `webApplicationInfo` property for any channel meeting:
+Use the following example to configure your app manifest's `webApplicationInfo` and `authorization` properties for any channel meeting:
 
 ```json
 "webApplicationInfo": {
-
     "id": "<bot id>",
-
     "resource": "https://RscPermission",
-
-    },
-
+},
 "authorization": {
-
     "permissions": {
-
         "resourceSpecific": [
-
             {
-
                 "name": "ChannelMeeting.ReadBasic.Group",
-
                 "type": "Application"
-
             }
-
-        ]    
-
+        ]
     }
-
 }
  ```
 
@@ -477,14 +451,14 @@ The following table includes the query parameters:
 ```javascript
 const appContentUrl = "https://www.bing.com/";
 
-microsoftTeams.meeting.shareAppContentToStage ((err, result) => {
-if(result) {
-  this.setState({ isAppSharing: true });
- }
-if(err) {
-  this.setState({ sharingError: err, isAppSharing: false })
- }
-}, appContentUrl); 
+microsoftTeams.meeting.shareAppContentToStage((err, result) => {
+    if (result) {
+        // handle success
+    }
+    if (err) {
+        // handle error
+    }
+}, appContentUrl);
 ```
 
 ### Response codes
@@ -512,11 +486,11 @@ The following table includes the query parameters:
 ### Example
 
 ```javascript
-microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
-  if(result.isAppSharing) {
-    this.setState({ isAppSharing: false });
-   }
-  });
+microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
+    if (result.isAppSharing) {
+        // Indicates app has permission to share contents to meeting stage.
+    }
+});
 ``` 
 
 The JSON response body for the `getAppContentStageSharingState` API is:
@@ -552,11 +526,11 @@ The following table includes the query parameters:
 ### Example
 
 ```javascript
-microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
-  if(result.doesAppHaveSharePermission) {
-    this.setState({ isAppAllowedToShare: true });
-   }
-  });
+microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
+    if (result.doesAppHaveSharePermission) {
+        // Indicates app has permission to share contents to meeting stage.
+    }
+});
 ``` 
 
 The JSON response body for `getAppContentStageSharingCapabilities` API is:
@@ -594,9 +568,16 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 "webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
-    "authorizations": [
-      "OnlineMeeting.ReadBasic.Chat"
-    ]
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
 }
  ```
 
