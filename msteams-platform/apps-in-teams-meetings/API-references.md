@@ -22,20 +22,13 @@ The following table provides a list of APIs available across the Microsoft Teams
 |---|---|----|
 |[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Teams tab.| MSTC SDK|
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. |MSBF SDK|
-|[**Send Notification signal**](#send-notification-signal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |MSBF SDK|
-|[**Get Meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |Bot SDK |
+|[**Send notification signal**](#send-notification-signal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |MSBF SDK|
+|[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |Bot SDK |
+|[**Send CART API**](#send-cart-api)|Enable you to post captions for a meeting, which was started|MSTC SDK|
 |[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |MSTC SDK|
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about apps' sharing state on the meeting stage. |MSTC SDK|
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the apps' capabilities for sharing to the meeting stage. |MSTC SDK|
 |[**Get Real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| Bot SDK|
-
-|API|Description|Request|Source|
-|---|---|----|---|
-|**GetUserContext**| Enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
-|**GetParticipant**| Enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | Enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Meeting Details** | Enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
-|**CART**|Enables you to post captions for a meeting, which was started.|**POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1**|Microsoft Teams client SDK|
 
 ## Get user context API
 
@@ -108,7 +101,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-The following JSON response body for `GetParticipant` API is:
+The JSON response body for `GetParticipant` API is as follows:
 
 ```json
 {
@@ -231,7 +224,7 @@ The following table includes the response codes:
 > [!NOTE]
 > Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
+The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
 ### Prerequisite
 
@@ -321,7 +314,7 @@ The JSON response body for Meeting Details API is as follows:
 } 
 ```
 
-## CART API
+## Send CART API
 
 The Communication access real-time translation (CART) API exposes a POST endpoint for Microsoft Teams CART captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
 
