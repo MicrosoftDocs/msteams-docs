@@ -184,23 +184,34 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
   "webApplicationInfo": {
     "id": "AAD App ID",
     "resource": "Resource URL for acquiring auth token for SSO",
-    "applicationPermissions": [
-      "TeamSettings.Read.Group",
-      "ChannelSettings.Read.Group",
-      "ChannelSettings.Edit.Group",
-      "Channel.Create.Group",
-      "Channel.Delete.Group",
-      "ChannelMessage.Read.Group",
-      "TeamsApp.Read.Group",
-      "TeamsTab.Read.Group",
-      "TeamsTab.Create.Group",
-      "TeamsTab.Edit.Group",
-      "TeamsTab.Delete.Group",
-      "Member.Read.Group",
-      "Owner.Read.Group",
-      "Member.ReadWrite.Group",
-      "Owner.ReadWrite.Group"
-    ],
+    "authorization": {
+
+        "permissions": {
+
+            "resourceSpecific": [
+
+                {
+
+                    "type": "Application",
+
+                    "name": "ChannelSettings.Read.Group"
+
+                },
+
+                {
+
+                    "type": "Delegated",
+
+                    "name": "ChannelMeetingParticipant.Read.Group"
+
+                }
+
+            ]
+
+        }
+
+    }
+    
   },
    "configurableProperties": [
      "name",
@@ -565,3 +576,68 @@ Specifies the SaaS offer associated with your app.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
+
+## meetingExtensionDefinition
+
+**Optional** - object
+
+Specify meeting extension definition.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`scenes`|array of objects| 5 items||Meeting supported scenes.|
+
+### meetingExtensionDefinition.scenes
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`id`|||✔| The unique identifier for the scene. This id must be a GUID. |
+|`name`| string | 128 characters |✔| The name of the scene. |
+|`file`|||✔| The relative file path to the scene metadata json file. |
+|`preview`|||✔| The relative file path to the a scene PNG preview icon. |
+|`maxAudience`| integer | 50 digits |✔| The maximum audiences supported in scene. |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 digits |✔| The number of seats reserved for organizers or presenters.|
+
+## authorization
+
+**Optional** — object
+
+Specify and consolidates authorization related information for the App.
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`permissions`||||List of permissions that the app needs to function.|
+
+### authorization.permissions
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`resourceSpecific`| array of objects|16 items||Permissions that guard data access on resource instance level.|
+
+### authorization.permissions.resourceSpecific
+
+|Name| Type|Maximum size|Required |Description|
+|---|---|---|---|---|
+|`type`|string||✔| The type of the resource-specific permission. Options are Application and Delegated.|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> Application permission: [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md) <br> Delegated permission: [authorization.permissions.delegated](#authorizationpermissionsdelegated)|
+
+### authorization.permissions.delegated
+
+* **Teams Permissions**
+
+    * `ChannelMeetingParticipant.Read.Group`: Read the participants of the team's channel meetings.
+    * `ChannelMeetingStage.Write.Group`: Show content on the meeting stage of channel meetings associated with the team.
+    * `InAppPurchase.Allow.Group`: Show and complete in-app purchases for users in th team.
+
+* **Chat/Meeting Permissions**
+
+    * `InAppPurchase.Allow.Chat`: Show and complete in-app purchases for users in the chat and any associated meeting.
+    * `MeetingStage.Write.Chat`: Show content on the meeting stage of meetings associated with the chat.
+    * `OnlineMeetingParticipant.Read.Chat`: Read the participants of the meetings associated with the chat.
+    * `OnlineMeetingParticipant.ToggleIncomingAudio.Chat`: Toggle incoming audio for participants in meetings associated with the chat.
+
+* **User Permissions**
+
+    * `CameraStream.Read.User`: Read the user's camera stream.
+    * `InAppPurchase.Allow.User`: Show and complete in-app purchases.
+    * `OutgoingVideoStream.Write.User`: Modify the user's outgoing video.
