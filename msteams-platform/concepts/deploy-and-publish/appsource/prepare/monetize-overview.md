@@ -1,5 +1,5 @@
 ---
-title: Monetize your overview
+title:  Teams app monetization overview
 description: Learn how to monetize your Microsoft Teams app.
 author: v-npaladugu
 ms.author: surbhigupta
@@ -7,7 +7,7 @@ ms.topic: how-to
 localization_priority: Normal 
 ---
 
-# Monetize your app
+# Monetization of your app
 
 Microsoft Teams app Store provide features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
 
