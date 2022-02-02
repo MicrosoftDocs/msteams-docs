@@ -104,4 +104,5 @@ The following example shows the users to purchase subscription plans for a ficti
 
 ## See also
 
-[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Create a Software as a Service (SaaS) offer](include-saas-offer.md#create-your-saas-offer)
