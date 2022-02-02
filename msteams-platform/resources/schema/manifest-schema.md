@@ -785,14 +785,6 @@ Specify meeting extension definition.
 |`maxAudience`| integer | 50 digits |✔| The maximum audiences supported in scene. |
 |`seatsReservedForOrganizersOrPresenters`| integer | 50 digits |✔| The number of seats reserved for organizers or presenters.|
 
-### meetingExtensionDefinition.filters
-
-|Name| Type|Maximum size|Required |Description|
-|---|---|---|---|---|
-|`id`|||✔|The unique identifier for the A/V filter. This id must be a GUID.|
-|`name`|string|128 characters|✔|The name of the AV filter.|
-|`thumbnail`|||✔|relative file path to a A/V filter's thumbnail.|
-
 ## authorization
 
 **Optional** — object
