@@ -28,7 +28,7 @@ With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-p
 
 :::row:::
     :::column:::
-![Free trials](~/assets/images/saas-offer/pricing-free-trial.png)
+     ![Free trials](~/assets/images/saas-offer/pricing-free-trial.png)
     :::column-end:::
     :::column span="2":::
 
@@ -44,11 +44,13 @@ You can offer a free trial version of your app to get more customers to try it. 
         ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
     :::column-end:::
     :::column span="2":::
+
 **In-app purchases**
 
 Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
 
 [Use in-app purchases](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+
     :::column-end:::
 :::row-end:::
 
@@ -66,7 +68,6 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
     :::column-end:::
 :::row-end:::
-:::row:::
 
 ## Test preview for monetized app
 
