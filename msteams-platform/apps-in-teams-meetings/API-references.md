@@ -303,7 +303,7 @@ The JSON response body for Meeting Details API is as follows:
     }, 
     "conversation": { 
             "isGroup": true, 
-            “conversationType”: “groupchat”, 
+            "conversationType": "groupchat", 
             "id": "meeting chat ID" 
     }, 
     "organizer": { 
@@ -404,10 +404,6 @@ The following table includes the query parameters:
 
 The following tabs include the examples:
 
-# [C#](#tab/dotnet)
-
-Not available
-
 # [JavaScript](#tab/javascript)
 
 ```typescript
@@ -424,10 +420,6 @@ if(err) {
 }, appContentUrl); 
 
 ```
-
-# [JSON](#tab/json)
-
-Not available
 
 ---
 
@@ -457,22 +449,15 @@ The following table includes the query parameters:
 
 The following tabs include the examples:
 
-# [C#](#tab/dotnet)
-
-Not available
-
 # [JavaScript](#tab/javascript)
 
-```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
+```
+microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
   if(result.isAppSharing) {
-    this.setState({ isGameSessionOver: false });
+    this.setState({ isAppSharing: false });
    }
   });
 ``` 
-
-# [JSON](#tab/json)
-
-Not available
 
 ---
 
@@ -481,7 +466,7 @@ The JSON response body for the `getAppContentStageSharingState` API is:
 ```json
 {
    "isAppSharing":true
-  }
+}
   
 ```
 
@@ -511,22 +496,15 @@ The following table includes the query parameters:
 
 The following tabs include the examples:
 
-# [C#](#tab/dotnet)
-
-Not available
-
 # [JavaScript](#tab/javascript)
 
-```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
+```
+microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
   if(result.doesAppHaveSharePermission) {
     this.setState({ isAppAllowedToShare: true });
    }
   });
 ``` 
-
-# [JSON](#tab/json)
-
-Not available
 
 ---
 
@@ -535,7 +513,7 @@ The JSON response body for `getAppContentStageSharingCapabilities` API is:
 ```json
 {
    "doesAppHaveSharePermission":true
-  }
+}
   
 ```
 
