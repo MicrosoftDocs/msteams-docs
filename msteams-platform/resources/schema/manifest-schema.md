@@ -251,23 +251,34 @@ The following schema sample shows all extensibility options:
   "webApplicationInfo": {
     "id": "AAD App ID",
     "resource": "Resource URL for acquiring auth token for SSO",
-    "applicationPermissions": [
-      "TeamSettings.Read.Group",
-      "ChannelSettings.Read.Group",
-      "ChannelSettings.Edit.Group",
-      "Channel.Create.Group",
-      "Channel.Delete.Group",
-      "ChannelMessage.Read.Group",
-      "TeamsApp.Read.Group",
-      "TeamsTab.Read.Group",
-      "TeamsTab.Create.Group",
-      "TeamsTab.Edit.Group",
-      "TeamsTab.Delete.Group",
-      "Member.Read.Group",
-      "Owner.Read.Group",
-      "Member.ReadWrite.Group",
-      "Owner.ReadWrite.Group"
-    ]
+    "authorization": {
+
+        "permissions": {
+
+            "resourceSpecific": [
+
+                {
+
+                    "type": "Application",
+
+                    "name": "ChannelSettings.Read.Group"
+
+                },
+
+                {
+
+                    "type": "Delegated",
+
+                    "name": "ChannelMeetingParticipant.Read.Group"
+
+                }
+
+            ]
+
+        }
+
+    }
+    
   },
   "showLoadingIndicator": false,
   "isFullScreen": false,
@@ -805,8 +816,9 @@ Specify and consolidates authorization related information for the App.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|string||✔| The type of the resource-specific permission. Specify granular [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md)
-|`name`|string|128 characters|✔|The name of the resource-specific permission, options are Application and Delegated.|
+|`type`|string||✔| The type of the resource-specific permission. Options are Application and Delegated. 
+|`name`|string|128 characters|✔|The name of the resource-specific permission.
+Application permission [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md)|
 
 ## See also
 
