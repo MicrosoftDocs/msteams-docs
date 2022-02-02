@@ -99,7 +99,6 @@ Example for RSC in a team
         ]    
     }
 }
-}
 ```
 
 Example for RSC in a chat
@@ -170,7 +169,6 @@ Example for RSC in a chat
             }
         ]    
     }
-}
 }
 ```
 
