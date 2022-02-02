@@ -145,7 +145,7 @@ The RSC permissions are declared in your app manifest JSON file.
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
-## Examples for RSC in team and chat
+### Manifest changes for resource-specific consent
 
 <br>
 
@@ -308,6 +308,9 @@ Example for RSC in a chat
 }
 ```
 
+> [!NOTE]
+> If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
+    
 <br>
 
 </details>
@@ -376,13 +379,12 @@ Example for RSC in a chat
   }
 ```
 
+> [!NOTE]
+> If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
+    
 <br>
 
 </details>
-
-
-> [!NOTE]
-> If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 
 ## Sideload your app in Teams
 
