@@ -177,7 +177,10 @@ Example for RSC in a chat
 ```
 
 <br>
-
+    
+> [!NOTE]
+> If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
+    
 </details>
 
 <br>
@@ -246,13 +249,15 @@ Example for RSC in a chat
 
 <br>
 
+> [!NOTE]
+> If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
+    
 </details>
 
 > [!IMPORTANT]
 > In your app manifest, only include the RSC permissions that you want your app to have.
 
 > [!NOTE]
-> If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 > If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Azure AD app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
 
 ## Test added RSC permissions to a team using the Postman app
