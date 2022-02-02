@@ -177,12 +177,10 @@ Example for RSC in a chat
     }
 }
 ```
-
-<br>
     
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
-    
+
 </details>
 
 <br>
