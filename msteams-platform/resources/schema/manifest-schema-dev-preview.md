@@ -649,13 +649,13 @@ Specify and consolidate authorization related information for the app.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more information, see [Application permission](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-resource-specific-permissions)|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more information, see [Application permission](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-permissions)|
 
-### Delegated resource specific permissions
+### Delegated permissions
 
 * **Resource-specific permissions for teams**
 
-    |**Application permission**|**Action**|
+    |**Delegated permission**|**Action**|
     |---|---|
     |`ChannelMeetingParticipant.Read.Group`| Read the participants of the teams' channel meetings.|
     |`InAppPurchase.Allow.Group`| Show and complete in-app purchases for users in the team.|
@@ -663,7 +663,7 @@ Specify and consolidate authorization related information for the app.
 
 * **Resource-specific permissions for chats or meetings**
 
-    |**Application permission**|**Action**|
+    |**Delegated permission**|**Action**|
     |---|---|
     |`InAppPurchase.Allow.Chat`|Show and complete in-app purchases for users in the chat and any associated meeting.|
     |`MeetingStage.Write.Chat`|Show content on the meeting stage of meetings associated with the chat.|
@@ -672,7 +672,7 @@ Specify and consolidate authorization related information for the app.
 
 * **Resource-specific permissions for users**
 
-    |**Application permission**|**Action**|
+    |**Delegated permission**|**Action**|
     |---|---|
     |`CameraStream.Read.User`|Read the users' camera stream.|
     |`InAppPurchase.Allow.User`|Show and complete in-app purchases.|
