@@ -15,7 +15,7 @@ keywords: teams authorization OAuth SSO Azure AD rsc Postman Graph
 
 Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. For more information, see [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
-## Prerequisite
+## Prerequisites
 
 Ensure that you verify the following app manifest changes for resource-specific consent before testing:
 
