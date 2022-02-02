@@ -66,8 +66,13 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
     :::column-end:::
 :::row-end:::
-
 :::row:::
+
+## Test preview for monetized app
+
+With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
+
+[Test preview for monetized apps](Test-preview-for-monetized-apps.md)
 
 ## Next step
 
