@@ -789,16 +789,16 @@ Specify meeting extension definition.
 |---|---|---|---|---|
 |`id`|||✔| The unique identifier for the scene. This id must be a GUID. |
 |`name`| string | 128 characters |✔| The name of the scene. |
-|`file`|||✔| The relative file path to the scene metadata json file. |
-|`preview`|||✔| The relative file path to the a scene PNG preview icon. |
-|`maxAudience`| integer | 50 digits |✔| The maximum audiences supported in scene. |
+|`file`|||✔| The relative file path to the scenes' metadata json file. |
+|`preview`|||✔| The relative file path to the scenes' PNG preview icon. |
+|`maxAudience`| integer | 50 digits |✔| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| integer | 50 digits |✔| The number of seats reserved for organizers or presenters.|
 
 ## authorization
 
 **Optional** — object
 
-Specify and consolidates authorization related information for the App.
+Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
@@ -814,29 +814,29 @@ Specify and consolidates authorization related information for the App.
 
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
-|`type`|string||✔| The type of the resource-specific permission. Options are Application and Delegated.|
+|`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 characters|✔|The name of the resource-specific permission. <br> Application permission: [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md) <br> Delegated permission: [authorization.permissions.delegated](#authorizationpermissionsdelegated)|
 
 ### authorization.permissions.delegated
 
 * **Teams Permissions**
 
-    * `ChannelMeetingParticipant.Read.Group`: Read the participants of the team's channel meetings.
+    * `ChannelMeetingParticipant.Read.Group`: Show the participants of the teams' channel meetings.
     * `ChannelMeetingStage.Write.Group`: Show content on the meeting stage of channel meetings associated with the team.
-    * `InAppPurchase.Allow.Group`: Show and complete in-app purchases for users in th team.
+    * `InAppPurchase.Allow.Group`: Show and complete in-app purchases for users in the team.
 
 * **Chat/Meeting Permissions**
 
     * `InAppPurchase.Allow.Chat`: Show and complete in-app purchases for users in the chat and any associated meeting.
     * `MeetingStage.Write.Chat`: Show content on the meeting stage of meetings associated with the chat.
-    * `OnlineMeetingParticipant.Read.Chat`: Read the participants of the meetings associated with the chat.
+    * `OnlineMeetingParticipant.Read.Chat`: Show the participants of the meetings associated with the chat.
     * `OnlineMeetingParticipant.ToggleIncomingAudio.Chat`: Toggle incoming audio for participants in meetings associated with the chat.
 
 * **User Permissions**
 
-    * `CameraStream.Read.User`: Read the user's camera stream.
+    * `CameraStream.Read.User`: Show the users' camera stream.
     * `InAppPurchase.Allow.User`: Show and complete in-app purchases.
-    * `OutgoingVideoStream.Write.User`: Modify the user's outgoing video.
+    * `OutgoingVideoStream.Write.User`: Modify the users' outgoing video.
 
 ## See also
 
