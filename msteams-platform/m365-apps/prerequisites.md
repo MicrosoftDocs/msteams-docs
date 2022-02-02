@@ -4,7 +4,6 @@ description: Here are the prerequisites for extending your Teams apps across Mic
 ms.date: 11/15/2021
 ms.topic: how-to
 ms.custom: m365apps
-ms.localizationpriority: medium
 ---
 # Set up your dev environment for extending Teams apps across M365
 
@@ -53,7 +52,7 @@ For more information on Office 365 release options, see [Set up the Standard or 
 ## Install Office apps in your test environment
 
 > [!IMPORTANT]
-> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook for Windows desktop support for Teams message extensions is available to your test tenant.
+> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook for Windows desktop support for Teams messaging extensions is available to your test tenant.
 
 You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [Change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install an Office 365 Beta Channel build.
 
