@@ -28,67 +28,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 
 <details>
 
-<summary><b>RSC permissions for app manifest version earlier or equal to 1.11</b></summary>
-
-Example for RSC in a team
-
-```json
-"webApplicationInfo": {
-    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource": "https://RscBasedStoreApp",
-    "applicationPermissions": [
-        "TeamSettings.Read.Group",
-        "TeamSettings.ReadWrite.Group",
-        "ChannelSettings.Read.Group",
-        "ChannelSettings.ReadWrite.Group",
-        "Channel.Create.Group",
-        "Channel.Delete.Group",
-        "ChannelMessage.Read.Group",
-        "TeamsAppInstallation.Read.Group",
-        "TeamsTab.Read.Group",
-        "TeamsTab.Create.Group",
-        "TeamsTab.ReadWrite.Group",
-        "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group",
-        "TeamsActivity.Send.Group"
-    ]
-  }
-```
-
-Example for RSC in a chat
-
-```json
-"webApplicationInfo": {
-    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource": "https://RscBasedStoreApp",
-    "applicationPermissions": [
-        "ChatSettings.Read.Chat",
-        "ChatSettings.ReadWrite.Chat",
-        "ChatMessage.Read.Chat",
-        "ChatMember.Read.Chat",
-        "Chat.Manage.Chat",
-        "TeamsTab.Read.Chat",
-        "TeamsTab.Create.Chat",
-        "TeamsTab.Delete.Chat",
-        "TeamsTab.ReadWrite.Chat",
-        "TeamsAppInstallation.Read.Chat",
-        "OnlineMeeting.ReadBasic.Chat",
-        "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat",
-        "TeamsActivity.Send.Chat"
-    ]
-  }
-```
-
-<br>
-
-</details>
-
-<br>
-
-<details>
-
-<summary><b>RSC permissions for app manifest version later or equal to 1.12</b></summary>
+<summary><b>RSC permissions for app manifest version 1.12</b></summary>
 
 Example for RSC in a team
 
@@ -232,6 +172,66 @@ Example for RSC in a chat
     }
 }
 }
+```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
+
+Example for RSC in a team
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
+    ]
+  }
+```
+
+Example for RSC in a chat
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
+    ]
+  }
 ```
 
 <br>
