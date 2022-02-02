@@ -4,6 +4,7 @@ description: Extend a Teams personal tab app across Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
+ms.localizationpriority: medium
 ---
 # Extend a Teams personal tab across Microsoft 365
 
@@ -18,7 +19,7 @@ Updating your personal app to run in Outlook and Office Home involves these step
 > * Update your app manifest
 > * Update your TeamsJS SDK references 
 > * Amend your Content Security Policy headers
-> * Update your AAD App Registration for Single Sign On (SSO)
+> * Update your Azure AD App Registration for Single Sign On (SSO)
 
 Testing your app will require the following steps:
 
@@ -113,9 +114,9 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## Update AAD app registration for SSO
+## Update Azure AD app registration for SSO
 
-Azure Active Directory Single-sign on (SSO) for personal tabs works the same way in Office and Outlook [as it does in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), however you will need to add several client application identifiers to the AAD app registration of your tab app in your tenant's *App registrations* portal.
+Azure Active Directory Single-sign on (SSO) for personal tabs works the same way in Office and Outlook [as it does in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), however you will need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
 
 1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open the **App registrations** blade.
@@ -170,7 +171,7 @@ When you upgrade your Teams personal tab and sideload it in Teams, it will also 
 
 To view your app running in Outlook on Windows desktop, launch Outlook and sign in using your dev tenant account. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar to see your installed personal tabs":::
+:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
 
 Click on your app icon to launch your app in Outlook.
 
@@ -178,9 +179,14 @@ Click on your app icon to launch your app in Outlook.
 
 To view your app in Outlook on the web, visit https://outlook.office.com and sign in using your dev tenant account. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 
+:::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
+
 Click on your app icon to launch and preview your app running in Outlook on the web.
 
 ### Office on the web
+
+> [!IMPORTANT]
+> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Office.com support for Teams personal apps is available to your test tenant.
 
 To preview your app running in Office on the web, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 

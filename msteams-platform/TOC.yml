@@ -92,31 +92,31 @@
   items:
   - name: Teams Toolkit for Visual Studio Code
     items:
-    - name: Teams Toolkit fundamentals
+    - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Create new project
       href: toolkit/create-new-project.md
-    - name: Prepare Accounts to build Teams app
+    - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
-    - name: Provision Cloud Resources
+    - name: Provision cloud resources
       href: toolkit/provision.md
-    - name: Deploy Teams App to the cloud
+    - name: Deploy Teams app to the cloud
       href: toolkit/deploy.md
     - name: Publish Teams apps using Teams Toolkit 
       href: toolkit/publish.md
-    - name: Add Capabilities to Teams App
+    - name: Add capabilities to Teams app
       href: toolkit/add-capability.md
-    - name: Add Cloud Resources to Teams App
+    - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
-    - name: Customize Teams App Manifest
+    - name: Customize Teams app manifest
       href: toolkit/TeamsFx-manifest-customization.md
-    - name: Preview Teams App Manifest
+    - name: Preview Teams app manifest
       href: toolkit/TeamsFx-manifest-preview.md
-    - name: Manage Multiple Environments
+    - name: Manage multiple environments
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: Use CI/CD workflow
+    - name: CI/CD guide
       href: toolkit/use-CICD-template.md
     - name: Teams Toolkit CLI
       href: toolkit/TeamsFx-CLI.md
@@ -237,9 +237,6 @@
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      items:
-      - name: Step-by-step guide
-        href: sbs-send-proactive.yml 
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
@@ -328,7 +325,9 @@
       href: task-modules-and-cards/cards/cards-format.md
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-    - name: Typeahead search in Adaptive Card
+    - name: People Picker in Adaptive Cards
+      href: task-modules-and-cards/cards/people-picker.md
+    - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md  
     - name: Universal Actions for Adaptive Cards
       items:
@@ -376,8 +375,6 @@
       href: bots/how-to/authentication/add-authentication.md
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: Step-by-step guide for bots with SSO
-      href: sbs-bots-with-sso.yml
   - name: Messaging extensions
     items:
     - name: Add authentication to your messaging extension
@@ -468,6 +465,10 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md   
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+  - name: Monetize your app
+    items:
+    - name: Overview
+      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     - name: Include a SaaS offer with your app
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
 - name: App manifest

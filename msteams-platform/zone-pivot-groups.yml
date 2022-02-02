@@ -1,0 +1,12 @@
+# YamlMime:ZonePivotGroups
+groups:
+- id: teams-app-types
+  title: Teams app feature
+  prompt: Select the Teams app feature that you want to build
+  pivots:
+  - id: tab-app
+    title: Tab
+  - id: bot-app
+    title: Bot
+  - id: mex-app
+    title: Messaging Extension
