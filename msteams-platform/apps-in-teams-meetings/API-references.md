@@ -302,7 +302,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 <details>
 
-<summary><b>For app manifest version 1.12</b></summary>
+<summary><b>For app manifest version 1.11 or earlier</b></summary>
 
 Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
