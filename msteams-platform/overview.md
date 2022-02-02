@@ -9,7 +9,9 @@ ms.date: 05/24/2021
 ---
 # An App that fits
 
+Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or messaging extensions or any combination of the three. These apps expand the value of your Teams collaborative experience.
 
+Apps can be personal or shared. A personal app enables a one-on-one communication, and a shared app lets multiple users share app space to collaborate.
 
 ## Driving organizational goals
 
@@ -22,8 +24,6 @@ Let's look at some areas that where an app meets the need.
 :::image type="content" source="../msteams-platform/assets/images/overview/org-goals.png" alt-text="Organizational goals":::
 
 You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
-
-
 
 ## Build apps with Microsoft Teams platform
 
