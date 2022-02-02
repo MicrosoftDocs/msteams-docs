@@ -42,7 +42,7 @@ Perform the following steps to adapt the workflow for your project:
 Perform the following the steps to customize CD workflow:
 
 1. By default, the CD workflow is triggered, when new commits are made to the `main` branch.
-1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure service principal and M365 account login credentials. For more information,see [GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
+1. Create GitHub [repository secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) by environment to hold Azure service principal and Microsoft 365 account login credentials. For more information,see [GitHub Actions](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md).
 1. Change the build scripts if necessary.
 1. Remove the test scripts as required.
 

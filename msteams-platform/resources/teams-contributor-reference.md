@@ -16,7 +16,7 @@ Teams documentation is part of the **Microsoft Docs** technical documentation li
 > [!div class="checklist"]
 >
 > * Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Install [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Install [Microsoft Visual Studio Code](https://code.visualstudio.com/) (VS Code).
 > * Install [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directly from the VS Code Marketplace.
 <br>&emsp;&emsp; or
 

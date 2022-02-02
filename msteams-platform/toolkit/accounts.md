@@ -55,11 +55,11 @@ You can sign up for the developer program by using one of the following account 
 
 The following list provides steps to check whether sideloading app permission is enabled. The two different ways are as follows:
 
-* **To use Visual studio code**
+* **To use Microsoft Visual studio code**
 
     1. Open **Visual Studio Code**.
     1. Select **Teams Toolkit** from left panel.
-    1. Select **Accounts** and log in to your M365 account.
+    1. Select **Accounts** and log in to your Microsoft 365 account.
     1. Check whether you can see the option **Sideloading enabled** as shown in the image:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::

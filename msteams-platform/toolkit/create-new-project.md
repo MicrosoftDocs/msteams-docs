@@ -25,7 +25,7 @@ The following guides helps you to create a new Teams app project using Teams Too
 
  You can create new project by exploring **sample gallery**. Select the required sample to create apps. The following steps guide you to create apps from samples:
 
- 1. Open **Teams Toolkit** from Visual Studio Code.
+ 1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
  1. Select **DEVELOPMENT** section in Tree View.
  1. Select **View samples**. The sample gallery appears as shown in the following image:
    
