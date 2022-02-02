@@ -303,6 +303,26 @@ The following schema sample shows all extensibility options:
     ],
     "subscriptionOffer": {
         "offerId": "publisherId.offerId"
+    },
+    "meetingExtensionDefinition": {
+        "scenes": [
+            {
+                "id": "9082c811-7e6a-4174-8173-6ccd57d377e6",
+                "name": "Getting started sample",
+                "file": "scenes/sceneMetadata.json",
+                "preview": "scenes/scenePreview.png",
+                "maxAudience": 15,
+                "seatsReservedForOrganizersOrPresenters": 0
+            },
+            {
+                "id": "afeaed22-f89b-48e1-98b4-46a514344e4a",
+                "name": "Sample-1",
+                "file": "scenes/sceneMetadata.json",
+                "preview": "scenes/scenePreview.png",
+                "maxAudience": 15,
+                "seatsReservedForOrganizersOrPresenters": 3
+            }
+        ]
     }
 }
 ```
@@ -801,7 +821,7 @@ Specify and consolidate authorization related information for the app.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> Application permission: [resource-specific consent](../../graph-api/rsc/resource-specific-consent.md) <br> Delegated permission: [authorization.permissions.delegated](#authorizationpermissionsdelegated)|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more details please refer [Application permission](../../graph-api/rsc/resource-specific-consent.md) and [Delegated resource specific permissions](#authorizationpermissionsdelegated) section.|
 
 ### Delegated resource specific permissions
 
