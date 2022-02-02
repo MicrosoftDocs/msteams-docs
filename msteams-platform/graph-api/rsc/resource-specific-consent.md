@@ -164,7 +164,7 @@ Specify and consolidate authorization related information for the app.
 
 |Name| Type | Description|
 |---|---|---|
-|`authorisation`|Object|List of permissions that the app needs to function. For more information, see [placeholder for link- authorisation in manifest]
+|`authorization`|Object|List of permissions that the app needs to function. For more information, see [placeholder for link- authorization in manifest]
 
 Example for RSC in a team
 
@@ -325,6 +325,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
+
 Example for RSC in a team
 
 ```json
