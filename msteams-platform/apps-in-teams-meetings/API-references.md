@@ -55,8 +55,6 @@ The following table includes the query parameters:
 
 ### Example
 
-The following tabs include the examples:
-
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -100,8 +98,6 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
 ---
-
-The JSON response body for `GetParticipant` API is as follows:
 
 ```json
 {
@@ -162,8 +158,6 @@ The `Bot ID` is declared in the manifest and the bot receives a result object.
 > * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example.
 > * The `externalResourceUrl` width and height parameters must be in pixels. For more information, see [design guidelines](design/designing-apps-in-meetings.md).
 > * The URL is the page, which loads as `<iframe>` in the in-meeting dialog box. The domain must be in the apps' `validDomains` array in your app manifest.
-
-The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -230,6 +224,86 @@ The Meeting Details API enables your app to get a meeting's static metadata. The
 
 To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.12</b></summary>
+
+Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
+
+```json
+"webApplicationInfo": {
+
+    "id": "<bot id>",
+
+    "resource": "https://RscPermission",
+
+    },
+
+"authorization": {
+
+    "permissions": {
+
+        "resourceSpecific": [
+
+            {
+
+                "name": "OnlineMeeting.ReadBasic.Chat",
+
+                "type": "Application"
+
+            }
+
+        ]    
+
+    }
+
+}
+ ```
+
+Use the following example to configure your app manifest's `webApplicationInfo` property for any channel meeting:
+
+```json
+"webApplicationInfo": {
+
+    "id": "<bot id>",
+
+    "resource": "https://RscPermission",
+
+    },
+
+"authorization": {
+
+    "permissions": {
+
+        "resourceSpecific": [
+
+            {
+
+                "name": "ChannelMeeting.ReadBasic.Group",
+
+                "type": "Application"
+
+            }
+
+        ]    
+
+    }
+
+}
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.12</b></summary>
+
 Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
 ```json
@@ -241,8 +315,8 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
     ]
 }
  ```
- 
- Use the following example to configure your app manifest's `webApplicationInfo` property for any channel meeting:
+
+Use the following example to configure your app manifest's `webApplicationInfo` property for any channel meeting:
 
 ```json
 "webApplicationInfo": {
@@ -253,6 +327,10 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
     ]
 }
  ```
+
+<br>
+
+</details>
 
 > [!NOTE]
 > The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
@@ -266,8 +344,6 @@ The following table lists the query parameter:
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK. |
 
 ### Example
-
-The following tabs include the examples:
 
 # [C#](#tab/dotnet)
 
@@ -402,8 +478,6 @@ The following table includes the query parameters:
 
 ### Example
 
-The following tabs include the examples:
-
 ```javascript
 
 const appContentUrl = "https://www.bing.com/";
@@ -442,8 +516,6 @@ The following table includes the query parameters:
 |**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
 
 ### Example
-
-The following tabs include the examples:
 
 ```javascript
 microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
@@ -485,9 +557,6 @@ The following table includes the query parameters:
 |**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The result can either contain an `AppContentStageSharingState` object, indicating successful retrieval, or null, indicating failed retrieval.|
 
 ### Example
-
-The following tabs include the examples:
-
 
 ```javascript
 microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
