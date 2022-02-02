@@ -67,13 +67,11 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
   await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
 }
-
 ```
 
 # [JavaScript](#tab/javascript)
 
 ```typescript
-
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
@@ -88,7 +86,6 @@ export class MyBot extends TeamsActivityHandler {
         });
     }
 }
-
 ```
 
 # [JSON](#tab/json)
@@ -170,7 +167,6 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 # [JavaScript](#tab/javascript)
 
 ```javascript
-
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
 replyActivity.channelData = {
     notification: {
@@ -479,7 +475,6 @@ The following table includes the query parameters:
 ### Example
 
 ```javascript
-
 const appContentUrl = "https://www.bing.com/";
 
 microsoftTeams.meeting.shareAppContentToStage ((err, result) => {
@@ -490,7 +485,6 @@ if(err) {
   this.setState({ sharingError: err, isAppSharing: false })
  }
 }, appContentUrl); 
-
 ```
 
 ### Response codes
@@ -530,8 +524,7 @@ The JSON response body for the `getAppContentStageSharingState` API is:
 ```json
 {
    "isAppSharing":true
-}
-  
+} 
 ```
 
 ### Response codes
@@ -571,8 +564,7 @@ The JSON response body for `getAppContentStageSharingCapabilities` API is:
 ```json
 {
    "doesAppHaveSharePermission":true
-}
-  
+} 
 ```
 
 ### Response codes
@@ -590,7 +582,33 @@ The user can receive real-time meeting events. As soon as any app is associated 
 
 ### Prerequisite
 
-Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
+Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following examples to configure your manifest:
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.12</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "authorizations": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+}
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.11 or earlier</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -601,6 +619,10 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     ]
 }
  ```
+
+<br>
+
+</details>
 
 ### Example of getting `MeetingStartEndEventvalue`
 
@@ -744,7 +766,6 @@ The following code provides an example of meeting end event payload:
 |Meeting Events Sample|Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |Meeting Recruitment Sample|Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |App installation using QR code|Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
-
 
 ## See also
 
