@@ -52,6 +52,23 @@ Whether you charge a price for your app or offer it for free, you can use in-app
     :::column-end:::
 :::row-end:::
 
+:::row:::
+    :::column:::
+        ![Charge a price for your app](~/assets/images/saas-offer/pricing-charge-price.png)
+    :::column-end:::
+    :::column span="2":::
+
+**Test preview for monetized app**
+
+With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
+
+[Test preview for monetized apps](Test-preview-for-monetized-apps.md)
+
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+
 ## Next step
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
