@@ -564,4 +564,4 @@ Specifies the SaaS offer associated with your app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
+|`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`. For a preview offer ID, you must format the string as `publisherId.offerId-preview`.|
