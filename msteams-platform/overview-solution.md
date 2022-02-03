@@ -57,7 +57,7 @@ For example: You can use Teams Toolkit to build an app with JavaScript and host 
 
 A Teams app brings your users the advantages of a collaborative workspace.
 
-As a platform for building apps, Teams offers the full range of apps and toolkits. From planning your app to distributing it, the Teams framework supports you at every stage.
+As a platform for building apps, Teams offers the full range of apps and toolkits. From planning your app to distributing it, the Teams platform supports you at every stage.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
 

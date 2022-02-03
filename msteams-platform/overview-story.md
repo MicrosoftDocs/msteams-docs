@@ -15,7 +15,7 @@ Take a look at this scenario:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-1.png" alt-text="Image showing user story" border="true":::
 
-This scenario is a typical user story. Relatable? But how does Teams fit in to this scenario?
+It's a typical user story. Relatable? But how does Teams fit in to this scenario?
 
 Let’s dig deeper into this story and find out.
 

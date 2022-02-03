@@ -28,13 +28,6 @@ With Teams, you can build your app in a feature-rich environment. As a platform 
 | Task modules | Task modules permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
 |
 
-## App scope
-
-Teams lets you determine the scope of app usage - on an individual level or in a collaborative context.
-
-- Personal app experience: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
-- Shared app experience: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
-
 ## Developer Portal
 
 Developer Portal, a Teams app, helps you to sideload, configure, manage, test, publish, and distribute your app.
