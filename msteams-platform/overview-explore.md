@@ -28,12 +28,8 @@ With Teams, you can build your app in a feature-rich environment. As a platform 
 | Task modules | Task modules permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
 |
 
-## Developer Portal
-
-Developer Portal, a Teams app, helps you to sideload, configure, manage, test, publish, and distribute your app.
-
 ## Dive Deeper
 
-Choose to customize your app with user authentication and Microsoft Graph features.
+Choose to customize your app with features and tools, such as user authentication, Microsoft Graph and Developer Portal.
 
 Now, you know about some features that Teams offers. Let's go back to the user story and see how you can use Teams features to build your app.
