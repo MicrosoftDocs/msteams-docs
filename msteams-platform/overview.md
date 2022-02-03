@@ -43,7 +43,7 @@ Here's why Teams is best-suited for your app needs:
 
 - **Communication & collaboration**
 
-    Most successful Teams apps involve either pulling information from another system, having a conversation about it, and allowing users to take action about that. Teams lets you do all this directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
+    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action about that. Teams lets you do all this directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
 
 - **Social interactions**
 
@@ -51,27 +51,27 @@ Here's why Teams is best-suited for your app needs:
 
 - **Common business processes**
 
-    Things like creating and sharing a sales call report, tracking your time against a project, reserving common resources, submitting help desk requests and more are repetitive tasks. They make for effective Teams apps.
+    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests are repetitive tasks. They make for effective Teams apps.
 
     In addition to automating repetitive workflows, you can use apps to help with communication issues. A chat bot is an easy replacement for emails and phone calls to IT or HR departments.
 
 - **Surface existing app**
 
-    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application it may make sense to enable some or all of it in Teams. You can extend existing apps, such as Adobe for Teams, or even distributed apps, such as Polly. It helps to grow user base and user engagement for your app.
+    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. You can extend existing apps, such as Adobe for Teams, or even distributed apps, such as Polly. It helps to grow user base and user engagement for your app.
 
 - **Teams Store advantage**
 
-    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. Especially, if you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great marketing for large audiences.
+    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great marketing platform for large audiences.
 
 - **Personal apps with tabs and bots**
 
-    One-to-one conversational bots are one of the more open-ended extensibility points within Microsoft Teams. The conversation is just between the bot and your user, you have the flexibility of including task modules to simplify complex sets of information.
+    One-to-one conversational bots are one of the more open-ended features in Microsoft Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
 
     For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
 
 ## About Microsoft Teams Developer Documentation
 
-This document describes Teams features and how you can use them to build your app's capabilities. It also includes:
+This document describes Teams features and how you can implement them to build your app's capabilities. It also includes:
 
 - Code samples, snippets, and examples.
 - Step-by-step guides.
