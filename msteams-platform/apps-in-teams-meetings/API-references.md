@@ -362,7 +362,7 @@ The JSON response body for Meeting Details API is as follows:
 
 ## Send real-time captions API
 
-The Communication access real-time translation (CART) API exposes a POST endpoint for Microsoft Teams CART captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
+The send real-time captions API exposes a POST endpoint for Microsoft Teams communication access real-time translation (CART) captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
 
 ### CART URL
 
