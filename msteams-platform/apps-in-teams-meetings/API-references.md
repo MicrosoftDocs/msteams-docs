@@ -24,7 +24,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. |MSBF SDK|
 |[**Send notification signal**](#send-notification-signal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |MSBF SDK|
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |Bot SDK |
-|[**Send CART API**](#send-cart-api)|Enable you to post captions for a meeting, which was started. |MSTC SDK|
+|[**Send real-time captions API**](#send-real-time-captions-api)|Enable you to post captions for a meeting, which was started. |MSTC SDK|
 |[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |MSTC SDK|
 |[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about apps' sharing state on the meeting stage. |MSTC SDK|
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the apps' capabilities for sharing to the meeting stage. |MSTC SDK|
@@ -38,7 +38,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 > [!NOTE]
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
-> * Currently, limitation to distribution lists or roster sizes are less than 350 participants for the `GetParticipant` API.
+> * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 
 ### Query parameters
 
@@ -360,7 +360,7 @@ The JSON response body for Meeting Details API is as follows:
 } 
 ```
 
-## Send CART API
+## Send real-time captions API
 
 The Communication access real-time translation (CART) API exposes a POST endpoint for Microsoft Teams CART captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
 
@@ -513,7 +513,7 @@ The following table provides the response codes:
 
 ## Get app content stage sharing capabilities API
 
-The `getAppContentStageSharingCapabilities` API enables you to fetch the apps' capabilities for sharing to meeting stage.
+The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage.
 
 ### Query parameter
 
