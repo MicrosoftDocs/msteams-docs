@@ -24,6 +24,12 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: App manifest schema version 1.12
+        url: ~/resources/schema/manifest-schema.md
+      - text: Public developer preview manifest schema
+        url: ~/resources/schema/manifest-schema-dev-preview.md
+      - text: Revised Interactive mode 
+        url: ~/apps-in-teams-meetings/API-references.md
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
       - text: In-app purchase flow for monetization of apps
