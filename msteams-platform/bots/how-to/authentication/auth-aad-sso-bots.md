@@ -371,7 +371,7 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
             }
     ```
   
-2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in [Update the Microsoft Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection).
+2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in [Update the Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection).
 3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 4. Zip the manifest with the profile images and install it in Teams.
 
