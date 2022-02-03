@@ -24,6 +24,7 @@ The following table provides a list of APIs:
 |**GetParticipant**| Enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | Enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Meeting Details** | Enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**CART**|Enables you to post captions for a meeting, which was started.|**POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1**|Microsoft Teams client SDK|
 
 ## GetUserContext API
 
@@ -298,7 +299,7 @@ The JSON response body for Meeting Details API is as follows:
 
 ## CART API
 
-The CART API exposes a POST endpoint for Microsoft Teams CART captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
+The Communication access real-time translation (CART) API exposes a POST endpoint for Microsoft Teams CART captions, human-typed closed captions. Text content sent to this endpoint appears to end users in a Microsoft Teams meeting when they have captions enabled.
 
 ### CART URL
 
