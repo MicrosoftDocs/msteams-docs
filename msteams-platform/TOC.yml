@@ -512,7 +512,9 @@
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
   - name: Integrate People Picker  
-    href: concepts/device-capabilities/people-picker-capability.md   
+    href: concepts/device-capabilities/people-picker-capability.md
+  - name: Share-in-Teams for personal app or tab  
+    href: concepts/build-and-test/share-in-Teams for personal app or tab.md     
 - name: Resources
   items:
   - name: Localization
