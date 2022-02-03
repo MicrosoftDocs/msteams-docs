@@ -7,7 +7,7 @@ keywords: Share Teams Share-in-Teams
 ---
 # Share-in-Teams
 
-Share-in-Teams is used to share the content from your personal app or tab to other user in Teams, you can also add this button to the personal app or tab. When you select **Share-in-Teams** button, it launches the Share-in-Teams experience in a pop-up window. You can add the recipient (a person or group or channel) and notes to the recipient in the pop-up window and share the required content.
+Share-in-Teams is used to share the content from your personal app or tab to other user in Teams. When you select **Share-in-Teams** button, it launches the Share-in-Teams experience in a pop-up window. You can add the recipient (a person or group or channel) and notes to the recipient in the pop-up window and share the required content.
 
 This document guides you on how to create and add a Share-in-Teams button for your personal app or tab.
 
@@ -41,15 +41,15 @@ microsoftTeams.sharing.shareWebContent({
 
 ## Benefits
 
-Following are the benefits of the Share-in-Teams:
+Following are the key benefits of the Share-in-Teams:
 
 * You can share a link from an app running inside Teams to recipient (a person or group or channel), so that the recipients can access the link.
 
-* You can share a link from an app running inside Teams without re-logging.
+* You can share a link from an app running inside Teams without relogging.
 
 * You can easily reach to the conversation where the link was shared and you can continue the conversation in the chat where the link was shared.
 
-* You can also add an notes or comments while sharing the link.
+* You can also add a note while sharing the link.
 
 ## Test the feature
 
