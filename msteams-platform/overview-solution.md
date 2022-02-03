@@ -43,7 +43,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 ## Choose what suits you
 
-You can build a Teams app as per your personal or organizational needs. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
+You can build a Teams app as per your app's requirements. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
 
 A Teams app offers you the flexibility of choosing your build environment. This includes tools, framework, and languages to approach your app development.
 
