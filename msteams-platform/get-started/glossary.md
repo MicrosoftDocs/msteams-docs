@@ -13,7 +13,7 @@ Common terms and definitions used in Teams Developer Documentation.
 <details>
 <summary>A</summary>
 
-## <a id="A"> </a>
+## A
 
 | Term | Definition |
 | --- | --- |
