@@ -25,12 +25,14 @@ Ensure that you verify the following app manifest changes for resource-specific 
 
 <summary><b>RSC permissions for app manifest version 1.12</b></summary>
 
+Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+
 |Name| Type | Description|
 |---|---|---|
 |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 
-Specify and consolidate authorization related information for the app.
+Specify permissions needed by the app.
 
 |Name| Type | Description|
 |---|---|---|
