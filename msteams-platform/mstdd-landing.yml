@@ -28,7 +28,7 @@ landingContent:
         url: ~/resources/schema/manifest-schema.md
       - text: Public developer preview manifest schema
         url: ~/resources/schema/manifest-schema-dev-preview.md
-      - text: Revised Interactive mode 
+      - text: Interactive mode to share meeting stage 
         url: ~/apps-in-teams-meetings/API-references.md
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
