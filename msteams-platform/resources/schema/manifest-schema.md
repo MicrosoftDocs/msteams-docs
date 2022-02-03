@@ -824,30 +824,30 @@ Specify and consolidate authorization related information for the app.
 
 ### Delegated permissions
 
+Delegated permissions allow the app to access data on behalf of the signed-in user.
+
 * **Resource-specific permissions for teams**
 
-    |**Delegated permission**|**Action**|
+    |**Name**|**Description**|
     |---|---|
-    |`ChannelMeetingParticipant.Read.Group`| Read the participants of the teams' channel meetings.|
-    |`InAppPurchase.Allow.Group`| Show and complete in-app purchases for users in the team.|
-    |`ChannelMeetingStage.Write.Group`| Show content on the meeting stage of channel meetings associated with the team.|
+    |`ChannelMeetingParticipant.Read.Group`| Allows the app to read participant information, including name, role, id, joined, and left times, of channel meetings associated with this team, on behalf of the signed-in user.|
+    |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
+    |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
 
 * **Resource-specific permissions for chats or meetings**
 
-    |**Delegated permission**|**Action**|
+    |**Name**|**Description**|
     |---|---|
-    |`InAppPurchase.Allow.Chat`|Show and complete in-app purchases for users in the chat and any associated meeting.|
-    |`MeetingStage.Write.Chat`|Show content on the meeting stage of meetings associated with the chat.|
-    |`OnlineMeetingParticipant.Read.Chat`|Read the participants of the meetings associated with the chat.|
-    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Toggle incoming audio for participants in meetings associated with the chat.|
+    |`InAppPurchase.Allow.Chat`|Allows the app to show marketplace offers to the users in this chat, and any associated meeting, and complete their purchases within the app, on behalf of the signed-in user.|
+    |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with this chat, on behalf of the signed-in user.|
+    |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
 
 * **Resource-specific permissions for users**
 
-    |**Delegated permission**|**Action**|
+    |**Name**|**Description**|
     |---|---|
-    |`CameraStream.Read.User`|Read the users' camera stream.|
-    |`InAppPurchase.Allow.User`|Show and complete in-app purchases.|
-    |`OutgoingVideoStream.Write.User`|Modify the users' outgoing video.|
+    |`InAppPurchase.Allow.User`|Allows the app to show the user marketplace offers and complete the user's purchases within the app, on behalf of the signed-in user.|
 
 ## See also
 
