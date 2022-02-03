@@ -22,10 +22,8 @@ items:
     * Presents the user with a modal popup to collect or display information.
     * The action commands can be triggered from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide illustrates how to build Teams action messaging extension to initiate actions from compose message and message area.
-    
-    You'll see the following output:
-
+    This step-by-step guide illustrates how to build Teams action messaging extension to initiate actions from compose message and message area. You'll see the following output:
+       
       ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
     
 
@@ -232,7 +230,7 @@ items:
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://2bb1****.ngrok.io/ae81d935-cdab-44c3-8038-898da03c2d4b`, where `2bb1****.ngrok.io` is the new ngrok subdomain name.
+        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
 
@@ -392,7 +390,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in a Command Prompt window and enter the following command:
+    Navigate to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
