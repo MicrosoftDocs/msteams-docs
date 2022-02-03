@@ -229,3 +229,7 @@ If you are using the parameters or an embedded web view with a `taskInfo` object
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+
+## Step-by-step guide
+
+* Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml)) to build Teams action messaging extension.

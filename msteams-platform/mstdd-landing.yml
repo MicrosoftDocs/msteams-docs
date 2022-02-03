@@ -68,6 +68,8 @@ landingContent:
         
     - linkListType: tutorial
       links:
+        - text: Build Teams action messaging extension 
+          url: ~/sbs-meetingextension-action.yml
         - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and messaging extensions
