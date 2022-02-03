@@ -33,23 +33,23 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 - **Map your use cases**: Map common use cases to Teams features based on sharing, collaborating, workflows, relevant social platforms, and more.
 
-- **Plan responsive tabs for Teams mobile**: Plan responsive tabs for Teams mobile covers common scenarios and helps with planning apps for Teams mobile.
+- **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
 
 - **Create and Build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
-- **Design your app**: Use Teams UI Toolkit and UI Library to design your app's layout.
+- **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
 - **Use Teams as a platform**: Teams, as a platform, helps you build a single- or multi-capability app. Your Teams app is backed by the integrated products and services that strengthen the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
-    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, or Connectors & Webhooks. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
     Together, these capabilities bring your app solution to life.
 
-- **Integrate device capabilities**: With enhanced Teams platform, you can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+- **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
 
 ### Post-build
 

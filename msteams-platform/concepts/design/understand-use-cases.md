@@ -11,18 +11,18 @@ ms.author: anclear
 
 In the collaborative social framework of Teams, there is a wide variety of user needs that you can solve with a Teams app. For instance, an app that bridges gap in achieving effective collaboration is a great fit.
 
-The app user and their need are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
+The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
 ## Understand your use cases
 
-If you're going to meet user needs with your app, you first need to understand them.
+If you're going to meet user requirements with your app, you first need to understand them.
 
-- **Understand your user**: It helps you to identify how users use Teams.
+- **Understand your user**: It helps you to identify how users utilize Teams app.
   - Recognize user issues and identify the solutions to some common problems the users face.
   - Build your Teams app by finding the right combination of Teams features to meet your user's needs.
   - Understand use cases to know how an end-user interacts with your app.
 
-- **Understand the problem**: Every app has a core problem or a need to solve. Before you start building an app, identify the user need. You can solve wide variety of problems, provided you understand which one you're trying to solve.
+- **Understand the problem**: Every app has a core problem to solve. Before you start building an app, work out the problem and the solution.
 
 - **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 
@@ -78,7 +78,7 @@ Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where peo
 
 #### Bots
 
-Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](../../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+Conversations often result in the need to do something (generate an order, review code, check ticket status, and so on). A [bot](../../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
    :::column-end:::
 
@@ -130,7 +130,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Webhooks and connectors
 
-[Incoming webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
+[Incoming webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
 
    :::column-end:::
 
@@ -173,7 +173,7 @@ Your app can have one of the following scopes:
 App capabilities can exist across different scopes. For example:
 
 - Your app can display data in a central shared location, that is, a tab.
-- It can also present that same information through a personal conversational interface, that is, the bot.
+- It can also present that same information through a personal conversational interface, that is, a bot.
 
 A user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
