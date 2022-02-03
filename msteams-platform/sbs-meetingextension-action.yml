@@ -42,9 +42,6 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-    > [!NOTE]
-    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
-
 - title: Set up local environment
   durationInMinutes: 1
   content: |
@@ -120,9 +117,11 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
-
     1. Select **MultiTenant** under **Bot Type**.
+
+        ![Type](~/assets/images/sbs-messagingextension-action/bot-type.png)
+
+    1. Next to **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/sbs-messagingextension-action/manage.png)
 
@@ -257,13 +256,13 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/sbs-messagingextension-action/addascope.png)
+        ![Add a scope](~/assets/images/sbs-messagingextension-action/addascopeuser.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/sbs-messagingextension-action/addascopeuser.png) 
+        ![Scopes](~/assets/images/sbs-messagingextension-action/scopes.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
