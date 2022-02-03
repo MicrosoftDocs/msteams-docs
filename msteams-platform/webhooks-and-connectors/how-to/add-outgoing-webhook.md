@@ -214,6 +214,11 @@ var responseMsg = JSON.stringify({
 |----------------|------------------|--------|----------------|
 | Outgoing Webhooks	| Samples to create custom bots to be used in Microsoft Teams.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create outgoing webhooks in Teams.
+
 ## See also
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
