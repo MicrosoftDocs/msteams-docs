@@ -21,14 +21,13 @@ Organizations use it to connect with their customers, provide services, and shar
 
 Let's look at some areas that where an app helps to meet a business need.
 
-| Development Options | Business Opportunities |
+| &nbsp; | &nbsp; |
 |--- | --- |
+| **Development Options** | **Business Opportunities** |
 | - Desktop app <br> - Web app <br> - Mobile app | - Increase customer base <br> - Extend existing apps <br> - Reliable for start-ups |
 | **Customer benefits** | **Internal workflows** |
 | - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Sales and accounting <br> - Finance <br> - Engineering |
 |
-
-:::image type="content" source="../msteams-platform/assets/images/overview/org-goals.png" alt-text="Organizational goals":::
 
 You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
 
