@@ -152,9 +152,9 @@ The steps to register your app through the Azure AD portal are similar to the [t
     
     * Select **Save** to save the changes.
 
-#### Update manifest in Azure portal
+#### Update manifest in Microsoft Azure portal
 
-The following steps will guide you to update the bot manifest in Azure portal:
+The following steps will guide you to update the bot manifest in Microsoft Azure portal:
 
 1. Select **Manifest** from the left pane.
 1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change it's value to **2**.
@@ -167,11 +167,11 @@ The following steps will guide you to update the bot manifest in Azure portal:
 
 1. Select **Save**.
 
-#### Update the Azure portal with the OAuth connection
+#### Update the Microsoft Azure portal with the OAuth connection
 
-The following steps will guide you to update the Azure portal with the OAuth connection:
+The following steps will guide you to update the Microsoft Azure portal with the OAuth connection:
 
-1. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. In the Microsoft Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 1. Go to **Configuration** on the left pane.
 1. Select **Add OAuth Connection Settings**.
 
@@ -371,7 +371,7 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
             }
     ```
   
-2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in [Update the Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection).
+2. Update `appsettings.json` to include the `botId`, password, and the connection name defined in [Update the Microsoft Azure portal with the OAuth connection](#update-the-azure-portal-with-the-oauth-connection).
 3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 4. Zip the manifest with the profile images and install it in Teams.
 
