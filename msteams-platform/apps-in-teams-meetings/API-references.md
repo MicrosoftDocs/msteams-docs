@@ -407,7 +407,7 @@ Hello I’m Cortana, welcome to my meeting.
 
 ### Error codes
 
-The CART API includes the following error codes:
+The following table provides the error codes:
 
 |Error code|Description|
 |---|---|
