@@ -35,15 +35,15 @@ The following list guides us to understand the collaboration process and its lim
 > [!NOTE]
 > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
 
-* In **ENVIRONMENT** section on Teams Toolkit, select **collaborators**. It displays the options **Add Microsoft 365 Teams App (with AAD App) Owners** and **List Microsoft 365 Teams App (with AAD App) Owners** as shown in the following images:
+* In **ENVIRONMENT** section on Teams Toolkit, select **collaborators**. It displays the options **Add Microsoft 365 Teams App (with Microsoft Azure Active Directory (Azure AD) App) Owners** and **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following images:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
 
-* Select **Add Microsoft 365 Teams App (with AAD App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
+* Select **Add Microsoft 365 Teams App (with Azure AD App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* To view collaborators in current environment, select **List Microsoft 365 Teams App (with AAD App) Owners**, then collaborators are listed in the output channel as shown in following image:
+* To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in following image:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
