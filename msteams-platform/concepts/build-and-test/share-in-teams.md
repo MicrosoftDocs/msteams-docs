@@ -1,11 +1,11 @@
 ---
-title: Share-in-Teams for personal app or tab
+title: Share-in-Teams button
 description: Learn to add the Share in Teams embedded button on your personal app or tab
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share Teams Share-in-Teams
 ---
-# Share-in-Teams for personal app or tab
+# Share-in-Teams button
 
 Share-in-Teams is used to share the content from your personal app or tab to other user in Teams. When you select **Share-in-Teams** button, it launches the Share-in-Teams experience in a pop-up window. You can add the recipient (a person or group or channel) and notes to the recipient in the pop-up window and share the required content.
 
