@@ -191,7 +191,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/sbs-messagingextension-action/configuration-file.png)
+        ![App URI](~/assets/images/sbs-messagingextension-action/appuri.png)
 
     1. Select **Apply**.
 
@@ -228,7 +228,7 @@ items:
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/sbs-messagingextension-action/appuri.png)
+        ![Expose](~/assets/images/sbs-messagingextension-action/exposeanapi.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
