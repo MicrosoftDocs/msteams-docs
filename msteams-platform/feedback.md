@@ -6,7 +6,7 @@ ms.topic: reference
 keywords: teams feedback developer questions issues contact community help request bugs contributions community discussions support
 ---
 
-## Developer support and service issues
+## :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Developer support and service issues
 
 Please use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business critical issues** which needs SLA based support.
 
