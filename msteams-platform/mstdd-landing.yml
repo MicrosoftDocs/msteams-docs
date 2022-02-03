@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Test preview for monetized apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
       - text: In-app purchase flow for monetization of apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Adaptive Cards form completion feedback
@@ -39,7 +41,6 @@ landingContent:
       - text: Typeahead search in Adaptive Card
         url: ~/task-modules-and-cards/cards/dynamic-search.md
       
-
 - title: All time favorites
   linkLists:
     - linkListType: concept
