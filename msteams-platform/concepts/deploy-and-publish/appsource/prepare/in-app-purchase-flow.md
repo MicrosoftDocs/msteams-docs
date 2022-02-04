@@ -101,7 +101,12 @@ The following example shows the users to purchase subscription plans for a ficti
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription." border="true":::
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Test preview for monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## See also
 
-[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Create a Software as a Service (SaaS) offer](include-saas-offer.md#create-your-saas-offer)
