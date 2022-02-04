@@ -37,8 +37,6 @@ You can build apps with Teams Developer platform by extending Teams capabilities
 
 Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you utilize Teams capabilities to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-apps.png" alt-text="Teams app" border="false":::
-
 The benefits of building apps span from meeting organizational goals to increasing internal productivity.
 
 Here's why Teams is best-suited for your app needs:
@@ -51,11 +49,15 @@ Here's why Teams is best-suited for your app needs:
 
     Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection and communication.
 
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Teams app for building team culture" border="false":::
+
 - **Common business processes**
 
     Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests are repetitive tasks. They make for effective Teams apps.
 
     In addition to automating repetitive workflows, you can use apps to help with communication issues. A chat bot is an easy replacement for emails and phone calls to IT or HR departments.
+
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams app for internal use" border="false":::
 
 - **Surface existing app**
 
