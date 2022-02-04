@@ -50,7 +50,7 @@ Following example shows the users to use Share-in-Teams option in Teams:
 
 2. From the ellipsis (...) menu, select **Share-in-Teams**.
 
-   :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button" lightbox="../../assets/images/share-in-teams/add-recepient.PNG":::
+   :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button":::
 
 3. Add a recipient (a person or group or channel).
 
