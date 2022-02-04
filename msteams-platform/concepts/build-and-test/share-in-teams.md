@@ -65,3 +65,7 @@ Following example shows the users to use Share-in-Teams option in Teams:
    :::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="share-in-teams-link-shared":::
 
 6. Select **View** to reach the conversation where the link was shared.
+
+## See also
+
+[Share-to-Teams](~/concepts/build-and-test/share-to-teams.md)
