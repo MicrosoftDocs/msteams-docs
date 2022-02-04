@@ -19,7 +19,7 @@ Share-in-Teams option allows users to:
 
 * Share a link from an app running inside Teams.
 
-* Reach to the conversation where the link was shared and continue the conversation in the chat where the link shared.
+* Reach to the conversation where the link was shared and continue the conversation in the chat.
 
 * Add a note while sharing the link.
 
@@ -64,7 +64,7 @@ Following example shows the users to use Share-in-Teams option in Teams:
 
    :::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="share-in-teams-link-shared":::
 
-6. Select **View** to reach the conversation where the link shared.
+6. Select **View** to reach the conversation where the link was shared.
 
 ## See also
 
