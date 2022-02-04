@@ -167,7 +167,7 @@ The following steps will guide you to update the bot manifest in Microsoft Azure
 
 1. Select **Save**.
 
-#### Update the Microsoft Azure portal with the OAuth connection
+#### Update the Azure portal with the OAuth connection
 
 The following steps will guide you to update the Microsoft Azure portal with the OAuth connection:
 
