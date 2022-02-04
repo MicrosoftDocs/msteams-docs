@@ -21,6 +21,8 @@ Organizations use it to connect with their customers, provide services, and shar
 
 Let's look at some areas that where an app helps to meet a business need.
 
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?" border="false":::
+
 | &nbsp; | &nbsp; |
 |--- | --- |
 | **Development Options** | **Business Opportunities** |
@@ -35,7 +37,7 @@ You can build apps with Teams Developer platform by extending Teams capabilities
 
 Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you utilize Teams capabilities to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/KeyMessage_StayFocused.jpg" alt-text="Teams app" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-apps.png" alt-text="Teams app" border="false":::
 
 The benefits of building apps span from meeting organizational goals to increasing internal productivity.
 
