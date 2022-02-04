@@ -40,7 +40,6 @@ Microsoft Teams platform features that are available to all app developers.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |02/02/2022| Introduced step-by-step guide to create a bot to invoke Teams task module | Build cards and task modules > Build task modules > Use task modules from bots > [Teams task module bot](sbs-botbuilder-taskmodule.yml)|
-|01/25/2022| CART API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#cart-api)|
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > [App manifest schema](resources/schema/manifest-schema.md) |
 |01/25/2022| Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
