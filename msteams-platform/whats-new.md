@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
-|02/02/2022| Introduced step-by-step guide to create a bot to invoke Teams task module | Build cards and task modules > Build task modules > Use task modules from bots > [Teams task module bot](sbs-botbuilder-taskmodule.yml)|
+|02/04/2022| Introduced step-by-step guide to create a bot to invoke Teams task module | Build cards and task modules > Build task modules > Use task modules from bots > [Teams task module bot](sbs-botbuilder-taskmodule.yml)|
 |02/03/2022| Introduced app manifest version 1.12 |  • App manifest > [App manifest schema](resources/schema/manifest-schema.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022 |Interactive mode to share meeting stage|• Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
 |02/03/2022| Test preview for monetized apps (developer preview)| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
@@ -39,7 +39,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|02/02/2022| Introduced step-by-step guide to create a bot to invoke Teams task module | Build cards and task modules > Build task modules > Use task modules from bots > [Teams task module bot](sbs-botbuilder-taskmodule.yml)|
+|02/04/2022| Introduced step-by-step guide to create a bot to invoke Teams task module | Build cards and task modules > Build task modules > Use task modules from bots > [Teams task module bot](sbs-botbuilder-taskmodule.yml)|
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > [App manifest schema](resources/schema/manifest-schema.md) |
 |01/25/2022| Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
