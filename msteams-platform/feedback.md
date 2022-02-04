@@ -10,7 +10,7 @@ keywords: teams feedback developer questions issues contact community help reque
 
 ## Product support and service issues
 
-Please use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business critical issues** which needs SLA based support.
+Please use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-critical issues** which need SLA based support.
 
 | **Product support** | **Contact** |
 |:------------|:------------|
