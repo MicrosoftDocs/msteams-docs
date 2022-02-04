@@ -360,6 +360,53 @@ items:
 
         ![Manifest](~/assets/images/Teams-Messaging-Extensions-Search/manifest.png)
 
+- title: Build and run the service
+  durationInMinutes: 1
+  content: |
+    **To build and run the service using Visual Studio 2019 or Command line**
+
+    # [Visual Studio 2019](#tab/vs2019)
+
+       1. Launch **Visual Studio 2019**.
+       1. Navigate to **File** > **Open** > **Project/Solution**.
+    
+          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+
+       1. Select **TeamsMessagingExtensionsSearch.csproj** file from **50.teams-messaging-extensions-search** folder.
+
+          ![CS proj file](~/assets/images/Teams-Messaging-Extensions-Search/fileready.png)
+
+       1. Open **Solution Explorer** from **View**.
+
+          ![Solution Explorer](~/assets/images/Teams-Messaging-Extensions-Search/solutionexplorer.png)
+
+       1. Right-click to select **TeamsMessagingExtensionsSearch**.
+
+       1. Select **Set as Startup Project**.
+
+          ![Solution Explorer](~/assets/images/Teams-Messaging-Extensions-Search/startup.png)
+
+       1. Press **F5** to run the project.
+    
+       1. Select **Yes** if the following dialog appears:
+
+          ![Trust Certificate](~/assets/images/Teams-Messaging-Extensions-Search/certificate.png)
+
+          A webpage opens with a message **Your bot is ready!**.
+
+          ![App ready](~/assets/images/Teams-Messaging-Extensions-Search/appisready.png) 
+
+        
+    # [Command line](#tab/cli)
+
+    Navigate to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
+
+    ```bash
+    dotnet run
+    ```
+   
+    ![Dotnet](~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.png)
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
