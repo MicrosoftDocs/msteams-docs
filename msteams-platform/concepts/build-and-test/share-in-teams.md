@@ -13,15 +13,15 @@ The following image displays the Share-in-Teams pop-up experience:
 
 :::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams-experience":::
 
-Share-in-Teams option allows users:
+Share-in-Teams option allows users to:
 
-* To share a link from an app running inside Teams to recipient (a person or group or channel), so that the recipients can access the link.
+* Share a link from an app running inside Teams to recipient (a person or group or channel), so that the recipients can access the link.
 
-* To share a link from an app running inside Teams.
+* Share a link from an app running inside Teams.
 
-* To reach to the conversation where the link was shared and you can continue the conversation in the chat where the link was shared.
+* Reach to the conversation where the link was shared and continue the conversation in the chat where the link shared.
 
-* To add a note while sharing the link.
+* Add a note while sharing the link.
 
 Ensure that you have [Microsoft Teams JavaScript client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true) (`@microsoft/teams-js@1.11.0-beta.7`).
 
@@ -42,19 +42,19 @@ microsoftTeams.sharing.shareWebContent({
       });
 ```
 
-The payload must contains the following parameter:
+The payload contains the following parameter:
 
 | Property name | Purpose |
 |---|---|
 | `type` | The type must be `URL`. |
-| `url` | URL which you which you like to share. |
+| `url` | URL which you like to share. |
 | `preview` | Preview must be `true`. |
 
 ## End user Share-in-Teams experience
 
 Following example shows the users to use Share-in-Teams option in Teams:
 
-1. Open a personal app or tab and select a content which you like to share.
+1. Open a personal app or tab and select a content, which you like to share.
 
 2. From the ellipsis (...) menu, select **Share-in-Teams**.
 
@@ -72,7 +72,7 @@ Following example shows the users to use Share-in-Teams option in Teams:
 
    :::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="share-in-teams-link-shared":::
 
-6. Select **View** to reach the conversation where the link was shared.
+6. Select **View** to reach the conversation where the link shared.
 
 ## See also
 
