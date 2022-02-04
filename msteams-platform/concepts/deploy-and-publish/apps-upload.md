@@ -35,7 +35,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Add your app to Teams.
 
 > [!NOTE]
-> By adding the bot to Microsoft Teams you can't get Microsoft Teams Locale because the bot activity is not initiated by the user action such as sending a message, so `turnContext.Activity.GetLocale();` returns null value.
+> `onInstallationUpdateActivityAsync()` method will get the Microsoft Teams Locale by adding the bot to Microsoft Teams.
 
 ## Troubleshoot upload issues
 
