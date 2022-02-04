@@ -28,20 +28,22 @@ landingContent:
         url: ~/resources/schema/manifest-schema.md
       - text: Public developer preview manifest schema
         url: ~/resources/schema/manifest-schema-dev-preview.md
+      - text: Interactive mode to share meeting stage 
+        url: ~/apps-in-teams-meetings/API-references.md
+      - text: Test preview for monetized apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+      - text: In-app purchase flow for monetization of apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Adaptive Cards form completion feedback
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: People Picker in Adaptive Cards
         url: ~/task-modules-and-cards/cards/people-picker.md
       - text: Teams Toolkit for Visual Studio Code (Preview)
         url: ~/toolkit/teams-toolkit-fundamentals.md
-      - text: Introduced new store icon
-        url: ~/concepts/design/personal-apps.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
-      - text: Typeahead search in Adaptive Card
-        url: ~/task-modules-and-cards/cards/dynamic-search.md
-      
 
+      
 - title: All time favorites
   linkLists:
     - linkListType: concept
