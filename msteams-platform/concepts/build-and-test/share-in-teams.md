@@ -42,14 +42,6 @@ microsoftTeams.sharing.shareWebContent({
       });
 ```
 
-The payload contains the following parameter:
-
-| Property name | Purpose |
-|---|---|
-| `type` | The type must be `URL`. |
-| `url` | URL, which you like to share. |
-| `preview` | Preview must be `true`. |
-
 ## End user Share-in-Teams experience
 
 Following example shows the users to use Share-in-Teams option in Teams:
@@ -58,7 +50,7 @@ Following example shows the users to use Share-in-Teams option in Teams:
 
 2. From the ellipsis (...) menu, select **Share-in-Teams**.
 
-   :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button-":::
+   :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button" lightbox="../../assets/images/share-in-teams/add-recepient.PNG":::
 
 3. Add a recipient (a person or group or channel).
 
