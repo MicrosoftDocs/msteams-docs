@@ -21,6 +21,8 @@ Organizations use it to connect with their customers, provide services, and shar
 
 Let's look at some areas that where an app helps to meet a business need.
 
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?" border="false":::
+
 | &nbsp; | &nbsp; |
 |--- | --- |
 | **Development Options** | **Business Opportunities** |
