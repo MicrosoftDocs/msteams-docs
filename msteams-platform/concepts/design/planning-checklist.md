@@ -120,6 +120,12 @@ Suggestion: Options that help determine the best distribution model.
 
 </details>
 
+## Plan for hosting your Teams app
+
+Teams doesn't host your app. When a user installs your app in Teams, they install an app package that contains a only configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
+
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app" border="true":::
+
 ## Plan beyond app building
 
 - **Decide what goes in Teams**: Whether it's a new app or an existing one, check if you want the entire app within the Teams client. If you integrate only a portion of the app, focus on sharing, collaborating, initiating, and monitoring workflows.
