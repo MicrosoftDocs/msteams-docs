@@ -101,6 +101,10 @@ The following example shows the users to purchase subscription plans for a ficti
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription." border="true":::
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Preview testing of monetized apps](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## See also
 
