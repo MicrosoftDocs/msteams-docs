@@ -125,11 +125,11 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 
 ## Universal Actions for search based messaging extensions
 
-The Universal Actions now bring the enhanced user experience available for adaptive cards to messaging extensions. To enable Universal Actions for search based messaging extensions, the app must have the [Schema for Universal Actions](/adaptive-cards/authoring-cards/universal-action-model#schema) along with the following requirements:
+Adaptive Cards in Search Based Messaging Extensions now support Universal Actions. To enable Universal Actions for search based messaging extensions, the app must conform to the [Schema for Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) along with the following requirements:
 
 1. The app must have a conversation bot defined in their app manifest.
 1. If you already have a conversational bot, the bot must be the same that is used in your messaging extension.
-1. If the card is sent in a group, the users must have group specific permissions to read the card.  Specify `team` and `groupchat` depending on scenarios you plan to support.
+1. If the card is sent in a group, the app must specify `team` or `groupchat` scope on their bot in the manifest.
 
 **Example**
 
@@ -162,7 +162,7 @@ The following is an example of a json schema with `team` and `groupchat`values:
 ```
 ### Automatic refresh for Adaptive Cards in search based MEs
 
-Enable automatic refresh in Adaptive Cards in messaging extensions to ensure users always see up to date data. To enable, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property.
+Enable automatic refresh in Adaptive Cards in messaging extensions to ensure users always see up to date data. To enable, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property. For more information, see [Work with Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh)
 
 **Example**
 
@@ -173,7 +173,7 @@ The following is an example of `userIds` array in the `refresh` property:
         "type": "AdaptiveCard",
         "refresh": {
             "userIds": [
-                "<8:orgId:<AADID>>",
+                "8:orgid:<AADID>",
                 "29:<id>"
             ],
             "action": {
@@ -198,7 +198,7 @@ The following is an example of `userIds` array in the `refresh` property:
     }
 ```
 > [!NOTE]
-> Automatic refresh is enabled for all users in the group chat or channel with more than or equal to 60 users. For conversations (group chat or channel) with more than 60 users, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
+> Automatic refresh is enabled for all users in the group chat or channel with LESS than or equal to 60 users. For conversations (group chat or channel) with more than 60 users, users can use the refresh button in the message options menu to get the latest result.
  
 ```json
     {
@@ -228,7 +228,8 @@ The following is an example of `userIds` array in the `refresh` property:
 
 ### Just-In Time (JIT) install
 
-When a user selects a card and sends it in a group chat or channel, a **Just-In Time (JIT)** installation prompt appears. After the user selects the **send** option, the bot installs the card in the background for all the users in the group.
+
+Just-In Time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel.  In order to support Universal Actions in search based Message extensions, your bot will be added to the conversation where the card is sent by the user.
 
 > [!NOTE]
 > For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt is not shown to the users.
@@ -251,3 +252,8 @@ The following is an example of a dynamic scenario for JIT install:
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+
+## See Also
+
+* [Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)
+* [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model)
