@@ -52,11 +52,11 @@ The SSO API also works in [task modules](~/task-modules-and-cards/what-are-task-
 This section describes the tasks involved in creating a Teams tab that uses SSO.    
 Complete the following steps to develop an SSO Teams tab:   
 
-1. [Create your AAD application](#create-your-aad-application)
-1. [Register your app through the AAD portal](#register-your-app-through-the-aad-portal)
+1. [Create your Azure AD application](#create-your-azure-ad-application)
+1. [Register your app through the Azure AD portal](#register-your-app-through-the-azure-ad-portal)
 1. [Update your Teams application manifest](#update-your-teams-application-manifest)
 
-### 1. Create your Azure AD application
+### Create your Azure AD application
 
 > [!NOTE]
 
@@ -70,7 +70,7 @@ Complete the following steps to develop an SSO Teams tab:
 > * Your app's domain name must be same as the domain name that you have registered for your AAD application.
 > * Currently, multiple domains per app are not supported.
 
-**To register your app through the Azure AD portal**
+### Register your app through the Azure AD portal
 
 1. Register a new application in the [Azure AD App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 1. Select **New Registration**. The **Register an application** page appears.
