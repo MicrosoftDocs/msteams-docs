@@ -20,7 +20,7 @@ items:
 
     You'll see the following output:
 
-     (Placeholder for image)
+    ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -407,12 +407,76 @@ items:
    
     ![Dotnet](~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.png)
 
+- title: Add search messaging extension app
+  durationInMinutes: 1
+  content: |
+    **To add search messaging extension app to Teams**
+
+    1. In your cloned repository, navigate to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
+
+    1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       ![Zip file](~/assets/images/Teams-Messaging-Extensions-Search/zipfile.png) 
+
+    1. Go to **Microsoft Teams**.
+
+    1. Select **Apps**.
+
+       ![Zip file](~/assets/images/Teams-Messaging-Extensions-Search/AppStore.png)
+   
+    1. In the lower left corner, select **Manage your apps**.
+
+       ![Manage apps](~/assets/images/Teams-Messaging-Extensions-Search/manageapps.png)
+   
+    1. Select **Upload an app to your org's app catalog**. 
+
+       ![Upload custom app](~/assets/images/Teams-Messaging-Extensions-Search/uploadapp.png)
+
+    1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
+
+       ![Select zip file](~/assets/images/Teams-Messaging-Extensions-Search/selectzip.png)
+
+    1. Select **Add**.
+
+       ![Add the app](~/assets/images/Teams-Messaging-Extensions-Search/addapp.png)
+
+       A pop-up opens in a chat.
+
+       ![Chat](~/assets/images/Teams-Messaging-Extensions-Search/popup.png)
+   
+- title: Interact with the app in Teams
+  durationInMinutes: 1
+  content: |
+    Let's interact with the app in Teams!
+
+    1. Select any option from the pop-up.
+
+    1. Enter some text and select Enter.
+
+       ![Option](~/assets/images/Teams-Messaging-Extensions-Search/option1.png)
+
+    1. Select **Nuget Package**.
+
+       The following page displays:
+
+       ![Nuget](~/assets/images/Teams-Messaging-Extensions-Search/nuget.png)
+
+    1. Select **Project**.
+
+       The following page displays:
+
+       ![Project](~/assets/images/Teams-Messaging-Extensions-Search/project.png)
+
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       (Placeholder for image)
+    ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
 - content: |
     You've completed the tutorial to get started with Teams messaging extensions search!
