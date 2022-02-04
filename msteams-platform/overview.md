@@ -61,7 +61,7 @@ Here's why Teams is best-suited for your app needs:
 
 - **Surface existing app**
 
-    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. You can extend existing apps, such as Adobe for Teams, or even distributed apps, such as Polly. It helps to grow user base and user engagement for your app.
+    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
 
 - **Teams Store advantage**
 
