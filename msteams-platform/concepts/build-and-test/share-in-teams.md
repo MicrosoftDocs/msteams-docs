@@ -7,7 +7,7 @@ keywords: Share Teams Share-in-Teams
 ---
 # Share-in-Teams
 
-Share-in-Teams is used to share the content from your personal app or tab to other user in Teams. When you select Share-in-Teams option, it launches the Share-in-Teams experience in a pop-up window. This allows you to add the recipient (a person or group or channel), notes and share the required content. This document guides you on how to create and add a Share-in-Teams for your personal app or tab.
+Share-in-Teams is used to share the content from your personal app or tab to other user in Teams. When you select Share-in-Teams option, it launches the Share-in-Teams experience in a pop-up window. This option allows you to add the recipient (a person or group or channel), notes and share the required content. This document guides you on how to create and add a Share-in-Teams for your personal app or tab.
 
 The following image displays the Share-in-Teams pop-up experience:
 
@@ -47,7 +47,7 @@ The payload contains the following parameter:
 | Property name | Purpose |
 |---|---|
 | `type` | The type must be `URL`. |
-| `url` | URL which you like to share. |
+| `url` | URL, which you like to share. |
 | `preview` | Preview must be `true`. |
 
 ## End user Share-in-Teams experience
