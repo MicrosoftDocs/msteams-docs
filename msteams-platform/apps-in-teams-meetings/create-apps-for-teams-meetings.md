@@ -27,19 +27,9 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, see completion `bot Id` parameter in `NotificationSignal` API.
 
-* The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+* The `MeetingDetails` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
 * For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.
-
-* Have parameters `meetingId`, `userId`, and `tenantId` in meeting API URL. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
-
-* Have a bot registration and ID in the `GetParticipant` API to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
-
-* Keep your app up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, check the completion `bot Id` parameter in `NotificationSignal` API.
-
-* Have a bot registration and bot ID in the `MeetingDetails` API. It requires Bot SDK to get `TurnContext`.
-
-* Be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
 
 After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
 
