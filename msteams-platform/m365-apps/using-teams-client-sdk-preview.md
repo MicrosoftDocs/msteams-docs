@@ -16,7 +16,7 @@ There are two significant changes in the TeamsJS SDK v2 Preview that your code w
 
  - [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `calendar`, `mail`, `monetization`, `meeting`, and `sharing`.
 
- You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code to simplify the update process for your Teams app, as described in the following section.
+ You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the update process for your Teams app, as described in the following section.
 
 > [!NOTE]
 > Enabling an existing Teams app to run in Outlook and Office requires both:
@@ -29,7 +29,7 @@ There are two significant changes in the TeamsJS SDK v2 Preview that your code w
 
 The easiest way to update your Teams app to use the TeamsJS SDK v2 Preview is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
-### 1. Install the latest Teams Toolkit VS Code extension
+### 1. Install the latest Teams Toolkit Visual Studio Code extension
 
 In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit** and install version `2.10.0` or later. The toolkit provides two commands to assist the process:
 
