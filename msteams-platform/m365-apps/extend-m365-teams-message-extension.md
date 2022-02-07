@@ -28,7 +28,7 @@ To complete this tutorial, you'll need:
  - A Microsoft 365 Developer Program sandbox tenant
  - Your sandbox tenant enrolled in *Office 365 Targeted Releases*
  - A test environment with Office apps installed from the Microsoft 365 Apps *beta channel*
- - Visual Studio Code with the Teams Toolkit (Preview) extension (Optional)
+ - Microsoft Visual Studio Code with the Teams Toolkit (Preview) extension (Optional)
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)

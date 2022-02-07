@@ -3,7 +3,7 @@ title: Extend a Teams personal tab app across Microsoft 365
 description: Extend a Teams personal tab app across Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.custom: m365apps
+ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
 ---
 # Extend a Teams personal tab across Microsoft 365
@@ -24,7 +24,7 @@ Updating your personal app to run in Outlook and Office Home involves these step
 Testing your app will require the following steps:
 
 > [!div class="checklist"]
-> * Enroll your M365 tenant in *Office 365 Targeted Releases*
+> * Enroll your Microsoft 365 tenant in *Office 365 Targeted Releases*
 > * Configure your account to access preview versions of Outlook and Office apps
 > * Sideload your updated app into Teams
 
@@ -37,7 +37,7 @@ To complete this tutorial, you'll need:
 * A Microsoft 365 Developer Program sandbox tenant
 * Your sandbox tenant enrolled in *Office 365 Targeted Releases*
 * A machine with Office apps installed from the Microsoft 365 Apps *beta channel*
-* (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Visual Studio Code to help update your code
+* (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -53,7 +53,7 @@ If you'd like to use sample code to complete this tutorial, follow the setup ste
 
 ## Update the app manifest
 
-You'll need to use the [Teams developer preview manifest](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) schema and the `m365DevPreview` manifest version to enable your Teams personal tab to run in Office and Outlook.
+You'll need to use the [Teams developer preview manifest](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) schema and the `Microsoft 365 DevPreview` manifest version to enable your Teams personal tab to run in Office and Outlook.
 
 You can either use Teams Toolkit to update your app manifest, or apply the changes manually:
 
