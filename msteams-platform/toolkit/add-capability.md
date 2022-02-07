@@ -68,7 +68,7 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 |Tabs with SPFx|None|
 |Tabs with Azure|Bot and messaging extension|
 |Bot|Tabs|
-|Messaging extensions|Tabs and bot|
+|Messaging extension|Tabs and bot|
 |Tabs and bot|Tab and message extension|
 |Tabs and messaging extension|Tabs and bot|
 |Tabs, bot, and messaging extension|Tab|
@@ -101,7 +101,7 @@ After adding tab, the changes in your project are as follows:
 
 The limitation to TeamsFx while adding more capabilities is as follows:
 
-* You can adds tabs up to 16 instances.
+* You can add tabs up to 16 instances.
 * You can add bot and messaging extension for one instance each.
 
 ## See also
