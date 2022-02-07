@@ -223,7 +223,7 @@ After generating your application ID and password, deploy your bot to Azure:
 
 After the resources have completed deploying to Azure, you must configure the Microsoft 365 Moodle plugins with a messaging endpoint. You must get the endpoint from your bot in Azure:
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Microsoft Azure portal](https://portal.azure.com).
 
 1. In the left pane, select **Resource groups** and select the resource group you used or created, while deploying your bot.
 
