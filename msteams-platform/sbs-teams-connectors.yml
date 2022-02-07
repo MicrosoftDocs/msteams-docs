@@ -163,9 +163,9 @@ items:
        
     14. Enter the new task details:
 
-        * Title
-        * Description
-        * Assign To
+        * **Title**
+        * **Description**
+        * **Assign To**
 
         ![Task details](~/assets/images/sbs-connector/details.png)
 
