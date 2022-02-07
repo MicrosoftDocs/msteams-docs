@@ -30,7 +30,7 @@ If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365
 3. Select **Set up E5 subscription**.
 4. Set up your administrator account. After you finish, you should see the following screen:
 
-:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows microsoft m365 program":::
+:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
 
 ## Accounts for Microsoft 365 developer program
 

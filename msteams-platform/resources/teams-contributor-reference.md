@@ -75,6 +75,6 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 * [Microsoft Docs](/)
 * [Contributors guide](/contribute)
 * [Docs style and voice quick start](/contribute/style-quick-start)
-* [Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
+* [Cutting edge: source code readability tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
