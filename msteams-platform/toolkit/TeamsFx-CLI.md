@@ -8,7 +8,20 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# TeamsFx command line interface
+# TeamsFx Library
+
+Microsoft Teams Framework (TeamsFx) is a library encapsulating common functionality and integration patterns (like simplified access to Microsoft Identity). You can build apps for Microsoft Teams with zero configuration.
+
+Here's a list of main TeamsFx features:
+
+- **TeamsFx Collaboration**: Let developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
+
+- **TeamsFx CLI**: It accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+
+- **TeamsFx SDK**: TeamsFx Software Development Kit (SDK) is the main TeamsFx code library encapsulating simple authentication for both client and server-side code tailored for Teams developers.
+
+
+## TeamsFx command line interface
 
 TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
