@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Create new Teams project using Teams Toolkit
 
-To create new Teams project using Teams Toolkit, click **Create a new Teams app project** or **Start from a sample**.
+To create new Teams project using Teams Toolkit, select **Create a new Teams app project** or **Start from a sample**.
 
 ## Create new project
 
