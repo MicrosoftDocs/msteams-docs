@@ -17,8 +17,6 @@ Share-in-Teams option allows users to:
 
 * Share a link from an app running inside Teams to recipient (a person or group or channel), so that the recipients can access the link.
 
-* Share a link from an app running inside Teams.
-
 * Reach to the conversation where the link was shared and continue the conversation in the chat.
 
 * Add a note while sharing the link.
