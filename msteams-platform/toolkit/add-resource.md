@@ -14,7 +14,7 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
 ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+[Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
 > Ensure you have Teams app project in VS Code.
@@ -81,7 +81,7 @@ After adding resouces, the additional changes in your project are as follows:
 
 ## Limitation
 
-- You can't add resources if you've created SPFx based tab project.
+You can't add resources if you've created SPFx based tab project.
 
 ## See also
 
