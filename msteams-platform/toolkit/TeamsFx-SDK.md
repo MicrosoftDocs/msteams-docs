@@ -27,7 +27,6 @@ For more information, see [Teams app project](https://github.com/OfficeDev/Teams
 - Node.js version `10.x.x` or later.
 - If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version is `>= 4.9.3`. ([Issue - all of the BOTBUILDER packages should be the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
-
 For more information, see:
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
@@ -78,6 +77,7 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+
 > [!NOTE]
 > You can use this credential class in browser application, such as Teams Tab App.
 
