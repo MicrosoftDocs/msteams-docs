@@ -81,7 +81,7 @@ After adding resouces, the additional changes in your project are as follows:
 
 ## Limitation
 
-- You can't add resources if your project is SPFx.
+- You can't add resources if you've created SPFx based tab project.
 
 ## See also
 
