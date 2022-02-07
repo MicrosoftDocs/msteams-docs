@@ -92,6 +92,8 @@ landingContent:
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
+        - text: Create a connector in Teams
+          url: ~/sbs-teams-connectors.yml
         
 - title: Get started
   linkLists:

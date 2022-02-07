@@ -209,7 +209,7 @@ items:
        * Enter `Valid Domains` as **https Base URL**.
        * Select **Yes** to enable the action on connector card.
        * Enter `Action URL` as **https://[BASE_URI]/Task/Update**.
-       * Select Save. 
+       * Select **Save**. 
 
        ![Basic details](~/assets/images/sbs-connector/basicdetails.png)
 
@@ -235,7 +235,7 @@ items:
 
         ![Sideloading](~/assets/images/sbs-connector/apppackage.png) 
 
-    11. Test your new connector(link to heading).
+    11. Test your new connector following the steps provided in **Test connector in Microsoft Teams**.
 
 - title: Complete challenge
   durationInMinutes: 1
