@@ -99,10 +99,8 @@ After adding tab, the changes in your project are as follows:
 
 ## Limitation
 
-The limitations with TeamsFx while adding more capabilities is as follows:
-
+The limitation to TeamsFx while adding more capabilities is as follows:
 - You can't add project capability for more than one instance.
-
 
 > [!NOTE]
 > If you want to include both bot and messaging extension capabilities, then select them at the same time. You can only add them either when you create a new project or a tab application.
