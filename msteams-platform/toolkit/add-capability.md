@@ -97,9 +97,9 @@ After adding tab, the changes in your project are as follows:
 - The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
 - The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
 
-## Limitation
+## Limitations
 
-The limitation to TeamsFx while adding more capabilities is as follows:
+The limitations to TeamsFx while adding more capabilities are as follows:
 
 * You can add tabs up to 16 instances.
 * You can add bot and messaging extension for one instance each.
