@@ -68,7 +68,9 @@ Use the following formats for a deep link that you can use:
 * An app added to a meeting with a tab [capability](~/concepts/capabilities-overview.md)
 
     `https://teams.microsoft.com/l/entity/<meetingId>/<entityId>?context={"chatId": "<meetingId>","contextType":"chat"}`
- 
+
+    `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<websiteUrl>&label=<name>&context={"chatId":"<chatId>","contextType":"chat"}` 
+
 > [!NOTE]
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
 > If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab is not opened.
