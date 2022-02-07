@@ -95,7 +95,7 @@ You can create an action command using **App Studio** or **Developer Portal**.
 
 1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
 
-   (image)
+    <img src="~/assets/images/messaging-extension/use-existing-bot.png" alt="use existing bot for messaging extension" width="500"/>
    
 1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.   
 The following image displays command addition for messaging extension:
