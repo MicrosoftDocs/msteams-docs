@@ -66,6 +66,72 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
 
+Let's take a tour of the topics covered in this document:
+
+## Accounts
+
+To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+
+## Environment
+
+Teams Toolkit helps you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.
+
+### TeamsFx Collaboration
+
+It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
+
+## Development
+
+Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.
+
+### Create a new Teams app
+
+It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
+
+### Add capabilities
+
+It helps to add other required Teams capabilities to Teams app during development process.
+
+### Add cloud resources
+
+It helps you to optionally add cloud resources that fits your development needs.
+
+### Edit manifest file 
+
+It helps you to edit the Teams app integration with Teams client.
+
+## Deployment
+
+During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.
+
+### Provision in the cloud
+
+It integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
+
+### Deploy to the cloud
+
+ It helps you to deploy the source code to Azure.
+
+### Publish to Teams
+
+After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
+
+### CI/CD guide
+
+It helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates for you to get started while setting up CI or CD pipelines.
+
+#### TeamsFx CLI
+
+It is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+
+#### TeamsFx SDK
+
+It helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
+
+## Help and Feedback
+
+In this section, you can find the documentation and resources you need. You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
+
 Let's explore Teams Toolkit features.
 
 | Teams Toolkit Features | Includes... | What you can do |
