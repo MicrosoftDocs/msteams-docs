@@ -111,6 +111,12 @@ The following code shows an example of Adaptive Cards formatting:
 }
 ```
 
+Adaptive Cards will also support emoji. The following code shows an example of Adaptive Cards with an emoji:
+
+`{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }`
+
+:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Adaptive card with an emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+
 ### Mention support within Adaptive Cards 
 
 You can add @mentions within an Adaptive Card body for bots and messaging extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
