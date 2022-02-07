@@ -17,7 +17,7 @@ items:
     You can add link unfurling to your app manifest using Developer portal or manually. With link unfurling, your app can register to receive an invoke activity when URLs with particular domain are pasted into the compose message area. The invoke contains the full URL and you can respond with card that the user can unfurl, providing additional information or actions. The link unfurling result is cached for 30 minutes. It works similar to search command.
     
     > [!NOTE]
-    > Currently, link unfurling is not supported on Mobile clients.
+    > Currently, link unfurling is not supported on Mobile clients. 
 
     The Teams link unfurling step-by-step guide demonstrates how to create a bot to perform link unfurling in Teams for *://www.BotFramework.com URLs. You'll see the following output:
 
