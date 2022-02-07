@@ -68,7 +68,7 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 |Tabs with SPFx|None|
 |Tabs with Azure|Bots and messaging extensions|
 |Bots|Tabs|
-|Messaging extensions|Tab and Bot||
+|Messaging extensions|Tab and Bot|
 |Tabs and bots|Tab and Bot|
 |Tabs and messaging extensions|Tab and Bot|
 |Tabs, bots, and messaging extensions|Tab and Bot|
