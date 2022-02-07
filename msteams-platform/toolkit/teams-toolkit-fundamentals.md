@@ -66,7 +66,6 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
 
-<<<<<<< HEAD
 Let's take a tour of the topics covered in this document:
 
 ## Accounts
@@ -132,7 +131,7 @@ It helps you to reduce tasks of implementing identity and access to cloud resour
 ## Help and Feedback
 
 In this section, you can find the documentation and resources you need. You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
-=======
+
 Let's explore Teams Toolkit features.
 
 | Teams Toolkit Features | Includes... | What you can do |
@@ -164,7 +163,6 @@ Let's explore Teams Toolkit features.
 
 > [!TIP]
 > Browse existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
->>>>>>> main
 
 ## See also
 
