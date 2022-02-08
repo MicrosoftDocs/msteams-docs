@@ -8,7 +8,7 @@ keywords: teams authentication OAuth SSO Azure AD
 # Authentication FAQ
 
 Common questions asked regarding Authentication in Teams
-<br>
+<br><br>
 <details>
 <summary>What user information does SSO give me?</summary>
 
