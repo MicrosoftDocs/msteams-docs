@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Teams task module bot
+title: Microsoft Teams task module bot
 metadata:
-  title: Teams task module bot
+  title:  Microsoft Teams task module bot
   description: In this tutorial, you'll learn to set up Teams task module.
   audience: Developer
   level: Beginner
@@ -30,7 +30,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
 
       > [!NOTE]
@@ -51,20 +51,20 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in AAD portal
+- title: Create and register your bot in Microsoft Azure Active Directory (Azure AD) portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory (AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure AD, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -119,7 +119,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-    1. Select **Multitenant** under App Type.
+    1. Select **MultiTenant** under App Type.
 
         ![Microsoft App ID](~/assets/images/Teams-task-module/config.png)
 
@@ -142,7 +142,7 @@ items:
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
 
-    **To add the Microsoft Teams channel**
+    **To add the Teams channel**
 
     1. Select **Home**.
 
@@ -195,10 +195,10 @@ items:
 
         You have successfully set up a bot in Azure Bot Service.
 
-- title: Update the AAD app registration
+- title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    **To register your app through the AAD portal**  
+    **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -288,7 +288,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
