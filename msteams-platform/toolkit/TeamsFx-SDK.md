@@ -16,7 +16,7 @@ Use the library to:
 
 - Access core functionalities in client and server environment in a similar way.
 - Write user authentication code in a simplified way.
- 
+
 ## Get started
 
 TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI.
@@ -51,7 +51,6 @@ To create graph client object for accessing Microsoft Graph API, you will need t
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -71,7 +70,6 @@ Use the following snippet:
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -166,7 +164,6 @@ Use `TeamsUserCredential` and `createMicrosoftGraphClient`.
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -183,7 +180,6 @@ Use `axios` library to make HTTP request to Azure Function.
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -206,7 +202,10 @@ Apart from `tedious`, you can also compose connection config of other SQL librar
 ```ts
 loadConfiguration();
 const sqlConnectConfig = new DefaultTediousConnectionConfiguration();
+// If there's only one SQL database
 const config = await sqlConnectConfig.getConfig();
+// If there are multiple SQL databases
+const config2 = await sqlConnectConfig.getConfig("your database name");
 const connection = new Connection(config);
 connection.on("connect", (error) => {
   if (error) {
