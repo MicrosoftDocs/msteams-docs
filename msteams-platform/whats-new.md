@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|02/09/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
 |02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot.| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/03/2022| Introduced app manifest version 1.12 | • App manifest > [App manifest schema](resources/schema/manifest-schema.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
@@ -40,6 +41,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|02/09/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
 |02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot.| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > [App manifest schema](resources/schema/manifest-schema.md) |
 |01/25/2022| Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
