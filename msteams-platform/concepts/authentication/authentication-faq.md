@@ -7,8 +7,12 @@ keywords: teams authentication OAuth SSO Azure AD
 ---
 # Authentication FAQ
 
-Common questions asked regarding Authentication in Teams
+Common questions asked regarding Authentication in Teams.
 <br><br>
+
+## AAD SSO
+
+<br>
 <details>
 <summary>What user information does SSO give me?</summary>
 
@@ -23,18 +27,6 @@ Common questions asked regarding Authentication in Teams
 <br>
 <details>
 <summary>How do I fetch more permissions for a user and when can I do it?</summary>
-
-**Answer**:
-</details>
-<br>
-<details>
-<summary>I want to use a CIAM - which one should I use?</summary>
-
-**Answer**:
-</details>
-<br>
-<details>
-<summary>Can I use AAD B2C?</summary>
 
 **Answer**:
 </details>
@@ -57,6 +49,10 @@ Common questions asked regarding Authentication in Teams
 **Answer**:
 </details>
 <br>
+
+## Other authentication methods
+
+<br>
 <details>
 <summary>How can I use AAD SSO with SAML?</summary>
 
@@ -69,6 +65,19 @@ Common questions asked regarding Authentication in Teams
 **Answer**:
 </details>
 <br>
+<details>
+<summary>I want to use a CIAM - which one should I use?</summary>
+
+**Answer**:
+</details>
+<br>
+<details>
+<summary>Can I use AAD B2C?</summary>
+
+**Answer**:
+</details>
+<br>
+
 <details>
 <summary>If we have partners or customers using their own Identity Provider, true AAD SSO experience isn't possible.
 
