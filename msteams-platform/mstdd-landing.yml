@@ -96,8 +96,7 @@ landingContent:
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
-        - text: Build a search-based messaging extension
-          url: ~/sbs-messagingextension-searchcommand.yml
+        
         
 - title: Get started
   linkLists:
