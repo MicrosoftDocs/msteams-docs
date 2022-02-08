@@ -34,6 +34,9 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 1. Add your app to Teams.
 
+> [!NOTE]
+> `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
+
 ## Troubleshoot upload issues
 
 If your app fails to sideload, do the following until the issue resolves:
