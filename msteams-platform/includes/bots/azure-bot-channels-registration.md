@@ -6,7 +6,7 @@ ms.topic: overview
 ms.author: surbhigupta12
 ---
 
-1. In the [Azure portal](https://ms.portal.azure.com/#home), under Azure services, select **Create a resource**.
+1. In the [Microsoft Azure portal](https://ms.portal.azure.com/#home), under Azure services, select **Create a resource**.
 1. In the search box enter "bot". And in the drop-down list, select **Bot Channels Registration**.
 1. Select the **Create** button.
 1. In the **Bot Channel Registration** blade, provide the requested information about your bot.
@@ -44,6 +44,6 @@ After Azure has created the registration resource it will be included in the res
 
 Once your bot channels registration is created, you'll need to enable the Teams channel.
 
-1. In the [Azure portal](https://ms.portal.azure.com/#home), under Azure services, select the **Bot Channel Registration** you just created.
+1. In the [Microsoft Azure portal](https://ms.portal.azure.com/#home), under Azure services, select the **Bot Channel Registration** you just created.
 1. In the left panel, click **Channels**.
 1. Click the Microsoft Teams icon, then choose **Save**.
