@@ -33,7 +33,7 @@ You must have an understanding of the following prerequisites:
 
 In addition, this project requires that you have the following installed in your development environment:
 
-- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+- Any text editor or IDE. You can install and use [Microsoft Visual Studio Code](https://code.visualstudio.com/download) for free.
 
 - [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
