@@ -32,7 +32,7 @@ microsoftTeams.sharing.shareWebContent({
       });
 ```
 
-The payload contains the following parameter:
+The payload contains the following parameters:
 
 | Property name | Purpose |
 |---|---|
@@ -42,7 +42,7 @@ The payload contains the following parameter:
 
 ## End user Share-in-Teams experience
 
-To use Share-in-Teams option:
+To use Share-in-Teams:
 
 1. Open a personal app or tab and select a content, which you like to share.
 
