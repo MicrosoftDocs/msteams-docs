@@ -116,7 +116,10 @@ items:
    ### Check for sideloading option
 
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
-      
+
+    > [!NOTE]
+    > If sideloading is not enabled in your Teams client, you will not be able to preview and test your app in local Teams environment.
+
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
    Verify if you can sideload apps in Teams:
@@ -779,7 +782,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
+    After you set up your project workspace with Teams Toolkit, build your project. You'll need to sign in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
 
