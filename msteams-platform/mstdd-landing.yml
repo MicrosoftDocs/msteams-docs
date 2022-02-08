@@ -98,8 +98,6 @@ landingContent:
           url: ~/sbs-meetings-sidepanel.yml
         - text: Generate a Meetings Stage View
           url: ~/sbs-meetings-stage-view.yml
-        - text: Interact with content bubble bot in Meetings
-          url: ~/sbs-meeting-content-bubble.yml
         
 - title: Get started
   linkLists:
