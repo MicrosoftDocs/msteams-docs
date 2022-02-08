@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Create new Teams project using Teams Toolkit
 
-You can create new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
+To create new Teams project using Teams Toolkit, select **Create a new Teams app project** or **Start from a sample**.
 
 ## Create new project
 
@@ -23,9 +23,9 @@ The following guides helps you to create a new Teams app project using Teams Too
 
 ## Create from samples
 
- You can create new project by exploring **sample gallery**. Select the required sample to create apps. The following steps guide you to create apps from samples:
+ You can create new project from **sample gallery**. Select the required sample to create apps. The following steps guide you to create apps from samples:
 
- 1. Open **Teams Toolkit** from Visual Studio Code.
+ 1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
  1. Select **DEVELOPMENT** section in Tree View.
  1. Select **View samples**. The sample gallery appears as shown in the following image:
    
