@@ -23,7 +23,7 @@ ms.date: 11/29/2021
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> Ensure you have Teams app project opened in VS code.
+> Ensure you have Teams app project opened in Microsoft Visual Studio code.
 
 ## Create a new environment
 

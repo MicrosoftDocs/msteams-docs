@@ -28,7 +28,7 @@ To complete this tutorial, you'll need:
  - A Microsoft 365 Developer Program sandbox tenant
  - Your sandbox tenant enrolled in *Office 365 Targeted Releases*
  - A test environment with Office apps installed from the Microsoft 365 Apps *beta channel*
- - Visual Studio Code with the Teams Toolkit (Preview) extension (Optional)
+ - Microsoft Visual Studio Code with the Teams Toolkit (Preview) extension (Optional)
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -74,7 +74,7 @@ In Microsoft Teams, a messaging extension consists of a web service that you hos
 
 For users to interact with your messaging extension from Outlook, you'll need to add an Outlook channel to your bot:
 
-1. From [Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), navigate to your bot resource.
+1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), navigate to your bot resource.
 
 1. From *Settings*, select **Channels**.
 
