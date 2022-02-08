@@ -37,7 +37,7 @@ The payload contains the following parameters:
 | Property name | Purpose |
 |---|---|
 | `type` | The type must be `URL`. |
-| `url` | URL which you like to share. |
+| `url` | URL, which you like to share. |
 | `preview` | Preview must be `true`. |
 
 ## End user Share-in-Teams experience
