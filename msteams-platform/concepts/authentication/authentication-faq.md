@@ -16,13 +16,13 @@ Common questions asked regarding Authentication in Teams
 </details>
 <br>
 <details>
-<summary>How do I get additional user information?</summary>
+<summary>How do I get more user information?</summary>
 
 **Answer**:
 </details>
 <br>
 <details>
-<summary>How do I fetch additional permissions for a user and when can I do this?</summary>
+<summary>How do I fetch more permissions for a user and when can I do it?</summary>
 
 **Answer**:
 </details>
@@ -40,13 +40,13 @@ Common questions asked regarding Authentication in Teams
 </details>
 <br>
 <details>
-<summary>If I use AAD SSO, what about my existing users who have not signed up using AAD SSO?</summary>
+<summary>If I use AAD SSO, what about my existing users who haven't signed up using AAD SSO?</summary>
 
 **Answer**:
 </details>
 <br>
 <details>
-<summary>Will I need to build AAD SSO login on my webapp too?</summary>
+<summary>Will I need to build AAD SSO credentials on my webapp too?</summary>
 
 **Answer**:
 </details>
@@ -70,7 +70,7 @@ Common questions asked regarding Authentication in Teams
 </details>
 <br>
 <details>
-<summary>If we have partners or customers using their own Identity Provider, true AAD SSO experience is not possible.
+<summary>If we have partners or customers using their own Identity Provider, true AAD SSO experience isn't possible.
 
 - What's the next best experience for such cases where we have non-AAD identity providers?
 - Do we have code samples or guiding documents?</summary>
