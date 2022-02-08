@@ -1,6 +1,6 @@
 ### (Optional) Adjust your browser launch settings
 
-When developing a Teams app, it is common to run your app in an alternate developer tenant or with alternate credentials.  Both Microsoft Edge and Google Chrome provide facilities to adjust the launch settings for your browser.  For example, to update the project to support InPrivate mode (Microsoft Edge), open the `.vscode/launch.json` file in your project.  Look for the appropriate launch settings, and add the following block to each one:
+When developing a Teams app, it is common to run your app in an alternate developer tenant or with alternate credentials. Both Microsoft Edge and Google Chrome provide facilities to adjust the launch settings for your browser. For example, to update the project to support InPrivate mode (Microsoft Edge), open the `.vscode/launch.json` file in your project. Look for the appropriate launch settings, and add the following block to each one:
 
 ``` json
 "runtimeArgs": [ "--inprivate" ]
