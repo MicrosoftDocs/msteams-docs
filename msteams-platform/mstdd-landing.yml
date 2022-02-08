@@ -76,8 +76,6 @@ landingContent:
         
     - linkListType: tutorial
       links:
-        - text: Create an outgoing webhook
-          url:  ~/sbs-outgoing-webhooks.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure Tab device permissions
