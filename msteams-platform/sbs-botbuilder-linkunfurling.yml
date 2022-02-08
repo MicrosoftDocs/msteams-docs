@@ -114,7 +114,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-    1. Select **Multitenant** under App Type.
+    1. Select **MultiTenant** under App Type.
 
         ![Microsoft App ID](~/assets/images/Teams-link-unfurling/config.png)
 
