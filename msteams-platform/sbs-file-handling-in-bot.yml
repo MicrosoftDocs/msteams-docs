@@ -156,7 +156,7 @@ items:
 
     **To add Redirect URI to the Azure bot resource:**
 
-    1. Select **Manage** next to **Microsoft App ID**.
+    1. Select **Manage** next to **Microsoft App ID**
 
          ![Manage Bot](~/assets/images/manage-sec.png)
 
