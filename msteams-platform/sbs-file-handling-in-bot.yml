@@ -100,11 +100,11 @@ items:
 
     1. Enter **Description** and select **Add**.
     
-         ![Client secret](~/assets/images/teams-file-upload-bot/client-secret.png)
+         ![Client secret](~/assets/images/teams-file-upload-bot/add-client-secret.png)
 
     1. In the **Value** column, select **Copy to clipboard** and save the value of client secret ID for future reference.
 
-         ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+         ![Value of client secret](~/assets/images/teams-file-upload-bot/copy-value.png)
        
     **To add the Microsoft Teams channel:**
 
