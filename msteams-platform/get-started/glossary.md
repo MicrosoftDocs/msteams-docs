@@ -26,8 +26,8 @@ Common terms and definitions used in Teams Developer Documentation.
 | [App scope](../concepts/design/app-structure.md) | The purview within which your app interacts with your users. An app can have Personal scope, Channel scope, or Team scope. A Teams app can exist across scopes. |
 | [App Studio](../concepts/build-and-test/app-studio-overview.md) | An app to start creating or integrating your own Microsoft Teams apps. It has now evolved to Developer Portal. <br> **See also**: [Developer Portal](#d) |
 | [Azure resource](../toolkit/provision.md) | A service that is available through Azure that your Teams app can use for Azure deployment. It could be storage accounts, web apps, databases, and more. |
-| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access resources internal and external Azure resources. |
-| [Authentication](../concepts/authentication/authentication.md) | A process to authorize user access for your app's usage. it can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i) |
+| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external Azure resources. |
+| [Authentication](../concepts/authentication/authentication.md) | A process to authorize user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i) |
 | [Authentication flow](../concepts/authentication/authentication.md#web-based-authentication-flow) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
 |
 </details>
@@ -39,10 +39,10 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft.) <br>**See also**:[A](#a) |
+| [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft.) |
 | [Bicep](../toolkit/provision.md) | A declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
 | [Bot](../bots/what-are-bots.md) | A bot is an app that executes programmed repetitive tasks. <br> **See also**: [Conversational bot](#c); [Chat bot](#c) |
-| [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that allows you to test and debug bots, either locally or remotely. |
+| [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that lets you test and debug bots, either locally or remotely. |
 | [Bot Framework](../bots/bot-features.md) | A rich SDK used to create bots using C#, Java, Python, and JavaScript. If you have a bot that is based on the Bot Framework, you can modify it to work in Teams. |
 |
 </details>
@@ -106,6 +106,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
+| Graph API | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
 | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
 |
 </details>
@@ -153,7 +154,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more.  |
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
 | [Microsoft 365 developer program](../toolkit/accounts.md#join-microsoft-365-developer-program) | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365.  |
-| [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data. |
+| [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
@@ -183,6 +184,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
+| People Picker | A native control in Teams platform to search and select people, which can be integrated in web apps, Adaptive Cards, and more. 
 | [Personal app](../concepts/design/personal-apps.md) | A personal app can be a bot, private workspace, or both. <br>**See also**: [Shared app](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
