@@ -96,8 +96,7 @@ landingContent:
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
-        - text: Create and fetch task module bot in Teams
-          url: ~/sbs-botbuilder-taskmodule.yml
+        
         
 - title: Get started
   linkLists:
