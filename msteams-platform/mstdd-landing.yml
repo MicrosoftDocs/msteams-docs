@@ -76,8 +76,7 @@ landingContent:
         
     - linkListType: tutorial
       links:
-        - text: Build Teams action messaging extension 
-          url: ~/sbs-meetingextension-action.yml
+        
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure Tab device permissions
