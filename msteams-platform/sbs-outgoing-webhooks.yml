@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Webhooks help Teams to integrate with external apps. In Teams, the outgoing webhooks act as bot and search for messages in channels using **@mention**. The outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through Microsoft Bot Framework. The outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
+    Webhooks help Microsoft Teams to integrate with external apps. In Teams, the outgoing webhooks act as bot and search for messages in channels using **@mention**. The outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through Microsoft Bot Framework. The outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
     
     Key features of outgoing webhooks:
     
@@ -36,7 +36,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
