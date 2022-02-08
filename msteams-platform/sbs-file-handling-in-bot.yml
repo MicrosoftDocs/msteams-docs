@@ -173,7 +173,7 @@ items:
         
     **To expose API endpoint:**
 
-    1. Select **Expose an API** from the left pane.
+    1. Select **Expose an API** from the left pane
     1. Select **Set** for the Application ID URI
     1. Use the **Application ID URL** shown and append **api://** instead of **https://** in the **ngrok url** and add at the beginning of the App ID URL.
 
