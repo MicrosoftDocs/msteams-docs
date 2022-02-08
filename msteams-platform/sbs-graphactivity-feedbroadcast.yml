@@ -14,19 +14,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The `meetingSidePanel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
+    This step-by-step guide shows a feature where user can broadcast a message to all members of organization using activity feed notification.
 
-    This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
+    **Interactions of graph activity feed broadcast**
 
-    **Meeting organizers' interaction of meeting SidePanel**
-
-    * **Add New Agenda Item**: Gives provision to add new agenda point.
-    * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
-    * **Publish Agenda**: Sends the agenda list to the meeting chat. 
+    * Broadcasts message for all the members.
+    * Displays activity feed notification.
+    * Broadcasts details available for members. 
 
     You'll see the following output:
 
-     ![Your Token](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
+     (Placeholder for image)
 
 - title: Prerequisites
   durationInMinutes: 1
