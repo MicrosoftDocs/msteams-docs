@@ -111,7 +111,7 @@ The following code shows an example of Adaptive Cards formatting:
 }
 ```
 
-Adaptive Cards supports emoji. The following code shows an example of Adaptive Cards with an emoji:
+Adaptive Cards support emoji. The following code shows an example of Adaptive Cards with an emoji:
 
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
