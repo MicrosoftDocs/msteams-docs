@@ -26,16 +26,16 @@ Let's look at some areas that where an app helps to meet a business need.
 | &nbsp; | &nbsp; |
 |--- | --- |
 | **Development Options** | **Business Opportunities** |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase customer base <br> - Extend existing apps <br> - Reliable for start-ups |
+| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Store |
 | **Customer benefits** | **Internal workflows** |
-| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Sales and accounting <br> - Finance <br> - Engineering |
+| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots such as Q&A and Help-desk |
 |
 
 You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 ## Build apps with Microsoft Teams platform
 
-Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you utilize Teams capabilities to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
+Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend Teams capabilities to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
 
 The benefits of building apps span from meeting organizational goals to increasing internal productivity.
 
@@ -43,7 +43,7 @@ Here's why Teams is best-suited for your app needs:
 
 - **Communication & collaboration**
 
-    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action about that. Teams lets you do all this directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
+    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
 
 - **Social interactions**
 
