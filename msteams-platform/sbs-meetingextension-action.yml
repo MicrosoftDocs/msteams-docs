@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Teams action messaging extension
+title: Microsoft Teams action messaging extension
 metadata:
-  title: Teams action messaging extension
+  title: Microsoft Teams action messaging extension
   description: In this tutorial, you'll learn to set up action messaging extension for Teams.
   audience: Developer
   level: Beginner
@@ -33,7 +33,7 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -52,10 +52,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure AD portal
+- title: Create and register your bot in Microsoft Azure Active Directory (Azure AD) portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure AD, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -65,7 +65,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
