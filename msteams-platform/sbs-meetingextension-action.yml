@@ -59,7 +59,7 @@ items:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
@@ -141,7 +141,7 @@ items:
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
 
-    **To add the Microsoft Teams channel**
+    **To add the Teams channel**
 
     1. Select **Home**.
 
