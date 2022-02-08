@@ -13,7 +13,7 @@ ms.author: lajanuar
 >
 > For current information, read the [prerequisites](../get-started/prerequisites.md) and follow  one of the newer tutorials.
 
-The Microsoft Teams Toolkit enables you to create single sign-on (SSO) authentication for tab apps directly within Visual Studio Code. The toolkit guides you through the process and provides everything you need including provisioning your Microsoft identity platform registration in the Azure portal.
+The Microsoft Teams Toolkit enables you to create single sign-on (SSO) authentication for tab apps directly within Visual Studio Code. The toolkit guides you through the process and provides everything you need including provisioning your Microsoft identity platform registration in the Microsoft Azure portal.
 
 ## Get started — create a project
 

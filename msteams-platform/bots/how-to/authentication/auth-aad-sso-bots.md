@@ -171,9 +171,17 @@ The steps to register your app through the Azure AD portal are similar to the [t
     * Select **API permissions** from the left plane.
     * Select **Add a platform** to add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.
 
-#### Update manifest in Azure portal
+1. The following steps will help you to enable implicit grant:
+    * Select **Authentication** from the left pane.
+    * Select the **Access tokens** and **ID tokens** checkboxes.
+    
+    ![Grant flow](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
+    
+    * Select **Save** to save the changes.
 
-The following steps will guide you to update the bot manifest in Azure portal:
+#### Update manifest in Microsoft Azure portal
+
+The following steps will guide you to update the bot manifest in Microsoft Azure portal:
 
 1. Select **Manifest** from the left pane.
 1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change it's value to **2**.
@@ -188,9 +196,9 @@ The following steps will guide you to update the bot manifest in Azure portal:
 
 #### Update the Azure portal with the OAuth connection
 
-The following steps will guide you to update the Azure portal with the OAuth connection:
+The following steps will guide you to update the Microsoft Azure portal with the OAuth connection:
 
-1. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. In the Microsoft Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 1. Go to **Configuration** on the left pane.
 1. Select **Add OAuth Connection Settings**.
 
