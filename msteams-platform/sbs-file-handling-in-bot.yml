@@ -19,7 +19,7 @@ items:
     
    This step-by-step guide helps you to upload files from a bot to Microsoft Teams. You'll see the following output:
 
-   :::image type="content" source="assets/images/teams-file-upload-bot/output-sbs.png" alt-text="sbs output" lightbox="assets/images/output-sbs.png":::
+   :::image type="content" source="assets/images/teams-file-upload-bot/output-sbs.png" alt-text="sbs output" lightbox="assets/images/teams-file-upload-bot/output-sbs.png":::
    
 - title: Prerequisites
   durationInMinutes: 1 
@@ -270,7 +270,7 @@ items:
 
     1. In the manifest.json file, find YOUR-MICROSOFT-APP-ID and replace it with your App Id (that was created when you registered your bot earlier) everywhere you see the place holder string and save it.
        
-       ![manifest json](~/assets/images/"C:\Users\v-silakshmi\msteamsv\msteams-platform\assets\images\teams-file-upload-bot\manifest-json.png")
+       ![manifest json](~/assets/images/teams-file-upload-bot/manifest-json.png)
 
     1. Zip up the contents of the `TeamsAppManifest' folder to create **manifest.zip**. Ensure to open the manifest file in visual studio code and replace with your MicrosoftAppID (depending on the scenario the Microsoft App Id may occur multiple times in the manifest.json)
 
@@ -319,7 +319,7 @@ items:
   content: |
     Did you come up with something like this?
     
-    :::image type="content" source="assets/images/teams-file-upload-bot/output-sbs.png" alt-text="sbs output" lightbox="assets/images/output-sbs.png":::
+    :::image type="content" source="assets/images/teams-file-upload-bot/output-sbs.png" alt-text="sbs output" lightbox="assets/images/teams-file-upload-bot/output-sbs.png":::
 
 - content: |
     You have completed the tutorial. Now you can upload files from bot to Microsoft Teams.
