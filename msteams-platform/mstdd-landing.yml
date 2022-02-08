@@ -63,6 +63,8 @@ landingContent:
       links:
         - text: Send and receive files 
           url: bots/how-to/bots-filesv4.md
+        - text: Teams calling and meeting bot 
+          url: bots/calls-and-meetings/registering-calling-bot.md
         - text: Device permission for browser 
           url: concepts/device-capabilities/browser-device-permissions.md
         - text: Use SSO authentication for tabs 
@@ -82,8 +84,11 @@ landingContent:
           
     - linkListType: tutorial
       links:
+
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
+        - text: Create Calling and meeting bot
+          url: ~/sbs-calling-and-meeting.yml
         - text: Configure Tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and messaging extensions
