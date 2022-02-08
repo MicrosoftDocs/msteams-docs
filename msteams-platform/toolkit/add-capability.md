@@ -30,7 +30,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 > [!IMPORTANT]
 > You need to perform provision for each environment after you successfully add capabilities to your Teams app.
 
-1. Open **Visual Studio Code**.
+1. Open **Microsoft Visual Studio Code**.
 1. Select **Teams Toolkit** from left panel.
 1. Select **Add capabilities**:
 
