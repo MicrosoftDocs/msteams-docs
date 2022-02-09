@@ -24,7 +24,7 @@ Microsoft Teams community of developers use Stack Overflow and Microsoft Q&A to 
 
 ### Developer community forums
 
-Post your questions and help other community members by sharing and responding to questions related to  Microsoft Teams App Development.
+Post your questions and help other community members by sharing and responding to Microsoft Teams App Development questions.
 
 | **Community channel**|   **Contact**  |
 |:---------------------|:---------------|
