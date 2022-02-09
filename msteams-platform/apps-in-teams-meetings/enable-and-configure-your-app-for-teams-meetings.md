@@ -8,7 +8,7 @@ ms.localizationpriority: none
 
 # Enable and configure your apps for Teams meetings
 
-Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in meeting scope within their app manifest.
+Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in meeting scope within their app manifest. 
 
 ## Enable your app for Teams meetings
 
