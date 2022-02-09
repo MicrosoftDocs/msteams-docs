@@ -43,7 +43,7 @@ The payload contains the following parameters:
 
 ## End user Share-in-Teams experience
 
-After the Share-in-Teams option is enabled on the personal app or tab, the users can share the link:
+The following steps will help users to share the link, once the Share-in-Teams option is enabled:
 
 1. Open a personal app or tab and select a content, which you like to share.
 
