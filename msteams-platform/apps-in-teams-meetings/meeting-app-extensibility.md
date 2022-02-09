@@ -176,7 +176,7 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 1. Select the app that you want to add and follow the steps as required. The app is installed as a bot.
 
-    ![Bot gallery meet](~/assets/images/apps-in-meetings/Bots-in-Meet2.png)
+    ![Bot gallery meet](~/assets/images/apps-in-meetings/Bots-in-Meet-2.png)
 
 ### Integrate messaging extensions into the meeting lifecycle
 
