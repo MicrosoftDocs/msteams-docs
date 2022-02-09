@@ -11,7 +11,6 @@ keywords: teams feedback developer questions issues contact community help reque
 ## Product support and service issues
 
 Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-critical issues** that need SLA-based support.
-``
 
 | **Product support** | **Contact** |
 |:------------|:------------|
@@ -20,7 +19,7 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 | **General questions about Microsoft Teams** | If you have general questions on Microsoft Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).|
 
 ## Developer community help
-Microsoft Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, developers can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
+Microsoft Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
 
 ### Developer community forums
 
@@ -40,7 +39,7 @@ Submit issues and ask general questions related to SDK and samples using the com
 |:----------------------|:------------|
 | **Samples** | Submit issues with samples to respective  [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository.|
 |  **Teams Toolkit or TeamsFx SDK and CLI issues** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png" border="false":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [TeamsFx (Microsoft Teams Framework) GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and to receive community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png" border="false"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/teams-toolkit): Use the `teams-toolkit` tag to post questions. Follow the Stack Overflow guidelines such as provide a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. </li> </ul> |
-| **Bot and Messaging Extension SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [JavaScript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). Post How-to questions at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework & microsoft-teams` tag. |
+| **Bot and Messaging Extension SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [JavaScript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). Post How-to questions at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework` and `microsoft-teams` tag. |
 | **Tab SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for [Microsoft Teams JavaScript Library](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Use the `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams). |
 
   
