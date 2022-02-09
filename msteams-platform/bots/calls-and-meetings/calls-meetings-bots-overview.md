@@ -8,7 +8,7 @@ keywords: calling calls audio video IVR voice online meetings real-time media st
 
 # Calls and online meetings bots
 
-Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
+Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With&nbsp;[Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
 * Interactive voice response (IVR).
 * Call control.
