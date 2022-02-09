@@ -36,7 +36,7 @@ Provision is performed with single command in Teams Toolkit for Visual Studio Co
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
 
-* Azure AD application under your Microsoft 365 tenant
+* Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant
 * Teams app registration under your Microsoft 365 tenant's Teams platform
 * Azure resources under your selected Azure subscription
 
@@ -84,7 +84,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resource|Purpose|
 |----------|--------------------------------|
-| Azure active directory application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
+| Microsoft Azure Active Directory (Azure AD) application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
 | API management service | Manage your APIs hosted in function app |
 | API management product | Group your APIs, define terms of use and runtime policies |
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
@@ -94,7 +94,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resources|Purpose of this resource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Manage secrets (e.g. Azure AD app client secret) used by other Azure Services |
+| Azure Key Vault Service | Manage secrets (e.g. Microsoft Azure Active Directory (Azure AD) app client secret) used by other Azure Services |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
 ## Customize resource provision
@@ -158,18 +158,18 @@ The following table provides a list of available predefined parameters:
 
 In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
-##### Azure AD application-related parameters
+##### Microsoft Azure Active Directory (Azure AD) application-related parameters
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Microsoft Azure Active Directory (Azure AD) app client id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Microsoft Azure Active Directory (Azure AD) app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Microsoft Azure Active Directory (Azure AD) app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's Azure AD app client ID created during provision | Delete the placeholder and fill the actual value |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's Azure AD app client secret created during provision | Delete the placeholder and fill the actual value |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's Microsoft Azure Active Directory (Azure AD) app client ID created during provision | Delete the placeholder and fill the actual value |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's Microsoft Azure Active Directory (Azure AD) app client secret created during provision | Delete the placeholder and fill the actual value |
 
 ##### Azure resource-related parameters
 
@@ -209,9 +209,9 @@ To ensure the TeamsFx tool functions properly, ensure you customize ARM template
 
 You can customize the following scenarios:
 
-#### Use an existing Azure AD app for your Teams app
+#### Use an existing Microsoft Azure Active Directory (Azure AD) app for your Teams app
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
+You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Microsoft Azure Active Directory (Azure AD) app created by yourself for your Teams app. To create an Microsoft Azure Active Directory (Azure AD) app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -225,11 +225,11 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 After adding the snippet, add your secret to related environment variable so the tool can resolve the actual secret during provision.
 
 > [!NOTE]
-> Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
+> Ensure not to share the same Microsoft Azure Active Directory (Azure AD) app in multiple environments. If you don't have permission to update the Microsoft Azure Active Directory (Azure AD) app, you can get a warning with instructions about how to manually update the Microsoft Azure Active Directory (Azure AD) app. Follow the instructions to update your Microsoft Azure Active Directory (Azure AD) app after provision.
 
-#### Use an existing Azure AD app for your bot
+#### Use an existing Microsoft Azure Active Directory (Azure AD) app for your bot
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your bot:
+You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Microsoft Azure Active Directory (Azure AD) app created by yourself for your bot:
 
 ```json
 "bot": {
