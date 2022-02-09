@@ -14,13 +14,7 @@ Common questions asked regarding Authentication in Teams.
 
 <br>
 <details>
-<summary>What user information does SSO give me?</summary>
-
-**Answer**:
-</details>
-<br>
-<details>
-<summary>How do I get more user information?</summary>
+<summary>What user information does SSO give me? How do I get more user information?</summary>
 
 **Answer**:
 </details>
@@ -49,10 +43,6 @@ Common questions asked regarding Authentication in Teams.
 **Answer**:
 </details>
 <br>
-
-## Other authentication methods
-
-<br>
 <details>
 <summary>How can I use AAD SSO with SAML?</summary>
 
@@ -64,6 +54,9 @@ Common questions asked regarding Authentication in Teams.
 
 **Answer**:
 </details>
+
+## Other authentication methods
+
 <br>
 <details>
 <summary>I want to use a CIAM - which one should I use?</summary>
