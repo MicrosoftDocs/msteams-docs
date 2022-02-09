@@ -86,7 +86,7 @@ The query parameters are:
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
 | `context.subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
-| `context.channelId`&emsp; | Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `meetingId`&emsp; | Meeting Id used by tab when running in meeting context. The meeting identifier is available through Bot Invoke and Teams Client SDK. | 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYt ODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
 | `chatId`&emsp; | Teams ID for the chat with which the content is associated | 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYt ODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
 | `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
