@@ -426,7 +426,7 @@ To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In
 
 ```json
 "authorization": {
-    "permission": { 
+    "permissions": { 
     "resourceSpecific": [
       { 
       "name": "MeetingStage.Write.Chat",
