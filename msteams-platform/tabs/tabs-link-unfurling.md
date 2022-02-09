@@ -95,7 +95,7 @@ The following image displays a Stage View invoked through a deep link:
 
 Following is the deeplink syntax: 
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl\":\""[contentUrl]"\",\"websiteUrl\":\""[websiteUrl]"\",\"name\":\"Contoso\"}
+https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
 ### Examples
 
