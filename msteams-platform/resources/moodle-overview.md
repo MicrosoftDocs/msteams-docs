@@ -7,7 +7,7 @@ ms.author: surbhigupta
 keywords: moodle LMS mConnect deep links
 ---
 
-# Moodle Learning Management System (LMS)
+# Moodle Learning Management System
 
 ## Overview
 
