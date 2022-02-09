@@ -227,7 +227,7 @@ After adding the snippet, add your secret to related environment variable so the
 > [!NOTE]
 > Ensure not to share the same Microsoft Azure Active Directory (Azure AD) app in multiple environments. If you don't have permission to update the Microsoft Azure Active Directory (Azure AD) app, you can get a warning with instructions about how to manually update the Microsoft Azure Active Directory (Azure AD) app. Follow the instructions to update your Microsoft Azure Active Directory (Azure AD) app after provision.
 
-#### Use an existing Microsoft Azure Active Directory (Azure AD) app for your bot
+#### Use an existing Azure AD app for your Teams app
 
 You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Microsoft Azure Active Directory (Azure AD) app created by yourself for your bot:
 
