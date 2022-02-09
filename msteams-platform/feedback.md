@@ -20,7 +20,7 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 | **General questions about Microsoft Teams** | If you have general questions on Microsoft Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).|
 
 ## Developer community help
-Microsoft Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, developers can also use other contacts or sites, depending on the type of community help required to submit issues, limitations, and general questions.
+Microsoft Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, developers can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
 
 ### Developer community forums
 
