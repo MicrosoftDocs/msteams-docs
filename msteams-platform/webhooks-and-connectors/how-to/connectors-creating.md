@@ -17,7 +17,7 @@ You can create a [package](~/concepts/build-and-test/apps-package.md) and [publi
 
 To distribute your connector, you must register through [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard). When a connector is registered, it is assumed that it works in all Office 365 products that support applications, including Outlook and Teams. 
 
-If the created connector works only in Teams then submit your connector through [app submission](/office/dev/store/add-in-submission-guide).
+If the connector works only in Teams then submit your connector through [app submission](~/concepts/deploy-and-publish/appsource/publish.md).
 
 
 > [!IMPORTANT]
