@@ -15,9 +15,9 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 
 | **Product support** | **Contact** |
 |:------------|:------------|
-| **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 then visit the Microsoft 365 Admin Center and use the Support menu to [Open a service request ](https://admin.microsoft.com/). |
-| **Azure help and support** | If you have a paid Azure subscription then visit the Azure Admin Center to [Open a ticket](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **General questions about Microsoft Teams** | Submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).|
+| **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft 365, visit the Microsoft 365 Admin Center and use the Support menu to [open a service request ](https://admin.microsoft.com/). |
+| **Azure help and support** | If you have a paid Azure subscription, visit the Azure Admin Center to [open a ticket](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
+| **General questions about Microsoft Teams** | If you have general questions on Microsoft Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).|
 
 ## Developer community help
 Microsoft Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, developers can also use other contacts or sites, depending on the type of community help required to submit issues, limitations, and general questions.
