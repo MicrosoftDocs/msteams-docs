@@ -143,6 +143,41 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 Bots that are enabled in `groupchat` scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
+#### Pre-meeting app experience
+
+With the pre-meeting app experience, you can find and add meeting apps as bots.
+
+**To add bots to an existing meeting**
+
+1. In your calendar, select a meeting to which you want to add a bot.
+1. Select the **Chat** tab.
+
+    ![Open tab](~/assets/images/apps-in-meetings/Bots-pre-Meet1.png)
+
+1. In the compose message area, enter the @ key and select **Get bots**.
+
+    ![Get bots](~/assets/images/apps-in-meetings/Bots-pre-Meet2.png)
+
+1. Select the app that you want to add and follow the steps as required. The app is installed as a bot.
+
+    ![Bot gallery](~/assets/images/apps-in-meetings/Bots-pre-Meet3.png)
+
+#### In-meeting app experience
+
+With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box.
+
+**To use bots during a meeting**
+
+1. Go to Teams.
+1. In your calendar, select a meeting in which you want to use a bot.
+1. In the compose message area of meeting chat, enter the @ key and select **Get bots**.
+
+   ![Get bots in meet](~/assets/images/apps-in-meetings/Bots-in-Meet1.png)
+
+1. Select the app that you want to add and follow the steps as required. The app is installed as a bot.
+
+    ![Bot gallery meet](~/assets/images/apps-in-meetings/Bots-in-Meet2.png)
+
 ### Integrate messaging extensions into the meeting lifecycle
 
 To implement messaging extension, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
