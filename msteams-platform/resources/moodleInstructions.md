@@ -29,7 +29,7 @@ In this article you'll learn how to install the Moodle LMS.
 
 Following are the prerequisites to install Moodle:
 
-* Moodle administrator credentials.
+* Moodle administrator credentials. 
 
 * Azure AD administrator credentials.
 
