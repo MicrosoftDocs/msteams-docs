@@ -158,7 +158,7 @@ The following table provides a list of available predefined parameters:
 
 In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
-##### Microsoft Azure Active Directory (Azure AD) application-related parameters
+##### Azure AD application-related parameters
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
@@ -168,8 +168,8 @@ In the meanwhile, following parameters are available with values populated durin
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's Microsoft Azure Active Directory (Azure AD) app client ID created during provision | Delete the placeholder and fill the actual value |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's Microsoft Azure Active Directory (Azure AD) app client secret created during provision | Delete the placeholder and fill the actual value |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's Azure AD app client ID created during provision | Delete the placeholder and fill the actual value |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's Azure AD app client secret created during provision | Delete the placeholder and fill the actual value |
 
 ##### Azure resource-related parameters
 
