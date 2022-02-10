@@ -182,6 +182,23 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 To implement messaging extension, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
+#### Pre-meeting app experience
+
+With the pre-meeting app experience, you can find and add meeting apps as messaging extensions.
+
+**To add messaging extension to an existing meeting**
+
+1. In your calendar, select a meeting to which you want to add a messaging extension.
+1. Select the **Chat** tab.
+
+    ![Open tab](~/assets/images/apps-in-meetings/Bots-pre-Meet1.png)
+
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the compose message area in the chat.
+
+    ![Ellipses](~/assets/images/apps-in-meetings/ME-pre-Meet2.png)
+
+1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
+
 The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
 
 ### Supported capabilities in meeting
