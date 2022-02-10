@@ -48,7 +48,7 @@ The following scenarios provide examples of accelerated learning potential combi
 
 * **Citizen developer apps** : Introduce new custom apps as differentiators for your school. Simple apps that help to optimize learning can be created in days, and often in hours. Envision for Teams with special event schedules, shuttle bookings, library books, mentors and various other services. The user can create to showcase value or to provide easy-to-use transactional activities for students and teachers.
 
-These are few scenarios of combining Microsoft Teams with Moodle implementations. Please provide feedback, based on the section on the Moodle LMS integrations and share ideas for additional integrations. We look forward to hearing feedback as we continue to empower institutions worldwide to optimize learning and planning in education. For more information, see [Microsoft education](https://www.microsoft.com/education).
+These are few scenarios of combining Microsoft Teams with Moodle implementations. Please provide feedback, based on the section on the Moodle LMS integrations and share ideas for additional integrations. We look forward to hearing feedback as we continue to empower institutions worldwide to optimize learning and planning in education. For more information, see [Microsoft education](https://www.microsoft.com/education). 
 
 ## See also
 
