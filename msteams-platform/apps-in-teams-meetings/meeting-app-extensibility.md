@@ -164,7 +164,7 @@ With the pre-meeting app experience, you can find and add meeting apps as bots.
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box.
+With the in-meeting app experience, you can engage participants during the meeting by using bots and the in-meeting dialog box.
 
 **To use bots during a meeting**
 
@@ -196,6 +196,20 @@ With the pre-meeting app experience, you can find and add meeting apps as messag
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the compose message area in the chat.
 
     ![Ellipses](~/assets/images/apps-in-meetings/ME-pre-Meet2.png)
+
+1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
+
+#### In-meeting app experience
+
+With the in-meeting app experience, you can engage participants during the meeting by using messaging extensions and the in-meeting dialog box.
+
+**To use messaging extensions during a meeting**
+
+1. Go to Teams.
+1. In your calendar, select a meeting in which you want to use a messaging extension.
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the compose message area in the chat.
+
+   ![ME in meet](~/assets/images/apps-in-meetings/ME-in-Meet1.png)
 
 1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
 
