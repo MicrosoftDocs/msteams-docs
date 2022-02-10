@@ -61,18 +61,17 @@ As a platform for building apps, Teams offers the full range of apps and toolkit
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
 
-By building your app with Teams, you can:
+From designing to building and distributing a Teams app, you can use various tools and services:
 
-- Design your app with Teams UI Toolkit and UI Library.
-- Build personal apps, a shared or collaborative apps, or custom apps.
-- Use the benefits of Teams Toolkit that scaffolds the basic app workspace for you with minimal effort.
-- Try ready made solutions.
-- Integrate with low-code and no-code Apps in Teams.
-- Automate tasks and low-code applications.
-- Integrate your existing apps with Teams.
-- Choose that build environment most suitable for your app, such as JavaScript, C#, SharePoint Framework, and other tools and SDKs.
-- Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
-- Dive deeper with user authentication, integration with other apps, Teams data from Microsoft Graph, and Developer Portal to manage your app.
+- Design the tab portion of your app with Teams UI Toolkit and UI Library.
+- Scaffold the basic app structure with Teams Toolkit.
+- Build tab UI with React web component for Teams.
+- Integrate with low-code and no-code Apps.
+- Port your existing web apps.
+- Choose tools and SDKs of your choice—JavaScript, C#, SharePoint Framework, and so on.
+- Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs.
+- Integrate Teams data from Microsoft Graph.
+- Manage your apps with Developer portal.
 
 ## Useful Links
 
