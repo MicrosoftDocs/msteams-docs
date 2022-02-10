@@ -8,10 +8,7 @@ keywords: Microsoft Teams developer definition
 # Glossary
 
 Common terms and definitions used in Teams Developer Documentation.
-<br>
-<br>
-<details>
-<summary>A</summary>
+
 
 ## A
 
@@ -30,25 +27,17 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Authentication](../concepts/authentication/authentication.md) | A process to authorize user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i) |
 | [Authentication flow](../concepts/authentication/authentication.md#web-based-authentication-flow) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
 |
-</details>
-<br>
-<details>
-<summary>B</summary>
 
 ## B
 
 | Term | Definition |
 | --- | --- |
-| [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft.) |
+| [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
 | [Bicep](../toolkit/provision.md) | A declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
 | [Bot](../bots/what-are-bots.md) | A bot is an app that executes programmed repetitive tasks. <br> **See also**: [Conversational bot](#c); [Chat bot](#c) |
 | [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that lets you test and debug bots, either locally or remotely. |
 | [Bot Framework](../bots/bot-features.md) | A rich SDK used to create bots using C#, Java, Python, and JavaScript. If you have a bot that is based on the Bot Framework, you can modify it to work in Teams. |
 |
-</details>
-<br>
-<details>
-<summary>C</summary>
 
 ## C
 
@@ -67,10 +56,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: [One-on-one chat](#o); [Group chat](#g) |
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It allows a user to interact with your web service using text, interactive cards, and task modules. <br>**See also** [Chat bot](#c) |
 |
-</details>
-<br>
-<details>
-<summary>D</summary>
+
 
 ## D
 
@@ -86,10 +72,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [DevTools](../tabs/how-to/developer-tools.md) | Browser's Devtools are used to view console logs, view or modify runtime network requests, add breakpoints to code (JavaScript) and perform interactive debugging for a Teams app. The feature is only available for desktop and Android clients after the Developer Preview has been enabled. |
 | [Dynamic search](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | A search feature for Adaptive Cards that is useful to search and select data from large data sets. It helps to filter out the choices as the user types. <br>**See also**: [Static search](#s) |
 |
-</details>
-<br>
-<details>
-<summary>E</summary>
+
 
 ## E
 
@@ -99,10 +82,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can discover and use your app. |
 | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default - local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
 |
-</details>
-<br>
-<details>
-<summary>G</summary>
+
 
 ## G
 
@@ -111,10 +91,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | Graph API | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
 | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
 |
-</details>
-<br>
-<details>
-<summary>I</summary>
+
 
 ## I
 
@@ -124,10 +101,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Incoming webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing webhook](#o) |
 | [In-meeting app experience](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
 |
-</details>
-<br>
-<details>
-<summary>L</summary>
+
 
 ## L
 
@@ -139,10 +113,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Location capability](../concepts/device-capabilities/location-capability.md) | <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d) |
 | [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that require little or no coding, and can be developed and deployed quickly.  |
 |
-</details>
-<br>
-<details>
-<summary>M</summary>
+
 
 ## M
 
@@ -163,10 +134,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
 | [Microsoft Store](../concepts/deploy-and-publish/appsource/publish.md) | Microsoft Store is a digital distribution platform owned by Microsoft. |
 |
-</details>
-<br>
-<details>
-<summary>O</summary>
+
 
 ## O
 
@@ -177,10 +145,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Outlook channel](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | A feature of Teams messaging extension app that lets the users interact with it from Microsoft Outlook. |
 | [One-on-one chat](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | A type of chat between a Teams personal bot app and a single user. <br>**See also**: [Group chat](#g); [Chat bot](#c) |
 |
-</details>
-<br>
-<details>
-<summary>P</summary>
+
 
 ## P
 
@@ -192,10 +157,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. <br>**See also**: [Deploy](#d) |
 |
-</details>
-<br>
-<details>
-<summary>R</summary>
+
 
 ## R
 
@@ -205,10 +167,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Role-based views](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md) | A feature of tabs where the tab experience may be different for users depending on their permission level. |
 | [RSC permission](../graph-api/rsc/resource-specific-consent.md) | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
 |
-</details>
-<br>
-<details>
-<summary>S</summary>
+
 
 ## S
 
@@ -225,10 +184,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: Collaboration aap |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Card payload. <br>**See also**: [Dynamic search](#d) |
 |
-</details>
-<br>
-<details>
-<summary>T</summary>
+
 
 ## T
 
@@ -245,10 +201,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
 |
-</details>
-<br>
-<details>
-<summary>U</summary>
+
 
 ## U
 
@@ -258,10 +211,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [UI templates](../concepts/design/design-teams-app-ui-templates.md) | For Teams app development, you can use Teams UI templates to design your apps quickly. |
 | [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) | A way to implement Adaptive Cards across platforms and applications. It uses a bot as a common backend for handling actions. |
 | 
-</details>
-<br>
-<details>
-<summary>V</summary>
+
 
 ## V
 
@@ -269,10 +219,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | [Virtual Assistant](../samples/virtual-assistant.md) | A Microsoft open-source template that enables you to create a robust conversational solution. |
 |
-</details>
-<br>
-<details>
-<summary>W</summary>
+
 
 ## W
 
@@ -282,10 +229,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It is a feature of a Teams app used to integrate it with external apps. <br>**See also**: Incoming webhook; outgoing webhook |
 | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using SharePoint. <br>**See also**: [SPFx](#s) |
 | [Workbench](../sbs-gs-spfx.yml) | Overall Visual Studio Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
-</details>
-<br>
-<details>
-<summary>Y</summary>
+
     
 ## Y
 
@@ -293,9 +237,3 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | [YoTeams](../get-started/get-started-overview.md) | A development toolkit for building Microsoft Teams applications based on TypeScript and node.js. |
 |
-</details>
-
-
-<!--Cross-references>
-
-[A]: A
