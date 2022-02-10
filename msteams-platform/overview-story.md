@@ -9,7 +9,7 @@ ms.date: 11/02/2021
 ---
 # It starts with an idea
 
-Learn how apps can help you help your users in Teams environment.
+Learn how apps let you help your users in the Teams environment.
 
 Take a look at this scenario:
 
@@ -70,4 +70,4 @@ Let’s dig deeper into this story and find out.
    :::column-end:::
 :::row-end:::
 
-Let's look at Teams features that help you build a solution.
+Next, you can explore some of Teams features that help you build a solution.

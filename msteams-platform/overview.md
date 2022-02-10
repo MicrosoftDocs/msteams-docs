@@ -35,7 +35,7 @@ You can build apps with Teams Developer platform by extending Teams capabilities
 
 ## Build apps with Microsoft Teams platform
 
-Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend Teams capabilities to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
+Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
 
 The benefits of building apps span from meeting organizational goals to increasing internal productivity.
 

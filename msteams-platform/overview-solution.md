@@ -13,7 +13,7 @@ The Microsoft Teams Platform is a powerful, flexible platform for creating apps 
 
 ## The user story
 
-Now that you've had a view of Teams offerings, you can map them to user needs. Let’s revisit the user scenario.
+You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
 
 The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app should:
 
@@ -30,7 +30,7 @@ Collate and map requirements to Teams features:
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 |
 
-**Teams app solution**: A Teams *personal chat bot* app, which checks and *sends forecast notification* in an *Adaptive Card* to *registered users* before their travel date, checks all requirements.
+**Teams app solution**: A Teams *personal chat bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-2.png" alt-text="Image showing user story" border="true":::
 
@@ -39,17 +39,17 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 1. Create a personal chat bot app.
 1. Integrate with external API from a forecast website to connect and request forecast for specific date and location.
 1. Integrate with Microsoft Graph for registered users.
-1. Check and send forecast details on the basis of users travel date and travel location on a particular day.
+1. Check and send forecast details based on user's travel date and travel location.
 
 ## Choose what suits you
 
 You can build a Teams app as per your app's requirements. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
 
-A Teams app offers you the flexibility of choosing your build environment. This includes tools, framework, and languages to approach your app development.
+A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/app-mindmap.png" alt-text="Business need app" border="true":::
 
-Build your Teams app in the environment that works for your particular requirements. You can even choose a combination of tools and .
+Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
 For example: You can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
@@ -57,7 +57,7 @@ For example: You can use Teams Toolkit to build an app with JavaScript and host 
 
 A Teams app brings your users the advantages of a collaborative workspace.
 
-As a platform for building apps, Teams offers the full range of apps and toolkits. From planning your app to distributing it, the Teams platform supports you at every stage.
+As a platform for building apps, Teams offers the full range of apps and toolkits. Teams platform supports you at every stage from planning your app to distributing it.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
 
