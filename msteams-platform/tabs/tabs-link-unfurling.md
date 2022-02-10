@@ -87,15 +87,11 @@ Following is the process to invoke Stage View:
 
 To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `microsoftTeams.executeDeeplink(url)` API. The deep link can also be passed through an `OpenURL` action in the card.
 
-The following image displays a Stage View invoked through a deep link:
-
-<img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
-
 ### Syntax
 
 Following is the deeplink syntax: 
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl\":\""[contentUrl]"\",\"websiteUrl\":\""[websiteUrl]"\",\"name\":\"Contoso\"}
+https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
 ### Examples
 
@@ -105,13 +101,28 @@ Following are the deep link examples to invoke Stage View:
 
 **Example 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“websiteUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“name”:”Contoso”}
+Not encoded
+ 
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl:"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+
+Encoded
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22websiteUrl%0A%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 **Example 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“websiteUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“name”:”Contoso”}
+Not encoded
+
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx","websiteUrl":"https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx","name":"Contoso"}
+
+Encoded
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 > [!NOTE]
+> All deeplinks must be encoded before pasting the URL. We don't support unencoded URLs.
 > * The `name` is optional in deep link. If not included, the app name replaces it.
 > * The deep link can also be passed through an `OpenURL` action.
 > * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
