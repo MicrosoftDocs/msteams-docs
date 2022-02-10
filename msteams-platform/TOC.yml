@@ -507,8 +507,34 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-    - name: Install Moodle LMS
-      href: resources/moodleInstructions.md
+    - name: Moodle LTI Apps
+      href: resources/moodle-lti-apps.md
+    - name: Microsoft 365 Plugins
+      items:
+      - name: Plugins introduction
+        href: resources/m365-plugins/m365-plugins-overview.md
+      - name: Open ID connect
+        href: resources/m365-plugins/openid-connect.md
+      - name: Microsoft 365 Integration
+        href: resources/m365-plugins/microsoft-365-integration.md
+      - name: Microsoft 365 Repository
+        href: resources/m365-plugins/microsoft-365-repository.md
+      - name: Teams Meetings
+        href: resources/m365-plugins/teams-meetings.md
+      - name: Microsoft 365 Teams theme
+        href: resources/m365-plugins/microsoft-365-theme.md
+      - name: OneNote
+        href: resources/m365-plugins/onenote-integration.md  
+      - name: Microsoft Block
+        href: resources/m365-plugins/microsoft-block.md
+      - name: oEmbed Filter
+        href: resources/m365-plugins/oEmbed-filter.md
+    - name: Partner apps for Moodle
+      href: resources/partner-apps-for-moodle.md
+    - name: FAQ's
+      href: resources/faqs.md
+    - name: Getting Help
+      href: resources/getting-help.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
   - name: Add a Teams tab to SharePoint
