@@ -45,7 +45,7 @@ A quick way to start a process or workflow in an external system.
 
 | **If you want to...** | **Try ...** |
 | --- | --- |
-| Trigger from messages, allowing your users to quickly send the contents of a message to your web services. | Messaging extensions action commands |
+| Trigger messages, allowing your users to quickly send the contents of a message to your web services. | Messaging extensions action commands |
 | Open messages from a tab, a bot, or a messaging extension to collect information before initiating a workflow. | Task modules |
 | Interact with your users through text and rich cards. | Conversational bots |
 | A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
