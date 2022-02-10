@@ -4,6 +4,7 @@ description: Learn to build Hello World apps with JavaScript with tab, bot, and 
 ms.topic: article 
 ms.date: 01/11/2022
 zone_pivot_groups: teams-app-types
+zone_pivot_group_filename: /microsoftteams/platform/zone-pivot-groups.json
 ---
 
 # Create and build your first Teams apps
