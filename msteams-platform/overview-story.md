@@ -15,7 +15,7 @@ Take a look at this scenario:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-1.png" alt-text="Image showing user story" border="true":::
 
-It's a typical user story. Relatable? But how does Teams fit in to this scenario?
+As a developer, you want a way to share important and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
 
 Let’s dig deeper into this story and find out.
 
@@ -28,8 +28,10 @@ Let’s dig deeper into this story and find out.
    :::column span="":::
       #### Understand your user
 
-        Knowing about your user is helps you to identify how they use Teams. Ask relevant questions, such as:
-        - Do the users primarily use mobile clients?
+        Know about your user to identify how they use Teams. 
+        
+        Relevant questions:
+        - Do the users mostly use mobile clients?
         - How technically sophisticated are your primary users?
    :::column-end:::
 :::row-end:::
@@ -37,8 +39,10 @@ Let’s dig deeper into this story and find out.
    :::column span="":::
       #### Understand the problem
 
-        Identify the user problem that you want to resolve with your app. Ask relevant questions, such as:
-        - What are the pros and cons of the current state system used by your users?
+        Identify the user problem that you want to resolve with your app. 
+
+        Relevant questions:
+        - What are the pros and cons of the current system of your users?
         - What issues do you want to address?
    :::column-end:::
    :::column span="":::
@@ -52,7 +56,9 @@ Let’s dig deeper into this story and find out.
    :::column span="":::
       #### List App Requirements and Benefits
 
-        Determine your app's features and how you expect it to answer the user's problem. Ask relevant questions, such as:
+        Determine your app's features and how you expect it to answer the user's problem. 
+
+        Relevant questions:
         - Do the users need current updates regularly without having to check?
         - Do you need to authenticate users?
    :::column-end:::
@@ -61,7 +67,9 @@ Let’s dig deeper into this story and find out.
    :::column span="":::
       #### User-centric solution
 
-        Craft the right app experience for your users with an app that fits their requirement. Ask relevant questions, such as:
+        Craft the right app experience for your users with an app that fits their requirement. 
+
+        Relevant questions:
         - Should only registered users receive regular help?
         - What features would be most convenient for user experience?
    :::column-end:::
@@ -70,4 +78,4 @@ Let’s dig deeper into this story and find out.
    :::column-end:::
 :::row-end:::
 
-Next, you can explore some of Teams features that help you build a solution.
+Next, explore some of Teams features that help you build an app solution.
