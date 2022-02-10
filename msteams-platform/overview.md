@@ -28,7 +28,7 @@ Let's look at some areas that where an app helps to meet a business need.
 | **Development Options** | **Business Opportunities** |
 | - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Store |
 | **Customer benefits** | **Internal workflows** |
-| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, <br> &nbsp;&nbsp; such as Q&A and Help-desk |
+| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, <br> &nbsp;&nbsp; such as Q and A and Help-desk |
 |
 
 You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
@@ -41,7 +41,7 @@ The benefits of building apps span from meeting organizational goals to increasi
 
 Here's why Teams is best-suited for your app needs:
 
-- **Communication & collaboration**
+- **Communication and collaboration**
 
     Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
 

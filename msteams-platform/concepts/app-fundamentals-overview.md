@@ -37,7 +37,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 - **Understand your use case and Teams App Features**: Understand your user's requirement and you can identify the right features.
 
-- **Map your use cases**: Map common use cases to Teams features based on sharing, collaborating, workflows, relevant social platforms, and more.
+- **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
 - **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
 
@@ -47,11 +47,11 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 - **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
-- **Use Teams as a platform**: Teams, as a platform, helps you build a single- or multi-capability app. Your Teams app is backed by the integrated products and services that strengthen the app experience.
+- **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is backed by the integrated products and services that strengthen the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
-    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
     Together, these capabilities bring your app solution to life.
 

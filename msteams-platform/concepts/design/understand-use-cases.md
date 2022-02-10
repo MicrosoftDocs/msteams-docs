@@ -17,12 +17,12 @@ The app user and their app's requirements are the basic guidelines that determin
 
 If you're going to meet user requirements with your app, you first need to understand them.
 
-- **Understand your user**: It helps you to identify how users utilize Teams app.
+- **Understand your user**:
   - Recognize user issues and identify the solutions to some common problems the users face.
   - Build your Teams app by finding the right combination of Teams features to meet your user's needs.
   - Understand use cases to know how an end-user interacts with your app.
 
-- **Understand the problem**: Every app has a core problem to solve. Before you start building an app, work out the problem and the solution.
+- **Understand the problem**: Work out the core problem your app must solve.
 
 - **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 
@@ -44,7 +44,7 @@ Your Teams apps have one or all of the following core capabilities:
 
 #### Personal apps
 
-A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view relevant activities.
 
    :::column-end:::
 
@@ -96,7 +96,7 @@ Conversations often result in the need to do something (generate an order, revie
 
 #### Messaging extensions
 
-With [messaging extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+With [messaging extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
    :::column-end:::
 
@@ -170,7 +170,7 @@ Your app can have one of the following scopes:
 - **Personal app experience**: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
 - **Shared app experience**: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
 
-App capabilities can exist across different scopes. For example:
+An app can exist across different scopes. For example:
 
 - Your app can display data in a central shared location, that is, a tab.
 - It can also present that same information through a personal conversational interface, that is, a bot.
