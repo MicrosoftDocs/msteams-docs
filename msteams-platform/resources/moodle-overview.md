@@ -4,54 +4,54 @@ description: Overview of Moodle LMS integration with Teams
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
-author: KirtiPereira
 keywords: moodle LMS mConnect deep links
 ---
 
-# Moodle learning management system
+# Moodle Learning Management System
 
-Moodle is the world’s largest open source learning management system. 
+## Overview
 
-This app helps educators create and organize their courses through valuable features, that include:
-* Robust quizzing tool 
-* Graded discussions
-* Various assignment types for students to engage with content  
+[Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system. With over 30 years of experience in remote learning, Moodle has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams results in modern superpowers by enhancing learning experiences.
  
-Moodle integrates with Microsoft Teams. Teams is the hub for real-time collaboration, teamwork, and productivity. With seamless integration with Office 365, hundreds of apps, chat, and live meeting capabilities of up to 300 participants. Teams gives faculty and students the ability to work together more efficiently no matter where they are. 
- 
-Microsoft 365 Moodle plugins complement Moodle by providing a comprehensive experience for faculty and students. With the Microsoft 365 Moodle plugins, site administrators can sync users with:
+The Moodle LMS partners along with Microsoft Teams provide productivity services as follows:
 
-* Office 365 and Moodle
-* Automate user matching
-* Sync courses to Microsoft Teams and file repositories
-* Connect OneNote assignments
-* Embed Office documents
- 
-Microsoft Teams apps such as mConnect by Skooler and the Microsoft 365 Moodle Plugins, integrates Moodle into Teams.
+* Audio or video calls
+* Chat with student course and activity management
+* Badges and rewards
+* Analytical insights
 
-Faculty and students can take advantage of Moodle's unique features in real-time communication and collaboration.
+ The following image shows different sections of Moodle LMS: 
 
-## mConnect app by Skooler
+:::image type="content" source="../assets/images/MoodleInstructions/flow chart.png" alt-text="Moodle lms flow chart":::
 
-The mConnect app by Skooler allows you to deliver virtual learnings through Teams with ease.
+* **Moodle LTI apps**
+Currently, the different type of Learning Tools Interoperability (LTI) available for the Moodle LMS are as follows:
+  * OneDrive LTI app provides modern enhanced experience with services, such as accessing and sharing personal and class files within LMS.
+  * Class Teams LTI app helps educators with creating a class with user roles within LMS course, and students with accessing and engaging within LMS course.
+  * Teams meetings LTI app helps educators and students to engage across desktop and web platforms and integrate class meetings into their LMS course.
 
-### Why mConnect and Teams
+* **Microsoft 365 Plugins**
+The Microsoft 365 Plugins are designed by Microsoft to support integration between Moodle sites and Microsoft Teams. There are seven types of plugins, which can be used independently, or in collaboration, to achieve various usage scenarios.
 
-Watch the following video to understand how mConnect and Teams work better together:
+* **Partner apps for Moodle**
+Partner apps for Moodle are examples of complete apps for Microsoft Teams that are currently available in the Microsoft Market. You can locate these apps within the Microsoft Teams App Store and enjoy their value immediately. Microsoft works closely with partners to certify app quality and to validate all Software as a Service (SaaS) offerings.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
+## Scenarios
 
-From inside mConnect, course participants access the full Moodle course experience inside the real-time collaboration and communication provided by Microsoft Teams.
+The following scenarios provide examples of accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
 
-### Get started with mConnect and Teams
+* **Facilitate hybrid remote meetings** : With Teams meetings and extensibility options, instructors can present in-person and remotely to students seamlessly. All students must have access to shared views, apps, and polls. For enhanced follow-up task, you must include the option for multi-language transcription and audio or video course recordings. Teams and Moodle are game changers, working together to share roosters, activities, and tasks.
 
-Watch the following video to understand how to get started with mConnect and Teams:
+* **Personalize meeting panels and apps** : You can use Teams Graph API endpoints to create unique collaborative learning experiences. For special initiatives in school such as, hackathon, the users can interview all freshman students by categorizing submissions using custom polls and share quizzes directly in Teams while pushing updates to the Moodle portal asynchronously.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
+* **Automations and workflow** : To set up automation for institution when a new student joins, the user can add Moodle course, send an Adaptive Card to the student with relevant links and suggest reading key course materials. With Teams along with custom connector for Moodle, the user can create a Moodle calendar event, every time a course meeting is scheduled.
 
-For more information, see [mConnect by Skooler](https://skooler.com/mconnect/how-to/).
+* **Citizen developer apps** : Introduce new custom apps as differentiators for your school. Simple apps that help to optimize learning can be created in days, and often in hours. Envision for Teams with special event schedules, shuttle bookings, library books, mentors and various other services. The user can create to showcase value or to provide easy-to-use transactional activities for students and teachers.
 
-## Microsoft 365 Moodle Plugins
+These are few scenarios of combining Microsoft Teams with Moodle implementations. Please provide feedback, based on the section on the Moodle LMS integrations and share ideas for additional integrations. We look forward to hearing feedback as we continue to empower institutions worldwide to optimize learning and planning in education. For more information, see [Microsoft education](https://www.microsoft.com/education). 
 
-Moodle plugins for Teams makes it easy to schedule, deliver, and collaborate on course content. Install the plugins that seamlessly bring the Moodle learning management system into Teams. For more information, see [Install Moodle LMS](moodleInstructions.md).
+## See also
 
+* [Moodle LTI Apps](moodle-lti-apps.md)
+* [Microsoft 365 Plugins](m365-plugins/m365-plugins-overview.md)
+* [Partner apps for Moodle](partner-apps-for-moodle.md)
