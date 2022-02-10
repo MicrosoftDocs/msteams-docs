@@ -99,7 +99,7 @@ When a user enters a URL, it is unfurled into an Adaptive card.
 
 Following are the deep link examples to invoke Stage View:
 
-**Example 1 - URL with threadId**
+**Example 1: URL with threadId**
 
 Unencoded URL:
  
@@ -110,7 +110,7 @@ Encoded URL:
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
 
 
-**Example 2 - URL with no threadId**
+**Example 2: URL with no threadId**
 
 Unencoded URL:
 
