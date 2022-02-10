@@ -38,7 +38,7 @@ You can configure environments and global variables to help transition your app 
 Use the variable names instead of hard-coded values to set your app configurations.
 
 1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment. 
+1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
 ## Identify app owners
 
@@ -65,30 +65,30 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-On the **Overview** page, you can view the total number of active users for your app, which is published to the Teams store or an org's app catalog through **Developer Portal for Teams** or App studio.
+On the **Overview** page, you can see the total number of active users for your app. These metrics are apps published to the Teams store or an org's app catalog through **Developer Portal for Teams** (App Studio) and scoped to each individual app ID.
 
 > [!NOTE]
-> Analytics for each app is scoped to the app ID.
+> Usage analytics will not be available for apps previously published outside of **Developer Portal for Teams** (App Studio), imported into **Developer Portal for Teams**.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *Monthly R30* | The default usage metric. It shows the count of unique active users that used your app within that rolling 30 day window in UTC. |
 | *Daily* | It shows you the count of unique active users that used your app in a given day in UTC. |
 
-The app usage for a given day is reflected within 24 to 48 hours and usage data for new app's can take up to 3 to 5 days.
+The app usage for a given day is reflected within 24 to 48 hours, and usage data for new apps can take up to 3 to 5 days to show up in the charts.
 
-You can view your app's usage and other additional insights from the **Analytics** page, to view:
+You can view your app's usage and other additional insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
-1. Select **Analytics** under the overview or select **View Details** under the active users card.
+1. Select **Analytics** under the overview, or select **View Details** under the Active Users (Preview).
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
 
 As you explore individual metrics on this page, you can use the **Filter** button to view and analyze your app's usage from the following filter options:
 
-1. Aggregation Type
+1. Aggregation Type : This filter allows you to group the following metrics by a count of distinct users or a count of distinct tenants or customers.
 1. Platform
 1. Operating system
 1. Area
@@ -104,7 +104,7 @@ Once you have selected your desired filters, you can explore the following indiv
 
 ### Usage by time period
 
-The **Usage by time period** chart shows you the number of active users or tenants that have opened or used this app across different time periods.
+The **Usage by time period** chart shows you the number of active users or tenants that have opened and/or used your app across different time periods.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
 
@@ -117,26 +117,26 @@ The **Usage by time period** chart shows you the number of active users or tenan
 
 ### Usage by platform and OS
 
-The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user or tenant can use an app on multiple endpoints.
+The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user or tenant can use an app on multiple endpoints. Each data point represents a given RL30 (Rolling 30 day) period.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
 
 ### Usage by retention state
 
-The **Usage by retention state** chart lets you track four key retention or churn metrics of your app over time.
+The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
 :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Retention":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| New Users or Tenants | Active users or tenants who are new (based on a historical start date of June 1, 2020). |
-| Returning Users or Tenants | Active users or tenants who used your app during a given R30 time period and the previous R30 time period. |
-| Resurrected Users or Tenants | Active users or tenants who used your app one or more times since June 1, 2020 but not in the immediately previous R30 time period. |
-| Lapsed Users or Tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the previous R30 time period. |
+| New Users or Tenants | Active users or tenants who are new and have not used your app before. |
+| Returning Users or Tenants | Active users or tenants that have used your app during a given RL30 time period and the immediately preceding RL30 time period. |
+| Resurrected Users or Tenants | Active users or tenants that have used your app one or more times before but not in the immediately preceding RL30 time period. |
+| Lapsed Users or Tenants | Active users or tenants who were not seen during a given RL30 time period but were seen during the immediately preceding RL30 time period. |
 
 ### Usage intensity
 
-The **Usage intensity** chart shows you key usage intensity metrics of your app.
+The **Usage intensity** chart shows you key usage intensity metrics for your app.
 
  :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="Intensity":::
 
@@ -144,11 +144,13 @@ The **Usage intensity** chart shows you key usage intensity metrics of your app.
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | Median Days Used per Month | The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period. |
 | % of 5+ Days Usage | The % of Active Users that have opened or used the app more than 5 days in the last RL30 (Rolling 30 day) period. |
-| DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. It provides information on stickiness of user engagement with your app. |
+| DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. |
 
 ### App dashboard
 
-The **My App Dashboard** shows you the latest value for each of these metrics and the Month over Month (MoM) change. You can select each of these rows to see trends over time.
+The **My App Dashboard** table shows you the latest value RL30 value for each of the metrics under the previous four category, and the Month over Month change. Use the time picker on the top left to select the desired date and you will see daily RL30 data available for the last 75 days, and end of month RL30 data available for up to 12 months.
+
+You can select each of these rows to see trends over time.
 
  :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="app":::
 
