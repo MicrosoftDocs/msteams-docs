@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Use cases and Teams features
 
-In the collaborative social framework of Teams, there is a wide variety of user needs that you can solve with a Teams app. For instance, an app that bridges gap in achieving effective collaboration is a great fit.
+In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For instance, an app that bridges gap in achieving effective collaboration is a great fit.
 
 The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
@@ -147,7 +147,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Microsoft Graph for Teams
 
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
    :::column-end:::
 

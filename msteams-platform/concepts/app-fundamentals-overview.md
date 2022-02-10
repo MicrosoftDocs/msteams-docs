@@ -14,6 +14,12 @@ Building an awesome Teams app is all about finding the right combination of feat
 
 At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
+In this section, learn how to:
+
+ - Identify and map use cases to Teams features.
+ - Use planning checklist.
+ - Plan beyond app deployment.
+
 ## Plan with Teams
 
 Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
