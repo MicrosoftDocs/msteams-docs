@@ -76,7 +76,7 @@ For complete instructions, see [build the landing page for your SaaS offer](/azu
 
 Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [end-user purchasing experience](#end-user-purchasing-experience).
 
-* Users must be able to log in to your landing page with the same Microsoft Azure Active Directory (Azure AD) credentials they used to buy the subscription. For more information, see [Microsoft Azure Active Directory (Azure AD) and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
+* Users must be able to log in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
 * Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions (for example, you may want to allow only subscription admins to search for users):
   * Search for users in their org using email or another form of identity.
   * See users they can assign licenses to in a list.

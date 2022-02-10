@@ -114,9 +114,9 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
+## Update Azure AD app registration for SSO
 
-Azure Active Directory Single-sign on (SSO) for personal tabs works the same way in Office and Outlook [as it does in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), however you will need to add several client application identifiers to the Microsoft Azure Active Directory (Azure AD) app registration of your tab app in your tenant's *App registrations* portal.
+Azure Active Directory Single-sign on (SSO) for personal tabs works the same way in Office and Outlook [as it does in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), however you will need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
 
 1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open the **App registrations** blade.
