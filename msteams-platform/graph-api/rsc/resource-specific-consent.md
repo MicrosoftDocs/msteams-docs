@@ -140,7 +140,7 @@ For more information, see [get access on behalf of a user](/graph/auth-v2-user?v
 The RSC permissions are declared in your app manifest JSON file. 
 
 > [!IMPORTANT]
-> Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
+> Non-RSC permissions are stored in the Microsoft Azure portal. Do not add them to the app manifest.
 
 ### Manifest changes for resource-specific consent
 
