@@ -49,7 +49,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meetings-side-panel/clonerepository1.png)
+       ![Clone repository](~/assets/images/sbs-graphactivity-feedbroadcast/clonerepository1.png)
 
     1. Select **Clone**. 
 
@@ -66,24 +66,29 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/meetings-side-panel/appregister.png)
+       ![App registration](~/assets/images/sbs-graphactivity-feedbroadcast/newregisteration.png)
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/meetings-side-panel/exposeanapi.png)
+       ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/meetings-side-panel/setlink.png)
+       ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/overview.png)
+
+       ![App ID URI](~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png)
+
+       ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png)
+
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://ae57****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/meetings-side-panel/appIDuri.png)
+        ![App ID URI](~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -91,7 +96,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+       ![Select scope](~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -111,35 +116,35 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/meetings-side-panel/addascope.png)
+        ![Add a scope](~/assets/images/sbs-graphactivity-feedbroadcast/addascopeuser.png)
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/meetings-side-panel/scopes.png) 
+        ![Scopes](~/assets/images/sbs-graphactivity-feedbroadcast/scopes.png) 
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/meetings-side-panel/selectclientapp.png) 
+        ![Select client application](~/assets/images/sbs-graphactivity-feedbroadcast/selectclientapp.png) 
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        ![Add client application 1](~/assets/images/meetings-side-panel/addclientapplication1.png) 
+        ![Add client application 1](~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png) 
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/addclientapplication2.png) 
+        ![Add client application 2](~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png) 
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/authorizedscope.png) 
+        ![Add client application 2](~/assets/images/sbs-graphactivity-feedbroadcast/authorizedscope.png) 
 
        The following image displays the client IDs:
 
-        ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
+        ![Client applications](~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png) 
   
     1. In the left panel, select **API Permissions**. 
 
@@ -148,7 +153,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+        ![Add permission](~/assets/images/sbs-graphactivity-feedbroadcast/addpermission.png)
 
     1. Select **Microsoft Graph**.
 
@@ -156,7 +161,7 @@ items:
 
         By default, **User.Read** is selected.
 
-         ![User](~/assets/images/meetings-side-panel/userpermission.png)
+         ![User](~/assets/images/sbs-graphactivity-feedbroadcast/userpermission.png)
 
     1. Add the following permissions:</br>
          * **email**
@@ -166,7 +171,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions.png)
+         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/other-permissions.png)
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -176,7 +181,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/meetings-side-panel/webauth.png)
+            ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://ae57****.ngrok.io/auth-end`. </br>
@@ -187,7 +192,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/meetings-side-panel/authend.png)
+            ![Auth-end](~/assets/images/sbs-graphactivity-feedbroadcast/authend.png)
 
 
 - title: Set up app settings and manifest files
@@ -195,7 +200,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/meetings-side-panel/appsettingslocation.png)
+        ![App settings location](~/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png)
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
@@ -203,18 +208,18 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        ![App settings](~/assets/images/meetings-side-panel/appsettings.png)
+        ![App settings](~/assets/images/sbs-graphactivity-feedbroadcast/appsettings.png)
 
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/meetings-side-panel/manifestlocation.png)
+        ![Manifest file location](~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocation.png)
     
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/meetings-side-panel/manifest-2.png)
+        ![Manifest image2](~/assets/images/sbs-graphactivity-feedbroadcast/manifest-2.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -230,7 +235,7 @@ items:
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/meetings-side-panel/Tokenfileready.png)
+          ![Solution File](~/assets/images/sbs-graphactivity-feedbroadcast/Tokenfileready.png)
 
        1. Press **F5** to run the project.
     
@@ -240,7 +245,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/meetings-side-panel/appisready.png) 
+          ![App ready](~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png) 
 
         
     # [Command line](#tab/cli)
@@ -251,7 +256,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
+    ![Dotnet](~/assets/images/sbs-graphactivity-feedbroadcast/dotnetruncmd.png)
       
 - title: Add Meetings SidePanel app to Teams
   durationInMinutes: 1
@@ -265,13 +270,13 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/meetings-side-panel/zipfile.png) 
+       ![Zip file](~/assets/images/sbs-graphactivity-feedbroadcast/zipfile.png) 
     
     1. Create a meeting with a few presenters and attendees.
    
     1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
-       ![Add an app](~/assets/images/meetings-side-panel/addanapp.png) 
+       ![Add an app](~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png) 
    
     1. In the pop-up that opens, select **Manage apps**.
 
@@ -279,19 +284,19 @@ items:
    
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/meetings-side-panel/uploadcustomapp.png)
+       ![Upload custom app](~/assets/images/sbs-graphactivity-feedbroadcast/uploadcustomapp.png)
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/meetings-side-panel/selectzip.png)
+       ![Select zip file](~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png)
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/meetings-side-panel/addtheapp.png)
+       ![Add the app](~/assets/images/sbs-graphactivity-feedbroadcast/addtheapp.png)
 
        The **Manage apps** section displays the list of applications.
 
-       ![App in Manage apps](~/assets/images/meetings-side-panel/manageappsection.png)
+       ![App in Manage apps](~/assets/images/sbs-graphactivity-feedbroadcast/manageappsection.png)
    
     1. Go to Teams meeting.
     
@@ -299,13 +304,13 @@ items:
     
        In the app selection page, the app displays as **Side Panel**.
   
-       ![App icon in Teams](~/assets/images/meetings-side-panel/appicon.png)
+       ![App icon in Teams](~/assets/images/sbs-graphactivity-feedbroadcast/appicon.png)
 
     1. Select the **Side Panel** app.
     
     1. Select **Save**.
 
-       ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
+       ![Welcome App](~/assets/images/sbs-graphactivity-feedbroadcast/welcomeapp.png)
    
        The app is visible in the meeting SidePanel.         
 
@@ -316,28 +321,28 @@ items:
 
     1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+       ![Token in Meet](~/assets/images/sbs-graphactivity-feedbroadcast/sidepanelinmeet.png)
 
     1. Enter a new agenda item to the list and select **Add**.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+       ![Token in Meet](~/assets/images/sbs-graphactivity-feedbroadcast/newagenda.png)
 
        The new agenda is added in the list.
 
     1. Select **Publish Agenda**.
 
-       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+       ![Your Token](~/assets/images/sbs-graphactivity-feedbroadcast/youragenda.png)
 
        The new agenda list is displayed in the meeting chat.
 
-       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+       ![Your Token](~/assets/images/sbs-graphactivity-feedbroadcast/agendainchat.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
+       ![Token in Meet](~/assets/images/sbs-graphactivity-feedbroadcast/sidepanelondesktopmobile.png)
 
 
 - content: |
