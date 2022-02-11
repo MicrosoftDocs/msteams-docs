@@ -59,13 +59,15 @@ Here's why Teams is best-suited for your app needs:
 
     :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams app for internal use" border="false":::
 
+- **Teams Store advantage**
+
+    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great marketing platform for large audiences.
+
 - **Surface existing app**
 
     If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
 
-- **Teams Store advantage**
-
-    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great marketing platform for large audiences.
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint site ported as a Teams tab" border="false":::
 
 - **Personal apps with tabs and bots**
 
