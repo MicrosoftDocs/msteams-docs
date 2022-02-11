@@ -34,6 +34,7 @@ Microsoft Teams platform features that are available to all app developers.
 <details>
 <summary><b>Older updates</b></summary>
 <br>
+Explore older GA updates from the previous GA releases listed here.
 <br>
 <details>
 
