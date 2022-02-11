@@ -513,7 +513,7 @@
       items:
       - name: Plugins introduction
         href: resources/m365-plugins/m365-plugins-overview.md
-      - name: Microsoft 365 plugins overview
+      - name: Plugins overview
         href: resources/m365-plugins/openid-connect.md
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
