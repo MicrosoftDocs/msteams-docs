@@ -43,9 +43,9 @@ Allows administrators to validate the following:
 
 Use Microsoft 365 repository plugin to store course files in OneDrive. The teachers can add files from the course files area of OneDrive or from their own personal space.
 
-## Teams Meetings
+## Teams meetings
 
-Create using the Atto editor in calendar, assignments, forum posts, or wherever Atto editor is available.
+Create meetings using the Atto editor in calendar, assignments, forum posts, or wherever Atto editor is available.
 
 ## Microsoft 365 Teams theme
 
@@ -65,4 +65,4 @@ Simplify the inclusion of external HTML content within Moodle.
 
 ## See also
 
-* [OpenID Connect](openid-connect.md)
+* [Plugin overview](openid-connect.md)
