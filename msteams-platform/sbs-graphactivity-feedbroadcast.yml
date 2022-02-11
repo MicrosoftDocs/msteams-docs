@@ -171,8 +171,15 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/other-permissions.png)
+         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png)
 
+         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png)
+
+         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)
+
+         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png)
+
+         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png)  
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
@@ -181,7 +188,9 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/webauth.png)
+            ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png)
+
+            ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/configureweb.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://ae57****.ngrok.io/auth-end`. </br>
@@ -192,7 +201,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/sbs-graphactivity-feedbroadcast/authend.png)
+            ![Auth-end](~/assets/images/sbs-graphactivity-feedbroadcast/redirect.png)
 
 
 - title: Set up app settings and manifest files
@@ -200,7 +209,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png)
+        ![App settings location](~/assets/images/sbs-graphactivity-feedbroadcast/appsettingjson.png)
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
@@ -212,7 +221,7 @@ items:
 
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocation.png)
+        ![Manifest file location](~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png)
     
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
@@ -231,7 +240,7 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+          ![Open file](~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png)
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
