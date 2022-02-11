@@ -85,7 +85,7 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 > [!NOTE]
 > Submission or feedback events trigger OneNote creation with a section for each course the student has enrolled in.
 
-# Microsoft Block
+## Microsoft Block
 
 Microsoft Block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to various resources. The admins can configure the Block to view the modified changes to appear on each course page. The Block also allows the users to perform the following activities:
 
@@ -97,7 +97,7 @@ Microsoft Block enhances user experience by providing an User Interface (UI) to 
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block":::
 
-# oEmbed Filter
+## oEmbed Filter
 
 The oEmbed filter enhances user experience by simplifying inclusion of the external HTML content within Moodle. The advantages of oEmbed filter are as follows: 
 
