@@ -125,7 +125,7 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.yml) to build a search-based messaging extension.
+Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.yml) to build a search based messaging extension.
 
 ## Next step
 
