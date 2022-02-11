@@ -26,7 +26,7 @@ With this preview, you can extend a Teams personal tab application to run in bot
 
 After sideloading to Teams, your personal tab appears as one of your installed apps in Outlook and Office.
 
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in outlook.com":::
+:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in Outlook, Office, and Teams":::
 
 ## Teams messaging extensions in Outlook
 
@@ -34,9 +34,7 @@ With this preview, you can extend your search-based Teams messaging extensions t
 
 After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
-:::image type="content" source="~/assets/images/git-issue-msging-extension.png" alt-text="messaging extension" lightbox="~/assets/images/git-issue-msging-extension.png" border="true":::
-
-## Next step
+## Next steps
 
 Set up your dev environment for extending Teams apps across Microsoft 365:
 
