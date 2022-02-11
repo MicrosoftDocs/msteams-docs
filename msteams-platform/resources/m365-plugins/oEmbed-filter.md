@@ -7,16 +7,7 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# oEmbed Filter
 
-The oEmbed filter enhances user experience by simplifying inclusion of the external HTML content within Moodle. The advantages of oEmbed filter are as follows: 
-
-* Reduces the time for an instructor to embed videos to an HTML page.
-* Enables embedding of multiple video content providers.
-* Doesn't require a technical understanding of how to copy and embed code from any of the supported services.
-* Doesn't require a YouTube API key for video embedding.
-
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::
 
 ## See also
 

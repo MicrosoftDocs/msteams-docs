@@ -507,28 +507,14 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-    - name: Moodle LTI Apps
+    - name: Moodle LTI apps
       href: resources/moodle-lti-apps.md
-    - name: Microsoft 365 Plugins
+    - name: Microsoft 365 plugins
       items:
       - name: Plugins introduction
         href: resources/m365-plugins/m365-plugins-overview.md
-      - name: Open ID connect
+      - name: Microsoft 365 plugins overview
         href: resources/m365-plugins/openid-connect.md
-      - name: Microsoft 365 Integration
-        href: resources/m365-plugins/microsoft-365-integration.md
-      - name: Microsoft 365 Repository
-        href: resources/m365-plugins/microsoft-365-repository.md
-      - name: Teams Meetings
-        href: resources/m365-plugins/teams-meetings.md
-      - name: Microsoft 365 Teams theme
-        href: resources/m365-plugins/microsoft-365-theme.md
-      - name: OneNote
-        href: resources/m365-plugins/onenote-integration.md  
-      - name: Microsoft Block
-        href: resources/m365-plugins/microsoft-block.md
-      - name: oEmbed Filter
-        href: resources/m365-plugins/oEmbed-filter.md
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
     - name: FAQ's

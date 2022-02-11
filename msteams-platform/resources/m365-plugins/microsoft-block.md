@@ -7,17 +7,6 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Microsoft Block
-
-Microsoft Block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to various resources. The admins can configure the Block to view the modified changes to appear on each course page. The Block also allows the users to perform the following activities:
-
-* Access the course SharePoint file location and OneNote Notebook.
-* View the course on OneNote notebook for submissions.
-* Configure the Outlook calendar sync.
-* Manage the connection to Office 365.
-* Customize personal Office 365 integration preferences.
-
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block":::
 
 ## See also
 
