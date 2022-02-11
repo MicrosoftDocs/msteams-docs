@@ -14,11 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    You can invoke task modules from Microsoft Teams bots using Adaptive Cards or Bot Framework cards. You can keep track of the bot state and allow the user to interrupt or cancel the sequence, which provides better user experience. 
+    You can invoke task modules from Microsoft Teams bots by using Adaptive Cards or Bot Framework cards.
 
     **Key features of task modules**
-    * Enhances user experience by avoiding multiple steps.
-    * Retrieves input from user and displays custom web page content.
+
+    * Enhance user experience by avoiding multiple steps.
+    * Help users to keep track of the bot state.
+    * Retrieve input from user and display custom web page content.
 
     This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module. You'll see the following output:
 
@@ -446,7 +448,7 @@ items:
 
        The app opens in a chat.
    
-    1. Enter any text. 
+    1. Enter any text and select Enter. 
 
        ![Chat](~/assets/images/Teams-task-module/chat-ready.png)
     
