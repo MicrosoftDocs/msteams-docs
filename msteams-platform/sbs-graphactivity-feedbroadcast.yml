@@ -281,71 +281,37 @@ items:
 
        ![Zip file](~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png) 
     
-    1. Create a meeting with a few presenters and attendees.
-   
-    1. After the meeting is created, go to the meeting details page and select **Add an app**.
+    1. Go to **Microsoft Teams**.
 
-       ![Add an app](~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png) 
-   
-    1. In the pop-up that opens, select **Manage apps**.
+    1. Select **Store**.
+    1. Select **Manage your apps**.
+    1. Select **Publish an app**.
 
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
-   
+       ![Dotnet](~/assets/images/Tab-ME-SSO/publish-an-app.png)
+
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/sbs-graphactivity-feedbroadcast/uploadcustomapp.png)
+       ![Upload custom app](~/assets/images/Tab-ME-SSO/upload-custom-app.png)
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png)
+       ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso-open.png)
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/sbs-graphactivity-feedbroadcast/addtheapp.png)
-
-       The **Manage apps** section displays the list of applications.
-
-       ![App in Manage apps](~/assets/images/sbs-graphactivity-feedbroadcast/manageappsection.png)
+       ![Add an app](~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png) 
    
-    1. Go to Teams meeting.
-    
-    1. Select **Add an app**. 
-    
-       In the app selection page, the app displays as **Side Panel**.
-  
-       ![App icon in Teams](~/assets/images/sbs-graphactivity-feedbroadcast/appicon.png)
+          The app is visible in the meeting SidePanel.      
 
-    1. Select the **Side Panel** app.
-    
-    1. Select **Save**.
+    1. App sends you the following message.
 
-       ![Welcome App](~/assets/images/sbs-graphactivity-feedbroadcast/welcomeapp.png)
-   
-       The app is visible in the meeting SidePanel.         
+        ![Add an app](~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png) 
 
-- title: Interact with the app in Teams
-  durationInMinutes: 1
-  content: |
-    Let's interact with the app in Teams!
+    1. Enter the message and select send message
 
-    1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
+       ![Bot sends you adaptive card](~/assets/images/meeting-content-bubble/push-agenda.png)
 
-       ![Token in Meet](~/assets/images/sbs-graphactivity-feedbroadcast/sidepanelinmeet.png)
-
-    1. Enter a new agenda item to the list and select **Add**.
-
-       ![Token in Meet](~/assets/images/sbs-graphactivity-feedbroadcast/newagenda.png)
-
-       The new agenda is added in the list.
-
-    1. Select **Publish Agenda**.
-
-       ![Your Token](~/assets/images/sbs-graphactivity-feedbroadcast/youragenda.png)
-
-       The new agenda list is displayed in the meeting chat.
-
-       ![Your Token](~/assets/images/sbs-graphactivity-feedbroadcast/agendainchat.png)
-
+     
 - title: Complete challenge
   durationInMinutes: 1
   content: |
