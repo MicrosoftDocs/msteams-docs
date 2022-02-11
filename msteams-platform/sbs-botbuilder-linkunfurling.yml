@@ -281,7 +281,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the AAD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
@@ -339,7 +339,7 @@ items:
 
          * Set `"MicrosoftAppType"` to `"MultiTenant"`.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppPassword"` to **Value** of **Client secret**.
          * Set `"MicrosoftAppTenantId"` as blank.
 
         ![App settings](~/assets/images/Teams-link-unfurling/appsettings.png)
