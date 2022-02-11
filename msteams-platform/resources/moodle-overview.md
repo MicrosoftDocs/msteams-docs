@@ -9,8 +9,6 @@ keywords: moodle LMS mConnect deep links
 
 # Moodle Learning Management System
 
-## Overview
-
 [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers.
  
 Moodle LMS partners with Microsoft Teams to provide productivity services as follows:
@@ -24,21 +22,19 @@ Moodle LMS partners with Microsoft Teams to provide productivity services as fol
 
 :::image type="content" source="../assets/images/MoodleInstructions/flow chart.png" alt-text="Moodle lms flow chart":::
 
-* **Moodle LTI apps**
-Currently, the different types of Learning Tools Interoperability (LTI) apps available for the Moodle LMS are as follows:
+* **Moodle LTI apps**: Currently, the different types of Learning Tools Interoperability (LTI) apps available for the Moodle LMS are as follows:
   * OneDrive LTI app provides modern enhanced experience with services, such as accessing and sharing personal and class files within LMS.
   * Class Teams LTI app helps educators create a class with user roles within LMS course, and students with access to engaging LMS course.
   * Teams meetings LTI app helps educators and students to engage using desktop and web platforms and to integrate class meetings into their LMS course.
 
-* **Microsoft 365 Plugins**
-The Microsoft 365 Plugins are designed to ensure support integration between Moodle sites and Microsoft Teams. There are seven types of plugins, which can be used independently, or in collaboration, to achieve various usage scenarios.
+* **Microsoft 365 Plugins**: The Microsoft 365 Plugins are designed to ensure support integration between Moodle sites and Microsoft Teams. There are seven types of plugins, which can be used independently, or in collaboration, to achieve various usage scenarios.
 
 * **Partner apps for Moodle**
 Partner apps for Moodle are examples of complete apps for Microsoft Teams that are currently available in the Microsoft market. You can locate these apps within the Microsoft Teams App Store and enjoy their value immediately. Microsoft works closely with partners to certify app quality and to validate all Software as a Service (SaaS) offerings.
 
 ## Scenarios
 
-The scenarios provided below are examples of accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
+The scenarios provided are examples of accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
 
 * **Facilitate hybrid remote meetings**: With Teams meetings and extensibility options, instructors can seamlessly present in-person and remotely while it is mandatory for students to have access to shared views, apps, and polls. For enhanced follow-up task, you must include the option for multi-language transcription and audio or video course recordings. Teams and Moodle are game changers, working together to share roosters, activities, and tasks.
 
