@@ -9,8 +9,9 @@ keywords: moodle LMS mConnect deep links
 
 # Moodle Learning Management System
 
-[Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers.
+<!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. -->
  
+ Microsoft's Learning Management System (LMS)-Moodle is an open-source system helping users with remote learning.  Offering productivity services as follows: 
 Moodle LMS partners with Microsoft Teams to provide productivity services as follows:
 
 * Audio or video calls
@@ -29,8 +30,7 @@ Moodle LMS partners with Microsoft Teams to provide productivity services as fol
 
 * **Microsoft 365 Plugins**: The Microsoft 365 Plugins are designed to ensure support integration between Moodle sites and Microsoft Teams. There are seven types of plugins, which can be used independently, or in collaboration, to achieve various usage scenarios.
 
-* **Partner apps for Moodle**
-Partner apps for Moodle are examples of complete apps for Microsoft Teams that are currently available in the Microsoft market. You can locate these apps within the Microsoft Teams App Store and enjoy their value immediately. Microsoft works closely with partners to certify app quality and to validate all Software as a Service (SaaS) offerings.
+* **Partner apps for Moodle**: Partner apps for Moodle are examples of complete apps for Microsoft Teams that are currently available in the Microsoft market. You can locate these apps within the Microsoft Teams App Store and enjoy their value immediately. Microsoft works closely with partners to certify app quality and to validate all Software as a Service (SaaS) offerings.
 
 ## Scenarios
 
