@@ -14,17 +14,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Webhooks help Microsoft Teams to integrate with external apps. In Teams, the outgoing webhooks act as bot and search for messages in channels using **@mention**. The outgoing webhooks allow users to send messages to web service without performing the entire process of creating bots through Microsoft Bot Framework. The outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
+    Webhooks help Microsoft Teams to integrate with external apps. In Teams, the outgoing webhooks act as bot and search for messages in channels using **@mention**. The outgoing webhooks allow users to send messages to web services without performing the entire process of creating bots through Microsoft Bot Framework. The outgoing webhooks post data from Teams to any service capable of accepting JSON payload. 
     
     Key features of outgoing webhooks:
     
     * Send notifications to any external web service.
-    * Respond with rich messages including cards and images. 
+    * Respond with rich text messages including cards and images. 
     * Receive messages in public channels and not within the personal or private scope.
     * Send HTTP POST to web service and get response. 
     
      > [!NOTE]
-     > The outgoing webhooks cannot access any other APIs, such as retrieve the roster or list of channels in a team.
+     > The outgoing webhooks can't access any other APIs, such as retrieve the roster or list of channels in a team.
     
     This step-by-step guide helps you to create outgoing webhooks in Teams. You'll see the following output:
 
