@@ -14,10 +14,10 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    You can add link unfurling to your app manifest using Developer portal or manually. With link unfurling, your app can register to receive an invoke activity when URLs with particular domain are pasted into the compose message area. The invoke contains the full URL and you can respond with card that the user can unfurl, providing additional information or actions. The link unfurling result is cached for 30 minutes. It works similar to search command.
-    
+    Link unfurling helps you to register your app and receive invoke activity when URLs with particular domain are pasted into the compose message area. The invoke contains the full URL and you can respond with card that the user can unfurl and provide additional information or perform different actions. You can add link unfurling to your app manifest using Developer Portal or manually.
+
     > [!NOTE]
-    > Currently, link unfurling is not supported on Mobile clients. 
+    > Currently, link unfurling is not supported on mobile clients. 
 
     The Microsoft Teams link unfurling step-by-step guide demonstrates how to create a bot to perform link unfurling in Teams for *://www.BotFramework.com URLs. You'll see the following output:
 
@@ -31,6 +31,10 @@ items:
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
+
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
 
 - title: Set up local environment
@@ -112,11 +116,13 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
+    1. Select **MultiTenant** under **Bot Type**.
+
+        ![Bot type](~/assets/images/Teams-link-unfurling/bot-type.png)
+
     1. Next to **Microsoft App ID**, select **Manage**.
 
-    1. Select **MultiTenant** under App Type.
-
-        ![Microsoft App ID](~/assets/images/Teams-link-unfurling/config.png)
+        ![Microsoft App ID](~/assets/images/Teams-link-unfurling/config1.png)
 
     1. In the **Client secrets** section, select **New client secret**. 
 
