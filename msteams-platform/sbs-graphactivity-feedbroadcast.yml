@@ -328,15 +328,14 @@ items:
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
 
-       ![Dotnet](~/assets/images/Tab-ME-SSO/publish-an-app.png)
-
+      
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/Tab-ME-SSO/upload-custom-app.png)
+       ![Upload custom app](~/assets/images/sbs-graphactivity-feedbroadcast/uploadacustomapp.png)
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/Tab-ME-SSO/upload-tab-me-sso-open.png)
+       ![Select zip file](~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png)
 
     1. Select **Add**.
 
