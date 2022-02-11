@@ -4,12 +4,12 @@ description: Microsoft 365 Plugins introduction
 ms.topic: Plugins introduction
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-rpatkur
+author: v-leenagopal
 ---
 
 # Plugins Introduction
 
-The Microsoft 365 Plugins support integration between Moodle sites and Microsoft Teams. Currently, there are seven plugins, which can be used independently, or in collaboration, as required in different scenarios. You can post any comments or issues at [dedicated GitHub repository](https://github.com/microsoft/o365-moodle/issues). For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
+The Microsoft 365 Plugins supports integration between Moodle sites and Microsoft Teams. Currently, there are seven plugins, which can be used independently, or in collaboration, as required in different scenarios. You can post any comments or issues at [dedicated GitHub repository](https://github.com/microsoft/o365-moodle/issues). For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
 
 ## Scenarios
 

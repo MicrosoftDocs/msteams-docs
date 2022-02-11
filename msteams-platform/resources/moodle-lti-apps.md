@@ -4,7 +4,7 @@ description: Classification of Moodle LTI apps
 ms.topic: Moodle LTI apps types
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-rpatkur
+author: v-leenagopal
 ---
 
 # Moodle LTI Apps
@@ -25,8 +25,8 @@ With the new Class Teams LTI app, educators and students can easily navigate bet
 
 Based on the enrolment roster of the LMS course, educators can do the following:
  
-* Create a Class Team with the proper user roles within an LMS course
-* Support Teams admin and adhere to LMS privacy policies during Class Team creation
+* Create a Class Team with the proper user roles within an LMS course.
+* Support Teams admin and adhere to LMS privacy policies during Class Team creation.
 
 After creating the Class Team, educators and students can do the following:
 * Access the Team from within the LMS course or Teams

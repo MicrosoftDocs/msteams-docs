@@ -4,12 +4,12 @@ description: Steps to sign in to OpenID Connect
 ms.topic: Introduction on OpenID connect
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-rpatkur
+author: v-leenagopal
 ---
 
 # OpenID Connect
 
-The OpenID Connect plugin authenticate any site or tool that supports the OpenID Connect specification. It is used to provide single-sign-on support with Microsoft Office 365.
+The OpenID Connect plugin authenticates any site or tool that supports the OpenID Connect specification. It is used to provide single-sign-on support with Office 365.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Login to openid-connect":::
 

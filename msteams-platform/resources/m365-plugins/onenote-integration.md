@@ -4,12 +4,12 @@ description: OneNote
 ms.topic: OneNote
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-rpatkur
+author: v-leenagopal
 ---
 
 # OneNote Integration
 
-OneNote integration helps with access to texts, graphics and audio repositories. The advantages of the bundle of plugins are as follows:
+OneNote integration helps with access to texts, graphics, and audio repositories. The advantages of the bundle of plugins are as follows:
 
 * Include browsing notebooks, sections, and pages, where students work on assignments and teachers provide feedback on those assignments in OneNote.
 * Combine digital binder for notes, assignments, and feedback for reference and review.
