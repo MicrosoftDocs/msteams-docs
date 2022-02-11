@@ -7,12 +7,11 @@ ms.author: surbhigupta
 keywords: moodle LMS mConnect deep links
 ---
 
-# Moodle Learning Management System
+# Moodle learning management system
 
 <!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. -->
  
- Microsoft's Learning Management System (LMS)-Moodle is an open-source system helping users with remote learning.  Offering productivity services as follows: 
-Moodle LMS partners with Microsoft Teams to provide productivity services as follows:
+ Microsoft's Learning Management System (LMS)-Moodle is an open-source system helping users with remote learning. Moodle LMS partners with Microsoft Teams to provide productivity services as follows:
 
 * Audio or video calls
 * Chat with student course and activity management
