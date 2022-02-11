@@ -4,12 +4,12 @@ description: Introduction to Microsoft 365 Teams Theme
 ms.topic: ms.365 Teams Theme
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-rleenagopal
+author: v-leenagopal
 ---
 
 # Microsoft 365 Teams Theme
 
-Microsoft 365 Teams theme plugins displays a custom view of Moodle course home page within Teams. This plugin is available when users access their Moodle courses within Teams.
+Microsoft 365 Teams theme plugins displays a custom view of Moodle course home page within Teams and is available when users access their Moodle courses within Teams.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/teams theme.png" alt-text=" microsoft teams theme":::
 
