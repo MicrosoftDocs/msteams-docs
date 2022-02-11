@@ -43,7 +43,7 @@ items:
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
   content: |
-    Register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
+    Register an application using App registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
 
     1. Use ngrok to create a tunnel to your web server's endpoints.
     1. Create Azure Bot resource to register bot with Azure Bot Service.
@@ -64,7 +64,7 @@ items:
 
     **Register an App in Azure:**
 
-    1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
+    1. Sign in to the [Microsoft Azure portal](https://portal.azure.com/) using your personal Microsoft account.
     1. Select the **Azure Active Directory** service, and select **App registrations** from the left pane and then select **New registration**.
     
         :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory.":::
@@ -142,7 +142,7 @@ items:
 
     **Create Bot channel registration in Azure account:**
 
-    1. Open [Azure portal](https://portal.azure.com/).
+    1. Open [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
