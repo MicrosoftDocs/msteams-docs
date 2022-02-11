@@ -288,7 +288,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
@@ -344,9 +344,9 @@ items:
 
          * Set `"MicrosoftAppType"` to `"MultiTenant"`.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppPassword"` to **Value** of **Client secret**.
          * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
-         * Set `"BaseUrl"` to the fully qualified domain name.
+         * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
         ![App settings](~/assets/images/Teams-task-module/appsettings.png)
 
