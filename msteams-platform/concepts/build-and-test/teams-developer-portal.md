@@ -65,7 +65,7 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-On the **Overview** page, you can see the total number of active users for your app. These metrics are apps published to the Teams store or an org's app catalog through **Developer Portal for Teams** (or App Studio) and scoped to each individual app ID.
+On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through **Developer Portal for Teams** (or App Studio) and scoped to each individual app ID.
 
 > [!NOTE]
 > Usage analytics will not be available for apps previously published outside of **Developer Portal for Teams** (or App Studio), imported into **Developer Portal for Teams**.
