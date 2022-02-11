@@ -66,10 +66,3 @@ Simplify the inclusion of external HTML content within Moodle.
 ## See also
 
 * [OpenID Connect](openid-connect.md)
-* [Microsoft 365 Integration](microsoft-365-integration.md)
-* [Microsoft 365 Repository](microsoft-365-repository.md)
-* [Teams Meetings](teams-meetings.md)
-* [Microsoft 365 Teams Theme](microsoft-365-theme.md)
-* [OneNote Integrations](onenote-integration.md)
-* [Microsoft Block](microsoft-block.md)
-* [oEmbed Filter](oEmbed-filter.md)
