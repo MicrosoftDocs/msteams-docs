@@ -14,11 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extension search commands allow users to search external systems and insert the results of the search into a message in the form of a card.
+    Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. 
+    
+    **Key features of messaging extension search commands**
 
-    This step-by-step guide helps you to build a search-based messaging extension.
+    * Allow users to search external systems.
+    * Insert search results into a message in the form of a card.
 
-    You'll see the following output:
+    This step-by-step guide helps you to build a search-based messaging extension. You'll see the following output:
 
     ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
