@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. 
+    Messaging extensions allow users to interact with web services in the Microsoft Teams client. They help to search or initiate actions in an external system from the compose message area, the command box, or directly from a message. 
     
     **Key features of messaging extension search commands**
 
@@ -290,7 +290,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
@@ -344,11 +344,11 @@ items:
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
-         * Set `"MicrosoftAppType"` **MultiTenant**.
+         * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppPassword"` to **Value** of **Client secret**.
          * Set `"MicrosoftAppTenantId"` as blank.
-         * Set `"BaseUrl"` to the fully qualified domain name.
+         * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
         ![App settings](~/assets/images/Teams-Messaging-Extensions-Search/appsettings.png)
 
@@ -461,17 +461,13 @@ items:
 
        ![Option](~/assets/images/Teams-Messaging-Extensions-Search/option1.png)
 
-    1. Select **Nuget Package**.
+       1. Select **Nuget Package**.
 
-       The following page displays:
+          ![Nuget](~/assets/images/Teams-Messaging-Extensions-Search/nuget.png)
 
-       ![Nuget](~/assets/images/Teams-Messaging-Extensions-Search/nuget.png)
+       1. Select **Project**.
 
-    1. Select **Project**.
-
-       The following page displays:
-
-       ![Project](~/assets/images/Teams-Messaging-Extensions-Search/project.png)
+          ![Project](~/assets/images/Teams-Messaging-Extensions-Search/project.png)
 
 
 - title: Complete challenge
