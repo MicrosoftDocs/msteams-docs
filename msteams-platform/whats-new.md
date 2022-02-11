@@ -34,29 +34,22 @@ Microsoft Teams platform features that are available to all app developers.
 <details>
 <summary><b>Older updates</b></summary>
 <br>
-Explore older GA updates from the previous GA releases listed here.
-<br>
+Explore updates from the previous GA releases listed here.
+<br><br>
 <details>
-
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|02/11/2022| Shared meeting stage| • Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
-|02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot.| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
-|02/02/2022| Introduced app manifest version 1.12 | App manifest > [App manifest schema](resources/schema/manifest-schema.md) |
 |01/25/2022| Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
-
-<br>
-
+|
 </details>
   
 <br>
 
 <details>
-
 <summary><b>2021</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -114,15 +107,12 @@ Explore older GA updates from the previous GA releases listed here.
 |02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.| • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • App fundamentals > Device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|Added QR or barcode scanner capability. <br/> QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions, and integrate media capabilities files.| • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
 |02/09/2021|Added device capabilities overview. <br/> Microphone capability information is added in the native device permissions and integrate media capabilities files.|• App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> App fundamentals > • Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md)|
-
-<br>
-
+|
 </details>
 
 <br>
 
 <details>
-  
 <summary><b>2020</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -148,9 +138,7 @@ Explore older GA updates from the previous GA releases listed here.
 |05/18/2020|Integrate Power Virtual Agents with Teams.|[Integrate a Power Virtual Agents chatbot with Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Integrate WFM systems with Shifts Connector for Teams.|[Microsoft Teams Shifts WFM connectors](samples/shifts-wfm-connectors.md)
 |03/24/2020 | Added support for retrieving a single member of a conversation, and additional support for retrieving paged members. | [Get Teams context for your bot](~/bots/how-to/get-teams-context.md) |
-
-<br>
-
+|
 </details>
 
 <br>
@@ -178,15 +166,12 @@ Explore older GA updates from the previous GA releases listed here.
 | 04/23/2019 | Action-based Messaging Extensions are now available. | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | Creating deep links to private chat. | [Deep linking to a chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context. | [Tab Context](~/concepts/tabs/tabs-context.md) |
-
-<br>
-
+|
 </details>
 
 <br>
 
 <details>
-
 <summary><b>2018</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -219,10 +204,7 @@ Explore older GA updates from the previous GA releases listed here.
 | 03/03/2018 | Added documentation for Teams App Studio. |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio.md), [Using the control library in App Studio](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
-
-<br>
-
-</details>
+|
 </details>
 </details>
 
