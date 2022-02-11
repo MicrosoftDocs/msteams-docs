@@ -46,7 +46,7 @@ Let’s dig deeper into this story and find out.
         - What issues do you want to address?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="I want to develop an app that sends weather forecast of the destination to customers..." border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="I want to develop an app that sends weather forecast of the destination to customers..." border="false":::
    :::column-end:::
 :::row-end:::
 :::row:::
