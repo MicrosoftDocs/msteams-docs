@@ -229,7 +229,9 @@ The following is an example of `userIds` array in the `refresh` property:
 ### Just-In Time (JIT) install
 
 
-Just-In Time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel.  In order to support Universal Actions in search based Message extensions, your bot will be added to the conversation where the card is sent by the user.
+Just-In Time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel.  In order to support Universal Actions in search based Message extensions, your bot is added to the conversation where the card is sent by the user.
+
+When a user selects a card and sends it in a group chat or channel, a **Just-In Time (JIT)** installation prompt appears. After the user selects the **send** option, the bot installs the card in the background for all the users in the group.
 
 > [!NOTE]
 > For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt is not shown to the users.
