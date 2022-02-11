@@ -26,7 +26,7 @@ Collate and map requirements to Teams features:
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
 | **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Forecast website |
-| **Scope** | &nbsp; | Personal app; Adaptive Card | &nbsp; |
+| **Scope** | &nbsp; | Personal app | &nbsp; |
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 |
 
