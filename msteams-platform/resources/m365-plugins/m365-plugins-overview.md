@@ -19,7 +19,7 @@ The following table lists the plugins and GitHub labels depending on the scenari
 |-----|-----|----|
 | Enable SSO for users, who work in both Moodle and Teams | OpenID Connect | auth_oidc|
 | Create Teams instances for each course in Moodle, and sync teachers as owners, and students as team members | - OpenID Connect </br> - Microsoft 365 integration | auth_oidc </br> local_o365|
-| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to teams instances | - OpenID Connect </br> - Microsoft 365 Integration </br> - Teams Theme| auth_oidc </br> local_o365 </br> themeboost_o365teams |
+| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances | - OpenID Connect </br> - Microsoft 365 Integration </br> - Teams Theme| auth_oidc </br> local_o365 </br> themeboost_o365teams |
 | Leverage Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle | - OpenID Connect </br> - Microsoft 365 integration </br> - Microsoft 365 Repository | auth_oidc </br> local_o365 </br> repository_office 365|
 | Enable OneNote to be used for assignment, submission and feedback| - OpenID Connect </br> - OneNote </br> - OneNote Submissions </br> - OneNote Feedback | auth_oidc </br> local_onenote </br> assignsubmission_onenote </br> assignfeedback_onenote| 
 | Enable 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office | - OpenID Connect </br> - Microsoft 365 Integration </br> - Microsoft 365 Repository </br> - Microsoft Block | auth_oidc </br> local_o365 </br> repository_office365 </br> block_microsoft |
@@ -33,10 +33,11 @@ Allows users to authenticate any site or tool that supports OpenID Connect speci
 ## Microsoft 365 integration
 
 Allows administrators to validate the following:
-* Check the integration is functioning properly
-* Synchronize users between Office 365 and Moodle
-* Configure permissions
-* Set up the sharepoint site for the course files
+
+* Check if the integration is functioning properly.
+* Synchronize users of Office 365 and Moodle.
+* Configure the required permissions.
+* Set up the SharePoint site for the course files.
 
 ## Microsoft 365 repository
 
@@ -48,15 +49,15 @@ Create using the Atto editor in calendar, assignments, forum posts, or wherever 
 
 ## Microsoft 365 Teams theme
 
-Display custom view of Moodle course home page within Teams. The view is only available when users access their Moodle courses within Teams.
+Displays custom view of Moodle course home page within Teams and available when users access their courses within Teams.
 
 ## OneNote Integration
 
-Include browsing notebooks, sections, and pages; where students do assignments and teachers provide feedback on those assignments in OneNote. Enhances user experience by adding features beyond tests and links, also extends to mobile using with digital pens, photo or video media, and co-authoring with groups.
+Include browsing notebooks, sections, and pages; where students do assignments and teachers provide feedback on respective assignments in OneNote. Enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
  
 ## Microsoft Block
 
-Allow users to access the course sharepoint file location and view the course in OneNote notebook for submissions, and modify  Office 365 integration preferences. The admins can configure the block to appear on every course page.
+Allow users to access the course SharePoint file location and view the course in OneNote notebook for submissions, and modify Office 365 integration preferences. The admins can configure the block to appear on all the course pages.
 
 ## oEmbed filter
 

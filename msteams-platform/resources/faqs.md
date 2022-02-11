@@ -4,12 +4,12 @@ description: Answers to some common questionsp
 ms.topic: FAQs
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-rpatkur
+author: v-leenagopal
 ---
 
 # Frequently asked questions
 
-Get answers to some common questions in Moodle learning management system.
+Get answers to some of the common questions users have in Moodle learning management system.
 
 <br>
 
@@ -20,7 +20,7 @@ Get answers to some common questions in Moodle learning management system.
 Each Moodle course must have at least one teacher and one Student in Moodle, who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
 
 > [!NOTE]
-> Every team course instance must have an Owner, and the synchronization sets the teacher as the Owner, with assumption that the teacher has a Microsoft Teams license.
+> Each team course instance must have an Owner, and the synchronization sets the teacher as the Owner, with assumption that the teacher has a Microsoft Teams license.
 
 <br>
 

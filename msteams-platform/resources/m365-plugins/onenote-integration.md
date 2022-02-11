@@ -13,11 +13,11 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 
 * Include browsing notebooks, sections, and pages, where students work on assignments and teachers provide feedback on those assignments in OneNote.
 * Combine digital binder for notes, assignments, and feedback for reference and review.
-* Expand drafting capabilities beyond text and links, and extend mobile usage scenarios using digital pens, photo or video media, and co-author with groups.
+* Expand drafting capabilities beyond text and links, and extend mobile usage scenarios using digital pens, photo or video media, and co-authoring with groups.
 * Include submission and feedback page for each assignment under the teacher's account. When such a page is saved within Moodle, a copy of the HTML and any associated pictures are packaged up in a zip file.
 
 > [!NOTE]
-> Submission or feedback events trigger OneNote creation with a section for each course the student is enrolled.
+> Submission or feedback events trigger OneNote creation with a section for each course the student has enrolled in.
 
 ## See also
 
