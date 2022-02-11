@@ -64,21 +64,31 @@ items:
 
     1. In the left navigation panel, select **App Registrations**.
 
-    1. Select your bot.
-
        ![App registration](~/assets/images/sbs-graphactivity-feedbroadcast/newregisteration.png)
+
+    1. Enter the following:
+
+       1. Set name to your app name.
+
+       1. Choose any supported account type.
+
+       1. Leave the **Redirect URI** empty.
+
+    1. Select Register.
+
+        ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
+        
+    1. Go to overview and copy and save **Application (client) ID**, **Directory (tenant) ID** for later use.
+
+        ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/overview.png)
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
+       ![App ID URI](~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png)
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
-
-       ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/overview.png)
-
-       ![App ID URI](~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png)
 
        ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png)
 
@@ -159,15 +169,14 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is selected.
-
-         ![User](~/assets/images/sbs-graphactivity-feedbroadcast/userpermission.png)
-
     1. Add the following permissions:</br>
-         * **email**
-         * **offline_access**
-         * **OpenId**
-         * **profile**
+         * ***User.Read** (enabled by default)
+         * **Directory.Read.All**
+         * **Directory.ReadWrite.All**
+         * **TeamsAppInstallation.ReadForUser**
+         * **TeamsAppInstallation.ReadWriteForUser**
+         * **TeamsActivity.Send**
+         * **TeamsAppInstallation.ReadForUser.All**
 
     1. Select **Add permissions**.
 
@@ -177,9 +186,17 @@ items:
 
          ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)
 
+    1. Select **Add a permission**.
+
+    1. Select **Microsoft Graph**.
+
+    1. Select **Application permissions**.
+
+    1. Select **Add permissions**.
+
          ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png)
 
-         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png)  
+         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)  
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
@@ -202,6 +219,30 @@ items:
          1. Select **Configure**.
 
             ![Auth-end](~/assets/images/sbs-graphactivity-feedbroadcast/redirect.png)
+
+
+    **To create client secret**
+
+    1. In the left panel, select **Certificates & secrets**. 
+
+    1. In the **Client secrets** section, select **New client secret**. 
+
+        ![New client secret](~/assets/images/bs-graphactivity-feedbroadcast/clientsecret.png)
+    
+       The **Add a client secret** window appears.  
+
+    1. Enter **Description**.
+    
+    1. Select **Add**.
+
+        ![Add client secret to app](~/assets/images/bs-graphactivity-feedbroadcast/secretsave.png)
+
+    1. In the **Value** column, select **Copy to clipboard**.
+
+         ![Value of client secret](~/assets/images/bs-graphactivity-feedbroadcast/clientsecretcode.png)
+       
+       > [!TIP]
+       > Save the **Client secrets** value or app password for future reference.
 
 
 - title: Set up app settings and manifest files
