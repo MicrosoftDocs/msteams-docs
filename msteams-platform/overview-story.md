@@ -23,7 +23,7 @@ Let’s dig deeper into this story and find out.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/us-1.png" alt-text="Image showing user story 1" border="true":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="User story - As a developer at a travel agency, I build apps for travelers" border="false":::
    :::column-end:::
    :::column span="":::
       #### Understand your user
@@ -46,12 +46,12 @@ Let’s dig deeper into this story and find out.
         - What issues do you want to address?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/us-2.png" alt-text="Image showing user story 2" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="I want to develop an app that sends weather forecast of the destination to customers..." border="false":::
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/us-3.png" alt-text="Image showing user story 3" border="true":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...so that customers can know weather conditions and plan ahead" border="false"::: 
    :::column-end:::
    :::column span="":::
       #### List App Requirements and Benefits
@@ -74,7 +74,7 @@ Let’s dig deeper into this story and find out.
         - What features would be most convenient for user experience?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/us-4.png" alt-text="Image showing user story 4" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Customers are well-prepared for traveling!" border="false":::
    :::column-end:::
 :::row-end:::
 
