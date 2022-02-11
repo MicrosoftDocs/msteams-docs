@@ -38,7 +38,7 @@ If you make any of the following changes to your app, however, your existing use
 * Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.
-* Modify configurations related to your Azure Active Directory app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## Fix issues with your published app
 
