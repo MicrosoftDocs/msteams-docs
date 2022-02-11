@@ -228,7 +228,7 @@ items:
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/sbs-graphactivity-feedbroadcast/manifest-2.png)
+        ![Manifest image2](~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -244,7 +244,7 @@ items:
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/sbs-graphactivity-feedbroadcast/Tokenfileready.png)
+          ![Solution File](~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png)
 
        1. Press **F5** to run the project.
     
@@ -279,7 +279,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/sbs-graphactivity-feedbroadcast/zipfile.png) 
+       ![Zip file](~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png) 
     
     1. Create a meeting with a few presenters and attendees.
    
