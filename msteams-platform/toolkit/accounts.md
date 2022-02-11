@@ -30,7 +30,7 @@ If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365
 3. Select **Set up E5 subscription**.
 4. Set up your administrator account. After you finish, you should see the following screen:
 
-:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows microsoft m365 program":::
+:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
 
 ## Accounts for Microsoft 365 developer program
 
@@ -42,7 +42,7 @@ You can sign up for the developer program by using one of the following account 
 
 - **Work account for business**
 
-  Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization.
+  Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Microsoft Azure Active Directory (Azure AD) to represent your organization.
 
 - **Visual Studio ID**
 
@@ -55,11 +55,11 @@ You can sign up for the developer program by using one of the following account 
 
 The following list provides steps to check whether sideloading app permission is enabled. The two different ways are as follows:
 
-* **To use Visual studio code**
+* **To use Microsoft Visual studio code**
 
     1. Open **Visual Studio Code**.
     1. Select **Teams Toolkit** from left panel.
-    1. Select **Accounts** and log in to your M365 account.
+    1. Select **Accounts** and log in to your Microsoft 365 account.
     1. Check whether you can see the option **Sideloading enabled** as shown in the image:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::

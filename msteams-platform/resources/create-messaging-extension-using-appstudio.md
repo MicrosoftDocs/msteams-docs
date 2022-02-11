@@ -41,7 +41,7 @@ Messaging extensions take advantage of the Bot Framework's messaging schema and 
 
 If you follow one of the quickstarts or start from one of the available samples you'll be guided through registering your web service. If you want to manually register your service you have three options to do so. If you choose to register without using an Azure subscription you will not be able to take advantage of the simplified OAuth authentication flow provided by the Bot Framework. You will be able to migrate your registration to Azure after creation.
 
-* If you have an Azure subscription (or want to create a new one), you can register your web service manually using the Azure Portal. Create a "Bot Channels Registration" resource. You can choose the free pricing tier, as messages from Microsoft Teams do not count towards your total allowable messages per month.
+* If you have an Azure subscription (or want to create a new one), you can register your web service manually using the Microsoft Azure portal. Create a "Bot Channels Registration" resource. You can choose the free pricing tier, as messages from Microsoft Teams do not count towards your total allowable messages per month.
 * If you do not wish to use an Azure subscription, you can use the [legacy registration portal](https://dev.botframework.com/bots/new).
 * App Studio can also help you register your web service (bot). Web services registered through App Studio are not registered in Azure. You can use the [legacy portal](https://dev.botframework.com/bots) to view, manage, and migrate your registrations.
 

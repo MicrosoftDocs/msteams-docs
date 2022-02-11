@@ -20,7 +20,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 
 ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+[Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
@@ -30,7 +30,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 > [!IMPORTANT]
 > You need to perform provision for each environment after you successfully add capabilities to your Teams app.
 
-1. Open **Visual Studio Code**.
+1. Open **Microsoft Visual Studio Code**.
 1. Select **Teams Toolkit** from left panel.
 1. Select **Add capabilities**:
 
@@ -66,12 +66,13 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 |Existing capabilities|Other supported capabilities can be added|
 |--------------------|--------------------|
 |Tabs with SPFx|None|
-|Tabs with Azure|Bots and messaging extensions|
-|Bots|Tabs|
-|Messaging extensions|Tabs|
-|Tabs and bots|None|
-|Tabs and messaging extensions|None|
-|Tabs, bots, and messaging extensions|None|
+|Tabs with Azure|Bot and messaging extension|
+|Bot|Tabs|
+|Messaging extension|Tabs and bot|
+|Tabs and bot|Tabs and message extension|
+|Tabs and messaging extension|Tabs and bot|
+|Tabs, bot, and messaging extension|Tabs|
+|Tabs |Bot and message extension|
 
 ## Add capabilities
 
@@ -98,14 +99,10 @@ After adding tab, the changes in your project are as follows:
 
 ## Limitations
 
-The limitations with TeamsFx while adding more capabilities are as follows:
+The limitations to TeamsFx while adding more capabilities are as follows:
 
-- You can't add project capability for more than one instance.
-- You can't add bot capabilities if your project contains messaging extension.
-- You can't add messaging extension if your project contains a bot.
-
-> [!NOTE]
-> If you want to include both bot and messaging extension capabilities, then select them at the same time. You can only add them either when you create a new project or a tab application.
+* You can add tabs up to 16 instances.
+* You can add bot and messaging extension for one instance each.
 
 ## See also
 

@@ -30,7 +30,7 @@ For your bot to receive all channel messages, RSC must be configured in the Team
 
 The following is an example of the `webApplicationInfo` object:
 
-* **id**: Your Azure Active Directory app ID. This can be the same as your bot ID.
+* **id**: Your Microsoft Azure Active Directory (Azure AD) app ID. This can be the same as your bot ID.
 * **resource**: Any string. This field has no operation in RSC, but must be added and have a value to avoid error response.
 * **applicationPermissions**: RSC permissions for your app with `ChannelMessage.Read.Group` must be specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
@@ -88,7 +88,7 @@ The following code provides an example of RSC permissions:
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-		await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channles in team without being @mentioned."));
+		await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
 }
 ```
 
