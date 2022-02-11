@@ -35,6 +35,9 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 
 <details>
+<summary>Older updates</summary>
+
+<details>
 
 <summary><b>2022</b></summary>
 
@@ -223,6 +226,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <br>
 
+</details>
 </details>
 </details>
 
