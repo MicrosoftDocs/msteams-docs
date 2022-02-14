@@ -25,19 +25,19 @@ Collate and map requirements to Teams features:
 | User app needs | Check forecast | Notification before travel | Registered user |
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Forecast website |
+| **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Weather API |
 | **Scope** | &nbsp; | Personal app | &nbsp; |
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 |
 
 **Teams app solution**: A Teams *personal chat bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/user-story-2.png" alt-text="Image showing user story" border="true":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="A developer at a travel agency builds a bot for Microsoft Teams that sends weather forecast to customers so that they can plan ahead their traveling dates" border="true":::
 
 Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. Create a personal chat bot app.
-1. Integrate with external API from a forecast website to connect and request forecast for specific date and location.
+1. Integrate with an external weather forecast API to connect and request forecast for specific date and location.
 1. Integrate with Microsoft Graph for registered users.
 1. Check and send forecast details based on user's travel date and travel location.
 
