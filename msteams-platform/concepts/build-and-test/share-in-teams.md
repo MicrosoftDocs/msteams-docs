@@ -47,7 +47,7 @@ The following steps will help users to share the link, once the Share-in-Teams o
 
 1. Open a personal app or tab and select a content, which you like to share.
 
-2. From the ellipsis (...) menu, select **Share-in-Teams**.
+2. From the ellipsis (...) menu, select **Share-to-Teams**.
 
    :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button":::
 
