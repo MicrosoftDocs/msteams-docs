@@ -197,7 +197,7 @@ items:
 
     **To authorize client applications:**
 
-    For example, Add the following IDs as **Authorized client applications**, select the check box for **Authorized scopes** and select **Add application**.      
+    For example, Add the following IDs as **Authorized client applications**, select the check box for **Authorized scopes** and then select **add application**.      
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or desktop application)            
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)</br>
 
@@ -293,7 +293,7 @@ items:
   durationInMinutes: 2
   content: |
     > [!NOTE]
-    >  The bot is installed in 'personal' scope which is why you immediately enter a one on one chat conversation with the bot. See Teams documentation for more details.
+    >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
 
     This guide shows how to communicate with the bot in various ways. Following are the steps that demonstrates the bot activities:
 
