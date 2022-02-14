@@ -57,7 +57,7 @@ landingContent:
       - text: Explore low-code apps for Teams
         url:  ~/samples/teams-low-code-solutions.md 
 
-- title: Features updates
+- title: Feature updates
   linkLists:
     - linkListType: concept
       links:
@@ -73,6 +73,61 @@ landingContent:
           url: ~/bots/how-to/authentication/add-authentication.md
         - text: Enable and configure apps for meetings
           url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+
+- title: Get started
+  linkLists:
+    - linkListType: get-started
+      links:
+      - text: Get started with building apps
+        url: ../msteams-platform/get-started/get-started-overview.md
+      - text: Get started with GitHub
+        url: /contribute/additional-resources
+    - linkListType: tutorial
+      links:
+      - text: Build app with JavaScript
+        url: sbs-gs-javascript.yml
+      - text: Build app with SPFx
+        url: sbs-gs-spfx.yml
+      - text: Build app with C# or .NET
+        url: sbs-gs-csharp.yml
+      - text: Build app with Node.js
+        url: sbs-gs-nodejs.yml
+
+- title: Build apps for Teams
+  linkLists:
+    - linkListType: overview
+      links:
+      - text: Build apps for Microsoft Teams
+        url: ../msteams-platform/overview.md
+      - text: App fundamentals
+        url: ~/concepts/app-fundamentals-overview.md
+      - text: Design your app
+        url: ~/concepts/design/design-teams-app-overview.md
+      - text: Code samples
+        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+    - linkListType: whats-new
+      links:
+      - text: What's new
+        url: ../msteams-platform/whats-new.md
+
+- title: Build app capabilities
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Build tabs
+      url: ~/tabs/what-are-tabs.md
+    - text: Build bots
+      url: ~/bots/what-are-bots.md
+    - text: Build message extensions
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+    - text: Build apps for Teams meetings
+      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
+    - text: Build webhooks and connectors
+      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - text: Build cards and task modules
+      url: ~/task-modules-and-cards/cards-and-task-modules.md
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
 
 - title: Tutorials
   linkLists:        
@@ -99,58 +154,6 @@ landingContent:
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
         
-- title: Get started
-  linkLists:
-    - linkListType: get-started
-      links:
-      - text: Get started with building apps
-        url: ../msteams-platform/get-started/get-started-overview.md
-      - text: Get started with GitHub
-        url: /contribute/additional-resources
-    - linkListType: tutorial
-      links:
-      - text: Build app with JavaScript
-        url: sbs-gs-javascript.yml
-      - text: Build app with SPFx
-        url: sbs-gs-spfx.yml
-      - text: Build app with C# or .NET
-        url: sbs-gs-csharp.yml
-      - text: Build app with Node.js
-        url: sbs-gs-nodejs.yml
-- title: Build apps for Teams
-  linkLists:
-    - linkListType: overview
-      links:
-      - text: Build apps for Microsoft Teams
-        url: ../msteams-platform/overview.md
-      - text: App fundamentals
-        url: ~/concepts/app-fundamentals-overview.md
-      - text: Design your app
-        url: ~/concepts/design/design-teams-app-overview.md
-      - text: Code samples
-        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-    - linkListType: whats-new
-      links:
-      - text: What's new
-        url: ../msteams-platform/whats-new.md
-- title: Build app capabilities
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Build tabs
-      url: ~/tabs/what-are-tabs.md
-    - text: Build bots
-      url: ~/bots/what-are-bots.md
-    - text: Build message extensions
-      url: ~/messaging-extensions/what-are-messaging-extensions.md
-    - text: Build apps for Teams meetings
-      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
-    - text: Build webhooks and connectors
-      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and task modules
-      url: ~/task-modules-and-cards/cards-and-task-modules.md
-    - text: App manifest
-      url: ../msteams-platform/resources/schema/manifest-schema.md
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
@@ -159,6 +162,7 @@ landingContent:
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+
 - title: Publish and distribute
   linkLists:
   - linkListType: concept
