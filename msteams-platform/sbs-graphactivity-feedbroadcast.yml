@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 02/08/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: Read more to enable and configure apps for meetings
+  nextTutorialHref: apps-in-teams-meetings/concepts/design/activity-feed-notifications.md
+  nextTutorialTitle: Read more on activity feed notifications.
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -72,13 +72,13 @@ items:
 
     1. Enter the following:
 
-       * Set name to your app name.
+       * Set Name to your app name.
 
-       * Choose the supported account type (any account type will work).
+       * Choose any one of the supported account types (any account type will work).
 
-       * Leave the **Redirect URI** empty.
+       * Leave the Redirect URI empty.
 
-       * Select Register.
+       * Select **Register**.
 
         ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
         
@@ -199,6 +199,8 @@ items:
 
     1. Select **Add permissions**.
 
+    1. Go to **Add a permission**.
+
     1. Select **Add a permission**.
 
     1. Select **Microsoft Graph**.
@@ -206,12 +208,14 @@ items:
     1. Select **Application permissions**.
 
     1. Add the following permissions:</br>
-         * **TeamsActivity.Send** (enabled by default)
+         * **TeamsActivity.Send** 
          * **Directory.Read.All**
 
          ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png)
 
          ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)  
+
+    1. Select **Add permissions**.
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -248,7 +252,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-         ![New client secret](~/assets/images/bs-graphactivity-feedbroadcast/clientsecret.png)
+         ![New client secret](~/assets/images/sbs-graphactivity-feedbroadcast/clientsecret.png)
     
        The **Add a client secret** window appears.  
 
@@ -256,11 +260,11 @@ items:
     
     1. Select **Add**.
 
-         ![Add client secret to app](~/assets/images/bs-graphactivity-feedbroadcast/secretsave.png)
+         ![Add client secret to app](~/assets/images/sbs-graphactivity-feedbroadcast/secretsave.png)
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/bs-graphactivity-feedbroadcast/clientsecretcode.png)
+         ![Value of client secret](~/assets/images/sbs-graphactivity-feedbroadcast/clientsecretcode.png)
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -278,7 +282,7 @@ items:
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"TenantID"` to **Directory (tenant) ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseUrl"` to the fully qualified domain name.
+         * Set `"BaseUrl"` to the `[WebAppDomainName]`.
 
         ![App settings](~/assets/images/sbs-graphactivity-feedbroadcast/appsettingjson.png)
 
@@ -290,7 +294,7 @@ items:
 
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
-         * Set `validDomains` to `[WebAppDomainName]`
+         * Set `validDomains` to `[WebAppDomainName]`.
 
         ![Manifest image2](~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png)
 
@@ -324,7 +328,7 @@ items:
 - title: Add Activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Activity feed broadcast App**
+    **To add Activity feed broadcast App to Teams**
 
     1. In your cloned repository, navigate to **csharp > ActivityFeedBroadcast > AppPackage**.
 
@@ -355,13 +359,13 @@ items:
    
           The app is visible in the meeting SidePanel.      
 
-    1. The Broadcast Tab displays Message title and Message description.
+    1. The **Broadcast Tab** displays Message title and Message description.
 
         ![Output](~/assets/images/sbs-graphactivity-feedbroadcast/output1.png) 
 
-    1. Enter the message and select Send message.
+    1. Enter the message and select **Send message**.
 
-       ![Bot sends you adaptive card](~/assets/images/sbs-graphactivity-feedbroadcast/output2.png)
+       ![Message](~/assets/images/sbs-graphactivity-feedbroadcast/output2.png)
 
      
 - title: Complete challenge
