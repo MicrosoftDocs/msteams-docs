@@ -26,7 +26,7 @@ items:
 
     You'll see the following output:
 
-     (Placeholder for image)
+      ![Activity feed](~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -55,7 +55,7 @@ items:
 
     1. Select **Clone**. 
 
-- title: Update the Microsoft Azure Active Directory (Azure AD) app registration
+- title: Register your Teams Auth SSO with Microsoft Azure Active Directory (Azure AD)
   durationInMinutes: 1
   content: |
     **To register your app through the Azure AD portal**  
@@ -66,17 +66,19 @@ items:
 
     1. In the left navigation panel, select **App Registrations**.
 
+    1. Select **New registration**.
+
        ![App registration](~/assets/images/sbs-graphactivity-feedbroadcast/newregisteration.png)
 
     1. Enter the following:
 
-       1. Set name to your app name.
+       * Set name to your app name.
 
-       1. Choose the supported account type (any account type will work)
+       * Choose the supported account type (any account type will work).
 
-       1. Leave the **Redirect URI** empty.
+       * Leave the **Redirect URI** empty.
 
-       1. Select Register.
+       * Select Register.
 
         ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
         
@@ -103,7 +105,7 @@ items:
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png)
+       ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/setlinkapplication.png)
 
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
@@ -111,7 +113,7 @@ items:
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png)
+        ![App ID URI](~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png)
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -191,17 +193,11 @@ items:
          * **TeamsActivity.Send**
          * **TeamsAppInstallation.ReadForUser.All**
 
-    1. Select **Add permissions**.
-
-    1. Select **Microsoft Graph**.
-
-    1. Select **Application permissions**.
-
          ![Application permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png)
 
          ![Application permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png)
 
-         ![Application permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)
+    1. Select **Add permissions**.
 
     1. Select **Add a permission**.
 
@@ -209,7 +205,9 @@ items:
 
     1. Select **Application permissions**.
 
-    1. Select **Add permissions**.
+    1. Add the following permissions:</br>
+         * **TeamsActivity.Send** (enabled by default)
+         * **Directory.Read.All**
 
          ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png)
 
@@ -226,9 +224,7 @@ items:
 
             ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png)
 
-            ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/configureweb.png)
-
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+         1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
            `https://bff2****.ngrok.io/Auth/end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
@@ -236,6 +232,12 @@ items:
              * **Access tokens**
    
          1. Select **Configure**.
+
+            ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/configureweb.png)
+
+         1. Select **Add URI** and enter `https://bff2****.ngrok.io/Auth/Start`. 
+
+         1. Select **Save**.
 
             ![Auth-end](~/assets/images/sbs-graphactivity-feedbroadcast/redirect.png)
 
@@ -246,7 +248,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/bs-graphactivity-feedbroadcast/clientsecret.png)
+         ![New client secret](~/assets/images/bs-graphactivity-feedbroadcast/clientsecret.png)
     
        The **Add a client secret** window appears.  
 
@@ -254,7 +256,7 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/bs-graphactivity-feedbroadcast/secretsave.png)
+         ![Add client secret to app](~/assets/images/bs-graphactivity-feedbroadcast/secretsave.png)
 
     1. In the **Value** column, select **Copy to clipboard**.
 
@@ -269,7 +271,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/sbs-graphactivity-feedbroadcast/appsettingjson.png)
+        ![App settings location](~/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png)
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
@@ -278,7 +280,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        ![App settings](~/assets/images/sbs-graphactivity-feedbroadcast/appsettings.png)
+        ![App settings](~/assets/images/sbs-graphactivity-feedbroadcast/appsettingjson.png)
 
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -324,9 +326,9 @@ items:
   content: |
     **To create a Teams meeting and add Activity feed broadcast App**
 
-    1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
+    1. In your cloned repository, navigate to **csharp > ActivityFeedBroadcast > AppPackage**.
 
-    1. Create a .zip with the following files that are present in the **Manifest** folder: 
+    1. Create a .zip with the following files that are present in the **AppPackage** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
@@ -335,16 +337,15 @@ items:
     
     1. Go to **Microsoft Teams**.
 
-    1. Select **Store**.
-    1. Select **Manage your apps**.
-    1. Select **Publish an app**.
+    1. Select **Apps**.
 
-      
+    1. Select **Manage your apps**.
+    
     1. Select **Upload a custom app**. 
 
        ![Upload custom app](~/assets/images/sbs-graphactivity-feedbroadcast/uploadacustomapp.png)
 
-    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+    1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
        ![Select zip file](~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png)
 
@@ -358,7 +359,7 @@ items:
 
         ![Output](~/assets/images/sbs-graphactivity-feedbroadcast/output1.png) 
 
-    1. Enter the message and select send message
+    1. Enter the message and select Send message.
 
        ![Bot sends you adaptive card](~/assets/images/sbs-graphactivity-feedbroadcast/output2.png)
 
@@ -368,7 +369,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Activity feed](~/assets/images/sbs-graphactivity-feedbroadcast/output2.png)
+       ![Activity feed](~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png)
 
 
 - content: |
