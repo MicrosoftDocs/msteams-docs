@@ -57,7 +57,7 @@ landingContent:
       - text: Explore low-code apps for Teams
         url:  ~/samples/teams-low-code-solutions.md 
 
-- title: Tutorials
+- title: Features updates
   linkLists:
     - linkListType: concept
       links:
@@ -73,7 +73,9 @@ landingContent:
           url: ~/bots/how-to/authentication/add-authentication.md
         - text: Enable and configure apps for meetings
           url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-        
+
+- title: Tutorials
+  linkLists:        
     - linkListType: tutorial
       links:
         - text: Create Calling and meeting bot
