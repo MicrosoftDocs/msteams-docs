@@ -9,11 +9,11 @@ author: v-leenagopal
 
 # Plugins introduction
 
-The Microsoft 365 plugins provides an integration between Moodle sites and Microsoft Teams. Tis plugins makes it easier for the user to scehedule, colloabrate, There are seven plugins, which can be used independently, or in collaboration, as required in different scenarios. You can post any comments or issues at [dedicated GitHub repository](https://github.com/microsoft/o365-moodle/issues). For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
+The Microsoft 365 plugins provides an integration between Moodle sites and Microsoft Teams. This plugins makes it easy to schedule, deliver, and collabrate on the course content. There are seven plugins, which can be used independently, or in collaboration, as required in . You can post any comments or issues at [dedicated GitHub repository](https://github.com/microsoft/o365-moodle/issues). For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
 
-## Scenarios
+## Distinct user requirements
 
-The following table lists the plugins and GitHub labels depending on the scenarios:
+The following table lists the plugins and GitHub labels based on the requirements:
 
 |Result|Plugins to install|GitHub Label(s)|
 |-----|-----|----|
@@ -45,7 +45,7 @@ The Microsoft 365 repository plugin allows the user to store course files in One
 
 ## Teams meetings
 
-The Team meeting plugin allows users to create meetings requests in calendar, assignments, forum posts, oAtto editor is available.
+The Teams meetings plugin allows users to create meetings requests in calendar, assignments, forum posts, and in the Atto editor when available.
 
 ## Microsoft 365 Teams theme
 
@@ -53,7 +53,7 @@ The Microsoft 365 Teams theme plugin provides user with custom view of Moodle co
 
 ## OneNote integration
 
-The OneNote integration plugin provides students the option to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necesssary feedback on corresponding assignments in OneNote. OneNote also Enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
+The OneNote integration plugin provides the option to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necesssary feedback on corresponding assignments in OneNote. OneNote also Enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
  
 ## Microsoft block
 

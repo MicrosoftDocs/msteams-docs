@@ -9,16 +9,16 @@ author: v-leenagopal
 
 # Plugins overview
 
-The details of the Microsoft 365 plugins are as follows:
+The detailed description of Microsoft 365 plugins are as follows:
 
 ## OpenID Connect
 
-The OpenID Connect plugin authenticates any site or tool that supports the OpenID Connect specification. It is used to provide single-sign-on support with Office 365.
+The OpenID Connect plugin authenticates any site or tool that supports OpenID Connect specification. It is used to provide single-sign-on support with Office 365.
 
-The OpenID Connect provides institutions with the following sign-in workflow options to meet their specific needs:
+The OpenID Connect plugin provides institutions with the following sign-in workflow options to meet their specific requirements:
 
-* Users can enter their Office 365 credentials, such as email and password to sign in directly using Moodle’s username and password fields, without signing into Office 365.
-* Users can select the link to sign in through Office 365 or the OpenID Connect provider on a Moodle page.
+* Users can enter their Office 365 credentials, such as email and password to sign in directly or sign-in using Moodle’s username and password fields, without signing into Office 365.
+* Users can select the link to sign in through Office 365 or the OpenID Connect provider on Moodle page.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Login to openid-connect":::
 
@@ -45,15 +45,16 @@ The users can perform the following actions with Microsoft 365 integration:
 
 Microsoft 365 offers benefits of using it as a file repository for an institution while keeping Moodle's data structure simple. The Microsoft 365 repository plugin provides the following services:
 
-* The teachers can store the course files in OneDrive. Each course has its own folder created in OneDrive, which allows teachers to add files either from the course files area of OneDrive or from their own personal space.  
+* The faculty can store the course files in OneDrive. Each course has its own folder created in OneDrive, which allows user to add files either from the course files area of OneDrive or from their own personal space.  
 * Users can choose to add the file to Moodle as a copy or create a link to the file. The linked file is displayed in a new window or is embedded in the page.
 * Users can upload files to OneDrive or SharePoint using the Moodle file picker.
+
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 repository.png" alt-text="ms.365 repository":::
 
 ## Teams meetings
 
-Teams meetings can be created using the Atto editor in calendar, assignments, forum posts, or wherever Atto editor is available. After the plugin is installed, teachers and students can create an audio or video meeting from Moodle. It require Microsoft 365 account and Moodle permissions to create meetings.
+Teams meetings can be created in the calendar, assignments, forum posts, or wherever Atto editor is available. After the plugin is installed, faculty and students can create an audio or video meeting using Moodle which requires Microsoft 365 account and Moodle permissions.
 
 >[!NOTE]
 >Teams meetings don't appear on Outlook or Teams calenders, however, individual student names can be added to the invite for the same.
@@ -87,12 +88,12 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 
 ## Microsoft block
 
-Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to various resources. The admins can configure the Block to view the modified changes to appear on each course page. The Block also allows the users to perform the following activities:
+Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to various resources. Administators can configure the block to view the modified changes to appear on each course page. The block also allows the users to perform the following activities:
 
 * Access the course SharePoint file location and OneNote notebook.
 * View the course on OneNote notebook for submissions.
 * Configure the Outlook calendar sync.
-* Manage the connection to Office 365.
+* Manage connection to Office 365.
 * Customize personal Office 365 integration preferences.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block":::
@@ -103,7 +104,7 @@ The oEmbed filter plugin enhances user experience by simplifying inclusion of th
 
 * Reduces the time for an instructor to embed videos to an HTML page.
 * Enables embedding of multiple video content providers.
-* Quick to copy and embed code from any of the supported services.
-* Video embedding to YouTube without API key.
+* Quick way to copy and embed code from any of the supported services.
+* Video embedding to Youtube without API key.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::

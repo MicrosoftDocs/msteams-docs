@@ -13,11 +13,10 @@ Learning Tools Interoperability (LTI) is a specification developed to integrate 
 
 ## OneDrive LTI app
 
-The OneDrive LTI app provides faculty and students with experience with their OneDrive files inside an LMS, that includes the following:
+The OneDrive LTI app allows the faculty and students to access their OneDrive files inside the LMS, which also includes the following:
 
-* Access personal OneDrive files from within LMS.
 * Access class files in shared ODSP libraries from within LMS.
-* Allow users to easily share files using sharing links within the LMS.
+* To share files using sharing links within LMS.
 
 ## Class Teams LTI app
 
@@ -35,7 +34,7 @@ After creating the Class Team, educators and students can do the following:
 
 ## Teams Meetings LTI app
 
-The Microsoft Teams Meetings LTI app helps faculty and students to integrate class meetings to their courses. Use the Teams Meetings LTI app to do the following:
+The Microsoft Teams meetings LTI app helps faculty and students to integrate class meetings to their courses. The Teams meetings LTI app also allows the user to do the following:
 
 * Schedule individual or recurring meetings within the course in LMS and set meeting options.
 * View past & upcoming meetings within the LMS course calendar.
@@ -43,7 +42,7 @@ The Microsoft Teams Meetings LTI app helps faculty and students to integrate cla
 * Engage across desktop and web platforms.
 
 > [!NOTE]
-> The Team Meeting LTI app currenlty doesn't support channel meetings, display of meeting recordings, or syncing of meetings with the LMS calendar.
+> The Team Meeting LTI app doesn't support channel meetings, display of meeting recordings, or syncing of meetings with the LMS calendar.
 
 ## See also
 

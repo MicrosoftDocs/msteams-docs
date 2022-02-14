@@ -1,15 +1,15 @@
 ---
 title: Frequently asked questions
-description: Answers to some common questionsp
-ms.topic: FAQs
+description: Answers to some common questions
+ms.topic: FFrequently asked questions
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Frequently asked questions
+# Frequently asked questions on Moodle LMS
 
-Get answers to some of the common questions users have in Moodle learning management system.
+<!-- Get answers to some of the common questions users have in Moodle learning management system. -->
 
 <br>
 
@@ -17,7 +17,7 @@ Get answers to some of the common questions users have in Moodle learning manage
 
 <summary><b>What should I do if one or more of the course teams were not created after synchronization?</b></summary>
 
-Each Moodle course must have at least one teacher and one Student in Moodle, who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
+Each Moodle course must have at least one teacher and one student in Moodle, who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
 
 > [!NOTE]
 > Each team course instance must have an Owner, and the synchronization sets the teacher as the Owner, with assumption that the teacher has a Microsoft Teams license.
