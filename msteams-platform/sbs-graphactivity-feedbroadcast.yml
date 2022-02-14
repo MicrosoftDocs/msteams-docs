@@ -322,7 +322,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png) 
+          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/appisready.png" alt-text="ready" border="true":::
 
    
 - title: Add Activity feed broadcast app to Teams
