@@ -12,9 +12,19 @@ This allows users to share the app or document from the app or document itself w
 
 ## Enable Present-in-Teams on 3P app
 
-To enable Present-in-Teams option for third party apps, use the following format of the deep link to share the app:
+You can use deep links to link your app with Teams. To enable Present-in-Teams in your app, use the following deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
+
+The following are the details for the deep links:
+
+**msteams:** according to protocol, all deeplinks should start with msteams, so that Teams app recognizes it and can open the deeplink.​
+
+**meeting-stage:** verb that specifies the protocol type, and the deeplink type​
+
+**deeplinkId:** GUID/UUID used for telemetry correlation​
+
+**fqdn:** teams.microsoft.com or teams.live.com. Teams supports multi-tenant multi-account, and Teams can run AAD and MSA accounts at the same time. FQDN is needed in Teams deeplink service for tenant/account checking. When the meeting is scheduled with Teams for Life, the fqdn is: teams.live.com, when the meeting is scheduled for Teams for business, the fqdn will be teams.microsoft.com or team.microsoft.us (for Gov) etc. Teams client will find the right linked identity and suggest to switch to the right one.​
 
 ```json
 { ​
@@ -26,7 +36,5 @@ To enable Present-in-Teams option for third party apps, use the following format
 }
 ```
 
-## Enable Present-in-Teams on 1P
-
-
 ## End user Present in Teams experience
+
