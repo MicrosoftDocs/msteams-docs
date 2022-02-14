@@ -16,6 +16,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of messaging extension app that uses a popup to collect or display information. <br>**See also**: [Messaging extension](#m); [Search commands](#s) |
 | [Adaptive Card](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or messaging extension. Use text, graphics, and buttons with these cards for rich communication. |
+| [Anonymous user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and is not federated with a tenant. They are like external users in a meeting. <br>**See also**: [Federated user](#f) |
 | [App Catalog](../toolkit/publish.md) | A site that stores the apps for SharePoint and Office for an organization's internal use. <br>**See also**: [SPFx](#s) |
 | [App manifest](../resources/schema/manifest-schema.md) | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file and app icons - color icon and outline icon. |
@@ -85,11 +86,18 @@ Common terms and definitions used in Teams Developer Documentation.
 |
 
 
+## F
+
+| Term | Definition |
+| --- | --- |
+| [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user role in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They are also called External users. <br>**See also**: [Anonymous user](#a) |
+|
+
 ## G
 
 | Term | Definition |
 | --- | --- |
-| Graph API | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
+| [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
 | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
 |
 
@@ -153,8 +161,8 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| People Picker | A native control in Teams platform to search and select people, which can be integrated in web apps, Adaptive Cards, and more. 
-| [Personal app](../concepts/design/personal-apps.md) | A personal app can be a bot, private workspace, or both. <br>**See also**: [Shared app](#s) |
+| [People Picker](../task-modules-and-cards/cards/people-picker.md) | A native control in Teams platform to search and select people, which can be integrated in web apps, Adaptive Cards, and more. |
+| [Personal app](../concepts/design/personal-apps.md) | A personal app is a Teams application with a personal scope. It focuses on interactions with a single user. It can be a conversational bot to engage in one-to-one conversations with a user or a personal tab providing an embedded web experience, or both. <br>**See also**: [Shared app](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. <br>**See also**: [Deploy](#d) |
@@ -186,6 +194,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It is invoked to surface web content within Teams. Note that it is *not* a different for Meeting stage.* <br>**See also**: [Meeting stage](#m) |
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: Collaboration aap |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Card payload. <br>**See also**: [Dynamic search](#d) |
+| [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
 |
 
 
@@ -202,7 +211,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
-| Teams store | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it is available to users via the Teams store. 
+| [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it is available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
 |
 
