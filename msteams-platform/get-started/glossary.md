@@ -142,8 +142,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
 | [Microsoft Store](../concepts/deploy-and-publish/appsource/publish.md) | Microsoft Store is a digital distribution platform owned by Microsoft. |
-| [Mobile whitelisting](../tabs/design/tabs-mobile.md) | A process to approve trusted websites for communication with a mobile app. <br>**See also**: [Teams Mobile](#t); |
-| 
+|
 
 
 ## O
