@@ -32,7 +32,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -53,12 +53,12 @@ items:
 
     1. Select **Clone**. 
 
-- title: Update the Azure AD app registration
+- title: Update the Microsoft Azure Active Directory (Azure AD) app registration
   durationInMinutes: 1
   content: |
     **To register your app through the Azure AD portal**  
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal] (https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
 
@@ -70,17 +70,28 @@ items:
 
        1. Set name to your app name.
 
-       1. Choose any supported account type.
+       1. Choose the supported account type (any account type will work)
 
        1. Leave the **Redirect URI** empty.
 
-    1. Select Register.
+       1. Select Register.
 
         ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
         
     1. Go to overview and copy and save **Application (client) ID**, **Directory (tenant) ID** for later use.
 
         ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/overview.png)
+
+    **To create tunnel for local web server**
+
+    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+     ```bash
+     ngrok http -host-header=localhost 3978
+     ```
+
+    > [!TIP]
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
     1. Under **Manage**, select **Expose an API**.
 
@@ -94,7 +105,7 @@ items:
 
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://ae57****.ngrok.io/{AppID}`</br>
+        `api://bff2****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
@@ -130,7 +141,7 @@ items:
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         ![Scopes](~/assets/images/sbs-graphactivity-feedbroadcast/scopes.png) 
   
@@ -170,7 +181,7 @@ items:
     1. Select **Delegated permissions**.
 
     1. Add the following permissions:</br>
-         * ***User.Read** (enabled by default)
+         * **User.Read** (enabled by default)
          * **Directory.Read.All**
          * **Directory.ReadWrite.All**
          * **TeamsAppInstallation.ReadForUser**
@@ -180,11 +191,15 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png)
+    1. Select **Microsoft Graph**.
 
-         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png)
+    1. Select **Application permissions**.
 
-         ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)
+         ![Application permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png)
+
+         ![Application permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png)
+
+         ![Application permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)
 
     1. Select **Add a permission**.
 
@@ -197,12 +212,14 @@ items:
          ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png)
 
          ![Other permissions](~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png)  
+
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
+
          1. Select **Web**.
 
             ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png)
@@ -210,7 +227,7 @@ items:
             ![Web](~/assets/images/sbs-graphactivity-feedbroadcast/configureweb.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://ae57****.ngrok.io/auth-end`. </br>
+           `https://bff2****.ngrok.io/Auth/end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -255,6 +272,7 @@ items:
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"TenantID"` to **Directory (tenant) ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
@@ -262,28 +280,29 @@ items:
 
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png)
+        ![Manifest file location](~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png)
     
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
-         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
+         * Set `validDomains` to `[WebAppDomainName]`
 
         ![Manifest image2](~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png)
 
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2019 or Command line**
+    **To build and run the service using  Microsoft Visual Studio**
 
     # [Visual Studio 2019](#tab/vs2019)
 
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png)
+          ![Open file](~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png)
 
-       1. Select **SidePanel.sln** file from **csharp** folder.
+       1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
 
           ![Solution File](~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png)
 
@@ -297,21 +316,11 @@ items:
 
           ![App ready](~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png) 
 
-        
-    # [Command line](#tab/cli)
-
-    Navigate to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
-
-    ```bash
-    dotnet run
-    ```
    
-    ![Dotnet](~/assets/images/sbs-graphactivity-feedbroadcast/dotnetruncmd.png)
-      
-- title: Add Meetings SidePanel app to Teams
+- title: Add Activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings SidePanel App**
+    **To create a Teams meeting and add Activity feed broadcast App**
 
     1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
 
@@ -343,13 +352,13 @@ items:
    
           The app is visible in the meeting SidePanel.      
 
-    1. App sends you the following message.
+    1. The Broadcast Tab displays Message title and Message description.
 
-        ![Add an app](~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png) 
+        ![Output](~/assets/images/sbs-graphactivity-feedbroadcast/output1.png) 
 
     1. Enter the message and select send message
 
-       ![Bot sends you adaptive card](~/assets/images/meeting-content-bubble/push-agenda.png)
+       ![Bot sends you adaptive card](~/assets/images/sbs-graphactivity-feedbroadcast/output2.png)
 
      
 - title: Complete challenge
@@ -357,10 +366,10 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/sbs-graphactivity-feedbroadcast/sidepanelondesktopmobile.png)
+       ![Activity feed](~/assets/images/sbs-graphactivity-feedbroadcast/output2.png)
 
 
 - content: |
-    You've completed the tutorial to get started with a **Side Panel** app!
+    You've completed the tutorial to get started with a **Activity feed broadcast** app!
 
 
