@@ -319,6 +319,10 @@ The following code sample demonstrates how to obtain file consent and upload fil
 |----------------|-----------------|--------------|----------------|-----------|
 | File upload | Demonstrates how to obtain file consent and upload files to Teams from a bot. Also, how to receive a file sent to a bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload files to Teams from a bot.
+
 ## Next step
 
 > [!div class="nextstepaction"]
