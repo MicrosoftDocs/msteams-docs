@@ -82,7 +82,7 @@ items:
 
         ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
         
-    1. Go to overview and copy and save **Application (client) ID**, **Directory (tenant) ID** for later use.
+    1. Go to **Overview** and copy and save Application (client) ID and Directory (tenant) ID for later use.
 
         ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/overview.png)
 
