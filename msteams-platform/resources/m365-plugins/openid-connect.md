@@ -7,7 +7,7 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Plugins Overview
+# Plugins overview
 
 The details of the Microsoft 365 plugins are as follows:
 
@@ -51,7 +51,7 @@ Microsoft 365 offers benefits of using it as a file repository for an institutio
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 repository.png" alt-text="ms.365 repository":::
 
-## Teams Meetings
+## Teams meetings
 
 Teams meetings can be created using the Atto editor in calendar, assignments, forum posts, or wherever Atto editor is available. After the plugin is installed, teachers and students can create an audio or video meeting from Moodle. It require Microsoft 365 account and Moodle permissions to create meetings.
 
@@ -60,20 +60,20 @@ Teams meetings can be created using the Atto editor in calendar, assignments, fo
 
 :::image type="content" source="../../assets/images/MoodleInstructions/teams meeting.png" alt-text="signin to teams meeting":::
 
-## Microsoft 365 Teams Theme
+## Microsoft 365 Teams theme
 
 Microsoft 365 Teams theme plugins displays a custom view of Moodle course home page and is available for viewing when users access their Moodle courses within Teams.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/teams theme.png" alt-text=" microsoft teams theme":::
 
-The theme plugin offers users an unified enhanced experience in Microsoft Teams and provides following features:
+The theme plugin offers users with an unified enhanced experience with the following features:
 
 * Adapts to Microsoft Teams theme changes, such as default, dark, and high contrast.
 * Provides focus on the course activities.
 * Removes Moodle blocks, navigation, header, and footer.
 * Provides Microsoft Team UI elements.
 
-## OneNote Integration
+## OneNote integration
 
 OneNote integration helps with access to texts, graphics, and audio repositories. The advantages of the bundle of plugins are as follows:
 
@@ -85,11 +85,11 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 > [!NOTE]
 > Submission or feedback events trigger OneNote creation with a section for each course the student has enrolled in.
 
-## Microsoft Block
+## Microsoft block
 
-Microsoft Block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to various resources. The admins can configure the Block to view the modified changes to appear on each course page. The Block also allows the users to perform the following activities:
+Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to various resources. The admins can configure the Block to view the modified changes to appear on each course page. The Block also allows the users to perform the following activities:
 
-* Access the course SharePoint file location and OneNote Notebook.
+* Access the course SharePoint file location and OneNote notebook.
 * View the course on OneNote notebook for submissions.
 * Configure the Outlook calendar sync.
 * Manage the connection to Office 365.
@@ -97,13 +97,13 @@ Microsoft Block enhances user experience by providing an User Interface (UI) to 
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block":::
 
-## oEmbed Filter
+## oEmbed filter
 
-The oEmbed filter enhances user experience by simplifying inclusion of the external HTML content within Moodle. The advantages of oEmbed filter are as follows: 
+The oEmbed filter plugin enhances user experience by simplifying inclusion of the external HTML content within Moodle. The advantages of oEmbed filter are as follows: 
 
 * Reduces the time for an instructor to embed videos to an HTML page.
 * Enables embedding of multiple video content providers.
-* Doesn't require a technical understanding of how to copy and embed code from any of the supported services.
-* Doesn't require YouTube API key for video embedding.
+* Quick to copy and embed code from any of the supported services.
+* Video embedding to YouTube without API key.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::

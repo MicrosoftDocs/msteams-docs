@@ -7,9 +7,9 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Plugins Introduction
+# Plugins introduction
 
-The Microsoft 365 Plugins supports integration between Moodle sites and Microsoft Teams. Currently, there are seven plugins, which can be used independently, or in collaboration, as required in different scenarios. You can post any comments or issues at [dedicated GitHub repository](https://github.com/microsoft/o365-moodle/issues). For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
+The Microsoft 365 plugins provides an integration between Moodle sites and Microsoft Teams. Tis plugins makes it easier for the user to scehedule, colloabrate, There are seven plugins, which can be used independently, or in collaboration, as required in different scenarios. You can post any comments or issues at [dedicated GitHub repository](https://github.com/microsoft/o365-moodle/issues). For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
 
 ## Scenarios
 
@@ -28,11 +28,11 @@ The following table lists the plugins and GitHub labels depending on the scenari
 
 ## OpenID Connect
 
-Allows users to authenticate any site or tool that supports OpenID Connect specification. It is used to provide single-sign-on support with Microsoft Office 365.
+The Open ID Connect plugin allows users to authenticate any site or tool that supports the required specification. It is used to provide single-sign-on support with Microsoft Office 365.
 
 ## Microsoft 365 integration
 
-Allows administrators to validate the following:
+The Microsoft 365 integration plugin allows administrators to validate the following:
 
 * Check if the integration is functioning properly.
 * Synchronize users of Office 365 and Moodle.
@@ -41,27 +41,27 @@ Allows administrators to validate the following:
 
 ## Microsoft 365 repository
 
-Use Microsoft 365 repository plugin to store course files in OneDrive. The teachers can add files from the course files area of OneDrive or from their own personal space.
+The Microsoft 365 repository plugin allows the user to store course files in OneDrive. Users (teachers) can add files from the course files area of OneDrive or from their own personal space to this repository.
 
 ## Teams meetings
 
-Create meetings using the Atto editor in calendar, assignments, forum posts, or wherever Atto editor is available.
+The Team meeting plugin allows users to create meetings requests in calendar, assignments, forum posts, oAtto editor is available.
 
 ## Microsoft 365 Teams theme
 
-Displays custom view of Moodle course home page within Teams and available when users access their courses within Teams.
+The Microsoft 365 Teams theme plugin provides user with custom view of Moodle course home page when accessing the course through Teams.
 
-## OneNote Integration
+## OneNote integration
 
-Include browsing notebooks, sections, and pages; where students do assignments and teachers provide feedback on respective assignments in OneNote. Enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
+The OneNote integration plugin provides students the option to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necesssary feedback on corresponding assignments in OneNote. OneNote also Enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
  
-## Microsoft Block
+## Microsoft block
 
-Allow users to access the course SharePoint file location and view the course in OneNote notebook for submissions, and modify Office 365 integration preferences. The admins can configure the block to appear on all the course pages.
+Microsoft block plugin allows users to access the course SharePoint file location and view the course in OneNote notebook for submissions, along with the option to modify Office 365 integration preferences. The admininstrators can configure the block to appear on all the course pages.
 
 ## oEmbed filter
 
-Simplify the inclusion of external HTML content within Moodle.
+This plugin simplifies the inclusion of external HTML content within Moodle.
 
 ## See also
 
