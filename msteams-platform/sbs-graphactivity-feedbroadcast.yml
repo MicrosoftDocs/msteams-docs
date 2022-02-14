@@ -322,7 +322,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/appisready.png" alt-text="ready" border="true":::
+          ![App is ready](~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png)
 
    
 - title: Add Activity feed broadcast app to Teams
@@ -330,8 +330,7 @@ items:
   content: |
     **To add Activity feed broadcast App to Teams**
 
-      :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/output.png" alt-text="image" border="true":::
-       
+             
     1. In your cloned repository, navigate to **csharp > ActivityFeedBroadcast > AppPackage**.
 
     1. Create a .zip with the following files that are present in the **AppPackage** folder: 
