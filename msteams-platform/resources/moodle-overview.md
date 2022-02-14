@@ -11,7 +11,7 @@ keywords: moodle LMS mConnect deep links
 
 <!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. -->
  
- Moodle is an open-source learning managing system (LMS), which helps its users with an unique remote learning experience along with enhanced cloud-based services. For more information, see [Moodle](https://moodle.com/about/). Moodle LMS integrates with Microsoft Teams to provide enhanced productivity services as follows:
+ Moodle is an open-source learning managing system (LMS), which helps its users with an unique remote learning experience and enhanced cloud-based services. For more information, see [Moodle](https://moodle.com/about/). Moodle LMS integrates with Microsoft Teams to provide enhanced productivity services as follows:
 
 * Audio or video calls
 * Chat with students
@@ -26,13 +26,14 @@ keywords: moodle LMS mConnect deep links
 ## Moodle LMS Sections 
 
 * **Moodle LTI apps**: The Learning Tools Interoperability (LTI) apps available for Moodle LMS are as follows:
+
   * OneDrive LTI app, which provides enhanced services like accessing and sharing personal and class files within LMS.
-  * Class Teams LTI app, which helps the faculty create a class with user roles within the LMS course; and access to engaging LMS course for students.
+  * Class Teams LTI app, which helps the faculty create a class with user roles within the LMS course; and access to engaging courses for students.
   * Teams meetings LTI app, which helps faculty and students to engage using desktop, web platforms and to integrate class meetings in their LMS course.
 
 * **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Microsoft Teams. There are seven types of plugins, which can be used independently, or in partnership to achieve distinct user requirements.
 
-* **Partner apps for Moodle**:  The complete set of apps for Moodle and Microsoft Teams is available in Microsoft Store.
+* **Partner apps for Moodle**: The complete set of apps for Moodle and Microsoft Teams is available in Microsoft Store.
 
 ## Distinct user requirements
 

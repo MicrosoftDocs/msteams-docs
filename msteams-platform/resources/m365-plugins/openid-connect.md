@@ -88,12 +88,12 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 
 ## Microsoft block
 
-Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to various resources. Administators can configure the block to view the modified changes to appear on each course page. The block also allows the users to perform the following activities:
+Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to its numersous resources. Administators can configure the block to view the modified changes to appear on each course page. The block also allows users to perform the following activities:
 
 * Access the course SharePoint file location and OneNote notebook.
 * View the course on OneNote notebook for submissions.
 * Configure the Outlook calendar sync.
-* Manage connection to Office 365.
+* Manages connection to Office 365.
 * Customize personal Office 365 integration preferences.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block":::
@@ -104,7 +104,7 @@ The oEmbed filter plugin enhances user experience by simplifying inclusion of th
 
 * Reduces the time for an instructor to embed videos to an HTML page.
 * Enables embedding of multiple video content providers.
-* Quick way to copy and embed code from any of the supported services.
-* Video embedding to Youtube without API key.
+* Ensures a faster method to copy and embed code from any of the supported services.
+* Permits video embedding without an API key.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::

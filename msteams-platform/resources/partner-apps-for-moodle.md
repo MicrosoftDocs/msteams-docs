@@ -9,7 +9,7 @@ author: v-leenagopal
 
 # Partner apps for Moodle
 
-Microsoft Store provides certified Partner apps for Moodle certify the and validates all Softwares as Service (SaaS) offerings.
+Microsoft Store provides certified Partner apps for Moodle, which validates all Softwares as Service (SaaS) offerings.
 
 ## Key benefits of Partner apps for Moodle
 
@@ -25,7 +25,7 @@ The advantages of using partner apps are as follows:
 mConnect is [Microsoft certified](/microsoft-365-app-certification/teams/teams-apps) app that integrates Moodle courses and activities into Teams to enhance learning experience. mConnect is empowered by leading-edge collaboration and productivity services in the cloud. The app is developed and supported by Skooler, a long-standing, and trusted Microsoft Gold Partner in education. mConnect allows Moodle administrators to automatically set up Teams for every Moodle course, making all features available for every course in Moodle.
 
 >[!NOTE]
->This app may be added from the Microsoft Teams App store if customers have a pre-existing account with Skooler, and this app requires an admin to configure it directly from the Moodle site.
+>This app may be added from the Microsoft Teams Store if customers have a pre-existing account with Skooler, and this app requires an adminstrator to configure it directly from the Moodle site.
   
 <!-- Watch the following video to understand how to get started with mConnect and Teams: -->
 
