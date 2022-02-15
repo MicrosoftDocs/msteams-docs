@@ -1,5 +1,5 @@
 ---
-title: Getting Help
+title: Getting help
 description: Help desk
 ms.topic: FAQs
 ms.localizationpriority: medium
@@ -13,9 +13,9 @@ Microsoft Teams community of developers use Stack Overflow to connect with other
 
 |Support type| contact|
 |------------|--------|
-| Microsoft 365 plugins Directory | https://moodle.org/plugins/?q=set:microsoft-365|
+| Microsoft 365 plugins directory| https://moodle.org/plugins/?q=set:microsoft-365|
 | Reporting issues related to Microsoft 365 plugins| https://github.com/enovation/moodle-atto_teamsmeeting/issues| 
-| Partner apps| Partner apps are supported by the authoring agencies. See the application description page in the marketplace for details on how to get help with publishing apps|
+| Partner apps| Partner apps are supported by the authoring agencies. See the application description website for details on how to get help with publishing apps|
 | mConnect: customer support| mConnect is supported by Skooler, a Microsoft partner. An optional enterprise SLA can be purchased to extend support options. For further assistance, email at moodle.support@skooler.com|
 | mConnect: Installation Documentation| For more information on installation, see: https://skooler.com/mconnect/how-to/|
    
