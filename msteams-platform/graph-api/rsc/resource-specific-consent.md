@@ -88,7 +88,7 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Microsoft Azure portal:
 
-1. Sign in to the [Microsoft Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. The default is **Allow group owner consent for all group owners**. For a team owner to install an app using RSC, group owner consent must be enabled for that user.
 
@@ -98,9 +98,9 @@ In addition, you can enable or disable group owner consent using PowerShell, fol
 
 ### Configure user consent settings for RSC in a chat
 
-You can enable or disable [user consent](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directly within the Microsoft Azure portal:
+You can enable or disable [user consent](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directly within the Azure portal:
 
-1. Sign in to the [Microsoft Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **User consent for applications**. The default is **Allow user consent for apps**. For a chat member to install an app using RSC, user consent must be enabled for that user.
 
@@ -140,7 +140,7 @@ For more information, see [get access on behalf of a user](/graph/auth-v2-user?v
 The RSC permissions are declared in your app manifest JSON file. 
 
 > [!IMPORTANT]
-> Non-RSC permissions are stored in the Microsoft Azure portal. Do not add them to the app manifest.
+> Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
 
 ### Manifest changes for resource-specific consent
 
