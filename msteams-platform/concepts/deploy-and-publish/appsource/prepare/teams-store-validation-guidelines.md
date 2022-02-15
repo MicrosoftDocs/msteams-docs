@@ -225,7 +225,7 @@ Apps must be fully functional on the latest versions of the following operating 
 
 * Microsoft Windows
 * macOS
-* Microsoft Edge
+* Microsoft&nbsp;Edge
 * Google Chrome
 * iOS
 * Android
