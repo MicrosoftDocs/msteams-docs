@@ -752,4 +752,4 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
-* [Share-in-Teams] (~/concepts/build-and-test/share-in-teams.md)
+* [Share-in-Teams](/microsoftteams/platform/concepts/build-and-test/share-in-teams?branch=pr-en-us-5129)
