@@ -55,12 +55,12 @@ items:
 
     1. Select **Clone**. 
 
-- title: Register your Teams Auth SSO with Microsoft Azure Active Directory (Azure AD)
+- title: Register your Teams auth single sign-on (SSO) with Microsoft Azure Active Directory (Azure AD)
   durationInMinutes: 1
   content: |
-    **To register your app through the Azure AD portal**  
+    **To register your app through the Microsoft Azure AD portal**  
 
-    1. Go to the [Microsoft Azure portal] (https://portal.azure.com/).
+    1. Go to the [Azure portal] (https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
 
@@ -70,19 +70,19 @@ items:
 
        ![App registration](~/assets/images/sbs-graphactivity-feedbroadcast/newregisteration.png)
 
-    1. Enter the following:
+    1. On the **Register an application** page, set the value as follows:
 
-       * Set Name to your app name.
+       * Set **Name** to your app name.
 
-       * Choose any one of the supported account types (any account type will work).
+       * Set **Supported account types** to any account type.
 
-       * Leave the Redirect URI empty.
+       * Leave the **Redirect URI** empty.
 
        * Select **Register**.
 
         ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
         
-    1. Go to **Overview** and copy and save Application (client) ID and Directory (tenant) ID for later use.
+    1. From the app **Overview** page and copy the value of the **Application (client) ID** and **Directory (tenant) ID** and save it for later use.
 
         ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/overview.png)
 
@@ -256,7 +256,7 @@ items:
     
        The **Add a client secret** window appears.  
 
-    1. Enter **Description**.
+    1. Enter a value in **Description**.
     
     1. Select **Add**.
 
@@ -301,7 +301,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using  Microsoft Visual Studio**
+    **To build and run the service using Visual Studio**
 
     # [Visual Studio 2019](#tab/vs2019)
 
@@ -325,10 +325,10 @@ items:
           ![App is ready](~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png)
 
    
-- title: Add Activity feed broadcast app to Teams
+- title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |
-    **To add Activity feed broadcast App to Teams**
+    **To add activity feed broadcast app to Teams**
 
              
     1. In your cloned repository, navigate to **csharp > ActivityFeedBroadcast > AppPackage**.
@@ -378,6 +378,6 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a **Activity feed broadcast** app!
+    You've completed the tutorial to get started with a **activity feed broadcast** app!
 
 
