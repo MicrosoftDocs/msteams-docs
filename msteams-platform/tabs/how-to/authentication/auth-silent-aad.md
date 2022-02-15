@@ -1,9 +1,9 @@
 ---
 title: Silent authentication
-description: Describes silent authentication, Single-sign-on, Microsoft Azure Active Directory (Azure AD) for tabs
+description: Describes silent authentication, Single-sign-on, Azure AD for tabs
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication SSO silent Microsoft Azure Active Directory (Azure AD) tab
+keywords: teams authentication SSO silent Azure AD tab
 ---
 # Silent authentication
 
@@ -13,9 +13,9 @@ keywords: teams authentication SSO silent Microsoft Azure Active Directory (Azur
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using Teams JavaScript SDK version 1.4.1 or later.
 
-Silent authentication in Microsoft Azure Active Directory (Azure AD) minimizes the number of times a user enters their credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
+Silent authentication in Azure AD minimizes the number of times a user enters their credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-To keep your code client-side, use the [Microsoft Azure Active Directory (Azure AD) authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Microsoft Azure Active Directory (Azure AD) access token silently. If the user has signed in recently, they do not see a popup dialog box.
+To keep your code client-side, use the [Azure AD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Microsoft Azure Active Directory (Azure AD) access token silently. If the user has signed in recently, they do not see a popup dialog box.
 
 While Active Directory Authentication Library is optimized for AngularJS applications, it also works with JavaScript single-page applications (SPA).
 
@@ -24,13 +24,13 @@ While Active Directory Authentication Library is optimized for AngularJS applica
 
 ## How silent authentication works
 
-The Active Directory Authentication Library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Microsoft Azure Active Directory (Azure AD)does not display the sign-in page. User interaction may be needed if the user needs to sign in or grant access to the application. If user interaction is necessary, Microsoft Azure Active Directory (Azure AD) returns an error that the library reports to your app. If necessary, your app can now display a sign-in option.
+The Active Directory Authentication Library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD does not display the sign-in page. User interaction may be needed if the user needs to sign in or grant access to the application. If user interaction is necessary, Azure AD returns an error that the library reports to your app. If necessary, your app can now display a sign-in option.
 
 ## How to do silent authentication
 
 The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
 
-[Initiate silent and simple authentication configurable tab using Microsoft Azure Active Directory (Azure AD)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) and follow the instructions to run the sample on your local machine.
+[Initiate silent and simple authentication configurable tab using Azure AD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) and follow the instructions to run the sample on your local machine.
 
 ### Include and configure Active Directory Authentication Library
 
@@ -42,7 +42,7 @@ Include Active Directory Authentication Library in your tab pages and configure 
     // Active Directory Authentication Library configuration
     let config = {
         clientId: "YOUR_APP_ID_HERE",
-        // redirectUri must be in the list of redirect URLs for the Microsoft Azure Active Directory (Azure AD) app
+        // redirectUri must be in the list of redirect URLs for the Azure AD app
         redirectUri: window.location.origin + "/tab-auth/silent-end",
         cacheLocation: "localStorage",
         navigateToLoginRequestUrl: false,
@@ -52,7 +52,7 @@ Include Active Directory Authentication Library in your tab pages and configure 
 
 ### Get the user context
 
-In the tab's content page, call `microsoftTeams.getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Microsoft Azure Active Directory (Azure AD).
+In the tab's content page, call `microsoftTeams.getContext()` to get a sign-in hint for the current user. The hint is used as a `loginHint` in the call to Azure AD.
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -102,7 +102,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### Process the return value
 
-Active Directory Authentication Library parses the result from Microsoft Azure Active Directory (Azure AD) by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign-in callback page.
+Active Directory Authentication Library parses the result from Azure AD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign-in callback page.
 
 Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.
 
@@ -121,7 +121,7 @@ if (authContext.isCallback(window.location.hash)) {
 
 ### Handle the sign-out flow
 
-Use the following code to handle sign out flow in Microsoft Azure Active Directory (Azure AD) authentication:
+Use the following code to handle sign out flow in Azure AD authentication:
 
 > [!NOTE]
 > When you logout from Teams tab or bot, the current session is cleared.
@@ -135,5 +135,5 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 
 ## See also
 
-* [Configure identity providers to use Microsoft Azure Active Directory (Azure AD)](../../../concepts/authentication/configure-identity-provider.md)
+* [Configure identity providers to use Azure AD](../../../concepts/authentication/configure-identity-provider.md)
 * [Know about Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
