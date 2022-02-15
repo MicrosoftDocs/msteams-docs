@@ -33,19 +33,19 @@ keywords: moodle LMS mConnect deep links
 
 * **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Microsoft Teams. There are seven types of plugins, which can be used independently, or in partnership to achieve distinct user requirements.
 
-* **Partner apps for Moodle**: The complete set of apps for Moodle and Microsoft Teams is available in Microsoft Store.
+* **Partner apps for Moodle**: All the partner set of apps for Moodle and Microsoft Teams are available in Microsoft Store.
 
 ## Distinct user requirements
 
-The following examples cite the accelerated learning potential combining Microsoft's cloud-based services with Moodle's courses:
+The following examples discuss the accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
 
-* **Facilitate hybrid remote meetings**: Microsoft Teams meetings and extensibility option allows faculty to seamlessly present in-person and remotely although it is mandatory for students to have access to shared views, apps, and polls. For enhanced follow-up task, you must include the option for multi-language transcription and audio or video course recordings. Teams and Moodle work together to share roosters, activities, and tasks.
+* **Facilitate hybrid remote meetings**: Microsoft Teams meetings and extensibility option allows faculty to seamlessly present in-person and remotely with students. For students its mandatory to have access to shared views, apps, and polls for remote meetings. The follow-up tasks provides options for multi-language transcription and audio or video course recordings. Microsoft Teams and Moodle work together to share roosters, activities, and tasks.
 
-* **Personalize meeting panels and apps**: You can use Teams Graph API endpoints to create unique collaborative learning experiences. For special initiatives in school such as, hackathon, users can interview all freshman students by categorizing submissions using custom polls and share quizzes directly in Teams while pushing updates to the Moodle portal asynchronously.
+* **Personalize meeting panels**: Create unique collaborative learning experiences using Teams Graph API endpoints. For other additional plans or projects, users can interview all new recruits and categorize the results using custom polls. The option to share quizzes directly in Microsoft Teams while pushing updates to the Moodle site asynchronously is also available.
 
-* **Automations and workflow**: To set up automation for institution when a new student joins, the user can add Moodle course, send an Adaptive Card to the student with relevant links and suggest key reading  course materials. With Teams along with custom connector for Moodle, the user can create a Moodle calendar event each time a course meeting is scheduled.
+* **Automations and workflow**: Fr setting up automation facilities for institutions when a new student joins, the user can add Moodle course, send an Adaptive Card to the student with relevant links and suggest key reading course materials. With Microsoft Teams custom connector for Moodle, the user can create a Moodle calendar event each time a course meeting is scheduled.
 
-* **Citizen developer apps**: Introduce new custom apps as differentiators for school which are easy to create simple apps that help to optimize learning can be created i Envision for Teams with special event schedules, shuttle bookings, library books, mentors, and various other services. The user can also create showcase value or provide easy-to-use transactional activities for students and teachers.
+* **Citizen developer apps**: To develop new custom apps for school, which are easy to create and helps optimize learning. You can also provide easy-to-use transactional activities for students and faculty.
 
 <!-- Please provide us feedback, based on the section on the Moodle LMS integrations and share ideas for additional integrations. We look forward to hearing feedback as we continue to empower institutions worldwide to optimize learning and planning in education. -->
 For more information, see [Microsoft education](https://www.microsoft.com/education).  -->
@@ -53,5 +53,5 @@ For more information, see [Microsoft education](https://www.microsoft.com/educat
 ## See also
 
 * [Moodle LTI Apps](moodle-lti-apps.md)
-* [Microsoft 365 Plugins](m365-plugins/m365-plugins-overview.md)
+* [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md)
 * [Partner apps for Moodle](partner-apps-for-moodle.md)
