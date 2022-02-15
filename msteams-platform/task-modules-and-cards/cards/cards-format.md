@@ -170,14 +170,14 @@ The following code shows an example of Adaptive Card with a mention:
 
 ### Microsoft Azure Active Directory (Azure AD) Object ID and UPN in user mention 
 
-Teams platform allows to mention users with their Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs. 
+Teams platform allows to mention users with their Azure AD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs. 
 
 The following table describes the newly supported user mention IDs:
 
 |IDs  | Supporting capabilities |	Description	| Example |
 |----------|--------|---------------|---------|
-| Microsoft Azure Active Directory (Azure AD) object ID | Bot, Connector |  Microsoft Azure Active Directory (Azure AD) user’s object ID |	49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN |	Bot, Connector | Microsoft Azure Active Directory (Azure AD) user’s UPN | john.smith@microsoft.com |
+| Azure AD object ID | Bot, Connector |  Azure AD user’s object ID |	49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN |	Bot, Connector | Azure AD user’s UPN | john.smith@microsoft.com |
 
 #### User mention in bots with Adaptive Cards 
 
@@ -230,11 +230,11 @@ Following image illustrates the user mention with Adaptive Card in Bot:
 
 #### User mention in Incoming Webhook with Adaptive Cards 
 
-Incoming webhooks start to support user mention in Adaptive Cards with the Microsoft Azure Active Directory (Azure AD) Object ID and UPN.
+Incoming webhooks start to support user mention in Adaptive Cards with the Azure AD Object ID and UPN.
 
 > [!NOTE]    
-> * Enable user mention in the schema for Incoming webhooks to support Microsoft Azure Active Directory (Azure AD) Object ID and UPN. 
-> * UI/UX changes are not required for user mentions with Microsoft Azure Active Directory (Azure AD) Object ID and UPN.      
+> * Enable user mention in the schema for Incoming webhooks to support Azure AD Object ID and UPN. 
+> * UI/UX changes are not required for user mentions with Azure AD Object ID and UPN.      
 
 ##### Example 
 
