@@ -7,7 +7,7 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Plugins overview
+# Plugins introduction
 
 The detailed description of Microsoft 365 plugins are as follows:
 

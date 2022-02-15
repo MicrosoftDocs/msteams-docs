@@ -7,9 +7,7 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Frequently asked questions on Moodle LMS
-
-<!-- Get answers to some of the common questions users have in Moodle learning management system. -->
+# Frequent asked questions on Moodle LMS
 
 <br>
 
@@ -17,10 +15,10 @@ author: v-leenagopal
 
 <summary><b>What should I do if one or more of the course teams were not created after synchronization?</b></summary>
 
-Each Moodle course must have at least one teacher and one student in Moodle, who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
+Each Moodle course must have at least one faculty and one student in Moodle, who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
 
 > [!NOTE]
-> Each team course instance must have an Owner, and the synchronization sets the teacher as the Owner, with assumption that the teacher has a Microsoft Teams license.
+> Each team course instance must have an Owner, and the synchronization sets the faculty as the Owner, with assumption that the faculty has Microsoft Teams license.
 
 <br>
 
@@ -28,7 +26,7 @@ Each Moodle course must have at least one teacher and one student in Moodle, who
 
 <details>
 
-<summary><b>What should we do to remove the Moodle login page when working from Microsoft Teams? Can we force single sign-on (SSO)?</b></summary>
+<summary><b>What should we do to remove Moodle login page when working from Microsoft Teams? Can we force single sign-on (SSO)?</b></summary>
 
 The users have multiple sign-in options from the page. If the users prefer to sign-in exclusively using Microsoft 365 credentials then you will need to enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled,you'll directly see the Microsoft sign-in page. The users can manually sign-in to the Moodle portal by using https://{moodle_url}.site/login/index.php?Noredirect=1 
 

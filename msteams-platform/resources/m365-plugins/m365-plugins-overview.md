@@ -7,17 +7,17 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Plugins introduction
+# Plugins overview
 
-The Microsoft 365 plugins provides an integration between Moodle sites and Microsoft Teams. This plugins makes it easy to schedule, deliver, and collabrate on the course content. There are seven plugins, which can be used independently, or in collaboration, as required in . You can post any comments or issues at [dedicated GitHub repository](https://github.com/microsoft/o365-moodle/issues). For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
+Microsoft 365 plugins provides an integration between Moodle sites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate on the course content. There are seven plugins, which can be used independently, or in partership as per the requirement. For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
 
-## Distinct user requirements
+## Plugin list and labels
 
 The following table lists the plugins and GitHub labels based on the requirements:
 
-|Result|Plugins to install|GitHub Label(s)|
+|Requirement|Plugins to install|GitHub Label(s)|
 |-----|-----|----|
-| Enable SSO for users, who work in both Moodle and Teams | OpenID Connect | auth_oidc|
+| Enable SSO for users who work using both Moodle and Microsoft Teams | OpenID Connect | auth_oidc|
 | Create Teams instances for each course in Moodle, and sync teachers as owners, and students as team members | - OpenID Connect </br> - Microsoft 365 integration | auth_oidc </br> local_o365|
 | Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances | - OpenID Connect </br> - Microsoft 365 Integration </br> - Teams Theme| auth_oidc </br> local_o365 </br> themeboost_o365teams |
 | Leverage Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle | - OpenID Connect </br> - Microsoft 365 integration </br> - Microsoft 365 Repository | auth_oidc </br> local_o365 </br> repository_office 365|
