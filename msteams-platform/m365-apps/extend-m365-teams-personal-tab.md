@@ -123,7 +123,7 @@ Azure Active Directory Single-sign on (SSO) for personal tabs works the same way
 1. Select the name of your personal tab application to open its app registration. 
 1. Select  **Expose an API** (under *Manage*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Microsoft Azure portal":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure portal":::
 
 In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
