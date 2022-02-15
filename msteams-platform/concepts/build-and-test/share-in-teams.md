@@ -7,9 +7,12 @@ keywords: Share Teams Share-in-Teams
 ---
 # Share-in-Teams
 
+> [!NOTE]
+> * The latest update on Share-in-Teams is currently available in public developer preview only. This update will be generally available (GA).
+
 Share-in-Teams is used to share the content from your personal app or tab to other user in Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This option allows you to add the recipient (a person or group or channel), notes and share the required content. This document guides you on how to create and add a Share-in-Teams for your personal app or tab.
 
-The following image shows the Share-in-Teams pop-up experience:
+The following image shows the Share-in-Teams pop-up window:
 
 :::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams-experience":::
 
@@ -19,7 +22,7 @@ The following image shows the Share-in-Teams pop-up experience:
 > Ensure that you have [Microsoft Teams JavaScript Client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true&branch=pr-en-us-5129) (`@microsoft/teams-js@1.11.0-beta.7`) to enable Share-in-Teams.
 
 To enable Share-in-Teams in your personal tab or app,
-call `microsoftTeams.sharing.shareWebContent` with a payload like this:
+call `microsoftTeams.sharing.shareWebContent` with the following payload:
 
 ```json
 microsoftTeams.sharing.shareWebContent({
@@ -43,7 +46,7 @@ The payload contains the following parameters:
 
 ## End user Share-in-Teams experience
 
-The following steps will help users to share the link, once the Share-in-Teams option is enabled:
+The following steps help users to share the link:
 
 1. Open a personal app or tab and select a content, which you like to share.
 
