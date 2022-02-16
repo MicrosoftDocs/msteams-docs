@@ -9,11 +9,11 @@ author: v-leenagopal
 
 # Plugins introduction
 
-The detailed description of Microsoft 365 plugins are as follows:
+Microsoft plugins are
 
 ## OpenID Connect
 
-The OpenID Connect plugin authenticates any website or tool that supports OpenID Connect specification and provides single-sign-on support with Office 365.
+The OpenID Connect plugin authenticates any website or tool that supports OpenID Connect specification and provides single sign-on support with Office 365.
 
 The OpenID Connect plugin provides institutions with the following sign-in workflow options to meet their specific requirements:
 

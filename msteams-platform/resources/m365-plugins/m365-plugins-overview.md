@@ -9,13 +9,13 @@ author: v-leenagopal
 
 # Plugins overview
 
-Microsoft 365 plugins provides an integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate the course content. The plugins be used independently, or in partership as per the requirement. For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
+Microsoft 365 plugins provides an integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate the course content. The plugins can be used independently, or in partership as per the requirement. For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
 
 ## Plugin list and labels
 
-The following table lists the plugins and GitHub labels based on the requirements:
+The following table lists the plugins and GitHub labels based on the requirements.
 
-|Requirement|Plugins to install|GitHub Label(s)|
+|Requirement|Plugins to install|GitHub label(s)|
 |-----|-----|----|
 | Enable SSO for users who work using both Moodle and Microsoft Teams | OpenID Connect | auth_oidc|
 | Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members | - OpenID Connect </br> - Microsoft 365 integration | auth_oidc </br> local_o365|

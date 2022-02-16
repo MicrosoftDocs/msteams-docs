@@ -11,7 +11,7 @@ keywords: moodle LMS mConnect deep links
 
 <!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. -->
  
- Moodle is one of the largest open-source learning managing system (LMS), which provides an unique remote learning experience powered with secured privacy services. For more information, see [Moodle](https://moodle.com/about/). Moodle LMS integrates with Microsoft Teams to provide several enhanced productivity services as follows:
+ Moodle is one of the largest open-source learning managing system (LMS), which provides a unique remote learning experience powered with secured privacy services. Moodle LMS integrates with Microsoft Teams to provide several enhanced productivity services as follows:
 
 * Audio or video calls
 * Chat with students
@@ -25,7 +25,7 @@ keywords: moodle LMS mConnect deep links
 
 ## Moodle LMS Sections 
 
-* **Moodle LTI apps**: The Learning Tools Interoperability (LTI) apps available for Moodle LMS are as follows:
+* **Moodle LTI apps**: The following are the Learning Tools Interoperability (LTI) apps available for Moodle LMS:
 
   * OneDrive LTI app, which provides services like accessing and sharing personal and class files within LMS.
   * Class Teams LTI app, which helps faculty to create a class with user roles within the LMS course; and access to engaging courses for students.
@@ -37,7 +37,7 @@ keywords: moodle LMS mConnect deep links
 
 ## User requirement scenarios
 
-The following examples discusses the accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
+The following examples talks about the accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
 
 * **Facilitate hybrid remote meetings**: Microsoft Teams meetings and extensibility option allows faculty to seamlessly present in-person and remotely with students. For students its mandatory to have access to shared views, apps, and polls for remote meetings. The follow-up tasks provides options for multi-language transcription and audio or video course recordings. Microsoft Teams and Moodle work together to share roosters, activities, and tasks.
 
