@@ -9,7 +9,7 @@ author: v-leenagopal
 
 # Plugins overview
 
-Microsoft 365 plugins provides an integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate the course content. There are seven plugins, which can be used independently, or in partership as per the requirement. For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
+Microsoft 365 plugins provides an integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate the course content. The plugins be used independently, or in partership as per the requirement. For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
 
 ## Plugin list and labels
 
