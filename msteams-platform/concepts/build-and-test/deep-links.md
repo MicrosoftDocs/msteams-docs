@@ -81,7 +81,7 @@ The query parameters are:
 | `chatId`&emsp; | Teams ID for the chat with which the content is associated | 19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYt ODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2 |
 | `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
 
-Examples:
+**Examples**:
 
 * Link to a configurable tab itself:
 
