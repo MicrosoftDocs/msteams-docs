@@ -1,0 +1,62 @@
+---
+title: Plan for Authenticating
+description: Overview of authentication in Teams apps
+ms.topic: conceptual
+ms.localizationpriority: medium
+keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
+---
+# Plan for authentication
+
+An app may exist in a public or organizational domain or as a personal app. In any scenario, authentication can be a vital part of its framework.
+
+Planning for implementing authentication is as important as for app's features and functionalities.
+
+This module covers:
+
+- Advantages and benefits of authentication.
+- Types of authentication methods.
+- Introduction to Azure Active Directory (AAD) Single sign-on (SSO), and other authentication methods.
+- Features of authentication methods and their user experience.
+- Case for AAD SSO.
+- Introduction to common extension scenarios.
+
+## Authentication
+
+Authentication is all about validating users for accessing and using the app. It is one of the ways you secure your app and it's data against unwarranted access.
+
+You can validate app users in several ways, such as using login credentials, access tokens, and more.
+
+Within Teams, there are multiple ways you can implement authentication. Here's an introduction to key terms that you'll come across:
+
+- SSO: Single sign-on lets your app users log into the app only once using their credentials. It offers access to all associated apps or websites without having to validate repeatedly.
+- OIDC: Open ID Connect (OIDC) is an authentication protocol used to validate a user. Third-party applications can use it to verify the user's identity and access their profile information.
+- ID tokens: An ID token is granted to a user who has been verified successfully. It's used to cache user profile information and provide it to a client application when a user requests access.
+- Authorization: It's a process to provide resource-specific access to an authenticated user based on their user profile.
+- Oauth2.0: OAuth is a protocol that lets third party applications access secure resources without compromising the user’s information, such as password.  
+- Access tokens: An access token is an artefact that contains security information of an application to access specific user information.  
+- Graph API: 
+
+
+## Why should I use authentication?
+
+\Purpose\
+
+\Benefits\
+
+Plan for authentication to optimize your app.
+
+- **Security**:
+  - For app
+  - For users
+- **User experience**:
+- **Long-term cost benefit**:
+
+## Authentication in Teams
+
+You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now. If you need a solution that requires you to provide guest access for users outside the tenant, access restrictions and permissions need to be placed to protect confidential information. You will need to design apps considering the limitations that come with guest user access. Therefore, ask questions, such as:
+•	Will the users access different views of data based on their roles?
+•	Is there PII involved?
+•	Will the interactions also be based on the user roles?
+•	Will external users access the app?
+
+
