@@ -20,7 +20,7 @@ Microsoft Teams community of developers use Stack Overflow to connect with other
    
 ## GitHub issues
 
-The following table provides the common GitHub issues and the templates used for the same:
+The following table provides common GitHub issues and the templates used for the same:
 
 |Issue| Template|
 |-----|---------|

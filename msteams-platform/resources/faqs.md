@@ -9,17 +9,18 @@ author: v-leenagopal
 
 # Frequently asked questions on Moodle LMS
 
-Get your answers to some of the questions when working with Moodle LMS.
+Get your answers to some of your queries when using Moodle LMS.<br>
+
 <br>
 
 <details>
 
-<summary><b>What should I do if one or more of the course teams were not created after synchronization?</b></summary>
+<summary><b>What should I do if one or more of the course teams weren't created after synchronization?</b></summary>
 
-Each Moodle course must have at least one faculty and one student in Moodle, who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
+Each Moodle course must have at least one faculty and one student who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
 
 > [!NOTE]
-> Each team course instance must have an Owner, and the synchronization sets the faculty as the Owner, with assumption that the faculty has Microsoft Teams license.
+> Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Microsoft Teams license.
 
 <br>
 
@@ -27,9 +28,9 @@ Each Moodle course must have at least one faculty and one student in Moodle, who
 
 <details>
 
-<summary><b>What should we do to remove Moodle login page when working from Microsoft Teams? Can we force single sign on (SSO)?</b></summary>
+<summary><b>What should we do to remove Moodle login page when working from Microsoft Teams? Can we force single sign-on (SSO)?</b></summary>
 
-The users have multiple sign in options from the page. If the users prefer to sign in exclusively using Microsoft 365 credentials then you will need to enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, you'll see the Microsoft sign in page. The users can manually sign in to the Moodle portal by using https://moodle.org/login/index.php
+The users have multiple sign in options from the Moodle login page. If the users prefer to sign in exclusively using Microsoft 365 credentials then you will need to enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, you'll see the Microsoft sign in page. The users can manually sign in to the Moodle portal by using https://moodle.org/login/index.php
 
 <br>
 
@@ -37,7 +38,7 @@ The users have multiple sign in options from the page. If the users prefer to si
 
 <details>
 
-<summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle site. </b></summary>
+<summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b></summary>
 
 You can specify the users by synchronizing the configuration options of the **local_o365** plugin, using **User Creation Restriction**. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language. 
 
@@ -58,7 +59,7 @@ You can specify the users by synchronizing the configuration options of the **lo
 
 <summary><b>We would like our faculty to be able to synchronize courses to Microsoft Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b></summary>
 
-By default only Moodle administrators can configure synchronization. The Team Owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled.
+By default only Moodle administrators can configure synchronization. The Team owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled.
 
 > [!NOTE]
 > In this case, the team owner is the faculty.
@@ -68,7 +69,7 @@ For more information, see Microsoft 365 block within the Moodle Course interface
 >[!NOTE]
 >The block will only show the configuration option to individuals with the appropriate owner permissions.
 
-[Place holder for url]
+<!-- [Place holder for url] -->
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 4.png" alt-text="admin":::
 
@@ -83,7 +84,7 @@ For more information, see Microsoft 365 block within the Moodle Course interface
 
 <summary><b>We have followed the documentation but the user accounts fail to sync AAD and Moodle. What should we do?</b></summary>
 
-In most cases, the issue will be resolved before teh users need **Delta token clean up** as a final troubleshooting step. The following table provides the actions and dependencies to be performed and validated:
+In most cases, the issue will be resolved before users need **Delta token clean up** as a final troubleshooting step. The following table provides the actions and dependencies to be performed and validated:
 
 | Dependency | Action | Reference|
 |-------|------------|----------|
@@ -98,7 +99,7 @@ In most cases, the issue will be resolved before teh users need **Delta token cl
 
 <details>
 
-<summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would cause this inconsistency?</b></summary>
+<summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b></summary>
 
 Inconsistencies with users being able to sign in can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
@@ -115,7 +116,7 @@ Inconsistencies with users being able to sign in can be related to the user mapp
 
 <summary><b>All users are unable to re-sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
 
-If users who were able to sign in start to report the issue, validate the Application **Client secret** has not expired. The following image shows the error message:
+If users who were able to sign in at the start need to report the issue, validate that the Application **Client secret** has not expired. The following image shows the error message:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 6.png" alt-text="report issue":::
 
@@ -123,7 +124,7 @@ The following image shows the error in Azure portal:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 7.png" alt-text="azure portal":::
 
-Consequently, if the **Client secret** has expired, then you need to generate a new Client secret, and update the configuration found on this page:[Place holder for url]. The users can  sign in again after the Client secret has been updated, which may take up to 24 hours to re-provision.
+Consequently, if the **Client secret** has expired, then you need to generate a new Client secret, and update the configuration found on this page. The users can sign in again after the Client secret has been updated, which may take up to 24 hours to re-provision.
 
 <br>
 
@@ -174,8 +175,8 @@ For more information on editing Atto toolbar, see:
 
 <details>
 
-<summary><b>Do the meetings scheduled through integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
+<summary><b>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
 
-The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
+The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines based on the date(s) the user enters when the meeting is created is followed. For more information, see [Meetings](https://microsoftteams/limits-specifications-teams)
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Meetings](https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams
