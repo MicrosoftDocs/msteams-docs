@@ -84,7 +84,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resource|Purpose|
 |----------|--------------------------------|
-| Microsoft Azure Active Directory (Azure AD) application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
+| Azure AD application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
 | API management service | Manage your APIs hosted in function app |
 | API management product | Group your APIs, define terms of use and runtime policies |
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
@@ -94,7 +94,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resources|Purpose of this resource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Manage secrets (e.g. Microsoft Azure Active Directory (Azure AD) app client secret) used by other Azure Services |
+| Azure Key Vault Service | Manage secrets (e.g. Azure AD app client secret) used by other Azure Services |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
 ## Customize resource provision
@@ -211,7 +211,7 @@ You can customize the following scenarios:
 
 #### Use an existing Azure AD app for your bot
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Microsoft Azure Active Directory (Azure AD) app created by yourself for your Teams app. To create an Microsoft Azure Active Directory (Azure AD) app, see <https://aka.ms/teamsfx-existing-aad-doc>.
+You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -225,11 +225,11 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 After adding the snippet, add your secret to related environment variable so the tool can resolve the actual secret during provision.
 
 > [!NOTE]
-> Ensure not to share the same Microsoft Azure Active Directory (Azure AD) app in multiple environments. If you don't have permission to update the Microsoft Azure Active Directory (Azure AD) app, you can get a warning with instructions about how to manually update the Microsoft Azure Active Directory (Azure AD) app. Follow the instructions to update your Microsoft Azure Active Directory (Azure AD) app after provision.
+> Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Microsoft Azure Active Directory (Azure AD) app created by yourself for your bot:
+You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your bot:
 
 ```json
 "bot": {

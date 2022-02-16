@@ -29,7 +29,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Microsoft Azure Active Directory (Azure AD) app ID. For more information, see [register your app in the Microsoft Azure Active Directory (Azure AD) portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 
 Specify permissions needed by the app.
@@ -195,7 +195,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Microsoft Azure Active Directory (Azure AD) app ID. For more information, see [register your app in the Microsoft Azure Active Directory (Azure AD) portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 
@@ -260,14 +260,14 @@ Example for RSC in a chat
 > In your app manifest, only include the RSC permissions that you want your app to have.
 
 > [!NOTE]
-> If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Microsoft Azure Active Directory (Azure AD) app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
+> If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Azure AD app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
 
 ## Test added RSC permissions to a team using the Postman app
 
 To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for team](test-team-rsc-json-file.md) into your local environment and update the following values:
 
-* `azureADAppId`: Your app's Microsoft Azure Active Directory (Azure AD) app ID.
-* `azureADAppSecret`: Your Microsoft Azure Active Directory (Azure AD) app password.
+* `azureADAppId`: Your app's Azure AD app ID.
+* `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
 * `teamGroupId`: You can get the team group id from the Teams client as follows:
 
@@ -281,10 +281,10 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for chats](test-chat-rsc-json-file.md) into your local environment and update the following values:
 
-* `azureADAppId`: Your app's Microsoft Azure Active Directory (Azure AD) app ID.
-* `azureADAppSecret`: Your Microsoft Azure Active Directory (Azure AD) app password.
+* `azureADAppId`: Your app's Azure AD app ID.
+* `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
-* `tenantId`: The name or the Microsoft Azure Active Directory (Azure AD) Object ID of your tenant.
+* `tenantId`: The name or the Azure AD Object ID of your tenant.
 * `chatId`: You can get the chat thread id from the Teams *web* client as follows:
 
     1. In the Teams web client, select **Chat** from the far left navigation bar.

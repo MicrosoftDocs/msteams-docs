@@ -156,7 +156,7 @@ To enable search within a list of conversation members, use the appropriate data
 ### Data Submission
 
 You can use `Action.Submit` or `Action.Execute` to submit selected data to your bot. The `invoke` payload received on your bot is a list of Microsoft Azure Active Directory (Azure AD) IDs or the IDs provided in static list.
-In People Picker, when a user is selected in the control, the `Microsoft Azure Active Directory (Azure AD) ID` of the user is the value sent back. The `Microsoft Azure Active Directory (Azure AD) ID` is a string and uniquely identifies a user in the directory.
+In People Picker, when a user is selected in the control, the `Azure AD ID` of the user is the value sent back. The `Azure AD ID` is a string and uniquely identifies a user in the directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
 
@@ -172,8 +172,8 @@ With the `Azure AD ID`, People Picker preselects the corresponding user.
 People Picker supports preselection of user in the control, when creating and sending an Adaptive Card. `Input.ChoiceSet` supports the `value` property that is used to preselect a user. The format of this `value` property is the same as the submitted value format in [data submission](#data-submission).  
 The following list provides the information to preselect users:
 
-* For single user in the control, specify the `Microsoft Azure Active Directory (Azure AD) ID` of the user as the `value`. 
-* For multiple users, such as `isMultiSelect` is `true`, specify a comma-separated string of `Microsoft Azure Active Directory (Azure AD) ID`s.  
+* For single user in the control, specify the `Azure AD ID` of the user as the `value`. 
+* For multiple users, such as `isMultiSelect` is `true`, specify a comma-separated string of `Azure AD ID`s.  
 
 The following example describes preselection of a single user:
 
@@ -301,6 +301,13 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 
 You can implement People Picker for efficient task management in different scenarios.  
+
+## Code sample
+
+| Sample Name           | Description | C#    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|People picker control in Adaptive Cards| This sample demonstrates how to use the people picker control in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) | 
+
 
 ## See also
 
