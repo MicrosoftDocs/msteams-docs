@@ -25,7 +25,7 @@ Collate and map requirements to Teams features:
 | User app needs | Check forecast | Notification before travel | Registered user |
 | --- |:---:|:---:|:---:|
 | **Capability** | Bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | Microsoft Graph; Weather API |
+| **Integration** | &nbsp; | &nbsp; | Microsoft Graph, Weather API |
 | **Scope** | &nbsp; | Personal app | &nbsp; |
 | **Integration point** | &nbsp; | Chat | &nbsp; |
 |
@@ -59,19 +59,22 @@ A Teams app brings your users the advantages of a collaborative workspace.
 
 As a platform for building apps, Teams offers the full range of apps and toolkits. Teams platform supports you at every stage from planning your app to distributing it.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Describing a life cycle of Teams app development. Plan, Design, Build, Extend, Test, Deploy, Distribute. Details shown in a bullet list below." border="false":::
 
 From designing to building and distributing a Teams app, you can use various tools and services:
 
-- Design the tab portion of your app with Teams UI Toolkit and UI Library.
-- Scaffold the basic app structure with Teams Toolkit.
-- Build tab UI with React web component for Teams.
-- Integrate with low-code and no-code Apps.
-- Port your existing web apps.
-- Choose tools and SDKs of your choice—JavaScript, C#, SharePoint Framework, and so on.
-- Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs.
-- Integrate Teams data from Microsoft Graph.
-- Manage your apps with Developer portal.
+1. Plan your project and figure out the requirement
+1. Design the app. Teams UI Kit and UI Library are helpful tools to design tabs UI
+1. Build the app 
+    - Choose tools and SDKs of your choice—JavaScript, C#, SharePoint Framework, and so on.
+    - Scaffold the app structure Teams Toolkit
+    - Or integrate with low-code and no-code Apps
+    - Or port your existing web apps
+    
+1. Extend Teams functionality with tabs, bots, adaptive cards. etc.
+    - Also, integrate Teams data from Microsoft Graph
+1. Deploy the app to cloud, such as Azure
+1. Manage and publish your apps with Developer portal
 
 ## Useful Links
 
