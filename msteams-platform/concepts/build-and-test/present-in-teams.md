@@ -37,4 +37,3 @@ The following are the details for the deep links:
 ```
 
 ## End user Present in Teams experience
-
