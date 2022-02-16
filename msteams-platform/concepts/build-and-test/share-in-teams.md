@@ -10,11 +10,11 @@ keywords: Share Teams Share-in-Teams
 > [!NOTE]
 > Share-in-Teams is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Share-in-Teams allows you to share the content from personal app or tab to another user within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This pop-up window allows you to add the recipient (a person or group or channel), notes and share the content.
+Share-in-Teams allows you to share the content from personal app or tab to another user within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This pop-up window allows you to add another user or group or channel, notes and share the content.
 
 The following image shows the Share-in-Teams pop-up window:
 
-:::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="share-in-teams-link-shared":::
+:::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams":::
 
 ## Enable Share-in-Teams
 
@@ -58,11 +58,11 @@ The following image shows the Share-in-Teams option:
 
    :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button":::
 
-3. Add a recipient (a person or group or channel).
+3. Add another user or group or channel.
 
    :::image type="content" source="../../assets/images/share-in-teams/add-recepient.PNG" alt-text="add-recipient":::
 
-4. Add a note in the **say something about this**.
+4. Add a note in **say something about this**.
 
    :::image type="content" source="../../assets/images/share-in-teams/add-notes.PNG" alt-text="add-note":::
 
