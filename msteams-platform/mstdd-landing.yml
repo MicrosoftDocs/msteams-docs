@@ -44,8 +44,7 @@ landingContent:
         url: ~/task-modules-and-cards/cards/people-picker.md
       - text: Teams Toolkit for Visual Studio Code (Preview)
         url: ~/toolkit/teams-toolkit-fundamentals.md
-      - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
-        url: ~/m365-apps/overview.md
+      
 
       
 - title: All time favorites
