@@ -1,14 +1,15 @@
 ---
 title: Frequently asked questions
 description: Answers to some common questions
-ms.topic: FFrequently asked questions
+ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Frequent asked questions on Moodle LMS
+# Frequently asked questions on Moodle LMS
 
+Get your answers to some of the questions when working with Moodle LMS.
 <br>
 
 <details>
@@ -26,13 +27,9 @@ Each Moodle course must have at least one faculty and one student in Moodle, who
 
 <details>
 
-<summary><b>What should we do to remove Moodle login page when working from Microsoft Teams? Can we force single sign-on (SSO)?</b></summary>
+<summary><b>What should we do to remove Moodle login page when working from Microsoft Teams? Can we force single sign on (SSO)?</b></summary>
 
-The users have multiple sign-in options from the page. If the users prefer to sign-in exclusively using Microsoft 365 credentials then you will need to enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled,you'll directly see the Microsoft sign-in page. The users can manually sign-in to the Moodle portal by using https://{moodle_url}.site/login/index.php?Noredirect=1 
-
-https://{moodle_url}/admin/settings.php?Section=authsettingoidc
-
-:::image type="content" source="../assets/images/MoodleInstructions/faq 1.png" alt-text="SSO":::
+The users have multiple sign in options from the page. If the users prefer to sign in exclusively using Microsoft 365 credentials then you will need to enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, you'll see the Microsoft sign in page. The users can manually sign in to the Moodle portal by using https://moodle.org/login/index.php
 
 <br>
 
@@ -45,9 +42,9 @@ https://{moodle_url}/admin/settings.php?Section=authsettingoidc
 You can specify the users by synchronizing the configuration options of the **local_o365** plugin, using **User Creation Restriction**. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language. 
 
 > [!TIP]
-> Create a dynamic Microsoft 365 Group to enable the **filter** option with multiple profile properties.
+> Create a dynamic Microsoft 365 group to enable the **filter** option with multiple profile properties.
 
-[Place holer for URL]
+<!-- [Place holer for URL] -->
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 2.png" alt-text="sync":::
 
@@ -59,14 +56,14 @@ You can specify the users by synchronizing the configuration options of the **lo
 
 <details>
 
-<summary><b>We would like our faculty to be able to synchronize courses to Microsoft Teams? Are Moodle Administrators the only ones who can control synchronization of courses?</b></summary>
+<summary><b>We would like our faculty to be able to synchronize courses to Microsoft Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b></summary>
 
-Currently, by default only Moodle Administrators can configure synchronization. The Team Owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled.
+By default only Moodle administrators can configure synchronization. The Team Owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled.
 
 > [!NOTE]
-> In this case, the team owner is the course teacher.
+> In this case, the team owner is the faculty.
 
-For more information,see Microsoft 365 Block within the Moodle Course interface.
+For more information, see Microsoft 365 block within the Moodle Course interface.
 
 >[!NOTE]
 >The block will only show the configuration option to individuals with the appropriate owner permissions.
@@ -101,14 +98,14 @@ In most cases, the issue will be resolved before teh users need **Delta token cl
 
 <details>
 
-<summary><b>One or more users are unable to sign-in using their Microsoft 365 credentials, although most users can sign-in without an issue. What would cause this inconsistency?</b></summary>
+<summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would cause this inconsistency?</b></summary>
 
-Inconsistencies with users being able to sign-in can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
+Inconsistencies with users being able to sign in can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
-* Validate the Moodle user authentication type is **OpenID**
-* Validate the Moodle **User Name** matches the AAD username
-* Clean up **Token Issue** through [place holder for url] and retry
-* Validate the users have **Permissions** to access the Azure application
+* Validate the Moodle user authentication type is **OpenID**.
+* Validate the Moodle **User Name** matches the AAD username.
+* Clean up **Token Issue** through [place holder for url] and retry.
+* Validate the users have **Permissions** to access the Azure application.
 
 <br>
 
@@ -141,8 +138,6 @@ Administrators may change the teams instance associated with a course through th
 >[!NOTE]
 >If you use Course reset to archive a team by mistake, you can link it back to the previous team.
 
-[Place holder for url]
-
 :::image type="content" source="../assets/images/MoodleInstructions/faq 8.png" alt-text="teams instance":::
 
 <br>
@@ -155,14 +150,14 @@ Administrators may change the teams instance associated with a course through th
 
 The user can face the issue if the icon reference is missing in the **Toolbar config**. which will display the Teams icon within the Atto editor. 
 
-* Install the plugin
-* Update **Toolbar config** with **teams meeting**
+* Install the plugin.
+* Update **Toolbar config** with **teams meeting**.
 
 The following image shows Toolbar icon after Toolbar config adjustment:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq 9.png" alt-text="tool bar":::
 
-[Place holder for url]
+<!-- [Place holder for url] -->
 
 >[!NOTE]
 > Add teams meeting to the right of the links icons.
@@ -181,8 +176,6 @@ For more information on editing Atto toolbar, see:
 
 <summary><b>Do the meetings scheduled through integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
 
-The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend directly from the embedded channel link. For more information, see [channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
+The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars.
-
-The standard timelines based on the date(s) the user enters when the meeting is created is followed. For more information, see [meetings](/microsoftteams/limits-specifications-teams)
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines based on the date(s) the user enters when the meeting is created is followed. For more information, see [Meetings](https://microsoftteams/limits-specifications-teams)

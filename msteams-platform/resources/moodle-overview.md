@@ -48,7 +48,7 @@ The following examples discusses the accelerated learning potential combining Mi
 * **Citizen developer apps**: To develop new custom apps for school, which are easy to create and helps optimize learning. You can also provide easy-to-use transactional activities for students and educators.
 
 <!-- Please provide us feedback, based on the section on the Moodle LMS integrations and share ideas for additional integrations. We look forward to hearing feedback as we continue to empower institutions worldwide to optimize learning and planning in education. -->
-For more information, see [Microsoft education](https://www.microsoft.com/education).  -->
+For more information, see [Microsoft education](https://www.microsoft.com/education).
 
 ## See also
 

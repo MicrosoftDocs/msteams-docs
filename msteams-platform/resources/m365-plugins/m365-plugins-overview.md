@@ -28,7 +28,7 @@ The following table lists the plugins and GitHub labels based on the requirement
 
 ## OpenID Connect
 
-The Open ID Connect plugin allows you to authenticate any website or tool that supports the required specification and provides single-sign-on support with Microsoft Office 365.
+The Open ID Connect plugin allows you to authenticate any website or tool that supports the required specification and provides single-sign-on support (SSO) with Microsoft Office 365.
 
 ## Microsoft 365 integration
 
@@ -65,4 +65,4 @@ oEmbed filter plugin simplifies the inclusion of external HTML content within Mo
 
 ## See also
 
-* [Plugin overview](openid-connect.md)
+* [Plugin introduction](openid-connect.md)
