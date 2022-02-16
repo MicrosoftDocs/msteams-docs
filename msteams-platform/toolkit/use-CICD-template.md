@@ -239,7 +239,7 @@ Ensure to set Azure and Microsoft365 credentials in your environment variables s
 To provision and deploy resources targeting Azure inside CI/CD, you must create an Azure service principal for use.
 
 Perform the following steps to create Azure service principals:
-1. Register an Azure AD application in single tenant.
+1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
 2. Assign a role to your Azure AD application to access your Azure subscription, and `Contributor` role is recommended. 
 3. Create a new Azure AD application secret.
 

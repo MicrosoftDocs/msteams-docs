@@ -19,7 +19,7 @@ Updating your personal app to run in Outlook and Office Home involves these step
 > * Update your app manifest
 > * Update your TeamsJS SDK references 
 > * Amend your Content Security Policy headers
-> * Update your Azure AD App Registration for Single Sign On (SSO)
+> * Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign On (SSO)
 
 Testing your app will require the following steps:
 
@@ -123,7 +123,7 @@ Azure Active Directory Single-sign on (SSO) for personal tabs works the same way
 1. Select the name of your personal tab application to open its app registration. 
 1. Select  **Expose an API** (under *Manage*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Microsoft Azure portal":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure portal":::
 
 In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 

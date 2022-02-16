@@ -130,7 +130,7 @@ Also, this project requires that you have the following installed in your develo
 
     Use the arrow keys to select **Personal (static)**.
 
-    **Do you require Azure AD Single-Sign-On support for the tab?**
+    **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
     Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
 

@@ -171,7 +171,7 @@ User types, such as organizer, presenter, or attendee in a meeting can do one of
 
 The following list details the various user types along with their accessibility and performance:
 
-* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Microsoft Azure Active Directory (Azure AD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
 * **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 

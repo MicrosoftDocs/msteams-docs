@@ -76,7 +76,7 @@ See how to get context for your Teams [tab](../tabs/how-to/access-teams-context.
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-Azure Active Directory is the identity provider for Teams. If your app uses a different identity provider, you must either do an identity mapping exercise or combine with Azure AD.
+Azure Active Directory is the identity provider for Teams. If your app uses a different identity provider, you must either do an identity mapping exercise or combine with Microsoft Azure Active Directory (Azure AD).
 
 Teams has single sign-on (SSO) mechanisms with Azure AD for third-party apps. It also provides the guidance for authentication flows to other identity providers using standards such as OAuth and Open ID Connect, known as OIDC.
 

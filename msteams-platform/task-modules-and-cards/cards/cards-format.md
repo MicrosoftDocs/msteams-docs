@@ -168,7 +168,7 @@ The following code shows an example of Adaptive Card with a mention:
 }
 ```
 
-### Azure AD Object ID and UPN in user mention 
+### Microsoft Azure Active Directory (Azure AD) Object ID and UPN in user mention 
 
 Teams platform allows to mention users with their Azure AD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs. 
 

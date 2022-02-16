@@ -86,7 +86,7 @@ For users to interact with your messaging extension from Outlook, you'll need to
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Azure Bot Channels pane listing both Microsoft Teams and Outlook channels":::
 
-## Update Azure AD app registration for SSO
+## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
 
 > [!NOTE]
 > You can skip the step if you're using [Teams messaging extension search sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search), as the scenario doesn't involve Azure Active Directory (AAD) Single Sign-On authentication.

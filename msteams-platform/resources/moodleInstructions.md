@@ -15,7 +15,7 @@ In this article you'll learn how to install the Moodle LMS.
 > [!NOTE]
 > To help IT admins to easily set-up Moodle and Teams integration, open-source Microsoft 365 Moodle Plugins is updated for the following:
 >
-> * Auto-registration of your Moodle server with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/).
+> * Auto-registration of your Moodle server with [Microsoft Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/).
 >
 > * One-click deployment of your Moodle Assistant bot to Azure.
 >
@@ -70,7 +70,7 @@ Ensure to install and download the following before proceeding with the Microsof
     >
     > * If you do not have an existing Moodle site, go to the [Moodle on Azure](https://github.com/azure/moodle) repo, and quickly deploy a Moodle instance and customize it to your needs.
 
-## 2. Configure the connection between the Microsoft 365 plugins and Azure Active Directory
+## 2. Configure the connection between the Microsoft 365 plugins and Azure AD
 
 You must configure the connection between the Microsoft 365 plugins and Azure AD.
 
