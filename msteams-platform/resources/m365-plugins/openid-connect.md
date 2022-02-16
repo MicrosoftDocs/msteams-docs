@@ -84,11 +84,11 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 * Include submission and feedback page for each assignment under the faculty's account. When such is saved within Moodle, a copy of the HTML and any associated pictures are packaged in a zip file.
 
 > [!NOTE]
-> Submission or feedback events trigger OneNote creation with a section for each course the student has enrolled in.
+> The submission or feedback events trigger OneNote creation with a section for each course the student has enrolled in.
 
 ## Microsoft block
 
-Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to its numersous resources. Administators can configure the block to view the modified changes to appear on each course page. The block also allows users to perform the following activities:
+Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to its numersous resources. Administators can configure the block to view the modified changes to appear on each course page. The block also allows you o perform the following activities:
 
 * Access the course SharePoint file location and OneNote notebook.
 * View the course on OneNote notebook for submissions.
@@ -102,9 +102,9 @@ Microsoft block enhances user experience by providing an User Interface (UI) to 
 
 The oEmbed filter plugin enhances user experience by simplifying inclusion of the external HTML content within Moodle. The advantages of oEmbed filter are as follows: 
 
-* Reduces the time for an instructor to embed videos to an HTML page.
+* Reduces the time to embed videos to an HTML page.
 * Enables embedding of multiple video content providers.
-* Ensures a quicker ethod to copy and embed code from any of the supported services.
+* Ensures a quicker method to copy and embed code from any of the supported services.
 * Permits video embedding without an API key.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::

@@ -1,6 +1,6 @@
 ---
-title: Microsoft 365 Plugins 
-description: Microsoft 365 Plugins introduction
+title: Microsoft 365 plugins 
+description: Microsoft 365 plugins introduction
 ms.topic: Plugins introduction
 ms.localizationpriority: medium
 ms.author: Surbhigupta
@@ -9,7 +9,7 @@ author: v-leenagopal
 
 # Plugins overview
 
-Microsoft 365 plugins provides an integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate on the course content. There are seven plugins, which can be used independently, or in partership as per the requirement. For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
+Microsoft 365 plugins provides an integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate the course content. There are seven plugins, which can be used independently, or in partership as per the requirement. For more information, see [supported plugins](https://moodle.org/plugins/?q=set:microsoft-365).
 
 ## Plugin list and labels
 
@@ -28,7 +28,7 @@ The following table lists the plugins and GitHub labels based on the requirement
 
 ## OpenID Connect
 
-The Open ID Connect plugin allows you to authenticate any site or tool that supports the required specification. It is used to provide single-sign-on support with Microsoft Office 365.
+The Open ID Connect plugin allows you to authenticate any website or tool that supports the required specification and provides single-sign-on support with Microsoft Office 365.
 
 ## Microsoft 365 integration
 
