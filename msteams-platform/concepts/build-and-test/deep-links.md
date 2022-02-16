@@ -135,7 +135,7 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 The query parameters are:
 
-* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Azure AD UserPrincipalName, such as an email address only.
+* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
 * `topicName`: An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
@@ -243,9 +243,6 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
-
-> [!NOTE]
-> Currently, deeplink to call is not supported on Teams mobile devices.
 
 ### Generate a deep link to a call
 

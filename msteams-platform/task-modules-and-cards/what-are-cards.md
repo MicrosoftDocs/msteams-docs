@@ -73,6 +73,7 @@ Type ahead search added as an input control in Adaptive Cards enable [dynamic se
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
+
 ## Overflow menu on Adaptive Cards
 
 Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is a secondary that are placed inside the overflow menu.
@@ -80,7 +81,10 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 ## Support for AAD Object ID and UPN in user mention 
 
-Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
+## Support for Azure AD Object ID and UPN in user mention 
+
+
+Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the Azure AD Object ID and UPN.
 
 ## Next step
 

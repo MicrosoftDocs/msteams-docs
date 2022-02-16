@@ -8,7 +8,7 @@ ms.author: anclear
 ---
 # Bots in Microsoft Teams
 
-A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can quick question and answer or can be a complex conversation.
+A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) and not available in GCC-High and Department of Defense (DOD).

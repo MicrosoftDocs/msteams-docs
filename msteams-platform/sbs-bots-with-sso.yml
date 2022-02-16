@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times for performing repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory (AAD) silently refreshes the authentication token. This results in reduction of the number of times users need to enter their sign-in credentials. 
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times for performing repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory silently refreshes the authentication token. This results in reduction of the number of times users need to enter their sign-in credentials. 
     
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -30,7 +30,11 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * Microsoft Teams with an account (not a guest account)
+    * Active Microsoft Teams account with profile picture
+
+      > [!TIP]
+      > Ensure the Microsoft Teams account is not a guest account.
+
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution
 
       > [!NOTE]
@@ -58,7 +62,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure bot** and select the Enter key.
     1. Select **Azure Bot**.
@@ -91,9 +95,16 @@ items:
 
     **To create client secret**
 
-    1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
+    1. In **Settings**, select **Configuration**.
+
+       > [!TIP]
+       > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+    1. Select **MultiTenant** under **Bot Type**.
+
+         ![Bot Type](~/assets/images/bots/bot-type.png)
     
-    1. Adjacent to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage**.
 
          ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
 
