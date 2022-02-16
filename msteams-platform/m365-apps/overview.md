@@ -4,6 +4,7 @@ description: Extend your Teams app experiences to other high-usage areas of Micr
 ms.date: 11/15/2021
 ms.topic: overview
 ms.custom: m365apps
+ms.localizationpriority: medium
 ---
 # Extend Teams apps across Microsoft 365
 
@@ -33,7 +34,7 @@ With this preview, you can extend your search-based Teams messaging extensions t
 
 After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in outlook.com":::
+:::image type="content" source="~/assets/images/git-issue-msging-extension.png" alt-text="messaging extension" lightbox="~/assets/images/git-issue-msging-extension.png" border="true":::
 
 ## Next step
 

@@ -4,7 +4,7 @@ description: Learn how to sideload your app in Microsoft Teams. Sideloading is c
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 
 # Upload your app in Microsoft Teams
@@ -33,6 +33,9 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Select your app package .zip file. An install dialog displays.
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 1. Add your app to Teams.
+
+> [!NOTE]
+> `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
 
 ## Troubleshoot upload issues
 

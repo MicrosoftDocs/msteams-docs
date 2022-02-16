@@ -92,7 +92,7 @@
   items:
   - name: Teams Toolkit for Visual Studio Code
     items:
-    - name: Teams Toolkit fundamentals
+    - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Create new project
       href: toolkit/create-new-project.md
@@ -325,7 +325,9 @@
       href: task-modules-and-cards/cards/cards-format.md
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-    - name: Typeahead search in Adaptive Card
+    - name: People Picker in Adaptive Cards
+      href: task-modules-and-cards/cards/people-picker.md
+    - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md  
     - name: Universal Actions for Adaptive Cards
       items:
@@ -463,8 +465,16 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md   
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+  - name: Monetize your app
+    items:
+    - name: Overview
+      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
     - name: Include a SaaS offer with your app
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - name: In-app purchases
+      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    - name: Test preview for monetized apps
+      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
   items:
     - name: App manifest schema

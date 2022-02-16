@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -34,7 +34,7 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
     | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Visual Studio Code extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the Node.js versions 10, 12, or 14 LTS release. |
@@ -100,6 +100,9 @@ items:
 
     After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
       
+    > [!NOTE]
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
     Verify if you can sideload apps in Teams:
