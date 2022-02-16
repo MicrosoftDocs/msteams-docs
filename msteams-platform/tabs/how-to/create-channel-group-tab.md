@@ -33,7 +33,7 @@ You must have an understanding of the following prerequisites:
 
 In addition, this project requires that you have the following installed in your development environment:
 
-- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+- Any text editor or IDE. You can install and use [Microsoft Visual Studio Code](https://code.visualstudio.com/download) for free.
 
 - [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
@@ -129,9 +129,9 @@ In addition, this project requires that you have the following installed in your
 
     You can select a team or a group chat.
 
-    **Do you require Azure AD Single-Sign-On support for the tab?**
+    **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
-    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+    Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
 
     **Do you want this tab to be available in SharePoint Online? (Y/n)**
 

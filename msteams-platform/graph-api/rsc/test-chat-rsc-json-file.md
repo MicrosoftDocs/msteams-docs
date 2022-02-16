@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: jecha
 ms.author: jecha
 ms.topic: how-to
-keywords: teams authorization OAuth SSO AAD rsc Postman Graph
+keywords: teams authorization OAuth SSO Azure AD rsc Postman Graph
 ---
 
 # Test chat RSC Postman collection for JSON

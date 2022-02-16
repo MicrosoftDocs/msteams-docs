@@ -16,7 +16,7 @@ Teams documentation is part of the **Microsoft Docs** technical documentation li
 > [!div class="checklist"]
 >
 > * Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-> * Install [Visual Studio Code](https://code.visualstudio.com/) (VS Code).
+> * Install [Microsoft Visual Studio Code](https://code.visualstudio.com/) (VS Code).
 > * Install [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) directly from the VS Code Marketplace.
 <br>&emsp;&emsp; or
 
@@ -75,6 +75,6 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 * [Microsoft Docs](/)
 * [Contributors guide](/contribute)
 * [Docs style and voice quick start](/contribute/style-quick-start)
-* [Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
+* [Cutting edge: source code readability tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)

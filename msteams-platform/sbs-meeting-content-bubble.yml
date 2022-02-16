@@ -17,7 +17,7 @@ items:
     Microsoft Teams helps you to interact with content bubble bot in Teams meeting.
 
     > [!NOTE]
-    > Meeting content bubble is available only for AAD users and not for anonymous users.
+    > Meeting content bubble is available only for Azure AD users and not for anonymous users.
 
     **Key features of meeting content bubble**
 
@@ -57,10 +57,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in AAD portal
+- title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory (AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
@@ -70,7 +70,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -119,9 +119,11 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Select **Multitenant** under **Bot Type**.
 
-    1. Select **Multitenant** under **App Type**.
+       ![Microsoft App ID](~/assets/images/meeting-content-bubble/bot-type.png)       
+
+    1. Next to **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/meeting-content-bubble/meeting-content-bubble-view-configuration.png)
 
@@ -162,7 +164,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
+          ![Select Teams](~/assets/images/meeting-token-generator/config-teams.png)   
     
     **To create tunnel for local web server**
 
@@ -192,10 +194,10 @@ items:
 
         You have successfully set up a bot in Azure Bot Service.
 
-- title: Update the AAD app registration
+- title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    **To register your app through the AAD portal**  
+    **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -277,7 +279,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 

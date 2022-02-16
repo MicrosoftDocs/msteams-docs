@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: how-to
-keywords: teams authorization OAuth SSO AAD rsc Postman Graph
+keywords: teams authorization OAuth SSO Azure AD rsc Postman Graph
 ---
 
 # Test team RSC Postman collection JSON

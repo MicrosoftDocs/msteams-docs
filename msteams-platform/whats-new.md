@@ -19,9 +19,17 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | --- | --- | --- |
 |01/19/2022|Adaptive Cards overflow menu|Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)|
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
+|02/09/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
+|02/11/2022| Shared meeting stage| • Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
+|02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot.| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
+|02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
+|02/03/2022| Introduced app manifest version 1.12 | • App manifest > [App manifest schema](resources/schema/manifest-schema.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+|02/03/2022| Test preview for monetized apps (developer preview)| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|02/03/2022| In-app purchase flow for monetization of apps (developer preview) | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|01/25/2022| Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| People Picker in Adaptive cards (developer preview for mobile and GA for desktop) | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
-|01/10/2022 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
+|01/10/2022| Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 
 ## GA features
 
@@ -35,6 +43,11 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|02/09/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
+|02/11/2022| Shared meeting stage| • Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
+|02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot.| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
+|02/02/2022| Introduced app manifest version 1.12 | App manifest > [App manifest schema](resources/schema/manifest-schema.md) |
+|01/25/2022| Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Meeting apps API references](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| Adaptive Cards form completion feedback | Build bots > Bot conversations > Messages in bot conversations > [Form completion feedback](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
@@ -67,13 +80,13 @@ Microsoft Teams platform features that are available to all app developers.
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide | Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
 |10/21/2021| Add a `registerOnFocused` API for tabs or personal apps | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| Meeting stage is now available in GA. | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|10/20/2021| Meeting Details API and real-time Teams meeting events | Build apps for Teams meetings > [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/20/2021| Meeting Details API and real-time Teams meeting events. | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |10/18/2021| Tabs link unfurling and stage view. | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |10/08/2021| New best practices for designing Adaptive Cards | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
 |10/05/2021| Hide Teams app until Admin allows to un-hide the app.| Design your app > [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |10/05/2021| Plan your apps for Teams mobile. | App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
-|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks | • Build cards and task modules > Build cards > [AAD Object ID and UPN in user mention](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|09/21/2021|Teams supports Azure AD Object ID and UPN in user mention for bots and Incoming Webhooks | • Build cards and task modules > Build cards > [Azure AD Object ID and UPN in user mention](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
 |08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards) | • Adaptive cards > Authoring cards > [Input validation](/adaptive-cards/authoring-cards/input-validation)</br> • Build cards and task modules > Build cards > Universal actions for adaptive cards > [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats | Build apps for Teams meetings > [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO).| Add authentication > Bots > [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
@@ -203,7 +216,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 05/29/2018 | Adaptive cards are supported in Teams. | [Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md) |
 | 04/17/2018 | replyToID has been added to the payload for the `Invoke` and `MessageBack` card actions. This is especially useful if you need to update the message that the card action came from. | [Card actions](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Added this topic to track changes to the Teams programming interface and this documentation set. | [What's new](~/whats-new.md)|
-| 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab.md), [AAD Tab authentication](~/concepts/authentication/auth-tab-AAD.md)|
+| 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab.md), [Azure AD Tab authentication](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Added design guidelines for using the Command Box. |[Command box](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | Using bots to send notifications for your app. |[Notification-only bots](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | Expanded documentation for proactive messaging. |[Starting a conversation](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
@@ -225,6 +238,10 @@ Developer preview is a public program that provides early access to unreleased T
 | -------- | --------- | ------------------ |
 |11/22/2021| Adaptive Cards overflow menu |Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
 | 11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
+|02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
+|02/02/2022| Introduced app manifest version 1.12 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+|02/03/2022| Test preview for monetized apps| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|02/03/2022| In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |01/17/2022| People Picker in Adaptive cards for mobile  | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions. | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |

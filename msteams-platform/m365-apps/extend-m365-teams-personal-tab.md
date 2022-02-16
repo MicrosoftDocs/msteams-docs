@@ -3,7 +3,7 @@ title: Extend a Teams personal tab app across Microsoft 365
 description: Extend a Teams personal tab app across Microsoft 365
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.custom: m365apps
+ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
 ---
 # Extend a Teams personal tab across Microsoft 365
@@ -19,12 +19,12 @@ Updating your personal app to run in Outlook and Office Home involves these step
 > * Update your app manifest
 > * Update your TeamsJS SDK references 
 > * Amend your Content Security Policy headers
-> * Update your AAD App Registration for Single Sign On (SSO)
+> * Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign On (SSO)
 
 Testing your app will require the following steps:
 
 > [!div class="checklist"]
-> * Enroll your M365 tenant in *Office 365 Targeted Releases*
+> * Enroll your Microsoft 365 tenant in *Office 365 Targeted Releases*
 > * Configure your account to access preview versions of Outlook and Office apps
 > * Sideload your updated app into Teams
 
@@ -37,7 +37,7 @@ To complete this tutorial, you'll need:
 * A Microsoft 365 Developer Program sandbox tenant
 * Your sandbox tenant enrolled in *Office 365 Targeted Releases*
 * A machine with Office apps installed from the Microsoft 365 Apps *beta channel*
-* (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Visual Studio Code to help update your code
+* (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -53,7 +53,7 @@ If you'd like to use sample code to complete this tutorial, follow the setup ste
 
 ## Update the app manifest
 
-You'll need to use the [Teams developer preview manifest](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) schema and the `m365DevPreview` manifest version to enable your Teams personal tab to run in Office and Outlook.
+You'll need to use the [Teams developer preview manifest](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) schema and the `Microsoft 365 DevPreview` manifest version to enable your Teams personal tab to run in Office and Outlook.
 
 You can either use Teams Toolkit to update your app manifest, or apply the changes manually:
 
@@ -114,16 +114,16 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## Update AAD app registration for SSO
+## Update Azure AD app registration for SSO
 
-Azure Active Directory Single-sign on (SSO) for personal tabs works the same way in Office and Outlook [as it does in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), however you will need to add several client application identifiers to the AAD app registration of your tab app in your tenant's *App registrations* portal.
+Azure Active Directory Single-sign on (SSO) for personal tabs works the same way in Office and Outlook [as it does in Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso), however you will need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
 
-1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
+1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open the **App registrations** blade.
 1. Select the name of your personal tab application to open its app registration. 
 1. Select  **Expose an API** (under *Manage*).
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure Portal":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure portal":::
 
 In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 

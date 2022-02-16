@@ -60,10 +60,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in AAD portal
+- title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory (AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -73,7 +73,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -126,9 +126,11 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Select **Multitenant** under **Bot Type**.
 
-    1. Select **Multitenant** under **App Type**.
+        ![Bot type](~/assets/images/meetings-side-panel/bot-type.png)
+
+    1. Next to **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/meetings-side-panel/config.png)
 
@@ -171,7 +173,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/meetings-side-panel/config-teams.png)   
+          ![Select Teams](~/assets/images/meetings-side-panel/config-teams1.png)   
     
     **To create tunnel for local web server**
 
@@ -205,10 +207,10 @@ items:
         You have successfully set up a bot in Azure Bot Service.
 
 
-- title: Update the AAD app registration
+- title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    **To register your app through the AAD portal**  
+    **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -296,7 +298,7 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 

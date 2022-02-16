@@ -1,7 +1,7 @@
 ---
 author: heath-hamilton
 description: Best practices or considerations for integrating existing web apps with Microsoft Teams
-ms.author: v-heha
+ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -18,7 +18,7 @@ The different types of apps which you can integrate with Teams are as follows:
 
 You can map and follow the appropriate guideline applicable to your integration scenario.
 This document gives an overview of Teams capabilities, share-point requirements for file and data storage, API requirements, authentication, and deep-linking of your app with Teams.
- 
+
 ## Get to know Teams platform capabilities
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
@@ -42,11 +42,10 @@ Your Teams app must include required and expected collaborative features. To wor
 
 Integrating all features of an existing application into Teams often leads to a forced or unnatural user experience, particularly in larger apps. Start with the most impactful features and those that integrates more naturally with Teams. You can allow users to launch the main app and access its full set of features.
 
-**Prerequisites to integrate your app with Teams** 
-Following are the prerequisites to integrate your app with Teams. 
+**Prerequisites to integrate your app with Teams**
 
 1. [Map your app's use cases to Teams platform capabilities](../concepts/design/map-use-cases.md).
-1. [Determine your app's entry points](../concepts/extensibility-points.md). Is it for personal use, collaboration, or both?
+1. [Determine your app's entry points](../concepts/extensibility-points.md). Is it for personal use, for collaboration, or for both?
 
 ## Understand SharePoint requirements and options
 
@@ -63,21 +62,21 @@ Alternatively, you can build a Teams tab [using the SharePoint Framework](/share
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-If your app is used by multiple organizations, consider multi-tenant hosting that makes your product scalable and greatly simplify the distribution.
+If your app is used by multiple organizations, consider multi-tenant hosting. It makes your product scalable and simplifies the distribution.
 
 ## Review your APIs
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-You must make your app's existing APIs and data structures support the app when integrating with Teams. To extend the support, you must augment the APIs and data structures with contextual information about Teams for [identity mapping](../concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](/graph/teams-concept-overview).
+Your app's APIs and data structures must support the app when integrating with Teams. To extend the support, you must augment the APIs and data structures with contextual information about Teams for [identity mapping](../concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](/graph/teams-concept-overview).
 
-Learn more about getting context for your Teams [tab](../tabs/how-to/access-teams-context.md) or [bot](../bots/how-to/get-teams-context.md).
+See how to get context for your Teams [tab](../tabs/how-to/access-teams-context.md) or [bot](../bots/how-to/get-teams-context.md).
 
 ## Understand authentication options
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-Azure Active Directory (AD) is the identity provider for Teams. If your app uses a different identity provider, you must either do an identity mapping exercise or combine with Azure AD.
+Azure Active Directory is the identity provider for Teams. If your app uses a different identity provider, you must either do an identity mapping exercise or combine with Microsoft Azure Active Directory (Azure AD).
 
 Teams has single sign-on (SSO) mechanisms with Azure AD for third-party apps. It also provides the guidance for authentication flows to other identity providers using standards such as OAuth and Open ID Connect, known as OIDC.
 
@@ -118,12 +117,12 @@ Following is an example of a notification message:
 
 ***Integration scenarios:** Standalone apps, collaboration apps, SharePoint pages*
 
-When a team is created, a [SharePoint site collection](/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app must leverage this feature if it interacts with files. Use the site collection to store raw data in SharePoint Lists and Excel.
+When a team is created, a [SharePoint site collection](/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app must leverage this feature if it interacts with files. Use the site collection to store raw data in SharePoint Lists and Microsoft Excel.
 
 ## See also
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
-* [Create Share-to-Teams button](../concepts/build-and-test/share-to-teams.md)
+* [Create a Share-to-Teams button](../concepts/build-and-test/share-to-teams.md)
 * [SameSite cookie attributes](~/resources/samesite-cookie-update.md)
 * [Integrate Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
