@@ -59,11 +59,9 @@ Provide the following fields:
 > [!NOTE]
 > Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
 
-Use the following formats for a deep link that you can use:
+Use the following format for a deep link that you can use in a bot, connector, or messaging extension card:
 
-* In a bot, connector, or messaging extension card
-
-    `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+`https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
@@ -85,19 +83,24 @@ The query parameters are:
 
 Examples:
 
-* Link to a configurable tab itself: 
+* Link to a configurable tab itself:
+
     `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
 
-* Link to a task item within the configurable tab: 
+* Link to a task item within the configurable tab:
+
     `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
 
-* Link to a static tab itself: 
+* Link to a static tab itself:
+
     `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
 
-* Link to a task item within the static tab: 
+* Link to a task item within the static tab:
+
     `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
     
 * Link to a tab app added to a meeting: 
+
     `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYtODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
