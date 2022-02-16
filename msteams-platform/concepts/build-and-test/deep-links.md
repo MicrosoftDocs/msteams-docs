@@ -65,14 +65,6 @@ Use the following formats for a deep link that you can use:
 
     `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
-* An app added to a group chat
-    
-    `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<websiteUrl>&label=<name>&context={"chatId":"<chatId>","contextType":"chat"}` 
-
-* An app added to a meeting with a tab [capability](~/concepts/capabilities-overview.md)
-
-    `https://teams.microsoft.com/l/entity/<meetingId>/<entityId>?context={"chatId": "<meetingId>","contextType":"chat"}`
-
 > [!NOTE]
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
 > If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab is not opened.
@@ -93,11 +85,20 @@ The query parameters are:
 
 Examples:
 
-* Link to a configurable tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link to a task item within the configurable tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link to a static tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* Link to a task item within the static tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
-* Link to a tab app added to a meeting: `https://teams.microsoft.com/l/entity/19%3ameeting_NDRmNzUzNjI tYTYwNC00OWNhLWI4OTYtODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2/Post-it?context={"chatId": "19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYtODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2","contextType":"chat"}`
+* Link to a configurable tab itself: 
+    `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* Link to a task item within the configurable tab: 
+    `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* Link to a static tab itself: 
+    `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+
+* Link to a task item within the static tab: 
+    `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+    
+* Link to a tab app added to a meeting: 
+    `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "19%3ameeting_NDRmNzUzNjItYTYwNC00OWNhLWI4OTYtODUyNDI2NWY4MmE1%40XXXXXXXXXX.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Ensure that all query parameters are properly URI encoded. You must follow the preceeding examples using the last example:
