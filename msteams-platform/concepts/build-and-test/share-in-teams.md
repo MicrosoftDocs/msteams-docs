@@ -10,7 +10,11 @@ keywords: Share Teams Share-in-Teams
 > [!NOTE]
 > Share-in-Teams is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Share-in-Teams allows you to share the content from personal app or tab to another user within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This option allows you to add the recipient (a person or group or channel), notes and share the content.
+Share-in-Teams allows you to share the content from personal app or tab to another user within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This pop-up window allows you to add the recipient (a person or group or channel), notes and share the content.
+
+The following image shows the Share-in-Teams pop-up window:
+
+:::image type="content" source="../../assets/images/share-in-teams/link-shared.PNG" alt-text="share-in-teams-link-shared":::
 
 ## Enable Share-in-Teams
 
@@ -38,9 +42,9 @@ The payload contains the following parameters:
 
 | Property name | Purpose |
 |---|---|
-| `type` | The type must be `URL`. |
-| `url` | URL, which you want to share. |
-| `preview` | Preview must be `true`. |
+| `type` | The type must be `URL` |
+| `url` | Required URL |
+| `preview` | Preview must be `true` |
 
 The following image shows the Share-in-Teams option:
 
