@@ -224,7 +224,7 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 The query parameters are:
 
-* `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, typically an email address.
+* `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName, typically an email address.
 * `startTime`: The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
 * `endTime`: The optional end time of the event, also in ISO 8601 format.
 * `subject`: An optional field for the meeting subject.
@@ -244,9 +244,6 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
 
-> [!NOTE]
-> Currently, deeplink to call is not supported on Teams mobile devices.
-
 ### Generate a deep link to a call
 
 | Deep link | Format | Example |
@@ -257,7 +254,7 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 | Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Following are the query parameters:
-* `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, typically an email address, or in case of a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
+* `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address, or in case of a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
 * `withVideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera. The receiver of the call has a choice to answer through audio or audio and video call through the Teams call notification window. 
 * `Source`: This is an optional parameter, which informs about the source of the deeplink.
 
