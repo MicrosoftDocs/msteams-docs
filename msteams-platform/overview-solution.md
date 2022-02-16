@@ -61,22 +61,17 @@ As a platform for building apps, Teams offers the full range of apps and toolkit
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Describing a life cycle of Teams app development. Plan, Design, Build, Extend, Test, Deploy, Distribute. Details shown in a bullet list below." border="false":::
 
-From designing to building and distributing a Teams app, you can use various tools and services:
+From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
 1. Plan your project and figure out the requirement
-1. Design the app. Teams UI Kit and UI Library are helpful tools to design tabs UI
-1. Build the app 
-    - Choose tools and SDKs of your choice—JavaScript, C#, SharePoint Framework, and so on.
-    - Scaffold the app structure Teams Toolkit
-    - Or integrate with low-code and no-code Apps
-    - Or port your existing web apps
-    
-1. Extend Teams functionality with tabs, bots, adaptive cards. etc.
-    - Also, integrate Teams data from Microsoft Graph
-1. Deploy the app to cloud, such as Azure
-1. Manage and publish your apps with Developer portal
+1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI
+1. Build the app with JavaScript using Teams Toolkit
+1. Extend functionality by adding more Teams capabilities and M365 data with Microsoft Graph
+1. Test the app on a developer tenant with sample user data
+1. Deploy the app to Azure
+1. Manage and publish the apps to Store with Developer Portal
 
-## Useful Links
+## Next steps
 
 :::row:::
     :::column span="1":::
