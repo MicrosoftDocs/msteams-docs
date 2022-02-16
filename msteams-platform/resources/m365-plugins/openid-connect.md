@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 plugins
-description: Microsoft 365 plugins
+description: Microsoft 365 plugins introduction
 ms.topic: Introduction on Microsoft 365 plugins
 ms.localizationpriority: medium
 ms.author: Surbhigupta
