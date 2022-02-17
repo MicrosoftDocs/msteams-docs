@@ -67,7 +67,7 @@ When you feel your app is production ready, you can begin the process of getting
 
    * Recommendations to fix the reported issues with links to guidance docs.
  
-  After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for us to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
+  After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for the validation team to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
   If there are issues remaining or regression issues observed in your app, the validation team will share an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few re-submissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
 
@@ -107,7 +107,7 @@ When you feel your app is production ready, you can begin the process of getting
 
       1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
-      1. Link to a demo video recording key user flows for your app. This is highly recommended.
+      1. Link to a demo video recording key user flow for your app. This is highly recommended.
 
 * **Post app submission**
 
