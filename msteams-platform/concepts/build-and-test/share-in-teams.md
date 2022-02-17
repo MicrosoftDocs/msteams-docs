@@ -10,11 +10,11 @@ keywords: Share Teams Share-in-Teams
 > [!NOTE]
 > Share-in-Teams is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Share-in-Teams allows you to share the content from personal app or tab to another user within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This pop-up window allows you to add another user or group or channel, notes and share the content.
+Share-in-Teams allows you to share the content from personal app or tab to other user or group or channel within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This pop-up window allows you to add other user or group or channel, notes and share the content.
 
 The following image shows the Share-in-Teams pop-up window:
 
-:::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams":::
+:::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams-pop-up":::
 
 ## Enable Share-in-Teams
 
@@ -46,9 +46,9 @@ The payload contains the following parameters:
 | `url` | Required URL |
 | `preview` | Preview must be `true` |
 
-The following image shows the Share-in-Teams option:
+The following image shows the Share-to-Teams option:
 
-:::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button":::
+:::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
 ## End user Share-in-Teams experience
 
@@ -58,7 +58,7 @@ The following image shows the Share-in-Teams option:
 
    :::image type="content" source="../../assets/images/share-in-teams/share-button.PNG" alt-text="share-in-teams-button":::
 
-3. Add another user or group or channel.
+3. Add other user or group or channel.
 
    :::image type="content" source="../../assets/images/share-in-teams/add-recepient.PNG" alt-text="add-recipient":::
 
