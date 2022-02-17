@@ -1,7 +1,7 @@
 ---
 title: Extend Teams apps across Microsoft 365 (preview)
 description: Extend your Teams app experiences to other high-usage areas of Microsoft 365 
-ms.date: 2/11/2022
+ms.date: 02/11/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium

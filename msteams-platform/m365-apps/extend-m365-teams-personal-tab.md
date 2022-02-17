@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams personal tab app across Microsoft 365
 description: Extend a Teams personal tab app across Microsoft 365
-ms.date: 2/11/2022
+ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
@@ -169,35 +169,43 @@ When you upgrade your Teams personal tab and sideload it in Teams, it will also 
 
 ### Outlook
 
-To view your app running in Outlook on Windows desktop, launch Outlook and sign in using your dev tenant account. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+To view your app running in Outlook on Windows desktop:
+
+1. Launch Outlook and sign in using your dev tenant account.
+1. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+1.  Click on your app icon to launch your app in Outlook.
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Outlook desktop client to see your installed personal tabs":::
 
-Click on your app icon to launch your app in Outlook.
-
 ### Outlook on the web
 
-To view your app in Outlook on the web, visit https://outlook.office.com and sign in using your dev tenant account. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+To view your app in Outlook on the web:
+
+1. Navigate to https://outlook.office.com and sign in using your dev tenant account.
+1. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+1. Click on your app icon to launch and preview your app running in Outlook on the web.
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
 
-Click on your app icon to launch and preview your app running in Outlook on the web.
-
 ### Office
 
-To view your app running in Office on Windows desktop, launch Office and sign in using your dev tenant account. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+To view your app running in Office on Windows desktop:
+
+1. Launch Office and sign in using your dev tenant account.
+1. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+1. Click on your app icon to launch your app in Office.
 
 :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
 
-Click on your app icon to launch your app in Office.
-
 ### Office on the web
 
-To preview your app running in Office on the web, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+To preview your app running in Office on the web:
+
+1. Log into office.com with test tenant credentials.
+1. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+1. Click on your app icon to launch your app in Office on the web.
 
 :::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of office.com to see your installed personal tabs":::
-
-Click on your app icon to launch your app in Office on the web.
 
 ## Next steps
 
