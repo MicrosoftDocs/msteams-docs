@@ -13,7 +13,7 @@ Planning for implementing authentication is as important as for app's features a
 
 This module covers:
 
-- Advantages and benefits of authentication.
+- Authentication advantages and benefits.
 - Types of authentication methods.
 - Introduction to Azure Active Directory (AAD) Single sign-on (SSO), and other authentication methods.
 - Features of authentication methods and their user experience.
@@ -22,9 +22,25 @@ This module covers:
 
 ## Authentication
 
-Authentication is all about validating users for accessing and using the app. It is one of the ways you secure your app and it's data against unwarranted access.
+Authentication is all about validating users for accessing and using the app. It's one of the ways you secure your app and users against unwarranted access.
 
-You can validate app users in several ways, such as using login credentials, access tokens, and more.
+You can validate app users in several ways, such as using login credentials, ID tokens, access tokens, and more.
+
+## Why should I use authentication?
+
+Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
+
+
+
+You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. 
+
+Plan for authentication to optimize your app.
+
+- **Security**:
+  - For app
+  - For users
+
+## Common authentication terms
 
 Within Teams, there are multiple ways you can implement authentication. Here's an introduction to key terms that you'll come across:
 
@@ -33,30 +49,17 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 - ID tokens: An ID token is granted to a user who has been verified successfully. It's used to cache user profile information and provide it to a client application when a user requests access.
 - Authorization: It's a process to provide resource-specific access to an authenticated user based on their user profile.
 - Oauth2.0: OAuth is a protocol that lets third party applications access secure resources without compromising the user’s information, such as password.  
-- Access tokens: An access token is an artefact that contains security information of an application to access specific user information.  
-- Graph API: 
+- Access tokens: An access token is an artifact that contains security information of an application to access specific user information.  
+- Graph API: \add details for Graph API and MS Graph\
 
-
-## Why should I use authentication?
-
-\Purpose\
-
-\Benefits\
-
-Plan for authentication to optimize your app.
-
-- **Security**:
-  - For app
-  - For users
-- **User experience**:
-- **Long-term cost benefit**:
 
 ## Authentication in Teams
 
-You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now. If you need a solution that requires you to provide guest access for users outside the tenant, access restrictions and permissions need to be placed to protect confidential information. You will need to design apps considering the limitations that come with guest user access. Therefore, ask questions, such as:
+You must identify early on if you need to protect the services you're offering and at what level. The web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it before you start building your app. 
+
+For example, if your app requires you to provide guest access for external users, access restrictions and permissions need to be placed to protect confidential information.
+
+Therefore, ask questions, such as:
 •	Will the users access different views of data based on their roles?
-•	Is there PII involved?
 •	Will the interactions also be based on the user roles?
 •	Will external users access the app?
-
-
