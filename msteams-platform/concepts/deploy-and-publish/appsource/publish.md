@@ -72,17 +72,25 @@ When you feel your app is production ready, you can begin the process of getting
   1. Complete [publisher verification](/azure/active-directory/develop/publisher-verification-overview) before you submit your app. If you run into any issues, you can create a [support ticket](/azure/marketplace/partner-center-portal/support) for resolution.
 
   1. As you prepare for app submission, [follow the checklist](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) and include the following details as part of your submission package:
+
       1. Thoroughly verified app package.
+
       1. Working admin and non-admin user credentials to test your app functionality (if your app offers a premium subscription model).
+
       1. Test instructions detailing app functionality and supported scenarios.
+
       1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
+
       1. Link to a demo video recording key user flows for your app. This is highly recommended.
 
 * **Post your app submission**
 
   * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any additional support to resolve the reported issues.
+
   * Ensure that you've adequate developer bandwidth to resolve any reported issues till the app is approved.
+
   * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and consequently, the time taken to approve your app.
+  
   * Avoid changing app functionality during the validation process. This might lead to discovery of new issues and increase the time it takes to approve your app.
 
 ## See also
