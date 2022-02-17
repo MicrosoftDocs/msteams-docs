@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
 ---
-# An App that fits
+# Teams app that fits
 
 Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or messaging extensions or any combination of the three. These apps expand the value of your Teams collaborative experience.
 

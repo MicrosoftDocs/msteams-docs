@@ -13,7 +13,7 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Conceptual representation of Teams as a platform" border="false":::
 
-## Teams App Features
+## Teams App features
 
 | Feature | Description | Useful for |
 | --- | --- | --- |

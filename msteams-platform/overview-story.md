@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 11/02/2021
 ---
-# It starts with an idea
+# From ideas to Teams app
 
 Learn how apps let you help your users in the Teams environment.
 

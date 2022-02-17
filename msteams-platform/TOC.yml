@@ -5,11 +5,11 @@
 - name: Overview
   expanded: false 
   items:
-  - name: An app that fits
+  - name: Teams app that fits
     href: overview.md
-  - name: It starts with an idea
+  - name: From ideas to Teams app
     href: overview-story.md
-  - name: Explore Teams Features
+  - name: Explore Teams features
     href: overview-explore.md
   - name: The Teams solution
     href: overview-solution.md
@@ -36,7 +36,7 @@
     href: concepts/design/understand-use-cases.md
   - name: Map your use case to Teams features
     href: concepts/design/map-use-cases.md
-  - name: Planning checklist
+  - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
