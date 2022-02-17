@@ -25,7 +25,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 1.	[Publish your app](#publish-your-app).
 
-1.	[Resolve the issues](#resolve-the-issues).
+1.	[Review the issues](#review-the-issues).
 
 
 ## Design your app
@@ -68,11 +68,12 @@ Ensure you have resolved all issues reported to you by the concierge service (te
 
 ### Deep functional and experience tests
 
-Your app is thoroughly reviewed by a validator to ensure compliance with [Microsoft Commercial Marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients.
+Your app is thoroughly reviewed by a validator to ensure compliance with [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients.
 
 ### Guided app publish through concierge service
 
 If there are no issues observed with your app, your app will be approved and published to Teams store. If there are issues, you will receive an automated validation report from Partner Center with failure details. To help you successfully publish your app to Teams store and guide you through this process, we send a personalized email from our concierge service (teamsubm@microsoft.com) with the following information:
+
 * Summary of all issues
 * Details of failures/issues with policy links and categorization:
   * Mandatory fix: These issues need to be fixed prior to app approval.
