@@ -16,7 +16,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of messaging extension app that uses a popup to collect or display information. <br>**See also**: [Messaging extension](#m); [Search commands](#s) |
 | [Adaptive Cards](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or messaging extension. Use text, graphics, and buttons with these cards for rich communication. |
-| [Anonymous user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and is not federated with a tenant. They are like external users in a meeting. <br>**See also**: [Federated user](#f) |
+| [Anonymous user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**See also**: [Federated user](#f) |
 | [App Catalog](../toolkit/publish.md) | A site that stores SharePoint and Office apps for an organization's internal use. <br>**See also**: [SPFx](#s) |
 | [App manifest](../resources/schema/manifest-schema.md) | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file, color icon, and outline icon. |
@@ -49,10 +49,10 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Capability](../toolkit/add-capability.md) | A Teams feature you can build into your app for interacting with app users. An app capability is used to extend Teams to fit your app needs. An app may have one or more core capabilities, such as tab, bot, and messaging extension. <br>**See also**: [Device capability](#d); [Media capability](#m) |
 | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. <br> **See also**: [Conversational bot](#c). |
 | Channel | A single place for a team to share messages, tools, and files. You can use a channel for teamwork and communication. <br>**See also**: [Conversation](#c) |
-| [Client secret](../bots/how-to/authentication/add-authentication.md) | The Client secret/password or a public or private key pair that is Certificate. It is not required for native apps. <br> **See also**: [Bot](#b) |
+| [Client secret](../bots/how-to/authentication/add-authentication.md) | The Client secret/password or a public or private key pair that is Certificate. It isn't required for native apps. <br> **See also**: [Bot](#b) |
 | [Cloud resources](../toolkit/add-resource.md) | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
 | [Collaboration app](../concepts/extensibility-points.md) | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: [Standalone app](#s) |
-| [Compose Extension](../resources/schema/manifest-schema.md#composeextensions) | A property in app manifest (`composeExtensions`) that refers to messaging extension capability. It is used when your extension needs to either authenticate or configure to continue. <br>**See also**: [App manifest](#a); [Messaging extension](#m) |
+| [Compose Extension](../resources/schema/manifest-schema.md#composeextensions) | A property in app manifest (`composeExtensions`) that refers to messaging extension capability. It's used when your extension needs to either authenticate or configure to continue. <br>**See also**: [App manifest](#a); [Messaging extension](#m) |
 | [Command box](../resources/schema/manifest-schema.md) | A type of context in app manifest (`commandBox`) that you can configure to invoke a messaging extension from Teams command box. |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It lets users subscribe to receive notifications and messages from the web services. Connectors expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: [Webhook](#w) |
 | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: [One-on-one chat](#o); [Group chat](#g); [Channel](#c) |
@@ -90,7 +90,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They are also called External users. <br>**See also**: [Anonymous user](#a) |
+| [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They're also called External users. <br>**See also**: [Anonymous user](#a) |
 |
 
 ## G
@@ -106,7 +106,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Identity provider](../concepts/authentication/configure-identity-provider.md) | An entity which stores and provides credentials to the user. Users can register themselves with an identity provider as well.  <br>**See also**: [Authentication](#a) |
+| [Identity provider](../concepts/authentication/configure-identity-provider.md) | An entity that stores and provides credentials to the user. Users can register themselves with an identity provider as well.  <br>**See also**: [Authentication](#a) |
 | [Incoming webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing webhook](#o) |
 | [In-meeting app experience](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
 |
@@ -118,9 +118,9 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with messaging extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in Adaptive Cards or in the meeting stage view. |
 | [Local environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A default development environment created by Teams Toolkit.  <br>**See also**: [Environment](#e); [Dev environment](#d) |
-| [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug an Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
+| [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug a Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
 | [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d); [Teams Mobile](#t) |
-| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that require little or no coding, and can be developed and deployed quickly. |
+| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that requires little or no coding, and can be developed and deployed quickly. |
 |
 
 
@@ -131,7 +131,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Media capability](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: [Capability](#c); [Device capability](#d) |
 | [Meeting bot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots that interact with Teams calls and meetings using real-time voice, video, and screen sharing. <br>**See also**: [Call bot](#c); [Chat bot](#c) |
 | [Meeting lifecycle](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle. <br>**See also**: [In-meeting experience](#i) |
-| [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It is a shared space accessible to all participants during the meeting. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
+| [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It's a shared space accessible to all participants during the meeting. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
 | [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md) | Messaging extensions are shortcuts for inserting app content or acting on a message. You can use a messaging extension without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
@@ -164,7 +164,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Personal app](../concepts/design/personal-apps.md) | A personal app is a Teams application with a personal scope. It focuses on interactions with a single user. It can be a conversational bot to engage in one-to-one conversations with a user or a personal tab providing an embedded web experience, or both. <br>**See also**: [Shared app](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
-| [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It is a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
+| [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
 |
 
 
@@ -189,9 +189,9 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Sideloading](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [SidePanel](../sbs-meetings-sidepanel.yml) | A feature of Teams meeting app that enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. |
-| SSO | Acronym for Single sign-on, an authentication method in which a user needs to sign in to a independent services of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a) |
-| [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It is invoked to surface web content within Teams. Note that it is *not* a the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
-| [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: Collaboration aap |
+| SSO | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a) |
+| [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
+| [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration aap](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
 | [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
 |
