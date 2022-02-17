@@ -9,7 +9,7 @@ author: v-leenagopal
 
 # Plugins introduction
 
-Microsoft plugins are
+Microsoft plugins are 
 
 ## OpenID Connect
 
