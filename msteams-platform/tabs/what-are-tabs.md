@@ -38,7 +38,7 @@ You can build tabs with Adaptive Cards and centralize all Teams app capabilities
 The tab features are as follows:
 
 * If a tab is added to an app that also has a bot, the bot is also added to the team.
-* Awareness of Azure Active Directory ID of the current user.
+* Awareness of Microsoft Azure Active Directory (Azure AD) ID of the current user.
 * Locale awareness for the user to indicate language that is `en-us`.
 * Single sign-on (SSO) capability, if supported.
 * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
@@ -74,7 +74,7 @@ For channel or group tabs, you can also create an additional configuration page.
 You can have multiple channels or group tabs, and up to 16 personal tabs per app.
 
 ### Tools you can use to build tabs
-* [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit for Microsoft Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## Next step

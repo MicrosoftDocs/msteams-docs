@@ -19,6 +19,9 @@ Choose your environment to build channel or group tab from **Node.js**, **ASP.NE
 
 ### Create a custom channel and group tab using Node.js
 
+- Any text editor or IDE. You can install and use [Microsoft Visual Studio Code](https://code.visualstudio.com/download) for free.
+
+
 To create custom channel and group tab with Node.js:
 
 1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
@@ -114,9 +117,9 @@ To create custom channel and group tab with Node.js:
 
     You can select a team or a group chat.
 
-    **Do you require Azure AD Single-Sign-On support for the tab?**
+    **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
-    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+    Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
 
     **Do you want this tab to be available in SharePoint Online? (Y/n)**
 

@@ -23,6 +23,7 @@ Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**
 # [Node.js](#tab/nodejs)
 
 ### Create a personal tab with Node.js
+- Any text editor or IDE. You can install and use [Microsoft Visual Studio Code](https://code.visualstudio.com/download) for free.
 
 To create a personal tab with Node.js:
 
@@ -116,7 +117,7 @@ To create a personal tab with Node.js:
 
     Use the arrow keys to select **Personal (static)**.
 
-    **Do you require Azure AD Single-Sign-On support for the tab?**
+    **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
     Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
 

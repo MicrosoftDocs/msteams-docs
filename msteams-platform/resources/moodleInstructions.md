@@ -15,7 +15,7 @@ In this article you'll learn how to install the Moodle LMS.
 > [!NOTE]
 > To help IT admins to easily set-up Moodle and Teams integration, open-source Microsoft 365 Moodle Plugins is updated for the following:
 >
-> * Auto-registration of your Moodle server with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/).
+> * Auto-registration of your Moodle server with [Microsoft Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/).
 >
 > * One-click deployment of your Moodle Assistant bot to Azure.
 >
@@ -70,13 +70,13 @@ Ensure to install and download the following before proceeding with the Microsof
     >
     > * If you do not have an existing Moodle site, go to the [Moodle on Azure](https://github.com/azure/moodle) repo, and quickly deploy a Moodle instance and customize it to your needs.
 
-## 2. Configure the connection between the Microsoft 365 plugins and Azure Active Directory
+## 2. Configure the connection between the Microsoft 365 plugins and Azure AD
 
 You must configure the connection between the Microsoft 365 plugins and Azure AD.
 
 ### Requisites
 
-Register Moodle as an application in your Azure AD, using the PowerShell script. The Powershell script provisions the following:
+Register Moodle as an application in your Azure AD, using the PowerShell script. The script provisions the following:
 
 * A new Azure AD application for your Microsoft 365 tenant, which is used by the Microsoft 365 Moodle Plugins.
 * The app for your Microsoft 365 tenant, set up the required reply URLs and permissions for the provisioned app, and returns the `AppID` and `Key`.
@@ -223,7 +223,7 @@ After generating your application ID and password, deploy your bot to Azure:
 
 After the resources have completed deploying to Azure, you must configure the Microsoft 365 Moodle plugins with a messaging endpoint. You must get the endpoint from your bot in Azure:
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Microsoft Azure portal](https://portal.azure.com).
 
 1. In the left pane, select **Resource groups** and select the resource group you used or created, while deploying your bot.
 
@@ -272,7 +272,7 @@ Although the Moodle tabs are created manually in Microsoft Teams, you can decide
 
 1. Locate the uploaded **Moodle app** > select the **options** icon > select **copy link**.
 
-1. In a text editor, paste the copied content. It must contain a URL such as ht&#8203;tps://teams.microsoft.com/l/app/00112233-4455-6677-8899-aabbccddeeff. Copy the last part of the URL, such as  `00112233-4455-6677-8899-aabbccddeeff`, which is the ID of the Microsoft Teams app.
+1. In a text editor, paste the copied content. It must contain a URL such as `https://teams.microsoft.com/l/app/00112233-4455-6677-8899-aabbccddeeff`. Copy the last part of the URL, such as  `00112233-4455-6677-8899-aabbccddeeff`, which is the ID of the Microsoft Teams app.
 
 1. In Moodle, open the **Teams Moodle app** tab from your Microsoft 365 Moodle Plugins configuration page.
 
@@ -285,6 +285,6 @@ When a Moodle course is synced, Microsoft Teams automatically installs the Moodl
 
 ## See also
 
-- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-- [Moodle](https://moodle.org/)
-- [Moodle documentation](https://docs.moodle.org/34/en/Installing_plugins).
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Moodle](https://moodle.org/)
+* [Moodle documentation](https://docs.moodle.org/34/en/Installing_plugins).

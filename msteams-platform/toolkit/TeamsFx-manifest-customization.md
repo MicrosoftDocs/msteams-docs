@@ -20,7 +20,7 @@ Teams Toolkit consists of the following manifest template files under `templates
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> Ensure you have Teams app project opened in VS Code.
+> Ensure you have Teams app project opened in Visual Studio Code.
 
 During provision, Teams Toolkit loads manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
