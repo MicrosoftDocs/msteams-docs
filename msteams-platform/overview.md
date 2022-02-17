@@ -19,14 +19,14 @@ Collaboration and communication are key for an organization. Concise communicati
 
 Organizations use it to connect with their customers, provide services, and share information. But that's not all! Apps are the meeting place for people to work together. A well-placed app helps build a cohesive environment for external and internal business needs.
 
-Let's look at some areas that where an app helps to meet a business need.
+Let's look at some areas where an app helps to meet a business need.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?" border="false":::
 
 | &nbsp; | &nbsp; |
 |--- | --- |
 | **Development Options** | **Business Opportunities** |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Store |
+| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Teams Store |
 | **Customer benefits** | **Internal workflows** |
 | - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, <br> &nbsp;&nbsp; such as Q & A and Help-desk |
 |

@@ -54,7 +54,7 @@ Let’s dig deeper into this story and find out.
       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...so that customers can know weather conditions and plan ahead" border="false"::: 
    :::column-end:::
    :::column span="":::
-      #### List App Requirements and Benefits
+      #### List app requirements and benefits
 
         Determine your app's features and how you expect it to answer the user's problem. 
 
