@@ -31,7 +31,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 1. **Deep functional and experience tests**: Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients.
 
-1. **Guided app publish through concierge service**: If there are no issues observed with your app, your app will be approved and published to the Teams store. If there are issues, you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service (teamsubm@microsoft.com) that includes the following information:
+1. **Guided app publish through concierge service**: If there are no issues observed with your app, your app will be approved and published to the Teams store. If there are issues, you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
    * Summary of all issues
    * Details of failures or issues with policy links and categorization: 
      * Mandatory fix: These issues must be fixed prior to app approval.
@@ -41,7 +41,7 @@ When you feel your app is production ready, you can begin the process of getting
    * Details of the issues related to your app in written instructions or video format.
    * Recommendations to fix the reported issues with links to guidance docs.
 
-1. After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for us to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at teamsubm@microsoft.com.
+1. After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for us to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
 1. If there are issues remaining or regression issues observed in your app, the validation team will share an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few re-submissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
 
@@ -63,7 +63,7 @@ When you feel your app is production ready, you can begin the process of getting
 
      1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
 
-       :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="store validation":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="store validation":::
  
      1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end-to-end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
@@ -79,10 +79,10 @@ When you feel your app is production ready, you can begin the process of getting
       1. Link to a demo video recording key user flows for your app. This is highly recommended.
 
 * **Post your app submission**
- 
+
   * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any additional support to resolve the reported issues.
   * Ensure that you've adequate developer bandwidth to resolve any reported issues till the app is approved.
-  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service (teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and consequently, the time taken to approve your app.
+  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and consequently, the time taken to approve your app.
   * Avoid changing app functionality during the validation process. This might lead to discovery of new issues and increase the time it takes to approve your app.
 
 ## See also
