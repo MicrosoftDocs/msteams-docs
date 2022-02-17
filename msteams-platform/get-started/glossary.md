@@ -15,11 +15,11 @@ Common terms and definitions used in Teams Developer Documentation.
 | Term | Definition |
 | --- | --- |
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of messaging extension app that uses a popup to collect or display information. <br>**See also**: [Messaging extension](#m); [Search commands](#s) |
-| [Adaptive Card](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or messaging extension. Use text, graphics, and buttons with these cards for rich communication. |
+| [Adaptive Cards](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or messaging extension. Use text, graphics, and buttons with these cards for rich communication. |
 | [Anonymous user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and is not federated with a tenant. They are like external users in a meeting. <br>**See also**: [Federated user](#f) |
 | [App Catalog](../toolkit/publish.md) | A site that stores the apps for SharePoint and Office for an organization's internal use. <br>**See also**: [SPFx](#s) |
 | [App manifest](../resources/schema/manifest-schema.md) | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
-| [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file and app icons - color icon and outline icon. |
+| [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file, color icon, and outline icon. |
 | [App permission](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | An option in a Teams app to enable device permissions. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: Device permissions |
 | [App scope](../concepts/design/app-structure.md) | An area in Teams where people can use your app. Apps can have one or many scopes, including personal, channels, chats, and meetings. A Teams app can exist across scopes. |
 | [App Studio](../concepts/build-and-test/app-studio-overview.md) | An app to start creating or integrating your own Microsoft Teams apps. It has now evolved to Developer Portal. <br> **See also**: [Developer Portal](#d) |
@@ -46,7 +46,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | Term | Definition |
 | --- | --- |
 | [Call bot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | A bot that participates in audio or video calls and online meetings. <br> **See also**: [Chat bot](#c); [Meeting bot](#m) |
-| [Capability](../toolkit/add-capability.md) | The feature of a Teams app are called as Capability. An app may have one or more core capabilities, such as tab, bot, messaging extensions. <br>**See also**: [Device capability](#d); [Media capability](#m) |
+| [Capability](../toolkit/add-capability.md) | A feature of a Teams built into your app that extends Teams to increase its usage scope. An app may have one or more core capabilities, such as tab, bot, messaging extensions. <br>**See also**: [Device capability](#d); [Media capability](#m) |
 | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. <br> **See also**: [Conversational bot](#c). |
 | Channel | A single place for a team to share messages, tools, and files. In Teams, teamwork and communication happen in channels.  |
 | [Client secret](../bots/how-to/authentication/add-authentication.md) | The Client secret/password or a public or private key pair that is Certificate. It is not required for native apps. <br> **See also**: [Bot](#b) |
@@ -116,10 +116,10 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with messaging extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in an Adaptive Card or in the meeting stage view. |
-| [Local environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A default development environment created by Teams Toolkit  <br>**See also**: [Environment](#e); [Dev environment](#d) |
+| [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with messaging extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in Adaptive Cards or in the meeting stage view. |
+| [Local environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A default development environment created by Teams Toolkit.  <br>**See also**: [Environment](#e); [Dev environment](#d) |
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug an Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
-| [Location capability](../concepts/device-capabilities/location-capability.md) | <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d) |
+| [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d) |
 | [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that require little or no coding, and can be developed and deployed quickly.  |
 |
 
@@ -141,7 +141,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
-| [Microsoft Store](../concepts/deploy-and-publish/appsource/publish.md) | Microsoft Store is a digital distribution platform owned by Microsoft. |
+| [Microsoft store](../concepts/deploy-and-publish/appsource/publish.md) | Microsoft store is a digital distribution platform owned by Microsoft. |
 |
 
 
@@ -192,7 +192,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | SSO | Acronym for Single sign-on, an authentication method in which a user needs to sign in to a independent services of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a) |
 | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It is invoked to surface web content within Teams. Note that it is *not* a different for Meeting stage.* <br>**See also**: [Meeting stage](#m) |
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: Collaboration aap |
-| [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Card payload. <br>**See also**: [Dynamic search](#d) |
+| [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
 | [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
 |
 
