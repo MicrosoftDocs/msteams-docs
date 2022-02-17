@@ -7,13 +7,11 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Use cases and Teams features
+# Understand your use cases
 
 In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For instance, an app that bridges gap in achieving effective collaboration is a great fit.
 
 The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
-
-## Understand your use cases
 
 If you're going to meet user requirements with your app, you first need to understand them.
 

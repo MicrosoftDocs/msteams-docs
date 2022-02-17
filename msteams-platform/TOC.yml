@@ -32,7 +32,7 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-  - name: Understand your use case and Teams features
+  - name: Understand your use case
     href: concepts/design/understand-use-cases.md
   - name: Map your use case to Teams features
     href: concepts/design/map-use-cases.md
