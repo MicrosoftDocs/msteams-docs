@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 11/02/2021
 ---
-# Explore Teams as a platform
+# Explore Teams features
 
 With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile app solutions. Choose the best features for your app.
 
