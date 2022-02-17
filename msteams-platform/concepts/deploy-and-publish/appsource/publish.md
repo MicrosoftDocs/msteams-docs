@@ -55,9 +55,9 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **Prior to your app submission**
 
-  1. [Create your Partner Center account](/create-partner-center-dev-account) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
+  1. [Create your Partner Center account](prepare/create-partner-center-dev-account.md) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Review the [store validation guidelines](/teams-store-validation-guidelines) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and consequently, the time taken to approve your app.
+  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and consequently, the time taken to approve your app.
 
   1. Test and re-test your app:
 
