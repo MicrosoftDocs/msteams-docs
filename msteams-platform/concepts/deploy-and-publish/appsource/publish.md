@@ -14,9 +14,6 @@ Apps published to the Teams store also automatically list on [Microsoft AppSourc
 
 ## Understand the publishing process
 
-:::row:::
-   :::column span="3":::
-
 When you feel your app is production ready, you can begin the process of getting it listed on the Teams store.
 
 > [!TIP]
@@ -28,15 +25,7 @@ When you feel your app is production ready, you can begin the process of getting
 1. [Submit your app](/office/dev/store/add-in-submission-guide) through Partner Center.
 1. If your submission fails, work with Microsoft directly to [resolve the issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 
-   :::column-end:::
-   :::column span="1":::
-
-<br>
-
-:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="false":::
-
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="true":::
 
 ## What to expect after you submit your app?
 
@@ -67,7 +56,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * Prior to your app submission
 
-  1. [Create your Partner Center account](/create-partner-center-dev-account) well in advance. If you run into any challenges with your Partner Center account, create a [support ticket](/azure/marketplace/partner-center-portal/support).
+  1. [Create your Partner Center account](/create-partner-center-dev-account) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
 
   1. Review the [store validation guidelines](/teams-store-validation-guidelines) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and consequently, the time taken to approve your app.
 
@@ -87,7 +76,7 @@ When you feel your app is production ready, you can begin the process of getting
       1. Thoroughly verified app package.
       1. Working admin and non-admin user credentials to test your app functionality (if your app offers a premium subscription model).
       1. Test instructions detailing app functionality and supported scenarios.
-      1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a provisioned demo tenant with admin access so that our validators can skip the configuration steps.
+      1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
       1. Link to a demo video recording key user flows for your app. This is highly recommended.
 
 * Post your app submission
