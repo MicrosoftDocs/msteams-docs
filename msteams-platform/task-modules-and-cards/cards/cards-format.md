@@ -111,6 +111,14 @@ The following code shows an example of Adaptive Cards formatting:
 }
 ```
 
+Adaptive Cards support emoji. The following code shows an example of Adaptive Cards with an emoji:
+
+``` json
+{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
+```
+
+:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Adaptive card with an emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+
 ### Mention support within Adaptive Cards 
 
 You can add @mentions within an Adaptive Card body for bots and messaging extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
@@ -160,7 +168,7 @@ The following code shows an example of Adaptive Card with a mention:
 }
 ```
 
-### Azure AD Object ID and UPN in user mention 
+### Microsoft Azure Active Directory (Azure AD) Object ID and UPN in user mention 
 
 Teams platform allows to mention users with their Azure AD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs. 
 

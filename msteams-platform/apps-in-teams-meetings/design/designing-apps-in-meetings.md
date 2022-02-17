@@ -179,9 +179,6 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 
 ## Use the shared meeting stage
 
-> [!NOTE]
-> Currently the feature is available in [**public developer preview**](../../whats-new.md#developer-preview) only.
-
 You can allow users to share and interact with some or all of your app content on the meeting stage. Here are examples of how people might use this feature during a meeting:
 
 * Editing a document

@@ -1,6 +1,6 @@
 ---
 title: Silent authentication
-description: Describes silent authentication, Single-sign-on, Azure Active Directory for tabs
+description: Describes silent authentication, Single-sign-on, Azure AD for tabs
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication SSO silent Azure AD tab
@@ -13,9 +13,9 @@ keywords: teams authentication SSO silent Azure AD tab
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using Teams JavaScript SDK version 1.4.1 or later.
 
-Silent authentication in Azure Active Directory minimizes the number of times a user enters their credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
+Silent authentication in Azure AD minimizes the number of times a user enters their credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-To keep your code client-side, use the [Azure AD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Azure AD access token silently. If the user has signed in recently, they do not see a popup dialog box.
+To keep your code client-side, use the [Azure AD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an Microsoft Azure Active Directory (Azure AD) access token silently. If the user has signed in recently, they do not see a popup dialog box.
 
 While Active Directory Authentication Library is optimized for AngularJS applications, it also works with JavaScript single-page applications (SPA).
 

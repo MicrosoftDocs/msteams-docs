@@ -19,7 +19,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Azure Active Directory or other identity provider, and you do not require the user to enter their username again. 
+* You initiate an authentication flow from Microsoft Azure Active Directory (Azure AD) or other identity provider, and you do not require the user to enter their username again. 
 
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
