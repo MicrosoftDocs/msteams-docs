@@ -38,61 +38,64 @@ When you feel your app is production ready, you can begin the process of getting
    :::column-end:::
 :::row-end:::
 
-## What to expect after submitting your app?
+## What to expect after you submit your app?
 
-### Deep functional and experience tests
+1. Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients.
 
-Your app is thoroughly reviewed by a validator to ensure compliance with [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients.
-
-### Guided app publish through concierge service
-
-If there are no issues observed with your app, your app will be approved and published to Teams store. If there are issues, you'll receive an automated validation report from Partner Center with failure details. To help you successfully publish your app to Teams store and guide you through this process, we send a personalized email from our concierge service (teamsubm@microsoft.com) with the following information:
+1. If there are no issues observed with your app, your app will be approved and published to the Teams store. If there are issues, you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service (teamsubm@microsoft.com) that includes the following information:
 
 * Summary of all issues
-* Details of failures or issues with policy links and categorization:
-  * Mandatory fix: These issues need to be fixed prior to app approval.
-  * Suggested fix: These may be fixed post app approval as these are recommendations to improve your app’s experience.
-  * Blocker: These prevent us from testing your app functionality and need to be resolved for validation to continue.
-  * Query: These may be shared to get answers to specific questions related to your app.
-* Detailed reproduction steps (including written instructions, videos).
-* Recommendations to fix reported issues with links to guidance docs.
+* Details of failures or issues with policy links and categorization: 
+  * Mandatory fix: These issues must be fixed prior to app approval.
+  * Suggested fix: These issues can be fixed post app approval as these are recommendations to improve your app’s experience.
+  * Blocker: These issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
+  * Query: These queries can be shared to get answers to specific questions related to your app.
+* Details of the issues related to your app in written instructions or video format.
+* Recommendations to fix the reported issues with links to guidance docs.
 
-After you've reviewed this list of issues, fix all the reported issues and share the updated app package over email, for us to re-validate your app thoroughly. If you've any queries related to the reported issues, contact us at teamsubm@microsoft.com.
+1. After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for us to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at teamsubm@microsoft.com.
 
-If there are remaining issues or if regression issues are observed in the app, we’ll share an updated validation report with you. If your app had blockers, you may see new issues reported when your app is validated after resolution of blockers. Occasionally, we also notice regression issues in apps post deployment of fixes. It takes a few re-submissions to close all issues for an app with bugs and get it approved for store publish.
-After all reported issues are closed and final submission is made in the Partner Center, we’ll approve and publish your app. Allow at least one business day for the app to be available in Teams store.
+1. If there are issues remaining or regression issues observed in your app, the validation team will share an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few re-submissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
 
-## Tips for rapid approval for app publishing
+1. After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams store.
 
-### During design phase
+## Tips for rapid approval to publish your app
 
-Review [store validation guidelines](/teams-store-validation-guidelines) early to ensure you build an app in line with store requirements. If your app is built in line with the guidelines, it prevents any rework due to non-adherence to store policies.
+* During design phase
 
-### Prior to app submission
+  Review the [store validation guidelines](/teams-store-validation-guidelines) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
 
-1. To publish your app to the Microsoft Teams store, you must [Create your Partner Center account](/create-partner-center-dev-account). If you run into any challenges with your Partner Center account, create a [support ticket](/azure/marketplace/partner-center-portal/support).
+* Prior to your app submission
 
-1. Review store validation guidelines once again to ensure that your app is aligned with store requirements. This helps reduce the number of issues observed in your app and consequently, the time taken to approve your app.
-1. Test and re-test your app:
+  1. [Create your Partner Center account](/create-partner-center-dev-account) well in advance. If you run into any challenges with your Partner Center account, create a [support ticket](/azure/marketplace/partner-center-portal/support).
 
-   1. Validate your app package using Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
-   :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="store validation":::
-   1. Self-test your app thoroughly prior to app submission and ensure it adheres with store policies. Sideload the app in Teams and test the end-to-end user flows for your app. Ensure functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
-   1. Test your app across desktop, web, and mobile clients. Ensure the app is responsive across different form factors.
-1. Complete publisher verification before you submit your app. If you run into any issues, you can create a support ticket for resolution.
-1. As you prepare for app submission, check the following as part of your submission package:
-      1. Thoroughly verified app package (The app package is thoroughly verified)
-      1. Include working admin and non-admin user credentials to test your app functionality (if your app offers a premium subscription model)
-      1. Test instructions detailing app functionality and supported scenarios
-      1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a provisioned demo tenant with admin access so that our validators can skip the configuration steps.
-      1. Link to a demo video recording key user flows for your app (highly recommended)
+  1. Review the [store validation guidelines](/teams-store-validation-guidelines) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and consequently, the time taken to approve your app.
 
-### Post app submission
+  1. Test and re-test your app:
+
+     1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
+
+       :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="store validation":::
  
-* After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any additional support to resolve the reported issues.
-* Ensure you've adequate developer bandwidth to resolve any reported issues until the app is approved.
-* Ensure you've resolved all issues reported to you by the concierge service (teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and, the time taken to approve your app.
-* Avoid changing app functionality during the validation process. This may lead to discovery of new issues and increase the time it takes to approve your app.
+     1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end-to-end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
+
+     1. Test your app across desktop, web, and mobile clients. Ensure that the app is responsive across different form factors.
+
+  1. Complete [publisher verification](/azure/active-directory/develop/publisher-verification-overview) before you submit your app. If you run into any issues, you can create a [support ticket](/azure/marketplace/partner-center-portal/support) for resolution.
+
+  1. As you prepare for app submission, [follow the checklist](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) and include the following details as part of your submission package:
+      1. Thoroughly verified app package.
+      1. Working admin and non-admin user credentials to test your app functionality (if your app offers a premium subscription model).
+      1. Test instructions detailing app functionality and supported scenarios.
+      1. Setup instructions if your app requires additional configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a provisioned demo tenant with admin access so that our validators can skip the configuration steps.
+      1. Link to a demo video recording key user flows for your app. This is highly recommended.
+
+* Post your app submission
+ 
+  1. After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any additional support to resolve the reported issues.
+  1. Ensure that you've adequate developer bandwidth to resolve any reported issues till the app is approved.
+  1. Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service (teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and consequently, the time taken to approve your app.
+* Avoid changing app functionality during the validation process. This might lead to discovery of new issues and increase the time it takes to approve your app.
 
 ## See also
 
