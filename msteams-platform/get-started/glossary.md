@@ -67,12 +67,12 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Deep linking](../concepts/build-and-test/deep-links.md) | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
 | [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) | The primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
 | [Developer Preview](../resources/dev-preview/developer-preview-intro.md) | A public program for developers that provides early access to unreleased features in Microsoft Teams. It lets you explore and test upcoming features for potential inclusion in your Microsoft Teams app. |
-| Deploy | A process to upload the backend and frontend code for the application. At Deployment, the code for your app is copied to the resources you created during provision. <br>**See also**: [Provision](#p) |
+| Deploy | A process to upload the backend and frontend code for the application. At Deployment, the code for your app is copied to the resources you created during provisioning. <br>**See also**: [Provision](#p) |
 | [Device capabilities](../concepts/device-capabilities/device-capabilities-overview.md) | Built-in devices, such as camera, microphone, barcode scanner, photo gallery, in a mobile or desktop. You can access the following device capabilities on mobile or desktop through dedicated APIs available in Microsoft Teams JavaScript client SDK. <br>**See also**: [Capability](#c); [Media capability](#m); [Location capability](#l) |
-| [Device permission](../concepts/device-capabilities/browser-device-permissions.md) | If an app needs to utilize a native device capability, it must request permission to access the capability. You can manage device permissions in Teams settings. <br>**See also**: [App permissions](#a) |
-| [Dev environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A type of development environment that Teams Toolkit creates by default to represent remote or cloud environment configurations. A project can have multiple remote environments. You can add more dev environments to your project using Teams Toolkit. <br>**See also** [Environment](#e); [Local environment](#l) |
+| [Device permission](../concepts/device-capabilities/browser-device-permissions.md) | A Teams app setting that you can configure in your app. You use it to request permission for your app to access and utilize a native device capability. You can manage device permissions in Teams settings. <br>**See also**: [App permissions](#a) |
+| [Dev environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A type of development environment that Teams Toolkit creates by default. It represents remote or cloud environment configurations. A project can have multiple remote environments. You can add more dev environments to your project using Teams Toolkit. <br>**See also** [Environment](#e); [Local environment](#l) |
 | [DevTools](../tabs/how-to/developer-tools.md) | Browser's Devtools are used to view console logs, view or modify runtime network requests, add breakpoints to code (JavaScript) and perform interactive debugging for a Teams app. The feature is only available for desktop and Android clients after the Developer Preview has been enabled. |
-| [Dynamic search](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | A search feature for Adaptive Cards that is useful to search and select data from large data sets. It helps to filter out the choices as the user types. <br>**See also**: [Static search](#s) |
+| [Dynamic search](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | A search feature for Adaptive Cards that is useful to search and select data from large data sets. It helps to filter out the choices as the user enters the search string. <br>**See also**: [Static search](#s) |
 |
 
 
@@ -80,9 +80,9 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| [E5 developer account](../toolkit/accounts.md) | E5 developer subscription includes 25 user licenses, including the administrator, for development purposes only for building apps to extend Microsoft 365.  <br>**See also**: [Microsoft 365 account](#m) |
-| [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can discover and use your app. |
-| [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default - local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
+| [E5 developer account](../toolkit/accounts.md) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
+| [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can use your app. |
+| [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default, local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
 |
 
 
@@ -90,7 +90,7 @@ Common terms and definitions used in Teams Developer Documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user role in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They are also called External users. <br>**See also**: [Anonymous user](#a) |
+| [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They are also called External users. <br>**See also**: [Anonymous user](#a) |
 |
 
 ## G
@@ -119,8 +119,8 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with messaging extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in Adaptive Cards or in the meeting stage view. |
 | [Local environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A default development environment created by Teams Toolkit.  <br>**See also**: [Environment](#e); [Dev environment](#d) |
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug an Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
-| [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d) |
-| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that require little or no coding, and can be developed and deployed quickly.  |
+| [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d); [Teams Mobile](#t) |
+| [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that require little or no coding, and can be developed and deployed quickly. |
 |
 
 
@@ -131,11 +131,11 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Media capability](../concepts/device-capabilities/mobile-camera-image-permissions.md) | Native device capabilities, such as, camera and microphone, that you can integrate with your Teams app. <br>**See also**: [Capability](#c); [Device capability](#d) |
 | [Meeting bot](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | Bots that interact with Teams calls and meetings using real-time voice, video, and screen sharing. <br>**See also**: [Call bot](#c); [Chat bot](#c) |
 | [Meeting lifecycle](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | It spans from pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle. <br>**See also**: [In-meeting experience](#i) |
-| [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It is a shared space .accessible during meeting to all participants. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
-| [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md) | Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
-| [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more.  |
+| [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It is a shared space accessible to all participants during the meeting. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
+| [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md) | Messaging extensions are shortcuts for inserting app content or acting on a message. You can use a messaging extension without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
+| [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
-| [Microsoft 365 developer program](../toolkit/accounts.md#join-microsoft-365-developer-program) | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365.  |
+| [Microsoft 365 developer program](../toolkit/accounts.md#join-microsoft-365-developer-program) | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
