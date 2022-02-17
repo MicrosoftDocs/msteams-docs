@@ -37,4 +37,4 @@ You've had a short tour through some of Teams platform features. You're ready to
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [The Teams solution](../overview-solution.md)
+> [The Teams solution](overview-solution.md)

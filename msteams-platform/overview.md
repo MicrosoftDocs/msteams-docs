@@ -78,4 +78,4 @@ Here's why Teams is best-suited for your app needs:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [From ideas to Teams app](../overview-story.md)
+> [From ideas to Teams app](overview-story.md)

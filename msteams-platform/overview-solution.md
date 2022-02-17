@@ -95,7 +95,7 @@ From designing to building and distributing a Teams app, you can use various too
         Understand and map your app use cases to Teams features.
 
         > [!div class="nextstepaction"]
-        > [Plan your app](../concepts/app-fundamentals-overview.md)
+        > [Plan your app](~/concepts/app-fundamentals-overview.md)
     :::column-end:::
 :::row-end:::
 
@@ -167,7 +167,7 @@ From designing to building and distributing a Teams app, you can use various too
         Publish and dstribute your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it.
 
         > [!div class="nextstepaction"]
-        > [Distribute and Publish your app](../concepts/deploy-and-publish/apps-publish-overview.md)
+        > [Distribute and Publish your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
     :::column-end:::
 :::row-end:::
         
