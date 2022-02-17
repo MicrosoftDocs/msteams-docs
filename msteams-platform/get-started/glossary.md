@@ -17,7 +17,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of messaging extension app that uses a popup to collect or display information. <br>**See also**: [Messaging extension](#m); [Search commands](#s) |
 | [Adaptive Cards](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or messaging extension. Use text, graphics, and buttons with these cards for rich communication. |
 | [Anonymous user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and is not federated with a tenant. They are like external users in a meeting. <br>**See also**: [Federated user](#f) |
-| [App Catalog](../toolkit/publish.md) | A site that stores the apps for SharePoint and Office for an organization's internal use. <br>**See also**: [SPFx](#s) |
+| [App Catalog](../toolkit/publish.md) | A site that stores SharePoint and Office apps for an organization's internal use. <br>**See also**: [SPFx](#s) |
 | [App manifest](../resources/schema/manifest-schema.md) | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
 | [App package](../concepts/build-and-test/apps-package.md) | A Teams app package is a zip file that contains the App manifest file, color icon, and outline icon. |
 | [App permission](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | An option in a Teams app to enable device permissions. It's available only when the manifest file of the app declares that the app needs device permissions. <br> **See also**: Device permissions |
@@ -26,7 +26,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | App tray | An application tray located on the bottom bar of a Teams mobile app. It collects all apps that are open but not currently used or active. <br>**See also**: [Teams Mobile](#t) |
 | [Azure resource](../toolkit/provision.md) | A service that is available through Azure that your Teams app can use for Azure deployment. It could be storage accounts, web apps, databases, and more. |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external Azure resources. |
-| [Authentication](../concepts/authentication/authentication.md) | A process to authorize user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i); [SSO](#s) |
+| [Authentication](../concepts/authentication/authentication.md) | A process to validate user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i); [SSO](#s) |
 | [Authentication flow](../concepts/authentication/authentication.md#web-based-authentication-flow) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
 |
 
