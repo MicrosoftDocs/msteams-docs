@@ -33,3 +33,8 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
 
 You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app. Let's go back to the user story.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [The Teams solution](../overview-solution.md)

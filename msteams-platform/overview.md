@@ -75,11 +75,7 @@ Here's why Teams is best-suited for your app needs:
 
     For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
 
-## About Microsoft Teams Developer Documentation
+## Next steps
 
-This document describes Teams features and how you can implement them to build your app's capabilities. It also includes:
-
-- Code samples, snippets, and examples.
-- Step-by-step guides.
-- Guidelines to publish and distribute your app to Teams store.
-- Best practices for Teams app scenarios.
+> [!div class="nextstepaction"]
+> [From ideas to Teams app](../overview-story.md)

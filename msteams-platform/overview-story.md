@@ -79,3 +79,8 @@ Let’s dig deeper into this story and find out.
 :::row-end:::
 
 Next, explore some of Teams features that help you build an app solution.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Explore Teams features](../overview-explore.md)

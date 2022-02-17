@@ -85,56 +85,12 @@ From designing to building and distributing a Teams app, you can use various too
     :::column-end:::
 :::row-end:::
 
-:::row:::
-    :::column span="1":::
-        **Integrate with Teams**
-    :::column-end:::
-    :::column span="2":::
-        Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
-
-        > [!div class="nextstepaction"]
-        > [Integrate an existing app](samples/integrating-web-apps.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **A little code goes a long way**
-    :::column-end:::
-    :::column span="2":::
-        You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
-
-        > [!div class="nextstepaction"]
-        > [Create a low-code app](samples/teams-low-code-solutions.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Get ideas for your app**
-    :::column-end:::
-    :::column span="2":::
-        Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
-
-        > [!div class="nextstepaction"]
-        > [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Test your app running across Microsoft 365**
-    :::column-end:::
-    :::column span="2":::
-        You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
-
-        > [!div class="nextstepaction"]
-        > [Extend your app](m365-apps/overview.md)
-    :::column-end:::
-:::row-end:::
-
 ## See also
 
-- [App fundamentals](~/concepts/app-fundamentals-overview.md)
+- [Plan your app](../concepts/app-fundamentals-overview.md)
 - [Design your Teams app](~/concepts/design/design-teams-app-process.md)
 - [Map your use cases to Teams app capabilities](~/concepts/design/map-use-cases.md)
+- [Integrate an existing app](samples/integrating-web-apps.md)
+- [Create a low-code app](samples/teams-low-code-solutions.md)
+- [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+- [Extend your app](m365-apps/overview.md)
