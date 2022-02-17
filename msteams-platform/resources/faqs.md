@@ -7,7 +7,7 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# Frequently asked questions on Moodle LMS
+# FAQ
 
 Get your answers to some of your queries when using Moodle LMS.<br>
 
