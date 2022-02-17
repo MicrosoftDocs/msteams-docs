@@ -19,12 +19,26 @@ When you feel your app is production ready, you can begin the process of getting
 > [!TIP]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
 
-   :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="true":::
+:::row:::
+   :::column span="":::
+      
+   :::column-end:::
+   :::column span="3":::
+      :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="true":::
+   :::column-end:::
+   :::column span="":::
+      
+   :::column-end:::
+:::row-end:::
 
 1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.
+
 1. [Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
+
 1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.
+
 1. [Submit your app](/office/dev/store/add-in-submission-guide) through Partner Center.
+
 1. If your submission fails, work with Microsoft directly to [resolve the issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 
 ## What to expect after you submit your app?
@@ -36,13 +50,21 @@ When you feel your app is production ready, you can begin the process of getting
 * **Guided app publish through concierge service**
 
   If there are no issues observed with your app, your app will be approved and published to the Teams store. If there are issues, you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
+
    * Summary of all issues
+
    * Details of failures or issues with policy links and categorization: 
+
      * Mandatory fix: These issues must be fixed prior to app approval.
+
      * Suggested fix: These issues can be fixed post app approval as these are recommendations to improve your app’s experience.
+
      * Blocker: These issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
+
      * Query: These queries can be shared to get answers to specific questions related to your app.
+
    * Steps to recreate issues through written instructions or video format.
+
    * Recommendations to fix the reported issues with links to guidance docs.
  
   After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for us to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
@@ -55,7 +77,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **During design phase**
 
-  Review the [store validation guidelines](/teams-store-validation-guidelines) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
+  Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
 
 * **Prior to app submission**
 
