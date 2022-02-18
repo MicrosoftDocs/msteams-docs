@@ -16,7 +16,7 @@ You can map your use case based on:
 - Starting workflows and sending notifications to users.
 - Using social platforms, conversational bots, and combining multiple features.
 
-## Common use cases mapped To Teams capabilities
+## Common use cases mapped to Teams capabilities
 
 The next step is to match use cases with app capabilities.
 

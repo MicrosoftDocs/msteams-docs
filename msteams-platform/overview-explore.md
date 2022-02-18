@@ -13,7 +13,7 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Conceptual representation of Teams as a platform" border="false":::
 
-## Teams App features
+## Teams app features
 
 | Feature | Description | Useful for |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 | Task modules | Task modules permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
 |
 
-## Dive Deeper
+## Dive deeper
 
 Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
 
