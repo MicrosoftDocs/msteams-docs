@@ -51,9 +51,9 @@ A Teams app offers you the flexibility of choosing your build environment. It in
 
 Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
-For example: You can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
-## Teams Collaborative Platform
+## Teams collaborative platform
 
 A Teams app brings your users the advantages of a collaborative workspace.
 
@@ -63,13 +63,13 @@ As a platform for building apps, Teams offers the full range of apps and toolkit
 
 From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
-1. Plan your project and figure out the requirement
-1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI
-1. Build the app with JavaScript using Teams Toolkit
-1. Extend functionality by adding more Teams capabilities and M365 data with Microsoft Graph
-1. Test the app on a developer tenant with sample user data
-1. Deploy the app to Azure
-1. Manage and publish the apps to Store with Developer Portal
+1. Plan your project and figure out the requirement.
+1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
+1. Build the app with JavaScript using Teams Toolkit.
+1. Extend functionality by adding more Teams capabilities and M365 data with Microsoft Graph.
+1. Test the app on a developer tenant with sample user data.
+1. Deploy the app to Azure.
+1. Manage and publish the apps to Store with Developer Portal.
 
 ## Next step
 
