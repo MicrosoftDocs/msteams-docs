@@ -36,7 +36,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <br>
 
-<details show>
+<details>
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
