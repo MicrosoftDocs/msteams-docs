@@ -57,25 +57,6 @@ landingContent:
       - text: Explore low-code apps for Teams
         url:  ~/samples/teams-low-code-solutions.md 
 
-- title: Feature updates
-  linkLists:
-    - linkListType: concept
-      links:
-        - text: Send and receive files 
-          url: bots/how-to/bots-filesv4.md
-        - text: Teams calling and meeting bot 
-          url: bots/calls-and-meetings/registering-calling-bot.md
-        - text: Device permission for browser 
-          url: concepts/device-capabilities/browser-device-permissions.md
-        - text: Use SSO authentication for tabs 
-          url: tabs/how-to/authentication/auth-aad-sso.md  
-        - text: Proactive messages
-          url: ~/bots/how-to/conversations/send-proactive-messages.md
-        - text: Add authentication to bots
-          url: ~/bots/how-to/authentication/add-authentication.md
-        - text: Enable and configure apps for meetings
-          url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-        
     - linkListType: tutorial
       links:
         - text: Upload files to Teams from a bot
@@ -163,7 +144,7 @@ landingContent:
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 
-- title: Tutorials
+- title: Step-by-step guides
   linkLists:        
     - linkListType: tutorial
       links:
