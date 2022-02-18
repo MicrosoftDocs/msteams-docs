@@ -38,6 +38,9 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 02/18/2022 | Updated Overview module to reflect mapping Teams app to business goals, user story, and exploring Teams app features | [Teams app that fits](overview.md) |
+| 02/18/2022 | Updated App fundamentals module to reflect planning a Teams app, mapping use cases, and introduced app planning checklist | [Overview](../concepts/app-fundamentals-overview.md) |
+| 02/18/2022 | Introducing Glossary to cover terms and definitions for Teams app development documentation | [Glossary](../get-started/glossary.md) |
 | 02/17/2022 | What to expect after you submit your app?| Distribute your app > Publish to the Teams store > [Overview](concepts/deploy-and-publish/appsource/publish.md) |
 | 02/15/2022 | Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [Step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
 | 02/11/2022 | Shared meeting stage| • Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
