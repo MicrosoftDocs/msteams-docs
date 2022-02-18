@@ -1,12 +1,12 @@
 ---
 title: Microsoft 365 plugins
-description: Microsoft 365 plugins introduction
+description: Microsoft 365 plugins tabular format
 ms.topic: Introduction on Microsoft 365 plugins
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-leenagopal
 ---
-
+<!-- 
 # Plugins introduction
 
 Microsoft plugins are 
@@ -107,4 +107,4 @@ The oEmbed filter plugin enhances user experience by simplifying inclusion of th
 * Ensures a quicker method to copy and embed code from any of the supported services.
 * Permits video embedding without an API key.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page"::: -->

@@ -9,7 +9,7 @@ author: v-leenagopal
 
 # Moodle LTI apps
 
-Learning Tools Interoperability (LTI) is a specification developed to integrate learning applications with learning management platforms. Microsoft now offers the following LTI's for Moodle LMS:
+Learning Tools Interoperability (LTI) is a specification developed to integrate learning applications with learning management platforms. The following LTI's for Moodle LMS are offered.
 
 ## OneDrive LTI app
 
@@ -37,7 +37,7 @@ After creating the Class Team, faculty and students can do the following:
 The Microsoft Teams meetings LTI app helps faculty and students to integrate class meetings to their courses. The Teams meetings LTI app also allows the user to do the following:
 
 * Schedule individual or recurring meetings within the course in LMS and set meeting options.
-* View past & upcoming meetings within the LMS course calendar.
+* View past and upcoming meetings within the LMS course calendar.
 * Join or edit the details of a Teams meeting from the LMS course.
 * Engage across desktop and web platforms.
 

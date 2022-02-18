@@ -13,7 +13,7 @@ Microsoft Store provides all the certified Partner apps for Moodle, which valida
 
 ## Key benefits of Partner apps for Moodle
 
-The advantages of using partner apps are as follows:
+The following table shows the advantages of using partner apps.
 
 |Advantages| Description|
 |----------|------------|

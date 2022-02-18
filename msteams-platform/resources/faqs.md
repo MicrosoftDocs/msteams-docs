@@ -9,7 +9,7 @@ author: v-leenagopal
 
 # FAQ
 
-Get your answers to some of your queries when using Moodle LMS.<br>
+Get answers to some of your queries when using Moodle LMS.<br>
 
 <br>
 
