@@ -15,7 +15,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
 
-| Date | Update | Find here  |
+| Date | Update | Find here |
 | --- | --- | --- |
 |02/17/2022| What to expect after you submit your app?| Distribute your app > Publish to the Teams store > [Overview](concepts/deploy-and-publish/appsource/publish.md)|
 |02/15/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [Step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
