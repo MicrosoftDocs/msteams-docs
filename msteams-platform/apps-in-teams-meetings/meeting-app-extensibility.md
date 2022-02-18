@@ -124,7 +124,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 # [Desktop](#tab/desktop)
 
-![Post meeting view](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/fixing-images/desktop-contoso-tab.png" alt-text="Contoso tab with results" lightbox="../assets/images/fixing-images/poll-feedback.png" border="true":::
 
 # [Mobile](#tab/mobile)
 
