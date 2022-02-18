@@ -129,7 +129,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/fixing-images/poll-feedback.png" alt-text="Post meeting app experience" lightbox="../assets/images/fixing-images/poll-feedback.png" border="true":::
+:::image type="content" source="~/assets/images/fixing-images/poll-feedback.png" alt-text="Post meeting app experience":::
 
 ---
 
