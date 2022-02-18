@@ -50,7 +50,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="images/fixing-images/desktop-image.png" alt-text="Tabs during a meeting" lightbox="images/fixing-images/desktop-image.png" border="true":::
+:::image type="content" source="~/assets/images/fixing-images/desktop-image.png" alt-text="Tabs during a meeting" lightbox="../assets/images/fixing-images/desktop-image.png" border="true":::
 
 # [Mobile](#tab/mobile)
 
@@ -76,7 +76,7 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="images/fixing images/desktop-people.png" alt-text="To use tabs during a meeting" border="true":::
+:::image type="content" source="~/assets/images/fixing images/desktop-people.png" alt-text="To use tabs during a meeting" border="true":::
 
 # [Mobile](#tab/mobile)
 
@@ -100,7 +100,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="images/fixing images/desktop-people-2.png" alt-text="Meeting side panel"border="true":::
+:::image type="content" source="~/assets/images/fixing images/desktop-people-2.png" alt-text="Meeting side panel"border="true":::
 
 # [Mobile](#tab/mobile)
 
@@ -128,7 +128,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="images/fixing images/poll-feedback.png" alt-text="Post meeting app experience" lightbox="images/fixing images/poll-feedback.png" border="true":::
+:::image type="content" source="~/assets/images/fixing images/poll-feedback.png" alt-text="Post meeting app experience" lightbox="../assets/images/fixing images/poll-feedback.png" border="true":::
 
 ---
 
@@ -147,7 +147,7 @@ The Teams unified meetings apps allow you to design your app based on participan
 
 ## Participant roles in a meeting
 
-:::image type="content" source="images/fixing images/participant-roles.png" alt-text="Participant roles in a meeting" lightbox="images/fixing images/participant-roles.png" border="true":::
+:::image type="content" source="~/assets/images/fixing images/participant-roles.png" alt-text="Participant roles in a meeting" lightbox="../assets/images/fixing images/participant-roles.png" border="true":::
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
