@@ -199,18 +199,17 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
-## Best Practices: Selling a flat-rate transactable offer
+## Best practice: Selling a flat-rate transactable offer
 
-1. Create a transactable SaaS offer with a [Flat rate pricing model](/azure/marketplace/plan-saas-offer).
-1. [Publish to AppSource](/azure/marketplace/test-publish-saas-offer).
-1. [Link the transactable SaaS offer](/azure/marketplace/create-new-saas-offer) to an existing Teams app in the Partner Center.
+1. Create your [flat rate transactable SaaS offer](/azure/marketplace/plan-saas-offer) and [publish to AppSource](/azure/marketplace/test-publish-saas-offer).
+1. Link your [Teams app to the offer](/azure/marketplace/create-new-saas-offer) in the Partner Center.
     > [!CAUTION]
-    > Do not add the offer to the app manifest, the app will fail the Teams store validation.
-1. Build an in-app message in your Teams app that the user needs to buy a subscription and add a link to your transactable SaaS offer in AppSource.
+    > Don't add the offer to the app manifest, the app will fail the Teams store validation.
+1. To promote your offer in AppSource, build an in-app message in your Teams app that a subscription is needed and provide a hyperlink to your transactable SaaS offer in AppSource.
 1. After Teams marketplace supports flat rate pricing, update your app manifest with the transactable SaaS offer ID and Publisher ID and [submit for validation](../publish.md).
 
 > [!NOTE]
-> Ensure that marketplace links do not appear on mobile and tablet devices to honor [third-party app store policies](/legal/marketplace/certification-policies).
+> Ensure that marketplace links do not appear on mobile and tablet devices to adhere to [third-party app store policies](/legal/marketplace/certification-policies).
 
 ## See also
 
