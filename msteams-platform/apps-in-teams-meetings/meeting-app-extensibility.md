@@ -40,7 +40,8 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
-    :::image type="content" source="assets/images/fixing images" alt-text="define-unified.png" lightbox="assets/images/fixing images" border="true":::>
+    :::image type="content" source="assets/images/fixing images/define-unified.png" alt-text="Pre-meeting app experience" lightbox="assets/images/fixing images" border="true":::
+
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -76,7 +77,7 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 
 # [Desktop](#tab/desktop)
 
-    :::image type="content" source="assets/images/fixing images" alt-text="desktop-people.png"border="true":::
+:::image type="content" source="assets/images/fixing images" alt-text="desktop-people.png" border="true":::
 
 # [Mobile](#tab/mobile)
 
