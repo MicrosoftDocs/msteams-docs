@@ -15,7 +15,7 @@ The Microsoft Teams Platform is a powerful, flexible platform for creating apps 
 
 You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
 
-The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app should:
+The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app must:
 
 - Check and send the forecast to travelers registered with the travel agency.
 - Notify the users a day before the departure date so they can plan.
