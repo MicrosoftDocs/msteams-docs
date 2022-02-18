@@ -2,6 +2,8 @@
   href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
+- name: Glossary
+  href: get-started/glossary.md  
 - name: Overview
   expanded: false 
   items:
