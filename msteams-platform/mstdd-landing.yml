@@ -32,8 +32,6 @@ landingContent:
         url: ~/concepts/app-fundamentals-overview.md  
       - text: App manifest schema version 1.12
         url: ~/resources/schema/manifest-schema.md
-      - text: Public developer preview manifest schema
-        url: ~/resources/schema/manifest-schema-dev-preview.md
       - text: Interactive mode to share meeting stage 
         url: ~/apps-in-teams-meetings/API-references.md
       - text: Test preview for monetized apps
@@ -115,6 +113,8 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Public developer preview manifest schema
+      url: ~/resources/schema/manifest-schema-dev-preview.md  
 
 - title: Step-by-step guides
   linkLists:        
