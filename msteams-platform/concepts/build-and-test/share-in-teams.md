@@ -10,7 +10,7 @@ keywords: Share Teams Share-in-Teams
 > [!NOTE]
 > Share-in-Teams is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Share-in-Teams allows you to share the content from personal app or tab to other user or group or channel within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. This pop-up window allows you to add other user or group or channel, notes and share the content.
+Share-in-Teams allows you to share the content from personal app or tab to other user or group or channel within Teams. You can select Share-in-Teams to launch the Share-in-Teams experience in a pop-up window. The pop-up window allows you to add other user or group or channel and to share the content.
 
 The following image shows the Share-in-Teams pop-up window:
 
