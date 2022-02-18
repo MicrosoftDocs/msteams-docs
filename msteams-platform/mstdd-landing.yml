@@ -26,7 +26,7 @@ landingContent:
       links:
       - text: Glossary
         url: ~/get-started/glossary.md
-      - text: overview
+      - text: Overview
         url: ~/overview.md
       - text: Plan your app
         url: ~/concepts/app-fundamentals-overview.md  
