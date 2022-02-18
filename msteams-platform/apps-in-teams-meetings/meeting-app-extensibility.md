@@ -40,7 +40,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
-    :::image type="content" source="assets/images/fixing images" alt-text="define-unified.png." lightbox="assets/images/fixing images" border="true" lightbox="../assets/images/fixing images/define-unified.png":::
+    :::image type="content" source="assets/images/fixing images" alt-text="define-unified.png" lightbox="assets/images/fixing images" border="true":::>
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
@@ -50,7 +50,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="assets/images/fixing images" alt-text="desktop-image.png." lightbox="assets/images/fixing images" border="true" lightbox="../assets/images/fixing images/desktop-image.png":::
+:::image type="content" source="assets/images/fixing images" alt-text="desktop-image.png" lightbox="assets/images/fixing images" border="true":::
 
 # [Mobile](#tab/mobile)
 
@@ -76,7 +76,7 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 
 # [Desktop](#tab/desktop)
 
-![Dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+    :::image type="content" source="assets/images/fixing images" alt-text="desktop-people.png"border="true":::
 
 # [Mobile](#tab/mobile)
 
@@ -84,7 +84,7 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-:::image type="content" source="assets/images/fixing images" alt-text="desktop-people.png." lightbox="assets/images/fixing images" border="true" lightbox="../assets/images/fixing images/desktop-people.png":::
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -100,11 +100,11 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="assets/images/fixing images" alt-text="desktop-people-2.png" lightbox="assets/images/fixing images" border="true":::png)
+:::image type="content" source="assets/images/fixing images" alt-text="desktop-people-2.png"border="true":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="assets/images/fixing images" alt-text="poll-feedback.png" lightbox="assets/images/fixing images" border="true":::
+<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
 
 ---
 
@@ -128,7 +128,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 # [Mobile](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="assets/images/fixing images" alt-text="poll-feedback.png" lightbox="assets/images/fixing images" border="true":::
 
 ---
 
