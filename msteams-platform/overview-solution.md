@@ -71,7 +71,7 @@ From designing to building and distributing a Teams app, you can use various too
 1. Deploy the app to Azure
 1. Manage and publish the apps to Store with Developer Portal
 
-## Next steps
+## Next step
 
 :::row:::
     :::column span="1":::
@@ -104,7 +104,7 @@ From designing to building and distributing a Teams app, you can use various too
         **Design your app**
     :::column-end:::
     :::column span="2":::
-        Design your app UI with UI Kit and Library
+        Design your app UI with Microsoft Teams UI Kit.
 
         > [!div class="nextstepaction"]
         > [Design your Teams app](~/concepts/design/design-teams-app-process.md)
@@ -125,13 +125,37 @@ From designing to building and distributing a Teams app, you can use various too
 
 :::row:::
     :::column span="1":::
-        **Test your app running across Microsoft 365**
+        **Extend your app across Microsoft 365**
     :::column-end:::
     :::column span="2":::
         You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
 
         > [!div class="nextstepaction"]
         > [Extend your app](m365-apps/overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Test your app**
+    :::column-end:::
+    :::column span="2":::
+        After integrating your app with Microsoft Teams, you must test your app before publishing it.
+
+        > [!div class="nextstepaction"]
+        > [Test your app](concepts/build-and-test/test-app-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Distribute your app**
+    :::column-end:::
+    :::column span="2":::
+        You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it.
+
+        > [!div class="nextstepaction"]
+        > [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
     :::column-end:::
 :::row-end:::
 
@@ -147,30 +171,6 @@ From designing to building and distributing a Teams app, you can use various too
     :::column-end:::
 :::row-end:::
 
-:::row:::
-    :::column span="1":::
-        **Test your app running across Microsoft 365**
-    :::column-end:::
-    :::column span="2":::
-        You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
-
-        > [!div class="nextstepaction"]
-        > [Extend your app](m365-apps/overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Provide your app to your users**
-    :::column-end:::
-    :::column span="2":::
-        Publish and dstribute your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it.
-
-        > [!div class="nextstepaction"]
-        > [Distribute and Publish your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
-    :::column-end:::
-:::row-end:::
-        
 :::row:::
     :::column span="1":::
         **A little code goes a long way**

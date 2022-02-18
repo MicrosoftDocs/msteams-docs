@@ -80,7 +80,7 @@ Let’s dig deeper into this story and find out.
 
 Next, explore some of Teams features that help you build an app solution.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Explore Teams features](overview-explore.md)
