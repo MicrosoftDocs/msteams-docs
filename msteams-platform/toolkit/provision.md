@@ -36,7 +36,7 @@ Provision is performed with single command in Teams Toolkit for Visual Studio Co
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
 
-* Azure AD application under your Microsoft 365 tenant
+* Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant
 * Teams app registration under your Microsoft 365 tenant's Teams platform
 * Azure resources under your selected Azure subscription
 
@@ -84,7 +84,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resource|Purpose|
 |----------|--------------------------------|
-| Azure active directory application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
+| Azure AD application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
 | API management service | Manage your APIs hosted in function app |
 | API management product | Group your APIs, define terms of use and runtime policies |
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
@@ -209,7 +209,7 @@ To ensure the TeamsFx tool functions properly, ensure you customize ARM template
 
 You can customize the following scenarios:
 
-#### Use an existing Azure AD app for your Teams app
+#### Use an existing Azure AD app for your bot
 
 You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
@@ -227,7 +227,7 @@ After adding the snippet, add your secret to related environment variable so the
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
-#### Use an existing Azure AD app for your bot
+#### Use an existing Azure AD app for your Teams app
 
 You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your bot:
 

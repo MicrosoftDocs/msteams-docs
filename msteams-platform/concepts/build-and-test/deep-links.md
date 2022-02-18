@@ -86,16 +86,32 @@ The query parameters are:
 | `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). |
-| `subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
-| `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn’t available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
+| `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
+| `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
 
-Examples:
+**Examples**:
 
-* Link to a configurable tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link to a task item within the configurable tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* Link to a static tab itself: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* Link to a task item within the static tab: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* Link to a static (personal) tab itself:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+
+* Link to a task item within the static (personal) tab:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+
+* Link to a configurable tab itself:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* Link to a task item within the configurable tab:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* Link to a tab app added to a meeting or group chat:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > Ensure that all query parameters are properly URI encoded. You must follow the preceeding examples using the last example:
@@ -146,8 +162,8 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 The query parameters are:
 
-* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Azure AD UserPrincipalName, such as an email address only.
-* `topicName`: An optional field for chat's display name, in the case of a chat with 3 or more users. If this field isn’t specified, the chat's display name is based on the names of the participants.
+* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
+* `topicName`: An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
@@ -160,7 +176,7 @@ The following deep link format can be used in a bot, connector, or messaging ext
 
 The query parameters are:
 
-* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Tenant ID such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Supported file type, such as .docx, .pptx, .xlsx, and .pdf.
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
@@ -197,7 +213,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## Deep linking to an app
 
-Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app. 
+Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app.
   
 ## Deep linking for SharePoint Framework tabs
 
@@ -250,28 +266,26 @@ To use this deep link with your bot, you can specify this as the URL target in y
 
 ## Deep linking to an audio or audio-video call
 
-You can create deep links to invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type, as *audio* or *av*, and the participants. After the deep link is invoked and before placing the call, Teams desktop client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deeplink invocation. 
+You can create deep links to invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type, as *audio* or *av*, and the participants. After the deep link is invoked and before placing the call, Teams desktop client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deeplink invocation.
 
 In case of a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
 
-> [!NOTE]
-> Currently, deeplink to call is not supported on Teams mobile devices.
-
 ### Generate a deep link to a call
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
-| Make an audio call | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| Make an audio and video call | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
-|Make an audio and video call with an optional parameter source | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
-| Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+| Make an audio call | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com` |
+| Make an audio and video call | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true` |
+|Make an audio and video call with an optional parameter source | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true&source=demoApp` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp` |  
+| Make an audio and video call to a combination of VoIP and PSTN users | `https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210` |
   
 Following are the query parameters:
+
 * `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address, or in case of a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
-* `withVideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera. The receiver of the call has a choice to answer through audio or audio and video call through the Teams call notification window. 
+* `withVideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera. The receiver of the call has a choice to answer through audio or audio and video call through the Teams call notification window.
 * `Source`: This is an optional parameter, which informs about the source of the deeplink.
 
 ## Code sample

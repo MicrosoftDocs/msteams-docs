@@ -70,7 +70,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -119,9 +119,11 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**.
+    1. Select **Multitenant** under **Bot Type**.
 
-    1. Select **Multitenant** under **App Type**.
+       ![Microsoft App ID](~/assets/images/meeting-content-bubble/bot-type.png)       
+
+    1. Next to **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/meeting-content-bubble/meeting-content-bubble-view-configuration.png)
 
@@ -162,7 +164,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
+          ![Select Teams](~/assets/images/meeting-token-generator/config-teams.png)   
     
     **To create tunnel for local web server**
 

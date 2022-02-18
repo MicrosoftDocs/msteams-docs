@@ -48,7 +48,7 @@ Perform the following steps to upload app package:
 
 ## Publish to your organization 
 
-When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Graph API, an integrated development environment (IDE) such as Visual Studio Code installed with Teams toolkit. You can either select **Publish to Teams** from **DEPLOYMENT** in TreeView of Teams Toolkit, or trigger **Teams: Publish to Teams** from command palette. Then select **Install for your organization**:
+When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Graph API, an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Teams toolkit. You can either select **Publish to Teams** from **DEPLOYMENT** in TreeView of Teams Toolkit, or trigger **Teams: Publish to Teams** from command palette. Then select **Install for your organization**:
 
 ![Install for your organization](./images/installforyourorganization.png)
 

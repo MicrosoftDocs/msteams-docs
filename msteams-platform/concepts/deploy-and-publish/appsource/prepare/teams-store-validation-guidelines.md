@@ -225,7 +225,7 @@ Apps must be fully functional on the latest versions of the following operating 
 
 * Microsoft Windows
 * macOS
-* Microsoft Edge
+* Microsoft&nbsp;Edge
 * Google Chrome
 * iOS
 * Android
@@ -265,7 +265,7 @@ The Teams app manifest defines your app's configuration.
 
 * Your manifest must conform to a publicly released manifest schema. For more information, see [manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the manifest.
 * If your app includes a bot or messaging extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory for authentication, include the Azure AD Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### App icons
 

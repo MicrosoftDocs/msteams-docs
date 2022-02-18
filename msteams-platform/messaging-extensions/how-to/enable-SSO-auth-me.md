@@ -28,7 +28,7 @@ The prerequisite to enable SSO for messaging extensions and link unfurling are a
 After the prerequisites are completed, you can enable SSO for messaging extensions and link unfurling.
 
 **To enable SSO**
-1. Update your bots [OAuth connection](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) details in the Azure portal.
+1. Update your bots [OAuth connection](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) details in the Microsoft Azure portal.
 2. Download the [messaging extensions sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) and follow the setup instructions provided by the wizard.
    > [!NOTE]
    > Use your bots OAuth connection when setting up your messaging extensions.

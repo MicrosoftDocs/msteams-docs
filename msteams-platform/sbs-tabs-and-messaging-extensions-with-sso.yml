@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Single sign-on (SSO) for tabs and messaging extension
+title: AAD SSO for tabs and messaging extension
 metadata:
-  title: Single sign-on (SSO) for tabs and messaging extension
-  description: In this tutorial, you'll learn to set up SSO for tabs.
+  title: AAD SSO for tabs and messaging extension
+  description: In this tutorial, you'll learn to set up AAD SSO for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
@@ -14,17 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Single sign-on (SSO) helps to authorize Teams tab for desktop or mobile clients. This enhances user experience by automatically signing in multiple times and also to other devices without re-entering sign-in credentials.
+   The Azure Active Directory Single sign-on (AAD SSO) helps to authenticate users in Teams. 
 
-   **Key features of SSO for tabs and messaging extension**
+   **Key aspects of the step-by-step guide of AAD SSO for tabs and messaging extensions**
 
-    * Allows the user to sign in automatically.
-    * Calls Graph APIs to display user's profile.
-    * Obtains access token for the logged-in user using SSO.
-    * Calls web service to exchange the access token.
-    * Displays profile card of the user in messaging extension.    
+    * After the first sign-in, AAD SSO allows the user to sign in automatically.
+    * Allows the user to sign in to other devices without re-entering sign-in credentials.
+    * Obtains token for the logged-in user.   
 
-   This step-by-step guide helps you to create tabs and messaging extensions with SSO authentication enabled. You'll see the following output:
+   This step-by-step guide helps you to create tabs and messaging extensions enabling AAD SSO authentication. You'll see the following output:
 
      ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
 
@@ -65,7 +63,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -112,9 +110,13 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
+    1. Select **MultiTenant** under **Bot Type**.
+
+        ![Bot Type](~/assets/images/Tab-ME-SSO/bot-type.png)
+
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage1.png)
+        ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage.png)
 
     1. In the **Client secrets** section, select **New client secret**. 
 

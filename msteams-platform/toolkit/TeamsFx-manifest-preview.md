@@ -22,7 +22,7 @@ The Template files consisting placeholders, and the actual values from Teams Too
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> Ensure you have Teams app project opened in VS code.
+> Ensure you have Teams app project opened in Visual Studio code.
 
 ## Preview manifest
 

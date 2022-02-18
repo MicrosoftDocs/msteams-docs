@@ -3,7 +3,7 @@ title: Single sign-on support for tabs
 description: Describes single sign-on (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication SSO Azure AD single sign-on api
+keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
 ---
 
 # Single sign-on (SSO) support for tabs
@@ -24,7 +24,7 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 > [!NOTE]
 > **Quickstart**  
 >
-> The simplest path to get started with tab SSO is with the Teams toolkit for Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+> The simplest path to get started with tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused.
@@ -43,7 +43,7 @@ The following image shows how the SSO process works:
 
 1. In the tab, a JavaScript call is made to `getAuthToken()`. `getAuthToken()` tells Teams to obtain an access token for the tab application.
 2. If the current user is using your tab application for the first time, there's a request prompt to consent if consent is required. Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication.
-3. Teams requests the tab access token from the Azure Active Directory endpoint for the current user.
+3. Teams requests the tab access token from the Azure AD endpoint for the current user.
 4. Azure AD sends the tab access token to the Teams application.
 5. Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call.
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.

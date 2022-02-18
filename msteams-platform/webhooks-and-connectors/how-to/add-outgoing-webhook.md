@@ -30,8 +30,8 @@ The following table provides the features and description of Outgoing Webhooks:
 | ------- | ----------- |
 | Scoped configuration| Webhooks are scoped at the team level. Mandatory set up process for each adds an Outgoing Webhook. |
 | Reactive messaging| Users must use @mention for the webhook to receive messages. Currently, users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
-|Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content, for example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they cannot use any card actions except for `openURL`.|
-| Teams API method support|Outgoing Webhooks sends an HTTP POST to a web service and gets a response. They cannot access any other APIs, such as retrieve the roster or list of channels in a team.|
+|Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content. For example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they can't use any card actions except for `openURL`.|
+| Teams API method support|Outgoing Webhooks sends an HTTP POST to a web service and gets a response. They can't access any other APIs, such as retrieve the roster or list of channels in a team.|
 
 ## Create Outgoing Webhooks
 
@@ -66,7 +66,7 @@ To create an Outgoing Webhook, follow these steps:
 
     ![create Outgoing Webhook](~/assets/images/outgoingwebhook.png)
 
-A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It is a security token used to authenticate calls between Teams and the designated outside service.
+A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
 >[!NOTE]
 > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
@@ -74,7 +74,7 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 The following scenario provides the details to add an Outgoing Webhook:
 
 * Scenario: Push change status notifications on a Teams channel database server to your app.
-* Example: You have a line of business app that tracks all CRUD operations, such as create, read, update, and delete. These operations are made to the employee records by Teams channel HR users across an Office 365 tenancy.
+* Example: You have a line of business app that tracks all CRUD (create, read, update, and delete) operations. These operations are made to the employee records by Teams channel HR users across an Office 365 tenancy.
 
 # [URL JSON payload](#tab/urljsonpayload)
 

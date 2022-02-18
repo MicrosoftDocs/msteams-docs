@@ -100,9 +100,6 @@ When using proactive messaging to send scheduled messages to users, verify that 
 
 ## Proactively install your app using Graph
 
-> [!Note]
-> Proactively installing apps using Graph is currently in beta.
-
 Proactively message users that have previously not installed or interacted with your app. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. In this case, you can use the Graph API to proactively install your app for your users. Cache the necessary values from the `conversationUpdate` event your app receives upon installation.
 
 You can only install apps that are in your organizational app catalog or the Teams App Store.
@@ -254,9 +251,6 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 ```
 
 ---
-
-> [!NOTE]
-> Currently bots cannot create a group chat through bot APIs or Graph. `createConversation` is available only for 1:1 chats.
 
 ## Code sample
 
