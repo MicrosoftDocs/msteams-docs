@@ -243,14 +243,14 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
 
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
-
-> [!IMPORTANT]
-> Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of the SDK, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
-
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
+    
+    > [!IMPORTANT]
+    > Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of the SDK, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
+    
 1. At the top of the `script` tag, insert a call to `microsoftTeams.initialize();`.
 
 1. Go to the **Pages** folder and open **Tab.cshtml**
@@ -292,9 +292,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Build and run your application for Teams
 
-**To build and run your application**
-
 1. In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu.
+
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 > [!TIP]
@@ -329,14 +328,6 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 1. Select Save.
 
 1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
-
-e **App details** section:
-
-1. Under **Identification**, select **Generate** to replace the placeholder ID with the required GUID for your tab.
-
-1. Under **Developer information**, update **Website** with your **ngrok** HTTPS URL.
-
-1. Under **App URLs**, update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 ### Preview your app in Teams
 
