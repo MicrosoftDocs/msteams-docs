@@ -3,7 +3,7 @@ title: Understand app features
 author: heath-hamilton
 description: Description of Teams app capabilities, such as Tabs, Bots, Messaging extensions, and Webhooks and connectors; app scope, such as personal and shared apps
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: tabs bots messaging extensions webhooks connectors

@@ -3,7 +3,7 @@ title: Exploring Teams as a platform for building apps
 author: heath-hamilton
 description: Overview of exploring Microsoft Teams features.
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
 ---

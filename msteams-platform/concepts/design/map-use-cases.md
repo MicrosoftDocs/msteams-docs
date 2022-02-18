@@ -3,7 +3,7 @@ title: Map your use cases to Teams app features and capabilities
 author: surbhigupta
 description: Identify how your app's use cases can work within the Teams experience, app features and capabilities; map common use cases with capabilities.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
 ---
 # Map your use cases to Teams app features

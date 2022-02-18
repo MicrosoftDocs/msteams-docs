@@ -3,7 +3,7 @@ title: Plan your app overview
 author: heath-hamilton
 description: Introduce the elements of planning an app, understanding use cases, app capabilities, and other Teams features.
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 keywords: entry points extensibility use cases device capability
 ---
