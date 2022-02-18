@@ -211,9 +211,6 @@ The following table includes the response codes:
 
 ## Get meeting details API
 
-> [!NOTE]
-> Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
-
 The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
 ### Prerequisite
