@@ -92,7 +92,7 @@ Task modules are a great place to surface forms with sequential user inputs and 
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/form.png" alt-text="Example form in a task module." border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="Example form in a task module." border="false":::
 
 ### Sign in
 
