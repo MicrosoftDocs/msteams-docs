@@ -135,15 +135,6 @@ landingContent:
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
 
-- title: Teams app scenarios
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Build scenarios for Teams app
-      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
-    - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
-
 - title: Step-by-step guides
   linkLists:        
     - linkListType: tutorial
@@ -168,7 +159,16 @@ landingContent:
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
-        
+
+- title: Teams app scenarios
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Build scenarios for Teams app
+      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+    - text: Best practices for Teams app scenarios
+      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+ 
 - title: Publish and distribute
   linkLists:
   - linkListType: concept
