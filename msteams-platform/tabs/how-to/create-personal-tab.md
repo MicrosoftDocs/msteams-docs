@@ -23,7 +23,6 @@ Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**
 # [Node.js](#tab/nodejs)
 
 ### Create a personal tab with Node.js
-- Any text editor or IDE. You can install and use [Microsoft Visual Studio Code](https://code.visualstudio.com/download) for free.
 
 To create a personal tab with Node.js:
 
@@ -171,10 +170,10 @@ To add a personal tab to this application, create a content page, and update exi
     }
     ```
 
-> [!IMPORTANT]
-> The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
->
-> For example: DefaultTabName is **MyTab** then **/MyTabTab/**
+    > [!IMPORTANT]
+    > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+    >
+    > For example: DefaultTabName is **MyTab** then **/MyTabTab/**
 
 1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
 
@@ -232,11 +231,11 @@ gulp build
 
 ### Establish a secure tunnel to your tab
 
-1. To establish a secure tunnel to your tab, exit the localhost and enter the following command:
+ To establish a secure tunnel to your tab, exit the localhost and enter the following command:
 
-    ```cmd
-    gulp ngrok-serve
-    ```
+```cmd
+gulp ngrok-serve
+```
 
 > [!IMPORTANT]
 > After your tab has been uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
@@ -285,6 +284,8 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 * http://localhost:3978/personalTab
 * http://localhost:3978/privacy
 * http://localhost:3978/tou
+
+### Update your application
 
 1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
@@ -375,6 +376,8 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 * http://localhost:3978/personalTab
 * http://localhost:3978/privacy
 * http://localhost:3978/tou
+
+### Update your application
 
 1. Go to the **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 

@@ -10,11 +10,11 @@ ms.author: lajanuar
 
 # Prerequisites
 
-Personal Tabs can be built in **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**. 
+Tabs can be built in **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**. 
 
-## Tools to build personal tabs
+## Tools to build tabs
 
-Here's a list of tools you'll need for building your personal tab.
+Here's a list of tools you'll need for building your tabs.
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
@@ -23,6 +23,8 @@ Here's a list of tools you'll need for building your personal tab.
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
+| &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample apps repo from GitHub. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
@@ -49,10 +51,6 @@ Teams tabs must adhere to the following prerequisites:
 * If you choose to have your channel or group tab appear on Teams mobile client, the `setSettings()` configuration must have a value for the `websiteUrl` property.
 
 * Microsoft Teams tab does not support the ability to load intranet websites that use self-signed certificates.
-
-## Tools you can use to build tabs
-* [Teams Toolkit for Microsoft Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
-* [Teams Toolkit for Visual Studio](../../toolkit/visual-studio-overview.md)
 
 ## Next step
 
