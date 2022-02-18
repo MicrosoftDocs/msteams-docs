@@ -17,10 +17,7 @@ Choose your environment to build channel or group tab from **Node.js**, **ASP.NE
 
 # [Node.js](#tab/nodejs)
 
-### Create a custom channel and group tab using Node.js
-
-- Any text editor or IDE. You can install and use [Microsoft Visual Studio Code](https://code.visualstudio.com/download) for free.
-
+### Create a custom channel or group tab with Node.js
 
 To create custom channel and group tab with Node.js:
 
@@ -35,9 +32,9 @@ To create custom channel and group tab with Node.js:
     ```cmd
     npm install generator-teams --global
     ```
-### Generate your personal tab
+### Generate your channel or group tab
 
-1. At a command prompt, create a new directory for your personal tab.
+1. At a command prompt, create a new directory for your channel or group tab.
 
 1. To start the Microsoft Teams App generator, enter the following command in your new directory.
 
@@ -130,24 +127,6 @@ To create custom channel and group tab with Node.js:
     >
     > For example: DefaultTabName is **MyTab** then **/MyTabTab/**
 
-1. In Visual Studio Code, go to your project directory and open the following file:
-
-    ```bash
-    ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
-    ```
-
-1. Locate the `render()` method and add the following `<div>` tag and content to the top of the `<PanelBody>` container code:
-
-    ```html
-        <PanelBody>
-            <div style={styles.section}>
-                Hello World! Yo Teams rocks!
-            </div>
-        </PanelBody>
-    ```
-
-1. Make sure to save the updated file.
-
 ### Build and run your application
 
 You must have an [app package](~/concepts/build-and-test/apps-package.md) to build and run your application in Teams.
@@ -168,7 +147,7 @@ The build command transpiles your solution into the **./dist** folder. Enter the
 gulp build
 ```
 
-#### Run your application in localhost
+#### Run your application
 
 1. Start a local web server by entering the following in the command prompt:
 
@@ -207,6 +186,14 @@ gulp ngrok-serve
     ![Channel tab added](../../assets/images/tab-images/channeltabadded.png)
 
 1. Select **Add** in the pop-up dialog box. Your tab uploads into Teams.
+
+> [!NOTE]
+> If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
+>"staticTabs": [],
+>"bots": [],
+>"connectors": [],
+>"composeExtensions": [],
+
 1. Return to your team, choose the channel where you want to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
 1. Follow the directions for adding a tab. There is a custom configuration dialog box for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
