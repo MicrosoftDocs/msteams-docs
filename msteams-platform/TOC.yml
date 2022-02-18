@@ -5,8 +5,14 @@
 - name: Overview
   expanded: false 
   items:
-    - name: Build apps for Microsoft Teams
-      href: overview.md
+  - name: Teams app that fits
+    href: overview.md
+  - name: From ideas to Teams app
+    href: overview-story.md
+  - name: Explore Teams features
+    href: overview-explore.md
+  - name: The Teams solution
+    href: overview-solution.md
 - name: Get started
   expanded: false
   items:
@@ -22,34 +28,18 @@
     href: sbs-gs-nodejs.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
-- name: App fundamentals
+- name: Plan your app
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-  - name: Teams app capabilities
-    href: concepts/capabilities-overview.md
-  - name: Teams app entry points
-    href: concepts/extensibility-points.md
-  - name: Understand your use cases
+  - name: Understand your use case
     href: concepts/design/understand-use-cases.md
-  - name: Map use cases to Teams app capabilities
+  - name: Map your use case to Teams features
     href: concepts/design/map-use-cases.md
+  - name: Teams app planning checklist
+    href: concepts/design/planning-checklist.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-  - name: Device capabilities
-    items:
-    - name: Overview
-      href: concepts/device-capabilities/device-capabilities-overview.md
-    - name: Request device permissions
-      href: concepts/device-capabilities/native-device-permissions.md
-    - name: Device permissions for the browser
-      href: concepts/device-capabilities/browser-device-permissions.md
-    - name: Integrate media capabilities
-      href: concepts/device-capabilities/mobile-camera-image-permissions.md
-    - name: Integrate QR or barcode scanner capability
-      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-    - name: Integrate location capabilities
-      href: concepts/device-capabilities/location-capability.md
 - name: Design your app
   items:
   - name: Overview
@@ -381,6 +371,20 @@
       href: messaging-extensions/how-to/add-authentication.md
     - name: Enable SSO for messaging extensions
       href: messaging-extensions/how-to/enable-SSO-auth-me.md  
+- name: Integrate device capabilities
+  items:
+  - name: Overview
+    href: concepts/device-capabilities/device-capabilities-overview.md
+  - name: Request device permissions
+    href: concepts/device-capabilities/native-device-permissions.md
+  - name: Device permissions for the browser
+    href: concepts/device-capabilities/browser-device-permissions.md
+  - name: Integrate media capabilities
+    href: concepts/device-capabilities/mobile-camera-image-permissions.md
+  - name: Integrate QR or barcode scanner capability
+    href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+  - name: Integrate location capabilities
+    href: concepts/device-capabilities/location-capability.md 
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
