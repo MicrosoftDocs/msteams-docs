@@ -11,7 +11,7 @@ Single sign-on is an authentication method that lets users sign in using one set
 
 Many applications already exist in Azure AD that you can use with SSO. You have several options for SSO depending on the needs of the application and how it's implemented. Take time to plan your SSO deployment before you create applications in Azure AD. The management of applications can be made easier by using the My Apps portal.
 
-## Benefits of AAS SSO
+## Benefits of AAD SSO
 
 
 ## AAD SSO user experience
