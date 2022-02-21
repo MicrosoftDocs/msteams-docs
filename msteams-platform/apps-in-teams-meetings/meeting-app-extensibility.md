@@ -101,7 +101,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog.png" alt-text="Meeting side panel"border="true":::
+![In-meeting side panel](../assets/images/in-meeting-dialog.png)
 
 # [Mobile](#tab/mobile)
 
