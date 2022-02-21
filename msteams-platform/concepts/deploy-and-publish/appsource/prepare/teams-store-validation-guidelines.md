@@ -273,7 +273,7 @@ The Teams app manifest defines your app's configuration.
 
 Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
-* Your app package must include two PNG versions of your app icon: A color icon and an outline icon.
+* Your app package must include two .png versions of your app icon: A color icon and an outline icon.
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background.
 * The outline version of your icon is displayed in the following scenarios:
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
@@ -1361,7 +1361,7 @@ Use the following guidelines for meeting extensions:
 * Must not use task modules.
 * Must align with the center of the meeting stage.
 
-:::row::: 
+:::row:::
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1369,13 +1369,12 @@ Use the following guidelines for meeting extensions:
    :::column-end:::
    :::column span="":::
    :::column-end:::
-:::row-end::: 
-     
+:::row-end:::
 
 * Must be dismissed after a user selects a button or performs an action.
 
-* **Together mode**: Ensure that you consider the following best practices for a scene building experience: 
-  * All images are in PNG format.
+* **Together mode**: Ensure that you consider the following best practices for a scene building experience:
+  * All images are in .png format.
   * The final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
   * The maximum scene size is 10 MB.
   * The maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image.
