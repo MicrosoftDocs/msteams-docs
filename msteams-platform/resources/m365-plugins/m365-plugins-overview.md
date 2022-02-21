@@ -120,7 +120,7 @@ Microsoft block enhances user experience by providing an User Interface (UI) to 
 
 ## oEmbed filter
 
-oEmbed filter plugin simplifies the inclusion of external HTML content within Moodle. The oEmbed filter plugin enhances user experience by simplifying inclusion of the external HTML content within Moodle. The following are the advantages of oEmbed filter. 
+oEmbed filter plugin simplifies and enhances user experience by simplifying inclusion of the external HTML content within Moodle. The following are the advantages of oEmbed filter. 
 
 * Reduces the time to embed videos to an HTML page.
 * Enables embedding of multiple video content providers.
@@ -131,7 +131,4 @@ oEmbed filter plugin simplifies the inclusion of external HTML content within Mo
 
 ## See also
 
-[Partner apps for Moodle](resources/partner-apps-for-moodle.md)
-<!-- * [Partner apps for Moodle](partner-apps-for-moodle.md)
-* [Getting help](getting-help.md)
-* [FAQs](faqs.md) -->
+* [Partner apps for Moodle](../partner-apps-for-moodle.md)
