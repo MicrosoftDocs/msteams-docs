@@ -1,4 +1,4 @@
----
+<!-- 
 title: Microsoft 365 plugins
 description: Microsoft 365 plugins tabular format
 ms.topic: Introduction on Microsoft 365 plugins
@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-leenagopal
 ---
-<!-- 
+
 # Plugins introduction
 
 Microsoft plugins are 
