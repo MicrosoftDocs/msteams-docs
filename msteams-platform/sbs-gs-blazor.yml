@@ -17,7 +17,7 @@ items:
 
     Blazor lets you build interactive web UIs using C#, instead of JavaScript. 
     
-    You'll create a tab app and a bot app with Blazor and Visual Studio 2019. 
+    You'll create a tab app with Blazor and Microsoft Visual Studio 2022. 
 
     Your app will have a capability, which comes with its own UI and UX:
 
@@ -35,7 +35,7 @@ items:
     | &nbsp;    | Install   | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Enterprise 2022 Preview (version 17.2.0). |
+    | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Enterprise 2022 Preview (version 17.2.0). |
     | &nbsp; | - Visual Studio Code Extensions | •  [Azure Functions Core Tools](/azure/azure-functions/functions-run-local): Backend components locally during a local debug run. It includes the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). </br> •  [.NET SDK](/dotnet/core/install/): Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot) require inbound connections. You can connect your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
