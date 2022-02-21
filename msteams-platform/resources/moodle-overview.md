@@ -20,13 +20,13 @@ keywords: moodle LMS mConnect deep links
 * Analytical insights
 
 
- The following image shows the different sections of Moodle LMS.
+ The following image shows the different parts of Moodle LMS.
 
  <!-- Query on this image about what is meant by section -->
 
 :::image type="content" source="../assets/images/MoodleInstructions/flow chart.png" alt-text="Moodle lms flow chart":::
 
-## Moodle LMS Sections 
+## Moodle LMS key parts
 
 * **Moodle LTI apps**: The following are the Learning Tools Interoperability (LTI) apps available for Moodle LMS:
 

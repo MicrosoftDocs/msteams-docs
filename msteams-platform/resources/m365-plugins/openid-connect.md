@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 plugins
-description: Microsoft 365 plugins tabular format
-ms.topic: Introduction on Microsoft 365 plugins
+description: Microsoft 365 plugins details
+ms.topic: Details on Microsoft 365 plugins
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-leenagopal
@@ -9,7 +9,7 @@ author: v-leenagopal
 
 # Plugins details
 
-Plugins helps the 
+Microsoft 365 plugins now integrates with the Moodle LMS to provide several productivity enhancements. 
 
 ## OpenID Connect
 

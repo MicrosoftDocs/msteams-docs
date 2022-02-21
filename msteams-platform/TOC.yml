@@ -517,8 +517,10 @@
       items:
       - name: Plugins overview
         href: resources/m365-plugins/m365-plugins-overview.md
+      - name: Plugins details
+        href: resources/m365-plugins/openid-connect.md 
     - name: Moodle LTI apps
-      href: resources/moodle-lti-apps.md    
+      href: resources/moodle-lti-apps.md
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
     - name: Frequently asked questions
