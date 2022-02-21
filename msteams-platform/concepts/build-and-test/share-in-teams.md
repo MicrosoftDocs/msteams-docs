@@ -16,7 +16,7 @@ The following image shows the Share-in-Teams pop-up window:
 
 :::image type="content" source="../../assets/images/share-in-teams/share-in-teams.PNG" alt-text="share-in-teams-pop-up":::
 
-## Enable Share-in-Teams
+## Enable Share-in-Team
 
 > [!NOTE]
 > Ensure that you have [Microsoft Teams JavaScript Client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true&branch=pr-en-us-5129) (`@microsoft/teams-js@1.11.0-beta.7`) to enable Share-in-Teams.
