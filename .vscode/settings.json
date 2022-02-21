@@ -13,5 +13,6 @@
         "MD025": {
             "front_matter_title": ""
         }
-    }
+    },
+    "docsImages.maxWidth": 0
 }
