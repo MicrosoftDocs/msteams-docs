@@ -35,15 +35,15 @@ The following list guides us to understand the collaboration process and its lim
 > [!NOTE]
 > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
 
-* In **ENVIRONMENT** section on Teams Toolkit, select **collaborators**. It displays the options **Add Microsoft 365 Teams App (with Microsoft Azure Active Directory (Azure AD) App) Owners** and **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following images:
+* In **ENVIRONMENT** section on Teams Toolkit, select **collaborators**. It displays the options **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following images:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
 
-* Select **Add Microsoft 365 Teams App (with Microsoft Azure Active Directory (Azure AD) App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
+* Select **Add Microsoft 365 Teams App (with Azure AD App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* To view collaborators in current environment, select **List Microsoft 365 Teams App (with Microsoft Azure Active Directory (Azure AD) App) Owners**, then collaborators are listed in the output channel as shown in following image:
+* To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in following image:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
@@ -72,8 +72,8 @@ You can't remove collaborators directly from Teams Toolkit extension. Perform th
   1. Go to Teams Developer Portal and select your Teams app by name or app ID.
   2. Select **Owners** from left panel.
   3. Select and remove the collaborator.
-  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Microsoft Azure Active Directory (Azure AD) App.
-  5. Select **Owners** from left panel in Microsoft Azure Active Directory (Azure AD) App management page.
+  4. Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
+  5. Select **Owners** from left panel in Azure AD App management page.
   6. Select and remove the collaborator.
 
 > [!NOTE]
