@@ -91,9 +91,9 @@ For users to interact with your messaging extension from Outlook, you'll need to
 > [!NOTE]
 > You can skip the step if you're using [Teams messaging extension search sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search), as the scenario doesn't involve Azure Active Directory (AAD) Single Sign-On authentication.
 
-Azure Active Directory Single-sign on (SSO) for messaging extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), however you need to add several client application identifiers to the Microsoft Azure Active Directory (Azure AD) app registration of your bot in your tenant's *App registrations* portal.
+Azure Active Directory Single-sign on (SSO) for messaging extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots), however you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
-1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
+1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open **App registrations**.
 1. Select the name of your application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).

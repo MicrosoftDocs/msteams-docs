@@ -21,9 +21,9 @@ For example, the authentication flow for tabs and bots using Node and the [OAuth
 ![Tab authentication sequence diagram](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. The user interacts with the content on the tab configuration or content page, commonly a **Sign in** or **Log in** button.
-2. The tab constructs the URL for its auth start page. Optionally, it uses information from URL placeholders or calls `microsoftTeams.getContext()` Teams client SDK method to streamline the authentication experience for the user. For example, when authenticating with A Microsoft Azure Active Directory (Azure AD), if the `login_hint` parameter is set to the user's email address, the user does not have to sign in if they have done so recently. This is because Microsoft Azure Active Directory (Azure AD) uses the user's cached credentials. The pop-up window is shown briefly and then disappears.
+2. The tab constructs the URL for its auth start page. Optionally, it uses information from URL placeholders or calls `microsoftTeams.getContext()` Teams client SDK method to streamline the authentication experience for the user. For example, when authenticating with A Azure AD, if the `login_hint` parameter is set to the user's email address, the user does not have to sign in if they have done so recently. This is because Azure AD uses the user's cached credentials. The pop-up window is shown briefly and then disappears.
 3. The tab then calls the `microsoftTeams.authentication.authenticate()` method and registers the `successCallback` and `failureCallback` functions.
-4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, such as `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` for Microsoft Azure Active Directory (Azure AD). Replace `<tenant id>` with your own tenant id that is context.tid.
+4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, such as `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` for Azure AD. Replace `<tenant id>` with your own tenant id that is context.tid.
 Similar to other application auth flows in Teams, the start page must be on a domain that is in its `validDomains` list, and on the same domain as the post sign in redirect page.
 
     > [!NOTE]
@@ -45,11 +45,11 @@ Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams tab authentication | Authentication process for tabs using Microsoft Azure Active Directory (Azure AD). | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teams tab authentication | Authentication process for tabs using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## See also
 
-For a detailed implementation for tab authentication using Microsoft Azure Active Directory (Azure AD), see:
+For a detailed implementation for tab authentication using Azure AD, see:
 
 * [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
