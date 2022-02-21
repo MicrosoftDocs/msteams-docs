@@ -143,7 +143,7 @@ items:
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development by creating your first app. This app uses the Tab capability.
+    Start Teams app development by creating your first app. This app uses the Tab capability.
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
 
