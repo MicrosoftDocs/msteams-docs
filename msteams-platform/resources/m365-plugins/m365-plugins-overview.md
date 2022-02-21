@@ -131,6 +131,6 @@ oEmbed filter plugin simplifies the inclusion of external HTML content within Mo
 
 ## See also
 
-* [Partner apps for Moodle](partner-apps-for-moodle.md)
+<!-- * [Partner apps for Moodle](partner-apps-for-moodle.md)
 * [Getting help](getting-help.md)
-* [FAQs](faqs.md)
+* [FAQs](faqs.md) -->
