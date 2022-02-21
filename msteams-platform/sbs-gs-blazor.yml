@@ -69,11 +69,12 @@ items:
 
     To install the Teams Toolkit extension:
 
-    1. Open Visual Studio 2019 using the **Continue without code ->** option on the opening page.
-    1. Select **Extensions** > **Manage Extensions**.
-    1. In the search box, enter **Teams Toolkit**.
-    1. Select the Teams Toolkit extension and select **Download**. The extension is downloaded.
-    1. Close Visual Studio 2019 to install the extension.
+    1. Download Visual Studio 2022.
+    1. Choose Microsoft Teams development tools under ASP.NET and web development workload.
+    1. Select Install.
+    
+    > [!IMPORTANT]
+    > You may now choose the Microsoft Teams development tools component in the ASP.NET web development workload in the Visual Studio Installer.
 
     # [Command line](#tab/cli)
 
@@ -164,7 +165,7 @@ items:
 
     **To create your tab project workspace**
 
-    1. Open Visual Studio 2019.
+    1. Open Visual Studio 2022.
 
     1. Select **Create a new project**.
 
