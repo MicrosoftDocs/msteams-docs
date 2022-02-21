@@ -83,8 +83,6 @@ The steps to register your app through the Azure AD portal are similar to the [t
    > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here *YourBotId* is your Azure AD application ID.
    > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Select the permissions that your application needs for the Azure AD endpoint and, optionally, for Microsoft Graph.
-1. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
 1. Select **Add a scope**.
 1. In the panel that prompts, enter `access_as_user` as the **Scope name**.
 
@@ -140,10 +138,6 @@ The steps to register your app through the Azure AD portal are similar to the [t
 
     ![Redirect uris](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
 
-1. Add necessary **API Permissions**.
-    * Select **API permissions** from the left plane.
-    * Select **Add a platform** to add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.
-
 1. The following steps will help you to enable implicit grant:
     * Select **Authentication** from the left pane.
     * Select the **Access tokens** and **ID tokens** checkboxes.
@@ -151,6 +145,10 @@ The steps to register your app through the Azure AD portal are similar to the [t
     ![Grant flow](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
     
     * Select **Save** to save the changes.
+
+1. Add necessary **API Permissions**.
+    * Select **API permissions** from the left pane.
+    * Select **Add a platform** to add any permissions that your app requires to downstream APIs, for example, User.Read.
 
 #### Update manifest in Microsoft Azure portal
 
@@ -189,7 +187,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
 
     * From the **Service Provider** drop-down, select **Azure Active Directory v2**.
     * Enter the client credentials, such as **Client Id** and **Client secret** for the Azure AD application.
-    * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot). The Token Exchange URL indicates to the SDK that this Azure AD application is configured for SSO.
+    * For the **Token Exchange URL**, use the scope value defined in [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot) for example, `api://botid-<your-app-id>/`. The Token Exchange URL indicates to the SDK that this Azure AD application is configured for SSO.
     * In the **Tenant ID**, enter *common*.
     * Add all the **Scopes** configured when specifying permissions to downstream APIs for your Azure AD application. With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
     * Select **Save**.
