@@ -1,3 +1,4 @@
+---
 title: Microsoft 365 plugins
 description: Microsoft 365 plugins tabular format
 ms.topic: Introduction on Microsoft 365 plugins
@@ -8,7 +9,8 @@ author: v-leenagopal
 
 # Plugins introduction
 
-All the content from this file has been merged to m365-plugins overview file.
+All the content from this file has been merged to m365-plugins overview file. This is a new format for Moodle LMS.
+
 
 <!-- 
 ## OpenID Connect
