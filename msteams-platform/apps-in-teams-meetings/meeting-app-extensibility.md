@@ -100,7 +100,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![In-meeting side panel](../assets/images/in-meeting-dialog.png)
 
 # [Mobile](#tab/mobile)
 
