@@ -17,9 +17,9 @@ items:
 
     Blazor lets you build interactive web UIs using C#, instead of JavaScript. 
     
-    You'll create two Teams apps: a tab app and a bot app with Blazor and Visual Studio 2019. 
+    You'll create a tab app and a bot app with Blazor and Visual Studio 2019. 
 
-    Each of your app will have a capability, which comes with its own UI and UX:
+    Your app will have a capability, which comes with its own UI and UX:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
 
@@ -35,9 +35,8 @@ items:
     | &nbsp;    | Install   | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Visual Studio 2019](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202019), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Community 2019 (version 16.11). |
+    | &nbsp; | [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Enterprise 2022 Preview (version 17.2.0). |
     | &nbsp; | - Visual Studio Code Extensions | •  [Azure Functions Core Tools](/azure/azure-functions/functions-run-local): Backend components locally during a local debug run. It includes the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). </br> •  [.NET SDK](/dotnet/core/install/): Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot) require inbound connections. You can connect your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
@@ -58,16 +57,16 @@ items:
 
     After you've installed the required tools, set up the development environment.
 
-    ### Install Teams Toolkit
+    ### Install Microsoft Teams Toolkit
 
     The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
     You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). 
     
-    # [Visual Studio 2019](#tab/vs)
+    # [Visual Studio 2022](#tab/vs)
 
-    You can use Visual Studio 2019 to develop Teams apps with Blazor Server in .NET.
+    You can use Visual Studio 2022 to develop Teams apps with Blazor Server in .NET.
 
-    To install the Teams Toolkit extension:
+    To install the Microsoft Teams Toolkit extension:
 
     1. Download Visual Studio 2022.
     1. Choose Microsoft Teams development tools under ASP.NET and web development workload.
@@ -208,11 +207,11 @@ items:
 
           The **Create a new Teams application** page appears.  
 
-    1.  Select Teams app features.        
+    1.  Select Teams app feature.       
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-create-teams-tab-app.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
-        Select app features and Microsoft 365 details: 
+        Select app feature and Microsoft 365 details: 
 
         1. Select the **Tab app** as the capability for your app.
 
@@ -259,7 +258,7 @@ items:
 
     To build and run your app locally:
 
-    1. Open Visual Studio 2019.
+    1. Open Visual Studio 2022.
     1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
         <details>
@@ -329,19 +328,19 @@ items:
     1. Start coding and copy your app into the created cloud resources.
 
     > [!NOTE]
-    > Support for Blazor apps is new in Teams Toolkit. Provisioning and deployment are done with a combination of Visual Studio 2019 and the Developer Portal for Teams.
+    > Provisioning and deploying your app are done with a combination of Visual Studio 2019 and the Developer Portal for Teams.
 
     ## Provision and deploy your app to Azure App Service
 
-    1. In Solution Explorer, right-click the project node and select **Publish**. You can also use the **Build** > **Publish** menu item.
+    1. From **Project**, point to **Teams Toolkit**, then select **Provision in the Cloud**
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-publish.png" alt-text="Select the Publish operation for the project" border="false":::
 
-    1. Select **Azure** and select **Next** in the **Publish** window.
+    1. From **Project**, point to **Teams Toolkit**, then select **Deploy to the Cloud**
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-vs-publish.png" alt-text="Select Azure as the publishing target" border="false":::
 
-    1. Select **Azure App Service (Windows)** and select **Next**.
+    1. After you complete the provision and deployment steps, select **Project**, point to **Teams Toolkit**, then  select **Preview Teams app**
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-vs-app-service.png" alt-text="Select Azure App Service as the publishing target" border="false":::
 
