@@ -128,7 +128,7 @@ Teams calls the `successCallback` and sends the result (authcode) to the 3P app.
 ```
 
   > [!NOTE]
-  > Kindly use the beta version of JS SDK to leverage the functionity for now. Beta versions are available via NPM - https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2.
+  > Kindly use the beta version of JS SDK to leverage the functionity for now. Beta versions are available through NPM - https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2.
 
 </br>
 <img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="authenticate" width="75%"/>
