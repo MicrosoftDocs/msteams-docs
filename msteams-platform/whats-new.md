@@ -235,7 +235,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|02/14/2022| Share-in-Teams| Integrate with Teams > [Share-in-Teams](concepts/build-and-test/share-in-teams.md) |
+|02/14/2022| Share-to-Teams from personal app or tab | Integrate with Teams > [Share-to-Teams from personal app or tab](concepts/build-and-test/share-to-teams%20from%20personal%20app%20or%20tab.md) |
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| Test preview for monetized apps| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|

@@ -60,12 +60,12 @@ The following image shows the Share-to-Teams option:
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
 
-3. Select **Share**.
-
 > [!NOTE]
 > You can add a note in **say something about this**.
 
-    :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="add-note":::
+3. Select **Share**.
+
+   :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="add-note":::
 
 4. Select **View** to reach the conversation where the link was shared.
 
