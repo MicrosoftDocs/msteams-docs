@@ -3,7 +3,7 @@ title: Authenticating with AAD SSO
 description: Authentication in Teams apps using AAD SSO
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
+keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), OIDC, username, password
 ---
 # Authentication with AAD SSO
 
@@ -11,13 +11,13 @@ Many applications exist in Azure AD that you can access using SSO. You have seve
 
 \ Add description Teams SSO/True SSO \
 
-## Role of AAD SSO in Authentication
+## Role of AAD SSO in authentication
 
-\Include an info-graphic\
+\Include an info-graphic and description \
 
 The AAD SSO workflow used in a Teams app for the first user login:
 
-1. The app request the user credentials via Teams from an Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
+1. The app requests the user credentials via Teams from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
 
 1. The IDP requests the user for their credentials and shares it with the app in an ID token.
 

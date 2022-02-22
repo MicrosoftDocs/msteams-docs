@@ -53,6 +53,7 @@ You can use an authentication method suitable for your app to validate the crede
 
 Within Teams, there are multiple ways you can implement authentication. Here's an introduction to key terms that you'll come across:
 
+- Identity Provider (IDP): \add details for IDP\
 - SSO: Single sign-on lets your app users log into the app only once using their credentials. It offers access to all associated apps or websites without having to validate repeatedly.
 - OIDC: Open ID Connect (OIDC) is an authentication protocol used to validate a user. Third-party applications can use it to verify the user's identity and access their profile information.
 - ID tokens: An ID token is granted to a user who has been verified successfully. It's used to cache user profile information and provide it to a client application when a user requests access.
@@ -64,4 +65,4 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan for authentication](authentication-overview.md)
+> [Authentication methods in Teams](authentication-overview.md)

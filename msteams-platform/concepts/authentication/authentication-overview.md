@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
 ---
-# Plan for authentication
+# Authentication methods in Teams
 
 Planning for implementing authentication is as important as for app's features and functionalities.
 
@@ -24,7 +24,7 @@ Single sign-on is an authentication method that lets users sign in using one set
 
 ## OpenID Connect authentication
 
-OIDC is used to authentication user access by using ID tokens from authorized Identity Providers (IDP).
+OIDC is used to authentication user access by using ID tokens from a trusted Identity Providers (IDP).
 
 \ Add description and infographic \
 \ Add information about using ID tokens for silent authentication, Authenticate a user in a Microsoft Teams tab \

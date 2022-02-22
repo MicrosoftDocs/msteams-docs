@@ -86,10 +86,12 @@
     href: concepts/authentication/plan-authentication.md
   - name: Plan authentication
     items:
-    - name: Methods of authentication
+    - name: Authentication methods in Teams
       href: concepts/authentication/authentication-overview.md
-    - name: About using AAD single sign-on
+    - name: AAD SSO in Teams
       href: concepts/authentication/plan-aad-sso.md
+    - name: Other authentication methods in Teams
+      href: concepts/authentication/plan-other-auth.md
   - name: Plan authorization 
     href: concepts/authentication/authorization-overview.md
 - name: Tools and SDKs
