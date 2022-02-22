@@ -84,15 +84,14 @@
   items:
   - name: Overview 
     href: concepts/authentication/authentication.md
+  - name: Plan authentication
     items:
-    - name: Plan authentication
-      items:
-      - name: Methods of authentication
-        href: concepts/authentication/authentication-overview.md
-      - name: About using AAD single sign-on
-        href: concepts/authentication/plan-aad-sso.md
-    - name: Plan authorization 
-      href: concepts/authentication/authorization-overview.md
+    - name: Methods of authentication
+      href: concepts/authentication/authentication-overview.md
+    - name: About using AAD single sign-on
+      href: concepts/authentication/plan-aad-sso.md
+  - name: Plan authorization 
+    href: concepts/authentication/authorization-overview.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
