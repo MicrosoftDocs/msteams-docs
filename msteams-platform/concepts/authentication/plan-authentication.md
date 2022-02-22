@@ -1,15 +1,20 @@
 ---
-title: Plan for Authenticating
+title: Authentication and Authorization in Teams
 description: Overview of authentication in Teams apps
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
 ---
-# Plan for authentication
+# Authentication and Authorization in Teams
 
-An app may exist in a public or organizational domain or as a personal app. In any scenario, authentication can be a vital part of its framework.
+An app may exist in a public or organizational domain or as a personal app. In any scenario, authentication can be a vital part of its framework. You must identify early on if you need to protect the services you're offering and at what level. The web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it before you start building your app.
 
-Planning for implementing authentication is as important as for app's features and functionalities.
+For example, if your app requires you to provide guest access for external users, access restrictions and permissions need to be placed to protect confidential information.
+
+Therefore, ask questions, such as:
+•	Will the users access different views of data based on their roles?
+•	Will the interactions also be based on the user roles?
+•	Will external users access the app?
 
 This module covers:
 
@@ -20,19 +25,29 @@ This module covers:
 - Case for AAD SSO.
 - Introduction to common extension scenarios.
 
-## Authentication
+## What is authentication?
 
 Authentication is all about validating users for accessing and using the app. It's one of the ways you secure your app and users against unwarranted access.
 
 You can validate app users in several ways, such as using login credentials, ID tokens, access tokens, and more.
 
-## Why should I use authentication?
-
-Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
-
-The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
+### Why should I use authentication?
 
 You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
+
+1. Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
+
+1. The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
+
+1. Building a personalized user experience is an additional benefit of authentication.
+
+## What is authorization?
+
+| Add description |
+
+### Why should I use authorization?
+
+| Add benefits |
 
 ## Common authentication terms
 
@@ -46,14 +61,7 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 - Access tokens: An access token is an artifact that contains security information of an application to access specific user information.  
 - Graph API: \add details for Graph API and MS Graph\
 
+## Next step
 
-## Authentication in Teams
-
-You must identify early on if you need to protect the services you're offering and at what level. The web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it before you start building your app. 
-
-For example, if your app requires you to provide guest access for external users, access restrictions and permissions need to be placed to protect confidential information.
-
-Therefore, ask questions, such as:
-•	Will the users access different views of data based on their roles?
-•	Will the interactions also be based on the user roles?
-•	Will external users access the app?
+> [!div class="nextstepaction"]
+> [Plan for authentication](authentication-overview.md)

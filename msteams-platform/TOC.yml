@@ -80,6 +80,21 @@
       href: concepts/design/activity-feed-notifications.md
   - name: App customization
     href: concepts/design/enable-app-customization.md
+- name: Plan for authentication
+  items:
+  - name: Overview 
+    href: concepts/authentication/authentication.md
+    items:
+    - name: Plan authentication
+      items:
+      - name: Methods of authentication
+        href: concepts/authentication/authentication-overview.md
+      - name: About using AAD single sign-on
+        href: concepts/authentication/plan-aad-sso.md
+    - name: Plan authorization 
+      items:
+      - name: Methods of authorization
+        href: concepts/authentication/authorization-overview.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
