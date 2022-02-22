@@ -543,11 +543,11 @@ The object is an array with all elements of the type `string`.
 
 **Optional**
 
-Specify your Azure AD App ID and Graph information to help users seamlessly sign into your Auzre AD app.
+Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Auzre AD app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|36 characters|✔|Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|String|36 characters|✔|Microsoft Azure Active Directory (Azure AD) application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource URL of the app for acquiring auth token for SSO.|
 |`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
 

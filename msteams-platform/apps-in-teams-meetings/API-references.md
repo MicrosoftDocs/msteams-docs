@@ -26,8 +26,8 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |MSBF SDK |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. |MSTC SDK|
 |[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |MSTC SDK|
-|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about apps' sharing state on the meeting stage. |MSTC SDK|
-|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the apps' capabilities for sharing to the meeting stage. |MSTC SDK|
+|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. |MSTC SDK|
+|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. |MSTC SDK|
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| MSBF SDK|
 
 ## Get user context API
@@ -210,9 +210,6 @@ The following table includes the response codes:
 | **404** | The meeting chat doesn't exist. |
 
 ## Get meeting details API
-
-> [!NOTE]
-> Currently, the feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
@@ -426,7 +423,7 @@ To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In
 
 ```json
 "authorization": {
-    "permission": { 
+    "permissions": { 
     "resourceSpecific": [
       { 
       "name": "MeetingStage.Write.Chat",

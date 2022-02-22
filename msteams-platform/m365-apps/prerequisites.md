@@ -1,11 +1,9 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
 description: Here are the prerequisites for extending your Teams apps across Microsoft 365
-ms.date: 11/15/2021
-ms.topic: how-to
-ms.custom: m365apps
+ms.date: 11/15/2021 
 ---
-# Set up your dev environment for extending Teams apps across M365
+# Set up your dev environment for extending Teams apps across Microsoft 365
 
 > [!NOTE]
 > Extend teams app across Microsoft 365 is currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
@@ -15,11 +13,11 @@ The development environment for extending Teams apps across Microsoft 365 is sim
 To set up your development environment:
 
 > [!div class="checklist"]
-> * [Get M365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
-> * [Enroll your M365 tenant in *Office 365 Targeted Releases*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
+> * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
+> * [Enroll your Microsoft 365 tenant in *Office 365 Targeted Releases*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configure your account to access preview versions of Outlook and Office](#install-office-apps-in-your-test-environment)
 > * [Switch to the Developer Preview version of Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*Optional*] [Install Teams Toolkit extension for Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## Prepare a Developer Tenant for testing
 
