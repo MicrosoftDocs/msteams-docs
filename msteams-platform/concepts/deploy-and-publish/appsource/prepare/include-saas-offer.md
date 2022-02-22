@@ -47,7 +47,7 @@ When planning how to monetize your Teams app, here are some things to consider:
 * Learn how [Azure Active Directory single sign-on (SSO)](/azure/marketplace/azure-ad-saas) helps your customers purchase and manage subscriptions. (Microsoft Azure Active Directory (Azure AD) SSO is required for Teams apps with SaaS offers.)
 * Understand that you're responsible for managing and paying for the infrastructure required to support your customers' use of your SaaS offer.
 * Plan for mobile. To avoid violating third-party app store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the related [commercial marketplace certification policies](/legal/marketplace/certification-policies#114048-mobile-experience).
-* Teams currently doesn't support flat rate pricing models. However, you can create a flat rate transactable offer in the Partner center. For more information, see [Best practices for selling a flat-rate transactable offer](#best-practices-for-selling-a-flat-rate-transactable-offer).
+* Teams currently doesn't support flat rate pricing models. However, you can create a flat rate transactable offer in the Partner center. For more information, see [Best practices for selling a flat rate transactable offer](#best-practices-for-selling-a-flat-rate-transactable-offer).
 
 ## Integrate with the SaaS Fulfillment APIs
 
