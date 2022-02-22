@@ -27,7 +27,7 @@ TypeScript
 | height             |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds|
 | successCallback    | A function is called if the authentication succeeds, with the result returned from the authentication pop-up. Authcode is the result|
 | URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders:</br> * oauthRedirectMethod: pass placeholder in `{}`, which replaces “deeplink” or “web” by Microsoft Teams platform informs app server if the call is from web or desktop/mobile platform.
-</br>* authId:  UUID replaces the placeholder. App server uses it to maintain session &mdash;for example, https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
+                      </br>* authId:  UUID replaces the placeholder. App server uses it to maintain session &mdash;for example, https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
 | width              | The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds |
 
 ## Steps to perform external window auth 
@@ -74,13 +74,13 @@ The 3P app server receives the URL with two query parameters oauthRedirectMethod
 
 3P server will redirect to OAuth providers (For example: Google, Github and others) auth page in the external browser. 
 
-e.g. https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loca.lt/authredirect&client_id=…&response_type=code&access_type=offline&scope=… 
+For example: https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loca.lt/authredirect&client_id=…&response_type=code&access_type=offline&scope=… 
  
 The redirect_uri is a dedicated route on the 3P app server. 
 
 ### 5. User sign in
 
-User signs in into the external browser. OAuth providers (For example: Google, GitHub, Microsoft Azure Active Directory) redirects back to the redirect_uri with the auth code. 
+User signs into the external browser. OAuth providers (For example: Google, GitHub, Microsoft Azure Active Directory) redirects back to the redirect_uri with the authcode. 
 
 ### 6. Response redirect to Teams 
 
@@ -97,7 +97,7 @@ if (req.session.oauthRedirectMethod === 'deeplink') {  {
 
  ### 7. Auth-callback deeplink format 
 
-For Teams desktop and mobile, 3P app generates a deeplink in the following format and sends the auth code and the session ID back to Teams desktop.
+For Teams desktop and mobile, 3P app generates a deeplink in the following format and sends the authcode and the session ID back to Teams desktop.
  
 
 ```javascript
@@ -107,7 +107,7 @@ For Teams desktop and mobile, 3P app generates a deeplink in the following forma
 
  ### 8. Success callback
 
-Teams calls the success callback and sends the result (auth code) to the 3P app. The 3P app receives the code in the success callback and they can use the code to retrieve the token and then the user info and update the UI. 
+Teams calls the success callback and sends the result (authcode) to the 3P app. The 3P app receives the code in the success callback and they can use the code to retrieve the token and then the user info and update the UI. 
 
 ```javascript
             successCallback: function (result) { 
