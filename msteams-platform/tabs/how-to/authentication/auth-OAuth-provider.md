@@ -55,7 +55,12 @@ microsoftTeams.authentication.authenticate({
 
 Teams clients opens the URL in an external browser after replacing the placeholders for oauthRedirectMethod and authId with suitable values. 
 
-For example: https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId=1234567890 
+#### Example
+
+```http
+ https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId=1234567890 
+```
+
 
 ### 3. 3P app server saves the passed authId and oauthRedirectMethod 
 
@@ -76,7 +81,12 @@ The following table includes the query parameters:
 
 3P server will redirect to OAuth providers (For example: Google, Github and others) auth page in the external browser. 
 
-For example: https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loca.lt/authredirect&client_id=…&response_type=code&access_type=offline&scope=… 
+#### Example
+
+```http
+https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loca.lt/authredirect&client_id=…&response_type=code&access_type=offline&scope=… 
+```
+
  
 The redirect_uri is a dedicated route on the 3P app server. 
 
