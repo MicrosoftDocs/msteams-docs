@@ -43,7 +43,7 @@ You can use an authentication method suitable for your app to validate the crede
 
 ## What is authorization?
 
-\ Add description \
+Authorization is the act of granting an authenticated party permission to do something. It specifies what data you're allowed to access and what you can do with that data.
 
 ### Why should I use authorization?
 

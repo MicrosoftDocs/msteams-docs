@@ -80,11 +80,11 @@
       href: concepts/design/activity-feed-notifications.md
   - name: App customization
     href: concepts/design/enable-app-customization.md
-- name: Plan for authentication
+- name: Plan authentication for Teams app
   items:
   - name: Overview 
     href: concepts/authentication/plan-authentication.md
-  - name: Plan authentication
+  - name: Authentication in Teams
     items:
     - name: Authentication methods in Teams
       href: concepts/authentication/authentication-overview.md
@@ -92,8 +92,10 @@
       href: concepts/authentication/plan-aad-sso.md
     - name: Other authentication methods in Teams
       href: concepts/authentication/plan-other-auth.md
-  - name: Plan authorization 
+  - name: Authorization in Teams
     href: concepts/authentication/authorization-overview.md
+  - name: Authentication FAQ
+    href: concepts/authentication/authentication-faq.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
