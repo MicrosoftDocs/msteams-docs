@@ -8,26 +8,27 @@ keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) s
 
 # Authentication using external OAuth providers    
 
-To support external or third party OAuth providers such as Google, we have introduced two significant changes in the authenticate() API. These changes include: 
+To support external or third party OAuth providers such as Google, the authenticate() API includes the following changes:
 
-1. A new parameter titled isExternal.
+*. The new parameter titled `isExternal`
 
-2. Placeholder values in existing URL parameter.
+*. Placeholder values in existing URL parameter
 
 TypeScript 
 
-`function authenticate(authenticateParameters?: AuthenticateParameters)` 
+`function authenticate(authenticateParameters?: AuthenticateParameters)`
 
 
 
-| Property           | Description   |
+| Parameter           | Description   |
 | --- | --- |
-| isExternal         | A Boolean that indicates that the auth window should be opened in an external browser . |
-| failureCallback    | A function that is called if the authentication fails, with the reason for the failure     returned from the authentication pop-up.|
-| height             |The preferred height for the pop-up. This value can be ignored if outside the acceptable bounds. |
-| successCallback    | A function that is called if the authentication succeeds, with the result returned from the authentication pop-up. Result will be the authcode.    |
-| URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders: 1. oauthRedirectMethod: Pass placeholder in {}. It will be replaced by “deeplink” or “web” by Teams platform that informs app server if the call is coming from web or desktop/mobile platform. 2. authId – this placeholder will be replaced by UUID. App server will use it to maintain session. eg - https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
-| width              | The preferred width for the pop-up. This value can be ignored if outside the acceptable bounds. |
+| isExternal         | A Boolean that indicates that the auth window opens in an external browser|
+| failureCallback    | A function that is called if the authentication fails, with the reason for the failure returned from the authentication pop-up|
+| height             |The preferred height for the pop-up. This value can be ignored if outside the acceptable bounds|
+| successCallback    | A function that is called if the authentication succeeds, with the result returned from the authentication pop-up. Result will be the authcode  |
+| URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders:<br> *. oauthRedirectMethod: Pass placeholder in {}. It will be replaced by “deeplink” or “web” by Teams platform that informs app server if the call is coming from web or desktop/mobile platform. </br>
+*. authId – this placeholder will be replaced by UUID. App server will use it to maintain session&mdash;for example: - https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
+| width              | The preferred width for the pop-up. This value can be ignored if outside the acceptable bounds |
 
 ## Steps to perform external window auth 
 
