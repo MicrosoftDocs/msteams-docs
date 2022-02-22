@@ -29,7 +29,7 @@ TypeScript
 | URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders: 1. oauthRedirectMethod: Pass placeholder in {}. It will be replaced by “deeplink” or “web” by Teams platform that informs app server if the call is coming from web or desktop/mobile platform. 2. authId – this placeholder will be replaced by UUID. App server will use it to maintain session. eg - https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
 | width              | The preferred width for the pop-up. This value can be ignored if outside the acceptable bounds. |
 
-# Steps to perform external window Auth 
+## Steps to perform external window auth 
 
 ### 1. Pass isExternal and placeholders in URL  
 
@@ -60,7 +60,7 @@ e.g. https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId=1234567
 
 The 3P app server will receive this URL with two query parameters oauthRedirectMethod and authId. 
 
-|
+| Property            | Description   |
 | --- | --- |
 | oauthRedirectMethod |Indicates how the 3P App should send the response of Authentication request back to Teams, it can have one of the two values: “deeplink” or “webpage”. external browser.|
 | authId              | The request-id Teams created for this specific authentication request. It needs to be sent back to Teams via the deeplink. |
