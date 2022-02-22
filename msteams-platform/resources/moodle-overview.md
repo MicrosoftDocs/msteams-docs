@@ -28,10 +28,10 @@ keywords: moodle LMS mConnect deep links
 
 ## Moodle LMS key parts
 
-* **Moodle LTI apps**: The following are the Learning Tools Interoperability (LTI) apps available for Moodle LMS:
+* **Moodle LTI apps**: The following are the Learning Tools Interoperability (LTI) apps available for Moodle LMS.
 
   * OneDrive LTI app, which provides services like accessing and sharing personal and class files within LMS.
-  * Class Teams LTI app, which helps faculty to create a class with user roles within the LMS courses. The app provides required access to students for various enaging courses.
+  * Class Teams LTI app, which helps faculty to create a class with user roles within the LMS courses. The app provides required access to students to various enaging courses.
   * Teams meetings LTI app, which helps faculty and students to engage using desktop, web platforms and to integrate class meetings in their LMS course.
 
 * **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Microsoft Teams. These plugins can be used independently, or in partnership to achieve distinct user requirements. For more information, see [Plugins overview](/resources/m365-plugins/m365-plugins-overview.md)

@@ -53,7 +53,7 @@ Microsoft 365 offers you the benefit of using it as a file repository for an ins
 
 ## Teams meetings
 
-The Teams meetings plugin allows you to create meetings requests in calendar, assignments, forum posts, and in the Atto editor its availability.
+The Teams meetings plugin allows you to create meetings requests in calendar, assignments, forum posts, and in the Atto editor as per availability.
 
 After the plugin is installed, faculty and students can create an audio or video meeting using Moodle, which requires Microsoft 365 account and Moodle permissions.
 
