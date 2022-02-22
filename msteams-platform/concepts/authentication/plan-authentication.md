@@ -43,11 +43,11 @@ You can use an authentication method suitable for your app to validate the crede
 
 ## What is authorization?
 
-| Add description |
+\ Add description \
 
 ### Why should I use authorization?
 
-| Add benefits |
+\ Add benefits \
 
 ## Common authentication terms
 

@@ -9,7 +9,7 @@ keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure
 
 Many applications exist in Azure AD that you can access using SSO. You have several options for SSO depending on the needs of the application and how it's implemented. Take time to plan your SSO deployment before you create applications in Azure AD. The management of applications can be made easier by using the My Apps portal.
 
-| Add description Teams SSO/True SSO |
+\ Add description Teams SSO/True SSO \
 
 ## Role of AAD SSO in Authentication
 
@@ -27,12 +27,12 @@ The user never needs to sign in again.
 
 ## AAD SSO user experience
 
-| Include images for AAD SSO UX |
-| UX for all Teams capabilities: tabs, bots, messaging extensions, link unfurling |
+\ Include images for AAD SSO UX \
+\ UX for all Teams capabilities: tabs, bots, messaging extensions, link unfurling \
 
 ## Benefits of AAD SSO
 
-| Add Introduction, details, and examples |
+\ Add Introduction, details, and examples \
 
 1. True Single sign-on
 1. Security via ID token
@@ -42,4 +42,4 @@ The user never needs to sign in again.
 
 ## What is silent authentication in Teams?
 
-| Add description |
+\ Add description \
