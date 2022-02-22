@@ -61,6 +61,8 @@ For example: https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId
 
 The 3P app server receives the URL with two query parameters oauthRedirectMethod and authId. 
 
+The following table includes the query parameters:
+
 | Parameter           | Description   |
 | --- | --- |
 | oauthRedirectMethod |Indicates how the 3P app sends the response of authentication request back to Teams, it can have one of the two values: “deeplink” or “webpage” |
