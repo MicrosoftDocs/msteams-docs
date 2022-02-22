@@ -3,7 +3,7 @@ title: Authentication using external OAuth providers
 description: Describes authentication using external OAuth providers  
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
+keywords: teams authentication using external OAuth provider
 ---
 
 # Authentication using external OAuth providers    
@@ -22,11 +22,11 @@ TypeScript
 
 | Parameter           | Description   |
 | --- | --- |
-| isExternal         | A Boolean indicates the auth window opens in an external browser|
+| isExternal         | A Boolean which indicates the auth window opens in an external browser|
 | failureCallback    | A function is called if the authentication fails, with the reason for the failure returned from the authentication pop-up|
 | height             |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds|
 | successCallback    | A function is called if the authentication succeeds, with the result returned from the authentication pop-up. Result will be the authcode |
-| URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders:<br> * oauthRedirectMethod: pass placeholder in `{}`, which replaces “deeplink” or “web” by Microsoft Teams platform informs app server if the call is from web or desktop/mobile platform. </br>
+| URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders:</br> * oauthRedirectMethod: pass placeholder in `{}`, which replaces “deeplink” or “web” by Microsoft Teams platform informs app server if the call is from web or desktop/mobile platform.
 * authId:  UUID replaces the placeholder. App server uses it to maintain session &mdash;for example, https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
 | width              | The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds |
 
