@@ -1,6 +1,6 @@
 ---
 title: Authentication Overview
-description: Authentication in Teams apps using AAD SSO, OIDC, ID tokens
+description: Authentication in Teams apps using AAD SSO, OIDC, and ID tokens
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
