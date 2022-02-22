@@ -229,7 +229,7 @@ The following is an example of `userIds` array in the `refresh` property:
 ### Just-In Time (JIT) install
 
 
-Just-In Time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel.  In order to support Universal Actions in search based Message extensions, your bot is added to the conversation where the card is sent by the user.
+Just-In Time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel.  Your bot is added to the conversation where the card is sent by the user to support Universal Actions in search based Message extensions.
 
 When a user selects a card and sends it in a group chat or channel, a **Just-In Time (JIT)** installation prompt appears. After the user selects the **send** option, the bot installs the card in the background for all the users in the group.
 
@@ -238,17 +238,7 @@ When a user selects a card and sends it in a group chat or channel, a **Just-In 
 
 The following is an example of a dynamic scenario for JIT install:
 
-1. The users selects a card in a group chat or channel.
-
-    :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-post-card.jpg" alt-text="user selects card":::
-
-1. The card is posted in to the compose box and a JIT installation prompt appears.
-
-    :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-install-prompt.jpg" alt-text="app shows installation prompt":::
-
-1. After the user selects send, the bot installs the card in the background for all the users in the group.
-
-    :::image type="content" source="../../../assets/images/messaging-extension/universal-actions-jit-sent.jpg" alt-text="card is sent to users":::
+  :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="Dynamic ME JIT flow":::
 
 ## Next step
 
