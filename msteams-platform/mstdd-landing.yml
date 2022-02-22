@@ -26,7 +26,7 @@ landingContent:
       links:
       - text: Glossary
         url: ~/get-started/glossary.md
-      - text: overview
+      - text: Overview
         url: ~/overview.md
       - text: Plan your app
         url: ~/concepts/app-fundamentals-overview.md  
@@ -50,7 +50,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Guidelines for apps linked to SaaS offerS
+      - text: Guidelines for apps linked to SaaS offers
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Microsoft Teams store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
