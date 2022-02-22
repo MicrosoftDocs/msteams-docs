@@ -60,8 +60,8 @@ The following image shows the Share-to-Teams option:
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
 
-> [!NOTE]
-> You can add a note in **say something about this**.
+  > [!NOTE]
+  > You can add a note in **say something about this**.
 
 3. Select **Share**.
 
