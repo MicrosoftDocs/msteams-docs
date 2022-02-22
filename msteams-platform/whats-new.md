@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
-|02/14/2022| Share-to-Teams from personal app or tab (developer preview) | Integrate with Teams > [share-to-teams from perosnal app or tab] ()|
+|02/14/2022| Share-to-Teams from personal app or tab (developer preview) | Integrate with Teams > [Share-to-Teams from personal app or tab](concepts/build-and-test/share-to-teams%20from%20personal%20app%20or%20tab.md) |
 |02/09/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
 | 02/18/2022 | Updated the Overview module for mapping Teams app to organizational goals, user story, and exploring Teams app features | [Overview > Teams app that fits](overview.md) |
