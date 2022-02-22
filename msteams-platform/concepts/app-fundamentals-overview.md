@@ -12,7 +12,7 @@ keywords: entry points extensibility use cases device capability
 
 Building Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the centre of Office 365, and offers a personal canvas for you to create apps.
+Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the center of Office 365, and offers a personal canvas for you to create apps.
 
 In this section, learn how to:
 
@@ -71,9 +71,9 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 
 | Features   | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC-High. | ✔️ App is enabled if it has DOD. |
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
-| 3p or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
+| 3P or third-party apps | ✔️ Third-party apps are available. By default they are disabled and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
