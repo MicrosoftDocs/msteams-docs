@@ -14,11 +14,12 @@ To support external or third party OAuth providers such as Google, the `authenti
 
 * Placeholder values in existing URL parameter
 
-TypeScript 
 
-`function authenticate(authenticateParameters?: AuthenticateParameters)`
+```TypeScript
+function authenticate(authenticateParameters?: AuthenticateParameters)
+``` 
 
-
+The following table describes parameter and its description.
 
 | Parameter           | Description   |
 | --- | --- |
@@ -106,7 +107,7 @@ For Teams desktop and mobile, 3P app generates a deeplink in the following forma
 
  ### 8. Success callback
 
-Teams calls the success callback and sends the result (authcode) to the 3P app. The 3P app receives the code in the success callback to retrieve the token, the user info and update the UI from the code. 
+Teams calls the `successCallback` and sends the result (authcode) to the 3P app. The 3P app receives the code in the success callback to retrieve the token, the user info and update the UI from the code. 
 
 ```javascript
             successCallback: function (result) { 
