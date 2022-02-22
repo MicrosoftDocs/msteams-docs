@@ -10,15 +10,15 @@ keywords: entry points extensibility use cases device capability
 
 # Plan your app with Teams features
 
-Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
+Building Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
+Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the centre of Office 365, and offers a personal canvas for you to create apps.
 
 In this section, learn how to:
 
- - Identify and map use cases to Teams features.
- - Use planning checklist.
- - Plan beyond app deployment.
+ - Identify and map use cases to Teams features
+ - Use planning checklist
+ - Plan beyond app deployment
 
 ## Plan with Teams
 
@@ -35,11 +35,11 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 
 Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
 
-- **Understand your use case and Teams App Features**: Understand your user's requirement and you can identify the right features.
+- **Understand your use case and Teams App features**: Understand your user's requirement and identify the right features.
 
-- **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
+- **Map your use cases**: Map common use cases to Teams feature based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
-- **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
+- **Plan responsive tabs for Teams mobile**: It includes common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
 
