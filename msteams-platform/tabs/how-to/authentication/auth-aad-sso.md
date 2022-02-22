@@ -70,10 +70,6 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 To register your app through the Azure AD portal, follow these steps:
 
 1. Register a new application in the [Azure AD App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
-
-    > [!NOTE]
-    > To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD App registration and also in your Teams app.
-
 1. Select **New Registration**. The **Register an application** page appears.
 1. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
@@ -150,6 +146,9 @@ Use the following code to add new properties to your Teams manifest:
 >* You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
 ### 3. Get an access token from your client-side code
+
+> [!NOTE]
+> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD App registration and also in your Teams app.
 
 Use the following authentication API:
 
