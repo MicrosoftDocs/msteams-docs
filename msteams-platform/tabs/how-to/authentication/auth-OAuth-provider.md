@@ -118,8 +118,7 @@ Teams will call the success callback and send the result (auth code) to the 3P a
   > Kindly use the beta version of JS SDK to leverage this functionity for now. Beta versions are available via NPM - https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2.
 
 
-
- <img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="Tab single sign-on SSO diagram" width="75%"/>
+ <img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="authenticate" width="75%"/>
 
 ## Step-by-step guides
 
