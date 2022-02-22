@@ -1,12 +1,12 @@
 ---
-title: Authentication using External OAuth Providers  
-description: Describes Authentication using External OAuth Providers  
+title: Authentication using external OAuth providers  
+description: Describes authentication using external OAuth providers  
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
 ---
 
-# Authentication using External OAuth Providers  
+# Authentication using external OAuth providers    
 
 To support external or 3rd party OAuth providers such as Google, we have introduced two significant changes in the authenticate() API. These changes include: 
 
@@ -16,7 +16,7 @@ Two placeholder values in existing url parameter
 
 TypeScript 
 
-function authenticate(authenticateParameters?: AuthenticateParameters) 
+`function authenticate(authenticateParameters?: AuthenticateParameters)` 
 
 
 
@@ -63,8 +63,10 @@ e.g. https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId=1234567
 
 The 3P app server will receive this url with two query parameters oauthRedirectMethod and authId. 
 
-| oauthRedirectMethod |Indicates how the 3P App should send the response of Authentication request back to Teams, it can have one of the two values: “deeplink” or “webpage”. external browser . |
-| authId      | The request-id Teams created for this specific authentication request. It needs to be sent back to Teams via the deeplink.  |
+|
+| --- | --- |
+| oauthRedirectMethod |Indicates how the 3P App should send the response of Authentication request back to Teams, it can have one of the two values: “deeplink” or “webpage”. external browser.|
+| authId              | The request-id Teams created for this specific authentication request. It needs to be sent back to Teams via the deeplink. |
 
 > [!TIP]
 > 3P App can marshal authId, oauthRedirectMethod in the OAuth ‘state’ query param when generating the login url for the OAuthProvider. When OAuthProvider redirects back to 3P Server the ‘state’ will contain the passed authId and oauthRedirectMethod, the 3P App can use these values for sending authentication response back to Teams as described in Step-6..
@@ -119,8 +121,9 @@ Teams will call the success callback and send the result (auth code) to the 3P a
 > Kindly use the beta version of JS SDK to leverage this functionity for now. Beta versions are available via NPM - https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2.
 
 
-<!-- markdownlint-disable MD033 -->
-<img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="Tab single sign-on SSO diagram" width="75%"/>
+
+    
+  <img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 ## Step-by-step guides
 
