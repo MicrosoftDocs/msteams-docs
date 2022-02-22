@@ -8,11 +8,11 @@ keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) s
 
 # Authentication using external OAuth providers    
 
-To support external or 3rd party OAuth providers such as Google, we have introduced two significant changes in the authenticate() API. These changes include: 
+To support external or third party OAuth providers such as Google, we have introduced two significant changes in the authenticate() API. These changes include: 
 
-A new parameter titled is External 
+1. A new parameter titled isExternal.
 
-Two placeholder values in existing url parameter 
+2. Placeholder values in existing URL parameter.
 
 TypeScript 
 
@@ -26,21 +26,21 @@ TypeScript
 | failureCallback    | A function that is called if the authentication fails, with the reason for the failure     returned from the authentication pop-up.|
 | height             |The preferred height for the pop-up. This value can be ignored if outside the acceptable bounds. |
 | successCallback    | A function that is called if the authentication succeeds, with the result returned from the authentication pop-up. Result will be the authcode.    |
-| url                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders: 1. oauthRedirectMethod: Pass placeholder in {}. It will be replaced by “deeplink” or “web” by Teams platform that informs app server if the call is coming from web or desktop/mobile platform. 2. authId – this placeholder will be replaced by UUID. App server will use it to maintain session. eg - https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
+| URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders: 1. oauthRedirectMethod: Pass placeholder in {}. It will be replaced by “deeplink” or “web” by Teams platform that informs app server if the call is coming from web or desktop/mobile platform. 2. authId – this placeholder will be replaced by UUID. App server will use it to maintain session. eg - https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
 | width              | The preferred width for the pop-up. This value can be ignored if outside the acceptable bounds. |
 
 # Steps to perform external window Auth 
 
-### 1. Pass isExternal and placeholders in url  
+### 1. Pass isExternal and placeholders in URL  
 
 3P App calls the SDK function microsoftTeams.authentication.authenticate with “isExternal” set as true to initiate the external auth-login process. 
 
-The passed url should contain placeholders for {authId}, and {oauthRedirectMethod}.  
+The passed URL should contain placeholders for {authId}, and {oauthRedirectMethod}.  
 
 
 ```javascript
 microsoftTeams.authentication.authenticate({
-    url: “https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}”,,
+    URL: “https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}”,,
     isExternal: true,
    successCallback: function (result) {
    //sucess 
@@ -58,7 +58,7 @@ e.g. https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId=1234567
 
 ### 3. 3P App Server saves the passed authId and oauthRedirectMethod 
 
-The 3P app server will receive this url with two query parameters oauthRedirectMethod and authId. 
+The 3P app server will receive this URL with two query parameters oauthRedirectMethod and authId. 
 
 |
 | --- | --- |
@@ -66,7 +66,7 @@ The 3P app server will receive this url with two query parameters oauthRedirectM
 | authId              | The request-id Teams created for this specific authentication request. It needs to be sent back to Teams via the deeplink. |
 
 > [!TIP]
-> 3P App can marshal authId, oauthRedirectMethod in the OAuth ‘state’ query param when generating the login url for the OAuthProvider. When OAuthProvider redirects back to 3P Server the ‘state’ will contain the passed authId and oauthRedirectMethod, the 3P App can use these values for sending authentication response back to Teams as described in Step-6..
+> 3P App can marshal authId, oauthRedirectMethod in the OAuth ‘state’ query param when generating the login URL for the OAuthProvider. When OAuthProvider redirects back to 3P Server the ‘state’ will contain the passed authId and oauthRedirectMethod, the 3P App can use these values for sending authentication response back to Teams as described in Step-6..
 
 
 ### 4. Response redirect 
