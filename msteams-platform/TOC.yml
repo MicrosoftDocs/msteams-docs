@@ -92,9 +92,7 @@
       - name: About using AAD single sign-on
         href: concepts/authentication/plan-aad-sso.md
     - name: Plan authorization 
-      items:
-      - name: Methods of authorization
-        href: concepts/authentication/authorization-overview.md
+      href: concepts/authentication/authorization-overview.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code

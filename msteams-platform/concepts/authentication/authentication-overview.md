@@ -31,7 +31,7 @@ OIDC is used to authentication user access by using ID tokens from authorized Id
 
 ## Username and password authentication
 
-You can choose to use the simple username and password combination to authenticate your app users.
+You can choose to use username and password combination to authenticate your app users.
 
 | Add description and infographic |
 | Add information about Partner/ISV sign in credentials-based authentication |
