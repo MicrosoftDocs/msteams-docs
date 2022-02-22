@@ -54,18 +54,18 @@ The following image shows the Share-to-Teams option:
 
 1. Open a personal app or tab and select **Share-to-Teams**.
 
-   :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
 2. Add other user or group or channel.
 
-   :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
+    :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
 
 3. Select **Share**.
 
 > [!NOTE]
 > You can add a note in **say something about this**.
 
-   :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="add-note":::
+    :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="add-note":::
 
 4. Select **View** to reach the conversation where the link was shared.
 

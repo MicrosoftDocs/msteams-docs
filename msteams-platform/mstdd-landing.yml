@@ -24,8 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Share-in-Teams
-        url: ~/concepts/build-and-test/share-in-teams.md
+      - text: Share-to-Teams from personal app or tab
+        url: ~/concepts/build-and-test/Share-to-Teams from personal app or tab.md
       - text: Glossary
         url: ~/get-started/glossary.md
       - text: Overview
