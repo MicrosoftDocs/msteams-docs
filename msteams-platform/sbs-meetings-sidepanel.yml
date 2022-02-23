@@ -73,7 +73,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -245,7 +245,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+       ![Select scope](~/assets/selectscope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -302,7 +302,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+        ![Add permission](~/assets/add-permission.png)
 
     1. Select **Microsoft Graph**.
 
@@ -429,7 +429,7 @@ items:
    
     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
+       ![Manage apps](~/assets/meeting-token-generator-manageapps.png)
    
     1. Select **Upload a custom app**. 
 

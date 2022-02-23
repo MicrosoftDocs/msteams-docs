@@ -1,11 +1,9 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
 description: Here are the prerequisites for extending your Teams apps across Microsoft 365
-ms.date: 11/15/2021
-ms.topic: how-to
-ms.custom: m365apps
+ms.date: 02/11/2022 
 ---
-# Set up your dev environment for extending Teams apps across M365
+# Set up your dev environment for extending Teams apps across Microsoft 365
 
 > [!NOTE]
 > Extend teams app across Microsoft 365 is currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
@@ -15,11 +13,11 @@ The development environment for extending Teams apps across Microsoft 365 is sim
 To set up your development environment:
 
 > [!div class="checklist"]
-> * [Get M365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
-> * [Enroll your M365 tenant in *Office 365 Targeted Releases*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
+> * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
+> * [Enroll your Microsoft 365 tenant in *Office 365 Targeted Releases*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configure your account to access preview versions of Outlook and Office](#install-office-apps-in-your-test-environment)
 > * [Switch to the Developer Preview version of Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*Optional*] [Install Teams Toolkit extension for Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## Prepare a Developer Tenant for testing
 
@@ -68,18 +66,20 @@ To install Office 365 Beta Channel applications in your test environment:
    If the build number is **14416** or higher and the channel is *Beta Channel*, you're running Microsoft 365 beta Channel build.
 1. In the top-right corner, turn on the **Coming Soon** toggle.
     
-    :::image type="content" source="images/outlook-coming-soon.png" alt-text="More Apps":::
+    :::image type="content" source="images/outlook-coming-soon.png" alt-text="'Coming Soon' toggle option in Outlook":::
 
 > [!NOTE]
 > You may need to close Outlook and restart your computer for the *Coming Soon* button to appear.
 
 You can verify test tenant support for your tenant account:
 
-* For Teams personal tabs running on office.com, outlook.com, and Outlook for Windows desktop, sign in with your test tenant credentials and check for ellipses (**...**) option on the lower left pane.
+* For Teams personal tabs running on office.com, outlook.com, and Outlook for Windows desktop, sign in with your test tenant credentials and check for ellipses (**...**) option on the left sidebar of Office or Outlook.
 
-    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses" lightbox="images/outlook-desktop-ellipses.png":::
+    :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses ('...') option on the left sidebar of Outlook":::
 
-* For messaging extensions in outlook.com and Outlook for Windows, check for **More Apps** option in the Outlook compose message ribbon.
+* For messaging extensions in outlook.com and Outlook for Windows, check for **More Apps** option at the bottom of the Outlook compose message pane.
+
+    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="'More apps' option in the Outlook compose message pane":::
 
 > [!NOTE]
 > If you're opted in to Beta Channel releases but you don't see these ellipses options, it's likely that preview feature support is in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/).
@@ -92,7 +92,7 @@ Ensure that you switch to the [Public Developer Preview](../resources/dev-previe
 1. From the ellipsis (**...**) menu next to your user profile, select **About** > **Developer preview**. A dialog appears, select **Switch to developer preview**.
 1. After the Teams app restarts, go to the ellipsis (**...**) menu next to your user profile and check if **Developer Preview** is selected.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Public developer preview" lightbox="images/teams-dev-preview.png":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Public developer preview option in Teams":::
 
 ## Install Visual Studio Code and Teams Toolkit Preview extension
 

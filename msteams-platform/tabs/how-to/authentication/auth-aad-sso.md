@@ -3,7 +3,7 @@ title: Single sign-on support for tabs
 description: Describes single sign-on (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication SSO Azure AD single sign-on api
+keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
 ---
 
 # Single sign-on (SSO) support for tabs
@@ -16,15 +16,23 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 > ✔Teams for Android (1416/1.0.0.2020073101 and later)
 >
 > ✔Teams for iOS (_Version_: 2.0.18 and later)  
-> 
-> ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel. 
+>
+> ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
 >
 > For the best experience with Teams, use the latest version of iOS and Android.
 
 > [!NOTE]
 > **Quickstart**  
 >
-> The simplest path to get started with tab SSO is with the Teams toolkit for Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+> The simplest path to get started with tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused.
+* Don't add note for a list of items.
+* Don't add numbers to headings.
+* Don't copy-paste superscript characters as is. Use HTML entities. See https://sitefarm.ucdavis.edu/training/all/using-wysiwyg/special-characters for the values.
+* Same for the check marks added in the content in the note above. The content should not be in a note anyway.
+--->
 
 ## How SSO works at runtime
 
@@ -35,7 +43,7 @@ The following image shows how the SSO process works:
 
 1. In the tab, a JavaScript call is made to `getAuthToken()`. `getAuthToken()` tells Teams to obtain an access token for the tab application.
 2. If the current user is using your tab application for the first time, there's a request prompt to consent if consent is required. Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication.
-3. Teams requests the tab access token from the Azure Active Directory endpoint for the current user.
+3. Teams requests the tab access token from the Azure AD endpoint for the current user.
 4. Azure AD sends the tab access token to the Teams application.
 5. Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call.
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
@@ -59,7 +67,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 > * Currently multiple domains per app are not supported.
 > * The user must set `accessTokenAcceptedVersion` to `2` for a new application.
 
-**To register your app through the Azure AD portal**
+To register your app through the Azure AD portal, follow these steps:
 
 1. Register a new application in the [Azure AD App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
 1. Select **New Registration**. The **Register an application** page appears.
@@ -138,6 +146,9 @@ Use the following code to add new properties to your Teams manifest:
 >* You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
 ### 3. Get an access token from your client-side code
+
+> [!NOTE]
+> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD app registration and in your Teams app.
 
 Use the following authentication API:
 
@@ -239,7 +250,7 @@ A simple way of consenting on behalf of an organization as a tenant admin is to 
 
 Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
-**To ask for additional consent using the Auth API**
+To ask for additional consent using the Auth API, follow these steps:
 
 1. The token retrieved using `getAuthToken()` must be exchanged server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
 2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
@@ -263,4 +274,5 @@ The above-described authentication solution only works for apps and services tha
 * Follow the [step-by-step guide](../../../sbs-tab-with-adaptive-cards.yml) to create tab with adaptive cards.
 
 ## See also
+
 [Teams Bot with Single sign-on](../../../sbs-bots-with-sso.yml)

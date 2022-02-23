@@ -19,7 +19,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Azure Active Directory or other identity provider, and you do not require the user to enter their username again. 
+* You initiate an authentication flow from Microsoft Azure Active Directory (Azure AD) or other identity provider, and you do not require the user to enter their username again. 
 
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -81,7 +81,7 @@ The following code provides an example of context variable:
     "userPrincipalName": "The principal name of the current user, in the current tenant",
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
-    "groupId": "Guid identifying the current O365 Group ID",
+    "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
     "teamType": "The type of team",

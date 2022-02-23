@@ -39,7 +39,7 @@ items:
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
-- title: Create a Bot Registration in Azure portal
+- title: Create a Bot Registration in Microsoft Azure portal
   durationInMinutes: 2
   content: |
     Adaptive Card tabs would require Azure Bot Service to build tabs in teams. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following:

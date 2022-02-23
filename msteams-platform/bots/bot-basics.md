@@ -220,7 +220,7 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when a O365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when a Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
@@ -272,7 +272,7 @@ The list of Teams activity handlers called from the `onInvokeActivity` Teams act
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a O365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
@@ -325,7 +325,7 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a O365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |

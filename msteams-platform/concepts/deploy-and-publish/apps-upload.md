@@ -2,7 +2,7 @@
 title: Upload your custom app
 description: Learn how to sideload your app in Microsoft Teams. Sideloading is common when testing and debugging an app during development.
 ms.topic: how-to
-author: KirtiPereira
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
 ---
@@ -35,7 +35,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Add your app to Teams.
 
 > [!NOTE]
-> By adding the bot to Microsoft Teams you can't get Microsoft Teams Locale because the bot activity is not initiated by the user action such as sending a message, so `turnContext.Activity.GetLocale();` returns null value.
+> `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
 
 ## Troubleshoot upload issues
 

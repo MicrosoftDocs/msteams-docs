@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Create a new Teams app using Teams Toolkit
 
-Once you have Teams Toolkit installed you have two options for creating a new app. You can either start from a basic starter project using the **Create a new Teams app** option, or you can adapt a sample app by using the **View samples** option.
+To create new Teams project using Teams Toolkit, select **Create a new Teams app project** or **Start from a sample**.
 
 ## Create a new Teams app using a new project
 
@@ -23,9 +23,9 @@ You can choose **Create a new Teams app** and then select from a number of capab
 
 ## Create a new Teams app using sample code
 
-You can also create a new project by exploring the **sample gallery** and choosing an existing sample as a starting point for your new app. These samples already have some functionality, for example a todo list with an Azure backend, or integration with the Microsoft Graph Toolkit. Follow these steps to create an app from one of the samples (if no folder is open in VS Code you'll skip step 2):
+You can create new project from **sample gallery**. Select the required sample to create apps. The following steps guide you to create apps from samples:
 
- 1. Open **Teams Toolkit** from Visual Studio Code.
+ 1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
  1. Select **DEVELOPMENT** section in Tree View.
  1. Select **View samples**. The sample gallery appears as shown in the following image:
    
