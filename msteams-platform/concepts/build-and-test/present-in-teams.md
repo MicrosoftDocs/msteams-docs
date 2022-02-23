@@ -7,11 +7,13 @@ keywords: Present-in-Teams
 ---
 # Present-in-Teams
 
-Present-in-Teams allows you to share any documents or third party app as a web view in the meeting stage. All the participants and presenter can interact and edit together. The Present-in-Teams button allows you to install the meeting extension app for the apps to control the meeting stage and to have access to the meeting stage.
+Present-in-Teams allows you to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together. When you select Present-in-Teams button, it launches the deep link to the meeting stage. This allows you to install the meeting extension app for the apps to control the meeting stage and to have access to the meeting stage.
 
 ## Enable Present-in-Teams on 3P app
 
-Use deep links to link your app with Teams. To enable Present-in-Teams in your app, use the following deep link format:
+(content to be added)
+
+When you select Present-in-Teams button, it launches the deep link to the meeting stage. The following are the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
@@ -38,3 +40,5 @@ The following are the details for the deep links:
 
 }
 ```
+
+
