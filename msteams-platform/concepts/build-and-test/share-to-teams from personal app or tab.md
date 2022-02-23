@@ -19,13 +19,15 @@ The following image shows the Share-to-Teams pop-up window:
 ## Enable Share-to-Teams
 
 > [!NOTE]
-> Ensure that you have [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](../../tabs/how-to/using-teams-client-sdk.md) or [Microsoft Teams JavaScript Client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true&branch=pr-en-us-5129) (`@microsoft/teams-js@1.11.0-beta.7` or later) to enable Share-to-Teams from a personal app or tab.
+> Ensure that you have [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](../../tabs/how-to/using-teams-client-sdk.md) or [Microsoft Teams JavaScript Client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true&branch=pr-en-us-5129) (`@microsoft/teams-js@1.11.0-beta.7` or later) to enable Share-to-Teams for your personal app or tab.
 
-1. Create a personal app or tab with Teams client SDK.
+To enable Share-to-Teams:
 
-1. Create a Share-to-Teams button.
+1. Create a personal app or tab with **Teams client SDK**.
 
-1. On Share-to-Teams button click, call `microsoftTeams.sharing.shareWebContent` with a content payload.
+2. Create a **Share-to-Teams** button.
+
+3. On Share-to-Teams button click, call `microsoftTeams.sharing.shareWebContent` with a content payload.
 
 The following example explains how to create a content payload:
 
@@ -46,7 +48,7 @@ The payload contains the following parameters:
 | Property name | Purpose |
 |---|---|
 | `type` | The type must be `URL` |
-| `url` | URL to be shared |
+| `url` | `URL` to be shared |
 | `preview` | Set to `true` to enable URL preview |
 
 The following image shows the Share-to-Teams option:
