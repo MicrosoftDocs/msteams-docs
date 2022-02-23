@@ -8,17 +8,17 @@ keywords: teams authentication using external OAuth provider
 
 # Authentication using external OAuth providers    
 
-To support external or third party OAuth providers such as Google, the `authenticate()` API includes the following changes:
+You can support external or third party OAuth providers such as Google. The `authenticate()` API includes the following changes:
 
-* The new parameter titled `isExternal`
-* Placeholder values in existing URL parameter
+* The new parameter `isExternal`
+* The placeholder values in existing URL parameter
 
-The following.
+
 ```TypeScript
 function authenticate(authenticateParameters?: AuthenticateParameters)
 ``` 
 
-The following table describes parameter and its description
+The following table describes parameters and their description:
 
 | Parameter           | Description   |
 | --- | --- |
