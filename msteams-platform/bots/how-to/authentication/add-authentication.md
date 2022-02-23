@@ -1,11 +1,11 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: How to add OAuth authentication to a bot in Microsoft Teams using Azure AD. Learn how to create, deploy, and integrate authentication-enabled bots.
+description: How to add OAuth authentication to a bot in Microsoft Teams using Azure Active Directory. Learn how to create, deploy, and integrate authentication-enabled bots.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: resource group bot registration azure emulator bot manifest 
+keywords: resource group bot registration Azure emulator bot manifest 
 ---
 
 # Add authentication to your Teams bot
@@ -14,7 +14,7 @@ There are times when you may need to create bots in Microsoft Teams that can acc
 
 This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. Key in all this is the use of **identity providers**, as we will see later.
 
-OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
+OAuth 2.0 is an open standard for authentication and authorization used by Microsoft Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
 See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
 
@@ -30,7 +30,7 @@ In this article you'll learn:
 
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
 - Knowledge of Azure and OAuth 2.0 development.
-- The current versions of Visual Studio and Git.
+- The current versions of Microsoft Visual Studio and Git.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/free/).
 - The following sample:
 
@@ -46,7 +46,7 @@ The resource group and the service plan aren't strictly necessary, but they allo
 
 You use a resource group to create individual resources for the Bot Framework. For performance, ensure that these resources are located in the same Azure region.
 
-1. In your browser, sign into the [**Azure portal**][azure-portal].
+1. In your browser, sign into the [**Microsoft Azure portal**][azure-portal].
 1. In the left navigation panel, select **Resource groups**.
 1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You'll be prompted to provide the following:
     1. **Subscription**. Use your existing subscription.
@@ -164,7 +164,7 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
 1. In the right panel, select the **New registration** tab, in the upper left.
 1. You'll be asked to provide the following information:
    1. **Name**. Enter the name for the application. An example could be  *BotTeamsIdentity*. Remember that the name must be unique.
-   1. Select the **Supported account types** for your application. Select *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.
+   1. Select the **Supported account types** for your application. Select *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.
    1. For the **Redirect URI**:<br/>
        &#x2713;Select **Web**. <br/>
        &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
@@ -185,9 +185,9 @@ In this procedure you'll use an Azure AD provider; other Azure AD supported iden
 
 ### Configure the identity provider connection and register it with the bot
 
-Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
+Note-there are two options for Service Providers here-Microsoft Azure Active Directory (Azure AD) V1 and Microsoft Azure Active Directory (Azure AD) V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
 
-#### Azure AD V1
+#### Microsoft Azure Active Directory (Azure AD) V1
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot registration link.
@@ -198,16 +198,16 @@ The following image displays the corresponding selection in the resource page:
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv1*.
-    1. **Service Provider**. Select **Azure Active Directory**. Once you select this, the Azure AD-specific fields will be displayed.
+    1. **Service Provider**. Select **Microsoft Azure Active Directory (Azure AD)**. Once you select this, the Azure AD-specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Grant Type**. Enter `authorization_code`.
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the Azure AD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Azure Active Directory (Azure AD) - Multi tenant)* enter the **tenant ID** you recorded earlier for the Microsoft Azure Active Directory (Azure AD) app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Azure Active Directory (Azure AD) app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This is not used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
@@ -216,7 +216,7 @@ The following image displays the corresponding selection in the resource page:
 
 1. Select **Save**.
 
-#### Azure AD V2
+#### Microsoft Azure Active Directory (Azure AD) V2
 
 1. In the [**Azure portal**][azure-portal], select your Azure Bot from the dashboard.
 1. In the resource page, select **Configuration** under **Settings**. 
@@ -227,15 +227,15 @@ The following image displays the corresponding selection in the resource page:
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv2*.
-    1. **Service Provider**. Select **Azure Active Directory v2**. Once you select this, the Azure AD-specific fields will be displayed.
+    1. **Service Provider**. Select **Microsoft Azure Active Directory v2**. Once you select this, the Microsoft Azure Active Directory (Azure AD)-specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the Azure AD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Azure Active directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the Microsoft Azure Active Directory (Azure AD) app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Azure AD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Azure Active Directory (Azure AD) - Multi tenant and personal Microsoft accounts e.g. Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Azure Active Directory (Azure AD) app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     1. For **Scopes**, enter a space-delimited list of graph permissions this application requires e.g.: User.Read User.ReadBasic.All Mail.Read 
 

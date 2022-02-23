@@ -28,7 +28,7 @@ The subscription is free for 90 days and continues to renew as long as you are u
 3. Select **Set up E5 subscription**.
 4. Set up your administrator account. After you finish, you should see the following screen:
 
-:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows microsoft m365 program":::
+:::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
 
 ## Accounts for Microsoft 365 developer subscription
 
@@ -40,7 +40,7 @@ Provides access to all consumer oriented Microsoft products and cloud services, 
 
 - **Work account for business**
 
-Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization.
+  Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Microsoft Azure Active Directory (Azure AD) to represent your organization.
 
 - **Visual Studio ID**
 

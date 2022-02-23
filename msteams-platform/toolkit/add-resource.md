@@ -14,17 +14,17 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
 ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+[Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> Ensure you have Teams app project in VS Code.
+> Ensure you have Teams app project in Visual Studio Code.
 
 ## Add cloud resources using Teams Toolkit
 
 > [!IMPORTANT]
 > You need to provision each environment after you add a resource.
 
-1. Open **Visual Studio Code**.
+1. Open **Microsoft Visual Studio Code**.
 1. Select **Teams Toolkit** from left pane.
 1. In the Teams Toolkit side bar panel, select **Add cloud resources**:
 
@@ -76,13 +76,12 @@ After adding resouces, the additional changes in your project are as follows:
 
 |Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
-|Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
+|Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.visual studio code` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
 |Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it is the API specification file .|
 
-## Limitations
+## Limitation
 
-- You can't add cloud resource for more than one instance.
-- You can't add resources if your project doesn't contain tab app.
+You can't add resources if you've created SPFx based tab project.
 
 ## See also
 

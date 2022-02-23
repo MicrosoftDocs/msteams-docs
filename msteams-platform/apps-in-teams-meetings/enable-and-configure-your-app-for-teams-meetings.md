@@ -114,13 +114,56 @@ Messaging extension works as expected when a user is in an in-meeting view. The 
 
 #### In-meeting dialog box
 
-The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](API-references.md#notificationsignal-api) API to trigger a bubble notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. Use the [SendNotificationSignal API](API-references.md#send-notification-signal-api) to trigger a bubble notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
 In-meeting dialog must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
 
 > [!NOTE]
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true).
-> * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
+> * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+
+#### Shared meeting stage
+
+Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. You can share your apps to the collaborative meeting stage in the following ways:
+
+* [Share entire app to stage](#share-entire-app-to-stage) using the share to stage button in Teams client.
+* [Share specific parts of the app to stage](#share-specific-parts-of-the-app-to-stage) using APIs in the Teams client SDK.
+
+##### Share entire app to stage
+
+Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
+
+```json
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
+
+For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+
+##### Share specific parts of the app to stage
+
+Participants can share specific parts of the app to the collaborative meeting stage by using the share to stage APIs. The APIs are available within the Teams client SDK and are invoked from the app side panel.
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
+
+If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure AD ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### After a meeting
 
