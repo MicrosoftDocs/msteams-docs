@@ -26,7 +26,7 @@ The following table describes parameters and their description:
 | failureCallback    | A function is called if the authentication fails, with the reason for the failure returned from the authentication pop-up|
 | height             |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds|
 | successCallback    | A function is called if the authentication succeeds, with the result returned from the authentication pop-up. Authcode is the result|
-| URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders:       - oauthRedirectMethod: pass placeholder in `{}`, which replaces “deeplink” or “web” by Microsoft Teams platform informs app server if the call is from web, or desktop, or mobile platform. </br>  -authId:  UUID replaces the placeholder. App server uses it to maintain session &mdash;for example, https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
+| URL                | The URL of 3P app server for the authentication pop-up, with two parameter placeholders: </br>       * oauthRedirectMethod: pass placeholder in `{}`, which replaces “deeplink” or “web” by Microsoft Teams platform informs app server if the call is from web, or desktop, or mobile platform. </br>  * authId:  UUID replaces the placeholder. App server uses it to maintain session &mdash;for example, https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId} |
 | width              | The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds |
 
 ## Steps to perform external window auth 
