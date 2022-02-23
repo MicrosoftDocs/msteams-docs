@@ -1,11 +1,11 @@
 ---
-title: Share-to-Teams from web apps 
+title: Create Share-to-Teams button
 description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share Teams Share-to-Teams
 ---
-# Share-to-Teams from web apps
+# Create Share-to-Teams button
 
 Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to create and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
 
