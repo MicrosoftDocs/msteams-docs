@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Adaptive Cards overflow menu
+        url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
         url: ~/get-started/glossary.md
       - text: Overview
