@@ -515,7 +515,7 @@
       href: resources/moodle-overview.md
     - name: Install Moodle LMS
       href: resources/moodleInstructions.md
-- name: Share-to-Teams
+  - name: Share-to-Teams
     items:
     - name: Overview
       href: concepts/build-and-test/share-to-teams-overview.md
