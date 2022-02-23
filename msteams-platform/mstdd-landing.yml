@@ -42,10 +42,8 @@ landingContent:
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: People Picker in Adaptive Cards
         url: ~/task-modules-and-cards/cards/people-picker.md
-      - text: Teams Toolkit for Visual Studio Code (Preview)
-        url: ~/toolkit/teams-toolkit-fundamentals.md
       
-
+      
       
 - title: All time favorites
   linkLists:
