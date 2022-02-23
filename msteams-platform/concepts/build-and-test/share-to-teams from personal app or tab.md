@@ -78,5 +78,5 @@ The following image shows the Share-to-Teams option:
 
 ## See also
 
-[Share-to-Teams from web apps](~/concepts/build-and-test/share-to-teams.md)
-[Create a personal tab](../../tabs/how-to/create-personal-tab.md)
+* [Share-to-Teams from web apps](~/concepts/build-and-test/share-to-teams.md)
+* [Create a personal tab](../../tabs/how-to/create-personal-tab.md)
