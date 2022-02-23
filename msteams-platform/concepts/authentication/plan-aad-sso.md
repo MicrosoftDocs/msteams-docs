@@ -46,7 +46,3 @@ The user never needs to sign in again.
 1. Access for all applications within the systems
 1. Security of customer data
 1. Personalized user experience
-
-## Teams silent authentication
-
-\ Add info-graphic showing authentication flow and description \
