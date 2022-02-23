@@ -12,9 +12,10 @@ An app may exist in a public or organizational domain or as a personal app. In a
 For example, if your app requires you to provide guest access for external users, access restrictions and permissions need to be placed to protect confidential information.
 
 Therefore, ask questions, such as:
-•	Will the users access different views of data based on their roles?
-•	Will the interactions also be based on the user roles?
-•	Will external users access the app?
+
+- Will the users access different views of data based on their roles?
+- Will the interactions also be based on the user roles?
+- Will external users access the app?
 
 This module covers:
 
