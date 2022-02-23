@@ -349,6 +349,8 @@
     href: concepts/authentication/authentication.md
   - name: Configure identity providers
     href: concepts/authentication/configure-identity-provider.md
+  - name: Authentication using external OAuth providers  
+    href: concepts/authentication/tabs/how-to/authentication/auth-OAuth-provider.md
   - name: Tabs
     items:
     - name: Authentication flow in tabs
