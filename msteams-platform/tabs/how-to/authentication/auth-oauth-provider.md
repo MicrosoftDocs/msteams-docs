@@ -65,7 +65,7 @@ Teams clients opens the URL in an external browser after replacing the placehold
 ```
 
 
-### 3. 3P app server saves the passed authId and oauthRedirectMethod 
+### 3. 3P app server saves the passed `authId` and `oauthRedirectMethod` 
 
 The 3P app server receives the URL with two query parameters `oauthRedirectMethod` and `authId`. 
 
