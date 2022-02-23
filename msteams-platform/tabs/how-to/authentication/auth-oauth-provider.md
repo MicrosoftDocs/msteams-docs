@@ -13,7 +13,7 @@ To support external or third party OAuth providers such as Google, the `authenti
 * The new parameter titled `isExternal`
 * Placeholder values in existing URL parameter
 
-
+The following.
 ```TypeScript
 function authenticate(authenticateParameters?: AuthenticateParameters)
 ``` 
