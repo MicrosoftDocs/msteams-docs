@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Microsoft Store ranking parameters
+        url: ~/concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
       - text: Glossary
         url: ~/get-started/glossary.md
       - text: Overview
