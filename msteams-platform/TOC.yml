@@ -482,9 +482,7 @@
     - name: Test preview for monetized apps
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
   - name: Microsoft Teams store ranking parameters
-    items:
-    - name: Overview
-      href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+    href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
 - name: App manifest
   items:
     - name: App manifest schema
