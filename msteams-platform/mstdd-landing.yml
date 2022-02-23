@@ -44,8 +44,6 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Adaptive Cards form completion feedback
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-      - text: People Picker in Adaptive Cards
-        url: ~/task-modules-and-cards/cards/people-picker.md
 
       
 - title: All time favorites
