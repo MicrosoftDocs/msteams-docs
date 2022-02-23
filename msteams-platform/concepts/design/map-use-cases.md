@@ -8,9 +8,9 @@ ms.author: anclear
 ---
 # Map your use cases to Teams app features
 
-A well-defined use case helps you to chart out the framework of features you want in the Teams app. After you've determined the user requirements, define the scope and Teams capability best suited for your app.
+A well-defined use case helps you to outline the framework of features you want in the Teams app. After you've determined the user requirements, define the scope and Teams capability best suited for your app.
 
-You can map your use case based on:
+Map your use case based on:
 
 - Sharing and collaborating on items in an external system.
 - Starting workflows and sending notifications to users.
@@ -20,7 +20,7 @@ You can map your use case based on:
 
 The next step is to match use cases with app capabilities.
 
-Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
+Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but helps you evaluate some of the possibilities available.
 </br>
 </br>
 <details>
