@@ -147,6 +147,9 @@ Use the following code to add new properties to your Teams manifest:
 
 ### 3. Get an access token from your client-side code
 
+> [!NOTE]
+> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD app registration and in your Teams app.
+
 Use the following authentication API:
 
 ```javascript
