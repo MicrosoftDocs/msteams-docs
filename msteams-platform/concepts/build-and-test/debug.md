@@ -38,9 +38,9 @@ Your bot can run within the Bot Emulator. This enables you to test some of the c
 
 Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software.
 
-Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. 
+Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 
-**To set up ngrok in preparation for running your Microsoft Teams app locally**
+To set up ngrok in preparation to execute your Microsoft Teams app locally, follow these steps:
 
 1. Go to the directory where you have ngrok.exe installed in a terminal application. You may want to add it as a path variable to avoid this step.
 2. Run, for example, `ngrok http 3978 --host-header=localhost:3978`, or replace the port number as needed.
@@ -72,7 +72,7 @@ To load and run your experience within Microsoft Teams, you need to create a pac
 
 ## Next step
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Add test data to your environment](~/concepts/build-and-test/test-data.md)
 
 ## See also
