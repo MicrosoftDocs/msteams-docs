@@ -31,7 +31,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
 
       > [!NOTE]
@@ -86,6 +86,10 @@ items:
 
         ![New resource group location](~/assets/images/meetings-side-panel/newresource.png)
 
+    1. Select **MultiTenant** under **Bot Type**.
+
+        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png) 
+
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
@@ -117,10 +121,6 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **MultiTenant** under **Bot Type**.
-
-        ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png)    
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -300,15 +300,12 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is selected.
-
-         ![User](~/assets/images/meetings-side-panel/userpermission.png)
-
     1. Add the following permissions:</br>
          * **email**
          * **offline_access**
          * **OpenId**
          * **profile**
+         * **User.Read**
 
     1. Select **Add permissions**.
 
@@ -342,7 +339,7 @@ items:
 
         ![App settings location](~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio 2022** and update the following information:  
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -356,7 +353,7 @@ items:
 
         ![Manifest file location](~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio 2022** and make the following changes:
 
          * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
@@ -366,11 +363,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2019 or Command line**
+    **To build and run the service using Visual Studio 2022 or Command line**
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Visual Studio 2022](#tab/vs2022)
 
-       1. Launch **Visual Studio 2019**.
+       1. Launch **Visual Studio 2022**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
