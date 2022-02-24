@@ -36,7 +36,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -107,11 +107,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2019**
+    **To build and run the service using Visual Studio 2022**
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Visual Studio 2022](#tab/vs2022)
 
-       1. Launch **Visual Studio 2019**.
+       1. Launch **Visual Studio 2022**.
 
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
