@@ -221,7 +221,7 @@ The following section is an example of a `composeExtensions` object defining two
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action messaging extension.
+Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action based messaging extension.
 
 ## Next step
 
