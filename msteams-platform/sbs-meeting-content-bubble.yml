@@ -53,7 +53,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository1.png)
+       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
 
     1. Select **Clone**. 
 
@@ -199,7 +199,7 @@ items:
   content: |
     **To register your app through the Azure AD portal**  
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
 
@@ -226,7 +226,7 @@ items:
 
     1. Select **Add a scope**. 
 
-        ![Add Scope](~/assets/images/meeting-content-bubble/selectscope.png)
+        ![Add Scope](~/assets/selectscope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   

@@ -39,12 +39,12 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within this tab. This must be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
-* {loginHint}: A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user in their home tenant.
+* {loginHint}: A value suitable as a login hint for Azure AD. This is usually the login name of the current user in their home tenant.
 * {userPrincipalName}: The User Principal Name of the current user in the current tenant.
-* {userObjectId}: The Microsoft Azure Active Directory (Azure AD) object ID of the current user in the current tenant.
+* {userObjectId}: The Azure AD object ID of the current user in the current tenant.
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 group in which the tab resides.
-* {tid}: The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user.
+* {tid}: The Azure AD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId(en-us).
 
 > [!NOTE]
@@ -77,10 +77,10 @@ The following code provides an example of context variable:
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Microsoft Azure Active Directory (Azure AD) object id of the current user, in the current tenant",
-    "tid": "The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
