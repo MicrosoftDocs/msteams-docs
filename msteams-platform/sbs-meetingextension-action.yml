@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Microsoft Teams action messaging extension
+title: Action based messaging extension
 metadata:
-  title: Microsoft Teams action messaging extension
+  title: Action based messaging extension
   description: In this tutorial, you'll learn to set up action messaging extension for Teams.
   audience: Developer
   level: Beginner
@@ -14,9 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extensions allow the users to interact with your web service through text and interactive cards in the Microsoft Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol through a Teams channel registered for your bot.
+    Messaging extensions allow users to interact with web services in the Microsoft Teams client. They help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
-    **Key features of Teams action messaging extension**
+    **Key features of messaging extension action commands**
 
     * Presents the user with a modal popup to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
@@ -33,7 +33,7 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -52,10 +52,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Microsoft Azure Active Directory (Azure AD) portal
+- title: Create and register your bot in Microsoft Azure Active Directory portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure AD, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -336,7 +336,7 @@ items:
 
         ![App settings location](~/assets/images/sbs-messagingextension-action/appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2022** and update the following information:  
+    1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppType"` to "MultiTenant".
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -350,7 +350,7 @@ items:
 
         ![Manifest file location](~/assets/images/sbs-messagingextension-action/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2022** and make the following changes:
+    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -360,11 +360,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2022 or Command line**
+    **To build and run the service using latest version of Visual Studio or Command line**
 
-    # [Visual Studio 2022](#tab/vs2022)
+    # [Latest version of Visual Studio](#tab/latest version of Visual Studio)
 
-       1. Launch **Visual Studio 2022**.
+       1. Launch latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
@@ -394,10 +394,10 @@ items:
    
     ![Dotnet](~/assets/images/sbs-messagingextension-action/dotnetruncmd.png)
       
-- title: Add action messaging extension app to Teams
+- title: Add Action Messaging Extension app to Teams
   durationInMinutes: 1
   content: |
-    **To add action messaging extension App**
+    **To add Action Messaging Extension  App**
 
     1. In your cloned repository, navigate to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
 
@@ -426,7 +426,7 @@ items:
 
        ![Add the app](~/assets/images/sbs-messagingextension-action/add.png)
 
-    1. Action messaging extension app is added to the Teams.
+    1. Action Messaging Extension app is added to the Teams.
     
                     
 - title: Interact with the app in Teams
