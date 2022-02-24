@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|02/24/2022| Build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Teams action based messaging extension](sbs-meetingextension-action.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
 | 02/18/2022 | Updated the Overview module for mapping Teams app to organizational goals, user story, and exploring Teams app features | [Overview > Teams app that fits](overview.md) |
@@ -29,7 +30,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |02/03/2022| Introduced app manifest version 1.12 | • App manifest > [App manifest schema](resources/schema/manifest-schema.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| Test preview for monetized apps (developer preview)| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| In-app purchase flow for monetization of apps (developer preview) | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
-|
+
 
 ## GA features
 
@@ -42,6 +43,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|02/24/2022| Build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Teams action based messaging extension](sbs-meetingextension-action.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
 | 02/18/2022 | Updated the Overview module for mapping Teams app to organizational goals, user story, and exploring Teams app features | [Overview > Teams app that fits](overview.md) |
