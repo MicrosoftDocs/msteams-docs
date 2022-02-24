@@ -60,11 +60,11 @@ items:
   content: |
     To create outgoing webhooks, perform the following steps:
 
-    1. Select the appropriate team, and then select Manage team from the (•••) dropdown menu.
+    1. Select the required team, and then select **Manage team** from the (•••) dropdown menu.
 
        ![Manage](~/assets/images/sbs-outgoing-webhooks/manage-team.png)
 
-    1. Choose the Apps tab from the navigation bar.
+    1. Choose the **Apps** tab from the navigation bar.
 
        ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
 
@@ -80,36 +80,35 @@ items:
 
     1. Enter the following details:
      
-        * Name - The webhook title in @mention tab.
+        * **Name** - The webhook title in @mention tab.
 
-        * Callback URL - The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams. To use the api/Sample or api/authenticatedSample, do the following:
+        * **Callback URL** - The URL generated from ngrok that accepts JSON payloads and receives POST requests from Teams. To use the api/Sample or api/authenticatedSample, do the following:
 
             * For api/sample, copy-and-paste ngrok URL and append it with /api/sample.
 
             * For authenticated sample, copy-and-paste ngrok URL and append it with /authenticatedSample?id=contoso.
 
-        * Description - A detailed string that will appear in the profile card and the team-level App dashboard.
+        * **Description** - A detailed string that will appear in the profile card and the team-level App dashboard.
 
-        * Profile Picture (optional) an app icon for your webhook.
+        * **Profile picture (optional)** an app icon for your webhook.
 
     1. Select **Create**. The outgoing webhook is added to the current team's channel.
 
         ![Create outgoing webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
 
-    1. A `Hash-based Message Authentication Code (HMAC)` dialogue box appears. You can use the security token in **AuthProvider.cs** file to authenticate calls between Teams and any designated outside service. 
-                    
-         ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)
+    1. A `Hash-based Message Authentication Code (HMAC)` dialogue box appears. You can use the security token in **AuthProvider.cs** file to authenticate calls between Teams and any designated outside services. 
 
         > [!NOTE]
-        >  The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
+        > The outgoing webhook is available to the team's users, only if the URL is valid and the server, and client authentication tokens are equal. For example, an HMAC handshake.
+                    
+         ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)   
 
-    
 - title: Build and run the service
   durationInMinutes: 1
   content: |
     **To build and run the service using latest version of Visual Studio**
 
-    # [Latest version of Visual Studio](#tab/latest version of Visual Studio)
+    # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
 
@@ -131,7 +130,7 @@ items:
 
            ![Trust Certificate](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
 
-          A webpage opens as shown in the below image.
+          A webpage opens with a message.
 
            ![App ready](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png) 
 
@@ -150,7 +149,7 @@ items:
 
        ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
 
-    1. Select send.
+    1. Select **send**.
 
        > [!NOTE]
        >  You can send Adaptive Card, Hero card, and text messages as attachment with outgoing webhook.
