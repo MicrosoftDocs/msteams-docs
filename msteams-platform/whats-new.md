@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|02/24/2022|  Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [step-by-step guide to create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 |02/24/2022| Build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Teams action based messaging extension](sbs-meetingextension-action.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
@@ -43,6 +44,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|02/24/2022|  Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [step-by-step guide to create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 |02/24/2022| Build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Teams action based messaging extension](sbs-meetingextension-action.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
