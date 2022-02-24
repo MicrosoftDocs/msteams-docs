@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Action based messaging extension
+title: Build action based messaging extension
 metadata:
-  title: Action based messaging extension
+  title: Build action based messaging extension
   description: In this tutorial, you'll learn to set up action messaging extension for Teams.
   audience: Developer
   level: Beginner
@@ -16,7 +16,7 @@ items:
   content: |
     Messaging extensions allow users to interact with web services in the Microsoft Teams client. They help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
-    **Key features of messaging extension action commands**
+    **Key features of action based messaging extension**
 
     * Presents the user with a modal popup to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
@@ -397,7 +397,7 @@ items:
 - title: Add Action Messaging Extension app to Teams
   durationInMinutes: 1
   content: |
-    **To add Action Messaging Extension  App**
+    **To add Action Messaging Extension app**
 
     1. In your cloned repository, navigate to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
 
@@ -426,7 +426,7 @@ items:
 
        ![Add the app](~/assets/images/sbs-messagingextension-action/add.png)
 
-    1. Action Messaging Extension app is added to the Teams.
+    1. **Action Messaging Extension** app is added to the Teams.
     
                     
 - title: Interact with the app in Teams
@@ -448,7 +448,7 @@ items:
 
     1. Select (...) from the overflow menu.
        
-    1. Point to **More actions**.
+    1. Navigate to **More actions**.
 
     1. Select **Share Message**.
 
@@ -457,16 +457,6 @@ items:
     1. Select the checkbox if you need to include image and submit.
 
        ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput.png)
-
-    1. The app responds as shown below
-
-       ![output1](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
-       
-       > [!NOTE]
-       > @mentioning message extensions is no longer supported in the compose box.
-
-       > [!TIP]
-       > Select **Fetch Roster** command from the compose box command list. If you have not installed it, you will be prompted with Just In Time installation option.
 
 - title: Complete challenge
   durationInMinutes: 1
