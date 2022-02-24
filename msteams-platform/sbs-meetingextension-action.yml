@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to set up action messaging extension for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 12/06/2021
+  ms.date: 24/02/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/action-commands/define-action-command.md
   nextTutorialTitle: Read more to enable messaging extension action commands
@@ -33,7 +33,7 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -89,6 +89,10 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
+    1. Select **MultiTenant** under **Bot Type**.
+
+        ![Type](~/assets/images/sbs-messagingextension-action/bot-type.png)
+
     1. Select **Review + create**.
 
         ![Create Microsoft App ID](~/assets/images/sbs-messagingextension-action/review-create.png)
@@ -113,10 +117,6 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **MultiTenant** under **Bot Type**.
-
-        ![Type](~/assets/images/sbs-messagingextension-action/bot-type.png)
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -296,15 +296,12 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is selected.
-
-         ![User](~/assets/images/sbs-messagingextension-action/userpermission.png)
-
     1. Add the following permissions:</br>
          * **email**
          * **offline_access**
          * **OpenId**
          * **profile**
+         * **User.Read**
 
     1. Select **Add permissions**.
 
@@ -339,7 +336,7 @@ items:
 
         ![App settings location](~/assets/images/sbs-messagingextension-action/appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio 2022** and update the following information:  
 
          * Set `"MicrosoftAppType"` to "MultiTenant".
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -353,7 +350,7 @@ items:
 
         ![Manifest file location](~/assets/images/sbs-messagingextension-action/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio 2022** and make the following changes:
 
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -363,11 +360,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2019 or Command line**
+    **To build and run the service using Visual Studio 2022 or Command line**
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Visual Studio 2022](#tab/vs2022)
 
-       1. Launch **Visual Studio 2019**.
+       1. Launch **Visual Studio 2022**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
