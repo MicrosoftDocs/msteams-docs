@@ -34,7 +34,7 @@ The following table describes parameters and their description:
 <p>
     <img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="Authenticate" width="75%"/>
 </p>
-  
+    ![Authenticate tabs](~/assets/images/tabs/tabs-authenticate-OAuthp.png)
 
 ### 1. Pass `isExternal` and placeholders in URL  
 
