@@ -12,9 +12,10 @@ With your app listed on the Microsoft Teams store, start thinking about how you'
 
 ## Analyze app usage
 
-You can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include  Daily, Weekly and Monthly  active users, retention and intensity metrics to track user churn and frequency of usage.
+You can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity chart to track user churn and frequency of usage.
 
-Allow up to a week for usage data to show up for newly published apps.
+> [!NOTE]
+> Data for newly published apps takes about a week to appear in the report.
 
 ## Publish updates to your app
 
