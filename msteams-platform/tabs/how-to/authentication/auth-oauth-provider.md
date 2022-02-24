@@ -8,7 +8,7 @@ keywords: teams authentication using external OAuth provider
 
 # Authentication using external OAuth providers
 
-You can support external or third party OAuth providers such as Google, GitHub, etc. The `authenticate()` API includes the following changes:
+You can support external or third party OAuth providers such as Google, GitHub, Facebook. The `authenticate()` API includes the following changes:
 
 * The new parameter `isExternal`
 * The placeholder values in existing URL parameter
@@ -31,6 +31,11 @@ The following table describes parameters and their description:
 
 ## Steps to perform external window auth 
 
+<p>
+    <img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="Authenticate" width="75%"/>
+</p>
+  
+
 ### 1. Pass `isExternal` and placeholders in URL  
 
 3P app calls the SDK function `microsoftTeams.authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process. 
@@ -49,10 +54,6 @@ microsoftTeams.authentication.authenticate({
     }
 });
 ```
-
-</br>
-<img src="~/assets/images/tabs/tabs-authenticate-OAuth.png" alt="authenticate" width="75%"/>
-   
 
 ### 2. Microsoft Teams opens the URL in an external browser 
 
@@ -90,7 +91,7 @@ The following table includes the query parameters:
 https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loca.lt/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…&response_type=code&access_type=offline&scope= … 
 ```
  
-The `redirect_uri` is a dedicated route on the 3P app server. `redirect_uri` has to be registered in the OAuth provider’s (eg. Google) dev console and has to be static (parameters need to be sent through the state object). 
+The `redirect_uri` is a dedicated route on the 3P app server. `redirect_uri` has to be registered in the OAuth provider’s dev console and has to be static (parameters need to be sent through the state object). 
 
 ### 5. User sign in
 
