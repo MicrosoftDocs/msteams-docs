@@ -365,7 +365,7 @@ items:
   content: |
     **To build and run the service using latest version of Visual Studio or Command line**
 
-    # [Latest version of Visual Studio](#tab/latest version of Visual Studio)
+    # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
