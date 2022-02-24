@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Search based messaging extension
+title: Build search based messaging extension
 metadata:
-  title: Search based messaging extension
+  title: Build search based messaging extension
   description: In this tutorial, you'll learn to build a search-based messaging extension.
   audience: Developer
   level: Beginner
@@ -16,7 +16,7 @@ items:
   content: |
     Messaging extensions allow users to interact with web services in the Microsoft Teams client. They help to search in an external system from the compose message area, the command box, or directly from a message. 
     
-    **Key features of messaging extension search commands**
+    **Key features of search based messaging extension**
 
     * Allow users to search external systems.
     * Insert search results into a message in the form of a card.
