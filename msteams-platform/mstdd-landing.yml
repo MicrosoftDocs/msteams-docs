@@ -145,7 +145,7 @@ landingContent:
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
-        - text: Search based messaging extension
+        - text: Build search based messaging extension
           url: ~/sbs-messagingextension-searchcommand.yml
 
 - title: Teams app scenarios
