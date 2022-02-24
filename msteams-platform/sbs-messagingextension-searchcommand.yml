@@ -30,6 +30,7 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
@@ -37,7 +38,6 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -52,7 +52,7 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Microsoft Azure Active Directory portal
+- title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
@@ -202,8 +202,6 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    **To register your app through the Azure AD portal**  
-
     1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
@@ -410,8 +408,6 @@ items:
 - title: Add Search Messaging Extension app
   durationInMinutes: 1
   content: |
-    **To add Search Messaging Extension app to Teams**
-
     1. In your cloned repository, navigate to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
@@ -450,11 +446,9 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    Let's interact with the app in Teams!
-
     1. Select any option from the pop-up.
 
-    1. Enter some text and select Enter.
+    1. Enter text and select **send**.
 
        ![Option](~/assets/images/Teams-Messaging-Extensions-Search/option1.png)
 
