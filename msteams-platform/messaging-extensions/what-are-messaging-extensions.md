@@ -237,3 +237,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 * [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
+* [Universal Actions for search based messaging extensions](../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#universal-actions-for-search-based-messaging-extensions)
