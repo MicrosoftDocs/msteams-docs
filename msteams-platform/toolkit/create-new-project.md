@@ -14,8 +14,6 @@ To create new Teams project using Teams Toolkit, select **Create a new Teams app
 
 ## Create a new Teams app using a new project
 
-Select Create a new Teams app and choose from the capabilities available - tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). Select at least one option to start creating and add more capabilities as per the requirement of the Teams app.
-
 Select **Create a new Teams app** and choose from the capabilities available - tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). Select at least one option to start creating, and then add more capabilities as needed, according to the requirements of the Teams app. The following guides help you to scaffold a new Teams starter app using each of them:
 
 - [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
