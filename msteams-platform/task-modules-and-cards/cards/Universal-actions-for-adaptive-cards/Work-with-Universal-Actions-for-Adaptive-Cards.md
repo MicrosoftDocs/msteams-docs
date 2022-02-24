@@ -143,6 +143,7 @@ The following is an example of a json schema with `team` and `groupchat`values:
     ]
 }
 ```
+
 ### Automatic refresh for Adaptive Cards in search based MEs
 
 Enable automatic refresh for Adaptive Cards in search based messaging extensions to ensure users always see up to date data. To enable, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property. For more information, see [Work with Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh)
@@ -180,9 +181,10 @@ The following is an example of `userIds` array in the `refresh` property:
         ]
     }
 ```
+
 > [!NOTE]
 > Automatic refresh is enabled for all users in the group chat or channel with LESS than or equal to 60 users. For conversations (group chat or channel) with more than 60 users, users can use the refresh button in the message options menu to get the latest result.
- 
+
 ```json
     {
         "type": "AdaptiveCard",
