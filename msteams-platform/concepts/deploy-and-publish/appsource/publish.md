@@ -75,7 +75,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **Rich app usage insights in Partner Center**
 
-  After your app is approved and published, you can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity chart to track user churn and frequency of usage.
+  After your app is approved and published, you can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity chart to track churn and frequency of usage.
 
   > [!NOTE]
   > Data for newly published apps takes about a week to appear in the report.
