@@ -16,12 +16,12 @@ A proactive message is any message sent by a bot that isn't in response to a req
 * Notifications
 * Scheduled messages
 
-For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location. 
+For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if required, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
 
 Sending a proactive message is different from sending a regular message. There's no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
-**To send a proactive message**
+To send a proactive message, follow these steps:
 
 1. [Get the user ID, team ID, or channel ID](#get-the-user-id-team-id-or-channel-id), if required.
 1. [Create the conversation](#create-the-conversation), if required.
@@ -99,9 +99,6 @@ When using proactive messaging to send scheduled messages to users, verify that 
 * What can user do next: Users can take the required action based on the message content.
 
 ## Proactively install your app using Graph
-
-> [!Note]
-> Proactively installing apps using Graph is currently in beta.
 
 Proactively message users that have previously not installed or interacted with your app. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. In this case, you can use the Graph API to proactively install your app for your users. Cache the necessary values from the `conversationUpdate` event your app receives upon installation.
 
@@ -254,9 +251,6 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 ```
 
 ---
-
-> [!NOTE]
-> Currently bots cannot create a group chat through bot APIs or Graph. `createConversation` is available only for 1:1 chats.
 
 ## Code sample
 
