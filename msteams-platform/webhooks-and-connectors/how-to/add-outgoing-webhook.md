@@ -231,7 +231,7 @@ var responseMsg = JSON.stringify({
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create outgoing webhooks in Teams.
+Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgoing Webhooks in Teams.
 
 ## See also
 
