@@ -144,7 +144,7 @@ landingContent:
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
-        - text: Create outgoing webhooks
+        - text: Create Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
 
 - title: Teams app scenarios
