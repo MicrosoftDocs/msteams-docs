@@ -94,13 +94,13 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
+    1. Select **MultiTenant** under Bot Type.
+
+        ![Microsoft App ID](~/assets/images/Teams-task-module/config.png)
+
     1. Select **Review + create**.
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
-
-    1. Select **MultiTenant** under App Type.
-
-        ![Microsoft App ID](~/assets/images/Teams-task-module/config.png)
 
     1. If the validation passes, select **Create**. 
 
