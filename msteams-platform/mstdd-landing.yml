@@ -59,6 +59,7 @@ landingContent:
       - text: Explore low-code apps for Teams
         url:  ~/samples/teams-low-code-solutions.md 
         
+        
 - title: Get started
   linkLists:
     - linkListType: get-started
@@ -144,6 +145,8 @@ landingContent:
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
+        - text: Build search based messaging extension
+          url: ~/sbs-messagingextension-searchcommand.yml
 
 - title: Teams app scenarios
   linkLists:
