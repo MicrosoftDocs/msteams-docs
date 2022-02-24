@@ -127,3 +127,4 @@ When you feel your app is production ready, you can begin the process of getting
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distributing tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
+* [Microsoft Teams store ranking parameters](post-publish/teams-store-ranking-parameters.md)
