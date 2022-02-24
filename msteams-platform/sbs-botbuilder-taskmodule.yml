@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Microsoft Teams task module bot
+title: Invoke task modules from Microsoft Teams
 metadata:
-  title:  Microsoft Teams task module bot
+  title: Invoke task modules from Microsoft Teams
   description: In this tutorial, you'll learn to set up Teams task module.
   audience: Developer
   level: Beginner
@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: task-modules-and-cards/task-modules/task-modules-bots.md
   nextTutorialTitle: Read more on task modules from bots
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: High
 items:
 - durationInMinutes: 1
   content: |
@@ -32,7 +32,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
 
       > [!NOTE]
@@ -53,10 +53,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Microsoft Azure Active Directory (Azure AD) portal
+- title: Create and register your bot in Microsoft Azure Active Directory portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure AD, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -339,7 +339,7 @@ items:
 
         ![App settings location](~/assets/images/Teams-task-module/appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2022** and update the following information:  
+    1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppType"` to `"MultiTenant"`.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -353,7 +353,7 @@ items:
 
         ![Manifest file location](~/assets/images/Teams-task-module/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2022** and make the following changes:
+    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `YourDeployedBotUrl.com` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
@@ -363,11 +363,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2022 or Command line**
+    **To build and run the service using latest version of Visual Studio or Command line**
 
-    # [Visual Studio 2022](#tab/vs2022)
+    # [Latest version of Visual Studio](#tab/latest version of Visual Studio)
 
-       1. Launch **Visual Studio 2022**.
+       1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
