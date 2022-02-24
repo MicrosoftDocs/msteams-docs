@@ -364,7 +364,7 @@ items:
 
     # [Latest version of Visual Studio](#tab/latest version of Visual Studio)
 
-       1. Launch latest version of Visual Studio.
+       1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
@@ -477,6 +477,6 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a **Action messaging extension** app!
+    You've completed the tutorial to get started with a **Action Messaging Extension** app!
 
 
