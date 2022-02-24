@@ -21,7 +21,7 @@ items:
     * Presents the user with a modal popup to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide illustrates how to build Teams action based messaging extension to initiate actions from compose message and message area. You'll see the following output:
+    This step-by-step guide helps you to build Teams action based messaging extension to initiate actions from compose message and message area. You'll see the following output:
        
       ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
     
@@ -408,7 +408,7 @@ items:
     
     1. Select **Apps**.
 
-    1. Select **Manage your apps** 
+    1. Select **Manage your apps**.
     
     1. Select **Upload a custom app**.
    
