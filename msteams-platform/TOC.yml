@@ -473,6 +473,8 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md   
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: Microsoft Teams store ranking parameters
+      href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
   - name: Monetize your app
     items:
     - name: Overview
