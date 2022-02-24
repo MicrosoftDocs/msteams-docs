@@ -89,7 +89,7 @@ When you feel your app is production ready, you can begin the process of getting
 
      1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="store validation":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
  
      1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end-to-end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
@@ -124,6 +124,7 @@ When you feel your app is production ready, you can begin the process of getting
 * [Publishing to Microsoft 365 App Stores](/office/dev/store/)
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [Plan onboarding experience for users](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distributing tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
+* [Microsoft Teams store ranking parameters](post-publish/teams-store-ranking-parameters.md)
