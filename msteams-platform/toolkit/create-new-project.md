@@ -10,9 +10,11 @@ ms.date: 11/29/2021
 
 # Create a new Teams app using Teams Toolkit
 
-To create new Teams project using Teams Toolkit, select **Create a new Teams app project** or **Start from a sample**.
+To create new Teams app using Teams Toolkit, select **Create a new Teams app project** or **Start from a sample**.
 
 ## Create a new Teams app using a new project
+
+Select Create a new Teams app and choose from the capabilities available - tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). Select at least one option to start creating and add more capabilities as per the requirement of the Teams app.
 
 You can choose **Create a new Teams app** and then select from a number of capabilities: Tab, Bot, Messaging Extension, or a Tab using the SharePoint Framework (SPFx). You must choose at least one, but you can add as many of these capabilities to your Teams app as you need. The following guides help you to scaffold a new Teams starter app using each of them:
 
@@ -32,6 +34,7 @@ You can create new project from **sample gallery**. Select the required sample t
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="samples":::
 
 You can explore and download samples and either run apps locally or remotely to preview in the Teams web client. Follow the instructions for each sample, or  choose **View on GitHub** to open the sample within the TeamsFx-Samples repository and browse the source code.
+
 
 ## See also
 
