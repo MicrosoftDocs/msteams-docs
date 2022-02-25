@@ -152,11 +152,13 @@ The Teams unified meetings apps allow you to design your app based on participan
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
 * **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
+
 * **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
-* **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting, such as: 
+
+* **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting, such as:
   * They can interact with other meeting members but can't manage any of the meeting settings or share the content.  
   * They can view or interact with the tab app on the meeting stage without installing the app or without any app entitlements.
- * They are not authorized to act as a presenter.
+  * They are not authorized to act as a presenter.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
