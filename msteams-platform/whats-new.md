@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
-| 02/25/2022 |Universal Actions for search based messaging extensions| Build cards and task modules > Build cards > Universal actions for Adaptive Cards > [Universal Actions for search based messaging extensions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#universal-actions-for-search-based-messaging-extensions)|
+| 02/25/2022 |Universal Actions for search based messaging extensions| Build Messaging Extensions > Search commands > Define search commands  > [Universal Actions for search based messaging extensions](messaging-extensions/how-to/search-commands/define-search-command.md#universal-actions-for-search-based-messaging-extensions)|
 |02/24/2022| Introduced step-by-step guide to build a search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
 |02/24/2022|  Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [step-by-step guide to create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 |02/24/2022| Introduced step-by-step guide to build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Teams action based messaging extension](sbs-meetingextension-action.yml)|
@@ -241,7 +241,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 02/25/2022 |Universal Actions for search based messaging extensions| Build cards and task modules > Build cards > Universal actions for Adaptive Cards > [Universal Actions for search based messaging extensions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#universal-actions-for-search-based-messaging-extensions)|
+| 02/25/2022 |Universal Actions for search based messaging extensions| Build Messaging Extensions > Search commands > Define search commands  > [Universal Actions for search based messaging extensions](messaging-extensions/how-to/search-commands/define-search-command.md#universal-actions-for-search-based-messaging-extensions)|
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| Test preview for monetized apps| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
