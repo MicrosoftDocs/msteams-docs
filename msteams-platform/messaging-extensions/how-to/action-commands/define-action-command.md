@@ -218,6 +218,11 @@ The following section is an example of a `composeExtensions` object defining two
 |:---------------------|:--------------|:---------|:--------|
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action based messaging extension.
+
 ## Next step
 
 If you are using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
@@ -229,3 +234,4 @@ If you are using the parameters or an embedded web view with a `taskInfo` object
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+
