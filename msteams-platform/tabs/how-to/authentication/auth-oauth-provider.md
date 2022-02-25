@@ -1,12 +1,12 @@
 ---
-title: Add authentication using external OAuth providers  
+title: Use external OAuth providers  
 description: Describes authentication using external OAuth providers  
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication using external OAuth provider
 ---
 
-# Add authentication using external OAuth providers  
+# Use external OAuth providers
 
 You can support external or third party OAuth providers, such as Google, GitHub, LinkedIn and Facebook with the help of update `authenticate()` API. The following list provides the changes in the updated API:
 

@@ -42,7 +42,7 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Adaptive Cards form completion feedback
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-      - text: Add authentication using external OAuth providers  
+      - text: Use external OAuth providers  
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
       
       

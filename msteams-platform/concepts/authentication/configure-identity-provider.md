@@ -27,7 +27,7 @@ Replace `<hostname>` with your actual host, which might be a dedicated hosting s
 
 * **Google:** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
 
-* **External OAuth providers from tabs:** For more information, see [Add authentication using external OAuth providers](../../tabs/how-to/authentication/auth-oauth-provider.md)
+* **External OAuth providers from tabs:** For more information, see [Use external OAuth providers](../../tabs/how-to/authentication/auth-oauth-provider.md)
 
 ## See also 
 
