@@ -25,10 +25,10 @@ The following table provides the list of `authenticate()` API parameters and fun
 | Parameter| Description|
 | --- | --- |
 |`isExternal` | The type of parameter is Boolean, which indicates that the auth window opens in an external browser.|
-|`failureCallback`| The function is called if the authentication fails, when returned from the authentication pop-up.|
+|`failureCallback`| The function is called if the authentication fails and the authentication pop-up specifies the reason for failure.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
 |`successCallback`| The function is called if the authentication succeeds, with the result returned from the authentication pop-up. Authcode is the result.|
-|`url`  <br>|The URL of 3P app server for the authentication pop-up, with two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. You can replace the placeholder by deeplink or web of Teams platform, which informs app server if the call is coming from web, desktop, or mobile platform.</br> <br> - `authId`: You can replace the placeholder by UUID. The app server uses it to maintain session, for example, [`authId`](https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}). </br>| 
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web by Teams platform, which informs app server if the call is coming from web, desktop, or mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session, for example, [`authId`](https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}). </br>| 
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 For more information on parameters, see [authenticate parameters interface](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true).
@@ -75,20 +75,17 @@ The Teams clients open the URL in an external browser after replacing the placeh
  https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId=1234567890 
 ```
 
-
 **3. The 3P app server response**
 
-The 3P app server receives and saves the `url` with two query parameters `oauthRedirectMethod` and `authId`. 
-
-The following table includes the query parameters:
+The 3P app server receives and saves the `url` with the following two query parameters:
 
 | Parameter | Description|
 | --- | --- |
-| `oauthRedirectMethod` |Indicates how the 3P app sends the response of authentication request back to Teams, with one of the two values: deeplink or web.|
-|`authId` | The request-id Teams for the specific authentication request and needs to be sent back to Teams through deeplink.|
+| `oauthRedirectMethod` |Indicates how the 3P app must send the response of authentication request back to Teams, with one of the two values: deeplink or webpage.|
+|`authId` | The request-id Teams created for this specific authentication request that needs to be sent back to Teams through deeplink.|
 
 > [!TIP]
-> The 3P app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the 3P server and the 3P app uses the values for sending authentication response back to Teams as described in the response redirect to Teams section.
+> The 3P app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the 3P server and the 3P app uses the values for sending authentication response back to Teams as described in **6. The 3P app server response to Teams**. 
 
 **4. The 3P app server redirects to specified `url`**
 
@@ -100,13 +97,13 @@ The 3P app server redirects to OAuth providers auth page in the external browser
 https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loca.lt/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…&response_type=code&access_type=offline&scope= … 
 ```
 
-**5. Sign into external browser**
+**5. Sign in to external browser**
 
-The OAuth providers redirects back to the `redirect_uri` with the authcode when user signs into the external browser.
+User signs in to the external browser. The OAuth providers redirects back to the `redirect_uri` with the auth code and the state object.
 
 **6. The 3P app server response to Teams** 
 
-The 3P app server handles the response and checks `oauthRedirectMethod`, which is returned from external OAuth provider in the state object to determine whether the response needs to be returned through the auth-callback deeplink or web that calls `notifySuccess()`.
+The 3P app server handles the response and checks `oauthRedirectMethod`, which is returned from external OAuth provider in the state object to determine whether the response needs to be returned through the auth-callback deeplink or through web page that calls `notifySuccess()`.
 
 ```JavaScript
 const state = JSON.parse(req.query.state)
@@ -120,15 +117,15 @@ else {
 
 **7. The 3P app generates a deeplink**
 
-The 3P app generates a deeplink for Teams desktop and mobile in the following format, and sends the authcode with the session ID back to Teams:
+The 3P app generates a deeplink for Teams desktop and mobile in the following format, and sends the auth code with the session ID back to Teams:
  
 ```JavaScript
-return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state  .authId}&code=${req.query.code}`)
+return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
 ```
 
- **8. Teams `successCallback` results**
+ **8. Teams success callback results**
 
-Teams calls the `successCallback` and sends the result, authcode to the 3P app. The 3P app receives the code in the `successCallback` to retrieve the token, user info and update the user interface from the code. 
+Teams calls the success callback and sends the result (auth code) to the 3P app. The 3P app receives the code in the success callback and use the code to retrieve the token, then the user information and update the user interface.
 
 ```JavaScript
 successCallback: function (result) { 
