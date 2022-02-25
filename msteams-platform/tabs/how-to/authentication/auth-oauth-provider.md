@@ -18,7 +18,7 @@ You can support external or third party OAuth providers such as Google, GitHub, 
 function authenticate(authenticateParameters?: AuthenticateParameters)
 ``` 
 
-The following table describes parameters and their description:
+The following table describes parameters and their descriptions:
 
 | Parameter           | Description   |
 | --- | --- |
