@@ -19,7 +19,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | --- | --- | --- |
 |02/25/2022| Introduced step-by-step guide to invoke task modules in Teams| Build cards and task modules > Build task modules > Use task modules from bots > [Invoke task module from Teams](sbs-botbuilder-taskmodule.yml)|
 |02/24/2022| Introduced step-by-step guide to build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Build action based messaging extension](sbs-meetingextension-action.yml)|
-|02/24/2022| Introduced step-by-step guide to build a search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
+|02/24/2022| Introduced step-by-step guide to build search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
 |02/24/2022| Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [Create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
@@ -48,7 +48,7 @@ Microsoft Teams platform features that are available to all app developers.
 | -------- | --------- | ----------------|
 | 02/25/2022| Introduced step-by-step guide to invoke task modules in Teams| Build cards and task modules > Build task modules > Use task modules from bots > [Invoke task module from Teams](sbs-botbuilder-taskmodule.yml)|
 | 02/24/2022| Introduced step-by-step guide to build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Build action based messaging extension](sbs-meetingextension-action.yml)|
-| 02/24/2022| Introduced step-by-step guide to build a search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
+| 02/24/2022| Introduced step-by-step guide to build search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
 | 02/24/2022| Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [Create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
