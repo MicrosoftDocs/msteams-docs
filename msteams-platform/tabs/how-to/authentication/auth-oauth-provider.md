@@ -138,5 +138,6 @@ Teams calls the `successCallback` and sends the result, authcode to the 3P app. 
 ```
 
 ## See also
-[Configure identity providers](../../../concepts/authentication/configure-identity-provider.md)
-[Microsoft Teams authentication flow for tabs](auth-flow-tab.md)
+
+* [Configure identity providers](../../../concepts/authentication/configure-identity-provider.md)
+* [Microsoft Teams authentication flow for tabs](auth-flow-tab.md)
