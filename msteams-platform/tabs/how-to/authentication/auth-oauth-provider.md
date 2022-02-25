@@ -8,7 +8,7 @@ keywords: teams authentication using external OAuth provider
 
 # Use external OAuth providers
 
-You can support external or third party (3P) OAuth providers, such as Google, GitHub, LinkedIn, and Facebook with the help of update `authenticate()` API. The following list provides the changes in the updated API:
+You can support external or third-party (3P) OAuth providers, such as Google, GitHub, LinkedIn, and Facebook with the help of update `authenticate()` API. The following list provides the changes in the updated API:
 
 * `isExternal` parameter
 * Placeholder values in existing URL parameter
