@@ -349,8 +349,6 @@
     href: concepts/authentication/authentication.md
   - name: Configure identity providers
     href: concepts/authentication/configure-identity-provider.md
-  - name: Authentication using external OAuth providers  
-    href: tabs/how-to/authentication/auth-oauth-provider.md
   - name: Tabs
     items:
     - name: Authentication flow in tabs
@@ -361,6 +359,8 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
+    - name: Authentication using external OAuth providers  
+      href: tabs/how-to/authentication/auth-oauth-provider.md
   - name: Bots
     items:
     - name: Authentication flow in bots
