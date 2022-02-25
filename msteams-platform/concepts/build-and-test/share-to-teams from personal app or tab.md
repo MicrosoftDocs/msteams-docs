@@ -16,7 +16,7 @@ The following image shows the Share-to-Teams pop-up window:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
 
-## Enable Share-to-Teams
+## Enable Share-to-Teams button
 
 > [!NOTE]
 > Ensure that you have [Microsoft Teams JavaScript Client SDK](../../tabs/how-to/using-teams-client-sdk.md) or [Microsoft Teams JavaScript Client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true&branch=pr-en-us-5129) (`@microsoft/teams-js@1.11.0-beta.7` or later) to enable Share-to-Teams for your personal app or tab.
@@ -27,7 +27,7 @@ To enable Share-to-Teams:
 
 2. Create a **Share-to-Teams** button.
 
-3. On Share-to-Teams button click, call `microsoftTeams.sharing.shareWebContent` with a content payload.
+3. On Share-to-Teams button, call `microsoftTeams.sharing.shareWebContent` with a content payload.
 
 The following example explains how to create a content payload:
 
@@ -55,7 +55,9 @@ The following image shows the Share-to-Teams option:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
-## End user Share-to-Teams experience
+## End user Share-to-Teams experience 
+
+After you enabled share-to-teams button, you can test this feature:
 
 1. Open a personal app or tab and select **Share-to-Teams**.
 

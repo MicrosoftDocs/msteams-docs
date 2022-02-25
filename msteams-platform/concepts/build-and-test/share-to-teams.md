@@ -127,4 +127,5 @@ You can select to set default values for the following fields on the Share to Te
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Share-to-Teams from personal app or tab](share-to-teams%20from%20personal%20app%20or%20tab.md)
