@@ -615,7 +615,7 @@ The following code shows how to capture the metadata of a meeting that is `Meeti
 
 Meeting Start Event
 ```csharp
-protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }

@@ -5,7 +5,7 @@ description: describes how to create an Outgoing Webhook
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: teams tabs outgoing webhook actionable message verify webhook
+keywords: Teams tabs outgoing webhook actionable message verify webhook
 ---
 
 # Create Outgoing Webhook
@@ -227,6 +227,11 @@ var responseMsg = JSON.stringify({
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Outgoing Webhooks | Samples to create custom bots to be used in Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgoing Webhooks in Teams.
 
 ## See also
 
