@@ -39,9 +39,9 @@ The prerequisite to create a search command is that you must already have create
 **To create a search command**
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1.  If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
+1. If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
 1. After importing app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page: 
+1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -49,7 +49,7 @@ The prerequisite to create a search command is that you must already have create
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.   
+1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.  
 The following image displays command addition for messaging extension:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -114,12 +114,17 @@ Following section is an example of the simple app manifest of the `composeExtens
   ],
 ...
 }
+
 ```
+
 For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Universal Actions for search based messaging extensions
 
-Adaptive Cards in Search based messaging extensions now support Universal Actions. To enable Universal Actions for search based messaging extensions, the app must conform to the [Schema for Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) along with the following requirements:
+>[!NOTE]
+> Universal Actions for search based messaging extensions is currently is currently available only in [Developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
+
+Adaptive Cards in search based messaging extensions now support Universal Actions. To enable Universal Actions for search based messaging extensions, the app must conform to the [Schema for Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) along with the following requirements:
 
 1. The app must have a conversation bot defined in their app manifest.
 1. If you already have a conversational bot, the bot must be the same that is used in your messaging extension.
@@ -127,7 +132,7 @@ Adaptive Cards in Search based messaging extensions now support Universal Action
 
 **Example**
 
-The following is an example of a json schema with `team` and `groupchat`values:
+The following is an example of a JSON schema with `team` and `groupchat`values:
 
 ```json
 {
@@ -157,7 +162,7 @@ The following is an example of a json schema with `team` and `groupchat`values:
 
 ### Automatic refresh for Adaptive Cards in search based MEs
 
-Enable automatic refresh for Adaptive Cards in search based messaging extensions to ensure users always see the latest information. To enable, define `userIds` array in either `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property. For more information, see [Work with Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh)
+Enable automatic refresh for Adaptive Cards in search based messaging extensions to ensure users always see the latest information. To enable, define `userIds` array either in  `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property. For more information, see [Work with Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh).
 
 **Example**
 
@@ -196,6 +201,10 @@ The following is an example of `userIds` array in the `refresh` property:
 > [!NOTE]
 > Automatic refresh is enabled for all users in the group chat or channel with LESS than or equal to 60 users. For conversations (group chat or channel) with more than 60 users, users can use the refresh button in the message options menu to get the latest result.
 
+**Example**
+
+The following is an example of `Action.Execute` in the `refresh` property:
+
 ```json
     {
         "type": "AdaptiveCard",
@@ -222,11 +231,11 @@ The following is an example of `userIds` array in the `refresh` property:
     }
 ```
 
-### Just-In Time (JIT) install
+### Just-in-time install
 
-Just-In Time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel. Your bot is added to the conversation where the card is sent by the user to support Universal Actions in search based Message extensions.
+Just-in-time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel. Your bot is added to the conversation where the card is sent by the user to support Universal Actions in search based Message extensions.
 
-When a user selects a card and sends it in a group chat or channel, a **Just-In Time (JIT)** installation prompt appears. After the user selects the **send** option, the bot installs the card in the background for all the users in the chat or channel and the message sent to the chat or channel.
+When a user selects a card and sends it in a group chat or channel, a **JIT** installation prompt appears. After the user selects the **send** option, the bot installs the card in the background for all the users in the chat or channel and the message is sent to the chat or channel.
 
 > [!NOTE]
 > For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt is not shown to the users.

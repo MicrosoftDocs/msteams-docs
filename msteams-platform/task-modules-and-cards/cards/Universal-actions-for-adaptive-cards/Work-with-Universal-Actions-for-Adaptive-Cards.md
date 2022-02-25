@@ -120,3 +120,4 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 * [Sequential Workflows](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Universal Actions for search based messaging extensions](../../../messaging-extensions/how-to/search-commands/define-search-command.md#universal-actions-for-search-based-messaging-extensions)
