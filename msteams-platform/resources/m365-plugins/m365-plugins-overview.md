@@ -1,15 +1,14 @@
 ---
-title: Microsoft 365 plugins overview
-description: Microsoft 365 plugins overview 
-ms.topic: Plugins overview
+title: Microsoft 365 plugins
+description: Microsoft 365 plugins
+ms.topic: Microsoft 365 plugins
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-leenagopal
 ---
 
-# Plugins overview
+# Microsoft 365 plugins
 
-Microsoft 365 plugins provides an integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collabrate the course content. The plugins can be used independently, or in partership as per the requirement. Moodle LMS supports the following eight plugins. 
+Microsoft 365 plugins provide integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collaborate the course content. The plugins can be used independently, or in partnership as per requirement. Moodle LMS supports the following plugins:
 
 ## OpenID Connect
 
@@ -18,20 +17,20 @@ The Open ID Connect plugin allows you to authenticate any website or tool that s
 * Users can enter their Office 365 credentials, such as email and password to sign in directly or sign-in using Moodle’s username and password fields, without signing into Office 365.
 * Users can select the link to sign in through Office 365 or the OpenID Connect provider on Moodle page.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Login to openid-connect":::
+:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Login to open-id connect" border="true":::
 
 ## Microsoft 365 integration
 
-Microsoft 365 consists of several apps with multiple functionalities allowing you to stay connected and perform different actions as required. The Microsoft 365 integration plugin allows administrators to validate the following:
+Microsoft 365 integration consists of several apps with multiple functionalities allowing you to stay connected and perform different actions as required. The plugin allows administrators to validate the following:
 
 * Validate appropriate integration functions.
 * Synchronize users between Office 365 and Moodle.
 * Configure required permissions for users.
 * Set up SharePoint website for the course files.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="microsoft 365 integration":::
+:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="microsoft 365 integration" border="true":::
 
-###  User functions
+### User functions
 
 The users can perform the following actions with Microsoft 365 integration.
 
@@ -49,7 +48,8 @@ Microsoft 365 offers you the benefit of using it as a file repository for an ins
 * To add files to Moodle as a copy or create a link to the file. The linked file is displayed in a new application window or is embedded in the webpage.
 * To upload files to OneDrive or SharePoint using the Moodle file picker.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 repository.png" alt-text="ms.365 repository":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 repository.png" alt-text="M365 repository" border="true":::
+
 
 ## Teams meetings
 

@@ -516,9 +516,7 @@
     - name: Overview
       href: resources/moodle-overview.md
     - name: Microsoft 365 plugins
-      items:
-      - name: Plugins overview
-        href: resources/m365-plugins/m365-plugins-overview.md
+      href: resources/m365-plugins/m365-plugins-overview.md
     - name: Moodle LTI apps
       href: resources/moodle-lti-apps.md
     - name: Partner apps for Moodle
