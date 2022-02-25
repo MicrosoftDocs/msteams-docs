@@ -1,5 +1,5 @@
 ---
-title: Overview - Teams app store publishing process
+title: Overview - Publish your app to the Microsoft Teams store
 description: Describes the process for submitting your app to Partner Center and getting it published to the Microsoft Teams store (and AppSource).
 ms.topic: overview
 author: heath-hamilton
@@ -127,3 +127,4 @@ When you feel your app is production ready, you can begin the process of getting
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distributing tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
+* [Microsoft Teams store ranking parameters](post-publish/teams-store-ranking-parameters.md)
