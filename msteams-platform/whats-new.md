@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
-|02/25/2022 | Introduced how to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
+|02/25/2022 | How to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
 |02/24/2022| Introduced step-by-step guide to build a search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
 |02/24/2022|  Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [step-by-step guide to create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 |02/24/2022| Introduced step-by-step guide to build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Teams action based messaging extension](sbs-meetingextension-action.yml)|
@@ -46,7 +46,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|02/25/2022 | Introduced how to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
+|02/25/2022 | How to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
 |02/24/2022| Introduced step-by-step guide to build a search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Teams messaging extensions search](sbs-messagingextension-searchcommand.yml)|
 |02/24/2022|  Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [step-by-step guide to create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 |02/24/2022| Introduced step-by-step guide to build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Teams action based messaging extension](sbs-meetingextension-action.yml)|
