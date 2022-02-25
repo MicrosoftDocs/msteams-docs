@@ -29,13 +29,13 @@ The following table provides the list of parameters along with their description
 |`url`  <br>|The URL of third party (3P) app server for the authentication pop-up, with two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. You can replace the placeholder by deeplink or web of Teams platform, which informs app server if the call is coming from web, desktop or mobile platform.</br> <br> - `authId`: You can replace the placeholder by UUID. The app server uses it to maintain session, for example, [`authId`](https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}). </br>| 
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
-For more information on parameters, see [AuthenticateParameters interface](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest).
+For more information on parameters, see [authenticate parameters interface](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest).
 
 ## To add authentication on external browsers
 
 > [!NOTE]
 > Currently, you can add authentication on external browsers for tabs only.
-> Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM]  (https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
+> Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
 
 The following image provides the flow to add authentication on external browsers:
 
