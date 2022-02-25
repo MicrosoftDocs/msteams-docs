@@ -32,7 +32,7 @@ Microsoft 365 integration consists of several apps with multiple functionalities
 
 ### User functions
 
-The users can perform the following actions with Microsoft 365 integration.
+The users can perform the following actions with Microsoft 365 integration:
 
 * Check the overall functioning of all Microsoft 365 plugin integrations.
 * Upload a CSV file, which compares Moodle to Office 365 users.
@@ -49,7 +49,6 @@ Microsoft 365 offers you the benefit of using it as a file repository for an ins
 * To upload files to OneDrive or SharePoint using the Moodle file picker.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 repository.png" alt-text="M365 repository" border="true":::
-
 
 ## Teams meetings
 
