@@ -122,7 +122,7 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 ## Universal Actions for search based messaging extensions
 
 >[!NOTE]
-> Universal Actions for search based messaging extensions is currently is currently available only in [Developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
+> Universal Actions for search based messaging extensions is currently available only in [Developer preview](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
 
 Adaptive Cards in search based messaging extensions now support Universal Actions. To enable Universal Actions for search based messaging extensions, the app must conform to the [Schema for Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) along with the following requirements:
 
