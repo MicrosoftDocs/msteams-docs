@@ -39,9 +39,7 @@ For more information on parameters, see [authenticate parameters interface](/jav
 
 The following image provides the flow to add authentication on external browsers:
 
-<p>
-    <img src="~/assets/images/tabs/tabs-authenticate-OAuthp.png" alt="Add authentication" width="75%"/>
-</p>
+:::image type="content" source="../msteams-platform/assets/images/tabs/tabs-authenticate-OAuthp.png" alt-text="Add authentication" border="false":::
 
 
 ### 1. Pass `isExternal` and placeholders in URL  
