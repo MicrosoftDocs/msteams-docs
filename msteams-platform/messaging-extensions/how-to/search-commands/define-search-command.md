@@ -195,7 +195,7 @@ The following is an example of `userIds` array in the `refresh` property:
 ```
 
 > [!NOTE]
-> Automatic refresh is enabled for all users in the group chat or channel with LESS than or equal to 60 users. For conversations (group chat or channel) with more than 60 users, users can use the refresh button in the message options menu to get the latest result.
+> Automatic refresh is enabled for all users in the group chat or channel with *less than or equal to* 60 users. For conversations (group chat or channel) with more than 60 users, users can use the refresh button in the message options menu to get the latest result.
 
 The following is an example of `Action.Execute` in the `refresh` property:
 
@@ -227,9 +227,9 @@ The following is an example of `Action.Execute` in the `refresh` property:
 
 ### Just-in-time install
 
-Just-in-time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel. Your bot is added to the conversation where the card is sent by the user to support Universal Actions in search based Message extensions.
+Just-in-time (JIT) allows you to install a card or messaging extension for multiple users in a group chat or channel. In order to support Universal Actions in search based Message extensions, your bot is added to the conversation where the card (with `Action.Execute`) is sent by the user.
 
-When a user selects a card and sends it in a group chat or channel, a **JIT** installation prompt appears. After the user selects the **send** option, the bot installs the card in the background for all the users in the chat or channel and the message is sent to the chat or channel.
+When a user selects a card and sends it in a group chat or channel, a **JIT** installation prompt appears. After the user selects the **send** option, the app is added for all the users in the chat or channel in the background.
 
 > [!NOTE]
 > For apps that don’t have `Action.Execute` and `refresh` schema defined, the install prompt is not shown to the users.
