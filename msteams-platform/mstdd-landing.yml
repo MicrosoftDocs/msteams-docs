@@ -147,6 +147,12 @@ landingContent:
           url: ~/sbs-file-handling-in-bot.yml
         - text: Invoke task modules from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
+        - text: Build search based messaging extension
+          url: ~/sbs-messagingextension-searchcommand.yml
+        - text: Build action based messaging extension
+          url: ~/sbs-meetingextension-action.yml
+        - text: Build Outgoing Webhooks
+          url: ~/sbs-outgoing-webhooks.yml
 
 - title: Teams app scenarios
   linkLists:
