@@ -8,7 +8,7 @@ keywords: teams authentication using external OAuth provider
 
 # Use external OAuth providers
 
-You can support external or third party OAuth providers, such as Google, GitHub, LinkedIn and Facebook with the help of update `authenticate()` API. The following list provides the changes in the updated API:
+You can support external or third party (3P) OAuth providers, such as Google, GitHub, LinkedIn, and Facebook with the help of update `authenticate()` API. The following list provides the changes in the updated API:
 
 * `isExternal` parameter
 * Placeholder values in existing URL parameter
@@ -26,16 +26,16 @@ The following table provides the list of parameters along with their description
 |`failureCallback`| The function is called if the authentication fails, when returned from the authentication pop-up.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
 |`successCallback`| The function is called if the authentication succeeds, with the result returned from the authentication pop-up. Authcode is the result.|
-|`url`  <br>|The URL of third party (3P) app server for the authentication pop-up, with two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. You can replace the placeholder by deeplink or web of Teams platform, which informs app server if the call is coming from web, desktop or mobile platform.</br> <br> - `authId`: You can replace the placeholder by UUID. The app server uses it to maintain session, for example, [`authId`](https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}). </br>| 
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. You can replace the placeholder by deeplink or web of Teams platform, which informs app server if the call is coming from web, desktop, or mobile platform.</br> <br> - `authId`: You can replace the placeholder by UUID. The app server uses it to maintain session, for example, [`authId`](https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}). </br>| 
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 For more information on parameters, see [authenticate parameters interface](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true).
 
-## To add authentication on external browsers
+## Add authentication on external browsers
 
 > [!NOTE]
-> Currently, you can add authentication on external browsers for tabs only.
-> Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
+> * Currently, you can add authentication on external browsers for tabs only.
+> * Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
 
 The following image provides the flow to add authentication on external browsers:
 
@@ -63,7 +63,7 @@ microsoftTeams.authentication.authenticate({
 
 ### 2. Microsoft Teams opens the URL in an external browser
 
-The Teams clients opens the URL in an external browser after replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values. 
+The Teams clients open the URL in an external browser after replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values. 
 
 #### Example
 
@@ -99,7 +99,7 @@ https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loc
 The `redirect_uri` is a dedicated route on the 3P app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object. 
 
 ### 5. User sign in
- the
+
 The user signs into the external browser. The OAuth providers redirects back to the `redirect_uri` with the authcode. 
 
 ### 6. Response redirect to Teams 
