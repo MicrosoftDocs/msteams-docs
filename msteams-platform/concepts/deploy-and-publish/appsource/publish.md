@@ -73,9 +73,9 @@ When you feel your app is production ready, you can begin the process of getting
 
   After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams store.
 
-* **Rich app usage insights in Partner Center**
+* **Analyze app usage**
 
-  After your app is approved and published, you can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include monthly, daily, and weekly active users, and retention and intensity chart to track a combination of active usage, user churn, and usage intensity.
+  After your app is approved and published, you can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
 
   Data for newly published apps takes about a week to appear in the report.
 
