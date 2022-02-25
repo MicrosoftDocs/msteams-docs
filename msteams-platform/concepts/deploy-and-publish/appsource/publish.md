@@ -21,13 +21,13 @@ When you feel your app is production ready, you can begin the process of getting
 
 :::row:::
    :::column span="":::
-      
+
    :::column-end:::
    :::column span="3":::
       :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams app store publishing process" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
    :::column-end:::
    :::column span="":::
-      
+
    :::column-end:::
 :::row-end:::
 
@@ -53,7 +53,7 @@ When you feel your app is production ready, you can begin the process of getting
 
    * Summary of all issues
 
-   * Details of failures or issues with policy links and categorization: 
+   * Details of failures or issues with policy links and categorization:
 
      * Mandatory fix: These issues must be fixed prior to app approval.
 
