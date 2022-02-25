@@ -235,12 +235,6 @@ The following is an example of a dynamic ME and JIT install user flow:
 
   :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="Dynamic ME JIT flow":::
 
-## See also
-
-[Work with Universal Actions for Adaptive Cards](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
-[Respond to search command](search-commands/respond-to-search.md)
-
-
 ## Code sample
 
 | Sample Name           | Description | .NET    | Node.js   |
