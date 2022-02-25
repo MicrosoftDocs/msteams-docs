@@ -34,7 +34,6 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |02/03/2022| Test preview for monetized apps (developer preview)| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| In-app purchase flow for monetization of apps (developer preview) | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
 
-
 ## GA features
 
 Microsoft Teams platform features that are available to all app developers.

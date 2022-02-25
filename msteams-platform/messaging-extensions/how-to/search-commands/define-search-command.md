@@ -36,7 +36,7 @@ To add the search command to your app manifest, you must add a new `composeExten
 
 The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**To create a search command**
+To create a search command, follow these steps:
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
 1. If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
@@ -130,8 +130,6 @@ Adaptive Cards in search based messaging extensions now support Universal Action
 1. If you already have a conversational bot, the bot must be the same that is used in your messaging extension.
 1. If the card is sent in a group, the app must specify `team` or `groupchat` scope on their bot in the manifest.
 
-**Example**
-
 The following is an example of a JSON schema with `team` and `groupchat`values:
 
 ```json
@@ -163,8 +161,6 @@ The following is an example of a JSON schema with `team` and `groupchat`values:
 ### Automatic refresh for Adaptive Cards in search based MEs
 
 Enable automatic refresh for Adaptive Cards in search based messaging extensions to ensure users always see the latest information. To enable, define `userIds` array either in  `29:<ID>` or `8:orgid:<AAD ID>` format in the `refresh` property. For more information, see [Work with Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh).
-
-**Example**
 
 The following is an example of `userIds` array in the `refresh` property:
 
@@ -200,8 +196,6 @@ The following is an example of `userIds` array in the `refresh` property:
 
 > [!NOTE]
 > Automatic refresh is enabled for all users in the group chat or channel with LESS than or equal to 60 users. For conversations (group chat or channel) with more than 60 users, users can use the refresh button in the message options menu to get the latest result.
-
-**Example**
 
 The following is an example of `Action.Execute` in the `refresh` property:
 
