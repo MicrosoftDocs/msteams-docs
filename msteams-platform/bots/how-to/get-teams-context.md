@@ -53,7 +53,7 @@ export class MyBot extends TeamsActivityHandler {
             var members = [];
 
             do {
-                var pagedMembers = await TeamsInfo.getPagedMembers(context, 100, continuationToken);
+                var pagedMembers = await TeamsInfo.getPagedMembers(turnContext, 100, continuationToken);
                 continuationToken = pagedMembers.continuationToken;
                 members.push(...pagedMembers.members);
             }
@@ -147,7 +147,7 @@ export class MyBot extends TeamsActivityHandler {
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
-            const member = await TeamsInfo.getMember(context, encodeURI('someone@somecompany.com'));
+            const member = await TeamsInfo.getMember(turnContext, encodeURI('someone@somecompany.com'));
 
             // By calling next() you ensure that the next BotHandler is run.
             await next();
