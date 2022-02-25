@@ -117,7 +117,7 @@ else {
 
 **7. The 3P app generates a deeplink**
 
-The 3P app generates a deeplink for Teams desktop and mobile in the following format, and sends the auth code with the session ID back to Teams:
+The 3P app generates a deeplink for Teams desktop and mobile in the following format, and sends the auth code with the session ID back to Teams.
  
 ```JavaScript
 return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
