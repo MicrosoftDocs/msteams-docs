@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    You can invoke task modules from Microsoft Teams bots by using Adaptive Cards or Bot Framework cards.
+    You can invoke task modules from Teams bots by using Adaptive Cards or Bot Framework cards.
 
     **Key features of task modules**
 
@@ -29,8 +29,9 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
-
+    Ensure you install the following tools and set up your development environment: 
+    
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
@@ -38,7 +39,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -53,7 +54,7 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Microsoft Azure Active Directory portal
+- title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
@@ -200,8 +201,6 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    **To register your app through the Azure AD portal**  
-
     1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
@@ -341,7 +340,7 @@ items:
 
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
-         * Set `"MicrosoftAppType"` to `"MultiTenant"`.
+         * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to **Value** of **Client secret**.
          * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
@@ -410,8 +409,6 @@ items:
 - title: Upload Task Module app
   durationInMinutes: 1
   content: |
-    **To add Task Module app to Teams**
-
     1. In your cloned repository, navigate to **csharp_dotnetcore > 54.teams-task-module > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
@@ -454,8 +451,6 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    Let's interact with the app in Teams!
-
     1. Select **Adaptive Card** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
        ![Adaptive card](~/assets/images/Teams-task-module/adaptive-card.png)
@@ -503,8 +498,6 @@ items:
        ![YouTube select](~/assets/images/Teams-task-module/youtube-select.png)
 
       The video plays.
-
-       ![YouTube play](~/assets/images/Teams-task-module/youtube-play.png)
 
 - title: Complete challenge
   durationInMinutes: 1
