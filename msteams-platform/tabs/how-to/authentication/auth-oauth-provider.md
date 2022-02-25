@@ -65,7 +65,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-**2. Teams opens the URL in an external browser**
+**2. Teams link in an external browser**
 
 The Teams clients open the URL in an external browser after replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values. 
 
@@ -76,7 +76,7 @@ The Teams clients open the URL in an external browser after replacing the placeh
 ```
 
 
-**3. The 3P app server response
+**3. The 3P app server response**
 
 The 3P app server receives and saves the `url` with two query parameters `oauthRedirectMethod` and `authId`. 
 
