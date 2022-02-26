@@ -15,7 +15,7 @@ You can integrate native device capabilities, such as the **camera** and **micro
 ## Advantage of integrating media capabilities
 
 The main advantage of integrating device capabilities in your Teams apps is it leverages native Teams controls to provide a rich and immersive experience to your users.
-To integrate media capabilities you must update the app manifest file and call the media capability APIs. 
+To integrate media capabilities you must update the app manifest file and call the media capability APIs.
 
 For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allow you to use native media capabilities.
 
@@ -74,7 +74,7 @@ The following image depicts web app experience of `selectMedia` API for micropho
 
 ## Error handling
 
-You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated: 
+You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
