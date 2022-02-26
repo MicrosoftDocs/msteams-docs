@@ -42,7 +42,7 @@ items:
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
+    * [SignalR](https://docs.microsoft.com/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
     > [!NOTE]
     > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
