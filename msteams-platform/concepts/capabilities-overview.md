@@ -135,12 +135,13 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).
 
-   :::column-end:::
-
 > [!NOTE]
 > Teams store has evolved:
-> 
 > Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
+
+   :::column-end:::
+
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
 
