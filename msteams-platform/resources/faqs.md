@@ -7,7 +7,7 @@ ms.author: Surbhigupta
 author: v-leenagopal
 ---
 
-# FAQ
+# FAQ's
 
 Get answers to some of your queries when using Moodle LMS.<br>
 
@@ -47,9 +47,9 @@ You can specify the users by synchronizing the configuration options of the **lo
 
 <!-- [Place holer for URL] -->
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 2.png" alt-text="sync":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync" border="true":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 3.png" alt-text="azure ad":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad" border="true":::
 
 <br>
 
@@ -71,10 +71,9 @@ For more information, see Microsoft 365 block within the Moodle Course interface
 
 <!-- [Place holder for url] -->
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 4.png" alt-text="admin":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="admin":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 5.png" alt-text="synchronization":::
-
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization":::
 
 <br>
 
@@ -118,11 +117,11 @@ Inconsistencies with users being able to sign in can be related to the user mapp
 
 If users who were able to sign in at the start need to report the issue, validate that the Application **Client secret** has not expired. The following image shows the error message:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 6.png" alt-text="report issue":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue":::
 
 The following image shows the error in Azure portal:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 7.png" alt-text="azure portal":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
 
 Consequently, if the **Client secret** has expired, then you need to generate a new Client secret, and update the configuration found on this page. The users can sign in again after the Client secret has been updated, which may take up to 24 hours to re-provision.
 
@@ -139,7 +138,7 @@ Administrators may change the teams instance associated with a course through th
 >[!NOTE]
 >If you use Course reset to archive a team by mistake, you can link it back to the previous team.
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 8.png" alt-text="teams instance":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance" border="true":::
 
 <br>
 
@@ -156,7 +155,7 @@ The user can face the issue if the icon reference is missing in the **Toolbar co
 
 The following image shows Toolbar icon after Toolbar config adjustment:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 9.png" alt-text="tool bar":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="tool bar" border="true":::
 
 <!-- [Place holder for url] -->
 

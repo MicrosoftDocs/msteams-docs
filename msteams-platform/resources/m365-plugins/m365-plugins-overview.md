@@ -48,7 +48,7 @@ Microsoft 365 offers you the benefit of using it as a file repository for an ins
 * To add files to Moodle as a copy or create a link to the file. The linked file is displayed in a new application window or is embedded in the webpage.
 * To upload files to OneDrive or SharePoint using the Moodle file picker.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 repository.png" alt-text="M365 repository" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="M365 repository"  border="true":::
 
 ## Teams meetings
 
@@ -61,6 +61,8 @@ After the plugin is installed, faculty and students can create an audio or video
 
 :::image type="content" source="../../assets/images/MoodleInstructions/teams meeting.png" alt-text="signin to teams meeting":::
 
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="sign in to teams meeting" border="true":::
+
 ## Microsoft 365 Teams theme
 
 The Microsoft 365 Teams theme plugin provides you with custom view of Moodle course home page and is available for viewing when you access their Moodle courses within Teams.
@@ -72,8 +74,7 @@ The theme plugin offers users with an unified enhanced experience with the follo
 * Removes Moodle blocks, navigation, header, and footer.
 * Provides Microsoft Team User Interface (UI) elements.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams theme.png" alt-text=" microsoft teams theme":::
-
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Microsoft Teams theme" border="true":::
 ## OneNote integration
 
 The OneNote integration plugin provides you with options to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necesssary feedback on corresponding assignments in OneNote. OneNote also enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
@@ -90,9 +91,9 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 
 ## Microsoft block
 
-Microsoft block plugin allows you to access the course SharePoint file location and view the course in OneNote notebook for submissions, along with the option to modify Office 365 integration preferences. The admininstrators can configure the block to appear on all the course pages.
+Microsoft block plugin allows you to access the course SharePoint file location and view the course in OneNote notebook for submissions, along with the option to modify Office 365 integration preferences. The administrators can configure the block to appear on all the course pages.
 
-Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to its numerous resources. Administators can configure the block to view the modified changes to appear on each course page. The block also allows you to perform the following activities:
+Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to its numerous resources. Administrators can configure the block to view the modified changes to appear on each course page. The block also allows you to perform the following activities:
 
 * Access the course SharePoint file location and OneNote notebook.
 * View the course on OneNote notebook for submissions.
@@ -100,7 +101,9 @@ Microsoft block enhances user experience by providing an User Interface (UI) to 
 * Manages connection to Office 365.
 * Customize personal Office 365 integration preferences.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block":::
+<!-- :::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block"::: -->
+
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="" border="true":::
 
 ## oEmbed filter
 
@@ -111,11 +114,11 @@ oEmbed filter plugin simplifies and enhances user experience by simplifying incl
 * Ensures a quicker method to copy and embed code from any of the supported services.
 * Permits video embedding without an API key.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="oEmbed filter page" border="true":::
 
 ## Plugin list and labels
 
-The following table lists the plugins and GitHub labels based on the requirements. For more information on the plugins, see [Plugins details](openid-connect.md).
+The following table lists the plugins and GitHub labels to be used based on the requirements.
 
 |Requirement|Plugins to install|GitHub label(s)|
 |-----|-----|----|
