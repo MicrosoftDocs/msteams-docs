@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 plugins
 description: Microsoft 365 plugins details
-ms.topic: Microsoft 365 plugins details
+ms.topic: Microsoft 365 plugins
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 ---
@@ -58,8 +58,6 @@ After the plugin is installed, faculty and students can create an audio or video
 
 >[!NOTE]
 >Teams meetings don't appear on Outlook or Teams calenders, however, individual student names can be added to the invite for the same.
-
-:::image type="content" source="../../assets/images/MoodleInstructions/teams meeting.png" alt-text="signin to teams meeting":::
 
 :::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="sign in to teams meeting" border="true":::
 

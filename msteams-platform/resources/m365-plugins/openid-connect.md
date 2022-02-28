@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 plugins
+title: Microsoft 365
 description: Microsoft 365 plugins
 ms.topic: Details on Microsoft
 ms.localizationpriority: medium
