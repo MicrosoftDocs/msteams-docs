@@ -312,7 +312,7 @@ items:
     To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
     </details>
 
-- title: Provision, Deploy and Preview your first Teams tab app
+- title: Provision, Deploy, and Preview your first Teams tab app
   durationInMinutes: 1
   content: |
 
