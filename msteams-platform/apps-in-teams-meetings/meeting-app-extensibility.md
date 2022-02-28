@@ -108,7 +108,7 @@ The following image illustrates the in-meeting side panel:
 
 ---
 
-The following table describes the behavior of app when it is validated and not validated:
+The following table describes the behavior of app when it's validated and not validated:
 
 |App capability | App is validated | App isn't validated |
 |---|---|---|
@@ -158,7 +158,7 @@ The default participant settings are determined by an organization's IT administ
 * **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting, such as:
   * They can interact with other meeting members but can't manage any of the meeting settings or share the content.  
   * They can view or interact with the tab app on the meeting stage without installing the app or without any app entitlements.
-  * They are not authorized to act as a presenter.
+  * They aren't authorized to act as a presenter.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
@@ -197,9 +197,9 @@ The following table provides the user types and lists the features that each use
 
 | User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage | Content bubble |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Not available | Not available |
+| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
-| Federated user, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
+| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
 
 ## Next step
 
