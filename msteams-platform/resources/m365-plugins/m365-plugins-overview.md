@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 plugins
 description: Microsoft 365 plugins details
-ms.topic: Microsoft 365 plugins
+ms.topic: Microsoft 365 plugins details
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 ---
