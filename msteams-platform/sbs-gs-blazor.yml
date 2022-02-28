@@ -347,7 +347,7 @@ items:
 
     1. Move through the page to view the user details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-tab-app-azure.png" alt-text="Screenshot of the Authorize button to access user information":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/authorize-user-info.png" alt-text="Screenshot of the Authorize button to access user information":::
 
     1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
