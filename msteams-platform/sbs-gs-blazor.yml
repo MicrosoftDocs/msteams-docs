@@ -10,21 +10,21 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
 
     Blazor lets you build interactive web UIs using C#, instead of JavaScript. 
     
-    You'll create a tab app with Blazor and Microsoft Visual Studio 2022. 
+    You'll create a tab app with Blazor and the latest version of Visual Studio.
 
     Your app will have a capability, which comes with its own UI and UX:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers templates for a Tab app and a Bot app with Blazor. The Message Extension capability isn't available.
+    > Currently, Teams Toolkit offers templates for a Tab app with Blazor. The Message Extension capability isn't available.
 
 - title: Prerequisites
   durationInMinutes: 1
