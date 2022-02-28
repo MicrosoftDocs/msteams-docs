@@ -39,7 +39,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 |--- | --- |
 | 1 | What are the pros and cons of the current state system used by your users? |
 | 2 | What are the issues faced by your users that you want to address? |
-| 3 | What features or capabilities your users like and love in their current way of doing the process? |
+| 3 | What features or capabilities your users like in their current way of doing the process? |
 |
 </details>
 <br>
@@ -73,9 +73,10 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | What happens when a user first configures your tab in a channel? |
-| 2 | If you are sharing cards with a messaging extension, does it make sense to add a small link to a learn more page to help introduce users to what else your app can do? |
+| 2 | If you are sharing cards with a messaging extension, adding a link to a learn more page to help introduce users to what else your app can do? |
 | 3 | Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? |
-| 4 | Are they coming to your app with no prior knowledge? |
+| 4 | Does your uses have any prior knowledge of your app? |
+
 |
 </details>
 <br>
@@ -86,7 +87,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | --- | --- |
 | 1 | Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information. |
 | 2 | Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company. |
-| 3 | Are there any personalized notifications or messages that will need to be sent to a user throughout the Teams app experience? |
+| 3 | Are there any personalized notifications or messages that needs to be sent to a user throughout the Teams app experience? |
 |
 </details>
 <br>
@@ -122,7 +123,7 @@ Suggestion: Options that help determine the best distribution model.
 
 ## Plan for hosting your Teams app
 
-Teams doesn't host your app. When a user installs your app in Teams, they install an app package that contains a only configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
+Teams doesn't host your app. When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app" border="true":::
 
