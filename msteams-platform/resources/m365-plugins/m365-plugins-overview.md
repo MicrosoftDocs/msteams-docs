@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 plugins
-description: Microsoft 365 plugins
+description: Microsoft 365 plugins details
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: medium
 ms.author: Surbhigupta
@@ -8,7 +8,7 @@ ms.author: Surbhigupta
 
 # Microsoft 365 plugins
 
-Microsoft 365 plugins provide integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collaborate the course content. The plugins can be used independently, or in partnership as per requirement. Moodle LMS supports the following plugins:
+Microsoft 365 plugins provide integration between Moodle websites and Microsoft Teams. These plugins makes it easy for you to schedule, deliver, and collaborate the course content. The plugins can be used independently, or in partnership as per the requirement. Moodle LMS supports the following plugins:
 
 ## OpenID Connect
 
@@ -103,7 +103,7 @@ Microsoft block enhances user experience by providing an User Interface (UI) to 
 
 <!-- :::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block"::: -->
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="microsoft block" border="true":::
 
 ## oEmbed filter
 

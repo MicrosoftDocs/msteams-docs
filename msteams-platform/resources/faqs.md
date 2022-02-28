@@ -162,7 +162,7 @@ The following image shows Toolbar icon after Toolbar config adjustment:
 >[!NOTE]
 > Add teams meeting to the right of the links icons.
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq 10.png" alt-text="links icon":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="links icon":::
 
 For more information on editing Atto toolbar, see: 
 * [Atto editor - MoodleDocs](https://docs.moodle.org/311/en/Atto_editor)

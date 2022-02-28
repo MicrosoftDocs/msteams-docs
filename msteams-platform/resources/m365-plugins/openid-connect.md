@@ -1,12 +1,12 @@
 ---
 title: Microsoft 365 plugins
-description: Microsoft 365 plugins details
-ms.topic: Details on Microsoft 365 plugins
+description: Microsoft 365 plugins
+ms.topic: Details on Microsoft
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-leenagopal
 ---
-
+<!-- 
 # Plugins details
 
 ## OpenID Connect
@@ -116,4 +116,4 @@ oEmbed filter plugin simplifies and enhances user experience by simplifying incl
 
 * [Partner apps for Moodle](../partner-apps-for-moodle.md)
 * [Getting help](../getting-help.md))
-* [FAQ](../faqs.md)
+* [FAQ](../faqs.md) -->
