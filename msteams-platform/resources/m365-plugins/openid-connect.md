@@ -4,7 +4,6 @@ description: Microsoft 365 plugins
 ms.topic: Details on Microsoft
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-leenagopal
 ---
 
 # Plugins details
