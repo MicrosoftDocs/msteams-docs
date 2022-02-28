@@ -323,7 +323,11 @@ items:
  
     1. From **Project**, navigate to **Teams Toolkit**, then select **Provision in the Cloud**
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the Publish operation for the project" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
+
+    1. Select the required subscription.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select_subscription.png" alt-text="Select the subscription operation for the project" border="false":::
 
     1. From **Project**, navigate to **Teams Toolkit**, then select **Deploy to the Cloud**
 
