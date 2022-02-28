@@ -25,10 +25,11 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | Are the users primarily front-line workers on mobile clients? |
-| 2 | Do you expect many guest users to need access to your app? |
+| 2 | Do you expect guest users need access to your app? |
 | 3 | Do they use teams and channels or primarily group chats? |
-| 4 | How technically sophisticated are your primary users? |
+| 4 | Are your primary users technically sophisticated ? |
 | 5 | Do you need a thorough onboarding experience or a few pointers might do? |
+
 |
 </details>
 <br>
