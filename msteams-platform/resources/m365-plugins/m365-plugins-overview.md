@@ -73,6 +73,7 @@ The theme plugin offers users with an unified enhanced experience with the follo
 * Provides Microsoft Team User Interface (UI) elements.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Microsoft Teams theme" border="true":::
+
 ## OneNote integration
 
 The OneNote integration plugin provides you with options to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necesssary feedback on corresponding assignments in OneNote. OneNote also enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
@@ -132,5 +133,5 @@ The following table lists the plugins and GitHub labels to be used based on the 
 ## See also
 
 * [Partner apps for Moodle](../partner-apps-for-moodle.md)
-* [Getting help](../getting-help.md))
-* [FAQ](../faqs.md)
+* [Get help](../getting-help.md))
+* [Frequently asked questions](../faqs.md)

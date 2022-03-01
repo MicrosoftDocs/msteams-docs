@@ -22,10 +22,10 @@ The following table shows the advantages of using partner apps.
 
 ## mConnect
 
-mConnect is [Microsoft certified](/microsoft-365-app-certification/teams/teams-apps) app that integrates Moodle courses and activities into Teams to enhance learning experience. mConnect is empowered by leading-edge collaboration and productivity services in the cloud. The app is developed and supported by Skooler, a trusted Microsoft Gold Partner in education. mConnect allows Moodle administrators to automatically set up Teams for every Moodle course, making all features available for each course in Moodle.
+mConnect is a [Microsoft certified](/microsoft-365-app-certification/teams/teams-apps) app that integrates Moodle courses and activities into Teams to enhance learning experience. mConnect is empowered by leading-edge collaboration and productivity services in the cloud. The app is developed and supported by Skooler, a trusted Microsoft Gold Partner in education. mConnect allows Moodle administrators to automatically set up Teams for every Moodle course and to make all features available for each course in Moodle.
 
 >[!NOTE]
->This app is availale in Microsoft Store for users have a pre-existing account with Skooler, and requires an adminstrator to configure it directly from the Moodle site.
+>This app is available in Microsoft Store for users have a pre-existing account with Skooler, and requires an administrator to configure it directly from the Moodle site.
   
 <!-- Watch the following video to understand how to get started with mConnect and Teams: -->
 

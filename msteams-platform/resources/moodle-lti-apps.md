@@ -46,10 +46,5 @@ The Microsoft Teams meetings LTI app helps faculty and students to integrate cla
 
 ## See also
 
-[Microsoft docs](https://docs.microsoft.com)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [M365 Plugins](/teamblog)
-
+* [Partner apps for Moodle](partner-apps-for-moodle.md)
+* [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md)
