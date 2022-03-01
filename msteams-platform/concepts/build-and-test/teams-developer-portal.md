@@ -13,6 +13,8 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
+> [!NOTE] The Developer Portal is not available for GCC, GCCH or DoD tenants.
+
 ## Register an app
 
 The Developer Portal provides a couple ways to register a Teams app:
