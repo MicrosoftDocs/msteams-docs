@@ -4,7 +4,6 @@ description: Help desk
 ms.topic: FAQs
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-leenagopal
 ---
 
 # Get help

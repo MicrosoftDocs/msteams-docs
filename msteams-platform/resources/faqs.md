@@ -4,7 +4,6 @@ description: Answers to some common questions
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-leenagopal
 ---
 
 # FAQ's
@@ -40,7 +39,7 @@ The users have multiple sign in options from the Moodle login page. If the users
 
 <summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b></summary>
 
-You can specify the users by synchronizing the configuration options of the **local_o365** plugin, using **User Creation Restriction**. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language. 
+You can specify the users by synchronizing the configuration options of the **local_o365** plugin, using **User Creation Restriction**. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language.
 
 > [!TIP]
 > Create a dynamic Microsoft 365 group to enable the **filter** option with multiple profile properties.
@@ -71,9 +70,9 @@ For more information, see Microsoft 365 block within the Moodle Course interface
 
 <!-- [Place holder for url] -->
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="admin":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="admin" border="true":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization" border="true":::
 
 <br>
 
@@ -117,11 +116,11 @@ Inconsistencies with users being able to sign in can be related to the user mapp
 
 If users who were able to sign in at the start need to report the issue, validate that the Application **Client secret** has not expired. The following image shows the error message:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue" border="true":::
 
 The following image shows the error in Azure portal:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal" border="true":::
 
 Consequently, if the **Client secret** has expired, then you need to generate a new Client secret, and update the configuration found on this page. The users can sign in again after the Client secret has been updated, which may take up to 24 hours to re-provision.
 
@@ -164,10 +163,10 @@ The following image shows Toolbar icon after Toolbar config adjustment:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="links icon":::
 
-For more information on editing Atto toolbar, see: 
-* [Atto editor - MoodleDocs](https://docs.moodle.org/311/en/Atto_editor)
-* [Icon Mapping](https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201)
+For more information on editing Atto toolbar, see:
 
+* [Atto editor - ModdleDocs](https://docs.moodle.org/311/en/Atto_editor)
+* [Atto editor - Icon mapping][https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201]
 <br>
 
 </details>
@@ -178,6 +177,6 @@ For more information on editing Atto toolbar, see:
 
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. 
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created.
 
-<!-- For more information, see [Meetings](https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams) -->
+For more information, see [Meetings](/microsoftteams/limits-specifications-teams)
