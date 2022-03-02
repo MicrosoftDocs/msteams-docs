@@ -7,7 +7,7 @@ keywords: Share Teams Share-to-Teams
 ---
 # Create Share-to-Teams button
 
-Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to create and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
+Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context.You can also add link unfurling for the shared link, for more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md). This document guides you on how to create and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
 
 > [!NOTE]
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
@@ -16,6 +16,9 @@ Third-party websites can use the launcher script to embed Share-to-Teams buttons
 The following image displays the Share-to-Teams pop-up experience:
 
 ![Share-to-Teams popup](~/assets/images/share-to-teams-popup.png)
+
+The following image displays the Share-to-Teams link unfurling experience:
+![Share-to-Teams link unfurling]()
 
 ## Embed a Share to Teams button
 
