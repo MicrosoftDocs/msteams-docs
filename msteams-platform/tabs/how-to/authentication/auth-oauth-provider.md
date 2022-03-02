@@ -28,7 +28,7 @@ The following table provides the list of `authenticate()` API parameters and fun
 |`failureCallback`| The function is called if the authentication fails and the authentication pop-up specifies the reason for failure.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
 |`successCallback`| The function is called if the authentication succeeds, with the result returned from the authentication pop-up. Authcode is the result.|
-|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web by Teams platform, which informs app server if the call is coming from web, desktop, or mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session, for example, [`authId`](https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}). </br>| 
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web by Teams platform, which informs app server if the call is coming from web, desktop, or mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.| 
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 For more information on parameters, see [authenticate parameters interface](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true).
@@ -55,7 +55,7 @@ The passed `url` contains placeholders for `{authId}`, and `{oauthRedirectMethod
 
 ```JavaScript
 microsoftTeams.authentication.authenticate({
-   url: “https://lnan-test2.loca.lt/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}”,,
+   url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
    isExternal: true,
    successCallback: function (result) {
    //sucess 
@@ -72,7 +72,7 @@ The Teams clients open the URL in an external browser after replacing the placeh
 #### Example
 
 ```http
- https://lnan-test2.loca.lt/auth?oauthRedirectMethod=deeplink&authId=1234567890 
+ https://3p.app.server/auth?oauthRedirectMethod=deeplink&authId=1234567890 
 ```
 
 **3. The 3P app server response**
@@ -94,7 +94,7 @@ The 3P app server redirects to OAuth providers auth page in the external browser
 #### Example
 
 ```http
-https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://lnan-test2.loca.lt/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…&response_type=code&access_type=offline&scope= … 
+https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://3p.app.server/authredirect&state={"authId":"…","oauthRedirectMethod":"…"}&client_id=…&response_type=code&access_type=offline&scope= … 
 ```
 
 **5. Sign in to external browser**
@@ -107,8 +107,8 @@ The 3P app server handles the response and checks `oauthRedirectMethod`, which i
 
 ```JavaScript
 const state = JSON.parse(req.query.state)
-if (state.  oauthRedirectMethod === 'deeplink') {
-   return res.redirect(“msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}”)
+if (state.oauthRedirectMethod === 'deeplink') {
+   return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
 }
 else {
 // continue redirecting to a web-page that will call notifySuccsss() – usually this method is used in Teams-Web
