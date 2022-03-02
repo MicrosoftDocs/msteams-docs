@@ -34,7 +34,7 @@ Moodle LMS helps you to access the following apps:
   * Class Teams LTI app, which helps faculty to create a class with user roles within the LMS courses. The app provides required access to students to various engaging courses.
   * Teams meetings LTI app, which helps faculty and students to engage using desktop, web platforms, and to integrate class meetings in their LMS course.
 
-* **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Microsoft Teams. These plugins can be used independently, or in partnership to achieve distinct user requirements. For more information, see [Plugins overview](/resources/m365-plugins/m365-plugins-overview.md)
+* **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Microsoft Teams. These plugins can be used independently, or in partnership to achieve distinct user requirements. For more information, see [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md).
 
 * **Partner apps for Moodle**: All the partner set of apps for Moodle and Microsoft Teams are available in Microsoft Store.
 
