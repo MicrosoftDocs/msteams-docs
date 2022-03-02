@@ -18,7 +18,7 @@ If you don't have a Microsoft 365 account, you must sign up for a Microsoft 365 
 
 If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active.
 
-## Azure account to host application resources
+## Azure account to host backend resources
 
 Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
 
