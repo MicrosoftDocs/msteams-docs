@@ -123,6 +123,10 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 |:---------------------|:--------------|:---------|:--------|
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.yml) to build a search based messaging extension.
+
 ## Next step
 
 > [!div class="nextstepaction"]
