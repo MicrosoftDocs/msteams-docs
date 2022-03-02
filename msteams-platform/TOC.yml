@@ -515,10 +515,10 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-    - name: Microsoft 365 plugins
-      href: resources/m365-plugins/m365-plugins-overview.md
     - name: Moodle LTI apps
       href: resources/moodle-lti-apps.md
+    - name: Microsoft 365 plugins
+      href: resources/m365-plugins/m365-plugins-overview.md
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
     - name: Frequently asked questions
