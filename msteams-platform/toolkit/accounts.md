@@ -10,21 +10,17 @@ ms.date: 02/03/2022
 
 # Prepare accounts to build Teams apps
 
-To create a Teams app, you will require a Microsoft 365 account with valid subscription and to host the backend resources on Azure, you will need an Azure account.
+To create a Teams app, you need a Microsoft 365 account with valid subscription and to host the backend resources on Azure, you need an Azure account.
 
-## Microsoft 365 developer program subscription
+## Microsoft 365 account
 
-If you don't have a Microsoft 365 account, you must sign up for a Microsoft 365 Developer Program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity.
+To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active.
 
-If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active.
+For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program)
 
-## Azure account to host backend resources
+### Microsoft 365 developer program
 
-Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
-
-## Join the Microsoft 365 developer program subscription
-
-If you don't have a Microsoft 365 account, you must sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 developer subscription. It is active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
+If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
@@ -35,13 +31,13 @@ The following image is shown after you complete the subscription.
 
 :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
 
-## Microsoft 365 developer subscription account types
+### Microsoft 365 developer account types
 
 You can sign up for the developer program by using one of the following account types:
 
 - **Microsoft account for personal use**
 
-This account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Signing up for an Outlook.com mailbox automatically creates a Microsoft account. After a Microsoft account is created, it can be used to access consumer-related Microsoft cloud services or Azure.
+This account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Sign up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
 
 - **Microsoft work account for business**
 
@@ -51,21 +47,23 @@ This account provides access to Microsoft products and cloud services, such as O
 
 The user id created to use Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
 
-## Azure account to host application resources
+## Azure account to host backend resources
 
-If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can choose to host your backend resources using another cloud provider, or on your own servers as long as these are available from the public domain.
+Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
+
+If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers as long as these are available from the public domain.
 
 ## Teams custom app upload or sideload permission
 
 > [!IMPORTANT]
-> During development, loading your app within Microsoft Teams without distributing it to users is known as **sideloading**.
+> After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
 
-You can verify that the sideloading permission is enabled using the following steps, either in Visual Studio Code or using the Teams client:
+You can verify that the sideloading permission is enabled using Visual Studio Code or Teams client using the following steps:
 
 * **To use Visual Studio Code**
 
     1. Open **Visual Studio Code**.
-    1. Select **Teams Toolkit** from left panel, if you don't see this option, ensure that you have installed the Teams Toolkit extension.
+    1. Select **Teams Toolkit** from left panel. If you are unable to see this ensure that you have installed Teams Toolkit extension.
     1. Select **Accounts** and log in to your Microsoft 365 account.
     1. Check whether you can see the option **Sideloading enabled** as shown in the following image:
 
@@ -85,7 +83,7 @@ You can verify that the sideloading permission is enabled using the following st
 
 If you are unable to view **Upload a custom app** it indicates that you don't have the permission for sideloading. You need to have sideloading enabled to do local or remote debugging. If you are a tenant admin you can enable the sideloading setting for your tenant or organization in the Teams admin center. If you are not a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
-## Upload your custom app
+### Upload your custom app
 
 > [!IMPORTANT]
 > To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
@@ -99,11 +97,11 @@ If you are unable to view **Upload a custom app** it indicates that you don't ha
 > [!NOTE]
 > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
 
-3. Navigate to **Teams apps** > **Setup Policies**. 
+3. Navigate to **Teams apps** > **Setup Policies**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set policies":::
 
-4. Select Toggle Upload custom apps to the **On** position.
+4. Sey Toggle Upload custom apps to **On** position.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="toggle":::
 
