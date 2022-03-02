@@ -86,7 +86,7 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create new project
+    - name: Create new app using Teams Toolkit
       href: toolkit/create-new-project.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
