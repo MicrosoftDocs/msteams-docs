@@ -1,7 +1,7 @@
 ---
 title: Toggle breakpoints
 author: zyxiaoyuer
-description: Debug your Teams app locally in Teams Toolkit
+description: Toggle breakpoints
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
