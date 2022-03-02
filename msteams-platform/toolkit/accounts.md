@@ -18,19 +18,19 @@ If you don't have a Microsoft 365 account, you must sign up for a Microsoft 365 
 
 If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active.
 
-## Azure account to host backend resources
+## Azure account to host application resources
 
 Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
 
 ## Join the Microsoft 365 developer program subscription
 
-If you don't have a Microsoft 365 account, you must sign up for a Microsoft 365 Developer Program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 developer subscription. It is active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
+If you don't have a Microsoft 365 account, you must sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 developer subscription. It is active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
 3. Select **Set up E5 subscription**.
 4. Set up your administrator account.
- 
+
 The following image is shown after you complete the subscription.
 
 :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
@@ -83,7 +83,7 @@ You can verify that the sideloading permission is enabled using the following st
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app":::
 
-If you can't see **Upload a custom app** option, this indicates that you don't have permission for sideloading. You need to have this enabled to do local or remote debugging. If you are a tenant admin you can enable the sideloading setting for your tenant or organization in the Teams admin center. If you are not a tenant admin you'll need to contact your tenant admin enable sideloading.
+If you are unable to see the **Upload a custom app** option it indicates that you don't have the permission for sideloading. You will need to have this enabled to do local or remote debugging. If you are a tenant admin you can enable the sideloading setting for your tenant or organization in the Teams admin center. If you are not a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
 ## Enable custom app uploading for your organization
 
