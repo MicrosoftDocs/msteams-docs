@@ -26,6 +26,15 @@ Test your bot locally. For more information, see [debug your bot locally with an
 
 To view the console logs, view or modify html, css, and network requests during runtime, add breakpoints to your JavaScript code, and perform interactive debugging access the DevTools. For more information, see [Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md). 
 
+
+[Ensure you have working knowledge of [C#]](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+
+[C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+
+[ASP.NET core](/aspnet/core/?view=aspnetcore-3.1) version 3.1
+
+[SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
+
 ## Add test data to your Microsoft 365 tenant
 
 Add the test data to Microsoft 365 test tenant. For more information, see [add test data to your Office 365 test tenant](~/concepts/build-and-test/test-data.md), and complete all the prerequisites before you start uploading your test data.
