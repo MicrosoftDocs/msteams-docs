@@ -5,25 +5,35 @@ description:  Create new Teams project Using Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 03/02/2022
 ---
 
 # Create a new Teams app using Teams Toolkit
 
-To create new Teams project using Teams Toolkit, select **Create a new Teams app project** or **Start from a sample**.
-
-## Create a new Teams app using a new project
+To create new Teams app using Teams Toolkit, select **Create a new Teams app** or **View samples**.
 
 Select **Create a new Teams app** and choose from the capabilities available - tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). Select at least one option to start creating, and then add more capabilities as needed, according to the requirements of the Teams app. The following guides help you to scaffold a new Teams starter app using each of them:
 
-- [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
+> [!div class="nextstepaction"]
+> [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
+
+> [!div class="nextstepaction"]
+> [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
+
+> [!div class="nextstepaction"]
+> [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
+
+> [!div class="nextstepaction"]
+> [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
+
+<!-- - [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
 - [Create a new Teams Bot app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
 - [Create a new Message Extension app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
-- [Create a new Teams Tab app (SharePoint Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+- [Create a new Teams Tab app (SharePoint Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch) -->
 
 ## Create a new Teams app using sample code
 
-You can create a new project by exploring the **View samples** and choosing an existing sample for your new app. These samples may already have some functionality, for example a todo list with an Azure backend, or an integration with the Microsoft Graph Toolkit. Follow these steps to create an app from one of the samples. If there are no open folders in Visual Studio Code, proceed with second step.
+You can create a new app by exploring the **View samples** and choosing an existing sample for your new app. These samples may already have some functionality, for example a todo list with an Azure backend, or an integration with the Microsoft Graph Toolkit. Follow these steps to create an app from one of the samples. If there are no open folders in Visual Studio Code, proceed with second step.
 
  1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
  1. Select **DEVELOPMENT** section in Tree View.
