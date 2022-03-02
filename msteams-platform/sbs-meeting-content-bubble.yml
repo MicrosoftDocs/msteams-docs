@@ -42,7 +42,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    Ensure you have working knowledge of [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+    Ensure you have working knowledge of [C#](/tutorials/how-to-display-command-line-arguments).
 
 - title: Set up local environment
   durationInMinutes: 1
