@@ -55,9 +55,9 @@ The following image shows the Share-to-Teams option:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
-## End user Share-to-Teams experience 
+## End user Share-to-Teams experience
 
-After you enabled share-to-teams button, you can test this feature:
+After you enabled share-to-teams button, you can experience the feature with the following steps:
 
 1. Open a personal app or tab and select **Share-to-Teams**.
 
