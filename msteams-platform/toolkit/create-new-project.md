@@ -2,7 +2,7 @@
 title: Create a new Teams project using Teams Toolkit
 author: zyxiaoyuer
 description:  Create new Teams project Using Teams Toolkit
-ms.author: surbhi gupta
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 03/02/2022
@@ -14,7 +14,7 @@ To create new Teams app using Teams Toolkit, you can select from one of the opti
 
 ## Create a new Teams app
 
-To create a new Teams app using the Teams Toolkit, open Visual Studio Code and select **Create a new Teams app**. Select from the capabilities available - tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). Select at least one option to start creating, and then add more capabilities as needed, according to the requirements of the Teams app. 
+To create a new Teams app using the Teams Toolkit, open Visual Studio Code and select **Create a new Teams app** option. Select from the capabilities available - tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). Select at least one option to start creating, and then add more capabilities as needed, according to the requirements of the Teams app.
 
 The following guides help you to scaffold a new Teams starter app using each of them:
 
