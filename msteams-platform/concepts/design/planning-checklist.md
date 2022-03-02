@@ -74,9 +74,9 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | What happens when a user first configures your tab in a channel? |
-| 2 | If you are sharing cards with a messaging extension, adding a link to a learn more page to help introduce users to what else your app can do? |
+| 2 | If you're sharing cards with a messaging extension, adding a link to a learn more page to help introduce users to what else your app can do? |
 | 3 | Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? |
-| 4 | Does your uses have any prior knowledge of your app? |
+| 4 | Does your users have any prior knowledge of your app? |
 
 |
 </details>
