@@ -16,13 +16,11 @@ To create a Teams app, you will require a Microsoft 365 account with valid subsc
 
 If you don't have a Microsoft 365 account, you must sign up for a Microsoft 365 Developer Program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity.
 
+If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active.
+
 ## Azure account to host backend resources
 
 Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
-
-## Visual Studio subscription
-
-If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active.
 
 ## Join the Microsoft 365 developer program subscription
 
