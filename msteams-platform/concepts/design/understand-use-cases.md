@@ -35,7 +35,7 @@ There are multiple ways to extend Teams so every app is unique. Teams app featur
 
 Capabilities are the core functionalities that you can build in your app. They're also called entry or extension points because they enable integration and interaction.
 
-Your Teams apps have one or all the following core capabilities:
+Your Teams apps have one or all of the following core capabilities:
 
 :::row:::
    :::column span="":::
