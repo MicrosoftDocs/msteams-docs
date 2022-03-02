@@ -137,15 +137,16 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
    :::column-end:::
 
-> [!NOTE]
-> Teams store has evolved:
-> 
-> Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
 
    :::column-end:::
 :::row-end:::
+
+> [!NOTE]
+> Teams store has evolved:
+> Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 ## Choose the correct scope for your app
 
