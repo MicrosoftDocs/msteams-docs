@@ -8,7 +8,7 @@ ms.author: v-abirade
 ---
 # Plan responsive tabs for Teams mobile
 
- Teams platform offers opportunity to build apps on mobile and desktop. Your app users prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, messaging extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile. The document guides to plan your responsive web pages on Teams mobile.
+ Teams platform offers opportunity to build apps on mobile and desktop. Your app users prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, messaging extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile. The article guides to plan your responsive web pages on Teams mobile.
 
 ## Identify apps scope
 
@@ -24,15 +24,15 @@ After you've identified the app scope, it's time to understand the following thr
 
 1. **Consumption**
 
-   View apps on mobile. To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
+   View apps on mobile: To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
 2. **Quick Actions**
 
-   Use app on mobile. After your users start consuming the content on mobile, you can scale your app to the next level by migrating some actions from desktop app. You can optimize and build new actions for mobile.
+   Use app on mobile: After your users start consuming the content on mobile, you can scale your app to the next level by migrating some actions from desktop app. You can optimize and build new actions for mobile.
 
 3. **Enablement**
 
-   Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use cases responsive on mobile.
+   Provide complete app experiences to engage on mobile: As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use cases responsive on mobile.
 
 > [!TIP]
 > To get information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).
@@ -53,11 +53,11 @@ You can understand how to plan responsive tabs for dashboarding and data visuali
 
 In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using task modules.
 
-You can show the following information: 
+You can show the following information:
 
 * Dashboards and summaries
 * Data visuals, maps, and infographics
-* Charts, graphs, and tables 
+* Charts, graphs, and tables
 
 ![Dashboarding and data visualization apps consumption](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
@@ -152,7 +152,7 @@ In the second stage, you can introduce the following actions:
 * Configure admin permissions
 
 > [!TIP]
-> You expose actions, which can be shown easily on the small screens.
+> You can expose actions, which are shown easily on the small screens.
 
 ![Coauthoring and whiteboarding apps quick actions](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
 
