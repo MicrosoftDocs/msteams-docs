@@ -33,7 +33,7 @@ After creating a new project, you can simply press F5 to run your Teams app in d
 1. Select Debug (Edge) or Debug (Chrome) in Run and Debug drop-down list, then select Start Debugging (F5) button. Toolkit will launch a new Edge or Chrome browser instance depending on your selection and open a web page to load Teams client. You can also simply press F5 to use the default browser.
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug.png" alt-text="browser default":::
 1. If the following dialog is popped up, select **Sign in** to Microsoft 365 (<https://www.office.com/>)
-:::image type="content" source="../assets/images/teams-toolkit-v2/microsoft365-sign in.png" alt-text="365 page":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/microsoft365-sign in.png" alt-text="sign in 365 page":::
 
 > [!NOTE]
 > You can also select **Read more** button to learn more about Microsoft 365 Developer Program.
