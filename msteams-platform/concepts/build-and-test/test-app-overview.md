@@ -31,7 +31,7 @@ To view the console logs, view or modify html, css, and network requests during 
 
 [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
 
-[ASP.NET core](/aspnet/core/?view=aspnetcore-3.1) version 3.1
+[ASP.NET core](/aspnet/core/?view=aspnetcore-3.1&preserve-view=true) version 3.1
 
 [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
