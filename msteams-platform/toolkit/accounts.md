@@ -2,25 +2,32 @@
 title: Prepare Accounts to Build Teams Apps
 author: zyxiaoyuer
 description:  Prepare Accounts to Build Teams Apps
-ms.author: zhany
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 02/03/2022
 ---
 
-# Prepare accounts to build Teams apps
+# Configure accounts to build Teams apps
 
-To develop a Teams app, you will require a Microsoft 365 account with a valid subscription. As a best practice, this should be separate from your production tenant. If you want to host your backend resources on Azure, you also need an Azure account.
+To create a Teams app, you will require a Microsoft 365 account with a valid subscription. As a best practice, this should be separate from your production tenant. If you want to host your backend resources on Azure, you also need an Azure account.
+
+Microsoft 365 account subscription
+Azure account to host backend resources.
+
+Note. Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
 
 ## Use Visual Studio subscription
 
-If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active.
+<!-- If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. -->
+
+If you do not have a Microsoft 365 account, you must sign up for a Microsoft 365 Developer Program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 developer subscription. It is active as long as your Visual Studio subscription is active. For more information, see set up a Microsoft 365 developer subscription.
 
 ## Join the Microsoft 365 developer program
 
 If you don’t have an existing Microsoft 365 account with a valid subscription, you can create one by joining the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program). This includes a Microsoft 365 E5 developer subscription that you can use to create your own sandbox and develop solutions independent of your production environment. For more information, see [set up a Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
-The subscription is free for 90 days and continues to renew as long as you are using it for development activity. 
+The subscription is free for 90 days and continues to renew as long as you are using it for development activity.
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
@@ -61,7 +68,7 @@ You can verify that the sideloading app permission is enabled using the followin
     1. Open **Visual Studio Code**.
     1. Select **Teams Toolkit** from left panel (if you don't see this option, make sure you have installed the Teams Toolkit extension).
     1. Select **Accounts** and log in to your Microsoft 365 account.
-    1. Check whether you can see the option **Sideloading enabled** as shown in the image:
+    1. Check whether you can see the option **Sideloading enabled** as shown in the following image:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
 
