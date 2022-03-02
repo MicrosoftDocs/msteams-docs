@@ -38,7 +38,7 @@ The images that you upload with the English language are used in AppSource.
 
 ## Localize strings in your app manifest
 
-You must use the Microsoft Teams app schema `v1.5` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to **https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case). 
+You must use the Microsoft Teams app schema `v1.5` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to ``https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json`` or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case).
 
 You must add the `localizationInfo` property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings do not match with any of your additional languages.
 

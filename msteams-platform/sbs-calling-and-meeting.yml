@@ -38,7 +38,7 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * Microsoft Teams with an account (not a guest account)
-    * Install [Windows PowerShell](https://docs.microsoft.com/microsoftteams/teams-powershell-install) by executing all the commands
+    * Install [Windows PowerShell](/microsoftteams/teams-powershell-install) by executing all the commands
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
