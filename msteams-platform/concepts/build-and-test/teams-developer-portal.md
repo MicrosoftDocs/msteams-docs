@@ -72,8 +72,8 @@ On the **Overview** page, you can see the total number of active users for your 
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly R30* | The default usage metric. It shows the count of unique active users that used your app within that rolling 30 day window in UTC. |
-| *Daily* | It shows you the count of unique active users that used your app in a given day in UTC. |
+| *Monthly R30* | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 day window in UTC. |
+| *Daily* | It shows you the count of unique active users who used your app in a given day in UTC. |
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for new apps can take up to 3 to 5 days to reflect in the charts.
 
@@ -104,7 +104,7 @@ Once you have selected your desired filters, you can explore the following indiv
 
 ### Usage by time period
 
-The **Usage by time period** chart shows you the number of active users or tenants that have opened and/or used your app across different time periods.
+The **Usage by time period** chart shows you the number of active users or tenants who opened and/or used your app across different time periods.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
 
@@ -143,7 +143,7 @@ The **Usage intensity** chart shows you key usage intensity metrics for your app
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | Median Days Used per Month | The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period. |
-| % of 5+ Days Usage | The % of Active Users that have opened or used the app more than five days in the last RL30 (Rolling 30 day) period. |
+| % of 5+ Days Usage | The % of Active Users who opened or used the app more than five days in the last RL30 (Rolling 30 day) period. |
 | DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. |
 
 ### App dashboard
