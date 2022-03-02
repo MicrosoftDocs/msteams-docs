@@ -159,7 +159,7 @@ In the second stage, you can introduce the following actions:
 **Enablement**
 
 In the third stage, provide complete experience to your users. You can enable users' experience with the following activities:
-
+f
 * Adding text, shapes, and quick notes
 * Navigate around content
 * Add layers and filters
