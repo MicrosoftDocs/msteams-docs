@@ -28,16 +28,16 @@ Moodle LMS supports the following plugins:
 
 ## OpenID Connect
 
-The Open ID Connect plugin allows you to authenticate any website or tool that supports the required specification and provides single sign-on support (SSO) with Microsoft Office 365. The OpenID Connect plugin provides institutions with the following sign-in workflow options to meet their specific requirements:
+The Open ID Connect plugin allows users to authenticate any website or tool that supports the required specification and provides single sign-on support (SSO) with Microsoft Office 365. The OpenID Connect plugin provides institutions with the following sign in options to meet their specific requirements:
 
-* Users can enter their Office 365 credentials, such as email and password to sign in directly or sign-in using Moodle’s username and password fields, without signing into Office 365.
+* Users can enter their Office 365 credentials, such as email and password to sign in directly or sign in using Moodle’s username and password fields, without signing into Office 365.
 * Users can select the link to sign in through Office 365 or the OpenID Connect provider on Moodle page.
 
 :::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Login to open-id connect" border="true":::
 
 ## Microsoft 365 integration
 
-Microsoft 365 integration consists of several apps with multiple functionalities allowing you to stay connected and perform different actions as required. The plugin allows administrators to validate the following:
+Microsoft 365 integration consists of several apps with multiple functionalities, which allows users to stay connected and perform different actions as required. The plugin allows administrators to validate the following:
 
 * Validate appropriate integration functions.
 * Synchronize users between Office 365 and Moodle.
@@ -56,19 +56,20 @@ The users can perform the following actions with Microsoft 365 integration:
 
 ## Microsoft 365 repository
 
-The Microsoft 365 repository plugin allows you to store course files in OneDrive. Faculty can add files from the course file section of OneDrive or from their own personal space to this repository.
+The Microsoft 365 repository plugin allows users to store course files in OneDrive. Faculty can add files from the course file section of OneDrive or from their own personal space to the repository.
 
-Microsoft 365 offers you the benefit of using it as a file repository for an institution while keeping Moodle's data structure simple. The Microsoft 365 repository plugin provides the following services:
+Microsoft 365 repository users the benefit of using it as a file repository for an institution while keeping Moodle's data structure simple. The Microsoft 365 repository plugin provides the following services:
 
-* The faculty can store the course files in OneDrive. Each course has its own folder created in OneDrive, which allows you to add files either from the course files area of OneDrive or from their own personal space.  
+* The faculty can store the course files in OneDrive. Each course has its own folder created in OneDrive, which allows faculty to add files either from the course files area of OneDrive or from their own personal space.  
 * To add files to Moodle as a copy or create a link to the file. The linked file is displayed in a new application window or is embedded in the webpage.
 * To upload files to OneDrive or SharePoint using the Moodle file picker.
 
+The following image 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="M365 repository"  border="true":::
 
 ## Teams meetings
 
-The Teams meetings plugin allows you to create meetings requests in calendar, assignments, forum posts, and in the Atto editor as per availability.
+The Teams meetings plugin allows user to create meetings requests in calendar, assignments, forum posts, and in the Atto editor as per availability.
 
 After the plugin is installed, faculty and students can create an audio or video meeting using Moodle, which requires Microsoft 365 account and Moodle permissions.
 
@@ -79,9 +80,9 @@ After the plugin is installed, faculty and students can create an audio or video
 
 ## Microsoft 365 Teams theme
 
-The Microsoft 365 Teams theme plugin provides you with custom view of Moodle course home page and is available for viewing when you access their Moodle courses within Teams.
+The Microsoft 365 Teams theme plugin provides user with custom view of Moodle course home page and is available for viewing when user accesses their Moodle courses within Teams.
 
-The theme plugin offers users with an unified enhanced experience with the following features:
+The theme plugin gives users an unified enhanced experience with the following features:
 
 * Adapts to Microsoft Teams theme changes, such as default, dark, and high contrast.
 * Provides focus on the course activities.
@@ -92,7 +93,7 @@ The theme plugin offers users with an unified enhanced experience with the follo
 
 ## OneNote integration
 
-The OneNote integration plugin provides you with options to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necesssary feedback on corresponding assignments in OneNote. OneNote also enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
+The OneNote integration plugin provides user with options to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necessary feedback on corresponding assignments in OneNote. OneNote also enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
 
 OneNote integration helps with access to texts, graphics, and audio repositories. The plugins provides you with the following advantages:
 
@@ -106,7 +107,7 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 
 ## Microsoft block
 
-Microsoft block plugin allows you to access the course SharePoint file location and view the course in OneNote notebook for submissions, along with the option to modify Office 365 integration preferences. The administrators can configure the block to appear on all the course pages.
+Microsoft block plugin allows the user to access course SharePoint file location and view the course in OneNote notebook for submissions, along with the option to modify Office 365 integration preferences. The administrators can configure the block to appear on all the course pages.
 
 Microsoft block enhances user experience by providing an User Interface (UI) to modify Microsoft 365 integration features and access to its numerous resources. Administrators can configure the block to view the modified changes to appear on each course page. The block also allows you to perform the following activities:
 
@@ -116,7 +117,7 @@ Microsoft block enhances user experience by providing an User Interface (UI) to 
 * Manages connection to Office 365.
 * Customize personal Office 365 integration preferences.
 
-<!-- :::image type="content" source="../../assets/images/MoodleInstructions/microsoft lock 1.png" alt-text="microsoft block"::: -->
+The following image shows the 
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="microsoft block" border="true":::
 

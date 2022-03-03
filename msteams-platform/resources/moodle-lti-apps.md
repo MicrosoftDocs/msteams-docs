@@ -9,23 +9,23 @@ author: v-leenagopal
 
 # Moodle LTI apps
 
-Learning Tools Interoperability (LTI) is a specification developed to integrate learning applications with learning management platforms. The following LTI's for Moodle LMS are offered.
+Learning Tools Interoperability (LTI) is a specification developed to integrate learning applications with learning management platforms. The following list provides LTI's apps for Moodle LMS:
 
 ## OneDrive LTI app
 
-The OneDrive LTI app allows the faculty and students to access their OneDrive files inside LMS, which also includes the following:
+The OneDrive LTI app allows the faculty and students to access their OneDrive files in LMS, which also includes the following:
 
 * Access to class files in shared ODSP libraries from within LMS.
 * Share files using links within LMS.
 
 ## Class Teams LTI app
 
-The Class Teams LTI app allows faculty and students to easily navigate between Teams and their respective courses in LMS. 
+Class Teams LTI app allows faculty and students to easily navigate between Teams and their respective courses in LMS.
 
 Based on the enrolment roster of the LMS course, faculty can do the following:
- 
-* Create a Class Team with the proper user roles for an LMS course.
-* Support Teams admin and adhere to LMS privacy policies during Class Team creation.
+
+* Create a Class team with the proper user roles for an LMS course.
+* Support Teams admin and adhere to LMS privacy policies during Class team creation.
 
 After creating the Class Team, faculty and students can do the following:
 
@@ -34,11 +34,11 @@ After creating the Class Team, faculty and students can do the following:
 
 ## Teams Meetings LTI app
 
-The Microsoft Teams meetings LTI app helps faculty and students to integrate class meetings to their courses. The Teams meetings LTI app also allows the user to do the following:
+The Teams meetings LTI app helps faculty and students to integrate class meetings to their courses and also allows the users to do the following:
 
 * Schedule individual or recurring meetings within the course in LMS and set meeting options.
-* View past and upcoming meetings within the LMS course calendar.
-* Join or edit the details of a Teams meeting from the LMS course.
+* View past and upcoming meetings within LMS course calendar.
+* Join or edit the details of Teams meeting from the LMS course.
 * Engage across desktop and web platforms.
 
 > [!NOTE]

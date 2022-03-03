@@ -88,7 +88,7 @@ In most cases, the issue will be resolved before users need **Delta token clean 
 |-------|------------|----------|
 | Stable version| Verify that the version of Moodle is listed as a **stable**| [Version support](https://docs.moodle.org/dev/Releases#Version_support)|
 |Permissions| Verify that the Azure application has the necessary permissions to run the sync|[Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions)|
-| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**| Enable full sync: {moodle_url}\local_o365\task\usersync </br>Check task logs: {moodleurl}/admin/tasklogs.php |
+| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**| Enable full sync: {moodle_url}\local_o365\task\usersync1 </br>Check task logs: {moodleurl}/admin/tasklogs.php |
 | Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken|
 
 <br>
@@ -114,7 +114,7 @@ Inconsistencies with users being able to sign in can be related to the user mapp
 
 <summary><b>All users are unable to re-sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
 
-If users who were able to sign in at the start need to report the issue, validate that the Application **Client secret** has not expired. The following image shows the error message:
+If users who were able to sign in at the start need to report the issue, validate that the application **Client secret** has not expired. The following image shows the error message:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue" border="true":::
 
