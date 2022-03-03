@@ -824,7 +824,7 @@ Specify and consolidate authorization related information for the app.
 
 #### Resource-specific application permissions
 
-Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [RSC permissions for app manifest version 1.11 or earlier](../../graph-api/rsc/resource-specific-consent.md#manifest-changes-for-resource-specific-consent).
+Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
 
 #### Resource-specific delegated permissions
 
