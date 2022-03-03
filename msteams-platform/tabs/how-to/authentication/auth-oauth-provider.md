@@ -28,7 +28,7 @@ The following table provides the list of `authenticate()` API parameters and fun
 |`failureCallback`| The function is called if the authentication fails and the authentication pop-up specifies the reason for failure.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
 |`successCallback`| The function is called if the authentication succeeds, with the result returned from the authentication pop-up. Authcode is the result.|
-|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web by Teams platform, which informs app server if the call is coming from web, desktop, or mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.| 
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.| 
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 For more information on parameters, see [authenticate parameters interface](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true).
@@ -81,7 +81,9 @@ The 3P app server receives and saves the `url` with the following two query para
 
 | Parameter | Description|
 | --- | --- |
-| `oauthRedirectMethod` |Indicates how the 3P app must send the response of authentication request back to Teams, with one of the two values: deeplink or webpage.|
+| `oauthRedirectMethod` |Indicates how the 3P app must send the response of authentication request back to Teams, with one of the two values: deeplink or 
+
+page.|
 |`authId` | The request-id Teams created for this specific authentication request that needs to be sent back to Teams through deeplink.|
 
 > [!TIP]
