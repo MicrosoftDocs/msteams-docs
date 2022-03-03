@@ -89,7 +89,7 @@ For teachers using the Share to Teams button, there is an additional option to `
 | Property | HTML attribute | Type | Default | Description |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | n/a | The href of the content to share. |
-| preview | `data-preview` | boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
+| preview | `data-preview` | Boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
 | iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share-to-Teams button to render. |
 | msgText | `data-msg-text` | string | n/a | Default text to be inserted before the link in the message compose box. Maximum number of characters is 200. |
 | assignInstr | `data-assign-instr` | string | n/a | Default text to be inserted in the assignments "Instructions" field. Maximum number of characters is 200. |
