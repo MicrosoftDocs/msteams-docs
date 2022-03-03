@@ -14,16 +14,18 @@ Microsoft 365 plugins provide integration between Moodle website and Teams. Thes
 
 The following table lists the plugins and GitHub labels to be used based on the requirements.
 
-|Plugins to install|Description|GitHub label(s)|
+|Plugins to install |Description |GitHub label(s)|
 |-----|-----|----|
 |[**OpenID Connect**](#openid-connect)|Enable SSO for users who work using both Moodle and Microsoft Teams|auth_oidc|
 |• [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration) |Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members|• auth_oidc </br> • local_o365|
 |• [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration) • Teams Theme| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances |  • auth_oidc </br> • local_o365 </br> • themeboost_o365teams |
-| • [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration)• Microsoft 365 Repository |Leverage Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle | • auth_oidc </br> * local_o365 </br> • repository_office 365|
-| • [**OpenID Connect**](#openid-connect) </br> • [**OneNote**](#onenote-integration) </br> • OneNote Submissions </br> • OneNote Feedback | Enable OneNote to be used for assignment, submission and feedback |• auth_oidc </br> • local_onenote </br> • assignsubmission_onenote </br> • assignfeedback_onenote |  
+|• [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration)• Microsoft 365 Repository |Leverage Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle | • auth_oidc </br> * local_o365 </br> • repository_office 365|
+|• [**OpenID Connect**](#openid-connect) </br> • [**OneNote**](#onenote-integration) </br> • OneNote Submissions </br> • OneNote Feedback | Enable OneNote to be used for assignment, submission and feedback |• auth_oidc </br> • local_onenote </br> • assignsubmission_onenote </br> • assignfeedback_onenote |  
 |• [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration) • [**Microsoft 365 Repository**](#microsoft-365-repository) </br> • Microsoft Block | Enable 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office | • auth_oidc </br> • local_o365 </br> • repository_office365 </br> • block_microsoft |
 |[**Teams Meeting**](#teams-meetings) | Enable Atto editor in Moodle to create Teams meeting links |atto_teamsmeeting |
 |[**oEmbed Filter**](#oembed-filter) | Enable video links in Moodle | Filter_oembed|
+
+
 Moodle LMS supports the following plugins:
 
 ## OpenID Connect
