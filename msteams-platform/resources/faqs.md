@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.author: Surbhigupta
 ---
 
-# FAQ's
+# Moodle FAQ
 
 Get answers to some of your queries when using Moodle LMS.<br>
 
@@ -155,8 +155,6 @@ The user can face the issue if the icon reference is missing in the **Toolbar co
 The following image shows Toolbar icon after Toolbar config adjustment:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="tool bar" border="true":::
-
-<!-- [Place holder for url] -->
 
 >[!NOTE]
 > Add teams meeting to the right of the links icons.
