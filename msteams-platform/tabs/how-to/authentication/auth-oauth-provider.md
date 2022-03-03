@@ -19,7 +19,6 @@ The following are added to the `authenticate()` API to support external OAuth pr
 * `isExternal` parameter
 * Two placeholder values in the existing `url` parameter
 
-
 The following table provides the list of `authenticate()` API parameters and functions along with their descriptions:
 
 | Parameter| Description|
@@ -36,7 +35,7 @@ For more information on parameters, see [authenticate parameters interface](/jav
 ## Add authentication to external browsers
 
 > [!NOTE]
-> * Currently, you can add authentication to external browsers for tabs only.
+> * Currently, you can add authentication to external browsers for tabs in mobile only.
 > * Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
 
 The following image provides the flow to add authentication to external browsers:
@@ -119,7 +118,7 @@ else {
 
 **7. The 3P app generates a deeplink**
 
-The 3P app generates a deeplink for Teams desktop and mobile in the following format, and sends the auth code with the session ID back to Teams.
+The 3P app generates a deeplink for Teams mobile in the following format, and sends the auth code with the session ID back to Teams.
  
 ```JavaScript
 return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
