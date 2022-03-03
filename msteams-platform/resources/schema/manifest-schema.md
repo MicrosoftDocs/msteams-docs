@@ -626,6 +626,12 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |`id`|string|36 characters|✔|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|string|2048 characters|✔|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you are not using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, https://notapplicable to avoid an error response. |
 
+**Application permissions**
+
+**Optional** — array of strings
+
+For information on application permissions, see [RSC permissions for app manifest version 1.11 or earlier](../../graph-api/rsc/resource-specific-consent.md#manifest-changes-for-resource-specific-consent) and [RSC permissions for app manifest version 1.11 or earlier for testing](../../graph-api/rsc/test-resource-specific-consent.md#prerequisites)
+
 ## showLoadingIndicator
 
 **Optional**—Boolean
@@ -822,7 +828,7 @@ Specify and consolidate authorization related information for the app.
 |`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more information, see [Application permissions](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-permissions).|
 
-### Delegated permissions
+**Delegated permissions**
 
 Delegated permissions allow the app to access data on behalf of the signed-in user.
 
