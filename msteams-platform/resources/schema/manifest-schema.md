@@ -630,7 +630,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 
 **Optional** — array of strings
 
-For information on application permissions, see [RSC permissions for app manifest version 1.11 or earlier](../../graph-api/rsc/resource-specific-consent.md#manifest-changes-for-resource-specific-consent) and [RSC permissions for app manifest version 1.11 or earlier for testing](../../graph-api/rsc/test-resource-specific-consent.md#prerequisites)
+For information on application permissions, see [RSC permissions for app manifest version 1.11 or earlier](../../graph-api/rsc/resource-specific-consent.md#manifest-changes-for-resource-specific-consent) and [RSC permissions for app manifest version 1.11 or earlier for testing](../../graph-api/rsc/test-resource-specific-consent.md#prerequisites).
 
 ## showLoadingIndicator
 
