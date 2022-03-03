@@ -657,9 +657,9 @@ Application permissions allow the app to access data without a signed-in user. F
 
 #### Resource-specific delegated permissions
 
-Delegated permissions allow the app to access data on behalf of the signed-in user.
+Delegated permissions allow the app to access data on behalf of the signed-in user. 
 
-* **Resource-specific permissions for teams**
+* **Resource-specific permissions for teams** 
 
     |**Name**|**Description**|
     |---|---|
