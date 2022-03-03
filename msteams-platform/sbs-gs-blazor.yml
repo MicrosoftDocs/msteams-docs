@@ -254,8 +254,6 @@ items:
   content: |
     After you set up your project workspace with Teams Toolkit, build your tab project.
 
-    ## Build and run your app
-
     To build and run your app locally:
 
     1. Open the latest version of Visual Studio.
