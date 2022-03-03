@@ -221,7 +221,7 @@ items:
 
         Your Teams app is created in a few seconds.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the latest Visual Studio." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
@@ -326,6 +326,8 @@ items:
     1. Select the required subscription.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select-subscription.png" alt-text="Select the subscription operation for the project" border="false":::
+
+    1. The resource group is generated in Azure portal.
 
     1. From **Project**, navigate to **Teams Toolkit**, then select **Deploy to the Cloud**
 
