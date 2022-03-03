@@ -649,9 +649,13 @@ Specify and consolidate authorization related information for the app.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more information, see [Application permissions](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-permissions).|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. For more information, see [Application permissions](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-permissions).|
 
-### Delegated permissions
+#### Application permissions
+
+For information on application permissions, see [RSC permissions for app manifest version 1.11 or earlier](../../graph-api/rsc/resource-specific-consent.md#manifest-changes-for-resource-specific-consent).
+
+#### Delegated permissions
 
 Delegated permissions allow the app to access data on behalf of the signed-in user.
 
