@@ -8,12 +8,16 @@ keywords: Share to Teams overview
 
 # Share-to-Teams
 
-Users can share any content from their web apps or personal app or tab to other users with the Share-to-Teams button. You can enable Share-to-Teams button on any web apps and personal app or tab. You can decide where to place the Share-to-Teams button on your app.
+Users can share content from web apps, personal app or tab to other users with the share-to-Teams button, this feature can be enabled on any web, personal app or tab, users you can decide where to place the feature on the app.
+
+Share to Teams button allows users to easily share content to individual contacts or groups in Teams. Users can pin the crucial content and refer to it while collaborating in Teams.
+
+(Image to be added)
+
+For Share-to-Teams developer page, see [Share-to-Teams](https://developer.microsoft.com/en-us/microsoft-teams/share-to-teams#/).
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Create Share-to-Teams button](share-to-teams.md)
+* [Share-to-Teams from web apps](share-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Share-to-Teams from personal app or tab](share-to-teams%20from%20personal%20app%20or%20tab.md)
+* [Share-to-Teams from personal app or tab](share-to-teams%20from%20personal%20app%20or%20tab.md)
