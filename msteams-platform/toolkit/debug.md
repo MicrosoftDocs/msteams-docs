@@ -55,7 +55,7 @@ When Teams client is completely loaded in the  web browser, select **Add button*
 ## Toggle breakpoints
 
 In Visual Studio Code, you can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints will be hit when you interact with the Teams app in a web browser.
-:::image type="content" source="../assets/images/teams-toolkit-v2/toggle.png" alt-text="Alternate capabilities":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/toggle.png" alt-text="capabilities":::
 
 ## Hot reload
 
