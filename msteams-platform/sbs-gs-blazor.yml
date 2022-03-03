@@ -331,11 +331,11 @@ items:
 
     1. From **Project**, navigate to **Teams Toolkit**, then select **Deploy to the Cloud**
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud.png" alt-text="Select Azure as the publishing target" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="false":::
 
     1. After you complete the provision and deployment steps, select **Project**, navigate to **Teams Toolkit**, then  select **Preview Teams app**
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-preview.png" alt-text="Select Azure App Service as the publishing target" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-preview.png" alt-text="Select preview" border="false":::
 
      1. Select **Add**, when prompted to install the app to Teams.
 
