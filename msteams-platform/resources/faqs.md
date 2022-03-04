@@ -114,7 +114,7 @@ Inconsistencies with users being able to sign in can be related to the user mapp
 
 <summary><b>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
 
-users who were unable to sign in at the start need to report the issue and validate that the application **Client secret** has not expired. 
+Users who were unable to sign in at the start need to report the issue and validate that the application **Client secret** has not expired.
 
 The following image shows the error message:
 

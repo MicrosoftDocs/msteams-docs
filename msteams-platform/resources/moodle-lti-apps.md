@@ -4,7 +4,6 @@ description: Classification of Moodle LTI apps
 ms.topic: Moodle LTI apps types
 ms.localizationpriority: medium
 ms.author: Surbhigupta
-author: v-leenagopal
 ---
 
 # Moodle LTI apps
@@ -27,9 +26,9 @@ Based on the enrolment roster of the LMS course, faculty can do the following:
 * Create a Class team with the proper user roles for an LMS course.
 * Support Teams admin and adhere to LMS privacy policies during Class team creation.
 
-After creating the Class Team, faculty and students can do the following:
+After creating the Class team, faculty and students can do the following:
 
-* Access the Team from within the LMS course or Teams.
+* Access the team from within the LMS course or Teams.
 * Engage using desktop, mobile, and web platforms.
 
 ## Teams Meetings LTI app
@@ -39,7 +38,7 @@ The Teams meetings LTI app helps faculty and students to integrate class meeting
 * Schedule individual or recurring meetings within the course in LMS and set meeting options.
 * View past and upcoming meetings within LMS course calendar.
 * Join or edit the details of Teams meeting from the LMS course.
-* Engage across desktop and web platforms.
+* Engage using desktop and web platforms.
 
 > [!NOTE]
 > The Team Meeting LTI app doesn't support channel meetings, display of meeting recordings, or syncing of meetings with the LMS calendar.
