@@ -95,7 +95,7 @@ The progress and result of checking prerequisites will be displayed in the outpu
 | Project type | Redirect URIs for web | Redirect URIs for single-page application |
 | --- | --- | --- |
 | Tab | <https://localhost:53000/auth-end.html> | <https://localhost:53000/auth-end.html?clientId={appId>} |
-| Bot or messaging extension | <https://{ngrokTunnelId}.ngrok.io/auth-end.html> | NA |
+| Bot or messaging extension | <https://ngrok.com> | NA |
 
 ## Register and configure bot
 

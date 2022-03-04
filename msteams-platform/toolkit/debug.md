@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 03/02/2022
 ---
 
-# Overview
+# Outline
 
 You use Teams Toolkit to debug your Teams app locally using Visual Studio Code's debugging tools. Several components of the software will start immediately after pressing F5. After that, the Teams web client will open in your browser.
 
