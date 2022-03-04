@@ -118,7 +118,7 @@ The in-meeting dialog box is used to engage participants during the meeting and 
 
 In-meeting dialog must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display in-meeting dialog box. You can use the `submitTask` method to submit data in a meeting chat.
 
-:::image type="content" source="../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Example shows how you can use an in-meeting dialog." border="true":::
 
 #### Shared meeting stage
 
