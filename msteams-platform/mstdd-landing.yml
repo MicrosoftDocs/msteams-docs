@@ -25,7 +25,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Share-to-Teams from personal app or tab
-        url: ~/concepts/build-and-test/Share-to-Teams from personal app or tab.md
+        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
       - text: Microsoft Teams store ranking parameters
         url: ~/concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
       - text: Adaptive Cards overflow menu

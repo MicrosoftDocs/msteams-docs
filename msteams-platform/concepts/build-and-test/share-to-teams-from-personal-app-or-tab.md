@@ -81,5 +81,5 @@ After you enabled share-to-teams button, you can experience the feature with the
 
 ## See also
 
-* [Share-to-Teams from web apps](~/concepts/build-and-test/share-to-teams.md)
+* [Share-to-Teams from web apps](share-to-teams-from-web-apps.md)
 * [Create a personal tab](../../tabs/how-to/create-personal-tab.md)
