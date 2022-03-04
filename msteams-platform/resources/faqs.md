@@ -136,8 +136,9 @@ Consequently, if the **Client secret** has expired, then you need to generate a 
 
 Administrators may change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance.
 
->[!NOTE]
->If you use Course reset to archive a team by mistake, you can link it back to the previous team.
+If you use Course reset to archive a team, you can link it back to the previous team.
+
+The following image shows the teams instance:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance" border="true":::
 
@@ -176,4 +177,4 @@ The meetings scheduled through the app don't appear in the scheduler’s Outlook
 
 However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created.
 
-For more information, see [Meetings](/microsoftteams/limits-specifications-teams)
+For more information, see [Teams Meetings](/microsoftteams/limits-specifications-teams)

@@ -16,15 +16,15 @@ The following table shows the advantages of using partner apps:
 
 |Advantages| Description|
 |----------|------------|
-|Extend Microsoft Teams to fit your needs| Install and engage with apps designed by experts for improved student engagement and collaboration|
-|Enjoy single sign-on (SSO)| Enable single sign-on SSO for Teams and Moodle for access to Moodle courses, data, and activities within Teams. The users don't needs to enter their login credentials each time|
+|Extend Teams to fit your needs| Install and engage with apps designed by experts for improved student engagement and collaboration.|
+|Enjoy single sign-on (SSO)| Enable single sign-on SSO for users of Teams and Moodle to access Moodle courses, data, and activities within Teams.|
 
 ## mConnect
 
-mConnect is a [Microsoft certified](/microsoft-365-app-certification/teams/teams-apps) app that integrates Moodle courses and activities into Teams to enhance learning experience. mConnect is empowered by leading-edge collaboration and productivity services in the cloud. The app is developed and supported by Skooler, a trusted Microsoft Gold partner in education. mConnect allows Moodle administrators to automatically set up Teams for every Moodle course and to make all features available for each course in Moodle.
+The mConnect app integrates Moodle courses and activities into Teams to enhance users learning experience. Skooler, a trusted Microsoft Gold partner in education has developed the mConnect app and provides the necessary support. mConnect allows Moodle administrators to automatically set up Teams for Moodle course and to make all features available for each course in Moodle.
 
 >[!NOTE]
->This app is available in Microsoft Store for users have a pre-existing account with Skooler, and requires an administrator to configure it directly from the Moodle site.
+>This app is available in Microsoft Store for users have a pre-existing account with Skooler, and requires administrator access rights to configure it directly from the Moodle site.
   
 <!-- Watch the following video to understand how to get started with mConnect and Teams: -->
 
@@ -33,4 +33,5 @@ mConnect is a [Microsoft certified](/microsoft-365-app-certification/teams/teams
 ## See also
 
 * [Moodle FAQ](faqs.md)
+* [Get help](getting-help.md)
 * [Skooler](https://skooler.com/mconnect/how-to/)

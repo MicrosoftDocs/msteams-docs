@@ -9,9 +9,6 @@ keywords: moodle LMS mConnect deep links
 
 # Moodle learning management system
 
-<!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
-This content is modified as per the requirement.-->
- 
  Moodle is one of the largest open-source learning managing system (LMS), which provides unique remote learning experience powered with secured privacy services. Moodle LMS integrates with Microsoft Teams to provide the following services:
 
 * Audio or video calls
@@ -19,6 +16,9 @@ This content is modified as per the requirement.-->
 * Courses and activity management
 * Badges and rewards
 * Analytical insights
+
+<!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
+This content is modified as per the requirement.-->
 
  The following image demonstrates Moodle LMS.
  <!-- Query on this image about what is meant by section -->
@@ -46,11 +46,11 @@ The following scenarios describe the accelerated learning potential combining Mi
 
 * **Personalize meeting panels**: Create unique collaborative learning experiences using Teams Graph API endpoints. For other additional plans or projects, users can interview all new recruits and categorize the results using custom polls. There is facility to share quizzes directly in Teams while pushing updates to the Moodle site asynchronously.
 
-* **Automate facility and workflow**: To set up automated facilities for institutions when a new student joins, the user can add Moodle course, send an Adaptive Card to the student with relevant links and suggest key reading course materials. Teams custom connector for Moodle helps to create Moodle calendar event each time a course meeting is scheduled.
+* **Automate facility**: To set up automated facilities for institutions when a new student joins, the user can add Moodle course, send an Adaptive Card to the student with relevant links and suggest key reading course materials. Teams custom connector for Moodle helps to create Moodle calendar event each time a course meeting is scheduled.
 
 * **Build Citizen developer apps**: To develop new custom apps for school, which are easy to create and help optimize learning. The app also provides easy-to-use transactional activities for students and faculty.
 
-
+The common questions on using Moodle LMS and support sections are also provided to user for resolving queries.
 <!-- For more information, see [Microsoft education](https://www.microsoft.com/education). -->
 
 ## See also
@@ -58,3 +58,5 @@ The following scenarios describe the accelerated learning potential combining Mi
 * [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md)
 * [Moodle LTI Apps](moodle-lti-apps.md)
 * [Partner apps for Moodle](partner-apps-for-moodle.md)
+* [Moodle FAQ](faqs.md)
+* [Get help](getting-help.md)

@@ -14,8 +14,8 @@ The following table provides links to product-specific information, such as issu
 
 |Support type| Contact|
 |------------|--------|
-|Microsoft 365 plugins directory| For more information see [Microsoft 365 plugin](https://moodle.org/plugins/index.php).|
-|Reporting issues related to Microsoft 365 plugins|For more information see [Reporting issues to Microsoft 365 plugins](https://github.com/enovation/moodle-atto_teamsmeeting)
+|Microsoft 365 plugins directory| For more information on Microsoft 365 plugins see, [Microsoft 365 plugin](https://moodle.org/plugins/index.php).|
+|Reporting issues related to Microsoft 365 plugins|For more information see [Reporting issues to Microsoft 365 plugins](https://github.com/enovation/moodle-atto_teamsmeeting).
 |Partner apps| Partner apps are supported by the authoring agencies. For more information on publishing the application description website.|
 
 ## GitHub issues
