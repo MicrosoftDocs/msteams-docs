@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers templates for a Tab app with Blazor. Teams Toolkit do not support Bot and Message Extension capability.
+    > Currently, Teams Toolkit offers templates for a Tab app with Blazor. Teams Toolkit doesn't support Bot and Message Extension capability.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -66,7 +66,7 @@ items:
     To install the Microsoft Teams Toolkit extension:
 
     1. Download the latest version of Visual Studio.
-    1. Select ASP.NET and web development workload.
+    1. Select ASP.NET and web development under workloads.
        
        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vsinstall.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
        
@@ -265,7 +265,7 @@ items:
 
         When you select **F5**, the Teams Toolkit:
 
-          * Checks all required prerequisites:
+       * Checks all required prerequisites:
           * Checks if Node.js is installed.
           * Checks if you have signed in to M365 and will let you sign in to M365 if not.
           * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
@@ -331,7 +331,7 @@ items:
 
     **To provision your tab app in the cloud**
     
-    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud.**
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
 
@@ -339,7 +339,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select-subscription.png" alt-text="Select the subscription operation for the project" border="true":::
 
-      Provision warning displays. Select **Provision.**
+      Provision warning displays. Select **Provision**.
       
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/provision-warning.png" alt-text="Select the provision" border="false":::
 
@@ -349,13 +349,13 @@ items:
 
     **To deploy your tab app to cloud**
 
-    1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud.**
+    1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="false":::
 
     **To preview your tab app in Teams**    
 
-    1. Select **Project** > **Teams Toolkit** > **Preview Teams app.**
+    1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-preview.png" alt-text="Select preview" border="false":::
 
