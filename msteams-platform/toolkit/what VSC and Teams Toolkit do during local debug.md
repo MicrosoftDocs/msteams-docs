@@ -109,7 +109,7 @@ For tab app or messaging extension app:
 
 1. Add Microsoft Teams channel.
 
-1. Configure messaging endpoint as <https://{ngrokTunnelId}.ngrok.io/api/messages>
+1. Configure messaging endpoint as <a href="https://{ngrokTunnelId}.ngrok.io/api/messages">Other page</a>
 
 ## Register and configure Teams app
 
