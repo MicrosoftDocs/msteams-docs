@@ -209,8 +209,8 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
                 "order": 1
             },
             "stopAll": true
-        }```
-
+        }
+         ```
 
 1. Comment **Start Backend**  and "Start Bot" from "Start All" task in .vscode/tasks.json, such as
 
