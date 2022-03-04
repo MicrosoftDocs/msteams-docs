@@ -133,7 +133,7 @@ The following table provides the response codes:
 
 ## Send notification signal API
 
-All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API triggers an in-meeting dialog box and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting dialog box based on user action, which is an in-meeting dialog box. The API includes query parameter, examples, and response codes.
+All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API triggers an in-meeting dialog box and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting dialog box based on user action. The API is available through Bot Services.
 
 > [!NOTE]
 > * When an in-meeting dialog box is invoked, the content is presented as a chat message.
