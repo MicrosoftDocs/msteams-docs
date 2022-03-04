@@ -185,7 +185,7 @@ In Visual Studio Code settings, uncheck the items to skip checking some prerequi
 
 1. For **bot or messaging extension**, update`dev:teamsfx script in bot/package.json`.
 
-1. For **Azure functions**, update `dev:teamsfx script in api/package.json` and for **TypeScript** update `watch:teamsfx script`. 
+1. For **Azure functions**, update `dev:teamsfx script in api/package.json` and for **TypeScript** update `watch:teamsfx script`.
 
  > [!NOTE]
  > Ensure you should start a new local debug after adding new environment variables as the environment variables are not support to hot reload.
@@ -216,15 +216,12 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 1. Comment **Start Backend**  and "Start Bot" from "Start All" task in .vscode/tasks.json, such as
 
-
-
-
-        ```{
+     ```json
             "label": "Start All",
             "dependsOn": [
                 "Start Frontend",
                 // "Start Backend",
                 // "Start Bot"
             ]
-        }```
-
+        }
+        ```
