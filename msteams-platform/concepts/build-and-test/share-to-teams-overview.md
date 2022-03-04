@@ -18,5 +18,5 @@ For Share-to-Teams developer page, see [Share-to-Teams](https://developer.micros
 
 ## See also
 
-* [Share-to-Teams from web apps](share-to-teams%20from%20web%20apps.md)
-* [Share-to-Teams from personal app or tab](share-to-teams%20from%20personal%20app%20or%20tab.md)
+* [Share-to-Teams from web apps](share-to-teams-from-web-apps.md)
+* [Share-to-Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)

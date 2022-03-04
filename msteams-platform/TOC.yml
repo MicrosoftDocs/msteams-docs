@@ -526,7 +526,7 @@
     - name: Share-to-Teams from web apps
       href: concepts/build-and-test/share-to-teams-from-web-apps.md
     - name: Share-to-Teams from personal app or tab
-      href: concepts/build-and-test/Share-to-Teams from personal app or tab.md
+      href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
