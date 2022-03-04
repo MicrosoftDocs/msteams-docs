@@ -68,10 +68,10 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-On the **Overview** page, you can see the total number of active users for your app. The app usage metrics are available for the apps that are published to the Teams store or an org's app catalog through **Developer Portal for Teams** (or App Studio) and scoped to each individual app ID.
+In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app. The app usage metrics are available for the apps that are published to the Teams store or an org's app catalog through **Developer Portal for Teams** (formerly App Studio) and scoped to each individual app ID.
 
 > [!NOTE]
-> Usage analytics are only available for new apps published to your org through **Developer Portal for Teams**. For more information on usage analytics for all published teams store app, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
+> Usage analytics are only available for new apps published to your org through **Developer Portal for Teams**. Usage analytics for all the apps published on the Teams store, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -85,29 +85,29 @@ You can view your app's usage and other more insights from the **Analytics** pag
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
-1. Select **Analytics** under the overview or select **View Details** under the Active Users (Preview) card.
+1. Select **Analytics** under the overview or select **View details** under the Active users (Preview) card.
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="Portal":::
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
-1. Aggregation Type: This filter allows you to group the following metrics by a count of distinct users or a count of distinct tenants or customers.
-1. Platform
-1. Operating system
-1. Area
+* Aggregation type: This filter allows you to group the following metrics by a count of distinct users or a count of distinct tenants or customers.
+* Platform
+* Operating system
+* Area
 
  :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
 
-Once you have selected your desired filters, you can explore the following individual widgets:
+After you have selected your desired filters, you can explore the following individual widgets:
 
-* Usage by time period
-* Usage by platform and OS
-* Usage by retention state
-* Usage intensity
+* [Usage by time period](#usage-by-time-period)
+* [Usage by platform and OS](#usage-by-platform-and-os)
+* [Usage by retention state](#usage-by-retention-state)
+* [Usage intensity](#usage-intensity)
 
 ### Usage by time period
 
-The **Usage by time period** chart shows you the number of active users or tenants who opened and/or used your app across different time periods.
+The **Usage by time period** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Period":::
 
@@ -132,10 +132,10 @@ The **Usage by retention state** chart lets you track four key retention or chur
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| New Users or Tenants | Active users or tenants who are new and not used your app. |
-| Returning Users or Tenants | Active users or tenants who used your app during a given RL30 time period and the immediately preceding RL30 time period. |
-| Resurrected Users or Tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding RL30 time period. |
-| Lapsed Users or Tenants | Active users or tenants who were not seen during a given RL30 time period but were seen during the immediately preceding RL30 time period. |
+| New users or tenants | Active users or tenants who are new and not used your app. |
+| Returning users or tenants | Active users or tenants who used your app during a given RL30 time period and the immediately preceding RL30 time period. |
+| Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding RL30 time period. |
+| Lapsed users or tenants | Active users or tenants who were not seen during a given RL30 time period but were seen during the immediately preceding RL30 time period. |
 
 ### Usage intensity
 
@@ -145,8 +145,8 @@ The **Usage intensity** chart shows you key usage intensity metrics for your app
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| Median Days Used per Month | The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period. |
-| % of 5+ Days Usage | The % of Active Users who opened or used the app more than five days in the last RL30 (Rolling 30 day) period. |
+| Median days used per month | The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period. |
+| % of 5+ Days usage | The % of Active Users who opened or used the app more than five days in the last RL30 (Rolling 30 day) period. |
 | DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected RL30 time period. |
 
 ### App dashboard
