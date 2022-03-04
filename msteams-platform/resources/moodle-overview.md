@@ -27,7 +27,7 @@ This content is modified as per the requirement.-->
 
 ## Moodle LMS accessibility
 
-Moodle LMS helps you to access the following apps:
+Moodle LMS helps users access the following apps:
 
 * **Moodle LTI apps**: The following Learning Tools Interoperability (LTI) apps are available for Moodle LMS:
   * OneDrive LTI app, which provides services like accessing and sharing personal and class files within LMS.
@@ -50,7 +50,8 @@ The following scenarios describe the accelerated learning potential combining Mi
 
 * **Build Citizen developer apps**: To develop new custom apps for school, which are easy to create and help optimize learning. The app also provides easy-to-use transactional activities for students and faculty.
 
-For more information, see [Microsoft education](https://www.microsoft.com/education).
+
+<!-- For more information, see [Microsoft education](https://www.microsoft.com/education). -->
 
 ## See also
 
