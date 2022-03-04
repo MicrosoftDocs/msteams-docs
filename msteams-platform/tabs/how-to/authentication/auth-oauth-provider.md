@@ -80,9 +80,7 @@ The 3P app server receives and saves the `url` with the following two query para
 
 | Parameter | Description|
 | --- | --- |
-| `oauthRedirectMethod` |Indicates how the 3P app must send the response of authentication request back to Teams, with one of the two values: deeplink or 
-
-page.|
+| `oauthRedirectMethod` |Indicates how the 3P app must send the response of authentication request back to Teams, with one of the two values: deeplink or page.|
 |`authId` | The request-id Teams created for this specific authentication request that needs to be sent back to Teams through deeplink.|
 
 > [!TIP]
