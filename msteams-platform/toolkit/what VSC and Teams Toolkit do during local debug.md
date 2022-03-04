@@ -95,7 +95,7 @@ The progress and result of checking prerequisites will be displayed in the outpu
 | Project type | Redirect URIs for web | Redirect URIs for single-page application |
 | --- | --- | --- |
 | Tab | <https://localhost:53000/auth-end.html> | <https://localhost:53000/auth-end.html?clientId={appId>} |
-| Bot or messaging extension | <https://ngrok.com> | NA |
+| Bot or messaging extension | <https://ngrok.io/auth-end.html> | NA |
 
 ## Register and configure bot
 
@@ -109,7 +109,7 @@ For tab app or messaging extension app:
 
 1. Add Microsoft Teams channel.
 
-1. Configure messaging endpoint as <a href="https://{ngrokTunnelId}.ngrok.io/api/messages">Other page</a>
+1. Configure messaging endpoint as <https://ngrok.io/api/messages>
 
 ## Register and configure Teams app
 
@@ -196,7 +196,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 1. Comment **Attach to Bot** and **Attach to Backend** from Debug compound in `.vscode/launch.json`, like
 
-``` {
+ ```{
             "name": "Debug (Edge)",
             "configurations": [
                 "Attach to Frontend (Edge)",
@@ -209,7 +209,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
                 "order": 1
             },
             "stopAll": true
-        } ```
+        }```
 
 
 1. Comment **Start Backend**  and "Start Bot" from "Start All" task in .vscode/tasks.json, such as
@@ -217,12 +217,12 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 
 
-       ``` {
+        ```{
             "label": "Start All",
             "dependsOn": [
                 "Start Frontend",
                 // "Start Backend",
                 // "Start Bot"
             ]
-        } ```
+        }```
 
