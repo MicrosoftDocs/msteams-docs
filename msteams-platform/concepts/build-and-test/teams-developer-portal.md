@@ -68,10 +68,10 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-On the **Overview** page, you can see the total number of active users for your app. These metrics are available for the apps that are published to the Teams store or an org's app catalog through **Developer Portal for Teams** (or App Studio) and scoped to each individual app ID.
+On the **Overview** page, you can see the total number of active users for your app. The app usage metrics are available for the apps that are published to the Teams store or an org's app catalog through **Developer Portal for Teams** (or App Studio) and scoped to each individual app ID.
 
 > [!NOTE]
-> Usage analytics are only available for new apps published to your org through **Developer Portal for Teams**. Usage analytics for all published Teams store apps, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
+> Usage analytics are only available for new apps published to your org through **Developer Portal for Teams**. For more information on usage analytics for all published teams store app, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -151,7 +151,7 @@ The **Usage intensity** chart shows you key usage intensity metrics for your app
 
 ### App dashboard
 
-The **My App Dashboard** table shows you the latest RL30 data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily RL30 data for the last 75 days and end of month RL30 data for up to 12 months.
+The **My App dashboard** table shows you the latest RL30 data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily RL30 data for the last 75 days and end of month RL30 data for up to 12 months.
 
 You can select each of these rows to see trends over time.
 
