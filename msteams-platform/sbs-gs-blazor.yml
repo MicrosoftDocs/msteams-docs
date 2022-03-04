@@ -21,7 +21,7 @@ items:
 
     Your app will have a capability, which comes with its own UI and UX:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
 
     > [!NOTE]
     > Currently, Teams Toolkit offers templates for a Tab app with Blazor. The Message Extension capability isn't available.
@@ -68,13 +68,14 @@ items:
 
     To install the Microsoft Teams Toolkit extension:
 
-    1. Download latest version of Visual Studio.
-    1. Choose Microsoft Teams development tools under ASP.NET and web development workload.
+    1. Download the latest version of Visual Studio.
+    1. Select ASP.NET and web development workload.
+       
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vsinstall.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
+       
+    1. Select Microsoft Teams development tools.
     1. Select Install.
     
-    > [!IMPORTANT]
-    > You may now choose the Microsoft Teams development tools component in the ASP.NET web development workload in the Visual Studio Installer.
-
     # [Command line](#tab/cli)
 
     To install the TeamsFx CLI, use the `npm` package manager:
@@ -145,7 +146,7 @@ items:
   content: |
     Start Teams app development by creating your first app. This app uses the Tab capability.
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
@@ -264,11 +265,16 @@ items:
 
         When you select **F5**, the Teams Toolkit:
 
-        1. Registers your application with Azure Active Directory.
-        1. Registers your application for "sideloading" in Teams.
-        1. Starts your application backend running locally.
-        1. Starts your application front-end hosted locally.
-        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+        * Checks all required prerequisites:
+        * Checks if Node.js is installed.
+        * Checks if you have signed in to M365 and will let you sign in to M365 if not.
+        * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
+        * Checks if NPM packages for tab app are installed and will install NPM packages for tab app if not.
+        * Checks if port required by tab app is already in use.
+    * Registers an Azure AD application and configures the application.
+    * Registers a Teams app in Teams Developer Portal and configures the app.
+    * Starts the tab app.
+    * Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
 
         </details>
     1. Install the self-signed SSL certificate for local debugging, if requested.
@@ -314,26 +320,37 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure and Preview on Teams.
+    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
+
+    1. Select Provision in the Cloud: You can provision your tab app in the cloud.
+    1. Select Deploy to Cloud: You can deploy your tab app to cloud. 
+    1. Select Preview Teams app: Your tab app opens in Teams. 
 
     Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
 
- 
-    1. From **Project**, navigate to **Teams Toolkit**, then select **Provision in the Cloud**
+    **To provision your tab app in the cloud**
+    
+    1. Select **Project**>**Teams Toolkit**>**Provision in the Cloud.**
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
 
-    1. Select the required subscription.
+    1. Select the required subscription. Your resource group is provisioned in the cloud and you can view it in Azure portal.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select-subscription.png" alt-text="Select the subscription operation for the project" border="false":::
 
-    1. The resource group is generated in Azure portal.
+      Your app will now be displayed:
 
-    1. From **Project**, navigate to **Teams Toolkit**, then select **Deploy to the Cloud**
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/resource-group.png" alt-text="Resource group is generated" border="true":::
+
+    **To deploy your tab app to cloud**
+
+    1. Select **Project**>**Teams Toolkit**>**Deploy to the Cloud.**
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="false":::
 
-    1. After you complete the provision and deployment steps, select **Project**, navigate to **Teams Toolkit**, then  select **Preview Teams app**
+    **To preview your tab app in Teams**    
+
+    1. Select **Project**>**Teams Toolkit**>**Preview Teams app.**
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-preview.png" alt-text="Select preview" border="false":::
 
