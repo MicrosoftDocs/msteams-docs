@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
   ms.custom: mvc
-  ms.localizationpriority: -
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -358,7 +358,7 @@ items:
 
         </details>
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
@@ -367,7 +367,7 @@ items:
 
     1. Select **Yes** if the following dialog appears:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/certificate-new.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
         Or select **Continue**, depending on your operating system:
 
@@ -604,12 +604,16 @@ items:
 
         In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
-        - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-        - *Sideloads* the app in Teams.
-        - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-        - Starts the app's frontend hosted locally.
-        - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-        - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+       * Checks all required prerequisites:
+          * Checks if Node.js is installed.
+          * Checks if you have signed in to M365 and will let you sign in to M365 if not.
+          * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
+          * Checks if NPM packages for tab app are installed and will install NPM packages for tab app if not.
+          * Checks if port required by tab app is already in use.
+      * Registers an Azure AD application and configures the application.
+      * Registers a Teams app in Teams Developer Portal and configures the app.
+      * Starts the tab app.
+      * Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
 
         </details>
 
@@ -847,15 +851,20 @@ items:
 
         When you select **F5**, the Teams Toolkit:
 
-        1. Registers your application with Azure Active Directory.
-        1. Registers your application for "side loading" in Teams.
-        1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-        1. Starts ngrok tunnel so Teams can communicate with your app.
-        1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
+       * Checks all required prerequisites:
+          * Checks if Node.js is installed.
+          * Checks if you have signed in to M365 and will let you sign in to M365 if not.
+          * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
+          * Checks if NPM packages for tab app are installed and will install NPM packages for tab app if not.
+          * Checks if port required by tab app is already in use.
+      * Registers an Azure AD application and configures the application.
+      * Registers a Teams app in Teams Developer Portal and configures the app.
+      * Starts the tab app.
+      * Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
 
         </details>
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
 
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
