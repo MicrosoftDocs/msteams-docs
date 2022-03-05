@@ -18,7 +18,7 @@ Debugging is the process of checking, detecting, and correcting problems (or "bu
 
 1. Debug your Teams app locally in Visual Studio Code. At the same time, you can debug tab, bot, messaging extension and Azure functions. One-click start, multi-target debugging, toggling breakpoints, hot reloading, and one-click stop are among the debugging tools supported by the toolkit.
 
-1. In the Teams web client, preview your Teams app locally.
+2. In the Teams web client, preview your Teams app locally.
 
 ## Prerequisite
 
@@ -35,7 +35,7 @@ After creating a new project, you can simply press F5 to run your Teams app in d
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug.png" alt-text="browser default":::
 
-1. If the following dialog is popped up, select **Sign in** to Microsoft 365 (<https://www.office.com/>)
+2. If the following dialog is popped up, select **Sign in** to Microsoft 365 (<https://www.office.com/>)
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft365-signin.png" alt-text="Alternate capabilities":::
 
@@ -43,22 +43,22 @@ After creating a new project, you can simply press F5 to run your Teams app in d
 > You can also select **Read more** button to learn more about Microsoft 365 Developer Program.
 Your default web browser will be opened to let you **Sign in** to Microsoft 365. Sign in to your Microsoft 365 account using your credentials.
 
-1.If the following dialog popped up to let you install the development certificate for localhost, select **Install** button.
+3. If the following dialog popped up to let you install the development certificate for localhost, select **Install** button.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/development-certificate.png" alt-text="certificate":::
 
 > [!Note]
 > You can also click Learn More button to learn more about the development certificate.
 
-A system dialog will be popped up depending on your operating system. For Windows, select **Yes** button.
+4. A system dialog will be popped up depending on your operating system. For Windows, select **Yes** button.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/ca-certificate.png" alt-text="certification authority":::
 
-For macOS, type your user name and password then select **Update Settings** button.
+5. For macOS, type your user name and password then select **Update Settings** button.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/mac-settings.png" alt-text="mac sign in":::
 
-When Teams client is completely loaded in the  web browser, select **Add button** or select one from the drop-down list as your needs.
+6. When Teams client is completely loaded in the  web browser, select **Add button** or select one from the drop-down list as your needs.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/hello-local-debug.png" alt-text="local debug":::
 
