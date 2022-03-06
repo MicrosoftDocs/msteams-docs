@@ -16,7 +16,7 @@ Get answers to some of your queries when using Moodle LMS.<br>
 
 <summary><b>What should I do if one or more of the course teams weren't created after synchronization?</b></summary>
 
-Each Moodle course must have at least one faculty and one student who can be matched to a Microsoft 365 AAD UPN account. You can't create a team, if the synchronization doesn't find a match.
+Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 AAD UPN account. The team can't be created, if the synchronization doesn't find a match.
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 
@@ -28,9 +28,9 @@ Each team course instance must have an owner, and the synchronization sets the f
 
 <summary><b>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</b></summary>
 
-The users have multiple sign in options from the Moodle login page. 
+The users have multiple sign in options from the Moodle login page.
 
-* To sign in exclusively using Microsoft 365 credentials enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, see the Microsoft sign in page.
+* To sign in exclusively using Microsoft 365 credentials enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal see [Moodle](https://moodle.org/login/index.php).
 
 <br>
@@ -41,14 +41,12 @@ The users have multiple sign in options from the Moodle login page.
 
 <summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b></summary>
 
-You can specify the users by synchronizing the configuration options of the **local_o365** plugin, using **User Creation Restriction**. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language.
+Use the **User Creation Restriction** option to specify the users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language.
 
 > [!TIP]
 > Create a dynamic Microsoft 365 group to enable the **filter** option with multiple profile properties.
 
-<!-- [Place holer for URL] -->
-
-The following image shows which users to sync:
+The following image shows user creation restrictions options:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync" border="true":::
 
@@ -62,13 +60,15 @@ The following image shows which users to sync:
 
 <summary><b>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b></summary>
 
-By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block will only show the configuration option to individuals with the appropriate owner permissions.
+By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the the configuration option to individuals with the appropriate owner permissions.
 
 For more information, see Microsoft 365 block within the Moodle Course interface.
 
-The following image shows synchronization of courses:
+The following image shows the option **Allow configure course sync in course**:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="admin" border="true":::
+
+The following image shows synchronization of courses:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization" border="true":::
 
@@ -80,17 +80,17 @@ The following image shows synchronization of courses:
 
 <summary><b>We have followed the documentation but the user accounts fail to sync AAD and Moodle. What should we do?</b></summary>
 
-In most cases, the issue will be resolved before users need **Delta token clean up** as a final troubleshooting step.
+The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
-The following table provides the actions and dependencies to be performed and validated:
+The following table provides the actions and dependencies to be performed and checked:
 
 | Dependency | Action | Reference|
 |-------|------------|----------|
-| Stable version| Verify that the version of Moodle is listed as a **stable**| [Version support](https://docs.moodle.org/dev/Releases#Version_support)|
-|Permissions| Verify that the Azure application has the necessary permissions to run the sync|[Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions)|
-| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**| Enable full sync: {moodle_url}\local_o365\task\usersync1 </br>Check task logs: {moodleurl}/admin/tasklogs.php |
-| Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken|
-
+| Stable version| Verify that the version of Moodle is listed as a **stable**.| For more information, see [Version support](https://docs.moodle.org/dev/Releases#Version_support).|
+|Permissions| Verify that the Azure application has the necessary permissions to run the synchronization.| For more information, see [Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions).|
+| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
+|Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
+<!-- |Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
 <br>
 
 </details>
@@ -99,12 +99,12 @@ The following table provides the actions and dependencies to be performed and va
 
 <summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b></summary>
 
-Inconsistencies with users being able to sign in can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
+Inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
-* Validate the Moodle user authentication type is **OpenID**.
-* Validate the Moodle **User Name** matches the AAD username.
-* Clean up **Token Issue** through [place holder for url] and retry.
-* Validate the users have **Permissions** to access the Azure application.
+* Check if the Moodle user authentication type is **OpenID**.
+* Check if the Moodle **User Name** matches the AAD username.
+* Clean up **Token Issue** and retry.
+* Check if the users have **Permissions** to access the Azure application.
 
 <br>
 
@@ -114,9 +114,9 @@ Inconsistencies with users being able to sign in can be related to the user mapp
 
 <summary><b>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
 
-Users who were unable to sign in at the start need to report the issue and validate that the application **Client secret** has not expired.
+Users who were unable to sign in at the start need to report the issue and verify that the application **Client secret** has not expired.
 
-The following image shows the error message:
+The following image shows the report issue :
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue" border="true":::
 
@@ -124,7 +124,7 @@ The following image shows the error in Azure portal:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal" border="true":::
 
-Consequently, if the **Client secret** has expired, then you need to generate a new Client secret, and update the configuration found on this page. The users can sign in again after the **Client secret** has been updated, which may take up to 24 hours to re-provision.
+If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which may take up to 24 hours to re-provision.
 
 <br>
 
@@ -136,7 +136,7 @@ Consequently, if the **Client secret** has expired, then you need to generate a 
 
 Administrators may change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance.
 
-If you use Course reset to archive a team, you can link it back to the previous team.
+If you use course reset to archive a team, you can link it back to the previous team.
 
 The following image shows the teams instance:
 
@@ -150,7 +150,7 @@ The following image shows the teams instance:
 
 <summary><b>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b></summary>
 
-The user can face the issue if the icon reference is missing in the **Toolbar config**, which will display the Teams icon within the Atto editor. Add Teams meeting icon to the right of links icon.
+The user can face this issue if the icon reference is missing in the **Toolbar config**, which displays the Teams icon within the Atto editor. User needs to add Teams meeting icon to the right of the links icon.
 
 * Install the plugin.
 * Update **Toolbar config** with **teams meeting**.
