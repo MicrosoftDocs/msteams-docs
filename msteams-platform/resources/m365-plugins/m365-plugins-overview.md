@@ -14,7 +14,7 @@ Microsoft 365 plugins provide integration between Moodle website and Teams. Thes
 
 The following table lists the plugins and GitHub labels to be used based on the requirements.
 
-|Plugins to install |Description |GitHub label(s)|
+<!-- |Plugins to install |Description |GitHub label(s)|
 |-----|-----|----|
 |[**OpenID Connect**](#openid-connect)|Enable SSO for users who work using both Moodle and Microsoft Teams|auth_oidc|
 |• [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration) |Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members|• auth_oidc </br> • local_o365|
@@ -23,13 +23,24 @@ The following table lists the plugins and GitHub labels to be used based on the 
 |• [**OpenID Connect**](#openid-connect) </br> • [**OneNote**](#onenote-integration) </br> • [**OneNote Submissions**](#onenote-integration) </br> • [**OneNote Feedback**](#onenote-integration) | Enable OneNote to be used for assignment, submission and feedback |• auth_oidc </br> • local_onenote </br> • assignsubmission_onenote </br> • assignfeedback_onenote |  
 |• [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration) • [**Microsoft 365 Repository**](#microsoft-365-repository) </br> • [**Microsoft Block**](#microsoft-365-repository) | Enable 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office | • auth_oidc </br> • local_o365 </br> • repository_office365 </br> • block_microsoft |
 |[**Teams Meeting**](#teams-meetings) | Enable Atto editor in Moodle to create Teams meeting links |atto_teamsmeeting |
-|[**oEmbed Filter**](#oembed-filter) | Enable video links in Moodle | Filter_oembed|
+|[**oEmbed Filter**](#oembed-filter) | Enable video links in Moodle | Filter_oembed| -->
+
+|Plugins to install |Description |GitHub label(s)|
+|-----|-----|----|
+|[**OpenID Connect**](#openid-connect)|Enables SSO for users who work using both Moodle and Teams.|auth_oidc|
+|[**Microsoft 365 integration**](#microsoft-365-integration) |Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members.|local_o365|
+|[**Microsoft 365 Repository**](#microsoft-365-repository) |Supports Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle.| repository_office 365|
+|[**Teams Meeting**](#teams-meetings) | Enables Atto editor in Moodle to create Teams meeting links.|atto_teamsmeeting |
+|[**Teams Theme**](#microsoft-365-teams-theme)| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances | themeboost_o365teams |
+| • [**OneNote**](#onenote-integration) </br> • [**OneNote Submissions**](#onenote-integration) </br> • [**OneNote Feedback**](#onenote-integration) | Enable OneNote to be used for assignment, submission and feedback.|• local_onenote </br> • assignsubmission_onenote </br> • assignfeedback_onenote |  
+|[**Microsoft Block**](#microsoft-block) | Enables Microsoft 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office.|  block_microsoft |
+|[**oEmbed Filter**](#oembed-filter) | s video links in Moodle.|Filter_oembed|
 
 Moodle LMS supports the following plugins:
 
 ## OpenID Connect
 
-The Open ID Connect plugin allows users to authenticate any website or tool that supports the required specification and provides single sign-on support (SSO) with Microsoft Office 365. The OpenID Connect plugin provides institutions with the following sign in options to meet their specific requirements:
+The Open ID Connect plugin allows users to authenticate any website or tool that supports necessary specification and provides single sign-on support (SSO) with Microsoft Office 365. The OpenID Connect plugin provides institutions with the following sign in options to meet their specific requirements:
 
 * Users can enter their Office 365 credentials, such as email and password to sign in directly or sign in using Moodle’s username and password fields, without signing into Office 365.
 * Users can select the link to sign in through Office 365 or the OpenID Connect provider on Moodle page.
@@ -40,9 +51,9 @@ The following image displays the OpenID connect login page:
 
 ## Microsoft 365 integration
 
-Microsoft 365 integration consists of several apps with multiple functionalities, which allows users to stay connected and perform different actions as required. The plugin allows administrators to validate the following:
+Microsoft 365 integration consists of several apps with multiple functionalities, which allows users to stay connected and perform different actions as required. The plugin allows administrators to check the following:
 
-* Validate appropriate integration functions.
+* Check appropriate integration functions.
 * Synchronize users between Office 365 and Moodle.
 * Configure required permissions for users.
 * Set up SharePoint website for the course files.
@@ -57,13 +68,13 @@ The users can perform the following actions with Microsoft 365 integration:
 
 * Check the overall functioning of all Microsoft 365 plugin integrations.
 * Upload a CSV file, which compares Moodle to Office 365 users.
-* Validate configurations for Azure AD permissions.
+* Check configurations for Azure AD permissions.
 
 ## Microsoft 365 repository
 
 The Microsoft 365 repository plugin allows users to store course files in OneDrive. Faculty can add files from the course file section of OneDrive or from their own personal space to the repository.
 
-Microsoft 365 repository users the benefit of using it as a file repository for an institution while keeping Moodle's data structure simple. The Microsoft 365 repository plugin provides the following services:
+Microsoft 365 repository allows the user to use it as a file repository for an institution while keeping Moodle's data structure simple. The Microsoft 365 repository plugin provides the following services:
 
 * The faculty can store the course files in OneDrive. Each course has its own folder created in OneDrive, which allows faculty to add files either from the course files area of OneDrive or from their own personal space.  
 * To add files to Moodle as a copy or create a link to the file. The linked file is displayed in a new application window or is embedded in the webpage.
@@ -154,7 +165,6 @@ The following image shows inclusion of external HTML content within Moodle.:
 | Enable 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office | • OpenID Connect </br> • Microsoft 365 Integration </br> • Microsoft 365 Repository </br> • Microsoft Block | • auth_oidc </br> • local_o365 </br> • repository_office365 </br> • block_microsoft |
 | Enable Atto editor in Moodle to create Teams meeting links | Teams Meeting | atto_teamsmeeting |
 | Enable video links in Moodle | oEmbed Filter | Filter_oembed | -->
-
 
 ## See also
 
