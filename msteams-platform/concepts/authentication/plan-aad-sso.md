@@ -5,32 +5,47 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), OIDC, username, password
 ---
-# Authentication with AAD SSO
+# AAD SSO in Teams
 
 Many applications exist in Azure AD that you can access using SSO. You have several options for SSO depending on the needs of the application and how it's implemented. Take time to plan your SSO deployment before you create applications in Azure AD. The management of applications can be made easier by using the My Apps portal.
 
 In this page, you'll learn about:
 
+- Prerequisites for using AAD SSO
 - Role of AAD SSO in authentication
 - AAD SSO user experience
 - Advantages of using AAD SSO
-- Teams silent authentication
 
 \ Add description: Teams SSO/Silent authentication and True SSO \
 
+## Prerequisites
+
+Before you can use AAD SSO to authenticate your app users, ensure that:
+
+- Register your app with AAD.
+- All valid app users are registered with AAD.
+- Any other prerequisites.
+
 ## Role of AAD SSO in authentication
+
+AAD is the main identity provider (IdP) for validating access to Azure-based systems and applications.
+
+<br>
+:::image type="content" source="../../assets/images/authentication/aad-sso-process.png" alt-text="AAD SSO process":::
 
 \Include an info-graphic to show the AAD SSO flow and description \
 
-The AAD SSO workflow used in a Teams app for the first user login:
+<br>
+The AAD SSO process used in a Teams app for the first user login:
 
-1. The app requests the user credentials via Teams from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
-
-1. The IDP requests the user for their credentials and shares it with the app in an ID token.
-
-1. Teams Client stores this ID token.
-
-The user never needs to sign in again.
+| # | Steps | Key points |
+|--- | --- | --- |
+| 1 | Teams app user attempts to log in | \ Add information relevant to this step that a partner should know while planning \ |
+| 2 | Teams app sends the user credentials (username and password) to AAD for verification | -- |
+| 3 | AAD matches the user information with its database | -- |
+| 4 | On a successful match, AAD sends an ID token granting app access to the valid user | -- |
+| 5 | The user can now access all services and application in the Azure system | -- |
+|
 
 ## AAD SSO user experience
 

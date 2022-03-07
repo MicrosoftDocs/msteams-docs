@@ -39,6 +39,7 @@ Based on the IdP, you can choose to authenticate users with:
 - User's ID and password
 
 :::image type="content" source="../../assets/images/authentication/idp-options.png" alt-text="IDP options":::
+<br>
 
 | &nbsp; | AAD | Other IdPs | Username + Password |
 | --- | --- | --- | --- |
@@ -52,14 +53,17 @@ Based on the IdP, you can choose to authenticate users with:
 
 You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
 
-1. Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
+1. User security: Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
 
-1. The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
+1. Data security: The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
 
-1. Building a personalized user experience is an additional benefit of authentication.
+1. User experience: Building a personalized user experience is an additional benefit of authentication.
 
+## Planning authentication for mobile client
 
-## Common authentication terms
+\ Add content \
+
+## Authentication terminology
 
 Within Teams, there are multiple ways you can implement authentication. Here's an introduction to key terms that you'll come across:
 
