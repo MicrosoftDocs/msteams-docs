@@ -2,7 +2,7 @@
 title: Frequently asked questions
 description: Answers to some common questions
 ms.topic: Frequently asked questions on Moodle LMS
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: Surbhigupta
 ---
 

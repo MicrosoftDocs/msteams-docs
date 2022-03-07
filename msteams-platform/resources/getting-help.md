@@ -2,7 +2,7 @@
 title: Get help
 description: Help desk
 ms.topic: FAQs
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: Surbhigupta
 ---
 
