@@ -24,7 +24,7 @@ Ensure to install the following softwares:
 | --- | --- | --- |
 | Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 | Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
-| Bot | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
+| Bot | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 | Messaging extension | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Sign in to M365 account | Teams toolkit prompts to sign in to M365, if you have not signed in |-|
 |Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3 | <br> - If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br><br>- The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br?>
@@ -32,8 +32,6 @@ Ensure to install the following softwares:
 |Azure functions | Install .NET Core SDK|<br> - If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> - For Linux, the local debug terminates.|</br>
 |Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|-|
 |NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|-|
-
-
 | Platform  | .NET core SDK versions |
 | --- | --- |
 |  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |
