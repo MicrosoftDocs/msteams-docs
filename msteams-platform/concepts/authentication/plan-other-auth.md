@@ -11,8 +11,8 @@ You can choose to implement authentication in your Teams app using methods, such
 
 In this page, you'll learn:
 
-- Teams silent authentication
-- Using OIDC
+- About Teams silent authentication
+- Using other IdPs
 - Using username and password
 - Using OIDC or username and password with AAD SSO
 
@@ -32,7 +32,7 @@ The process informs the user that their token is refreshed, with no user input r
 
 
 
-## Role of OIDC in authentication
+## Role of other IdPs in authentication
 
 \Include an info-graphic and description \
 
@@ -44,11 +44,11 @@ The workflow used in a Teams app:
 
 The user is authenticated with the ID token.
 
-### OIDC user experience
+### Other IdPs user experience
 
 \ Include images for OIDC UX \
 
-### Benefits of OIDC
+### Benefits of Other IdPs
 
 \ Add Introduction, details, and examples \
 

@@ -28,11 +28,27 @@ This module covers:
 
 ## What is authentication?
 
-Authentication is all about validating users for accessing and using the app. It's one of the ways you secure your app and users against unwarranted access.
+Authentication is all about validating the identity of your app users. It's one of the ways you secure your app and app users against unwarranted access.
 
-You can validate app users in several ways, such as using login credentials, ID tokens, access tokens, and more.
+You can validate app users in several ways, such as using login credentials, ID tokens, access tokens, and more. Identity Provider (IdP) is a key player in the process of authentication. An app and its users must be registered with the same IdP to facilitate verification of user identity. Azure Active Directory, Google, and Facebook are commonly used for their IdP services.
 
-### Why should I use authentication?
+Based on the IdP, you can choose to authenticate users with:
+
+- Azure Active Directory (AAD) SSO
+- Other IdPs, such as Google or Facebook
+- User's ID and password
+
+:::image type="content" source="../../assets/images/authentication/idp-options.png" alt-text="IDP options":::
+
+| &nbsp; | AAD | Other IdPs | Username + Password |
+| --- | --- | --- | --- |
+| **Frequency of logging in** | User logs in once for all. | User may need to log in on a different device. | User needs to log in for every use. |
+| **Number of passwords** | Only one password needed. | Multiple password may be needed based on usage. | Multiple passwords are needed and the user needs to keep track of them. |
+| **Cost of authentication** | Low cost as the user password is set only once | -- | High cost as user password is managed and maintained by the organization |
+| **Security** | -- | -- | -- |
+|
+
+### Consideration for planning authentication
 
 You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
 
@@ -42,13 +58,6 @@ You can use an authentication method suitable for your app to validate the crede
 
 1. Building a personalized user experience is an additional benefit of authentication.
 
-## What is authorization?
-
-Authorization is the act of granting an authenticated party permission to do something. It specifies what data you're allowed to access and what you can do with that data.
-
-### Why should I use authorization?
-
-\ Add benefits \
 
 ## Common authentication terms
 
