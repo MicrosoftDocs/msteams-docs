@@ -93,7 +93,7 @@
     - name: Debug overview
       href: toolkit/debug.md
     - name: Visual studio code and Teams Toolkit in local debug
-      href: toolkit/what VSC and Teams Toolkit do during local debug.md
+      href: toolkit/debug background processes.md
     - name: Provision cloud resources
       href: toolkit/provision.md
     - name: Deploy Teams app to the cloud

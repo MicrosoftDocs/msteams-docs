@@ -1,5 +1,5 @@
 ---
-title: Visual studio code and Teams Toolkit in local debug
+title: Debug background processes
 author: zyxiaoyuer
 description: Function of Visual studio code and Teams Toolkit during local debug
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Overview
 
-The `.vscode/launch.json` and `.vscode/tasks.json` controls the entire local debug workflow. In `launch.json`, "Debug" is the entry point for local debugging. Visual studio Code runs the compound preLaunchTask "Pre Debug Check & Start All", which is defined in `.vscode/tasks.json`, then Visual Studio Code launches the debuggers specified in the compound configurations, such as "Attach to Bot", "Attach to Backend", "Attach to Frontend", and "Launch Bot".  A `Node.js` debugger starts to attach to both the bot and Azure function source code. A Edge or Chrome debugger starts to launch a new browser instance and opens a web page to load Teams client. During local debug, Teams Toolkit resolves values of the placeholders "teamsAppId" and "account-hint" in `.vscode/launch.json`. Teams Toolkit contributes to several commands such as `fx-extension.validate-local-prerequisites`, `fx-extension.pre-debug-check`, and `fx-extension.get-func-path` in `tasks.json`.
+The `.vscode/launch.json` and `.vscode/tasks.json` controls the entire local debug workflow. In `launch.json`, "Debug" is the entry point for local debugging. Visual studio Code runs the compound preLaunchTask, Pre Debug Check and Start All, which is defined in `.vscode/tasks.json`, then Visual Studio Code launches the debuggers specified in the compound configurations, such as attach to bot, attach to backend, attach to Frontend, and launch bot. A Microsoft Edge or Chrome debugger starts to launch a new browser instance and opens a web page to load Teams client. 
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Ensure to install the following softwares:
 |Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
 
 
-| Project type  | Node.js LTS versions | Limitation |
+| Project type  | Node.js LTS versions | Limitation|
 | --- | --- | --- |
 | Tab without Azure functions | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
 | Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
@@ -167,7 +167,7 @@ In Visual Studio Code settings, uncheck the items to skip checking some prerequi
 
 ## Use your own bot endpoint
 
-1. In Visual Studio Code settings, uncheck "Ensure Ngrok is installed and started (ngrok)".
+1. In Visual Studio Code settings, uncheck Ensure Ngrok is installed and started (ngrok).
 
 1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
 
@@ -211,7 +211,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
                 // "Attach to Bot",
                 // "Attach to Backend"
             ],
-            "preLaunchTask": "Pre Debug Check & Start All",
+            "preLaunchTask": "Pre Debug Check and Start All",
             "presentation": {
                 "group": "all",
                 "order": 1
