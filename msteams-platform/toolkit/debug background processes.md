@@ -34,6 +34,7 @@ Ensure to install the following softwares:
 |Azure functions | Install .NET Core SDK|<br> - If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> - For Linux, the local debug terminates.|</br>
 
 Use the following .NET Core versions:
+
 | Platform  | .NET core SDK versions |- |
 | --- | --- | --- |
 |  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |-|
