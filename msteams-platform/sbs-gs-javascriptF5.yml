@@ -604,16 +604,18 @@ items:
 
         In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
-       * Checks all required prerequisites:
+      * Checks all required prerequisites:
           * Checks if Node.js is installed.
           * Checks if you have signed in to M365 and will let you sign in to M365 if not.
-          * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
-          * Checks if NPM packages for tab app are installed and will install NPM packages for tab app if not.
-          * Checks if port required by tab app is already in use.
-      * Registers an Azure AD application and configures the application.
-      * Registers a Teams app in Teams Developer Portal and configures the app.
-      * Starts the tab app.
-      * Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
+          * Checks if Ngrok is installed and will install ngrok if not.
+          * Checks if NPM packages for bot app are installed and will install NPM packages for bot app if not.
+          * Checks if port required by bot app is already in use.
+          * Starts Ngrok to create a HTTP tunnel.
+     * Registers an Azure AD application and configures the application.
+     * Registers a bot in Bot Framework and configures the bot.
+     * Registers a Teams app in Teams Developer Portal and configures the app.
+     * Starts the bot app.
+     * Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
 
         </details>
 
@@ -854,12 +856,13 @@ items:
        * Checks all required prerequisites:
           * Checks if Node.js is installed.
           * Checks if you have signed in to M365 and will let you sign in to M365 if not.
-          * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
-          * Checks if NPM packages for tab app are installed and will install NPM packages for tab app if not.
-          * Checks if port required by tab app is already in use.
+          * Checks if Ngrok is installed and will install ngrok if not.
+          * Checks if NPM packages for bot app are installed and will install NPM packages for messaging extension app if not.
+          * Checks if port required by messaging extension app is already in use.
       * Registers an Azure AD application and configures the application.
+      * Registers a bot in Bot Framework and configures the bot.
       * Registers a Teams app in Teams Developer Portal and configures the app.
-      * Starts the tab app.
+      * Starts the messaging extension app hosted locally.
       * Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
 
         </details>
