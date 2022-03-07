@@ -26,7 +26,7 @@ The following table lists the limitations if the Node.js software is unavailable
 
 The following table lists the limitations if the Node.js software is unavailable for Teams app capability:
 
-|Teams app capability | Node.js LTS versions | Limitation |
+|Teams app capability | Node.js LTS versions| Limitation |
 | --- | --- | --- |
 | Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 | Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|

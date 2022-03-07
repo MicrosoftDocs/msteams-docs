@@ -92,8 +92,8 @@
       href: toolkit/accounts.md
     - name: Debug overview
       href: toolkit/debug.md
-    - name: Debug background process
-      href: toolkit/debug background processes.md
+      - name: Debug background process
+        href: toolkit/debug background processes.md
     - name: Provision cloud resources
       href: toolkit/provision.md
     - name: Deploy Teams app to the cloud
