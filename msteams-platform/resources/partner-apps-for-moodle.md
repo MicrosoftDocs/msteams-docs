@@ -2,13 +2,13 @@
 title: Partner apps for Moodle
 description: Introduction to partner apps
 ms.topic: Partner apps
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: Surbhigupta
 ---
 
 # Partner apps for Moodle
 
-Microsoft Store provides all the certified partner apps for Moodle, which validates Softwares as Service (SaaS) offerings.
+Microsoft Store provides all the certified partner apps for Moodle, which validates Softwares as Service (SaaS) offerings. mConnect a partner app for Microsoft integrates Moodle courses with Teams.
 
 ## Key benefits of partner apps for Moodle
 

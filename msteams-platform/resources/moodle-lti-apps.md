@@ -2,7 +2,7 @@
 title: Moodle LTI apps
 description: Classification of Moodle LTI apps
 ms.topic: Moodle LTI apps types
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: Surbhigupta
 ---
 
@@ -45,5 +45,5 @@ The Teams meetings LTI app helps faculty and students to integrate class meeting
 
 ## See also
 
-* [Partner apps for Moodle](partner-apps-for-moodle.md)
 * [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md)
+* [Partner apps for Moodle](partner-apps-for-moodle.md)

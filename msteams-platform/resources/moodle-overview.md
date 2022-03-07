@@ -2,7 +2,7 @@
 title: Moodle learning management system
 description: Overview of Moodle LMS integration with Teams
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
 keywords: moodle LMS mConnect deep links
 ---
@@ -20,7 +20,7 @@ keywords: moodle LMS mConnect deep links
 <!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
 This content is modified as per the requirement.-->
 
- The following image demonstrates Moodle LMS.
+ The following image demonstrates Moodle LMS:
  <!-- Query on this image about what is meant by section -->
 
 :::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart" border="true":::
