@@ -60,9 +60,9 @@ The following image shows user creation restrictions options:
 
 <summary><b>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b></summary>
 
-By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and the **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the the configuration option to individuals with the appropriate owner permissions.
+By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the configuration option to individuals with the appropriate owner permissions. 
 
-For more information, see Microsoft 365 block within the Moodle Course interface.
+<!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
 
 The following image shows the option **Allow configure course sync in course**:
 
@@ -99,11 +99,11 @@ The following table provides the actions and dependencies to be performed and ch
 
 <summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b></summary>
 
-Inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
+The reason for inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
 * Check if the Moodle user authentication type is **OpenID**.
 * Check if the Moodle **User Name** matches the AAD username.
-* Clean up **Token Issue** and retry.
+* Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
 
 <br>
@@ -116,7 +116,7 @@ Inconsistencies with users being able unable to sign using their Microsoft 365 c
 
 Users who were unable to sign in at the start need to report the issue and verify that the application **Client secret** has not expired.
 
-The following image shows the report issue :
+The following image shows the error message received when user sign using their Microsoft 365 credentials:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue" border="true":::
 
@@ -124,7 +124,7 @@ The following image shows the error in Azure portal:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal" border="true":::
 
-If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which may take up to 24 hours to re-provision.
+If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which can take up to 24 hours to re-provision.
 
 <br>
 
@@ -134,9 +134,7 @@ If the **Client secret** has expired, then user needs to generate a new **Client
 
 <summary><b>How to change the teams instance that is linked to a course?</b></summary>
 
-Administrators may change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance.
-
-If you use course reset to archive a team, you can link it back to the previous team.
+Administrators can change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance. If you use course reset to archive a team, you can link it back to the previous team.
 
 The following image shows the teams instance:
 
@@ -150,7 +148,7 @@ The following image shows the teams instance:
 
 <summary><b>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b></summary>
 
-The user can face this issue if the icon reference is missing in the **Toolbar config**, which displays the Teams icon within the Atto editor. User needs to add Teams meeting icon to the right of the links icon.
+The user can face Atto Teams meeting issue if the icon reference is missing in the **Toolbar config**, which displays the Teams icon within the Atto editor. User needs to add Teams meeting icon to the right of the links icon using the following steps:
 
 * Install the plugin.
 * Update **Toolbar config** with **teams meeting**.
@@ -175,6 +173,4 @@ For more information on editing Atto toolbar, see:
 
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created.
-
-For more information, see [Teams Meetings](/microsoftteams/limits-specifications-teams)
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams][https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams](/microsoftteams/limits-specifications-teams)

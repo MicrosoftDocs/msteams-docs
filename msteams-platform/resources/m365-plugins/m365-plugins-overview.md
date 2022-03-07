@@ -14,7 +14,7 @@ Microsoft 365 plugins provide integration between Moodle website and Teams. Thes
 
 The following table lists the plugins and GitHub labels to be used based on the requirements.
 
-<!-- |Plugins to install |Description |GitHub label(s)|
+<!--Old content of the table updated and revamped |Plugins to install |Description |GitHub label(s)|
 |-----|-----|----|
 |[**OpenID Connect**](#openid-connect)|Enable SSO for users who work using both Moodle and Microsoft Teams|auth_oidc|
 |• [**OpenID Connect**](#openid-connect) </br> • [**Microsoft 365 integration**](#microsoft-365-integration) |Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members|• auth_oidc </br> • local_o365|
@@ -28,10 +28,10 @@ The following table lists the plugins and GitHub labels to be used based on the 
 |Plugins to install |Description |GitHub label(s)|
 |-----|-----|----|
 |[**OpenID Connect**](#openid-connect)|Enables SSO for users who work using both Moodle and Teams.|auth_oidc|
-|[**Microsoft 365 integration**](#microsoft-365-integration) |Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members.|local_o365|
+|[**Microsoft 365 integration**](#microsoft-365-integration)|Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members.|local_o365|
 |[**Microsoft 365 Repository**](#microsoft-365-repository) |Supports Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle.| repository_office 365|
-|[**Teams Meeting**](#teams-meetings) | Enables Atto editor in Moodle to create Teams meeting links.|atto_teamsmeeting |
-|[**Teams Theme**](#microsoft-365-teams-theme)| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances | themeboost_o365teams |
+|[**Teams Meeting**](#teams-meetings) |Enables Atto editor in Moodle to create Teams meeting links.|atto_teamsmeeting |
+|[**Teams Theme**](#microsoft-365-teams-theme)| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances.| themeboost_o365teams |
 | • [**OneNote**](#onenote-integration) </br> • [**OneNote Submissions**](#onenote-integration) </br> • [**OneNote Feedback**](#onenote-integration) | Enable OneNote to be used for assignment, submission and feedback.|• local_onenote </br> • assignsubmission_onenote </br> • assignfeedback_onenote |  
 |[**Microsoft Block**](#microsoft-block) | Enables Microsoft 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office.|  block_microsoft |
 |[**oEmbed Filter**](#oembed-filter) | s video links in Moodle.|Filter_oembed|
