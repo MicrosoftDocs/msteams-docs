@@ -24,7 +24,7 @@ Class Teams LTI app allows faculty and students to easily navigate between Teams
 Based on the enrolment roster of the LMS course, faculty can do the following:
 
 * Create a class team app with proper user roles for the LMS course.
-* Create a class team app, which adheres to LMS privacy policies and also support teams administrator.
+* Create a class team app, which adheres to LMS privacy policies and also supports teams administrator.
 
 After creating the Class team app, both faculty and students can do the following:
 

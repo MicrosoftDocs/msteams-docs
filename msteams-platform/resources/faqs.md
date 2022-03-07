@@ -78,7 +78,7 @@ The following image shows synchronization of courses:
 
 <details>
 
-<summary><b>We have followed the documentation but the user accounts fail to sync AAD and Moodle. What should we do?</b></summary>
+<summary><b>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</b></summary>
 
 The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
@@ -153,7 +153,7 @@ The user can face Atto Teams meeting issue if the icon reference is missing in t
 * Install the plugin.
 * Update **Toolbar config** with **teams meeting**.
 
-The following images shows Toolbar icon after Toolbar configuration adjustment:
+The following images show Toolbar icon after Toolbar configuration adjustment:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="tool bar" border="true":::
 
@@ -162,7 +162,7 @@ The following images shows Toolbar icon after Toolbar configuration adjustment:
 For more information on editing Atto toolbar, see:
 
 * [Atto editor-ModdleDocs](https://docs.moodle.org/311/en/Atto_editor)
-* [Atto editor-Icon mapping][https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201]
+* [Atto editor-Icon mapping](https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201)
 <br>
 
 </details>
@@ -173,7 +173,7 @@ For more information on editing Atto toolbar, see:
 
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams][https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams](/microsoftteams/limits-specifications-teams)
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams).
 
 <br>
 

@@ -8,7 +8,7 @@ ms.author: Surbhigupta
 
 # Microsoft 365 plugins
 
-Microsoft 365 plugins provide integration between Moodle website and Teams. These plugins makes it easy for user to schedule, deliver, and collaborate the course content. The plugins can be used independently, or in partnership as per the requirement.
+Microsoft 365 plugins provide integration between Moodle website and Teams. These plugins make it easy for user to schedule, deliver, and collaborate the course content. The plugins can be used independently, or in partnership as per the requirement.
 
 ## Plugin list and labels
 
@@ -32,7 +32,7 @@ The following table lists the plugins and GitHub labels to be used based on the 
 |[**Microsoft 365 Repository**](#microsoft-365-repository) |Supports Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle.| repository_office 365|
 |[**Teams Meeting**](#teams-meetings) |Enables Atto editor in Moodle to create Teams meeting links.|atto_teamsmeeting |
 |[**Teams Theme**](#microsoft-365-teams-theme)| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances.| themeboost_o365teams |
-|[**OneNote**](#onenote-integration)| Enable OneNote to be used for assignment, submission and feedback.|local_onenote, assignsubmission_onenote, and assignfeedback_onenote </br>|  
+|[**OneNote**](#onenote-integration)| Enable OneNote to be used for assignment, submission, and feedback.|local_onenote, assignsubmission_onenote, and assignfeedback_onenote </br>|  
 |[**Microsoft Block**](#microsoft-block) | Enables Microsoft 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office.|block_microsoft |
 |[**oEmbed Filter**](#oembed-filter) | Enable video links in Moodle.|Filter_oembed|
 
@@ -91,7 +91,7 @@ Teams meetings plugin allows user to create meetings requests in calendar, assig
 After the plugin is installed, faculty and students can create an audio or video meeting using Moodle, which requires Microsoft 365 account and Moodle permissions.
 
 >[!NOTE]
->Teams meetings don't appear on Outlook or Teams calenders, however, individual student names can be added to the invite for the same.
+>Teams meetings don't appear on Outlook or Teams calendar, however, individual student names can be added to the invite for the same.
 
 The following image displays the Teams meeting sign in page:
 
@@ -99,9 +99,9 @@ The following image displays the Teams meeting sign in page:
 
 ## Microsoft 365 Teams theme
 
-The Microsoft 365 Teams theme plugin provides user with custom view of Moodle course home page and is available for viewing when user accesses their Moodle courses within Teams.
+The Microsoft 365 Teams theme plugin provides users with custom view of Moodle course home page and is available for viewing when user accesses their Moodle courses within Teams.
 
-The theme plugin gives users an unified enhanced experience with the following features:
+The theme plugin gives users a unified enhanced experience with the following features:
 
 * Adapts to Microsoft Teams theme changes, such as default, dark, and high contrast.
 * Provides focus on the course activities.
@@ -114,11 +114,11 @@ The following image displays the Teams theme set up by the user:
 
 ## OneNote integration
 
-The OneNote integration plugin provides user with options to browse notebooks, sections, and pages; where assignments are submitted and faculty provides necessary feedback on corresponding assignments in OneNote. OneNote also enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
+The OneNote integration plugin provides users with options to browse notebooks, sections, and pages; where assignments are submitted, and faculty provides necessary feedback on corresponding assignments in OneNote. OneNote also enhances user experience by adding features beyond tests and links, while extending the capabilities to mobile using digital pens, photo or video media, and co-authoring with groups.
 
-OneNote integration helps with access to texts, graphics, and audio repositories. The plugins provides the following advantages:
+OneNote integration helps with access to texts, graphics, and audio repositories. The plugin provides the following advantages:
 
-* Include browsing notebooks, sections, and pages, where students work on assignments and  provide feedback on those assignments in OneNote.
+* Include browsing notebooks, sections, and pages, where students work on assignments and provide feedback on those assignments in OneNote.
 * Combine digital binder for notes, assignments, and feedback for reference and review.
 * Expand drafting capabilities beyond text and links, and extend mobile usage using digital pens, photo or video media, and co-authoring with groups.
 * Include submission and feedback page for each assignment under the faculty's account. When such is saved within Moodle, a copy of the HTML and any associated pictures are packaged in a zip file.
@@ -130,7 +130,7 @@ OneNote integration helps with access to texts, graphics, and audio repositories
 
 Microsoft block plugin allows the user to access course SharePoint file location and view the course in OneNote notebook for submissions, along with the option to modify Office 365 integration preferences. The administrators can configure the block to appear on all the course pages.
 
-Microsoft block enhances user experience by providing an user interface to modify Microsoft 365 integration features and access to its numerous resources. Administrators can configure the block to view the modified changes to appear on each course page. The block allows the user to perform the following activities:
+Microsoft block enhances user experience by providing a user interface to modify Microsoft 365 integration features and access to its numerous resources. Administrators can configure the block to view the modified changes to appear on each course page. The block allows the user to perform the following activities:
 
 * Access the course SharePoint file location and OneNote notebook.
 * View the course on OneNote notebook for submissions.
