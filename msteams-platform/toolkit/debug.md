@@ -36,8 +36,7 @@ The following image displays the browser options in the dropdown list:
 3. Select **Sign in** to Microsoft 365 account in the pop-up window.
     :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft365-signin.png" alt-text="Alternate capabilities":::
 
- > [!NOTE]
-    You can also select **Read more** to learn more about Microsoft 365 Developer Program. Your default web browser opens to let you sign into Microsoft 365. Sign in to your Microsoft 365 account using your credentials.
+> [!NOTE]   You can also select **Read more** to learn more about Microsoft 365 Developer Program. Your default web browser opens to let you sign into Microsoft 365. Sign in to your Microsoft 365 account using your credentials.
 
 3. Select **Install** in the pop-up dialog box to let you install the development certificate for localhost.
 
