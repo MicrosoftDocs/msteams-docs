@@ -92,7 +92,7 @@
       href: toolkit/accounts.md
     - name: Debug overview
       href: toolkit/debug.md
-    - name: What Visual studio code and Teams Toolkit do during local debug
+    - name: Visual studio code and Teams Toolkit in local debug
       href: toolkit/what VSC and Teams Toolkit do during local debug.md
     - name: Provision cloud resources
       href: toolkit/provision.md

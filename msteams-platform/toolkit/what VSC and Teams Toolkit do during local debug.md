@@ -1,5 +1,5 @@
 ---
-title: What Visual studio code and Teams Toolkit do during local debug
+title: Visual studio code and Teams Toolkit in local debug
 author: zyxiaoyuer
 description: Function of Visual studio code and Teams Toolkit during local debug
 ms.author: surbhigupta
