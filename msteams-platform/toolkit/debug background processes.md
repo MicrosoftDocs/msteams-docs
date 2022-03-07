@@ -29,13 +29,16 @@ Ensure to install the following softwares:
 |Sign in to M365 account | Teams toolkit prompts to sign in to M365, if you have not signed in |-|
 |Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3 | <br> - If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br><br>- The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br?>
 |Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> - If you have not installed Azure Functions Core Tools or the version doesn't  match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br>- The  Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
-|Azure functions | Install .NET Core SDK|<br> - If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> - For Linux, the local debug terminates.|</br>
 |Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|-|
 |NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|-|
-| Platform  | .NET core SDK versions |
-| --- | --- |
-|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |
-|  macOs (arm64) |  6.0 |
+|Azure functions | Install .NET Core SDK|<br> - If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> - For Linux, the local debug terminates.|</br>
+
+Use the following .NET Core versions:
+| Platform  | .NET core SDK versions |- |
+| --- | --- | --- |
+|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |-|
+|  macOs (arm64) |  6.0 |-|
+
 
   > [!NOTE]
   > If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.
@@ -118,7 +121,7 @@ Run tasks defined in `.vscode/tasks.json` to start app services as follows:
 |  Bot or messaging extensions |  Start Bot |  bot |
 |  Azure functions |  Start backend |  api |
 
-After all app services are started, launch the debug configurations defined in `.vscode/launch.json` as follows:
+After all the app services starts, launch the debug configurations defined in `.vscode/launch.json` as follows:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/Terminal.png" alt-text="Start frontend task":::
 
