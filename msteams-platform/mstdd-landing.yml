@@ -44,8 +44,7 @@ landingContent:
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: Authentication using external OAuth providers  
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
-      - text: Debug your Teams app 
-        url: ~/toolkit/debug.md
+      
       
       
 - title: All time favorites
