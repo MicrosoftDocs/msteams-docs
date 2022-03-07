@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 03/02/2022
 ---
 
-# Outline
+# Debug overview
 
-Debugging is the process of checking, detecting, and correcting problems (or "bugs") in order to ensure that a programme runs according to its specifications. Debugging is also known as Debug.One of the most important feature of Visual Studio Code is debugging, also referred as the **F5** (function key) among developers. This built-in debugger speeds up the editing, compiling, and debugging process. Teams Toolkit makes use of the Visual Studio Code function to help you run and debug your app in the Teams client as it's being developed.
+Debugging is the process of checking, detecting, and correcting problems or bugs in order to ensure that a programme runs according to its specifications. Debugging is also known as Debug. One of the most important feature of Visual Studio Code is debugging, also referred as the **F5** function key among developers. Editing, compiling, and debugging process is made much faster by this built-in debugger. Teams Toolkit makes use of the Visual Studio Code function to help you run and debug your app in the Teams client as it's being developed.
 
 ## Debug your Teams app locally in Teams Toolkit
 
