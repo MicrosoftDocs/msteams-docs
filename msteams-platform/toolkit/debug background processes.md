@@ -15,10 +15,9 @@ The `.vscode/launch.json` and `.vscode/tasks.json` controls the entire local deb
 ## Prerequisites
 
 Ensure to install the following softwares:
-
-|Installation  | Description | Limitation |
+|Installation | Description | Limitation |
 | --- | --- | --- |
-|Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
+|Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Project type  | Node.js LTS versions | Limitation |
 | --- | --- | --- |
 | Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
