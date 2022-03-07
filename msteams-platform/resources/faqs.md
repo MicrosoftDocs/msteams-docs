@@ -181,6 +181,8 @@ However, you can access the invite and manually add participant names to the **R
 
 <details>
 
-<summary><b>Is there any support site where we can get more help?</b></summary>
+<summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
 
-For more information on support and feedback see, [Support and Feedback](/microsoftteams/platform/feedback)
+For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback).
+
+

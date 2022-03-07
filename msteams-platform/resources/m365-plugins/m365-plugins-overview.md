@@ -32,9 +32,9 @@ The following table lists the plugins and GitHub labels to be used based on the 
 |[**Microsoft 365 Repository**](#microsoft-365-repository) |Supports Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle.| repository_office 365|
 |[**Teams Meeting**](#teams-meetings) |Enables Atto editor in Moodle to create Teams meeting links.|atto_teamsmeeting |
 |[**Teams Theme**](#microsoft-365-teams-theme)| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances.| themeboost_o365teams |
-|[**OneNote**](#onenote-integration)| Enable OneNote to be used for assignment, submission and feedback.|• local_onenote</br> • assignsubmission_onenote </br> • assignfeedback_onenote </br>|  
+|[**OneNote**](#onenote-integration)| Enable OneNote to be used for assignment, submission and feedback.|local_onenote, assignsubmission_onenote, and assignfeedback_onenote </br>|  
 |[**Microsoft Block**](#microsoft-block) | Enables Microsoft 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office.|block_microsoft |
-|[**oEmbed Filter**](#oembed-filter) | s video links in Moodle.|Filter_oembed|
+|[**oEmbed Filter**](#oembed-filter) | Enable video links in Moodle.|Filter_oembed|
 
 Moodle LMS supports the following plugins:
 
@@ -154,17 +154,6 @@ oEmbed filter plugin simplifies and enhances user experience by simplifying incl
 The following image shows inclusion of external HTML content within Moodle:
 
 :::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="oEmbed filter page" border="true":::
-
-<!-- |Requirement|Plugins to install|GitHub label(s)|
-|-----|-----|----|
-| Enable SSO for users who work using both Moodle and Microsoft Teams | OpenID Connect | auth_oidc|
-| Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members | • OpenID Connect </br> • Microsoft 365 integration | • auth_oidc </br> • local_o365|
-| Remove Moodle blocks and extra chrome within the Moodle iframes for Teams, which applies while mapping courses to Teams instances | • OpenID Connect </br> • Microsoft 365 Integration </br> • Teams Theme| • auth_oidc </br> • local_o365 </br> • themeboost_o365teams |
-| Leverage Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle | • OpenID Connect </br> • Microsoft 365 integration </br> • Microsoft 365 Repository | • auth_oidc </br> * local_o365 </br> • repository_office 365|
-| Enable OneNote to be used for assignment, submission and feedback | • OpenID Connect </br> • OneNote </br> • OneNote Submissions </br> • OneNote Feedback | • auth_oidc </br> • local_onenote </br> • assignsubmission_onenote </br> • assignfeedback_onenote |  
-| Enable 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office | • OpenID Connect </br> • Microsoft 365 Integration </br> • Microsoft 365 Repository </br> • Microsoft Block | • auth_oidc </br> • local_o365 </br> • repository_office365 </br> • block_microsoft |
-| Enable Atto editor in Moodle to create Teams meeting links | Teams Meeting | atto_teamsmeeting |
-| Enable video links in Moodle | oEmbed Filter | Filter_oembed | -->
 
 ## See also
 
