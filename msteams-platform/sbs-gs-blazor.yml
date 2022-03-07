@@ -285,7 +285,7 @@ items:
         
     1. Select **Add**, when prompted to install the app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-add-app.png" alt-text="Screenshot showing how to add app to Teams web client.border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-add-app.png" alt-text="Screenshot showing how to add app to Teams web client" border="true":::
 
         Your app will now be displayed:
 
