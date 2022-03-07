@@ -174,3 +174,13 @@ For more information on editing Atto toolbar, see:
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they are similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
 However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams][https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams](/microsoftteams/limits-specifications-teams)
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>Is there any support site where we can get more help?</b></summary>
+
+For more information on support and feedback see, [Support and Feedback](/microsoftteams/platform/feedback)

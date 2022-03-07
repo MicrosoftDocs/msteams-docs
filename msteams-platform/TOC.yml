@@ -525,8 +525,6 @@
       href: resources/partner-apps-for-moodle.md
     - name: Moodle FAQ
       href: resources/faqs.md
-    - name: Get help
-      href: resources/getting-help.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
   - name: Add a Teams tab to SharePoint

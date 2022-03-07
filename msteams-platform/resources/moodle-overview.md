@@ -57,4 +57,3 @@ The following scenarios describe the accelerated learning potential combining Mi
 * [Moodle LTI Apps](moodle-lti-apps.md)
 * [Partner apps for Moodle](partner-apps-for-moodle.md)
 * [Moodle FAQ](faqs.md)
-* [Get help](getting-help.md)

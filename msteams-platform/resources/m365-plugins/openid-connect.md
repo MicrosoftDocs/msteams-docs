@@ -7,7 +7,7 @@ ms.author: Surbhigupta
 ---
 
 # Plugins details
-<!-- 
+<!-- This document has been merged in m365-plugins overview file
 ## OpenID Connect
 
 The Open ID Connect plugin allows you to authenticate any website or tool that supports the required specification and provides single sign-on support (SSO) with Microsoft Office 365. The OpenID Connect plugin provides institutions with the following sign-in workflow options to meet their specific requirements:
