@@ -21,7 +21,8 @@ Ensure to install the following softwares:
 |Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
 
 
-| Project type  | Node.js LTS versions | Limitation |
+
+|Project type  | Node.js LTS versions | Limitation |
 | --- | --- | --- |
 | Tab without Azure functions | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
 | Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
@@ -30,7 +31,7 @@ Ensure to install the following softwares:
 |Sign in to M365 account | Teams toolkit prompts to sign in to M365, if you have not signed in |-|
 |Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3 | <br> - If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br><br>- The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br?>
 |Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> - If you have not installed Azure Functions Core Tools or the version doesn't  match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br>- The  Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
-|Azure functions | Install .NET Core SDK| * If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`. * For Linux, the local debug terminates.|
+|Azure functions | Install .NET Core SDK|<br> - If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> - For Linux, the local debug terminates.|</br>
 |Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|-|
 |NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|-|
 
