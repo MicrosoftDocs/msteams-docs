@@ -127,11 +127,11 @@ After all app services are started, launch the debug configurations defined in `
 
 For project with tab app and bot app:
 
-|  Component |  Debug configuration name  | Debug configuration type  |
+|  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
 |  Tab |  Attach to Frontend (Edge) or Attach to Frontend (Chrome)  |  pwa-msedge or pwa-mschrome  |
-|  Bot or messaging extensions |  Attach to Bot |  pwa-node  |
-|  Azure functions |  Attach to backend |  pwa-node  |
+|  Bot or messaging extensions |  Attach to Bot |  pwa-node |
+|  Azure functions |  Attach to backend |  pwa-node |
 
 For project with bot app and without tab app:
 
@@ -139,7 +139,7 @@ For project with bot app and without tab app:
 | --- | --- | --- |
 |  Bot or messaging extension  |  Launch Bot (Edge) or Launch Bot (Chrome)  |   pwa-msedge or pwa-mschrome  |
 |  Bot or messaging extension  |  Attach to Bot |  pwa-node  |
-|  Azure functions |  Attach to backend |  pwa-node  |
+|  Azure functions |  Attach to backend |  pwa-node |
 
 Configuration attach to Frontend or Launch Bot launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is completely loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
 i.e. [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
