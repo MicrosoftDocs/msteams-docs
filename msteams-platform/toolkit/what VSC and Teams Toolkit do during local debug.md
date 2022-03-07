@@ -10,48 +10,44 @@ ms.date: 03/03/2022
 
 # Overview
 
-The entire local debug workflow is controlled by `.vscode/launch.json` and `.vscode/tasks.json`.
-In `launch.json` there is a compound named **Debug**, which is the entry point for local debugging. Visual studio Code will first run the compound preLaunchTask **Pre Debug Check & Start All** which is defined in `.vscode/tasks.json`. Following the completion of this operation, Visual Studio Code will launch the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.  A `Node.js` debugger will be started to attach to both the bot and Azure function source code. A Edge or Chrome debugger will be started to launch a new browser instance and open a web page to load Teams client. There are several placeholders **teamsAppId** and **account-hint** in `.vscode/launch.json` whose values will be resolved by Teams Toolkit during local debug. In `tasks.json`, there are several commands `fx-extension.validate-local-prerequisites`, `fx-extension.pre-debug-check` and `fx-extension.get-func-path` which are contributed by Teams Toolkit.
+The `.vscode/launch.json` and `.vscode/tasks.json` controls the entire local debug workflow. In `launch.json`, "Debug" is the entry point for local debugging. Visual studio Code runs the compound preLaunchTask "Pre Debug Check & Start All", which is defined in `.vscode/tasks.json`, then Visual Studio Code launches the debuggers specified in the compound configurations, such as "Attach to Bot", "Attach to Backend", "Attach to Frontend", and "Launch Bot".  A `Node.js` debugger starts to attach to both the bot and Azure function source code. A Edge or Chrome debugger starts to launch a new browser instance and opens a web page to load Teams client. During local debug, Teams Toolkit resolves values of the placeholders "teamsAppId" and "account-hint" in `.vscode/launch.json`. Teams Toolkit contributes to several commands such as `fx-extension.validate-local-prerequisites`, `fx-extension.pre-debug-check`, and `fx-extension.get-func-path` in `tasks.json`.
 
-## Check all required prerequisites
+## Prerequisites
 
-1. Ensure if Node.js is installed (<https://nodejs.org/>)
+Ensure to install the following softwares:
 
-| Project type  | Node.js LTS versions |
-| --- | --- |
-| Tab without Azure functions | 10, 12, **14 (recommended)**, 16 |
-| Tab with Azure functions | 10, 12, **14 (recommended)** |
-| Bot | 10, 12, **14 (recommended)**, 16 |
-| Messaging extension | 10, 12, **14 (recommended)**, 16 |
+|Installation  | Description | Limitation |
+| --- | --- | --- |
+|Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
 
-If Node.js is not installed or the version does not match the requirement, the local debug will be terminated.
 
-2. Ensure if you have signed in to **Microsoft 365** account. If not then sign in to your account.
+| Project type  | Node.js LTS versions |  |
+| --- | --- | --- |
+| Tab without Azure functions | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
+| Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
+| Bot | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
+| Messaging extension | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version  doesn't match the requirement.|
+|Sign in to M365 account | Teams toolkit prompts to sign in to M365, if you have not signed in |-|
+|Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3 | <br> - If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br><br>- The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br?>
+|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> - If you have not installed Azure Functions Core Tools or the version doesn't  match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br>- The  Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
+|Azure functions | Install .NET Core SDK| * If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`. * For Linux, the local debug terminates.|
+|Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|-|
+|NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|-|
 
-3. For **bot and messaging extension**, ensure if `Ngrok` is installed. The Ngrok binary version required is 2.3. If Ngrok is not installed or the version does not match the requirement, the toolkit will install Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
-
-4. For **Azure functions**, ensure if Azure Functions Core Tools is installed. The Azure Functions Core Tools binary version required is 3. If Azure Functions Core Tools is not installed or the version does not match the requirement, the toolkit will install Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The **Azure Functions Core Tools** binary is managed by Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin`. For Linux, the local debug will be terminated.
-
-5. For Azure functions, ensure if **.NET Core SDK** is installed. The .NET Core versions required are as follows:
 
 | Platform  | .NET core SDK versions |
 | --- | --- |
 |  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |
 |  macOs (arm64) |  6.0 |
 
-If .NET Core SDK is not installed or the version does not match the requirement, the toolkit will install .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`. For Linux, the local debug will be terminated.
+  > [!NOTE]
+  > If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.
 
-6. If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab will urge you to do so.
+* Start Ngrok to create a HTTP tunnel for bot and messaging extension.
 
-7. For Azure functions, ensure if Azure functions binding extensions defined in `api/extensions.csproj` are installed. If not will install Azure functions binding extensions.
+* If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
 
-8. Ensure if NPM packages for tab app, bot app, messaging extension app and Azure functions are installed. If not install all NPM packages.
-
-9. Start Ngrok to create a HTTP tunnel for bot and messaging extension.
-
-10. If ports required by tab, bot, messaging extension and Azure functions are already in use, the local debug will be terminated.
-
-The ports required are as follows:
+The following ports are:
 
 | Component  | Port |
 | --- | --- |
@@ -61,7 +57,7 @@ The ports required are as follows:
 | Azure functions | 7071 |
 | Node inspector for Azure functions | 9229 |
 
-The progress and result of checking prerequisites will be displayed in the output channel named Teams Toolkit.
+The Teams Toolkit output channel displays the progress and result of checking prerequisites.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/pre-toolkit.png" alt-text="prerequisites":::
 
@@ -94,8 +90,8 @@ The progress and result of checking prerequisites will be displayed in the outpu
 
 | Project type | Redirect URIs for web | Redirect URIs for single-page application |
 | --- | --- | --- |
-| Tab | <https://localhost:53000/auth-end.html> | <https://localhost:53000/auth-end.html?clientId={appId>} |
-| Bot or messaging extension | <https://ngrok.io/auth-end.html> | NA |
+| Tab | [Local](https://localhost:53000/auth-end.html) | [Localhost](https://localhost:53000/auth-end.html?clientId={appId>}) |
+| Bot or messaging extension | [Ngrok](https://ngrok.io/auth-end.html) | NA |
 
 ## Register and configure bot
 
@@ -105,19 +101,19 @@ For tab app or messaging extension app:
 
 1. Create a client secret for the Azure AD application.
 
-1. Register a bot in Microsoft Bot Framework <https://dev.botframework.com/> using the Azure AD application.
+1. Register a bot in Microsoft Bot Framework [Framework](https://dev.botframework.com/) using the Azure AD application.
 
 1. Add Microsoft Teams channel.
 
-1. Configure messaging endpoint as <https://ngrok.io/api/messages>
+1. Configure messaging endpoint as [Messages](https://ngrok.io/api/messages).
 
 ## Register and configure Teams app
 
-Register a Teams app in Teams Developer Portal <https://dev.teams.microsoft.com/home> using the manifest template in `templates/appPackage/manifest.local.template.json`.
+Register a Teams app in Teams Developer Portal [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
 
 ## Start app services, launch debuggers and sideload Teams app
 
-Run tasks defined in `.vscode/tasks.json` to start app services as follows.
+Run tasks defined in `.vscode/tasks.json` to start app services as follows:
 
 |  Component |  Task name  | Folder |
 | --- | --- | --- |
@@ -125,11 +121,11 @@ Run tasks defined in `.vscode/tasks.json` to start app services as follows.
 |  Bot or messaging extensions |  Start Bot |  bot |
 |  Azure functions |  Start backend |  api |
 
-After all app services are started, launch the debug configurations defined in `.vscode/launch.json` as follows.
+After all app services are started, launch the debug configurations defined in `.vscode/launch.json` as follows:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/Terminal.png" alt-text="Start frontend task":::
 
-For project with tab app and bot app.
+For project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
@@ -137,7 +133,7 @@ For project with tab app and bot app.
 |  Bot or messaging extensions |  Attach to Bot |  pwa-node  |
 |  Azure functions |  Attach to backend |  pwa-node  |
 
-For project with bot app but without tab app.
+For project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
@@ -145,21 +141,21 @@ For project with bot app but without tab app.
 |  Bot or messaging extension  |  Attach to Bot |  pwa-node  |
 |  Azure functions |  Attach to backend |  pwa-node  |
 
-Configuration Attach to Frontend or Launch Bot will launch a new Edge or Chrome browser instance and open a web page to load Teams client. After the Teams client is completely loaded, Teams will sideload the Teams app controlled by the sideloading url defined in the launch configurations,
-i.e. [Microsoft Teams](<https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
+Configuration attach to Frontend or Launch Bot launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is completely loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
+i.e. [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
 
 
 ## Local debug files
 
-- `.fx/configs/localSettings.json:` local debug configuration file. The values of each configuration will be generated and saved during local debug.
+-`.fx/configs/localSettings.json:` local debug configuration file. The values of each configuration generates and saves during local debug.
 
-- `templates/appPackage/manifest.local.template.json:` Teams app manifest template file for local debug. The placeholders in this file will be resolved during local debug.
+-`templates/appPackage/manifest.local.template.json:` Teams app manifest template file for local debug. The placeholders in the file resolves during local debug.
 
-- `tabs/.env.teams.local:` environment variables file for tab. The values of each environment variable will be generated and saved during local debug.
+-`tabs/.env.teams.local:` environment variables file for tab. The values of each environment variable generates and saves during local debug.
 
-- `bot/.env.teamsfx.local:` environment variables file for bot and messaging extension. The values of each environment variable will be generated and saved during local debug.
+-`bot/.env.teamsfx.local:` environment variables file for bot and messaging extension. The values of each environment variable  generates and saves during local debug.
 
-- `api/.env.teamsfx.local:` environment variables file for Azure functions. The values of each environment variable will be generated and saved during local debug.
+-`api/.env.teamsfx.local:` environment variables file for Azure functions. The values of each environment variable  generates and saves during local debug.
 
 ## How to customize Teams Toolkit local debug
 
@@ -171,26 +167,35 @@ In Visual Studio Code settings, uncheck the items to skip checking some prerequi
 
 ## Use your own bot endpoint
 
-1. In Visual Studio Code settings, uncheck **Ensure Ngrok is installed and started (ngrok)**.
+1. In Visual Studio Code settings, uncheck "Ensure Ngrok is installed and started (ngrok)".
 
-1. Set **botDomain** and **botEndpoint** configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
+1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
 
 ## Use your own development certificate
 
-1. In Visual Studio Code settings, uncheck **Ensure development certificate is trusted (devCert)**
+1. In Visual Studio Code settings, uncheck Ensure development certificate is trusted (devCert).
 
-1. Set **sslCertFile** and **sslKeyFile** configuration in `.fx/configs/localSettings.json` to your own certificate file path and key file path.
+1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your own certificate file path and key file path.
 
 ## Use your own start scripts to start app services
 
-1. For **tab**, update `dev:teamsfx script in tabs/package.json`.
+1. For tab, update `dev:teamsfx script in tabs/package.json`.
 
-1. For **bot or messaging extension**, update`dev:teamsfx script in bot/package.json`.
+1. For bot or messaging extension, update`dev:teamsfx script in bot/package.json`.
 
-1. For **Azure functions**, update `dev:teamsfx script in api/package.json` and for **TypeScript** update `watch:teamsfx script`.
+1. For Azure functions, update `dev:teamsfx script in api/package.json` and for TypeScript update `watch:teamsfx script`.
+
 
  > [!NOTE]
- > Ensure you should start a new local debug after adding new environment variables as the environment variables are not support to hot reload.
+ > Currently, the tab, bot, messaging extension apps, and Azure functions doesn't support customization.
+
+
+## Add environment variables
+
+1. You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension and Azure functions. Teams Toolkit loads the environment variables you added to start services during local debug.
+
+ > [!NOTE]
+ > Ensure to start a new local debug after adding new environment variables as the environment variables doesn't support to hot reload.
 
 ## Debug partial component
 
@@ -232,3 +237,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 }
 ```
 
+## See also
+
+* [Debug overview](debug.md))

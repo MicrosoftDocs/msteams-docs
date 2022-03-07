@@ -33,14 +33,14 @@ After creating a new project, you can select **F5** to run your Teams app in deb
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** in the Run and Debug dropdown list, then select Start Debugging (F5). Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug.png" alt-text="browser default" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug.png" alt-text="browser default" border="false"::: 
 
 2. Select **Sign in** to Microsoft 365 account in the pop-up dialog box.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft365-signin.png" alt-text="Alternate capabilities":::
 
-> [!NOTE]
-> You can also select **Read more** to learn more about Microsoft 365 Developer Program.
+  > [!NOTE]
+   > You can also select **Read more** to learn more about Microsoft 365 Developer Program.
 Your default web browser opens to let you sign into Microsoft 365. Sign in to your Microsoft 365 account using your credentials.
 
 3. Select **Install** in the pop-up dialog box to let you install the development certificate for localhost.
@@ -66,16 +66,16 @@ Your default web browser opens to let you sign into Microsoft 365. Sign in to yo
 
 In Visual Studio Code, you can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints execute when you interact with the Teams app in a web browser.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/toggle.png" alt-text="toggle breakpoints":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/toggle.png" alt-text="capabilities":::
 
 ## Hot reload
 
 You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the Teams app. Update the codes and save the changes. The project re-loads and the debugger re-attaches to any programming languages.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/hot reload.png" alt-text="hot capabilities":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/hot reload.png" alt-text="hot capabilities":::
 
 ### Stop debugging
 
-When you complete local debug, you can select **Stop or Disconnect** in the floating debugging toolbar to stop all debug sessions and terminate tasks.
+When you complete local debug, you can select **Stop or Disconnect** in the floating debugging toolbar to stop all debug sessions and terminate tasks. 
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/stop-debugging.png" alt-text="debug":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/stop-debugging.png" alt-text="debug":::
