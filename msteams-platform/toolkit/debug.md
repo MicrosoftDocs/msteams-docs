@@ -58,7 +58,7 @@ Your default web browser opens to let you sign into Microsoft 365. Sign in to yo
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/mac-settings.png" alt-text="mac sign in":::
 
-6. When Teams client is completely loaded in the  web browser, select **Add** or select one from the dropdown list as your needs.
+6. When Teams client completely loads in the  web browser, select **Add** or select one from the dropdown list as your needs.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/hello-local-debug.png" alt-text="local debug":::
 
