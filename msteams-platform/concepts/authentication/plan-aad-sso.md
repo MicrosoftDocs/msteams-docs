@@ -31,6 +31,7 @@ Before you can use AAD SSO to authenticate your app users, ensure that:
 AAD is the main identity provider (IdP) for validating access to Azure-based systems and applications.
 
 <br>
+
 :::image type="content" source="../../assets/images/authentication/aad-sso-process.png" alt-text="AAD SSO process":::
 
 \ Include an info-graphic to show the AAD SSO flow and description \
