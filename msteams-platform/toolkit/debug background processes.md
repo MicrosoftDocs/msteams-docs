@@ -121,7 +121,7 @@ Run tasks defined in `.vscode/tasks.json` to start app services as follows:
 |  Bot or messaging extensions |  Start Bot |  bot |
 |  Azure functions |  Start backend |  api |
 
-After all the app services starts, launch the debug configurations defined in `.vscode/launch.json` as follows:
+After the app services starts, launch the debug configurations defined in `.vscode/launch.json` as follows:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/Terminal.png" alt-text="Start frontend task":::
 
