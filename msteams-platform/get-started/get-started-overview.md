@@ -53,5 +53,5 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 
 ## See also
 
-- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-- [Git and GitHub resources](/contribute/additional-resources)
+* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git and GitHub resources](/contribute/additional-resources)
