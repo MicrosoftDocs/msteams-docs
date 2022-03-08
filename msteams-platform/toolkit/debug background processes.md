@@ -12,8 +12,8 @@ ms.date: 03/03/2022
 
 The background process of debugging involves the `.vscode/launch.json` and `.vscode/tasks.json` files, which controls the entire local debug workflow.  
 
-* The `launch.json` file configures the debugger in Visual Studio Code (VS). VS Code runs the compound configurations preLaunchTask, Pre Debug Check, and Start All, which is defined in `.vscode/tasks.json` file.
-* VS Code launches the debuggers specified in the compound configurations, such as Attach to bot, Attach to backend, Attach to Frontend, and launch bot.
+* The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations preLaunchTask, Pre Debug Check, and Start All, which is defined in `.vscode/tasks.json` file.
+* Visual Studio Code launches the debuggers specified in the compound configurations, such as Attach to bot, Attach to backend, Attach to Frontend, and launch bot.
 * Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Prerequisites
@@ -121,9 +121,9 @@ For tab app or messaging extension app:
 
 Register a Teams app in Teams Developer Portal [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
 
-## Start app services, launch debuggers, and sideload Teams app
+## Start app services
 
-Run tasks defined in `.vscode/tasks.json` to start app services as follows:
+To start app services, run tasks defined in `.vscode/tasks.json` to start app services as follows:
 
 |  Component |  Task name  | Folder |
 | --- | --- | --- |
@@ -131,7 +131,9 @@ Run tasks defined in `.vscode/tasks.json` to start app services as follows:
 |  Bot or messaging extensions |  Start Bot |  bot |
 |  Azure functions |  Start backend |  api |
 
-After the app services starts, launch the debug configurations defined in `.vscode/launch.json` as follows:
+## Launch debuggers
+
+Launch the debug configurations defined in `.vscode/launch.json` as follows:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/Terminal.png" alt-text="Start frontend task":::
 
@@ -150,6 +152,9 @@ The table shows debug configuration type for project with bot app and without ta
 |  Bot or messaging extension  |  Launch Bot (Edge) or Launch Bot (Chrome)  |   pwa-msedge or pwa-mschrome  |
 |  Bot or messaging extension  |  Attach to Bot |  pwa-node  |
 |  Azure functions |  Attach to backend |  pwa-node |
+
+
+## Sideload Teams app
 
  The configuration attach to Frontend or Launch Bot launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is completely loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
@@ -170,9 +175,9 @@ The following lists the local debug files:
 
 ## Customize Teams Toolkit local debug
 
-### Skipping prerequisites
+### Clear prerequisites
 
-You can skip some of the prerequisites in the VS Code settings.
+You can clear some of the prerequisites in the VS Code settings.
 
 1. Select **Settings**.
 
