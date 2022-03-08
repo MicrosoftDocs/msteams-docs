@@ -15,14 +15,14 @@ Visual Studio Code provides you with the debugging feature also referred as the
 
 ## Debug your Teams app locally in Teams Toolkit
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions.  Toolkit supports debugging features including start, multi-target debugging, toggle breakpoints, hot reloading, and stop. The Teams app is available for preview in Teams web client locally after the debugging process.
+Teams Toolkit helps you to debug and preview your Teams app locally. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Toolkit supports debugging features including start, multi-target debugging, toggle breakpoints, hot reloading, and stop. The Teams app is available for preview in Teams web client locally after the debugging process.
 
 ## Prerequisite
 
 Install [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+ or later.
 
->[!Tip]
-Ensure you have Teams app opened in Microsoft Visual Studio Code.
+> [!Tip]
+> Ensure you have Teams app opened in Microsoft Visual Studio Code.
 
 ## Steps to perform local debug using Teams Toolkit
 
@@ -33,28 +33,29 @@ After creating a new app using Teams Toolkit, you can select **F5** to run your 
 
 The following image displays the browser options in the dropdown list:
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug.png" alt-text="browser default" border="true"::: 
+
 3. Select **Sign in** to Microsoft 365 account in the pop-up window.
     :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft365-signin.png" alt-text="Alternate capabilities":::
 
 > [!NOTE]
 > You can also select **Read more** to learn more about Microsoft 365 Developer Program. Your default web browser opens to let you sign into Microsoft 365. Sign in to your Microsoft 365 account using your credentials.
 
-3. Select **Install** in the pop-up dialog box to let you install the development certificate for localhost.
+4. Select **Install** in the pop-up dialog box to let you install the development certificate for localhost.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/development-certificate.png" alt-text="certificate":::
 
 > [!Note]
 > You can also select **Learn More** to learn more about the development certificate.
 
-4. A system dialog box appears depending on your operating system. For Windows, select **Yes**.
+5. A system dialog box appears depending on your operating system. For Windows, select **Yes**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/ca-certificate.png" alt-text="certification authority":::
 
-5. For MacOS, enter your **User Name** and **Password**, then select **Update Settings**.
+6. For MacOS, enter your **User Name** and **Password**, then select **Update Settings**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/mac-settings.png" alt-text="mac sign in":::
 
-6. When Teams client completely loads in the  web browser, select **Add** or select one from the dropdown list as your needs.
+7. When Teams client completely loads in the  web browser, select **Add** or select one from the dropdown list as your needs.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/hello-local-debug.png" alt-text="local debug":::
 
@@ -81,3 +82,8 @@ You can update the source codes of tab, bot, messaging extension, and Azure func
 When you complete local debug, you can select **Stop or Disconnect** in the floating debugging toolbar to stop all debug sessions and terminate tasks. This is as shown in the following image:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/stop-debugging.png" alt-text="stop debugging":::
+
+
+## See also
+
+* [Debug background process](debug%20background%20processes.md).

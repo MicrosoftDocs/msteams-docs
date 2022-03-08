@@ -12,15 +12,15 @@ ms.date: 03/03/2022
 
 The background process of debugging involves the `.vscode/launch.json` and `.vscode/tasks.json` files, which controls the entire local debug workflow.  
 
-* The `launch.json` file configures the debugger in Visual Studio Code (VS). VS code runs the compound configurations preLaunchTask, Pre Debug Check, and Start All, which is defined in `.vscode/tasks.json` file.
+* The `launch.json` file configures the debugger in Visual Studio Code (VS). VS Code runs the compound configurations preLaunchTask, Pre Debug Check, and Start All, which is defined in `.vscode/tasks.json` file.
 * VS Code launches the debuggers specified in the compound configurations, such as Attach to bot, Attach to backend, Attach to Frontend, and launch bot.
 * Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
-## Debugging software prerequisites
+## Prerequisites
 
 The following table lists the limitations if the Node.js software is unavailable for debugging:
 
-|Installation | Description | Limitation |
+|Software | Installation | Limitation |
 | --- | --- | --- |
 |Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
 
@@ -48,11 +48,9 @@ Use the following .NET Core versions:
 
 
 > [!NOTE]
- If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.
+> *If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.
+> *Start Ngrok to create a HTTP tunnel for bot and messaging extension.
 
-* Start Ngrok to create a HTTP tunnel for bot and messaging extension.
-
-* If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
 
 The following table shows the ports available for components:
 
@@ -64,6 +62,9 @@ The following table shows the ports available for components:
 | Azure functions | 7071 |
 | Node inspector for Azure functions | 9229 |
 
+> [!NOTE]
+> If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
+
 The Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/pre-toolkit.png" alt-text="prerequisites":::
@@ -72,11 +73,11 @@ The Teams Toolkit output channel displays the progress and result after checking
 
 1. Register an Azure AD application.
 
-1. Create a **Client Secret**.
+1. Create a Client Secret.
 
 1. Expose an API.
 
-    a. Configure application ID URI. For tab, set `api://localhost/{appId}`. For bot or messaging extension, set `api://botid-{botid}`.
+    a. Configure Application ID URI. For tab, set `api://localhost/{appId}`. For bot or messaging extension, set `api://botid-{botid}`.
 
     b. Add a scope named `access_as_user`. Enable it for **Admin and users**.
 
@@ -95,7 +96,7 @@ The following table shows the configuration of Microsoft 365 client application 
 
 4. Configure API permissions. Add Microsoft Graph permission to **User.Read**.
 
-5. Configure the authentication as follows:
+Configure the authentication as follows:
 
 | Project type | Redirect URIs for web | Redirect URIs for single-page application |
 | --- | --- | --- |
@@ -108,9 +109,9 @@ For tab app or messaging extension app:
 
 1. Register an Azure AD application.
 
-1. Create a client secret for the Azure AD application.
+1. Create a Client Secret for the Azure AD application.
 
-1. Register a bot in Microsoft Bot Framework [Framework](https://dev.botframework.com/) using the Azure AD application.
+1. Register a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
 
 1. Add Microsoft Teams channel.
 
@@ -120,7 +121,7 @@ For tab app or messaging extension app:
 
 Register a Teams app in Teams Developer Portal [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
 
-## Start app services, launch debuggers and sideload Teams app
+## Start app services, launch debuggers, and sideload Teams app
 
 Run tasks defined in `.vscode/tasks.json` to start app services as follows:
 
@@ -134,7 +135,7 @@ After the app services starts, launch the debug configurations defined in `.vsco
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/Terminal.png" alt-text="Start frontend task":::
 
-For project with tab app and bot app:
+The table shows debug configuration type for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
@@ -142,7 +143,7 @@ For project with tab app and bot app:
 |  Bot or messaging extensions |  Attach to Bot |  pwa-node |
 |  Azure functions |  Attach to backend |  pwa-node |
 
-For project with bot app and without tab app:
+The table shows debug configuration type for project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
