@@ -54,8 +54,8 @@
       href: concepts/authentication/plan-aad-sso.md
     - name: Other authentication methods in Teams
       href: concepts/authentication/plan-other-auth.md
-  - name: Authorization in Teams
-    href: concepts/authentication/authorization-overview.md
+    - name: Common extensions to authentication
+      href: concepts/authentication/common-extn.md
   - name: Authentication FAQ
     href: concepts/authentication/authentication-faq.md
 - name: Design your app

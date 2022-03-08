@@ -44,12 +44,12 @@ Based on the IdP, you can choose to authenticate users with:
 | &nbsp; | AAD | Other IdPs | Username + Password |
 | --- | --- | --- | --- |
 | **Frequency of logging in** | User logs in once for all. | User may need to log in on a different device. | User needs to log in for every use. |
-| **Number of passwords** | Only one password needed. | Multiple password may be needed based on usage. | Multiple passwords are needed and the user needs to keep track of them. |
+| **Number of passwords** | Only one password needed. | Multiple password may be used. | Multiple passwords are needed and the user needs to keep track of them. |
 | **Cost of authentication** | Low cost as the user password is set only once | -- | High cost as user password is managed and maintained by the organization |
 | **Security** | -- | -- | -- |
 |
 
-### Consideration for planning authentication
+### Considerations for planning authentication
 
 You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
 
