@@ -11,7 +11,7 @@ ms.date: 03/02/2022
 
 Debugging also termed as debug is the process of checking, detecting, and correcting problems or bugs to ensure that the program runs as per its specifications.
 
-Visual Studio Code provides you with the debugging feature also referred as the **F5** function key. The built-in debugger improves the editing, compiling, and debugging process and helps you to run and debug your app in the Teams client as it is being developed.
+Visual Studio Code provides you with the debugging feature also known as the **F5** function key. The built-in debugger improves the editing, compiling, and debugging process and helps you to run and debug your app in the Teams client as it is being developed.
 
 ## Debug your Teams app locally in Teams Toolkit
 
