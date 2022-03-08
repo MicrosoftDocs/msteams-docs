@@ -43,10 +43,13 @@ The `selectPeople` API comes along with following input configurations:
 |`openOrgWideSearchInChatOrChannel`|Boolean| It is an optional parameter. When it is set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|False|
 |`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only.|False|
 
-The following image depicts the experience of People Picker in a sample web and desktop app:
+The following image depicts the experience of People Picker in a sample web app:
 
 ![Web app experience of People Picker](../../assets/images/tabs/people-picker-control-capability.png)
 
+The following image depicts the experience of People Picker in a sample desktop app:
+
+:::image type="content" source="../../assets/images/tabs/integrate-people-picker-desktop.png" alt-text="people picker desktop":::
 
 <!-- ![Desktop app experience of People Picker]() Image for desktop app to be added here.-->
 
