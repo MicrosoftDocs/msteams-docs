@@ -13,10 +13,10 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 
 * You want to test and debug an app locally yourself or with other developers.
 * You built an app just for yourself. For example, to automate a workflow.
-* You built an app for a small set of users such as, your work group.
+* You built an app for a small set of users, such as, your work group.
 
 > [!IMPORTANT]
-> Currently, sideloading apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD).
+> Currently, sideloading apps are available in Government Community Cloud (GCC), but are not available for GCC-High and Department of Defense (DOD).
 
 ## Prerequisites
 
@@ -32,7 +32,9 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Select **Apps** and select **Manage your apps**.
 1. Choose **Upload a custom app**.
 1. Select your app package .zip file. An install dialog displays.
+
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
+
 1. Add your app to Teams.
 
 > [!NOTE]
