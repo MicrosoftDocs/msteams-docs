@@ -76,7 +76,7 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog-view.png" alt-text="To use tabs during a meeting" border="true":::
+:::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog-view,highres.png" alt-text="To use tabs during a meeting" border="true":::
 
 
 # [Mobile](#tab/mobile)
@@ -105,7 +105,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Mobile](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+<img src="../assets/images/apps-in-meetings/sidepanelmobile,highres.png" alt="In-meeting side panel mobile" width="300"/>
 
 ---
 
