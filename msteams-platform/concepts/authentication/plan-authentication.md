@@ -32,11 +32,21 @@ Authentication is all about validating the identity of your app users. It's one 
 
 You can validate app users in several ways, such as using login credentials, ID tokens, access tokens, and more. Identity Provider (IdP) is a key player in the process of authentication. An app and its users must be registered with the same IdP to facilitate verification of user identity. Azure Active Directory, Google, and Facebook are commonly used for their IdP services.
 
+### Considerations for planning authentication
+
+You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
+
+1. User security: Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
+
+1. Data security: The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
+
+1. User experience: Building a personalized user experience is an additional benefit of authentication.
+
 Based on the IdP, you can choose to authenticate users with:
 
 - Azure Active Directory (AAD) SSO
 - Other IdPs, such as Google or Facebook
-- User's ID and password
+- User's credentials (username and password)
 
 :::image type="content" source="../../assets/images/authentication/idp-options.png" alt-text="IDP options":::
 <br>
@@ -48,16 +58,6 @@ Based on the IdP, you can choose to authenticate users with:
 | **Cost of authentication** | Low cost as the user password is set only once | -- | High cost as user password is managed and maintained by the organization |
 | **Security** | -- | -- | -- |
 |
-
-### Considerations for planning authentication
-
-You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
-
-1. User security: Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
-
-1. Data security: The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
-
-1. User experience: Building a personalized user experience is an additional benefit of authentication.
 
 ## Planning authentication for mobile client
 
