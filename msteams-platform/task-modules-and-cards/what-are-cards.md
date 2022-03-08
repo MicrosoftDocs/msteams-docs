@@ -11,7 +11,7 @@ ms.topic: overview
 A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments and can include buttons, which trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
 The bots for Teams support the following types of cards:
- 
+
 - Adaptive Card
 - Hero card
 - List card
@@ -25,9 +25,9 @@ You can add rich text formatting to your cards using either Markdown or HTML, de
 
 Teams uses cards in three different places:
 
-* Connectors
-* Bots
-* Messaging extensions
+- Connectors
+- Bots
+- Messaging extensions
 
 ## Cards in connectors
 
@@ -53,26 +53,27 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
 
-* Connector cards: Used as part of Office 365 Connectors.
-* Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
+- Connector cards: Used as part of Office 365 Connectors.
+- Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
 
 ### People Picker in Adaptive Cards
 
-[People Picker](cards/people-picker.md#people-picker-in-adaptive-cards) added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience. 
+[People Picker](cards/people-picker.md#people-picker-in-adaptive-cards) added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience.
 
 ### Type-ahead search in Adaptive Cards  
 
-Type ahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience. 
+Type ahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience.
 
 ### Adaptive Cards and Incoming Webhooks
 
 > [!NOTE]
-> * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
-> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+>
+> All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
+> The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
-## Support for Azure AD Object ID and UPN in user mention 
+## Support for Azure AD Object ID and UPN in user mention
 
 Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the Azure AD Object ID and UPN.
 
@@ -83,6 +84,6 @@ Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Activ
 
 ## See also
 
-* [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
-* [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+- [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
+- [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
+- [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
