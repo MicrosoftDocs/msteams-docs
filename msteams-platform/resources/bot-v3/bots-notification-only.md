@@ -23,7 +23,7 @@ If your bot's sole purpose is to deliver notification to users and is not conver
 To enable this, set `isNotificationOnly` to `true`.
 
 > [!NOTE]
-> Be aware that the value of `isNotificationOnly` is boolean and not a string.
+> The value of `isNotificationOnly` is Boolean and not a string.
 
 ```json
 {

@@ -99,7 +99,7 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 
 ### During a meeting
 
-During a meeting, you can use the `meetingSidePanel` or the in-meeting dialog box to build unique experiences for your apps.
+During a meeting, you can use the `meetingSidePanel` or in-meeting notification to build unique experiences for your apps.
 
 #### Meeting SidePanel
 
@@ -112,14 +112,13 @@ Messaging extension works as expected when a user is in an in-meeting view. The 
 > [!NOTE]
 > Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
 
-#### In-meeting dialog box
+#### In-meeting notification
 
-The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. Use the [SendNotificationSignal API](API-references.md#send-notification-signal-api) to trigger a bubble notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting notification is used to engage participants during the meeting and collect information or feedback during the meeting. Use an [in-meeting notification payload](API-references.md#send-an-in-meeting-notification) to trigger an in-meeting notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
-In-meeting dialog must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
+In-meeting notification must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-> [!NOTE]
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks).
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Example shows how you can use an in-meeting dialog." border="true":::
 
 #### Shared meeting stage
 
