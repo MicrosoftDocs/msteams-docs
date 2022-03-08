@@ -49,7 +49,7 @@
   - name: Authentication in Teams
     items:
     - name: Authentication methods in Teams
-      href: concepts/authentication/authentication-overview.md
+      href: concepts/authentication/auth-methods.md
     - name: AAD SSO in Teams
       href: concepts/authentication/plan-aad-sso.md
     - name: Other authentication methods in Teams

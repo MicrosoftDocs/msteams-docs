@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
 ---
-# Authentication methods in Teams
+# Authentication overview
 
 Planning for implementing authentication is as important as for app's features and functionalities.
 
