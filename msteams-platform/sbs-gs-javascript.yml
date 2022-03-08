@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
     
     > [!NOTE]
-    > In this tutorial, you will create a tab app first, followed by a bot app, and then a messaging extension app. However, you can choose to build an app with any capability first, without hindering the functionality of other apps.
+    > In this tutorial, you'll create a tab app first, followed by a bot app, and then a messaging extension app. However, you can choose to build an app with any capability first, without hindering the functionality of other apps.
 
     In this tutorial, you'll learn:
 
