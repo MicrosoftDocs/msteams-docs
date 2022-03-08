@@ -22,7 +22,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |---|---|----|
 |[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Teams tab.| MSTC SDK|
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. |MSBF SDK|
-|[**Send notification signal**](#send-notification-signal-api)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting dialog box. |MSBF SDK|
+|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. |MSBF SDK|
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. |MSBF SDK |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. |MSTC SDK|
 |[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. |MSTC SDK|
@@ -132,9 +132,9 @@ The following table provides the response codes:
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participants are not available.|
 
-## Send notification signal API
+## Send an in-meeting notification
 
-All users in a meeting receive the notifications sent through the `NotificationSignal` API. `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send signal based on user action, an in-meeting dialog box. The API includes query parameter, examples, and response codes.
+All users in a meeting receive the notifications sent through in-meeting notification payload. In-meeting notification payload triggers an in-meeting notification and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting notification based on user action. The payload is available through Bot Services.
 
 > [!NOTE]
 >
@@ -157,7 +157,7 @@ The `Bot ID` is declared in the manifest and the bot receives a result object.
 >
 > * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example.
 > * The `externalResourceUrl` width and height parameters must be in pixels. For more information, see [design guidelines](design/designing-apps-in-meetings.md).
-> * The URL is the page, which loads as `<iframe>` in the in-meeting dialog box. The domain must be in the apps' `validDomains` array in your app manifest.
+> * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
 # [C#](#tab/dotnet)
 
