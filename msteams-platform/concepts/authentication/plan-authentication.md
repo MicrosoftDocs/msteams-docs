@@ -23,7 +23,6 @@ This module covers:
 - Types of authentication methods.
 - Introduction to Azure Active Directory (AAD) Single sign-on (SSO), and other authentication methods.
 - Features of authentication methods and their user experience.
-- Case for AAD SSO.
 - Introduction to common extension scenarios.
 
 ## What is authentication?
@@ -41,6 +40,8 @@ You can use an authentication method suitable for your app to validate the crede
 1. Data security: The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
 
 1. User experience: Building a personalized user experience is an additional benefit of authentication.
+
+### Authentication methods
 
 Based on the IdP, you can choose to authenticate users with:
 
