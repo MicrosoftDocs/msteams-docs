@@ -7,6 +7,7 @@ keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure
 ---
 # Common extensions to authentication
 
-In a Teams app, you can plan to use using one of the following methods to extend authentication:
+In a Teams app, you can plan to use one of the following methods to extend authentication:
 
 - Graph API
+- Staggered permissions
