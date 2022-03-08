@@ -347,7 +347,7 @@ items:
 
        * Checks all the following prerequisites:
           * Node.js is installed.
-          * Signed in to M365 and will let you sign in to M365 if not.
+          * Signed in to M365 and lets you sign in to M365 if not.
           * Development certificate for localhost is installed and prompts you to install a development certificate for localhost if not installed.
           * NPM packages for tab app are installed and will install NPM packages for tab app if not.
           * Port required by tab app is available.
