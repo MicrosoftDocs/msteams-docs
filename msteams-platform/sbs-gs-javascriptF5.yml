@@ -345,12 +345,12 @@ items:
 
         In case you're wondering, when you press the **F5** key, Teams Toolkit:
 
-       * Checks all required prerequisites:
-          * Checks if Node.js is installed.
-          * Checks if you have signed in to M365 and will let you sign in to M365 if not.
-          * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
-          * Checks if NPM packages for tab app are installed and will install NPM packages for tab app if not.
-          * Checks if port required by tab app is already in use.
+       * Checks all the following prerequisites:
+          * Node.js is installed.
+          * Signed in to M365 and will let you sign in to M365 if not.
+          * Development certificate for localhost is installed and prompts you to install a development certificate for localhost if not installed.
+          * NPM packages for tab app are installed and will install NPM packages for tab app if not.
+          * Port required by tab app is available.
       * Registers an Azure AD application and configures the application.
       * Registers a Teams app in Teams Developer Portal and configures the app.
       * Starts the tab app.
@@ -604,12 +604,12 @@ items:
 
         In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
-      * Checks all required prerequisites:
-          * Checks if Node.js is installed.
-          * Checks if you have signed in to M365 and will let you sign in to M365 if not.
-          * Checks if Ngrok is installed and will install ngrok if not.
-          * Checks if NPM packages for bot app are installed and will install NPM packages for bot app if not.
-          * Checks if port required by bot app is already in use.
+      * Checks all the following prerequisites:
+          * Node.js is installed.
+          * Signed in to M365 and lets you sign in to M365 if not.
+          * Ngrok is installed and installs ngrok if not installed.
+          * NPM packages for bot app are installed and installs NPM packages for bot app if not.
+          * Port required by bot app is available.
           * Starts Ngrok to create a HTTP tunnel.
      * Registers an Azure AD application and configures the application.
      * Registers a bot in Bot Framework and configures the bot.
@@ -853,12 +853,12 @@ items:
 
         When you select **F5**, the Teams Toolkit:
 
-       * Checks all required prerequisites:
-          * Checks if Node.js is installed.
-          * Checks if you have signed in to M365 and will let you sign in to M365 if not.
-          * Checks if Ngrok is installed and will install ngrok if not.
-          * Checks if NPM packages for bot app are installed and will install NPM packages for messaging extension app if not.
-          * Checks if port required by messaging extension app is already in use.
+       * Checks all the following prerequisites:
+          * Node.js is installed.
+          * Signed in to M365 and lets you sign in to M365 if not.
+          * Ngrok is installed and installs ngrok if not.
+          * NPM packages for bot app are installed and installs  NPM packages for messaging extension app if not.
+          * Port required by messaging extension app is available.
       * Registers an Azure AD application and configures the application.
       * Registers a bot in Bot Framework and configures the bot.
       * Registers a Teams app in Teams Developer Portal and configures the app.
