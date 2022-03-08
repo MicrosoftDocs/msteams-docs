@@ -12,9 +12,9 @@ ms.date: 03/03/2022
 
 The background process of debugging involves the `.vscode/launch.json` and `.vscode/tasks.json` files, which controls the entire local debug workflow.  
 
-* In `launch.json`, the entry point for local debugging is debug. Visual Studio Code (VSC) runs the compound configurations preLaunchTask, Pre Debug Check and Start All, which is defined in `.vscode/tasks.json` file.
-* Visual Studio Code launches the debuggers specified in the compound configurations, such as Attach to bot, Attach to backend, Attach to Frontend, and launch bot.
-* Microsoft Edge or Chrome debugger starts to launch a new browser instance and opens a web page to load Teams client.
+* The `launch.json` file configures the debugger in Visual Studio Code (VS). VS code runs the compound configurations preLaunchTask, Pre Debug Check, and Start All, which is defined in `.vscode/tasks.json` file.
+* VS Code launches the debuggers specified in the compound configurations, such as Attach to bot, Attach to backend, Attach to Frontend, and launch bot.
+* Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Debugging software prerequisites
 
@@ -24,7 +24,7 @@ The following table lists the limitations if the Node.js software is unavailable
 | --- | --- | --- |
 |Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
 
-The following table lists the limitations if the Node.js software is unavailable for Teams app capability:
+The following table lists the limitations if the software is unavailable for Teams app capability:
 
 |Teams app capability | Node.js LTS versions| Limitation |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Use the following .NET Core versions:
 
 * If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
 
-The following tables shows the ports available for components:
+The following table shows the ports available for components:
 
 | Component  | Port |
 | --- | --- |
@@ -79,6 +79,8 @@ The Teams Toolkit output channel displays the progress and result after checking
     a. Configure application ID URI. For tab, set `api://localhost/{appId}`. For bot or messaging extension, set `api://botid-{botid}`.
 
     b. Add a scope named `access_as_user`. Enable it for **Admin and users**.
+
+The following table shows the configuration of Microsoft 365 client application with their client Ids:
 
 | Microsoft 365 client application |  Client ID  |
 | --- | --- |
@@ -148,10 +150,12 @@ For project with bot app and without tab app:
 |  Bot or messaging extension  |  Attach to Bot |  pwa-node  |
 |  Azure functions |  Attach to backend |  pwa-node |
 
-Configuration attach to Frontend or Launch Bot launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is completely loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
-i.e. [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
+ The configuration attach to Frontend or Launch Bot launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is completely loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
+[Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
 
 ## Local debug files
+
+The following lists the local debug files:
 
 -`.fx/configs/localSettings.json:` local debug configuration file. The values of each configuration generates and saves during local debug.
 
@@ -159,27 +163,35 @@ i.e. [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?ins
 
 -`tabs/.env.teams.local:` environment variables file for tab. The values of each environment variable generates and saves during local debug.
 
--`bot/.env.teamsfx.local:` environment variables file for bot and messaging extension. The values of each environment variable  generates and saves during local debug.
+-`bot/.env.teamsfx.local:` environment variables file for bot and messaging extension. The values of each environment variable generates and saves during local debug.
 
--`api/.env.teamsfx.local:` environment variables file for Azure functions. The values of each environment variable  generates and saves during local debug.
+-`api/.env.teamsfx.local:` environment variables file for Azure functions. The values of each environment variable generates and saves during local debug.
 
 ## Customize Teams Toolkit local debug
 
-### Skip checking some prerequisites
+### Skipping prerequisites
 
-In Visual Studio Code settings, uncheck the items to skip checking some prerequisites. The following image shows the list that can be unchecked:
+You can skip some of the prerequisites in the VS Code settings.
+
+1. Select **Settings**.
+
+1. Navigate to **Extensions** in the list and expand it, then select **Teams Toolkit (Preview)** and **Prerequisite Check**.
+
+1. Uncheck the checkbox you want to skip.
+
+The following image shows the list that can be unchecked:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/prerequisite check.png" alt-text="vsc setting":::
 
 ### Use your own bot endpoint
 
-1. In Visual Studio Code settings, uncheck Ensure Ngrok is installed and started (ngrok).
+1. In Visual Studio Code settings, uncheck **Ensure Ngrok is installed and started (ngrok)**.
 
 1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
 
 ### Use your own development certificate
 
-1. In Visual Studio Code settings, uncheck Ensure development certificate is trusted (devCert).
+1. In Visual Studio Code settings, uncheck **Ensure development certificate is trusted (devCert)**.
 
 1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your own certificate file path and key file path.
 
@@ -206,7 +218,7 @@ In Visual Studio Code settings, uncheck the items to skip checking some prerequi
 
 Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, messaging extension and Azure functions at the same time. You can update `.vscode/launch.json`` and .vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure functions project, use the following steps:
 
-1. Comment **Attach to Bot** and **Attach to Backend** from Debug compound in `.vscode/launch.json`, like
+1. Comment **Attach to Bot** and **Attach to Backend** from Debug compound in `.vscode/launch.json`
 
  ```json
 {
@@ -226,7 +238,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 }
 ```
 
-1. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json, such 
+1. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
 
 ```json
 {
