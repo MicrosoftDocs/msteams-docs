@@ -1,11 +1,11 @@
 ---
-title: Authentication and Authorization in Teams
+title: Authentication in Teams
 description: Overview of authentication in Teams apps
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
 ---
-# Authentication and Authorization in Teams
+# Authentication in Teams
 
 An app may exist in a public or organizational domain or as a personal app. In any scenario, authentication can be a vital part of its framework. You must identify early on if you need to protect the services you're offering and at what level. The web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it before you start building your app.
 
