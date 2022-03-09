@@ -31,20 +31,20 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Log in to the Teams client with your [Microsoft 365 development account](~/build-your-first-app/build-and-run.md#prerequisites).
 1. Select **Apps** and select **Manage your apps**.
 1. Select **Upload a custom app**.
-1. Select your app package .zip file. An install dialog screen appears.
+1. Select your app package .zip file to see the following screen:
 
     :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 
-1. Add your app to Teams.
+1. Select **Add** to add your app to Teams.
 
 > [!NOTE]
 > `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
 
 ## Troubleshooting
 
-If your app fails to sideload or if there are any issues to upload your app, check the following options:
+If your app fails to sideload or any issues to upload, check the following options:
 
-1. Ensure to follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
+1. Ensure that you have followed all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html) again.
 1. Ensure your app manifest matches to the latest [schema](../../resources/schema/manifest-schema.md).
 
