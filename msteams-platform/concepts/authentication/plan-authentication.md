@@ -39,7 +39,7 @@ You can use an authentication method suitable for your app to validate the crede
 
 1. App data security: The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
 
-1. User experience: Building a personalized user experience is an additional benefit of authentication.
+1. User experience: Building a personalized user experience is an additional benefit of authentication. For example, with Single sign-on, the user does not need to log in every time they access your application.
 
 1. Compatible with standards: Ensure that the authentication method you choose offers you the best options for your particular app requirements.
 
