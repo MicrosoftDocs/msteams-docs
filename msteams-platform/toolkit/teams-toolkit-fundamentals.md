@@ -13,14 +13,13 @@ ms.date: 11/29/2021
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
 
-
 Teams Toolkit for Microsoft Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with the toolkit has the advantages of:
 
-- Integrated identity
-- Access to cloud storage
-- Data from Microsoft Graph
-- Azure and Microsoft 365 services with zero-configuration approach
+* Integrated identity
+* Access to cloud storage
+* Data from Microsoft Graph
+* Azure and Microsoft 365 services with zero-configuration approach
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
@@ -39,7 +38,6 @@ The main milestones of this journey are:
 1. Use Microsoft 365 account to build and debug your Teams app.
 1. Use Azure account to provision and deploy your app to cloud.
 1. Publish your app to Teams.
-
 
 ## Install Teams Toolkit for Visual Studio Code
 
@@ -64,7 +62,6 @@ The main milestones of this journey are:
 After Toolkit installation, you'll see the Teams Toolkit UI as shown in following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini functions":::
-
 
 You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. If you have a Teams project created by Teams Toolkit v2.+ opened in Visual Studio Code, you will see Teams Toolkit UI with all functionalities as shown in the following image:
 You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. You can view a list of all Toolkit features when you create or open an existing project in Visual Studio Code sidebar.
@@ -101,7 +98,7 @@ It helps to add other required Teams capabilities to Teams app during developmen
 
 It helps you to optionally add cloud resources that fits your development needs.
 
-### Edit manifest file 
+### Edit manifest file
 
 It helps you to edit the Teams app integration with Teams client.
 

@@ -19,6 +19,7 @@ To enable your app for Teams meetings, update your app manifest and use the cont
 The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. The scope defines who can access and the context defines where your app is available.
 
 > [!NOTE]
+>
 > * You must update your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
 > * Apps in meetings require `groupchat` scope. The `team` scope works for tabs in channels only.
 
@@ -73,7 +74,7 @@ Teams meetings provide a collaborative experience for your organization. Configu
 
 Before a meeting, users can add tabs, bots, and messaging extensions. Users with organizer and presenter roles can add tabs to a meeting.
 
-**To add a tab to a meeting**
+To add a tab to a meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
@@ -82,16 +83,17 @@ Before a meeting, users can add tabs, bots, and messaging extensions. Users with
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
-**To add a messaging extension to a meeting**
+To add a messaging extension to a meeting:
 
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat.
 1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
 
-**To add a bot to a meeting**
+To add a bot to a meeting:
 
 In a meeting chat, enter the **@** key and select **Get bots**.
 
 > [!NOTE]
+>
 > * The content bubble posts an Adaptive Card or a card simultaneously in the meeting chat that users can access. This helps the users when the meeting or the Teams app is minimized.
 > * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
@@ -151,7 +153,7 @@ To share the entire app to stage, in the app manifest you must configure `meetin
   ]
 ```
 
-For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ##### Share specific parts of the app to stage
 
