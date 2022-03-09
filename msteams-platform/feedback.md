@@ -49,7 +49,7 @@ Submit documentation feedback or updates using the community help channels.
 | **Community channel** | **Contact** |
 |:--------------------------|:--------------------------|
 | **Documentation issues** | Select **This page** in the **Submit and view feedback** section available at the footer of the documentation, to open an [issue](https://github.com/MicrosoftDocs/msteams-docs/issues) on the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository.<br/>:::image type="content" source="assets/images/community-feedback-this-page.png" alt-text="This page feedback":::|
-|**Documentation updates**|Select **Edit** at the top right of the article you want to update, and submit a pull request to the :::image type="icon" source="assets/icons/GitHub-icon.png" border="false"::: [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository. <br /> :::image type="content" source="assets/images/community-feedback-edit.png":::|
+|**Documentation updates**|Select **Edit** at the top right of the article you want to update, and submit a pull request to the :::image type="icon" source="assets/icons/GitHub-icon.png" border="false"::: [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository. <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="edit option":::|
 
 ### Feature request and general help
 
