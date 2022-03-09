@@ -212,7 +212,7 @@ items:
   content: |
     **To register your app through the Azure AD portal**  
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
 
@@ -233,7 +233,7 @@ items:
        ![Set link](~/assets/images/meetings-side-panel/setlink.png)
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://ae57****.ngrok.io/{AppID}`</br>
+        `api://4d52****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
@@ -245,7 +245,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+       ![Select scope](~/assets/selectscope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -269,7 +269,7 @@ items:
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://4d52****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         ![Scopes](~/assets/images/meetings-side-panel/scopes.png) 
   
@@ -302,7 +302,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+        ![Add permission](~/assets/add-permission.png)
 
     1. Select **Microsoft Graph**.
 
@@ -333,7 +333,7 @@ items:
             ![Web](~/assets/images/meetings-side-panel/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://ae57****.ngrok.io/auth-end`. </br>
+           `https://4d52****.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -429,7 +429,7 @@ items:
    
     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
+       ![Manage apps](~/assets/meeting-token-generator-manageapps.png)
    
     1. Select **Upload a custom app**. 
 

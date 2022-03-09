@@ -39,12 +39,12 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within this tab. This must be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
-* {loginHint}: A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user in their home tenant.
+* {loginHint}: A value suitable as a login hint for Azure AD. This is usually the login name of the current user in their home tenant.
 * {userPrincipalName}: The User Principal Name of the current user in the current tenant.
-* {userObjectId}: The Microsoft Azure Active Directory (Azure AD) object ID of the current user in the current tenant.
+* {userObjectId}: The Azure AD object ID of the current user in the current tenant.
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 group in which the tab resides.
-* {tid}: The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user.
+* {tid}: The Azure AD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId(en-us).
 
 > [!NOTE]
@@ -77,10 +77,10 @@ The following code provides an example of context variable:
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Microsoft Azure Active Directory (Azure AD) object id of the current user, in the current tenant",
-    "tid": "The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
@@ -110,9 +110,6 @@ The following code provides an example of context variable:
 
 ## Retrieve context in private channels
 
-> [!Note]
-> Private channels are currently in private developer preview.
-
 When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. 
 
 The following fields are changed when your content page is in a private channel:
@@ -124,10 +121,30 @@ The following fields are changed when your content page is in a private channel:
 * `teamSitePath`: Set to the path of a distinct, unique SharePoint site for the private channel
 * `teamSiteDomain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
 
-If your page makes use of any of these values, you must check the `channelType` field to determine if your page is loaded in a private channel and respond appropriately.
+If your page makes use of any of these values, the value of `channelType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
-> [!Note]
-> `teamSiteUrl` also works well for standard channels.
+## Retrieve context in Microsoft Teams Connect shared channels
+
+> [!NOTE]
+> Currently, Microsoft Teams Connect shared channels are in [developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+
+When your content page is loaded in a Microsoft Teams Connect shared channel, the data you receive from the `getContext` call is altered due to the unique roster of users in shared channels. 
+
+The following fields are changed when your content page is in a shared channel:
+
+* `groupId`: Undefined for shared channels.
+* `teamId`: Set to the `threadId` of the team, the channel is shared for the current user. If the user has access to multiple teams, the `teamId` is set to the team that hosts (creates) the shared channel.
+* `teamName`: Set to the name of the team, the channel is shared for the current user. If the user has access to multiple teams, the `teamName` is set to the team that hosts (creates) the shared channel.
+* `teamSiteUrl`: Set to the URL of a distinct, unique SharePoint site for the shared channel.
+* `teamSitePath`: Set to the path of a distinct, unique SharePoint site for the shared channel.
+* `teamSiteDomain`: Set to the domain of a distinct, unique SharePoint site domain for the shared channel.
+
+In addition to these field changes, there are two new fields available for shared channels:
+
+* `hostTeamGroupId`: Set to the `groupId` associated with the hosting team, or the team that created the shared channel. The property can make Microsoft Graph API calls retrieve membership of the shared channel.
+* `hostTeamTenantId`: Set to the `tenantId` associated with the hosting team, or the team that created the shared channel. The property can be cross referenced with the current user's tenant ID found in the `tid` field of `getContext` to determine if the user is internal or external to the hosting team's tenant.
+
+If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 ## Handle theme change
 

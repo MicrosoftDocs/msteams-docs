@@ -24,10 +24,16 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Adaptive Cards overflow menu
+        url: ~/task-modules-and-cards/cards/cards-format.md
+      - text: Glossary
+        url: ~/get-started/glossary.md
+      - text: Overview
+        url: ~/overview.md
+      - text: Plan your app
+        url: ~/concepts/app-fundamentals-overview.md  
       - text: App manifest schema version 1.12
         url: ~/resources/schema/manifest-schema.md
-      - text: Public developer preview manifest schema
-        url: ~/resources/schema/manifest-schema-dev-preview.md
       - text: Interactive mode to share meeting stage 
         url: ~/apps-in-teams-meetings/API-references.md
       - text: Test preview for monetized apps
@@ -36,19 +42,15 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Adaptive Cards form completion feedback
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-      - text: People Picker in Adaptive Cards
-        url: ~/task-modules-and-cards/cards/people-picker.md
-      - text: Teams Toolkit for Visual Studio Code (Preview)
-        url: ~/toolkit/teams-toolkit-fundamentals.md
-      - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
-        url: ~/m365-apps/overview.md
-
+      - text: Authentication using external OAuth providers  
+        url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
+      
       
 - title: All time favorites
   linkLists:
     - linkListType: concept
       links:
-      - text: Guidelines for apps linked to SaaS offerS
+      - text: Guidelines for apps linked to SaaS offers
         url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
       - text: Microsoft Teams store validation guidelines
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -56,24 +58,67 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       - text: Explore low-code apps for Teams
         url:  ~/samples/teams-low-code-solutions.md 
-
-- title: Tutorials
-  linkLists:
-    - linkListType: concept
-      links:
-        - text: Teams calling and meeting bot 
-          url: bots/calls-and-meetings/registering-calling-bot.md
-        - text: Device permission for browser 
-          url: concepts/device-capabilities/browser-device-permissions.md
-        - text: Use SSO authentication for tabs 
-          url: tabs/how-to/authentication/auth-aad-sso.md  
-        - text: Proactive messages
-          url: ~/bots/how-to/conversations/send-proactive-messages.md
-        - text: Add authentication to bots
-          url: ~/bots/how-to/authentication/add-authentication.md
-        - text: Enable and configure apps for meetings
-          url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
         
+        
+- title: Get started
+  linkLists:
+    - linkListType: get-started
+      links:
+      - text: Get started with building apps
+        url: ../msteams-platform/get-started/get-started-overview.md
+      - text: Get started with GitHub
+        url: /contribute/additional-resources
+    - linkListType: tutorial
+      links:
+      - text: Build app with JavaScript
+        url: sbs-gs-javascript.yml
+      - text: Build app with SPFx
+        url: sbs-gs-spfx.yml
+      - text: Build app with C# or .NET
+        url: sbs-gs-csharp.yml
+      - text: Build app with Node.js
+        url: sbs-gs-nodejs.yml
+
+- title: Build apps for Teams
+  linkLists:
+    - linkListType: overview
+      links:
+      - text: Build apps for Microsoft Teams
+        url: ../msteams-platform/overview.md
+      - text: App fundamentals
+        url: ~/concepts/app-fundamentals-overview.md
+      - text: Design your app
+        url: ~/concepts/design/design-teams-app-overview.md
+      - text: Code samples
+        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+    - linkListType: whats-new
+      links:
+      - text: What's new
+        url: ../msteams-platform/whats-new.md
+
+- title: Build app capabilities
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Build tabs
+      url: ~/tabs/what-are-tabs.md
+    - text: Build bots
+      url: ~/bots/what-are-bots.md
+    - text: Build message extensions
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+    - text: Build apps for Teams meetings
+      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
+    - text: Build webhooks and connectors
+      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - text: Build cards and task modules
+      url: ~/task-modules-and-cards/cards-and-task-modules.md
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Public developer preview manifest schema
+      url: ~/resources/schema/manifest-schema-dev-preview.md  
+
+- title: Step-by-step guides
+  linkLists:        
     - linkListType: tutorial
       links:
         - text: Create Calling and meeting bot
@@ -96,59 +141,19 @@ landingContent:
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml
-        
-- title: Get started
-  linkLists:
-    - linkListType: get-started
-      links:
-      - text: Get started with building apps
-        url: ../msteams-platform/get-started/get-started-overview.md
-      - text: Get started with GitHub
-        url: /contribute/additional-resources
     - linkListType: tutorial
       links:
-      - text: Build app with JavaScript
-        url: sbs-gs-javascript.yml
-      - text: Build app with SPFx
-        url: sbs-gs-spfx.yml
-      - text: Build app with C# or .NET
-        url: sbs-gs-csharp.yml
-      - text: Build app with Node.js
-        url: sbs-gs-nodejs.yml
-- title: Build apps for Teams
-  linkLists:
-    - linkListType: overview
-      links:
-      - text: Build apps for Microsoft Teams
-        url: ../msteams-platform/overview.md
-      - text: App fundamentals
-        url: ~/concepts/app-fundamentals-overview.md
-      - text: Design your app
-        url: ~/concepts/design/design-teams-app-overview.md
-      - text: Code samples
-        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-    - linkListType: whats-new
-      links:
-      - text: What's new
-        url: ../msteams-platform/whats-new.md
-- title: Build app capabilities
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Build tabs
-      url: ~/tabs/what-are-tabs.md
-    - text: Build bots
-      url: ~/bots/what-are-bots.md
-    - text: Build message extensions
-      url: ~/messaging-extensions/what-are-messaging-extensions.md
-    - text: Build apps for Teams meetings
-      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
-    - text: Build webhooks and connectors
-      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and task modules
-      url: ~/task-modules-and-cards/cards-and-task-modules.md
-    - text: App manifest
-      url: ../msteams-platform/resources/schema/manifest-schema.md
+        - text: Upload files to Teams from a bot
+          url: ~/sbs-file-handling-in-bot.yml
+        - text: Invoke task modules from Microsoft Teams
+          url: ~/sbs-botbuilder-taskmodule.yml
+        - text: Build search based messaging extension
+          url: ~/sbs-messagingextension-searchcommand.yml
+        - text: Build action based messaging extension
+          url: ~/sbs-meetingextension-action.yml
+        - text: Build Outgoing Webhooks
+          url: ~/sbs-outgoing-webhooks.yml
+
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
@@ -157,6 +162,7 @@ landingContent:
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+ 
 - title: Publish and distribute
   linkLists:
   - linkListType: concept

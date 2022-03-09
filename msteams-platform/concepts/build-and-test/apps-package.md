@@ -20,13 +20,13 @@ When a user installs your app in Teams, they install an app package that contain
 
 ## App manifest
 
-Your app manifest file must be at the top level of the package with the name `manifest.json`. 
+Your app manifest file must be at the top level of the package with the name `manifest.json`.
 
 When publishing to the Teams store, make sure your manifest references to the latest [schema](~/resources/schema/manifest-schema.md).
 
 ## App icons
 
-Your app package must include two PNG versions of your app icon: A color and outline version.
+Your app package must include two .png versions of your app icon: A color and outline version.
 
 > [!Note]
 > If your app has a bot or messaging extension, your icons also will be included in your Microsoft Azure Bot Service registration.
