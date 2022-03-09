@@ -14,7 +14,7 @@ Before you identify the different card types, understand how to create a hero ca
 
 ## Create a hero card, thumbnail card, or Adaptive Card
 
-**To create a hero card, thumbnail card, or Adaptive Card from App Studio**
+To create a hero card, thumbnail card, or Adaptive Card from App Studio:
 
 1. Go to **App Studio** from Teams.
 1. Select **Card editor**.
@@ -117,6 +117,7 @@ The following table provides the features that support Adaptive Cards:
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
+>
 > * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based messaging extensions.
 > * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based messaging extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
