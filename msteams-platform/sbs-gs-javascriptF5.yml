@@ -1078,7 +1078,7 @@ items:
 
       [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
 
-      <!-- markdownlint-disable MD033 -->
+      <!-- markdownlint-disable MD033 -->.
       <details>
       <summary>Learn what happens when you deployed your app to Azure</summary>
 
