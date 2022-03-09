@@ -18,7 +18,7 @@ Team, channel, and chat are collaboration spaces. Apps in these contexts are ava
 
 The following list shows how Teams app capabilities are commonly used in collaborative contexts:
 
-* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience configured for the team, channel, or group chat. All members interact with the same web-based content, so a stateless single-page app experience is typical.
+* [**Tabs**](~/tabs/what-are-tabs.md) provide a full-screen embedded web experience configured for the team, channel, or group chat. All members interact with the same web-based content, so a stateless single-page app experience is typical.  
 
 * [**Messaging extensions**](~/messaging-extensions/what-are-messaging-extensions.md) are shortcuts for inserting external content into a conversation or taking action on messages without leaving Teams. [Link unfurling](~/messaging-extensions/how-to/link-unfurling.md) provides rich content when sharing content from a common URL.
 
