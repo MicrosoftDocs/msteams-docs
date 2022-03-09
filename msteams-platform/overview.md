@@ -23,8 +23,6 @@ Let's look at some areas where an app helps to meet a business need.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?" border="false":::
 
-| &nbsp; | &nbsp; |
-|--- | --- |
 | **Development Options** | **Business Opportunities** |
 | - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Teams Store |
 | **Customer benefits** | **Internal workflows** |
