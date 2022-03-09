@@ -59,7 +59,7 @@ The following image shows the Share-to-Teams option:
 
 ## End user Share-to-Teams experience
 
-After you enable share-to-teams button, you can experience the feature with the following steps:
+After you enable share to teams button on personal app or tab, you can share the content. To access, follow the steps:
 
 1. Open a personal app or tab and select **Share-to-Teams**.
 
