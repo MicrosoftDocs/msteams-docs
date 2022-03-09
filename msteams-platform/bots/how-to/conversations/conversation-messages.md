@@ -377,7 +377,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
     ![Success message](~/assets/images/Cards/success.PNG)
 
-You can select **Close** or switch chat to dismiss the message.    
+You can select **Close** or switch chat to dismiss the message.
 
 **Response on mobile**:
 

@@ -53,7 +53,7 @@ The next section provides examples of embedding task modules in a YouTube video 
 
 HTML or JavaScript-based task modules have access to the entire area of the task module below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, the user must provide the right CSS. The next sections provide some examples for a few use cases.
 
-**Example 1: YouTube video**
+### Example 1: YouTube video
 
 YouTube offers the ability to embed videos on web pages. It is easy to embed videos on web pages in a task module using a simple stub web page.
 
@@ -92,7 +92,7 @@ The following code provides an example of the CSS:
 }
 ```
 
-**Example 2: PowerApp**
+### Example 2: PowerApp
 
 The user can use the same approach to embed a PowerApp as well. As the height or width of any individual PowerApp is customizable, the user can adjust the height and width to achieve the desired presentation.
 
@@ -222,7 +222,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 |Sample name | Description | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
 |Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-|Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
 ## Next step
 
