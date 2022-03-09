@@ -13,8 +13,8 @@ keywords: tabs bots messaging extensions webhooks connectors
 
 There are multiple ways to extend Teams, so every app is unique. A Teams app can manifest itself to a user in different ways. An Teams app features include:
 
-- App capabilities
-- App scope
+* App capabilities
+* App scope
 
 For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot. You can only one capability, such as a webhook, while others have more than one feature to give users various options.
 
@@ -28,6 +28,7 @@ Your Teams apps have one or all of the following core capabilities:
 
 :::row:::
    :::column span="":::
+
 ### Personal apps
 
 A [personal app](../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
@@ -152,8 +153,8 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
 You can choose app scope from the following:
 
-- Personal app experience: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
-- Shared app experience: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
+* Personal app experience: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+* Shared app experience: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
 
 ## See also
 
