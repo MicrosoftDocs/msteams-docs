@@ -16,8 +16,6 @@ In this page, you'll learn about:
 - AAD SSO user experience
 - Advantages of using AAD SSO
 
-\ Add description: Teams SSO/Silent authentication and True SSO \
-
 ## Prerequisites
 
 Before you can use AAD SSO to authenticate your app users, ensure that:
@@ -46,7 +44,6 @@ The AAD SSO process used in a Teams app for the first user login:
 | 3 | AAD matches the user information with its database | -- |
 | 4 | On a successful match, AAD sends an ID token granting app access to the valid user | -- |
 | 5 | The user can now access all services and application in the Azure system | -- |
-|
 
 ## AAD SSO user experience
 
