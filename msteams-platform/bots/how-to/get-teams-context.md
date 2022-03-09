@@ -285,6 +285,7 @@ After you get details of the team, you can get the list of channels in a team. C
 Your bot can query the list of channels in a team.
 
 > [!NOTE]
+>
 > * The name of the default General channel is returned as `null` to allow for localization.
 > * The channel ID for the General channel always matches the team ID.
 
