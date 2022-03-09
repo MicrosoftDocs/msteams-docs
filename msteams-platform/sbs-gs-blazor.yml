@@ -265,16 +265,21 @@ items:
 
         When you select **F5**, the Teams Toolkit:
 
-       * Checks all required prerequisites:
-          * Checks if Node.js is installed.
-          * Checks if you have signed in to M365 and will let you sign in to M365 if not.
-          * Checks if you have installed a development certificate for localhost and will prompt you to install a development certificate for localhost if not.
-          * Checks if NPM packages for tab app are installed and will install NPM packages for tab app if not.
-          * Checks if port required by tab app is already in use.
-      * Registers an Azure AD application and configures the application.
-      * Registers a Teams app in Teams Developer Portal and configures the app.
-      * Starts the tab app.
-      * Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
+        1. Checks all the following prerequisites:
+          * Supported Node.js version is installed.
+          * Microsoft 365 account is logged in and sideloading enabled. 
+          * Development certificate for localhost is installed.    
+          * NPM packages for tab app are installed.
+          * Port required by tab app is available.
+
+          > [!NOTE]
+          > If Teams Toolkit fails to check any of the prerequisites, then it prompts you to complete the same.
+          
+        3. Registers an Azure AD application and configures the application.
+        5. Registers a Teams app in Teams Developer Portal and configures the app.
+        6. Starts the tab app.
+        7. Starts Teams in a web browser with a command to instruct Teams to sideload the Teams app.
+    
         </details>
 
     1. Install the self-signed SSL certificate for local debugging, if requested.
