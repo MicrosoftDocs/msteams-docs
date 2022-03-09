@@ -343,7 +343,7 @@ items:
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        In case you're wondering, when you press the **F5** key, Teams Toolkit:
+       When you press the **F5** key, Teams Toolkit:
 
        1. Checks all the following prerequisites:
           * Supported Node.js version is installed.
@@ -606,7 +606,7 @@ items:
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        In case you're wondering, when you press the **F5** key, the Teams Toolkit:
+        When you press the **F5** key, Teams Toolkit:
 
        1. Checks all the following prerequisites:
           * Supported Node.js version is installed.
@@ -859,7 +859,7 @@ items:
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        When you select **F5**, the Teams Toolkit:
+        When you select **F5**, Teams Toolkit:
 
         1. Checks all the following prerequisites:
           * Supported Node.js version is installed.
@@ -876,7 +876,7 @@ items:
         4. Registers a bot in Bot Framework and configures the bot.
         5. Registers a Teams app in Teams Developer Portal and configures the app.
         6. Starts the messaging extension app hosted locally.
-        7. Starts Teams in a web browser with a command to instruct Teams to side load the Teams app.
+        7. Starts Teams in a web browser with a command to instruct Teams to sideload the Teams app.
 
         </details>
 
