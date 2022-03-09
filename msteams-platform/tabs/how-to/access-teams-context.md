@@ -19,7 +19,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Microsoft Azure Active Directory (Azure AD) or other identity provider, and you do not require the user to enter their username again. 
+* You initiate an authentication flow from Microsoft Azure Active Directory (Azure AD) or other identity provider, and you do not require the user to enter their username again.
 
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -110,7 +110,7 @@ The following code provides an example of context variable:
 
 ## Retrieve context in private channels
 
-When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. 
+When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel.
 
 The following fields are changed when your content page is in a private channel:
 
@@ -128,7 +128,7 @@ If your page makes use of any of these values, the value of `channelType` field 
 > [!NOTE]
 > Currently, Microsoft Teams Connect shared channels are in [developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-When your content page is loaded in a Microsoft Teams Connect shared channel, the data you receive from the `getContext` call is altered due to the unique roster of users in shared channels. 
+When your content page is loaded in a Microsoft Teams Connect shared channel, the data you receive from the `getContext` call is altered due to the unique roster of users in shared channels.
 
 The following fields are changed when your content page is in a shared channel:
 

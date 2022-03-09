@@ -37,7 +37,6 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |02/03/2022| Test preview for monetized apps (developer preview)| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| In-app purchase flow for monetization of apps (developer preview) | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
 
-
 ## GA features
 
 Microsoft Teams platform features that are available to all app developers.
@@ -68,7 +67,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 01/17/2022 | People Picker in Adaptive cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
- 
+
 <br>
 
 <details>
@@ -76,7 +75,6 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 Explore updates from the previous GA releases listed here.
 <br><br>
-
 
 <details>
 <summary><b>2021</b></summary>
@@ -251,7 +249,7 @@ Developer preview is a public program that provides early access to unreleased T
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| Test preview for monetized apps| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
+|02/03/2022| In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |01/17/2022| People Picker in Adaptive cards for mobile  | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |

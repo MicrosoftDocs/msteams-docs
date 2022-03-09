@@ -37,6 +37,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 ## Get participant API
 
 > [!NOTE]
+>
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 
@@ -136,11 +137,12 @@ The following table provides the response codes:
 All users in a meeting receive the notifications sent through in-meeting notification payload. In-meeting notification payload triggers an in-meeting notification and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting notification based on user action. The payload is available through Bot Services.
 
 > [!NOTE]
+>
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications and support for webapp are not supported.
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
-
+>
 ### Query parameter
 
 The following table includes the query parameters:
@@ -154,6 +156,7 @@ The following table includes the query parameters:
 The `Bot ID` is declared in the manifest and the bot receives a result object.
 
 > [!NOTE]
+>
 > * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example.
 > * The `externalResourceUrl` width and height parameters must be in pixels. For more information, see [design guidelines](design/designing-apps-in-meetings.md).
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
@@ -303,7 +306,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 > [!NOTE]
 > The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
- 
+
 ### Query parameter
 
 The following table lists the query parameter:
@@ -490,7 +493,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 The JSON response body for the `getAppContentStageSharingState` API is:
 
@@ -530,7 +533,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 The JSON response body for `getAppContentStageSharingCapabilities` API is:
 
@@ -609,6 +612,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 The bot receives event through the `OnEventActivityAsync` handler. To deserialize the JSON payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
 
 > [!NOTE]
+>
 > * Get meeting ID from `turnContext.ChannelData`.
 > * Do not use conversation ID as meeting ID.
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
@@ -616,6 +620,7 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
+
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -624,6 +629,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Meeting End Event
+
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
