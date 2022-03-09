@@ -80,4 +80,4 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Authentication methods in Teams](authentication-overview.md)
+> [Authentication methods in Teams](auth-methods.md)
