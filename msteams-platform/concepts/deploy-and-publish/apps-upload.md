@@ -12,7 +12,7 @@ ms.localizationpriority: high
 You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store in the following scenarios:
 
 * You want to test and debug an app locally yourself or with other developers.
-* You built an app just for yourself to automate a workflow.
+* You built an app for yourself to automate a workflow.
 * You built an app for a small set of users, such as, your work group.
 
 > [!IMPORTANT]
