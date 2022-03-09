@@ -9,10 +9,10 @@ ms.localizationpriority: high
 
 # Upload your app in Microsoft Teams
 
-You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store. This makes sense in the following scenarios:
+You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store in the following scenarios.
 
 * You want to test and debug an app locally yourself or with other developers.
-* You built an app just for yourself. For example, to automate a workflow.
+* You built an app just for yourself to automate a workflow.
 * You built an app for a small set of users, such as, your work group.
 
 > [!IMPORTANT]
@@ -22,7 +22,7 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 
 * Create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
-* Make sure that your app is running and accessible via HTTPs.
+* Ensure that your app is running and accessible using HTTPs.
 
 ## Upload your app
 
@@ -30,23 +30,23 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
 1. Log in to the Teams client with your [Microsoft 365 development account](~/build-your-first-app/build-and-run.md#prerequisites).
 1. Select **Apps** and select **Manage your apps**.
-1. Choose **Upload a custom app**.
-1. Select your app package .zip file. An install dialog displays.
+1. Select **Upload a custom app**.
+1. Select your app package .zip file. An install dialog screen appears.
 
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
+    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 
 1. Add your app to Teams.
 
 > [!NOTE]
 > `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
 
-## Troubleshoot upload issues
+## Troubleshooting
 
-If your app fails to sideload, do the following until the issue resolves:
+If your app fails to sideload or if there are any issues to upload your app, check the following options:
 
-1. Go back through the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
+1. Ensure to follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html) again.
-1. Ensure your app manifest matches the latest [schema](../../resources/schema/manifest-schema.md).
+1. Ensure your app manifest matches to the latest [schema](../../resources/schema/manifest-schema.md).
 
 ## Access your app
 
