@@ -35,11 +35,13 @@ You can validate app users in several ways, such as using login credentials, ID 
 
 You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
 
-1. User security: Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
+1. User data security: Authentication is key to the security design of your app. This process lets you verify if the user is who they claim to be. Validating user access for your app is a first step for providing necessary authorization to the user as well.
 
-1. Data security: The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
+1. App data security: The Authentication process focuses on building security for app data. It protects the system from unauthorized access and often stops any security issue at the onset. It lets your app users share  information safely. By using authentication, you can also secure your app users' data.
 
 1. User experience: Building a personalized user experience is an additional benefit of authentication.
+
+1. Compatible with standards: Ensure that the authentication method you choose offers you the best options for your particular app requirements.
 
 ### Authentication methods
 
