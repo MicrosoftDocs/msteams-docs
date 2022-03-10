@@ -31,7 +31,7 @@ Following are the key benefits of Teams Shifts WFM connectors:
 
 * **Seamless integration:** The integration between WFM solutions and Teams Shifts allows first-line workers to use the Teams Shifts app to view or manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app.  
 
-**Open shifts view in Teams**
+Open shifts view in Teams:
 
 The shifts view in Teams is shown in the following image:
 

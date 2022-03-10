@@ -101,7 +101,6 @@ To learn how to use the thumbnail and hero card types, see [add cards and card a
 
 For additional information about the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
 
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or a Thumbnail card.
@@ -409,9 +408,9 @@ The default query has the same structure as any regular user query, with the `na
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |   
+| Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## Next step

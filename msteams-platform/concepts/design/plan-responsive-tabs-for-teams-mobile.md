@@ -49,7 +49,7 @@ Let us go through the following use cases to understand how to plan different ty
 
 You can understand how to plan responsive tabs for dashboarding and data visualization apps on Teams mobile platform.
 
-**Consumption**
+Consumption:
 
 In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using task modules.
 
@@ -61,7 +61,7 @@ You can show the following information:
 
 ![Dashboarding and data visualization apps consumption](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
-**Quick actions**
+Quick actions:
 
 In the second stage, the users can work on the existing charts and visuals from desktop experience. You can introduce the following actions:
 
@@ -71,7 +71,7 @@ In the second stage, the users can work on the existing charts and visuals from 
 
 ![Dashboarding and data visualization apps quick actions](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
-**Enablement**
+Enablement:
 
 In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access specific data items with detailed view.
 
@@ -95,27 +95,29 @@ You can provide following access to users:
 
 You can understand how to plan responsive tabs for task boarding apps on Teams mobile platform.
 
-**Consumption**
+Consumption:
 
 In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as **Proposed**, **Active**, and **Closed** then provide filters for showing grouped tasks or as headers to see the grouped tasks.
 
 ![Task boarding apps consumption](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
 
-**Quick actions**
+Quick actions:
 
 In the second stage, you can provide the following app access to users:
+
 * Create tasks or items with the mandatory fields to reduce cognitive load of the users
 * Change the board type or view
 * Review tasks by expanding the view
 * Use task modules to see detailed view
-* Move the tasks into different categories 
+* Move the tasks into different categories
 * Share relevant tasks in chats and channels through emails and activity feed
 
 ![Task boarding apps quick actions](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
-**Enablement**
+Enablement:
 
 In the third stage, you can enable users' experience with the following activities:
+
 * Add new projects and boards
 * Add and modify different categories, such as **Proposed**, **Active**, and **Closed**
 * Configure the tasks for comments, attachments, and other complex features
@@ -133,7 +135,7 @@ In the third stage, you can enable users' experience with the following activiti
 
 You can understand how to plan responsive tabs for coauthoring and whiteboarding apps on Teams mobile platform.
 
-**Consumption**
+Consumption:
 
 In the first stage, you can consider desktop experience to show the content and assets in your app.  You can show the following functions:
 
@@ -143,7 +145,7 @@ In the first stage, you can consider desktop experience to show the content and 
 
 ![Coauthoring and whiteboarding apps consumption](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
-**Quick Actions**
+Quick Actions:
 
 In the second stage, you can introduce the following actions:
 
@@ -156,7 +158,7 @@ In the second stage, you can introduce the following actions:
 
 ![Coauthoring and whiteboarding apps quick actions](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
 
-**Enablement**
+Enablement:
 
 In the third stage, provide complete experience to your users. You can enable users' experience with the following activities:
 
