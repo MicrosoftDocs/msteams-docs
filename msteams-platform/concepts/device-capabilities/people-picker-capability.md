@@ -15,12 +15,12 @@ Use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-cli
 
 ## Advantages of integrating the native People Picker
 
-* People Picker control works in all Teams surfaces, such as task module, a chat, channel, meeting tab, and personal app.
+* People Picker control works on all Teams platforms, such as task module, a chat, channel, meeting tab, and personal app.
 * The control allows the user to search and select user in a chat, channel, or the entire organization.
 * People Picker helps with scenarios involving task assignment, tagging and notifying a user.
 * The control can be used in both web and desktop, as it saves the effort and time significantly to build a similar control.
 
-To integrate People Picker control in your Teams app the select the `selectPeople` API. For effective integration and to call the API ensure thorough knowledge of the [code snippet](#code-snippet). User also needs familiarity with the [API response errors](#error-handling) to handle the errors in web and desktop app.
+To integrate People Picker control in your Teams app select the API, `selectPeople`. For effective integration and to call the API ensure thorough knowledge of the [code snippet](#code-snippet). User also needs familiarity with the [API response errors](#error-handling) to handle any errors in web and desktop app.
 
 ## `selectPeople` API
 
@@ -28,7 +28,7 @@ To integrate People Picker control in your Teams app the select the `selectPeopl
 
 | API | Description  |
 | --- | --- |
-|**selectPeople**|Launches a People Picker and allows the user to search and select one or more people from the list.<br/><br/>This API returns the ID, name and email address of selected users to the calling web and desktop app.<br/><br/>In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
+|**selectPeople**| • Launches People Picker and allows the user to search and select one or more people from the list.<br/>  • This API returns the ID, name and email address of selected users to the web or desktop app.<br/> • In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
 
 The `selectPeople` API comes with the following input configurations:
 
@@ -46,8 +46,6 @@ The following image depicts the experience of People Picker in a sample web app:
 The following image depicts the experience of People Picker in a sample desktop app:
 
 <!-- ![Desktop app experience of People Picker]() Image for desktop app to be added here.-->
-
-:::image type="content" source="../../assets/images/tabs/integrate-people-picker-desktop.png" alt-text="People picker desktop":::
 
 :::image type="content" source="../../assets/images/tabs/select-people-desktop.png" alt-text="people picker desktop app":::
 
@@ -85,10 +83,10 @@ Ensure to handle the errors appropriately in your web and desktop app. The follo
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
-| **500** | INTERNAL_ERROR | Internal error is encountered while launching People Picker.|
+| **500** | INTERNAL_ERROR | Internal error encountered while launching People Picker.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|
-| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present.  Upgrading the build resolves the issue.|
+| **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrading the build resolves the issue.|
 
 ## See also
 
