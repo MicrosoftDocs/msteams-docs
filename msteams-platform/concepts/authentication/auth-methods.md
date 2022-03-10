@@ -29,7 +29,7 @@ AAD SSO can be explicit SSO or silent SSO.
 
 Teams supports other authentication methods that you can choose based on your app's security requirement.
 
-Other methods include:
+Other methods include: 
 
 - **Username and password authentication**: The simplest authentication method to validate users is by verifying their login credentials. Your system matches the user's password with their username and authenticates the user for app access.  
 - **Other identity providers**: You can use a third-party Identity Provider (IdP) to authenticate your app users. The user is registered with an identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the user credentials and profile.
