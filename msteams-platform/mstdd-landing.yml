@@ -96,7 +96,7 @@ landingContent:
       - text: What's new
         url: ../msteams-platform/whats-new.md
       - text: Unified meetings apps
-        url:  ../msteams-platform/meeting-app-extensibility.md
+        url:  ~/apps-in-teams-meetings/meeting-app-extensibility.md
 
 - title: Build app capabilities
   linkLists:
