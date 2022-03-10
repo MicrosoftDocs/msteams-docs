@@ -11,7 +11,9 @@ ms.author: surbhigupta
 
 People Picker is a native capability and control in Teams, which allows user to search and select people. Teams now integrates native People Picker input control on both web and desktop apps. The control can be selected for single or multiple configurations, such as limiting search within a chat, channel, or across the entire organization.
 
-Use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate People Picker within your web and desktop app.
+> [!NOTE]
+> * Currently, Microsoft Teams support for People Picker is available for mobile clients only.
+> * You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate the People Picker within your web app.
 
 ## Advantages of integrating the native People Picker
 
@@ -22,22 +24,30 @@ Use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-cli
 
 To integrate People Picker control in your Teams app select the API, `selectPeople`. For effective integration and to call the API ensure thorough knowledge of the [code snippet](#code-snippet). User also needs familiarity with the [API response errors](#error-handling) to handle any errors in web and desktop app.
 
+## Advantages of integrating the native People Picker
+
+* People Picker control works in all of Teams surfaces, such as task module, a chat, channel, meeting tab, and personal app.
+* This control allows you to search for and select users within a chat, channel, or the entire organization.
+* People Picker helps with scenarios involving task assignment, tagging, notifying a user.
+* You can use this readily available control in your web app. It saves the effort and time significantly to build such a control on your own.
+
 ## `selectPeople` API
 
-`selectPeople` API enables you to add Teams native `People Picker input control` to your web and desktop apps. The following table provides a description of the API:
+You must call the `selectPeople` API to integrate People Picker control in your Teams app. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the API.
+It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app. `selectPeople` API enables you to add Teams native `People Picker input control` to your web and desktop apps. The following table provides a description of the API:
 
 | API | Description  |
 | --- | --- |
-|**selectPeople**| • Launches People Picker and allows the user to search and select one or more people from the list.<br/>  • This API returns the ID, name and email address of selected users to the web or desktop app.<br/> • In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
+|`selectPeople`| • Launches People Picker and allows the user to search and select one or more people from the list.<br/>  • This API returns the ID, name and email address of selected users to the web or desktop app.<br/> • In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
 
 The `selectPeople` API comes with the following input configurations:
 
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
-|`title`|String| It is an optional parameter. It sets title for the People Picker control.|Select people|
-|`setSelected`|String| It is an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is pre-populated ignoring the rest.|Null|
-|`openOrgWideSearchInChatOrChannel`|Boolean| It is an optional parameter. When it is set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|False|
-|`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only.|False|
+|`title`| String| It is an optional parameter. It sets title for the People Picker control. | Select people|
+|`setSelected`|String| It is an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. |Null|
+|`openOrgWideSearchInChatOrChannel`|Boolean | It is an optional parameter. When it is set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel. |False|
+|`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only. |False|
 
 The following image depicts the experience of People Picker in a sample web app:
 
@@ -78,7 +88,7 @@ The following image depicts the experience of People Picker in a sample desktop 
 
 ## Error handling
 
-Ensure to handle the errors appropriately in your web and desktop app. The following table lists the error codes and the conditions under which the errors are generated:
+You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |

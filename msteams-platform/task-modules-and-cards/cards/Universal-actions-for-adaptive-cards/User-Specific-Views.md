@@ -59,7 +59,7 @@ The following code provides an example of Adaptive Cards:
 }
 ```
 
-**To send Adaptive Cards, refresh User Specific Views, and invoke requests to the bot**
+To send Adaptive Cards, refresh User Specific Views, and invoke requests to the bot:
 
 1. When Megan creates a new incident, the bot sends the Adaptive Card or common card with incident details in the Teams conversation.
 2. Now this card automatically refreshes to User Specific View for Megan and Alex. Alex's and Megan's user MRIs are added in `userIds` property of `refresh` property of the Adaptive Card JSON. The card remains the same for other users in the conversation.
@@ -211,7 +211,7 @@ const cardRes = {
 
 ```
 
----
+***
 
 Card design guidelines to keep in mind while designing User Specific Views:
 
