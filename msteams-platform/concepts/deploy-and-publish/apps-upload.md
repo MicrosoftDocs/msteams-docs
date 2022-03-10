@@ -37,8 +37,8 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
 1. Select **Add** to add your app to Teams.
 
-> [!NOTE]
-> `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
+    > [!NOTE]
+    > `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
 
 ## Troubleshooting
 
