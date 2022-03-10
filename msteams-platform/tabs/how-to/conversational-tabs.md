@@ -89,7 +89,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | Sample name | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|Create Conversational tab|	Microsoft Teams tab sample app for demonstrating create conversation tab. |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp)	|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## Next step
 
