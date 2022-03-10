@@ -263,7 +263,7 @@ items:
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        When you select **F5**, the Teams Toolkit:
+        When you select **F5**, Teams Toolkit:
 
         1. Checks all the following prerequisites:
           * Supported Node.js version is installed.
