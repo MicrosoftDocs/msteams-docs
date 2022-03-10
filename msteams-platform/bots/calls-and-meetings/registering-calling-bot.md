@@ -9,7 +9,7 @@ keywords: calling bot audio/video audio video media
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [ Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
+* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
@@ -32,7 +32,7 @@ The next section enables you to create a new bot or add calling capabilities to 
 
 For information on creating bots, see [create a bot for Teams](../how-to/create-a-bot-for-teams.md).
 
-**To create a new bot for Teams**
+To create a new bot for Teams:
 
 1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
 1. Add the Teams channel.
