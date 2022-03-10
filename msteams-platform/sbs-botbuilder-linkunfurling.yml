@@ -26,8 +26,9 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure you install the following tools and set up your development environment: 
 
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
@@ -35,7 +36,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -198,9 +199,7 @@ items:
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
-  content: |
-    **To register your app through the Azure AD portal**  
-
+  content: | 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
@@ -336,7 +335,7 @@ items:
 
         ![App settings location](~/assets/images/Teams-link-unfurling/appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2022**.
+    1. Open **appsettings.json** in latest version of Visual Studio 2022.
     
     1. Update the following information:  
 
@@ -351,7 +350,7 @@ items:
 
         ![Manifest file location](~/assets/images/Teams-link-unfurling/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2022**.
+    1. Open **manifest.json** in latest version of Visual Studio 2022.
 
     1. Add the following code snippet to your manifest file, if not already present:
 
@@ -376,7 +375,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2022 or Command line**
+    **To build and run the service using latest version of Visual Studio 2022 or Command line**
 
     # [Visual Studio 2022](#tab/vs2022)
 
@@ -423,8 +422,6 @@ items:
 - title: Upload Link Unfurling app
   durationInMinutes: 1
   content: |
-    **To add Link Unfurling app to Teams**
-
     1. In your cloned repository, navigate to **csharp_dotnetcore > 55.teams-link-unfurling > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
