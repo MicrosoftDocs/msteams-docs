@@ -18,7 +18,7 @@ You can create links to information and features within Teams. The scenarios whe
 > A deeplink launches the browser first before navigating to content. The behaviour of deep links on Teams entities are as follows:
 >
 > **Tab**:  
-> ✔ Directly navigates to the deeplink url.
+> ✔ Directly navigates to the deeplink url
 >
 > **Bot**:  
 > ✔ Deeplink in card body: Opens in browser first.  
