@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers templates for a Tab app with Blazor. Teams Toolkit doesn't support Bot and Message Extension capability.
+    > Currently, Teams Toolkit offers templates for only a Tab app with Blazor. Teams Toolkit doesn't support Bot and Message Extension capability.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -322,7 +322,7 @@ items:
     To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
     </details>
 
-- title: Provision, Deploy, and Preview your first Teams tab app
+- title: Preview your first Teams tab app
   durationInMinutes: 1
   content: |
 
