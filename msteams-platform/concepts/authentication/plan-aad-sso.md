@@ -16,6 +16,22 @@ In this page, you'll learn about:
 - AAD SSO user experience
 - Advantages of using AAD SSO
 
+## Case for AAD SSO
+
+Let's look at an app scenario to understand the benefits and implementation of AAD SSO authentication in an app.
+
+**App scenario**:
+ABC organization wants to build a Teams app for sharing its Sales Dashboard content with its global Sales and Marketing team and Finance team.
+
+Here's a list of app requirements:
+
+- Collect its sales data from company's database.
+- Create Dashboard with charts and tables.
+- Make the Dashboard app available within organization to valid users from a different department also.
+- Distribute the app as desktop app for local users, web app for global users, and mobile app for access on-the-go.
+
+In the next sections, let's see how AAD SSO can help with user authentication and access to all subsystems within the organization, in addition to Azure resources.
+
 ## Prerequisites
 
 Before you can use AAD SSO to authenticate your app users, ensure that:
