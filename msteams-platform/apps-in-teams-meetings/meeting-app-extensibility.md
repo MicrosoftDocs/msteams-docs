@@ -241,7 +241,7 @@ The following table provides the user types and lists the features that each use
 > [!div class="nextstepaction"]
 > [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 
-## See also
+## See also 
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
