@@ -76,12 +76,12 @@ In the second stage, the users can work on the existing charts and visuals from 
 In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access specific data items with detailed view.
 
 You can provide following access to users:
+
 * Modify title and description
 * Insert data items to create visualizations
 * Share visualizations in a channel or group chat
 
 ![Dashboarding and data visualization apps enablement](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
-
 
 <br>
 

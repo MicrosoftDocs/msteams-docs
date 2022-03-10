@@ -12,7 +12,7 @@ keywords: entry points extensibility use cases device capability
 
 Building Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the center of Office 365, and offers a personal canvas for you to create apps.
+Teams is a collaboration platform. It's also a social platform, is natively cross-platform, is at the center of Office 365, and offers a personal canvas for you to create apps.
 
 In this section, learn how to:
 
