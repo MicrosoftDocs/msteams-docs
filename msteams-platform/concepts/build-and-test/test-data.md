@@ -11,7 +11,7 @@ ms.date: 11/01/2019
 
 You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.
 
-## Prerequisite
+## Prerequisites
 
 1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
