@@ -39,20 +39,16 @@ If you are already familiar with Yeoman workflow, you may prefer using [YoTeams 
 > [!NOTE]
 > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps.
 
-
 ## Build your first Teams app
 
 Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
 
 > [!div class="nextstepaction"]
 > [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
-
 > [!div class="nextstepaction"]
 > [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
-
 > [!div class="nextstepaction"]
 > [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
-
 > [!div class="nextstepaction"]
 > [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
 

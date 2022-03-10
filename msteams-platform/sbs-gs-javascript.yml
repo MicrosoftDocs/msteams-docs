@@ -275,7 +275,6 @@ items:
     | - `templates/appPackage/manifest.local.template.json` | App manifest for running the app in local environment  |
     | - `templates/appPackage/manifest.remote.template.json` | App manifest for running the app in remote environment, such as an Azure site |
     | `templates/azure` | BICEP template files |
-    |
 
     When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 

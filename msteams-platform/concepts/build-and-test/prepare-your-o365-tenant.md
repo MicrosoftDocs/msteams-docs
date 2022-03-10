@@ -17,6 +17,7 @@ Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the f
 * Education, Education Plus, and Education E5
 
 > [!NOTE]
+>
 > * For more information on Microsoft 365 subscriptions, see [plans](https://products.office.com/business/compare-more-office-365-for-business-plans).
 > * Teams is also available to customers who subscribed to E4 prior to its [retirement](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147).
 
@@ -30,7 +31,7 @@ Enable Teams for your organization and for more information, see [enabling Teams
 
 ## Enable custom Teams apps and turn on custom app uploading
 
-**To turn on the custom app uploading or sideloading for your developer tenant**
+To turn on the custom app uploading or sideloading for your developer tenant:
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
@@ -58,7 +59,7 @@ For complete information on how these settings interact, see [manage custom app 
 
 ## Next step
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Choose a test setup](~/concepts/build-and-test/debug.md)
 
 ## See also
