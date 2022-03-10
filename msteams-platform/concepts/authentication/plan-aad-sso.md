@@ -27,7 +27,7 @@ Here's a list of app requirements:
 
 - Collect its sales data from company's database.
 - Create Dashboard with charts and tables.
-- Make the Dashboard app available within organization to valid users from a different department also.
+- Make the Dashboard app available within organization to valid users across different locations.
 - Distribute the app as desktop app for local users, web app for global users, and mobile app for access on-the-go.
 
 In the next sections, let's see how AAD SSO can help with user authentication and access to all subsystems within the organization, in addition to Azure resources.
@@ -36,8 +36,9 @@ In the next sections, let's see how AAD SSO can help with user authentication an
 
 Before you can use AAD SSO to authenticate your app users, ensure that:
 
-- Register your app with AAD: Establishes a trust relationship between AAD and your Teams app. AAD serves as an IdP for your app users and will be able to authenticate them.
-- All valid app users are registered with AAD: Valid users registered with AAD can get authenticated successfully. They can access all Azure resources and subsystems.
+- Create a Teams tab aap to display sales dashboard.
+- Register your app with AAD: Establish a trust relationship between AAD and your Teams app. AAD serves as an IdP for your app users and will be able to authenticate them. To register your app, provide app ID, configure access permissions, and define scope for user access on the Azure portal.
+- All valid app users are registered with AAD: Users registered with AAD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.
 
 ## Role of AAD SSO in authentication
 
