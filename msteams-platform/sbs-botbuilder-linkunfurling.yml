@@ -30,7 +30,7 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version or any equivalent tunneling solution
 
       > [!NOTE]
@@ -335,7 +335,7 @@ items:
 
         ![App settings location](~/assets/images/Teams-link-unfurling/appsettingslocation.png)
 
-    1. Open **appsettings.json** in latest version of Visual Studio 2022.
+    1. Open **appsettings.json** in latest version of Visual Studio.
     
     1. Update the following information:  
 
@@ -350,7 +350,7 @@ items:
 
         ![Manifest file location](~/assets/images/Teams-link-unfurling/manifestlocation.png)
     
-    1. Open **manifest.json** in latest version of Visual Studio 2022.
+    1. Open **manifest.json** in latest version of Visual Studio.
 
     1. Add the following code snippet to your manifest file, if not already present:
 
@@ -375,11 +375,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using latest version of Visual Studio 2022 or Command line**
+    **To build and run the service using latest version of Visual Studio  or Command line**
 
     # [Visual Studio 2022](#tab/vs2022)
 
-       1. Launch **Visual Studio 2022**.
+       1. Launch latest version of Visual Studio .
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
