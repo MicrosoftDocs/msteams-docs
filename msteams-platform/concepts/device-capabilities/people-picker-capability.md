@@ -78,7 +78,7 @@ The following image depicts the experience of People Picker in a sample desktop 
 
 ## Error handling
 
-Ensure to handle the errors appropriately in your web and desktop app. The following table lists the error codes and the conditions under which the errors are generated:
+Ensure to handle the errors appropriately in your web and desktop app. The following table lists the error codes and the conditions under which the errors are generated: 
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
