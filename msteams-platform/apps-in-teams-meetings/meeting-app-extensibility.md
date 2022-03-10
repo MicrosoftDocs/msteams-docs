@@ -28,6 +28,7 @@ Tabs allow the team members to access services and content in a specific space w
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
+>
 > * The private scheduled meetings only support apps.
 > * Add app option for Teams meeting extension tab app is not supported in Teams web client.
 
@@ -35,7 +36,7 @@ Tabs allow the team members to access services and content in a specific space w
 
 With the pre-meeting app experience, you can find and add meeting apps. You can also do pre-meeting tasks, such as developing a poll to survey the meeting participants.
 
-**To add tabs to an existing meeting**
+To add tabs to an existing meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
@@ -45,6 +46,7 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
    > [!NOTE]
+   >
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
    > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
 
@@ -66,7 +68,7 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
-**To use tabs during a meeting**
+To use tabs during a meeting:
 
 1. Go to Teams.
 1. In your calendar, select a meeting in which you want to use a tab.
@@ -93,6 +95,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 ---
 
 > [!NOTE]
+>
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
 > * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
