@@ -1,12 +1,12 @@
 ---
-title: Unified meetings apps
+title: Teams unified meetings apps
 author: surbhigupta
-description: Learn about Meeting lifecycle, building user's meeting experience throughout meeting lifecycle in desktop and mobile environment, participant roles and user types. In addition, learn about integrating bots and messaging extension in meeting lifecycle.
+description: lifecycle.
 ms.topic: conceptual
 ms.localizationpriority: none
 ---
 
-# Unified meetings apps
+# Teams unified meetings apps
 
 Teams unified meetings apps are based on the following concepts:
 
