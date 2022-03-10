@@ -85,7 +85,7 @@
   - name: Teams Toolkit for Visual Studio Code
     items:
     - name: Teams Toolkit overview
-      href: toolkit/teams-toolkit-fundamentals.md
+      href: toolkit/teams-toolkit-fundamentals.md 
     - name: Create new project
       href: toolkit/create-new-project.md
     - name: Prepare accounts to build Teams app
