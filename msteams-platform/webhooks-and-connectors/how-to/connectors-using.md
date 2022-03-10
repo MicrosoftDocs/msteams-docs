@@ -39,6 +39,7 @@ To display the multiple-selection list in the compact style, specify `"isMultiSe
 For more information on connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
 > [!NOTE]
+>
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 > * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Office 365 user who took the action.
 
@@ -182,14 +183,15 @@ To post a message to the webhook with PowerShell, follow these steps:
 
 1. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
-    - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
+    * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
+    * Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
 
 ---
 
 ## Send Adaptive Cards using an Incoming Webhook
 
 > [!NOTE]
+>
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
