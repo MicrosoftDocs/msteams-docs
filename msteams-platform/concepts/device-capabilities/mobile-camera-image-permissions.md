@@ -15,13 +15,14 @@ You can integrate native device capabilities, such as the **camera** and **micro
 ## Advantage of integrating media capabilities
 
 The main advantage of integrating device capabilities in your Teams apps is it leverages native Teams controls to provide a rich and immersive experience to your users.
-To integrate media capabilities you must update the app manifest file and call the media capability APIs. 
+To integrate media capabilities you must update the app manifest file and call the media capability APIs.
 
 For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allow you to use native media capabilities.
 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE]
+>
 > * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.
 > * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
@@ -52,6 +53,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
   * Scan documents, whiteboard, and business cards  through the camera.
   
 > [!IMPORTANT]
+>
 > * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
 > * `selectMedia` API has been extended to support microphone and audio properties.
 
@@ -74,7 +76,7 @@ The following image depicts web app experience of `selectMedia` API for micropho
 
 ## Error handling
 
-You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated: 
+You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |

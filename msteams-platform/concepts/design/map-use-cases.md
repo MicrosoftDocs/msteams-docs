@@ -12,9 +12,9 @@ A well-defined use case helps you to chart out the framework of features you wan
 
 You can map your use case based on:
 
-- Sharing and collaborating on items in an external system.
-- Starting workflows and sending notifications to users.
-- Using social platforms, conversational bots, and combining multiple features.
+* Sharing and collaborating on items in an external system.
+* Starting workflows and sending notifications to users.
+* Using social platforms, conversational bots, and combining multiple features.
 
 ## Common use cases mapped to Teams capabilities
 
@@ -86,10 +86,10 @@ Let's look at how Teams capabilities enable different features for your app.
 
 For example:
 
-- Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
-- Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
+* Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
+* Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
 
 ## See also
 
-- [Planning checklist](../design/planning-checklist.md)
-- [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)
+* [Planning checklist](../design/planning-checklist.md)
+* [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)
