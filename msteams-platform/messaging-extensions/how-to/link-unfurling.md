@@ -13,6 +13,7 @@ ms.author: anclear
 This document guides you on how to add link unfurling to your app manifest using App studio and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
 
 > [!NOTE]
+>
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 
@@ -35,11 +36,9 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 
     ![message handlers section in App Studio](~/assets/images/link-unfurling.png)
 
-    
 ### Add link unfurling manually
 
-To enable your messaging extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following example explains how to add link unfurling manually: 
-
+To enable your messaging extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following example explains how to add link unfurling manually:
 
 ```json
 ...
@@ -174,7 +173,7 @@ Following is an example of the response:
 
 * * *
 
-## See also 
+## See also
 
 * [Cards](~/task-modules-and-cards/what-are-cards.md)
 * [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)

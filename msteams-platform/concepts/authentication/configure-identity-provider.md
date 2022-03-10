@@ -29,7 +29,7 @@ Replace `<hostname>` with your actual host, which might be a dedicated hosting s
 
 * **External OAuth providers from tabs:** For more information, see [Use external OAuth providers](../../tabs/how-to/authentication/auth-oauth-provider.md)
 
-## See also 
+## See also
 
 * [Authenticate a user in a Microsoft Teams bot](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
 * [Single sign-on (SSO) support for tabs](../../tabs/how-to/authentication/auth-aad-sso.md)

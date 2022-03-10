@@ -30,7 +30,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and messaging extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
+Microsoft has published a [Microsoft Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and messaging extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 ![High-level diagram of a Virtual Assistant solution](../assets/images/bots/virtual-assistant/high-level-diagram.png)
@@ -43,6 +43,7 @@ This drawback is resolved by embedding skill information in the card action payl
 
 You must provide `skillId` in the constructor to ensure that the skill information is always present in card actions.
 A card action data sample code is shown in the following section:
+
 ```csharp
     public class CardActionData
     {
@@ -123,10 +124,9 @@ Virtual Assistant can handle interruptions in cases where a user tries to invoke
 
 ### Handle task module requests
 
-To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill. 
+To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill.
 
 Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
-
 
 ```csharp
     public static TaskModuleResponse GetTaskModuleRespose(this InvokeResponse invokeResponse)
@@ -165,7 +165,7 @@ Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.b
         }
 ```
 
-A similar approach is followed for card action dispatching and task module responses. Task module fetch and submit action data is updated to include `skillId`. 
+A similar approach is followed for card action dispatching and task module responses. Task module fetch and submit action data is updated to include `skillId`.
 Activity Extension method `GetSkillId` extracts `skillId` from the payload which provides details about the skill that needs to be invoked.
 
 The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync` methods are given in the following section:
@@ -331,7 +331,7 @@ Some messaging extension activities do not include the command ID. For example, 
 ## Example
 
 The following example shows how to convert the Book-a-room app template to a Virtual Assistant skill:
-Book-a-room is a Microsoft Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations. 
+Book-a-room is a Microsoft Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
 The following image displays a Virtual Assistant with a **book a room** skill:
 
 ![Virtual Assistant with a "book a room" skill](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -406,8 +406,8 @@ bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
 
 Book-a-room bot has two main commands for users:
 
-- `Book room`
-- `Manage Favorites`
+* `Book room`
+* `Manage Favorites`
 
 We have built a LUIS model by understanding these two commands. Corresponding secrets must be populated in `cognitivemodels.json`. The corresponding LUIS JSON file is found [here](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json).
 The corresponding `.lu` file is shown in the following section:
@@ -523,14 +523,14 @@ The allowed callers array can restrict which skill consumers can access the skil
 
 For more information on adding claims validation to a skill, see [add claims validation to skill](/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
 
-### Limitation of card refresh 
+### Limitation of card refresh
 
 Updating activity, such as card refresh is not supported yet through Virtual Assistant ([github issue](https://github.com/microsoft/botbuilder-dotnet/issues/3686)). Hence, we have replaced all card refresh calls `UpdateActivityAsync` with posting new card calls `SendActivityAsync`.
 
 ### Card actions and task module flows
 
 To forward card action or task module activities to an associated skill, the skill must embed `skillId` to it.
-`Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter. 
+`Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter.
 
 For more information refer [this](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) section from this documentation.
 
@@ -555,7 +555,7 @@ For more information refer [this](/microsoftteams/platform/samples/virtual-assis
 
 You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. For creating a new skill, see [tutorials to create a new skill](https://microsoft.github.io/botframework-solutions/overview/skills/). For Virtual Assistant and skills architecture documentation, see[Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
-## Limitations of Virtual Assistant 
+## Limitations of Virtual Assistant
 
 * **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there is no clear state where conversation is ended. Hence we have not sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.  
 * **Card refresh**: Card refresh is not yet supported through Virtual Assistant.  
@@ -572,7 +572,6 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 |----------|-----------------|---------------------------|
 | Updated visual studio template | Customized template to support teams capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
 | Book-a-room bot skill code | Lets you quickly find and book a meeting room on the go. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
-
 
 ## See also
 
