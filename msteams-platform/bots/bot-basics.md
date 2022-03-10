@@ -55,9 +55,9 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-		{
-			// Code logic here
-		}
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsTeamRenamedAsync`
@@ -65,9 +65,9 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-		{
-			// Code logic here
-		}
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersAddedAsync`
@@ -75,9 +75,9 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 ```csharp
 
 protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-		{
-			// Code logic here
-		}
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersRemovedAsync`
@@ -85,9 +85,9 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 ```csharp
 
 protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
-		{
-			// Code logic here
-		}
+  {
+   // Code logic here
+  }
 ```
 
 # [JavaScript](#tab/javascript)
@@ -146,7 +146,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
-	   await next();
+    await next();
     });
 ```
 
@@ -156,7 +156,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
-	   await next();
+    await next();
     });
 ```
 
@@ -334,7 +334,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 ---
 
-* * *
+---
 
 Now that you have familiarized yourself with bot activity handlers, let us see how bots behave differently depending on the conversation and the messages it receives or sends.
 
