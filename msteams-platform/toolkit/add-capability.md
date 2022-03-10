@@ -36,8 +36,8 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
 
-   You can also open the command palette and enter **Teams: Add Capabilities**: 
-      
+   You can also open the command palette and enter **Teams: Add Capabilities**:
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="Alternate capabilities":::
 
 1. From the pop-up, select the capabilities to include in your project:
@@ -61,7 +61,7 @@ The selected capabilities are succesfully added to your project. The Teams Toolk
 
 ## Supported capabilities matrix
 
-Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app. The following table provides the different Teams app capabilities: 
+Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app. The following table provides the different Teams app capabilities:
 
 |Existing capabilities|Other supported capabilities can be added|
 |--------------------|--------------------|
@@ -78,24 +78,24 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 
 After adding bot and messaging extension, the changes in your project are as follows:
 
-- A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project.
-- `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. 
-- `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated, which includes bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
-  - The ID of your bot.
-  - The scopes of your bot.
-  - The commands that hello world bot application can respond to.
-- The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
-- The files under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
+* A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project.
+* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
+* `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated, which includes bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
+  * The ID of your bot.
+  * The scopes of your bot.
+  * The commands that hello world bot application can respond to.
+* The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
+* The files under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
 
 After adding tab, the changes in your project are as follows:
 
-- A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.
-- `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally. 
-- `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform, the changes are as follows:
-  - The configurable and static tabs.
-  - The scopes of the tabs.
-- The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
-- The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
+* A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.
+* `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
+* `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform, the changes are as follows:
+  * The configurable and static tabs.
+  * The scopes of the tabs.
+* The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
+* The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
 
 ## Limitations
 

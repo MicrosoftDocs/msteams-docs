@@ -35,7 +35,7 @@ You can opt out of adding the SameSite cookie attribute to the `SetCookie` heade
 ## SameSite cookie attribute: 2020 release
 
 Chrome 80, released in February 2020, introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
- 
+
 SameSite cookie attributes are as follows:
 
 |Setting | Enforcement | Value |Attribute Specification |
@@ -76,6 +76,7 @@ According to the updated SameSite restrictions, a browser does not add a cookie 
 Android WebView is a Chrome system component that allows Android apps to display the web content. While the new restrictions are default, starting with Chrome 80, they are not immediately enforced on WebViews. They will be applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
+>
 > * You must declare first party cookies as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 > * You must declare third party cookies as `SameSite=None; Secure`.
 

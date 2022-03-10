@@ -29,7 +29,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Microsoft Azure Active Directory (Azure AD) app ID. For more information, see [register your app in the Microsoft Azure Active Directory (Azure AD) portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 
 Specify permissions needed by the app.
@@ -179,7 +179,7 @@ Example for RSC in a chat
     }
 }
 ```
-    
+
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
 
@@ -195,7 +195,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Microsoft Azure Active Directory (Azure AD) app ID. For more information, see [register your app in the Microsoft Azure Active Directory (Azure AD) portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 
@@ -253,38 +253,38 @@ Example for RSC in a chat
 
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
-    
+
 </details>
 
 > [!IMPORTANT]
 > In your app manifest, only include the RSC permissions that you want your app to have.
 
 > [!NOTE]
-> If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Microsoft Azure Active Directory (Azure AD) app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
+> If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Azure AD app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
 
 ## Test added RSC permissions to a team using the Postman app
 
 To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for team](test-team-rsc-json-file.md) into your local environment and update the following values:
 
-* `azureADAppId`: Your app's Microsoft Azure Active Directory (Azure AD) app ID.
-* `azureADAppSecret`: Your Microsoft Azure Active Directory (Azure AD) app password.
+* `azureADAppId`: Your app's Azure AD app ID.
+* `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
 * `teamGroupId`: You can get the team group id from the Teams client as follows:
 
     1. In the Teams client, select **Teams** from the far left navigation bar.
     2. Select the team where the app is installed from the dropdown menu.
     3. Select the **More options** icon (&#8943;).
-    4. Select **Get link to team**. 
+    4. Select **Get link to team**.
     5. Copy and save the **groupId** value from the string.
 
 ## Test added RSC permissions to a chat using the Postman app
 
 To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for chats](test-chat-rsc-json-file.md) into your local environment and update the following values:
 
-* `azureADAppId`: Your app's Microsoft Azure Active Directory (Azure AD) app ID.
-* `azureADAppSecret`: Your Microsoft Azure Active Directory (Azure AD) app password.
+* `azureADAppId`: Your app's Azure AD app ID.
+* `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
-* `tenantId`: The name or the Microsoft Azure Active Directory (Azure AD) Object ID of your tenant.
+* `tenantId`: The name or the Azure AD Object ID of your tenant.
 * `chatId`: You can get the chat thread id from the Teams *web* client as follows:
 
     1. In the Teams web client, select **Chat** from the far left navigation bar.
@@ -296,7 +296,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 1. Open the [Postman](https://www.postman.com) app.
 2. Select **File** > **Import** > **Import file** to upload the updated JSON file from your environment.  
-3. Select the **Collections** tab. 
+3. Select the **Collections** tab.
 4. Select the chevron **>** next to the **Test RSC** to expand the details view and see the API requests.
 
 Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest must succeed, while those not specified must fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meet expectations.
@@ -307,7 +307,7 @@ Execute the entire permissions collection for each API call. The permissions tha
 ## Test revoked RSC permissions using [Postman](https://www.postman.com/)
 
 1. Uninstall the app from the specific resource.
-2. Follow the steps for either chat or team: 
+2. Follow the steps for either chat or team:
     1. [Test added RSC permissions to a team using Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
     2. [Test added RSC permissions to a chat using Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
 3. Check all the response status codes to confirm that the specific API calls **have failed with an HTTP 403 status code**.

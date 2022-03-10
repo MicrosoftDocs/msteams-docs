@@ -17,8 +17,8 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 * Account prerequisites
   To provision cloud resources, you must have the following accounts:
 
-    * Microsoft 365 account with valid subscription
-    * Azure with valid subscription
+  * Microsoft 365 account with valid subscription
+  * Azure with valid subscription
   For more information, see [how to prepare accounts for building Teams app](accounts.md).
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
@@ -84,7 +84,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resource|Purpose|
 |----------|--------------------------------|
-| Microsoft Azure Active Directory (Azure AD) application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
+| Azure AD application for API management service | Allows Microsoft Power Platform access APIs managed by API management service |
 | API management service | Manage your APIs hosted in function app |
 | API management product | Group your APIs, define terms of use and runtime policies |
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
@@ -94,12 +94,12 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resources|Purpose of this resource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Manage secrets (e.g. Microsoft Azure Active Directory (Azure AD) app client secret) used by other Azure Services |
+| Azure Key Vault Service | Manage secrets (e.g. Azure AD app client secret) used by other Azure Services |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md). 
+Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -211,7 +211,7 @@ You can customize the following scenarios:
 
 #### Use an existing Azure AD app for your bot
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Microsoft Azure Active Directory (Azure AD) app created by yourself for your Teams app. To create an Microsoft Azure Active Directory (Azure AD) app, see <https://aka.ms/teamsfx-existing-aad-doc>.
+You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -225,11 +225,11 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 After adding the snippet, add your secret to related environment variable so the tool can resolve the actual secret during provision.
 
 > [!NOTE]
-> Ensure not to share the same Microsoft Azure Active Directory (Azure AD) app in multiple environments. If you don't have permission to update the Microsoft Azure Active Directory (Azure AD) app, you can get a warning with instructions about how to manually update the Microsoft Azure Active Directory (Azure AD) app. Follow the instructions to update your Microsoft Azure Active Directory (Azure AD) app after provision.
+> Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Microsoft Azure Active Directory (Azure AD) app created by yourself for your bot:
+You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your bot:
 
 ```json
 "bot": {
@@ -277,9 +277,9 @@ The following steps are:
     }
     ```
 
-### Scenerio 
+### Scenerio
 
-**To add other Azure resource or storage to the application**
+To add other Azure resource or storage to the application:
 
 Consider the scenario, you want to add Azure storage to your Azure function backend to store blob data. There is no auto flow to update the bicep template with Azure storage support. However, you can edit the bicep file and add the resource. The steps are as follows:
 
@@ -354,7 +354,6 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 
 > [!NOTE]
 > Currently, the building Teams app with sharepoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
-
 
 <br>
 

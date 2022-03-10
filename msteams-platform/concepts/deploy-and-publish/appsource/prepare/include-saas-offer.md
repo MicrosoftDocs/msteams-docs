@@ -16,21 +16,21 @@ With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Te
 
 Here's a general idea of how to monetize your app:
 
-1.	[Plan your SaaS offer](#plan-your-saas-offer).
+1. [Plan your SaaS offer](#plan-your-saas-offer).
 
-1.	[Integrate with the SaaS Fulfillment APIs](#integrate-with-the-saas-fulfillment-apis).
+1. [Integrate with the SaaS Fulfillment APIs](#integrate-with-the-saas-fulfillment-apis).
 
-1.	[Build a landing page for subscription management](#build-a-landing-page-for-subscription-management).
+1. [Build a landing page for subscription management](#build-a-landing-page-for-subscription-management).
 
-1.	[Create your SaaS offer](#create-your-saas-offer).
+1. [Create your SaaS offer](#create-your-saas-offer).
 
-1.	[Configure your app for the SaaS offer](#configure-your-app-for-the-saas-offer).
+1. [Configure your app for the SaaS offer](#configure-your-app-for-the-saas-offer).
 
-1.	[Publish your app to the Teams store](#publish-your-app).
+1. [Publish your app to the Teams store](#publish-your-app).
 
    :::column-end:::
    :::column span="1":::
-   
+
 :::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Diagram showing process for how to include a SaaS offer with your Teams app." border="false":::
 
    :::column-end:::
@@ -66,7 +66,7 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
 * Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their own subscriptions.
 
-## Build a landing page for subscription management 
+## Build a landing page for subscription management
 
 When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
 
@@ -76,7 +76,7 @@ For complete instructions, see [build the landing page for your SaaS offer](/azu
 
 Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [end-user purchasing experience](#end-user-purchasing-experience).
 
-* Users must be able to log in to your landing page with the same Microsoft Azure Active Directory (Azure AD) credentials they used to buy the subscription. For more information, see [Microsoft Azure Active Directory (Azure AD) and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
+* Users must be able to log in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
 * Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions (for example, you may want to allow only subscription admins to search for users):
   * Search for users in their org using email or another form of identity.
   * See users they can assign licenses to in a list.
@@ -99,12 +99,12 @@ Once you’ve integrated the SaaS Fulfillment APIs and built your landing page w
 
 See [create a SaaS offer](/azure/marketplace/create-new-saas-offer) for complete instructions on how to do this in Partner Center. The following steps describe what to do at a high level.
 
-1.	Create a [Partner Center](https://partner.microsoft.com/) account if you don’t have one.
+1. Create a [Partner Center](https://partner.microsoft.com/) account if you don’t have one.
 
-1.	Configure the subscription plans, pricing details, and more for your transactable SaaS offer. In particular, make sure you complete the following steps:
+1. Configure the subscription plans, pricing details, and more for your transactable SaaS offer. In particular, make sure you complete the following steps:
 
     * Under **Setup details**, select the **Yes** option to specify that you’re selling the offer through Microsoft.
-     
+
     * Under **Microsoft 365 integration**, add the AppSource link to your app listing. This step ensures people can buy your subscription plans in AppSource in addition to Teams.
 
 1. Store your publisher and offer IDs. (You need them later to link the offer to your app in the Developer Portal.)

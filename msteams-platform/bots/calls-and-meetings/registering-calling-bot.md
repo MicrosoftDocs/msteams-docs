@@ -9,7 +9,7 @@ keywords: calling bot audio/video audio video media
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [ Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
+* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
@@ -32,7 +32,7 @@ The next section enables you to create a new bot or add calling capabilities to 
 
 For information on creating bots, see [create a bot for Teams](../how-to/create-a-bot-for-teams.md).
 
-**To create a new bot for Teams**
+To create a new bot for Teams:
 
 1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
 1. Add the Teams channel.
@@ -76,9 +76,9 @@ You must configure the application permissions for your bot in advance by using 
 
 ### Get tenant administrator consent
 
-For apps using the Microsoft Azure Active Directory (Azure AD) V1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Microsoft Azure Active Directory (Azure AD), your app can request tokens without having to request consent again.
+For apps using the Azure AD V1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Azure AD, your app can request tokens without having to request consent again.
 
-You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Microsoft Azure Active Directory (Azure AD) V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/uth-v2-service#3-get-administrator-consent).
+You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/uth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > To construct the tenant Admin consent URL, a configured redirect URI or reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.

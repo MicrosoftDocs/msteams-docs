@@ -13,12 +13,12 @@ author: surbhigupta
 App templates are examples of complete apps for Microsoft Teams that are open-source and available on GitHub. Each app template contains detailed instructions for deploying and installing that app for your organization. It also provides a sample app that you can install and start using immediately. The complete source code is also available, which allows you to explore it in detail or fork the code and alter it to meet your specific requirements.
 All app templates are provided under the [MIT License](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) terms.
 
-> [!NOTE] 
+> [!NOTE]
 > You must license and support apps created from app templates for your users and organizations.
 
-### Key benefits
+The key benefits of using App templates are:
 
-* **Deploy directly to the cloud:** All app templates include deployment scripts that allows you to host all required services in Microsoft Azure or the Power Platform. 
+* **Deploy directly to the cloud:** All app templates include deployment scripts that allows you to host all required services in Microsoft Azure or the Power Platform.
 * **Recommended sample code:** The app templates conform to recommended best practices around security and infrastructure. All community submitted changes to the app templates are reviewed to ensure conformance.
 * **Customizable and extensible:** While all app templates are deployed with minimal configuration, the entire code base and deployment scripts are provided, so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps.  
@@ -29,7 +29,7 @@ The Champion Management Platform (CMP) app template helps you manage, scale, and
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-## Adoption Tool- Microsoft 365 Learning Pathways (Get Started) 
+## Adoption Tool- Microsoft 365 Learning Pathways (Get Started)
 
 The Get Started app template allows you to bring the power of Microsoft 365 learning pathways inside of Microsoft Teams. This app template allows you to grant easy access to specific training pages or other intranet assets and load the content directly within Teams. You can also change the app name or logo to match your company branding.
 
@@ -47,7 +47,7 @@ It provides a foundation to build custom targeted communication capabilities suc
 
 ![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
 
-## Co-worker Appreciation 
+## Co-worker Appreciation
 
 Using the co-worker appreciation template in Microsoft Teams, users can recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This is considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
 
@@ -84,7 +84,7 @@ In addition to encouraging personal connections across your entire team, the Ice
 
 ![Icebreaker app](../assets/images/icebreaker.png)
 
-## New Employee Onboarding 
+## New Employee Onboarding
 
 New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app is used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
 
@@ -107,12 +107,13 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 
 App template code samples are a collection of sample apps for Microsoft Teams platform capabilities.
 
-> [!NOTE] 
-> Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
+> [!NOTE]
+> * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
+> * You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
 
 The following table describes App template code samples:  
 
-|Name|Scenario|GitHub link|    
+|Name|Scenario|GitHub link|
 |---------|---------||-------|
 |Adoption Bot |Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](https://github.com/akporzondek/adoption_hub). | [Adoption Bot](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot) |
 | Appointment Manager | Appointment Manager is a Teams app template to help businesses create, manage, and conduct virtual appointments with consumers through Teams. New appointment requests from consumers are visible in Teams channels, where they are quickly assigned and reassigned to staff in a team. Appointment requests are viewed at team or personal levels through custom tabs. Every appointment is associated with a Teams online meeting, hence the staff and consumers can easily join the meeting at the scheduled time. The app template integrates with Microsoft Bookings for easy appointment management. Scheduled appointments automatically appear on assigned staff members' calendars, and consumers receive customizable email notifications and reminders with embedded meeting links.| [Appointment Manager](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager) |
@@ -146,7 +147,7 @@ The following table describes App template code samples:
 | Poll| Poll is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to quickly create and send polls in a chat or a channel to gather team opinions and preferences. The app is supported across all Teams platform clients, such as desktop, browser, iOS, and Android and is ready for deployment as part of your Microsoft 365 subscription.|[Poll](https://github.com/OfficeDev/microsoft-teams-poll-app) |
 | Quick Responses| Quick Responses is a Microsoft Teams app that delivers a robust solution for effectively answering users' commonly asked questions FAQs. Instead of answering each query manually and continuously repeating information, the app builds a library of responses for an interactive user experience through Teams [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md).|[Quick Responses](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses) |
 |Quiz | Quiz is a custom [Teams messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to create a quiz within a chat or a channel for knowledge check and instantaneous results. You can use Quiz for, In-class and offline exams, Knowledge check within team, and for fun quizzes within a team. Quiz app is supported across multiple platforms, such as Teams desktop, browser, iOS, and Android clients. This app is ready for deployment as part of your existing Microsoft 365 subscription.|[Quiz](https://github.com/OfficeDev/microsoft-teams-apps-quiz) |
-| Rapid Assist|Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests, and allow experts to receive notifications to quickly get on a call to help answer questions. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liaisons to resolve customer queries and deliver a great customer experience. |[Rapid Assist](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist) |
+| Rapid Assist|Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/) based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests, and allow experts to receive notifications to quickly get on a call to help answer questions. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liaisons to resolve customer queries and deliver a great customer experience. |[Rapid Assist](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist) |
 | Reflect|Reflect is a custom Microsoft Teams [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that provides a safe and inclusive resource for your team members to share the state of their emotional well-being with colleagues or group leaders directly within Teams. The app is available in channel, group, meeting, and 1:1 chats and the check-in response is set to public, private-to-sender, or fully anonymous. |[Reflect](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect) |
 |Remote Support | Remote Support is a [Microsoft Teams bot](../bots/what-are-bots.md) that provides a focused interface between support requesters throughout your organization and the internal support team.  End-users can submit, edit, or withdraw requests for support and the support team can respond, manage, and update requests all within the Teams platform.|[Remote Support](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport) |
 | Request-a-team|Request-a-team is a Microsoft Teams app that optimizes new team creation for your enterprise organization. The app supports standardization and best practices when creating new team instances through the integration of a wizard-guided request form, an embedded approval process, a request status dashboard, and automated team builds.|[Request-a-team](https://github.com/OfficeDev/microsoft-teams-apps-requestateam) |
@@ -162,7 +163,6 @@ The following table describes App template code samples:
 |Visitor Management | The Visitor Management app enables your organization and employees to easily and efficiently manage the on-site visitor process, directly from Microsoft Teams. The app enables employees to create visitor requests, centrally track a request status through the visitor dashboard, and receive real-time notifications when a visitor arrives.|[Visitor Management](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement) |
 |Water Cooler |Water Cooler is a custom Teams app that enables corporate teams to create, invite, and join casual conversations among teammates, such as those that take place by the Water Cooler or break room. Use this template for multiple scenarios, such as new non project related announcements, topics of interest, current events, or conversations about hobbies. The app provides an easy interface for anyone to find an existing conversation or start a new one. It is a foundation for building custom targeted communication capabilities, promoting interaction amongst coworkers who may otherwise not get a chance to socialize during breaks. Key features are: <br/> **Water Cooler Home Page**: You can browse existing rooms where team members are interacting in existing conversations with certain people or topics of interest. Active conversations on the **Home Page** show a room name, short description, call duration, and room image. <br/>**Join room**: Use the **Join room** feature to join an ongoing conversation immediately. Select **Join** from active conversations to join the room.<br/>**Room creation**: Use the **Room creation** feature to create a Teams call or chat for all attendees to interact. Create rooms easily by specifying the room name, short description, up to five colleagues as an initial group and selecting from the provided set of room images. <br/>**Find room**: Use the **Find room** feature to search keyword which matches with the topic or short descriptions of ongoing conversations.<br/>**Attendee invitation**: Use the **Attendee invitation** feature to invite additional users after room creation. This is similar to Teams call.<br/>**App badge**: The **Water Cooler** icon on the left menu shows a badge with the number of active conversations visible from Teams while using any app. |[Water Cooler](https://github.com/microsoft/csapps-msteams-watercooler) |
 | Workplace Awards| Workplace Awards is a Teams app template that provides a positive framework to foster recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition, called R&R program where employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards, and announce recipients.|[Workplace Awards](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards) |
-
 
 To provide feedback, see [App template feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
