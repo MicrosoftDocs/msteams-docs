@@ -36,15 +36,14 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure you install the following tools and set up your development environment: 
 
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
    
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -125,7 +124,7 @@ items:
 
        ![ngrok path](~/assets/images/sbs-connector/ngrok1.png)
 
-    3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/Home/Login#!/show/133adfba-f620-475e-a192-19e9f10c476c).
+    3. Go to [Connector Developer Portal](https://outlook.office.com/connectors/publish).
     4. Select **New Connector**.
      
        ![Add new connector](~/assets/images/sbs-connector/connector.png)
@@ -184,7 +183,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Manifest zip](~/assets/images/sbs-connector/zip.png)
+       ![Manifest zip](~/assets/images/sbs-connector/web.png)
    
     1. Go to **Microsoft Teams**.
     1. In the left panel, select **Store** and select **Manage your apps**.
