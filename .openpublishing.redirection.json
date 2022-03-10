@@ -715,6 +715,14 @@
       {
         "source_path": "msteams-platform/sbs-gs-blazor.yml",
         "redirect_url": "/microsoftteams/platform/get-started/get-started-overview.md"
+      },
+      {
+        "source_path": "msteams-platform/concepts/capabilities-overview.md",
+        "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md" 
+      },
+      {
+        "source_path": "msteams-platform/concepts/extensibility-points.md",
+        "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md" 
       }
     ]
 }
