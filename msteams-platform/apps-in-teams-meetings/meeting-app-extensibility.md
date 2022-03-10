@@ -28,15 +28,14 @@ Tabs allow the team members to access services and content in a specific space w
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
->
-> * The private scheduled meetings only support apps.
+> * Apps are only supported in private scheduled or recurring channel meetings.
 > * Add app option for Teams meeting extension tab app is not supported in Teams web client.
 
 #### Pre-meeting app experience
 
 With the pre-meeting app experience, you can find and add meeting apps. You can also do pre-meeting tasks, such as developing a poll to survey the meeting participants.
 
-To add tabs to an existing meeting:
+**To add tabs to an existing meeting**
 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
@@ -46,7 +45,6 @@ To add tabs to an existing meeting:
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
    > [!NOTE]
-   >
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
    > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
 
@@ -58,7 +56,7 @@ To add tabs to an existing meeting:
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
 ---
 
@@ -68,7 +66,7 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
-To use tabs during a meeting:
+**To use tabs during a meeting**
 
 1. Go to Teams.
 1. In your calendar, select a meeting in which you want to use a tab.
@@ -94,7 +92,6 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 ---
 
 > [!NOTE]
->
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
 > * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
@@ -103,7 +100,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-![In-meeting side panel](../assets/images/in-meeting-dialog.png)
+![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
 # [Mobile](#tab/mobile)
 
@@ -140,7 +137,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ### Integrate bots into the meeting lifecycle
 
-Bots that are enabled in groupchat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Bots that are enabled in `groupchat` scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### Integrate messaging extensions into the meeting lifecycle
 
@@ -148,15 +145,53 @@ To implement messaging extension, start with [build a messaging extension](../me
 
 The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
 
+### Supported capabilities in meeting
+
+The overall user experience in standard channel meetings will be same as in scheduled private meetings, however the capability differs. The following table lists the support availability in meetings for mobile and desktop:
+
+| Capability | Support available | In-tenant | Guest | Federated or external | Anonymous |
+| :-- | :-- | :-- | :-- | :-- |
+| **Mobile** | | | | |
+| Scheduled or recurring private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| **Desktop** | | | | |
+| Scheduled or recurring private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+
+> [!NOTE]
+> * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
+> * Apps on the channel will not be available in the meeting by default.
+
+## Meeting app permissions
+
+Team owners manages the meeting app permissions through team settings:
+
+* Channel meeting app permissions are different from the team app CRUD model (not the non-channel meeting app CRUD model). If a user adds an app to a team or channel, they are able to use it in the meeting.
+* When team settings are enabled, meeting apps follow the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot add.
+* If users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
+
+> [!NOTE]
+> By adding the app outside of the meeting interface,Attendee can indirectly add apps to their meetings when the **Allow team members to add and remove apps** setting is enabled.
+
+The following image illustrates member permissions setting:
+
+:::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
+
+* Permission to add/remove meeting apps can be configured in the team settings page, by default it is enabled.
+* If enabled, members can add/remove meeting apps before, during, or after meetings.
+
+:::image type="content" source="../assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
+
 ## Participant roles in a meeting
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
 
-The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
+The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meetin
+g:
 
-* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
-* **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
-* **Attendee**: An attendee is a user who has been invited to attend a meeting. But attendees aren't authorized to act as a presenter. Attendees can interact with other meeting members but can't manage any of the meeting settings or share the content.
+* **Organizer**: Organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
+* **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
+* **Attendee**: An attendee is invited to attend a meeting but can't act as a presenter. Attendees can interact with other meeting members but can't manage any of the meeting settings or share the content.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
@@ -172,9 +207,11 @@ User types, such as organizer, presenter, or attendee in a meeting can do one of
 > [!NOTE]
 > The user type is not included in the **getParticipantRole** API.
 
+User types, such as, organizer, presenter, or attendee in a meeting can be [a participant in a meeting](#participant-roles-in-a-meeting).
+
 The following list details the various user types along with their accessibility and performance:
 
-* **In-tenant**: In-tenant users belong to the organization and have credentials in Microsoft Azure Active Directory (Azure AD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They're full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
 * **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s Azure AD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
