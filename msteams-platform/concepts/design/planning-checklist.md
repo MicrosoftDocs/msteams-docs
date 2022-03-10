@@ -27,7 +27,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | 1 | Are the users primarily front-line workers on mobile clients? |
 | 2 | Do you expect guest users need access to your app? |
 | 3 | Do they use teams and channels or primarily group chats? |
-| 4 | Are your primary users technically sophisticated ? |
+| 4 | Are your primary users technically sophisticated? |
 | 5 | Do you need a thorough onboarding experience or a few pointers might do? |
 
 </details>
@@ -73,7 +73,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | What happens when a user first configures your tab in a channel? |
-| 2 | If you're sharing cards with a messaging extension, adding a link to a learn more page to help introduce users to what else your app can do? |
+| 2 |If you're sharing cards with a messaging extension, add a link to a lear more page, which helps users to know more about your app |
 | 3 | Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? |
 | 4 | Does your users have any prior knowledge of your app? |
 
