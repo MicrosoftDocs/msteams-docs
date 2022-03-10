@@ -46,7 +46,6 @@
   items:
   - name: Overview 
     href: concepts/authentication/plan-authentication.md
-  - name: Authentication in Teams
   - name: AAD SSO in Teams
     href: concepts/authentication/plan-aad-sso.md
   - name: Other authentication methods in Teams
