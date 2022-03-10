@@ -54,10 +54,9 @@ Provide the following fields:
 ### Generate a deep link to your tab
 
 > [!NOTE]
-> Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [manifest](~/resources/schema/manifest-schema.md) reference for more information on tab scopes.
-
-> [!NOTE]
-> Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
+>
+> * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [manifest](~/resources/schema/manifest-schema.md) reference for more information on tab scopes.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
 
 Use the following format for a deep link that you can use in a bot, connector, or messaging extension card:
 
@@ -115,7 +114,7 @@ The query parameters are:
 
 > [!IMPORTANT]
 > Ensure that all query parameters are properly URI encoded. You must follow the preceeding examples using the last example:
-
+>
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -198,7 +197,7 @@ The following example format illustrates the deeplink to files:
 
 ### Serialization of this object
 
-```
+```javascript
 {
 fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
 tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
@@ -266,7 +265,7 @@ To use this deep link with your bot, you can specify this as the URL target in y
 
 ## Deep linking to an audio or audio-video call
 
-You can create deep links to invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type, as *audio* or *av*, and the participants. After the deep link is invoked and before placing the call, Teams desktop client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deeplink invocation.
+You can create deep links to invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type, as *audio* or *av*, and the participants. After the deep link is invoked and before placing the call, Teams client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deeplink invocation.
 
 In case of a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
