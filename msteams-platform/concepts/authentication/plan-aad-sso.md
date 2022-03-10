@@ -30,13 +30,11 @@ Here's a list of app requirements:
 - Make the Dashboard app available within organization to valid users across different locations.
 - Distribute the app as desktop app for local users, web app for global users, and mobile app for access on-the-go.
 
-In the next sections, let's see how AAD SSO can help with user authentication and access to all subsystems within the organization, in addition to Azure resources.
-
 ## Prerequisites
 
 Before you can use AAD SSO to authenticate your app users, ensure that:
 
-- Create a Teams tab aap to display sales dashboard.
+- Create a Teams tab AAD to display sales dashboard.
 - Register your app with AAD: Establish a trust relationship between AAD and your Teams app. AAD serves as an IdP for your app users and will be able to authenticate them. To register your app, provide app ID, configure access permissions, and define scope for user access on the Azure portal.
 - All valid app users are registered with AAD: Users registered with AAD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.
 
@@ -55,10 +53,10 @@ The AAD SSO process used in a Teams app for the first user login:
 
 | # | Steps | Key points |
 |--- | --- | --- |
-| 1 | A Teams app user attempts to log in | - The user provides their credentials to the app. <br> - This may include the username and password of the user. |
+| 1 | A Teams app user attempts to log in | - The user provides their credentials to the app. <br> - It may include the username and password of the user. |
 | 2 | Teams app sends the user credentials to AAD for verification | - AAD receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
 | 3 | AAD verifies the user information. | - AAD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
-| 4 | On a successful match, AAD sends an ID token granting app access to the your app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to the user access every time they access the app. |
+| 4 | On a successful match, AAD sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to let the user access at subsequent log ins. |
 | 5 | The user is given access once and for all. | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
 
 ## AAD SSO user experience
