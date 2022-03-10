@@ -20,6 +20,7 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 | **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 > [!NOTE]
+>
 > * Apps submitted to the [AppSource](https://appsource.microsoft.com) for publishing on Teams are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 > * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
