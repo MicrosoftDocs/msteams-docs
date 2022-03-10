@@ -16,9 +16,9 @@ Teams is a collaboration platform. It's also a social platform, is natively cros
 
 In this section, learn how to:
 
- - Identify and map use cases to Teams features
- - Use planning checklist
- - Plan beyond app deployment
+* Identify and map use cases to Teams features
+* Use planning checklist
+* Plan beyond app deployment
 
 ## Plan with Teams
 
@@ -35,19 +35,19 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 
 Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
 
-* **Understand your use case and Teams app features**: Understand your user's requirement and identify the right features.
+* Understand your use case and Teams app features: Understand your user's requirement and identify the right features.
 
-* **Map your use cases**: Map common use cases to Teams feature based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
+* Map your use cases: Map common use cases to Teams feature based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
-* **Plan responsive tabs for Teams mobile**: It includes common scenarios and helps with planning apps for Teams mobile.
+* Plan responsive tabs for Teams mobile: It includes common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
 
-* **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
+* Create and build app project: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
-* **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
+* Design your app UI: Use Teams UI Toolkit and UI Library to design your app's layout.
 
-* **Use Teams as a platform**: Teams platform helps you build a single or multi-capability app. Your Teams app is supported by the integrated products and services that enhance the app experience.
+* Use Teams as a platform: Teams platform helps you build a single or multi-capability app. Your Teams app is supported by the integrated products and services that enhance the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
@@ -55,7 +55,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
      Together, these capabilities bring your app solution to life.
 
-* **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+* Integrate device capabilities: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
 
 ### Post-build
 
