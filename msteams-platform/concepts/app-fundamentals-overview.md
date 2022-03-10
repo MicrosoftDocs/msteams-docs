@@ -26,28 +26,28 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 
 :::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app" border="true":::
 
-- [Before you build](#before-you-build)
-- [During build](#during-build)
-- [Post-build](#post-build)
-- [Planning checklist](../concepts/design/planning-checklist.md)
+* [Before you build](#before-you-build)
+* [During build](#during-build)
+* [Post-build](#post-build)
+* [Planning checklist](../concepts/design/planning-checklist.md)
 
 ### Before you build
 
 Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
 
-- **Understand your use case and Teams app features**: Understand your user's requirement and identify the right features.
+* **Understand your use case and Teams app features**: Understand your user's requirement and identify the right features.
 
-- **Map your use cases**: Map common use cases to Teams feature based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
+* **Map your use cases**: Map common use cases to Teams feature based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
-- **Plan responsive tabs for Teams mobile**: It includes common scenarios and helps with planning apps for Teams mobile.
+* **Plan responsive tabs for Teams mobile**: It includes common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
 
-- **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
+* **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
-- **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
+* **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
-- **Use Teams as a platform**: Teams platform helps you build a single or multi-capability app. Your Teams app is supported by the integrated products and services that enhance the app experience.
+* **Use Teams as a platform**: Teams platform helps you build a single or multi-capability app. Your Teams app is supported by the integrated products and services that enhance the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
@@ -55,12 +55,12 @@ Understanding the user and their concern are the first indicators of how a Teams
 
      Together, these capabilities bring your app solution to life.
 
-- **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+* **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
 
 ### Post-build
 
-- Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
-- Use Developer Portal to configure, manage, and deploy your app.
+* Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
+* Use Developer Portal to configure, manage, and deploy your app.
 
 <details>
 <summary><b>Learn about Government Community Cloud (GCC)</b></summary>
@@ -83,10 +83,10 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
-- For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
-- For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
-- For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
-- For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+* For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
+* For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+* For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
 </details>
 
@@ -97,6 +97,6 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 
 ## See also
 
-- [Planning checklist](../concepts/design/planning-checklist.md)
-- [Considerations for Teams integration](../samples/integrating-web-apps.md)
-- [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Planning checklist](../concepts/design/planning-checklist.md)
+* [Considerations for Teams integration](../samples/integrating-web-apps.md)
+* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
