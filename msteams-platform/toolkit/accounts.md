@@ -1,13 +1,12 @@
 ---
 title: Prepare accounts to build Teams apps
 author: zyxiaoyuer
-description:  Prepare accounts to Build Teams apps
+description:  Prepare accounts to build Teams apps
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 02/03/2022
+ms.date: 03/03/2022
 ---
-
 # Prepare accounts to build Teams apps
 
 To create a Teams app, you need a Microsoft 365 account with valid subscription and to host the backend resources on Azure, you need an Azure account.
@@ -18,7 +17,7 @@ To create a Microsoft 365 account, sign up for a Microsoft 365 developer program
 
 For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program)
 
-### Microsoft 365 developer program
+## Join Microsoft 365 developer program
 
 If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
 
@@ -47,9 +46,13 @@ This account provides access to Microsoft products and cloud services, such as O
 
 The user id created to use Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
 
+* **Work account for business**
+
 ## Azure account to host backend resources
 
 Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
+
+* **Visual Studio ID**
 
 If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers as long as these are available from the public domain.
 
