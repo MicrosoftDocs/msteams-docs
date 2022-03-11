@@ -78,16 +78,13 @@ To use tabs during a meeting:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/in-meeting-dialog-view.png" alt-text="To use tabs during a meeting" border="true":::
-
-
 # [Mobile](#tab/mobile)
 
 After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in-meeting side panel of the app.
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+:::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Mobile dialog box view" border="true":::
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
