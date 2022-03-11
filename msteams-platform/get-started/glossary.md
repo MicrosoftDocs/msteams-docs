@@ -9,7 +9,6 @@ keywords: Microsoft Teams developer definition
 
 Common terms and definitions used in Teams Developer Documentation.
 
-
 ## A
 
 | Term | Definition |

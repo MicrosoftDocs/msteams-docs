@@ -11,7 +11,7 @@ ms.date: 11/18/2018
 
 In [Run and debug your app](../../concepts/build-and-test/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support calls and online meetings.
 
-Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels. 
+Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels.
 
 ## Configure ngrok.yml
 
@@ -84,8 +84,9 @@ statefulClientBuilder.SetNotificationUrl(
 > Replace signal with the one provided by ngrok and the `NotificationEndpoint` with the controller path that receives notification.
 
 > [!IMPORTANT]
+>
 > * The URL in `SetNotificationUrl` must be HTTPS.
-> 
+>
 > Your local instance must be listening to HTTP traffic on the signaling port. The requests made by the calls and online meetings platform will reach the bot as localhost HTTP traffic unless end-to-end encryption is set up.
 
 #### Update media
@@ -112,8 +113,6 @@ var mediaPlatform = new MediaPlatformSettings
 
 ## Caveats
 
-- Ngrok free accounts **don't** provide end-to-end encryption. The HTTPS data ends at the ngrok URL and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider a paid ngrok account. See [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
-- Because the bot callback URL is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
-- Ngrok tunnels can also be used with [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). For an example of how to do this, see the [HueBot sample app](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot).
-
- 
+* Ngrok free accounts **don't** provide end-to-end encryption. The HTTPS data ends at the ngrok URL and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider a paid ngrok account. See [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
+* Because the bot callback URL is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
+* Ngrok tunnels can also be used with [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). For an example of how to do this, see the [HueBot sample app](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot).

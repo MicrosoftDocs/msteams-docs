@@ -82,7 +82,7 @@ As a best practice, acknowledge the file upload by sending a message back to the
 
 ### Upload files to personal chat
 
-**To upload a file to a user**
+To upload a file to a user:
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, the bot receives an invoke activity with a location URL.
