@@ -650,13 +650,17 @@ Specify and consolidate authorization related information for the app.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more information, see [Application permissions](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-permissions).|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. For more information, see [Resource-specific application permissions](#resource-specific-application-permissions) and [Resource-specific delegated permissions](#resource-specific-delegated-permissions)|
 
-### Delegated permissions
+#### Resource-specific application permissions
 
-Delegated permissions allow the app to access data on behalf of the signed-in user.
+Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
 
-* **Resource-specific permissions for teams**
+#### Resource-specific delegated permissions
+
+Delegated permissions allow the app to access data on behalf of the signed-in user. 
+
+* **Resource-specific delegated permissions for teams** 
 
     |**Name**|**Description**|
     |---|---|
@@ -664,7 +668,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
 
-* **Resource-specific permissions for chats or meetings**
+* **Resource-specific delegated permissions for chats or meetings**
 
     |**Name**|**Description**|
     |---|---|
@@ -673,7 +677,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
 
-* **Resource-specific permissions for users**
+* **Resource-specific delegated permissions for users**
 
     |**Name**|**Description**|
     |---|---|
