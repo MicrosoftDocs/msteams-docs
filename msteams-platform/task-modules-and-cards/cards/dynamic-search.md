@@ -82,10 +82,10 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
-| type | Data.Query	| Yes |	Specifies that it's a Data.Query object.|
+| type | Data.Query | Yes | Specifies that it's a Data.Query object.|
 | dataset | String | Yes | Specifies the type of data that is fetched dynamically. |
-| value	| String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
-| count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
+| value | String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
+| count | Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. |
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
 ### Example
@@ -323,25 +323,25 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 {
     if (turnContext.Activity.Name == "application/search")
     {
-	var packages = new[] {
-			new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
-			new { title = "Fluent UI Library", value = "FluentUI" }};
+ var packages = new[] {
+   new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+   new { title = "Fluent UI Library", value = "FluentUI" }};
 
-	var searchResponseData = new
-	{
-	    type = "application/vnd.microsoft.search.searchResponse",
-	    value = new
-	    {
-		results = packages
-	    }
-	};
-	var jsonString = JsonConvert.SerializeObject(searchResponseData);
-	JObject jsonData = JObject.Parse(jsonString);
-	return new InvokeResponse()
-	{
-	    Status = 200,
-	    Body = jsonData
-	};
+ var searchResponseData = new
+ {
+     type = "application/vnd.microsoft.search.searchResponse",
+     value = new
+     {
+  results = packages
+     }
+ };
+ var jsonString = JsonConvert.SerializeObject(searchResponseData);
+ JObject jsonData = JObject.Parse(jsonString);
+ return new InvokeResponse()
+ {
+     Status = 200,
+     Body = jsonData
+ };
     }
 
     return null;
@@ -349,7 +349,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ```
 
 #### [Node.js](#tab/nodejs)
- 
+
 ```nodejs
   async onInvokeActivity(context) {
     if (context._activity.name == 'application/search') {
@@ -379,7 +379,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
   }
 ```
 
-####  [JSON](#tab/json)
+#### [JSON](#tab/json)
 
 ```json
 {
@@ -409,7 +409,6 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 |**Sample name** | **Description** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
 | Typeahead search control on Adaptive Cards | The sample shows the features of static and dynamic typeahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
-
 
 ## See also
 
