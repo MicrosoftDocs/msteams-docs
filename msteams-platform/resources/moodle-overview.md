@@ -31,7 +31,7 @@ Moodle LMS helps users access the following apps:
 
 * **Moodle LTI apps**: The following Learning Tools Interoperability (LTI) apps are available for Moodle LMS:
   * OneDrive LTI app, which provides services like accessing and sharing personal and class files within LMS.
-  * Class Teams LTI app, which helps faculty to create a class with user roles within the LMS courses. The Class LTI app provides required access to students to various engaging courses.
+  * Class Teams LTI app, which helps faculty to create a class with user roles within the LMS courses. The Class LTI app provides required access to students to various engaging courses.  
   * Teams meetings LTI app, which helps faculty and students to engage using desktop, web platforms, and to integrate class meetings in their LMS course. For more information, see [Moodle LTI apps](moodle-lti-apps.md).
 
 * **Microsoft 365 plugins**: The Microsoft 365 plugins are designed to ensure integration between Moodle sites and Microsoft Teams. These plugins can be used independently, or in partnership to achieve distinct user requirements. For more information, see [Microsoft 365 plugins](m365-plugins/m365-plugins-overview.md).
