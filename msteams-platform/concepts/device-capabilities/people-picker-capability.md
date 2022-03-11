@@ -20,11 +20,11 @@ Use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-cli
 * People Picker helps with scenarios involving task assignment, tagging and notifying a user.
 * The control can be used in both web and desktop, as it saves the effort and time significantly to build a similar control.
 
-To integrate People Picker control in your Teams app select the API, `selectPeople`. For effective integration and to call the API ensure thorough knowledge of the [code snippet](#code-snippet). User also needs familiarity with the [API response errors](#error-handling) to handle any errors in web and desktop app.
+To integrate People Picker control in your Teams app select the API, `selectPeople`. To integrate and call the API, user must know about [code snippet](#code-snippet). User also needs familiarity with [API response errors](#error-handling) to handle any errors in web and desktop app.
 
 ## `selectPeople` API
 
-For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the API. The `selectPeople` API enables you to add Teams native `People Picker input control` to your web and desktop apps. The following table provides a description of the API:
+The `selectPeople` API enables users to add Teams native `People Picker input control` to web and desktop apps. The following table provides a description of the API:
 
 | API | Description  |
 | --- | --- |
@@ -53,7 +53,7 @@ The following image depicts the experience of People Picker in a sample desktop 
 
 ## Code snippet
 
-**Calling `selectPeople` API** to select people from a list:
+The following code snippet displays use of `selectPeople` API to select people from a list:
 
 ```javascript
  microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
