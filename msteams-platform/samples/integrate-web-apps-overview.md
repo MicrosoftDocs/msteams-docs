@@ -36,6 +36,9 @@ Low code platforms provide an intuitive approach to software development and req
 
 Microsoft Power platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment.
 
+>[!NOTE]
+>You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+
 ### Power Apps
 
 With Power Apps, you can build business apps that connect to your business data and are tailored to your organization's needs. Power Apps enable a wide range of app scenarios to solve business challenges through canvas apps. After building the app, you can export it from the Power Apps maker portal and embed in Microsoft Teams.

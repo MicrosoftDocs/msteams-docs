@@ -92,7 +92,7 @@ The following code provides an example of context variable:
     "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
     "userTeamRole": "The user's role in the team",
     "isTeamArchived": "Indicates if team is archived",
-    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
     "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
     "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",

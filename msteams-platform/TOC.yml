@@ -501,14 +501,14 @@
     href: samples/integrate-web-apps-overview.md
   - name: Considerations for Teams Integration
     href: samples/integrating-web-apps.md
+  - name: Create Virtual Assistant
+    href: samples/virtual-assistant.md 
   - name: Power Platform apps
     items:
     - name: Overview
       href: samples/teams-low-code-solutions.md
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-    - name: Create Virtual Assistant
-      href: samples/virtual-assistant.md 
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
@@ -517,8 +517,6 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-    - name: Moodle LTI apps
-      href: resources/moodle-lti-apps.md
     - name: Microsoft 365 plugins
       href: resources/m365-plugins/m365-plugins-overview.md
     - name: Partner apps for Moodle
