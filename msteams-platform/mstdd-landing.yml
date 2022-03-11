@@ -46,7 +46,7 @@ landingContent:
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
       
       
-- title: All time favorites
+- title: Monetize your app
   linkLists:
     - linkListType: concept
       links:
@@ -56,9 +56,7 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: Explore low-code apps for Teams
-        url:  ~/samples/teams-low-code-solutions.md 
-        
+
         
 - title: Get started
   linkLists:
@@ -162,7 +160,10 @@ landingContent:
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
- 
+    - text: Explore low-code apps for Teams
+      url:  ~/samples/teams-low-code-solutions.md
+
+
 - title: Publish and distribute
   linkLists:
   - linkListType: concept
