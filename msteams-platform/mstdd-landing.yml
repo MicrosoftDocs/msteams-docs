@@ -44,10 +44,7 @@ landingContent:
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: People Picker in Adaptive Cards
         url: ~/task-modules-and-cards/cards/people-picker.md
-      - text: Authentication using external OAuth providers  
-        url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
-
-      
+        
       
 - title: All time favorites
   linkLists:
