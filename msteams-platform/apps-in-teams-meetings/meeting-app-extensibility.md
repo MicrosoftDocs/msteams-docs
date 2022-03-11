@@ -84,7 +84,7 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as feedback.
 
-:::image type="content" source="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt-text="Mobile dialog box view" border="true":::
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
