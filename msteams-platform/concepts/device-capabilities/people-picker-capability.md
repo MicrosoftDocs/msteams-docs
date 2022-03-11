@@ -13,7 +13,7 @@ People Picker is a native capability and control in Teams, which allows user to 
 
 Use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to `selectPeople` API to integrate People Picker within your web and desktop app.
 
-## Advantages of integrating the native People Picker
+## Advantages of integrating People Picker
 
 * People Picker control works on all Teams platforms, such as task module, a chat, channel, meeting tab, and personal app.
 * The control allows the user to search and select user in a chat, channel, or the entire organization.
@@ -24,8 +24,7 @@ To integrate People Picker control in your Teams app select the API, `selectPeop
 
 ## `selectPeople` API
 
-You must call the `selectPeople` API to integrate People Picker control in your Teams app. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the API.
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app. `selectPeople` API enables you to add Teams native `People Picker input control` to your web and desktop apps. The following table provides a description of the API:
+For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the API. The `selectPeople` API enables you to add Teams native `People Picker input control` to your web and desktop apps. The following table provides a description of the API:
 
 | API | Description  |
 | --- | --- |
@@ -48,11 +47,11 @@ The following image depicts the experience of People Picker in a sample desktop 
 
 <!-- ![Desktop app experience of People Picker]() Image for desktop app to be added here.-->
 
-:::image type="content" source="../../assets/images/tabs/select-people-desktop.png" alt-text="people picker desktop app":::
+:::image type="content" source="../../assets/images/tabs/select-people-desktop.png" alt-text="people picker by name":::
 
-:::image type="content" source="../../assets/images/tabs/select-people-desktop-email.png" alt-text="people picker email":::
+:::image type="content" source="../../assets/images/tabs/select-people-desktop-email.png" alt-text="people picker using email address":::
 
-### Code snippet
+## Code snippet
 
 **Calling `selectPeople` API** to select people from a list:
 
@@ -79,7 +78,7 @@ The following image depicts the experience of People Picker in a sample desktop 
 
 ## Error handling
 
-Ensure to handle the errors appropriately in your web and desktop app. The following table lists the error codes and the conditions under which the errors are generated: 
+Ensure to handle the errors appropriately in your web and desktop app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
