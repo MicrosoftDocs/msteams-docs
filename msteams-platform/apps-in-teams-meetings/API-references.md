@@ -30,11 +30,16 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. |MSTC SDK|
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| MSBF SDK|
 
+> [!NOTE]
+> Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
+
 ## Get user context API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
 ## Get participant API
+
+The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
 
 > [!NOTE]
 >
@@ -45,6 +50,8 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 > [!TIP]
 > Get participant IDs and tenant IDs from the Tab SSO.
+
+Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 The following table includes the query parameters:
 
@@ -217,6 +224,8 @@ The following table includes the response codes:
 ## Get meeting details API
 
 The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
+
+The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
 ### Prerequisite
 
@@ -555,6 +564,8 @@ The following table provides the response codes:
 ## Get real-time Teams meeting events API
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
+
+You must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.
 
 ### Prerequisite
 
