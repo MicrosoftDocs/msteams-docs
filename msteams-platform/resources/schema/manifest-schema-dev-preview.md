@@ -304,7 +304,7 @@ A unique identifier for this app in reverse domain notation; for example, com.ex
 
 ## developer
 
-**Required**
+Required:
 
 Specifies information about your company. For apps submitted to AppSource (formerly Office Store), these values must match the information in your AppSource entry.
 
@@ -318,7 +318,7 @@ Specifies information about your company. For apps submitted to AppSource (forme
 
 ## localizationInfo
 
-**Optional**
+Optional:
 
 Allows the specification of a default language, as well as pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
@@ -337,7 +337,7 @@ An array of objects specifying additional language translations.
 
 ## name
 
-**Required**
+Required:
 
 The name of your app experience, displayed to users in the Teams experience. For apps submitted to AppSource, these values must match the information in your AppSource entry. The values of `short` and `full` should not be the same.
 
@@ -348,7 +348,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 ## description
 
-**Required**
+Required:
 
 Describes your app to users. For apps submitted to AppSource, these values must match the information in your AppSource entry.
 
@@ -361,7 +361,7 @@ Ensure that your description accurately describes your experience and provides i
 
 ## icons
 
-**Required**
+Required:
 
 Icons used within the Teams app. The icon files must be included as part of the upload package.
 
@@ -380,7 +380,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 ## configurableTabs
 
-**Optional**
+Optional:
 
 Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope, and currently only one tab per app is supported.
 
@@ -397,14 +397,13 @@ The object is an array with all elements of the type `object`. This block is req
 
 ## staticTabs
 
-**Optional**
+Optional:
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
 Render tabs with Adaptive Cards by specifying `contentBotId` instead of `contentUrl` in the **staticTabs** block.
 
 The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
-
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -417,7 +416,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ## bots
 
-**Optional**
+Optional:
 
 Defines a bot solution, along with optional information such as default command properties.
 
@@ -442,7 +441,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ## connectors
 
-**Optional**
+Optional:
 
 The `connectors` block defines an Office 365 Connector for the app.
 
@@ -456,7 +455,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 ## composeExtensions
 
-**Optional**
+Optional:
 
 Defines a messaging extension for the app.
 
@@ -485,7 +484,7 @@ Each command item is an object with the following structure:
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
 |`context`|Array of Strings|3||Defines where the messaging extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the task module dynamically.|
 |`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -505,7 +504,7 @@ Each command item is an object with the following structure:
 
 ## permissions
 
-**Optional**
+Optional:
 
 An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
 
@@ -541,7 +540,7 @@ The object is an array with all elements of the type `string`.
 
 ## webApplicationInfo
 
-**Optional**
+Optional:
 
 Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Auzre AD app.
 
@@ -577,6 +576,7 @@ You can define any of the following properties:
 **Optional** - string
 
 Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+
 * `personal`
 * `team`
 * `groupchat`
@@ -587,10 +587,11 @@ Specifies the install scope defined for this app by default. The defined scope w
 **Optional** - object
 
 When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+
 * `team`
 * `groupchat`
 * `meetings`
- 
+
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|

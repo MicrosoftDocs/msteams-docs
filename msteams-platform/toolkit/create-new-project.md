@@ -1,20 +1,16 @@
 ---
 title: Create a new Teams project using Teams Toolkit
 author: zyxiaoyuer
-description:  Create new Teams project Using Teams Toolkit
+description:  Create new Teams app using Teams Toolkit
 ms.author: surbhigupta
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/02/2022
+ms.date: 03/11/2022
 ---
 
 # Create a new Teams app using Teams Toolkit
 
-To create a new Teams app using Teams Toolkit, you can select either  **Create a new Teams app** or **View samples**.
-
-## Create a new Teams app using Teams Toolkit
-
-**To create a new Teams app using Teams Toolkit**
+To create a new Teams app using Teams Toolkit, you can select either **Create a new Teams app** or **View samples**.
 
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar.
@@ -29,11 +25,9 @@ The following guides help you to a create Teams app using each of the capabiliti
 - [Create a new Message Extension app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
 - [Create a new Teams Tab app (SharePoint Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch) 
 
-## Create a new Teams app using sample code
+## Create a new Teams app using view samples
 
-You can create a new app by exploring **View samples** and selecting an existing sample for your new app. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
-
-Perform the following steps to create an app from one of the samples.
+You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
 
  1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
  1. Select **DEVELOPMENT** section in Tree View.

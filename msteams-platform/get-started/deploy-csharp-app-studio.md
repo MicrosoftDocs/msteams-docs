@@ -29,11 +29,10 @@ Complete the following steps to update the app package:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-
     The sample comes with its own manifest and is designed to build an app package when the project is built. The manifest.json file can be located in Visual Studio in Manifest under ```Microsoft.Teams.Samples.HelloWorld.Web```.
 
      In Visual Studio, the manifest.json file is located in under **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web`. This step is described by the following image:  
-    
+
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
 
 1. Now to modify this app package, select **Import an existing app** in the **Manifest editor**:
@@ -50,7 +49,7 @@ Complete the following steps to update the app package:
 
     On the left-hand side of the Manifest editor there is a list of steps. On the right-hand side there is a list of properties that need to be filled in for each step. As you started with a sample app, much of the information is already completed. The next steps enable you to update the properties of the Hello World app.
 
-#### App details
+## App details
 
 Select **App details** under **Details**. Select the **Generate** button to create a new App ID.
 
@@ -58,11 +57,11 @@ Your new App ID is similar to `2322041b-72bf-459d-b107-f4f335bc35bd`.
 
 Go through the app details in the right-hand pane including **Developer information** and **Branding** details. These details are important if you are writing a new app for distribution.
 
-#### Tabs
+## Tabs
 
 It is simple to add tabs to a Teams app. The sample app already supports several tabs, and you can enable them.
 
-##### Team tab
+### Team tab
 
 Your app can only have one Team tab:
 
@@ -70,7 +69,7 @@ Your app can only have one Team tab:
 
 In this sample, the Team tab is where your configuration page is displayed. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when hosting your app.
 
-##### Personal tabs
+### Personal tabs
 
 Your app can have up to 16 tabs, including the Team tab.
 
@@ -98,13 +97,13 @@ The bot that was imported from the sample does not have an associated App ID. Yo
 
 Complete the following steps to setup your bot:
 
-1. Select **Delete** next to the imported bot in the bot list. Now there are no bots left to show. 
+1. Select **Delete** next to the imported bot in the bot list. Now there are no bots left to show.
 1. Select **Setup** to display the **Set up a bot** dialog box.
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
 1. Add a bot name **Contoso bot** and select all three check boxes under **Scope**.
-1. Choose **Save** to exit the dialog box. App Studio registers your bot with Microsoft and displays your new bot in the bot list. 
+1. Choose **Save** to exit the dialog box. App Studio registers your bot with Microsoft and displays your new bot in the bot list.
 1. Now open a text file in notepad and copy and paste your new bot ID into it.
 1. Click **Generate New Password**, and note the password in the same text file you noted your bot App ID.
 1. Update the **Bot endpoint address** to `https://yourteamsapp.ngrok.io/api/messages`, and replace `yourteamsapp.ngrok.io` with the URL that you used when hosting your app.
@@ -147,7 +146,7 @@ Complete the following steps to setup your messaging extension:
 After entering the details of your app, complete the following steps to register your app in Teams:
 
 1. Use **Test and distribute** of App Studio to install your app in Teams.
-1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension. 
+1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension.
 1. Select **Test and distribute**  under **Finish** in the left-hand pane of App Studio:
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
@@ -155,7 +154,7 @@ After entering the details of your app, complete the following steps to register
 1. To upload your app to Teams, select the **Install** button under **Test and Distribute**:
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
-    
+
     > [!NOTE]
     > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
 
@@ -212,7 +211,7 @@ The sample app requires the environment variables to be set to the values that y
 
 After you've installed the app into Teams, configure it to display the tab that you want the app to load.
 
-**To configure the app tab**
+To configure the app tab:
 
 1. Go to a channel in the team where you installed the sample app, and select the **'+'** button to add a new tab.
 1. Select **Hello World** from the **Add a tab** list. A configuration dialog box is displayed that enables you to select the tab to display in this channel.
@@ -224,7 +223,7 @@ After you've installed the app into Teams, configure it to display the tab that 
 
 You can now test the bot in Teams.
 
-**To test your bot**
+To test your bot:
 
 - Select a channel in the team where you registered your app and type `@your-bot-name`. This type of message is called an **\@mention**. The bot replies to any message that you send.
 
@@ -232,7 +231,7 @@ You can now test the bot in Teams.
 
 ### Test your messaging extension
 
-**To test your messaging extension**
+To test your messaging extension:
 
 1. Select **...** below the input box in your conversation view. A menu with the **'Hello World'** app is displayed.
 1. Select the menu, a set of random texts is displayed. You can select one of the random texts and that is inserted into your conversation.

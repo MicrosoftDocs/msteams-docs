@@ -29,7 +29,6 @@ The following steps help you with authentication and bot application tokens:
    > * The bot token is received from every active user endpoint.
    > * The app must be installed in personal scope for SSO support.
 
-
 1. If the current user is using your bot application for the first time, a request prompt appears to   the user to do one of the following actions:
     * Provide consent, if necessary.
     * Handle step-up authentication, such as two-factor authentication.
@@ -80,6 +79,7 @@ The steps to register your app through the Azure AD portal are similar to the [t
    > To update your app manifest later, save the **Application (client) ID** value.
 
    > [!IMPORTANT]
+   >
    > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here *YourBotId* is your Azure AD application ID.
    > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
@@ -141,9 +141,9 @@ The steps to register your app through the Azure AD portal are similar to the [t
 1. The following steps will help you to enable implicit grant:
     * Select **Authentication** from the left pane.
     * Select the **Access tokens** and **ID tokens** checkboxes.
-    
+
     ![Grant flow](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
-    
+
     * Select **Save** to save the changes.
 
 1. Add necessary **API Permissions**.
@@ -158,7 +158,6 @@ The following steps will guide you to update the bot manifest in Azure portal:
 1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change it's value to **2**.
 
     ![Update manifest](~/assets/images/bots/update-manifest.png)
-
 
    >[!NOTE]
    > If you are already in testing your bot in Teams, you must sign out from this app and sign out from Teams. Then sign in again to see this change.
@@ -192,7 +191,7 @@ The following steps will guide you to update the Azure portal with the OAuth con
     * Add all the **Scopes** configured when specifying permissions to downstream APIs for your Azure AD application. With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
     * Select **Save**.
     * Select **Apply**.
-   
+
     ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### Update your Teams application manifest for your bot
@@ -206,6 +205,7 @@ If the application contains a standalone bot, then use the following code to add
             "resource": "api://botid-00000000-0000-0000-0000-000000000000"
         }
 ```
+
 If the application contains a bot and a tab, then use the following code to add new properties to the Teams application manifest:
 
 ```json
@@ -264,7 +264,7 @@ When the user selects **Continue**, the following events occur:
 
 #### Receive the bot token
 
-The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name, 
+The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
@@ -352,7 +352,6 @@ To understand what the bot does when the token exchange fails to trigger a conse
 
 6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
 
-
 ### Update the auth sample
 
 Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:
@@ -375,7 +374,8 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 4. Zip the manifest with the profile images and install it in Teams.
 
 ## Code sample
-|**Sample name** | **Description** |**.NET** | 
+
+|**Sample name** | **Description** |**.NET** |
 |----------------|-----------------|--------------|
 |Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
 

@@ -8,7 +8,7 @@ ms.author: surbhigupta
 ---
 
 # Single sign-on support for messaging extensions
- 
+
 Single sign-on (SSO) support is now available for messaging extensions and link unfurling. Enabling Single sign-on for messaging extensions by default refreshes the authentication token, which minimizes the number of times you need to enter the sign in credentials for Microsoft Teams.
 
 This document guides you on how to enable the SSO and store your authentication token, if necessary.
@@ -27,7 +27,8 @@ The prerequisite to enable SSO for messaging extensions and link unfurling are a
 
 After the prerequisites are completed, you can enable SSO for messaging extensions and link unfurling.
 
-**To enable SSO**
+To enable SSO:
+
 1. Update your bots [OAuth connection](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) details in the Microsoft Azure portal.
 2. Download the [messaging extensions sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) and follow the setup instructions provided by the wizard.
    > [!NOTE]
@@ -36,7 +37,7 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
 
     > [!NOTE]
     > We do not support other handlers SSO, except `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the TeamsMessagingExtensionsSearchAuthConfigBot.cs file.
-   
+
 4. You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you are enabling the SSO for:
 
     ```json
@@ -50,7 +51,7 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
      ```
   
     If you're using the OAuth connection, add the following code to the TeamsMessagingExtensionsSearchAuthConfigBot.cs file to update or add the token in the store:
-    
+
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
@@ -109,7 +110,7 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
             return true;
         }
     
-    ```    
+    ```
 
 ## See also
 

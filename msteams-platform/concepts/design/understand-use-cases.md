@@ -158,7 +158,7 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
 > [!NOTE]
 > Teams store has evolved:
-> 
+>
 > Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 ### App scope
