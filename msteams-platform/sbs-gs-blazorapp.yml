@@ -71,12 +71,12 @@ items:
 
     1. Select **ASP.NET and web development** under workloads.
 
-     1. Select **Microsoft Teams development tools**.
-       
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/install-yourapp.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
+    1. Select **Microsoft Teams development tools**.
        
     1. Select **Install**.
 
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/install-yourapp.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
+       
      Your Visual Studio is installed in few minutes.
     
     # [Command line](#tab/cli)
@@ -249,8 +249,7 @@ items:
     | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
     | `Pages/Tab.razor` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
     | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
-    |
-
+    
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
 - title: Build and run your first Teams tab app locally
