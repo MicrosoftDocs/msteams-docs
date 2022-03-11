@@ -25,3 +25,7 @@ In addition to these features, Teams store also offers:
 - Test preview: Teams store lets you preview and test a SaaS offer before you publish your app.
 
 Establishing a monetizing option beforehand helps guide the app design, app build and platform options, and app distribution decisions.
+
+## See also
+
+[Monetize your app](../deploy-and-publish/appsource/prepare/monetize-overview.md)

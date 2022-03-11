@@ -4,7 +4,7 @@ description: Learn the basic tasks and concepts needed to implement in-app purch
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-ms.localizationpriority: medium 
+ms.localizationpriority: high 
 ---
 
 # In-app purchases
