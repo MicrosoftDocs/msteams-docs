@@ -19,10 +19,10 @@ items:
     
     You'll create a tab app with Blazor and the latest version of Visual Studio.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has two features, Tab and Bot." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-apps.png" alt-text="Diagram showing this app has two features, tab and Bot." border="false":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers templates for only a Tab app with Blazor. Teams Toolkit doesn't support Bot and Message Extension capability.
+    > Currently, Teams Toolkit offers templates for only a tab app with Blazor. Teams Toolkit doesn't support bot and message extension capability.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -35,7 +35,6 @@ items:
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Latest version of Visual Studio](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Enterprise 2022 Preview (version 17.2.0). |
     | &nbsp; | - Visual Studio Code Extensions | •  [Azure Functions Core Tools](/azure/azure-functions/functions-run-local): Backend components locally during a local debug run. It includes the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). </br> •  [.NET SDK](/dotnet/core/install/): Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | **Optional** | &nbsp; | &nbsp; |
@@ -44,7 +43,6 @@ items:
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
     | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run. It includes the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
     | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-    |
 
     > [!TIP]
     > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
@@ -66,12 +64,20 @@ items:
     To install the Microsoft Teams Toolkit extension:
 
     1. Download the latest version of Visual Studio.
-    1. Select ASP.NET and web development under workloads.
+    1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
+    1. Select **Continue** in Visual Studio Installer to configure your installation.
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Select continue to configure your installation" border="true":::  
+
+    1. Select **ASP.NET and web development** under workloads.
+
+     1. Select **Microsoft Teams development tools**.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vsinstall.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/install-yourapp.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
        
-    1. Select Microsoft Teams development tools.
-    1. Select Install.
+    1. Select **Install**.
+
+     Your Visual Studio is installed in few minutes.
     
     # [Command line](#tab/cli)
 
@@ -141,7 +147,7 @@ items:
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
-    Start Teams app development by creating your first app. This app uses the Tab capability.
+    Start Teams app development by creating your first app. This app uses the tab capability.
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
 
@@ -213,10 +219,7 @@ items:
 
         1. Select the **Tab app** as the capability for your app.
 
-        1. Ensure to select the correct Microsoft 365 account for registering your app with Developer Portal. 
-
-          > [!NOTE]
-          > Set up E5 subscription for the selected Microsoft 365 account.
+        1. Ensure to select the correct Microsoft 365 account with E5 subscription. 
 
         1. Select **Create**.
 
@@ -317,15 +320,15 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
+    You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
 
-    1. **Select Provision in the Cloud:** You can provision your tab app in the cloud.
-    1. **Select Deploy to Cloud:** You can deploy your tab app to cloud. 
-    1. **Select Preview Teams app:** Your tab app opens in Teams. 
+    1. Select Provision in the Cloud: You can provision your tab app in the cloud.
+    1. Select Deploy to Cloud: You can deploy your tab app to cloud. 
+    1. Select Preview Teams app: Your tab app opens in Teams. 
 
-    Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
-    **To provision your tab app in the cloud**
+    #### **To provision your tab app in the cloud**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
@@ -335,27 +338,31 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select-subscription.png" alt-text="Select the subscription operation for the project" border="true":::
 
-      Provision warning displays. Select **Provision**.
+        Provision warning displays. 
+
+    1. Select **Provision**.
       
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/provision-warning.png" alt-text="Select the provision" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/provision-warning.png" alt-text="Select the provision" border="true":::
 
-      It takes a few minutes for your resource group to be provisioned in the cloud. You can view it in the Azure portal.
+        It takes a few minutes for your resource group to be provisioned in the cloud. You can view it in the Azure portal.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/resource-group.png" alt-text="Resource group is generated" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/resource-group.png" alt-text="Resource group is generated" border="true":::
 
-    **To deploy your tab app to cloud**
+    #### **To deploy your tab app to cloud**
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="false":::
 
-    **To preview your tab app in Teams**    
+        Your output displays as Successfully deployed to cloud. It copies the code for your app to the resources you created during the provision step.
+ 
+    #### **To preview your tab app in Teams**    
 
     1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-preview.png" alt-text="Select preview" border="false":::
 
-     1. Select **Add**, when prompted to install the app to Teams.
+    1. Select **Add**, when prompted to install the app to Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-add-app1.png" alt-text="Screenshot showing how to add app to Teams web client.":::
 
