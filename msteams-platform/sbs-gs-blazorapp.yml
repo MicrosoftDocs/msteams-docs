@@ -67,7 +67,7 @@ items:
     1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
     1. Select **Continue** in Visual Studio Installer to configure your installation.
 
-     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Select continue to configure your installation" border="true":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Select continue to configure your installation" border="true":::  
 
     1. Select **ASP.NET and web development** under workloads.
 
