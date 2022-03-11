@@ -77,9 +77,9 @@ landingContent:
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       - text: In-app purchases
-        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow
+        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Test preview
-        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps  
+        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md 
 
 - title: Build apps for Teams
   linkLists:
