@@ -32,7 +32,7 @@ items:
 
     * Install [ngrok](https://ngrok.com/) or equivalent tunneling solution.
     * Install [Node.js](https://nodejs.org/en/).
-    * Visual Studio Code or the latest version.
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
 - title: Configure and run the Tab device permissions app on Teams
