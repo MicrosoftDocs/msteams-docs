@@ -53,7 +53,7 @@ When you feel your app is production ready, you can begin the process of getting
 
   * Summary of all issues
 
-  * Details of failures or issues with policy links and categorization: 
+  * Details of failures or issues with policy links and categorization:
 
     * Mandatory fix: These issues must be fixed prior to app approval.
 

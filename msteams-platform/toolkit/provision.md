@@ -17,8 +17,8 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 * Account prerequisites
   To provision cloud resources, you must have the following accounts:
 
-    * Microsoft 365 account with valid subscription
-    * Azure with valid subscription
+  * Microsoft 365 account with valid subscription
+  * Azure with valid subscription
   For more information, see [how to prepare accounts for building Teams app](accounts.md).
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
@@ -99,7 +99,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md). 
+Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -277,9 +277,9 @@ The following steps are:
     }
     ```
 
-### Scenerio 
+### Scenerio
 
-**To add other Azure resource or storage to the application**
+To add other Azure resource or storage to the application:
 
 Consider the scenario, you want to add Azure storage to your Azure function backend to store blob data. There is no auto flow to update the bicep template with Azure storage support. However, you can edit the bicep file and add the resource. The steps are as follows:
 
@@ -354,7 +354,6 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 
 > [!NOTE]
 > Currently, the building Teams app with sharepoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
-
 
 <br>
 

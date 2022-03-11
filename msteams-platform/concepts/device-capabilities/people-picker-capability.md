@@ -24,7 +24,7 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 You must call the `selectPeople` API to integrate People Picker control in your Teams app. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the API.
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app.
 
-> [!NOTE] 
+> [!NOTE]
 > Currently, Microsoft Teams support for People Picker is available for mobile clients only.
 
 ## `selectPeople` API
@@ -41,7 +41,7 @@ The `selectPeople` API comes along with following input configurations:
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
 |`title`| String| It is an optional parameter. It sets title for the People Picker control. | Select people|
-|`setSelected`|String| It is an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. |Null| 
+|`setSelected`|String| It is an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. |Null|
 |`openOrgWideSearchInChatOrChannel`|Boolean | It is an optional parameter. When it is set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel. |False|
 |`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only. |False|
 
@@ -76,7 +76,7 @@ The following image depicts the experience of People Picker in a sample web app:
 
 ## Error handling
 
-You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated: 
+You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |

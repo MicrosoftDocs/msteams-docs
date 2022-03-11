@@ -24,7 +24,7 @@ Following are the advantages of integration of QR or barcode scanner capabilitie
 To integrate QR or barcode scanner capability, you must update the app manifest file and call the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API. For effective integration, you must have a good understanding of [code snippet](#code-snippet) for calling the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API, which allows you to use native QR or barcode scanner capability. The API gives an error for an unsupported barcode standard.
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
-> [!NOTE] 
+> [!NOTE]
 > Currently, Microsoft Teams support for QR or barcode scanner capability is only available for mobile clients.
 
 ## Update manifest
@@ -51,7 +51,7 @@ The **scanBarCode()** API supports the following barcode types:
 | Barcode Type | Supported on Android | Supported on iOS |
 | ---------- | ---------- | ------------ |
 | Codebar | Yes | No |
-| Code 39 | Yes | Yes | 
+| Code 39 | Yes | Yes |
 | Code 93 | Yes | Yes |
 | Code 128 | Yes | Yes |
 | EAN-13 | Yes | Yes |
@@ -69,7 +69,7 @@ The following image depicts web app experience of QR or barcode scanner capabili
 
 ## Error handling
 
-You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated: 
+You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |

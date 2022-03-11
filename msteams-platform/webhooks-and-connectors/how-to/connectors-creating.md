@@ -31,12 +31,13 @@ Users can complete the entire connector configuration experience without having 
 1. The user selects **Save**, which triggers a callback in code.
 
     > [!NOTE]
+    >
     > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
     > * The configuration experience is loaded inline within Teams.
 
 You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows.
 
-**To integrate the configuration experience**
+To integrate the configuration experience:
 
 1. Initialize the SDK by calling `microsoftTeams.initialize()`.
 1. Call `microsoftTeams.settings.setValidityState(true)` to enable **Save**.
@@ -137,9 +138,9 @@ The following table provides the parameters and the details of `GetSetting` resp
 
 Your code must handle users who return to edit an existing connector configuration. To do this, call `microsoftTeams.settings.setSettings()` during the initial configuration with the following parameters:
 
-- `entityId` is the custom ID that represents what the user has configured and understood by your service.
-- `configName` is a name that configuration code can retrieve.
-- `contentUrl` is a custom URL that gets loaded when a user edits an existing connector configuration.
+* `entityId` is the custom ID that represents what the user has configured and understood by your service.
+* `configName` is a name that configuration code can retrieve.
+* `contentUrl` is a custom URL that gets loaded when a user edits an existing connector configuration.
 
 This call is made as part of your save event handler. Then, when the `contentUrl` is loaded, your code must call `getSettings()` to pre populate any settings or forms in your configuration user interface.
 
@@ -212,7 +213,7 @@ Run the following commands in Exchange Online PowerShell:
 * To disable connectors for the tenant: `Set-OrganizationConfig -ConnectorsEnabled:$false`.
 * To disable actionable messages for the tenant: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
 * To enable connectors for Teams, run the following commands:
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
@@ -237,7 +238,7 @@ If you want the connector to be available only to the users in your organization
 
 After uploading the app package to configure and use the connector in a team, install the connector from the organization's app catalog.
 
-**To set up a connector**
+To set up a connector:
 
 1. Select **Apps** from the left navigation bar.
 1. In the **Apps** section, select **Connectors**.
@@ -263,8 +264,8 @@ The following table provides the sample name and its description:
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connectors	| Sample Office 365 Connector generating notifications to Teams channel.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Generic connectors sample |Sample code for a generic connector that is easy to customize for any system that supports webhooks.|	| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connectors | Sample Office 365 Connector generating notifications to Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Generic connectors sample |Sample code for a generic connector that is easy to customize for any system that supports webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## See also
 

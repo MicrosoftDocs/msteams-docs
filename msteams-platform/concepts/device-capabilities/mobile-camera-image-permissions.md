@@ -22,6 +22,7 @@ For effective integration, you must have a good understanding of [code snippets]
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE]
+>
 > * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.
 > * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
@@ -52,6 +53,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
   * Scan documents, whiteboard, and business cards  through the camera.
   
 > [!IMPORTANT]
+>
 > * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
 > * `selectMedia` API has been extended to support microphone and audio properties.
 
