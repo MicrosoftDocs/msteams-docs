@@ -83,9 +83,10 @@
 - name: Tools and SDKs
   items:
   - name: Overview on Tools and SDK
+  items:
     - name: Teams Toolkit
       href: teams-toolkit-fundamentals.md
-    - name: Teams Toolkit Framework
+     - name: Teams Toolkit Framework
       href: teams-toolkit-fundamentals.md
       - name: TeamsFx Library
         href: teams-toolkit-fundamentals.md    
