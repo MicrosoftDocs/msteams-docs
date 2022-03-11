@@ -82,11 +82,18 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
-  - name: Teams Toolkit for Visual Studio Code
+  - name: Overview on Tools and SDK
+    - name: Teams Toolkit
+      href: teams-toolkit-fundamentals.md
+    - name: Teams Toolkit Framework
+      href: teams-toolkit-fundamentals.md
+      - name: TeamsFx Library
+        href: teams-toolkit-fundamentals.md    
+  -  name: Teams Toolkit for Visual Studio Code
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md 
-    - name: Create new project
+    - name: Create new app using Teams Toolkit
       href: toolkit/create-new-project.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
