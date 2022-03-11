@@ -160,6 +160,18 @@ From designing to building and distributing a Teams app, you can use various too
 
 :::row:::
     :::column span="1":::
+        **Monetize your app**
+    :::column-end:::
+    :::column span="2":::
+        Teams store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
+
+        > [!div class="nextstepaction"]
+        > [Monetize your app]([Monetize your app](~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md))
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
         **Integrate with Teams**
     :::column-end:::
     :::column span="2":::
