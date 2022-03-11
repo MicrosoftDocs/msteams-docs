@@ -659,7 +659,7 @@ Application permissions allow the app to access data without a signed-in user. F
 
 Delegated permissions allow the app to access data on behalf of the signed-in user. 
 
-* **Resource-specific permissions for teams** 
+* **Resource-specific delegated permissions for teams** 
 
     |**Name**|**Description**|
     |---|---|
@@ -667,7 +667,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
 
-* **Resource-specific permissions for chats or meetings**
+* **Resource-specific delegated permissions for chats or meetings**
 
     |**Name**|**Description**|
     |---|---|
@@ -676,7 +676,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
 
-* **Resource-specific permissions for users**
+* **Resource-specific delegated permissions for users**
 
     |**Name**|**Description**|
     |---|---|
