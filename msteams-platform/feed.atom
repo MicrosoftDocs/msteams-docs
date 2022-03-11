@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2022-03-03T12:04:01+05:30</updated>
+	<updated>2022-03-11T12:04:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://docs.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Use external OAuth providers]]></title>
+		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-oauth-provider</id>
+		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-oauth-provider?referrer=whats.new.rssfeed"/>
+		<updated>2022-03-03T12:41:01+05:30</updated>
+		<summary type="html"><![CDATA[You can support external or third-party (3P) OAuth providers, such as Google, GitHub, LinkedIn, and Facebook using the updated authenticate() API.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20b608448b-3dd7-d5be-128c-da2859067140%0A*%20Version%20Independent%20ID%3A%20b608448b-3dd7-d5be-128c-da2859067140%0A*%20Content%3A%20%5BUse%20external%20OAuth%20providers%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Fauth-oauth-provider)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Fauth-oauth-provider.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Fauth-oauth-provider.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Step by step guide to invoke task modules from Microsoft Teams]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-botbuilder-taskmodule?tabs=latestversionofvisualstudio</id>
@@ -118,13 +126,4 @@
 		<updated>2022-02-03T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Added new code sample which shows how to add people picker in Adaptive Cards.</br></br>Would you please provide your <a href="https://github.com/OfficeDev/Microsoft-Teams-Samples/discussions">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
-	</entry>
-		<entry>
-		<title type="html"><![CDATA[Sample code for Typeahead search in Adaptive Cards]]></title>
-		<id>https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards</id>
-		<link href="https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards?referrer=whats.new.rssfeed"/>
-		<updated>2022-02-03T12:41:01+05:30</updated>
-		<summary type="html"><![CDATA[Added new code sample which shows how to add typeahead search (static and dynamic) control in Adaptive Cards.</br></br>Would you please provide your <a href="https://github.com/OfficeDev/Microsoft-Teams-Samples/discussions">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
 </feed>
