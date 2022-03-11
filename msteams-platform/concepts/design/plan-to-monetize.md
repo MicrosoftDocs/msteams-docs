@@ -12,7 +12,7 @@ Microsoft Teams app store provide features that enable you to monetize your apps
 
 Consider publishing your app on Teams store to offer your app the best platform for global visibility. Factors, such as type of app, nature of service, target customers influence the best monetization option for your app.
 
-\ Image placeholder \
+:::image type="content" source="../../assets/images/app-fundamentals/monetize-apps.png" alt-text="Monetize apps":::
 
 The most common ways to monetize your apps are:
 
