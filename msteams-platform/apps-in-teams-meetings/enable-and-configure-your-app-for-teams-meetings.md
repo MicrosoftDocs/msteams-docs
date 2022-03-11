@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in meeting scope within their app manifest.
 
-# Prerequisites for apps in Teams meetings
+## Prerequisites
 
 With apps for Teams meetings, you can expand the capabilities of your apps across the meeting lifecycle. Before you work with apps for Teams meetings, you must fulfill the following prerequisites:
 
