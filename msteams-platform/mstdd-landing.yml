@@ -28,6 +28,8 @@ landingContent:
         url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
       - text: Microsoft Teams store ranking parameters
         url: ~/concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+      - text: Moodle LMS and Microsoft 365 plugins
+        url: ~/resources/moodle-overview.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -38,11 +40,9 @@ landingContent:
         url: ~/concepts/app-fundamentals-overview.md  
       - text: App manifest schema version 1.12
         url: ~/resources/schema/manifest-schema.md
-      - text: Interactive mode to share meeting stage 
-        url: ~/apps-in-teams-meetings/API-references.md
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-      - text: In-app purchase flow for monetization of apps
+      - texst: In-app purchase flow for monetization of apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       
       

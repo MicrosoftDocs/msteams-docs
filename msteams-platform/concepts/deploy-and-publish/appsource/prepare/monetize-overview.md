@@ -19,7 +19,7 @@ Microsoft Teams app Store provide features that enable you to monetize your apps
     :::column-end:::
     :::column span="2":::
 
-**Include a SaaS offer with your app**
+Include a SaaS offer with your app:
 
 With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams store listing.
 
@@ -32,7 +32,7 @@ With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-p
     :::column-end:::
     :::column span="2":::
 
-**Free trials**
+Free trials:
 
 You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
 
@@ -56,7 +56,7 @@ Whether you charge a price for your app or offer it for free, you can use in-app
     :::column-end:::
     :::column span="2":::
 
-**Test preview for monetized app**
+Test preview for monetized app:
 
 With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
 
@@ -64,6 +64,7 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
     :::column-end:::
 :::row-end:::
+
 ## Next step
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

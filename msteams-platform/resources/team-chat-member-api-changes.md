@@ -30,7 +30,7 @@ The following code provides a sample JSON representation of what is returned by 
     "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
     "name": "Anon1 (Guest)",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-	"userRole": "anonymous"
+ "userRole": "anonymous"
 }, {
     "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
     "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
@@ -39,7 +39,7 @@ The following code provides a sample JSON representation of what is returned by 
     "email": "johnp@fabrikam.com",
     "userPrincipalName": "johnp@fabrikam.com",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-	"userRole": "user"
+ "userRole": "user"
 }, {
     "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
     "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
@@ -48,7 +48,7 @@ The following code provides a sample JSON representation of what is returned by 
     "email": "Rick.Stevens@fabrikam.com",
     "userPrincipalName": "rstevens@fabrikam.com",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-	"userRole": "user"
+ "userRole": "user"
 }]
 ```
 
