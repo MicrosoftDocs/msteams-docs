@@ -19,6 +19,7 @@ To enable your app for Teams meetings, update your app manifest and use the cont
 The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. The scope defines who can access and the context defines where your app is available.
 
 > [!NOTE]
+>
 > * You must update your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
 > * Apps in meetings require `groupchat` scope. The `team` scope works for tabs in channels only.
 
@@ -73,7 +74,7 @@ Teams meetings provide a collaborative experience for your organization. Configu
 
 Before a meeting, users can add tabs, bots, and messaging extensions. Users with organizer and presenter roles can add tabs to a meeting.
 
-**To add a tab to a meeting**
+To add a tab to a meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
@@ -82,16 +83,17 @@ Before a meeting, users can add tabs, bots, and messaging extensions. Users with
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
-**To add a messaging extension to a meeting**
+To add a messaging extension to a meeting:
 
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat.
 1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
 
-**To add a bot to a meeting**
+To add a bot to a meeting:
 
 In a meeting chat, enter the **@** key and select **Get bots**.
 
 > [!NOTE]
+>
 > * The content bubble posts an Adaptive Card or a card simultaneously in the meeting chat that users can access. This helps the users when the meeting or the Teams app is minimized.
 > * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
@@ -99,7 +101,7 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 
 ### During a meeting
 
-During a meeting, you can use the `meetingSidePanel` or the in-meeting dialog box to build unique experiences for your apps.
+During a meeting, you can use the `meetingSidePanel` or in-meeting notification to build unique experiences for your apps.
 
 #### Meeting SidePanel
 
@@ -112,15 +114,13 @@ Messaging extension works as expected when a user is in an in-meeting view. The 
 > [!NOTE]
 > Use version 1.7.0 or higher of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
 
-#### In-meeting dialog box
+#### In-meeting notification
 
-The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. Use the [SendNotificationSignal API](API-references.md#send-notification-signal-api) to trigger a bubble notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting notification is used to engage participants during the meeting and collect information or feedback during the meeting. Use an [in-meeting notification payload](API-references.md#send-an-in-meeting-notification) to trigger an in-meeting notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
-In-meeting dialog must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
+In-meeting notification must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-> [!NOTE]
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
-> * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Example shows how you can use an in-meeting dialog." border="true":::
 
 #### Shared meeting stage
 
@@ -153,7 +153,7 @@ To share the entire app to stage, in the app manifest you must configure `meetin
   ]
 ```
 
-For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs). 
+For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
 ##### Share specific parts of the app to stage
 

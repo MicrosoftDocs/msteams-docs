@@ -141,6 +141,7 @@ HTTP/1.1 202 Accepted
 ```http
 400 Bad Request
 ```
+
 You can receive the error message in the following scenarios:
 
 * If `createdDateTime` is set for future.
@@ -151,6 +152,7 @@ You can receive the error message in the following scenarios:
 After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
 
 > [!NOTE]
+>
 > * Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.
 > * `createdDateTime` must be unique across messages in the same thread.
 > * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has the value of `createdDateTime` set as *2020-09-16T05:50:31.0025302Z*, then it would be converted to *2020-09-16T05:50:31.002Z* when the message is ingested.
@@ -227,6 +229,7 @@ HTTP/1.1 200 OK
 #### Request (POST a message with inline image)
 
 > [!NOTE]
+>
 > * There are no special permission scopes in this scenario since the request is part of `chatMessage`.
 > * The scopes for `chatMessage` apply here.
 
@@ -374,7 +377,6 @@ The following table provides the content scope:
 ||Emojis|
 ||Quotes|
 ||Cross posts between channels|
-
 
 ## See also
 

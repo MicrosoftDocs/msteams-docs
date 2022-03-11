@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Moodle LMS and Microsoft 365 plugins
+        url: ~/resources/moodle-overview.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -34,8 +36,6 @@ landingContent:
         url: ~/concepts/app-fundamentals-overview.md  
       - text: App manifest schema version 1.12
         url: ~/resources/schema/manifest-schema.md
-      - text: Interactive mode to share meeting stage 
-        url: ~/apps-in-teams-meetings/API-references.md
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
       - text: In-app purchase flow for monetization of apps
@@ -44,6 +44,9 @@ landingContent:
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: People Picker in Adaptive Cards
         url: ~/task-modules-and-cards/cards/people-picker.md
+      - text: Authentication using external OAuth providers  
+        url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
+
       
       
 - title: All time favorites
@@ -58,6 +61,7 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       - text: Explore low-code apps for Teams
         url:  ~/samples/teams-low-code-solutions.md 
+        
         
 - title: Get started
   linkLists:
@@ -144,6 +148,14 @@ landingContent:
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
+        - text: Invoke task modules from Microsoft Teams
+          url: ~/sbs-botbuilder-taskmodule.yml
+        - text: Build search based messaging extension
+          url: ~/sbs-messagingextension-searchcommand.yml
+        - text: Build action based messaging extension
+          url: ~/sbs-meetingextension-action.yml
+        - text: Build Outgoing Webhooks
+          url: ~/sbs-outgoing-webhooks.yml
 
 - title: Teams app scenarios
   linkLists:
@@ -166,6 +178,3 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
-
-
-    
