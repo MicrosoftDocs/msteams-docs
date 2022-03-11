@@ -31,7 +31,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| MSBF SDK|
 
 > [!NOTE]
-> Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
+> Use Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
 
 ## Get user context API
 
@@ -49,9 +49,9 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 ### Query parameters
 
 > [!TIP]
-> Get participant IDs and tenant IDs from the Tab SSO.
+> Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
-Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. The parameters are available as part of the Teams Client SDK and bot activity.
 
 The following table includes the query parameters:
 
