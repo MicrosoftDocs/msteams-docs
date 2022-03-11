@@ -31,12 +31,15 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * Microsoft Teams with an account (not a guest account)
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
-
+       
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+    
 - title: Set up local environment
   durationInMinutes: 1
   content: |
@@ -85,6 +88,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
+    1. Select **Type of App** as `Multi Tenant`
     1. Select **Review + create**.
 
        ![Register bot](~/assets/images/Tab-ME-SSO/register-bot-2.png)
@@ -109,10 +113,6 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **MultiTenant** under **Bot Type**.
-
-        ![Bot Type](~/assets/images/Tab-ME-SSO/bot-type.png)
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -190,9 +190,7 @@ items:
 
 - title: Configure SSO for your tab 
   durationInMinutes: 1
-  content: |
-    **To register your app through the Azure AD portal**  
-
+  content: | 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
@@ -207,7 +205,7 @@ items:
 
        ![Expose an API](~/assets/images/Tab-ME-SSO/application-id-set.png)
 
-    1. Set the **Application ID URI** in the form of `api://botid-{AppID}`.
+    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
 
        ![Set link](~/assets/images/Tab-ME-SSO/appid-uri1.png)
         
@@ -235,7 +233,7 @@ items:
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://botid-00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://your ngrok/botid-00000000-0000-0000-0000-000000000000/access_as_user`
 
           ![Scopes](~/assets/images/Tab-ME-SSO/add-a-scope-final1.png) 
   
@@ -271,17 +269,13 @@ items:
 
     1. Select **Delegated permissions**.
 
-       By default, **User.Read** is selected.
-
-       ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
-
     1. Add the following permissions:</br>
         * **email**
         * **offline_access**
         * **OpenId**
         * **profile**
+        * **User.Read**
   
-
     1. Select **Add permissions**.
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
@@ -419,8 +413,6 @@ items:
 - title: Upload SSO App to Teams
   durationInMinutes: 1
   content: |
-    **To run Teams app by uploading the manifest.zip file**
-
     1. In your cloned repository, navigate to **csharp > App SSO Sample > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
