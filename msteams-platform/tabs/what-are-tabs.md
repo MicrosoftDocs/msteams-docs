@@ -16,7 +16,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML 
 
 The following image shows personal tabs:
 
-:::image type="content" source="../assets/images/get-started/PersonalTab.png" alt-text="Personal tabs" lightbox="../assets/images/get-started/PersonalTab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Personal tab" lightbox="../assets/images/tabs/personaltab.png":::
 
 The following image shows Contoso channel tabs:
 
