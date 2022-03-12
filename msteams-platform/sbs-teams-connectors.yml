@@ -61,7 +61,6 @@ items:
 - title: Enable developer preview
   durationInMinutes: 1
   content: |
-   **To enable developer preview in your desktop Teams client:**
 
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
@@ -93,7 +92,7 @@ items:
 
     1. Go to **Microsoft Teams**.
     
-    1. From the upper right corner of your Teams interface, select `...`.
+    1. From the upper right corner of your Teams interface, select `...` .
     
     1. Select **About**. 
     
@@ -108,7 +107,6 @@ items:
 - title: Configure your own connector
   durationInMinutes: 1
   content: | 
-    **To create your own connector:**
 
     1. Navigate to **TeamsToDoAppConnector.sln** in cloned repository.
 
@@ -152,39 +150,34 @@ items:
        > [!TIP]
        > Save the Connector ID for future reference.
 
-    6. Navigate to **Web** in cloned repository.
+    6. Select **TeamsToDoAppConnector.csproj** file from **TeamsToDoAppConnector folder**.
 
-       ![Navigation path](~/assets/images/sbs-connector/webnavigation.png) 
+       ![Navigation path](~/assets/images/sbs-connector/web.png) 
 
-    7. Open in Visual Studio.
+    7. Open in Latest version of Visual Studio. 
 
     8. Replace the `configuration.appSettings.BaseUrl` variable to `ngrok https forwarding url`.
        
        ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
 
     9. Press **F5** to run the project.
-    10. Sideload your app package.
+    10. A web page opens with a message.
 
-        ![Sideloading](~/assets/images/sbs-connector/apppackage.png) 
-
-    11. You can test your new connector.
+        ![Sideloading](~/assets/images/sbs-connector/local host.png) 
 
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
-    **To test the connector in Microsoft Teams:**
 
-    1. Navigate to **manifest.json** in cloned repository.
-
-       ![Manifest location](~/assets/images/sbs-connector/manifestnavigation.png)
+    1. In your cloned repository, navigate to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
-       ![Manifest zip](~/assets/images/sbs-connector/web.png)
-   
+       ![Manifest location](~/assets/images/sbs-connector/zip.png)
+
     1. Go to **Microsoft Teams**.
     1. In the left panel, select **Store** and select **Manage your apps**.
 
