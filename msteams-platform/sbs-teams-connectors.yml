@@ -163,7 +163,7 @@ items:
     9. Press **F5** to run the project.
     10. A web page opens with a message. 
 
-     ![local host](~\assets\images/sbs-connector/local host.png)    
+       ![Local host](~\assets\images/sbs-connector/local host.png)    
 
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
