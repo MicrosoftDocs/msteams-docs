@@ -34,7 +34,7 @@ This is for c#.
 
 ::: zone-end
 
-::: zone pivot="Javascript"
+::: zone pivot="js"
 
 This is for JS.
 

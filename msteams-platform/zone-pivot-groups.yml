@@ -11,11 +11,11 @@ groups:
   - id: mex-app
     title: Messaging Extension
 
-- id: Language
+- id: language
   title: Programming Languages
   prompt: Select the Programming Language that you want to use.
   pivots:
   - id: c-sharp
     title: C#
-  - id: JavaScript
+  - id: js
     title: JavaScript
