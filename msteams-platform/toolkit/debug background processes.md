@@ -23,14 +23,6 @@ The following table lists the limitations if the Node.js software is unavailable
 |Software | Installation | Limitation |
 | --- | --- | --- |
 |Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
-
-The following table lists the limitations if the software is unavailable for Teams app capability:
-The following table lists the limitations if the software is unavailable for Teams app capability:
-The following table lists the limitations if the software is unavailable for Teams app capability:
-
-
-|Software | Installation | Limitation |
-| --- | --- | --- |
 |Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Bot | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
@@ -44,10 +36,10 @@ The following table lists the limitations if the software is unavailable for Tea
 
 Use the following .NET Core versions:
 
-| Platform  |.NET Core SDK versions |li |
+| Platform  |.NET Core SDK versions |- |
 | --- | --- | --- |
-|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |li|
-|  macOs (arm64) | 6.0 |li|
+|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |-|
+|  macOs (arm64) | 6.0 |-|
 
 
 > [!NOTE]
