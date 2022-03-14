@@ -21,7 +21,7 @@ If you don’t have an existing Microsoft 365 account with a valid subscription,
 
 If you want to host your app related resources or access resources within Azure, you must have an Azure subscription. You can [create a free account](https://azure.microsoft.com/free/) before you begin.
 
-## Join Microsoft 365 developer program 
+## Join Microsoft 365 developer program
 
 If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
@@ -36,15 +36,15 @@ If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365
 
 You can sign up for the developer program by using one of the following account types:
 
-- **Microsoft account for personal use** 
+* **Microsoft account for personal use**
 
   Provides access to all consumer oriented Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Signing up for an Outlook.com mailbox automatically creates a Microsoft account. After a Microsoft account is created, it can be used to access consumer-related Microsoft cloud services or Azure.
 
-- **Work account for business**
+* **Work account for business**
 
   Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Microsoft Azure Active Directory (Azure AD) to represent your organization.
 
-- **Visual Studio ID**
+* **Visual Studio ID**
 
   You can create for your Visual Studio Professional or Enterprise subscriptions - We recommend that you use this option to join the developer program from within the Visual Studio Gallery to get the full benefits as a Visual Studio subscriber.
 
