@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams Connector is Model-View-Controller (MVC) sample task management application generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or Task management. You can add your existing Office 365 Connector or build a new one within Teams.
+    Microsoft Teams connector is Model-View-Controller (MVC) sample task management application.The application is generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or Task management. You can add your existing Office 365 Connector or build a new one within Teams.
     
     **Types of connector codes**
 
-      * ConnectorController.cs - Set up and save actions.
-      * TaskController.cs - Create and update actions.
+      * **ConnectorController.cs**: Set up and save actions
+      * **TaskController.cs**: Create and update actions.
 
-    **Key features of Microsoft Teams Connector**
+    **Key features of Microsoft Teams connector**
 
       * Simulates real task management system.
       * Allows users to create and view tasks.
@@ -40,15 +40,14 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    * [Latest version ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
    
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
 - title: Set up local environment
   durationInMinutes: 1
-  content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+  content: |  
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
@@ -102,11 +101,11 @@ items:
    
     1.   Select **Switch to developer preview**.
 
-- title: Configure your own connector
+- title: Configure your connector
   durationInMinutes: 1
   content: | 
 
-    1. Navigate to **TeamsToDoAppConnector.sln** in cloned repository.
+    1. Navigate to **TeamsToDoAppconnector.sln** in cloned repository.
 
        ![sln path](~/assets/images/sbs-connector/sln.png)
 
@@ -152,14 +151,14 @@ items:
 
        ![Navigation path](~/assets/images/sbs-connector/web.png) 
 
-    7. Open in Latest version of Visual Studio. 
+    7. Open in Visual Studio. 
 
-    8. Replace the `configuration.appSettings.BaseUrl` variable to `ngrok https forwarding url`.
+    8. Replace the `configuration.appSettings.BaseUrl` variable with `ngrok https forwarding url`.
        
        ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
 
     9. Press **F5** to run the project.
-       A web page opens with a message. 
+       A web page opens. 
 
        ![Local-host](~\assets\images/sbs-connector/local-host.png)    
 
@@ -177,7 +176,7 @@ items:
        ![Manifest location](~/assets/images/sbs-connector/zip.png)
 
     1. Go to **Microsoft Teams**.
-    1. In the left panel, select **Store** and select **Manage your apps**.
+    1. In the left panel, select **Store** > **Manage your apps**.
 
        ![Manage Apps](~/assets/images/sbs-connector/manageapp.png)
 
@@ -244,6 +243,6 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="final output" border="true":::
 
 - content: |
-    You've completed the tutorial to get started with **Microsoft Teams Connectors**!
+    You've completed the tutorial to get started with **Microsoft Teams connectors**!
 
 
