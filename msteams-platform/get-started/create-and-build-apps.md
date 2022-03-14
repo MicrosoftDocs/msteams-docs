@@ -1,6 +1,6 @@
 ---
 title: Create and build a Teams app with JavaScript
-description: Learn to build Hello World apps with JavaScript with tab, bot, and messaging extension feature.
+description: Learn to build Hello World apps with JavaScript with tab, bot, and messaging extension feature copy.
 ms.topic: article 
 ms.date: 01/11/2022
 zone_pivot_groups: teams-app-types
@@ -25,19 +25,3 @@ Start Microsoft Teams app development by creating your first app. This app uses 
 Start Microsoft Teams app development by creating your first app. This app uses the Messaging Extension capability.
 
 ::: zone-end
-
-## Languages
-
-::: zone pivot="c-sharp"
-
-This is for c#.
-
-::: zone-end
-
-::: zone pivot="js"
-
-This is for JS.
-
-::: zone-end
-
-
