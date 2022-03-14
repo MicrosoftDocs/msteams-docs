@@ -1,75 +1,23 @@
 ---
-title: Authenticating with AAD SSO
+title: Authenticating with AAD SSO for Teams
 description: Authentication in Teams apps using AAD SSO
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), OIDC, username, password
 ---
-# AAD SSO in Teams
+# Authenticate with AAD SSO
 
-Many applications exist in Azure AD that you can access using SSO. You have several options for SSO depending on the needs of the application and how it's implemented. Take time to plan your SSO deployment before you create applications in Azure AD. The management of applications can be made easier by using the My Apps portal.
+Azure Active Directory (Azure AD) is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Azure AD also helps them access internal resources. These are resources like apps on your corporate network and intranet, along with any cloud apps developed by your own organization.
 
-In this page, you'll learn about:
+Use Azure AD as a standards-based approach for adding single sign-on (SSO) to your app. SSO is an authentication method that lets users sign in using one set of credentials to multiple independent software systems. Using SSO means a user doesn't have to sign in to every application they use. With SSO, users can access all needed applications without being required to authenticate using different credentials.
 
-- Prerequisites for using AAD SSO
-- Role of AAD SSO in authentication
-- AAD SSO user experience
-- Advantages of using AAD SSO
+## AAD SSO for Teams
 
-## Case for AAD SSO
+You can use AAD SSO to implement authentication for your Teams app users. When you register your Teams app with AAD, it becomes the main identity provider (IdP) for validating access to Azure-based systems and applications.
 
-Let's look at an app scenario to understand the benefits and implementation of AAD SSO authentication in an app.
+Some prerequisites for implementing authentication with AAD SSO are:
 
-**App scenario**:
-ABC organization wants to build a Teams app for sharing its Sales Dashboard content with its global Sales and Marketing team and Finance team.
+- **Create a Teams app**: Your Teams app can have single or multiple capabilities, such as tabs, bots, messaging extensions, and more. Teams offers a different UI and UX experience for each feature. This makes your Teams app completely compatible with AAD SSO functionality irrespective of its features.
+- **Register your app with AAD**: Establish a trust relationship between AAD and your Teams app. AAD serves as an IdP for your app users and will be able to authenticate them. To register your app, provide app ID, configure access permissions, and define scope for user access on the Azure portal.
+- **Register users with AAD**: All valid app users are registered with AAD. Users registered with AAD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.
 
-Here's a list of app requirements:
-
-- Collect its sales data from company's database.
-- Create Dashboard with charts and tables.
-- Make the Dashboard app available within organization to valid users across different locations.
-- Distribute the app as desktop app for local users, web app for global users, and mobile app for access on-the-go.
-
-## Prerequisites
-
-Before you can use AAD SSO to authenticate your app users, ensure that:
-
-- Create a Teams tab AAD to display sales dashboard.
-- Register your app with AAD: Establish a trust relationship between AAD and your Teams app. AAD serves as an IdP for your app users and will be able to authenticate them. To register your app, provide app ID, configure access permissions, and define scope for user access on the Azure portal.
-- All valid app users are registered with AAD: Users registered with AAD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.
-
-## Role of AAD SSO in authentication
-
-AAD is the main identity provider (IdP) for validating access to Azure-based systems and applications.
-
-<br>
-
-:::image type="content" source="../../assets/images/authentication/aad-sso-process.png" alt-text="AAD SSO process":::
-
-\ Include an info-graphic to show the AAD SSO flow and description \
-
-<br>
-The AAD SSO process used in a Teams app for the first user login:
-
-| # | Steps | Key points |
-|--- | --- | --- |
-| 1 | A Teams app user attempts to log in | - The user provides their credentials to the app. <br> - It may include the username and password of the user. |
-| 2 | Teams app sends the user credentials to AAD for verification | - AAD receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
-| 3 | AAD verifies the user information. | - AAD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
-| 4 | On a successful match, AAD sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to let the user access at subsequent log ins. |
-| 5 | The user is given access once and for all. | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
-
-## AAD SSO user experience
-
-\ Include images for AAD SSO UX \
-\ UX for all Teams capabilities: tabs, bots, messaging extensions, link unfurling \
-
-## Advantages of using AAD SSO
-
-\ Add Introduction, details, and examples \
-
-1. True Single sign-on: AAD SSO offers true SSO experience for your Teams app users. Once the user has logged in successfully to your app, they don't have to log in again at all.
-1. Security via ID token:
-1. Access for all applications within the systems: If a Teams app user attempts to access a new service or a subsystem in the Azure system, they can access it without any further need for logging in. The users can access all Azure-based services and systems. You can also customize the process for granting access. You can grant access to all services at the same time on the user's first successful log in. If you want, you can grant access to services and subsystem as needed by the user. This method is called staggered permissions.
-1. Security of customer data
-1. Personalized user experience
