@@ -33,11 +33,11 @@ You can create a new app by exploring **View samples** and selecting an existing
  1. Select **DEVELOPMENT** section in Tree View.
  1. Select **View samples**. The sample gallery appears as shown in the following image:
  
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
 You can explore and download samples and either run apps locally or remotely to preview in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample within the `TeamsFx`- Samples repository and browse the source code.
 
-The following guide help you to a create Teams tab and bot app capabilities:
+For detailed information please refer to the following guides, which help you to create Teams app with tab and bot capabilities:
 
 - [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
 - [Create a new Teams Bot app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
