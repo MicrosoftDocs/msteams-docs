@@ -66,8 +66,7 @@ Some prerequisites for implementing authentication with user credentials are:
 | # | Steps | Key points |
 |--- | --- | --- |
 | 1 | A Teams app user attempts to access the Teams app. | - The user provides their credentials to the app. <br> - It may include the username and password of the user. |
-| 2 | The Teams app verifies the user credentials against the user details.  | - The Teams app receives user credentials and verifies it against user information in the organization's database. <br>
-- This information may include user credentials along with details of the app that requested authentication. |
+| 2 | The Teams app verifies the user credentials against the user details.  | - The Teams app receives user credentials and verifies it against user information in the organization's database. <br> - This information may include user credentials along with details of the app that requested authentication. |
 | 3 | On a successful match, the user is granted app access to your Teams app. | - The access is valid only for the current session. <br> - If the user access the Teams app again, the authentication process is repeated. |
 
 ### Username and password user experience
