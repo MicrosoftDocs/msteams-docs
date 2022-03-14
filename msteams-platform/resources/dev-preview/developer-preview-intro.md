@@ -37,10 +37,10 @@ To enable the public developer preview on a desktop or web client:
 
 To enable the public developer preview on a mobile client:
 
-1. Enabling uploading of apps in the admin console of your tenant as described [here](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+1. Enable app uploading or sideloading for your developer tenant. For more information, see [Enable custom Teams apps and turn on custom app uploading](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 1. Open the hamburger menu on the top left, then select **Settings**.
 1. Select **About**.
-1. Click the Developer preview toggle.
+1. Turn on the **Developer preview** toggle.
 
 ## Disable developer preview
 
