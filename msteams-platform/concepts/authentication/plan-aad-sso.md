@@ -34,4 +34,3 @@ Implementing AAD SSO for authentication in your app means that AAD would serve a
 | 3 | AAD serves as an IdP and verifies the user information. | - AAD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
 | 4 | On a successful match, AAD sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to let the user access at subsequent log ins. |
 | 5 | Every time the user accesses any part of your app or any other resource, the IdP uses the ID token to authenticate the user. The user is given access once and for all. | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
-

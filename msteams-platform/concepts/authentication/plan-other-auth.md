@@ -11,36 +11,34 @@ You can choose to implement authentication in your Teams app using methods, such
 
 In this page, you'll learn:
 
-- About Teams silent authentication
 - Using other IdPs
 - Using username and password
-- Using OIDC or username and password with AAD SSO
 
-## Teams silent authentication
+## Authenticate using other IdPs
 
-Silent authentication is method provided in Teams environment.
+You can use other IdPs to implement authentication for your Teams app users. It can be Google or Facebook, or any other service that provides identity and access management.
 
-1. The app requests the user credentials via Teams app from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
+Some prerequisites for implementing authentication with an IdP are:
 
-1. The IDP requests the user for their credentials and shares it with the app in an ID token (cookie).
+- **Create a Teams app**: Your Teams app can have single or multiple capabilities, such as tabs, bots, messaging extensions, and more. Teams offers a different UI and UX experience for each feature.
+- **Register your app with IdP**: Establish a trust relationship between your chosen IdP and your Teams app. The IdP will be able to authenticate all users registered with it.
+- **Register users with IdP**: All valid app users are registered with the IdP. After first successful sign in, the user's ID token is refreshed for later user.
 
-1. Teams Client refreshes this token (cookie) for the user. It uses a login hint (user's email address) for refreshing the token.
+### Role of other IdPs in authentication
 
-The process informs the user that their token is refreshed, with no user input required to continue their ongoing session. It isn't true SSO as the user would still need to sign in on a different device (new session).
+An IdP authenticates users identity for access your Teams app. This authentication is not true SSO. The IdP sends a token for a verified user in response to the request for authenticating user credentials sent by your Teams app. The Teams app uses the token to authenticate the user. However, the token is good only for a limited time. If the user attempts to access the Teams app after the token has expired, the Teams app uses the token and login hint shared in its initial request.
 
-\ Add info-graphic showing authentication flow and description \
+The user sees a pop up dialog when their token is refreshed and they are able to access the app again.
 
-## Role of other IdPs in authentication
+:::image type="content" source="../../assets/images/authentication/other-idp-process.png" alt-text="Authenticating with other IdPs":::
 
-\Include an info-graphic and description \
-
-The workflow used in a Teams app:
-
-1. The app request the user credentials via Teams from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
-
-1. The IDP requests the user for their credentials and shares it with the app in an ID token.
-
-The user is authenticated with the ID token.
+| # | Steps | Key points |
+|--- | --- | --- |
+| 1 | A Teams app user attempts to log in for the first time. | - The user provides their credentials to the app. <br> - It may include the username and password of the user. |
+| 2 | The Teams app leads the user to a sign-in page. It sends the user credentials to IdP for verification | - IdP receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
+| 3 | The IdP verifies the user information. | - IdP matches the user credentials with its database. <br> - It verifies user access for the particular app. |
+| 4 | On a successful match, the IdP sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token and the login hint is used to refresh the ID token. <br> - After the ID token is refreshed, the user is able to access the app. |
+| 5 | If the user access the Teams app from a different browser or a different device, the authentication process is repeated. | - Your app redirects the user to continue with their selected IdP. <br> - The app requires the user to provide login credentials. <br> - Teams sends the credentials to the IdP and on successful verification, sends an ID token. |
 
 ### Other IdPs user experience
 
@@ -56,7 +54,21 @@ The user is authenticated with the ID token.
 
 ## Username and password for authentication
 
-\ Add introduction and description \
+Username and password are the simplest form of user authentication. The user is required to enter login credentials every time they attempt to access the Teams app. If a user needs to access multiple apps or services, they need to keep track of and maintain multiple usernames and passwords.
+
+Some prerequisites for implementing authentication with user credentials are:
+
+- **Create a Teams app**: Your Teams app can have single or multiple capabilities, such as tabs, bots, messaging extensions, and more. Teams offers a different UI and UX experience for each feature.
+- **Create user accounts**: Your organization creates user accounts for each app user and maintains their username and password. This information is used to validate user access to your app.
+
+:::image type="content" source="../../assets/images/authentication/user-credentials.png" alt-text="Authentication with user credentials":::
+
+| # | Steps | Key points |
+|--- | --- | --- |
+| 1 | A Teams app user attempts to access the Teams app. | - The user provides their credentials to the app. <br> - It may include the username and password of the user. |
+| 2 | The Teams app verifies the user credentials against the user details.  | - The Teams app receives user credentials and verifies it against user information in the organization's database. <br>
+- This information may include user credentials along with details of the app that requested authentication. |
+| 3 | On a successful match, the user is granted app access to your Teams app. | - The access is valid only for the current session. <br> - If the user access the Teams app again, the authentication process is repeated. |
 
 ### Username and password user experience
 
