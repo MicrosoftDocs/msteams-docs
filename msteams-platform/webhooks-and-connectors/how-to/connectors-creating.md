@@ -271,7 +271,7 @@ The following table provides the sample name and its description:
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and test a connector in Microsoft Teams.
+Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and test connector in Teams.
 
 ## See also
 
