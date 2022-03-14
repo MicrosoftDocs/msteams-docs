@@ -18,15 +18,15 @@ Consider publishing your app on Teams store to offer your app the best platform 
     :::column span="":::
         The most common ways to monetize your app are:
 
-        - **Subscription**: You can choose to offer your app as a service to your users for a regular subscription. Include a Software-as-a-service (SaaS) offer with your app to enable subscription plans for your users. Teams store lets your users purchase subscription plans.
+        - **Subscription**: Include a Software-as-a-service (SaaS) offer with your app to enable subscription plans for your users. Teams store lets your users purchase subscription plans.
         - **In-app purchases**: You can offer a free download of your app with limited basic features. For more or advanced features, offer your users to upgrade to a full version or additional services.
-
-        In addition to these features, Teams store also offers:
-
-        - **Free trials**: You can offer your app to users for a time-limited usage. It lets your users try the app features for a set number of days or times.
-        - **Test preview**: Teams store lets you preview and test a SaaS offer before you publish your app.
     :::column-end:::
 :::row-end:::
+
+In addition to these features, Teams store also offers:
+
+- **Free trials**: You can offer your app to users for a time-limited usage. It lets your users try the app features for a set number of days or times.
+- **Test preview**: Teams store lets you preview and test a SaaS offer before you publish your app.
 
 Establishing a monetizing option beforehand helps guide the app design, build, and distribution decisions.
 
