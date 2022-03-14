@@ -54,7 +54,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone repository.png" alt-text="cloning the repository" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone repository.png" alt-text="cloning the repository" border="true":::
 
     1. Select **Clone**. 
 
@@ -67,7 +67,7 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
  
-          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)
+          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png) border="true"
 
         1. In the left panel, select **Teams apps**.
        
