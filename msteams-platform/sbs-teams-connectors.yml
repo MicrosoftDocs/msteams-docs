@@ -66,22 +66,20 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
  
-          ![Admin center menu](./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png)
+          ::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png" alt-text="Admin center menu" border="true":::
 
     1.  In the left panel, select **Teams apps**.
        
     1.  Select **Setup policies**.
-
-          ![Setup policies](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) 
-
+ 
+           ::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Setup policies" border="true":::
     1.  Select **Global**.
 
           ![Global](~/assets/images/sbs-connector/Global.png)
 
     1.   Toggle **Upload custom apps** to **On** position.
 
-          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
-
+           ::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png" alt-text="Toggle On" border="true":::
     1.   Select **Save**. 
        
           Your test tenant can permit custom app sideloading.
@@ -97,9 +95,10 @@ items:
     
     1.   Select **Developer preview**.
 
-         ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
-   
+          ::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png" alt-text="Developer preview" border="true":::
+    
     1.   Select **Switch to developer preview**.
+   
 
 - title: Configure your connector
   durationInMinutes: 1
