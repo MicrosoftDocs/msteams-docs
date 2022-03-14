@@ -141,7 +141,6 @@
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Teams JavaScript client SDK v2 Preview
     href: m365-apps/using-teams-client-sdk-preview.md
-  
   - name: Microsoft Graph SDKs
     href: https://docs.microsoft.com/graph/sdks/sdks-overview
   - name: Legacy SDKs
