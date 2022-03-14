@@ -343,8 +343,6 @@ Not available
 GET /v1/meetings/{meetingId}
 ```
 
----
-
 The JSON response body for Meeting Details API is as follows:
 
 ```json
@@ -370,6 +368,8 @@ The JSON response body for Meeting Details API is as follows:
     }
 } 
 ```
+
+---
 
 ## Send real-time captions API
 
