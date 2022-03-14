@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Prepare accounts to build Teams apps
 
-To create a Teams app, you need to prepare the following accounts:
+To create a Teams app and upload, you need to prepare the following accounts:
 
 * Microsoft 365 account with valid subscription.
 * Azure account to host the backend resources on Azure.
@@ -49,7 +49,7 @@ You can sign up for the developer program by using one of the following account 
 
     The user id created to use Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
 
-### Azure account to host backend resources
+## Azure account to host backend resources
 
 Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
 
