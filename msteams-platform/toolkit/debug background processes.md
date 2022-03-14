@@ -26,18 +26,20 @@ The following table lists the limitations if the Node.js software is unavailable
 
 The following table lists the limitations if the software is unavailable for Teams app capability:
 
-| Teams app capability | Node.js LTS versions | Limitation |
+
+
+|Teams app capability | Node.js LTS versions | Limitation |
 | --- | --- | --- |
 | Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 | Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 | Bot | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 | Messaging extension | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Sign in to Microsoft 365 account | Teams toolkit prompts to sign in to Microsoft 365 account, if you have not signed in |Microsoft 365 credentials. |
-|Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3.| <br> - If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> <br>- The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br>
-|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> - If you have not installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br>- The  Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
+|Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3.| <br> • If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> <br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br>
+|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> • If you have not installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br> • The  Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
 |Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|Limitation to be added|
 |NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|Limitation to be added|
-|Azure functions | Install .NET Core SDK|<br> - If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> - For Linux, the local debug terminates.|</br>
+|Azure functions | Install .NET Core SDK|<br> • If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> • For Linux, the local debug terminates.|</br>
 
 Use the following .NET Core versions:
 
@@ -48,8 +50,8 @@ Use the following .NET Core versions:
 
 
 > [!NOTE]
-> *If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.
-> *Start Ngrok to create a HTTP tunnel for bot and messaging extension.
+> • If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.</br>
+> • Start Ngrok to create a HTTP tunnel for bot and messaging extension.
 
 
 The following table shows the ports available for components:
