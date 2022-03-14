@@ -4,7 +4,7 @@ description: Learn to build Hello World apps with JavaScript with tab, bot, and 
 ms.topic: article 
 ms.date: 01/11/2022
 zone_pivot_groups: teams-app-types
----
+--- 
 
 # Create and build your first Teams apps
 
@@ -25,3 +25,19 @@ Start Microsoft Teams app development by creating your first app. This app uses 
 Start Microsoft Teams app development by creating your first app. This app uses the Messaging Extension capability.
 
 ::: zone-end
+
+## Languages
+
+::: zone pivot="c-sharp"
+
+This is for c#.
+
+::: zone-end
+
+::: zone pivot="Javascript"
+
+This is for JS.
+
+::: zone-end
+
+
