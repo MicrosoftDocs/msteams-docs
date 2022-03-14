@@ -42,7 +42,7 @@ The following image provides the flow to add authentication to external browsers
 
  :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth" border="true":::
 
-### Steps to perform authentication to external browsers
+**To add authentication to external browsers**
 
 <!-- #### 1. Pass `isExternal` and placeholders in `url` -->
 **1. Initiate the external auth-login process**
