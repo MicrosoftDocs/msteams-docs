@@ -102,7 +102,7 @@ items:
    
     1.   Select **Switch to developer preview**.
 
-        ![Switch to developer preview](./assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
+        ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
 
 - title: Configure your own connector
   durationInMinutes: 1
