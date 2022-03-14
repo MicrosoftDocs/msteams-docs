@@ -63,44 +63,44 @@ items:
   content: |
 
     1. Enable uploading of apps in the admin console of your tenant.
-       1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
-       1. In the left panel, select **Show All**.
-       1. Select **Teams**.
+        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
+        1. In the left panel, select **Show All**.
+        1. Select **Teams**.
  
           ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)
 
-       1. In the left panel, select **Teams apps**.
+        1. In the left panel, select **Teams apps**.
        
-       1. Select **Setup Policies**.
+        1. Select **Setup Policies**.
 
           ![Setup policies](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) 
 
-       1. Select **Global**.
+        1. Select **Global**.
 
           ![Global](~/assets/images/sbs-connector/Global.png)
 
-       1. Toggle **Upload custom apps** to **On** position.
+        1. Toggle **Upload custom apps** to **On** position.
 
           ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
 
-       1. Select **Save**. 
+        1. Select **Save**. 
        
           Your test tenant can permit custom app sideloading.
 
           > [!TIP]
           > The sideloading takes some time to become active.
 
-    1. Go to **Microsoft Teams**.
+        1. Go to **Microsoft Teams**.
     
-    1. From the upper right corner of your Teams interface, select `...` .
+        1. From the upper right corner of your Teams interface, select `...` .
     
-    1. Select **About**. 
+        1. Select **About**. 
     
-    1. Select **Developer preview**.
+        1. Select **Developer preview**.
 
         ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
    
-    1. Select **Switch to developer preview**.
+        1. Select **Switch to developer preview**.
 
         ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
 
