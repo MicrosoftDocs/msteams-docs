@@ -24,10 +24,10 @@ The following table lists the limitations if the Node.js software is unavailable
 
 Use the following .NET Core versions:
 
-| Platform  |.NET Core SDK versions |- |
-| --- | --- | --- |
-|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |-|
-|  macOs (arm64) | 6.0 |-|
+| Platform  |.NET Core SDK versions |
+| --- | --- | 
+|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |
+|  macOs (arm64) | 6.0 |
 
 
 > [!NOTE]
