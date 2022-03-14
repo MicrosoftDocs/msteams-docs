@@ -9,7 +9,7 @@ ms.date: 03/03/2022
 ---
 # Prepare accounts to build Teams apps
 
-To create a Teams app, you need a Microsoft 365 account with valid subscription and to host the backend resources on Azure, you need an Azure account.
+To create a Teams app, you need the Microsoft 365 account with valid subscription and to host the backend resources on Azure, you need an Azure account.
 
 ## Microsoft 365 account
 
@@ -44,8 +44,6 @@ You can sign up for the developer program by using one of the following account 
 
     The user id created to use Visual Studio Professional or Enterprise subscription can be used to join the developer program within the Visual Studio Gallery to avail full benefits as a Visual Studio subscriber.
 
-* **Work account for business**
-
 ### Azure account to host backend resources
 
 Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
@@ -56,8 +54,8 @@ Azure account is optional if your existing application is hosted on other cloud 
 
 ## Teams custom app upload or sideload permission
 
-> [!IMPORTANT]
-> After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**. 
+    > [!IMPORTANT]
+    > After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
 
    You can verify that the sideloading permission is enabled using Visual Studio Code or Teams client using the following steps:
 
@@ -102,7 +100,7 @@ Azure account is optional if your existing application is hosted on other cloud 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set policies":::
 
-4. Sey Toggle Upload custom apps to **On** position.
+4. Set Toggle Upload custom apps to **On** position.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="toggle":::
 
