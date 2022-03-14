@@ -54,8 +54,8 @@ Azure account is optional if your existing application is hosted on other cloud 
 
 ## Teams custom app upload or sideload permission
 
-    > [!IMPORTANT]
-    > After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
+> [!IMPORTANT]
+> After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
 
    You can verify that the sideloading permission is enabled using Visual Studio Code or Teams client using the following steps:
 
@@ -80,7 +80,7 @@ Azure account is optional if your existing application is hosted on other cloud 
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app" border="true":::
 
-    If you are unable to view **Upload a custom app** it indicates that you don't have the permission for sideloading. You need to have sideloading enabled to do local or remote debugging. If you are a tenant admin you can enable the sideloading setting for your tenant or organization in the Teams admin center. If you are not a tenant admin, you'll need to contact your tenant admin to enable sideloading.
+        If you are unable to view **Upload a custom app** it indicates that you don't have the permission for sideloading. You need to have sideloading enabled to do local or remote debugging. If you are a tenant admin you can enable the sideloading setting for your tenant or organization in the Teams admin center. If you are not a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
 ### Upload your custom app
 
@@ -106,8 +106,8 @@ Azure account is optional if your existing application is hosted on other cloud 
 
 5. Select **Save**.
 
-    [!Note]
-    > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
+>[!Note]
+> It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [Upload custom apps](/microsoftteams/teams-app-setup-policies).
 
 For more information, see [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
