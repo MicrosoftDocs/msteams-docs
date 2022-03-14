@@ -17,7 +17,7 @@ The meeting extensibility provide APIs to enhance meeting experience. You can pe
 * Select required APIs to improve the meeting experience.
 
 > [!NOTE]
-> Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
+> Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
 
 The following table provides a list of APIs available across the Microsoft Teams Client (MSTC) and Microsoft Bot Framework (MSBF) SDKs:
 
