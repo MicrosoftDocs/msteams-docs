@@ -15,6 +15,7 @@ Search-based [messaging extensions](/microsoftteams/platform/messaging-extension
 The process to update your search-based Teams messaging extension to run Outlook involves these steps:
 
 > [!div class="checklist"]
+>
 > * Update your app manifest
 > * Add an Outlook channel for your bot
 > * Sideload your updated app in Teams
@@ -25,10 +26,10 @@ The rest of this guide will walk you through these steps and show you how to pre
 
 To complete this tutorial, you'll need:
 
- - A Microsoft 365 Developer Program sandbox tenant
- - Your sandbox tenant enrolled in *Office 365 Targeted Releases*
- - A test environment with Office apps installed from the Microsoft 365 Apps *beta channel*
- - Microsoft Visual Studio Code with the Teams Toolkit (Preview) extension (Optional)
+* A Microsoft 365 Developer Program sandbox tenant
+* Your sandbox tenant enrolled in *Office 365 Targeted Releases*
+* A test environment with Office apps installed from the Microsoft 365 Apps *beta channel*
+* Microsoft Visual Studio Code with the Teams Toolkit (Preview) extension (Optional)
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -62,6 +63,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 If you used Teams Toolkit to create your messaging extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
@@ -175,11 +177,11 @@ From the *Apps* menu, select *Manage your apps* > **Submit an app to your org**.
 
 #### Microsoft Teams Admin Center
 
-As a Teams admin, you can upload and pre-install the app package for your organization's tenant from https://admin.teams.microsoft.com/. See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
+As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin](https://admin.teams.microsoft.com/). See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
 
 #### Microsoft Admin Center
 
-As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+As a global admin, you can upload and pre-install the app package from [Microsoft admin](https://admin.microsoft.com/). See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
 ### Multitenant distribution
 

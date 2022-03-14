@@ -181,9 +181,9 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
 
 * **Subject Line**: Partner Center Account Issue for *your app name*.
 * **Email body**:
-    * Support ticket number.
-    * Your seller ID.
-    * A screenshot of the issue (if possible).
+  * Support ticket number.
+  * Your seller ID.
+  * A screenshot of the issue (if possible).
 
 <br>
 
