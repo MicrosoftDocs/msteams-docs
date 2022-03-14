@@ -17,13 +17,17 @@ The background process of debugging involves the `.vscode/launch.json` and `.vsc
 * Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Prerequisites
-The following table lists the limitations if the software is unavailable for Teams app capability:
 
 The following table lists the limitations if the Node.js software is unavailable for debugging:
 
 |Software | Installation | Limitation |
 | --- | --- | --- |
 |Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+
+The following table lists the limitations if the software is unavailable for Teams app capability:
+The following table lists the limitations if the software is unavailable for Teams app capability:
+The following table lists the limitations if the software is unavailable for Teams app capability:
+
 
 |Software | Installation | Limitation |
 | --- | --- | --- |
@@ -40,10 +44,10 @@ The following table lists the limitations if the Node.js software is unavailable
 
 Use the following .NET Core versions:
 
-| Platform  | .NET Core SDK versions |- |
+| Platform  |.NET Core SDK versions |li |
 | --- | --- | --- |
-|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |-|
-|  macOs (arm64) |  6.0 |-|
+|  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |li|
+|  macOs (arm64) | 6.0 |li|
 
 
 > [!NOTE]
