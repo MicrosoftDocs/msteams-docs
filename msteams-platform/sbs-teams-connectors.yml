@@ -228,9 +228,10 @@ items:
 
     15. Select **Save**. 
       
-       The MessageCard appears in registered Teams channel
+       The message card appears in registered Teams channel
+       
 
-        ![Message](~/assets/images/sbs-connector/messagecard.png)
+      ![Message](~/assets/images/sbs-connector/messagecard.png)
 
        > [!TIP]
        > You can try the actionable buttons available on the message card.
