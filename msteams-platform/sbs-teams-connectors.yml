@@ -19,7 +19,7 @@ items:
     **Types of connector codes**
 
       * **ConnectorController.cs**: Set up and save actions
-      * **TaskController.cs**: Create and update actions.
+      * **TaskController.cs**: Create and update actions
 
     **Key features of Microsoft Teams connector**
 
@@ -40,7 +40,7 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
+    * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
    
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -228,12 +228,12 @@ items:
 
     15. Select **Save**. 
       
-       The MessageCard appears in registered Teams channel.
+       The MessageCard appears in registered Teams channel
+
+        ![Message](~/assets/images/sbs-connector/messagecard.png)
 
        > [!TIP]
        > You can try the actionable buttons available on the message card.
-
-       ![Message](~/assets/images/sbs-connector/messagecard.png)
 
 - title: Complete challenge
   durationInMinutes: 1
