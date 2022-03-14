@@ -30,7 +30,7 @@ items:
     
     This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
        
-    ![output image](~/assets/images/sbs-connector/mobile.png) border="true"
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="introduction image" border="true":::
        
 
 - title: Prerequisites
@@ -243,7 +243,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![Complete output](~/assets/images/sbs-connector/mobile.png) border="true"
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="final output" border="true":::
 
 - content: |
     You've completed the tutorial to get started with **Microsoft Teams Connectors**!
