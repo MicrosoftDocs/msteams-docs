@@ -84,13 +84,18 @@
   items:
   - name: Overview on Tools and SDK
     href: toolkit/teams-toolkit-fundamentals.md
-  items:
-    - name: Teams Toolkit
+     - name: Teams Toolkit
       href: toolkit/teams-toolkit-fundamentals.md
      - name: Teams Toolkit Framework
        href: toolkit/teams-toolkit-fundamentals.md
      - name: TeamsFx Library
-       href: toolkit/teams-toolkit-fundamentals.md    
+       href: toolkit/teams-toolkit-fundamentals.md
+     - name: Teams Toolkit CLI
+       href: toolkit/TeamsFx-CLI.md
+     - name: TeamsFx SDK
+       href: toolkit/TeamsFx-SDK.md   
+     - name: CI/CD guide
+      href: toolkit/use-CICD-template.md 
   -  name: Teams Toolkit for Visual Studio Code
     items:
     - name: Teams Toolkit overview
@@ -117,16 +122,17 @@
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: CI/CD guide
-      href: toolkit/use-CICD-template.md
-    - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
-    - name: TeamsFx SDK
-      href: toolkit/TeamsFx-SDK.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
+  - name: Teams Software Development Kit
+    
+  - name: Recommended content for (GitHub  
   - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
+  - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
+    href: https://github.com/Microsoft/botbuilder-js
+  - name: .NET Bot Framework for bots and messaging extensions (GitHub)
+    href: https://github.com/Microsoft/botbuilder-dotnet  
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
   - name: Developer Portal for Teams
@@ -135,10 +141,7 @@
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Teams JavaScript client SDK v2 Preview
     href: m365-apps/using-teams-client-sdk-preview.md
-  - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
-    href: https://github.com/Microsoft/botbuilder-js
-  - name: .NET Bot Framework for bots and messaging extensions (GitHub)
-    href: https://github.com/Microsoft/botbuilder-dotnet
+  
   - name: Microsoft Graph SDKs
     href: https://docs.microsoft.com/graph/sdks/sdks-overview
   - name: Legacy SDKs
