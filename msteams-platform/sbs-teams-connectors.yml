@@ -25,7 +25,7 @@ items:
 
       * Simulates real task management system.
       * Allows users to create and view tasks.
-      * Generates content randomly 
+      * Generates content randomly. 
       * Simulates notification to be sent to Microsoft Teams channel. 
     
     This step-by-step guide helps you to create and test a connector in Microsoft Teams. You'll see the following output:
