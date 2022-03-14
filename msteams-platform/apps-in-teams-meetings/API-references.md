@@ -436,20 +436,21 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
+*  To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
 
-```json
-"authorization": {
-    "permissions": { 
-    "resourceSpecific": [
-      { 
-      "name": "MeetingStage.Write.Chat",
-      "type": "Delegated"
-      }
-    ]
-   }
-}
- ```
+    ```json
+    "authorization": {
+        "permissions": { 
+        "resourceSpecific": [
+        { 
+        "name": "MeetingStage.Write.Chat",
+        "type": "Delegated"
+        }
+        ]
+    }
+    }
+    ```
+*  `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
 
 ### Query parameter
 
