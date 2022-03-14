@@ -28,7 +28,7 @@ The following table lists the limitations if the software is unavailable for Tea
 
 
 
-|Teams app capability | Node.js LTS versions | Limitation |
+|Software | Installation | Limitation |
 | --- | --- | --- |
 | Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 | Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
