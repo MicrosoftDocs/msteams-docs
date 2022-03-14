@@ -67,7 +67,8 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
  
-          ![Admin center menu](~/assets/images/meeting-token-generator/meetie.png border="true")
+          :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-token-generator-admincenter.png" alt-text="admin centre" border="true":::
+
 
     1.  In the left panel, select **Teams apps**.
        
@@ -98,11 +99,11 @@ items:
     
     1.   Select **Developer preview**.
 
-        ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
+        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-token-generator-devpreview.png" alt-text="developer" border="true":::
    
     1.   Select **Switch to developer preview**.
 
-        ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
+        ![Switch to developer preview](~/assets/images/meeting-token-generatotodevpreview.png)
 
 - title: Configure your own connector
   durationInMinutes: 1
