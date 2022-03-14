@@ -8,9 +8,11 @@ ms.author: surbhigupta
 ---
 # Build apps with the Teams Toolkit and Visual Studio Code
 
-The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a “zero-configuration” approach to the developer experience.  
+The latest version of Visual Studio helps you to create and deploy Teams app with  
 
-You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).
+<!-- The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a “zero-configuration” approach to the developer experience.   -->
+
+You also can use the with Visual Studio or as a Command Line Interface (CLI) (called `teamsfx`).
 
 ## Install the Teams Toolkit for Visual Studio Code
 
