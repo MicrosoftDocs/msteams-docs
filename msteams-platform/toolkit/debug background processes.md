@@ -21,7 +21,7 @@ The background process of debugging involves the `.vscode/launch.json` and `.vsc
 The following table lists the limitations if the Node.js software is unavailable for debugging:
 
 
-||Platform  | Platform|
+| Platform  | Platform|
 |--------------------|-------------|
 |Windows, macOs (x64), Linux |content 1a |**3.1 (recommended)**, 5.0, 6.0 |
 |macOs (arm64) |content 1b   |6.0 |
