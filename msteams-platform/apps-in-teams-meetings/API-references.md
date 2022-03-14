@@ -51,7 +51,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 > [!TIP]
 > Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
-Meeting API URL parameters must have `meetingId`, `participantId`, and `tenantId`. The parameters are available as part of the Teams Client SDK and bot activity.
+The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Teams Client SDK and bot activity.
 
 The following table includes the query parameters:
 
