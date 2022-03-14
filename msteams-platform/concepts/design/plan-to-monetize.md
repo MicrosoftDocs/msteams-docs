@@ -11,9 +11,8 @@ One of the most important objectives for building a Teams app is to solve the pr
 
 Consider publishing your app on Teams store to offer your app the best platform for global visibility. Factors, such as type of app, nature of service, and target customers influence your choice for the best monetization option.
 
-
 :::row:::
-        :::column span="5":::
+        :::column span="2":::
         The most common ways to monetize your app are:
 
         - **Subscription**: You can choose to offer your app as a service to your users for a regular subscription. Include a Software-as-a-service (SaaS) offer with your app to enable subscription plans for your users. Teams store lets your users purchase subscription plans.
