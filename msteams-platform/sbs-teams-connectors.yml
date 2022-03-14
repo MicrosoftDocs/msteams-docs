@@ -161,7 +161,7 @@ items:
        ![Settings manifest](~/assets/images/sbs-connector/manifest.png) 
 
     9. Press **F5** to run the project.
-    10. A web page opens with a message. 
+       A web page opens with a message. 
 
        ![Local-host](~\assets\images/sbs-connector/local-host.png)    
 
