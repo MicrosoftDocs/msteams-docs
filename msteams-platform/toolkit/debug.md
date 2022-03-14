@@ -9,17 +9,14 @@ ms.date: 03/02/2022
 
 # Debug your Teams app locally in Teams Toolkit
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure that the program runs as per the requirements. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Toolkit supports debugging features including start, multi-target debugging, toggle breakpoints, hot reloading, and stop. The Teams app is available for preview in Teams web client locally after the debugging process. .
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure that the program runs as per the requirements. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Toolkit supports debugging features including start, multi-target debugging, toggle breakpoints, hot reloading, and stop. The Teams app is available for preview in Teams web client locally after the debugging process. 
 
 ## Prerequisite
 
 Install [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+ or later.
 
-> [!Tip]
-> Ensure you have Teams app opened in Microsoft Visual Studio Code.
 
-
-## Teams Toolkit debug features
+## Visual Studio Code debugging features
 
 ### Start debugging
 
@@ -33,13 +30,13 @@ In Visual Studio Code, you can toggle breakpoints on the source codes of tabs, 
 
 ### Hot reload
 
-You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the Teams app. Update the codes and save the changes. The project re-loads and the debugger re-attaches to the programming languages.
+You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the Teams app. Update the code and save the changes. The project re-loads and the debugger re-attaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/hot reload.png" alt-text="hot-reload for source codes":::
 
 ### Stop debugging
 
-When you complete local debug, you can select **Stop or Disconnect** in the floating debugging toolbar to stop all debug sessions and terminate tasks. This is as shown in the following image:
+When you complete local debug, you can select **Stop or Disconnect** in the floating debugging toolbar to stop all debug sessions and terminate tasks. The following image shows stop debugging action:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/stop-debugging.png" alt-text="stop debugging":::
 
@@ -48,8 +45,8 @@ When you complete local debug, you can select **Stop or Disconnect** in the floa
 
 After creating a new app using Teams Toolkit, select **F5** to run your Teams app in debug mode. The following steps to perform during local debug:
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the Run and Debug list. 
-1. Select Start Debugging (F5). Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
+1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
+1. Select **Start Debugging (F5)**. Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
 The following image displays the browser options in the dropdown list:
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug.png" alt-text="browser default" border="true"::: 

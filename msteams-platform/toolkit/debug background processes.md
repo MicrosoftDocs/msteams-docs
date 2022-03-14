@@ -12,8 +12,8 @@ ms.date: 03/03/2022
 
 The background process of debugging involves the `.vscode/launch.json` and `.vscode/tasks.json` files, which controls the entire local debug workflow.  
 
-* The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations preLaunchTask, Pre Debug Check, and Start All, which is defined in `.vscode/tasks.json` file.
-* Visual Studio Code launches the debuggers specified in the compound configurations, such as Attach to bot, Attach to backend, Attach to Frontend, and launch bot.
+* The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations `preLaunchTask`, `Pre Debug Check`, and `Start All`, which is defined in `.vscode/tasks.json` file.
+* Visual Studio Code launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 * Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Prerequisites
@@ -41,7 +41,7 @@ The following table lists the limitations if the software is unavailable for Tea
 
 Use the following .NET Core versions:
 
-| Platform  | .NET core SDK versions |- |
+| Platform  | .NET Core SDK versions |- |
 | --- | --- | --- |
 |  Windows, macOs (x64), Linux |  **3.1 (recommended)**, 5.0, 6.0 |-|
 |  macOs (arm64) |  6.0 |-|
@@ -69,19 +69,26 @@ The Teams Toolkit output channel displays the progress and result after checking
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/pre-toolkit.png" alt-text="prerequisites":::
 
-### Register and configure Azure AD application
+In the set up process, Teams Toolkit prepares the following registrations and configurations:
 
-1. Register an Azure AD application.
+ 1. Registers and configures Azure AD application: Teams Toolkit registers and configures your Azure AD application.
+ 1. Register and configure bot: Teams Toolkit registers and configures your bot.
+ 1. Register and configure Teams app: Teams Toolkit registers and configures your Teams app.
 
-1. Create a Client Secret.
 
-1. Expose an API.
+### Registers and configures Azure AD application
 
-    a. Configure Application ID URI. For tab, set `api://localhost/{appId}`. For bot or messaging extension, set `api://botid-{botid}`.
+1. Registers an Azure AD application.
 
-    b. Add a scope named `access_as_user`. Enable it for **Admin and users**.
+1. Creates a Client Secret.
 
-The following table shows the configuration of Microsoft 365 client application with their client Ids:
+1. Exposes an API.
+
+    a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or messaging extension,  `api://botid-{botid}`.
+
+    b. Adds a scope named `access_as_user`. Enables it for **Admin and users**.
+
+The following table shows the configurations of Microsoft 365 client application with their client Ids:
 
 | Microsoft 365 client application |  Client ID  |
 | --- | --- |
@@ -94,42 +101,42 @@ The following table shows the configuration of Microsoft 365 client application 
 | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
 | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-4. Configure API permissions. Add Microsoft Graph permission to **User.Read**.
+4. Configures API permissions. Adds Microsoft Graph permission to **User.Read**.
 
-Configure the authentication as follows:
+Configures the authentication as follows:
 
 | Project type | Redirect URIs for web | Redirect URIs for single-page application |
 | --- | --- | --- |
 | Tab | [Local](https://localhost:53000/auth-end.html) | [Localhost](https://localhost:53000/auth-end.html?clientId={appId>}) |
 | Bot or messaging extension | [Ngrok](https://ngrok.io/auth-end.html) | NA |
 
-## Register and configure bot
+## Registers and configures bot
 
 For tab app or messaging extension app:
 
-1. Register an Azure AD application.
+1. Registers an Azure AD application.
 
-1. Create a Client Secret for the Azure AD application.
+1. Creates a Client Secret for the Azure AD application.
 
-1. Register a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
+1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
 
-1. Add Microsoft Teams channel.
+1. Adds Microsoft Teams channel.
 
-1. Configure messaging endpoint as [Messages](https://ngrok.io/api/messages).
+1. Configures messaging endpoint as [Messages](https://ngrok.io/api/messages).
 
-## Register and configure Teams app
+## Registers and configures Teams app
 
-Register a Teams app in Teams Developer Portal [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
+Registers a Teams app in Teams Developer Portal [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
 
 ## Start app services
 
-To start app services, run tasks defined in `.vscode/tasks.json` to start app services as follows:
+To start app services, run tasks defined in `.vscode/tasks.json` as follows:
 
 |  Component |  Task name  | Folder |
 | --- | --- | --- |
 |  Tab |  Start Frontend |  tabs |
 |  Bot or messaging extensions |  Start Bot |  bot |
-|  Azure functions |  Start backend |  api |
+|  Azure Functions |  Start Backend |  api |
 
 ## Launch debuggers
 
@@ -143,7 +150,7 @@ The table shows debug configuration type for project with tab app and bot app:
 | --- | --- | --- |
 |  Tab |  Attach to Frontend (Edge) or Attach to Frontend (Chrome)  |  pwa-msedge or pwa-mschrome  |
 |  Bot or messaging extensions |  Attach to Bot |  pwa-node |
-|  Azure functions |  Attach to backend |  pwa-node |
+|  Azure Functions |  Attach to Backend |  pwa-node |
 
 The table shows debug configuration type for project with bot app and without tab app:
 
@@ -151,27 +158,25 @@ The table shows debug configuration type for project with bot app and without ta
 | --- | --- | --- |
 |  Bot or messaging extension  |  Launch Bot (Edge) or Launch Bot (Chrome)  |   pwa-msedge or pwa-mschrome  |
 |  Bot or messaging extension  |  Attach to Bot |  pwa-node  |
-|  Azure functions |  Attach to backend |  pwa-node |
+|  Azure Functions |  Attach to Backend |  pwa-node |
 
 
 ## Sideload Teams app
 
- The configuration attach to Frontend or Launch Bot launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is completely loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
+ The configurations, **Attach to Frontend** or **Launch Bot** launch a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is completely loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
 
 ## Local debug files
 
 The following lists the local debug files:
 
--`.fx/configs/localSettings.json:` local debug configuration file. The values of each configuration generates and saves during local debug.
-
--`templates/appPackage/manifest.local.template.json:` Teams app manifest template file for local debug. The placeholders in the file resolves during local debug.
-
--`tabs/.env.teams.local:` environment variables file for tab. The values of each environment variable generates and saves during local debug.
-
--`bot/.env.teamsfx.local:` environment variables file for bot and messaging extension. The values of each environment variable generates and saves during local debug.
-
--`api/.env.teamsfx.local:` environment variables file for Azure functions. The values of each environment variable generates and saves during local debug.
+| File| File name| Debug configuration type  |
+| --- | --- | --- |
+|  `.fx/configs/localSettings.json` | local debug configuration file | The values of each configuration generates and saves during local debug. |
+|  `templates/appPackage/manifest.local.template.json` | Teams app manifest template file for local debug. | The placeholders in the file resolves during local debug. |
+|  `tabs/.env.teams.local`  | environment variables file for tab.  | The values of each environment variable generates and saves during local debug. |
+|  `bot/.env.teamsfx.local`  | environment variables file for bot and messaging extension.| The values of each environment variable generates and saves during local debug. |
+| `api/.env.teamsfx.local`  | environment variables file for Azure functions. | The values of each environment variable generates and saves during local debug. |
 
 ## Customize Teams Toolkit local debug
 
@@ -211,14 +216,14 @@ The following image shows the list that can be unchecked:
 
 
  > [!NOTE]
- > Currently, the tab, bot, messaging extension apps, and Azure functions doesn't support customization.
+ > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
 
 ### Add environment variables
 
 1. You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension and Azure functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
- > Ensure to start a new local debug after adding new environment variables as the environment variables doesn't support to hot reload.
+ > Ensure to start a new local debug after adding new environment variables as the environment variables doesn't support hot reload.
 
 ### Debug partial component
 
