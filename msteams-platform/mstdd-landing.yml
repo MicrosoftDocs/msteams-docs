@@ -83,10 +83,6 @@ landingContent:
   linkLists:
     - linkListType: overview
       links:
-      - text: Create new app using Teams Toolkit
-        url: ~/toolkit/create-new-project.md 
-      - text: Prepare accounts to build Teams app
-        url: /toolkit/accounts.md  
       - text: Build apps for Microsoft Teams
         url: ../msteams-platform/overview.md
       - text: App fundamentals

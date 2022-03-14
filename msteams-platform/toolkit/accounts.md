@@ -5,29 +5,31 @@ description:  Prepare accounts to build Teams apps
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/03/2022
+ms.date: 03/14/2022
 ---
 # Prepare accounts to build Teams apps
 
-To create a Teams app, you will need to prepare the following accounts:
+To create a Teams app, you need to prepare the following accounts:
 
 * Microsoft 365 account with valid subscription.
 * Azure account to host the backend resources on Azure.
 
 ## Microsoft 365 account
 
-To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits).It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program)
+To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity.
 
-## Join Microsoft 365 developer program
+If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program)
 
-If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+## Microsoft 365 developer program
+
+To get a free Teams developer account join the Microsoft 365 developer program and perform the following steps:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 2. Select **Join Now**.
 3. Select **Set up E5 subscription**.
 4. Set up your administrator account.
 
-   The following image is shown after you complete the subscription.
+   The following image is shown after you complete the subscription:
 
     :::image type="content" source="./images/m365-developer-program.png" alt-text="Diagram that shows Microsoft 365 program":::
 
@@ -51,16 +53,16 @@ You can sign up for the developer program by using one of the following account 
 
 Azure account is optional if your existing application is hosted on other cloud provider and you want to integrate the existing application on Teams platform.
 
-* **Visual Studio ID**
+**Visual Studio ID**
 
-    If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers as long as these are available from the public domain.
+If you want to host your application related resources or access resources within Azure, you can [create a free account](https://azure.microsoft.com/free/) before you begin. Alternatively you can select to host your backend resources using another cloud provider, or on your own servers if they are available from the public domain.
 
 ## Teams custom app upload or sideload permission
 
 > [!IMPORTANT]
 > After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
 
-   You can verify if the sideloading permission is enabled using Visual Studio Code or Teams client using the following steps:
+   You can verify if the sideloading permission is enabled using either Visual Studio Code or Teams client.
 
 * **Verify sideloading permission using Visual Studio Code**
 
@@ -84,13 +86,15 @@ Azure account is optional if your existing application is hosted on other cloud 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app" border="true":::
 
         If you are unable to view the option **Upload a custom app** then, it indicates that you don't have the required permission for sideloading.
-        * For a tenant admin enable the sideloading setting for your tenant or organization in the Teams admin center.
+        * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
         * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
 ### Upload your custom app
 
 >[!IMPORTANT]
-> To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
+>To turn on custom app uploading or sideloading for your developer tenant, you must be the admin for your tenant.
+
+To upload the custom app perform the following steps:
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
@@ -98,10 +102,10 @@ Azure account is optional if your existing application is hosted on other cloud 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="show all" border="true":::
 
-> [!NOTE]
+> [!Note]
 > It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
 
-3. Navigate to **Teams apps** > **Setup Policies**.
+3. Navigate to **Teams apps** > **Setup policies**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set policies":::
 
@@ -120,3 +124,6 @@ For more information, see [Manage custom app policies and settings in Teams](/mi
 
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
 * [Provision cloud resources](provision.md)
+* [Deploy Teams app to the cloud](deploy.md)
+* [Publish your Teams app](TeamsFx-collaboration.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
