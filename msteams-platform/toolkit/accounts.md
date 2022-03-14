@@ -11,8 +11,8 @@ ms.date: 03/14/2022
 
 To create a Teams app and upload, you need to prepare the following accounts:
 
-* Microsoft 365 account with valid subscription.
-* Azure account to host the backend resources on Azure.
+* [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)
+* [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources).
 
 ## Microsoft 365 account
 
@@ -20,7 +20,7 @@ To create a Microsoft 365 account, sign up for a Microsoft 365 developer program
 
 If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program)
 
-## Microsoft 365 developer program
+### Microsoft 365 developer program
 
 To get a free Teams developer account join the Microsoft 365 developer program and perform the following steps:
 
