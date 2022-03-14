@@ -3,17 +3,20 @@ title: Prepare accounts to build Teams apps
 author: zyxiaoyuer
 description:  Prepare accounts to build Teams apps
 ms.author: surbhigupta
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
 ---
 # Prepare accounts to build Teams apps
 
-To create a Teams app, you need the Microsoft 365 account with valid subscription and to host the backend resources on Azure, you need an Azure account.
+To create a Teams app, you will need to prepare the following accounts:
+
+* Microsoft 365 account with valid subscription.
+* Azure account to host the backend resources on Azure.
 
 ## Microsoft 365 account
 
-To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program)
+To create a Microsoft 365 account, sign up for a Microsoft 365 developer program subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits).It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program)
 
 ## Join Microsoft 365 developer program
 
@@ -34,7 +37,7 @@ You can sign up for the developer program by using one of the following account 
 
 - **Microsoft account for personal use**
 
-    This account provides access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Sign up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
+    The Microsoft account provides you access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
 
 - **Microsoft work account for business**
 
@@ -57,7 +60,7 @@ Azure account is optional if your existing application is hosted on other cloud 
 > [!IMPORTANT]
 > After creating the app, you must load your app in Teams without distributing it. This process is known as **sideloading**.
 
-   You can verify that the sideloading permission is enabled using Visual Studio Code or Teams client using the following steps:
+   You can verify if the sideloading permission is enabled using Visual Studio Code or Teams client using the following steps:
 
 * **Verify sideloading permission using Visual Studio Code**
 
@@ -80,7 +83,9 @@ Azure account is optional if your existing application is hosted on other cloud 
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app" border="true":::
 
-        If you are unable to view the option **Upload a custom app** then it indicates that you don't have the required permission for sideloading. You need to have sideloading enabled to perform local or remote debugging process. If you are a tenant admin you can enable the sideloading setting for your tenant or organization in the Teams admin center. If you are not a tenant admin, you'll need to contact your tenant admin to enable sideloading.
+        If you are unable to view the option **Upload a custom app** then, it indicates that you don't have the required permission for sideloading.
+        * For a tenant admin enable the sideloading setting for your tenant or organization in the Teams admin center.
+        * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
 ### Upload your custom app
 
