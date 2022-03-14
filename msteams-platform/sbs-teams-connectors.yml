@@ -18,8 +18,8 @@ items:
     
     **Types of connector codes**
 
-      * ConnectorController.cs - Set up and Save actions.
-      * TaskController.cs - Create and Update actions.
+      * ConnectorController.cs - Set up and save actions.
+      * TaskController.cs - Create and update actions.
 
     **Key features of Microsoft Teams Connector**
 
