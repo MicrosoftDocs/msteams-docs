@@ -40,6 +40,9 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). For more information on getting started, see [Power Virtual Agents documentation](/power-virtual-agents).
 
+>[!NOTE]
+>You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+
 ## Bots with webhooks and connectors
 
 Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a simple bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
@@ -74,8 +77,9 @@ In the cases where bots work better in a channel also work better in a group cha
 ### In a one-to-one chat
 
 One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
+
 * Q&A bots
-* bots that initiate workflows in other systems 
+* bots that initiate workflows in other systems
 * bots that tell jokes
 * bots that take notes
 Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
@@ -166,7 +170,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
     turnContext.Activity.RemoveRecipientMention();
     var text = turnContext.Activity.Text.Trim().ToLower();
-		await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
 }
 ```
 

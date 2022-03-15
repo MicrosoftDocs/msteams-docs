@@ -18,11 +18,11 @@ The following sections describe how to do this:
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### Search type message extensions
+## Search type message extensions
 
 For search based messaging extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple Action-based commands.
 
-#### Complete app manifest example
+### Complete app manifest example
 
 ```json
 {
@@ -79,7 +79,7 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 }
 ```
 
-### Test via uploading
+## Test via uploading
 
 You can test your messaging extension by uploading your app.
 
@@ -91,7 +91,7 @@ Most of your work involves the `onQuery` event, which handles all interactions i
 
 If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your messaging extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
 
-### Handle onQuery events
+## Handle onQuery events
 
 A messaging extension receives an `onQuery` event when anything happens in the messaging extension window or is sent to the window.
 
@@ -103,7 +103,7 @@ Next, check whether `initialRun` is set; if so, take appropriate action, such as
 
 The remainder of your handler for `onQuery` prompts the user for information, displays a list of preview cards, and returns the card selected by the user.
 
-### Handle onQuerySettingsUrl and onSettingsUpdate events
+## Handle onQuerySettingsUrl and onSettingsUpdate events
 
 The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable the **Settings** menu item.
 

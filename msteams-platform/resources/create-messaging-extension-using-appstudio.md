@@ -38,7 +38,6 @@ The heart of your messaging extension is your web service. It will define a sing
 
 Messaging extensions take advantage of the Bot Framework's messaging schema and secure communication protocol; if you don't already have one you'll need to register your web service on the Bot Framework. The Microsoft App Id (we'll refer to this as your Bot Id from inside of Teams, to identify it from other App Id's you might be working with) and the messaging endpoint your register with the Bot Framework will be used in your messaging extension to receive and respond to requests. If you're using an existing registration, make sure you [enable the Microsoft Teams channel](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0).
 
-
 If you follow one of the quickstarts or start from one of the available samples you'll be guided through registering your web service. If you want to manually register your service you have three options to do so. If you choose to register without using an Azure subscription you will not be able to take advantage of the simplified OAuth authentication flow provided by the Bot Framework. You will be able to migrate your registration to Azure after creation.
 
 * If you have an Azure subscription (or want to create a new one), you can register your web service manually using the Microsoft Azure portal. Create a "Bot Channels Registration" resource. You can choose the free pricing tier, as messages from Microsoft Teams do not count towards your total allowable messages per month.

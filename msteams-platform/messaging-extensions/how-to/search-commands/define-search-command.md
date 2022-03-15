@@ -36,12 +36,12 @@ To add the search command to your app manifest, you must add a new `composeExten
 
 The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**To create a search command**
+To create a search command:
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1.  If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
+1. If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
 1. After importing app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page: 
+1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -49,7 +49,7 @@ The prerequisite to create a search command is that you must already have create
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.   
+1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.
 The following image displays command addition for messaging extension:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -115,6 +115,7 @@ Following section is an example of the simple app manifest of the `composeExtens
 ...
 }
 ```
+
 For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
@@ -131,4 +132,3 @@ Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.ym
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-

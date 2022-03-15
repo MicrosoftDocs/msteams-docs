@@ -119,6 +119,7 @@ Responses from your Outgoing Webhooks appear in the same reply chain as the orig
 ---
 
 > [!NOTE]
+>
 > * You can send Adaptive Card, Hero card, and text messages as attachment with an Outgoing Webhook.
 > * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
 
@@ -193,30 +194,30 @@ var responseMsg = JSON.stringify({
 
 ```json
 {
-	"type": "message",
-	"attachments": [
-		{
-			"contentType": "application/vnd.microsoft.card.adaptive",
-			"content": {
-				"type": "AdaptiveCard",
-				"version": "1.4",
-				"body": [
-					{
-						"type": "TextBlock",
-						"text": "Request sent by: Megan"
-					},
-					{
-						"type": "Image",
-						"url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
-					},
-					{
-						"type": "TextBlock",
-						"text": "Sample image for Adaptive Card.."
-					}
-				]
-			}
-		}
-	]
+ "type": "message",
+ "attachments": [
+  {
+   "contentType": "application/vnd.microsoft.card.adaptive",
+   "content": {
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Request sent by: Megan"
+     },
+     {
+      "type": "Image",
+      "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Sample image for Adaptive Card.."
+     }
+    ]
+   }
+  }
+ ]
 }
 ```
 
@@ -227,7 +228,6 @@ var responseMsg = JSON.stringify({
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Outgoing Webhooks | Samples to create custom bots to be used in Microsoft Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
-
 
 ## Step-by-step guide
 
