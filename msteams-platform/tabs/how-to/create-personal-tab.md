@@ -17,7 +17,7 @@ Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**
 
 ## Create a personal tab
 
-# [Node.js](#tab/nodejs)
+::: zone pivot="node-java-script"
 
 ### Create a personal tab with Node.js
 
@@ -256,7 +256,9 @@ To upload your application to Teams
 
 In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app.
 
-# [ASP.NET Core](#tab/aspnetcore)
+::: zone-end
+
+::: zone pivot="razor-csharp"
 
 ### Create a personal tab with ASP.NET Core
 
@@ -347,7 +349,9 @@ ngrok http 3978 --host-header=localhost
 
 ![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetuploaded.png)
 
-# [ASP.NET Core MVC](#tab/aspnetcoremvc)
+::: zone-end
+
+::: zone pivot="mvc-csharp"
 
 ### Create a personal tab with ASP.NET Core MVC
 
@@ -439,7 +443,8 @@ ngrok http 3978 --host-header=localhost
 
 ![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetmvccoreuploaded.png)
 
----
+::: zone-end
+
 ## Reorder static personal tabs
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
