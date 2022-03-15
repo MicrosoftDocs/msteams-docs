@@ -45,7 +45,7 @@ To create a personal tab with Node.js:
 
 1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
 
-    :::image type="content" source="../assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
 
     **What is your solution name?**
 
