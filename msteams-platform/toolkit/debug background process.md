@@ -142,8 +142,8 @@ The following lists the local debug files and their configuration types:
 | `api/.env.teamsfx.local`  | environment variables file for Azure functions. | The values of each environment variable generates and saves during local debug. |
 
 
-After all the files are generated, you can also customize your app. To learn more refer [Customize local debug settings](debug.md#customize-local-debug-settings).
+After all the files are generated, you can also customize your app. To learn more refer [Customize local debug settings](debug local.md#customize-local-debug-settings)
 
 ## See also
 
-* [Debug overview](debug.md).
+[Debug your Teams app locally in Teams Toolkit](debug%20local.md).

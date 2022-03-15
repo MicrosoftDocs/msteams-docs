@@ -217,4 +217,4 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ## See also
 
-* [Debug background process](debug%20background%20processes.md).
+ [Debug background process](debug%20background%20process.md).
