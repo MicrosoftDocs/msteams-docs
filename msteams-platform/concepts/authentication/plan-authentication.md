@@ -117,4 +117,4 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Azure Active Directory Single Sign-on](plan-aad-sso.md)
+> [Azure Active Directory Single Sign-on](plan-sso-teams.md)
