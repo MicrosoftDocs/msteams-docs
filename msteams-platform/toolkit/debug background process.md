@@ -128,7 +128,7 @@ For tab app or messaging extension app:
 
 Registers a Teams app in Teams Developer Portal [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
 
-After registering and configuring the app, local debug files gets generated.
+After registering and configuring the app, local debug files get generated.
 
 ## Local debug files
 
