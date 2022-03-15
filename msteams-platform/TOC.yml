@@ -42,18 +42,8 @@
     href: concepts/design/planning-checklist.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-- name: Plan authentication for Teams app
-  items:
-  - name: Overview 
-    href: concepts/authentication/plan-authentication.md
-  - name: Authenticate with SSO for Teams
-    href: concepts/authentication/plan-sso-teams.md
-  - name: Other authentication methods in Teams
-    href: concepts/authentication/plan-other-auth.md
-  - name: Common extensions to authentication
-    href: concepts/authentication/common-extn.md
-  - name: Authentication FAQ
-    href: concepts/authentication/authentication-faq.md
+  - name: Plan to monetize your app
+    href: concepts/design/plan-to-monetize.md
 - name: Design your app
   items:
   - name: Overview
@@ -485,16 +475,16 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
-  - name: Monetize your app
-    items:
-    - name: Overview
-      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: Include a SaaS offer with your app
-      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    - name: In-app purchases
-      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-    - name: Test preview for monetized apps
-      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+- name: Monetize your app
+  items:
+  - name: Overview
+    href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+  - name: Include a SaaS offer with your app
+    href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+  - name: In-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+  - name: Test preview for monetized apps
+    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
   items:
     - name: App manifest schema
