@@ -21,7 +21,7 @@ items:
 
     For this tutorial, start Microsoft Teams app development with SPFx by building your first app with a tab capability.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="true":::
 
     > [!NOTE]
     > Currently, Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities are not available.
