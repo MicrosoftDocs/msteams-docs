@@ -34,3 +34,19 @@ Implementing AAD SSO for authentication in your app means that AAD would serve a
 | 3 | AAD serves as an IdP and verifies the user information. | - AAD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
 | 4 | On a successful match, AAD sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to let the user access at subsequent log ins. |
 | 5 | Every time the user accesses any part of your app or any other resource, the IdP uses the ID token to authenticate the user. The user is given access once and for all. | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
+
+## Features of using AAD SSO for Teams
+
+Implementing authentication with AAD SSO in your Teams app lets you solve security, development, and cost concerns of your app.
+
+- **Security**: The app users never have to sign in again after they log in for the first time. Your Teams app can have any capability, such as tabs, bots, or messaging extensions. AAD SSO authentication ensures a one-time sign-in for not just your Teams app, but all internal and external resources as needed.
+
+- **App development**: Building an app with AAD SSO authentication follows a simple development process.
+
+- **Managing passwords**: As an app owner, your overhead to maintain usernames and passwords, and protecting user privacy and data is considerably reduced.
+
+- **Conditional access policies**: Use conditional access policies to let yor users enjoy device-specific access to join a domain.
+
+- **Available for all app types**: Your Teams app may be available to your users on desktop, web, or mobile device. AAD SSO makes it easier for your users to avail the benefits of SSO. After their first sign-in, they never need to sign in again on any other browser or device.
+
+- **Personalized user experience**: App users often use the same set of apps and resources. When AAD manages your user's identity, each user can have a personalized experience based for their commonly used apps.
