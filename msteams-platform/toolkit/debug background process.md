@@ -31,10 +31,10 @@ The following table lists the limitations if the required softwares is unavailab
 |Messaging extension | 10, 12, 14 (recommended), 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Sign in to Microsoft 365 account | Teams toolkit prompts to sign in to Microsoft 365 account, if you have not signed in |Microsoft 365 credentials. |
 |Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3.| <br> • If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> <br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br>
-|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> • If you have not installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br> • The  Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
+|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> • If you have not installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
 |Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|Limitation to be added|
 |NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|Limitation to be added|
-|Azure functions | Install .NET Core SDK|<br> • If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br> • For Linux, the local debug terminates.|</br>
+|Azure functions | Install .NET Core SDK|<br>• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br>• For Linux, the local debug terminates.|</br>
 
 Use the following .NET Core versions:
 
@@ -45,7 +45,7 @@ Use the following .NET Core versions:
 
 
 > [!NOTE]
-> • If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.</br>
+> • If you don't have a development certificate for localhost installed in Windows or macOS, the tab prompts you to install it.</br>
 > • Start Ngrok to create a HTTP tunnel for bot and messaging extension.
 
 
@@ -128,6 +128,7 @@ For tab app or messaging extension app:
 
 Registers a Teams app in Teams Developer Portal [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
 
+After registering and configuring the app, local debug files gets generated.
 
 ## Local debug files
 
@@ -135,14 +136,14 @@ The following lists the local debug files and their configuration types:
 
 | File| File name| Debug configuration type |
 | --- | --- | --- |
-|  `.fx/configs/localSettings.json` | local debug configuration file | The values of each configuration generates and saves during local debug. |
+|  `.fx/configs/localSettings.json` | Local debug configuration file | The values of each configuration generates and saves during local debug. |
 |  `templates/appPackage/manifest.local.template.json` | Teams app manifest template file for local debug. | The placeholders in the file resolves during local debug. |
-|  `tabs/.env.teams.local`  | environment variables file for tab.  | The values of each environment variable generates and saves during local debug. |
-|  `bot/.env.teamsfx.local` | environment variables file for bot and messaging extension.| The values of each environment variable generates and saves during local debug. |
-| `api/.env.teamsfx.local`  | environment variables file for Azure functions. | The values of each environment variable generates and saves during local debug. |
+|  `tabs/.env.teams.local`  | Environment variables file for tab.  | The values of each environment variable generates and saves during local debug. |
+|  `bot/.env.teamsfx.local` | Environment variables file for bot and messaging extension.| The values of each environment variable generates and saves during local debug. |
+| `api/.env.teamsfx.local`  | Environment variables file for Azure functions. | The values of each environment variable generates and saves during local debug. |
 
 
-After all the files are generated, you can also customize your app. To learn more refer [Customize local debug settings](debug local.md#customize-local-debug-settings)
+After all the files are generated, you can also customize your app. To learn more refer [Customize local debug settings](debug local.md#customize-local-debug-settings).
 
 ## See also
 

@@ -18,9 +18,6 @@ Install [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=Team
 
 ## Visual Studio Code debugging features
 
-### Start debugging
-
-When you start local debug, you can select **Start** in the floating debugging toolbar to start all debug sessions.
 
 ### Toggle breakpoints
 
@@ -49,20 +46,22 @@ After creating a new app using Teams Toolkit, select **F5** to run your Teams ap
 1. Select **Start Debugging (F5)**. 
 
 The following image displays the browser options in the dropdown list:
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug.png" alt-text="browser default" border="true"::: 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug.png" alt-text="browser default" border="true"::: 
 
 3. Select **Sign in** to Microsoft 365 account in the pop-up window.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Alternate capabilities":::
 
-> [!NOTE]
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Alternate capabilities":::
+
+> [!TIP]
 > You can also select **Read more** to learn more about Microsoft 365 Developer Program. Your default web browser opens to let you sign into Microsoft 365. Sign in to your Microsoft 365 account using your credentials.
 
 4. Select **Install** in the pop-up dialog box to let you install the development certificate for localhost.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate":::
 
-> [!Note]
-> You can also select **Learn More** to learn more about the development certificate.
+> [!TIP]
+> You can also select **Learn More** to know about the development certificate.
 
 5. A system dialog box appears depending on your operating system. For Windows, select **Yes**.
 
@@ -130,15 +129,15 @@ Your app is added to Teams.
 
 Teams Toolkit allows you to customize the debug settings to create your own tab or bot.
 
-### Clear prerequisites
+### Uncheck few prerequisites
 
-You can clear some of the prerequisites in the VS Code settings.
+You can uncheck some of the prerequisites in the VS Code settings.
 
 1. Select **Settings**.
 
 1. Navigate to **Extensions** in the list and expand it, then select **Teams Toolkit (Preview)** and **Prerequisite Check**.
 
-1. Uncheck the checkbox you want to skip.
+1. Uncheck the checkbox you want to skip during debug.
 
 The following image shows the list that can be unchecked:
 
@@ -199,7 +198,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 }
 ```
 
-1. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
+2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
 
 ```json
 {
@@ -214,6 +213,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 }
 ```
+Teams client opens a tab only project.
 
 ## See also
 
