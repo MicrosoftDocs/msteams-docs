@@ -8,7 +8,7 @@ ms.author: surbhigupta
 ---
 # Build apps with the Teams Toolkit and Visual Studio Code
 
-The latest version of Visual Studio helps you to create and deploy Teams app with  
+Visual Studio helps you to create and deploy Teams app with integrated 
 
 <!-- The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a “zero-configuration” approach to the developer experience.   -->
 
@@ -79,11 +79,11 @@ The Teams Toolkit can create React apps that are hosted in Azure or SPFx web par
 
 1. Select a workspace folder. A folder is created within your workspace folder for the project you are creating.
 
-1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
+1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters. Press **Enter** to continue.
 
 Your Teams app is created within a few seconds. The scaffolded app contains code to handle single sign-on with Azure Active Directory and access to the Microsoft Graph.  If you selected Azure resources, then the code for those resources is also available.
 
-For a walk-through of the SPFx creation and publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).
+For more information see, [SPFx creation and publication process](../get-started/first-app-spfx.md).
 
 ## Configure your app
 
