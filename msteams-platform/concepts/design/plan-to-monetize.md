@@ -21,7 +21,7 @@ Consider publishing your app on Teams store to offer your app the best platform 
 
         - **Subscription**: Include a Software-as-a-service (SaaS) offer with your app to let users purchase subscription plans.
         - **In-app purchases**: Offer a free app download with limited features. For advanced features, offer an upgraded version.
-        - **Free trials**: Offer your app to users for a time-limited usage to let them try the app for a set number of days or times.
+        - **Free trials**: Let the users try the app for free for a set number of days or times.
         - **Test preview**: Preview and test a SaaS offer before you publish your app.
     :::column-end:::
 :::row-end:::
