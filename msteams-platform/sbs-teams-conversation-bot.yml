@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
-title: Teams calling and meeting bot
+title: Teams conversation bot
 metadata:
   title: Teams conversation bot
-  description: In this tutorial, you'll learn to set up calling and meeting in a bot for Teams.
+  description: In this tutorial, you'll learn to set up conversation bot in Teams.
   audience: Developer
   level: Beginner
-  ms.date: 02/08/2021
+  ms.date: 03/22/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
   nextTutorialTitle: Register a calling bot
@@ -14,17 +14,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Calling and Meeting bot provides basic functionalities like create a call, join a call, transfer or redirect a call, join a scheduled meeting and invite the participants by integrating cloud communications API Graph API.
+    Conversational bots allow users to interact with your web service through text, interactive cards, and task modules.
     
-    Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
+    Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
-    * Interactive Voice Response (IVR)
-    * Call control
-    * Access to real time audio and video streams, including desktop and app sharing
+    * Easy access to the Bot Framework connector.
+    * Additional functionality to manage conversation flow and state.
+    * Simple ways to incorporate cognitive services, such as natural language processing (NLP).
 
-    Create a bot and specify some additional information and permissions to use these Graph APIs in a Teams app.
+    When your bot is first added to the group or team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
  
-    This step-by-step guide helps you to create a bot with calling and meeting functionality. By the end of this tutorial you can achieve the following output:
+    This step-by-step guide helps you to incorporate basic conversational flow into a Teams application. By the end of this tutorial you can achieve the following output:
 
     ![Final output](~/assets/images/calls-and-meetings/final-output.png)
 
@@ -38,7 +38,6 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Microsoft Teams with an account (not a guest account)
-    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install) by executing all the commands
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
@@ -48,7 +47,6 @@ items:
     1. Use ngrok to create a tunnel to your web server's endpoints.
     1. Create Azure Bot resource to register bot with Azure Bot Service.
     1. Create client secret that enables SSO authentication of the bot.
-    1. Create a policy for a demo tenant user for creating the online meetings using PowerShell.
     1. Add API permissions for downstream calls.
     1. Create Bot channel registration in Azure account.
     1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
