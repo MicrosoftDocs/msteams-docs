@@ -16,7 +16,7 @@ In this page, you'll learn:
 
 ## Authenticate using third-party IdPs
 
-You can use other IdPs to implement authentication for your Teams app users. It can be Google or Facebook, or any other service that provides identity and access management.
+You can use third-party IdPs to implement authentication for your Teams app users. It can be Google or Facebook, or any other service that provides identity and access management.
 
 Some prerequisites for implementing authentication with an IdP are:
 
