@@ -153,8 +153,7 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
-        - text: Build Teams connectors
-          url: ~/sbs-teams-connectors.yml
+
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference

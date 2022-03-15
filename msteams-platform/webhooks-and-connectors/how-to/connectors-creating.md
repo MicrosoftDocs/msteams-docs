@@ -232,8 +232,6 @@ After you upload the app, open the connectors list from any channel. Scroll to t
 
 To verify that `HttpPOST` action is working correctly, [send messages to your connector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and test the connectors in your Microsoft Teams.
-
 ## Publish connectors for the organization
 
 If you want the connector to be available only to the users in your organization, you can upload your custom connector app to your [organization's app catalog](~/concepts/deploy-and-publish/apps-publish.md).
@@ -268,10 +266,6 @@ The following table provides the sample name and its description:
 |----------------|------------------|--------|----------------|
 | Connectors | Sample Office 365 Connector generating notifications to Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Generic connectors sample |Sample code for a generic connector that is easy to customize for any system that supports webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and test connector in Teams.
 
 ## See also
 
