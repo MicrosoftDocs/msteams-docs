@@ -218,11 +218,11 @@ gulp build
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page as shown in the following image:
 
-    :::image type="content" source="../assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
 
 1. To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
 
-    :::image type="content" source="../assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab" border="true":::
 
 ### Establish a secure tunnel to your tab
 
@@ -244,11 +244,11 @@ To upload your application to Teams
 1. From the lower left corner, choose **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
-    :::image type="content" source="../assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
 
 1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
 
-    :::image type="content" source="../assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
 
 In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your uploaded app to view your personal tab.
 
@@ -405,7 +405,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="../assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab" border="true":::
 
 ::: zone-end
 
@@ -572,7 +572,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
 
-    :::image type="content" source="../assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
 
 ::: zone-end
 
