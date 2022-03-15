@@ -20,7 +20,7 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 ## Prerequisites
 
-The following table lists the limitations if the required softwares is unavailable for debugging:
+The following table lists the limitations if the required software is unavailable for debugging:
 
 |Software|Installation| Limitation|
 |----------|--------------------------------|-----|

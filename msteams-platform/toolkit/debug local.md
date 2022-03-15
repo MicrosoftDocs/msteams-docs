@@ -7,7 +7,7 @@ ms.topic: overview
 ms.date: 03/02/2022
 ---
 
-# Debug your Teams app locally in Teams Toolkit
+# Debug your Teams app using Teams Toolkit
 
 Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure that the program runs as per the requirements. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Toolkit supports debugging features including start, multi-target debugging, toggle breakpoints, hot reloading, and stop. The Teams app is available for preview in Teams web client locally after the debugging process.
 
@@ -51,25 +51,25 @@ The following image displays the browser options in the dropdown list:
 
 3. Select **Sign in** to Microsoft 365 account in the pop-up window.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Alternate capabilities":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Alternate capabilities" border="true":::
 
 > [!TIP]
 > You can also select **Read more** to learn more about Microsoft 365 Developer Program. Your default web browser opens to let you sign into Microsoft 365. Sign in to your Microsoft 365 account using your credentials.
 
 4. Select **Install** in the pop-up dialog box to let you install the development certificate for localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate" border="true":::
 
 > [!TIP]
 > You can also select **Learn More** to know about the development certificate.
 
 5. A system dialog box appears depending on your operating system. For Windows, select **Yes**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
 6. For MacOS, enter your **User Name** and **Password**, then select **Update Settings**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
 
 Visual Studio Code starts the following processes:
@@ -119,7 +119,7 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
 7. When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
 
 s
 Your app is added to Teams.
