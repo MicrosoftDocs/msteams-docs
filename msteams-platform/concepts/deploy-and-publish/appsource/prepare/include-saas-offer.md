@@ -4,7 +4,7 @@ description: Learn how to monetize your Microsoft Teams app with subscription pl
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Include a SaaS offer with your Microsoft Teams app
