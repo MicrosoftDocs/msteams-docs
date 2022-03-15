@@ -155,7 +155,8 @@ landingContent:
           url: ~/sbs-outgoing-webhooks.yml
         - text: Invoke link unfurlimg in Teams
           url: ~/sbs-botbuilder-linkunfurling.yml
-
+        - text: Build Teams connectors
+          url: ~/sbs-teams-connectors.yml
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
