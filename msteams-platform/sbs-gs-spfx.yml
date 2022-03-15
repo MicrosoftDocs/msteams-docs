@@ -293,7 +293,7 @@ items:
         teamsfx account login m365
         ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials, close the browser when you're prompted.
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
