@@ -438,6 +438,79 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 * http://localhost:3978/privacy
 * http://localhost:3978/tou
 
+<details>
+<summary><b>Review the source code</b></summary>
+
+#### Startup.cs
+
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+
+``` csharp
+public void ConfigureServices(IServiceCollection services)
+  {
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+  }
+public void Configure(IApplicationBuilder app)
+  {
+    app.UseStaticFiles();
+    app.UseMvc();
+  }
+```
+
+#### wwwroot folder
+
+In ASP.NET Core, the web root folder is where the application looks for static files.
+
+#### AppManifest folder
+
+This folder contains the following required app package files:
+
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A **manifest.json** file that specifies the attributes of your app.
+
+These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
+
+#### .csproj
+
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
+
+``` xml
+<PropertyGroup>
+    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="AppManifest\icon-outline.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\icon-color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+```
+
+#### Models
+
+**PersonalTab.cs** presents a Message object and methods that are called from **PersonalTabController** when a user selects a button in the **PersonalTab** View.
+
+#### Views
+
+These views are the different views in ASP.NET Core MVC:
+
+* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
+
+* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It also references the Teams Library.
+
+#### Controllers
+
+The controllers use the `ViewBag` property to transfer values dynamically to the Views.
+
+</details>
+
 ### Update your application
 
 1. Go to the **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
