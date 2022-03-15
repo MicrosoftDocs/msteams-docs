@@ -19,7 +19,8 @@ The following image displays the Share-to-Teams pop-up experience:
 ![Share-to-Teams popup](~/assets/images/share-to-teams-popup.png)
 
 The following image displays the Share-to-Teams link unfurling experience:
-![Share-to-Teams link unfurling]()
+
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams link unfurling" border="true":::
 
 ## Embed a Share to Teams button
 
