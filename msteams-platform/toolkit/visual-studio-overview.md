@@ -1,25 +1,28 @@
 ---
 title: Build apps with the Teams Toolkit and Visual Studio
-description: Get started building great custom apps directly within Visual Studio with the Microsoft Teams Toolkit. Learn to configure your app in Visual Studio, validate your app, and publish it from Visual Studio and Developer Portal. 
+description: Build apps with the Teams Toolkit and Visual Studio
 keywords: teams visual studio toolkit
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
-ms.author: johmil
+ms.author: surbhigupta
 ---
 
 # Teams Toolkit for Visual Studio
 
-Build, test, and develop for Teams inside your IDE.
+You can build, test, and develop Teams app using Visual Studio Code in the integrated development environment (IDE). The Teams Toolkit's extension for Visual Studio allows you to do the following:
 
-Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your IDE.
+* Create new projects for Teams
+* Set up apps in the Teams developer portal
+* Run and debug in Teams
+* Configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your Integrated Development Environment (IDE).
 
 ## Install Teams Toolkit for Visual Studio
 
->[!NOTE]
-> As a prerequisite, ensure you use Visual Studio 2022 17.1 Preview 2 or newer to follow the instructions below.
+> [!NOTE]
+> As a prerequisite, ensure you install Visual Studio 2022 17.1 Preview 2 or latest version to follow the instructions.
 
-1. If you already have Visual Studio 2022 17.1 Preview 2 installed, skip to the next step. Otherwise, [install Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/).
+1. Install Visual Studio 2022 17.1 Preview 2. For more information see, [Install Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/).
 2. Open the Visual Studio Installer.
 3. Select **Modify** for your existing VS 2022 Preview installation.
 4. Select the **ASP.NET and web development** workload.
@@ -28,7 +31,7 @@ Teams Toolkit's extension for Visual Studio makes it easy to create new projects
 
 ![Selecting the Microsoft Teams development tools in the Visual Studio installer.) installed.](images/teams-development-tools-vs-installer.png)
 
-## Get started quickly with a new project
+## Create a new project using Visual Studio
 
 Teams Toolkit project templates provide all code, files, and configuration you need to get started with a Teams app project.
 
@@ -48,7 +51,7 @@ The Microsoft Teams App project template allows you to specify a Microsoft 365 a
 
 Visual Studio will open up your new project and Teams Toolkit will setup you new project in Teams Developer Portal. The project will be added for the Teams organization linked to the Microsoft 365 account you chose in the steps above and create a new Azure Active Directory registration. This is required for the app to run in Teams.
 
-## Run and debug your app in Teams
+## Run and debug your app
 
 You can launch your app project running locally from Visual Studio.
 
@@ -57,14 +60,14 @@ You can launch your app project running locally from Visual Studio.
 
 Visual Studio will launch your Teams app project in a browser and start debugging.
 
-## Host your Teams app in the cloud and preview it
+## Host your app in cloud
 
 You can create and automatically configure cloud resources for hosting your app in Azure using Teams Toolkit.
 
-1. Select the **Project > Teams Toolkit > Provision in the Cloud** menu.
-2. In the Select your subscription window, choose the Azure subscription you want to use to create resources with.
+1. Select the **Project > Teams Toolkit > Provision in the Cloud**.
+2. Select Azure subscription from the you want to use to create resources with.
 
-Teams Toolkit will create Azure resources in this subscription but no code is deployed during this step. To deploy your project to these new resources:
+Teams Toolkit creates Azure resources in this subscription but no code is deployed during this step. To deploy your project to these new resources:
 
 1. Select the **Project > Teams Toolkit > Deploy in the Cloud** menu.
 
@@ -80,5 +83,5 @@ Your app will open in a browser and use the resources created by the Provision a
 
 In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users.
 
-- Your IT admin will review these submissions.
-- You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you can submit updates to your app or cancel any currently active submissions.
+* Your IT admin will review these submissions.
+* You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you can submit updates to your app or cancel any currently active submissions.
