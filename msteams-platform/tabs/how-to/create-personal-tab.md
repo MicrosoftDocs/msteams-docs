@@ -13,13 +13,11 @@ zone_pivot_groups: teams-app-environment
 
 Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
-Choose your environment to build personal tab from **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**.
-
-## Create a personal tab
+Choose your environment above to build personal tab from **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**.
 
 ::: zone pivot="node-java-script"
 
-### Create a personal tab with Node.js
+## Create a personal tab with Node.js
 
 To create a personal tab with Node.js:
 
