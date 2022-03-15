@@ -44,7 +44,7 @@ The user sees a pop up dialog when their token is refreshed and they are able to
 
 \ Include images for OIDC UX \
 
-### Benefits of Other IdPs
+### Features of third-party IdPs
 
 \ Add Introduction, details, and examples \
 
@@ -73,7 +73,7 @@ Some prerequisites for implementing authentication with user credentials are:
 
 \ Include images for UX \
 
-### Benefits of username and password authentication
+### Features of username and password authentication
 
 1. Security for user access
 1. Security for user data
