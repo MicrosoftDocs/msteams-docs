@@ -42,8 +42,8 @@ Implementing AAD SSO for authentication in your app means that AAD would serve a
 
 | # | Steps | Key points |
 |--- | --- | --- |
-| 1 | A Teams app user attempts to use the app for the first time. | <!-- The user provides their credentials to the app. <br> - It may include the username and password of the user.--> |
-| 2 | Teams seeks the consent of the user to use their Teams login credentials  | - AAD receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
+| 1 | A Teams app user attempts to use the app for the first time. <br> :::image type="content" source="../../assets/images/authentication/app-access.png" alt-text="Teams app access"::: | The Teams app seeks to verify the user's identity. |
+| 2 | Teams seeks the consent of the user to use their Teams login credentials <br> :::image type="content" source="../../assets/images/authentication/permission-requested.png" alt-text="Permission requested"::: | - AAD receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
 | 3 | AAD serves as an IdP and verifies the user information. | - AAD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
 | 4 | On a successful match, AAD sends an access token granting app access to your Teams app. | - Access token may contain validated user credentials. <br> - The access token of the authentication user is saved with the app. <br> - The access token is used to let the user access at subsequent log ins. |
 | 5 | Every time the user accesses any part of your app or any other resource, the IdP uses the access token to authenticate the user. The user is given access once and for all. | - Your app uses the access token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
