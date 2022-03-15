@@ -11,10 +11,10 @@ You can choose to implement authentication in your Teams app using methods, such
 
 In this page, you'll learn:
 
-- Using other IdPs
+- Using other Third-party authentication
 - Using username and password
 
-## Authenticate using other IdPs
+## Authenticate using third-party IdPs
 
 You can use other IdPs to implement authentication for your Teams app users. It can be Google or Facebook, or any other service that provides identity and access management.
 
