@@ -7,25 +7,25 @@ keywords: Present-in-Teams
 ---
 # Present-in-Teams
 
-Present-in-Teams allows you to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together. When you select Present-in-Teams button, it launches the deep link to the meeting stage. This allows you to install the meeting extension app for the third party apps to control the meeting stage and to have access to the meeting stage.
+Present-in-Teams allows users to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together. When users select Present-in-Teams button, it launches the deep link to the meeting stage. This allows users to install the meeting extension app for the third party apps to control the meeting stage and to have access to the meeting stage.
 
 ## Enable Present-in-Teams on 3P app
 
 (content to be added)
 
-When you select Present-in-Teams button, it launches the deep link to the meeting stage. The following are the deep link format:
+When you select Present-in-Teams button, it launches the deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
 The following are the details for the deep links:
 
-**ms teams:** All deep links should start with ms teams, so that Teams app recognizes it and can open the deep link.​
+`ms teams`: All deep links should start with ms teams, so that Teams app recognizes it and can open the deep link.​
 
-**meeting-stage:** Verb that specifies the protocol type, and the deep link type​.
+`meeting-stage`: Verb that specifies the protocol type, and the deep link type​.
 
-**deep link Id:** GUID/UUID used for telemetry correlation​.
+`deep link Id`: GUID/UUID used for telemetry correlation​.
 
-**fqdn:** teams.microsoft.com or teams.live.com. FQDN is needed in Teams deep link service for tenant or account checking. When the meeting is scheduled with Teams for Life, the fqdn is: teams.live.com, when the meeting is scheduled for Teams for business, the fqdn will be teams.microsoft.com or team.microsoft.us (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
+`fqdn`: teams.microsoft.com or teams.live.com. FQDN is needed in Teams deep link service for tenant or account checking. When the meeting is scheduled with Teams for Life, the fqdn is: teams.live.com, when the meeting is scheduled for Teams for business, the fqdn will be teams.microsoft.com or team.microsoft.us (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
 
 ### Deep link example
 
@@ -40,5 +40,3 @@ The following are the details for the deep links:
 
 }
 ```
-
-
