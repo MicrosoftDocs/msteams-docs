@@ -13,6 +13,7 @@ The development environment for extending Teams apps across Microsoft 365 is sim
 To set up your development environment:
 
 > [!div class="checklist"]
+>
 > * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
 > * [Enroll your Microsoft 365 tenant in *Office 365 Targeted Releases*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configure your account to access preview versions of Outlook and Office](#install-office-apps-in-your-test-environment)
@@ -42,7 +43,7 @@ To enroll your test tenant for Office 365 targeted releases:
     1. **Target release for select users**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
-    
+
 1. Select **Save**.
 
 For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
@@ -65,7 +66,7 @@ To install Office 365 Beta Channel applications in your test environment:
 1. Open **File** > **Office Account** > **About Outlook**.  
    If the build number is **14416** or higher and the channel is *Beta Channel*, you're running Microsoft 365 beta Channel build.
 1. In the top-right corner, turn on the **Coming Soon** toggle.
-    
+
     :::image type="content" source="images/outlook-coming-soon.png" alt-text="'Coming Soon' toggle option in Outlook":::
 
 > [!NOTE]
@@ -102,5 +103,5 @@ The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolki
 
 ## Next steps
 
-- [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
-- [Enable a Teams messaging extension for Outlook](extend-m365-teams-message-extension.md)
+* [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
+* [Enable a Teams messaging extension for Outlook](extend-m365-teams-message-extension.md)

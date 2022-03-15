@@ -51,7 +51,7 @@ Let’s dig deeper into this story and find out.
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...so that customers can know weather conditions and plan ahead" border="false"::: 
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...so that customers can know weather conditions and plan ahead" border="false":::
    :::column-end:::
    :::column span="":::
       #### List app requirements and benefits
