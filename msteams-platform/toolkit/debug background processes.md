@@ -10,15 +10,17 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The background process of debugging involves the `.vscode/launch.json` and `.vscode/tasks.json` files, which controls the entire local debug workflow.  
+The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code, the following steps:
 
-* The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations `preLaunchTask`, `Pre Debug Check`, and `Start All`, which is defined in `.vscode/tasks.json` file.
-* Visual Studio Code launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
-* Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
+1. The `launch.json` file configures the debugger in Visual Studio Code.    Visual Studio Code runs the compound configurations `preLaunchTask`, `Pre Debug Check`, and `Start All`, which is defined in `.vscode/tasks.json` file.
+
+2. Visual Studio Code launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
+
+3. Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Prerequisites
 
-The following table lists the limitations if the Node.js software is unavailable for debugging:
+The following table lists the limitations if the Node.js software or other required softwares is unavailable for debugging:
 
 | Software | Installation | Limitation |
 | --- | --- | --- |
@@ -42,16 +44,12 @@ Use the following .NET Core versions:
 |macOs (arm64) |6.0 |
 
 
-
-
-
-
 > [!NOTE]
 > • If you don't have a development certificate for localhost installed in **Windows or macOS**, the tab prompts you to install it.</br>
 > • Start Ngrok to create a HTTP tunnel for bot and messaging extension.
 
 
-The following table shows the ports available for components:
+The following table lists the ports available for components:
 
 | Component  | Port |
 | --- | --- |
@@ -70,12 +68,11 @@ The Teams Toolkit output channel displays the progress and result after checking
 
 In the set up process, Teams Toolkit prepares the following registrations and configurations:
 
- 1. Registers and configures Azure AD application: Teams Toolkit registers and configures your Azure AD application.
- 1. Register and configure bot: Teams Toolkit registers and configures your bot.
- 1. Register and configure Teams app: Teams Toolkit registers and configures your Teams app.
+ 1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
+ 1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot.
+ 1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app.
 
-
-### Registers and configures Azure AD application
+#### Registers and configures Azure AD application
 
 1. Registers an Azure AD application.
 
@@ -87,7 +84,7 @@ In the set up process, Teams Toolkit prepares the following registrations and co
 
     b. Adds a scope named `access_as_user`. Enables it for **Admin and users**.
 
-The following table shows the configurations of Microsoft 365 client application with their client Ids:
+The following table lists the configurations of Microsoft 365 client application with their client Ids:
 
 | Microsoft 365 client application |  Client ID  |
 | --- | --- |
@@ -133,9 +130,9 @@ To start app services, run tasks defined in `.vscode/tasks.json` as follows:
 
 |  Component |  Task name  | Folder |
 | --- | --- | --- |
-|  Tab |  Start Frontend |  tabs |
-|  Bot or messaging extensions |  Start Bot |  bot |
-|  Azure Functions |  Start Backend |  api |
+|  Tab |  Start Frontend |  Tabs |
+|  Bot or messaging extensions |  Start Bot |  Bot |
+|  Azure Functions |  Start Backend |  Api |
 
 ## Launch debuggers
 
