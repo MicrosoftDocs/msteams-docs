@@ -10,3 +10,14 @@ groups:
     title: Bot
   - id: mex-app
     title: Messaging Extension
+groups:
+- id: teams-app-environment
+  title: Teams app environment
+  prompt: Select the environment in which you want to build
+  pivots:
+  - id: node-java-script
+    title: Node.js
+  - id: razor-csharp
+    title: ASP.NET Core
+  - id: mvc-csharp
+    title: ASP.NET Core MVC

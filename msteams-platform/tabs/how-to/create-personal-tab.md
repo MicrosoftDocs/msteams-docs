@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
+zone_pivot_groups: teams-app-environment
 ---
 
 # Personal tab
