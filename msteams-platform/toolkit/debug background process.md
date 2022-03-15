@@ -30,11 +30,11 @@ The following table lists the limitations if the required softwares is unavailab
 |Bot | 10, 12, 14 (recommended), 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Messaging extension | 10, 12, 14 (recommended), 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
 |Sign in to Microsoft 365 account | Teams toolkit prompts to sign in to Microsoft 365 account, if you have not signed in |Microsoft 365 credentials. |
-|Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3.| <br> • If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> <br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|</br>
-|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.|<br> • If you have not installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> <br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|</br>
+|Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3.| • If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
+|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.| • If you have not installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
 |Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|Limitation to be added|
 |NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|Limitation to be added|
-|Azure functions | Install .NET Core SDK|<br>• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> <br>• For Linux, the local debug terminates.|</br>
+|Azure functions | Install .NET Core SDK|• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
 
 Use the following .NET Core versions:
 
@@ -64,7 +64,7 @@ The following table lists the ports available for components:
 
 When you Select **Start Debugging (F5)**. The Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/pre-toolkit.png" alt-text="prerequisites":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/pre-toolkit.png" alt-text="prerequisites":::
 
 ## Registrations and configurations
 

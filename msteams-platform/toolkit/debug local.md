@@ -92,7 +92,7 @@ It runs the tasks defined in `.vscode/tasks.json` as follows:
 
 It launches the debug configurations defined in `.vscode/launch.json` as follows:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/Terminal.png" alt-text="Start frontend task":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start frontend task":::
 
 The table lists debug configuration type for project with tab app and bot app:
 
@@ -121,9 +121,8 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug":::
 
-
+s
 Your app is added to Teams.
-
 
 ## Customize local debug settings
 
@@ -213,6 +212,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 }
 ```
+
 Teams client opens a tab only project.
 
 ## See also
