@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code as follows:
+The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code, then Visual Studio Code launches the debuggers, and  Microsoft Edge or Chrome debugger launches a new browser instance as follows:
 
 1. The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations `preLaunchTask`, `Pre Debug Check`, and `Start All`, which is defined in `.vscode/tasks.json` file.
 
@@ -25,22 +25,22 @@ The following table lists the limitations if the required software is unavailabl
 |Software|Installation| Limitation|
 |----------|--------------------------------|-----|
 | Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
-|Tab without Azure functions | 10, 12, 14 (recommended), 16 | The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
-|Tab with Azure functions | 10, 12, 14 (recommended) |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
-|Bot | 10, 12, 14 (recommended), 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
-|Messaging extension | 10, 12, 14 (recommended), 16 |The local debug terminates, if you have not installed Node.js or the version doesn't match the requirement.|
-|Sign in to Microsoft 365 account | Teams toolkit prompts to sign in to Microsoft 365 account, if you have not signed in |Microsoft 365 credentials. |
-|Bot, messaging extension | Install Ngrok. The Ngrok binary requires version 2.3.| • If you have not installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
-|Azure functions | Install Azure Functions Core Tools. The Azure Functions Core Tools requires binary version 3.| • If you have not installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
-|Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|Limitation to be added|
-|NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|Limitation to be added|
+|Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Bot | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Messaging extension | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Sign in to Microsoft 365 account | Microsoft 365 credentials |Teams toolkit prompts to sign in to Microsoft 365 account, if you haven't signed in. |
+|Bot, messaging extension | Install Ngrok version 2.3.| • If you haven't installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
+|Azure functions | Install Azure Functions Core Tools version 3.| • If you haven't installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
+|Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|-|
+|NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|-|
 |Azure functions | Install .NET Core SDK|• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
 
 Use the following .NET Core versions:
 
 | Platform  | Software|
 | --- | --- |
-|Windows, macOs (x64), Linux | 3.1 (recommended), 5.0, 6.0 |
+|Windows, macOs (x64), Linux | **3.1 (recommended)**, 5.0, 6.0 |
 |macOs (arm64) |6.0 |
 
 
@@ -72,7 +72,7 @@ In the set up process, Teams Toolkit prepares the following registrations and co
 
 1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
 
-1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot.
+1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or messaging extension app.
 
 1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app.
 
@@ -88,7 +88,7 @@ In the set up process, Teams Toolkit prepares the following registrations and co
 
     b. Adds a scope named `access_as_user`. Enables it for **Admin and users**.
 
-The following table lists the configurations of Microsoft 365 client application with their client Ids:
+The following table lists the configurations of Microsoft 365 client application with the client Ids:
 
 | Microsoft 365 client application |  Client ID  |
 | --- | --- |
@@ -122,7 +122,7 @@ For tab app or messaging extension app:
 
 1. Adds Microsoft Teams channel.
 
-1. Configures messaging endpoint as [Messages](https://ngrok.io/api/messages).
+1. Configures messaging endpoint as [Messages](https://ngrok.io/api/messages).`https://{ngrokTunnelId}.ngrok.io/api/messages`.
 
 ### Registers and configures Teams app
 

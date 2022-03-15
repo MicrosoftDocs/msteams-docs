@@ -67,16 +67,16 @@ The following image displays the browser options in the dropdown list:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
-6. For MacOS, enter your **User Name** and **Password**, then select **Update Settings**.
+6. For macOS, enter your **User Name** and **Password**, then select **Update Settings**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
 
 Visual Studio Code starts the following processes:
 
-1. [Starts app services](#starts-app-services)
-1. [Launches debuggers](#launches-debuggers)
-1. [Sideloads the Teams app](#sideloads-the-teams-app)
+1. [Starts app services](#starts-app-services).
+1. [Launches debuggers](#launches-debuggers).
+1. [Sideloads the Teams app](#sideloads-the-teams-app).
 
 ## Starts app services
 
@@ -121,7 +121,7 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
 
-s
+
 Your app is added to Teams.
 
 ## Customize local debug settings
@@ -130,7 +130,7 @@ Teams Toolkit allows you to customize the debug settings to create your own tab 
 
 ### Uncheck few prerequisites
 
-You can uncheck some of the prerequisites in the VS Code settings.
+You can uncheck some of the prerequisites in the Visual Studio Code settings.
 
 1. Select **Settings**.
 
@@ -212,8 +212,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 }
 ```
-
-Teams client opens a tab only project.
 
 ## See also
 
