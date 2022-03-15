@@ -45,7 +45,7 @@ items:
     Register an application using App registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
 
     1. Use ngrok to create a tunnel to your web server's endpoints.
-    1. Create Azure Bot resource to register bot with Azure Bot Service.
+    1. Create Azure Bot resource to register bot with Azure Bot service.
     1. Create client secret that enables SSO authentication of the bot.
     1. Add API permissions for downstream calls.
     1. Create Bot channel registration in Azure account.
