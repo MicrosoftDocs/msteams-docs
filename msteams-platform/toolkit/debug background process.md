@@ -12,7 +12,7 @@ ms.date: 03/03/2022
 
 The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code, then Visual Studio Code launches the debuggers, and  Microsoft Edge or Chrome debugger launches a new browser instance as follows:
 
-1. The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations `preLaunchTask`, `Pre Debug Check`, and `Start All`, which is defined in `.vscode/tasks.json` file.
+1. The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations `preLaunchTask`, defined as `Pre Debug Check`, and `Start All` in `.vscode/tasks.json` file.
 
 2. Visual Studio Code launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
@@ -107,8 +107,8 @@ Configures the authentication as follows:
 
 | Project type | Redirect URIs for web | Redirect URIs for single-page application |
 | --- | --- | --- |
-| Tab | [Local](https://localhost:53000/auth-end.html) | [Localhost](https://localhost:53000/auth-end.html?clientId={appId>}) |
-| Bot or messaging extension | [Ngrok](https://ngrok.io/auth-end.html) | NA |
+| Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
+| Bot or messaging extension | `https://ngrok.io/auth-end.html` | NA |
 
 ### Registers and configures bot
 
@@ -122,7 +122,7 @@ For tab app or messaging extension app:
 
 1. Adds Microsoft Teams channel.
 
-1. Configures messaging endpoint as [Messages](https://ngrok.io/api/messages).`https://{ngrokTunnelId}.ngrok.io/api/messages`.
+1. Configures messaging endpoint as `https://{ngrokTunnelId}.ngrok.io/api/messages`.
 
 ### Registers and configures Teams app
 
@@ -143,7 +143,7 @@ The following lists the local debug files and their configuration types:
 | `api/.env.teamsfx.local`  | Environment variables file for Azure functions. | The values of each environment variable generates and saves during local debug. |
 
 
-After all the files are generated, you can also customize your app. To learn more about customize your app refer [Customize local debug settings].
+After all the files are generated, you can also customize your app. To learn more about customize your app refer [Customize local debug settings](debug local.md#customize-local-debug-settings).
 
 
 ## See also
