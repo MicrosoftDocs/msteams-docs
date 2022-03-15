@@ -45,7 +45,7 @@ To create a personal tab with Node.js:
 
 1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
 
-    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    :::image type="content" source="../assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
 
     **What is your solution name?**
 
@@ -218,11 +218,11 @@ gulp build
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page as shown in the following image:
 
-    ![home page screenshot](~/assets/images/tab-images/homePage.png)
+    :::image type="content" source="../assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
 
 1. To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
 
-    ![Personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
+    :::image type="content" source="../assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab" border="true":::
 
 ### Establish a secure tunnel to your tab
 
@@ -244,15 +244,13 @@ To upload your application to Teams
 1. From the lower left corner, choose **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
-    ![Adding your personal tab](../../assets/images/tab-images/addingpersonaltab.png)
+    :::image type="content" source="../assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
 
 1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
 
-    ![Personal tab uploaded](../../assets/images/tab-images/personaltabuploaded.png)
+    :::image type="content" source="../assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
 
-### View your personal tab
-
-In the navigation bar at the far left in Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app.
+In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your uploaded app to view your personal tab.
 
 ::: zone-end
 
@@ -274,7 +272,7 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln**.
+1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln**.
 
 In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
@@ -369,7 +367,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Update your app package with Developer Portal
 
-1. Navigate to your **Developer portal** in Teams.
+1. Go to your **Developer portal** in Teams.
 
 1. Open **Apps** and select **Import app**.
 
@@ -405,15 +403,15 @@ ngrok http 3978 --host-header=localhost
 
 1. Select the **View** option. The **Add** page appears for your app.
 
-1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
+1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
-![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetuploaded.png)
+    :::image type="content" source="../assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab" border="true":::
 
 ::: zone-end
 
 ::: zone pivot="mvc-csharp"
 
-### Create a personal tab with ASP.NET Core MVC
+## Create a personal tab with ASP.NET Core MVC
 
 You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC:
 
@@ -429,7 +427,7 @@ You can create a custom personal tab using C# and ASP.NET Core MVC. To create a 
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
+1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
 
 In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
@@ -536,7 +534,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Update your app package with Developer Portal
 
-1. Navigate to your **Developer portal** in Teams.
+1. Go to your **Developer portal** in Teams.
 
 1. Open **Apps** and select **Import app**.
 
@@ -574,7 +572,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
 
-![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetmvccoreuploaded.png)
+    :::image type="content" source="../assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
 
 ::: zone-end
 
@@ -657,19 +655,19 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 ### Personal app
 
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="true":::
 
 #### Personal app - Forward event
 
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Example shows options for adding registerOnFocussed API forward move" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Example shows options for adding registerOnFocussed API forward move" border="true":::
 
 #### Personal app - Backward event
 
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Example shows options for adding registerOnFocussed API backward move" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Example shows options for adding registerOnFocussed API backward move" border="true":::
 
 ### Tab
 
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Example shows options for adding registerOnFocussed API for tab" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Example shows options for adding registerOnFocussed API for tab" border="true":::
 
 ## Next step
 
