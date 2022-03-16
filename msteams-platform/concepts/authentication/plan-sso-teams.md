@@ -9,13 +9,13 @@ keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), 
 
 <!--Azure Active Directory (Azure AD) is a cloud-based identity and access management service. It helps your app users access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Your users can also access internal resources, such as apps on your corporate network and intranet, along with any cloud apps from your own organization.-->
 
-Your app users can access and use your Teams app without ever having to sign-in. Single sign-on (SSO) for Teams makes it possible for you.
+You can let users access and use your Teams app without ever having to sign-in. Single sign-on (SSO) for Teams makes it possible for you.
 
-SSO for Teams is an authentication method that uses the credentials of your app users to validate them for accessing your app. A user who has logged into Teams doesn't need to log in again to your app within Teams environment. With only a consent required from the user, the Teams app retrieves their identity and access details from Azure Active Directory (AD).
+SSO for Teams is an authentication method that uses a user's Teams sign-in credentials to validate them for accessing your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the user, the Teams app retrieves their identity and access details from Azure Active Directory (AD).
 
 SSO for Teams is the recommended user authentication method for a Teams app. It's an enhanced process that doesn't lead the user to enter their credentials again, even on a different device or browser.
 
-Take the advantage of single sign-on (SSO) to validate your app users for desktop, web, or mobile device apps.
+Take the advantage of SSO for Teams to validate your app users for desktop, web, or mobile device apps.
 
 ## Prerequisites for SSO for Teams
 
