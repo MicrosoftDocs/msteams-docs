@@ -45,7 +45,7 @@ Implementing SSO for Teams authentication in your app means that Azure AD would 
 
 Primarily, Teams app and Azure AD perform a token exchange.
 
-:::image type="content" source="../../assets/images/authentication/sso-for-teams.png" alt-text="SSO for Teams":::
+:::image type="content" source="../../assets/images/authentication/teams-sso-story/sso-for-teams.png" alt-text="Role of AAD in SSO for Teams":::
 
 1. When a user accesses your Teams app, the app tells Teams to obtain an access token for the user.
 1. If the user is accessing your app for the first time, there's a request prompt for the user to provide their consent for using their credentials to authenticate them.
