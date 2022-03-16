@@ -44,8 +44,9 @@ landingContent:
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: Authentication using external OAuth providers  
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
+      linkLists:
       - text: Debug Teams app locally with Teams Toolkit  
-        url: ~/toolkit/debug local.md, toolkit/debug background process.md
+        url: ~/toolkit/debug local.md
       
 
 - title: Get started

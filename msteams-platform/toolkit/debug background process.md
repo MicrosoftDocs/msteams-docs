@@ -31,7 +31,7 @@ The following table lists the limitations if the required software is unavailabl
 |Sign in to Microsoft 365 account | Microsoft 365 credentials |Teams toolkit prompts to sign in to Microsoft 365 account, if you haven't signed in. |
 |Bot, messaging extension | Ngrok version 2.3.| • If you haven't installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
 |Azure functions | Azure Functions Core Tools version 3.| • If you haven't installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
-|Azure functions | [.NET Core SDK version](#Use-the-following-.NET-Core-versions)|• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
+|Azure functions |.NET Core SDK version|• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
 |Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If you haven't installed Azure functions binding extensions, the toolkit installs Azure functions binding extensions.|
 |NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|If you haven't installed NPM, the toolkit installs all NPM packages.|
 |Bot and messaging extension | Ngrok |Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension. |
@@ -61,7 +61,6 @@ The following table lists the ports available for components:
 | Node inspector for bot or messaging extension | 9239 |
 | Azure functions | 7071 |
 | Node inspector for Azure functions | 9229 |
-
 
 
 When you Select **Start Debugging (F5)**. The Teams Toolkit output channel displays the progress and result after checking the prerequisites.
