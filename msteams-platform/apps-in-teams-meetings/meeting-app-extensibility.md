@@ -64,7 +64,7 @@ After adding the tabs to an existing meeting on mobile, you can see the same app
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
+With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
@@ -200,7 +200,7 @@ The following table provides the user types and lists the features that each use
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## See also
 
