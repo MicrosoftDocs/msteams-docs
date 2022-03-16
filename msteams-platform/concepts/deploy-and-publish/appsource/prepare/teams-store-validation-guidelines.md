@@ -4,7 +4,7 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 # Microsoft Teams store validation guidelines
 
