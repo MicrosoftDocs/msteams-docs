@@ -14,8 +14,8 @@ Teams Toolkit in Visual Studio allows you to build, test, and develop Teams app 
 
 * Create new projects for Teams
 * Set up apps in the Teams developer portal
-* Run and debug in Teams
-* Configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your Integrated Development Environment (IDE).
+* Run and debug app in Teams
+* Configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) in your Integrated Development Environment (IDE).
 
 ## Install Teams Toolkit for Visual Studio
 
@@ -31,7 +31,7 @@ Teams Toolkit in Visual Studio allows you to build, test, and develop Teams app 
 
 The following image displays the options you must select in the Visual Studio installer:
 
-![Selecting the Microsoft Teams development tools in the Visual Studio installer.) installed.]:::image type="content" source="images/teams-development-tools-vs-installer.png" alt-text="Teams development VS installer" border="true":::
+:::image type="content" source="images/teams-development-tools-vs-installer.png" alt-text="Teams development VS installer" border="true":::
 
 ## Create a new project using Visual Studio
 
@@ -43,7 +43,7 @@ The Microsoft Teams App project template allows you to specify a Microsoft 365 a
 > If you do not have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's free for 90 days and renews as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
 
 1. Launch Visual Studio 2022.
-1. In the start window, choose **Create a new project**.
+1. In the start window, select **Create a new project**.
 1. In the **Search for templates** box, enter Microsoft Teams App.
 1. Select the **Microsoft Teams App** template and select **Next**.
 1. In the **Configure your new project** window, type or enter _HelloTeams_ in the **Project name** box. Then, select **Create**.
