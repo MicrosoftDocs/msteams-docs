@@ -14,19 +14,19 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Link unfurling helps you to register your app and receive invoke activity when URLs with particular domain are pasted into the compose message area. The invoke contains the full URL and you can respond with card that the user can unfurl and provide additional information or perform different actions. You can add link unfurling to your app manifest using Developer Portal or manually.
+    Link unfurling helps you to register your app and receive invoke activity when URLs with particular domain are pasted into the compose message area. The invoke contains the full URL and you can respond with card. User can unfurl and provide additional information or perform different actions. You can add link unfurling to your app manifest using Developer Portal or manually.
 
     > [!NOTE]
     > Currently, link unfurling is not supported on mobile clients. 
 
     **Key features of link unfurling**
 
-    * Allows the user to paste URLs and respond with a card.
-    * Allows the user to register the app and receive invoke activity.
+    * Allows user to paste URLs and respond with a card.
+    * Allows user to register the app and receive invoke activity.
 
 
 
-    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for *://www.BotFramework.com URLs. You'll see the following output:
+    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for ://www.BotFramework.com URLs. You'll see the following output:
 
      ![Link unfurling](~/assets/images/Teams-link-unfurling/final-image.png)
 
@@ -195,8 +195,10 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
+      
         ![Messaging Endpoint](~/assets/images/Teams-link-unfurling/messaging-endpoint.png)
 
+   
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service.
@@ -378,7 +380,7 @@ items:
   content: |
     **To build and run the service using latest version of Visual Studio  or Command line**
 
-    # [Visual Studio 2022](#tab/vs2022)
+    # [Visual Studio](#tab/vs)
 
        1. Launch Visual Studio .
        1. Navigate to **File** > **Open** > **Project/Solution**.
