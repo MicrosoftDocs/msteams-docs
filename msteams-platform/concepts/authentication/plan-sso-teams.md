@@ -25,36 +25,35 @@ Some prerequisites for implementing authentication with SSO for Teams are:
 - **Register your app with Azure AD**: Establish a trust relationship between Azure AD and your Teams app. Azure AD serves as an IdP for your app users and will be able to authenticate them. To register your app, provide app ID, configure access permissions, and define scope for user access on the Azure portal.
 - **Register users with Azure AD**: All valid app users are registered with Azure AD. Users registered with Azure AD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.
 
+## SSO for Teams user experience
+
+Let's explore the authentication experience of a user with Teams app that uses SSO for Teams.
+
+:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-ux.png" alt-text="SSO for Teams UX":::
+
+1. A Teams user attempts to use your Teams app for the first time.
+
+1. A message displays lets the user know that it's seeking additional permissions.
+
+1. A popup dialog requires the user to give Teams their consent to use their Teams login credentials to gain access to your app.
+
+The user can access and use your Teams app with no further need of consenting or signing in.
+
 ## Role of Azure AD as IdP
 
 Implementing SSO for Teams authentication in your app means that Azure AD would serve as an IdP for validating your app users. All users registered with Azure AD can now be validated for app usage and access all resources within Azure system.
 
- For subsequent access, the user's access token is pre-fetched to improve your app's performance and load time.
+Primarily, Teams app and Azure AD perform a token exchange.
 
-
-:::image type="content" source="../../assets/images/authentication/aad-sso-process.png" alt-text="SSO for Teams":::
+:::image type="content" source="../../assets/images/authentication/sso-for-teams.png" alt-text="SSO for Teams":::
 
 1. When a user accesses your Teams app, the app tells Teams to obtain an access token for the user.
 1. If the user is accessing your app for the first time, there's a request prompt for the user to provide their consent for using their credentials to authenticate them.
-1. Teams requests the access token from the Azure AD for the current user.
-1. Azure AD sends the access token to the Teams application granting the identified user permissions to use the app.
-1. Teams sends the access token to the app.
-1. The Teams app extracts the required information, such as the user's email address from the access token. 
-1. This token is used to let the user access and use the app. After this consent the user can access the app without consenting or signing in ever again.
-
-## SSO for Teams user experience
-
-\ user scenario \
-
-\ Add app screenshots to show UI and UX \
-
-| # | Steps | Key points |
-|--- | --- | --- |
-| 1 | A Teams app user attempts to use the app for the first time. <br> :::image type="content" source="../../assets/images/authentication/app-access.png" alt-text="Teams app access"::: | The Teams app seeks to verify the user's identity. |
-| 2 | Teams seeks the consent of the user to use their Teams login credentials <br> :::image type="content" source="../../assets/images/authentication/permission-requested.png" alt-text="Permission requested"::: | - Azure AD receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
-| 3 | Azure AD serves as an IdP and verifies the user information. | - Azure AD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
-| 4 | On a successful match, Azure AD sends an access token granting app access to your Teams app. | - Access token may contain validated user credentials. <br> - The access token of the authentication user is saved with the app. <br> - The access token is used to let the user access at subsequent log ins. |
-| 5 | The user can access and use your app with no further need of consenting or signing in. | - Your app uses the access token generated the first time that the user was authenticated. |
+1. Teams performs a token exchange with Azure AD. It sends the ID token of the current user to Azure AD to request access. This request contains the user's login credentials (ID token) and the app ID of your app.
+1. Azure AD verifies the ID token and sends an access token to the Teams application granting the identified user permissions to use the app.
+1. Teams sends the access token to your app.
+1. The Teams app extracts the required information, such as the user's email address, from the access token.
+1. This token is used to let the user access and use the app. After this consent the user can access the app without consenting or signing in ever again. For subsequent access, the user's access token is pre-fetched to improve your app's performance and load time.
 
 ## Features of SSO for Teams
 
