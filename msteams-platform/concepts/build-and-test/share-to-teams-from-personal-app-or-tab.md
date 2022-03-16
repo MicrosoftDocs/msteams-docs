@@ -55,7 +55,7 @@ The following image shows the Share to Teams option:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
-### Response codes
+## Response codes
 
 The following table provides the response code:
 
@@ -63,7 +63,7 @@ The following table provides the response code:
 |---|---|
 | **100** | API not supported in the current platform. |
 
-### Limitations
+## Limitations
 
 The limitations to add Share to Teams button:
 
