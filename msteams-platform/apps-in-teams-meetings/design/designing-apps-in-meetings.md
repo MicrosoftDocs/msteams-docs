@@ -91,7 +91,7 @@ People might use the in-meeting tab to:
 
 ### Anatomy: In-meeting tab
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -147,7 +147,7 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 
 ### Anatomy: In-meeting dialog
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog." border="false":::
 
 |Counter|Description|
 |----------|-----------|

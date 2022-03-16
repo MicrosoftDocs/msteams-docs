@@ -31,6 +31,7 @@ Tabs allow the team members to access services and content in a specific space w
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
+>
 > * The private scheduled meetings only support apps.
 > * Add app option for Teams meeting extension tab app is not supported in Teams web client.
 
@@ -38,38 +39,39 @@ Tabs allow the team members to access services and content in a specific space w
 
 With the pre-meeting app experience, you can find and add meeting apps. You can also do pre-meeting tasks, such as developing a poll to survey the meeting participants.
 
-**To add tabs to an existing meeting**
+To add tabs to an existing meeting:
 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="Pre-meeting app experience":::
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
    > [!NOTE]
+   >
    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
    > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
 
 # [Desktop](#tab/desktop)
 
-![Pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="Tabs during a meeting":::
 
 # [Mobile](#tab/mobile)
 
 After adding the tabs to an existing meeting on mobile, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
 ---
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
+With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
-**To use tabs during a meeting**
+To use tabs during a meeting:
 
 1. Go to Teams.
 1. In your calendar, select a meeting in which you want to use a tab.
@@ -78,8 +80,6 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 1. In the in-meeting dialog box, enter your response as feedback.
 
 # [Desktop](#tab/desktop)
-
-![Dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # [Mobile](#tab/mobile)
 
@@ -95,6 +95,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 ---
 
 > [!NOTE]
+>
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
 > * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
@@ -103,7 +104,7 @@ The following image illustrates the in-meeting side panel:
 
 # [Desktop](#tab/desktop)
 
-![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![In-meeting side panel](../assets/images/in-meeting-dialog.png)
 
 # [Mobile](#tab/mobile)
 
@@ -127,11 +128,11 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 # [Desktop](#tab/desktop)
 
-![Post meeting view](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="Contoso tab with results":::
 
 # [Mobile](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Post meeting app experience":::
 
 ---
 
@@ -150,7 +151,7 @@ The Teams unified meetings apps allow you to design your app based on participan
 
 ## Participant roles in a meeting
 
-![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="Participant roles in a meeting":::
 
 The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
@@ -202,7 +203,7 @@ The following table provides the user types and lists the features that each use
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## See also
 
