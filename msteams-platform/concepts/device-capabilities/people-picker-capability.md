@@ -41,13 +41,11 @@ The `selectPeople` API comes with the following input configurations:
 
 The following image depicts the experience of People Picker in a sample web and desktop app:
 
-# [People Picker Mobile](#tab/AS)
+# [People Picker Mobile](#tab/Mobile)
 
-> [!NOTE]
-> The prerequisite to create an action command is that you have already created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
-![Web app experience of People Picker](../../assets/images/tabs/people-picker-control-capability.png)
+:::image type="content" source="../../assets/images/tabs/select-people-desktop-email.png" alt-text="people picker using email address":::
 
-
+# [People Picker Mobile](#tab/Desktop)
 :::image type="content" source="../../assets/images/tabs/select-people-desktop-email.png" alt-text="people picker using email address":::
 
 ## Code snippet
