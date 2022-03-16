@@ -273,7 +273,7 @@ items:
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin-spfx1.png" alt-text="Screenshot showing where to sign in to Microsoft 365." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin-spfx.png" alt-text="Screenshot showing where to sign in to Microsoft 365." border="false":::
 
         Your default web browser opens to let you sign in to the account.
 
