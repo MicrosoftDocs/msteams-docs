@@ -38,7 +38,7 @@ The images that you upload with the English language are used in AppSource.
 
 ## Localize strings in your app manifest
 
-You must use the Microsoft Teams app schema `v1.5` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to ``https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json`` or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case).
+You must use the Microsoft Teams app schema `v1.5` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case).
 
 You must add the `localizationInfo` property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings do not match with any of your additional languages.
 
@@ -94,7 +94,7 @@ If the user's language is set to 'en-ca', the following changes take place based
 
 If the user's language is set to 'es-es', the Teams client takes the 'fr' strings. The Teams client does not override the strings with any of the language files as no 'es' or 'es-es' translation is provided.
 
-Therefore, you must provide top level, language only translations in your manifest. For example, 'en' instead of 'en-us'. You must provide region level overrides only for the few strings that need them.
+Therefore, you must provide top level, language only translations in your manifest. For example, `en` instead of `en-us`. You must provide region level overrides only for the few strings that need them.
 
 ### Example manifest.json change
 
