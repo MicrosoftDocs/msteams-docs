@@ -28,6 +28,7 @@ You can format card text using a subset of XML or HTML formatting or Markdown de
 [People Picker in Adaptive Cards](cards/people-picker.md) in Adaptive Card helps to search, select, reassign, and preselect users within chat or channel.
 
 You can add and respond to card actions that:
+
 * Open a URL
 * Send messages and payload to the bot
 * Initiate OAuth flow

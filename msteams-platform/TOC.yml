@@ -42,6 +42,8 @@
     href: concepts/design/planning-checklist.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+  - name: Plan to monetize your app
+    href: concepts/design/plan-to-monetize.md
 - name: Design your app
   items:
   - name: Overview
@@ -86,7 +88,7 @@
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create new project
+    - name: Create a new Teams app
       href: toolkit/create-new-project.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
@@ -283,8 +285,6 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Unified meetings apps
     href: apps-in-teams-meetings/meeting-app-extensibility.md
-  - name: Prerequisites for apps in Teams meetings
-    href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
@@ -359,6 +359,8 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
+    - name: Use external OAuth providers
+      href: tabs/how-to/authentication/auth-oauth-provider.md
   - name: Bots
     items:
     - name: Authentication flow in bots
@@ -471,16 +473,18 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md   
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-  - name: Monetize your app
-    items:
-    - name: Overview
-      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: Include a SaaS offer with your app
-      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    - name: In-app purchases
-      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-    - name: Test preview for monetized apps
-      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+    - name: Microsoft Teams store ranking parameters
+      href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+- name: Monetize your app
+  items:
+  - name: Overview
+    href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+  - name: Include a SaaS offer with your app
+    href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+  - name: In-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+  - name: Test preview for monetized apps
+    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
   items:
     - name: App manifest schema
@@ -497,14 +501,14 @@
     href: samples/integrate-web-apps-overview.md
   - name: Considerations for Teams Integration
     href: samples/integrating-web-apps.md
+  - name: Create Virtual Assistant
+    href: samples/virtual-assistant.md 
   - name: Power Platform apps
     items:
     - name: Overview
       href: samples/teams-low-code-solutions.md
     - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-    - name: Create Virtual Assistant
-      href: samples/virtual-assistant.md 
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
@@ -513,8 +517,12 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-    - name: Install Moodle LMS
-      href: resources/moodleInstructions.md
+    - name: Microsoft 365 plugins
+      href: resources/m365-plugins/m365-plugins-overview.md
+    - name: Partner apps for Moodle
+      href: resources/partner-apps-for-moodle.md
+    - name: Moodle FAQ
+      href: resources/faqs.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
   - name: Add a Teams tab to SharePoint

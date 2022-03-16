@@ -20,7 +20,6 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 > ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
 >
 > For the best experience with Teams, use the latest version of iOS and Android.
-
 > [!NOTE]
 > **Quickstart**  
 >
@@ -137,15 +136,18 @@ Use the following code to add new properties to your Teams manifest:
 * **WebApplicationInfo** is the parent of the following elements:
 
 > [!div class="checklist"]
+>
 > * **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with Azure AD.
 >* **resource** - The domain and subdomain of your application. This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in step 6. You must not include the `access_as_user` path in your resource. The domain part of this URI must match the domain, including any subdomains, used in the URLs of your Teams application manifest.
-
 > [!NOTE]
 >
 >* The resource for an Azure AD app is usually the root of its site URL and the appID (e.g. `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). This value is also used to ensure your request is coming from the same domain. Ensure that the `contentURL` for your tab uses the same domains as your resource property.
 >* You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
 ### 3. Get an access token from your client-side code
+
+> [!NOTE]
+> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD app registration and in your Teams app.
 
 Use the following authentication API:
 
@@ -225,6 +227,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
             });
         });
 ```
+
 ---
 
 ## Code sample
