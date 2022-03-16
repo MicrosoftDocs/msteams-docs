@@ -74,9 +74,9 @@ The following image displays the browser options in the dropdown list:
 
 Visual Studio Code starts the following processes:
 
-1. [Starts app services](#starts-app-services).
-1. [Launches debuggers](#launches-debuggers).
-1. [Sideloads the Teams app](#sideloads-the-teams-app).
+1. [Starts app services](#starts-app-services)
+1. [Launches debuggers](#launches-debuggers)
+1. [Sideloads the Teams app](#sideloads-the-teams-app)
 
 ## Starts app services
 
@@ -168,7 +168,7 @@ The following image shows the list that can be unchecked:
 
 ### Add environment variables
 
-1. You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension and Azure functions. Teams Toolkit loads the environment variables you added to start services during local debug.
+You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension and Azure functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
  > Ensure to start a new local debug after adding new environment variables as the environment variables doesn't support hot reload.
@@ -177,7 +177,7 @@ The following image shows the list that can be unchecked:
 
 Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, messaging extension and Azure functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure functions project, use the following steps:
 
-1. Comment **Attach to Bot** and **Attach to Backend** from Debug compound in `.vscode/launch.json`
+1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
  ```json
 {
