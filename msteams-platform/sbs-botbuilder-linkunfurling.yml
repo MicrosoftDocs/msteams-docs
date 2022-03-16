@@ -26,7 +26,7 @@ items:
 
 
 
-    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for ://www.BotFramework.com URLs. You'll see the following output:
+    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com` URL. You'll see the following output:
 
      ![Link unfurling](~/assets/images/Teams-link-unfurling/final-image.png)
 
@@ -254,7 +254,7 @@ items:
   
     1. Ensure that **State** is set to **Enabled**.
   
-    1. Select **Add scope** to save.
+    1. Select **Add a scope** to save.
 
         ![Add a scope](~/assets/images/Teams-link-unfurling/addascope.png)
 
@@ -270,7 +270,7 @@ items:
 
         ![Select client application](~/assets/images/meetings-side-panel/selectclientapp.png) 
 
-    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
+    1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams desktop application. 
 
         ![Add client application 1](~/assets/images/meetings-side-panel/addclientapplication1.png) 
 
@@ -282,7 +282,7 @@ items:
 
         ![Add client application 2](~/assets/images/Teams-link-unfurling/authorizedscope.png) 
 
-       The following image displays the **Client Ids**:
+       The following image displays the **Client Id**:
 
         ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
   
