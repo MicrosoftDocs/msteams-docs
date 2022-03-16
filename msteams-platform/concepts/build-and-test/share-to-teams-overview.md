@@ -10,9 +10,9 @@ keywords: Share to Teams overview
 
 Share to Teams is a button enabled on any web app, personal app or tab that allows users to share content to other users in Teams.
 
-You can also decide the placement of the Share to Teams button on the app.
+You can also decide the placement of the Share to Teams button on the app. Users can pin the crucial content and refer to it while collaborating with Teams.
 
-Users can pin the crucial content and refer to it while collaborating with Teams.
+:::image type="content" source="../../assets/images/share-to-teams/overview-share-to-teams.PNG" alt-text="share":::
 
 You can enable this feature on the following:
 
