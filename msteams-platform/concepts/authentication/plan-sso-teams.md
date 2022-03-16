@@ -1,5 +1,5 @@
 ---
-title: Authenticating with AAD SSO for Teams
+title: Authenticating with Azure AD SSO for Teams
 description: Authentication in Teams apps using SSO for Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -31,11 +31,13 @@ Let's explore the authentication experience of a user with Teams app that uses S
 
 :::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-ux.png" alt-text="SSO for Teams UX":::
 
-1. A Teams user attempts to use your Teams app for the first time.
+The user goes through only a simple consent request.
 
-1. A message displays lets the user know that it's seeking additional permissions.
+1. A Teams user attempts to access your Teams app for the first time.
 
-1. A popup dialog requires the user to give Teams their consent to use their Teams login credentials to gain access to your app.
+1. A message displays letting the user know that Teams is seeking more permissions to access the app.
+
+1. A popup dialog requires the user to give Teams the consent to use their Teams login credentials to gain access to your app.
 
 The user can access and use your Teams app with no further need of consenting or signing in.
 
@@ -53,7 +55,7 @@ Primarily, Teams app and Azure AD perform a token exchange.
 1. Azure AD verifies the ID token and sends an access token to the Teams application granting the identified user permissions to use the app.
 1. Teams sends the access token to your app.
 1. The Teams app extracts the required information, such as the user's email address, from the access token.
-1. This token is used to let the user access and use the app. After this consent the user can access the app without consenting or signing in ever again. For subsequent access, the user's access token is pre-fetched to improve your app's performance and load time.
+1. This token is used to let the user access and use the app. After this consent, the user can access the app without consenting or signing in ever again. For subsequent access, the user's access token is pre-fetched to improve your app's performance and load time.
 
 ## Features of SSO for Teams
 
@@ -63,7 +65,7 @@ Here's a look at features of SSO for Teams:
 
 - **App development**: Building an app with SSO for Team follows a simple development process.
 
-- **Managing passwords**: Your overhead to maintain usernames and passwords, and protecting user privacy and data is considerably reduced.
+- **Managing passwords**: Your overhead to maintain usernames and passwords, and protecting user privacy and data is reduced.
 
 - **Conditional access policies**: Use conditional access policies to let yor users enjoy device-specific access to join a domain.
 
