@@ -18,11 +18,11 @@ The following sections describe how to do this:
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### Search type message extensions
+## Search type message extensions
 
 For search based messaging extension set the `type` parameter to `query`. Below is an example of a manifest with a single search command. A single messaging extension can have up to 10 different commands associated with it. This can include both multiple search and multiple Action-based commands.
 
-#### Complete app manifest example
+### Complete app manifest example
 
 ```json
 {
@@ -79,7 +79,7 @@ For search based messaging extension set the `type` parameter to `query`. Below 
 }
 ```
 
-### Test via uploading
+## Test via uploading
 
 You can test your messaging extension by uploading your app.
 
@@ -91,7 +91,7 @@ Most of your work involves the `onQuery` event, which handles all interactions i
 
 If you set `canUpdateConfiguration` to `true` in the manifest, you enable the **Settings** menu item for your messaging extension and must also handle `onQuerySettingsUrl` and `onSettingsUpdate`.
 
-### Handle onQuery events
+## Handle onQuery events
 
 A messaging extension receives an `onQuery` event when anything happens in the messaging extension window or is sent to the window.
 
@@ -103,7 +103,7 @@ Next, check whether `initialRun` is set; if so, take appropriate action, such as
 
 The remainder of your handler for `onQuery` prompts the user for information, displays a list of preview cards, and returns the card selected by the user.
 
-### Handle onQuerySettingsUrl and onSettingsUpdate events
+## Handle onQuerySettingsUrl and onSettingsUpdate events
 
 The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable the **Settings** menu item.
 
@@ -127,8 +127,8 @@ In addition to the standard bot activity properties, the payload contains the fo
 |`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) object id of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For additional information, please *see* [Non-IRI entity types — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
@@ -429,7 +429,7 @@ The default query has the same structure as any regular user query, except with 
 
 ## Identify the user
 
-Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Azure Active Directory object ID.
+Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Microsoft Azure Active Directory (Azure AD) object ID.
 
 ```json
 "from": {
@@ -439,7 +439,7 @@ Every request to your services includes the obfuscated ID of the user that perfo
 },
 ```
 
-The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user. They can be used as keys to look up credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which can be used to identify the user’s organization. If applicable, the request also contains the team and channel IDs from which the request originated.
+The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user. They can be used as keys to look up credentials or any cached state in your service. In addition, each request contains the Microsoft Azure Active Directory (Azure AD) tenant ID of the user, which can be used to identify the user’s organization. If applicable, the request also contains the team and channel IDs from which the request originated.
 
 ## Authentication
 

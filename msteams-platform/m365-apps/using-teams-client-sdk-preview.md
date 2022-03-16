@@ -4,6 +4,7 @@ description: Understand the changes coming with Microsoft Teams JavaScript clien
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
+ms.localizationpriority: medium
 ---
 # Microsoft Teams JavaScript client SDK v2 Preview
 
@@ -13,22 +14,23 @@ There are two significant changes in the TeamsJS SDK v2 Preview that your code w
 
 * [**Callback functions now return Promise objects.**](#callbacks-converted-to-promises) All existing functions with a callback parameter have been modernized to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object for improved handling of asynchronous operations and code readability.
 
- - [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `calendar`, `mail`, `monetization`, `meeting`, and `sharing`.
+* [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `calendar`, `mail`, `monetization`, `meeting`, and `sharing`.
 
- You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code to simplify the update process for your Teams app, as described in the following section.
+ You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the update process for your Teams app, as described in the following section.
 
 > [!NOTE]
 > Enabling an existing Teams app to run in Outlook and Office requires both:
+>
 > 1. Dependency on the `@microsoft/teams-js@2.0.0-beta.1` or later, and
 > 2. Modifying existing application code according to the required changes described in this document.
 >
->  If you reference `@microsoft/teams-js@2.0.0-beta.1` (or later) from an existing Teams app, you will see deprecation warnings if your code calls APIs that have changed. An API translation layer (mapping current SDK to preview SDK API calls) is provided to enable existing Teams apps to continue working in Teams until they are able to update code to work with the TeamsJS SDK v2 Preview. After you update your code with the changes outlined in this article, your personal tab will also run in Outlook and Office.
+> If you reference `@microsoft/teams-js@2.0.0-beta.1` (or later) from an existing Teams app, you will see deprecation warnings if your code calls APIs that have changed. An API translation layer (mapping current SDK to preview SDK API calls) is provided to enable existing Teams apps to continue working in Teams until they are able to update code to work with the TeamsJS SDK v2 Preview. After you update your code with the changes outlined in this article, your personal tab will also run in Outlook and Office.
 
 ## Updating to the Teams client SDK v2 Preview
 
 The easiest way to update your Teams app to use the TeamsJS SDK v2 Preview is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
-### 1. Install the latest Teams Toolkit VS Code extension
+### 1. Install the latest Teams Toolkit Visual Studio Code extension
 
 In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit** and install version `2.10.0` or later. The toolkit provides two commands to assist the process:
 
@@ -55,6 +57,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
@@ -72,6 +75,7 @@ To run in Outlook and Office, your app will need to depend on the [npm package](
 After completion, the utility will have updated your `package.json` file with the TeamsJS SDK v2 Preview (`@microsoft/teams-js@2.0.0-beta.1` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
+>
 > * `package.json` references to TeamsJS SDK v2 Preview
 > * Import statements for TeamsJS SDK v2 Preview
 > * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS SDK v2 Preview
@@ -106,7 +110,7 @@ Needs to be updated to:
 ```js
 import { app, Context } from "@microsoft/teams-js";
 
-app.getContext().then((context: Context) => {
+app.getContext().then((context) => {
     /*...*/
 });
 ```
@@ -229,7 +233,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 | - | - |
 | `getTabInstances` |  `pages.tabs.getTabInstances` |
 | `getMruTabInstances` | `pages.tabs.getMruTabInstances` |
-| ` navigateToTab` | `pages.tabs.navigateToTab` |
+| `navigateToTab` | `pages.tabs.navigateToTab` |
 
 | Original namespace `navigation` | New namespace `pages.tabs` |
 | - | - |
@@ -346,11 +350,11 @@ You can also visualize the changes by reviewing the  [`transformLegacyContextToA
 | `tenantSKU`| `app.Context.user.tenant.teamsSku` |
 | `tid`| `app.Context.user.tenant.id` |
 | `upn` | `app.Context.user.userPrincipalName` |
-|` userClickTime`| `app.Context.app.userClickTime`|
+|`userClickTime`| `app.Context.app.userClickTime`|
 | `userFileOpenPreference` | `app.Context.app.userFileOpenPreference` |
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
-| ` userTeamRole` | `app.Context.team.userRole`|
+| `userTeamRole` | `app.Context.team.userRole`|
 | `userDisplayName` | `app.Context.user.displayName` |
 | N/A | `app.Context.app.host.name`|
 

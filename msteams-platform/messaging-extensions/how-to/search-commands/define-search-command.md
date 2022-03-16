@@ -36,12 +36,12 @@ To add the search command to your app manifest, you must add a new `composeExten
 
 The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**To create a search command**
+To create a search command:
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1.  If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
+1. If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
 1. After importing app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page: 
+1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -49,7 +49,7 @@ The prerequisite to create a search command is that you must already have create
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.   
+1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.
 The following image displays command addition for messaging extension:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -58,7 +58,7 @@ The following image displays command addition for messaging extension:
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be invoked. Selecting **message** does not currently alter the behavior of your search command. The following image displays the search command invoke location:
+1. Select the location from where your search command must be invoked. The following image displays the search command invoke location:
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
@@ -115,17 +115,20 @@ Following section is an example of the simple app manifest of the `composeExtens
 ...
 }
 ```
+
 For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |   
+| Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.yml) to build a search based messaging extension.
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-

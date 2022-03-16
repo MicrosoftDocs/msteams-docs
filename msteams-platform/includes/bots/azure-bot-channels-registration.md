@@ -6,7 +6,7 @@ ms.topic: overview
 ms.author: surbhigupta12
 ---
 
-1. In the [Azure portal](https://ms.portal.azure.com/#home), under Azure services, select **Create a resource**.
+1. In the [Microsoft Azure portal](https://ms.portal.azure.com/#home), under Azure services, select **Create a resource**.
 1. In the search box enter "bot". And in the drop-down list, select **Bot Channels Registration**.
 1. Select the **Create** button.
 1. In the **Bot Channel Registration** blade, provide the requested information about your bot.

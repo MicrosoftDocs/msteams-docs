@@ -132,15 +132,17 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```typescript
 
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
-            await context.sendActivity('Hello and welcome!');
-            await next();
-        });
-    }
-}
+    this.onMembersAddedActivity(async (context, next) => {
+        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
+            if (member.id !== context.activity.recipient.id) {
+                await context.sendActivity(
+                    `Welcome to the team ${member.givenName} ${member.surname}`
+                );
+            }
+        }));
+
+        await next();
+    });
 ```
 
 # [Python](#tab/python)
@@ -197,7 +199,7 @@ The `channelData` object is not included in messages in personal conversations, 
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
 * `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Azure Active Directory tenant ID passed in all contexts.
+* `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
 * `team`: Passed only in channel contexts, not in personal chat.
   * `id`: GUID for the channel.
   * `name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -207,7 +209,7 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 * `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
-### Example channelData object or channelCreated event
+### Example channelData object (channelCreated event)
 
 The following code shows an example of channelData object:
 
@@ -227,22 +229,20 @@ The following code shows an example of channelData object:
 }
 ```
 
-Messages received from or sent to your bot can include different types of message content.
-
 ## Message content
+
+Messages received from or sent to your bot can include different types of message content.
 
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text | ✔                | ✔                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
 | Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.  |
 | Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
-
-You can also add notifications to your message using the `Notification.Alert` property.
+| Emojis    | ✔                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ## Notifications to your message
 
-Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner, or both a banner and an email.
+You can also add notifications to your message using the `Notification.Alert` property. Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner, or both a banner and an email.
 
 > [!NOTE]
 > The **Summary** field displays any text from the user as a notification message in the feed.
@@ -365,7 +365,25 @@ The following code shows an example of sending a simple Adaptive Card:
 }
 ```
 
-To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
+### Form completion feedback
+
+Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+
+* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
+
+    ![Error message](~/assets/images/Cards/error-message.png)
+
+* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
+
+    ![Success message](~/assets/images/Cards/success.PNG)
+
+You can select **Close** or switch chat to dismiss the message.
+
+**Response on mobile**:
+
+The error message appears at the bottom of the Adaptive Card.
+
+For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
 ## Status code responses
 

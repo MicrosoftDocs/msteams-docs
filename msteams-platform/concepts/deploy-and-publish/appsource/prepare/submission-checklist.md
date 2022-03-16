@@ -2,7 +2,7 @@
 title: Prepare your store submission  
 description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package, compile testing instructions, and create your store listing details.
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: submission store distribute validate app package guidelines localize
@@ -18,7 +18,7 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
 > [!NOTE]
->  App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/)
+> App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/)
 
 The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 
@@ -30,6 +30,7 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 ## Compile testing instructions
 
 Provide instructions and resources to help the reviewers test your app, including:
+
 * Test accounts
 * Credentials
 * License keys
@@ -147,8 +148,8 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 Remember the following best practices about screenshots:
 
 * You can have up to five screenshots per listing.
-* Supported file types include PNG, JPEG, and GIF.
-* Dimensions should be 1366x768 pixels.
+* Supported file types include .png, .jpeg, and gif image formats.
+* Dimensions should be 1366 x 768 pixels.
 * Maximum size of 1,024 KB.
 
 For best practices, see the following resources:

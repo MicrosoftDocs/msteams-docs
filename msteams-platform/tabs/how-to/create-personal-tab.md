@@ -12,7 +12,7 @@ keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission 
 
 ## Create a custom personal tab
 
-You can create a personal tab using Node.js and the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC.
+You can create a personal tab using Node.js and the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC. For a personal tab on Microsoft Teams mobile, see [tabs on mobile](~/tabs/design/tabs-mobile.md).
 
 # [Node.js](#tab/nodejs)
 
@@ -34,7 +34,7 @@ You must have an understanding of the following prerequisites:
 
 Also, this project requires that you have the following installed in your development environment:
 
-- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+- Any text editor or IDE. You can install and use [Microsoft Visual Studio Code](https://code.visualstudio.com/download) for free.
 
 - [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) is installed in your system with the installation of Node.js.
 
@@ -130,7 +130,7 @@ Also, this project requires that you have the following installed in your develo
 
     Use the arrow keys to select **Personal (static)**.
 
-    **Do you require Azure AD Single-Sign-On support for the tab?**
+    **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
     Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
 

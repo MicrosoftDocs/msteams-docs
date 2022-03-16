@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Teams Tab with Adaptive cards
+title: Build Tab with Adaptive Cards
 metadata:
-  title: Teams Tab with Adaptive Cards
+  title: Build Tab with Adaptive Cards
   description: In this tutorial, you'll learn to set up Adaptive Cards in a tab for Teams.
   audience: Developer
   level: Beginner
@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: tabs/how-to/authentication/auth-aad-sso.md
   nextTutorialTitle: Read more on tab authentication
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -39,7 +39,7 @@ items:
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
-- title: Create a Bot Registration in Azure portal
+- title: Create a Bot Registration in Microsoft Azure portal
   durationInMinutes: 2
   content: |
     Adaptive Card tabs would require Azure Bot Service to build tabs in teams. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following:
@@ -101,6 +101,9 @@ items:
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
 
         ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+
+        > [!NOTE]
+        > Ensure **MultiTenant** is selected under **Bot Type**.
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 

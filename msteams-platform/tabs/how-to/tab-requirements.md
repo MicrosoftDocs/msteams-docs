@@ -35,7 +35,8 @@ Teams tabs must adhere to the following prerequisites:
 * MS Teams tab does not support the ability to load intranet websites that use self-signed certificates.
 
 ## Tools you can use to build tabs
-* [Teams Toolkit for Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+
+* [Teams Toolkit for Microsoft Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit for Visual Studio](../../toolkit/visual-studio-overview.md)
 
 ## Next step

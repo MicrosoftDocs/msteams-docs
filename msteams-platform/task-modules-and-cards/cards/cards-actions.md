@@ -22,6 +22,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 | `signin` | Initiates OAuth flow, allowing bots to connect with secure services. |
 
 > [!NOTE]
+>
 >* Teams does not support `CardAction` types not listed in the previous table.
 >* Teams does not support the `potentialActions` property.
 >* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service. Suggested actions are not supported in Microsoft Teams. If you want buttons to appear on a Teams bot message, use a card.
@@ -551,6 +552,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
   }
 }
 ```
+
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -562,3 +564,4 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Adaptive cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

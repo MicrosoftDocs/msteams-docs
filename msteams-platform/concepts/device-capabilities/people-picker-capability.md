@@ -12,22 +12,22 @@ ms.author: surbhigupta
 
 People Picker is a control to search and select people. This is a native capability available in Teams platform. You can integrate Teams native People Picker input control with your web apps. You can select between single or multi selection, and configurations, such as limiting search within a chat, channels, or across the entire organization.
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate the People Picker within your web app. 
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate the People Picker within your web app.
 
-## Advantages of integrating the native People Picker 
+## Advantages of integrating the native People Picker
 
 * People Picker control works in all of Teams surfaces, such as task module, a chat, channel, meeting tab, and personal app.
 * This control allows you to search for and select users within a chat, channel, or the entire organization.
-* People Picker helps with scenarios involving task assignment, tagging, notifying a user. 
+* People Picker helps with scenarios involving task assignment, tagging, notifying a user.
 * You can use this readily available control in your web app. It saves the effort and time significantly to build such a control on your own.
 
-You must call the `selectPeople` API to integrate People Picker control in your Teams app. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the API. 
+You must call the `selectPeople` API to integrate People Picker control in your Teams app. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the API.
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app.
 
-> [!NOTE] 
+> [!NOTE]
 > Currently, Microsoft Teams support for People Picker is available for mobile clients only.
 
-## `selectPeople` API 
+## `selectPeople` API
 
 `selectPeople` API enables you to add Teams native `People Picker input control` to your web apps.  
 The API description is as follows:
@@ -41,7 +41,7 @@ The `selectPeople` API comes along with following input configurations:
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
 |`title`| String| It is an optional parameter. It sets title for the People Picker control. | Select people|
-|`setSelected`|String| It is an optional parameter. You must pass AAD IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. |Null| 
+|`setSelected`|String| It is an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. |Null|
 |`openOrgWideSearchInChatOrChannel`|Boolean | It is an optional parameter. When it is set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel. |False|
 |`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only. |False|
 
@@ -76,7 +76,7 @@ The following image depicts the experience of People Picker in a sample web app:
 
 ## Error handling
 
-You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated: 
+You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
