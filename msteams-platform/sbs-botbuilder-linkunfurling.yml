@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Link unfurling helps you to register your app and receive invoke activity when URLs with particular domain are pasted into the compose message area. The invoke contains the full URL and you can respond with card. User can unfurl and provide additional information or perform different actions. You can add link unfurling to your app manifest using Developer Portal or manually.
+    Link unfurling helps you to register your app and receive invoke activity when URL with particular domain is pasted into the compose message area. The invoke contains the full URL and you can respond with a card. You can add link unfurling to your app manifest either using Developer Portal or manually. User can unfurl and provide additional information to get improved user experience and requirements.
 
     > [!NOTE]
     > Currently, link unfurling is not supported on mobile clients. 
@@ -26,7 +26,7 @@ items:
 
 
 
-    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com` URL. You'll see the following output:
+    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for *://www.BotFramework.com URL. You'll see the following output:
 
      ![Link unfurling](~/assets/images/Teams-link-unfurling/final-image.png)
 
@@ -179,7 +179,7 @@ items:
      ```
 
     > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+    > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
     **To add messaging endpoint**
 
