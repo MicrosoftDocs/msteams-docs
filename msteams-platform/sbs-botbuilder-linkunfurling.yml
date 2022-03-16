@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Link unfurling helps you to register your app and receive invoke activity when URL with particular domain is pasted into the compose message area. The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework, but it supports a different set of these cards. The invoke contains the full URL and you can respond with a card. You can add link unfurling to your app manifest either using Developer Portal or manually. User can unfurl and provide additional information to get improved user experience and requirements.
+    Link unfurling helps you to register your app and receive invoke activity when URL with particular domain is pasted into the compose message area. The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams support bots using the Bot Framework, but it supports a different set of these cards. The invoke contains the full URL and you can respond with a card. You can add link unfurling to your app manifest either using Developer Portal or manually. User can unfurl and provide additional information to get improved user experience and requirements.
 
     > [!NOTE]
     > Currently, link unfurling is not supported on mobile clients. 
