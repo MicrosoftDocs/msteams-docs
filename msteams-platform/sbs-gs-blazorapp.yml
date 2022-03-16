@@ -319,7 +319,7 @@ items:
 
     1. [Provision in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
     1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
-    1. [Preview Teams app](#to-preview-your-tab-app-in-Teams): Your tab app opens in Teams. 
+    1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
     Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
