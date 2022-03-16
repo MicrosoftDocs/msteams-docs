@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Invoke link unfurling in Teams
+title: Teams link unfurling using bot
 metadata:
-  title: Invoke link unfurling in Teams
+  title: Teams link unfurling using bot
   description: In this tutorial, you'll learn to set up Teams link unfurling bot.
   audience: Developer
   level: Beginner
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Link unfurling helps you to register your app and receive invoke activity when URL with particular domain is pasted into the compose message area. The invoke contains the full URL and you can respond with a card. You can add link unfurling to your app manifest either using Developer Portal or manually. User can unfurl and provide additional information to get improved user experience and requirements.
+    Link unfurling helps you to register your app and receive invoke activity when URL with particular domain is pasted into the compose message area. The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework, but it supports a different set of these cards. The invoke contains the full URL and you can respond with a card. You can add link unfurling to your app manifest either using Developer Portal or manually. User can unfurl and provide additional information to get improved user experience and requirements.
 
     > [!NOTE]
     > Currently, link unfurling is not supported on mobile clients. 
@@ -26,7 +26,7 @@ items:
 
 
 
-    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for *://www.BotFramework.com URL. You'll see the following output:
+    This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
 
      ![Link unfurling](~/assets/images/Teams-link-unfurling/final-image.png)
 
@@ -464,7 +464,7 @@ items:
 
        ![Chat](~/assets/images/Teams-link-unfurling/result.png)
 
-    1. Select Enter.
+    1. Select :::image type="content" source="~/assets/images/Teams-link-unfurling/enter-key.png." alt-text="enter" border="true":::
 
 - title: Complete challenge
   durationInMinutes: 1
