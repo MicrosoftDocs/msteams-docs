@@ -39,15 +39,14 @@ The `selectPeople` API comes with the following input configurations:
 |`openOrgWideSearchInChatOrChannel`|Boolean| It is an optional parameter. When it is set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|False|
 |`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only.|False|
 
-The following image depicts the experience of People Picker in a sample web app:
+The following image depicts the experience of People Picker in a sample web and desktop app:
 
+# [People Picker Mobile](#tab/AS)
+
+> [!NOTE]
+> The prerequisite to create an action command is that you have already created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 ![Web app experience of People Picker](../../assets/images/tabs/people-picker-control-capability.png)
 
-The following image depicts the experience of People Picker in a sample desktop app:
-
-<!-- ![Desktop app experience of People Picker]() Image for desktop app to be added here.-->
-
-:::image type="content" source="../../assets/images/tabs/select-people-desktop.png" alt-text="people picker by name":::
 
 :::image type="content" source="../../assets/images/tabs/select-people-desktop-email.png" alt-text="people picker using email address":::
 
