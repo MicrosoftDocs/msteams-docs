@@ -131,7 +131,7 @@ Don't facilitate payments through an app for goods or services prohibited by [Ge
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
 * Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins.
-<
+
 :::row:::
    :::column span="":::
    :::column-end:::
