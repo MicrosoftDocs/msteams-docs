@@ -25,7 +25,7 @@ Some prerequisites for implementing authentication with SSO for Teams are:
 
 ## Role of AAD as IdP
 
-Implementing AAD SSO for authentication in your app means that AAD would serve as an IdP for your app users. All users registered with AAD can now be validated for app usage and access all resources they require.
+Implementing SSO for Teams authentication in your app means that AAD would serve as an IdP for validating your app users. All users registered with AAD can now be validated for app usage and access all resources within Azure system.
 
 :::image type="content" source="../../assets/images/authentication/aad-sso-process.png" alt-text="SSO for Teams":::
 
@@ -46,11 +46,11 @@ Implementing AAD SSO for authentication in your app means that AAD would serve a
 | 2 | Teams seeks the consent of the user to use their Teams login credentials <br> :::image type="content" source="../../assets/images/authentication/permission-requested.png" alt-text="Permission requested"::: | - AAD receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
 | 3 | AAD serves as an IdP and verifies the user information. | - AAD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
 | 4 | On a successful match, AAD sends an access token granting app access to your Teams app. | - Access token may contain validated user credentials. <br> - The access token of the authentication user is saved with the app. <br> - The access token is used to let the user access at subsequent log ins. |
-| 5 | Every time the user accesses any part of your app or any other resource, the IdP uses the access token to authenticate the user. The user is given access once and for all. | - Your app uses the access token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
+| 5 | The user can access and use your app with no further need of consenting or signing in. | - Your app uses the access token generated the first time that the user was authenticated. |
 
 ## Features of SSO for Teams
 
-Implementing authentication with SSO for Teams lets you solve security, development, and cost concerns of your app.
+Here's a look at features of SSO for Teams:
 
 - **Security**: The app users never have to sign in. Your Teams app can have any capability, such as tabs, bots, or messaging extensions. SSO for Teams authentication ensures a one-time sign-in for not just your Teams app, but all internal and external resources as needed.
 
