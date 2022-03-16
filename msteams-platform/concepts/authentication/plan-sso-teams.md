@@ -1,11 +1,11 @@
 ---
 title: Authenticating with AAD SSO for Teams
-description: Authentication in Teams apps using AAD SSO
+description: Authentication in Teams apps using SSO for Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), OIDC, username, password
 ---
-# Authenticate with SSO for Teams app
+# Authenticate with SSO for Teams
 
 <!--Azure Active Directory (Azure AD) is a cloud-based identity and access management service. It helps your app users access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Your users can also access internal resources, such as apps on your corporate network and intranet, along with any cloud apps from your own organization.-->
 
@@ -48,7 +48,7 @@ Implementing AAD SSO for authentication in your app means that AAD would serve a
 | 4 | On a successful match, AAD sends an access token granting app access to your Teams app. | - Access token may contain validated user credentials. <br> - The access token of the authentication user is saved with the app. <br> - The access token is used to let the user access at subsequent log ins. |
 | 5 | Every time the user accesses any part of your app or any other resource, the IdP uses the access token to authenticate the user. The user is given access once and for all. | - Your app uses the access token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
 
-## Features of using SSO for Teams
+## Features of SSO for Teams
 
 Implementing authentication with SSO for Teams lets you solve security, development, and cost concerns of your app.
 
