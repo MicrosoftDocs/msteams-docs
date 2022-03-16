@@ -35,7 +35,7 @@ items:
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
     * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [ Latest Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Microsoft Teams with an account (not a guest account)
     * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install) by executing all the commands
