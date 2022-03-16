@@ -13,7 +13,7 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 
 ## Prerequisite
 
-Install [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+ or later.
+Install [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.4.0+ or later.
 
 
 ## Visual Studio Code debugging features
@@ -84,9 +84,9 @@ It runs the tasks defined in `.vscode/tasks.json` as follows:
 
 |  Component |  Task name  | Folder |
 | --- | --- | --- |
-|  Tab |  Start Frontend |  Tabs |
-|  Bot or messaging extensions |  Start Bot |  Bot |
-|  Azure Functions |  Start Backend |  Api |
+|  Tab |  Start Frontend |  tabs |
+|  Bot or messaging extensions |  Start Bot |  bot |
+|  Azure Functions |  Start Backend |  api |
 
 ## Launches debuggers
 
@@ -98,7 +98,7 @@ The table lists debug configuration type for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
-|  Tab |  Attach to Frontend (Edge) or Attach to Frontend (Chrome)  |  pwa-msedge or pwa-mschrome  |
+|  Tab |  Attach to Frontend (Edge) or Attach to Frontend (Chrome)  |  pwa-msedge or pwa-chrome  |
 |  Bot or messaging extensions |  Attach to Bot |  pwa-node |
 |  Azure Functions |  Attach to Backend |  pwa-node |
 
@@ -106,7 +106,7 @@ The table lists debug configuration type for project with bot app and without ta
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or messaging extension  |  Launch Bot (Edge) or Launch Bot (Chrome)  |   pwa-msedge or pwa-mschrome  |
+|  Bot or messaging extension  |  Launch Bot (Edge) or Launch Bot (Chrome)  |   pwa-msedge or pwa-chrome  |
 |  Bot or messaging extension  |  Attach to Bot |  pwa-node  |
 |  Azure Functions |  Attach to Backend |  pwa-node |
 
@@ -156,11 +156,11 @@ The following image shows the list that can be unchecked:
 
 ### Use your own start scripts to start app services
 
-1. For tab, update `dev:teamsfx script in tabs/package.json`.
+1. For tab, update `dev:teamsfx` script in `tabs/package.json`.
 
-1. For bot or messaging extension, update`dev:teamsfx script in bot/package.json`.
+1. For bot or messaging extension, update `dev:teamsfx` script in `bot/package.json`.
 
-1. For Azure functions, update `dev:teamsfx script in api/package.json` and for TypeScript update `watch:teamsfx script`.
+1. For Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
 
 
  > [!NOTE]
@@ -175,24 +175,24 @@ The following image shows the list that can be unchecked:
 
 ### Debug partial component
 
-Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, messaging extension and Azure functions at the same time. You can update `.vscode/launch.json`` and .vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure functions project, use the following steps:
+Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, messaging extension and Azure functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure functions project, use the following steps:
 
 1. Comment **Attach to Bot** and **Attach to Backend** from Debug compound in `.vscode/launch.json`
 
  ```json
 {
-  "name": "Debug (Edge)",
+    "name": "Debug (Edge)",
     "configurations": [
       "Attach to Frontend (Edge)",
       // "Attach to Bot",
        // "Attach to Backend"
-       ],
+      ],
       "preLaunchTask": "Pre Debug Check and Start All",
       "presentation": {
-       "group": "all",
+          "group": "all",
           "order": 1
-        },
-   "stopAll": true
+      },
+      "stopAll": true
         
 }
 ```
@@ -202,12 +202,12 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 ```json
 {
                     
-  "label": "Start All",
+    "label": "Start All",
     "dependsOn": [
       "Start Frontend",
         // "Start Backend",
          // "Start Bot"
-            ]
+   ]
         
 
 }

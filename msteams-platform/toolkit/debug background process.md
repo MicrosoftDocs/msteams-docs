@@ -22,19 +22,22 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 The following table lists the limitations if the required software is unavailable for debugging:
 
-|Software|Installation| Limitation|
+|Project type|Installation| Limitation|
 |----------|--------------------------------|-----|
-| Node.js | Install Node.js [Node.js](https://nodejs.org/) | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
-|Tab without Azure functions | 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
-|Tab with Azure functions | 10, 12, **14 (recommended)** |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
-|Bot | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
-|Messaging extension | 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Tab without Azure functions | Node.js LTS versions 10, 12, **14 (recommended)**, 16 | The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Tab with Azure functions | Node.js LTS versions 10, 12, **14 (recommended)** |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Bot | Node.js LTS versions 10, 12, **14 (recommended)**, 16|The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
+|Messaging extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if you haven't installed Node.js or the version doesn't match the requirement.|
 |Sign in to Microsoft 365 account | Microsoft 365 credentials |Teams toolkit prompts to sign in to Microsoft 365 account, if you haven't signed in. |
-|Bot, messaging extension | Install Ngrok version 2.3.| • If you haven't installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
-|Azure functions | Install Azure Functions Core Tools version 3.| • If you haven't installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
-|Azure functions | Install Azure functions binding extensions defined in `api/extensions.csproj`|-|
-|NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|-|
-|Azure functions | Install .NET Core SDK|• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
+|Bot, messaging extension | Ngrok version 2.3.| • If you haven't installed Ngrok or the version doesn't match the requirement, the toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
+|Azure functions | Azure Functions Core Tools version 3.| • If you haven't installed Azure Functions Core Tools or the version doesn't match the requirement, the toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
+|Azure functions | [.NET Core SDK version](#Use-the-following-.NET-Core-versions)|• If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
+|Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If you haven't installed Azure functions binding extensions, the toolkit installs Azure functions binding extensions.|
+|NPM packages| Install NPM packages for tab app, bot app, messaging extension app, and Azure functions|If you haven't installed NPM, the toolkit installs all NPM packages.|
+|Bot and messaging extension | Ngrok |Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension. |
+
+> [!NOTE]
+> If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
 
 Use the following .NET Core versions:
 
@@ -45,8 +48,8 @@ Use the following .NET Core versions:
 
 
 > [!NOTE]
-> • If you don't have a development certificate for localhost installed in Windows or macOS, the tab prompts you to install it.</br>
-> • Start Ngrok to create a HTTP tunnel for bot and messaging extension.
+> If you haven't installed a development certificate for localhost for tab in Windows or macOS, the tab prompts you to install it.</br>
+
 
 
 The following table lists the ports available for components:
@@ -59,8 +62,7 @@ The following table lists the ports available for components:
 | Azure functions | 7071 |
 | Node inspector for Azure functions | 9229 |
 
-> [!NOTE]
-> If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
+
 
 When you Select **Start Debugging (F5)**. The Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
