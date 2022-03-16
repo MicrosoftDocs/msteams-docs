@@ -41,6 +41,7 @@ The `selectPeople` API comes with the following input configurations:
 
 The following image depicts the experience of People Picker in a sample web and desktop app:
 
+
 # [People Picker Mobile](#tab/Mobile)
 
 :::image type="content" source="../../assets/images/tabs/select-people-desktop-email.png" alt-text="people picker using email address":::
