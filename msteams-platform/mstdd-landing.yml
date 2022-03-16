@@ -98,8 +98,7 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
-      - text: Debug Teams app locally with Teams Toolkit  
-        url: ../toolkit/debug local.md
+     
 
 
 - title: Build app capabilities
