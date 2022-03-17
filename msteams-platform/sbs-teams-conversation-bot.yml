@@ -39,18 +39,17 @@ items:
     * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
     * Microsoft Teams with an account (not a guest account)
 
-- title: Setup Calling and Meeting Bot
+- title: Setup conversational bot
   durationInMinutes: 5
   content: |
-    Register an application using App registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
+    Register bot with Azure bot service when you develop and host it in Azure. Perform the following steps:
 
     1. Use ngrok to create a tunnel to your web server's endpoints.
-    1. Create Azure Bot resource to register bot with Azure Bot service.
+    1. Create bot channel registration in Azure account.
     1. Create client secret that enables SSO authentication of the bot.
     1. Add API permissions for downstream calls.
-    1. Create Bot channel registration in Azure account.
-    1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
     1. Add messaging endpoint to the ngrok tunnel you created.
+    1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
 
     **Create ngrok tunnel:**
 
@@ -59,84 +58,6 @@ items:
     ```bash
     ngrok http -host-header=rewrite 3978
     ```
-
-    **Register an App in Azure:**
-
-    1. Sign in to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
-    1. Select the **Azure Active Directory** service, and select **App registrations** from the left pane and then select **New registration**.
-    
-        :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory.":::
-    
-    1. **Register an application** page opens. Enter your application's registration information.
-    1. Enter a meaningful application **Name** that is displayed to users of the app.
-    1. In **Supported account types**, select the accounts you would like your application to support.
-    1. In **Redirect URI** (optional) field, select the type of app **Web or Public client(mobile & desktop)**, and then enter the redirect URI for your application.
-
-        > [!NOTE]
-        > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
-
-    1. Select **Register**.
-
-        :::image type="content" source="./assets/images/calls-and-meetings/reg-app.png" alt-text="Register an app.":::
-
-    **To create client secret:**
-
-    1. In **Overview** page of your bot, select **Essentials** and save the **Application client ID** (Microsoft App ID) for future reference.
-    
-        :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new.png" alt-text="Microsoft App ID.":::
-    
-    1. In **Manage**, select **Certificates & secrets** section, then select **Client secrets** and select **New client secret**. The **Add a client secret** window appears.  
-
-    1. Enter **Description** and select **Add**.
- 
-        :::image type="content" source="./assets/images/calls-and-meetings/add-client.png" alt-text="Add Client secret.":::
-
-    1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
-
-        :::image type="content" source="./assets/images/calls-and-meetings/client-secret.png" alt-text="Value.":::
-
-    **Run PowerShell script to create a policy:**
-
-    1. Create a policy for a demo tenant user for creating the online meetings using the following PowerShell script:
-
-        > [!NOTE]
-        > Run Windows PowerShell PSI as an administrator and execute the script.
-
-        :::image type="content" source="./assets/images/calls-and-meetings/powershell-script.png" alt-text="PowerShell script.":::
-
-    1. Replace `azure-client-id` with your **Microsoft App ID** of your bot and `object-id` with the **Tenant ID** of your account used to login to the Teams (Copy the link as shown in the following image and you can find the Tenant ID of your Teams account in the link obtained).
-
-        :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new.png" alt-text="Teams Link.":::
-
-    1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in the PowerShell script. Login with your Teams account when PowerShell prompts.
-
-        :::image type="content" source="./assets/images/calls-and-meetings/powershell.png" alt-text="PowerShell.":::
-
-    1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
-    
-        ```powershell
-        Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
-        ```
-
-    **To add API permissions for downstream calls:**
-
-    > [!NOTE]
-    > Make sure that your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
-
-    1. In **Manage** pane of your bot, select **API permissions**.
-    1. Select **Add a permission**. **Request API permissions** window appears.
-    1. Select **Microsoft APIs** and select **Microsoft Graph**.
-    1. Select **Application permissions** and then select permissions.
-    1. Add following Graph API Applications permissions to your Azure App and grant admin consent.
-        * `Calls.AccessMedia.All`
-        * `Calls.Initiate.All`
-        * `Calls.InitiateGroupCall.All`
-        * `Calls.JoinGroupCall.All`
-        * `Calls.JoinGroupCallAsGuest.All`
-        * `OnlineMeetings.ReadWrite.All`
-    1. Select **Add permissions**.
-
-        :::image type="content" source="./assets/images/calls-and-meetings/add-api-permissions.png" alt-text="Add API permissions.":::
 
     **Create Bot channel registration in Azure account:**
 
@@ -178,28 +99,41 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource.png" alt-text="Go to resource.":::
 
-    **To add the Microsoft Teams channel:**
+    **To create client secret:**
 
-    1. Go to **Home**.
-    1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> from the list of available channels.    
-        
-        :::image type="content" source="./assets/images/calls-and-meetings/channels-teams.png" alt-text="Channels Teams.":::
-    
-    1. Select the checkbox to accept the terms of service and select **Agree**.
+    1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/terms-of-service.png" alt-text="Terms of service.":::
+        ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
 
-    1. Select **Save**.
-    1. Select **Microsoft Teams** and select **Calling** tab on Teams channel page.
+        > [!NOTE]
+        > Ensure **MultiTenant** is selected under **Bot Type**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/configure-teams.png" alt-text="Configure Teams.":::
-    
-    1. Select **Enable calling**, and then update **Webhook** with your HTTPS ngrok URL (https://yourNgrok/api/callback) and add `/api/callback` at the end.
+    1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/enable-calling.png" alt-text="Enable calling.":::
+        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
 
-    1. Select **Save**.
+    1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
+
+        ![New Client secret](~/assets/images/adaptive-cards/new-client-secret.png)
+
+    1. Enter **Description** and select **Add**.
+ 
+        ![Client secret](~/assets/images/adaptive-cards/client-secret.png)
+
+    1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
+
+        ![Client secret value](~/assets/images/adaptive-cards/client-secret-value.png)
+
+    **To add API permissions for downstream calls:**
+
+    1. In **Manage** pane of your bot, select **API permissions**.
+    1. Select **Add a permission**. **Request API permissions** window appears.
+    1. Select **Microsoft APIs** and select **Microsoft Graph**.
+    1. Select **Application permissions** and then select permissions.
+    1. Add any user permissions that your app requires to downstream APIs, for example, `User.Read`.
+    1. Select **Add permissions**.
+
+        :::image type="content" source="./assets/images/calls-and-meetings/add-api-permissions.png" alt-text="Add API permissions.":::
 
     **To add messaging endpoint:**
 
@@ -214,6 +148,20 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/messaging-endpoint.png" alt-text="Messaging endpoint.":::
 
     1. Select **Apply**.
+    
+    **To add the Microsoft Teams channel:**
+
+    1. Go to **Home**.
+    1. Open your bot, which is listed in the **Recent resources** section.
+    1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> from the list of available channels.    
+        
+        :::image type="content" source="./assets/images/calls-and-meetings/channels-teams.png" alt-text="Channels Teams.":::
+    
+    1. Select the checkbox to accept the terms of service and select **Agree**.
+
+        :::image type="content" source="./assets/images/calls-and-meetings/terms-of-service.png" alt-text="Terms of service.":::
+
+    1. Select **Save**.
 
         You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
 
@@ -224,89 +172,88 @@ items:
     
     1. Update appsettings.json in Visual Studio.
     1. Update manifest.json in Visual Studio and compress it to the zip file in File explorer.
+    1. Run your solution in Visual Studio 2019.
+    1. Upload the bot to Teams.
 
-    **Update appsettings for calling Bot:**
+    **Update appsettings for conversational bot:**
 
-    1. Go to the repo https://github.com/OfficeDev/Microsoft-Teams-Samples.git.
+    1. Go to the repo https://github.com/Microsoft/botbuilder-samples.git.
     1. Select **Code** and select the dropdown.
     1. Select **Download ZIP**.
 
         :::image type="content" source="./assets/images/calls-and-meetings/repo-download.png" alt-text="Repo download.":::
 
     1. Ensure to note the Path of the repository that is downloaded.
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** folder.
+    1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** folder.
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
-        * You can obtain the `Tenant ID` or `UserId` from the link of the account used to login to the Teams. Follow the path in the image to get the link for `tenant id`.
+        * You can obtain the `MicrosoftAppTenantId` or `UserId` from the link of the account used to login to the Teams. Follow the path in the image to get the link for `tenant id`.
         
             :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new.png" alt-text="Teams Link.":::
+
+    1. Select **Save**.    
         
-        * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) site.
-            * Login to the page using your Teams account and add `Users` at the end of the URl in the search box and select **Run query**.
-            * Display names and User IDs linked to your account are generated.
-            * Pick any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
-
-            :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer.png" alt-text="Graph Explorer.":::
-
-        > [!NOTE]
-        > `Tenant ID` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denotes to whom you want to redirect or transfer the call.
-
-    1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with your **Application (client) ID** and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with your **Value**.
-    1. Update `BotBaseUrl` with your `ngrok` URL.
-    1. Update `Tenant ID` and `UserId`.
-    1. Update `DisplayName` and `UserId`.
-
         :::image type="content" source="./assets/images/calls-and-meetings/appsettings.png" alt-text="Appsettings Json.":::
-
-    1. Select **Save**.
 
     **To update manifest:**
 
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
+    1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** > **TeamsAppManifest** folder.
     1. Open the **manifest.json** file in Visual Studio.
-    1. In the **manifest.json** file, find **{id}, {BotId}** and add your Microsoft App ID.
+    1. In the **manifest.json** file, find **{id}, {botId}** and add your Microsoft App ID.
     1. Add your ngrok url in **validDomains** excluding https:// and save.
 
         :::image type="content" source="./assets/images/calls-and-meetings/manifest.png" alt-text="Manifest.":::
 
-    1. Zip the contents of the **Manifest** folder to create **manifest.zip**.
+    1. Zip the contents of the **TeamsAppManifest** folder to create **manifest.zip**.
     
         > [!NOTE]
         > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
-        > Upload your manifest in your demo tenant for organisation or your Teams account and run your solution in Visual Studio.
+        > Run your solution in Visual Studio 2019 and upload your manifest in your demo tenant for organization or your Teams account.
     
+    **To run solution in Visual Studio 2019:**
+
+    1. Open Visual Studio 2019.
+    1. Select **File** and select **Open**.
+    1. Select **Project/Solution** to open the `.csproj` file from the File Explorer.
+    1. Go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** folder.
+    1. Select `TeamsConversationBot.csproj` field.
+    1. Select F5 to debug.
+
+    **To upload the app to Teams:**
+
     1. Go to Teams.
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip** from the repo folder in File explorer.
-    1. Select **Add** to install Calling bot in Teams.
+    1. Select **Add** to install conversational bot in Teams.
 
         :::image type="content" source="./assets/images/calls-and-meetings/output.png" alt-text="Add Output.":::
 
-        You can interact with this bot after debugging in Visual Studio.
+        You can interact with this bot now.
 
-- title: Interaction with the Calling and Meeting Bot
+- title: Interaction with the conversational bot
   durationInMinutes: 2
   content: |
-    Bot allows you to access services and content in a dedicated space within a channel or in a chat.
+    You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot will respond to the following strings:
 
-    Follow the steps to use the bot:
+    In the left pane of the Teams, select the ellipses ●●● and choose your app from the list. The bot will show **Suggestions** as follows:
 
-    1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
-    1. Bot will send welcome Text with Adaptive Card as shown below.
+    1. **Show Welcome**
+        **Result:** The bot will send the welcome card for you to interact with.
+        **Valid Scopes:** personal, group chat, team chat
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Adaptive card in bot.":::
 
-    1. You can ask bot to Create a call.
+    1. **MentionMe**
+        **Result:** The bot will respond to the message and mention the user.
+        **Valid Scopes:** personal, group chat, team chat
 
         :::image type="content" source="./assets/images/calls-and-meetings/placed-call.png" alt-text="Placed Call.":::
 
-    1. You can ask bot to Transfer the call.
+    1. **MessageAllMembers**
+        **Result:** The bot will send a one-on-one message to each member in the current conversation.
+        **Valid Scopes:** personal, group chat, team chat
 
         :::image type="content" source="./assets/images/calls-and-meetings/transfer-call.png" alt-text="Transfer Call.":::
-
-    1. You can ask bot to Schedule a Meeting and invite the participants.
-
-        :::image type="content" source="./assets/images/calls-and-meetings/meeting.png" alt-text="Meeting bot.":::
 
 - title: Complete challenge
   durationInMinutes: 1
@@ -316,4 +263,4 @@ items:
     ![Final output](~/assets/images/calls-and-meetings/final-output.png)
     
 - content: |
-    You've completed the tutorial to get started with bot calling and meeting app for Microsoft Teams.
+    You've completed the tutorial to get started with conversational bot for Microsoft Teams.
