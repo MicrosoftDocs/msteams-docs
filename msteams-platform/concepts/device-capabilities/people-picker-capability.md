@@ -34,20 +34,20 @@ The `selectPeople` API comes with the following input configurations:
 
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
-|`title`|String| It is an optional parameter. It sets title for the People Picker control.|Select people|
-|`setSelected`|String| It is an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is pre-populated ignoring the rest.|Null|
-|`openOrgWideSearchInChatOrChannel`|Boolean| It is an optional parameter. When it is set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|False|
-|`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only.|False|
+|`title`|String| It is an optional parameter and sets the title for the People Picker control.|Select people|
+|`setSelected`|String| It is an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of a single selection, only the first valid user is pre-populated ignoring the rest.|Null|
+|`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|False|
+|`singleSelect`|Boolean|It is an optional parameter. When set to true it launches the People Picker and restricts the selection to only one user.|False|
 
-The following image depicts the experience of People Picker in a sample web and desktop app:
+The following image shows the experience of People Picker using mobile and desktop app:
 
 # [People Picker Mobile](#tab/Mobile)
 
-:::image type="content" source="../../assets/images/tabs/people-picker-control-capability.png" alt-text="people picker mobile" border="true":::
+:::image type="content" source="../../assets/images/tabs/people-picker-desktop-email.png" alt-text="people picker mobile" border="true":::
 
 # [People Picker Desktop](#tab/Desktop)
 
-:::image type="content" source="../../assets/images/tabs/select-people-desktop-email.png" alt-text="people picker using email address":::
+:::image type="content" source="../../assets/images/tabs/.png" alt-text="people picker using email address":::
 
 ---
 
