@@ -13,7 +13,7 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
-> [!NOTE] 
+> [!NOTE]
 > Currently, Developer Portal is not available for Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
 
 ## Register an app
@@ -30,13 +30,13 @@ The Developer Portal provides a couple ways to register a Teams app:
 
 You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
-**To set up an environment**
+To set up an environment:
 
 1. In the Developer Portal, select the app you're working on.
 2. Go to the **Environments** page and select **+ Add an environment**.
 3. Select **+ Add a variable** to create configuration variables for your environment.
 
-**To use variables**
+To use variables:
 
 Use the variable names instead of hard-coded values to set your app configurations.
 

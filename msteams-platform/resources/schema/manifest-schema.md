@@ -476,8 +476,8 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`context` | array of enums| 2|| The set of `contextItem` scopes where a tab is supported.|
 
 > [!NOTE]
->  The searchUrl feature is not available for the third-party developers.
->  If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
+> The searchUrl feature is not available for the third-party developers.
+> If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
 
 ## bots
 
@@ -634,7 +634,6 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 >[!NOTE]
 >If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 
-
 ## isFullScreen
 
  **Optional**—Boolean
@@ -713,6 +712,7 @@ Define the properties your app uses to post a user activity feed.
 **Optional** - string
 
 Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+
 * `personal`
 * `team`
 * `groupchat`
@@ -723,10 +723,11 @@ Specifies the install scope defined for this app by default. The defined scope w
 **Optional** - object
 
 When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+
 * `team`
 * `groupchat`
 * `meetings`
- 
+
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
@@ -757,7 +758,7 @@ You can define any of the following properties:
 ## defaultBlockUntilAdminAction
 
 **Optional**—Boolean
- 
+
 When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
 ## publisherDocsUrl
@@ -820,13 +821,17 @@ Specify and consolidate authorization related information for the app.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`type`|string||✔| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
-|`name`|string|128 characters|✔|The name of the resource-specific permission. <br> For more information, see [Application permissions](../../graph-api/rsc/resource-specific-consent.md) and [Delegated permissions](#delegated-permissions).|
+|`name`|string|128 characters|✔|The name of the resource-specific permission. For more information, see [Resource-specific application permissions](#resource-specific-application-permissions) and [Resource-specific delegated permissions](#resource-specific-delegated-permissions)|
 
-### Delegated permissions
+#### Resource-specific application permissions
+
+Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+
+#### Resource-specific delegated permissions
 
 Delegated permissions allow the app to access data on behalf of the signed-in user.
 
-* **Resource-specific permissions for teams**
+* **Resource-specific delegated permissions for teams**
 
     |**Name**|**Description**|
     |---|---|
@@ -834,7 +839,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
 
-* **Resource-specific permissions for chats or meetings**
+* **Resource-specific delegated permissions for chats or meetings**
 
     |**Name**|**Description**|
     |---|---|
@@ -843,7 +848,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
 
-* **Resource-specific permissions for users**
+* **Resource-specific delegated permissions for users**
 
     |**Name**|**Description**|
     |---|---|
