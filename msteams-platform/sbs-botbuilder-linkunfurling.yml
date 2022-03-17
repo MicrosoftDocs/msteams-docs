@@ -25,7 +25,7 @@ items:
      * Allows user to register the app and receive invoke activity.
 
     This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
-   
+
     :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
 
 - title: Prerequisites
@@ -59,7 +59,7 @@ items:
     The following steps guide you to:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client s ecret to enable SSO authentication of the bot.
+    * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
@@ -71,8 +71,8 @@ items:
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
     1. Select **Azure Bot**.
-
-   :::image type="content" source="../assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
+  
+    :::image type="content" source="../assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
     
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -412,7 +412,7 @@ items:
     ```bash
     dotnet run
     ```
- :::image type="content" source="../assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Dotnet" border="true":::
+    :::image type="content" source="../assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Dotnet" border="true":::
     
 - title: Upload Link Unfurling app
   durationInMinutes: 1
@@ -429,24 +429,24 @@ items:
     1. Go to **Microsoft Teams**.
 
     1. Select **Apps**.
-
-   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore.png" alt-text="Zip file" border="true":::
+ 
+    :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore.png" alt-text="Zip file" border="true":::
        
     1. In the lower left corner, select **Manage your apps**.
 
-   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps.png" alt-text="Manage apps" border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps.png" alt-text="Manage apps" border="true":::
           
     1. Select **Upload an app to your org's app catalog**. 
 
-   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp.png" alt-text="Upload custom app" border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp.png" alt-text="Upload custom app" border="true":::
       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-   :::image type="content" source="../assets/images/Teams-link-unfurling/selectzip.png" alt-text="Select zip file" border="true":::
+    :::image type="content" source="../assets/images/Teams-link-unfurling/selectzip.png" alt-text="Select zip file" border="true":::
       
     1. Select **Add**.
 
-   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app" border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app" border="true":::
        
        The app opens in a chat.
    
@@ -454,7 +454,7 @@ items:
 
        The link unfurls as shown in the following image:
 
-   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result1.png" alt-text="Link unfurling result" border="true":::  
+    :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result1.png" alt-text="Link unfurling result" border="true":::  
        
     1. Press Enter
 
