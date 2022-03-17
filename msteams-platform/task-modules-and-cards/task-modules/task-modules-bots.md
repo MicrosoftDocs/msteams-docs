@@ -7,7 +7,7 @@ keywords: task modules teams bots deep links adaptive card
 ---
 
 # Use task modules from bots
- 
+
 Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that is hero, thumbnail, and Office 365 Connector. Task modules are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
 
 There are two ways of invoking task modules:
