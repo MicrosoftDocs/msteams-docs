@@ -37,4 +37,4 @@ For more information, see [Share to Teams from personal app or tab](share-to-tea
 
 ## See also
 
-For Share to Teams developer page, see [Share-to-Teams](https://developer.microsoft.com/microsoft-teams/share-to-teams#/).
+[Share-to-Teams developer page](https://developer.microsoft.com/microsoft-teams/share-to-teams#/)
