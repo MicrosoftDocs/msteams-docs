@@ -178,4 +178,4 @@ The following lists the local debug files and their configuration types:
 
 ## See also
 
-[Debug your Teams app locally in Teams Toolkit](debug%20local.md).
+[Debug your Teams app using Teams Toolkit](debug-local.md).
