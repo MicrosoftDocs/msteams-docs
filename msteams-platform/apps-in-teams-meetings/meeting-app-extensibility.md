@@ -21,7 +21,7 @@ This article covers the information about meeting lifecycle and how to integrate
 A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle.
 
 > [!NOTE]
-> Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are currently not supported.
+> Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
 
 ### Integrate tabs into the meeting lifecycle
 
