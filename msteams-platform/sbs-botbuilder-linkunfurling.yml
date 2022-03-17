@@ -25,8 +25,9 @@ items:
      * Allows user to register the app and receive invoke activity.
 
     This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
-    :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
-    
+
+    :::image type="content" source="~/assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
