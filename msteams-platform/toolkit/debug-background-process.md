@@ -175,7 +175,6 @@ The following lists the local debug files and their configuration types:
 |  `bot/.env.teamsfx.local` | Environment variables file for bot and messaging extension| The values of each environment variable generates and saves during local debug. |
 | `api/.env.teamsfx.local`  | Environment variables file for Azure functions | The values of each environment variable generates and saves during local debug. |
 
-
 ## See also
 
-[Debug your Teams app using Teams Toolkit](debug-local.md).
+[Debug your Teams app using Teams Toolkit](debug-local.md)
