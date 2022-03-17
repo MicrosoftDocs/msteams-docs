@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code, then Visual Studio Code launches the debuggers, and  Microsoft Edge or Chrome debugger launches a new browser instance as follows:
+The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code, then the Visual Studio Code launches the debuggers, and  Microsoft Edge or Chrome debugger launches a new browser instance as follows:
 
 1. The `launch.json` file configures the debugger in Visual Studio Code. Visual Studio Code runs the compound configurations `preLaunchTask`, defined as `Pre Debug Check`, and `Start All` in `.vscode/tasks.json` file.
 
@@ -20,7 +20,39 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 ## Prerequisites
 
-The following table lists the limitations if the required software is unavailable for debugging:
+
+Visual Studio Code checks all prerequisites in the process of debug actions:
+
+* Node.js is installed, applicable for project types, such as tab without Azure functions, tab with Azure functions ( versions 10, 12, **14 (recommended)**), bot and messaging extensions,  versions 10, 12, **14 (recommended)**, 16.
+
+* Signed in to M365 account, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in.
+
+* Ngrok binary version 2.3 is installed, applicable for bot, messaging extension.  If Ngrok is not installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+
+Azure Functions Core Tools version 3, applicable for Azure functions. If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+
+.NET Core SDK version [Use the following .NET Core versions:](#use-the-following-net-core-versions), applicable for Azure functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.
+
+Development certificate. If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
+
+Azure functions binding extensions defined in `api/extensions.csproj`, Azure functions. If Azure functions binding extensions is not installed, the toolkit installs Azure functions binding extensions.
+
+NPM packages, applicable for tab app, bot app, messaging extension app, and Azure functions. If NPM is not installed, the toolkit installs all NPM packages.
+
+Bot and messaging extension. Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
+
+Ports available. If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
+
+
+#### Use the following .NET Core versions:
+
+| Platform  | Software|
+| --- | --- |
+|Windows, macOs (x64), Linux | **3.1 (recommended)**, 5.0, 6.0 |
+|macOs (arm64) |6.0 |
+
+
+<!-- The following table lists the limitations if the required software is unavailable for debugging:
 
 |Project type|Installation| Limitation|
 |----------|--------------------------------|-----|
@@ -48,7 +80,7 @@ Use the following .NET Core versions:
 
 
 > [!NOTE]
-> If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br>
+> If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
 
 
 

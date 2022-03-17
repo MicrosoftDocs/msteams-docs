@@ -125,7 +125,7 @@ Your app is added to Teams.
 
 ## Customize local debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your own tab or bot
+Teams Toolkit allows you to customize the debug settings to create your own tab or bot.
 
 ### Uncheck few prerequisites
 
