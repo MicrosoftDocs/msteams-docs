@@ -210,12 +210,12 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 1. Build an in-app message in your Teams app that a subscription is needed and provide a hyperlink  to your SaaS offer in AppSource to promote your flat rate offer.
 
+   > [!NOTE]
+   > Ensure any marketplace links don't appear on mobile and tablet devices to adhere to [third-party app store policies](/legal/marketplace/certification-policies).
+
 1. Submit your app for validation.
 
-1. After Teams marketplace supports flat rate pricing, update your app manifest with the Offer ID and Publisher ID.
-
-> [!NOTE]
-> Ensure any marketplace links don't appear on mobile and tablet devices to adhere to [third-party app store policies](/legal/marketplace/certification-policies).
+1. After Teams marketplace supports flat rate pricing, update your app manifest with the Offer ID and Publisher ID and re-submit your app for validation.
 
 ## See also
 
