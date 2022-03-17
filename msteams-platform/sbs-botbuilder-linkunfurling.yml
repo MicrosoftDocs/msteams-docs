@@ -28,7 +28,7 @@ items:
      * Allows user to register the app and receive invoke activity.
 
      This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
-
+   
      :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
 
 - title: Prerequisites
@@ -44,8 +44,6 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    
-
 - title: Set up local environment
   durationInMinutes: 1
   content: | 
@@ -54,7 +52,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-      :::image type="content" source="../assets/images/Teams-link-unfurling/clonerepository.png" alt-text="Clone repository" border="true":::
+       :::image type="content" source="../assets/images/Teams-link-unfurling/clonerepository.png" alt-text="Clone repository" border="true":::
 
     1. Select **Clone**. 
 
@@ -77,7 +75,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-    :::image type="content" source="../assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
+       :::image type="content" source="../assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
     
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -254,7 +252,7 @@ items:
   
     1. Select **Add a scope** to save.
 
-        :::image type="content" source="../msteams-platformassets/images/Teams-link-unfurling/addascope.png" alt-text="Add a scope" border="true"::: 
+        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addascope.png" alt-text="Add a scope" border="true"::: 
         
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -266,7 +264,7 @@ items:
     
     1. Select **Add a client application**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp.png.png" alt-text="Select client application" border="true"::: 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Select client application" border="true":::
        
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams desktop application. 
    
@@ -388,7 +386,7 @@ items:
           
        1. Select **TeamsLinkUnfurling.csproj** file from **55.teams-link-unfurling** folder.
 
-          :::image type="content" source="../assets/images/Teams-link-unfurling/csproj.png" alt-text="" border="true":::
+          :::image type="content" source="../assets/images/Teams-link-unfurling/csproj.png" alt-text="Select from folder" border="true":::
       
        1. Open **Solution Explorer** from **View**.
 
