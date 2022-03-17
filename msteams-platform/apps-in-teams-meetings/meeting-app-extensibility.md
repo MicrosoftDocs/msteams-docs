@@ -159,6 +159,7 @@ The default participant settings are determined by an organization's IT administ
 * **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting, such as:
   * They can interact with other meeting members but can't manage any of the meeting settings or share the content.  
   * They can view or interact with the tab app on the meeting stage without installing the app or without any app entitlements.
+  * They can’t view or interact with the app in the side panel without any app entitlements.
   * They aren't authorized to act as a presenter.
 
 > [!NOTE]
