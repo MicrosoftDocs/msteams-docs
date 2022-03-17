@@ -29,22 +29,22 @@ Visual Studio Code checks all prerequisites in the process of debug actions:
 
 * Ngrok binary version 2.3 is installed, applicable for bot, messaging extension.  If Ngrok is not installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
-Azure Functions Core Tools version 3, applicable for Azure functions. If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* Azure Functions Core Tools version 3, applicable for Azure functions. If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 
-.NET Core SDK version [Use the following .NET Core versions:](#use-the-following-net-core-versions), applicable for Azure functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.
+* .NET Core SDK version [Use the following .NET Core versions:](#use-the-following-net-core-versions), applicable for Azure functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.
 
-Development certificate. If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
+* Development certificate. If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
 
-Azure functions binding extensions defined in `api/extensions.csproj`, Azure functions. If Azure functions binding extensions is not installed, the toolkit installs Azure functions binding extensions.
+* Azure functions binding extensions defined in `api/extensions.csproj`, Azure functions. If Azure functions binding extensions is not installed, the toolkit installs Azure functions binding extensions.
 
-NPM packages, applicable for tab app, bot app, messaging extension app, and Azure functions. If NPM is not installed, the toolkit installs all NPM packages.
+* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure functions. If NPM is not installed, the toolkit installs all NPM packages.
 
-Bot and messaging extension. Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
+* Bot and messaging extension. Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
 
-Ports available. If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
+* Ports available. If tab, bot, messaging extension, and Azure functions ports are unavailable, the local debug terminates.
 
 
-#### Use the following .NET Core versions:
+##### Use the following .NET Core versions:
 
 | Platform  | Software|
 | --- | --- |
