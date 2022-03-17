@@ -44,6 +44,20 @@
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
+- name: Plan authentication for Teams app
+  items:
+    - name: Overview
+      href: concepts/authentication/plan-authentication.md
+    - name: Authenticate with SSO for Teams
+      href: concepts/authentication/plan-sso-teams.md
+    - name: Authenticate with AAD SSO
+      href: concepts/authentication/plan-aad-sso.md
+    - name: Other authentication methods
+      href: concepts/authentication/plan-other-auth.md
+    - name: Common extension scenarios
+      href: concepts/authentication/common-extn.md
+    - name: Authentication FAQ
+      href: concepts/authentication/authentication-faq.md  
 - name: Design your app
   items:
   - name: Overview

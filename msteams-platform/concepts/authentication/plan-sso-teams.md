@@ -1,13 +1,11 @@
 ---
-title: Authenticating with Azure AD SSO for Teams
+title: Authenticating with SSO for Teams
 description: Authentication in Teams apps using SSO for Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), OIDC, username, password
+keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), username, password
 ---
 # Authenticate with SSO for Teams
-
-<!--Azure Active Directory (Azure AD) is a cloud-based identity and access management service. It helps your app users access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Your users can also access internal resources, such as apps on your corporate network and intranet, along with any cloud apps from your own organization.-->
 
 You can let users access and use your Teams app without ever having to sign-in. Single sign-on (SSO) for Teams makes it possible for you.
 
