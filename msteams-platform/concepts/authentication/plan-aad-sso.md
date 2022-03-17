@@ -39,13 +39,13 @@ Azure AD is the main identity provider (IdP) for validating access to Azure-base
 | 4 | On a successful match, AAD sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to let the user access at subsequent log ins. |
 | 5 | The user is given access once and for all. | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
 
-## ## Features of SSO for Teams
+## Features of Azure AD SSO
 
-Here's a look at features of SSO for Teams:
+Here's a look at features Azure AD SSO authentication method:
 
 :::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-features.png" alt-text="SSO for Teams features ":::
 
-| &nbsp; | Feature | What it means for you |
+| # | Feature | What it means for you |
 | --- | --- | --- |
 | 1. | True SSO | &nbsp; |
 | 2. | Single identity | &nbsp; |
