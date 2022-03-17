@@ -26,7 +26,7 @@ items:
 
      This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
 
-     :::image type="content" source="../~/assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
+     :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -74,20 +74,20 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         :::image type="content" source="../~/assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
+         :::image type="content" source="../assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
     
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
     1. From the **Resource group** dropdown list, select your existing resource group. 
     
-    :::image type="content" source="../~/assets/images/Teams-link-unfurling/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::
+    :::image type="content" source="../assets/images/Teams-link-unfurling/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::
        
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
-      :::image type="content" source="../~/assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location" border="true":::
+      :::image type="content" source="../assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location" border="true":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -100,7 +100,7 @@ items:
 
     1. Select **Review + create**.
 
-      :::image type="content" source="../~/assets/images/meeting-token-generator/register-bot-3.png" alt-text="Create Microsoft App ID" border="true":::
+      :::image type="content" source="../assets/images/meeting-token-generator/register-bot-3.png" alt-text="Create Microsoft App ID" border="true":::
 
     1. If the validation passes, select **Create**. 
 
@@ -108,11 +108,11 @@ items:
 
     1. Select **Go to resource**. 
 
-      :::image type="content" source="../~/assets/images/Teams-link-unfurling/botdeployment.png" alt-text="Deploy App" border="true":::
+      :::image type="content" source="../assets/images/Teams-link-unfurling/botdeployment.png" alt-text="Deploy App" border="true":::
 
         Your Azure bot is created.
 
-        :::image type="content" source="../~/assets/images/Teams-link-unfurling/bot-page.png" alt-text="Azure bot resource created" border="true":::
+        :::image type="content" source="../assets/images/Teams-link-unfurling/bot-page.png" alt-text="Azure bot resource created" border="true":::
         
       **To create client secret**
 
@@ -125,8 +125,8 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        :::image type="content" source="../~/assets/images/Teams-link-unfurling/config1.png" alt-text="Azure bot resource created" border="true":::
-        
+        :::image type="content" source="../assets/images/Teams-link-unfurling/config1.png" alt-text="Azure bot resource created" border="true":::
+
     1. In the **Client secrets** section, select **New client secret**. 
 
         ![New client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
