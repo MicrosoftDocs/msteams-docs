@@ -29,7 +29,7 @@ items:
 
      This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
    
-     :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
+    :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -52,7 +52,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../assets/images/Teams-link-unfurling/clonerepository.png" alt-text="Clone repository" border="true":::
+    :::image type="content" source="../assets/images/Teams-link-unfurling/clonerepository.png" alt-text="Clone repository" border="true":::
 
     1. Select **Clone**. 
 
@@ -75,20 +75,20 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-       :::image type="content" source="../assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
+   :::image type="content" source="../assets/images/bots/createazurebot.png" alt-text="Create Azure bot card" border="true":::
     
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
     1. From the **Resource group** dropdown list, select your existing resource group. 
     
-       :::image type="content" source="../assets/images/Teams-link-unfurling/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::
+    :::image type="content" source="../assets/images/Teams-link-unfurling/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::
        
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
-       :::image type="content" source="../assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location" border="true":::
+      :::image type="content" source="../assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location" border="true":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -101,7 +101,7 @@ items:
 
     1. Select **Review + create**.
 
-       :::image type="content" source="../assets/images/meeting-token-generator/register-bot-3.png" alt-text="Create Microsoft App ID" border="true":::
+      :::image type="content" source="../assets/images/meeting-token-generator/register-bot-3.png" alt-text="Create Microsoft App ID" border="true":::
 
     1. If the validation passes, select **Create**. 
 
@@ -415,7 +415,7 @@ items:
     ```bash
     dotnet run
     ```
-    :::image type="content" source="../assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Dotnet" border="true":::
+ :::image type="content" source="../assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Dotnet" border="true":::
     
 - title: Upload Link Unfurling app
   durationInMinutes: 1
@@ -433,31 +433,31 @@ items:
 
     1. Select **Apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore.png" alt-text="Zip file" border="true":::
+   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/AppStore.png" alt-text="Zip file" border="true":::
        
     1. In the lower left corner, select **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps.png" alt-text="Manage apps" border="true":::
+   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps.png" alt-text="Manage apps" border="true":::
           
     1. Select **Upload an app to your org's app catalog**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp.png" alt-text="Upload custom app" border="true":::
+   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp.png" alt-text="Upload custom app" border="true":::
       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       :::image type="content" source="../assets/images/Teams-link-unfurling/selectzip.png" alt-text="Select zip file" border="true":::
+   :::image type="content" source="../assets/images/Teams-link-unfurling/selectzip.png" alt-text="Select zip file" border="true":::
       
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app" border="true":::
+   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app" border="true":::
        
        The app opens in a chat.
    
     1. In the compose message area, enter `https://www.BotFramework.com`.
 
        The link unfurls as shown in the following image:
-       
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result1.png" alt-text="Link unfurling result" border="true":::  
+
+   :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result1.png" alt-text="Link unfurling result" border="true":::  
        
     1. Press Enter
 
