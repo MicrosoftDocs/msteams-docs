@@ -49,7 +49,7 @@ landingContent:
       - text: Debug your Teams app using Teams Toolkit
         url: ~/toolkit/debug-local.md
       - text: Debug background processes
-        url: ~/toolkit/toolkit/debug-background-process.md
+        url: ~toolkit/debug-background-process.md
       
 
 - title: Get started
