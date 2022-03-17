@@ -25,7 +25,7 @@ In Visual Studio Code, you can toggle breakpoints on the source codes of tabs, 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle.png" alt-text="toggle breakpoints":::
 
-### Hot reload
+### Hot-reload
 
 You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the Teams app. Update the code and save the changes. The project re-loads and the debugger re-attaches to the programming languages.
 
@@ -121,12 +121,11 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
 
-
 Your app is added to Teams.
 
 ## Customize local debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your own tab or bot.
+Teams Toolkit allows you to customize the debug settings to create your own tab or bot
 
 ### Uncheck few prerequisites
 
