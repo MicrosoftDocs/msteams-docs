@@ -29,7 +29,7 @@ items:
 
      This step-by-step guide helps you to create a bot to perform link unfurling in Microsoft Teams for `https://www.BotFramework.com`. You'll see the following output:
 
-    :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
+     :::image type="content" source="../assets/images/Teams-link-unfurling/final-image.png" alt-text="Link unfurling" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -348,7 +348,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot.
 
-           :::image type="content" source="../msteams-platform//assets/images/Teams-link-unfurling/appsettings.png" alt-text="App settings" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appsettings.png" alt-text="App settings" border="true":::
         
     1. Navigate to **manifest.json** in cloned repository.
 
