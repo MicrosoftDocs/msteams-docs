@@ -91,9 +91,9 @@
     - name: Create a new Teams app
       href: toolkit/create-new-project.md
     - name: Debug your Teams app using Teams Toolkit
-      href: toolkit/debug local.md
+      href: toolkit/toolkit/debug-local.md
     - name: Debug background processes
-      href: toolkit/debug background process.md
+      href: toolkit/toolkit/debug-background-process.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
     - name: Provision cloud resources

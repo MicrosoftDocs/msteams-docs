@@ -9,7 +9,7 @@ ms.date: 03/02/2022
 
 # Debug your Teams app using Teams Toolkit
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure that the program runs as per the requirements. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Toolkit supports debugging features including start, multi-target debugging, toggle breakpoints, hot-reloading, and stop debugging. The Teams app is available for preview in Teams web client locally after the debugging process.
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure that the program runs as per the requirements. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Toolkit supports debugging features including start, multi-target debugging, toggle breakpoints, hot reloading, and stop debugging. The Teams app is available for preview in Teams web client locally after the debugging process.
 
 ## Prerequisite
 
@@ -25,11 +25,11 @@ You can toggle breakpoints on the source codes of tabs, bots, messaging extensi
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle.png" alt-text="toggle breakpoints":::
 
-### Hot-reload
+### Hot reload
 
 You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the Teams app. Update the code and save the changes. The app re-loads and the debugger re-attaches to the programming languages.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot reload.png" alt-text="hot-reload for source codes":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
 ### Stop debugging
 
