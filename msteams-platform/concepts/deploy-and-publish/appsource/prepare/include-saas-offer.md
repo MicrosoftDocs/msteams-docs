@@ -215,7 +215,7 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 1. Submit your app for validation.
 
-1. After Teams marketplace supports flat rate pricing, update your app manifest with the Offer ID and Publisher ID and re-submit your app for validation.
+1. After Teams marketplace supports flat rate pricing, update your app manifest with the Offer ID and Publisher ID and resubmit your app for validation.
 
 ## See also
 
