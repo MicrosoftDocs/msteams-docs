@@ -23,7 +23,7 @@ The Teams app is available for preview in Teams web client locally after the deb
 
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Visual Studio Code debug features
+## Advantages
 
 ### Toggle breakpoints
 
@@ -103,17 +103,17 @@ The table lists debug configuration type for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
-|  Tab |  **Attach to Frontend (Edge)** or Attach to Frontend (Chrome)  |  pwa-msedge or pwa-chrome  |
-|  Bot or messaging extensions |  Attach to Bot |  pwa-node |
-|  Azure Functions |  Attach to Backend |  pwa-node |
+|  Tab |  **Attach to Frontend (Edge)** or  **Attach to Frontend (Chrome)**  |  pwa-msedge or pwa-chrome  |
+|  Bot or messaging extensions |   **Attach to Bot** |  pwa-node |
+|  Azure Functions |   **Attach to Backend** |  pwa-node |
 
 The table lists debug configuration type for project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or messaging extension  |  Launch Bot (Edge) or Launch Bot (Chrome)  |   pwa-msedge or pwa-chrome  |
-|  Bot or messaging extension  |  Attach to Bot |  pwa-node  |
-|  Azure Functions |  Attach to Backend |  pwa-node |
+|  Bot or messaging extension  |   **Launch Bot (Edge)** or  **Launch Bot (Chrome)**  |   pwa-msedge or pwa-chrome  |
+|  Bot or messaging extension  |   **Attach to Bot** |  pwa-node  |
+|  Azure Functions |  **Attach to Backend** |  pwa-node |
 
 
 ### Sideloads the Teams app
