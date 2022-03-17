@@ -67,18 +67,18 @@ After creating a new app using Teams Toolkit, select **F5** to run your Teams ap
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
-6. For macOS, in certificate trust settings enter your **User Name** and **Password**, then select **Update Settings**.
+6. For macOS, in Certificate Trust Settings dialog box, enter your **User Name** and **Password**, then select **Update Settings**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
 
-Visual Studio Code starts the following processes:
+After the initial set up process, the Teams Toolkit starts the following processes:
 
-1. [Start app services](#start-app-services)
-1. [Launch debuggers](#launch-debuggers)
-1. [Sideload the Teams app](#sideload-the-teams-app)
+1. [Starts app services](#starts-app-services)
+1. [Launches debuggers](#launches-debuggers)
+1. [Sideloads the Teams app](#sideloads-the-teams-app)
 
-### Start app services
+### Starts app services
 
 It runs the tasks defined in `.vscode/tasks.json` as follows:
 
@@ -88,7 +88,7 @@ It runs the tasks defined in `.vscode/tasks.json` as follows:
 |  Bot or messaging extensions |  Start Bot |  bot |
 |  Azure Functions |  Start Backend |  api |
 
-### Launch debuggers
+### Launches debuggers
 
 It launches the debug configurations defined in `.vscode/launch.json` as follows:
 
@@ -111,9 +111,9 @@ The table lists debug configuration type for project with bot app and without ta
 |  Azure Functions |  Attach to Backend |  pwa-node |
 
 
-### Sideload the Teams app
+### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations,
+The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
 
 
@@ -121,7 +121,7 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
 
-Your app is added to Teams.
+   Your app is added to Teams!
 
 ## Customize local debug settings
 
@@ -160,7 +160,6 @@ The following image shows the list that can be unchecked:
 1. For bot or messaging extension, update `dev:teamsfx` script in `bot/package.json`.
 
 1. For Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
-
 
  > [!NOTE]
  > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
@@ -208,7 +207,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
          // "Start Bot"
    ]
         
-
 }
 ```
 
