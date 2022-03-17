@@ -67,16 +67,16 @@ After creating a new app using Teams Toolkit, select **F5** to run your Teams ap
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
-6. For macOS, certificate trust settings enter your **User Name** and **Password**, then select **Update Settings**.
+6. For macOS, in certificate trust settings enter your **User Name** and **Password**, then select **Update Settings**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
 
 Visual Studio Code starts the following processes:
 
-1. [Start app services](#starts-app-services)
-1. [Launch debuggers](#launches-debuggers)
-1. [Sideload the Teams app](#sideloads-the-teams-app)
+1. [Start app services](#start-app-services)
+1. [Launch debuggers](#launch-debuggers)
+1. [Sideload the Teams app](#sideload-the-teams-app)
 
 ### Start app services
 
