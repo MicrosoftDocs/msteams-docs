@@ -107,12 +107,18 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 
 - Identity Provider (IDP): \add details for IDP\
 - SSO: Single sign-on lets your app users log into the app only once using their credentials. It offers access to all associated apps or websites without having to validate repeatedly.
-- OIDC: Open ID Connect (OIDC) is an authentication protocol used to validate a user. Third-party applications can use it to verify the user's identity and access their profile information.
-- ID tokens: An ID token is granted to a user who has been verified successfully. It's used to cache user profile information and provide it to a client application when a user requests access.
-- Authorization: It's a process to provide resource-specific access to an authenticated user based on their user profile.
-- Oauth2.0: OAuth is a protocol that lets third party applications access secure resources without compromising the user’s information, such as password.  
-- Access tokens: An access token is an artifact that contains security information of an application to access specific user information.  
+- Third-party authentication: A Teams app can use third-party IdPs, such as Google or Facebook. 
 - Graph API: \add details for Graph API and MS Graph\
+
+**Protocols**:
+
+- OIDC: Open ID Connect (OIDC) is an authentication protocol used to validate a user. Third-party applications can use it to verify the user's identity and access their profile information.
+- Oauth2.0: OAuth is a protocol that lets third party applications access secure resources without compromising the user’s information, such as password.
+
+**Authentication tokens**:
+
+- ID tokens: An ID token is granted to a user who has been verified successfully. It's used to cache user profile information and provide it to a client application when a user requests access.
+- Access tokens: An access token is an artifact that contains security information of an application to access specific user information.  
 
 ## Next step
 
