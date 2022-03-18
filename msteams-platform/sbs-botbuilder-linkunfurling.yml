@@ -135,11 +135,11 @@ items:
     
     1. Select **Add**.
 
-       :::image type="content" source="../assets/images/Teams-link-unfurling/clientsecret.png" alt-text="Add client secret to app" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientsecret.png" alt-text="Add client secret to app" border="true":::
        
     1. In the **Value** column, select **Copy to clipboard**.
 
-       :::image type="content" source="..assets/images/Teams-link-unfurling/clientvalue.png" alt-text="Value of client secret" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientvalue.png" alt-text="Value of client secret" border="true":::
              
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -446,7 +446,7 @@ items:
       
     1. Select **Add**.
 
-    :::image type="content" source="../assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app" border="true":::
+    :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Add the app" border="true":::
        
        The app opens in a chat.
    
