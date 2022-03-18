@@ -192,39 +192,39 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
 
-       ```json
-           {
-           "name": "Debug (Edge)",
-            "configurations": [
-              "Attach to Frontend (Edge)",
-              // "Attach to Bot",
-              // "Attach to Backend""
-              ],
-              "preLaunchTask": "Pre Debug Check and Start All",
-              "presentation": {
-                  "group": "all",
-                  "order": 1
-              },
-              "stopAll": true
-                 
-         }
-        ```
+   ```json
+    {
+    "name": "Debug (Edge)",
+     "configurations": [
+       "Attach to Frontend (Edge)",
+       // "Attach to Bot",
+       // "Attach to Backend""
+       ],
+       "preLaunchTask": "Pre Debug Check and Start All",
+       "presentation": {
+           "group": "all",
+           "order": 1
+       },
+       "stopAll": true
+          
+   }
+   ```
 
 2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
 
 
-       ```json
-           {
-                                              
-         "label": "Start All",
-          "dependsOn": [
-              "Start Frontend",
-                // "Start Backend",
-                // "Start Bot"
-            ]
-                 
-         }
-        ```
+   ```json
+        {
+                                           
+      "label": "Start All",
+       "dependsOn": [
+           "Start Frontend",
+             // "Start Backend",
+             // "Start Bot"
+         ]
+              
+       }
+       ```
 
 ## Next step
 
