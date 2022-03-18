@@ -43,11 +43,11 @@ The following image shows the experience of People Picker using mobile and deskt
 
 # [People Picker Mobile](#tab/Mobile)
 
-:::image type="content" source="../../assets/images/tabs/people-picker-desktop-email.png" alt-text="people picker mobile" border="true":::
+:::image type="content" source="../../assets/images/tabs/people-picker-control-capability.png" alt-text="People picker control capability mobile":::
 
 # [People Picker Desktop](#tab/Desktop)
 
-:::image type="content" source="../../assets/images/tabs/people-picker-desktop-email.png" alt-text="People picker desktop ":::
+:::image type="content" source="../../assets/images/tabs/people-picker-desktop-email.png" alt-text="People picker desktop" border="true":::
 
 ---
 
