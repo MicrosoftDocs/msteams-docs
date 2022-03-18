@@ -11,14 +11,13 @@ ms.date: 03/02/2022
 
 Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit supports the following debugging features:
 
-* One-click start
-* Multi-target debugging  
-* Toggle breakpoints
-* Hot reloading
-* Stop debugging
+* [One-click start](#one-click-start)
+* [Multi-target debugging](#multi-target-debugging)
+* [Toggle breakpoints](#toggle-breakpoints)
+* [Hot reload](#hot-reload)
+* [Stop debugging](#stop-debugging)
 
 During the debug process, Teams Toolkit automatically starts app services, launches debuggers and sideloads the Teams app. The Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints or development certificate, or debug partial component to load your required app.
-
 
 ## Prerequisite
 
@@ -52,8 +51,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
 
-
-## Debug locally using Teams Toolkit
+## 1. Debug locally using Teams Toolkit
 
 After creating a new app using Teams Toolkit, do the following as per your operating system:
 
@@ -61,7 +59,6 @@ After creating a new app using Teams Toolkit, do the following as per your opera
 
 <details>
 <summary>Windows</summary>
-
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from **Run and Debug** in the activity bar.
 1. Select **Start Debugging (F5)** to run your Teams app in debug mode.
@@ -99,12 +96,13 @@ For macOS, in **Certificate Trust Settings** dialog box, enter your **User Name*
 
 </details>
 
+## 2. Debug actions
 
 After the initial set up process, the Teams Toolkit starts the following processes:
 
-1. [Starts app services](#starts-app-services)
-1. [Launches debuggers](#launches-debuggers)
-1. [Sideloads the Teams app](#sideloads-the-teams-app)
+a. [Starts app services](#starts-app-services)
+b. [Launches debuggers](#launches-debuggers)
+c. [Sideloads the Teams app](#sideloads-the-teams-app)
 
 ### Starts app services
 
@@ -143,9 +141,7 @@ The table lists debug configuration type for project with bot app and without ta
 ### Sideloads the Teams app
 
 The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations
-[Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
-
-7. When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
+[Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
 
@@ -153,11 +149,52 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
 ## Customize debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your own tab or bot.
 
-### Clear prerequisites
+Teams Toolkit allows you to customize the debug settings to create your own tab or bot by unchecking some prerequisites:
 
-You can clear some of the prerequisites in the Visual Studio Code settings.
+<br>
+
+<details>
+<summary>Use your bot endpoint</summary>
+
+1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
+
+1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Customize bot endpoint":::
+
+</details>
+
+
+<details>
+<summary>Use your development certificate</summary>
+
+1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
+
+1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your own certificate file path and key file path.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Customize certificate":::
+
+</details>
+
+
+<details>
+<summary>Use your start scripts to start app services</summary>
+
+1. For tab, update `dev:teamsfx` script in `tabs/package.json`.
+
+1. For bot or messaging extension, update `dev:teamsfx` script in `bot/package.json`.
+
+1. For Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
+
+ > [!NOTE]
+ > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
+
+</details>
+
+<!-- ### Uncheck prerequisites
+
+You can uncheck some of the prerequisites in the Visual Studio Code settings to create Teams app using your bot endpoints, development certificate, and start scripts.
 
 1. Select **Settings**.
 
@@ -165,7 +202,7 @@ You can clear some of the prerequisites in the Visual Studio Code settings.
 
 1. Clear the checkbox you want to skip during debug.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-check.png" alt-text="vsc setting":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-check.png" alt-text="vsc setting"::: -->
 
 ### Use your own bot endpoint
 
@@ -207,40 +244,39 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
-
    ```json
-    {
-    "name": "Debug (Edge)",
-     "configurations": [
-       "Attach to Frontend (Edge)",
-       // "Attach to Bot",
-       // "Attach to Backend""
-       ],
-       "preLaunchTask": "Pre Debug Check and Start All",
-       "presentation": {
-           "group": "all",
-           "order": 1
-       },
-       "stopAll": true
-          
+   {
+       "name": "Debug (Edge)",
+        "configurations": [
+           "Attach to Frontend (Edge)",
+           // "Attach to Bot",
+           // "Attach to Backend""
+           ],
+           "preLaunchTask": "Pre Debug Check and Start All",
+           "presentation": {
+               "group": "all",
+               "order": 1
+           },
+           "stopAll": true
+
    }
    ```
 
 2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
 
-
    ```json
-        {
+   {
                                            
-      "label": "Start All",
+       "label": "Start All",
        "dependsOn": [
            "Start Frontend",
              // "Start Backend",
              // "Start Bot"
+
          ]
               
-       }
-       ```
+   }
+   ```
 
 ## Next step
 
