@@ -11,7 +11,7 @@ ms.date: 03/02/2022
 
 Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Teams toolkit" border="true"::: helps you to debug and preview your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams" border="false"::: app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: supports the following debugging features:
 
-* [One-click start](#one-click-start)
+* [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
@@ -25,7 +25,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ## Key features
 
-### One-click start
+### Start debugging
 
 You can perform single operation, select **F5** to start debugging. The Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Teams toolkit" border="true"::: starts checking prerequisites, registering AAD app, registering Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png"  alt-text="Teams" border="false"::: app, registering bot, starting services and launching browser.
 
@@ -53,12 +53,12 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 ## 1. Debug locally using Teams Toolkit
 
-After creating a new app using Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true":::, do the following as per your operating system:
+After creating a new app using :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: Teams Toolkit, do the following as per your operating system:
 
 <br>
 
 <details>
-<summary>Windows</summary>
+<summary>**Windows**</summary>
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from **Run and Debug** in the activity bar.
 1. Select **Start Debugging (F5)** to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
@@ -88,7 +88,7 @@ After creating a new app using Teams Toolkit :::image type="icon" source="../ass
 </details>
 
 <details>
-<summary>Macos</summary>
+<summary>**macOS**</summary>
 
 For macOS, in **Certificate Trust Settings** dialog box, enter your **User Name** and **Password**, then select **Update Settings**.
 
@@ -224,7 +224,7 @@ Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/tea
            // "Attach to Bot",
            // "Attach to Backend""
            ],
-           "preLaunchTask": "Pre Debug Check and Start All",
+           "preLaunchTask": "Pre Debug Check & Start All",
            "presentation": {
                "group": "all",
                "order": 1
