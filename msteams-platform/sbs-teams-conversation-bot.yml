@@ -251,7 +251,7 @@ items:
         :::image type="content" source="./assets/images/conversation-bot/mentionme-output.png" alt-text="Mentionme card.":::
 
     1. **MessageAllMembers**<br>
-        **Result:** The bot will send a one-on-one message to each member in the current conversation.</br>
+        **Result:** The bot will send a one-on-one message to each member in the current conversation.<br>
         **Valid Scopes:** personal, group chat, team chat
 
         :::image type="content" source="./assets/images/conversation-bot/message-all-members-output.png" alt-text="MessageAllMembers card.":::
