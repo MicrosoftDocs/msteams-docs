@@ -41,11 +41,11 @@ The `selectPeople` API comes with the following input configurations:
 
 The following image shows the experience of People Picker using web and desktop app:
 
-# [People Picker for web app](#tab/Sample web app)
+# [Web app](#tab/Sample web app)
 
 :::image type="content" source="../../assets/images/tabs/people-picker-control-capability.png" alt-text="People picker control capability mobile":::
 
-# [People Picker for desktop app](#tab/Sample desktop app)
+# [Desktop app](#tab/Sample desktop app)
 
 :::image type="content" source="../../assets/images/tabs/people-picker-desktop-email.png" alt-text="People picker desktop" border="true":::
 
