@@ -723,6 +723,10 @@
       {
         "source_path": "msteams-platform/concepts/extensibility-points.md",
         "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md" 
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/create-apps-for-teams-meetings.md",
+        "redirect_url": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md"
       }
     ]
 }
