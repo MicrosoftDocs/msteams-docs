@@ -27,7 +27,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ### One-click start
 
-You can perform single operation, select **F5** to start debugging. The Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: starts checking prerequisites, registering AAD app, registering Teams :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: app, registering bot, starting services and launching browser.
+You can perform single operation, select **F5** to start debugging. The Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: starts checking prerequisites, registering AAD app, registering Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app, registering bot, starting services and launching browser.
 
 ### Multi-target debugging
 
@@ -35,13 +35,13 @@ Multi-target debugging is a Visual Studio Code debugging feature. Teams Toolkit 
 
 ### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints execute when you interact with the Teams :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: app in a web browser. The following image shows the toggle breakpoints:
+You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints execute when you interact with the Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false"::: app in a web browser. The following image shows the toggle breakpoints:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle.png" alt-text="toggle breakpoints":::
 
 ### Hot reload
 
-You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the Teams :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: app. Update the code and save the changes. The app re-loads and the debugger re-attaches to the programming languages.
+You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false"::: app. Update the code and save the changes. The app re-loads and the debugger re-attaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
@@ -61,7 +61,7 @@ After creating a new app using Teams Toolkit :::image type="icon" source="../ass
 <summary>Windows</summary>
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from **Run and Debug** in the activity bar.
-1. Select **Start Debugging (F5)** to run your Teams :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: app in debug mode.
+1. Select **Start Debugging (F5)** to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
 
    The following image shows the browser options in the dropdown list:
 
@@ -140,7 +140,7 @@ The table lists debug configuration type for project with bot app and without ta
 
 ### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations
+The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false"::: app controlled by the sideloading url defined in the launch configurations
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
