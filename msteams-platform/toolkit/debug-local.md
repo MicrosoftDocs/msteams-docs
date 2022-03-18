@@ -56,6 +56,15 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 After creating a new app using Teams Toolkit:
 
+## GA features
+
+Microsoft Teams platform features that are available to all app developers.
+
+<br>
+
+<details>
+<summary><b>2022</b></summary>
+
 1. Select **Debug (Edge)** or **Debug (Chrome)** from **Run and Debug** in the activity bar.
 1. Select **Start Debugging (F5)** to run your Teams app in debug mode.
 
