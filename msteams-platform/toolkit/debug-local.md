@@ -52,18 +52,16 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
 
+
 ## Debug locally using Teams Toolkit
 
-After creating a new app using Teams Toolkit:
-
-## GA features
-
-Microsoft Teams platform features that are available to all app developers.
+After creating a new app using Teams Toolkit, do the following as per your operating system:
 
 <br>
 
 <details>
-<summary><b>2022</b></summary>
+<summary>Windows</summary>
+
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from **Run and Debug** in the activity bar.
 1. Select **Start Debugging (F5)** to run your Teams app in debug mode.
@@ -90,9 +88,17 @@ Microsoft Teams platform features that are available to all app developers.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
+</details>
+
+<details>
+<summary>Macos</summary>
+
 For macOS, in **Certificate Trust Settings** dialog box, enter your **User Name** and **Password**, then select **Update Settings**.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
+
+</details>
+
 
 After the initial set up process, the Teams Toolkit starts the following processes:
 
