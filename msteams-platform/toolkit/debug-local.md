@@ -9,7 +9,7 @@ ms.date: 03/02/2022
 
 # Debug your Teams app locally
 
-Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Teams toolkit" border="true"::: helps you to debug and preview your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: supports the following debugging features:
+Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Teams toolkit" border="true"::: helps you to debug and preview your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams" border="false"::: app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: supports the following debugging features:
 
 * [One-click start](#one-click-start)
 * [Multi-target debugging](#multi-target-debugging)
