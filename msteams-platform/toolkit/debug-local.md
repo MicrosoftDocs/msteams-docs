@@ -9,7 +9,7 @@ ms.date: 03/02/2022
 
 # Debug your Teams app locally
 
-Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: helps you to debug and preview your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: supports the following debugging features:
+Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Teams toolkit" border="true"::: helps you to debug and preview your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: supports the following debugging features:
 
 * [One-click start](#one-click-start)
 * [Multi-target debugging](#multi-target-debugging)
@@ -17,7 +17,7 @@ Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/tea
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
 
-During the debug process, Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: automatically starts app services, launches debuggers and sideloads the Teams app. The Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints or development certificate, or debug partial component to load your required app.
+During the debug process, Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Teams toolkit" border="true"::: automatically starts app services, launches debuggers and sideloads the Teams app. The Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints or development certificate, or debug partial component to load your required app.
 
 ## Prerequisite
 
@@ -27,7 +27,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ### One-click start
 
-You can perform single operation, select **F5** to start debugging. The Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: starts checking prerequisites, registering AAD app, registering Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app, registering bot, starting services and launching browser.
+You can perform single operation, select **F5** to start debugging. The Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" alt-text="Teams toolkit" border="true"::: starts checking prerequisites, registering AAD app, registering Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" border="false"::: app, registering bot, starting services and launching browser.
 
 ### Multi-target debugging
 
