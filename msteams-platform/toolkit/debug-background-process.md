@@ -32,7 +32,7 @@ Teams Toolkit checks all the following prerequisites in the debug process:
   |Bot |  10, 12, **14 (recommended)**, 16|
   |Messaging extension | 10, 12, **14 (recommended)**, 16 |
     
-* Microsoft 365 account valid credentials, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in.
+* Microsoft 365 account with valid credentials, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in.
 
 * Custom app uploading or sideloading for your developer tenant is turned on. If not, the local debug terminates.
 

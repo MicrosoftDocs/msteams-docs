@@ -17,17 +17,18 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * Hot reloading
 * Stop debugging
 
-The Teams app is available for preview in Teams web client locally after the debugging process.
+During the debug process, Teams Toolkit automatically starts app services, launches debuggers and sideloads the Teams app. The Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints or development certificate, or debug partial component to load your required app.
+
 
 ## Prerequisite
 
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Advantages
+## Key features
 
 ### One-click start
 
-You can perform only one operation, select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering AAD app, registering Teams app, registering bot, starting services and launching browser.
+You can perform single operation, select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering AAD app, registering Teams app, registering bot, starting services and launching browser.
 
 ### Multi-target debugging
 
@@ -135,7 +136,7 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
    Your app is added to Teams!
 
-## Customize local debug settings
+## Customize debug settings
 
 Teams Toolkit allows you to customize the debug settings to create your own tab or bot.
 
