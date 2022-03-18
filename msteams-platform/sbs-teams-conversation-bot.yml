@@ -236,21 +236,21 @@ items:
 
     In the left pane of the Teams, select the ellipses ●●● and choose your app from the list. The bot will show **Suggestions** as follows:
 
-        :::image type="content" source="./assets/images/conversation-bot/suggestions.png" alt-text="Suggestions card.":::
+    :::image type="content" source="./assets/images/conversation-bot/suggestions.png" alt-text="Suggestions card.":::
 
-    1. **Show Welcome**</br>
-        **Result:** The bot will send the welcome card for you to interact with.</br>
+    1. **Show Welcome** <br>
+        **Result:** The bot will send the welcome card for you to interact with. <br>
         **Valid Scopes:** personal, group chat, team chat
 
         :::image type="content" source="./assets/images/conversation-bot/show-welcome-output.png" alt-text="Show Welcome card.":::
 
-    1. **MentionMe**</br>
-        **Result:** The bot will respond to the message and mention the user.</br>
+    1. **MentionMe** <br>
+        **Result:** The bot will respond to the message and mention the user.<br>
         **Valid Scopes:** personal, group chat, team chat
 
         :::image type="content" source="./assets/images/conversation-bot/mentionme-output.png" alt-text="Mentionme card.":::
 
-    1. **MessageAllMembers**</br>
+    1. **MessageAllMembers**<br>
         **Result:** The bot will send a one-on-one message to each member in the current conversation.</br>
         **Valid Scopes:** personal, group chat, team chat
 
