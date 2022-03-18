@@ -47,7 +47,7 @@ Here's a look at features Azure AD SSO authentication method:
 
 | # | Feature | What it means for you |
 | --- | --- | --- |
-| 1. | True SSO | &nbsp; |
+| 1. | Single sign-on | The user needs to log into the app only once.  |
 | 2. | Single identity | &nbsp; |
 | 3. | Secure user access | &nbsp; |
 | 4. | Secure user data | &nbsp; |
