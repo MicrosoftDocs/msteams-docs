@@ -27,11 +27,11 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ### One-click start
 
-You can perform only one operation, select **F5** to start debugging. The Teams Toolkit performs checking prerequisites, registering AAD app, registering Teams app, registering bot, starting services, launching browser, etc. in this command.
+You can perform only one operation, select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering AAD app, registering Teams app, registering bot, starting services and launching browser.
 
 ### Multi-target debugging
 
-Multi-target debugging is a Visual Studio Code debugging feature. Teams Toolkit utilizes this feature to debug tab, bot, messaging extension and Azure functions at the same time.
+Multi-target debugging is a Visual Studio Code debugging feature. Teams Toolkit utilizes this feature to debug tab, bot, messaging extension, and Azure functions at the same time.
 
 ### Toggle breakpoints
 
@@ -60,7 +60,7 @@ After creating a new app using Teams Toolkit:
 
    The following image shows the browser options in the dropdown list:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug.png" alt-text="browser default" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug.png" alt-text="browser default" border="false":::
 
 3. Select **Sign in** to Microsoft 365 account.
 
@@ -226,7 +226,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
          }
         ```
 
-    
 ## Next step
 
 > [!div class="nextstepaction"]
