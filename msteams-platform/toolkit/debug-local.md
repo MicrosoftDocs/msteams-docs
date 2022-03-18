@@ -36,9 +36,9 @@ Multi-target debugging is a Visual Studio Code debugging feature. :::image type=
 
 ### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints execute when you interact with the :::image type="icon" source="../assets/icons/teams-icon.png" border="false":::Teams app in a web browser. The following image shows the toggle breakpoints:
+You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints execute when you interact with the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app in a web browser. The following image shows the toggle breakpoints:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle.png" alt-text="toggle breakpoints":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints":::
 
 ### Hot reload
 
