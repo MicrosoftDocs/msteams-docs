@@ -10,12 +10,12 @@ ms.date: 03/02/2022
 # Debug your Teams app using Teams Toolkit
 
 Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit supports the following debugging features:
- 
-* Start
+
+* One-click start
 * Multi-target debugging  
 * Toggle breakpoints
 * Hot reloading
-* Stop
+* One-click stop
 
 The Teams app is available for preview in Teams web client locally after the debugging process.
 
@@ -24,6 +24,19 @@ The Teams app is available for preview in Teams web client locally after the deb
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 ## Advantages
+
+### One-click start
+
+You can perform only one operation, select **F5** to start debugging, then the Teams Toolkit
+One-click start means that users only need to do one operation (pressing F5), then Teams Toolkit performs checking prerequisites, registering AAD app, registering Teams app, registering bot, starting services, launching browser, etc. in this command.
+
+### Multi-target debugging
+
+Multi-target debugging is a Visual Studio Code debugging feature. Teams Toolkit utilizes this feature to debug tab, bot, messaging extension and Azure functions at the same time.
+
+### One-click stop
+
+You can perform only one operation, select **Stop** or **Disconnect**, then the Teams Toolkit terminates the services, closes browser.
 
 ### Toggle breakpoints
 
@@ -39,10 +52,9 @@ You can update the source codes of tab, bot, messaging extension, and Azure func
 
 ### Stop debugging
 
-When you complete local debug, you can select **Stop** from the floating debugging toolbar to stop all debug sessions and terminate tasks. The following image shows the stop debug action:
+When you complete local debug, you can select **Stop** or **Disconnect** from the floating debugging toolbar to stop all debug sessions and terminate tasks. The following image shows the stop debug action:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debugging.png" alt-text="stop debugging":::
-
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
 
 ## Debug locally using Teams Toolkit
 
@@ -53,7 +65,7 @@ After creating a new app using Teams Toolkit:
 
    The following image shows the browser options in the dropdown list:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug.png" alt-text="browser default" border="true"::: 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug.png" alt-text="browser default" border="true":::
 
 3. Select **Sign in** to Microsoft 365 account.
 
@@ -93,34 +105,34 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 |  Bot or messaging extensions |  **Start Bot** |  bot |
 |  Azure Functions |  **Start Backend** |  api |
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
+
 ### Launches debuggers
 
 Launches the debug configurations defined in `.vscode/launch.json` as follows:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start frontend task":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debugging.png" alt-text="Launch debugger":::
 
 The table lists debug configuration type for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
-|  Tab |  **Attach to Frontend (Edge)** or  **Attach to Frontend (Chrome)**  |  pwa-msedge or pwa-chrome  |
-|  Bot or messaging extensions |   **Attach to Bot** |  pwa-node |
-|  Azure Functions |   **Attach to Backend** |  pwa-node |
+|  Tab |  Attach to Frontend (Edge) or  Attach to Frontend (Chrome)  |  pwa-msedge or pwa-chrome  |
+|  Bot or messaging extensions |   Attach to Bot |  pwa-node |
+|  Azure Functions |   Attach to Backend |  pwa-node |
 
 The table lists debug configuration type for project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or messaging extension  |   **Launch Bot (Edge)** or  **Launch Bot (Chrome)**  |   pwa-msedge or pwa-chrome  |
-|  Bot or messaging extension  |   **Attach to Bot** |  pwa-node  |
-|  Azure Functions |  **Attach to Backend** |  pwa-node |
-
+|  Bot or messaging extension  | Launch Bot (Edge) or  Launch Bot (Chrome)  |   pwa-msedge or pwa-chrome  |
+|  Bot or messaging extension  |   Attach to Bot |  pwa-node  |
+|  Azure Functions |  Attach to Backend |  pwa-node |
 
 ### Sideloads the Teams app
 
 The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
-
 
 7. When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
@@ -180,8 +192,10 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
- ```json
+  ```json
+
     {
+
       "name": "Debug (Edge)",
         "configurations": [
           "Attach to Frontend (Edge)",
@@ -194,23 +208,24 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
               "order": 1
           },
           "stopAll": true
-    }
-    ```
+       }
+       ```
+
  
 2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
 
 ```json
-    {
+         {
                                             
      "label": "Start All",
       "dependsOn": [
           "Start Frontend",
             // "Start Backend",
-               // "Start Bot"
-  ]
+            // "Start Bot"
+        ]
                                 
-  }
- ```
+      }
+      ```
 
 ## Next step
 
