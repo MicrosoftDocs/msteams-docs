@@ -60,7 +60,7 @@ After creating a new app using Teams Toolkit:
 
    The following image shows the browser options in the dropdown list:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug.png" alt-text="browser default" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="browser default" border="false":::
 
 3. Select **Sign in** to Microsoft 365 account.
 
