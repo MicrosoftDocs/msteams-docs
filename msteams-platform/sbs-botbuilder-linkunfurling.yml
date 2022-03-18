@@ -94,7 +94,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as `Multi Tenant`.
+    1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
 
@@ -249,7 +249,7 @@ items:
   
     1. Select **Add a scope** to save.
 
-        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addascope.png" alt-text="Add a scope" border="true"::: 
+        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/addscope.png" alt-text="Add a scope" border="true"::: 
         
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -379,7 +379,7 @@ items:
        1. Launch Visual Studio .
        1. Navigate to **File** > **Open** > **Project/Solution**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="Open file" border="true":::
+          :::image type="content" source="~/assets/images/Teams-link-unfurling/VSopenfile.png" alt-text="Open file" border="true":::
           
        1. Select **TeamsLinkUnfurling.csproj** file from **55.teams-link-unfurling** folder.
 

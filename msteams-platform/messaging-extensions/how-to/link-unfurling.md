@@ -173,10 +173,9 @@ Following is an example of the response:
 
 * * *
 
-
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to perform link unfurling using bot in Teams.
+Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to perform link unfurling in Teams using bot.
 
 ## See also
 
