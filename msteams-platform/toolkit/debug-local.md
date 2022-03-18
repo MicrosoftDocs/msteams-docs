@@ -15,7 +15,7 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * Multi-target debugging  
 * Toggle breakpoints
 * Hot reloading
-* One-click stop
+* Stop debugging
 
 The Teams app is available for preview in Teams web client locally after the debugging process.
 
@@ -27,8 +27,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ### One-click start
 
-You can perform only one operation, select **F5** to start debugging, then the Teams Toolkit
-One-click start means that users only need to do one operation (pressing F5), then Teams Toolkit performs checking prerequisites, registering AAD app, registering Teams app, registering bot, starting services, launching browser, etc. in this command.
+You can perform only one operation, select **F5** to start debugging. The Teams Toolkit performs checking prerequisites, registering AAD app, registering Teams app, registering bot, starting services, launching browser, etc. in this command.
 
 ### Multi-target debugging
 
@@ -36,7 +35,7 @@ Multi-target debugging is a Visual Studio Code debugging feature. Teams Toolkit 
 
 ### One-click stop
 
-You can perform only one operation, select **Stop** or **Disconnect**, then the Teams Toolkit terminates the services, closes browser.
+You can perform only one operation, select **Stop** or **Disconnect**. The Teams Toolkit terminates the services, closes browser.
 
 ### Toggle breakpoints
 
@@ -192,7 +191,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
-  ```json
+```json
 
     {
 
@@ -226,6 +225,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
                                 
       }
       ```
+
 
 ## Next step
 
