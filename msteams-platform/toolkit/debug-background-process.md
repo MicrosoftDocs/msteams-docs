@@ -22,7 +22,7 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 ## Prerequisites
 
-Teams Toolkit checks all the following prerequisites in the debug process:
+Teams Toolkit checks all the following prerequisites during the debug process:
 
 * Node.js, applicable for project types, such as tab without Azure functions, tab with Azure functions, bot and messaging extensions,  versions 10, 12, **14 (recommended)**, 16.
 
@@ -72,8 +72,6 @@ Teams Toolkit checks all the following prerequisites in the debug process:
   | Node inspector for Azure functions | 9229 |
 
 
-
-
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
 
 |Project type|Installation| Limitation|
@@ -103,7 +101,6 @@ Use the following .NET Core versions:
 
 > [!NOTE]
 > If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
-
 
 
 When you select **Start Debugging (F5)**, the Teams Toolkit output channel displays the progress and result after checking the prerequisites.
@@ -176,7 +173,7 @@ After registering and configuring the app, local debug files get generated.
 
 ## Local debug files
 
-The following lists the local debug files and their configuration types:
+The following table lists the local debug files and their configuration types:
 
 | File| File name| Debug configuration type |
 | --- | --- | --- |

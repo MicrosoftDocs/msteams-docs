@@ -7,9 +7,9 @@ ms.topic: overview
 ms.date: 03/02/2022
 ---
 
-# Debug your Teams app locally
+# Debug your Teams :::image type="icon" source="assets/icons/Teams-icon.png" border="false"::: app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit supports the following debugging features:
+Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. Teams Toolkit supports the following debugging features:
 
 * [One-click start](#one-click-start)
 * [Multi-target debugging](#multi-target-debugging)
@@ -143,7 +143,7 @@ The table lists debug configuration type for project with bot app and without ta
 The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
 
    Your app is added to Teams!
 
@@ -165,7 +165,6 @@ Teams Toolkit allows you to customize the debug settings to create your own tab 
 
 </details>
 
-
 <details>
 <summary>Use your development certificate</summary>
 
@@ -177,7 +176,6 @@ Teams Toolkit allows you to customize the debug settings to create your own tab 
 
 </details>
 
-
 <details>
 <summary>Use your start scripts to start app services</summary>
 
@@ -187,8 +185,8 @@ Teams Toolkit allows you to customize the debug settings to create your own tab 
 
 1. For Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
 
- > [!NOTE]
- > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
+   > [!NOTE]
+   > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
 
 </details>
 
@@ -204,32 +202,6 @@ You can uncheck some of the prerequisites in the Visual Studio Code settings to 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-check.png" alt-text="vsc setting"::: -->
 
-### Use your own bot endpoint
-
-1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
-
-1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Customize bot endpoint":::
-
-### Use your own development certificate
-
-1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
-
-1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your own certificate file path and key file path.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Customize certificate":::
-
-### Use your own start scripts to start app services
-
-1. For tab, update `dev:teamsfx` script in `tabs/package.json`.
-
-1. For bot or messaging extension, update `dev:teamsfx` script in `bot/package.json`.
-
-1. For Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
-
- > [!NOTE]
- > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
 
 ### Add environment variables
 
@@ -277,6 +249,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
               
    }
    ```
+
 
 ## Next step
 
