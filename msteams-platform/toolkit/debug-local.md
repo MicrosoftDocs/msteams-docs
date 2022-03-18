@@ -33,10 +33,6 @@ You can perform only one operation, select **F5** to start debugging. The Teams
 
 Multi-target debugging is a Visual Studio Code debugging feature. Teams Toolkit utilizes this feature to debug tab, bot, messaging extension and Azure functions at the same time.
 
-### One-click stop
-
-You can perform only one operation, select **Stop** or **Disconnect**. The Teams Toolkit terminates the services, closes browser.
-
 ### Toggle breakpoints
 
 You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows the toggle breakpoints:
@@ -86,7 +82,7 @@ After creating a new app using Teams Toolkit:
 
 For macOS, in **Certificate Trust Settings** dialog box, enter your **User Name** and **Password**, then select **Update Settings**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
 After the initial set up process, the Teams Toolkit starts the following processes:
 
@@ -110,7 +106,7 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 
 Launches the debug configurations defined in `.vscode/launch.json` as follows:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debugging.png" alt-text="Launch debugger":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Launch debugger":::
 
 The table lists debug configuration type for project with tab app and bot app:
 
@@ -161,11 +157,15 @@ You can clear some of the prerequisites in the Visual Studio Code settings.
 
 1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Customize bot endpoint":::
+
 ### Use your own development certificate
 
 1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
 
 1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your own certificate file path and key file path.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Customize certificate":::
 
 ### Use your own start scripts to start app services
 
@@ -191,42 +191,42 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
-```json
 
-    {
+       ```json
+           {
+           "name": "Debug (Edge)",
+            "configurations": [
+              "Attach to Frontend (Edge)",
+              // "Attach to Bot",
+              // "Attach to Backend""
+              ],
+              "preLaunchTask": "Pre Debug Check and Start All",
+              "presentation": {
+                  "group": "all",
+                  "order": 1
+              },
+              "stopAll": true
+                 
+         }
+        ```
 
-      "name": "Debug (Edge)",
-        "configurations": [
-          "Attach to Frontend (Edge)",
-          // "Attach to Bot",
-          // "Attach to Backend""
-          ],
-          "preLaunchTask": "Pre Debug Check and Start All",
-          "presentation": {
-              "group": "all",
-              "order": 1
-          },
-          "stopAll": true
-       }
-       ```
-
- 
 2. Comment **Start Backend** and Start Bot from Start All task in .vscode/tasks.json
 
-```json
-         {
-                                            
-     "label": "Start All",
-      "dependsOn": [
-          "Start Frontend",
-            // "Start Backend",
-            // "Start Bot"
-        ]
-                                
-      }
-      ```
 
+       ```json
+           {
+                                              
+         "label": "Start All",
+          "dependsOn": [
+              "Start Frontend",
+                // "Start Backend",
+                // "Start Bot"
+            ]
+                 
+         }
+        ```
 
+    
 ## Next step
 
 > [!div class="nextstepaction"]
