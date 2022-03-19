@@ -9,7 +9,7 @@ ms.date: 03/02/2022
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit supports the following debugging features:
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -18,7 +18,7 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * [Stop debugging](#stop-debugging)  
 
 
-During the debug process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit automatically starts app services, launches debuggers and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints or development certificate, or debug partial component to load your required app.
+During the debug process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit automatically starts app services, launches debuggers and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
 
 ## Prerequisite
 
@@ -28,7 +28,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ### Start debugging
 
-You can perform single operation, select **F5** to start debugging. The :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts checking prerequisites, registering AAD app, registering :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app, registering bot, starting services and launching browser.
+You can perform single operation, select **F5** to start debugging. The :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts checking prerequisites, registering AAD app, registering :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app, registering bot, starting services, and launching browser.
 
 ### Multi-target debugging
 
@@ -42,7 +42,7 @@ You can toggle breakpoints on the source codes of tabs, bots, messaging extensi
 
 ### Hot reload
 
-You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. Update the code and save the changes. The app re-loads and the debugger re-attaches to the programming languages.
+You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. Update the code and save the changes. The app reloads and the debugger reattaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
@@ -174,7 +174,7 @@ The table lists debug configuration type for project with bot app and without ta
 
 ### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false"::: app controlled by the sideloading url defined in the launch configurations
+The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app controlled by the sideloading url defined in the launch configurations
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
@@ -192,7 +192,7 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
 1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
 
-1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your own domain and endpoint.
+1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your domain and endpoint.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Customize bot endpoint":::
 
@@ -203,7 +203,7 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
 
 1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
 
-1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your own certificate file path and key file path.
+1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your certificate file path and key file path.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Customize certificate":::
 
@@ -276,6 +276,8 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
    ```
 
 </details>
+
+Your tab app is running on Teams!
 
 ## Next step
 
