@@ -300,7 +300,7 @@ The following table provides the properties of a hero card:
 
 ### Example of a hero card
 
-:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero":::
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero card":::
 
 The following code shows an example of a hero card:
 
@@ -645,7 +645,7 @@ The following table provides the features that support thumbnail cards:
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail":::
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail card":::
 
 ### Properties of a thumbnail card
 
@@ -737,7 +737,7 @@ Properties of a carousel card are same as the hero and thumbnail cards.
 
 #### Example of a carousel collection
 
-:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Carousel":::
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Carousel collection":::
 
 The following code shows an example of a carousel collection:
 
@@ -924,7 +924,7 @@ The following table provides the features that support list collections:
 
 #### Example of a list collection
 
-:::image type="content" source="../../assets/images/Cards/list.png" alt-text="list":::
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="list collection":::
 
 Properties of list collections are same as the hero or thumbnail cards.
 
