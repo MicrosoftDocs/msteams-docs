@@ -52,14 +52,16 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
 
-## 1. Debug locally using Teams Toolkit
+## Debug locally using Teams Toolkit
 
-After creating a new app using Teams Toolkit , do the following as per your operating system:
+### 1. Debug your app on Windows and macOS operating systems
+
+Complete the following steps to debug your app after creating a new app using the Teams Toolkit:
 
 <br>
 
 <details>
-<summary><b>:::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows</b></summary>
+<summary><b>Windows</b></summary>
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from **Run and Debug** in the activity bar.
 1. Select **Start Debugging (F5)** to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
@@ -82,29 +84,54 @@ After creating a new app using Teams Toolkit , do the following as per your oper
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. A dialog box appears depending on your operating system. For Windows, select **Yes**.
+5. Select **Yes** if the following dialog appears:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
+
+Visual Studio Code launches your Teams app project in a browser and starts debugging.
 
 </details>
 
 <details>
-<summary><b>:::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS**</b></summary>
+<summary><b>macOS**</b></summary>
 
-For macOS, in **Certificate Trust Settings** dialog box, enter your **User Name** and **Password**, then select **Update Settings**.
+1. Select **Debug (Edge)** or **Debug (Chrome)** from **Run and Debug** in the activity bar.
+1. Select **Start Debugging (F5)** to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
+
+   The following image shows the browser options in the dropdown list:
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="browser default" border="false":::
+
+3. Select **Sign in** to :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Alternate capabilities" border="true":::
+
+   > [!TIP]
+   > You can select **Read more** to learn about :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 Developer Program. Your default web browser opens to let you sign in to your :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account using your credentials.
+
+4. Select **Install** for installing the development certificate for localhost.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="certificate" border="true":::
+
+   > [!TIP]
+   > You can select **Learn More** to know about the development certificate.
+
+5. Enter your **User Name** and **Password**, then select **Update Settings** in the following dialog box:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
+Visual Studio Code launches your Teams app project in a browser and starts debugging.
+
 </details>
 
-## 2. Debug actions
+## 2. Teams Toolkit processes
 
 After the initial set up process, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts the following processes:
 
-a. [Starts app services](#starts-app-services)
-b. [Launches debuggers](#launches-debuggers)
-c. [Sideloads the Teams app](#sideloads-the-teams-app)
-
+    a. [Starts app services](#starts-app-services)
+    b. [Launches debuggers](#launches-debuggers)
+    c. [Sideloads the Teams app](#sideloads-the-teams-app)
+        
 ### Starts app services
 
 Runs the tasks defined in `.vscode/tasks.json` as follows:
@@ -149,7 +176,6 @@ The configuration **Attach to Frontend** or **Launch Bot**, launches a new Edge 
    Your app is added to Teams!
 
 ## Customize debug settings
-
 
 :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit allows you to customize the debug settings to create your own tab or bot by unchecking some prerequisites:
 
