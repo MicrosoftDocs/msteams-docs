@@ -22,7 +22,7 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 ## Prerequisites
 
-Teams Toolkit checks the following prerequisites during the debug process:
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit checks the following prerequisites during the debug process:
 
 * Node.js, applicable for project types, such as tab without Azure functions, tab with Azure functions, bot and messaging extensions, versions 10, 12, **14 (recommended)**, 16.
 
@@ -38,7 +38,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Custom app uploading or sideloading for your developer tenant is turned on. If not, the local debug terminates.
 
-* Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok is not installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok is not installed or the version doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
 * Azure Functions Core Tools version 3, applicable for Azure functions. If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 
@@ -52,11 +52,11 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |:::image type="icon" source="../assets/icons/macos-icon.png" border="false":::macOs (arm64) |6.0 |
 
 
-* Development certificate. If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
+* Development certificate. If the development certificate for localhost is not installed for tab in :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows or :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit prompts you to install it.
 
-* Azure functions binding extensions defined in `api/extensions.csproj`, Azure functions. If Azure functions binding extensions is not installed, the toolkit installs Azure functions binding extensions.
+* Azure functions binding extensions defined in `api/extensions.csproj`, Azure functions. If Azure functions binding extensions is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: toolkit installs Azure functions binding extensions.
 
-* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure functions. If NPM is not installed, the toolkit installs all NPM packages.
+* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure functions. If NPM is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::toolkit installs all NPM packages.
 
 * Bot and messaging extension. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
 
@@ -112,11 +112,11 @@ When you select **Start Debugging (F5)**, the :::image type="icon" source="../as
 
 In the set up process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
+1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your Azure AD application.
 
-1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or messaging extension app.
+1. [Registers and configures bot](#registers-and-configures-bot): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your bot for tab or messaging extension app.
 
-1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app.
+1. [Registers and configures Teams app](#registers-and-configures-teams-app): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your Teams app.
 
 ### Registers and configures Azure AD application
 

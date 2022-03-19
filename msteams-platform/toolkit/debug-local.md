@@ -18,7 +18,7 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * [Stop debugging](#stop-debugging)  
 
 
-During the debug process, Teams Toolkit automatically starts app services, launches debuggers and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints or development certificate, or debug partial component to load your required app.
+During the debug process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit automatically starts app services, launches debuggers and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints or development certificate, or debug partial component to load your required app.
 
 ## Prerequisite
 
@@ -65,11 +65,11 @@ Complete the following steps to debug your app after creating a new app using th
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="browser default" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Run debug" border="false":::
 
 1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Run debug" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="browser default" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debugging" border="false":::
 
 3. Select **Sign in** to :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account.
 
@@ -90,20 +90,21 @@ Complete the following steps to debug your app after creating a new app using th
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
-Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client. 
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client. 
 
 </details>
+
 
 <details>
 <summary><b>macOS**</b></summary>
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="browser default" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Debug run" border="false":::
 
 1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Run debug" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="browser default" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debug" border="false":::
 
 3. Select **Sign in** to :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account.
 
@@ -123,18 +124,18 @@ Toolkit launches a new Edge or Chrome browser instance depending on your selecti
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
-Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
 </details>
 
-## Teams Toolkit debug processes
+## Teams Toolkit automated processes
 
 ### 2. Teams Toolkit processes
 
 After the initial set up process, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts the following processes:
 
-  a. [Starts app services](#starts-app-services)
-  b. [Launches debuggers](#launches-debuggers)
+  a. [Starts app services](#starts-app-services) </br>
+  b. [Launches debuggers](#launches-debuggers)   </br>
   c. [Sideloads the Teams app](#sideloads-the-teams-app)
         
 ### Starts app services
