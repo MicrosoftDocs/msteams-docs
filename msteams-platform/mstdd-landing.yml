@@ -172,11 +172,9 @@ landingContent:
     - text: Build scenarios for Teams app
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
-
-
 - title: Publish and distribute
   linkLists:
   - linkListType: concept
