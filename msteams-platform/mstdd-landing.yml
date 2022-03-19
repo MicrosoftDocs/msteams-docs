@@ -142,7 +142,7 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Create a meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Generate a Meetings Stage View
+        - text: Generate Meeting Stage View
           url: ~/sbs-meetings-stage-view.yml
         - text: Interact with content bubble bot in Meetings
           url: ~/sbs-meeting-content-bubble.yml

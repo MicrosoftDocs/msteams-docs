@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Meetings Stage View
+title: Generate Meeting Stage View
 metadata:
-  title: Meetings Stage View
-  description: In this tutorial, you'll learn to set up a Meetings stage view for Teams.
+  title: Generate Meeting Stage View
+  description: In this tutorial, you'll learn to set up a Meeting stage view for Teams.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -14,9 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meetings Stage View helps to enable and configure your apps for Teams meetings. It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
+    Meeting Stage View helps to enable and configure your apps for Teams meetings. It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
 
-    **Key features of Meetings Stage View**
+    **Key features of Meeting Stage View**
 
     * Add status details in side panel.
     * Add details for collaboration.
@@ -30,10 +30,10 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
-    * [Visual Studio code](https://code.visualstudio.com/Download)
-    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of nodejs](https://nodejs.org/en/download/) 
+    * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -48,7 +48,6 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
@@ -85,6 +84,7 @@ items:
          * Replace `<<VALID DOMAIN>>` with your **ngrok domain**.
          
          :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::   
+
 - title: Build and run client app using npm 
   durationInMinutes: 1 
   content: |
@@ -106,10 +106,10 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
        
-- title: Add Meetings Stage View to Teams  
+- title: Add Meeting Stage View to Teams  
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings Stage View to Teams**:
+    **To create a Teams meeting and add Meeting Stage View to Teams**:
 
     1. In your cloned repository, navigate to **samples> meetings-stage-view> nodejs> Manifest**.
 
@@ -186,4 +186,4 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
 
 - content: |
-    You've completed the tutorial to get started with a Meetings Stage View. 
+    You've completed the tutorial to get started with a Meeting Stage View. 
