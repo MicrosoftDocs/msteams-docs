@@ -347,11 +347,11 @@ items:
 
         ![App settings](~/assets/images/Teams-Messaging-Extensions-Search/appsettings.png)
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation.png)
     
-    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
+    1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
          * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.

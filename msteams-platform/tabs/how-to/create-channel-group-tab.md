@@ -61,7 +61,7 @@ In addition, this project requires that you have the following installed in your
     yo teams
     ```
 
-1. Next, provide a series of values that are used in your application's **manifest.json** file:
+1. Next, provide a series of values that are used in your application's `manifest.json` file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -170,7 +170,7 @@ You must have an app package to test your tab in Teams. It is a zip folder that 
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A `manifest.json` file that specifies the attributes of your app.
 
 The package is created through a gulp task that validates the manifest.json file and generates the zip folder in the **./package directory**. In the command prompt, enter the following command:
 
@@ -315,7 +315,7 @@ This folder contains the following required app package files:
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A `manifest.json` file that specifies the attributes of your app.
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams loads the `configurationUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
 
@@ -430,7 +430,7 @@ Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to t
 ### Upload your tab for Teams
 
 > [!NOTE]
-> App Studio can be used to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file. If you do, ensure that you build the solution again to create the **tab.zip** file to upload.
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
 
 **To upload your tab with App Studio**
 
@@ -438,13 +438,13 @@ Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to t
 
 1. Go to **App Studio** and select the **Manifest editor** tab.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It is available from the following path:
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Upload **tab.zip** to App Studio.
+1. Upload `tab.zip` to App Studio.
 
 #### Update your app package with Manifest editor
 
@@ -452,7 +452,7 @@ After you have uploaded your app package into App Studio, you must configure it.
 
 Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There is a list of steps on the left side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your **manifest.json** but there are fields that you must update.
+There is a list of steps on the left side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your `manifest.json` but there are fields that you must update.
 
 ##### Details: App details
 
@@ -569,7 +569,7 @@ This folder contains the following required app package files:
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A `manifest.json` file that specifies the attributes of your app.
 
 These files need to be zipped in an app package for use in uploading your tab to Teams.
 

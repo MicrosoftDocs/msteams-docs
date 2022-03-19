@@ -359,11 +359,11 @@ items:
 
         ![App settings](~/assets/images/meetings-side-panel/appsettings.png)
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/meetings-side-panel/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open `manifest.json` in **Visual Studio 2019** and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.

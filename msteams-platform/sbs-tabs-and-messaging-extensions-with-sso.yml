@@ -353,11 +353,11 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/Tab-ME-SSO/folder-manifest.png)
     
-    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
+    1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
          * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name. 
          * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
