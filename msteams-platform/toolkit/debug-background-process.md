@@ -174,9 +174,7 @@ After registering and configuring the app, local debug files get generated.
 
 ## Take a tour of your app source code
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit provides all components for building an app. 
-
-The following table lists the local debug files and the configuration types:
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit provides all components for building an app. The following table lists the local debug files and the configuration types:
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
