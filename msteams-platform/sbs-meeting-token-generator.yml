@@ -53,13 +53,13 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-    * [Get a free Teams developer tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+    * [Get a free Teams developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)
     
     Ensure you have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+    * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
-    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1
+    * [ASP.NET core](/aspnet/core/?view=aspnetcore-3.1) version 3.1
     * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 or later
 
 - title: Set up local environment
