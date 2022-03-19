@@ -65,9 +65,9 @@ Complete the following steps to debug your app after creating a new app using th
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Run debug" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser option" border="false":::
 
-1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Run debug" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
+1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Start to debug" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debugging" border="false":::
 
@@ -100,9 +100,9 @@ Complete the following steps to debug your app after creating a new app using th
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Debug" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists" border="false":::
 
-1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Run debug" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
+1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Start" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start" border="false":::
 
