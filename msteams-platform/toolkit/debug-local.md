@@ -73,7 +73,7 @@ Complete the following steps to debug your app after creating a new app using th
 
 3. Select **Sign in** to :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Alternate capabilities" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign in" border="true":::
 
 
    > [!TIP]
@@ -100,15 +100,15 @@ Complete the following steps to debug your app after creating a new app using th
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Debug run" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Debug" border="false":::
 
 1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Run debug" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debug" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start" border="false":::
 
 3. Select **Sign in** to :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Alternate capabilities" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign into M365 account" border="true":::
 
    > [!TIP]
    > You can select **Read more** to learn about :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 Developer Program. Your default web browser opens to let you sign in to your :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account using your credentials.
