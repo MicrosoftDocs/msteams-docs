@@ -142,7 +142,7 @@
 - name: Developer Portal for Teams
   href: concepts/build-and-test/teams-developer-portal.md
 - name: App Studio
-   href: concepts/build-and-test/app-studio-overview.md  
+  href: concepts/build-and-test/app-studio-overview.md  
 - name: Recommended content for GitHub
   items:
     - name: Yeoman generator for Teams (GitHub)
@@ -152,7 +152,7 @@
     - name: .NET Bot Framework for bots and messaging extensions (GitHub)
       href: https://github.com/Microsoft/botbuilder-dotnet     
 - name: Legacy SDKs
-    items:
+  items:
     - name: Bots SDK (v3)
       href: resources/bot-v3/bots-overview.md
       items:
