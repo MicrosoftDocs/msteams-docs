@@ -82,51 +82,51 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
-  - name: Overview on Tools and SDK
-    href: toolkit/teams-toolkit-fundamentals.md
-     - name: Teams Toolkit
-      href: toolkit/teams-toolkit-fundamentals.md
-     - name: Teams Toolkit Framework
-       href: toolkit/teams-toolkit-fundamentals.md
-     - name: TeamsFx Library
-       href: toolkit/teams-toolkit-fundamentals.md
-     - name: Teams Toolkit CLI
-       href: toolkit/TeamsFx-CLI.md
-     - name: TeamsFx SDK
-       href: toolkit/TeamsFx-SDK.md   
-     - name: CI/CD guide
-      href: toolkit/use-CICD-template.md 
-  -  name: Teams Toolkit for Visual Studio Code
+   - name: Overview on Tools and SDK
+     href: toolkit/teams-toolkit-fundamentals.md
+   - name: Teams Toolkit
+     href: toolkit/teams-toolkit-fundamentals.md
+   - name: Teams Toolkit Framework
+     href: toolkit/teams-toolkit-fundamentals.md
+   - name: TeamsFx Library
+     href: toolkit/teams-toolkit-fundamentals.md
+   - name: Teams Toolkit CLI
+     href: toolkit/TeamsFx-CLI.md
+   - name: TeamsFx SDK
+     href: toolkit/TeamsFx-SDK.md   
+   - name: CI/CD guide
+     href: toolkit/use-CICD-template.md 
+-   name: Teams Toolkit for Visual Studio Code
+  items:
+   - name: Teams Toolkit overview
+     href: toolkit/teams-toolkit-fundamentals.md 
+   - name: Create new app using Teams Toolkit
+     href: toolkit/create-new-project.md
+   - name: Prepare accounts to build Teams app
+     href: toolkit/accounts.md
+   - name: Provision cloud resources
+     href: toolkit/provision.md
+   - name: Deploy Teams app to the cloud
+     href: toolkit/deploy.md
+   - name: Publish Teams apps using Teams Toolkit 
+     href: toolkit/publish.md
+   - name: Add capabilities to Teams app
+     href: toolkit/add-capability.md
+   - name: Add cloud resources to Teams app
+     href: toolkit/add-resource.md
+   - name: Customize Teams app manifest
+     href: toolkit/TeamsFx-manifest-customization.md
+   - name: Preview Teams app manifest
+     href: toolkit/TeamsFx-manifest-preview.md
+   - name: Manage multiple environments
+     href: toolkit/TeamsFx-multi-env.md
+   - name: Collaborating with other developers on Teams Toolkit
+     href: toolkit/TeamsFx-collaboration.md
+   - name: Teams Toolkit for Visual Studio
+     href: toolkit/visual-studio-overview.md
+   - name: Teams Software Development Kit
+- name: Recommended content for (GitHub  
     items:
-    - name: Teams Toolkit overview
-      href: toolkit/teams-toolkit-fundamentals.md 
-    - name: Create new app using Teams Toolkit
-      href: toolkit/create-new-project.md
-    - name: Prepare accounts to build Teams app
-      href: toolkit/accounts.md
-    - name: Provision cloud resources
-      href: toolkit/provision.md
-    - name: Deploy Teams app to the cloud
-      href: toolkit/deploy.md
-    - name: Publish Teams apps using Teams Toolkit 
-      href: toolkit/publish.md
-    - name: Add capabilities to Teams app
-      href: toolkit/add-capability.md
-    - name: Add cloud resources to Teams app
-      href: toolkit/add-resource.md
-    - name: Customize Teams app manifest
-      href: toolkit/TeamsFx-manifest-customization.md
-    - name: Preview Teams app manifest
-      href: toolkit/TeamsFx-manifest-preview.md
-    - name: Manage multiple environments
-      href: toolkit/TeamsFx-multi-env.md
-    - name: Collaborating with other developers on Teams Toolkit
-      href: toolkit/TeamsFx-collaboration.md
-  - name: Teams Toolkit for Visual Studio
-    href: toolkit/visual-studio-overview.md
-  - name: Teams Software Development Kit
-    
-  - name: Recommended content for (GitHub  
   - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
