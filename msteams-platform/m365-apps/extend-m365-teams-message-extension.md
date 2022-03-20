@@ -146,8 +146,8 @@ As you test your messaging extension, you can identify the source (originating f
 To preview your app running in Outlook on the web:
 
 1. Log in to [outlook.com](https://www.outlook.com) using credentials for your test tenant.
-1. Click on **New message**.
-1. Open the **More apps** flyout menu on the bottom of the composition window.
+1. Select **New message**.
+1. Open **More apps** flyout menu on the bottom of the composition window.
 
 :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="Click on the 'More apps' menu on the bottom of the mail composition window to use your message extension":::
 
