@@ -180,7 +180,7 @@ Participants can share specific parts of the app to the collaborative meeting st
 To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
 > [!NOTE]
-> * To share specific parts of the app to stage, use Teams manifest version 1.12 or later
+> * To share specific parts of the app to stage, use Teams manifest version 1.12 or later.
 > * Share specific parts of the app to stage is supported for Teams desktop clients only.
 
 ### After a meeting
