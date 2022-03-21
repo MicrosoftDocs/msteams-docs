@@ -26,7 +26,7 @@ items:
  
     This step-by-step guide helps you to incorporate basic conversational flow into a Teams application. You'll see the following output:
 
-    (Image)
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -267,7 +267,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    (Image)
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output.":::
     
 - content: |
     You've completed the tutorial to get started with conversational bot for Microsoft Teams.
