@@ -22,7 +22,7 @@ This page seeks to let you compare authentication methods based on:
 | --- | --- | --- | --- |
 | **Frequency of logging in** | User never needs to log into the app | User logs in once for all. | User may need to log in on a different browser. |
 | **Number of passwords** | User credentials already available in Teams are used. | Only one password is needed. | Multiple passwords may be used for different IdPs. |
-| **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained. The user never needs to be authenticated, and Teams takes care of handling user identity. Your app doesn't need to worry about token lifecycle. | Low cost as the user password authentication is done only once. The user is logged in silently and Azure AD managed token lifecycle. | Comparatively higher overheads as user may need to log in every time the token expires. The IdP manages the token lifecycle. The app needs to handle refreshing tokens. |
+| **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained. The user never needs to be authenticated, and Teams takes care of handling user identity. Your app doesn't need to worry about token lifecycle. | Low cost as the user password authentication is done only once. The user is logged in silently and Azure AD manages token lifecycle. | Comparatively higher overheads as user may need to log in every time the token expires. The IdP manages the token lifecycle. The app needs to handle refreshing tokens. |
 | **Security** | Security is high as user credentials don't need to be entered or validated. Teams handles app access based on user's identity in Teams. You can also leverage the conditional access policies.  | Security options are good as the user enters their credentials only once and Azure AD manages their ID tokens after that. | Security may be at risk as the user may need to log in repeatedly with change in browser or expiry of tokens. |
 | **Conditional access policies** | Use of conditional access policies builds adds to the security capabilities  | You may not be able to completely leverage the use of conditional policies | Third-party IdPs can't leverage conditional access policies. |
 | **Ease of app development** | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
@@ -45,7 +45,7 @@ This section explores the authentication required for different app capability i
 | &nbsp; | Teams SSO with Azure AD | Teams assisted SSO with Azure AD | Authentication with third-party IdPs |
 | --- | --- | --- | --- |
 | Tabs | You can build your applications with almost seamless authentication. The user only needs to consent the usage of their Teams app once. | The user needs to enter their user credentials once for using your app. | The user may need to sign-in multiple times, and your app needs to handle ID and access tokens. |
-| Bots | The user is redirected to provide consent only once. | The user is redirected to enter their log in credentials once. | Your app redirects the user to UI that lets them select their IdP, and then to either select the particular user credentials or to enter their credentials. This may be repeated according to token lifecycle. |
+| Bots | The user is redirected to provide consent only once. | -- | -- |
 | Messaging extensions | -- | -- | -- |
 | Task modules | -- | -- | -- |
 | Multi-capability app | -- | -- | -- |
