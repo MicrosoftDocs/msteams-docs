@@ -26,7 +26,7 @@ This page seeks to let you compare authentication methods based on:
 | **Security** | Security is high as user credentials don't need to be entered or validated. Teams handles app access based on user's identity in Teams. You can also leverage the conditional access policies.  | Security options are good as the user enters their credentials only once and Azure AD manages their ID tokens after that. | Security may be at risk as the user may need to log in repeatedly with change in browser or expiry of tokens. |
 | **Conditional access policies** | Use of conditional access policies builds adds to the security capabilities  | You may not be able to completely leverage the use of conditional policies | Third-party IdPs can't leverage conditional access policies. |
 | **Ease of app development** | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
-| **Compatibility with iOS and Android** | It's compatible with: <br> - Teams for Android (1416/1.0.0.2020073101 and later) <br> - Teams for iOS (Version: 2.0.18 and later) <br> - Teams JavaScript SDK (Version: 1.10 and later) for SSO to work in meeting side panel. | -- | -- |
+| **Compatibility with iOS and Android** | Your Teams app is compatible with: <br> - Teams for Android (1416/1.0.0.2020073101 and later) <br> - Teams for iOS (Version: 2.0.18 and later) <br> - Teams JavaScript SDK (Version: 1.10 and later) for SSO to work in meeting side panel. | -- | -- |
 
 ## Compare authentication for app distribution model
 
@@ -41,3 +41,11 @@ Your Teams app can be distributed as a Teams client app, web app, mobile app, or
 In Teams, your app can have capabilities, such as a tab or bot, or messaging extension. Your app can a single- or multi-capability app.
 
 This section explores the authentication required for different app capability in Teams for single- and multi-capability apps.
+
+| &nbsp; | Teams SSO with Azure AD | Teams assisted SSO with Azure AD | Authentication with third-party IdPs |
+| --- | --- | --- | --- |
+| Tabs | You can build your applications with almost seamless authentication. The user only needs to consent the usage of their Teams app once. | The user needs to enter their user credentials once for using your app. | The user may need to sign-in multiple times, and your app needs to handle ID and access tokens. |
+| Bots | The user is redirected to provide consent only once. | The user is redirected to enter their log in credentials once. | Your app redirects the user to UI that lets them select their IdP, and then to either select the particular user credentials or to enter their credentials. This may be repeated according to token lifecycle. |
+| Messaging extensions | -- | -- | -- |
+| Task modules | -- | -- | -- |
+| Multi-capability app | -- | -- | -- |

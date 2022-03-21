@@ -73,3 +73,31 @@ Here's a look at features of Teams SSO with Azure AD:
 - **Available for all app types**: Your Teams app may be available to your users on desktop, web, or mobile device. Teams SSO with Azure AD makes it easier for your users to avail the benefits of SSO. After their Teams sign-in, they never need to sign in again on any other browser or device.
 
 - **Personalized user experience**: App users often use the same set of apps and resources. When Azure AD manages your user's identity, each user can have a personalized experience based for their commonly used apps.
+
+## Authentication flow for app capabilities
+
+Your Teams app may have single or multiple capabilities. The authentication flow differs for each capability, and also for a multi-capability app.
+
+This sections discusses the Teams SSO with Azure AD authentication flow for different app capabilities.
+
+### Teams tab app
+
+You can build your applications with almost seamless authentication.
+
+:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-tabs.png" alt-text="Authentification flow for Teams tab app":::
+
+1. In the tab, call getAuthToken() using the Teams JavaScript SDK. This tells Teams to obtain an auth token.
+1. If this is the first time the current user has used your tab application, they will be prompted to consent.
+1. Microsoft Teams requests a token for the tab application from the Azure AD endpoint for the current user.
+1. Azure AD sends the tab application token back to Teams.
+1. Microsoft Teams then sends the token back to the tab application.
+1. JavaScript in the tab application can parse the token and extract the information it needs, such as the user's email address. <sup>*</sup>
+
+<sup>*</sup> The tab app can optionally exchange the token server-side for further Graph permissions.
+
+### Teams bot app
+
+The user needs to provide just a one-time consent to your app for using their credentials to obtain an access token.
+
+:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-bots.png" alt-text="Authentification flow for Teams bot app":::
+
