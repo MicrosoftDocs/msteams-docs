@@ -35,11 +35,6 @@ items:
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [Latest version of nodejs](https://nodejs.org/en/download/) 
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
-
-    * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/microsoft-365/dev-program)
-    * [Visual Studio code](https://code.visualstudio.com/Download)
-    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -72,31 +67,30 @@ items:
      ngrok http -host-header=localhost 3978
      ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok.png" alt-text="tunnel using command prompt" border="false":::
  
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in node.js folder in cloned repository.
+    1. Navigate to **manifest.json** in cloned repository.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest path.png" alt-text="path for manifest.json" border="false":::
 
-    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio** and make the following changes:
 
-         * Replace `<<App-ID>>` with your bot's **Microsoft App ID** or with some unique **GUID**.
-         * Replace `<<BASE-URL>>` with your **ngrok base url**.
-         * Replace `<<VALID DOMAIN>>` with your **ngrok domain**.
+         * Replace `<<App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace `<<BASE-URL>>` to the fully qualified domain name.
+         * Replace `<<VALID DOMAIN>>` with your fully qualified domain name.
          
          :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="false":::   
 
 - title: Build and run client app using npm 
   durationInMinutes: 1 
   content: |
-    **To build client app using npm install to generate distributable folder**:
     
-    1. Navigate to the app path **samples/meetings-stage-view/nodejs** folder in cloned repository.
+    1. In your cloned repository, navigate to **samples > meetings-stage-view > nodejs**.
 
     1. Copy the **nodejs** folder path.
 
@@ -106,16 +100,23 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs path.png" alt-text="path for nodejs" border="false":::
 
-    1. Run `npm install` to download packages and dependencies.
+    1. Run the following command in the **command prompt** to download packages and dependencies.
+
+     ```command-prompt
+        npm install
+        ```
     
-    1. Run `npm start` to start the app.
+    1. Run the following command in the **command prompt** to start the app.
+
+    ```command-prompt
+       npm start
+       ```
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
        
 - title: Add Meeting Stage View to Teams  
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meeting Stage View to Teams**:
 
     1. In your cloned repository, navigate to **samples> meetings-stage-view> nodejs> Manifest**.
 
@@ -141,6 +142,8 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app.png" alt-text="upload the app" border="true":::
+
     1. Select **Add**.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add an app in meeting.png" alt-text="add app in meeting" border="false":::
@@ -152,7 +155,6 @@ items:
 - title: Interacting with the app in Teams
   durationInMinutes: 1
   content: | 
-    **To interact with the app in Teams**:
     
     1. Go to Teams meeting.
     
