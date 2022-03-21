@@ -146,7 +146,7 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 |  Bot or messaging extensions |  **Start Bot** |  bot |
 |  Azure Functions |  **Start Backend** |  api |
 
-The following image displays task names on the output terminal tab of the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code while running tab, bot or messaging extension, and Azure Functions.
+The following image displays task names on the **Output** **Terminal** tab of the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code while running tab, bot or messaging extension, and Azure Functions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
@@ -156,7 +156,7 @@ Launches the debug configurations defined in `.vscode/launch.json` as follows:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Launch debugger":::
 
-The table lists debug configuration type for project with tab app and bot app:
+The following table lists the debug configuration names and types for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
@@ -164,7 +164,7 @@ The table lists debug configuration type for project with tab app and bot app:
 |  Bot or messaging extensions |   **Attach to Bot** |  pwa-node |
 | Azure Functions |   **Attach to Backend** |  pwa-node |
 
-The table lists debug configuration type for project with bot app and without tab app:
+The following table lists the debug configuration names and types for project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
@@ -183,7 +183,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new :::ima
 
 ## Customize debug settings
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit allows you to customize the debug settings to create your own tab or bot by unchecking some prerequisites:
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit allows you to customize the debug settings to create your tab or bot by unchecking some prerequisites:
 
 <br>
 

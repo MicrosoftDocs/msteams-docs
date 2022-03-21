@@ -24,7 +24,7 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit checks the following prerequisites during the debug process:
 
-* Node.js, applicable for project types, such as tab without Azure Functions, tab with Azure Functions, bot and messaging extensions.
+* Node.js, applicable for the following project types.
 
   |Project type|Node.js LTS version|
   |----------|--------------------------------|
