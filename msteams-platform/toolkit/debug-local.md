@@ -4,12 +4,12 @@ description: Debug your Teams app locally in Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/02/2022
+ms.date: 03/21/2022
 ---
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code allows you to debug tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -32,17 +32,17 @@ You can perform single operation, select **F5** to start debugging. The :::imag
 
 ### Multi-target debugging
 
-Multi-target debugging is a Visual Studio Code debugging feature. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes this feature to debug tab, bot, messaging extension, and Azure functions at the same time.
+Multi-target debugging is a :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code debugging feature. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes this feature to debug tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions at the same time.
 
 ### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure functions. The breakpoints execute when you interact with the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app in a web browser. The following image shows the toggle breakpoints:
+You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. The breakpoints execute when you interact with the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app in a web browser. The following image shows the toggle breakpoints:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints":::
 
 ### Hot reload
 
-You can update the source codes of tab, bot, messaging extension, and Azure functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. Update the code and save the changes. The app reloads and the debugger reattaches to the programming languages.
+You can update the source codes of tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. Update the code and save the changes. The app reloads and the debugger reattaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
@@ -63,7 +63,7 @@ Complete the following steps to debug your app after creating a new app using th
 <details>
 <summary><b>Windows</b></summary>
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
+1. Select **Debug (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge)** or **Debug (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)** from the **Run and Debug** in the activity bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser option" border="false":::
 
@@ -90,7 +90,7 @@ Complete the following steps to debug your app after creating a new app using th
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client. 
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance depending on your selection and opens a web page to load Teams client. 
 
 </details>
 
@@ -98,7 +98,7 @@ Complete the following steps to debug your app after creating a new app using th
 <details>
 <summary><b>macOS**</b></summary>
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **Run and Debug** in the activity bar.
+1. Select **Debug (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge)** or **Debug (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)** from the **Run and Debug** in the activity bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists" border="false":::
 
@@ -124,7 +124,7 @@ Complete the following steps to debug your app after creating a new app using th
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new Edge or Chrome browser instance depending on your selection and opens a web page to load Teams client.
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
 </details>
 
@@ -146,7 +146,7 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 | --- | --- | --- |
 |  Tab |  **Start Frontend** |  tabs |
 |  Bot or messaging extensions |  **Start Bot** |  bot |
-|  Azure Functions |  **Start Backend** |  api |
+|  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |  **Start Backend** |  api |
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
@@ -160,21 +160,21 @@ The table lists debug configuration type for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
-|  Tab |  Attach to Frontend (Edge) or  Attach to Frontend (Chrome)  |  pwa-msedge or pwa-chrome  |
+|  Tab |  Attach to Frontend (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge) or  Attach to Frontend (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)  |  pwa-msedge or pwa-chrome  |
 |  Bot or messaging extensions |   Attach to Bot |  pwa-node |
-|  Azure Functions |   Attach to Backend |  pwa-node |
+|  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |   Attach to Backend |  pwa-node |
 
 The table lists debug configuration type for project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or messaging extension  | Launch Bot (Edge) or  Launch Bot (Chrome)  |   pwa-msedge or pwa-chrome  |
+|  Bot or messaging extension  | Launch Bot (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge) or  Launch Bot (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)  |   pwa-msedge or pwa-chrome  |
 |  Bot or messaging extension  |   Attach to Bot |  pwa-node  |
-|  Azure Functions |  Attach to Backend |  pwa-node |
+|  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |  Attach to Backend |  pwa-node |
 
 ### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app controlled by the sideloading url defined in the launch configurations
+The configuration **Attach to Frontend** or **Launch Bot** launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app controlled by the sideloading url defined in the launch configurations
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
@@ -190,7 +190,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge o
 <details>
 <summary><b>Use your bot endpoint</b></summary>
 
-1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
+1. In :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
 
 1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your domain and endpoint.
 
@@ -201,7 +201,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge o
 <details>
 <summary><b>Use your development certificate</b></summary>
 
-1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
+1. In :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
 
 1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your certificate file path and key file path.
 
@@ -216,7 +216,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge o
 
 1. For bot or messaging extension, update `dev:teamsfx` script in `bot/package.json`.
 
-1. For Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
+1. For :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
 
    > [!NOTE]
    > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
@@ -226,7 +226,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge o
 <details>
 <summary><b>Add environment variables</b></summary>
 
-You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension and Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit loads the environment variables you added to start services during local debug.
+You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
  > Ensure to start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
@@ -237,7 +237,7 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
 <summary><b>Debug partial component</b></summary>
 
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, messaging extension and Azure functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure functions project, use the following steps:
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code multi-target debugging to debug tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure functions project, use the following steps:
 
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
@@ -277,7 +277,6 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
 
 </details>
 
-Your tab app is running on Teams!
 
 ## Next step
 
