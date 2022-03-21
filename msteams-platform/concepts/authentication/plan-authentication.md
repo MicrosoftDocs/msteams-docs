@@ -90,7 +90,7 @@ Teams supports other authentication methods that you can choose based on your ap
 | **Number of passwords** | User credentials already available in Teams are used. | Only one password is needed. | Multiple passwords may be used for different IdPs. |
 | **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained | Low cost as the user password is set only once | Comparitively higher overheads \Add links\ |
 | **Security** | -- | -- | -- |
-| Ease of app development | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
+| **Ease of app development** | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
 
 ## Planning authentication for different app types
 
