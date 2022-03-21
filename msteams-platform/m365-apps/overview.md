@@ -34,6 +34,8 @@ With this preview, you can extend your search-based Teams messaging extensions t
 
 After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Messaging extension running in Outlook and Teams":::
+
 ## Next steps
 
 Set up your dev environment for extending Teams apps across Microsoft 365:
