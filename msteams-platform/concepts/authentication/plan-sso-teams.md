@@ -84,9 +84,9 @@ This sections discusses the Teams SSO with Azure AD authentication flow for diff
 
 You can build your applications with almost seamless authentication.
 
-:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-tabs.png" alt-text="Authentification flow for Teams tab app":::
+:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-tabs.png" alt-text="Authentication flow for Teams tab app":::
 
-1. In the tab, call getAuthToken() using the Teams JavaScript SDK. This tells Teams to obtain an auth token.
+1. In the tab, call `getAuthToken()` using the Teams JavaScript SDK. This tells Teams to obtain an auth token.
 1. If this is the first time the current user has used your tab application, they will be prompted to consent.
 1. Microsoft Teams requests a token for the tab application from the Azure AD endpoint for the current user.
 1. Azure AD sends the tab application token back to Teams.
@@ -99,9 +99,10 @@ You can build your applications with almost seamless authentication.
 
 The user needs to provide just a one-time consent to your app for using their credentials to obtain an access token.
 
-:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-bots.png" alt-text="Authentification flow for Teams bot app":::
+:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-bots.png" alt-text="Authentication flow for Teams bot app":::
 
-1. The bot sends a message with an OAuthCard that contains the tokenExchangeResource property. It tells Microsoft Teams to obtain an authentication token for the bot application. The user receives messages at all the active user endpoints.
+1. The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property. It tells Microsoft Teams to obtain an authentication token for the bot application. The user receives messages at all the active user endpoints.
+
 1. If the current user is using your bot application for the first time, a request prompt is displayed, requesting the user to do one of the following:
 
   - Provide consent, if necessary.

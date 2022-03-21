@@ -47,5 +47,7 @@ This section explores the authentication required for different app capability i
 | Tabs | You can build your applications with almost seamless authentication. The user only needs to consent the usage of their Teams app once. | The user needs to enter their user credentials once for using your app. | The user may need to sign-in multiple times, and your app needs to handle ID and access tokens. |
 | Bots | The user is redirected to provide consent only once. | -- | -- |
 | Messaging extensions | -- | -- | -- |
+| Link unfurling | -- | -- | -- |
 | Task modules | -- | -- | -- |
+| Apps for Teams meetings | -- | -- | -- |
 | Multi-capability app | -- | -- | -- |
