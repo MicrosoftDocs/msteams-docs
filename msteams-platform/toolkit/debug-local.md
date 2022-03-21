@@ -28,7 +28,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 #### Start debugging
 
-You can perform single operation, select **F5** to start debugging. The :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts checking prerequisites, registering AAD app, registering :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app, registering bot, starting services, and launching browser.
+You can perform single operation, select **F5** to start debugging. The :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts checking prerequisites, registering :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure Active Directory app, registering :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app, registering bot, starting services, and launching browser.
 
 #### Multi-target debugging
 
@@ -181,7 +181,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new :::ima
 
    Your app is added to Teams!
 
-## Customize your debug settings
+## Customize debug settings
 
 :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit allows you to customize the debug settings to create your own tab or bot by unchecking some prerequisites:
 
