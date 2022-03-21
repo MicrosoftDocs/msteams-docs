@@ -28,21 +28,27 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+
+    Ensure you install the following tools and set up your development environment:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [Latest version of nodejs](https://nodejs.org/en/download/) 
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
+    * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/microsoft-365/dev-program)
+    * [Visual Studio code](https://code.visualstudio.com/Download)
+    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
+    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt
+
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
     Ensure you have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+    * [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
-    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1
+    * [ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) version 3.1
     * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 or later
 
 - title: Set up local environment
