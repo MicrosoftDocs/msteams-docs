@@ -346,7 +346,7 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud1.png" alt-text="Select deploy to cloud" border="false":::
 
         Your output displays as Successfully deployed to cloud. It copies the code for your app to the resources you created during the provision step.
  
