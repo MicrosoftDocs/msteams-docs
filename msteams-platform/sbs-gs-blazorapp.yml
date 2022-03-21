@@ -271,11 +271,11 @@ items:
 
         Teams is loaded in a web browser.
         
-    1. Select **Add**, when prompted to install the app to Teams.
+    1. Select **Add** when prompted to install the app to Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-add-app.png" alt-text="Screenshot showing how to add app to Teams web client" border="true":::
 
-        Your app will now be displayed:
+       Congratulations, your app is running in your local environment!
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-tab-app.png" alt-text="Screenshot of the completed app" border="true":::
 
@@ -291,7 +291,7 @@ items:
 
     1. Select **Accept** to let your app access user details.
 
-        Your photograph and details appear in your personal tabs.
+        Your photograph and details appear in your **Personal Tab**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot showing user information in the tab":::
 
@@ -343,7 +343,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud1.png" alt-text="Select deploy to cloud" border="false":::
 
-        Your output displays: Successfully deployed to cloud. It copies the code for your app to the resources you created during the provision step.
+        Your output displays: Successfully deployed to the cloud. It copies the code for your app to the resources you created during the provision step.
 
     #### **To preview your tab app in Teams**    
 
@@ -351,11 +351,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-preview.png" alt-text="Select preview" border="false":::
 
-    1. Select **Add**, when prompted to install the app to Teams.
+    1. Select **Add** when prompted to install the app to Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-add-app1.png" alt-text="Screenshot showing how to add app to Teams web client.":::
 
-        Your app displays:
+        Congratulations, your app is running in your Azure environment!
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-tab-app-azure.png" alt-text="Screenshot of the completed app" border="true":::
 
@@ -371,7 +371,7 @@ items:
 
     1. Select **Accept** to let your app access user details.
 
-        Your photograph and details appear in your personal tabs.
+        Your photograph and details appear in your **Personal Tab**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/tab-azure.png" alt-text="Screenshot showing user information in the tab" border="true":::
 
