@@ -51,15 +51,15 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
   |Windows, macOs (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Development certificate. If the development certificate for localhost is not installed for tab in :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows or :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit prompts you to install it.
+* Development certificate, if the development certificate for localhost is not installed for tab in :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows or :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit prompts you to install it.
 
 * Azure Functions binding extensions defined in `api/extensions.csproj`. If Azure Functions binding extensions is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs Azure Functions binding extensions.
 
 * NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams Toolkit installs all NPM packages.
 
-* Bot and messaging extension. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
+* Bot and messaging extension. The :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
 
-* Ports available. If tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates.
+* Ports available, if tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates.
 
   The following table lists the ports available for components:
 
@@ -105,13 +105,13 @@ Use the following .NET Core versions:
 
 When you select **Start Debugging (F5)**, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="prerequisites":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="prerequisites":::
 
 ## Registrations and configurations for your Teams app
 
 In the set up process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application](#registers-and-configures-azure-ad-application): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application.
+1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application.
 
 1. [Registers and configures bot](#registers-and-configures-bot): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your bot for tab or messaging extension app.
 
