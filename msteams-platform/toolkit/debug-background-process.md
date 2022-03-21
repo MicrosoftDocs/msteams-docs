@@ -44,7 +44,7 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 * .NET Core SDK version, applicable for Azure Functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs .NET Core SDK for :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows and :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS in `~/.fx/bin/dotnet`. For :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux, the local debug terminates.
 
-  Use the following .NET Core versions:
+  The following table lists the .NET Core versions:
 
   | Platform  | Software|
   | --- | --- |
@@ -107,7 +107,7 @@ When you select **Start Debugging (F5)**, the :::image type="icon" source="../as
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="prerequisites":::
 
-## Registrations and configurations for your Teams app
+## Register and configure your Teams app
 
 In the set up process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit prepares the following registrations and configurations for your Teams app:
 

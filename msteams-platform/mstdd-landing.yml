@@ -24,8 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Moodle LMS and Microsoft 365 plugins
-        url: ~/resources/moodle-overview.md
+      - text: Debug your Teams app using Teams Toolkit
+        url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -46,8 +46,7 @@ landingContent:
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
     - linkListType: concept
       links:
-      - text: Debug your Teams app using Teams Toolkit
-        url: ~/toolkit/debug-local.md
+     
       
       
 
