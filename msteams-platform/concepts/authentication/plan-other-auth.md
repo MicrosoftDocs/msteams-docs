@@ -9,6 +9,20 @@ keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), 
 
 You can choose to implement authentication in your Teams app using other IdPs for validating app users' identity.
 
+## Teams silent authentication
+
+Silent authentication is method provided in Teams environment.
+
+1. The app requests the user credentials via Teams app from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
+
+1. The IDP requests the user for their credentials and shares it with the app in an ID token (cookie).
+
+1. Teams Client refreshes this token (cookie) for the user. It uses a login hint (user's email address) for refreshing the token.
+
+The process informs the user that their token is refreshed, with no user input required to continue their ongoing session. It isn't true SSO as the user would still need to sign in on a different device (new session).
+
+\ Add info-graphic showing authentication flow and description \
+
 ## Authenticate using third-party IdPs
 
 You can use third-party IdPs to implement authentication for your Teams app users. It can be Google or Facebook, or any other service that provides identity and access management.

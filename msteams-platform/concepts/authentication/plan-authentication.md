@@ -84,12 +84,13 @@ Teams supports other authentication methods that you can choose based on your ap
 
 ### Comparison of authentication methods
 
-| &nbsp; | Teams SSO with Azure AD | Azure AD SSO | Other IdPs |
+| &nbsp; | Teams SSO with Azure AD | Teams assisted SSO with Azure AD | Authentication with third-party IdPs |
 | --- | --- | --- | --- |
 | **Frequency of logging in** | User never needs to log into the app | User logs in once for all. | User may need to log in on a different browser. |
 | **Number of passwords** | User credentials already available in Teams are used. | Only one password is needed. | Multiple passwords may be used for different IdPs. |
-| **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained | Low cost as the user password is set only once | Comparitively higher overheads \Add links\ |
+| **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained | Low cost as the user password is set only once | Comparatively higher overheads \Add links\ |
 | **Security** | -- | -- | -- |
+| Conditional access policies | Use of conditional access policies builds adds to the security capabilities  | You may not be able to completely leverage the use of conditional policies | Third-party IdPs can't leverage conditional access policies. |
 | **Ease of app development** | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
 
 ## Planning authentication for different app types
