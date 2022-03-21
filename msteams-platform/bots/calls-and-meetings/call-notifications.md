@@ -93,5 +93,5 @@ For more information, see [validate inbound requests](https://github.com/microso
 
 ## See also
 
-* [Set up an auto attendant](https://docs.microsoft.com/microsoftteams/create-a-phone-system-auto-attendant)
-* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](https://docs.microsoft.com/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
