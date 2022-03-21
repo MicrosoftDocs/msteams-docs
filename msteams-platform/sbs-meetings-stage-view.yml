@@ -108,8 +108,8 @@ items:
     1. Run the following command in the **command prompt** to start the app.
 
     ```command-prompt
-       npm start
-       ```
+        npm start
+        ```
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
        
@@ -141,7 +141,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app.png" alt-text="upload the app" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app.png" alt-text="upload the app" border="true":::
 
     1. Select **Add**.
 
