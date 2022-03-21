@@ -89,8 +89,7 @@ items:
 - title: Build and run client app using npm 
   durationInMinutes: 1 
   content: |
-    
-    1. In your cloned repository, navigate to **samples** > **meetings-stage-view** > **nodejs**.
+    1. In your cloned repository, navigate to **samples**>**meetings-stage-view**>**nodejs**.
 
     1. Copy the **nodejs** folder path.
 
@@ -194,4 +193,4 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
 
 - content: |
-    You've completed the tutorial to get started with a Meeting Stage View. test
+    You've completed the tutorial to get started with a Meeting Stage View. 
