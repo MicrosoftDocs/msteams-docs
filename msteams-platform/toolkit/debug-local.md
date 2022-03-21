@@ -18,7 +18,7 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * [Stop debugging](#stop-debugging)  
 
 
-During the debug process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
+During the debug process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after debugging. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
 
 ## Prerequisite
 
@@ -32,7 +32,7 @@ You can perform single operation, select **F5** to start debugging. The :::imag
 
 #### Multi-target debugging
 
-Multi-target debugging is a :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code debugging feature. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes this feature to debug tab, bot, messaging extension, and Azure Functions at the same time.
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, messaging extension, and Azure Functions at the same time.
 
 #### Toggle breakpoints
 
@@ -42,7 +42,7 @@ You can toggle breakpoints on the source codes of tabs, bots, messaging extensi
 
 #### Hot reload
 
-You can update the source codes of tab, bot, messaging extension, and Azure Functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. Update the code and save the changes. The app reloads and the debugger reattaches to the programming languages.
+You can update and save the source codes of tab, bot, messaging extension, and Azure Functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. The app reloads and the debugger reattaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
@@ -52,7 +52,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="stop debugging":::
 
-## Debug locally using Teams Toolkit
+## Debug your Teams app locally
 
 #### 1. Set up your Teams Toolkit
 
@@ -90,7 +90,7 @@ Complete the following steps to debug your app after creating a new app using th
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance depending on your selection and opens a web page to load Teams client. 
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance depending on your selection and opens a web page to load Teams client. The process takes about 3-5 minutes. 
 
 </details>
 
@@ -123,7 +123,7 @@ Complete the following steps to debug your app after creating a new app using th
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance depending on your selection and opens a web page to load Teams client.
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance depending on your selection and opens a web page to load Teams client. The process takes about 3-5 minutes.
 
 </details>
 
