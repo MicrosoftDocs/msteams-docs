@@ -24,7 +24,7 @@ items:
 
     When your bot is first added to the group or team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
  
-    This step-by-step guide helps you to incorporate basic conversational flow into a Teams application. By the end of this tutorial you can achieve the following output:
+    This step-by-step guide helps you to incorporate basic conversational flow into a Teams application. You'll see the following output:
 
     (Image)
 
@@ -33,11 +33,11 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
-    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
-    * Microsoft Teams with an account (not a guest account)
+    * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+    * [Ngrok](https://ngrok.com/) or an equivalent tunnelling solution.
+    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
+    * [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download).
+    * Microsoft Teams and a Teams account.
 
 - title: Setup conversational bot
   durationInMinutes: 5
@@ -61,7 +61,7 @@ items:
 
     **Create Bot channel registration in Azure account:**
 
-    1. Open [Azure portal](https://portal.azure.com/).
+    1. Access the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
@@ -86,9 +86,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/review-create.png" alt-text="Review and create.":::
 
-    1. If the validation passes, select **Create**.
-
-       It takes a few moments for your bot service to be provisioned.
+    1. If the validation passes, select **Create**. It takes a few moments for your bot service to be provisioned.
 
         :::image type="content" source="./assets/images/conversation-bot/validation-passed.png" alt-text="Validation of the bot.":::
 
@@ -148,7 +146,7 @@ items:
     **To add the Microsoft Teams channel:**
 
     1. Go to **Home**.
-    1. Open your bot, which is listed in the **Recent resources** section.
+    1. Open your bot, from the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/conversation-bot/teamsicon.png" alt="Teams icon" width="20"/> from the list of available channels.    
         
         :::image type="content" source="./assets/images/conversation-bot/channels-teams.png" alt-text="Select Teams.":::
