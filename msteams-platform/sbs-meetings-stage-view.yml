@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting Stage View helps to enable and configure your apps for Teams meetings. It helps the user to share Meeting Stage, allows meeting participants to add status details of past, present, and future tasks. Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. It enhances Teams meeting experience. 
+    Meeting Stage View helps to enable and configure your apps for Teams meetings. It helps the user to share Meeting Stage, allows meeting participants to add status details of past, present, and future tasks.Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. It enhances Teams meeting experience. 
 
     **Key features of Meeting Stage View**
 
@@ -132,7 +132,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png" alt-text="Add an app" border="true":::
        
-    1. In the pop-up window, select **Manage apps**.
+    1. In the pop-up , select **Manage apps**.
 
        :::image type="content" source="../msteams-platform/assets/meeting-token-generator-manageapps.png" alt-text="manage apps" border="true":::
 
