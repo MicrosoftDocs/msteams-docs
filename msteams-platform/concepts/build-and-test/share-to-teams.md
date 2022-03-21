@@ -14,7 +14,7 @@ Third-party websites can use the launcher script to embed Share-to-Teams buttons
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.  
 
-The following image displays the Share-to-Teams pop-up experience:
+The following image displays the Share-to-Teams preview experience:
 
 :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams popup" border="true":::
 
