@@ -98,7 +98,7 @@ Complete the following steps to debug your app after creating a new app using th
 <details>
 <summary><b>macOS**</b></summary>
 
-1. Select **Debug (:::image type="icon" source="../assets/icons/edge1-icon.png" border="false"::: Edge)** or **Debug (:::image type="icon" source="../assets/icons/chrome1-icon.png" border="false"::: Chrome)** from the **Run and Debug** in the activity bar.
+1. Select **Debug (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge)** or **Debug (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)** from the **Run and Debug** in the activity bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists" border="false":::
 
