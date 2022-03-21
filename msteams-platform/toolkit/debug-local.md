@@ -146,7 +146,7 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 |  Bot or messaging extensions |  **Start Bot** |  bot |
 |  Azure Functions |  **Start Backend** |  api |
 
-The following image displays task names on the lower right side of the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code while running tab, bot or messaging extension, and Azure Functions.
+The following image displays task names on the output terminal tab of the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code while running tab, bot or messaging extension, and Azure Functions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
@@ -181,7 +181,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new :::ima
 
    Your app is added to Teams!
 
-## Customize debug settings
+## Customize your debug settings
 
 :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit allows you to customize the debug settings to create your own tab or bot by unchecking some prerequisites:
 

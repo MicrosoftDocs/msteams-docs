@@ -48,13 +48,12 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
   | Platform  | Software|
   | --- | --- |
-  |:::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows, :::image type="icon" source="../assets/icons/macos-icon.png" border="false":::macOs (x64), :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux | **3.1 (recommended)**, 5.0, 6.0 |
-  |:::image type="icon" source="../assets/icons/macos-icon.png" border="false":::macOs (arm64) |6.0 |
-
+  |Windows, macOs (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
+  |macOs (arm64) |6.0 |
 
 * Development certificate. If the development certificate for localhost is not installed for tab in :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows or :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit prompts you to install it.
 
-* Azure functions binding extensions defined in `api/extensions.csproj`. If Azure Functions binding extensions is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs Azure Functions binding extensions.
+* Azure Functions binding extensions defined in `api/extensions.csproj`. If Azure Functions binding extensions is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs Azure Functions binding extensions.
 
 * NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams Toolkit installs all NPM packages.
 
@@ -132,7 +131,7 @@ In the set up process, :::image type="icon" source="../assets/icons/sidebar-icon
 
   The following table lists the configurations of :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false":::Microsoft 365 client application with the client Ids:
 
-  | :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false":::Microsoft 365 client application |  Client ID  |
+  | Microsoft 365 client application |  Client ID  |
   | --- | --- |
   | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
   | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
