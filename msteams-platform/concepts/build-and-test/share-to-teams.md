@@ -7,20 +7,24 @@ keywords: Share Teams Share-to-Teams
 ---
 # Create Share-to-Teams button
 
-Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select Share-to-Teams button, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. You can also add link unfurling for the shared link. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md). This article guides you on how to create and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
+Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select Share-to-Teams button, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context.
+
+The following image displays the pop-up window for Share-to-Teams preview experience:
+
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams popup" border="true":::
 
 > [!NOTE]
 >
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
-> * Use of Freemium or guest accounts is not supported.  
+> * Use of Freemium or guest accounts is not supported.
 
-The following image displays the Share-to-Teams preview experience:
-
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams popup" border="true":::
+You can also add link unfurling for the shared link. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
 
 The following image displays the Share-to-Teams link unfurling experience:
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams link unfurling" border="true":::
+
+This article guides you on how to create and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
 
 ## Embed a Share to Teams button
 
