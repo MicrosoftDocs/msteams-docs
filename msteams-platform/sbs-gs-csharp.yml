@@ -267,7 +267,7 @@ items:
         ````
         The ngrok tunnel is created. Here's an example:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="true"lightbox="assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png":::
 
         You can try adding `hello`, `first`, or `second` to the ngrok tunnel url to view different tab pages of the app.
         
@@ -339,7 +339,7 @@ items:
 
     1. Search for **Developer Portal** in the search bar, and select **Developer Portal**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="true"lightbox="assets/images/teams-toolkit-v2/select-dev-portal-app.png":::
 
     1. Select **Open**.
 
