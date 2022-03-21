@@ -48,6 +48,8 @@
   items:
     - name: Overview
       href: concepts/authentication/plan-authentication.md
+    - name: Chart of comparison
+      href: concepts/authentication/auth-comparison.md
     - name: Authenticate with Teams SSO with Azure AD
       href: concepts/authentication/plan-sso-teams.md
     - name: Authenticate using identity providers
