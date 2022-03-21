@@ -181,6 +181,7 @@ items:
     1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** folder.
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
+        * Add your bot name for `MicrosoftAppType`.
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
         * You can obtain the `MicrosoftAppTenantId` or `UserId` from the link of the account used to login to the Teams. Follow the path in the image to get the link for `tenant id`.
         
@@ -211,8 +212,13 @@ items:
     1. Select **File** and select **Open**.
     1. Select **Project/Solution** to open the `.csproj` file from the File Explorer.
     1. Go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** folder.
-    1. Select `TeamsConversationBot.csproj` field.
-    1. Select F5 to debug.
+    1. Select `TeamsConversationBot.csproj` file and select your bot from the **Startup Projects** list.
+
+        :::image type="content" source="./assets/images/conversation-bot/visual-studio.png" alt-text="Visual Studio debug.":::
+
+    1. Select F5 to debug. You will receive a confirmation screen when your bot is ready.
+
+        :::image type="content" source="./assets/images/conversation-bot/bot.png" alt-text="Bot ready screen.":::
 
     **To upload the app to Teams:**
 
