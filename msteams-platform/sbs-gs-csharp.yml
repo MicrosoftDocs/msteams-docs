@@ -631,7 +631,7 @@ items:
 
     1. Select **Preview in Teams** from the Developer Portal toolbar.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button" border="true"lightbox="~/assets/images/teams-toolkit-v2/preview-in-teams.png":::
 
         The Developer Portal informs you that your app is sideloaded successfully.
 
@@ -665,7 +665,7 @@ items:
 
             You can try a search using the message extension.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext-query.png" alt-text="Image showing search using message extension in local environment" border="true":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext-query.png" alt-text="Image showing search using message extension in local environment" border="true"lightbox="~/assets/images/teams-toolkit-v2/helloworld-msgext-query.png":::
 
         - About tab:
 
