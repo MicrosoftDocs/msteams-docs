@@ -31,7 +31,7 @@ Authentication is all about validating the identity of your app users. It's one 
 
 You can validate app users in several ways, such as using login credentials, ID tokens, access tokens, and more. Identity Provider (IdP) is a key player in the process of authentication. An app and its users must be registered with the same IdP to facilitate verification of user identity. Azure Active Directory, Google, and Facebook are commonly used for their IdP services.
 
-### Considerations for planning authentication
+## Considerations for planning authentication
 
 You can use an authentication method suitable for your app to validate the credentials of the user who is attempting to access your app and its resources. Plan for authentication to optimize your app.
 
