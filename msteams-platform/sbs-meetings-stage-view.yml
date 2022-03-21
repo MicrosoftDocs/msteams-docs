@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting Stage View helps to enable and configure your apps for Teams meetings. It helps users to share Meetings Stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience. 
+    Meeting Stage View helps to enable and configure your apps for Teams meetings. It helps the user to share Meeting Stage, allows meeting participants to add status details of past, present, and future tasks. It enhances Teams meeting experience. 
 
     **Key features of Meeting Stage View**
 
     * Add status details in side panel.
     * Add details for collaboration.
     
-    This step-by-step guide helps you to generate Meetings Stage View to add status details for collaboration in Teams. You'll see the following output:
+    This step-by-step guide helps you to generate Meeting Stage View to add status details for collaboration in Teams. You'll see the following output:
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings stage view" border="false":::
 
