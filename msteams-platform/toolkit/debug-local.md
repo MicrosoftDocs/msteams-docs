@@ -9,7 +9,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code allows you to debug tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure Functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -26,27 +26,27 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ## Key features of Teams Toolkit
 
-### Start debugging
+#### Start debugging
 
 You can perform single operation, select **F5** to start debugging. The :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts checking prerequisites, registering AAD app, registering :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app, registering bot, starting services, and launching browser.
 
-### Multi-target debugging
+#### Multi-target debugging
 
-Multi-target debugging is a :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code debugging feature. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes this feature to debug tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions at the same time.
+Multi-target debugging is a :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code debugging feature. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes this feature to debug tab, bot, messaging extension, and Azure Functions at the same time.
 
-### Toggle breakpoints
+#### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. The breakpoints execute when you interact with the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app in a web browser. The following image shows the toggle breakpoints:
+You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure Functions. The breakpoints execute when you interact with the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app in a web browser. The following image shows the toggle breakpoints:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints":::
 
-### Hot reload
+#### Hot reload
 
-You can update the source codes of tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. Update the code and save the changes. The app reloads and the debugger reattaches to the programming languages.
+You can update the source codes of tab, bot, messaging extension, and Azure Functions at the same time when you are debugging the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app. Update the code and save the changes. The app reloads and the debugger reattaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
-### Stop debugging
+#### Stop debugging
 
 When you complete local debug, you can select **Stop** or **Disconnect** from the floating debugging toolbar to stop all debug sessions and terminate tasks. The following image shows the stop debug action:
 
@@ -54,7 +54,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 ## Debug locally using Teams Toolkit
 
-### 1. Set up your Teams Toolkit
+#### 1. Set up your Teams Toolkit
 
 Complete the following steps to debug your app after creating a new app using the Teams Toolkit:
 
@@ -128,9 +128,8 @@ Complete the following steps to debug your app after creating a new app using th
 
 </details>
 
-## Teams Toolkit automated processes
 
-### 2. Debug your app locally
+#### 2. Debug your app 
 
 After the initial set up process, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts the following processes:
 
@@ -138,7 +137,7 @@ After the initial set up process, the :::image type="icon" source="../assets/ico
   b. [Launches debuggers](#launches-debuggers)   </br>
   c. [Sideloads the Teams app](#sideloads-the-teams-app)
         
-### Starts app services
+#### Starts app services
 
 Runs the tasks defined in `.vscode/tasks.json` as follows:
 
@@ -146,13 +145,13 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 | --- | --- | --- |
 |  Tab |  **Start Frontend** |  tabs |
 |  Bot or messaging extensions |  **Start Bot** |  bot |
-|  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |  **Start Backend** |  api |
+|  Azure Functions |  **Start Backend** |  api |
 
-The following image displays task names on the lower right side of the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code while running tab, bot or messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions.
+The following image displays task names on the lower right side of the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code while running tab, bot or messaging extension, and Azure Functions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
-### Launches debuggers
+#### Launches debuggers
 
 Launches the debug configurations defined in `.vscode/launch.json` as follows:
 
@@ -162,19 +161,19 @@ The table lists debug configuration type for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
-|  Tab |  Attach to Frontend (:::image type="icon" source="../assets/icons/edge1-icon.png" border="false"::: Edge) or  Attach to Frontend (:::image type="icon" source="../assets/icons/chrome1-icon.png" border="false"::: Chrome)  |  pwa-msedge or pwa-chrome  |
+|  Tab |  Attach to Frontend (Edge) or  Attach to Frontend (Chrome)  |  pwa-msedge or pwa-chrome  |
 |  Bot or messaging extensions |   Attach to Bot |  pwa-node |
-|  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |   Attach to Backend |  pwa-node |
+| Azure Functions |   Attach to Backend |  pwa-node |
 
 The table lists debug configuration type for project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or messaging extension  | Launch Bot (:::image type="icon" source="../assets/icons/edge1-icon.png" border="false"::: Edge) or  Launch Bot (:::image type="icon" source="../assets/icons/chrome1-icon.png" border="false"::: Chrome)  |   pwa-msedge or pwa-chrome  |
+|  Bot or messaging extension  | Launch Bot (Edge) or  Launch Bot (Chrome)  |   pwa-msedge or pwa-chrome  |
 |  Bot or messaging extension  |   Attach to Bot |  pwa-node  |
-|  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |  Attach to Backend |  pwa-node |
+|  Azure Functions |  Attach to Backend |  pwa-node |
 
-### Sideloads the Teams app
+#### Sideloads the Teams app
 
 The configuration **Attach to Frontend** or **Launch Bot** launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app controlled by the sideloading url defined in the launch configurations
 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
@@ -218,17 +217,17 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new :::ima
 
 1. For bot or messaging extension, update `dev:teamsfx` script in `bot/package.json`.
 
-1. For :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
+1. For Azure Functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script.
 
    > [!NOTE]
-   > Currently, the tab, bot, messaging extension apps, and Azure functions ports don't support customization.
+   > Currently, the tab, bot, messaging extension apps, and Azure Functions ports don't support customization.
 
 </details>
 
 <details>
 <summary><b>Add environment variables</b></summary>
 
-You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit loads the environment variables you added to start services during local debug.
+You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension, and Azure Functions. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
  > Ensure to start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
@@ -239,7 +238,7 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
 <summary><b>Debug partial component</b></summary>
 
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code multi-target debugging to debug tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure functions project, use the following steps:
+:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit utilizes :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code multi-target debugging to debug tab, bot, messaging extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
 
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 

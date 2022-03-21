@@ -24,12 +24,12 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit checks the following prerequisites during the debug process:
 
-* Node.js, applicable for project types, such as tab without Azure functions, tab with :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions, bot and messaging extensions.
+* Node.js, applicable for project types, such as tab without Azure Functions, tab with Azure Functions, bot and messaging extensions.
 
   |Project type|Node.js LTS version|
   |----------|--------------------------------|
-  |Tab without Azure functions | 10, 12, **14 (recommended)**, 16 |
-  |Tab with :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions | 10, 12, **14 (recommended)**|
+  |Tab without Azure Functions | 10, 12, **14 (recommended)**, 16 |
+  |Tab with Azure Functions | 10, 12, **14 (recommended)**|
   |Bot |  10, 12, **14 (recommended)**, 16|
   |Messaging extension | 10, 12, **14 (recommended)**, 16 |
 
@@ -40,9 +40,9 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 * Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok is not installed or the version doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
-* :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions Core Tools version 3. If :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions Core Tools is not installed or the version doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit installs :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions Core Tools binary. For :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux, the local debug terminates.
+* Azure Functions Core Tools version 3. If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux, the local debug terminates.
 
-* .NET Core SDK version, applicable for :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs .NET Core SDK for :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows and :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS in `~/.fx/bin/dotnet`. For :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux, the local debug terminates.
+* .NET Core SDK version, applicable for Azure Functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs .NET Core SDK for :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows and :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS in `~/.fx/bin/dotnet`. For :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux, the local debug terminates.
 
   Use the following .NET Core versions:
 
@@ -54,13 +54,13 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 * Development certificate. If the development certificate for localhost is not installed for tab in :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows or :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit prompts you to install it.
 
-* Azure functions binding extensions defined in `api/extensions.csproj`. If :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions binding extensions is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions binding extensions.
+* Azure functions binding extensions defined in `api/extensions.csproj`. If Azure Functions binding extensions is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs Azure Functions binding extensions.
 
-* NPM packages, applicable for tab app, bot app, messaging extension app, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions. If NPM is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams Toolkit installs all NPM packages.
+* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams Toolkit installs all NPM packages.
 
 * Bot and messaging extension. :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
 
-* Ports available. If tab, bot, messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions ports are unavailable, the local debug terminates.
+* Ports available. If tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates.
 
   The following table lists the ports available for components:
 
@@ -69,8 +69,8 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
   | Tab | 53000 |
   | Bot or messaging extension | 3978 |
   | Node inspector for bot or messaging extension | 9239 |
-  | :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions | 7071 |
-  | Node inspector for :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions | 9229 |
+  | Azure Functions | 7071 |
+  | Node inspector for Azure Functions | 9229 |
 
 
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
@@ -182,7 +182,7 @@ You can view the project folders and files in the Explorer area of :::image type
 |  `templates/appPackage/manifest.local.template.json` | Teams app manifest template file for local debug | The placeholders in the file resolves during local debug. |
 |  `tabs/.env.teams.local`  | Environment variables file for tab  | The values of each environment variable generates and saves during local debug. |
 |  `bot/.env.teamsfx.local` | Environment variables file for bot and messaging extension| The values of each environment variable generates and saves during local debug. |
-| `api/.env.teamsfx.local`  | Environment variables file for :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions | The values of each environment variable generates and saves during local debug. |
+| `api/.env.teamsfx.local`  | Environment variables file for Azure Functions | The values of each environment variable generates and saves during local debug. |
 
 
 ## See also
