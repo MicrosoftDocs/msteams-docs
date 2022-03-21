@@ -18,7 +18,7 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * [Stop debugging](#stop-debugging)  
 
 
-During the debug process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit automatically starts app services, launches debuggers and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
+During the debug process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. The :::image type="icon" source="../assets/icons/teams-icon.png" border="false"::: Teams app is available for preview in Teams web client locally after the debugging process. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
 
 ## Prerequisite
 
