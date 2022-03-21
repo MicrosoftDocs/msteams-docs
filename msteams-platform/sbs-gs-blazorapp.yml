@@ -33,7 +33,7 @@ items:
     | &nbsp;    | Install   | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Latest version of Visual Studio](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Enterprise 2022 Preview (version 17.2.0). |
+    | &nbsp; | [Visual Studio version 17.2.0 preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. Choose Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 1). |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     
@@ -47,13 +47,13 @@ items:
     The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
     You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). 
     
-    # [Latest version of Visual Studio](#tab/vs)
+    # [Visual Studio version 17.2.0 preview 1.0](#tab/vs)
 
-    You can use the latest version of Visual Studio to develop Teams apps with Blazor Server in .NET.
+    You can use the Visual Studio version 17.2.0 preview 1.0 to develop Teams apps with Blazor Server in .NET.
 
     To install the Microsoft Teams Toolkit extension:
 
-    1. Download the latest version of Visual Studio.
+    1. Download the Visual Studio version 17.2.0 preview 1.0 .
     1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
     1. Select **Continue** in Visual Studio Installer to configure your installation.
 
