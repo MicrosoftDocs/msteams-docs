@@ -26,6 +26,7 @@ This page seeks to let you compare authentication methods based on:
 | **Security** | Security is high as user credentials don't need to be entered or validated. Teams handles app access based on user's identity in Teams. You can also leverage the conditional access policies.  | Security options are good as the user enters their credentials only once and Azure AD manages their ID tokens after that. | Security may be at risk as the user may need to log in repeatedly with change in browser or expiry of tokens. |
 | **Conditional access policies** | Use of conditional access policies builds adds to the security capabilities  | You may not be able to completely leverage the use of conditional policies | Third-party IdPs can't leverage conditional access policies. |
 | **Ease of app development** | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
+| **Compatibility with iOS and Android** | It's compatible with: <br> - Teams for Android (1416/1.0.0.2020073101 and later) <br> - Teams for iOS (Version: 2.0.18 and later) <br> - Teams JavaScript SDK (Version: 1.10 and later) for SSO to work in meeting side panel. | -- | -- |
 
 ## Compare authentication for app distribution model
 
