@@ -54,7 +54,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 ## Debug locally using Teams Toolkit
 
-### 1. Debug your app on Windows and macOS operating systems
+### 1. Set up your Teams Toolkit
 
 Complete the following steps to debug your app after creating a new app using the Teams Toolkit:
 
@@ -98,13 +98,13 @@ Complete the following steps to debug your app after creating a new app using th
 <details>
 <summary><b>macOS**</b></summary>
 
-1. Select **Debug (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge)** or **Debug (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)** from the **Run and Debug** in the activity bar.
+1. Select **Debug (:::image type="icon" source="../assets/icons/edge1-icon.png" border="false"::: Edge)** or **Debug (:::image type="icon" source="../assets/icons/chrome1-icon.png" border="false"::: Chrome)** from the **Run and Debug** in the activity bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser lists" border="false":::
 
-1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="Start" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
+1. Select **Start Debugging (F5)** or  **Run** :::image type="content" source="../assets/images/teams-toolkit-v2/debug/run.png" alt-text="F5 run" border="false"::: to run your Teams :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teams-icon.png" alt-text="Teams icon" border="false":::  app in debug mode.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Debug your app" border="false":::
 
 3. Select **Sign in** to :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account.
 
@@ -122,7 +122,7 @@ Complete the following steps to debug your app after creating a new app using th
 
 5. Enter your **User Name** and **Password**, then select **Update Settings** in the following dialog box:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac sign in" border="true":::
 
 :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Toolkit launches a new :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome browser instance depending on your selection and opens a web page to load Teams client.
 
@@ -130,7 +130,7 @@ Complete the following steps to debug your app after creating a new app using th
 
 ## Teams Toolkit automated processes
 
-### 2. Teams Toolkit processes
+### 2. Debug your app locally
 
 After the initial set up process, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts the following processes:
 
@@ -148,6 +148,8 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 |  Bot or messaging extensions |  **Start Bot** |  bot |
 |  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |  **Start Backend** |  api |
 
+The following image displays task names on the lower right side of the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code while running tab, bot or messaging extension, and :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure functions.
+
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
 ### Launches debuggers
@@ -160,7 +162,7 @@ The table lists debug configuration type for project with tab app and bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
-|  Tab |  Attach to Frontend (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge) or  Attach to Frontend (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)  |  pwa-msedge or pwa-chrome  |
+|  Tab |  Attach to Frontend (:::image type="icon" source="../assets/icons/edge1-icon.png" border="false"::: Edge) or  Attach to Frontend (:::image type="icon" source="../assets/icons/chrome1-icon.png" border="false"::: Chrome)  |  pwa-msedge or pwa-chrome  |
 |  Bot or messaging extensions |   Attach to Bot |  pwa-node |
 |  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |   Attach to Backend |  pwa-node |
 
@@ -168,7 +170,7 @@ The table lists debug configuration type for project with bot app and without ta
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or messaging extension  | Launch Bot (:::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Edge) or  Launch Bot (:::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome)  |   pwa-msedge or pwa-chrome  |
+|  Bot or messaging extension  | Launch Bot (:::image type="icon" source="../assets/icons/edge1-icon.png" border="false"::: Edge) or  Launch Bot (:::image type="icon" source="../assets/icons/chrome1-icon.png" border="false"::: Chrome)  |   pwa-msedge or pwa-chrome  |
 |  Bot or messaging extension  |   Attach to Bot |  pwa-node  |
 |  :::image type="icon" source="../assets/icons/azure-icon.png" border="false"::: Azure Functions |  Attach to Backend |  pwa-node |
 
