@@ -47,6 +47,10 @@ The following image shows the experience of People Picker using web and desktop 
 
 # [Desktop app](#tab/Sampledesktop)
 
+The following image displays two ways to search for a person:
+* Search using only name
+* Search using email address
+
 :::image type="content" source="../../assets/images/tabs/people-picker-desktop-email.png" alt-text="People picker desktop" border="true":::
 
 ---
@@ -78,7 +82,7 @@ The following code snippet displays use of `selectPeople` API to select people f
 
 ## Error handling
 
-Ensure to handle the errors appropriately in your web and desktop app. The following table lists the error codes and the conditions under which the errors are generated:
+The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
