@@ -55,26 +55,25 @@ You can implement authentication in a Teams app using Microsoft Graph APIs or we
 
 In a Teams app based on the IdP, you can choose to authenticate users with:
 
-- Azure Active Directory Single Sign-on (AAD SSO)
+- Teams SSO with Azure AD
+- Teams assisted SSO with Azure AD
 - Other authentication methods:
-  - Other IdPs, such as Google or Facebook
-  - User's credentials (username and password)
+  - Silent authentication
+  - Third-party IdPs, such as Google or Facebook
 - Common extension scenarios
 
-:::image type="content" source="../../assets/images/authentication/idp-options.png" alt-text="IDP options":::
+:::image type="content" source="../../assets/images/authentication/auth-options.png" alt-text="IDP options":::
 <br>
 
-### Azure Active Directory Single Sign-on
+### Teams Single sign-on (SSO) with Azure AD
 
-Single sign-on is an authentication method that lets users sign in using one set of credentials to access multiple independent software systems. Using SSO means a user doesn't have to sign in to every application they use within the system. They can access all needed applications without being required to authenticate using different credentials.
-
-Azure Active Directory Single Sign-On (AAD SSO) automatically signs users in. Users don't need to type in their credentials to sign in to Azure AD. This feature provides your users easy access to your cloud-based applications without needing any additional on-premises components.
+Teams SSO with Azure AD is an authentication method that uses a user's Teams sign-in credentials to provide them for accessing your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the user, the Teams app retrieves access details for them from Azure Active Directory (AD).
 
 ### Other authentication methods
 
 Teams supports other authentication methods that you can choose based on your app's security requirement.
 
-- **Username and password authentication**: The simplest authentication method to validate users is by verifying their login credentials. Your system matches the user's password with their username and authenticates the user for app access.  
+- **Teams assisted SSO with Azure AD**: Azure Active Directory Single Sign-On (AAD SSO) automatically signs users in. Users don't need to type in their credentials to sign in to Azure AD. This feature provides your users easy access to your cloud-based applications without needing any additional on-premises components.  
 - **Other identity providers**: You can use a third-party Identity Provider (IdP) to authenticate your app users. The user is registered with an identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the user credentials and profile.
 - **IdP + SSO**: For an enhanced user experience, you can use an IDP to authenticate your users. In this case, the IDP works with SSO provider, such as AAD, and provides a single sign-on experience to the authenticated user.
 
@@ -82,26 +81,6 @@ Teams supports other authentication methods that you can choose based on your ap
 
 / Add content /
 
-### Comparison of authentication methods
-
-| &nbsp; | Teams SSO with Azure AD | Teams assisted SSO with Azure AD | Authentication with third-party IdPs |
-| --- | --- | --- | --- |
-| **Frequency of logging in** | User never needs to log into the app | User logs in once for all. | User may need to log in on a different browser. |
-| **Number of passwords** | User credentials already available in Teams are used. | Only one password is needed. | Multiple passwords may be used for different IdPs. |
-| **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained. The user never needs to be authenticated, and Teams takes care of handling user identity. Your app doesn't need to worry about token lifecycle. | Low cost as the user password authentication is done only once. The user is logged in silently and Azure AD managed token lifecycle. | Comparatively higher overheads as user may need to log in every time the token expires. The IdP manages the token lifecycle. The app needs to handle refreshing tokens. |
-| **Security** | -- | -- | -- |
-| **Conditional access policies** | Use of conditional access policies builds adds to the security capabilities  | You may not be able to completely leverage the use of conditional policies | Third-party IdPs can't leverage conditional access policies. |
-| **Ease of app development** | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
-
-## Planning authentication for different app types
-
-Your app can be distributed as a Teams client app, web app, mobile app, or across all platforms. Plan for authentication for all the ways that you plan to distribute your app.
-
-- Desktop app accessible from within Teams Client.
-- Teams web app
-- Teams mobile app
-
-\ Add content \
 
 ## Common authentication terms
 
