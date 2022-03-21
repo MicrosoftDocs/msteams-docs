@@ -131,6 +131,7 @@ items:
     1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png" alt-text="Add an app" border="true":::
+       
     1. In the pop-up window, select **Manage apps**.
 
        :::image type="content" source="../msteams-platform/assets/meeting-token-generator-manageapps.png" alt-text="manage apps" border="true":::
@@ -192,4 +193,4 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
 
 - content: |
-    You've completed the tutorial to get started with a Meeting Stage View. 
+    You've completed the tutorial to get started with a Meeting Stage View. .
