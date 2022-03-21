@@ -50,12 +50,14 @@
       href: concepts/authentication/plan-authentication.md
     - name: Authenticate with Teams SSO with Azure AD
       href: concepts/authentication/plan-sso-teams.md
-    - name: Authenticate with Azure AD SSO
-      href: concepts/authentication/plan-aad-sso.md
-    - name: Other authentication methods
-      href: concepts/authentication/plan-other-auth.md
-    - name: Common extension scenarios
-      href: concepts/authentication/common-extn.md
+    - name: Authenticate using identity providers
+      items:
+      - name: Authenticate with Azure AD SSO
+        href: concepts/authentication/plan-aad-sso.md
+      - name: Other authentication methods
+        href: concepts/authentication/plan-other-auth.md
+      - name: Common extension scenarios
+        href: concepts/authentication/common-extn.md
     - name: Authentication FAQ
       href: concepts/authentication/authentication-faq.md  
 - name: Design your app

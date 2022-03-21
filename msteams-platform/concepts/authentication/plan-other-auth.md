@@ -5,14 +5,9 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), OIDC, username, password
 ---
-# Authentication using other methods
+# Authenticate with third-party IdPs
 
-You can choose to implement authentication in your Teams app using methods, such as OIDC, and username and password.
-
-In this page, you'll learn:
-
-- Using other Third-party authentication
-- Using username and password
+You can choose to implement authentication in your Teams app using other IdPs for validating app users' identity.
 
 ## Authenticate using third-party IdPs
 
@@ -42,7 +37,7 @@ The user sees a pop up dialog when their token is refreshed and they are able to
 
 ### Other IdPs user experience
 
-\ Include images for OIDC UX \
+\ Include images for UX \
 
 ### Features of third-party IdPs
 
@@ -51,29 +46,3 @@ The user sees a pop up dialog when their token is refreshed and they are able to
 1. Security via ID token
 1. Security of customer data
 1. Personalized user experience
-
-## Username and password for authentication
-
-Username and password are the simplest form of user authentication. The user is required to enter login credentials every time they attempt to access the Teams app. If a user needs to access multiple apps or services, they need to keep track of and maintain multiple usernames and passwords.
-
-Some prerequisites for implementing authentication with user credentials are:
-
-- **Create a Teams app**: Your Teams app can have single or multiple capabilities, such as tabs, bots, messaging extensions, and more. Teams offers a different UI and UX experience for each feature.
-- **Create user accounts**: Your organization creates user accounts for each app user and maintains their username and password. This information is used to validate user access to your app.
-
-:::image type="content" source="../../assets/images/authentication/user-credentials.png" alt-text="Authentication with user credentials":::
-
-| # | Steps | Key points |
-|--- | --- | --- |
-| 1 | A Teams app user attempts to access the Teams app. | - The user provides their credentials to the app. <br> - It may include the username and password of the user. |
-| 2 | The Teams app verifies the user credentials against the user details.  | - The Teams app receives user credentials and verifies it against user information in the organization's database. <br> - This information may include user credentials along with details of the app that requested authentication. |
-| 3 | On a successful match, the user is granted app access to your Teams app. | - The access is valid only for the current session. <br> - If the user access the Teams app again, the authentication process is repeated. |
-
-### Username and password user experience
-
-\ Include images for UX \
-
-### Features of username and password authentication
-
-1. Security for user access
-1. Security for user data
