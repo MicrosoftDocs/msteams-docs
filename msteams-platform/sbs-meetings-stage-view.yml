@@ -35,11 +35,11 @@ items:
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [Latest version of nodejs](https://nodejs.org/en/download/) 
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
+
     * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/microsoft-365/dev-program)
     * [Visual Studio code](https://code.visualstudio.com/Download)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt
-
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
