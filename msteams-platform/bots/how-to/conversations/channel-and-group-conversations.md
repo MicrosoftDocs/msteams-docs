@@ -19,7 +19,7 @@ Bots in a group or channel only receive messages when they are mentioned @botnam
 >
 > Using resource-specific consent (RSC), bots can receive all channel messages in teams that it is installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 >
->Posting a message or adaptive card to a private channel currently is not supported.
+>Posting a message or adaptive card to a private channel is currently not supported.
 
 ## Design guidelines
 
