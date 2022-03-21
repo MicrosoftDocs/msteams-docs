@@ -88,9 +88,9 @@ Teams supports other authentication methods that you can choose based on your ap
 | --- | --- | --- | --- |
 | **Frequency of logging in** | User never needs to log into the app | User logs in once for all. | User may need to log in on a different browser. |
 | **Number of passwords** | User credentials already available in Teams are used. | Only one password is needed. | Multiple passwords may be used for different IdPs. |
-| **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained | Low cost as the user password is set only once | Comparatively higher overheads \Add links\ |
+| **Cost of authentication** | Low overheads as no extra password or login details needs to be maintained. The user never needs to be authenticated, and Teams takes care of handling user identity. Your app doesn't need to worry about token lifecycle. | Low cost as the user password authentication is done only once. The user is logged in silently and Azure AD managed token lifecycle. | Comparatively higher overheads as user may need to log in every time the token expires. The IdP manages the token lifecycle. The app needs to handle refreshing tokens. |
 | **Security** | -- | -- | -- |
-| Conditional access policies | Use of conditional access policies builds adds to the security capabilities  | You may not be able to completely leverage the use of conditional policies | Third-party IdPs can't leverage conditional access policies. |
+| **Conditional access policies** | Use of conditional access policies builds adds to the security capabilities  | You may not be able to completely leverage the use of conditional policies | Third-party IdPs can't leverage conditional access policies. |
 | **Ease of app development** | The simplest app building process with Teams Toolkit and Visual Studio Code. | -- | -- |
 
 ## Planning authentication for different app types
