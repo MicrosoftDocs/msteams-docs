@@ -281,3 +281,4 @@ Follow the [step-by-step guide](../../../sbs-send-proactive.yml), which helps yo
 * [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Teams proactive bot messaging code sample](https://github.com/pnp/teams-dev-samples/tree/main/samples/bot-proactive-messaging)
