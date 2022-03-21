@@ -99,17 +99,17 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs path.png" alt-text="path for nodejs" border="false":::
 
-    1. Run the following command in the **command prompt** to download packages and dependencies.
+    1. Run the following command in the **command prompt** to download packages and dependencies:
 
-     ```command-prompt
+       ```command-prompt
         npm install
-        ```
-    
-    1. Run the following command in the **command prompt** to start the app.
+        ```  
 
-    ```command-prompt
-        npm start
-        ```
+    1. Run the following command in the **command prompt** to start the app:
+
+       ```command-prompt
+       npm start
+       ```
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="false":::
        
