@@ -104,4 +104,4 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Chart of comparision](auth-comparison.md)
+> [Compare authentication methods](auth-comparison.md)
