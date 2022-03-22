@@ -13,6 +13,8 @@ You can choose to implement authentication in your Teams app using other IdPs fo
 
 Silent authentication is method provided in Teams environment.
 
+:::image type="content" source="../../assets/images/authentication/silent-auth.png" alt-text="Authenticating with silent authentication":::
+
 1. The app requests the user credentials via Teams app from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
 
 1. The IDP requests the user for their credentials and shares it with the app in an ID token (cookie).
@@ -20,8 +22,6 @@ Silent authentication is method provided in Teams environment.
 1. Teams Client refreshes this token (cookie) for the user. It uses a login hint (user's email address) for refreshing the token.
 
 The process informs the user that their token is refreshed, with no user input required to continue their ongoing session. It isn't true SSO as the user would still need to sign in on a different device (new session).
-
-\ Add info-graphic showing authentication flow and description \
 
 ## Authenticate using third-party IdPs
 
@@ -39,7 +39,7 @@ An IdP authenticates users identity for access your Teams app. This authenticati
 
 The user sees a pop up dialog when their token is refreshed and they are able to access the app again.
 
-:::image type="content" source="../../assets/images/authentication/other-idp-process.png" alt-text="Authenticating with other IdPs":::
+:::image type="content" source="../../assets/images/authentication/other-idp-auth.png" alt-text="Authenticating with other IdPs":::
 
 | # | Steps | Key points |
 |--- | --- | --- |
