@@ -98,8 +98,8 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 
 **Authentication tokens**:
 
-- ID tokens: An ID token is granted to a user who has been verified successfully. It's used to cache user profile information and provide it to a client application when a user requests access.
-- Access tokens: An access token is an artifact that contains security information of an application to access specific user information.  
+- ID tokens: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user requests access.
+- Access tokens: An access token is an artifact contains user identity and access information. An IdP provides an access token to an app when a user registered with the IdP attempts to use the app.
 
 ## Next step
 

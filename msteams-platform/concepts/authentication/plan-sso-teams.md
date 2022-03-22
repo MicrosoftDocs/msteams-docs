@@ -39,9 +39,9 @@ The user goes through only a simple consent request.
 
 The user can access and use your Teams app with no further need of consenting or signing in.
 
-## Role of Azure AD as IdP
+## Role of Azure AD
 
-Implementing Teams SSO with Azure AD authentication in your app means that Azure AD would serve as an IdP for validating your app users. All users registered with Azure AD can now be validated for app usage and access all resources within Azure system.
+Implementing Teams SSO with Azure AD authentication in your app means that Azure AD would provide an access token for the user currently logged into Teams. The Teams login credentials of the user provide the identity details to Azure AD.
 
 Primarily, Teams app and Azure AD perform a token exchange.
 
@@ -58,11 +58,17 @@ This token is used to let the user access and use the app. After this consent, t
 
 ## Features of Teams SSO with Azure AD
 
+You can build your applications with almost seamless authentication. The Teams app requires access token for the current user to let them use the app. The user just consents for the Teams tab app to use their credentials to get this access token from Azure AD.
+
 Here's a look at features of Teams SSO with Azure AD:
 
-- **Security**: The app users never have to sign in. Your Teams app can have any capability, such as tabs, bots, or messaging extensions. Teams SSO with Azure AD authentication ensures a one-time sign-in for not just your Teams app, but all internal and external resources as needed.
+- **True SSO UX**: After a Teams app obtains access token for a user, the user never has to consent or sign in to the app. They may be using the desktop, Teams web, or mobile device. This access token remains valid for the user. This is true SSO user experience.
 
-- **App development**: Building an app with Teams SSO with Azure AD follows a simple development process.
+- **Security**: The app users never have to sign in. Your Teams app can have any capability, such as tabs, bots, or messaging extensions. Teams SSO with Azure AD ensures a one-time sign-in for not just your Teams app, but all internal and external resources as needed.
+
+- **Efficient app loading**: The Teams has pre-fetched access tokens for your app users. This translates to faster loading time. Especially with Teams tab app, the access token is obtained from Azure AD when the user clicks on the tab before it's completely loaded. When the app requests access token, it's already available with Teams.
+
+- **App development**: Building an app with Teams SSO with Azure AD follows a simple development process. You can expect a more streamlined developer experience when building authentication into the app.
 
 - **Teams store**: If you want to host your app on Teams store, it is recommended that you choose to implement authentication using Teams SSO with Azure AD.
 
@@ -82,7 +88,7 @@ This sections discusses the Teams SSO with Azure AD authentication flow for diff
 
 ### Teams tab app
 
-You can build your applications with almost seamless authentication.
+Here's what really happens at run time.
 
 :::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-tabs.png" alt-text="Authentication flow for Teams tab app":::
 
