@@ -25,7 +25,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Create Teams conversation bot
-          url: ~/sbs-teams-conversation-bot.yml
+        url: ~/sbs-teams-conversation-bot.yml
       - text: Debug your Teams app 
         url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
