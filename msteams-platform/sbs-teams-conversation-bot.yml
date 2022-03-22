@@ -5,10 +5,10 @@ metadata:
   description: In this tutorial, you'll learn to set up conversation bot in Teams.
   audience: Developer
   level: Beginner
-  ms.date: 03/22/2022
+  ms.date: 03/23/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
-  nextTutorialTitle: Register a calling bot
+  nextTutorialHref: azure/bot-service/bot-builder-basics-teams
+  nextTutorialTitle: How Microsoft Teams bots work
   ms.custom: mvc
   ms.localizationpriority: none
 items:
