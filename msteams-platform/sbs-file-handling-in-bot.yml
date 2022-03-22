@@ -24,12 +24,16 @@ items:
 - title: Prerequisites
   durationInMinutes: 1 
   content: |
-    To set up your development environment, install the following tools:
+    Ensure you install the following tools and set up your development environment: 
 
-    * Microsoft Teams and a Teams account.
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [.NET Core SDK version 3.1](https://dotnet.microsoft.com/download).
-    * [ngrok](https://ngrok.com/) or an equivalent tunnelling solution.
-    * Visual Studio 2019 or later.
+    * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
+   
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
 
 - title: Create a bot Registration in Azure Portal
   durationInMinutes: 5
