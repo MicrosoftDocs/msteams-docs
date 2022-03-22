@@ -10,19 +10,19 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code, then the :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code launches the debuggers, and  :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Microsoft Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome debugger launches a new browser instance as follows:
+The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in Visual Studio Code, then the Visual Studio Code launches the debuggers, and Microsoft Edge or Chrome debugger launches a new browser instance as follows:
 
-1. The `launch.json` file configures the debugger in :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code. 
+1. The `launch.json` file configures the debugger in Visual Studio Code. 
 
-2. :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code runs the compound `preLaunchTask`, `Pre Debug Check & Start All` in `.vscode/tasks.json` file.
+2. Visual Studio Code runs the compound `preLaunchTask`, `Pre Debug Check & Start All` in `.vscode/tasks.json` file.
 
-3. :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
+3. Visual Studio Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
-4.  :::image type="icon" source="../assets/icons/edge-icon.png" border="false"::: Microsoft Edge or :::image type="icon" source="../assets/icons/chrome-icon.png" border="false"::: Chrome debugger launches a new browser instance and opens a web page to load Teams client.
+4.  Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Prerequisites
 
-:::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit checks the following prerequisites during the debug process:
+Teams Toolkit checks the following prerequisites during the debug process:
 
 * Node.js, applicable for the following project types:
 
@@ -34,15 +34,15 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
   |Messaging extension | 10, 12, **14 (recommended)**, 16 |
 
    
-* :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account with valid credentials, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit prompts you to sign in to :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 account, if you haven't signed in.
+* Microsoft 365 account with valid credentials, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in.
 
 * Custom app uploading or sideloading for your developer tenant is turned on. If not, the local debug terminates.
 
-* Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok is not installed or the version doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok is not installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
-* Azure Functions Core Tools version 3. If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux, the local debug terminates.
+* Azure Functions Core Tools version 3. If Azure Functions Core Tools is not installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 
-* .NET Core SDK version, applicable for Azure Functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs .NET Core SDK for :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows and :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS in `~/.fx/bin/dotnet`. For :::image type="icon" source="../assets/icons/linux-icon.png" border="false"::: Linux, the local debug terminates.
+* .NET Core SDK version, applicable for Azure Functions. If .NET Core SDK is not installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
 
   The following table lists the .NET Core versions:
 
@@ -51,13 +51,13 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
   |Windows, macOs (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Development certificate, if the development certificate for localhost is not installed for tab in :::image type="icon" source="../assets/icons/windows-icon.png" border="false"::: Windows or :::image type="icon" source="../assets/icons/macos-icon.png" border="false"::: macOS, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams toolkit prompts you to install it.
+* Development certificate, if the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
 
-* Azure Functions binding extensions defined in `api/extensions.csproj`. If Azure Functions binding extensions is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit installs Azure Functions binding extensions.
+* Azure Functions binding extensions defined in `api/extensions.csproj`. If Azure Functions binding extensions is not installed, the Teams Toolkit installs Azure Functions binding extensions.
 
-* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is not installed, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false":::Teams Toolkit installs all NPM packages.
+* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is not installed, the Teams Toolkit installs all NPM packages.
 
-* Bot and messaging extension. The :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
+* Bot and messaging extension. The Teams Toolkit starts Ngrok to create a HTTP tunnel for bot and messaging extension.
 
 * Ports available, if tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates.
 
@@ -103,23 +103,23 @@ Use the following .NET Core versions:
 > If the development certificate for localhost is not installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
 
 
-When you select **Start Debugging (F5)**, the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit output channel displays the progress and result after checking the prerequisites.
+When you select **Start Debugging (F5)**, the Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="prerequisites":::
 
 ## Register and configure your Teams app
 
-In the set up process, :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit prepares the following registrations and configurations for your Teams app:
+In the set up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application.
+1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
 
-1. [Registers and configures bot](#registers-and-configures-bot): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your bot for tab or messaging extension app.
+1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or messaging extension app.
 
-1. [Registers and configures Teams app](#registers-and-configures-teams-app): :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your Teams app.
+1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app.
 
 ### Registers and configures Azure AD application
 
-1. Registers an :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application.
+1. Registers an Azure AD application.
 
 1. Creates a Client Secret.
 
@@ -129,7 +129,7 @@ In the set up process, :::image type="icon" source="../assets/icons/sidebar-icon
 
     b. Adds a scope named `access_as_user`. Enables it for **Admin and users**.
 
-The following table lists the configurations of :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false":::Microsoft 365 client application with the client Ids:
+The following table lists the configurations of Microsoft 365 client application with the client Ids:
 
   | Microsoft 365 client application |  Client ID  |
   | --- | --- |
@@ -155,11 +155,11 @@ The following table lists the configuration of the authentication as follows:
 
 For tab app or messaging extension app:
 
-1. Registers an :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application.
+1. Registers an Azure AD application.
 
-1. Creates a Client Secret for the :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application.
+1. Creates a Client Secret for the Azure AD application.
 
-1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the :::image type="icon" source="../assets/icons/aad-icon.png" border="false"::: Azure AD application.
+1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
 
 1. Adds Microsoft Teams channel.
 
@@ -173,7 +173,7 @@ After registering and configuring the app, local debug files get generated.
 
 ## Take a tour of your app source code
 
-You can view the project folders and files in the Explorer area of :::image type="icon" source="../assets/icons/vsc-icon.png" border="false"::: Visual Studio Code after the :::image type="icon" source="../assets/icons/sidebar-icon.png" border="false"::: Teams Toolkit registers and configures your app. The following table lists the local debug files and the configuration types:
+You can view the project folders and files in the Explorer area of Visual Studio Code after the Teams Toolkit registers and configures your app. The following table lists the local debug files and the configuration types:
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
