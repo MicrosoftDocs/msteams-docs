@@ -95,23 +95,3 @@ You can build your applications with almost seamless authentication.
 
 <sup>*</sup> The tab app can optionally exchange the token server-side for further Graph permissions.
 
-### Teams bot app
-
-The user needs to provide just a one-time consent to your app for using their credentials to obtain an access token.
-
-:::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-bots.png" alt-text="Authentication flow for Teams bot app":::
-
-1. The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property. It tells Microsoft Teams to obtain an authentication token for the bot application. The user receives messages at all the active user endpoints.
-
-1. If the current user is using your bot application for the first time, a request prompt is displayed, requesting the user to do one of the following:
-
-  - Provide consent, if necessary.
-  - Handle step-up authentication, such as two-factor authentication.
-
-1. Microsoft Teams requests the bot application token from the Azure AD endpoint for the current user.
-
-1. Azure AD sends the bot application token to the Microsoft Teams application.
-
-1. Microsoft Teams sends the token to the bot as part of the value object returned by the invoke activity with the name `sign-in/tokenExchange`.
-
-1. The parsed token in the bot application provides the required information, such as the user's email address.
