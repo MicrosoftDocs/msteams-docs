@@ -45,7 +45,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ## Bots with webhooks and connectors
 
-Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a simple bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## Advantages of bots
 
