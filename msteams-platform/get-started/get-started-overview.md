@@ -21,7 +21,6 @@ Let's take a quick glance at the build environment options you can choose from, 
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
 
-
 ## App capabilities and development tools
 
 Depending on the capabilities you want for your app, choose an appropriate development tool set.
@@ -43,6 +42,8 @@ If you are already familiar with Yeoman workflow, you may prefer using [YoTeams 
 
 Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
 
+> [!div class="nextstepaction"]
+> [Build a Teams app with Blazor](../sbs-gs-blazorapp.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
