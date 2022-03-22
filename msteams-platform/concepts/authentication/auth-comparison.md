@@ -51,3 +51,8 @@ This section explores the authentication required for different app capability i
 | Task modules | -- | -- | -- |
 | Apps for Teams meetings | -- | -- | -- |
 | Multi-capability app | -- | -- | -- |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Authenticate with Teams SSO with Azure AD](plan-sso-teams.md)
