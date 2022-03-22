@@ -42,43 +42,31 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone repository.png" alt-text="cloning the repository" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/botbuilder-sample.png" alt-text="cloning the repository" border="false":::
 
     1. Select **Clone**. 
 
-- title: Create a bot Registration in Azure Portal
+- title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To authenticate the bot, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
     
-    1. Configure and run your Teams file bot app.
-    1. Create Azure Bot resource.
-    1. Create client secret.
-    1. Add Microsoft Teams channel.
-    1. Add messaging endpoint.
-    
-    **To configure and run your Teams file bot app:**
-    
-    1. Open a command prompt and clone the repository at https://github.com/Microsoft/botbuilder-samples.git. Note the path where you clone the repository.
-    
-    1. In Visual Studio:
-
-        * Open Visual Studio.
-        * Select **File** > **Open** > **Project/Solution**.
-        * Access `botbuilder-samples\samples\csharp_dotnetcore\56.teams-file-upload` folder.
-        * Open the `Teamsfileupload.csproj` file.
-
-    1. Open ngrok terminal and start a ngrok tunnel with this command `ngrok http -host-header=rewrite 3978`.
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource:**
 
-    1. Access the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure bot** and select the Enter key.
+    1. In the search box, enter **Azure bot**.
+    1. Select the **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/teams-file-upload-bot/azure-new.png)
-
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-new.png" alt-text="azure bot card" border="false":::
+       
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select the subscription.
