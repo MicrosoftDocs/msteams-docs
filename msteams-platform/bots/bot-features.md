@@ -203,3 +203,4 @@ this.onMessage(async (context, next) => {
 * [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Code samples for bots](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore)
