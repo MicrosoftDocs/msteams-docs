@@ -126,6 +126,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Create Teams conversation bot
+          url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure Tab device permissions
