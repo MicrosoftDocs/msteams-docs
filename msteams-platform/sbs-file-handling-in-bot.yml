@@ -34,6 +34,17 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
+- title: Set up local environment
+  durationInMinutes: 1
+  content: |  
+
+    1. Open [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples).
+    1. Select **Code**.
+    1. From the dropdown menu, select **Open with GitHub Desktop**.
+
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone repository.png" alt-text="cloning the repository" border="true":::
+
+    1. Select **Clone**. 
 
 - title: Create a bot Registration in Azure Portal
   durationInMinutes: 5
