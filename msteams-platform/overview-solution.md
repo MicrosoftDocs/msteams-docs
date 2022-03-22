@@ -11,6 +11,8 @@ ms.date: 11/02/2021
 
 The Microsoft Teams Platform is a powerful, flexible platform for creating apps for Microsoft Teams. It provides a vast suite of development environments and tools to support app development.
 
+With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile app solutions. Choose the best features for your app
+
 ## The user story
 
 You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
