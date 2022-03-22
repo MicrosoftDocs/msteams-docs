@@ -21,7 +21,6 @@ Let's take a quick glance at the build environment options you can choose from, 
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
 
-
 ## App capabilities and development tools
 
 Depending on the capabilities you want for your app, choose an appropriate development tool set.
