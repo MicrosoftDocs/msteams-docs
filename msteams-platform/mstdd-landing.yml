@@ -44,9 +44,7 @@ landingContent:
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: Authentication using external OAuth providers  
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
-   
-      
-      
+
 
 - title: Get started
   linkLists:
@@ -58,6 +56,8 @@ landingContent:
         url: /contribute/additional-resources
     - linkListType: tutorial
       links:
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorapp.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
       - text: Build app with SPFx
