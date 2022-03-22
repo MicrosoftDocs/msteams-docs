@@ -129,7 +129,7 @@ In the set up process, :::image type="icon" source="../assets/icons/sidebar-icon
 
     b. Adds a scope named `access_as_user`. Enables it for **Admin and users**.
 
-  The following table lists the configurations of :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false":::Microsoft 365 client application with the client Ids:
+The following table lists the configurations of :::image type="icon" source="../assets/icons/microsoft-icon.png" border="false":::Microsoft 365 client application with the client Ids:
 
   | Microsoft 365 client application |  Client ID  |
   | --- | --- |

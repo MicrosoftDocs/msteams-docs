@@ -24,7 +24,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Debug your Teams app using Teams Toolkit
+      - text: Debug your Teams app 
         url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
