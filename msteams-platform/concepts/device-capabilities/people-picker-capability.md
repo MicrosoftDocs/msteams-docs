@@ -13,7 +13,7 @@ People Picker is a native capability and control in Teams, which allows user to 
 
 <!-- The control can be selected for single or multiple configurations, such as limiting search within a chat, channel, or across the entire organization. -->
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate People Picker within your web and desktop app.
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate People Picker within your mobile and desktop app.
 
 ## Advantages of integrating People Picker
 
@@ -41,9 +41,9 @@ The `selectPeople` API comes with the following input configurations:
 |`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|False|
 |`singleSelect`|Boolean|It is an optional parameter. When set to true it launches the People Picker and restricts the selection to only one user.|False|
 
-The following image shows the experience of People Picker using web and desktop app:
+The following image shows the experience of People Picker using mobile and desktop:
 
-# [Web app](#tab/Samplewebapp)
+# [Mobile app](#tab/Samplemobileapp)
 
 :::image type="content" source="../../assets/images/tabs/people-picker-control-capability.png" alt-text="People picker control capability mobile":::
 
@@ -54,7 +54,8 @@ The desktop app allows you to do a search based on the following:
 * Search using name
 * Search using email address
 
-:::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People pciker by name" border="true":::
+:::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name" border="true":::
+
 ---
 
 ## Code snippet
