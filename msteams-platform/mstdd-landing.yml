@@ -30,6 +30,8 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
       - text: Moodle LMS and Microsoft 365 plugins
         url: ~/resources/moodle-overview.md
+      - text: Debug your Teams app 
+        url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -44,7 +46,11 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
       - text: In-app purchase flow for monetization of apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-      
+      - text: Adaptive Cards form completion feedback
+        url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
+      - text: Authentication using external OAuth providers  
+        url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
+
 
 - title: Get started
   linkLists:
@@ -56,6 +62,8 @@ landingContent:
         url: /contribute/additional-resources
     - linkListType: tutorial
       links:
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorapp.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
       - text: Build app with SPFx
@@ -97,7 +105,7 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
-
+     
 
 
 - title: Build app capabilities
