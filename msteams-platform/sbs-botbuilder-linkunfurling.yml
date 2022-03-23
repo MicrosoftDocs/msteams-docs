@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Unfurl links using bot in Teams
+title: Unfurl links in Teams using bot
 metadata:
-  title: Unfurl links using bot in Teams
+  title: Unfurl links in Teams using bot
   description: In this tutorial, you'll learn to set up Teams link unfurling bot.
   audience: Developer
   level: Beginner
