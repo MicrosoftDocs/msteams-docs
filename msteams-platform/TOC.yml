@@ -20,6 +20,8 @@
   items:
   - name: Get started overview
     href: get-started/get-started-overview.md  
+  - name: Build your first app using Blazor
+    href: sbs-gs-blazorapp.yml
   - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first app using SPFx
@@ -108,6 +110,10 @@
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Create a new Teams app
       href: toolkit/create-new-project.md
+    - name: Debug your Teams app locally
+      href: toolkit/debug-local.md
+    - name: Debug background processes
+      href: toolkit/debug-background-process.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
     - name: Provision cloud resources
