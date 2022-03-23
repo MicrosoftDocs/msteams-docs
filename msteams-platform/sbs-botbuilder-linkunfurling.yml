@@ -204,7 +204,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. From the left pane, select **App Registrations**.
+    1. From the left pane, select **App registrations**.
 
     1. Select your bot.
        
@@ -377,7 +377,7 @@ items:
 
     # [Visual Studio](#tab/vs)
 
-       1. Launch Visual Studio .
+       1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/VSopenfile.png" alt-text="Open file" border="true":::
