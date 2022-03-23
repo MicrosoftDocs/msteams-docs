@@ -24,8 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Moodle LMS and Microsoft 365 plugins
-        url: ~/resources/moodle-overview.md
+      - text: Debug your Teams app 
+        url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -44,7 +44,7 @@ landingContent:
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
       - text: Integrate People Picker capability to desktop
         url: ~/concepts/device-capabilities/people-picker-capability.md
-      
+ 
 
 - title: Get started
   linkLists:
@@ -56,6 +56,8 @@ landingContent:
         url: /contribute/additional-resources
     - linkListType: tutorial
       links:
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorapp.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
       - text: Build app with SPFx
@@ -97,7 +99,7 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
-
+     
 
 
 - title: Build app capabilities

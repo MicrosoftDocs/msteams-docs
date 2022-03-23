@@ -86,6 +86,12 @@ You can rely on an administrator to grant the permissions your app needs at the 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
 
+## Code sample
+
+| **Sample name** | **Description** | **Graph** |
+|---------------|----------|--------|
+| Calling and meeting bot | The sample app demonstartes how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up calling and meeting in a bot.
