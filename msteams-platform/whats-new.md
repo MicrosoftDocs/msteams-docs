@@ -50,6 +50,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|03/23/2022| Introduced step-by-step guide to View Meeting Stage in Microsoft Teams | Build apps for Teams meetings > Enable and configure your apps for Teams meetings > [View Meeting Stage in Teams](sbs-meetings-stage-view.yml)|,
 |03/22/2022| Updated the Get started with Blazor app for Teams|  • Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
 |03/14/2022| Introduced step-by-step guide to build and test a connector in Microsoft Teams. | Build webhooks and connectors > Create Office 365 Connectors > [Build Teams connectors](sbs-teams-connectors.yml)|
