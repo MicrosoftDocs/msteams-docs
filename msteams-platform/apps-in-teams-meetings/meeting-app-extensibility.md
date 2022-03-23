@@ -114,9 +114,13 @@ The following image illustrates the in-meeting side panel:
 
 The following table describes the behavior of app when it's validated and not validated:
 
-|App capability | App is validated | App isn't validated |
+|App capability | App is validated |Support for Channel Meetings in Mobile
 |---|---|---|
-| Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
+| Meeting extensibility | The app will appear in meetings. |  Meetings on Mobile can have apps which can be accessed while you are in that channel meeting and are tied to that Post in the Channel.
+
+> [!NOTE]
+> The intent is to only provide consumption experience on Mobile and not the capability to add apps on Mobile meetings.
+> Only Public Scheduled Channel meetings
 
 For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
