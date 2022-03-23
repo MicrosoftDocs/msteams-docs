@@ -19,7 +19,7 @@ The following image shows the Share to Teams pop-up window:
 ## Enable Share to Teams button
 
 > [!NOTE]
-> Ensure that you have [Microsoft Teams JavaScript Client SDK](../../tabs/how-to/using-teams-client-sdk.md) or [Microsoft Teams JavaScript Client SDK v2 Preview](../../tabs/how-to/using-teams-client-sdk.md)(`@microsoft/teams-js@1.11.0-beta.7` or later) to enable Share to Teams for your personal app or tab.
+> Ensure that you have [Microsoft Teams JavaScript Client SDK](../../tabs/how-to/using-teams-client-sdk.md) or [Microsoft Teams JavaScript Client SDK v2 Preview](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7` or later) to enable Share to Teams for your personal app or tab.
 
 To enable Share to Teams:
 
