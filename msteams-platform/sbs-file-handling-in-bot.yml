@@ -201,7 +201,57 @@ items:
 
     1. Select your bot.
        
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-your-bot.png" alt-text="bot selection" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/set-api.png" alt-text="setting an api" border="false":::
+
+    1. Under **Manage**, select **Expose an API**.
+
+    1. Select **Set**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api.png" alt-text="adding api" border="false":::
+
+    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri.png" alt-text="redirect uri" border="false":::
+
+    1. Select **Add a scope**. 
+
+    
+
+       In the panel that appears, enter `access_as_user` as the **Scope name**.
+  
+    1. Set **Who can consent?** to `Admins and users`.
+  
+    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    
+         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+
+         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+
+         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+
+         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
+  
+    1. Ensure that **State** is set to **Enabled**.
+  
+    1. Select **Add scope** to save.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - title: Test your app
   durationInMinutes: 2
