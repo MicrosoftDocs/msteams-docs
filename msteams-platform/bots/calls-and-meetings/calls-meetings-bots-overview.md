@@ -88,7 +88,6 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
 | Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| Calling and meeting bot | The sample app demonstartes how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## Next step
 
