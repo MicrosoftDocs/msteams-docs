@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK for TypeScript or JavaScript
 
-TeamsFx aims to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuratio
+TeamsFx aims to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
 
 Use the library to:
 
