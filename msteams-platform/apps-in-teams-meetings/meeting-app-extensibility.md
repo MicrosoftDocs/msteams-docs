@@ -114,9 +114,9 @@ The following image illustrates the in-meeting side panel:
 
 The following table describes the behavior of app when it's validated and not validated:
 
-|App capability | App is validated |Support for Channel Meetings in Mobile
+|App capability | App is validated | App isn't validated
 |---|---|---|
-| Meeting extensibility | The app will appear in meetings. |  Meetings on Mobile can have apps which can be accessed while you are in that channel meeting and are tied to that Post in the Channel.
+| Meeting extensibility | The app will appear in meetings. | Meetings on Mobile can have apps which can be accessed while you are in that channel meeting and are tied to that Post in the Channel. | Anonymous users for channel meetings will not work.
 
 > [!NOTE]
 > The intent is to only provide consumption experience on Mobile and not the capability to add apps on Mobile meetings.
