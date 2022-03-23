@@ -12,7 +12,7 @@ The choice of authentication method that best suits your Teams app may depend on
 
 This page seeks to let you compare authentication methods based on:
 
-- Authentication methods
+- Authentication features
 - Distribution model
 - App capability
 
