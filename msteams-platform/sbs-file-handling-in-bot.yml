@@ -69,32 +69,54 @@ items:
        
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select the subscription.
-    1. From the **Resource group** dropdown list, select the resource group.
-        
-        To create a new resource, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
+    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
+    1. From the **Resource group** dropdown list, select your existing resource group.
 
-        > [!NOTE]
-        > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource.png" alt-text="azure resource selection" border="false":::
+       
+         You can also create a new resource group (select **Create new** > enter resource name > select **OK**)
+
+     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/newresource.png" alt-text="selection of new resource location" border="false":::
+
+     1. Select **Type of App** as `Multi Tenant`.
+
+     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
+       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+
+       > [!NOTE]
+       > You can't create more than one bot with the same **Microsoft App ID**.
+
     1. Select **Review + create**.
 
-         ![Review and create](~/assets/images/teams-file-upload-bot/reg-azure-1.png)
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create.png" alt-text="creation of new bot" border="false":::   
 
-    1. If the validation passes, select **Create**. It takes a few moments for your bot service to be provisioned.
+    1. If the validation passes, select **Create**. 
+    
+    It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
+    1. Select **Go to resource**. 
 
-       Now your Azure bot has been created.
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment.png" alt-text="create resource" border="false":::
 
-         ![Azure bot resource created](~/assets/images/teams-file-upload-bot/resource-group.png)
+       Your Azure bot is created.
 
-    **To create client secret:**
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created.png" alt-text="creation of bot" border="false":::
 
-    1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
-    1. Adjacent to **Microsoft App ID**, select **Manage**.
+     **To create client secret**
 
-         ![Microsoft App ID](~/assets/images/teams-file-upload-bot/manage-sec.png)
+     Perform the following steps if you have created a new **Microsoft App ID**:
+
+    1. In the left panel, select **Configuration**.
+
+       > [!TIP]
+       > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+    1. Next to **Microsoft App ID**, select **Manage**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manage.png" alt-text="select manage" border="false":::
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
