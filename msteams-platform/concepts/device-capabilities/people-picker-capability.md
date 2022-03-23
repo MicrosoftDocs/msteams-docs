@@ -9,11 +9,11 @@ ms.author: surbhigupta
 
 # Integrate People Picker
 
-People Picker is a native capability and control in Teams, which allows user to search and select people. Teams integrates native People Picker input control on both web and desktop apps. User can perform different functions like searching within a chat, a chanel, or across the organization by selecting single or multiple configurations of the control.
+People Picker is a native capability and control in Teams, which allows user to search and select people. Teams integrates native People Picker input control on both web and desktop apps. User can perform different functions like searching within a chat, a channel, or across the organization by selecting single or multiple configurations of the control.
 
 <!-- The control can be selected for single or multiple configurations, such as limiting search within a chat, channel, or across the entire organization. -->
 
-Use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), to `selectPeople` API to integrate People Picker within your web and desktop app.
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate People Picker within your web and desktop app.
 
 ## Advantages of integrating People Picker
 
@@ -49,12 +49,12 @@ The following image shows the experience of People Picker using web and desktop 
 
 # [Desktop app](#tab/Sampledesktop)
 
-The following image displays two ways to search for a person:
-* Search using only name
+The desktop app allows you to do a search based on the following:
+
+* Search using name
 * Search using email address
 
-:::image type="content" source="../../assets/images/tabs/people-picker-desktop-email.png" alt-text="People picker desktop" border="true":::
-
+:::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People pciker by name" border="true":::
 ---
 
 ## Code snippet
