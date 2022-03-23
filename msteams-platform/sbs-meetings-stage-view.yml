@@ -61,7 +61,7 @@ items:
 - title: Set up tunnel for local web server
   durationInMinutes: 1
   content: |
-    Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
@@ -99,15 +99,15 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs path.png" alt-text="path for nodejs" border="true":::
 
-    1. Run the following command in the **command prompt** to download packages and dependencies:
+    1. Run the following command in the **Command Prompt** to download packages and dependencies:
 
-       ```command-prompt
+       ```Command-Prompt
         npm install
         ```  
 
-    1. Run the following command in the **command prompt** to start the app:
+    1. Run the following command in the **Command Prompt** to start the app:
 
-       ```command-prompt
+       ```Command-Prompt
        npm start
        ```
 
