@@ -190,119 +190,18 @@ items:
 
         You have successfully set up a bot in Azure Bot Service.
    
-- title: Set up bot service connection
+- title: Update the Azure AD app registration
   durationInMinutes: 5
   content: |
-    For Bot Service to enable a user to sign in and access the bot, configure SSO for your bot.
-    To set up bot service connection, perform the following:
-    
-    1. Add Redirect URI to the Azure bot resource.
-    1. Expose API endpoint.
-    1. Authorize client applications.
-    1. Add any necessary API permissions for downstream calls.
-    1. Enable implicit grant.
-    1. Update manifest.
-    1. Set up Bot Service connection.
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
 
-    **To add Redirect URI to the Azure bot resource:**
+    1. Select **Azure Active Directory**.
 
-    1. Select **Manage** option adjacent to **Microsoft App ID**.
+    1. In the left navigation panel, select **App Registrations**.
 
-         ![Manage Bot](~/assets/images/teams-file-upload-bot/manage-sec.png)
-
-    1. Select **Authentication** from the left pane of your bot resource.
-    1. In **Platform configurations**, select **Add a platform**.
-    1. Select **Web**.
-    1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect` and select **Configure**.
-
-        ![Configure web redirect url](~/assets/images/teams-file-upload-bot/authentication.png)
-
-        The Redirect URI is added to the Azure bot resource.
-
-        ![Display web redirect url](~/assets/images/bots/redirectURIadded.png)
-        
-    **To expose API endpoint:**
-
-    1. Select **Expose an API** from the left pane.
-    1. Select **Set** for the Application ID URI.
-    1. Use the **Application ID URL** shown and append `api://` instead of `https://` in the **ngrok url** and add at the beginning of the App ID URL.
-
-        ![App ID URI](~/assets/images/teams-file-upload-bot/expose-api.png)
-
-    1. Select **Save**.
-    1. Select **Add a scope**.
-    1. In **Scope name**, enter `access_as_user`.
-    1. In **Who can consent?**, switch to **Admins and users**.
-    1. Enter the following values in the boxes:
-
-        | Field | Value |
-        | ----- | ----- |
-        | Admin consent display name | Teams can access the user's profile |
-        | Admin consent description | Allows Teams to call the app's web APIs as the current user. |
-        | User consent display name | Teams can access your user profile and make requests on your behalf |
-        | User consent description | Enable Teams to call this app's APIs with the same permissions that you have. |
-
-    1. Set **State** to **Enabled**, if not set already.
-
-        ![Add a scope](~/assets/images/teams-file-upload-bot/expo.png)
-
-    1. Select **Add scope**. The scope name automatically matches the Application ID URI, with `/access_as_user` added to the end.
-
-    **To authorize client applications:**
-
-    For example, Add the following IDs as **Authorized client applications**, select the check box for **Authorized scopes** and then select **add application**.      
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or desktop application)            
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)</br>
-
-        ![Add client application](~/assets/images/teams-file-upload-bot/client-application.png)      
-
-    **To add any necessary API permissions for downstream calls:**
-
-    1. Select **API permissions** from the left pane.
-    1. Select **Add a permission**. **Request API permissions** window appears.
-    1. Select **Microsoft API's**. Then select **Microsoft Graph** and select **Delegated permissions**.
-    1. Add any user **Delegated permissions** that your app requires to downstream APIs, for example, User.Read.</br>
-
-         ![API permissions](~/assets/images/teams-file-upload-bot/delegated-permission-1.png)
-
-    **To enable implicit grant:**
-    
-    1. Select **Authentication** from the left pane.
-    1. Select **Access tokens** and **ID tokens** checkboxes.
-
-         ![Authentication Tokens](~/assets/images/teams-file-upload-bot/access-tokens.png)
-
-    1. Select **Save**.
-
-    **To update manifest**
-
-    1. Select **Manifest** from the left pane.
-    1. Set the configuration item to **"accessTokenAcceptedVersion": 2**. If not set, change its value to `2`` and select **Save**.
-        
-        > [!NOTE]
-        > If you are already testing your bot in Teams, sign out of this app and sign out of Teams. To see this change, sign in again.
-
-        ![Update Manifest](~/assets/images/teams-file-upload-bot/access-version-manifest-2.png)
-
-    **To set up Bot Service connection:**
-
-    1. Open the **Home** page of your bot and select **Configuration** under **Settings** from the left pane.
-    1. Select **Add OAuth Connection Settings**.
-    1. In **New Connection Setting**, provide the following details:
-
-        | Field | Value or description |
-        | ----- | ----- |
-        | Name | Provide name for your new connection setting. You can use the name in the settings of your bot service code. |
-        | Service Provider | Select **Azure Active Directory V2**. |
-        | Client id | Provide the **Microsoft App ID**. |
-        | Client secret | Provide the **Value** of the client secret ID. |
-        | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
-        | Tenant ID | Provide **Tenant Id**. |
-        | Scopes | Provide **User.Read** and add all the required **Scopes** while specifying permissions to downstream APIs. |
-
-        :::image type="content" source="./assets/images/teams-file-upload-bot/oauth-settings.png" alt-text="Bot service connection":::
-
-    1. Select **Save**.
+    1. Select your bot.
+       
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-your-bot.png" alt-text="bot selection" border="false":::
 
 - title: Test your app
   durationInMinutes: 2
