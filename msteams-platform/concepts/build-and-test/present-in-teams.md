@@ -54,5 +54,14 @@ Optional:
 }
 ```
 
-## Present in Teams end user experience on 3P apps
+## Limitations
 
+## End user experience - 3P
+
+:::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
+
+:::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Present in teams share":::
+
+:::image type="content" source="../../assets/images/present-in-teams/share-stage.PNG" alt-text="present in teams":::
+
+## End user experience - 1P
