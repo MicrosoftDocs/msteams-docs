@@ -101,6 +101,9 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
+    1. Select **Type of App** as `Multi Tenant`
+
+       :::image type="content" source="../assets/images/meetings-side-panel/Review-Create.png" alt-text="Multi Tenant" border="true":::
     1. Select **Review + create**.
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
@@ -125,10 +128,6 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **Multitenant** under **Bot Type**.
-
-        ![Bot type](~/assets/images/meetings-side-panel/bot-type.png)
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -171,7 +170,7 @@ items:
 
           ![Terms of service](~/assets/images/meetings-side-panel/terms.png)
 
-    1. Select **Save**.
+    1. Select **Apply**.
 
           ![Select Teams](~/assets/images/meetings-side-panel/config-teams1.png)   
     
