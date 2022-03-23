@@ -18,7 +18,7 @@ items:
     domain is pasted into the compose message area. The invoke contains the full URL and you can respond to it with a card. User can unfurl the link using bot with additional information to get an enhanced experience.
 
      > [!NOTE]
-     > Currently, link unfurling is not supported on mobile clients. 
+     > Currently, link unfurling is not supported on mobile clients.
 
      **Key features of link unfurling** 
 
@@ -130,7 +130,7 @@ items:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret" border="true":::
             
-       The **Add a client secret** window appears.  
+       The **Add a client secret** window appears.
 
     1. Enter **Description**.
     
