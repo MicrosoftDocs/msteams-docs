@@ -84,24 +84,24 @@ items:
 
      1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
-       > [!NOTE]
-       > You can't create more than one bot with the same **Microsoft App ID**.
+        > [!NOTE]
+        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Review + create**.
+     1. Select **Review + create**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create.png" alt-text="creation of new bot" border="false":::   
 
-    1. If the validation passes, select **Create**. 
+     1. If the validation passes, select **Create**. 
     
-    It takes a few moments for your bot service to be provisioned.
+        It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. 
+     1. Select **Go to resource**. 
 
         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment.png" alt-text="create resource" border="false":::
 
-       Your Azure bot is created.
+        Your Azure bot is created.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created.png" alt-text="creation of bot" border="false":::
 
@@ -118,50 +118,78 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manage.png" alt-text="select manage" border="false":::
 
-    1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
+    1. In the **Client secrets** section, select **New client secret**.
 
-    1. Enter **Description** and select **Add**.
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/new-client-secret.png" alt-text="adding client secret" border="false":::
+
+       The **Add a client secret** window appears. 
+
+    1. Enter **Description**.
+
+    1. Select **Add**.
     
-         ![Client secret](~/assets/images/teams-file-upload-bot/add-client-secret.png)
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-client-secret.png" alt-text="adding client secret and description" border="false"::: 
 
-    1. In the **Value** column, select **Copy to clipboard** and save the value of client secret ID for future reference.
+    1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/teams-file-upload-bot/copy-value.png)
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/copy-value.png" alt-text="copy value to clipboard" border="false":::
+
+        > [!TIP]
+        > Save the **Client secrets** value or app password for future reference. 
        
-    **To add the Microsoft Teams channel:**
+     **To add the Teams channel:**
 
-    1. Go to **Home**.
+    1. Select **Home**.
 
-         ![Home](~/assets/images/teams-file-upload-bot/home-png.png)
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/go-to-home.png" alt-text="select home" border="false":::    
 
-    1. Open your bot from the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Microsoft Teams** 
+    1. Select your bot from **Recent resources**.
 
-          ![Open Teams from channels](~/assets/images/teams-file-upload-bot/chanels-teams.png)  
+    1. Select **Channels** in the left pane.
 
-          ![Select Teams](~/assets/images/teams-file-upload-bot/configure-microsoft-teams.png)  
+    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Save**.
-    1. Select the checkbox to accept the terms of service and select **Agree**.</br>
+    1. Select the checkbox to accept the **Terms of Service**.
 
-          ![Terms of service](~/assets/images/teams-file-upload-bot/terms-service.png)
-
-    **To add messaging endpoint:**
-
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
-    1. Go to ngrok.
-    1. Copy the HTTPS URL (https to io).
-
-        ![ngrok HTTPS URL](~/assets/images/teams-file-upload-bot/ngrok-url.png)
-
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
-
-         ![Messaging end point](~/assets/images/teams-file-upload-bot/messaging-endpoint.png)
+    1. Select **Agree**.
+   
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/terms.png" alt-text="select terms" border="false":::
 
     1. Select **Apply**.
 
-       You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams.png" alt-text="microsoft teams" border="false":::
 
+    **To create tunnel for local web server**
+
+    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+     ```bash
+     ngrok http -host-header=localhost 3978
+     ```
+
+    > [!TIP]
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+
+    **To add messaging endpoint:**
+
+    1. From ngrok, copy the HTTPS URL.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/ngrok.png" alt-text="apply ngrok" border="false"::: 
+
+        > [!NOTE]
+        > The HTTPS URL in your ngrok is your fully qualified domain name.
+        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+
+    1.  In **Settings** for the Azure bot that you created, select **Configuration**.
+
+    1.  In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api.png" alt-text="adding api" border="false":::
+        
+     1. Select **Apply**.
+
+        You have successfully set up a bot in Azure Bot Service.
+   
 - title: Set up bot service connection
   durationInMinutes: 5
   content: |
