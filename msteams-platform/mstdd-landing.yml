@@ -24,7 +24,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Share-to-Teams from personal app or tab
+      - text: Share to Teams from personal app or tab
         url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
       - text: Debug your Teams app 
         url: ~/toolkit/debug-local.md
