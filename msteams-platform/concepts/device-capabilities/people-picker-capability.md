@@ -94,6 +94,7 @@ The following table lists the error codes and the conditions under which the err
 | **8000** | USER_ABORT |User cancelled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrading the build resolves the issue.|
 
+
 ## See also
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
