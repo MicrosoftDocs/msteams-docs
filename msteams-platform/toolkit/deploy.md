@@ -8,7 +8,11 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
+<<<<<<< Updated upstream
 # Deploy to the cloud
+=======
+# Deploy Teams app to the cloud
+>>>>>>> Stashed changes
 
 Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
 
