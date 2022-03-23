@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Teams link unfurling using bot
+title: Unfurl links using bot in Teams
 metadata:
-  title: Teams link unfurling using bot
+  title: Unfurl links using bot in Teams
   description: In this tutorial, you'll learn to set up Teams link unfurling bot.
   audience: Developer
   level: Beginner
@@ -50,14 +50,14 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/clonerepository.png" alt-text="Clone repository" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clonerepository-new.png" alt-text="Clone repository" border="true":::
 
     1. Select **Clone**. 
 
 - title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
-    The following steps guide you to:
+    The following steps guide you to create and register your bot in Azure portal:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -167,7 +167,7 @@ items:
 
        :::image type="content" source="~/assets/images/Teams-link-unfurling/configteams.png" alt-text="Select Teams" border="true":::
       
-       **To create tunnel for local web server**
+    **To create tunnel for local web server**
 
          Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -230,7 +230,7 @@ items:
 
     1. Select **Add a scope**. 
        
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope.png" alt-text="[Select scope" border="true"::: 
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope.png" alt-text="Select scope" border="true"::: 
           
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -414,7 +414,10 @@ items:
     dotnet run
     ```
     :::image type="content" source="~/assets/images/Teams-link-unfurling/dotnetruncmd.png" alt-text="Dotnet" border="true":::
-    
+
+
+---
+
 - title: Upload Link Unfurling app
   durationInMinutes: 1
   content: |
