@@ -16,7 +16,7 @@ Third-party websites can use the launcher script to embed Share to Teams buttons
 
 The following image displays the Share to Teams pop-up experience:
 
-![Share-to-Teams popup](~/assets/images/share-to-teams-popup.png)
+:::image type="content" source="../../assets/images/share-to-teams-popup.png" alt-text="Share to Teams popup":::
 
 ## Embed a Share to Teams button
 
@@ -84,7 +84,7 @@ You can use either the HTML default versions or the Open Graph version.
 
 For teachers using the Share to Teams button, there is an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team, based on the shared link. The following image displays Share to Teams for education:
 
-![Share to Teams popup education](~/assets/images/share-to-teams-popup-edu.png)
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Share to Teams popup education":::
 
 ## Full launcher.js definition
 
