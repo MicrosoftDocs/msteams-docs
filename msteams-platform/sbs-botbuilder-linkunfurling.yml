@@ -57,11 +57,11 @@ items:
 - title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
-    The following steps guide you to create and register your bot in Azure portal:
+    The following steps help you to create and register your bot in Azure portal:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
-    * Add Teams channel to deploy the bot to a Teams channel.
+    * Add Teams channel to deploy the bot to Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
