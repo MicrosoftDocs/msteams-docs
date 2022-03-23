@@ -127,7 +127,7 @@ items:
     1. Add any user permissions that your app requires to downstream APIs, for example, `User.Read`.
     1. Select **Add permissions**.
 
-        :::image type="content" source="./assets/images/conversation-bot/api-permissions.png" alt-text="Add API permissions.":::
+        :::image type="content" source="./assets/images/conversation-bot/api-permissions.png" alt-text="Add API permissions." border="true"lightbox="assets/images/conversation-bot/api-permissions.png":::
 
     **To add messaging endpoint:**
 
