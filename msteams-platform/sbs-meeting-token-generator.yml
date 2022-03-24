@@ -112,7 +112,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-       Select **Type App**as `Multi Tenant`
+    1. Select **Type App** as `Multi Tenant`.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
 
