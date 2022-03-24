@@ -253,6 +253,71 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 * https://localhost:3978/privacy
 * https://localhost:3978/tou
 
+<details>
+<summary><b>Review the source code</b></summary>
+
+#### Startup.cs
+
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+  {
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+  }
+public void Configure(IApplicationBuilder app)
+  {
+    app.UseStaticFiles();
+    app.UseMvc();
+  }
+```
+
+#### wwwroot folder
+
+In ASP.NET Core, the web root folder is where the application looks for static files.
+
+#### Index.cshtml
+
+ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
+
+#### Tab.cs
+
+This C# file contains a method that is called from **Tab.cshtml** during configuration.
+
+#### AppManifest folder
+
+This folder contains the following required app package files:
+
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A **manifest.json** file that specifies the attributes of your app.
+
+These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Microsoft Teams loads the `configurationUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
+
+#### .csproj
+
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
+
+```xml
+<PropertyGroup>
+    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="AppManifest\icon-outline.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\icon-color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+```
+
+</details>
+
 ### Establish a secure tunnel to your tab for Teams
 
 To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
