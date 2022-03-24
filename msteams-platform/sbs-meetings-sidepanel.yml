@@ -107,8 +107,6 @@ items:
     
     1. Select **Review + create**.
 
-        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
-
     1. If the validation passes, select **Create**. 
 
         It takes a few moments for your bot service to be provisioned. 
