@@ -190,6 +190,7 @@ this.onMessage(async (context, next) => {
 |Sample name | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Bot samples | Set of bot samples | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) | |
 
 ## Next step
 
@@ -203,4 +204,3 @@ this.onMessage(async (context, next) => {
 * [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Code samples for bots](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore)
