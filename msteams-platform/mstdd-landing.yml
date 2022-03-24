@@ -164,6 +164,8 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
+        - text: Share meeting stage in Teams
+          url: ~/sbs-meetings-stage-view.yml
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference

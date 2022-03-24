@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: View Meeting Stage in Teams 
+title: Share meeting stage in Teams 
 metadata:
-  title: View Meeting Stage in Teams
+  title: Share meeting stage in Team
   description: In this tutorial, you'll learn to set up a Meeting stage view for Teams.
   audience: Developer
   level: Beginner
@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    View Meeting Stage in Teams  helps to enable and configure your apps for Teams meetings. It helps the user to share Meeting Stage, allows meeting participants to add status details of past, present, and future tasks. Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. It enhances Teams meeting experience. 
+    Share meeting stage is an in meeting app which helps to enable and configure your apps for Teams meetings. It helps meeting participants to share meeting stage to add status details of past, present, and future tasks. The meeting stage also allows the participants to interact with and collaborate on app content in real time.
 
     **Key features of View Meeting Stage in Teams**
 
-    * Add status details in side panel.
+    * Add status details in the side panel.
     * Add details for collaboration.
     
-    This step-by-step guide helps you to generate View Meeting Stage in Teams to add status details for collaboration in Teams. You'll see the following output:
+    This step-by-step guide helps you to share meeting stage in Teams to add status details for collaboration. You'll see the following output:
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings stage view" border="true":::
 
@@ -39,7 +39,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    Ensure you have working knowledge of the following technologies:
+     You must have working knowledge of the following technologies:
 
     * [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
@@ -61,13 +61,13 @@ items:
 - title: Set up tunnel for local web server
   durationInMinutes: 1
   content: |
-    Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    Use ngrok or **Command Prompt** to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
      ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok.png" alt-text="tunnel using command prompt" border="true":::
  
@@ -81,8 +81,8 @@ items:
     1. Open **manifest.json** in **Visual Studio** and make the following changes:
 
          * Replace `<<App-ID>>` with your bot's **Microsoft App ID**.
-         * Replace `<<BASE-URL>>` to the fully qualified domain name.
-         * Replace `<<VALID DOMAIN>>` with your fully qualified domain name.
+         * Replace `<<BASE-URL>>` to the fully qualified ngrok domain name.
+         * Replace `<<VALID DOMAIN>>` with your fully qualified ngrok domain name.
          
          :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="true":::   
 
@@ -113,7 +113,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="true":::
        
-- title: Add View Meeting Stage to Teams  
+- title: Add meeting stage to Teams  
   durationInMinutes: 1
   content: |
 
@@ -124,7 +124,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest zip.png" alt-text="manifest" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file.png" alt-text="manifest" border="true":::
     
     1. Create a Teams meeting with a few presenters and attendees.
    
@@ -159,7 +159,7 @@ items:
     
     1. Select **Add an app**. 
     
-       In the app selection page, the app displays as **App In Meeting**.
+       In the app selection page, the app is displayed as **App In Meeting**.
   
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view" border="false":::
     
@@ -190,7 +190,8 @@ items:
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
+
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
 
 - content: |
-    You've completed the tutorial to get started with a View Meeting Stage in Teams.
+    You've completed the tutorial to get started with a Share meeting stage in Teams.
