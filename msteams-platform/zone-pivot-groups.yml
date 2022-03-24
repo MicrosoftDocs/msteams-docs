@@ -12,7 +12,7 @@ groups:
     title: Messaging Extension
 - id: teams-app-environment
   title: Teams app environment
-  prompt: Select the environment in which you want to build
+  prompt: Before you begin, select the environment in which you want to build
   pivots:
   - id: node-java-script
     title: Node.js
