@@ -281,6 +281,15 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
+
+Follow the below steps to create a personal tab:
+
+* [Generate your personal tab](#generate-your-personal-tab)
+* [Update your application](#update-your-application)
+* [Run your application](#run-your-application)
+* [Update your app package with Developer Portal](#update-your-app-package-with-developer-Portal)
+* [Preview your app in Teams](#preview-your-app-in-teams)
+
 ### Generate your personal tab
 
 1. Open Visual Studio and select **Open a project or solution**.
@@ -435,6 +444,14 @@ You can create a custom personal tab using C# and ASP.NET Core MVC. To create a 
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
+
+Follow the below steps to create a personal tab:
+
+* [Generate your personal tab](#generate-your-personal-tab)
+* [Update your application](#update-your-application)
+* [Run your application](#run-your-application)
+* [Update your app package with Developer Portal](#update-your-app-package-with-developer-Portal)
+* [Preview your app in Teams](#preview-your-app-in-teams)
 
 ### Generate your personal tab
 
