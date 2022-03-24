@@ -18,7 +18,7 @@ This page seeks to let you compare authentication methods based on:
 
 ## Compare authentication methods
 
-| &nbsp; | Teams SSO with Azure AD | Teams assisted SSO with Azure AD | Authentication with third-party IdPs |
+| &nbsp; | Teams SSO with Azure AD | Azure AD as IdP | Authentication with third-party IdPs |
 | --- | --- | --- | --- |
 | **Frequency of logging in** | User never needs to log into the app | User logs in once for all. | User may need to log in on a different browser. |
 | **Number of passwords** | User credentials already available in Teams are used. | Only one password is needed. | Multiple passwords may be used for different IdPs. |
@@ -42,7 +42,7 @@ In Teams, your app can have capabilities, such as a tab or bot, or messaging ext
 
 This section explores the authentication required for different app capability in Teams for single- and multi-capability apps.
 
-| &nbsp; | Teams SSO with Azure AD | Teams assisted SSO with Azure AD | Authentication with third-party IdPs |
+| &nbsp; | Teams SSO with Azure AD | Azure AD as IdP | Authentication with third-party IdPs |
 | --- | --- | --- | --- |
 | Tabs | You can build your applications with almost seamless authentication. The user only needs to consent the usage of their Teams app once. | The user needs to enter their user credentials once for using your app. | The user may need to sign-in multiple times, and your app needs to handle ID and access tokens. |
 | Bots | The user is redirected to provide consent only once. | -- | -- |
