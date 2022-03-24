@@ -114,7 +114,7 @@ items:
 
        Select **Type App**as `Multi Tenant`
 
-       :::image type="content" source="../assets/images//meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
+       :::image type="content" source="~/assets/images//meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
 
     1. Select **Review + create**.
 
@@ -140,10 +140,6 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **Multitenant** under **Bot Type**.
-
-        ![Bot type](~/assets/images/meeting-token-generator/bot-type.png)
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
