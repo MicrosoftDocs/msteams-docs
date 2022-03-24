@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Share meeting stage is an in meeting app which helps to enable and configure your apps for Teams meetings. It helps meeting participants to share meeting stage to add status details of past, present, and future tasks. The meeting stage also allows the participants to interact with and collaborate on app content in real time.
+    Share meeting stage is an in-meeting app, which helps to enable and configure your apps for Teams meetings. THe app helps the meeting participants to share meeting stage to add status details of past, present, and future tasks. The meeting stage also allows the participants to interact with and collaborate on app content in real time.
 
     **Key features of View Meeting Stage in Teams**
 
@@ -95,7 +95,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app folder path.png" alt-text="folder path" border="true":::
 
-    1. Open a new Command Prompt window, change the current directory to the copied **nodejs** path.
+    1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs path.png" alt-text="path for nodejs" border="true":::
 
@@ -163,7 +163,7 @@ items:
   
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view" border="false":::
     
-    1. Select the **App in Meeting**.
+    1. Select the **App In Meeting**.
     
     1. Select **Save**.
 
