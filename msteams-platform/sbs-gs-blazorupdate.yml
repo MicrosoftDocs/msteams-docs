@@ -249,7 +249,14 @@ items:
 
     To build and run your app locally:
 
-    1. Open the latest version of Visual Studio.
+    1. Select **Project** > **Teams Toolkit** > **Configure Your Microsoft Teams**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
+
+    1. Select your Microsoft 365 account or **Add an account** to sign in.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
+
     1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
         <details>
@@ -323,17 +330,31 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
 
-    1. Select the required subscription. 
+    1. Enter the following in Provision dialog box:
+
+       Subscription name: Visual Studio Enterprise Subscription
+       Resource group: Select New to add the resource group generated for your app.
+       Region: East Asia
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select-subscription.png" alt-text="Select the subscription operation for the project" border="true":::
 
+    1. Select **Provision** 
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::  
+        
         Provision warning displays. 
 
     1. Select **Provision**.
       
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/provision-warning.png" alt-text="Select the provision" border="true":::
 
-        It takes a few minutes for your resource group to be provisioned in the cloud. You can view it in the Azure portal.
+        It takes a few minutes for your resource group to provision in the cloud. 
+        
+    1. After the provision is complete, select OK. 
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/resource-group.png" alt-text="Resource group is generated" border="true":::
+
+    1. Select View Provisioned Resources to view on Azure Portal. 
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/resource-group.png" alt-text="Resource group is generated" border="true":::
 
@@ -343,7 +364,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud1.png" alt-text="Select deploy to cloud" border="false":::
 
-        Your output displays: Successfully deployed to the cloud. It copies the code for your app to the resources you created during the provision step.
+    1. Select **OK.** 
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-deploytocloud1.png" alt-text="Select deploy to cloud" border="false":::
 
     #### **To preview your tab app in Teams**    
 
