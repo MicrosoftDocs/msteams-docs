@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# People Picker control
+# People Picker capability
 
 People Picker is a native capability and control in Teams that allows user to search and select people. Teams app developers can integrate the People Picker input control in their web app, which allows end users to perform different functions like search and select people within a chat, a channel, or across the organization. The People Picker capability is available across all Teams clients - web, desktop, and mobile.
 
