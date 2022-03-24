@@ -11,9 +11,7 @@ zone_pivot_groups: teams-app-environment
 
 # Personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
-
-Choose your environment above to build personal tab from **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access.
 
 ::: zone pivot="node-java-script"
 
@@ -33,9 +31,16 @@ To create a personal tab with Node.js:
     npm install generator-teams --global
     ```
 
+Follow the below steps to create a personal tab:
+
+* [Generate your personal tab](generate-your-personal-tab)
+* [Update your app manifest](manifest-update)
+* [Build and run your application](build-and-run-your-application)
+* [Upload your application to Teams](upload-your-application-to-teams)
+
 ### Generate your personal tab
 
-1. At a command prompt, create a new directory for your personal tab.
+1. At the command prompt, create a new directory for your personal tab.
 
 1. To start the Microsoft Teams App generator, enter the following command in your new directory.
 
@@ -43,9 +48,12 @@ To create a personal tab with Node.js:
     yo teams
     ```
 
-1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
+1. Microsoft Teams App generator prompts a series of questions as following to which by providing your values you update your **manifest.json** file:
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
+
+<details>
+<summary><b>Series of questions to update your **manifest.json** file</b></summary>
 
     **What is your solution name?**
 
@@ -114,6 +122,8 @@ To create a personal tab with Node.js:
     **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
     Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+
+</details>
 
 ### Manifest update
 
@@ -194,7 +204,7 @@ You must have an [app package](~/concepts/build-and-test/apps-package.md) to bui
 
 #### Create the app package
 
-The package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. In the command prompt, enter the following command:
+The package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
 
 ```cmd
 gulp manifest
@@ -233,15 +243,18 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your tab has been uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
+> After your tab is uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
 
 ### Upload your application to Teams
 
 To upload your application to Teams
 
-1. Go to your Microsoft Teams.
-1. From the lower left corner, select **Apps**.
-1. From the lower left corner, choose **Upload a custom app**.
+1. Go to your Microsoft Teams and select **Store** icon.
+1. Select **Manage your apps** > **Publish an app**.
+1. Choose **Upload a custom app**.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams." border="true":::
+
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
