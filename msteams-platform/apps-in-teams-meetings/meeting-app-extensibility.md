@@ -117,9 +117,9 @@ The following table describes the behavior of app when it's validated and not va
 |App capability | App is validated | App isn't validated |
 |---|---|---|
 | Meeting extensibility | The app appears in meetings. |
-| Channel Meetings Support Meeting Extensibility | Meetings on Mobile can view apps, which can be accessed while you are in that channel meeting and are tied to that Post in the Channel | Can't add apps on Mobile meetings.
-| Channel Meetings Support Meeting Extensibility | This feature allows user to set up a meeting from a channel. It is an in-meeting experience, the users must be within the meeting. | Currently users cannot add apps to meeting directly, apps will only be added from desktop
-| Channel Meetings Support Meeting Extensibility | Only Public Scheduled Channel meetings  | Anonymous users for channel meetings will not work.
+| Channel Meetings Support Meeting Extensibility | Meetings on Mobile can view apps, which can be accessed while you are in that channel meeting and are tied to that Post in the Channel. | Currently users can't add apps on Mobile meetings.
+| Channel Meetings Support Meeting Extensibility | This feature allows user to set up a meeting from a channel. It is an in-meeting experience, the users must be within the meeting. | Currently users can't add apps to meeting directly, apps will only be added from desktop.
+| Channel Meetings Support Meeting Extensibility | Only Public Scheduled Channel meetings.  | Anonymous users for channel meetings won't work.
 
 For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
