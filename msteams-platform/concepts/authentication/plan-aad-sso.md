@@ -9,7 +9,7 @@ keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), 
 
 Azure Active Directory (Azure AD) is a cloud-based identity and access management service. It helps your app users access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Your users can also access internal resources, such as apps on your corporate network and intranet, along with any cloud apps from your own organization. It's a standards-based approach for adding single sign-on (SSO) authentication to your Teams app.
 
-Azure AD SSO is an authentication method that lets users sign in using one set of credentials to access and use multiple apps. Using SSO for Teams means a user doesn't have to sign in to the app at all. Users can access all needed applications without being required to authenticate using different credentials.
+**Azure AD SSO** is an authentication method that lets users sign in using one set of credentials to access and use multiple apps. Users can access all needed applications without being required to authenticate using different credentials.
 
 ## Prerequisites for Azure AD SSO
 
