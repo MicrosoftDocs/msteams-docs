@@ -114,7 +114,7 @@ items:
 
        Select **Type App**as `Multi Tenant`
 
-       :::image type="content" source="~/assets/images//meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
+       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
 
     1. Select **Review + create**.
 
@@ -184,7 +184,7 @@ items:
 
     1. Select **Apply**.
 
-          ![Select Teams](~/assets/images/meeting-token-generator-messages/messages.png)   
+          ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-messages.png)   
     
     **To create tunnel for local web server**
 
