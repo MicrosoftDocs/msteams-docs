@@ -86,7 +86,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | --- | --- |
 | 1 | Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information. |
 | 2 | Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company. |
-| 3 | Are there any personalized notifications or messages that will need to be sent to a user throughout the Teams app experience? |
+| 3 | Are there any personalized notifications or messages that needs to be sent to a user throughout the Teams app experience? |
 
 </details>
 <br>
