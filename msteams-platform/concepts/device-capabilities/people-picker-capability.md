@@ -9,20 +9,18 @@ ms.author: surbhigupta
 
 # Integrate People Picker
 
-People Picker is a native capability and control in Teams, which allows user to search and select people. Teams integrates native People Picker input control on both web and desktop apps. User can perform different functions like searching within a chat, a channel, or across the organization by selecting single or multiple configurations of the control.
+People Picker is a native capability and control in Teams and allows user to search and select people. Teams app developers can integrate People Picker input control in their web apps which allows end users to perform different functions like searching and selecting people within a chat, a channel, or across the organization. The People Picker control is available across all Teams clients - web, desktop, and mobile.
 
-<!-- The control can be selected for single or multiple configurations, such as limiting search within a chat, channel, or across the entire organization. -->
-
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate People Picker within your mobile and desktop app.
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate People Picker within your web app.
 
 ## Advantages of integrating People Picker
 
 * People Picker control works on all Teams platforms, such as task module, a chat, channel, meeting tab, and personal app.
 * The control allows the user to search and select user in a chat, channel, or the entire organization.
 * People Picker helps with scenarios involving task assignment, tagging and notifying a user.
-* The control can be used in both web and desktop, as it saves the effort and time significantly to build a similar control.
+* The control saves the effort and time significantly to build a similar control.
 
-To integrate People Picker control in your Teams app select the API, `selectPeople`. To integrate and call the API, user must know about [code snippet](#code-snippet). User also needs familiarity with [API response errors](#error-handling) to handle any errors in web and desktop app.
+To integrate People Picker control in your Teams app select the API, `selectPeople`. To integrate and call the API, user must know about [code snippet](#code-snippet). You also need familiarity with [API response errors](#error-handling) to handle any errors in web app.
 
 ## `selectPeople` API
 
@@ -30,7 +28,7 @@ The `selectPeople` API enables users to add Teams native `People Picker input co
 
 | API | Description  |
 | --- | --- |
-|`selectPeople`| • Launches People Picker and allows the user to search and select one or more people from the list.<br/>  • This API returns the ID, name and email address of selected users to the web or desktop app.<br/> • In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
+|`selectPeople`| • Launches People Picker and allows the user to search and select one or more people from the list.<br/>  • This API returns the ID, name and email address of selected users to the web app.<br/> • In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
 
 The `selectPeople` API comes with the following input configurations:
 
@@ -41,18 +39,13 @@ The `selectPeople` API comes with the following input configurations:
 |`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|False|
 |`singleSelect`|Boolean|It is an optional parameter. When set to true it launches the People Picker and restricts the selection to only one user.|False|
 
-The following image shows the experience of People Picker using mobile and desktop:
+The following image displays the experience of People Picker on mobile and desktop:
 
-# [Mobile app](#tab/Samplemobileapp)
+# [Mobile experience](#tab/Samplemobileapp)
 
 :::image type="content" source="../../assets/images/tabs/people-picker-control-capability.png" alt-text="People picker control capability mobile":::
 
-# [Desktop app](#tab/Sampledesktop)
-
-The desktop app allows you to do a search based on the following:
-
-* Search using name
-* Search using email address
+# [Desktop experience](#tab/Sampledesktop)
 
 :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name" border="true":::
 
@@ -88,13 +81,12 @@ The following code snippet displays use of `selectPeople` API to select people f
 The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
-| --------- | --------------- | -------- |
+| --------- | --------------- | --------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error encountered while launching People Picker.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrading the build resolves the issue.|
-
 
 ## See also
 
