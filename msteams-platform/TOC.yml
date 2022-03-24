@@ -86,26 +86,23 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
-   - name: Overview 
+   - name: Overview of Tools in IDE
      items:
-     - name: Teams Toolkit 
-       href: toolkit/teams-toolkit-fundamentals.md
-     - name: Install Teams Toolkit in IDE
-       href: toolkit/teams-toolkit-fundamentals.md
-       items:
         - name: Teams Toolkit in Visual Studio Code
           items:
-          - name: Create new app
+          - name: Create a new app
             href: toolkit/create-new-project.md
-          - name: Prepare accounts to build app
+          - name: Accounts to build the app
             href: toolkit/accounts.md
+          - name: Custom app upload
+            href: toolkit/accounts.md  
           - name: Debug the app locally
             href: toolkit/debug-local.md 
           - name: Provision cloud resources
             href: toolkit/provision.md
-          - name: Deploy Teams app to the cloud
+          - name: Deploy app to the cloud
             href: toolkit/deploy.md
-          - name: Publish Teams apps using Teams Toolkit 
+          - name: Publish apps using Toolkit 
             href: toolkit/publish.md
           - name: Toolkit FAQ  
             href: toolkit/publish.md
@@ -121,15 +118,17 @@
               href: toolkit/TeamsFx-manifest-preview.md
             - name: Manage multiple environments
               href: toolkit/TeamsFx-multi-env.md
-            - name: Collaborating using Toolkit
+            - name: Collaborate using Toolkit
               href: toolkit/TeamsFx-collaboration.md
         - name: Teams Toolkit in Visual Studio
           href: toolkit/visual-studio-overview.md
           items:
           - name: Build Blazor app
             href: sbs-gs-blazorapp.yml
-     - name: Software Development Kits
-       items:
+        - name: Teams Toolkit in Command Line Interface
+          href: toolkit/teamsfx-cli.md    
+   - name: Software Development Kits       
+     items:
         - name: JavaScript client SDK and versions
           href: tabs/how-to/using-teams-client-sdk.md
         - name: JavaScript client SDK v2 Preview
