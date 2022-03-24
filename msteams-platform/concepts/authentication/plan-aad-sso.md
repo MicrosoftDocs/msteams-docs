@@ -45,11 +45,9 @@ Here's a look at features Azure AD SSO authentication method:
 
 :::image type="content" source="../../assets/images/authentication/teams-sso-story/aad-sso-features.png" alt-text="SSO for Teams features ":::
 
-| # | Feature | What it means for you |
-| --- | --- | --- |
-| 1. | Single sign-on | The user needs to log into the app only once.  |
-| 2. | Single identity | &nbsp; |
-| 3. | Secure user access | &nbsp; |
-| 4. | Secure user data | &nbsp; |
-| 5. | Customized user experience | &nbsp; |
-| 6. | Administrative and overhead costs | &nbsp; |
+1. Single sign-on: The user needs to log into the app only once.
+2. Single identity: The user is able to use multiple resources and services with a single identity that is authenticated by Azure AD.
+3. Secure user access: The user access is made secure as the login credentials are needed only once.
+4. Secure user data: The user data remains secure with one-time single access.  
+5. Customized user experience: App users often use the same set of apps and resources. When Azure AD manages your user's identity, each user can have a personalized experience based on their commonly used apps.
+6. Administrative and overhead costs: Low cost as the user password authentication is done only once. The user is logged in silently and Azure AD manages token lifecycle.
