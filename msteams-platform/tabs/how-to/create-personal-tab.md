@@ -287,7 +287,7 @@ Follow the below steps to create a personal tab:
 * [Generate your personal tab](#generate-your-personal-tab)
 * [Update your application](#update-your-application)
 * [Run your application](#run-your-application)
-* [Update your app package with Developer Portal](#update-your-app-package-with-developer-Portal)
+* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 * [Preview your app in Teams](#preview-your-app-in-teams)
 
 ### Generate your personal tab
@@ -450,7 +450,7 @@ Follow the below steps to create a personal tab:
 * [Generate your personal tab](#generate-your-personal-tab)
 * [Update your application](#update-your-application)
 * [Run your application](#run-your-application)
-* [Update your app package with Developer Portal](#update-your-app-package-with-developer-Portal)
+* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 * [Preview your app in Teams](#preview-your-app-in-teams)
 
 ### Generate your personal tab
