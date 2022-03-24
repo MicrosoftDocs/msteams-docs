@@ -52,78 +52,78 @@ Follow the below steps to create a personal tab:
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
 
-<details>
-<summary><b>Series of questions to update your **manifest.json** file</b></summary>
-
-**What is your solution name?**
-
-The solution name is your project name. You can accept the suggested name by selecting **Enter**.
-
-**Where do you want to place the files?**
-
-You're currently in your project directory. Select **Enter**.
-
-**Title of your Microsoft Teams app project?**
-
-The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
-
-**Your (company) name? (max 32 characters)**
-
-Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
-
-**Which manifest version would you like to use?**
-
-Select the default schema.
-
-**Quick scaffolding? (Y/n)**
-
-The default is yes; enter **n** to enter your Microsoft Partner ID.
-
-**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
-
-This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
-
-**What do you want to add to your project?**
-
-Select **( &ast; ) A Tab**.
-
-**The URL where you will host this solution?**
-
-By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
-
-**Would you like show a loading indicator when your app/tab loads?**
-
-Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
-
-**Would you like personal apps to be rendered without a tab header-bar?**
-
-Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
-
-**Would you like to include Test framework and initial tests? (y/N)**
-
-Choose **not** to include a test framework for this project. The default is no, enter **n**.
-
-**Would you like to include ESLint support? (y/N)**
-
-Choose not to include ESLint support. The default is no, enter **n**.
-
-**Would you like to use Azure Applications Insights for telemetry? (y/N)**
-
-Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
-
-**Default Tab Name (max 16 characters)?**
-
-Name your tab. This tab name is used throughout your project as a file or URL path component.
-
-**What kind of Tab would you like to create?**
-
-Use the arrow keys to select **Personal (static)**.
-
-**Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
-
-Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
-
-</details>
+    <details>
+    <summary><b>Series of questions to update your manifest.json file</b></summary>
+    
+    **What is your solution name?**
+    
+    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+    
+    **Where do you want to place the files?**
+    
+    You're currently in your project directory. Select **Enter**.
+    
+    **Title of your Microsoft Teams app project?**
+    
+    The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+    
+    **Your (company) name? (max 32 characters)**
+    
+    Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+    
+    **Which manifest version would you like to use?**
+    
+    Select the default schema.
+    
+    **Quick scaffolding? (Y/n)**
+    
+    The default is yes; enter **n** to enter your Microsoft Partner ID.
+    
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    
+    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    
+    **What do you want to add to your project?**
+    
+    Select **( &ast; ) A Tab**.
+    
+    **The URL where you will host this solution?**
+    
+    By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
+    
+    **Would you like show a loading indicator when your app/tab loads?**
+    
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+    
+    **Would you like personal apps to be rendered without a tab header-bar?**
+    
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+    
+    **Would you like to include Test framework and initial tests? (y/N)**
+    
+    Choose **not** to include a test framework for this project. The default is no, enter **n**.
+    
+    **Would you like to include ESLint support? (y/N)**
+    
+    Choose not to include ESLint support. The default is no, enter **n**.
+    
+    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
+    
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+    
+    **Default Tab Name (max 16 characters)?**
+    
+    Name your tab. This tab name is used throughout your project as a file or URL path component.
+    
+    **What kind of Tab would you like to create?**
+    
+    Use the arrow keys to select **Personal (static)**.
+    
+    **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+    
+    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+    
+    </details>
 
 ### Manifest update
 
