@@ -32,8 +32,22 @@ This page seeks to let you compare authentication methods based on:
 Your Teams app can be distributed as a Teams client app, web app, mobile app, or across all platforms. Plan authentication for all the ways that you plan to distribute your app.
 
 - Desktop app accessible from within Teams Client.
-- Teams web app.
-- Teams mobile app.
+- Teams web app
+- Teams mobile app
+
+<!-- Compare authentication for app capabilities
+In Teams, your app can have capabilities, such as a tab or bot, or messaging extension. Your app can a single- or multi-capability app.
+
+This section explores the authentication required for different app capability in Teams for single- and multi-capability apps.
+
+ 	Teams SSO with Azure AD	Azure AD as IdP	Authentication with third-party IdPs
+Tabs	You can build your applications with almost seamless authentication. The user only needs to consent the usage of their Teams app once.	The user needs to enter their user credentials once for using your app.	The user may need to sign-in multiple times, and your app needs to handle ID and access tokens.
+Bots	The user is redirected to provide consent only once.	--	--
+Messaging extensions	--	--	--
+Link unfurling	--	--	--
+Task modules	--	--	--
+Apps for Teams meetings	--	--	--
+Multi-capability app	--	--	-->
 
 ## Next step
 
