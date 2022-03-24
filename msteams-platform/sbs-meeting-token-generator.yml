@@ -112,6 +112,10 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
+       Select **Type App**as `Multi Tenant`
+
+       :::image type="content" source="../assets/images//meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
+
     1. Select **Review + create**.
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
@@ -182,9 +186,9 @@ items:
 
           ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
 
-    1. Select **Save**.
+    1. Select **Apply**.
 
-          ![Select Teams](~/assets/images/meeting-token-generator/config-teams.png)   
+          ![Select Teams](~/assets/images/meeting-token-generator-messages/messages.png)   
     
     **To create tunnel for local web server**
 
