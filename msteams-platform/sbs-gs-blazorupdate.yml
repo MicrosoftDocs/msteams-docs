@@ -209,8 +209,6 @@ items:
 
         1. Select the **Tab app** as the capability for your app.
 
-        1. Ensure to select the correct Microsoft 365 account with E5 subscription. 
-
         1. Select **Create**.
 
         Your Teams app is created in a few seconds.
@@ -284,7 +282,7 @@ items:
 
        Congratulations, your first tab app is running in your local environment!
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app.png" alt-text="Screenshot of the completed app" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot of the completed app" border="true":::
 
     1. Move through the page to view the user details.
 
@@ -340,7 +338,7 @@ items:
 
     1. Select **Provision** 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::  
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Select the provision operation for the project" border="false":::  
         
         Provision warning displays. 
 
@@ -385,7 +383,7 @@ items:
 
     1. Move through the page to view the user details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-azure.png" alt-text="Screenshot of the Authorize button to access user information" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of the Authorize button to access user information" border="true":::
 
     1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
@@ -397,7 +395,7 @@ items:
 
         Your photograph and details appear in your **Personal Tab**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/tab-azure.png" alt-text="Screenshot showing user information in the tab" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info" alt-text="Screenshot showing user information in the tab" border="true":::
 
 - title: Congratulations!
   durationInMinutes: 1
