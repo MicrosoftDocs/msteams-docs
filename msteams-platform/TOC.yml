@@ -20,6 +20,8 @@
   items:
   - name: Get started overview
     href: get-started/get-started-overview.md  
+  - name: Build your first app using Blazor
+    href: sbs-gs-blazorapp.yml
   - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first app using SPFx
@@ -42,6 +44,8 @@
     href: concepts/design/planning-checklist.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+  - name: Plan to monetize your app
+    href: concepts/design/plan-to-monetize.md
 - name: Design your app
   items:
   - name: Overview
@@ -82,12 +86,16 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
-  - name: Teams Toolkit for Visual Studio Code
+  - name: Teams Toolkit for Visual Studio Code 
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create new project
+    - name: Create a new Teams app
       href: toolkit/create-new-project.md
+    - name: Debug your Teams app locally
+      href: toolkit/debug-local.md
+    - name: Debug background processes
+      href: toolkit/debug-background-process.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
     - name: Provision cloud resources
@@ -110,10 +118,10 @@
       href: toolkit/TeamsFx-collaboration.md
     - name: CI/CD guide
       href: toolkit/use-CICD-template.md
-    - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
+  - name: Teams Toolkit CLI
+    href: toolkit/TeamsFx-CLI.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
@@ -283,8 +291,6 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Unified meetings apps
     href: apps-in-teams-meetings/meeting-app-extensibility.md
-  - name: Prerequisites for apps in Teams meetings
-    href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
@@ -475,16 +481,16 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
-  - name: Monetize your app
-    items:
-    - name: Overview
-      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: Include a SaaS offer with your app
-      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    - name: In-app purchases
-      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-    - name: Test preview for monetized apps
-      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+- name: Monetize your app
+  items:
+  - name: Overview
+    href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+  - name: Include a SaaS offer with your app
+    href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+  - name: In-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+  - name: Test preview for monetized apps
+    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
   items:
     - name: App manifest schema

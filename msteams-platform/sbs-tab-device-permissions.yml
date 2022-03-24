@@ -34,6 +34,7 @@ items:
     * Install [Node.js](https://nodejs.org/en/).
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
+    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
 - title: Configure and run the Tab device permissions app on Teams
   durationInMinutes: 1
