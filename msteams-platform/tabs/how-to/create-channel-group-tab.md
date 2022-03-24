@@ -5,17 +5,14 @@ description: A quickstart guide to creating a channel and group tab with the Yeo
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
+zone_pivot_groups: teams-app-environment
 ---
 
 # Create a channel or group tab
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
-Choose your environment to build channel or group tab from **Node.js**, **ASP.NET Core**, or **ASP.NET Core MVC**.
-
-## Create a custom channel or group tab
-
-# [Node.js](#tab/nodejs)
+::: zone pivot="node-java-script"
 
 ### Create a custom channel or group tab with Node.js
 
@@ -32,6 +29,7 @@ To create custom channel and group tab with Node.js:
     ```cmd
     npm install generator-teams --global
     ```
+
 ### Generate your channel or group tab
 
 1. At a command prompt, create a new directory for your channel or group tab.
@@ -203,7 +201,9 @@ gulp ngrok-serve
 
     ![Channel tab uploaded](../../assets/images/tab-images/channeltabuploaded.png)
 
-# [ASP.NET Core](#tab/aspnetcore)
+::: zone-end
+
+::: zone pivot="razor-csharp"
 
 ### Create a custom channel or group tab with ASP.NET Core
 
@@ -225,16 +225,16 @@ You can create a custom channel or group tab using C# and ASP.NET Core Razor pag
 
 In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* https://localhost:44364/
-* https://localhost:44364/privacy
-* https://localhost:44364/tou
+* https://localhost:3978/
+* https://localhost:3978/privacy
+* https://localhost:3978/tou
 
 ### Establish a secure tunnel to your tab for Teams
 
 To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
 
 ```cmd
-ngrok http 44364 --host-header=localhost
+ngrok http 3978 --host-header=localhost
 ```
 
 Ensure that you keep the command prompt with ngrok running and make a note of the URL.
@@ -343,7 +343,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     ![Channel tab ASPNET uploaded](../../assets/images/tab-images/channeltabaspnetuploaded.png)
 
-# [ASP.NET Core MVC](#tab/aspnetcoremvc)
+::: zone-end
+
+::: zone pivot="mvc-csharp"
 
 ### Create a custom channel or group tab with ASP.NET Core MVC
 
@@ -365,16 +367,16 @@ You can create a custom channel or group tab using C# and ASP.Net Core MVC.
 
 In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* https://localhost:44303/
-* https://localhost:44303/privacy
-* https://localhost:44303/tou
+* https://localhost:3978/
+* https://localhost:3978/privacy
+* https://localhost:3978/tou
 
 ### Establish a secure tunnel to your tab for Teams
 
 To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
 
 ```cmd
-ngrok http 44303 --host-header=localhost
+ngrok http 3978 --host-header=localhost
 ```
 
 Ensure that you keep the command prompt with ngrok running and make a note of the URL.
@@ -481,6 +483,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Add to team** to load the tab on Teams. Your tab is now available in Teams.
     ![Channel tab ASPNET MVC uploaded](../../assets/images/tab-images/channeltabaspnetmvcuploaded.png)
+
+::: zone-end
 
 ## Next step
 
