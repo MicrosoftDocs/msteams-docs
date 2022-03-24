@@ -169,6 +169,6 @@ To provide feedback, see [App template feedback](https://forms.office.com/Pages/
 ## See also
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-* [Understand Microsoft Teams app capabilities](../concepts/design/understand-use-cases.md)
+* [Understand your use cases](../concepts/design/understand-use-cases.md)
 * [Designing your personal app for Microsoft Teams](../concepts/design/personal-apps.md)
 * [Design System](../concepts/design/design-teams-app-fundamentals.md)
