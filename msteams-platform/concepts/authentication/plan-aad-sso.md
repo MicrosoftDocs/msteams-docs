@@ -5,23 +5,23 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), OIDC, username, password
 ---
-# Authenticate with Teams assisted SSO with Azure AD
+# Authenticate with Azure AD SSO as IdP
 
 Azure Active Directory (Azure AD) is a cloud-based identity and access management service. It helps your app users access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. Your users can also access internal resources, such as apps on your corporate network and intranet, along with any cloud apps from your own organization.
 
 Use Azure AD as a standards-based approach for adding single sign-on (SSO) to your Teams app. SSO is an authentication method that lets users sign in using one set of credentials to access and use multiple apps. Using SSO for Teams means a user doesn't have to sign in to the app at all. Users can access all needed applications without being required to authenticate using different credentials.
 
-## Prerequisites for Teams assisted SSO with Azure AD
+## Prerequisites for Azure AD SSO
 
-Some prerequisites for implementing authentication with Teams assisted SSO with Azure AD are:
+Some prerequisites for implementing authentication with Azure AD SSO are:
 
 - **Create a Teams app**: Your Teams app can have single or multiple capabilities, such as tabs, bots, messaging extensions, and more. Teams offers a different UI and UX experience for each feature.
 - **Register your app with Azure AD**: Establish a trust relationship between Azure AD and your Teams app. Azure AD serves as an IdP for your app users and will be able to authenticate them. To register your app, provide app ID, configure access permissions, and define scope for user access on the Azure portal.
 - **Register users with Azure AD**: All valid app users are registered with Azure AD. Users registered with Azure AD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.
 
-## Teams assisted SSO with Azure AD user experience
+## Azure AD SSO user experience in Teams
 
-\ Add UI/UX for Teams assisted SSO with Azure AD \
+\ Add UI/UX for Azure AD SSO \
 
 ## Role of Azure AD in authentication
 
@@ -39,9 +39,9 @@ Azure AD is the main identity provider (IdP) for validating access to Azure-base
 | 4 | On a successful match, AAD sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to let the user access at subsequent log ins. |
 | 5 | The user is given access once and for all. | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
 
-## Features of Teams assisted SSO with Azure AD
+## Features of Azure AD SSO
 
-Here's a look at features Teams assisted SSO with Azure AD authentication method:
+Here's a look at features Azure AD SSO authentication method:
 
 :::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-features.png" alt-text="SSO for Teams features ":::
 
