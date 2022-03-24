@@ -24,8 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Moodle LMS and Microsoft 365 plugins
-        url: ~/resources/moodle-overview.md
+      - text: Debug your Teams app 
+        url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -44,22 +44,8 @@ landingContent:
         url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
       - text: Authentication using external OAuth providers  
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
-      
-      
-- title: All time favorites
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Guidelines for apps linked to SaaS offers
-        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-      - text: Microsoft Teams store validation guidelines
-        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-      - text: Monetize your Teams app with a transactable SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: Explore low-code apps for Teams
-        url:  ~/samples/teams-low-code-solutions.md 
-        
-        
+
+
 - title: Get started
   linkLists:
     - linkListType: get-started
@@ -70,6 +56,8 @@ landingContent:
         url: /contribute/additional-resources
     - linkListType: tutorial
       links:
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorapp.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
       - text: Build app with SPFx
@@ -78,6 +66,22 @@ landingContent:
         url: sbs-gs-csharp.yml
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
+
+
+- title: Monetize your app
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Guidelines for apps linked to SaaS offers
+        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
+      - text: Microsoft Teams store validation guidelines
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+      - text: Monetize your Teams app with a transactable SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: In-app purchases
+        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+      - text: Test preview for monetized apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md 
 
 - title: Build apps for Teams
   linkLists:
@@ -95,6 +99,8 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
+     
+
 
 - title: Build app capabilities
   linkLists:
@@ -116,6 +122,7 @@ landingContent:
       url: ../msteams-platform/resources/schema/manifest-schema.md
     - text: Public developer preview manifest schema
       url: ~/resources/schema/manifest-schema-dev-preview.md  
+
 
 - title: Step-by-step guides
   linkLists:        
@@ -153,6 +160,8 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
 - title: Teams app scenarios
@@ -162,8 +171,9 @@ landingContent:
     - text: Build scenarios for Teams app
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
- 
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
+    - text: Explore low-code apps for Teams
+      url:  ~/samples/teams-low-code-solutions.md
 - title: Publish and distribute
   linkLists:
   - linkListType: concept
