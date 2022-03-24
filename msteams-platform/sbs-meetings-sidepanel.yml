@@ -103,7 +103,8 @@ items:
 
     1. Select **Type of App** as `Multi Tenant`
 
-       :::image type="content" source="../assets/images/meetings-side-panel/Review-Create.png" alt-text="Multi Tenant" border="true":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/Review-Create.png" alt-text="Multi Tenant" border="true":::
+    
     1. Select **Review + create**.
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
