@@ -373,14 +373,15 @@ items:
 - content: |
     You have completed the tutorial. Now you can upload files from bot to Microsoft Teams.
 
-    **Points to remember**
-    
-    1. Select **Type of App** as  `Multi Tenant`.
+-  title: Points to remember
+   durationInMinutes: 1
+   content: |
+     1. Select **Type of App** as  `Multi Tenant`.
 
-    1. Select **msteams.nonprod.pub.msft.aplt** from subscribtion dropdown list.
+     1. Select **msteams.nonprod.pub.msft.aplt** from subscribtion dropdown list.
 
-    1. Select **Microsoft Teams** from channels.
+     1. Select **Microsoft Teams** from channels.
 
-    1. Change value to `2` in Manifest.
+     1. Change value to `2` in Manifest.
 
  
