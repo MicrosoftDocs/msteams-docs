@@ -8,17 +8,17 @@ ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 
-# Create a channel or group tab
+# Channel or group tab
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
 ::: zone pivot="node-java-script"
 
-### Create a custom channel or group tab with Node.js
+## Create a custom channel or group tab with Node.js
 
 To create custom channel and group tab with Node.js:
 
-1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
+1. At a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
     ```cmd
     npm install yo gulp-cli --global
@@ -29,6 +29,12 @@ To create custom channel and group tab with Node.js:
     ```cmd
     npm install generator-teams --global
     ```
+
+Follow the below steps to create a channel or group tab:
+
+* [Generate your channel or group tab](#generate-your-channel-or-group-tab)
+* [Build and run your application](#build-and-run-your-application)
+* [Upload your application to Teams](#upload-your-application-to-teams)
 
 ### Generate your channel or group tab
 
@@ -43,6 +49,9 @@ To create custom channel and group tab with Node.js:
 1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+
+    <details>
+    <summary><b>Series of questions to update your manifest.json file</b></summary>
 
     **What is your solution name?**
 
@@ -120,10 +129,12 @@ To create custom channel and group tab with Node.js:
 
     Enter **n**.
 
-    > [!IMPORTANT]
-    > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
-    >
-    > For example: DefaultTabName is **MyTab** then **/MyTabTab/**
+    </details>
+
+> [!IMPORTANT]
+> The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+>
+> For example: DefaultTabName is **MyTab** then **/MyTabTab/**
 
 ### Build and run your application
 
@@ -178,8 +189,13 @@ gulp ngrok-serve
 
 1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 1. From your teams on the left pane, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
-1. In the main pane, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
-1. Go your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
+1. In left pane of Teams, select **Store** icon.
+1. Select **Manage your apps** > **Publish an app**.
+1. Choose **Upload a custom app**.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams." border="true":::
+
+1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
 
     ![Channel tab added](../../assets/images/tab-images/channeltabadded.png)
 
@@ -205,7 +221,7 @@ gulp ngrok-serve
 
 ::: zone pivot="razor-csharp"
 
-### Create a custom channel or group tab with ASP.NET Core
+## Create a custom channel or group tab with ASP.NET Core
 
 You can create a custom channel or group tab using C# and ASP.NET Core Razor pages. To create a channel or group tab with ASP.NET Core Razor pages:
 
@@ -216,6 +232,14 @@ You can create a custom channel or group tab using C# and ASP.NET Core Razor pag
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
+
+Follow the below steps to create a channel or group tab:
+
+* [Generate your channel or group tab](#generate-your-channel-or-group-tab)
+* [Update your application](#update-your-application)
+* [Build and run your application](#build-and-run-your-application)
+* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
+* [Preview your app in Teams](#preview-your-app-in-teams)
 
 ### Generate your channel or group tab
 
@@ -290,7 +314,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Save the updated **Tab.cshtml**.
 
-### Build and run your application for Teams
+### Build and run your application
 
 1. In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu.
 
@@ -347,7 +371,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ::: zone pivot="mvc-csharp"
 
-### Create a custom channel or group tab with ASP.NET Core MVC
+## Create a custom channel or group tab with ASP.NET Core MVC
 
 You can create a custom channel or group tab using C# and ASP.Net Core MVC. 
 
@@ -358,6 +382,14 @@ You can create a custom channel or group tab using C# and ASP.Net Core MVC.
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
+
+Follow the below steps to create a channel or group tab:
+
+* [Generate your channel or group tab](#generate-your-channel-or-group-tab)
+* [Update your application](#update-your-application)
+* [Build and run your application](#build-and-run-your-application)
+* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
+* [Preview your app in Teams](#preview-your-app-in-teams)
 
 ### Generate your channel or group tab
 
@@ -371,7 +403,7 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 * https://localhost:3978/privacy
 * https://localhost:3978/tou
 
-### Establish a secure tunnel to your tab for Teams
+### Establish a secure tunnel to your tab
 
 To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
 
@@ -432,7 +464,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Make sure to save the updated **Tab.cshtml**.
 
-### Build and run your application for Teams
+### Build and run your application
 
 1. In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu.
 
