@@ -160,6 +160,8 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
 - title: Teams app scenarios
