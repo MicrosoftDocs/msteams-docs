@@ -17,7 +17,7 @@ This page seeks to let you compare authentication methods based on:
 - App capability
 
 ## Compare authentication methods
-
+ 
 | &nbsp; | Teams SSO with Azure AD | Azure AD as IdP | Authentication with third-party IdPs |
 | --- | --- | --- | --- |
 | **Frequency of logging in** | User never needs to log into the app | User logs in once for all. | User may need to log in on a different browser. |
