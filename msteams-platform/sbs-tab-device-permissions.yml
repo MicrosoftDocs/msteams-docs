@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Tab device permissions
+title: Grant Tab device permissions
 metadata:
-  title: Tab device permissions
+  title: Grant Tab device permissions
   description: In this tutorial, you'll learn to give tab device permissions for Microsoft Teams apps.
   audience: Developer
   level: Beginner
@@ -18,11 +18,13 @@ items:
     > The latest update on how device permissions are handled in the browser is currently available in [public developer preview](resources/dev-preview/developer-preview-intro.md) only. 
     > This update will be generally available (GA) by February 01, 2022.
 
-    Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
+    Teams app that requires device permissions, such as location, camera, or microphone access, now allows the users to manually grant permission for the app in the web browser.
+    Previously, the browser handled how to grant access permissions, but now these permissions are handled in Teams.
 
-    This step-by-step guide helps you to do tab device permissions at Microsoft Teams. You'll see the following output:
+    This step-by-step guide helps you to grat tab device permissions at Microsoft Teams. You'll see the following output:
 
-      ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
+     :::image type="content" source="../assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG" alt-text="Desktop" border="true":::
+      
 
 
 - title: Prerequisites
@@ -64,7 +66,8 @@ items:
        ```
     6. You can see the following output in the browser:
 
-       ![react](~/assets/images/tab-device-permission/sbs-react.PNG)
+      :::image type="content" source="../~/assets/images/tab-device-permission/sbs-react.PNG" alt-text="react" border="true":::
+      
 
     **Begin your tunneling service to get an https endpoint:**
 
@@ -81,14 +84,15 @@ items:
     2. Open the **manifest.json** file in visual studio code.
     3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
-       ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)
+      :::image type="content" source="../assets/images/tab-device-permission/ngrok-tunnel.PNG alt-text="ngrok" border="true":::
+     
 
     4. Zip the files in the **appPackage/folder** as manifest.zip.
     5. Open Teams on browser using tenant ID.
     6. To upload **manifest.zip**, select **Apps > Upload a custom app** and open **manifest.zip**.
     7. Select **Tab Device Permission** app.
     8. Select **Add** to add the tab device permission app.
-
+        
         ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)
 
     9. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
@@ -114,13 +118,13 @@ items:
 
       To test the app on desktop, select **App Permission** icon and get the following prompts to accept permission request:
 
-       ![desktoppermissionteams](~/assets/images\tab-device-permission\desktop-teams-permission.png)
+       ![desktoppermissionteams](~/assets/images/tab-device-permission/desktop-teams-permission.png)
 
       # [Browser](#tab/Browser)
 
       To test the app in browser, select **Get Location** to see the following outputs:
 
-       ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)
+              ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)
 
      # [Mobile](#tab/Mobile)
 
