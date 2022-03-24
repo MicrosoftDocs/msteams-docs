@@ -103,9 +103,9 @@ items:
 
     1. Select **Type of App** as `Multi Tenant`
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/Review-Create.png" alt-text="Multi Tenant" border="true":::
-    
     1. Select **Review + create**.
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/Review-Create.png" alt-text="Multi Tenant" border="true":::
 
     1. If the validation passes, select **Create**. 
 
@@ -171,7 +171,7 @@ items:
 
     1. Select **Apply**.
 
-          ![Select Teams](~/assets/images/meetings-side-panel/config-teams1.png)   
+      :::image type="content" source="../assets/images/meetings-side-panel/MicrosoftTeams-Commercial.png" alt-text="Enable sideloading" border="false":::   
     
     **To create tunnel for local web server**
 
