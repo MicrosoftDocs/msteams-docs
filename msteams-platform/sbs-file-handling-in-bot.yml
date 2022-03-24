@@ -361,30 +361,31 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id.png" alt-text="replace bot id" border="false"::: 
 
-- title: Interacting with the bot in Teams
+- title: Build and run the service
   durationInMinutes: 2
   content: |
-    > [!NOTE]
-    >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
+     **To build and run the service using Visual Studio or Command line**
 
-    This guide shows how to communicate with the bot in various ways. Following are the steps that demonstrates the bot activities:
+     # [Visual Studio](#tab/visualstudio)
 
-    1. Send a message to the bot. It responds with a card for the permission to upload the file.
-       
-         ![prompt1](~/assets/images/teams-file-upload-bot/sbs-1.png)
+        1. Launch Visual Studio.
+        1. Navigate to **File** > **Open** > **Project/Solution**.
 
-    1. Select **Allow**. A `teams-logo.png` file is uploaded to the file directory, which is ready to download.
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-open-file.png" alt-text="visual studio" border="false":::      
+        
+        1. Select **TeamsFileUpload.csproj** file from **56.teams-file-upload** folder.
 
-         ![message prompt](~/assets/images/teams-file-upload-bot/sbs-2.png)
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/csproj-folder.png" alt-text="folder" border="false":::        
 
-    1. Send a file to the bot as an attachment in Teams. It responds with a message `Received and Saved`. You can view the attachment from the **Files** tab.
 
-         ![file prompt](~/assets/images/teams-file-upload-bot/sbs-3.png)
 
-    1. Send an image as an attachment. It responds with a message `Received and saved`. You can view the image on the chat window and from **Files** tab.
-       
-         ![Image prompt](~/assets/images/teams-file-upload-bot/sbs-4.png)
-    
+
+
+
+
+
+
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
