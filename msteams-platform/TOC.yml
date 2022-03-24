@@ -56,9 +56,9 @@
       href: concepts/authentication/plan-sso-teams.md
     - name: Authenticate using identity providers
       items:
-      - name: Authenticate with Teams assisted SSO with Azure AD
+      - name: Authenticate with Azure AD SSO as IdP
         href: concepts/authentication/plan-aad-sso.md
-      - name: Other authentication methods
+      - name: Authenticate with third-party IdPs
         href: concepts/authentication/plan-other-auth.md
       - name: Common extension scenarios
         href: concepts/authentication/common-extn.md
