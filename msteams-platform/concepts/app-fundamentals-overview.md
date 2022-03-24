@@ -16,9 +16,9 @@ At its heart, Teams is a collaboration platform. It's also a social platform, is
 
 In this section, learn how to:
 
-* Identify and map use cases to Teams features.
-* Use planning checklist.
-* Plan beyond app deployment.
+* Identify and map use cases to Teams features
+* Use planning checklist
+* Plan beyond app deployment
 
 ## Plan with Teams
 
@@ -47,7 +47,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
-* **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is backed by the integrated products and services that strengthen the app experience.
+* **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
@@ -71,9 +71,9 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 
 | Features   | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC-High. | ✔️ App is enabled if it has DOD. |
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
-| 3p or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
+| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
