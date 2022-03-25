@@ -157,7 +157,7 @@
   - name: .NET Bot Framework for bots and messaging extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-dotnet
   - name: Microsoft Graph SDKs
-    href: https://docs.microsoft.com/en-us/graph/sdks/sdks-overview
+    href: /graph/sdks/sdks-overview
   - name: Legacy SDKs
     items:
     - name: Bots SDK (v3)
