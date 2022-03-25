@@ -656,8 +656,8 @@ function handleFocusEnter(navigateForward: boolean): void
 After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines the type of events. The `focusEnterHandler` is invoked only by Ctrl+F6 and not by the tab key.
 The keys useful for move events within Teams are as follows:
 
-* Forward event -> Ctrl+F6 keys
-* Backward event -> Ctrl+Shift+F6 keys
+* Forward event: Ctrl+F6 keys
+* Backward event: Ctrl+Shift+F6 keys
 
 ``` C#
 
@@ -687,11 +687,11 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="true":::
 
-#### Personal app - Forward event
+#### Personal app: Forward event
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Example shows options for adding registerOnFocussed API forward move" border="true":::
 
-#### Personal app - Backward event
+#### Personal app: Backward event
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Example shows options for adding registerOnFocussed API backward move" border="true":::
 
