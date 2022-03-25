@@ -43,12 +43,12 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+   You install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -65,9 +65,7 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
-
-    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+    1. Open [BotBuilder Samples](https://github.com/microsoft/BotBuilder-Samples).
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
@@ -112,7 +110,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type App** as `Multi Tenant`.
+    1. Select **Type App** as **Multi Tenant**.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
 
