@@ -337,9 +337,9 @@ items:
       1. In **New Connection Setting**, enter the following details:
 
 
-        |Field|Value or description|
-        |-----|-----|
-        |**Name**|Enter name for your new connection setting. You can use the name in the settings of your bot service code.|
+        | Field | Value or description |
+        | ----- | ----- |
+        | **Name** | Enter name for your new connection. Youo can use the name in the settings of your bot service code.|
         |**Service Provider**|Select **Azure Active Directory V2**.|
         |**Client ID**|Saved previously as your **Microsoft App ID**.|
         |**Client secret**|Saved previously as **Value** of the client secret ID.|
