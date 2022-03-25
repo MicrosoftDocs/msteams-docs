@@ -116,12 +116,11 @@ The following table describes the behavior of app when it's validated and not va
 
 |App capability | App is validated | App isn't validated |
 |---|---|---|
-| Meeting extensibility | The app appears in meetings. |
-| Channel Meetings Support Meeting Extensibility | Meetings on Mobile can view apps, which can be accessed while you are in that channel meeting and are tied to that Post in the Channel. | Currently users can't add apps on Mobile meetings.
-| Channel Meetings Support Meeting Extensibility | This feature allows user to set up a meeting from a channel. It is an in-meeting experience, the users must be within the meeting. | Currently users can't add apps to meeting directly, apps are only added from desktop.
-| Channel Meetings Support Meeting Extensibility | Only Public Scheduled Channel meetings.  | Anonymous users for channel meetings won't work.
+| Meeting extensibility | The app will appear in meetings. |
+| Channel meeting supports meeting extensibility | Channel meeting allows user to set up a meeting from a channel, users can use apps in scheduled private channel meetings. It is an in-meeting experience for both desktop and mobile. |Currently users can't add apps to the meetings directly, apps are only added from desktop, it shows up on corresponding mobile meeting when added on desktop  |
+| Channel Meetings Supports Meeting Extensibility | Users can view apps, on mobile, which can be accessed while they are in that channel meeting. | External users are not allowed to participate in channel meetings.| Channel Meeting supports meeting extensibility | Click on the dropdown menu next to the meet  and select schedule a meeting, it leads an user to the calender and auto adds the team within the channel. |
 
-For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md). 
 
 #### Post-meeting app experience
 
@@ -208,6 +207,7 @@ The following table provides the user types and lists the features that each use
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
+| Channel meeting supports meeting extensibility for channel members | Available | Available | Available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are not allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 
 ## Next step
 
