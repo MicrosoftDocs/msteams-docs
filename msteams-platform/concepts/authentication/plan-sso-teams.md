@@ -65,6 +65,9 @@ Here's a look at features of Teams SSO with Azure AD:
 
 - **True SSO UX**: After a Teams app obtains access token for a user, the user never has to consent or sign in to the app. They may be using the desktop, Teams web, or mobile device. This access token remains valid for the user. This is true SSO user experience.
 
+> [!NOTE]
+> Note that this consent is valid for user-level Microsoft Graph API permissions, such as email and profile. For any other additional access to Microsoft Graph scopes, the user would need access token with Graph permission.
+
 - **Security**: The app users never have to sign in. Your Teams app can have any capability, such as tabs, bots, or messaging extensions. Teams SSO with Azure AD ensures a one-time sign-in for not just your Teams app, but all internal and external resources as needed.
 
 - **Efficient app loading**: The Teams has pre-fetched access tokens for your app users. This translates to faster loading time. Especially with Teams tab app, the access token is obtained from Azure AD when the user clicks on the tab before it's completely loaded. When the app requests access token, it's already available with Teams.
@@ -101,7 +104,7 @@ Here's what really happens at run time.
 1. Microsoft Teams requests a token for the tab application from the Azure AD endpoint for the current user.
 1. Azure AD sends the tab application token back to Teams.
 1. Microsoft Teams then sends the token back to the tab application.
-1. JavaScript in the tab application can parse the token and extract the information it needs, such as the user's email address. <sup>*</sup>
+1. The tab app can parse the token and extract the information it needs, such as the user's email address. <sup>*</sup>
 
 <sup>*</sup> The tab app can optionally exchange the token server-side for further Graph permissions.
 
@@ -111,17 +114,14 @@ Here's what really happens at run time.
 
 :::image type="content" source="../../assets/images/authentication/teams-sso-story/teams-sso-bots.png" alt-text="Authentication flow for Teams bot app":::
 
-1. The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property. It tells Microsoft Teams to obtain an authentication token for the bot application. The user receives messages at all the active user endpoints.
+1. The bot sends a request to Teams to obtain an authentication token for the bot application.
 
-1. If the current user is using your bot application for the first time, a request prompt is displayed, requesting the user to do one of the following:
+1. If the current user is using your bot application for the first time, a request prompt is displayed, requesting the user to provide consent.
 
-  - Provide consent, if necessary.
-  - Handle step-up authentication, such as two-factor authentication.
+1. Teams requests the Azure AD for an access token the current user.
 
-1. Microsoft Teams requests the bot application token from the Azure AD endpoint for the current user.
+1. Azure AD sends the access token to the Teams.
 
-1. Azure AD sends the bot application token to the Microsoft Teams application.
+1. Teams sends the token to the bot.
 
-1. Microsoft Teams sends the token to the bot as part of the value object returned by the invoke activity with the name `sign-in/tokenExchange`.
-
-1. The parsed token in the bot application provides the required information, such as the user's email address.
+1. The bot app can parse the token and extract the information it needs, such as the user's email address.
