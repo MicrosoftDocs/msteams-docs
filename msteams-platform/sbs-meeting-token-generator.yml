@@ -116,7 +116,7 @@ items:
 
     1. Select **Type App** as **Multi Tenant**.
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png" alt-text="multi tenant" border="false":::
+        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png" alt-text="multi tenant" border="true":::
 
     1. Select **Review + create**.
 
@@ -128,11 +128,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/meeting-token-generator/meeting-token-generator-botdeployment.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-meeting-token-generator-bot-deployment.png" alt-text="bot" border="true":::
 
         Your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/meeting-token-generator/meeting-token-generator-bot-page.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-created.png" alt-text="bot home" border="true":::
 
     **To create client secret**
 
@@ -145,23 +145,23 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-config.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-microsoft-app-id.png" alt-text="microsoft app id" border="true":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
-    
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-client-secret" alt-text="secret" border="true":::
+       
        The **Add a client secret** window appears.  
 
     1. Enter **Description**.
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-add-client secret.png" alt-text="client" border="true":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-new-client-secret.png" alt-text="new client" border="true":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -170,7 +170,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/meeting-token-generator/meeting-token-generator-gotohome.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-home-page.png" alt-text="page" border="true":::
 
     1. Select your bot from **Recent resources**.
 
@@ -182,11 +182,11 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-agree.png" alt-text=" agree" border="true":::
 
     1. Select **Apply**.
 
-          ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-messages.png)   
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-messages" alt-text="messages" border="true":::   
     
     **To create tunnel for local web server**
 
@@ -207,7 +207,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/meeting-token-generator/meeting-token-generator-ngrok.png)
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-ngrok-page.png" alt-text="ngrok" border="true":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -217,7 +217,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/meeting-token-generator/meeting-token-generator-messaging-endpoint.png)
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-message-endpoint.png" alt-text="end point" border="true":::
 
     1. Select **Apply**.
 
