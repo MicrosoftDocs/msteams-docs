@@ -416,11 +416,11 @@
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
-    href: https://docs.microsoft.com/graph/teams-concept-overview
+    href: /graph/teams-concept-overview
   - name: Microsoft Graph Toolkit
-    href: https://docs.microsoft.com/graph/toolkit/overview
+    href: /graph/toolkit/overview
   - name: Get started
-    href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
+    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
   - name: Proactive installation of apps using Graph API to send messages
