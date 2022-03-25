@@ -115,7 +115,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 |--|--|
 | Teams | `teams.microsoft.com` |
 | Office | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com` |
+| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## Update Azure AD app registration for SSO
 
