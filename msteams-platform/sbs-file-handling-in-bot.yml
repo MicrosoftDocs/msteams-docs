@@ -17,6 +17,7 @@ items:
    The bot can directly send and receive files with users in the personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
 
    **Key features of upload file in Teams using bot** 
+   
      * Upload files to Teams using a bot.
      * Receive a file sent to bot as an attachment.
      * Fetch inline images sent in message.
