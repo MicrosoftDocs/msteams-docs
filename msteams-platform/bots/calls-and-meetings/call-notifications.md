@@ -90,3 +90,8 @@ For more information, see [validate inbound requests](https://github.com/microso
 
 > [!div class="nextstepaction"]
 > [Requirements and considerations for application-hosted media bots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+
+## See also
+
+* [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
