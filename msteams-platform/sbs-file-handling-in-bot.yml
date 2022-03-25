@@ -14,8 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The bot is created using Bot Framework. It shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. 
-   It also shows how to fetch inline images sent in message.
+   The bot can directly send and receive files with users in the personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
+
+   **Key features of upload file in Teams using bot**
+     
+       * Upload files to Teams using a bot.
+       * Receive a file sent to bot as an attachment.
+       * Fetch inline images sent in message.
     
    This step-by-step guide helps you to upload file in Teams using bot. You'll see the following output:
 
@@ -272,7 +277,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-web.png" alt-text="client id web" border="true":::
 
-       The following image displays the **Client Ids**:
+       The following image displays the **Client Id**:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-ids.png" alt-text="shows ids" border="true":::   
 
@@ -460,7 +465,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-file-bot.png" alt-text="add" border="true"::: 
 
-       1. In the compose message area, type `Hi` and wait for few seconds for it to respond with a card.
+       1. In the compose message area, type `hi` and wait for few seconds for it to respond with a card.
 
           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot" border="true":::
  
