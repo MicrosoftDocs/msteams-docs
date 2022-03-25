@@ -107,58 +107,58 @@ items:
 
      **To create client secret**
 
-     Perform the following steps if you have created a new **Microsoft App ID**:
+       Perform the following steps if you have created a new **Microsoft App ID**:
 
-        1. In the left panel, select **Configuration**.
+    1. In the left panel, select **Configuration**. 
 
-           > [!TIP]
-           > Save the **Microsoft App ID** or **Client ID** for future reference.
+       > [!TIP]
+       > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-        1. Next to **Microsoft App ID**, select **Manage**.
+    1. Next to **Microsoft App ID**, select **Manage**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manage.png" alt-text="select manage" border="true":::
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/config1.png" alt-text="Azure bot resource created" border="true":::
 
-        1. In the **Client secrets** section, select **New client secret**.
+    1. In the **Client secrets** section, select **New client secret**. 
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/new-client-secret.png" alt-text="adding client secret" border="true":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret" border="true":::
+            
+       The **Add a client secret** window appears.
 
-           The **Add a client secret** window appears. 
-
-        1. Enter **Description**.
-
-        1. Select **Add**.
+    1. Enter **Description**.
     
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-client-secret.png" alt-text="adding client secret and description" border="true"::: 
+    1. Select **Add**.
 
-        1. In the **Value** column, select **Copy to clipboard**.
-
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/copy-value.png" alt-text="copy value to clipboard" border="true":::
-
-            > [!TIP]
-            > Save the **Client secrets** value or app password for future reference. 
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientsecret.png" alt-text="Add client secret to app" border="true":::
        
-     **To add the Teams channel:**
+    1. In the **Value** column, select **Copy to clipboard**.
 
-        1. Select **Home**.
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/clientvalue.png" alt-text="Value of client secret" border="true":::
+             
+       > [!TIP]
+       > Save the **Client secrets** value or app password for future reference.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/go-to-home.png" alt-text="select home" border="true":::    
+     **To add the Teams channel**
 
-        1. Select your bot from **Recent resources**.
+    1. Select **Home**.
 
-        1. Select **Channels** in the left pane.
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/gotohome.png" alt-text="Home page" border="true":::
+       
+    1. Select your bot from **Recent resources**.
 
-        1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+    1. Select **Channels** in the left pane. 
 
-        1. Select the checkbox to accept the **Terms of Service**.
+    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-        1. Select **Agree**.
-   
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/terms.png" alt-text="select terms" border="true":::
+    1. Select the checkbox to accept the **Terms of Service**.
+    
+    1. Select **Agree**.
 
-        1. Select **Apply**.
+       :::image type="content" source="~/assets/images/meetings-side-panel/terms.png" alt-text="Terms of service" border="true":::
+      
+    1. Select **Save**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams.png" alt-text="microsoft teams" border="true":::
-
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/configteams.png" alt-text="Select Teams" border="true":::
+      
     **To create tunnel for local web server**
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
