@@ -340,7 +340,7 @@ items:
           * **Service Provider** select `Azure Active Directory V2`.
           * **Client ID** your `Microsoft App ID`.
           * **Client secret** `Value of the client secret ID`.
-          * **Token Exchange URL** Use the `Application ID URI` obtained previously while exposing API endpoint.
+          * **Token Exchange URL** use the `Application ID URI` obtained previously while exposing API endpoint.
           * **Tenant ID** enter `common`.
           * **Scopes** enter `User.Read`.
      
