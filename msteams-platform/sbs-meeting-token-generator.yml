@@ -237,13 +237,13 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/meeting-token-generator/meeting-token-generator-appregister.png)
-
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-app-register.png" alt-text="register" border="true":::
+   
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/meeting-token-generator/meeting-token-generator-exposeanapi.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-set.png" alt-text="set" border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
