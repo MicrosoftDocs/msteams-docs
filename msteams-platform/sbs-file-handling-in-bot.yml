@@ -188,7 +188,7 @@ items:
         
        1. Select **Apply**.
 
-        You have successfully set up a bot in Azure Bot Service.
+          You have successfully set up a bot in Azure Bot Service.
    
 - title: Update the Azure AD app registration
   durationInMinutes: 5
