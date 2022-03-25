@@ -96,7 +96,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep.md).
+Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep](/azure/azure-resource-manager/bicep/).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
