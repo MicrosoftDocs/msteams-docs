@@ -714,19 +714,19 @@
       },
       {
         "source_path": "msteams-platform/sbs-gs-blazor.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview.md"
+        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
       },
       {
         "source_path": "msteams-platform/concepts/capabilities-overview.md",
-        "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md" 
+        "redirect_url": "/microsoftteams/platform/concepts/design/understand-use-cases" 
       },
       {
         "source_path": "msteams-platform/concepts/extensibility-points.md",
-        "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md" 
+        "redirect_url": "/microsoftteams/platform/concepts/design/understand-use-cases" 
       },
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/create-apps-for-teams-meetings.md",
-        "redirect_url": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md"
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings"
       }
     ]
 }
