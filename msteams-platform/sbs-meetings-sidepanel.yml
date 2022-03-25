@@ -460,7 +460,7 @@ items:
    
        The app is visible in the meeting SidePanel.         
 
-- title: Interact with the app in Teams
+- title: Interact with the app in Teams.
   durationInMinutes: 1
   content: |
     Let's interact with the app in Teams!
