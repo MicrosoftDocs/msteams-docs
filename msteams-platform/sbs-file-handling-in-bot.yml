@@ -336,17 +336,14 @@ items:
 
       1. In **New Connection Setting**, enter the following details:
 
-
-        | Field | Value or description |
-        | ----- | ----- |
-        | **Name** | Enter name for your new connection. Youo can use the name in the settings of your bot service code.|
-        |**Service Provider**|Select **Azure Active Directory V2**.|
-        |**Client ID**|Saved previously as your **Microsoft App ID**.|
-        |**Client secret**|Saved previously as **Value** of the client secret ID.|
-        |**Token Exchange URL**|Use the **Application ID URI** obtained previously while exposing API endpoint.|
-        |**Tenant ID**|Enter **common**.|
-        |**Scopes**|Enter **User.Read** and add all the **Scopes** selected while specifying permissions to downstream APIs.|
-  
+          * **Name** enter `name for your new connection setting. You can use the name in the settings of your bot service code.`
+          * **Service Provider** select `Azure Active Directory V2`.
+          * **Client ID** your `Microsoft App ID`.
+          * **Client secret** `Value of the client secret ID`.
+          * **Token Exchange URL** Use the `Application ID URI` obtained previously while exposing API endpoint.
+          * **Tenant ID** enter `common`.
+          * **Scopes** enter `User.Read`.
+     
       1. Select **Save**.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/new-connection-setting.png" alt-text="setting new connection" border="true":::
