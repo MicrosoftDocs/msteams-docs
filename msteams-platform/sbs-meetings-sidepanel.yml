@@ -56,13 +56,14 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-:::image type="content" source="~/assets/images/meetings-side-panel/clonerepository1.png" alt-text="Clone repository" border="true":::  
+        :::image type="content" source="~/assets/images/meetings-side-panel/clonerepository1.png" alt-text="Clone repository" border="true":::  
 
     1. Select **Clone**. 
 
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
+
     To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
