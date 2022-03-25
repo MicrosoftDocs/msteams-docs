@@ -84,7 +84,7 @@ items:
     2. Open the **manifest.json** file in visual studio code.
     3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
-       :::image type="content" source="../assets/images/tab-device-permission/ngrok-tunnel.png alt-text="ngrok" border="true":::
+       :::image type="content" source="~/assets/images/tab-device-permission/ngrok-tunnel.png alt-text="ngrok" border="true":::
      
 
     4. Zip the files in the **appPackage/folder** as manifest.zip.
@@ -98,18 +98,18 @@ items:
 
     9. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
 
-       :::image type="content" source="../assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
+       :::image type="content" source="~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
        " alt-text="desktop teams" border="true":::
        
     10. Open mobile Teams to see the following outputs:
-        :::image type="content" source="../assets/images/tab-device-permission/mobile-teams-output.png" alt-text="mobile teams" border="true":::  
+        :::image type="content" source="~/assets/images/tab-device-permission/mobile-teams-output.png" alt-text="mobile teams" border="true":::  
         
 
     11. Open desktop Teams.
     12. To upload **manifest.zip**, select **Apps > Upload a custom app** and open **manifest.zip**.
     13. Select **Add** to add the tab device permission app and you will see the following output:  
 
-        :::image type="content" source="../assets/images/tab-device-permission/dekstop-tab-device-permission.png alt-text="desktop teams" border="true":::
+        :::image type="content" source="~/assets/images/tab-device-permission/dekstop-tab-device-permission.png alt-text="desktop teams" border="true":::
         
 - title: Test your app
   durationInMinutes: 1
@@ -120,20 +120,20 @@ items:
 
       To test the app on desktop, select **App Permission** icon and get the following prompts to accept permission request:
 
-       :::image type="content" source="../assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="desktop permission teams" border="true"::: 
+       :::image type="content" source="~/assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="desktop permission teams" border="true"::: 
        
       # [Browser](#tab/Browser)
 
       To test the app in browser, select **Get Location** to see the following outputs:
 
-       :::image type="content" source="../assets/images/tab-device-permission/sbs-location-result.png" alt-text="location result browser" border="true":::
+       :::image type="content" source="~/assets/images/tab-device-permission/sbs-location-result.png" alt-text="location result browser" border="true":::
 
      
      # [Mobile](#tab/Mobile)
 
       To test the app on mobile, select the respective button to test the scenario and get the following prompts to accept permission request:
        
-       :::image type="content" source="../assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="Mobile app" border="true":::
+       :::image type="content" source="~/assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="Mobile app" border="true":::
        
 
     --- 
@@ -143,7 +143,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG" alt-text="tab device image" border="true":::
+    :::image type="content" source="~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG" alt-text="tab device image" border="true":::
     
 
 
