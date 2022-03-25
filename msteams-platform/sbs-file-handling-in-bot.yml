@@ -383,17 +383,19 @@ items:
 
      # [Visual Studio](#tab/visualstudio)
 
-        1. Launch Visual Studio.
-        1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Launch Visual Studio.
+       
+       1. Navigate to **File** > **Open** > **Project/Solution**.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-open-file.png" alt-text="visual studio" border="true":::      
         
-        1. Select **TeamsFileUpload.csproj** file from **56.teams-file-upload** folder.
+       1. Select **TeamsFileUpload.csproj** file from **56.teams-file-upload** folder.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/csproj-folder.png" alt-text="folder" border="true":::        
 
-         1. Open **Solution Explorer** from **View**.
+       1. Open **Solution Explorer** from **View**.
 
+          
           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/solutionexplorer.png" alt-text="view" border="true":::
 
           
