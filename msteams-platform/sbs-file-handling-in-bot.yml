@@ -322,12 +322,12 @@ items:
       1. Select **Manifest** from the left pane.
 
       1. Set the configuration item **"accessTokenAcceptedVersion":2**. If not set, change its value to `2` and select **Save**.
-
+ 
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-value.png" alt-text="open the manifest file" border="true":::
+        
          > [!NOTE]
          > If you are already testing your bot in Teams, sign out of this app and sign out of Teams. To see this change, sign in again.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-value.png" alt-text="open the manifest file" border="true":::
-          
       **To set up Bot Service connection**
 
       1. Go to **Configuration page** > **Add OAuth Connection Settings**.
@@ -394,24 +394,27 @@ items:
 
          1. Open **Solution Explorer** from **View**.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/solutionexplorer.png" alt-text="view" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/solutionexplorer.png" alt-text="view" border="true":::
 
-         1.  Right-click to select **TeamsFileUpload**.
+          
+       1. Right-click on **TeamsFileUpload**.
 
-         1. Select **Set as Startup Project**.
+       1. Select **Set as Startup Project**.
+          
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-file-upload.png" alt-text="start up project" border="true":::
+          
+       1. Press **F5** to run the project.
+    
+       1. Select **Yes** if the following dialog appears:
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-file-upload.png" alt-text="start up project" border="true":::        
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/certificate.png" alt-text="ca" border="true":::
 
-         1. Press **F5** to run the project.
+          
+          A webpage opens with a message **Your bot is ready!**.
 
-         1. Select **Yes** if the following dialog appears:
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/file-bot.png" alt-text="your bot is ready" border="true":::
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/certificate.png" alt-text="ca" border="true":::
-
-            A webpage opens with a message **Your bot is ready!**.
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/file-bot.png" alt-text="your bot is ready" border="true":::
-
+       
  
      # [Command line](#tab/cli)
 
