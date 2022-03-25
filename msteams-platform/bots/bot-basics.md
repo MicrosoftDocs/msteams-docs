@@ -181,7 +181,7 @@ The bot logic processes incoming activities from one or more of your bot channel
 >[!NOTE]
 
 * > Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
-* > `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams.
+* > `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
