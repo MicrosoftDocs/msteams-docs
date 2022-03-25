@@ -36,14 +36,11 @@ items:
     * Install [Node.js](https://nodejs.org/en/).
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
-    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
-
-- title: Configure and run the Tab device permissions app on Teams
+    
+- title: Configure tab device permissions
   durationInMinutes: 1
   content: |
-    The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app, across all scopes. 
-    
-    To configure and run the Teams app by uploading the manifest.zip file, perform the following:
+    The most comprehensive way to test your app is to create an app package and upload it to Teams. To configure and run the Teams app by uploading the manifest.zip file, perform the following:
 
     1. Configure and run your tab device permissions app.
     2. Begin your tunneling service to get an https endpoint.
@@ -66,13 +63,13 @@ items:
        ```
     6. You can see the following output in the browser:
 
-      :::image type="content" source="~/assets/images/tab-device-permission/sbs-react.PNG" alt-text="react" border="true":::
+       :::image type="content" source="~/assets/images/tab-device-permission/sbs-react.PNG" alt-text="react" border="true":::
       
 
     **Begin your tunneling service to get an https endpoint:**
 
     1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
-    2. Open **ngrok** terminal and start a ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
+    2. Open **ngrok** terminal and start a ngrok tunnel with the following command. You'll need the https endpoint to update the manifest file.
 
        ```ngrok
        ngrok http 3000 --host-header=localhost
@@ -82,7 +79,7 @@ items:
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
     2. Open the **manifest.json** file in visual studio code.
-    3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
+    3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok in all the places.
 
        :::image type="content" source="~/assets/images/tab-device-permission/ngrok-tunnel.png" alt-text="ngrok" border="true":::
      
@@ -147,5 +144,5 @@ items:
 
 
 - content: |
-    You've completed the tutorial and now you can grant tab device permission at Microsoft Teams apps.
+    You've completed the tutorial and now you can grant tab device permission in Teams apps.
 
