@@ -9,25 +9,6 @@ keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD), 
 
 You can choose to implement authentication in your Teams app using other IdPs for validating app users' identity.
 
-## Teams silent authentication
-
-Silent authentication is method provided in Teams environment. This is an old cookie-based authentication method. It isn't true SSO, but it seeks to provide the user experience that is close to SSO.
-
-> [!NOTE]
-> Teams does not recommend using this method any more in light of Teams SSO with Azure AD that is true SSO experience.
-
-:::image type="content" source="../../assets/images/authentication/silent-auth.png" alt-text="Authenticating with silent authentication":::
-
-1. The app requests the user credentials via Teams app from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
-
-1. The IDP requests the user for their credentials and shares it with the app in an ID token (cookie).
-
-1. Teams Client refreshes this token (cookie) for the user. It uses a login hint (user's email address) for refreshing the token.
-
-1. The user sees a popup that requires no intervention. It shows up while the cookie is refreshed.
-
-The process informs the user that their token is refreshed, with no user input required to continue their ongoing session. It isn't true SSO as the user would still need to sign in on a different browser or device (new session).
-
 ## Authenticate using third-party IdPs
 
 You can use third-party IdPs to implement authentication for your Teams app users. It can be Google or Facebook, or any other service that provides identity and access management. This method also uses tokens that are refreshed when expired, and the user may need to log in on different browsers or devices. This method is not a true SSO user experience.
@@ -65,3 +46,22 @@ The user sees a pop up dialog when their token is refreshed and they are able to
 1. Security via ID token
 1. Security of customer data
 1. Personalized user experience
+
+## Teams silent authentication
+
+Silent authentication is method provided in Teams environment. This is an old cookie-based authentication method. It isn't true SSO, but it seeks to provide the user experience that is close to SSO.
+
+> [!NOTE]
+> Teams does not recommend using this method any more in light of Teams SSO with Azure AD that is true SSO experience.
+
+:::image type="content" source="../../assets/images/authentication/silent-auth.png" alt-text="Authenticating with silent authentication":::
+
+1. The app requests the user credentials via Teams app from a trusted Identity Provider (IDP) (AAD, Partner organization, other IDPs, such as Google or Facebook).
+
+1. The IDP requests the user for their credentials and shares it with the app in an ID token (cookie).
+
+1. Teams Client refreshes this token (cookie) for the user. It uses a login hint (user's email address) for refreshing the token.
+
+1. The user sees a popup that requires no intervention. It shows up while the cookie is refreshed.
+
+The process informs the user that their token is refreshed, with no user input required to continue their ongoing session. It isn't true SSO as the user would still need to sign in on a different browser or device (new session).
