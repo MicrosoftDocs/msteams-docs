@@ -149,7 +149,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-client-secret" alt-text="secret" border="true":::
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-client-secret.png" alt-text="secret" border="true":::
        
        The **Add a client secret** window appears.  
 
@@ -161,7 +161,7 @@ items:
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-new-client-secret.png" alt-text="new client" border="true":::
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-secret-section.png" alt-text="section" border="true":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -186,7 +186,7 @@ items:
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-messages" alt-text="messages" border="true":::   
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-messages.png" alt-text="messages" border="true":::   
     
     **To create tunnel for local web server**
 
