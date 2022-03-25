@@ -17,7 +17,7 @@ items:
    The bot is created using Bot Framework. It shows how to upload files to Teams from a bot and how to receive a file sent to a bot as an attachment. 
    It also shows how to fetch inline images sent in message.
     
-   This step-by-step guide helps you to upload files from a bot to Microsoft Teams. You'll see the following output:
+   This step-by-step guide helps you to upload file in Teams using bot. You'll see the following output:
 
    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="output image" border="true":::
    
@@ -336,15 +336,15 @@ items:
 
       1. In **New Connection Setting**, enter the following details:
 
-        |  Field  |  Value or description  |
-        |  -----  |  -----  | 
-        |  **Name**  |  Enter name for your new connection setting. You can use the name in the settings of your bot service code.  |
-        |  **Service Provider**  |  Select **Azure Active Directory V2**  |
-        |  **Client ID**  |  Saved previously as your **Microsoft App ID**  |
-        |  **Client secret**  |  Saved previously as **Value** of the client secret ID  |
+        | Field | Value or description |
+        | ----- | ----- |
+        | **Name** | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
+        | **Service Provider** | Select **Azure Active Directory V2**. |
+        | **Client ID** | Saved previously as your **Microsoft App ID**. |
+        | **Client secret** | Saved previously as **Value** of the client secret ID. |
         | **Token Exchange URL** | Use the **Application ID URI** obtained previously while exposing API endpoint. |
-        |  **Tenant ID**  |  Enter **common**  |
-        |  **Scopes**  |  Enter **User.Read** and add all the **Scopes** selected while specifying permissions to downstream APIs  |
+        | **Tenant ID** | Enter **common**. |
+        | **Scopes** | Enter **User.Read** and add all the **Scopes** selected while specifying permissions to downstream APIs. |
   
       1. Select **Save**.
 
@@ -438,55 +438,55 @@ items:
        * icon-outline.png
        * icon-color.png 
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-upload-manifest.png" alt-text="manifest folder" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-upload-manifest.png" alt-text="manifest folder" border="true":::
 
       1. Go to **Microsoft Teams**.
 
       1. Select **Apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/AppStore.png" alt-text="adding app" border="true"::: 
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/AppStore.png" alt-text="adding app" border="true"::: 
 
       1. In the lower left corner, select **Manage your apps**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manageapps.png" alt-text="apps" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manageapps.png" alt-text="apps" border="true":::
 
       1. Select **Upload a custom app**
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-custom-app.png" alt-text="custom apps" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-custom-app.png" alt-text="custom apps" border="true":::
 
       1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-manifest.png" alt-text="manifest open" border="true"::: 
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-manifest.png" alt-text="manifest open" border="true"::: 
 
       1. Select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-file-bot.png" alt-text="add" border="true"::: 
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-file-bot.png" alt-text="add" border="true"::: 
 
        1. In the compose message area, type `Hi` and wait for few seconds for it to respond with a card.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot" border="true":::
  
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
     1. Send a message to the bot. It responds with a card for the permission to upload the file.
        
-      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-1.png" alt-text="bot sending card" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-1.png" alt-text="bot sending card" border="true":::
     
     1. Select **Allow**. A `teams-logo.png` file is uploaded to the file directory, which is ready to download.
          
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-2.png" alt-text="teams logo" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-2.png" alt-text="teams logo" border="true":::
     
     1. Send a file to the bot as an attachment in Teams. It responds with a message `Received and Saved`. You can view the attachment from the **Files** tab.
         
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-3.png" alt-text="send file" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-3.png" alt-text="send file" border="true":::
    
     1. Send an image as an attachment. It responds with a message `Received and saved`. You can view the image on the chat window and from **Files** tab.
        
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-4.png" alt-text="received" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-4.png" alt-text="received" border="true":::
       
-       > [!NOTE]
-       >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
+        > [!NOTE]
+        >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
       
 - title: Complete challenge
   durationInMinutes: 1

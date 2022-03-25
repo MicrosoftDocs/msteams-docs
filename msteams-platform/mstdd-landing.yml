@@ -164,6 +164,9 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
+        - text: Upload file in Teams using bot
+          url: ~/sbs-file-handling-in-bot.yml
+
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
