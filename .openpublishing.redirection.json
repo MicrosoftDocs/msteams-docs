@@ -718,7 +718,7 @@
       },
       {
         "source_path": "msteams-platform/concepts/capabilities-overview.md",
-        "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md" 
+        "redirect_url": "/microsoftteams/platform/concepts/design/understand-use-cases.md" 
       },
       {
         "source_path": "msteams-platform/concepts/extensibility-points.md",
