@@ -299,7 +299,7 @@ The following example describes static choices:
 
 The following image illustrates People Picker in Adaptive Cards with static choices in organization search:
 
-:::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="peoplepicker-static-choice":::
+:::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
 
 You can implement People Picker for efficient task management in different scenarios.  
 
