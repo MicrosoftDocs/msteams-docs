@@ -115,7 +115,7 @@ The following table provides predefined values as **dataset** for people picker:
 
 ### Example
 
-The code example for creating People Picker with organization search is as follows:
+The code example for creating People Picker with organization search is as follows
 
 ```json
 {
