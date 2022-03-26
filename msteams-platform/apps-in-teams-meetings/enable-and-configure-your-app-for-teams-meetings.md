@@ -197,7 +197,7 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 ## Step-by-step guides
 
-* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate a meeting token to extend a meeting in Teams
 * Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting sidepanel in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate meeting stage view in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate meeting content bubble in your Teams meeting.
