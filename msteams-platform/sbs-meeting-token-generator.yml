@@ -254,8 +254,8 @@ items:
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/meeting-token-generator/meeting-token-generator-appIDuri.png)
-
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-expose.png" alt-text="expose" border="true":::
+       
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
         > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
@@ -278,41 +278,41 @@ items:
   
        The following image shows the fields and the values:
 
-        ![Add a scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-app-scope.png" alt-text="scope" border="true":::
 
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
 
-        ![Add scope](~/assets/images/meeting-token-generator/meeting-token-generator-addscope2.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-enabled.png" alt-text="enabled" border="true":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) 
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-ad-scope.png" alt-text="ad scope" border="true":::
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-        ![Add client app](~/assets/images/meeting-token-generator/meeting-token-generator-selectclientapp.png) 
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-client-application.png" alt-text="application" border="true"::: 
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        ![Add client application 1](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp1.png) 
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-application.png" alt-text="appl" border="true":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        ![Add client application 2](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp2.png) 
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-client-appl.png" alt-text="client app" border="true":::
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/meeting-token-generator/meeting-token-generator-authorizedscope1.png) 
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-authorised-scope.png" alt-text="authorised" border="true":::
 
        The following image displays the client IDs:
 
-         ![Client applications](~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png) 
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-authorised-application.png" alt-text="author" border="true"::: 
   
     1. In the left panel, select **API Permissions**. 
 
@@ -321,7 +321,7 @@ items:
 
     1. Select **Add a permission**.
 
-         ![Add permission](~/assets/add-permission.png)
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-configured-permission.png" alt-text="permission" border="true":::
 
     1. Select **Microsoft Graph**.
 
@@ -329,7 +329,7 @@ items:
 
         By default, **User.Read** is selected.
 
-         ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-request-api.png" alt-text="req api" border="true":::
 
     1. Add the following permissions:</br>
          * **email**
@@ -339,7 +339,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-request-app-permission.png" alt-text="app permission" border="true":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -349,7 +349,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)
+            :::image type="content" source="~/assets/images/meeting-token-generator/sbs-authentication.png" alt-text="authentication" border="true":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://ae57****.ngrok.io/auth-end`. </br>
@@ -360,7 +360,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
+            :::image type="content" source="~/assets/images/meeting-token-generator/sbs-configure-web.png" alt-text="web" border="true":::
 
 
 - title: Set up app settings
