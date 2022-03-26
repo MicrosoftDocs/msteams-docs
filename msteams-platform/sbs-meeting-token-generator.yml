@@ -368,7 +368,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-samples-app-setting.png" alt-text="app setting" border="true":::
 
     1. Open **appsettings.json** in **Visual Studio Code** and update the following information:  
 
@@ -392,7 +392,7 @@ items:
   content: |
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest.png" alt-text="manifest" border="true":::
     
     1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
 
@@ -426,16 +426,16 @@ items:
     1. Copy the **App** folder path.
     1. Open a new Command Prompt window, change the current directory to the copied **App** path.
 
-       ![App folder path](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-prompt.png" alt-text="prompt" border="true":::
 
     1. Run `npm install` to download packages and dependencies.
     1. Run `npm run build` to build the app.
 
-       ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-npm.png" alt-text="npm" border="true":::
 
        The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server serves the static files from the location.
 
-       ![Distributable folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-dist.png" alt-text="dist" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -451,17 +451,17 @@ items:
 
        1. Select **TokenApp.csproj** file from **csharp** folder.
 
-          ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-token-csproj.png" alt-text="csproj" border="true":::
 
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-warning.png" alt-text="warning" border="true":::
 
           A webpage opens with a message **App is ready!**.
 
-          ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-meeting-token-output.png" alt-text="output" border="true"::: 
 
         
     # [Command line](#tab/cli)
@@ -484,7 +484,7 @@ items:
        1. In the left panel, select **Show All**.
        1. Select **Teams**.
  
-          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-developer-team.png" alt-text="developer" border="true":::
 
        1. In the left panel, select **Teams apps**.
        
@@ -494,7 +494,7 @@ items:
 
        1. Select **Global**.
 
-          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideloadimage.png)
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-global.png" alt-text="global" border="true":::
 
        1. Toggle **Upload custom apps** to **On** position.
 
@@ -533,7 +533,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/meeting-token-generator/meeting-token-generator-zipfile.png) 
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-cshrap-manifest.png" alt-text="csharp" border="true"::: 
     
     1. Create a meeting with a few presenters and attendees.
    
@@ -547,19 +547,19 @@ items:
    
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
-
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-upload-custom-app.png" alt-text="custom app" border="true":::
+    
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-open-manifest.png" alt-text="open manifest" border="true":::
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-add-meeting-app.png" alt-text="meeting app" border="true":::
 
        The **Manage apps** section displays the list of applications.
 
-       ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manage-app.png" alt-text="manage app" border="true":::
    
     1. Go to Teams meeting.
     
