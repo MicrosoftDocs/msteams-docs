@@ -37,9 +37,6 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
 1. Select **Add** to add your app to Teams.
 
-    > [!NOTE]
-    > `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
-
 ## Troubleshooting
 
 If your app fails to sideload or any issues to upload, check the following options:
@@ -66,7 +63,7 @@ To remove your app, right click the app icon in Teams and select **Uninstall**.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Use your Teams app](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+> [Use your Teams app](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b)
 
 ## See also
 
