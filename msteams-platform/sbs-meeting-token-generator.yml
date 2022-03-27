@@ -233,7 +233,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left navigation panel, select **App registrations**.
 
     1. Select your bot.
 
@@ -439,9 +439,9 @@ items:
   content: |
     **To build and run the service using Visual Studio 2019 or Command line**
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Visual Studio 2022](#tab/vs2022)
 
-       1. Launch **Visual Studio 2019**.
+       1. Launch the latest version of Visual Studio..
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
