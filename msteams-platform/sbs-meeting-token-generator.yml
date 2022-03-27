@@ -92,7 +92,7 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-azure-home-bot.png" alt-text="home bot" border="true":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
@@ -245,14 +245,11 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-set.png" alt-text="set" border="true":::
 
-    1. Set the **Application ID URI** in the form of `api://{AppID}`.
+    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
 
-       ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-sso-app-id.png" alt-text="sso" border="true":::
 
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://ae57****.ngrok.io/{AppID}`</br>
-        
-       The following image shows the domain name:
+     The following image shows the domain name:
         
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-expose.png" alt-text="expose" border="true":::
        
@@ -352,7 +349,7 @@ items:
             :::image type="content" source="~/assets/images/meeting-token-generator/sbs-authentication.png" alt-text="authentication" border="true":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://ae57****.ngrok.io/auth-end`. </br>
+           `https://your ngrok/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -519,7 +516,7 @@ items:
    
     1. Select **Switch to developer preview**.
 
-        ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-developer-preview.png" alt-text="developer preview" border="true":::
 
 - title: Add Meeting Token App to Teams
   durationInMinutes: 1
