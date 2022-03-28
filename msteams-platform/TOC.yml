@@ -136,7 +136,7 @@
         - name: JavaScript client SDK v2 Preview
           href: m365-apps/using-teams-client-sdk-preview.md 
         - name: Microsoft Graph SDKs
-          href: https://docs.microsoft.com/graph/sdks/sdks-overview
+          href: /graph/sdks/sdks-overview
         - name: Developer Portal for Teams
           href: concepts/build-and-test/teams-developer-portal.md
         - name: Recommended content for GitHub
@@ -409,9 +409,9 @@
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
-    href: https://docs.microsoft.com/graph/teams-concept-overview
+    href: /graph/teams-concept-overview
   - name: Microsoft Graph Toolkit
-    href: https://docs.microsoft.com/graph/toolkit/overview
+    href: /graph/toolkit/overview
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Resource-specific consent
