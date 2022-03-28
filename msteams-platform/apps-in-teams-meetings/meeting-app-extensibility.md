@@ -112,18 +112,13 @@ The following image illustrates the in-meeting side panel:
 
 ---
 
-The following table describes the behavior of app in channel meetings.
+The following table describes the behavior of app when it's validated and not validated:
 
 |App capability | App is validated | App isn't validated |
 |---|---|---||
-| Allows user to set up a meeting from a channel. |  Users can use apps in scheduled channel meetings. | External members aren't allowed to participate in channel meetings. Permission is required. |
-| It is an in-meeting experience. |  Supports desktop and mobile. | Currently users can add apps only from desktop. |
-| View added Apps in mobile. | Users can view apps on mobile, which can be accessed while they are in channel meeting. App shows up on corresponding mobile meeting when added on desktop. | Currently users can add apps only from desktop. |
-| Actions supported. | Select the dropdown menu next to the meet  and select schedule a meeting, it leads an user to the calender and auto adds the team within the channel. | Apps doesn't support unscheduled channel meetings. |
-| Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots, message extensions. | User receives an notification, when there is any event launched by an app in the meeting. | At present **meet now** is not supported in channel meetings. |
+| Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
 
 For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
-
 #### Post-meeting app experience
 
 With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab, get meeting notes, and see the results on which organizers and attendees must take action.
@@ -142,6 +137,28 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
+
+## Channel meetings support meeting extensibility
+
+Allows user to set up a meeting from a channel, apps can be used in scheduled channel meetings. It is an in-meeting experience, supports desktop and mobile..
+Users can view apps on mobile, which can be accessed while they are in channel meeting, app shows up on corresponding mobile meeting when added on desktop.
+
+### Schedule channel meetings
+
+Select Teams from the left pane. The teams page appears, select the dropdown menu next to the meet and select schedule a meeting.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
+
+Select **schedule a meeting** button leads an user to the calendar and auto adds the team within the channel.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
+
+> [!NOTE]
+> currently users can add apps only from desktop.
+
+### Capabilities
+
+Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots and message extensions.
 
 ### Integrate bots into the meeting lifecycle
 
