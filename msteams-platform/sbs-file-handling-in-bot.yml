@@ -209,7 +209,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. From the left pane, select **App Registrations**.
 
     1. Select your bot.
        
@@ -253,9 +253,9 @@ items:
   
     1. Ensure that **State** is set to **Enabled**.
   
-    1. Select **Add scope** to save.
+    1. Select **Add a scope** to save.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-scope.png" alt-text="adding scope" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-a-scope.png" alt-text="adding scope" border="true":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
