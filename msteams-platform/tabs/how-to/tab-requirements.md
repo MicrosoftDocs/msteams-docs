@@ -45,12 +45,12 @@ Here's a list of tools you'll need for building your tabs.
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
-| &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample apps repo from GitHub. |
+| &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Build a personal tab](~/tabs/how-to/create-personal-tab.md)
