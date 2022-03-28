@@ -108,7 +108,7 @@ Perform the following steps for customization:
 * 3. Create new environment and name it `staging` if it doesn't exist.
 * 4. Open config file `.fx/configs/config.staging.json`.
 * 5. Update the same property `myapp(staging)`.
-* 6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+* 6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision).
 
 ### Scenario 2: customize Teams App description for different environment
 
@@ -161,7 +161,7 @@ Perform the following steps for customization:
   }
   ```
 
-* 8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+* 8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision).
 
 ### Scenario 3: customize Teams App description for all environments
 
@@ -187,7 +187,7 @@ As the Teams app manifest template is shared across all environments, we can upd
     ...
   }
 
-* 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+* 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision).
 
 ### Scenario 4: customize Azure resources for different environment
 
