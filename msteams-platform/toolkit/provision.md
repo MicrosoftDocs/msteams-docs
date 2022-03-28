@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Use Teams Toolkit to provision cloud resources
+# Provision cloud resources using  Teams Toolkit
 
 TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.  
 
@@ -23,13 +23,13 @@ TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
 
-## Provision using Teams Toolkit
+## Provision
 
 Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI as follows:
 
 [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
-## Resource creation
+## Create Resource
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
 
@@ -42,7 +42,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 > [!NOTE]
 > Azure services incur costs in your subscription, for more information on cost estimation, see [the pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
-### Resource creation for Teams Tab application
+### Create resource for Teams Tab application
 
 |Resource|Purpose|Description |
 |----------|--------------------------------|-----|
@@ -51,7 +51,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for simple auth | Host simple auth server to gain access to other services in your single page application | Adds user assigned identity to access other Azure resources |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Teams bot or messaging extension application
+### Create resource for Teams Bot or messaging extension application
 
 |Resource|Purpose| Description |
 |----------|--------------------------------|-----|
@@ -60,7 +60,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for bot | Host your bot app | Adds user assigned identity to access other Azure resources. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure Functions in the project
+### Create resource for Azure Functions in the project
 
 |Resource|Purpose| Description|
 |----------|--------------------------------|-----|
@@ -69,7 +69,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Azure storage for function app | Required to create function app |Not applicable|
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure SQL in the project
+### Create resource for Azure SQL in the project
 
 |Resource|Purpose | Description |
 |----------|--------------------------------|-----|
@@ -77,7 +77,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Azure SQL database | Store data for your app | Grants user assigned identity, read or write permission to the database |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Azure API Management in the project
+### Create resource for Azure API Management in the project
 
 |Resource|Purpose|
 |----------|--------------------------------|
@@ -87,7 +87,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app |
 | User assigned identity | Authenticate Azure service-to-service requests |
 
-### Resources created when including Azure Key Vault in the project
+### Create resource when including Azure Key Vault in the project
 
 |Resources|Purpose of this resource|
 |----------|--------------------------------|
@@ -177,7 +177,7 @@ In the meanwhile, following parameters are available with values populated durin
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM's publisher email, default value is your Azure account | Delete the placeholder and fill the actual value |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM's publisher name, default value is your Azure account | Delete the placeholder and fill the actual value |
 
-#### Referencing environment variables in parameter files
+#### Referencing to environment variables in parameter files
 
 If you don't want to hardcode the values in parameter files, for example, when the value is a secret. The parameter files support referencing the values from environment variables. You can use syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve from current environment variable.
 
@@ -202,7 +202,7 @@ To ensure the proper functioning of TeamsFx tool, customize the ARM template wit
 * Keep the name of auto-generated parameters as well as its property names unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
 * Keep the output of auto-generated ARM template unchanged. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
 
-### Customization scenarios
+### Customize scenarios
 
 You can customize the following scenarios:
 
@@ -245,7 +245,7 @@ If you have insufficient permission error when the tool tries to add user to SQL
 "skipAddingSqlUser": true
 ```
 
-### Specifying the name of Function app instance
+### Specify the name of Function app instance
 
 You can use `contosoteamsappapi` for function app instances instead of using the default name.
 

@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create a new Teams app using Teams Toolkit
+# Create a new Teams app
 
-To create a new Teams app using Teams Toolkit, you can select from one of the following options:
+Select one of the following option to create a new Teams app using Teams Toolkit:
 
 * [Create a new Teams app](create-new-project.md#create-a-new-teams-app)
 * [View samples](create-new-project.md#create-a-new-teams-app-using-view-samples)
@@ -20,15 +20,15 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar.
 1. Select **Create a new Teams app**.
-1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). 
-1. Select at least one option to start creating the Teams app.
+1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx).
+1. Select at least one option to create the Teams app.
 
 ### Create a new Teams app using view samples
 
-You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
+You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality. For example, a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
 
  1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
- 1. Select **DEVELOPMENT** section in Treeview.
+ 1. Select **DEVELOPMENT** section in Tree view.
  1. Select **View samples**. The sample gallery appears as shown in the following image:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
