@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Build your tab app with Teams SSO
+metadata:
+  title: Build your tab app with Teams SSO
+  description: In this tutorial, you'll learn to implement Teams SSO in your tab app
+  audience: Developer
+  level: Beginner
+  ms.date: 10/21/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: ~/concepts/authentication/authentication.md
+  nextTutorialTitle: Back to Authentication overview
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+    Implement Teams SSO in your Microsoft Teams tab app.
+    You'll create a tab app and configure it to authenticate app users with Teams SSO.
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+
+   Here's a list of prerequisites for implementing Teams SSO in your tab app:
+
+   1. A Teams tab app: You can use the Get started sample available for Teams Toolkit and Visual Studio Code to build a sample tab app.
+
+   1. Register your tab app with Azure AD: Your Teams app users are authenticated using their Teams user credentials and Azure AD provides an access token for them.
+
+- title: Register tab app with Azure AD
+  durationInMinutes: 1
+  content: |  
+
+  
