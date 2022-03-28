@@ -245,7 +245,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/selectscope.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope.png" alt-text="Select scope" border="true":::
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -302,7 +302,7 @@ items:
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/add-permission.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission.png" alt-text="Add permission" border="true":::
 
     1. Select **Microsoft Graph**.
 
@@ -379,7 +379,7 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+           :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Open file" border="true":::
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
@@ -389,7 +389,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
+           :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Trust Certificate" border="true":::
 
           A webpage opens with a message **Your bot is ready!**.
 
@@ -428,7 +428,7 @@ items:
    
     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/meeting-token-generator-manageapps.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/manageapps.png" alt-text="Manage apps" border="true":::
    
     1. Select **Upload a custom app**. 
 
