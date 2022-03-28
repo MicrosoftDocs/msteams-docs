@@ -413,7 +413,7 @@
   - name: Microsoft Graph Toolkit
     href: /graph/toolkit/overview
   - name: Get started
-    href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
+    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
   - name: Proactive installation of apps using Graph API to send messages
