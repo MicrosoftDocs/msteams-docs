@@ -264,6 +264,18 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
+You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and  curly braces. Check the following JSON example:
+
+```json
+{ 
+"type": "TextBlock",
+ "text": "${titleText}",
+ "size": "default",
+ "weight": "bolder"
+ }
+
+```
+
 Bot Framework reference:
 
 * [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
