@@ -15,12 +15,12 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 
 ## Advantages of using People Picker
 
-* People Picker control works on all Teams platforms, such as task module, a chat, a channel, meeting tab, and personal app.
+* People Picker control works on all of Teams extensibility points, such as task module, a chat, a channel, meeting tab, and personal app.
 * The control allows the user to search and select user in a chat, channel, or the entire organization.
 * People Picker helps in scenarios involving task assignment, tagging, and notifying the user.
-* The control saves the effort and time significantly to build a similar control.
+* People Picker saves significant time and effort otherwise needed to build a similar control.
 
-To integrate People Picker control in your Teams app select the API, `selectPeople`. To integrate and call the API, you must know about [code snippet](#code-snippet). You also need familiarity with [API response errors](#error-handling) to handle any errors in the web app.
+To integrate People Picker control in your Teams app select the API, `selectPeople`. To integrate and call the API, you must have a good understanding of accompanying [code snippet](#code-snippet). You also need familiarity with [API response errors](#error-handling) to handle any errors in the web app.
 
 ## `selectPeople` API
 
