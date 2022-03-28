@@ -11,13 +11,15 @@ zone_pivot_groups: teams-app-environment
 
 # Personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for personal tabs.
+
+Ensure that you have the required [tools to build](~/tabs/how-to/tab-requirements.md#tools-to-build-tabs) your personal tab.
 
 ::: zone pivot="node-java-script"
 
 ## Create a personal tab with Node.js
 
-To create a personal tab with Node.js:
+To create a personal tab with Node.js
 
 1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
 
@@ -31,14 +33,14 @@ To create a personal tab with Node.js:
     npm install generator-teams --global
     ```
 
-Follow the below steps to create a personal tab:
+Following are the steps to create a personal tab:
 
-* [Generate your personal tab](#generate-your-personal-tab)
-* [Update your app manifest](#manifest-update)
-* [Build and run your application](#build-and-run-your-application)
-* [Upload your application to Teams](#upload-your-application-to-teams)
+1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab)
+1. [Update your app manifest](#manifest-update)
+1. [Build and run your application](#build-and-run-your-application)
+1. [Upload your application to Teams](#upload-your-application-to-teams)
 
-### Generate your personal tab
+### Generate your application with a personal tab
 
 1. At the command prompt, create a new directory for your personal tab.
 
