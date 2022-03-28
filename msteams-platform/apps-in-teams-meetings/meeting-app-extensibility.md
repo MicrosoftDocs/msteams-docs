@@ -116,11 +116,11 @@ The following table describes the behavior of app in channel meetings.
 
 |App capability | App is validated | App isn't validated |
 |---|---|---||
-| Allows user to set up a meeting from a channel |  users can use apps in scheduled channel meetings. |
-| It is an in-meeting experience |  Supports desktop and mobile. | Currently users can't add apps to the meetings directly, apps are only added from desktop, it shows up on corresponding mobile meeting when added on desktop  |
-| Consumption and View of Added Apps in mobile | Users can view apps, on mobile, which can be accessed while they are in that channel meeting. | External users are not allowed to participate in channel meetings.Permission is required|
-| User Interface | Click on the dropdown menu next to the meet  and select schedule a meeting, it leads an user to the calender and auto adds the team within the channel. | Apps does not support in unscheduled channel meetings. |
-| Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots, message extensions | User receives an notification when there is any event launched by an app in the meeting. | Apps does not support in ad-hoc channel meetings. |
+| Allows user to set up a meeting from a channel |  users can use apps in scheduled channel meetings. | External members are not allowed to participate in channel meetings.Permission is required |
+| It is an in-meeting experience |  Supports desktop and mobile. | Currently users can add apps only from desktop. |
+| View added Apps in mobile | Users can view apps, on mobile, which can be accessed while they are in that channel meeting. app shows up on corresponding mobile meeting when added on desktop | Apps can't be added in mobile. |
+| Actions supported | Click on the dropdown menu next to the meet  and select schedule a meeting, it leads an user to the calender and auto adds the team within the channel. | Apps does not support in unscheduled channel meetings. |
+| Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots, message extensions | User receives an notification when there is any event launched by an app in the meeting. | Apps does not support ad-hoc channel meetings(meet now). |
 
 For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md). 
 
