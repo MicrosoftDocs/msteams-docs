@@ -21,7 +21,7 @@ This article covers the information about meeting lifecycle and how to integrate
 A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app experience. You can integrate tabs, bots, and messaging extensions in each stage of the meeting lifecycle.
 
 > [!NOTE]
-> Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage are not currently fully supported.
+> Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage aren't currently fully supported.
 
 ### Integrate tabs into the meeting lifecycle
 
@@ -116,11 +116,11 @@ The following table describes the behavior of app in channel meetings.
 
 |App capability | App is validated | App isn't validated |
 |---|---|---||
-| Allows user to set up a meeting from a channel |  users can use apps in scheduled channel meetings. | External members are not allowed to participate in channel meetings.Permission is required |
+| Allows user to set up a meeting from a channel |  Users can use apps in scheduled channel meetings. | External members aren't allowed to participate in channel meetings. Permission is required |
 | It is an in-meeting experience |  Supports desktop and mobile. | Currently users can add apps only from desktop. |
-| View added Apps in mobile | Users can view apps on mobile, which can be accessed while they are in that channel meeting. App shows up on corresponding mobile meeting when added on desktop |
-| Actions supported | Click on the dropdown menu next to the meet  and select schedule a meeting, it leads an user to the calender and auto adds the team within the channel. | Apps does not support unscheduled channel meetings. |
-| Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots, message extensions | User receives an notification when there is any event launched by an app in the meeting. | Apps does not support ad-hoc channel meetings(meet now). |
+| View added Apps in mobile | Users can view apps on mobile, which can be accessed while they are in channel meeting. App shows up on corresponding mobile meeting when added on desktop |
+| Actions supported | Select the dropdown menu next to the meet  and select schedule a meeting, it leads an user to the calender and auto adds the team within the channel. | Apps does not support unscheduled channel meetings. |
+| Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots, message extensions | User receives an notification when there is any event launched by an app in the meeting. | Apps doesn't support ad-hoc channel meetings (meet now). |
 
 For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md). 
 
@@ -193,7 +193,7 @@ The following list details the various user types along with their accessibility
     > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
 
     > [!IMPORTANT]
-    > Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
+    > Currently, third-party apps are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
 * **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
 
@@ -209,7 +209,6 @@ The following table provides the user types and lists the features that each use
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
-| Channel meeting supports meeting extensibility for channel members | Available | Available | Available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are not allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 
 ## Next step
 
