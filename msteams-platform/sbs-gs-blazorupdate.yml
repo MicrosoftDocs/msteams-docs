@@ -368,6 +368,8 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Select deploy to cloud" border="true":::
 
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.png" alt-text="View in Azure" border="true":::
+
         Your tab app is successfully deployed to the cloud!
 
     #### **To preview your tab app in Teams**    
