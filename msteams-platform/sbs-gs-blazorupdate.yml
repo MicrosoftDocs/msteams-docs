@@ -459,8 +459,8 @@ items:
 
 
 - title: Congratulations!
-   durationInMinutes: 1
-   content: |
+  durationInMinutes: 1
+  content: |
 
     You've done it!
 
