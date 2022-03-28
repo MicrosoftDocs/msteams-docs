@@ -2,7 +2,7 @@
 title: Meetings SidePanel
 metadata:
   title: Meetings SidePanel
-  description: In this tutorial, you'll learn to set up Meetings SidePanel for Teams.
+  description: In this tutorial, you'll learn to set up Meetings Side Panel for Teams.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -14,11 +14,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The `meetingSidePanel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
+    The `meetingSide Panel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
 
     This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
 
-    **Meeting organizers' interaction of meeting SidePanel**
+    **Meeting organizers' interaction of meeting Side Panel**
 
     * **Add New Agenda Item**: Gives provision to add new agenda point.
     * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
@@ -460,7 +460,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp.png" alt-text="Welcome App" border="true":::
    
-       The app is visible in the meeting SidePanel.         
+       The app is visible in the meeting Side Panel.         
 
 - title: Interact with the app in Teams.
   durationInMinutes: 1
