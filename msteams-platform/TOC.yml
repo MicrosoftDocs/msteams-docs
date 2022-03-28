@@ -121,7 +121,7 @@
             - name: Collaborate using Toolkit
               href: toolkit/TeamsFx-collaboration.md
             - name: Add CI/CD Workflows
-              href: toolkit/use-CICD-template
+              href: toolkit/use-CICD-template.md
         - name: Teams Toolkit in Visual Studio
           href: toolkit/visual-studio-overview.md
           items:
