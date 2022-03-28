@@ -21,8 +21,10 @@ Take the advantage of Teams SSO with Azure AD to let your app users access and u
 Some prerequisites for implementing authentication with Teams SSO with Azure AD are:
 
 - **Create a Teams app**: Your Teams app can have single or multiple capabilities, such as tabs, bots, messaging extensions, and more. Teams offers a different UI and UX experience for each feature.
+
 - **Register your app with Azure AD**: To register your app, provide app ID, configure access permissions, and define scope for user access on the Azure portal.
-- **Register users with Azure AD**: All valid app users are registered with Azure AD. Users registered with Azure AD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.
+
+<!-- **Register users with Azure AD**: All valid app users are registered with Azure AD. Users registered with Azure AD will get authenticated. After first successful sign in, they don't need to log in again. They can access all Azure resources and subsystems.-->
 
 ## Teams SSO with Azure AD user experience
 
@@ -78,7 +80,7 @@ Here's a look at features of Teams SSO with Azure AD:
 
 - **Managing passwords**: Your overhead to maintain usernames and passwords, and protecting user privacy and data is reduced.
 
-- **Conditional access policies**: Use conditional access policies to let yor users enjoy device-specific access to join a domain.
+- **Conditional access policies**: <!--Use--> Support conditional access policies, such as ensuring a device is Intune enrolled or domain-joined before accessing your app <!-- to let yor users enjoy device-specific access to join a domain.-->
 
 - **Available for all app types**: Your Teams app may be available to your users on desktop, web, or mobile device. Teams SSO with Azure AD makes it easier for your users to avail the benefits of SSO. After their Teams sign-in, they never need to sign in again on any other browser or device.
 
@@ -116,12 +118,10 @@ Here's what really happens at run time.
 
 1. The bot sends a request to Teams to obtain an authentication token for the bot application.
 
-1. If the current user is using your bot application for the first time, a request prompt is displayed, requesting the user to provide consent.
+1. If the current user is using your bot application for the first time, they are requested to provide consent.
 
 1. Teams requests the Azure AD for an access token the current user.
 
-1. Azure AD sends the access token to the Teams.
-
-1. Teams sends the token to the bot.
+1. Azure AD sends the access token to the Teams, and Teams sends the token to the bot.
 
 1. The bot app can parse the token and extract the information it needs, such as the user's email address.
