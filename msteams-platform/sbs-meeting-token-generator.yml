@@ -538,7 +538,7 @@ items:
 
        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
-    1. In the pop-up that opens, select **Manage apps**.
+    1. In the pop-up window, select **Manage apps**.
 
        ![Manage apps](~/assets/meeting-token-generator-manageapps.png)
    
@@ -550,7 +550,7 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-open-manifest.png" alt-text="open manifest" border="true":::
 
-    1. Select **Add**.
+    1. Click an **Add**.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-add-meeting-app.png" alt-text="meeting app" border="true":::
 
