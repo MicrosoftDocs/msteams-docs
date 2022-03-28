@@ -253,7 +253,7 @@ items:
   
     1. Ensure that **State** is set to **Enabled**.
   
-    1. Select **Add a scope** to save.
+    1. Select **Add scope** to save.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-a-scope.png" alt-text="adding scope" border="true":::
 
