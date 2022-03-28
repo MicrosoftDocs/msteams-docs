@@ -44,8 +44,8 @@ items:
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
-    > [!NOTE]
-    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
+      > [!NOTE]
+      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -103,7 +103,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as `Multi Tenant`
+    1. Select **Type of App** as **Multi Tenant**
 
     1. Select **Review + create**.
 
@@ -196,7 +196,7 @@ items:
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
 
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
+    1. In **Settings** for the Azure bot that you have created, select **Configuration**.
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -216,7 +216,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left navigation panel, select **App registrations**.
 
     1. Select your bot.
 
@@ -232,7 +232,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/setlink.png" alt-text="Set link" border="true":::
 
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
+    1. Insert the **WebAppDomain** value between `api://` and `/{AppID}`.</br>
         `api://4d52****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
@@ -295,7 +295,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications" border="true"::: 
   
-    1. In the left panel, select **API Permissions**. 
+    1. In the left panel, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -350,7 +350,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in **Latest version of Visual Studio** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
@@ -362,7 +362,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location" border="true":::
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in **Latest version of Visual Studio ** and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -374,9 +374,9 @@ items:
   content: |
     **To build and run the service using Visual Studio 2019 or Command line**
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Latest version of Visual Studio](#tab/vslatestversion)
 
-       1. Launch **Visual Studio 2019**.
+       1. Launch **latest version of Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Open file" border="true":::
@@ -406,10 +406,10 @@ items:
    
     ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
       
-- title: Add Meetings SidePanel app to Teams
+- title: Add Meetings Side Panel app to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings SidePanel App**
+    **To create a Teams meeting and add Meetings Side Panel App**
 
     1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
 
