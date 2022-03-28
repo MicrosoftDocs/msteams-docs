@@ -16,9 +16,9 @@ items:
   content: |
     The `meetingSide Panel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
 
-    This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
+    This step-by-step guide helps you to implement **Side Panel** app to add and publish agenda.
 
-    **Meeting organizers' interaction of meeting Side Panel**
+    **Meeting organizers' interaction with meeting Side Panel**
 
     * **Add New Agenda Item**: Gives provision to add new agenda point.
     * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
@@ -65,7 +65,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    The following steps help you to create and register your bot in Azure portal:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
