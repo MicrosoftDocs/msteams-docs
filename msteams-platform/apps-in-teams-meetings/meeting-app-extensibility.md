@@ -209,6 +209,7 @@ The following table provides the user types and lists the features that each use
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
+| Channel meeting supports meeting extensibility for channel members | Available | Available | Available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card is allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 
 ## Next step
 
