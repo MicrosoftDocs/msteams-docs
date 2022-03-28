@@ -92,7 +92,7 @@ items:
 
    1. Select the **Redirect URI** details.
 
-      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="App registration page on Azure Portal." border="false":::
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="App registration page on Azure Portal." border="true":::
 
       1. Select the platform where your app will be accessible.
       1. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app. 
