@@ -63,7 +63,7 @@ items:
 
         The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon1.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
     You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -293,7 +293,7 @@ items:
         teamsfx account login m365
         ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials, close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
