@@ -56,8 +56,6 @@ items:
    To complete the registration of your tab app in Azure AD:
 
    1. [Register your app](#register-your-app)
-   1. [Configure authentication](#configure-authentication)  
-   1. Create a client secret
    1. Configure API permissions with Microsoft Graph
    1. Expose an API for the app and define app scope 
    
@@ -99,7 +97,15 @@ items:
          You can change this URL at a later stage, if needed.
 
    1. Select **Register**.   
+      A message pops up on the browser stating that the app was created.
 
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="App registration page on Azure Portal." border="true":::
 
-   ## Configure authentication
+      The app is created and displayed.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration page on Azure Portal." border="false":::
+
+    1. Note the **Application ID** and save it for later user.
+    
+   ## Configure API permissions with Microsoft Graph
 
