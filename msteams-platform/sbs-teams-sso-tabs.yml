@@ -62,6 +62,8 @@ items:
 
    ## Register your app
 
+   In this section, you'll learn to create and register an Azure-based Teams tab app. 
+
    To register your tab app in Azure AD:
 
    1. Open a web browser to the [Azure portal](https://ms.portal.azure.com/).
@@ -77,7 +79,7 @@ items:
 
       :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Azure Portal." border="false":::
       
-      The **Register an app** page appears.
+      The **Register an application** page appears.
    
    1. Enter the app details for your tab app.
 
@@ -105,7 +107,10 @@ items:
 
       :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration page on Azure Portal." border="false":::
 
-    1. Note the **Application ID** and save it for later user.
-    
+    1. Note and save the **Application ID**. You'll need it for updating the app manifest.
+
+    Your Teams tab app is created.
+
    ## Configure API permissions with Microsoft Graph
 
+   In this section, you'll learn to  
