@@ -37,6 +37,13 @@ You can explore and download samples and either run your app locally or remotely
 
 For more information, see [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
 
+## Step-by-step guides using Teams Toolkit
+
+* [Build a Teams app with Blazor](../sbs-gs-blazorapp.yml)
+* [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
+* [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
+* [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
+
 ## See also
 
 * [Provision cloud resources](provision.md)
