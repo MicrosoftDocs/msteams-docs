@@ -104,7 +104,7 @@
             href: toolkit/deploy.md
           - name: Publish apps using Toolkit 
             href: toolkit/publish.md
-          - name: Toolkit FAQ  
+          - name: Toolkit FAQ 
             href: toolkit/publish.md
           - name: Additional functions using Toolkit 
             items:
@@ -120,6 +120,8 @@
               href: toolkit/TeamsFx-multi-env.md
             - name: Collaborate using Toolkit
               href: toolkit/TeamsFx-collaboration.md
+            - name: Add CI/CD Workflows
+              href: toolkit/use-CICD-template
         - name: Teams Toolkit in Visual Studio
           href: toolkit/visual-studio-overview.md
           items:
