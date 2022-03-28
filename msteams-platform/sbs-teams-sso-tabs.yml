@@ -34,7 +34,13 @@ items:
    The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
     > [!NOTE]
-    > The getAuthToken() is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as User.Read or Mail.Read. For suggested workarounds, see Get an access token with Graph permissions.  
+    > The getAuthToken() is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as User.Read or Mail.Read. For suggested workarounds, see Get an access token with Graph permissions.
+
+    > [!IMPORTANT]
+    > Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as User.Read or Mail.Read, see Get an access token with Graph permissions.
+    > It is important that your application's domain name is the same as the domain name you have registered for your Azure AD application.
+    > Currently multiple domains per app are not supported.
+    > The user must set accessTokenAcceptedVersion to 2 for a new application.
 
 - title: Register tab app with Azure AD
   durationInMinutes: 1
@@ -50,10 +56,50 @@ items:
    To complete the registration of your tab app in Azure AD:
 
    1. [Register your app](#register-your-app)
-   1. Configure authentication
+   1. [Configure authentication](#configure-authentication)  
    1. Create a client secret
    1. Configure API permissions with Microsoft Graph
    1. Expose an API for the app and define app scope 
    
 
    ## Register your app
+
+   To register your tab app in Azure AD:
+
+   1. Open a web browser to the [Azure portal](https://ms.portal.azure.com/).
+      The Microsoft Azure Portal page opens. 
+   
+   1. Select **App registrations** icon. 
+      
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure Portal page." border="false":::
+
+      The **App registrations** page appears.
+
+   1. Select **+ New registration** icon.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Azure Portal." border="false":::
+      
+      The **Register an app** page appears.
+   
+   1. Enter the app details for your tab app.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure Portal." border="false":::
+
+      1. Enter the name of your app that will be displayed to the user.
+         You can change this name at a later stage, if you want to.
+
+      1. Select the intended types of user accounts that can access your app. For this tutorial, select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
+
+   1. Select the **Redirect URI** details.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="App registration page on Azure Portal." border="false":::
+
+      1. Select the platform where your app will be accessible.
+      1. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app. 
+         You can change this URL at a later stage, if needed.
+
+   1. Select **Register**.   
+
+
+   ## Configure authentication
+
