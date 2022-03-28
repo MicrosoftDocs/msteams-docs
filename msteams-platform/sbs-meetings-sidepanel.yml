@@ -26,7 +26,7 @@ items:
 
     You'll see the following output:
 
-:::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token" border="true":::  
+    :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token" border="true":::  
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -59,6 +59,7 @@ items:
         :::image type="content" source="~/assets/images/meetings-side-panel/clonerepository1.png" alt-text="Clone repository" border="true":::  
 
     1. Select **Clone**. 
+
 
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
