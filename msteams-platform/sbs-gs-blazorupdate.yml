@@ -457,6 +457,7 @@ items:
 
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
+
 - title: Congratulations!
    durationInMinutes: 1
    content: |
