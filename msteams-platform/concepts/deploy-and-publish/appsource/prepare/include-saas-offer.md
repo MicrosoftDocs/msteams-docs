@@ -217,6 +217,61 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 1. After Teams marketplace supports flat rate pricing, update your app manifest with the Offer ID and Publisher ID and resubmit your app for validation.
 
+## 1st party license management of 3P SaaS offers enabled in Teams/client
+
+With 1st party license management of 3P SaaS offers in the Teams surface area, our goal is to enable customers to easily assign, use, and track SaaS licenses purchased in Teams Storefront. This document focusses on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration, where the license management happens post purchase of the said app (the associated SaaS offer) via Teams surface areas or via AppSource. Without licenses being assigned to the given users, the app is unusable.
+
+The objective of this document is to outline the scenario, business justification and detailed specifications for simplified license management for Teams ISV apps from within Teams surface areas.
+
+The ISV creates an offer in Partner Center and chooses to manage licenses for this offer through Microsoft. This includes defining one or more licensing plans for the offer.
+These offers have licenses managed by Microsoft.
+
+## Assign and unassign Limitations
+
+APIs are managed by commerce team for license management. If a user is assigned with a license, in the background you are sending an API request to license core on commerce to add a license.
+
+If license is assigned to multiple users, we build a queue to the commerce team to add the licenses.
+
+1. Partial failures.
+1. A user may or may not have approval.
+1. Time lag based on the queue.
+
+You will see a pending status if the license has failed to assign and there is an opportunity to retry.
+
+## Process
+
+1. License Assignment for single and multiple users.
+1. View all paid subscriptions after uploading app to Teams.
+1. License management overview.
+1. User can assign licenses.
+1. User selects multiple individuals to assign.
+1. Users were assigned with licenses successfully. They appear as a list.
+
+## License Assignment for single and multiple users
+
+Customer is able to assign licenses for a new SaaS purchase - to a single or multiple users at a time or Teams Channel for their purchases.
+
+## Single User assignment
+
+1. From the purchase completion screen or from the license landing page in Teams, IW is able to navigate to a screen to assign licenses to users.
+1. IW can only assign licenses for plans they purchase.
+1. IW can assign licenses to users only within their modern workplace groups tenant.
+1. If user already has a license, the IW should receive a message indicating the user has a license.
+1. If the subscription does not have any available license seats, the purchaser should receive a message indicating that there are no licenses.
+1. If the subscription does not have any available license seats, the purchaser should be able to link to license seat upgrade screen in subscriptions management.
+1. Each user that is assigned a license should  Receive an email about assignment.
+1. As each license is assigned, the number of available licenses is decremented and displayed to the purchaser.
+
+## Multiple User assignment
+
+1. User can select multiple users or a Teams channel for license assignment.
+1. While multi user/channel assignment is in progress, Teams should render a message of update in progress.
+1. Partial failure should render a message about users that were not assigned.
+1. Document Performance and latency SLAs : multiple calls - one per user assignee.
+1. For channel assignment, purchaser can "select all" users in the channel for assignment.
+1. As each license is assigned, the number of available licenses is decremented and displayed to the purchaser.
+1. If maximum licenses available exceeds size of channel, user receives a notification in the CX and prompted to select users from list to be assigned a license.
+
 ## See also
 
 [Maintaining and supporting your published app](../post-publish/overview.md)
