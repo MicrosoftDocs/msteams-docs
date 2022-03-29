@@ -39,7 +39,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
    The following screen appears when you select your app package .zip file:
 
-    :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog." border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog" border="true":::
 
 ## Troubleshooting
 
