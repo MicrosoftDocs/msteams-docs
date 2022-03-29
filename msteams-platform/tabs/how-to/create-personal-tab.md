@@ -21,13 +21,13 @@ Ensure that you have the required [tools to build](~/tabs/how-to/tab-requirement
 
 To create a personal tab with Node.js
 
-1. In a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
+1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
 
     ```cmd
     npm install yo gulp-cli --global
     ```
 
-1. Install the Microsoft Teams App generator by entering the following command in your command prompt:
+1. At the command prompt, install Microsoft Teams App generator by entering the following command:
 
     ```cmd
     npm install generator-teams --global
@@ -36,21 +36,23 @@ To create a personal tab with Node.js
 Following are the steps to create a personal tab:
 
 1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab)
-1. [Update your app manifest](#Update-your-app-manifest)
+1. [Add a content page to the personal tab](#add-a-content-page-to-the-personal-tab)
+1. [Create your app package](#create-your-app-package)
 1. [Build and run your application](#build-and-run-your-application)
+1. [Establish a secure tunnel to your personal tab](#establish-a-secure-tunnel-to-your-tab)
 1. [Upload your application to Teams](#upload-your-application-to-teams)
 
 ### Generate your application with a personal tab
 
 1. At the command prompt, create a new directory for your personal tab.
 
-1. To start the Microsoft Teams App generator, enter the following command in your new directory.
+1. Enter the following command in your new directory to start the Microsoft Teams App generator.
 
     ```cmd
     yo teams
     ```
 
-1. Microsoft Teams App generator prompts a series of questions as following to which by providing your values you update your **manifest.json** file:
+1. provide your values to a series of questions prompted by Microsoft Teams App generator to update your **manifest.json** file.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
 
@@ -127,11 +129,11 @@ Following are the steps to create a personal tab:
     
     </details>
 
-### Update your app manifest
+### Add a content page to the personal tab
 
-To add a personal tab to this application, create a content page, and update existing files
+Create a content page and update the existing files of the personal tab application
 
-1. In your code editor, create a new **personal.html** file with the following markup:
+1. Create a new **personal.html** file in your Visual Studio Code with the following markup:
 
     ```html
     <!DOCTYPE html>
@@ -159,7 +161,7 @@ To add a personal tab to this application, create a content page, and update exi
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Open **manifest.json** from the following location in your code editor:
+1. Open **manifest.json** from the following location in your Visual Studio Code:
 
     ```
      ./src/manifest/manifest.json
@@ -186,7 +188,7 @@ To add a personal tab to this application, create a content page, and update exi
 
 1. Save the updated **manifest.json** file.
 
-1. To provide your content page in an IFrame, open **Tab.ts** in your code editor from the following path:
+1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
@@ -200,21 +202,21 @@ To add a personal tab to this application, create a content page, and update exi
 
 1. Save the updated file. Your tab code is complete.
 
-### Build and run your application
+### Create your app package
 
-You must have an [app package](~/concepts/build-and-test/apps-package.md) to build and run your application in Teams.
+You must have an app package to build and run your application in Teams.
 
-#### Create the app package
-
-The package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
+The app package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
 
 ```cmd
 gulp manifest
 ```
 
+### Build and run your application
+
 #### Build your application
 
-The build command transpiles your solution into the **./dist** folder. Enter the following command in the command prompt:
+Enter the following command at the command prompt to transpile your solution into the **./dist** folder.
 
 ```cmd
 gulp build
@@ -222,23 +224,23 @@ gulp build
 
 #### Run your application
 
-1. Start a local web server by entering the following command in the command prompt:
+1. At the command prompt enter the following command to start a local web server.
 
     ```cmd
     gulp serve
     ```
 
-1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page as shown in the following image:
+1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
 
-1. To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
+1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your personal tab.
 
     :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab" border="true":::
 
 ### Establish a secure tunnel to your tab
 
- To establish a secure tunnel to your tab, exit the localhost and enter the following command:
+At the command prompt exit the localhost and enter the following command to establish a secure tunnel to your tab.
 
 ```cmd
 gulp ngrok-serve
@@ -249,13 +251,11 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-To upload your application to Teams
+1. Go to your Microsoft Teams and select :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png":::
+1. Select **Manage your apps**
+1. Select **Publish an app** and **Upload a custom app**.
 
-1. Go to your Microsoft Teams and select **Store** icon.
-1. Select **Manage your apps** > **Publish an app**.
-1. Choose **Upload a custom app**.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams." border="true":::
+    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload custom app" border="true":::
 
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
@@ -265,7 +265,7 @@ To upload your application to Teams
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
 
-In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your uploaded app to view your personal tab.
+1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your uploaded app to view your personal tab.
 
 ::: zone-end
 
