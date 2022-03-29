@@ -45,7 +45,7 @@ If your app fails to sideload or any issues to upload, check the following optio
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html).
 1. Ensure your app manifest matches to the latest [schema](../../resources/schema/manifest-schema.md).
 
-## Access your app
+## Access your app.
 
 Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
