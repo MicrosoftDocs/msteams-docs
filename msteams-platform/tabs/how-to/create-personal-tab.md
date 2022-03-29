@@ -285,8 +285,7 @@ Following are the steps to create a personal tab:
 
 1. [Generate your application with a personal tab](#generate-your-personal-tab)
 1. [Update and run your application](#update-and-run-your-application)
-1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
-1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
+1. [Establish a secure tunnel](#establish-a-secure-tunnel)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 1. [Preview your app in Teams](#preview-your-app-in-teams)
 
@@ -378,7 +377,7 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 
-### Establish a secure tunnel to your tab
+### Establish a secure tunnel
 
 To establish a secure tunnel to your tab, at the command prompt in the root of your project directory run the following command:
 
