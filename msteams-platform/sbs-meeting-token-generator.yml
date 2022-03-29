@@ -443,13 +443,13 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-   **To build and run the service using latest version of Visual Studio or Command line**
+   **To build and run the service using latest version of Visual Studio  or Command line**
 
-    # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
+    # [Visual Studio](#tab/vs)
 
-       1. Launch the Visual Studio..
+       1. Launch the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
-    
+          
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="vsopen" border="true":::
 
        1. Select **TokenApp.csproj** file from **csharp** folder.
@@ -475,7 +475,9 @@ items:
     ```
    
     :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
-      
+
+      ---
+
 - title: Enable developer preview
   durationInMinutes: 1
   content: |
