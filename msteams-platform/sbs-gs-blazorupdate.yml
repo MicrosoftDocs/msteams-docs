@@ -215,9 +215,6 @@ items:
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
         
-        > [!NOTE]
-        > Select the **Bot app** as the capability for your app in the app feature to build and run your first bot app.
-
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
@@ -401,6 +398,114 @@ items:
         Your photograph and details appear in your **Personal Tab**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot showing user information in the tab" border="true":::
+
+
+- title: Create project workspace for your bot app
+  durationInMinutes: 1
+  content: |
+    Start Teams app development by creating your first app. This app uses the bot capability.
+    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
+
+    This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
+
+    In this section, you'll learn:
+    
+    1. [How to set up a new bot project with Teams Toolkit](#create-your-project)
+    1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
+
+    ## Create your project
+
+    Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
+
+    1. **Creating a new project** page: You select the project type.
+    1. **Configure your new project** page: You enter the project details.
+    1. **Create a new Teams application** page: You select the Teams app capabilities and the Microsoft 365 credentials.
+
+    **To create your bot project workspace**
+
+    1. Open the latest version of Visual Studio.
+
+    1. Select **Create a new project**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Illustration shows the option to create a new project." border="false":::
+
+        The **Create a new project** page appears.
+
+    1. Select the project details.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+
+          Select the project type:
+
+          1. Select **Microsoft Teams** from **All platforms** dropdown list.  
+        
+          1. Select **Microsoft Teams App** as the template.
+
+          1. Select **Next**.
+        
+          The **Configure your new project** page appears.
+
+    1.  Configure the new project details.     
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
+
+          Select the following project configuration:
+
+          1. Enter a suitable name for your project.
+
+              > [!NOTE] 
+              > You'll note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
+
+          1. Select the folder path where you want to create the project workspace.
+
+          1. Enter a different solution name, if you want.
+
+          1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
+
+          1. Select **Create**.
+
+          The **Create a new Teams application** page appears.  
+
+    1.  Select Teams app feature.       
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png" alt-text="Illustration shows the options to configure new project." border="false":::
+
+        Select app feature:
+
+        1. Select the **Bot app** as the capability for your app.
+
+        1. Select **Create**.
+
+        Your Teams bot app is created in a few seconds.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
+        
+
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/blazorapp.gif)
+    </details>
+
+    ## Take a tour of the source code
+
+    After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio." border="false":::
+
+    Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
+
+    | Folder name | Contents |
+    | --- | --- |
+    | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
+    | Properties/`manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
+    | `Pages/Tab.razor` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
+    
+    You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
 
 - title: Build and run your first bot app
