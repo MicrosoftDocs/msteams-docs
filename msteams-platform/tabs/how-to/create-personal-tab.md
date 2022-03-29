@@ -9,7 +9,7 @@ keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission 
 zone_pivot_groups: teams-app-environment
 ---
 
-# Personal tab
+# Create a personal tab
 
 Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for personal tabs.
 
