@@ -33,11 +33,11 @@ Azure AD is the main identity provider (IdP) for validating access to Azure-base
 
 | # | Steps | Key points |
 |--- | --- | --- |
-| 1 | A Teams app user attempts to log in | - The user provides their credentials to the app. <br> - It may include the username and password of the user. |
-| 2 | Teams app sends the user credentials to AAD for verification | - AAD receives the request to authenticate the user. <br> - This information may include user credentials along with details of the app that requested authentication. |
+| 1 | A Teams app user attempts to log in | - The user is redirected to Azure AD page where they provide their credentials. <br> - It may include the username and password of the user. |
+| 2 | AAD receives the request to authenticate the user. | -  This information may include user credentials along with details of the app that requested authentication. |
 | 3 | AAD verifies the user information. | - AAD matches the user credentials with its database. <br> - It verifies user access for the particular app. |
 | 4 | On a successful match, AAD sends an ID token granting app access to your Teams app. | - ID token may contain validated user credentials. <br> - The ID token of the authentication user is saved with the app. <br> - The ID token is used to let the user access at subsequent log ins. |
-| 5 | The user is given access once and for all. | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
+| 5 | The user is given access | - Your app uses the ID token generated the first time that the user was authenticated. <br> - Your app user can now access all services and application in the Azure system. |
 
 ## Features of Azure AD SSO
 

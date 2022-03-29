@@ -56,7 +56,7 @@ You can implement authentication in a Teams app using Microsoft Graph APIs or we
 In a Teams app based on the IdP, you can choose to authenticate users with:
 
 - Teams SSO with Azure AD
-- Teams assisted SSO with Azure AD
+- Authenticate with Azure AD as IdP
 - Other authentication methods:
   - Silent authentication
   - Third-party IdPs, such as Google or Facebook
@@ -73,7 +73,7 @@ Teams SSO with Azure AD is an authentication method that uses a user's Teams sig
 
 Teams supports other authentication methods that you can choose based on your app's security requirement.
 
-- **Teams assisted SSO with Azure AD**: Azure Active Directory Single Sign-On (AAD SSO) automatically signs users in. Users don't need to type in their credentials to sign in to Azure AD. This feature provides your users easy access to your cloud-based applications without needing any additional on-premises components.  
+- **Authenticate with Azure AD as IdP**: Azure Active Directory Single Sign-On (AAD SSO) automatically signs users in. Users don't need to type in their credentials to sign in to Azure AD. This feature provides your users easy access to your cloud-based applications.
 - **Other identity providers**: You can use a third-party Identity Provider (IdP) to authenticate your app users. The user is registered with an identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the user credentials and profile.
 - **IdP + SSO**: For an enhanced user experience, you can use an IDP to authenticate your users. In this case, the IDP works with SSO provider, such as AAD, and provides a single sign-on experience to the authenticated user.
 
@@ -89,7 +89,7 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 - Identity Provider (IDP): \add details for IDP\
 - SSO: Single sign-on lets your app users log into the app only once using their credentials. It offers access to all associated apps or websites without having to validate repeatedly.
 - Third-party authentication: A Teams app can use third-party IdPs, such as Google or Facebook. 
-- Graph API: \add details for Graph API and MS Graph\
+- Graph API: \add details for MS Graph\
 
 **Protocols**:
 
@@ -98,8 +98,9 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 
 **Authentication tokens**:
 
-- ID tokens: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user requests access.
-- Access tokens: An access token is an artifact contains user identity and access information. An IdP provides an access token to an app when a user registered with the IdP attempts to use the app.
+- ID token: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user attempts to access an app.
+- Access token: An access token is an artifact contains user identity and permission scopes.
+- Bearer token: \add details\
 
 ## Next step
 
