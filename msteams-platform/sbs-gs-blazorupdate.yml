@@ -19,7 +19,7 @@ items:
     
     You'll create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-apps.png" alt-text="Diagram showing this app has two features, tab and Bot." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, tab and Bot." border="false":::
 
     > [!NOTE]
     > Currently, Teams Toolkit doesn't support message extension capability.
@@ -486,7 +486,7 @@ items:
     <summary>A quick recap of creating a Teams app.</summary>
     Watch this short recap for creating a Teams app.
 
-    ![Create a Teams app](~/assets/videos/blazorapp.gif)
+    ![Create a Teams app](~/assets/videos/botapp.gif)
     </details>
 
     ## Take a tour of the source code
