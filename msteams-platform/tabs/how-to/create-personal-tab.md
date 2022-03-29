@@ -601,9 +601,9 @@ ngrok http 3978 --host-header=localhost
 
 ::: zone-end
 
-    Now you have succesfuly created and added your personal tab in Teams.
+  Now you have succesfuly created and added your personal tab in Teams.
 
-    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+  As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
 
 ## Reorder static personal tabs
 
