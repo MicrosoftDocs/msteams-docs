@@ -414,10 +414,10 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png" alt-text="manifest" border="true":::
 
+
 - title: Build client app using npm install
   durationInMinutes: 1
   content: |
-    
     1. Navigate to the **App** folder in cloned repository.
     1. Copy the **App** folder path.
     1. Open a new **Command Prompt** window, change the current directory to the copied **App** path.
