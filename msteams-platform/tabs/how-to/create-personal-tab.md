@@ -13,7 +13,7 @@ zone_pivot_groups: teams-app-environment
 
 Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for personal tabs.
 
-Ensure that you have the required [tools to build](~/tabs/how-to/tab-requirements.md#tools-to-build-tabs) your personal tab.
+Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
 ::: zone pivot="node-java-script"
 
@@ -131,7 +131,7 @@ Following are the steps to create a personal tab:
 
 ### Add a content page to the personal tab
 
-Create a content page and update the existing files of the personal tab application
+Create a content page and update the existing files of the personal tab application:
 
 1. Create a new **personal.html** file in your Visual Studio Code with the following markup:
 
@@ -286,6 +286,7 @@ Following are the steps to create a personal tab:
 1. [Generate your application with a personal tab](#generate-your-personal-tab)
 1. [Update and run your application](#update-and-run-your-application)
 1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
+1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 1. [Preview your app in Teams](#preview-your-app-in-teams)
 
@@ -295,7 +296,7 @@ Following are the steps to create a personal tab:
 
 1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln**.
 
-In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
 * <http://localhost:3978/>
 * <http://localhost:3978/personalTab>
@@ -377,6 +378,8 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 ### Establish a secure tunnel to your tab
+
+### Establish a secure tunnel to your 
 
 To establish a secure tunnel to your tab, at the command prompt in the root of your project directory run the following command:
 
