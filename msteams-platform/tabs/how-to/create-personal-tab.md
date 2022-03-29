@@ -271,9 +271,9 @@ gulp ngrok-serve
 
 ## Create a personal tab with ASP.NET Core
 
-You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with ASP.NET Core Razor pages:
+You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with ASP.NET Core
 
-1. At a command prompt, create a new directory for your tab project.
+1. At the command prompt, create a new directory for your tab project.
 
 1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
@@ -281,13 +281,14 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-Follow the below steps to create a personal tab:
+Following are the steps to create a personal tab:
 
-* [Generate your personal tab](#generate-your-personal-tab)
-* [Update your application](#update-your-application)
-* [Run your application](#run-your-application)
-* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
-* [Preview your app in Teams](#preview-your-app-in-teams)
+1. [Generate your application with a personal tab](#generate-your-personal-tab)
+1. [Update your application](#update-your-application)
+1. [Run your application](#run-your-application)
+1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
+1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
+1. [Preview your app in Teams](#preview-your-app-in-teams)
 
 ### Generate your personal tab
 
@@ -295,7 +296,7 @@ Follow the below steps to create a personal tab:
 
 1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **razor-csharp** folder and open **PersonalTab.sln**.
 
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
 * http://localhost:3978/
 * http://localhost:3978/personalTab
@@ -307,7 +308,7 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 3.1 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -341,7 +342,7 @@ These files must be zipped in an app package for use in uploading your tab to Te
 
 #### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
+In Visual Studio Solution Explorer, right-click on the project and select **Edit Project File**. At the end of the file, you can see the following code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -365,22 +366,22 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 ### Update your application
 
-1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
+1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml** and add the following to the `<head>` tags section:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Open **PersonalTab.cshtml** from **Pages** folder and inside the `<script>` tags add `microsoftTeams.initialize()` and save.
+1. Open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
 
 ### Run your application
 
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
+In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-### Establish a secure tunnel to your tab for Teams
+### Establish a secure tunnel to your tab
 
-To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
+To establish a secure tunnel to your tab, at the command prompt in the root of your project directory run the following command:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -388,7 +389,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Update your app package with Developer Portal
 
-1. Go to your **Developer portal** in Teams.
+1. Go to **Developer portal** in Teams.
 
 1. Open **Apps** and select **Import app**.
 
@@ -408,11 +409,11 @@ ngrok http 3978 --host-header=localhost
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank. 
+1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank.
 
 1. Select Save.
 
-1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
 ### Preview your app in Teams
 
@@ -420,7 +421,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
 
-1. Find your app using the search box, select the three-dots in its row
+1. Find your app using the search , select the three-dots in its row.
 
 1. Select the **View** option. The **Add** page appears for your app.
 
@@ -434,9 +435,9 @@ ngrok http 3978 --host-header=localhost
 
 ## Create a personal tab with ASP.NET Core MVC
 
-You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC:
+You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC
 
-1. At a command prompt, create a new directory for your tab project.
+1. At the command prompt, create a new directory for your tab project.
 
 1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
@@ -444,21 +445,22 @@ You can create a custom personal tab using C# and ASP.NET Core MVC. To create a 
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-Follow the below steps to create a personal tab:
+Following are the steps to create a personal tab:
 
-* [Generate your personal tab](#generate-your-personal-tab)
-* [Update your application](#update-your-application)
-* [Run your application](#run-your-application)
-* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
-* [Preview your app in Teams](#preview-your-app-in-teams)
+1. [Generate your application with a personal tab](#generate-your-personal-tab)
+1. [Update your application](#update-your-application)
+1. [Run your application](#run-your-application)
+1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
+1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
+1. [Preview your app in Teams](#preview-your-app-in-teams)
 
-### Generate your personal tab
+### Generate your application with a personal tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
 1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
 
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
 * http://localhost:3978
 * http://localhost:3978/personalTab
@@ -470,7 +472,7 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 3.1 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -500,7 +502,7 @@ These files must be zipped in an app package for use in uploading your tab to Te
 
 #### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
 
 ``` xml
 <PropertyGroup>
@@ -522,7 +524,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Models
 
-**PersonalTab.cs** presents a Message object and methods that are called from **PersonalTabController** when a user selects a button in the **PersonalTab** View.
+**PersonalTab.cs** presents a message object and methods that are called from **PersonalTabController** when a user selects a button in the **PersonalTab** View.
 
 #### Views
 
@@ -540,22 +542,22 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 ### Update your application
 
-1. Go to the **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
+1. Go to **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and inside the `<script>` tags add `microsoftTeams.initialize()` and save.
+1. Open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
 
 ### Run your application
 
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
+In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-### Establish a secure tunnel to your tab for Teams
+### Establish a secure tunnel to your tab
 
-To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
+To establish a secure tunnel to your tab, at the command prompt in the root of your project directory run the following command:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -563,7 +565,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Update your app package with Developer Portal
 
-1. Go to your **Developer portal** in Teams.
+1. Go to **Developer portal** in Teams.
 
 1. Open **Apps** and select **Import app**.
 
@@ -595,16 +597,19 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
 
-1. Find your app using the search box, select the three-dots in its row
+1. Find your app using the search, select the three-dots in its row.
 
-1. Select the **View** option. The **Add** page appears for your app.
+1. Select **View** option. The **Add** page appears for your app.
 
-1. Select **Add** to load the tab on Teams. Your tab is now available in Teams. 
+1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
 
 ::: zone-end
 
+Now you have succesfuly created and added your personal tab in Teams.
+
+As you have your personal tab in Teams, you can also [reorder](reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
 
 ## Reorder static personal tabs
 
