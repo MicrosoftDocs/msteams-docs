@@ -1,0 +1,57 @@
+---
+title: FAQs
+author: zyxiaoyuer
+description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
+ms.author: zhany
+ms.localizationpriority: medium
+ms.topic: overview
+ms.date: 11/29/2021
+---
+
+# Teams Toolkit FAQs
+
+This section provides the answer and relevant information to the common questions asked about Teams Toolkit. This section can be divided into different categories 2/3 – 2 tabs
+
+* Error messages
+* Queries
+
+1.	Getting Error in Unit Testing TeamsFx app
+2.	How do I get a Graph API token with higher permission than the user?
+3.	Format of Teams Chat URL.
+4.	How to setup Custom Teams Office 365 Connector.
+5.	How to trigger Microsoft Graph Toolkit PeoplePicker onChange event in mobile.
+6.	How to Enable the user install the bot by default and not as a tab on teams app manifest.
+7.	Facing HTTP error when communicate with teams bot by using teamsFx.
+8.	How to implement localization in TeamsFX project.
+9.	Microsoft Teams Desktop Personal app not working with SPFX and GraphApi.
+10.	What is Microsoft Teams Toolkit - Support for Multitenant Teams App.
+11.	Teams-cli using Github actions fails to find package.json.
+12.	Microsoft Teams Chatbot checklist.
+13.	Is there a way for a Microsoft Teams Bot to receive emergency call notification on Teams?.
+14.	How to set up ngrok for Teams Tab cross-device debug.
+15.	How to Provision Teams App due to Storage domain conflict.
+16.	How fix Search Message extension oauth failing
+17.	How to create an oauth for my Bot
+18.	How to login using CLI for CI/CD
+19.	
+20.	How to address MS Teams static tab with content bot id with shows error in personal chat scope
+21.	How to provision my app resources in Azure using the TeamsToolkit
+22.	Error messages
+23.	How to clear the credentials used by TeamsFx SSO?
+24.	"Localhost refused to connect" using Microsoft Graph Toolkit on a deployed Microsoft Teams custom personal app
+25.	Teams Toolkit - Failed to provision 'App Service plan'
+26.	I can't paste anything into the bot endpoint address field. 
+27.	App doesn't sideload when debugging with Teams Toolkit
+28.	Can't found personal application of Microsoft Teams Toolkit when I sideload it in Teams
+29.	Is the June 2009 WPF Toolkit Safe to Use in Applications that will be Shipped Out to Customers?
+30.	How to remove a tab attribute in ASP .NET AJAX Toolkit using Regular Expression
+31.	How to clear the credentials used by TeamsFx SSO?
+
+
+## See also
+
+* [Create new project using Teams Toolkit](create-new-project.md)
+* [Prepare accounts to build Teams apps](accounts.md)
+* [Publish Teams apps using Teams Toolkit](publish.md)
+* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Deploy to the cloud](deploy.md)
