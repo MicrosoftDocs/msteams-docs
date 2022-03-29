@@ -251,9 +251,9 @@ items:
         
       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-expose.png" alt-text="final expose" border="true":::
       
-        > [!NOTE]
-        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+     > [!NOTE]
+     > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
+     > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
     
     1. Select **Add a scope**. 
     
@@ -426,14 +426,14 @@ items:
 
     1. Run the following command in the **Command Prompt** to download packages and dependencies.
     
-        ```Command-Prompt
-    npm install
-    ```
+       ```Command-Prompt
+       npm install
+       ```
     1. Run the following command in the **Command Prompt** to build the app.
 
-            ```Command-Prompt
-    npm start
-    ```
+       ```Command-Prompt
+       npm install
+       ```
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-npm.png" alt-text="npm" border="true":::
 
        The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server serves the static files from the location.
@@ -443,9 +443,9 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-   **To build and run the service using latest version of Visual Studio or Command line.**
+   **To build and run the service using latest version of Visual Studio or Command line**
 
-   # [Visual Studio](#tab/vs)
+    # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the Visual Studio..
        1. Navigate to **File** > **Open** > **Project/Solution**.
