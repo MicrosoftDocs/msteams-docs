@@ -31,7 +31,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure that you install the following tools and set up your development environment:  
+    To set up your development environment, install the following tools:
 
     * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
     * [Ngrok](https://ngrok.com/) or an equivalent tunnelling solution
@@ -177,7 +177,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/repo.png" alt-text="Repo Cloning.":::
 
-    1. Ensure to note the Path of the repository that you downloaded.
+    1. Ensure to note the path of the repository that you downloaded.
     1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** folder.
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
@@ -260,7 +260,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/message-all-members-output.png" alt-text="MessageAllMembers card.":::
 
-    You can select an option from the command list by typing @TeamsConversationBot into the compose message area and What can I do? text above the compose area.
+    You can select an option from the command list by typing `@TeamsConversationBot` into the compose message area and `What can I do?` text above the compose area.
 
 - title: Complete challenge
   durationInMinutes: 1
