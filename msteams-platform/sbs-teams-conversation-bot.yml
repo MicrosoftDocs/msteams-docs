@@ -37,7 +37,7 @@ items:
     * [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download)
     * Microsoft Teams and a Teams account
 
-- title: Setup conversation bot
+- title: Set up conversation bot
   durationInMinutes: 5
   content: |
     Register bot with Azure bot service when you develop and host it in Azure. Perform the following steps:
@@ -183,11 +183,11 @@ items:
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
         * You can obtain the `MicrosoftAppTenantId` or `UserId` from the link of the account used to login to the Teams. Follow the path in the image to get the link for `tenant id`:
         
-            :::image type="content" source="./assets/images/conversation-bot/teams-link-new.png" alt-text="Tenant ID.":::
+            :::image type="content" source="./assets/images/conversation-bot/teams-link-new.png" alt-text="Tenant ID path in Teams.":::
 
             :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Copy Teams link.":::
 
-        Copy the `tenant id` from the URL.
+            Copy the tenant id from the URL.
 
             :::image type="content" source="./assets/images/conversation-bot/url-tenantid.png" alt-text="TenantID.":::
 
@@ -220,7 +220,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/visual-studio.png" alt-text="Visual Studio debug.":::
 
-    1. Select F5 to debug. You will receive a confirmation screen when your bot is ready.
+    1. Select F5 to debug. You'll receive a confirmation screen when your bot is ready.
 
         :::image type="content" source="./assets/images/conversation-bot/bot.png" alt-text="Bot ready screen.":::
 
@@ -240,26 +240,26 @@ items:
 - title: Interaction with the conversation bot
   durationInMinutes: 2
   content: |
-    You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot will respond to the following strings:
+    You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot responds to the following strings:
 
     In the left pane of the Teams, select the ellipses ●●● and then select your app from the list. The bot shows **Suggestions** as follows:
 
     :::image type="content" source="./assets/images/conversation-bot/suggestions.png" alt-text="Suggestions card.":::
 
     1. **Show Welcome** <br>
-        **Result:** The bot will send the welcome card for you to interact with. <br>
+        **Result:** The bot sends the welcome card for you to interact with. <br>
         **Valid Scopes:** personal, group chat, team chat.
 
         :::image type="content" source="./assets/images/conversation-bot/show-welcome-output.png" alt-text="Show Welcome card.":::
 
     1. **MentionMe** <br>
-        **Result:** The bot will respond to the message and mention the user.<br>
+        **Result:** The bot responds to the message and mention the user.<br>
         **Valid Scopes:** personal, group chat, team chat.
 
         :::image type="content" source="./assets/images/conversation-bot/mentionme-output.png" alt-text="Mentionme card.":::
 
     1. **MessageAllMembers**<br>
-        **Result:** The bot will send a one-on-one message to each member in the current conversation.<br>
+        **Result:** The bot sends a one-on-one message to each member in the current conversation.<br>
         **Valid Scopes:** personal, group chat, team chat.
 
         :::image type="content" source="./assets/images/conversation-bot/message-all-members-output.png" alt-text="MessageAllMembers card.":::
