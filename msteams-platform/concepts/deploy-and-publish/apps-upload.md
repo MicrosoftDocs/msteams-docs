@@ -32,10 +32,10 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Select **Apps** and select **Manage your apps**.
 1. Select **Upload a custom app**.
 1. Select your app package .zip file.
-1. Select **Add** to add your app to Teams.
+1. Select from the dropdown list to add your app to Teams.
 
 > [!NOTE]
-> You can also select one from the dropdown list as per your requirement.
+> You can select one from the dropdown list to add your app to a team or chat.
 
    The following screen appears when you select your app package .zip file:
 
