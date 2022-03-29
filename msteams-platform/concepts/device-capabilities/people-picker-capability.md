@@ -20,11 +20,9 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 * Helps in scenarios involving task assignment, tagging, and notifying user.
 * Saves significant time and effort in comparison to building any similar control.
 
-## Use `selectPeople` API to integrate People Picker
+To integrate People Picker input control in your Teams app, use the [`selectPeople`](#selectpeople-api) API. To integrate and call the API, you must have a good understanding of accompanying [code snippet](#code-snippet). You also need familiarity with [API response errors](#error-handling).
 
-To integrate People Picker input control in your Teams app, use the [`selectPeople`](#selectpeople-api) API. To integrate and call the API, you must have a good understanding of accompanying [code snippet](#code-snippet). You also need familiarity with API response errors to handle any errors in the web app.
-
-### `selectPeople` API
+## `selectPeople` API
 
 The `selectPeople` API enables you to add Teams People Picker input control to the web apps and also helps you with the following:
 
@@ -40,7 +38,7 @@ The `selectPeople` API comes with the following input configurations:
 |`title`|String| It's an optional parameter and sets the title for the People Picker control.|`selectPeople`|
 |`setSelected`|String| It's an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In case of a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
 |`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|**False**|
-|`singleSelect`|Boolean|It's an optional parameter. When set to true it launches the People Picker and restricts the selection to only one user.|**False**|
+|`singleSelect`|Boolean|It's an optional parameter and when set to true, it launches the People Picker and restricts the selection to only one user.|**False**|
 
 The following image displays the experience of People Picker on mobile and desktop:
 
