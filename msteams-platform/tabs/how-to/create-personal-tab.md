@@ -598,12 +598,12 @@ ngrok http 3978 --host-header=localhost
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
-
-::: zone-end
-
+  
    Now you have succesfuly created and added your personal tab in Teams.
 
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+
+::: zone-end
 
 ## Reorder static personal tabs
 
