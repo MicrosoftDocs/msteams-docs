@@ -32,7 +32,7 @@ items:
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
-
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
@@ -41,7 +41,6 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
       > [!NOTE]
