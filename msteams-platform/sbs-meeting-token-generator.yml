@@ -46,7 +46,7 @@ items:
    You install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Latest version of visual Studio](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution
     
@@ -252,12 +252,11 @@ items:
      The following image shows the domain name:
         
       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-bot-expose.png" alt-text="final expose" border="true":::
-       
-        
-     > [!NOTE]
-     > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-     > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
-
+      
+        > [!NOTE]
+        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
+        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+    
     1. Select **Add a scope**. 
     
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-scope.png" alt-text="scope" border="true":::
@@ -442,7 +441,7 @@ items:
   content: |
     **To build and run the service using latest version of Visual Studio or Command line**
 
-    # [Visual Studio 2022](#tab/vs2022)
+    # [Visual Studio](#tab/vs2022)
 
        1. Launch the latest version of Visual Studio..
        1. Navigate to **File** > **Open** > **Project/Solution**.
@@ -521,11 +520,9 @@ items:
 
          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-developer-preview.png" alt-text="developer preview" border="true":::
 
-- title: Add Meeting Token App to Teams
+- title: Add Meeting Token to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meeting Token App**
-
     1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
