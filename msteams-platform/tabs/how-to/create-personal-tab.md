@@ -285,7 +285,7 @@ Following are the steps to create a personal tab:
 
 1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab-1)
 1. [Update and run your application](#update-and-run-your-application)
-1. [Establish a secure tunnel to tab](#establish-a-secure-tunnel)
+1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-1)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 1. [Preview your app in Teams](#preview-your-app-in-teams)
 
@@ -297,10 +297,10 @@ Following are the steps to create a personal tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* <http://localhost:3978/>
-* <http://localhost:3978/personalTab>
-* <http://localhost:3978/privacy>
-* <http://localhost:3978/tou>
+    * <http://localhost:3978/>
+    * <http://localhost:3978/personalTab>
+    * <http://localhost:3978/privacy>
+    * <http://localhost:3978/tou>
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -374,12 +374,11 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
 1. Open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
 
-In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
+1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
+### Establish a secure tunnel to your tab
 
-### Establish a secure tunnel
-
-To establish a secure tunnel to your tab, at the command prompt in the root of your project directory run the following command:
+At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -409,7 +408,7 @@ ngrok http 3978 --host-header=localhost
 
 1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank.
 
-1. Select Save.
+1. Select **Save**.
 
 1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
@@ -445,9 +444,9 @@ You can create a custom personal tab using C# and ASP.NET Core MVC. To create a 
 
 Following are the steps to create a personal tab:
 
-1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab)
-1. [Update and run application](#update-your-application)
-1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
+1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab-2)
+1. [Update and run application](#update-and-run-your-application-1)
+1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-2)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal-1)
 1. [Preview your app in Teams](#preview-your-app-in-teams-1)
 
@@ -457,12 +456,12 @@ Following are the steps to create a personal tab:
 
 1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
 
-In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* <http://localhost:3978>
-* <http://localhost:3978/personalTab>
-* <http://localhost:3978/privacy>
-* <http://localhost:3978/tou>
+    * <http://localhost:3978>
+    * <http://localhost:3978/personalTab>
+    * <http://localhost:3978/privacy>
+    * <http://localhost:3978/tou>
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -537,7 +536,7 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 </details>
 
-### Update your application
+### Update and run your application
 
 1. Go to **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
@@ -548,13 +547,11 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 1. Open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
 
-### Run your application
-
-In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
+1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 ### Establish a secure tunnel to your tab
 
-To establish a secure tunnel to your tab, at the command prompt in the root of your project directory run the following command:
+At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -584,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank.
 
-1. Select Save.
+1. Select **Save**.
 
 1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
@@ -604,9 +601,9 @@ ngrok http 3978 --host-header=localhost
 
 ::: zone-end
 
-Now you have succesfuly created and added your personal tab in Teams.
+    Now you have succesfuly created and added your personal tab in Teams.
 
-As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
 
 ## Reorder static personal tabs
 
