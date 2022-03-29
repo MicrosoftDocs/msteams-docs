@@ -118,9 +118,10 @@ items:
    To configure API permissions:
 
    1. Select **Manage** > **API permission** from the left pane.
-      The **API permissions** page appears.
 
       :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option." border="false":::
+
+      The **API permissions** page appears.
 
    1. Select **+ Add permissions** to add Microsoft Graph API permissions.
       
@@ -159,4 +160,37 @@ items:
    To expose an API:
 
    1. Select **Manage** > **Expose an API** from the left pane.
+      
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option." border="false":::
+
       The **Expose an API** page appears.
+
+   1. Select **Set** to generate app ID URI.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Expose an API menu option." border="false":::
+
+      The section for setting app ID URI appears.
+
+   1. Enter the app ID URI, and then select **Save**.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
+
+      A message pops up on the browser stating that the app ID URI was updated. 
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message" border="true":::
+
+      The app ID URI displays on the page.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App ID URI updated" border="false":::
+
+   1. Select **+ Add a scope** in the **Scopes defined by this API** section.
+
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="App ID URI updated" border="true":::
+
+      The **Add a scope** page appears.
+
+   1.    
+
+
+
+       
