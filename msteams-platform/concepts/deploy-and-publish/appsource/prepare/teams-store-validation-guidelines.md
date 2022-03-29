@@ -19,7 +19,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 ## Value proposition
 
-> This section is inline with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
+This section is inline with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
 ### App name
 
@@ -103,7 +103,6 @@ If your app authenticates users with an external service, follow these guideline
 
 [*Mandatory Fix*]
 
-> [!NOTE]  
 > This section is inline with [Microsoft commercial certification policy number 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
 
 Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.  
