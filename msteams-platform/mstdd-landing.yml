@@ -164,7 +164,7 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
-        - text: Implement meeting side panel in Teams
+        - text: Generate meeting side panel in Teams
           url: ~/sbs-meetings-sidepanel.yml  
 - title: Teams app scenarios
   linkLists:
