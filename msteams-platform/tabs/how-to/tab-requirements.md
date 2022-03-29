@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 # Prerequisites
 
-Ensure that you adhere to the following prerequisites while building your Teams tab:
+Ensure that you adhere to the following prerequisites while building your Teams personal and channel or group tab:
 
 * Allow your tab pages to be discovered in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
   * Set header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
@@ -50,7 +50,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 ### Build your Teams tab
 
-Now let's build your tab. But first select your choice of tab to build.
+Now let's build your tab. But first select your choice of tab to build:
 
 > [!div class="nextstepaction"]
 > [Build a personal tab](~/tabs/how-to/create-personal-tab.md)
