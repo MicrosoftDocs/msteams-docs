@@ -88,6 +88,8 @@
   items:
    - name: Overview of Tools in IDE
      items:
+        - name: Teams Toolkit overview
+          href: toolkit/teams-toolkit-fundamentals.md
         - name: Teams Toolkit in Visual Studio Code
           items:
           - name: Create a new app
@@ -104,7 +106,7 @@
             href: toolkit/deploy.md
           - name: Publish apps using Toolkit 
             href: toolkit/publish.md
-          - name: Toolkit FAQ 
+          - name: Teams Toolkit FAQ 
             href: toolkit/publish.md
           - name: Additional functions using Toolkit 
             items:
