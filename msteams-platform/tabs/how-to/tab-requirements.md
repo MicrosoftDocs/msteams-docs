@@ -30,9 +30,9 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * For authentication to work on mobile clients, you must upgrade to Teams JavaScript SDK 1.4.1 and later.
 
-* If you choose to have your channel or group tab appear on Teams mobile client, the `setSettings()` configuration must have a value for the `websiteUrl` property.
+* If you choose to have your channel or group tab to appear on Teams mobile client, the `setSettings()` configuration must have a value for the `websiteUrl` property.
 
-* Microsoft Teams tab does not support the ability to load intranet websites that use self-signed certificates.
+* Microsoft Teams tab does'nt support the ability to load intranet websites that use self-signed certificates.
 
 ## Tools to build tabs
 
@@ -45,12 +45,12 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
+| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When the computer is shut down or goes to sleep, the service is no longer available. |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
 ### Build your Teams tab
 
-Now let's build your tab. But first select your choice of tab to build
+Now let's build your tab. But first select your choice of tab to build.
 
 > [!div class="nextstepaction"]
 > [Build a personal tab](~/tabs/how-to/create-personal-tab.md)
