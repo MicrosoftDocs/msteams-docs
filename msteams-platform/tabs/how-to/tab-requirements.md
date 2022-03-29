@@ -48,6 +48,8 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
+### Build your Teams tab
+
 Now let's build your tab. But first select your choice of tab to build
 
 > [!div class="nextstepaction"]
@@ -58,6 +60,4 @@ Now let's build your tab. But first select your choice of tab to build
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Build your first app using JavaScript](../../get-started/first-app-react.md)
-* [Build your first app using SPFx](../../get-started/first-app-spfx.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
