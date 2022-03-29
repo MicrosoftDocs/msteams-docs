@@ -443,8 +443,9 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-   
-   # [Visual Studio](#tab/vs2022)
+   **To build and run the service using latest version of Visual Studio or Command line.**
+
+   # [Visual Studio](#tab/vs)
 
        1. Launch the Visual Studio..
        1. Navigate to **File** > **Open** > **Project/Solution**.
@@ -465,8 +466,7 @@ items:
 
           :::image type="content" source="~/assets/images/meeting-token-generator/sbs-meeting-token-output.png" alt-text="output" border="true"::: 
 
-        
-    # [Command line](#tab/cli)
+   # [Command line](#tab/cli)
 
     Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
 
