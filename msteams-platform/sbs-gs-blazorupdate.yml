@@ -405,7 +405,7 @@ items:
   content: |
     Start Teams app development by creating your first app. This app uses the bot capability.
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-helloworld-app-bot.png" alt-text="Diagram showing this app has one feature. Tab is highlighted." border="false":::    
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
@@ -448,7 +448,7 @@ items:
 
     1.  Configure the new project details.     
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
           Select the following project configuration:
 
@@ -469,7 +469,7 @@ items:
 
     1.  Select Teams app feature.       
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png" alt-text="Illustration shows the options to configure new project." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
         Select app feature:
 
@@ -493,7 +493,7 @@ items:
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio." border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-appbot-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio." border="false":::
 
     Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
 
