@@ -29,7 +29,7 @@ The `selectPeople` API enables you to add Teams People Picker input control to t
 * Allows the user to search and select one or more people from the list.
 * Returns the ID, name, and email address of selected users to the web app.
 
-In case of a personal app, the control searches across the organization within Teams. If the app is added to a chat or channel, then the search context is configured based on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.
+In case of a personal app, the control searches across the organization within Teams. If the app is added to a chat or channel, then the search context is configured based on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization within Teams.
 
 The `selectPeople` API comes with the following input configurations:
 
@@ -53,7 +53,7 @@ The People Picker input control allows the user to search and add people using t
 
 # [Desktop](#tab/Sampledesktop)
 
-The People Picker control on web or desktop is launched in a modal window on top of your web app and add people using the following steps:
+The People Picker control on web or desktop is launched in a modal window on top of your web app and to add people use the following steps:
 
 1. Search the name of the required person using the control.
 1. Select person from the suggested list and add to the app.
