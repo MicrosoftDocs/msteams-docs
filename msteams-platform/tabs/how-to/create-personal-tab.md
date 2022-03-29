@@ -249,7 +249,7 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to Microsoft Teams and select **store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::
+1. Go to Microsoft Teams and select **Store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Select **Manage your apps**
 1. Select **Publish an app** and **Upload a custom app**.
 
@@ -259,11 +259,11 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
 
-1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
+1. Select **Add** in the pop-up window. Your tab is uploaded to Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
 
-1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and choose your uploaded app to view your personal tab.
+1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
 ::: zone-end
 
@@ -284,8 +284,7 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 Following are the steps to create a personal tab:
 
 1. [Generate your application with a personal tab](#generate-your-personal-tab)
-1. [Update your application](#update-your-application)
-1. [Run your application](#run-your-application)
+1. [Update and run your application](#update-and-run-your-application)
 1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 1. [Preview your app in Teams](#preview-your-app-in-teams)
@@ -364,7 +363,7 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
 </details>
 
-### Update your application
+### Update and run your application
 
 1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml** and add the following to the `<head>` tags section:
 
@@ -374,8 +373,6 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
     ```
 
 1. Open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
-
-### Run your application
 
 In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
