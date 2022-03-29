@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # People Picker
 
-People Picker is a control in Teams, that allows users to search and select people. You can integrate People Picker input control in a web app, which allows end users to perform different functions. The functions allows user to search and select people within a chat, a channel, or across the organization. The People Picker control is available across all Teams clients web, desktop, and mobile.
+People Picker is a control in Teams that allows users to search and select people. You can integrate People Picker input control in a web app, which allows end users to perform different functions. The functions allows user to search and select people within a chat, a channel, or across the organization. The People Picker control is available across all Teams clients web, desktop, and mobile.
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate People Picker in your web app.
 
@@ -46,10 +46,10 @@ The following image displays the experience of People Picker on mobile and deskt
 The People Picker control on mobile allows the user to search and add people as provided in the following steps:
 
 * To add the user as an approver in an app, select the required field and People Picker control opens in a separate view.
-* User selects the approver based on name oe email address specified.
+* User selects the approver based on name or email address.
 * The suggested list is shared back with the app.
 
-:::image type="content" source="../../assets/images/tabs/people-picker-mobile-caobility-new.jpg" alt-text="People picker control capability mobile":::
+:::image type="content" source="../../assets/images/tabs/people-picker-mobile-capability-new.jpg" alt-text="People picker control capability mobile":::
 
 # [Desktop](#tab/Sampledesktop)
 
