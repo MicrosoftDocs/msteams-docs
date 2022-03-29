@@ -153,11 +153,11 @@ Select **Schedule a meeting** button, that leads an user to the calendar and aut
 :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
 
 > [!NOTE]
-> currently users can add apps only from desktop. App shows up on corresponding mobile meeting when added on desktop.
+> Currently users can add apps only from desktop. App shows up on corresponding mobile meeting when added on desktop.
 
 ### Capabilities
 
-Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots and message extensions.
+Supports pre/post meeting tabs, in-meeting panels, content bubbles, bots and message extensions.
 
 ### Integrate bots into the meeting lifecycle
 
