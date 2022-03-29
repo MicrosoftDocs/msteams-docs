@@ -251,7 +251,7 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to your Microsoft Teams and select :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png":::
+1. Go to your Microsoft Teams and select :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Teams store":::
 1. Select **Manage your apps**
 1. Select **Publish an app** and **Upload a custom app**.
 
