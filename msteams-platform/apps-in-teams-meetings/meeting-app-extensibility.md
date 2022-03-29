@@ -140,21 +140,20 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ## Channel meetings support meeting extensibility
 
-Allows user to set up a meeting from a channel, apps can be used in scheduled channel meetings. It is an in-meeting experience, supports desktop and mobile..
-Users can view apps on mobile, which can be accessed while they are in channel meeting, app shows up on corresponding mobile meeting when added on desktop.
+Channel meeting allows user to set up a meeting from a channel, apps can be used in scheduled channel meetings. It is an in-meeting experience, supports desktop and mobile.
 
 ### Schedule channel meetings
 
-Select Teams from the left pane. The teams page appears, select the dropdown menu next to the meet and select schedule a meeting.
+Select Teams from the left pane. The teams page appears, select the **Meet** dropdown menu and select **Schedule a meeting**.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
 
-Select **schedule a meeting** button leads an user to the calendar and auto adds the team within the channel.
+Select **Schedule a meeting** button, that leads an user to the calendar and auto adds the team within the channel.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
 
 > [!NOTE]
-> currently users can add apps only from desktop.
+> currently users can add apps only from desktop. App shows up on corresponding mobile meeting when added on desktop.
 
 ### Capabilities
 
