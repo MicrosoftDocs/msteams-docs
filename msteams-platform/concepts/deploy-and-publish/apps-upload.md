@@ -37,7 +37,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 > [!NOTE]
 > You can also select one from the dropdown list as per your requirement.
 
-   The following screen appears when you select your app package.zip file:
+   The following screen appears when you select your app package .zip file:
 
     :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog." border="true":::
 
