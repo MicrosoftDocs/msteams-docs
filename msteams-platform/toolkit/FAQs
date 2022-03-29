@@ -33,19 +33,18 @@ This section provides the answer and relevant information to the common question
 16.	How fix Search Message extension oauth failing
 17.	How to create an oauth for my Bot
 18.	How to login using CLI for CI/CD
-19.	
-20.	How to address MS Teams static tab with content bot id with shows error in personal chat scope
-21.	How to provision my app resources in Azure using the TeamsToolkit
-22.	Error messages
-23.	How to clear the credentials used by TeamsFx SSO?
-24.	"Localhost refused to connect" using Microsoft Graph Toolkit on a deployed Microsoft Teams custom personal app
-25.	Teams Toolkit - Failed to provision 'App Service plan'
-26.	I can't paste anything into the bot endpoint address field. 
-27.	App doesn't sideload when debugging with Teams Toolkit
-28.	Can't found personal application of Microsoft Teams Toolkit when I sideload it in Teams
-29.	Is the June 2009 WPF Toolkit Safe to Use in Applications that will be Shipped Out to Customers?
-30.	How to remove a tab attribute in ASP .NET AJAX Toolkit using Regular Expression
-31.	How to clear the credentials used by TeamsFx SSO?
+19.	How to address MS Teams static tab with content bot id with shows error in personal chat scope
+20.	How to provision my app resources in Azure using the TeamsToolkit
+21.	Error messages
+22.	How to clear the credentials used by TeamsFx SSO?
+23.	"Localhost refused to connect" using Microsoft Graph Toolkit on a deployed Microsoft Teams custom personal app
+24.	Teams Toolkit - Failed to provision 'App Service plan'
+25.	I can't paste anything into the bot endpoint address field. 
+26.	App doesn't sideload when debugging with Teams Toolkit
+27.	Can't found personal application of Microsoft Teams Toolkit when I sideload it in Teams
+28.	Is the June 2009 WPF Toolkit Safe to Use in Applications that will be Shipped Out to Customers?
+29.	How to remove a tab attribute in ASP .NET AJAX Toolkit using Regular Expression
+30.	How to clear the credentials used by TeamsFx SSO?
 
 
 ## See also
