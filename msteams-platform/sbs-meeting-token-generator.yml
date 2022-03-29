@@ -479,8 +479,7 @@ items:
 - title: Enable developer preview
   durationInMinutes: 1
   content: |
-     
-     1. Enable uploading of apps in the admin console of your tenant.
+    1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
        1. In the left panel, select **Show All**.
        1. Select **Teams**.
