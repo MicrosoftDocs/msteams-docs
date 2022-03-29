@@ -265,7 +265,7 @@ gulp ngrok-serve
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
 
-   Now you have succesfuly created and added your personal tab in Teams.
+   Now you have succesfully created and added your personal tab in Teams.
   
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
 
@@ -430,7 +430,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab" border="true":::
 
-   Now you have succesfuly created and added your personal tab in Teams.
+   Now you have succesfully created and added your personal tab in Teams.
   
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
 
@@ -607,7 +607,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
   
-   Now you have succesfuly created and added your personal tab in Teams.
+   Now you have succesfully created and added your personal tab in Teams.
 
    As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
 
