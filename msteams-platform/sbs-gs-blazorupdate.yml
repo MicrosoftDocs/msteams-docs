@@ -217,8 +217,8 @@ items:
         
 
     <details>
-    <summary>A quick recap of creating a Teams app.</summary>
-    Watch this short recap for creating a Teams app.
+    <summary>A quick recap of creating a Teams tab app.</summary>
+    Watch this short recap for creating a Teams tab app.
 
     ![Create a Teams app](~/assets/videos/blazorapp.gif)
     </details>
@@ -483,8 +483,8 @@ items:
         
 
     <details>
-    <summary>A quick recap of creating a Teams app.</summary>
-    Watch this short recap for creating a Teams app.
+    <summary>A quick recap of creating a Teams bot app.</summary>
+    Watch this short recap for creating a Teams bot app.
 
     ![Create a Teams app](~/assets/videos/botapp.gif)
     </details>
