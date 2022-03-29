@@ -29,7 +29,7 @@ While the web version and the desktop version of Teams are almost the same, ther
 
     * On MacOS, click on the Microsoft Teams icon in the Dock.
 
-      :::image type="content" source="../../assets/images/mac-os-developer-tools.PNG" alt-text="mac-os-developer-tools":::
+      :::image type="content" source="../../assets/images/mac-os-developer-tools.PNG" alt-text="mac-os-dev-tools":::
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 
