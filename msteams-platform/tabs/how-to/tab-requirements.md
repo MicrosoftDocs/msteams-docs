@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 # Prerequisites
 
-Teams tabs must adhere to the following prerequisites:
+Ensure that you adhere to the following prerequisites while building your Teams tab:
 
 * Allow your tab pages to be discovered in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
   * Set header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
@@ -20,7 +20,7 @@ Teams tabs must adhere to the following prerequisites:
 * Login pages don't render in iFrames, as a safeguard against clickjacking. Your authentication logic needs to use a method other than redirect. For example, use token-based or cookie-based authentication.
 
     > [!NOTE]
-    > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).
+    > It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).
 
 * Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the app manifest when loading or communicating with the tab.
 
@@ -36,8 +36,6 @@ Teams tabs must adhere to the following prerequisites:
 
 ## Tools to build tabs
 
-Here's a list of tools you'll need for building your tabs.
-
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
@@ -50,7 +48,7 @@ Here's a list of tools you'll need for building your tabs.
 | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
-## Next steps
+Now let's build your tab. But first select your choice of tab to build
 
 > [!div class="nextstepaction"]
 > [Build a personal tab](~/tabs/how-to/create-personal-tab.md)
