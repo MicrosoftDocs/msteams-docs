@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Meeting Token Generator
+title: Build Meeting Token Generate
 metadata:
-  title: Meeting Token Generator
+  title: Build Meeting Token Generate
   description: In this tutorial, you'll learn to set up a Meeting Token Generator for Teams.
   audience: Developer
   level: Beginner
@@ -36,15 +36,16 @@ items:
     > [!NOTE]
     > Skip is available only to the meeting organizers.
     
-    This step-by-step guide helps you to generate meeting token to extend meetings in Teams. You'll see the following output:
+    This step-by-step guide helps you to build meeting token generate in Teams. You'll see the following output:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="final output" border="true":::)
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-   You install the following tools and set up your development environment:  
+   You install the following tools and set up your development environment: 
 
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
@@ -86,7 +87,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -115,12 +116,9 @@ items:
        > You can't create more than one bot with the same **Microsoft App ID**.
 
     1. Select **Type App** as **Multi Tenant**.
-
-        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png" alt-text="multi tenant" border="true":::
-
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png" alt-text="app create" border="true":::
+        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png" alt-text="multi tenant" border="true":::
 
     1. If the validation passes, select **Create**.
 
@@ -200,12 +198,12 @@ items:
       > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
     
       > [!TIP]
-      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the **Command Prompt** to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
 
     **To add messaging endpoint**
 
-    1. From ngrok, copy the HTTPS URL (https to io).
+    1. From ngrok, copy the HTTPS URL  .
 
          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-ngrok-page.png" alt-text="ngrok" border="true":::
 
@@ -309,7 +307,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-authorised-scope.png" alt-text="authorised" border="true":::
 
-       The following image displays the client IDs:
+       The following image displays the Client Id:
 
          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-authorised-application.png" alt-text="author" border="true"::: 
   
@@ -419,17 +417,23 @@ items:
 - title: Build client app using npm install
   durationInMinutes: 1
   content: |
-    **To build client app using npm install to generate distributable folder**
     
     1. Navigate to the **App** folder in cloned repository.
     1. Copy the **App** folder path.
-    1. Open a new Command Prompt window, change the current directory to the copied **App** path.
+    1. Open a new **Command Prompt** window, change the current directory to the copied **App** path.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-prompt.png" alt-text="prompt" border="true":::
 
-    1. Run `npm install` to download packages and dependencies.
-    1. Run `npm run build` to build the app.
+    1. Run the following command in the **Command Prompt** to download packages and dependencies.
+    
+        ```Command-Prompt
+    npm install
+    ```
+    1. Run the following command in the **Command Prompt** to build the app.
 
+            ```Command-Prompt
+    npm start
+    ```
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-npm.png" alt-text="npm" border="true":::
 
        The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server serves the static files from the location.
@@ -439,11 +443,10 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using latest version of Visual Studio or Command line**
+   
+   # [Visual Studio](#tab/vs2022)
 
-    # [Visual Studio](#tab/vs2022)
-
-       1. Launch the latest version of Visual Studio..
+       1. Launch the Visual Studio..
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="vsopen" border="true":::
@@ -476,9 +479,8 @@ items:
 - title: Enable developer preview
   durationInMinutes: 1
   content: |
-    **To enable developer preview in your desktop Teams client**
-
-    1. Enable uploading of apps in the admin console of your tenant.
+     
+     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
        1. In the left panel, select **Show All**.
        1. Select **Teams**.
