@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Integrate People Picker in Teams
+        url: ~/concepts/device-capabilities/people-picker-capability.md
       - text: Debug your Teams app 
         url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
@@ -42,8 +44,7 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Authentication using external OAuth providers  
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
-      - text: Integrate People Picker in Teams
-        url: ~/concepts/device-capabilities/people-picker-capability.md
+      
  
 
 - title: Get started

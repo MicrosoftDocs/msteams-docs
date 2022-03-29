@@ -45,9 +45,9 @@ The following image displays the experience of People Picker on mobile and deskt
 
 The People Picker control on mobile allows the user to search and add people as provided in the following steps:
 
-* To add the user as an approver in an app, select the required field and People Picker control opens in a separate view.
-* User selects the approver based on name or email address.
-* The suggested list is shared back with the app.
+1. To add the user as an approver in an app, select the required field and People Picker control opens in a separate view.
+2. User selects the approver based on name or email address.
+3. The suggested list is shared back with the app.
 
 :::image type="content" source="../../assets/images/tabs/people-picker-mobile-capability-new.jpg" alt-text="People picker control capability mobile":::
 
@@ -55,7 +55,9 @@ The People Picker control on mobile allows the user to search and add people as 
 
 The People Picker control on web or desktop is launched in a modal window on top of your web app.
 
-* To add a user to the web app, select the option in the web app and search based on user name or email address.
+1. To add a user to the web app, select the option in the web app.
+1. User selects the search based on name or email address.
+1. The suggested list is shared back in the web app. 
 
 :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="People picker by name" border="true":::
 
