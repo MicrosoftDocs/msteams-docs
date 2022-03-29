@@ -43,7 +43,7 @@ The following image displays the experience of People Picker on mobile and deskt
 
 # [Mobile](#tab/Samplemobileapp)
 
-* To add a user as an approver in an app, select the required field and People Picker control opens in a separate view.
+* To add a user as an approver in an app, select the required field and the People Picker control opens in a separate view.
 * User selects the approver based on name specified.
 * The suggested list is shared back with the app.
 

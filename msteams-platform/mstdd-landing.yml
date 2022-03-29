@@ -42,7 +42,7 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       - text: Authentication using external OAuth providers  
         url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
-      - text: People Picker capability support on Teams web and desktop
+      - text: Integrate People Picker in Teams
         url: ~/concepts/device-capabilities/people-picker-capability.md
  
 
