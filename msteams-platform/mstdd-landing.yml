@@ -24,7 +24,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Integrate People Picker in Teams
+      - text: Integrate People Picker
         url: ~/concepts/device-capabilities/people-picker-capability.md
       - text: Debug your Teams app 
         url: ~/toolkit/debug-local.md
