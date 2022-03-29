@@ -23,6 +23,7 @@ items:
     * **Publish Agenda**: Sends the agenda list to the meeting chat. 
 
     This step-by-step guide helps you to generate **Side Panel** app to add and publish agenda.
+    
     You'll see the following output:
 
     :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token" border="true":::  
