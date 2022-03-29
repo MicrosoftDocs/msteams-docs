@@ -117,7 +117,7 @@ items:
 
    To configure API permissions:
 
-   1. Select **API permission** from the left pane.
+   1. Select **Manage** > **API permission** from the left pane.
       The **API permissions** page appears.
 
       :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option." border="false":::
@@ -130,13 +130,13 @@ items:
 
    1. Select **Microsoft Graph**.
 
-      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Request API permissions page." border="false":::
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Request API permissions page." border="true":::
 
       The options for Graph permissions display.
 
    1. Select **Delegated permissions** to view the list of possible permission that you can select.
 
-      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="false":::
+      :::image type="content" source="~/assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="true":::
 
    1. Select relevant permissions for your app. For this tutorial, select **email** and **offline_access**, and then select **Add permissions**.
 
@@ -152,4 +152,11 @@ items:
 
    Next, you will expose API and define scope.    
   
-   
+   ## Expose an API for the app and define app scope
+
+   In this section, you'll learn to expose an API and define the app scope.
+
+   To expose an API:
+
+   1. Select **Manage** > **Expose an API** from the left pane.
+      The **Expose an API** page appears.
