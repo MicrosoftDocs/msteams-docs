@@ -116,7 +116,7 @@ The following table describes the behavior of app when it's validated and not va
 
 |App capability | App is validated | App isn't validated |
 |---|---|---||
-| Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
+| Meeting extensibility | The app will appear in mobile and desktop meetings  |
 
 For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 #### Post-meeting app experience
@@ -140,15 +140,17 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ## Channel meetings support meeting extensibility
 
-Channel meeting allows user to set up a meeting from a channel, apps can be used in scheduled channel meetings. It is an in-meeting experience, supports desktop and mobile.
+ Channel meeting allows users to set up a meeting from a channel and users can add and interact with an app in the scheduled channel meetings.
 
 ### Schedule channel meetings
 
-Select Teams from the left pane. The teams page appears, select the **Meet** dropdown menu and select **Schedule a meeting**.
+To schedule channel meetings:
+
+1. Go to Teams.
+1. Select the **Meet** dropdown menu and select **Schedule a meeting**.
+1. The channel's calendar appears and the Team is automatically added.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
-
-Select **Schedule a meeting** button, that leads an user to the calendar and auto adds the team within the channel.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
 
@@ -157,7 +159,11 @@ Select **Schedule a meeting** button, that leads an user to the calendar and aut
 
 ### Capabilities
 
-Supports pre/post meeting tabs, in-meeting panels, content bubbles, bots and message extensions.
+1. pre/post meeting tabs
+1. in-meeting panels
+1. content bubbles
+1. Bots
+1. Message extensions.
 
 ### Integrate bots into the meeting lifecycle
 
