@@ -46,7 +46,7 @@ Following are the steps to create a personal tab:
 
 1. At the command prompt, create a new directory for your personal tab.
 
-1. Enter the following command in your new directory to start the Microsoft Teams App generator.
+1. Enter the following command in your new directory to start the Microsoft Teams App generator:
 
     ```cmd
     yo teams
@@ -214,7 +214,7 @@ gulp manifest
 
 #### Build your application
 
-Enter the following command at the command prompt to transpile your solution into the **./dist** folder.
+Enter the following command at the command prompt to transpile your solution into the **./dist** folder:
 
 ```cmd
 gulp build
@@ -222,7 +222,7 @@ gulp build
 
 #### Run your application
 
-1. At the command prompt enter the following command to start a local web server.
+1. At the command prompt enter the following command to start a local web server:
 
     ```cmd
     gulp serve
@@ -238,7 +238,7 @@ gulp build
 
 ### Establish a secure tunnel to your tab
 
-At the command prompt exit the localhost and enter the following command to establish a secure tunnel to your tab.
+At the command prompt exit the localhost and enter the following command to establish a secure tunnel to your tab:
 
 ```cmd
 gulp ngrok-serve
