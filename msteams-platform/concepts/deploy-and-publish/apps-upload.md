@@ -39,7 +39,8 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
    The following screen appears when you select your app package .zip file:
 
-   :::image type="content" source="./assets/images/build-your-first-app/add-teams-app.png" alt-text="Teams dialog box." border="true":::
+     ![Register bot](~/assets/images/build-your-first-app/add-teams-app.png)
+
 
 ## Troubleshooting
 
