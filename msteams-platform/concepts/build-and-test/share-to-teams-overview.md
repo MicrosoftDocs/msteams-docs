@@ -21,7 +21,7 @@ You can enable this feature on the following:
 
 ## Share to Teams from web apps
 
-You can embed Share to Teams button on the web apps that allows users to share the content from the web apps to any users on the Teams, without switching the context.
+You can embed Share to Teams button on the web apps that allows users to share the content from the web apps to any chat, group chat or channel in Teams, without switching the context.
 
 :::image type="content" source="../../assets/images/share-to-teams/overview-web-apps.PNG" alt-text="web-app":::
 
@@ -29,7 +29,7 @@ For more information, see [Share to Teams from web apps](share-to-teams-from-web
 
 ## Share to Teams from personal app or tab
 
-You can embed Share to Teams button on the personal app or tab which is running inside Teams that allows users to share the content from the personal app or tab to other users or group or channel within Teams.
+You can embed Share to Teams button in the personal app or tab hosted inside Teams that allows users to share the content from the personal app or tab to any chat, group chat or channel in Teams without switching the context.
 
 :::image type="content" source="../../assets/images/share-to-teams/overview-personal-app.PNG" alt-text="personal-app":::
 
