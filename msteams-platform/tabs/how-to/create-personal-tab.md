@@ -283,9 +283,9 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
 
 Following are the steps to create a personal tab:
 
-1. [Generate your application with a personal tab](#generate-your-personal-tab)
+1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab-1)
 1. [Update and run your application](#update-and-run-your-application)
-1. [Establish a secure tunnel](#establish-a-secure-tunnel)
+1. [Establish a secure tunnel to tab](#establish-a-secure-tunnel)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 1. [Preview your app in Teams](#preview-your-app-in-teams)
 
@@ -446,11 +446,10 @@ You can create a custom personal tab using C# and ASP.NET Core MVC. To create a 
 Following are the steps to create a personal tab:
 
 1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab)
-1. [Update your application](#update-your-application)
-1. [Run your application](#run-your-application)
+1. [Update and run application](#update-your-application)
 1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
 1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal-1)
-1. [Preview your app in Teams](#preview-your-app-in-teams)
+1. [Preview your app in Teams](#preview-your-app-in-teams-1)
 
 ### Generate your application with a personal tab
 
