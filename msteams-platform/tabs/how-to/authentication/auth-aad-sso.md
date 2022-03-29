@@ -82,7 +82,7 @@ To register your app through the Azure AD portal, follow these steps:
     >
     > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
     >
-    > * Use lower case letters for domain name, do not use upper case.
+    > * Use lower case letters for domain name, don't use upper case.
     > For example, when you create an app service or web app, if you enter base resource name as `DemoApplication`, then the URL will be `https://DemoApplication.azurewebsites.net`. This supports in desktop, web and iOS, but not in android.
 
 1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. ² For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
