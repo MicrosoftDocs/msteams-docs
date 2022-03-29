@@ -473,10 +473,7 @@ items:
     ```bash
     dotnet run
     ```
-   
-    :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
-
-      ---
+   :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
 
 - title: Enable developer preview
   durationInMinutes: 1
