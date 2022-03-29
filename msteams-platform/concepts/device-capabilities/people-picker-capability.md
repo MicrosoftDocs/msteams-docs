@@ -20,14 +20,14 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 * Helps in scenarios involving task assignment, tagging, and notifying the user.
 * Saves significant time and effort otherwise needed to build a similar control.
 
-To integrate People Picker control in your Teams app select the API, [`selectPeople`](#selectpeople-api). To integrate and call the API, you must have a good understanding of accompanying [code snippet](#code-snippet). You also need familiarity with [API response errors](#error-handling) to handle any errors in the web app.
+Select the API, [`selectPeople`](#selectpeople-api) to integrate People Picker control in your Teams app. To integrate and call the API, you must have a good understanding of accompanying [code snippet](#code-snippet). You also need familiarity with [API response errors](#error-handling) to handle any errors in the web app.
 
 ## `selectPeople` API
 
-The `selectPeople` API enables you to add Teams People Picker input control to the web apps and also allows the following:
+The `selectPeople` API enables you to add Teams People Picker control to the web apps and also allows the following:
 
 * Allows the user to search and select one or more people from the list.
-* The API returns ID, name, and email address of selected users to the web app.
+* Return ID, name, and email address of selected users to the web app.
 * In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured based on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.
 
 The `selectPeople` API comes with the following input configurations:
@@ -47,7 +47,7 @@ The People Picker control on mobile allows the user to search and add people usi
 
 1. To add the user as an approver in an app, select the required field and People Picker control opens in a separate view.
 2. User searches one or more people based on name or email address.
-3. The selected list is shared back with the app.
+3. The selected list is shared back in the app.
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Picker Picker mobile":::
 # [Desktop](#tab/Sampledesktop)
