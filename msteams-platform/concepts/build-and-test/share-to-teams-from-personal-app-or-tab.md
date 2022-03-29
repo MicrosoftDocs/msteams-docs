@@ -10,7 +10,7 @@ keywords: Share Teams Share to Teams
 > [!NOTE]
 > Share to Teams is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Share to Teams allows you to share the content from personal app or tab to other user or group or channel within Teams. You can select Share to Teams to launch the Share to Teams experience in a pop-up window. The pop-up window allows you to add other user or group or channel and to share the content.
+Share to Teams allows users to share the content from personal app or tab to other user or group or channel within Teams. Users can select Share to Teams to launch the Share to Teams experience in a pop-up window. The pop-up window allows users to add other user or group or channel to share the content.
 
 The following image shows the Share to Teams pop-up window:
 
