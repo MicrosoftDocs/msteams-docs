@@ -215,7 +215,7 @@ items:
     1. Open Visual Studio.
     1. Select **File** and select **Open**.
     1. Select **Project/Solution** to open the `.csproj` file from the File Explorer.
-    1. Go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** folder.
+    1. Go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot**.
     1. Select `TeamsConversationBot.csproj` file and select your bot from the **Startup Projects** list.
 
         :::image type="content" source="./assets/images/conversation-bot/visual-studio.png" alt-text="Visual Studio debug.":::
