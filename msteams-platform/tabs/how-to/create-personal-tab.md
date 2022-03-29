@@ -52,7 +52,7 @@ Following are the steps to create a personal tab:
     yo teams
     ```
 
-1. provide your values to a series of questions prompted by Microsoft Teams App generator to update your **manifest.json** file.
+1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your **manifest.json** file.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
 
@@ -204,9 +204,7 @@ Create a content page and update the existing files of the personal tab applicat
 
 ### Create your app package
 
-You must have an app package to build and run your application in Teams.
-
-The app package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
+You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
 
 ```cmd
 gulp manifest
@@ -251,7 +249,7 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to your Microsoft Teams and select   :::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams store":::
+1. Go to your Microsoft Teams and select **store**
 1. Select **Manage your apps**
 1. Select **Publish an app** and **Upload a custom app**.
 
@@ -282,7 +280,6 @@ You can create a custom personal tab using C# and ASP.NET Core Razor pages. To c
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
-
 
 Follow the below steps to create a personal tab:
 
@@ -607,6 +604,7 @@ ngrok http 3978 --host-header=localhost
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab" border="true":::
 
 ::: zone-end
+
 
 ## Reorder static personal tabs
 
