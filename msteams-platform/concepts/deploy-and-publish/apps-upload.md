@@ -32,10 +32,10 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Select **Apps** and select **Manage your apps**.
 1. Select **Upload a custom app**.
 1. Select your app package .zip file, the following screen appears:
-
+1. Select **Add** or from the dropdownlist to add your app to Teams
+ 
     :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 
-1. Select **Add** to add your app to Teams.
 
 ## Troubleshooting
 
