@@ -30,7 +30,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
 1. Log in to the Teams client with your [Microsoft 365 development account](~/build-your-first-app/build-and-run.md#prerequisites).
 1. Select **Store** and select **Manage your apps**.
-1. Select **Upload a custom app**.
+1. Select **Publish an app** and **Upload a custom app**.
 1. Select your app package .zip file, the following window appears:
 
     :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
@@ -55,7 +55,16 @@ select the app dropdown to view all the scopes where that app has been installed
 
 :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Access teams app scope" border="true":::
 
-By selecting the installed scope of that app you would be navigated to the location of the app.
+By selecting the installed scope of that app you would be navigated to the installed scope of the app.
+
+>[!NOTE]
+> Currently group chat scope where the app has been installed is not listed in the app dropdown.
+
+**To access apps through Channels**
+
+To access your installed app in a channel, select ellipses &#x25CF;&#x25CF;&#x25CF; beside the Team name and browse to **Manage Team** in the dropdown.
+
+Select **Apps** in **Manage Team** to view list of apps installed in that Team.
 
 Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
@@ -69,7 +78,9 @@ By selecting **View update**, a window with update option appears. Select **Upda
 
 ## Remove your app
 
-To remove your app, right click the app icon in Teams and select **Uninstall**.
+To remove your app, select the app dropdown in **Manage your app** and a delete option would be displayed beside your app installed scope.
+
+Select the delete icon where you want to delete the app and a window would popup with disclamair and **Remove** option. Select **Remove** to remove your app from the selected scope.
 
 > [!NOTE]
 > You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
