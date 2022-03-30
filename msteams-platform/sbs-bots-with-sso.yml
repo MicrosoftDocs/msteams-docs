@@ -40,7 +40,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * Visual Studio 2019 or the latest version
+    * Visual Studio 2019 or the latest version.
     * [Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md) or access to Teams account with the appropriate permissions to install an app
 
 - title: Set up bot in Azure Bot Service
