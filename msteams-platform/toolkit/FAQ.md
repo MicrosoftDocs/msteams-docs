@@ -8,7 +8,8 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Teams Toolkit FAQ :::image type="content" source="~/assets/images/teams-toolkit-v2/trumpet.png" alt-text="faq" border="true":::
+# Teams Toolkit FAQ
+:::image type="content" source="../assets/images/teams-toolkit-v2/trumpet.png" alt-text="faq" border="true":::
 
 This section provides the answer and relevant information to the common questions asked about Teams Toolkit.
 <br> This section can be divided into different categories 2/3 – 2 tabs
@@ -18,11 +19,11 @@ This section provides the answer and relevant information to the common question
 <br>
 
 <br>
-<details>:::image type="content" source="~/assets/images/teams-toolkit-v2/question.png" alt-text="question" border="true":::
+<details>:::image type="content" source="../assets/images/teams-toolkit-v2/question.png" alt-text="question" border="true":::
 
 <summary><b>How to login using CLI for CI/CD</b></summary>
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/bulb_ans.png" alt-text="answer" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/bulb_ans.png" alt-text="answer" border="true":::
 Ans.
 
 <br>
@@ -208,7 +209,7 @@ The following image shows user creation restrictions options:
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync" border="true":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad" border="true":::
+
 
 <br>
 <!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
