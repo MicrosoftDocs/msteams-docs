@@ -38,6 +38,7 @@ Microsoft Teams platform features that are available to all app developers.
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
+| --- | --- | --- |
 |03/30/2022| Introduced step-by-step guide to upload file in Teams using bot | Bot conversations > Send and receive files > [Upload file in Teams using bot](sbs-file-handling-in-bot.yml)
 |03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 |Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)
