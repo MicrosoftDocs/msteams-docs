@@ -63,6 +63,10 @@ Teams provides several ways to open apps. For more information, see [access your
 
 You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations.
 
+If your app has any available update, then there would be an **Update available** option. once you select the **Update available** option, you can see the app dropdown where you have  **View update** option in the scope where you need to update the app.
+
+By selecting **View update**, a window with update option appears. Select **Update** button  to update your app.
+
 ## Remove your app
 
 To remove your app, right click the app icon in Teams and select **Uninstall**.
