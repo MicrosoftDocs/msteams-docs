@@ -81,23 +81,23 @@ If your app has any available update, then the **Update available** option is en
 
 1. Select **Update available** to view update.
 
-     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Access Teams app in a channel" border="true":::
+     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Update Teams app" border="true":::
 
 1. Select **View update**, a window with update option appears.
 1. Select **Update** button to update your app.
     
-     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Access Teams app in a channel" border="true":::
+     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Update Teams app in manage apps" border="true":::
 
-     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Access Teams app in a channel" border="true":::
+     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Updated app" border="true":::
 
 ## Remove your app
 
 To remove your app follow the steps:
 
 1. Select the app in **Manage your app**.
-1. Select :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Remove app in Teams" to remove the installed app.
+1. Select :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Remove app in Teams"::: to remove the installed app.
 
-    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Access Teams app in a channel" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
 
 1. Select **Remove** to remove your app.
 
