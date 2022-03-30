@@ -210,6 +210,7 @@ items:
         1. Select **Create**.      
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png" alt-text="Illustration shows the options to configure new project." border="false":::
+        
         Your Teams app is created in a few seconds.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
@@ -352,7 +353,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Resource group is generated" border="true":::
 
-    1. Azure portal prompts you to sign in to your account. Sign in to your Azure portal account.
+    1. Sign in to your Azure portal account on sign in prompt. 
 
         Your app-dev-rg appears.
 
