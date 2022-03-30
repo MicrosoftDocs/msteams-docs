@@ -27,6 +27,8 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
 
+Users can also add or interact with an app in the scheduled private channel meetings.
+
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
@@ -67,9 +69,7 @@ After adding the tabs to an existing meeting on mobile, you can see the same app
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants.
-
-Users can set up a meeting from a channel and add or interact with an app in the scheduled private channel meetings. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
+With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
@@ -118,12 +118,7 @@ The following table describes the behavior of app when it's validated and not va
 
 |App capability | App is validated | App isn't validated |
 |---|---|---|
-| Meeting extensibility | The app will appear in mobile and desktop meetings  |
-| Allows user to set up a meeting from a channel. |  Users can use apps in scheduled channel meetings. | External members aren't allowed to participate in channel meetings. Permission is required. |
-| It is an in-meeting experience. |  Supports desktop and mobile. | Currently users can add apps only from desktop. |
-| View added Apps in mobile. | Users can view apps on mobile, which can be accessed while they are in channel meeting. App shows up on corresponding mobile meeting when added on desktop. | Currently users can add apps only from desktop. |
-| Actions supported. | Select the dropdown menu next to the meet  and select schedule a meeting, it leads an user to the calender and auto adds the team within the channel. | Apps doesn't support unscheduled channel meetings. |
-| Supports Pre/Post meeting tabs, in-meeting panels, content bubbles, bots, message extensions. | User receives an notification, when there is any event launched by an app in the meeting. | At present **meet now** is not supported in channel meetings. |
+| Meeting extensibility | The app will appear in meetings.  | The app won't appear in meetings for the mobile clients.
 
 For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 #### Post-meeting app experience
@@ -144,32 +139,6 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
-
-  Users can set up a meeting from a channel and add or interact with an app in the scheduled private channel meetings.
-
-### Schedule channel meetings
-
-1. Go to Teams.
-1. Select **Schedule a meeting** from **Meet** dropdown menu.
-
-   :::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
-
-1. The channel's **Calendar** appears and the Team is automatically added.
-
-   :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meeting-invite.png" alt-text="calendar meeting invite" border="true":::
-
-> [!NOTE]
-> Currently, users can add apps only from desktop. The app appears on the corresponding mobile after the app is added on the desktop.
-
-### App accessibility
-
-Users can select the **More** option to access the following apps in the meeting:
-
-1. Pre/post meeting tabs
-1. In-meeting panels
-1. Content bubbles
-1. Bots
-1. Message extensions
 
 ### Integrate bots into the meeting lifecycle
 
@@ -237,7 +206,6 @@ The following table provides the user types and lists the features that each use
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
-| Channel meeting supports meeting extensibility for channel members | Available | Available | Available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card is allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 
 ## Next step
 
