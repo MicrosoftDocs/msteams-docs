@@ -26,10 +26,7 @@ This section provides the answer and relevant information to the common question
 <summary><b>How to login using CLI for CI/CD</b></summary>
 
 <br>
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/bulb_ans.png" alt-text="answer" border="true":::
-
-
+:::image type="content" source="../assets/images/teams-toolkit-v2/bulb_ans.png" alt-text="bulb" border="true":::
 
 Ans.
 
