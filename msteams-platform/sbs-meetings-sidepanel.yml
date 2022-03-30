@@ -55,7 +55,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meetings-side-panel/clonerepository1.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/clonerepository1.png" alt-text="Clone repository" border="true":::
 
     1. Select **Clone**. 
 
@@ -78,20 +78,20 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/createazurebot.png" alt-text="Create Azure bot card" border="true":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. From the **Subscription** dropdown list, select your subscription.
     1. From the **Resource group** dropdown list, select your existing resource group.
     
-        ![Select resource Azure bot](~/assets/images/meetings-side-panel/review-plus-create.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
-        ![New resource group location](~/assets/images/meetings-side-panel/newresource.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="New resource group location" border="true":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
