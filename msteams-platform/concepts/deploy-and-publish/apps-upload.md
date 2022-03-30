@@ -62,7 +62,7 @@ Manage your apps allows users to have a dedicated place to manage and update the
 
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Access teams app scope" border="true":::
 
-Select the scope of app to go to the app in the channel or personal view.
+* Select the scope of app to go to the app in the channel or personal view.
 
 >[!NOTE]
 > Currently, group chat scope where the app is installed is not listed in the app dropdown.
@@ -73,7 +73,7 @@ Find the team name and select **More options** &#x25CF;&#x25CF;&#x25CF; > **Mana
 
  :::image type="content" source="~/assets/images/publish-app/apps-in-channels.png" alt-text="Access Teams app in a channel" border="true":::
 
-Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
+Teams provide several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
 ## Update your app
 
