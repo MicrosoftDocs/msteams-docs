@@ -26,12 +26,12 @@ landingContent:
       links:
       - text: Create Teams conversation bot
         url: ~/sbs-teams-conversation-bot.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
       - text: Device permissions for the browser
         url: ~/concepts/device-capabilities/browser-device-permissions.md
       - text: Integrate People Picker
         url: ~/concepts/device-capabilities/people-picker-capability.md
-      - text: Debug your Teams app 
-        url: ~/toolkit/debug-local.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -58,6 +58,8 @@ landingContent:
       links:
       - text: Build your first app using Blazor
         url:  sbs-gs-blazorapp.yml
+      - text: Build your first app using Blazor with Visual Studio latest version
+        url:  sbs-gs-blazorupdate.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
       - text: Build app with SPFx
