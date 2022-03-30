@@ -14,11 +14,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Meeting Side Panel enhances your in-meeting experience and it helps organizers and presenters to have different set of views and actions.In the meeting and all scenerios, the app is rendered in an in-meeting tab. Messaging extension works as expected when a user is in in-meeting view.
+    The Meeting Side Panel enhances your in-meeting experience and it helps organizers and presenters to have different set of views and actions. In the meeting and all scenerios, the app is rendered in an in-meeting tab. Messaging extension works as expected when a user is in in-meeting view.
 
    
 
-    Key features of meeting SidePanel**
+    Key features of Meeting Side Panel
 
     * It gives provision to add new agenda point.
     * Adds the agenda as text input to the **Side Panel** agenda list.
@@ -33,7 +33,7 @@ items:
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
-
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
@@ -42,7 +42,6 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
     > [!NOTE]
