@@ -160,7 +160,7 @@ To schedule channel meetings:
 
 ### App accessibility
 
-Users can access apps by selecting **More** option in the meeting from the following :
+Users can select the more option to access the following apps in the meeting:
 
 1. Pre/post meeting tabs
 1. In-meeting panels
