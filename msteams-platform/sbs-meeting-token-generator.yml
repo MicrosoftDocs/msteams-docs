@@ -224,7 +224,6 @@ items:
 - title: Update the Azure app registration for tab SSO
   durationInMinutes: 1
   content: |
-    
     1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
