@@ -145,10 +145,10 @@ items:
 
     In this section, you can learn:
     
-    1. [How to set up a new tab project with Teams Toolkit](#create-your-project)
-    1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
+    1. [How to set up a new tab project with Teams Toolkit](#create-your-tab-project)
+    1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
 
-    ## Create your project
+    ## Create your tab project
 
     Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
@@ -223,7 +223,7 @@ items:
     ![Create a Teams app](~/assets/videos/blazorapp.gif)
     </details>
 
-    ## Take a tour of the source code
+    ## Take a tour of the source code for Teams tab app
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
 
@@ -415,10 +415,10 @@ items:
 
     In this section, you can learn:
     
-    1. [How to set up a new bot project with Teams Toolkit](#create-your-project1)
-    1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
+    1. [How to set up a new bot project with Teams Toolkit](#create-your-bot-project)
+    1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-bot-app)
 
-    ## Create your project1
+    ## Create your bot project
 
     Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
@@ -493,7 +493,7 @@ items:
     ![Create a Teams app](~/assets/videos/botapp.gif)
     </details>
 
-    ## Take a tour of the source code
+    ## Take a tour of the source code for Teams bot app
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
 
