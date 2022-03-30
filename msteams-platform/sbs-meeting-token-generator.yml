@@ -74,7 +74,7 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure AD portal
+- title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -222,7 +222,7 @@ items:
         You have successfully set up a bot in Azure Bot Service.
 
 
-- title: Update the Azure AD app registration for tab SSO
+- title: Update the Azure app registration for tab SSO
   durationInMinutes: 1
   content: |
     **To register your app through the Azure AD portal**  
@@ -443,28 +443,26 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-   **To build and run the service using latest version of Visual Studio  or Command line**
+   **To build and run the service using Latest Visual Studio**
 
-    # [Visual Studio](#tab/vs)
-
-       1. Launch the latest version of Visual Studio.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+      1. Launch **Visual Studio**.
+      1. Navigate to **File** > **Open** > **Project/Solution**.
           
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="vsopen" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="vsopen" border="true":::
 
-       1. Select **TokenApp.csproj** file from **csharp** folder.
+      1. Select **TokenApp.csproj** file from **csharp** folder.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-token-csproj.png" alt-text="csproj" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-token-csproj.png" alt-text="csproj" border="true":::
 
-       1. Press **F5** to run the project.
+      1. Press **F5** to run the project.
     
-       1. Select **Yes** if the following dialog appears:
+      1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-warning.png" alt-text="warning" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-warning.png" alt-text="warning" border="true":::
 
-          A webpage opens with a message **App is ready!**.
+         A webpage opens with a message **App is ready!**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-meeting-token-output.png" alt-text="output" border="true"::: 
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-meeting-token-output.png" alt-text="output" border="true"::: 
 
    # [Command line](#tab/cli)
 
@@ -473,7 +471,7 @@ items:
     ```bash
     dotnet run
     ```
-   :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
 
 - title: Enable developer preview
   durationInMinutes: 1
