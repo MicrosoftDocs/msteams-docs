@@ -26,6 +26,8 @@ landingContent:
       links:
       - text: Create Teams conversation bot
         url: ~/sbs-teams-conversation-bot.yml
+      - text: Device permissions for the browser
+        url: ~/concepts/device-capabilities/browser-device-permissions.md
       - text: Integrate People Picker
         url: ~/concepts/device-capabilities/people-picker-capability.md
       - text: Debug your Teams app 
