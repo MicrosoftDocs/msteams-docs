@@ -90,10 +90,10 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Teams Toolkit in Visual Studio Code
           items:
-          - name: Create a new app
-            href: toolkit/create-new-teams-app.md
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
+          - name: Create a new app
+            href: toolkit/create-new-teams-app.md
           - name: Debug the app locally
             href: toolkit/debug-local.md 
           - name: Debug background process
@@ -103,8 +103,6 @@
           - name: Deploy app to the cloud
             href: toolkit/deploy.md
           - name: Publish apps 
-            href: toolkit/publish.md
-          - name: Teams Toolkit FAQ 
             href: toolkit/publish.md
           - name: Add capabilities to the app
             href: toolkit/add-capability.md
@@ -120,6 +118,8 @@
             href: toolkit/TeamsFx-collaboration.md
           - name: Add CI/CD Workflows
             href: toolkit/use-CICD-template.md
+          - name: Teams Toolkit FAQ 
+            href: toolkit/publish.md  
         - name: Teams Toolkit in Visual Studio
           href: toolkit/visual-studio-overview.md
           items:
