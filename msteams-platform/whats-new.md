@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
-|03/30/2022|Device permissions for the browser | App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
+|03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 | Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)|
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
 |03/22/2022| Updated the Get started with Blazor app for Teams |  • Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
@@ -38,7 +38,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | -----------| --------------|
-|03/30/2022|Device permissions for the browser | App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
+|03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 |Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|  
 |03/22/2022| Updated the Get started with Blazor app for Teams|  • Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
