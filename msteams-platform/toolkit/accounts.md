@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Prepare accounts to build Teams apps
 
-To create a Teams app and upload, you need to prepare the following accounts:
+The deployment process happens in two steps: Provision of the app to cloud and deployment. All the necessary Azure resources which the app uses. To create a Teams app and upload, you need to prepare the following accounts:
 
 * [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)
 * [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources).

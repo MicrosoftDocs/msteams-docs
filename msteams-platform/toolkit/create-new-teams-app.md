@@ -1,7 +1,7 @@
 ---
-title: Create a new Teams app using Teams Toolkit
+title: Create a new Teams app
 author: zyxiaoyuer
-description:  Create new Teams app using Teams Toolkit
+description:  Create new Teams app using 
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -17,7 +17,7 @@ Teams Toolkit brings together all the tools needed for building a Teams app in o
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams-toolkit-ide.png" alt-text="Teams toolkit ":::
 
-# [Visual Studio Code](#tab/Visual Studio Code)
+# [Visual Studio Code](#tab/VisualStudioCode)
 
 ### Create a new Teams app using Toolkit
 
@@ -26,7 +26,7 @@ Install Teams Toolkit extension in Visual Studio Code and to view the Teams Tool
 * [Create a new Teams app](create-new-project.md#create-a-new-teams-app)
 * [View samples](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-### Steps to reate a new Teams app
+### Steps to create a new Teams app
 
 1. Open latest version of Visual Studio Code.
 1. Select Teams Toolkit icon in the Visual Studio Code sidebar and select any one option.
@@ -36,7 +36,7 @@ Install Teams Toolkit extension in Visual Studio Code and to view the Teams Tool
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/create-new-teams-app.png" alt-text="Create a new Teams app":::
 
-### Stesp to reate a new Teams app using view samples
+### Steps to create a new Teams app using samples
 
 You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
 
@@ -52,7 +52,7 @@ You can explore and download samples and either run your app locally or remotely
 
 For more information, see [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
 
-# [Visual Studio](#tab/Visual Studio)
+# [Visual Studio](#tab/VisualStudio)
 
 ### Teams Toolkit for Visual Studio
 
@@ -99,7 +99,7 @@ Visual Studio opens up the new project and Teams Toolkit will setup you new proj
 
  For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 
-# [TeamsFx ](#tab/TeamsFx Command line interface)
+# [TeamsFx Command Line Interface](#tab/TeamsFxCommandlineinterface)
 
 ## TeamsFx command line interface
 

@@ -84,9 +84,8 @@
       href: concepts/design/activity-feed-notifications.md
   - name: App customization
     href: concepts/design/enable-app-customization.md
-- name
-   - name: Overview of Tools in IDE
-     items:
+  - name: Overview of Tools in IDE
+    items:
         - name: Teams Toolkit overview
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Teams Toolkit in Visual Studio Code
