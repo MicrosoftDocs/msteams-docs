@@ -56,7 +56,6 @@ Microsoft Teams platform features that are available to all app developers.
 | -------- | --------- | ----------------|
 |03/29/2022| Introduced step-by-step guide to generate meeting side panel in Teams | Build apps for Teams meeting > Enable and configure apps for meetings > [Meeting Side Panel](sbs-meetings-sidepanel.yml)|
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
-| -------- | -----------| --------------|
 |03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 |Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|  
