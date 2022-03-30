@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
       - text: Device permissions for the browser
         url: ~/concepts/device-capabilities/browser-device-permissions.md
       - text: Integrate People Picker
