@@ -18,6 +18,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | Date | Update | Find here |
 | --- | --- | --- |
 |03/30/2022| Introduced step-by-step guide to upload file in Teams using bot | Bot conversations > Send and receive files > [Upload file in Teams using bot](sbs-file-handling-in-bot.yml)
+|03/30/2022| Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 | Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)|
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
 |03/22/2022| Updated the Get started with Blazor app for Teams |  • Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
@@ -37,9 +38,8 @@ Microsoft Teams platform features that are available to all app developers.
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
 |03/30/2022| Introduced step-by-step guide to upload file in Teams using bot | Bot conversations > Send and receive files > [Upload file in Teams using bot](sbs-file-handling-in-bot.yml)
-|03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
+|03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 |Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|  
 |03/22/2022| Updated the Get started with Blazor app for Teams|  • Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
@@ -253,7 +253,6 @@ Developer preview is a public program that provides early access to unreleased T
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
-|10/19/2021|Device permissions for the browser | App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
