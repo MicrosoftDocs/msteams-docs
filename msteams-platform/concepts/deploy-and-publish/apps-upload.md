@@ -47,22 +47,26 @@ If your app fails to sideload or any issues to upload, check the following optio
 
 ## Access your app
 
-Go to **Store** and select **Manage your apps** in Teams to view your Teams apps installed across all your scopes in a list format.
+Manage your apps allows users to have a dedicated place to manage and update their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
+
+* Go to **Store** and select **Manage your apps** in Teams to view the installed apps across all your channels or for personal use in a list format.
 
 :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="Access teams apps list" border="true":::
 
-select the app dropdown to view all the scopes where that app has been installed.
+* Select the app dropdown to view all the scopes where the app is installed.
 
 :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Access teams app scope" border="true":::
 
-By selecting the installed scope of that app you would be navigated to the installed scope of the app.
+Select the scope of app to go to the app in the channel or personal view.
 
 >[!NOTE]
-> Currently group chat scope where the app has been installed is not listed in the app dropdown.
+> Currently, group chat scope where the app is installed is not listed in the app dropdown.
 
-**To access apps through Channels**
+**To access apps through channels**
 
-To access your installed app in a channel, select ellipses &#x25CF;&#x25CF;&#x25CF; beside the Team name and browse to **Manage Team** in the dropdown.
+1. Select more options (&#x25CF;&#x25CF;&#x25CF;) in your Team and then select **Manage Team** open **Apps** section To access apps your installed.
+
+select ellipses &#x25CF;&#x25CF;&#x25CF; from the **Team** To access apps your installed in a channel,  beside the Team name and browse to **Manage Team** in the dropdown.
 
 Select **Apps** in **Manage Team** to view list of apps installed in that Team.
 
