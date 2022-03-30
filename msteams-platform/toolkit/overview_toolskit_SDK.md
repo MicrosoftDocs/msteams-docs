@@ -13,7 +13,10 @@ ms.date: 11/29/2021
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
 
-Teams Toolkit for Microsoft Visual Studio Code helps you to create, debug, and deploy your Teams app from the Visual Studio Code. Teams Toolkit brings all tools needed for building a Teams app in one place.
+Teams Toolkit for Microsoft Visual Studio Code helps you to create, debug, and deploy your Teams app from the Visual Studio Code.
+<br> Teams Toolkit brings all tools needed for building a Teams app in one place.
+<br>
+<br>
 App development with the toolkit has the advantages of:
 
 * Integrated identity
@@ -21,13 +24,13 @@ App development with the toolkit has the advantages of:
 * Data from Microsoft Graph
 * Azure and Microsoft 365 services with zero-configuration
 
- For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`. 
-
+ For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which has Toolkit `teamsfx`. 
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-ide.png" alt-text="ide":::
+<br>
 ## User Experience for  Teams Toolkit
 
-Teams Toolkit automates manual work and provides great integration of Teams and Azure resources.
+Teams Toolkit automates work and provides great integration of Teams and Azure resources.
 
-The following image shows Teams Toolkit user journey:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="User Journey" border="true":::
 
@@ -39,6 +42,8 @@ The milestones of this experience are:
 1. Use Microsoft 365 account to build and debug your Teams app.
 1. Use Azure account to provision and deploy your app to cloud.
 1. Publish your app to Teams.
+
+
 
 ## Install Teams Toolkit for Visual Studio Code
 
