@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Meetings SidePanel
+title: Generate meeting side panel
 metadata:
-  title: Meetings SidePanel
+  title: Generate meetings side panel
   description: In this tutorial, you'll learn to set up Meetings SidePanel for Teams.
   audience: Developer
   level: Beginner
@@ -14,16 +14,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The `meetingSidePanel` enhances your in-meeting experience. You can help organizers and presenters to have different set of views and actions.
+    The Meeting Side Panel enhances your in-meeting experience and it helps organizers and presenters to have different set of views and actions.In the meeting and all scenerios, the app is rendered in an in-meeting tab. Messaging extension works as expected when a user is in in-meeting view.
 
-    This step-by-step guide illustrates how to implement **Side Panel** app to add and publish agenda.
+   
 
-    **Meeting organizers' interaction of meeting SidePanel**
+    Key features of meeting SidePanel**
 
-    * **Add New Agenda Item**: Gives provision to add new agenda point.
-    * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
-    * **Publish Agenda**: Sends the agenda list to the meeting chat.
+    * It gives provision to add new agenda point.
+    * Adds the agenda as text input to the **Side Panel** agenda list.
+    * Publish the agenda list to the meeting chat.
 
+    This step-by-step guide helps you to implement generate **Side Panel** app to add and publish agenda.
     You'll see the following output:
 
      ![Your Token](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
