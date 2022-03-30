@@ -44,13 +44,12 @@ items:
     
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
-    > [!NOTE]
-    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
+      > [!NOTE]
+      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
 
 - title: Set up local environment
   durationInMinutes: 1
-  content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+  content: | 
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
@@ -63,7 +62,7 @@ items:
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    The following steps help you to create and register your bot in Azure portal:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -73,7 +72,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -83,8 +82,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select your **Subscription** from the dropdown list.
-    1. Select your **Resource group** from the dropdown list. 
+    1. From the **Subscription** dropdown list, select your subscription.
+    1. From the **Resource group** dropdown list, select your existing resource group.
     
         ![Select resource Azure bot](~/assets/images/meetings-side-panel/review-plus-create.png) 
     
@@ -100,6 +99,8 @@ items:
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
+
+    1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
 
@@ -126,10 +127,6 @@ items:
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Select **Multitenant** under **Bot Type**.
-
-        ![Bot type](~/assets/images/meetings-side-panel/bot-type.png)
-
     1. Next to **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/meetings-side-panel/config.png)
@@ -153,7 +150,7 @@ items:
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
 
-    **To add the Microsoft Teams channel**
+    **To add the Teams channel**
 
     1. Select **Home**.
 
@@ -171,7 +168,7 @@ items:
 
           ![Terms of service](~/assets/images/meetings-side-panel/terms.png)
 
-    1. Select **Save**.
+    1. Select **Apply**.
 
           ![Select Teams](~/assets/images/meetings-side-panel/config-teams1.png)   
     
