@@ -8,25 +8,23 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Teams Toolkit FAQ
-<br>
-:::image type="content" source="~/assets/images/teams-toolkit-v2/trumpet.png" alt-text="trumpet" border="true":::
-
+# Teams Toolkit FAQ :::image type="content" source="../assets/images/teams-toolkit-v2/trumpet.png" alt-text="trumpet":::
+ 
 This section provides the answer and relevant information to the common questions asked about Teams Toolkit.
 <br> This section can be divided into different categories 2/3 – 2 tabs
 
 * **Error messages**
 * **Queries**
-<br>
 
-<br>
 <details>
+:::image type="content" source="../assets/images/question.png" alt-text="question":::
+
 :::image type="content" source="~/assets/images/teams-toolkit-v2/question.png" alt-text="question" border="true":::
 
 <summary><b>How to login using CLI for CI/CD</b></summary>
 
 <br>
-:::image type="content" source="~/assets/images/teams-toolkit-v2/bulb_ans.png" alt-text="bulb" border="true":::
+:::image type="content" source="../assets/images/bulb.png" alt-text="bulb":::
 
 Ans.
 
