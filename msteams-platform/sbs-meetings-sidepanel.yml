@@ -22,7 +22,7 @@ items:
 
     * **Add New Agenda Item**: Gives provision to add new agenda point.
     * **Add**: Adds the agenda as text input to the **Side Panel** agenda list.
-    * **Publish Agenda**: Sends the agenda list to the meeting chat. 
+    * **Publish Agenda**: Sends the agenda list to the meeting chat.
 
     You'll see the following output:
 
@@ -34,7 +34,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
