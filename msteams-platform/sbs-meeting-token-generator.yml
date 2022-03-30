@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Build Meeting Token Generate
+title: Generate Meeting Token
 metadata:
-  title: Build Meeting Token Generate
+  title: Generate Meeting Token
   description: In this tutorial, you'll learn to set up a Meeting Token Generator for Teams.
   audience: Developer
   level: Beginner
@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting Token Generator app helps to enhance your meeting experience in Teams by allowing meeting participants to request for token. The app generates tokens sequentially so that each participant has equal opportunity to interact in the meeting. For example, the app is useful in Q&A sessions and in meetings, such as scrum meetings.
+    Meeting Token Generator app helps to enhance your meeting experience in Teams by allowing meeting participants to request for token. The app generates tokens sequentially so that each participant has an equal opportunity to interact in the meeting. For example, the app is useful in Q&A sessions and in meetings, such as scrum meetings.
 
     > [!NOTE]
     > The In-meeting tabs for Meeting Token Generator app are available only in the **Teams desktop client**.
 
     **Key features of Meeting Token Generator**
 
-    * Displays the current token that is being serviced in the meeting.
-    * Displays the user list sorted by the token number.
+    * Displays the current token used in the meeting.
+    * Displays the user list sorted based on the token number.
     * Generates a token for the user upon request.
     * Displays current user's token number.
     * Allows the organizer to skip the current meeting token.
@@ -50,13 +50,12 @@ items:
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution
-    
-    > [!NOTE]
-   > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-    
     * [Get a free Teams developer tenant](https://developer.microsoft.com/microsoft-365/dev-program)
     
-    You have working knowledge of the following technologies:
+       > [!NOTE]
+       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+    
+    You must have working knowledge of the following technologies:
 
     * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
@@ -81,7 +80,7 @@ items:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
-    * Add Teams channel to deploy the bot to a Teams channel.
+    * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
@@ -225,8 +224,7 @@ items:
 - title: Update the Azure app registration for tab SSO
   durationInMinutes: 1
   content: |
-    **To register your app through the Azure AD portal**  
-
+    
     1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
@@ -343,6 +341,7 @@ items:
        > [!NOTE]
        > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
                
+        
          1. Select **Add a platform**.
          1. Select **Web**.
 
@@ -520,7 +519,7 @@ items:
 
          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-developer-preview.png" alt-text="developer preview" border="true":::
 
-- title: Add Meeting Token to Teams
+- title: Add meeting token to Teams
   durationInMinutes: 1
   content: |
     1. In your cloned repository, navigate to **csharp > Resources > Manifest**.

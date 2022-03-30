@@ -165,7 +165,7 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
-        - text: Build meeting token generate
+        - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
 - title: Teams app scenarios
   linkLists:
