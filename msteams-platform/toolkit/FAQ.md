@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Teams Toolkit FAQ
 <br>
-:::image type="content" source="~/assets/images/teams-toolkit-v2/trumpet.png" alt-text="trumpt" border="true":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/trumpet.png" alt-text="trumpet" border="true":::
 
 This section provides the answer and relevant information to the common questions asked about Teams Toolkit.
 <br> This section can be divided into different categories 2/3 – 2 tabs
