@@ -370,6 +370,8 @@ items:
   durationInMinutes: 1
   content: |
 
+      **To build and run the service using Visual Studio or Command line**
+
     # [Visual Studio](#tab/vs)
 
        1. Launch **Visual Studio**.
