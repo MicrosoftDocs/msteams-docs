@@ -429,10 +429,10 @@ items:
        ```Command-Prompt
        npm install
        ```
-    1. Run the following command in the **Command Prompt** to build the app.
+    1. Run the following command in the **Command Prompt** to start the app.
 
        ```Command-Prompt
-       npm install
+       npm start
        ```
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-npm.png" alt-text="npm" border="true":::
 
