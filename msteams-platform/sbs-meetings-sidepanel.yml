@@ -2,7 +2,7 @@
 title: Generate meeting side panel
 metadata:
   title: Generate meetings side panel
-  description: In this tutorial, you'll learn to set up Meetings SidePanel for Teams.
+  description: In this tutorial, you'll learn to set up Meetings Side Panel for Teams.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -45,7 +45,7 @@ items:
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
       > [!NOTE]
-      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
+      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting side panel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -213,7 +213,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left navigation panel, select **App registrations**.
 
     1. Select your bot.
 
@@ -229,7 +229,7 @@ items:
 
        ![Set link](~/assets/images/meetings-side-panel/setlink.png)
 
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
+    1. Insert the **WebAppDomain** value between `api://` and `/{AppID}`.</br>
         `api://4d52****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
@@ -288,7 +288,7 @@ items:
 
         ![Add client application 2](~/assets/images/meetings-side-panel/authorizedscope.png) 
 
-       The following image displays the client IDs:
+       The following image displays the client Id:
 
         ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
   
@@ -330,7 +330,7 @@ items:
             ![Web](~/assets/images/meetings-side-panel/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://4d52****.ngrok.io/auth-end`. </br>
+           `https://your ngrok/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -348,11 +348,11 @@ items:
 
         ![App settings location](~/assets/images/meetings-side-panel/appsettingslocation.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseUrl"` to the fully qualified domain name.
+         * Set `"BaseUrl"` to the fully qualified ngrok domain name.
 
         ![App settings](~/assets/images/meetings-side-panel/appsettings.png)
 
@@ -360,9 +360,9 @@ items:
 
         ![Manifest file location](~/assets/images/meetings-side-panel/manifestlocation.png)
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
+         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
         ![Manifest image2](~/assets/images/meetings-side-panel/manifest-2.png)
@@ -370,11 +370,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2019 or Command line**
+    **To build and run the service using Visual Studio or Command line**
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Visual Studio](#tab/vs)
 
-       1. Launch **Visual Studio 2019**.
+       1. Launch **Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
@@ -404,10 +404,9 @@ items:
    
     ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
       
-- title: Add Meetings SidePanel app to Teams
+- title: Add Meetings Side Panel to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings SidePanel App**
 
     1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
 
@@ -424,7 +423,7 @@ items:
 
        ![Add an app](~/assets/images/meetings-side-panel/addanapp.png) 
    
-    1. In the pop-up that opens, select **Manage apps**.
+    1. In the pop-up window, select **Manage apps**.
 
        ![Manage apps](~/assets/meeting-token-generator-manageapps.png)
    
@@ -448,7 +447,7 @@ items:
     
     1. Select **Add an app**. 
     
-       In the app selection page, the app displays as **Side Panel**.
+       In the app selection page, the app is displayed as **Side Panel**.
   
        ![App icon in Teams](~/assets/images/meetings-side-panel/appicon.png)
 
@@ -458,7 +457,7 @@ items:
 
        ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
    
-       The app is visible in the meeting SidePanel.         
+       The app is visible in the meeting Side Panel.         
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
