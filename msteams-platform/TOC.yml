@@ -94,36 +94,34 @@
           items:
           - name: Create a new app
             href: toolkit/create-new-project.md
-          - name: Accounts to build the app
+          - name: Prepare accounts to build the app
             href: toolkit/accounts.md
-          - name: Custom app upload
-            href: toolkit/accounts.md  
           - name: Debug the app locally
             href: toolkit/debug-local.md 
+          - name: Debug background process
+            href: toolkit/debug-background-process.md
           - name: Provision cloud resources
             href: toolkit/provision.md
           - name: Deploy app to the cloud
             href: toolkit/deploy.md
-          - name: Publish apps using Toolkit 
+          - name: Publish apps 
             href: toolkit/publish.md
           - name: Teams Toolkit FAQ 
             href: toolkit/publish.md
-          - name: Additional functions using Toolkit 
-            items:
-            - name: Add capabilities to the app
-              href: toolkit/add-capability.md
-            - name: Add cloud resources to the app
-              href: toolkit/add-resource.md
-            - name: Customize Teams app manifest
-              href: toolkit/TeamsFx-manifest-customization.md
-            - name: Preview Teams app manifest
-              href: toolkit/TeamsFx-manifest-preview.md
-            - name: Manage multiple environments
-              href: toolkit/TeamsFx-multi-env.md
-            - name: Collaborate using Toolkit
-              href: toolkit/TeamsFx-collaboration.md
-            - name: Add CI/CD Workflows
-              href: toolkit/use-CICD-template.md
+          - name: Add capabilities to the app
+            href: toolkit/add-capability.md
+          - name: Add cloud resources to the app
+            href: toolkit/add-resource.md
+          - name: Customize Teams app manifest
+            href: toolkit/TeamsFx-manifest-customization.md
+          - name: Preview Teams app manifest
+            href: toolkit/TeamsFx-manifest-preview.md
+          - name: Manage multiple environments
+            href: toolkit/TeamsFx-multi-env.md
+          - name: Collaborate using Toolkit
+            href: toolkit/TeamsFx-collaboration.md
+          - name: Add CI/CD Workflows
+            href: toolkit/use-CICD-template.md
         - name: Teams Toolkit in Visual Studio
           href: toolkit/visual-studio-overview.md
           items:
