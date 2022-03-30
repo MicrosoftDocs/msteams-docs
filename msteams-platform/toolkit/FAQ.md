@@ -19,12 +19,12 @@ This section provides the answer and relevant information to the common question
 <details>
 :::image type="content" source="../assets/images/question.png" alt-text="question":::
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/question.png" alt-text="question" border="true":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/question.png" alt-text="q" border="true":::
 
 <summary><b>How to login using CLI for CI/CD</b></summary>
 
 <br>
-:::image type="content" source="../assets/images/bulb.png" alt-text="bulb":::
+:::image type="content" source="../assets/images/bulb.png" alt-text="b":::
 
 Ans.
 
