@@ -84,7 +84,7 @@
       href: concepts/design/activity-feed-notifications.md
   - name: App customization
     href: concepts/design/enable-app-customization.md
-  - name: Overview of Tools in IDE
+  - name: Tools and Software Development Kits
     items:
         - name: Teams Toolkit overview
           href: toolkit/teams-toolkit-fundamentals.md
@@ -127,8 +127,8 @@
             href: sbs-gs-blazorapp.yml
         - name: Teams Toolkit in Command Line Interface
           href: toolkit/teamsfx-cli.md    
-   - name: Software Development Kits       
-     items:
+  - name: Software Development Kits       
+    items:
         - name: JavaScript client SDK and versions
           href: tabs/how-to/using-teams-client-sdk.md
         - name: JavaScript client SDK v2 Preview
