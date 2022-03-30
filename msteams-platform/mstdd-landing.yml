@@ -44,8 +44,6 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
       - text: In-app purchase flow for monetization of apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-      - text: Authentication using external OAuth providers  
-        url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
       
 
 - title: Get started
@@ -148,8 +146,7 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Create a meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Generate a Meetings Stage View
-          url: ~/sbs-meetings-stage-view.yml
+      
     - linkListType: tutorial
       links:
         - text: Upload files to Teams from a bot
