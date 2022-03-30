@@ -58,7 +58,7 @@ items:
     
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
-    * Add Teams channel to deploy the bot to Teams channel.
+    * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
@@ -74,7 +74,7 @@ items:
        
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
+    1. From the **Subscription** dropdown list, select your subscription.
     1. From the **Resource group** dropdown list, select your existing resource group.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource.png" alt-text="azure resource selection" border="true":::
@@ -476,7 +476,7 @@ items:
        
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-1.png" alt-text="bot sending card" border="true":::
     
-    1. Select **Allow**. A `teams-logo.png` file is uploaded to the file directory, which is ready to download.
+    1. Select **Allow**. A `teams-logo.png` file is uploaded to the file directory, which is ready for download.
          
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-2.png" alt-text="teams logo" border="true":::
     
@@ -489,7 +489,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-4.png" alt-text="received" border="true":::
       
         > [!NOTE]
-        >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
+        >  After the bot is installed in the personal scope, the user enters into an one on one chat conversation with the bot.
       
 - title: Complete challenge
   durationInMinutes: 1
@@ -499,5 +499,5 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/output-sbs.png" alt-text="final image" border="true"::: 
 
 - content: |
-    You have completed the tutorial. Now you can upload files from bot to Microsoft Teams.
+    You have completed the tutorial. Now you can upload files from bot to Teams.
  
