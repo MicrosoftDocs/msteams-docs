@@ -51,7 +51,12 @@ Go to **Store** and select **Manage your apps** in Teams to view your Teams apps
 
 :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="Access teams apps list" border="true":::
 
-select the app dropdown to vieww all the scopes where that app has been installed
+select the app dropdown to view all the scopes where that app has been installed.
+
+:::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Access teams app scope" border="true":::
+
+By selecting the installed scope of that app you would be navigated to the location of the app.
+
 Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
 ## Update your app
