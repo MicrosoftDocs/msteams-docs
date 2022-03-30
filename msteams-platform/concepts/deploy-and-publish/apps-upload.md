@@ -107,7 +107,7 @@ To remove your app from Teams or only from a particular scope follow the steps:
 
 * **To remove app from a particular scope**
 
-1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; to remove the installed app.
+1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; at the scope of the installed app.
 
     :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
 
