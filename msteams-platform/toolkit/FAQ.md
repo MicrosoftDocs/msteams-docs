@@ -9,6 +9,7 @@ ms.date: 11/29/2021
 ---
 
 # Teams Toolkit FAQ
+<br>
 :::image type="content" source="../assets/images/teams-toolkit-v2/trumpet.png" alt-text="faq" border="true":::
 
 This section provides the answer and relevant information to the common questions asked about Teams Toolkit.
@@ -22,6 +23,7 @@ This section provides the answer and relevant information to the common question
 <details>:::image type="content" source="../assets/images/teams-toolkit-v2/question.png" alt-text="question" border="true":::
 
 <summary><b>How to login using CLI for CI/CD</b></summary>
+<br>
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bulb_ans.png" alt-text="answer" border="true":::
 Ans.

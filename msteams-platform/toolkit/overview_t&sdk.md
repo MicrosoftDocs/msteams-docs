@@ -29,8 +29,8 @@ Teams Toolkit automates manual work and provides great integration of Teams and 
 
 The following image shows Teams Toolkit user journey:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams Toolkit User Journey" border="true":::
-:::image type="content" source="../assets/images/MoodleInstructions/overview.png" alt-text="sync" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="User Journey" border="true":::
+
 
 The milestones of this experience are:
 
