@@ -445,7 +445,9 @@ items:
   content: |
    **To build and run the service using Latest Visual Studio**
 
-      1. Launch **Visual Studio**.
+   # [Visual Studio](#tab/vs)
+
+      1. Launch the latest version of Visual Studio.
       1. Navigate to **File** > **Open** > **Project/Solution**.
           
          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png" alt-text="vsopen" border="true":::
@@ -471,7 +473,7 @@ items:
     ```bash
     dotnet run
     ```
-         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
+    :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
 
 - title: Enable developer preview
   durationInMinutes: 1
