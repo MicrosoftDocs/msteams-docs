@@ -266,7 +266,7 @@ items:
 
     | MentionMe    | Show Welcome   | MessageAllMembers |
     | --- | --- | --- |
-    | :::image type="content" source="./assets/images/conversation-bot/mentionme-output1.png" alt-text="Mentionme card1."::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-output1.png" alt-text="Show Welcome card1."::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-output1.png" alt-text="MessageAllMembers card1."::: |
+    | :::image type="content" source="./assets/images/conversation-bot/mentionme-output1.png" alt-text="Mentionme card1." border="true"lightbox="assets/images/conversation-bot/mentionme-output1.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-output1.png" alt-text="Show Welcome card1." border="true"lightbox="assets/images/conversation-bot/show-welcome-output1.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-output1.png" alt-text="MessageAllMembers card1." border="true"lightbox="assets/images/conversation-bot/message-all-members-output1.png"::: |
     | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
     | **Valid Scopes:** personal, group chat, team chat. | **Valid Scopes:** personal, group chat, team chat. |  **Valid Scopes:** personal, group chat, team chat. |
 
