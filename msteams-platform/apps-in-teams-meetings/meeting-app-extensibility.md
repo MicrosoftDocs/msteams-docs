@@ -140,30 +140,33 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ## Channel meetings support meeting extensibility
 
- Channel meeting allows users to set up a meeting from a channel and users can add and interact with an app in the scheduled channel meetings.
+ Channel meeting allows users to set up a meeting from a channel and users can add and interact with an app in the scheduled private channel meetings.
 
 ### Schedule channel meetings
 
 To schedule channel meetings:
 
 1. Go to Teams.
-1. Select the **Meet** dropdown menu and select **Schedule a meeting**.
-1. The channel's calendar appears and the Team is automatically added.
+1. Select **Schedule a meeting** from **Meet** dropdown menu.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
+
+1. The channel's calendar appears and the Team is automatically added.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
 
 > [!NOTE]
-> Currently users can add apps only from desktop. App shows up on corresponding mobile meeting when added on desktop.
+> Currently, users can add apps only from desktop. The apps appears on the corresponding mobile after the app is added on the desktop.
 
-### Capabilities
+### App accessibility
 
-1. pre/post meeting tabs
-1. in-meeting panels
-1. content bubbles
+Users can access apps by selecting **More** option in the meeting from the following :
+
+1. Pre/post meeting tabs
+1. In-meeting panels
+1. Content bubbles
 1. Bots
-1. Message extensions.
+1. Message extensions
 
 ### Integrate bots into the meeting lifecycle
 
@@ -231,7 +234,6 @@ The following table provides the user types and lists the features that each use
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
-| Channel meeting supports meeting extensibility for channel members | Available | Available | Available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card is allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 
 ## Next step
 
