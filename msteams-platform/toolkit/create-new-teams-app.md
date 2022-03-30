@@ -103,12 +103,7 @@ Visual Studio opens up the new project and Teams Toolkit will setup you new proj
 
 ## TeamsFx command line interface
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
-
-For more information, see:
-
-* [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
-* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. 
 
 ## Get Started
 
@@ -159,6 +154,8 @@ By default, `teamsfx new` goes into interactive mode and guides you through the 
 |`--spfx-web part-name`| No | Applicable if `Tab(SPfx)` capability is selected. The default value is "helloworld".|
 |`--spfx-web part-desp`| No | Applicable if `Tab(SPfx)` capability is selected. The default value is "helloworld description". |
 |`--azure-resources`| No| Applicable if contains `tab` capability. Add Azure resources to your project. The multiple options are `sql` (Azure SQL Database) and `function` (Azure Functions). |
+
+
 
 ## See also
 
