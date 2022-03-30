@@ -246,29 +246,11 @@ items:
 
     :::image type="content" source="./assets/images/conversation-bot/suggestions.png" alt-text="Suggestions card.":::
 
-    1. **MentionMe** <br>
-        **Result:** The bot responds to the message and mention the user.<br>
-        **Valid Scopes:** personal, group chat, team chat.
-
-        :::image type="content" source="./assets/images/conversation-bot/mentionme-output.png" alt-text="Mentionme card.":::
-
-    1. **Show Welcome** <br>
-        **Result:** The bot sends the welcome card for you to interact with. <br>
-        **Valid Scopes:** personal, group chat, team chat.
-
-        :::image type="content" source="./assets/images/conversation-bot/show-welcome-output.png" alt-text="Show Welcome card.":::
-
-    1. **MessageAllMembers**<br>
-        **Result:** The bot sends a one-on-one message to each member in the current conversation.<br>
-        **Valid Scopes:** personal, group chat, team chat.
-
-        :::image type="content" source="./assets/images/conversation-bot/message-all-members-output.png" alt-text="MessageAllMembers card.":::
-
     | MentionMe    | Show Welcome   | MessageAllMembers |
     | --- | --- | --- |
-    | :::image type="content" source="./assets/images/conversation-bot/mentionme-output1.png" alt-text="Mentionme card1." border="true"lightbox="assets/images/conversation-bot/mentionme-output1.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-output1.png" alt-text="Show Welcome card1." border="true"lightbox="assets/images/conversation-bot/show-welcome-output1.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-output1.png" alt-text="MessageAllMembers card1." border="true"lightbox="assets/images/conversation-bot/message-all-members-output1.png"::: |
+    | :::image type="content" source="./assets/images/conversation-bot/mentionme.png" alt-text="Mentionme card" border="true"lightbox="assets/images/conversation-bot/mentionme.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome.png" alt-text="Show Welcome card" border="true"lightbox="assets/images/conversation-bot/show-welcome.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members.png" alt-text="MessageAllMembers card" border="true"lightbox="assets/images/conversation-bot/message-all-members.png"::: |
     | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
-    | **Valid Scopes:** personal, group chat, team chat. | **Valid Scopes:** personal, group chat, team chat. |  **Valid Scopes:** personal, group chat, team chat. |
+    | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
     You can select an option from the command list by typing **@TeamsConversationBot** into the compose message area and **What can I do?** text above the compose area.
 
