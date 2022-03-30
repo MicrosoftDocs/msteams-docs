@@ -519,7 +519,7 @@ items:
 
          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-developer-preview.png" alt-text="developer preview" border="true":::
 
-- title: Add meeting token to Teams
+- title: Add Meeting Token to Teams
   durationInMinutes: 1
   content: |
     1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
