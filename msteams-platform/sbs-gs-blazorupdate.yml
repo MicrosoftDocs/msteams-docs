@@ -481,9 +481,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
-        Your Teams bot app is created in a few seconds.
+         Your Teams bot app is created in a few seconds.
         
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-bot-app-team.png" alt-text="Illustration shows the app project created in the latest Visual Studio." border="false":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-bot-app-team.png" alt-text="Illustration shows the app project created in the latest Visual Studio." border="false":::
         
 
     <details>
