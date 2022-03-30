@@ -1,14 +1,14 @@
 ---
-title: Teams Toolkit Overview
+title: Overview
 author: zyxiaoyuer
-description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
+description:  Overview 
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Teams Toolkit Overview
+# Overview
 
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
