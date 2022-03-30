@@ -531,9 +531,7 @@ items:
         ngrok http -host-header=localhost 2544
         ```
 
-    1. Select **F5** in Visual Studio Code to run your app in debug mode.
-
-        1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
+     1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
