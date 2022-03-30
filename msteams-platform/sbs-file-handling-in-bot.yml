@@ -62,7 +62,7 @@ items:
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
-    **To create Azure Bot resource:**
+    **To create Azure Bot resource**
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
@@ -182,7 +182,7 @@ items:
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
-    **To add messaging endpoint:**
+    **To add messaging endpoint**
 
        1. From ngrok, copy the HTTPS URL.
 
