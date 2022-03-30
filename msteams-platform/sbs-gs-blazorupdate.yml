@@ -415,10 +415,10 @@ items:
 
     In this section, you can learn:
     
-    1. [How to set up a new bot project with Teams Toolkit](#create-your-project)
+    1. [How to set up a new bot project with Teams Toolkit](#create-your-project1)
     1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
-    
-    ## Create your project
+
+    ## Create your project1
 
     Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
