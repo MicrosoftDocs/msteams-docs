@@ -31,7 +31,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 1. Select **Store** > **Manage your apps** and **Publish an app**.
 
-       :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Publish an app" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Publish an app" border="true":::
 
 1. Select **Upload a custom app**.
 
@@ -55,30 +55,28 @@ If your app fails to sideload or any issues to upload, check the following optio
 
 ## Manage your apps
 
-Manage your apps allows users to have a dedicated place to manage, update and removal of their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
+Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
 
-## Access your app
+### Access your app
 
 Apps can be accesed either from **Manage your apps** or from the channels.
 
-*To access apps through **Manage your apps***
+To access apps through **Manage your apps** follow the steps:
 
-    1. Go to **Store** and select **Manage your apps** in Teams to view the installed apps across all your channels or for personal use in a list format.
-    
-        :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="Access teams apps list" border="true":::
-    
-    1. Select the app dropdown to view all the scopes where the app is installed.
-    
-        :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Access teams app scope" border="true":::
-    
-    1. Select the scope of app to go to the app in the channel or personal view.
-    
-        >[!NOTE]
-        > Currently, group chat scope where the app is installed is not listed in the app dropdown.
-    
-*To access apps through channels*
+1. Go to **Store** and select **Manage your apps** in Teams to view the installed apps across all your channels or for personal use in a list format.
 
-Find the team name and select **More options** &#x25CF;&#x25CF;&#x25CF; > **Manage team** > **Apps** to view list of apps installed in that Team.
+    :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="Access teams apps list" border="true":::
+    
+1. Select the app dropdown to view all the scopes where the app is installed.
+    
+    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Access teams app scope" border="true":::
+    
+1. Select the scope of app to go to the app in the channel or personal view.
+    
+    >[!NOTE]
+    > Currently, group chat scope where the app is installed is not listed in the app dropdown.
+    
+To access apps through channels, find the team name and select **More options** &#x25CF;&#x25CF;&#x25CF; > **Manage team** > **Apps** to access the installed apps in that Team.
 
  :::image type="content" source="~/assets/images/publish-app/apps-in-channels.png" alt-text="Access Teams app in a channel" border="true":::
 
@@ -103,29 +101,29 @@ If an update is available to your app, then the **Update available** option is e
 
 ## Remove your app
 
-To remove your app from Teams or only from a particular scope follow the steps:
+You can remove your app either from Teams or from a particular scope.
 
-***To remove app from Teams***
+To remove app from Teams, follow the steps:
 
-    1. Find the app in **Manage your app**.
-    1. Select **More options** &#x25CF;&#x25CF;&#x25CF; and **Uninstall**.
+1. Find the app in **Manage your app**.
+1. Select **More options** &#x25CF;&#x25CF;&#x25CF; and **Uninstall**.
     
-        :::image type="content" source="~/assets/images/publish-app/uninstall-from-teams.png" alt-text="Uninstall an app from Teams" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-teams.png" alt-text="Uninstall an app from Teams" border="true":::
     
-    1. Select **Remove** to remove your app.
+1. Select **Remove** to remove your app.
     
-        :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams" border="true":::
 
-***To remove app from a particular scope***
+To remove app from a particular scope, follow the steps:
 
-    1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; at the scope of the installed app.
+1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; at the scope of the installed app.
     
-        :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
     
-    1. Select **Remove** to remove your app.
+1. Select **Remove** to remove your app.
         
-        > [!NOTE]
-        > You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+    > [!NOTE]
+    > You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
 
 ## Next step
 
