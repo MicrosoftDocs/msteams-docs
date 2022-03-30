@@ -241,12 +241,12 @@ items:
     
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
-- title: Build and run your first Teams tab app locally
+- title: Build and run your first Teams tab app
   durationInMinutes: 1
   content: |
     After you set up your project workspace with Teams Toolkit, build your tab project.
 
-    To build and run your app locally:
+    To build and run your app:
 
     1. Select **Project** > **Teams Toolkit** > **Configure Your Microsoft Teams**.
 
