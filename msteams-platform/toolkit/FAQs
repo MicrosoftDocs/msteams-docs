@@ -16,41 +16,440 @@ This section provides the answer and relevant information to the common question
 * Queries
 
 1.	Getting Error in Unit Testing TeamsFx app
-2.	How do I get a Graph API token with higher permission than the user?
 3.	Format of Teams Chat URL.
-4.	How to setup Custom Teams Office 365 Connector.
-5.	How to trigger Microsoft Graph Toolkit PeoplePicker onChange event in mobile.
-6.	How to Enable the user install the bot by default and not as a tab on teams app manifest.
+
+6.	
 7.	Facing HTTP error when communicate with teams bot by using teamsFx.
-8.	How to implement localization in TeamsFX project.
-9.	Microsoft Teams Desktop Personal app not working with SPFX and GraphApi.
-10.	What is Microsoft Teams Toolkit - Support for Multitenant Teams App.
+8.	
+9.	
+10.	
 11.	Teams-cli using Github actions fails to find package.json.
 12.	Microsoft Teams Chatbot checklist.
 13.	Is there a way for a Microsoft Teams Bot to receive emergency call notification on Teams?.
 14.	How to set up ngrok for Teams Tab cross-device debug.
-15.	How to Provision Teams App due to Storage domain conflict.
+15.
 16.	How fix Search Message extension oauth failing
-17.	How to create an oauth for my Bot
-18.	How to login using CLI for CI/CD
+17.	
+18.	
 19.	How to address MS Teams static tab with content bot id with shows error in personal chat scope
-20.	How to provision my app resources in Azure using the TeamsToolkit
+20.	
 21.	Error messages
 22.	How to clear the credentials used by TeamsFx SSO?
 23.	"Localhost refused to connect" using Microsoft Graph Toolkit on a deployed Microsoft Teams custom personal app
 24.	Teams Toolkit - Failed to provision 'App Service plan'
 25.	I can't paste anything into the bot endpoint address field. 
-26.	App doesn't sideload when debugging with Teams Toolkit
-27.	Can't found personal application of Microsoft Teams Toolkit when I sideload it in Teams
-28.	Is the June 2009 WPF Toolkit Safe to Use in Applications that will be Shipped Out to Customers?
-29.	How to remove a tab attribute in ASP .NET AJAX Toolkit using Regular Expression
-30.	How to clear the credentials used by TeamsFx SSO?
 
 
-## See also
+# Teams Toolkit FAQ
 
-* [Create new project using Teams Toolkit](create-new-project.md)
-* [Prepare accounts to build Teams apps](accounts.md)
-* [Publish Teams apps using Teams Toolkit](publish.md)
-* [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Deploy to the cloud](deploy.md)
+This section provides the answer and relevant information to the common questions asked about Teams Toolkit.<br>
+
+<br>
+<details>
+
+<summary><b>How to login using CLI for CI/CD</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>How to create an oauth for my Bot</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>	How to Provision Teams App due to Storage domain conflict</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+
+
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+
+<details>
+
+<summary><b>App doesn't sideload when debugging with Teams Toolkit</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>How to provision my app resources in Azure using the TeamsToolkit</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>Is the June 2009 WPF Toolkit Safe to Use in Applications that will be Shipped Out to Customers?</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>Can't found personal application of Microsoft Teams Toolkit when I sideload it in Teams</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+
+
+
+
+
+
+
+
+<details>
+
+<summary><b>How do I get a Graph API token with higher permission than the user?</b></summary>
+
+ABC
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>How to setup Custom Teams Office 365 Connector.</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>How to trigger Microsoft Graph Toolkit PeoplePicker onChange event in mobile.</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>How to Enable the user install the bot by default and not as a tab on teams app manifest.</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>How to implement localization in TeamsFX project.</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>Microsoft Teams Desktop Personal app not working with SPFX and GraphApi.</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>What is Microsoft Teams Toolkit - Support for Multitenant Teams App.</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>How to clear the credentials used by TeamsFx SSO?
+</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b>How to remove a tab attribute in ASP .NET AJAX Toolkit using Regular Expression</b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details><details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+<details>
+
+<summary><b></b></summary>
+
+Ans.
+
+<br>
+
+</details>
+
+
+
+
+
+
+
+> [!TIP]
+> Create a dynamic Microsoft 365 group to enable the **filter** option with multiple profile properties.
+
+The following image shows user creation restrictions options:
+
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync" border="true":::
+
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad" border="true":::
+
+<br>
+<!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
+</details>
+
+
+<details>
+
+<summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
+
+For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback).
