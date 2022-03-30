@@ -360,7 +360,7 @@ You can also visualize the changes by reviewing the  [`transformLegacyContextToA
 
 ## Next steps
 
-You can also learn more about breaking changes in the [TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md) and the [TeamsJS SDK v2 Preview API Reference](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true).
+You can also learn more about breaking changes in the [TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/packages/teams-js/CHANGELOG.md) and the [TeamsJS SDK v2 Preview API Reference](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true).
 
 When you're ready to test your Teams apps running in Outlook and Office, see:
 
