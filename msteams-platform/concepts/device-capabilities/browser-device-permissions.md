@@ -8,10 +8,6 @@ ms.topic: how-to
 
 # Device permissions for the browser
 
-> [!NOTE]
-> The latest update on how device permissions are handled in the browser is currently available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
-> This update will be generally available (GA) starting February 01, 2022 and finish rolling out late February.
-
 Teams app that require device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams. This has implications on how you design your application and if they require these permissions in the browser.
 
 ## Enable app's device permissions
