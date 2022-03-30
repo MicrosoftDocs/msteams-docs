@@ -42,8 +42,6 @@ landingContent:
         url: ~/resources/schema/manifest-schema.md
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-      - text: In-app purchase flow for monetization of apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       
 
 - title: Get started
