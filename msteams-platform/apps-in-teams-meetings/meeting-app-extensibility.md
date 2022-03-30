@@ -149,18 +149,18 @@ To schedule channel meetings:
 1. Go to Teams.
 1. Select **Schedule a meeting** from **Meet** dropdown menu.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
 
 1. The channel's calendar appears and the Team is automatically added.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
 
 > [!NOTE]
-> Currently, users can add apps only from desktop. The apps appears on the corresponding mobile after the app is added on the desktop.
+> Currently, users can add apps only from desktop. The app appears on the corresponding mobile after the app is added on the desktop.
 
 ### App accessibility
 
-Users can select the more option to access the following apps in the meeting:
+Users can select the **More** option to access the following apps in the meeting:
 
 1. Pre/post meeting tabs
 1. In-meeting panels
