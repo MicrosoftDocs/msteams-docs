@@ -67,7 +67,9 @@ After adding the tabs to an existing meeting on mobile, you can see the same app
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
+With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants.
+
+Users can set up a meeting from a channel and add or interact with an app in the scheduled private channel meetings. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
@@ -143,13 +145,9 @@ The following image displays the **Contoso** tab with results of poll and feedba
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
 
-## Channel meetings support meeting extensibility
-
- Channel meeting allows users to set up a meeting from a channel and users can add and interact with an app in the scheduled private channel meetings.
+  Users can set up a meeting from a channel and add or interact with an app in the scheduled private channel meetings.
 
 ### Schedule channel meetings
-
-To schedule channel meetings:
 
 1. Go to Teams.
 1. Select **Schedule a meeting** from **Meet** dropdown menu.
