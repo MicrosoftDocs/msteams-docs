@@ -1,55 +1,28 @@
 ---
 title: FAQ
 author: zyxiaoyuer
-description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
+description:  FAQ of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Teams Toolkit FAQs
+# Teams Toolkit FAQ :::image type="content" source="~/assets/images/teams-toolkit-v2/trumpet.png" alt-text="sync" border="true":::
 
-This section provides the answer and relevant information to the common questions asked about Teams Toolkit. This section can be divided into different categories 2/3 – 2 tabs
+This section provides the answer and relevant information to the common questions asked about Teams Toolkit.
+<br> This section can be divided into different categories 2/3 – 2 tabs
 
-* Error messages
-* Queries
-
-1.	Getting Error in Unit Testing TeamsFx app
-3.	Format of Teams Chat URL.
-
-6.	
-7.	Facing HTTP error when communicate with teams bot by using teamsFx.
-8.	
-9.	
-10.	
-11.	Teams-cli using Github actions fails to find package.json.
-12.	Microsoft Teams Chatbot checklist.
-13.	Is there a way for a Microsoft Teams Bot to receive emergency call notification on Teams?.
-14.	How to set up ngrok for Teams Tab cross-device debug.
-15.
-16.	How fix Search Message extension oauth failing
-17.	
-18.	
-19.	How to address MS Teams static tab with content bot id with shows error in personal chat scope
-20.	
-21.	Error messages
-22.	How to clear the credentials used by TeamsFx SSO?
-23.	"Localhost refused to connect" using Microsoft Graph Toolkit on a deployed Microsoft Teams custom personal app
-24.	Teams Toolkit - Failed to provision 'App Service plan'
-25.	I can't paste anything into the bot endpoint address field. 
-
-
-# Teams Toolkit FAQ
-
-This section provides the answer and relevant information to the common questions asked about Teams Toolkit.<br>
+* **Error messages**
+* **Queries**
+<br>
 
 <br>
-<details>
+<details>:::image type="content" source="~/assets/images/teams-toolkit-v2/question.png" alt-text="sync" border="true":::
 
 <summary><b>How to login using CLI for CI/CD</b></summary>
 
-Ans.
+:::image type="content" source="~/assets/images/teams-toolkit-v2/bulb_ans.png" alt-text="sync" border="true":::Ans.
 
 <br>
 
@@ -66,7 +39,7 @@ Ans.
 </details>
 <details>
 
-<summary><b>	How to Provision Teams App due to Storage domain conflict</b></summary>
+<summary><b>How to Provision Teams App due to Storage domain conflict</b></summary>
 
 Ans.
 
@@ -74,11 +47,19 @@ Ans.
 
 </details>
 
+<details>
 
+<summary><b>Is there a way for a Microsoft Teams Bot to receive emergency call notification on Teams?.</b></summary>
+
+Ans.
+
+<br>
+
+</details>
 
 <details>
 
-<summary><b></b></summary>
+<summary><b>How to set up ngrok for Teams Tab cross-device debug.</b></summary>
 
 Ans.
 
@@ -106,36 +87,7 @@ Ans.
 
 </details>
 
-<details>
 
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-
-
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
 <details>
 
 <summary><b>Is the June 2009 WPF Toolkit Safe to Use in Applications that will be Shipped Out to Customers?</b></summary>
@@ -155,19 +107,11 @@ Ans.
 
 </details>
 
-
-
-
-
-
-
-
-
 <details>
 
 <summary><b>How do I get a Graph API token with higher permission than the user?</b></summary>
 
-ABC
+Ans
 
 <br>
 
@@ -239,185 +183,7 @@ Ans.
 <br>
 
 </details>
-<details>
 
-<summary><b>How to remove a tab attribute in ASP .NET AJAX Toolkit using Regular Expression</b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details><details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
-<details>
-
-<summary><b></b></summary>
-
-Ans.
-
-<br>
-
-</details>
 <details>
 
 <summary><b></b></summary>
