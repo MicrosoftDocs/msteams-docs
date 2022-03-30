@@ -65,7 +65,7 @@ items:
        
     1. Select **Install**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vsinstall.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
        
      Your Visual Studio is installed in a few minutes.
     
@@ -483,7 +483,7 @@ items:
 
         Your Teams bot app is created in a few seconds.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-bot-app-team.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-bot-app-team.png" alt-text="Illustration shows the app project created in the latest Visual Studio." border="false":::
         
 
     <details>
