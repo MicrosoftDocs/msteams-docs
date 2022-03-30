@@ -65,7 +65,7 @@ items:
        
     1. Select **Install**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/install-yourapp.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vsinstall.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
        
      Your Visual Studio is installed in a few minutes.
     
@@ -176,7 +176,7 @@ items:
 
           1. Select **Next**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
         
           The **Configure your new project** page appears.
 
@@ -348,9 +348,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Resource group is generated" border="true":::
 
-    1. Select **View Provisioned Resources** to view on Azure Portal. 
+    1. Select **View Provisioned Resources** to view on Azure portal. 
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Resource group is generated" border="true":::
+
+    1. Azure portal prompts you to sign in to your account. Sign in to your Azure portal account.
+
+        Your app-dev-rg appears.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.png" alt-text="View in Azure" border="true":::
 
@@ -478,7 +482,7 @@ items:
 
         Your Teams bot app is created in a few seconds.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-bot-app.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
         
 
     <details>
