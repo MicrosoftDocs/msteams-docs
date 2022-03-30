@@ -1,5 +1,5 @@
 ---
-title: FAQs
+title: FAQ
 author: zyxiaoyuer
 description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
 ms.author: zhany
