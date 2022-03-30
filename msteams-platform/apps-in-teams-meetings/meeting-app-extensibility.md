@@ -153,7 +153,7 @@ To schedule channel meetings:
 
 1. The channel's **Calendar** appears and the Team is automatically added.
 
-   :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meeting-invite.png" alt-text="calendar meeting invite" border="true":::
 
 > [!NOTE]
 > Currently, users can add apps only from desktop. The app appears on the corresponding mobile after the app is added on the desktop.
