@@ -151,7 +151,7 @@ To schedule channel meetings:
 
    :::image type="content" source="~/assets/images/apps-in-meetings/meet-option.png" alt-text="schedule a meeting" border="true":::
 
-1. The channel's calendar appears and the Team is automatically added.
+1. The channel's **Calendar** appears and the Team is automatically added.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/calendar-meet.png" alt-text="calendar-meeting-invite" border="true":::
 
