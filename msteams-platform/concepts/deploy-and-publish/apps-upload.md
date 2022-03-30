@@ -92,16 +92,26 @@ If your app has any available update, then the **Update available** option is en
 
 ## Remove your app
 
-To remove your app follow the steps:
+To remove your app from Teams or only from a particular scope follow the steps:
 
-1. Select the app in **Manage your app**.
-1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams"::: to remove the installed app.
+* **To remove app from Teams**
+
+1. Find the app in **Manage your app**.
+1. Select **More options** &#x25CF;&#x25CF;&#x25CF; and **Uninstall**.
+
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-teams.png" alt-text="Uninstall an app from Teams" border="true":::
+
+1. Select **Remove** to remove your app.
+
+    :::image type="content" source="~msteams-platform\assets\images\publish-app\remove-app-teams.png" alt-text="Remove an app from Teams" border="true":::
+
+* **To remove app from a particular scope**
+
+1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; to remove the installed app.
 
     :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
 
 1. Select **Remove** to remove your app.
-
-Select the delete icon where you want to delete the app and a window would popup with disclamair and **Remove** option. Select **Remove** to remove your app from the selected scope.
 
 > [!NOTE]
 > You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
