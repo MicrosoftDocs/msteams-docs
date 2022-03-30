@@ -17,8 +17,11 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
+
 |03/28/2022| Updated the Get started with Blazor app for Teams with Visual Studio latest version |  Get started > [Build your first app using Blazor](sbs-gs-blazorupdate.yml)|
+|03/29/2022 | Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)|
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
+|03/22/2022| Updated the Get started with Blazor app for Teams |  • Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Updated the Get started with Blazor app for Teams |  Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
 |03/14/2022| Introduced step-by-step guide to build and test a connector in Microsoft Teams | Build webhooks and connectors > Create Office 365 Connectors > [Build Teams connectors](sbs-teams-connectors.yml)|
@@ -38,6 +41,9 @@ Microsoft Teams platform features that are available to all app developers.
 | -------- | --------- | ----------------|
 |03/28/2022| Updated the Get started with Blazor app for Teams with Visual Studio latest version |  Get started > [Build your first app using Blazor](sbs-gs-blazorupdate.yml)|
 |03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
+|03/29/2022 |Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)
+|03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build messaging extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|  
+|03/22/2022| Updated the Get started with Blazor app for Teams|  • Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Updated the Get started with Blazor app for Teams|  Get started > [Build your first app using Blazor](sbs-gs-blazorapp.yml)|
 |03/22/2022| Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
 |03/14/2022| Introduced step-by-step guide to build and test a connector in Microsoft Teams | Build webhooks and connectors > Create Office 365 Connectors > [Build Teams connectors](sbs-teams-connectors.yml)|
