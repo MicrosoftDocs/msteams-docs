@@ -91,7 +91,7 @@
         - name: Teams Toolkit in Visual Studio Code
           items:
           - name: Create a new app
-            href: toolkit/create-new-project.md
+            href: toolkit/create-new-teams-app.md
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
           - name: Debug the app locally
