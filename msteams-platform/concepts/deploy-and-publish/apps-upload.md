@@ -82,7 +82,7 @@ To access apps through channels, find the team name and select **More options** 
 
 Teams provide several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
-## Update your app
+### Update your app
 
 You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations.
 
@@ -99,7 +99,7 @@ If an update is available to your app, then the **Update available** option is e
 
      :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Updated app" border="true":::
 
-## Remove your app
+### Remove your app
 
 You can remove your app either from Teams or from a particular scope.
 
