@@ -83,7 +83,7 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
+    1. From the **Subscription** dropdown list, select your subscription.
     1. From the **Resource group** dropdown list, select your existing resource group. 
 
         :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::    
