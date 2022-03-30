@@ -154,7 +154,7 @@ items:
 
     1. **Creating a new project** page: You select the project type.
     1. **Configure your new project** page: You enter the project details.
-    1. **Create a new Teams application** page: You select the Teams app capabilities and the Microsoft 365 credentials.
+    1. **Create a new Teams application** page: You select the Teams app capabilities.
 
     **To create your tab project workspace**
 
@@ -424,7 +424,7 @@ items:
 
     1. **Creating a new project** page: You select the project type.
     1. **Configure your new project** page: You enter the project details.
-    1. **Create a new Teams application** page: You select the Teams app capabilities and the Microsoft 365 credentials.
+    1. **Create a new Teams application** page: You select the Teams app capabilities.
 
     **To create your bot project workspace**
 
