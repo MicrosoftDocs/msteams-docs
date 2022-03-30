@@ -67,7 +67,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/install-yourapp.png" alt-text="Illustration shows the option to install Microsoft development tool." border="true":::  
        
-     Your Visual Studio is installed in few minutes.
+     Your Visual Studio is installed in a few minutes.
     
     # [Command line](#tab/cli)
 
@@ -168,21 +168,19 @@ items:
 
     1. Select the project details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
-
-          Select the project type:
+         Select the project type:
 
           1. Select **Microsoft Teams** from **All platforms** dropdown list.  
         
           1. Select **Microsoft Teams App** as the template.
 
           1. Select **Next**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
         
           The **Configure your new project** page appears.
 
     1.  Configure the new project details.     
-
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
           Select the following project configuration:
 
@@ -199,18 +197,19 @@ items:
 
           1. Select **Create**.
 
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
+
           The **Create a new Teams application** page appears.  
 
-    1.  Select Teams app feature.       
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png" alt-text="Illustration shows the options to configure new project." border="false":::
-
+    1.  Select Teams app feature. 
+          
         Select app feature:
 
         1. Select the **Tab app** as the capability for your app.
 
-        1. Select **Create**.
+        1. Select **Create**.      
 
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab.png" alt-text="Illustration shows the options to configure new project." border="false":::
         Your Teams app is created in a few seconds.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the Visual Studio." border="false":::
@@ -338,10 +337,10 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Select the subscription operation for the project" border="true":::
 
         Provision warning displays. 
-    
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.png" alt-text="Select the provision" border="true":::
 
     1. Select **Provision**.
+    
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.png" alt-text="Select the provision" border="true":::
 
         It takes a few minutes for your resource group to provision in the cloud. 
         
@@ -352,6 +351,8 @@ items:
     1. Select **View Provisioned Resources** to view on Azure Portal. 
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Resource group is generated" border="true":::
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.png" alt-text="View in Azure" border="true":::
 
         Your resources are provisioned in the Azure portal!
 
@@ -364,8 +365,6 @@ items:
     1. Select **OK**. 
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Select deploy to cloud" border="true":::
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.png" alt-text="View in Azure" border="true":::
 
         Your tab app is successfully deployed to the cloud!
 
@@ -434,8 +433,6 @@ items:
 
     1. Select the project details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
-
           Select the project type:
 
           1. Select **Microsoft Teams** from **All platforms** dropdown list.  
@@ -443,12 +440,12 @@ items:
           1. Select **Microsoft Teams App** as the template.
 
           1. Select **Next**.
-        
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+
           The **Configure your new project** page appears.
 
-    1.  Configure the new project details.     
-
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Illustration shows the options to configure new project." border="false":::
+    1.  Configure the new project details.  
 
           Select the following project configuration:
 
@@ -463,19 +460,21 @@ items:
 
           1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
 
-          1. Select **Create**.
+          1. Select **Create**.   
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
           The **Create a new Teams application** page appears.  
 
-    1.  Select Teams app feature.       
+    1.  Select Teams app feature. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot.png" alt-text="Illustration shows the options to configure new project." border="false":::
-
-        Select app feature:
+        Select app feature: 
 
         1. Select the **Bot app** as the capability for your app.
 
-        1. Select **Create**.
+        1. Select **Create**.     
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot.png" alt-text="Illustration shows the options to configure new project." border="false":::
 
         Your Teams bot app is created in a few seconds.
         
