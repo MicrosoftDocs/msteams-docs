@@ -51,7 +51,7 @@ You can use an authentication method suitable for your app to validate the crede
 
 Planning for implementing authentication is as important as for app's features and functionalities.
 
-You can implement authentication in a Teams app using Microsoft Graph APIs or web-based authentication. It's recommended that you plan for using authentication early. Depending on the type of app you create, or integrate an existing app with Teams, you can choose a suitable authorization method.
+<!--You can implement authentication in a Teams app using Microsoft Graph APIs or web-based authentication.--> It's recommended that you plan for using authentication early. Depending on the type of app you create, or integrate an existing app with Teams, you can choose a suitable authorization method.
 
 In a Teams app based on the IdP, you can choose to authenticate users with:
 
