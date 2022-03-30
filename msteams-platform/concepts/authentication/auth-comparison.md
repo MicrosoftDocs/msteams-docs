@@ -29,7 +29,7 @@ This page seeks to let you compare authentication methods based on:
 | **Teams store** | If you want to host your app on Teams store, Teams SSO with Azure AD is required. | -- | -- |
 
 > [!NOTE]
-> If a developer chooses not to use MSAL then they would need to manage the tokens on their own. It is recommended that the MSAL be used to handle this Azure AD authentication flow. Without MSAL, the app development cost and effort to implement authentication with Azure AD will increase.
+> If an app doesn't use MSAL then it needs to manage the tokens on its own. It is recommended that the MSAL be used to handle this Azure AD authentication flow. Without MSAL, the app development cost and effort to implement authentication with Azure AD will increase.
 
 ## Compare authentication for app types
 
