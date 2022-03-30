@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Build Meeting Token Generate
 metadata:
-  title: Build Meeting Token Generator
+  title: Build Meeting Token Generate
   description: In this tutorial, you'll learn to set up a Meeting Token Generator for Teams.
   audience: Developer
   level: Beginner
@@ -443,7 +443,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-   **To build and run the service using Latest Visual Studio**
+   **To build and run the service using Latest Visual Studio or command line**
 
    # [Visual Studio](#tab/vs)
 
@@ -468,12 +468,12 @@ items:
 
    # [Command line](#tab/cli)
 
-    Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
+   Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
 
-    ```bash
+   ```bash
     dotnet run
-    ```
-    :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
+   ```
+   :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png" alt-text="dotnet" border="true":::
 
 - title: Enable developer preview
   durationInMinutes: 1
