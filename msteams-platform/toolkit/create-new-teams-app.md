@@ -10,7 +10,8 @@ ms.date: 03/30/2022
 
 # Teams Toolkit in Integrated Development Environments
 
-Teams Toolkit provides all the tools needed for building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code, Visual Studio, or Teams CLI to create apps in Teams.
+Teams Toolkit provides you with all the tools required for successfully building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code, Visual Studio, or Teams CLI to create apps in Teams. For more information, see 
+
 
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
@@ -44,7 +45,7 @@ You can create a new app by exploring **View samples** and selecting an existing
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view-samples.png" alt-text="View sample gallary":::
+    <!-- :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view-samples.png" alt-text="View sample gallary"::: -->
 
 You can explore and download samples and either run your app locally or remotely to preview in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample within the `TeamsFx Samples repository` and browse the source code.
 
@@ -55,20 +56,6 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 #### Teams Toolkit for Visual Studio
 
 Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your IDE.
-
-### Install Teams Toolkit for Visual Studio
-
->[!NOTE]
-> As a prerequisite, ensure you use Visual Studio 2022 17.2 or newer versions to follow the instructions below.
-
-1. If you have Visual Studio 2022 17.2 Preview 2 installed, skip to the next step.
-2. Open the Visual Studio Installer.
-3. Select **Modify** for your existing VS 2022 Preview installation.
-4. Select the **ASP.NET and web development** workload.
-5. On the right, expand the **ASP.NET and web development** section and select **Microsoft Teams development tools** in the Optional list of components.
-6. Select **Install** or **Modify** in the Visual Studio Installer to complete the installation process.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/modify-vs-installer.PNG" alt-text="modify vs 2022 to add ms teams":::
 
 ## Get started with a new project
 
