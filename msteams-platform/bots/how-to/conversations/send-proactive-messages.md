@@ -1,6 +1,6 @@
 ---
 title: Send proactive messages
-description: Describes how to send proactive messages with your Microsoft Teams bot.
+description: Learn how to send proactive messages with your Microsoft Teams bot, proactively install your app using Microsoft Graph.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
