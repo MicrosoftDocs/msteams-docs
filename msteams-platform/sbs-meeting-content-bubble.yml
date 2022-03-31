@@ -450,11 +450,12 @@ items:
   durationInMinutes: 1
   content: |
     * Remember the path where you are cloning the sample.
-    * Select **type of app** `Multi Tenant`f631****.
+    * Select **type of app** `Multi Tenant`.
     * Select **Microsoft Teams** from channels.
-    * Select **User.read** from permission**.
+    * Select **User.read** from permission.
     * Ensure ngrok url is added everywhere.
     * Ensure Microsoft app idd, ngrok is updated in the jason and manifest file in Visual studio.
+    * Select **Web**.
 
 - content: |
     You've completed the tutorial to get started with a meeting content bubble app.
