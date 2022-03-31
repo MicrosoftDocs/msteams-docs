@@ -16,8 +16,6 @@ Channel or group tabs deliver content to channels and group chats, and are a gre
 
 ## Create a custom channel or group tab with Node.js
 
-To create a custom channel or group tab with Node.js
-
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
     ```cmd
@@ -219,7 +217,7 @@ gulp ngrok-serve
 
 ## Create a custom channel or group tab with ASP.NET Core
 
-You can create a custom channel or group tab using C# and ASP.NET Core Razor pages. To create a channel or group tab with ASP.NET Core
+You can create a custom channel or group tab using C# and ASP.NET Core Razor pages.
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -435,7 +433,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ## Create a custom channel or group tab with ASP.NET Core MVC
 
-You can create a custom channel or group tab using C# and ASP.Net Core MVC. To create a channel or group tab with ASP.NET Core MVC
+You can create a custom channel or group tab using C# and ASP.Net Core MVC.
 
 1. At the command prompt, create a new directory for your tab project.
 
