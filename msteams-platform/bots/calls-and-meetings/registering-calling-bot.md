@@ -105,3 +105,4 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up cal
 
 * [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)
