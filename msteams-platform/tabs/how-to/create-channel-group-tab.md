@@ -186,7 +186,7 @@ gulp ngrok-serve
 ### Upload your application to Teams
 
 1. Go to Microsoft Teams and select **Store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps**
+1. Select **Manage your apps**.
 1. Select **Publish an app** and **Upload a custom app**.
 
     :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload custom app" border="true":::
@@ -195,7 +195,7 @@ gulp ngrok-serve
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab" border="true":::
 
-1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
+1. Select **Add** in the pop-up window. Your tab is uploaded to Teams.
     
     > [!NOTE]
     > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
