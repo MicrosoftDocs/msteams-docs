@@ -112,11 +112,10 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/meetings-side-panel/botdeployment.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/botdeployment.png" alt-text="Deploy App" border="true":::
 
         Your Azure bot is created.
-
-        ![Azure bot resource created](~/assets/images/meetings-side-panel/bot-page.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/bot-page.png" alt-text="Azure bot resource created" border="true":::
 
     **To create client secret**
 
@@ -129,11 +128,11 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/meetings-side-panel/config.png)
+       :::image type="content" source="~/assets/images/meetings-side-panel/config.png" alt-text="Microsoft App ID" border="true":::
 
     1. In the **Client secrets** section, select **New client secret**. 
-
-        ![New client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
+   
+         :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="New client secret" border="true":::
     
        The **Add a client secret** window appears.  
 
@@ -141,12 +140,12 @@ items:
     
     1. Select **Add**.
 
-        ![Add client secret to app](~/assets/images/meetings-side-panel/clientsecret.png)
+          :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret.png" alt-text="Add client secret to app" border="true":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-         ![Value of client secret](~/assets/images/meetings-side-panel/clientvalue.png)
-       
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientvalue.png" alt-text="Value of client secret" border="true":::
+                
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
 
@@ -154,7 +153,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/meetings-side-panel/gotohome.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/gotohome.png" alt-text="Home page" border="true":::
 
     1. Select your bot from **Recent resources**.
 
@@ -165,12 +164,12 @@ items:
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
-
-          ![Terms of service](~/assets/images/meetings-side-panel/terms.png)
+   
+        :::image type="content" source="~/assets/images/meetings-side-panel/terms.png" alt-text="Terms of service" border="true":::
 
     1. Select **Apply**.
 
-          ![Select Teams](~/assets/images/meetings-side-panel/config-teams1.png)   
+        :::image type="content" source="~/assets/images/meetings-side-panel/config-teams1.png" alt-text="Select Teams" border="true":::   
     
     **To create tunnel for local web server**
 
@@ -187,7 +186,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-        ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok1.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/ngrok1.png" alt-text="ngrok HTTPS URL" border="true":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -197,7 +196,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging Endpoint](~/assets/images/meetings-side-panel/messaging-endpoint.png)
+          :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint.png" alt-text="Messaging Endpoint" border="true":::
 
     1. Select **Apply**.
 
@@ -217,24 +216,24 @@ items:
 
     1. Select your bot.
 
-       ![App registration](~/assets/images/meetings-side-panel/appregister.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/appregister.png" alt-text="App registration" border="true":::
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-       ![Expose an API](~/assets/images/meetings-side-panel/exposeanapi.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/exposeanapi.png" alt-text="Expose an API" border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/meetings-side-panel/setlink.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/setlink.png" alt-text="Set link" border="true":::
 
     1. Insert the **WebAppDomain** value between `api://` and `/{AppID}`.</br>
         `api://4d52****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        ![App ID URI](~/assets/images/meetings-side-panel/appIDuri.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/appIDuri.png" alt-text="App ID URI" border="true":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -262,35 +261,35 @@ items:
   
     1. Select **Add scope** to save.
 
-        ![Add a scope](~/assets/images/meetings-side-panel/addascope.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/addascope.png" alt-text="Add a scope" border="true":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://4d52****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        ![Scopes](~/assets/images/meetings-side-panel/scopes.png) 
+         :::image type="content" source="~/assets/images/meetings-side-panel/scopes.png" alt-text="Scopes" border="true":::
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-        ![Select client application](~/assets/images/meetings-side-panel/selectclientapp.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Select client application" border="true":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        ![Add client application 1](~/assets/images/meetings-side-panel/addclientapplication1.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Add client application 1" border="true":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/addclientapplication2.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Add client application 2" border="true":::
 
     1. Select **Authorized scopes**.
 
-        ![Add client application 2](~/assets/images/meetings-side-panel/authorizedscope.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope.png" alt-text="Add client application 2" border="true":::
 
        The following image displays the client Id:
 
-        ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
+          :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications" border="true":::
   
     1. In the left panel, select **API Permissions**. 
 
@@ -307,7 +306,7 @@ items:
 
         By default, **User.Read** is selected.
 
-         ![User](~/assets/images/meetings-side-panel/userpermission.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/userpermission.png" alt-text="User" border="true":::
 
     1. Add the following permissions:</br>
          * **email**
@@ -317,7 +316,7 @@ items:
 
     1. Select **Add permissions**.
 
-         ![Other permissions](~/assets/images/meetings-side-panel/other-permissions.png)
+          :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions.png" alt-text="Other permissions" border="true":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -327,7 +326,7 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-            ![Web](~/assets/images/meetings-side-panel/webauth.png)
+             :::image type="content" source="~/assets/images/meetings-side-panel/webauth.png" alt-text="Web" border="true":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -338,7 +337,7 @@ items:
    
          1. Select **Configure**.
 
-            ![Auth-end](~/assets/images/meetings-side-panel/authend.png)
+              :::image type="content" source="~/assets/images/meetings-side-panel/authend.png" alt-text="Auth-end" border="true":::
 
 
 - title: Set up app settings and manifest files
@@ -346,7 +345,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/meetings-side-panel/appsettingslocation.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="App settings location" border="true":::
 
     1. Open **appsettings.json** in **Visual Studio** and update the following information:  
 
@@ -354,18 +353,18 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the fully qualified ngrok domain name.
 
-        ![App settings](~/assets/images/meetings-side-panel/appsettings.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings" border="true":::
 
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/meetings-side-panel/manifestlocation.png)
-    
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location" border="true":::
+            
     1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/meetings-side-panel/manifest-2.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2.png" alt-text="Manifest image2" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -381,7 +380,7 @@ items:
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/meetings-side-panel/Tokenfileready.png)
+           :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready.png" alt-text="Solution File" border="true":::
 
        1. Press **F5** to run the project.
     
@@ -391,7 +390,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/meetings-side-panel/appisready.png) 
+            :::image type="content" source="~/assets/images/meetings-side-panel/appisready.png" alt-text="App ready" border="true":::
 
         
     # [Command line](#tab/cli)
@@ -401,8 +400,7 @@ items:
     ```bash
     dotnet run
     ```
-   
-    ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
+    :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Dotnet" border="true":::
       
 - title: Add Meetings Side Panel to Teams
   durationInMinutes: 1
@@ -415,13 +413,13 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/meetings-side-panel/zipfile.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/zipfile.png" alt-text="Zip file" border="true":::
     
     1. Create a meeting with a few presenters and attendees.
    
     1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
-       ![Add an app](~/assets/images/meetings-side-panel/addanapp.png) 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addanapp.png" alt-text="Add an app" border="true":::
    
     1. In the pop-up window, select **Manage apps**.
 
@@ -429,19 +427,19 @@ items:
    
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/meetings-side-panel/uploadcustomapp.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp.png" alt-text="Upload custom app" border="true":::
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/meetings-side-panel/selectzip.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/selectzip.png" alt-text="Select zip file" border="true":::
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/meetings-side-panel/addtheapp.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/addtheapp.png" alt-text="Add the app" border="true":::
 
        The **Manage apps** section displays the list of applications.
 
-       ![App in Manage apps](~/assets/images/meetings-side-panel/manageappsection.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/manageappsection.png" alt-text="App in Manage apps" border="true":::
    
     1. Go to Teams meeting.
     
@@ -449,13 +447,13 @@ items:
     
        In the app selection page, the app is displayed as **Side Panel**.
   
-       ![App icon in Teams](~/assets/images/meetings-side-panel/appicon.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/appicon.png" alt-text="App icon in Teams" border="true":::
 
     1. Select the **Side Panel** app.
     
     1. Select **Save**.
 
-       ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp.png" alt-text="Welcome App" border="true":::
    
        The app is visible in the meeting Side Panel.         
 
@@ -466,28 +464,28 @@ items:
 
     1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet.png" alt-text="Token in Meet" border="true":::
 
     1. Enter a new agenda item to the list and select **Add**.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/newagenda.png" alt-text="Token in Meet" border="true":::
 
        The new agenda is added in the list.
 
     1. Select **Publish Agenda**.
 
-       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/youragenda.png" alt-text="Your Token" border="true":::
 
        The new agenda list is displayed in the meeting chat.
 
-       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/agendainchat.png" alt-text="Your Token" border="true":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Token in Meet" border="true":::
 
 
 - content: |
