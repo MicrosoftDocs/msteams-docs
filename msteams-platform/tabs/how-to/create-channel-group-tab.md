@@ -382,8 +382,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
-> [!TIP]
-> You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
+    > [!TIP]
+    > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
 
 ### Update your app package with Developer Portal
 
@@ -427,7 +427,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdown" border="true":::&nbsp; > **Add to team** to load the tab in a team. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetmvcuploaded.png" alt-text="Channel tab ASPNET uploaded" border="true":::
 
 ::: zone-end
 
@@ -651,7 +651,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select  &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="Channel tab ASPNET uploaded" border="true":::&nbsp; > **Add to team** to load the tab on Teams. Your tab is now available in Teams.
 
-     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetmvcuploaded.png" alt-text="Channel tab ASPNET MVC uploaded" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetmvcuploaded.png" alt-text="Channel tab ASPNET MVC uploaded" border="true":::
 
 ::: zone-end
 
