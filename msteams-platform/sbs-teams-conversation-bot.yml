@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to set up conversation bot in Teams.
   audience: Developer
   level: Beginner
-  ms.date: 03/29/2022
+  ms.date: 03/31/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/conversations/channel-and-group-conversations.md
   nextTutorialTitle: Channel and group chat conversations with a bot
@@ -248,7 +248,7 @@ items:
 
     | MentionMe    | Show Welcome   | MessageAllMembers |
     | --- | --- | --- |
-    | :::image type="content" source="./assets/images/conversation-bot/mentionme.png" alt-text="Mentionme card" border="true"lightbox="assets/images/conversation-bot/mentionme.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome.png" alt-text="Show Welcome card" border="true"lightbox="assets/images/conversation-bot/show-welcome.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members.png" alt-text="MessageAllMembers card" border="true"lightbox="assets/images/conversation-bot/message-all-members.png"::: |
+    | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Mentionme card" border="true"lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Show Welcome card" border="true"lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="MessageAllMembers card" border="true"lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
     | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
     | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
