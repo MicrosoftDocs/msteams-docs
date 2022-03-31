@@ -49,7 +49,7 @@
 - name: Design your app
   items:
   - name: Overview
-    href: concepts/design/design-teams-app-
+    href: concepts/design/design-teams-app-overview.md
   - name: Understand the design process
     href: concepts/design/design-teams-app-process.md
   - name: Design system
@@ -123,11 +123,11 @@
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
   - name: Teams Toolkit for Visual Studio
-    href: toolkit/visual-studio-
+    href: toolkit/visual-studio-code-overview.md
   - name: Yeoman generator for Teams (GitHub)
     href: https://github.com/pnp/generator-teams
   - name: App Studio
-    href: concepts/build-and-test/app-studio-
+    href: concepts/build-and-test/app-studio-overview.md
   - name: Developer Portal for Teams
     href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
@@ -143,7 +143,7 @@
   - name: Legacy SDKs
     items:
     - name: Bots SDK (v3)
-      href: resources/bot-v3/bots-
+      href: resources/bot-v3/bots-overview.md
       items:
       - name: Create a bot
         href: resources/bot-v3/bots-create.md
