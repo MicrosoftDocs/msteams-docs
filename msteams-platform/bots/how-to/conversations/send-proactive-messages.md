@@ -1,6 +1,6 @@
 ---
-title: Proactive messages
-description: In this module, learn more about proactive messages for a bot in Microsoft Teams.
+title: Send proactive messages
+description: Learn how to send proactive messages with your Microsoft Teams bot, proactively install your app using Microsoft Graph.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
