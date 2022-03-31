@@ -106,7 +106,7 @@ Let's take a tour of the topics covered in this document:
 
 
 
-Let's explore the Teams Toolkit features.
+**Let's explore the Teams Toolkit features.**
 
 |Features | Includes... | What you can do |
 | --- | --- | --- |

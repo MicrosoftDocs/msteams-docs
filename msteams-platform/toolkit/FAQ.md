@@ -16,8 +16,6 @@ This section provides the answer and relevant information to the common question
 <summary><b>How to login using CLI for CI/CD?</b></summary>
 
 <br>
-:::image type="content" source="../assets/images/bulb.png" alt-text="b":::
-
 Ans.
 
 <br>
@@ -26,7 +24,7 @@ Ans.
 
 <details>
 
-<summary><b>How to create an oauth for my Bot?</b></summary>
+<summary><b>How to create an Oauth for my Bot?</b></summary>
 
 Ans.
 
@@ -172,5 +170,3 @@ Ans.
 <details>
 <summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
 </details>
-<br>
-For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback).
