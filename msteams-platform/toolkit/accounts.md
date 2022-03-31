@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Prepare accounts to build Teams apps
 
-The deployment process happens in two steps: Provision of the app to cloud and deployment. 
+The deployment process happens in two steps: Provision of the app to cloud and deployment.
 Provision creates all the Azure resources which the app uses. To create a Teams app and upload, you need to prepare the following accounts:
 
 * [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)

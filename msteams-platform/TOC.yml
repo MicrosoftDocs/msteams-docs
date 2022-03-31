@@ -88,7 +88,7 @@
     items:
         - name: Teams Toolkit overview
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: Teams Toolkit in Visual Studio Code
+        - name: Build basic Teams app using Toolkit
           items:
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
@@ -99,11 +99,13 @@
           - name: Debug background process
             href: toolkit/debug-background-process.md
           - name: Provision cloud resources
-            href: toolkit/provision.md
+            href: toolkit/provision-to-cloud.md
           - name: Deploy app to the cloud
-            href: toolkit/deploy.md
+            href: toolkit/deploy-to-cloud.md
           - name: Publish apps 
             href: toolkit/publish.md
+        - name: Customize your Teams app using Toolkit
+          items:    
           - name: Add capabilities to the app
             href: toolkit/add-capability.md
           - name: Add cloud resources to the app
