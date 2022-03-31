@@ -9,7 +9,7 @@ ms.date: 03/31/2022
 
 # Publish Teams apps
 
-After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. The distribution depends on multiple factors, including needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
+You can distribute your app after based on several factors which includes business and technical requirements, and your goal for the app. Distribution to wider scope requires process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
 # [Visual Studio Code](#tab/VisualStudioCode)
 

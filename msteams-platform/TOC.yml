@@ -120,8 +120,6 @@
             href: toolkit/TeamsFx-collaboration.md
           - name: Add CI/CD Workflows
             href: toolkit/use-CICD-template.md
-          - name: Teams Toolkit FAQ 
-            href: toolkit/publish.md  
         - name: Teams Toolkit in Visual Studio
           href: toolkit/visual-studio-overview.md
           items:
@@ -129,6 +127,8 @@
             href: sbs-gs-blazorapp.yml
         - name: Teams Toolkit in Command Line Interface
           href: toolkit/teamsfx-cli.md    
+        - name: Teams Toolkit FAQ 
+          href: toolkit/FAQ.md   
   - name: Software Development Kits       
     items:
         - name: JavaScript client SDK and versions
