@@ -1,6 +1,6 @@
 ---
-title: Send proactive messages
-description: Describes how to send proactive messages with your Microsoft Teams bot.
+title: Proactive messages
+description: In this module, learn more about proactive messages for a bot in Microsoft Teams.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
