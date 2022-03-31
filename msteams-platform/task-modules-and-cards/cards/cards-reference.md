@@ -270,11 +270,11 @@ Example:
 
 ```json
 { 
-"type": "TextBlock",
+ "type": "TextBlock",
  "text": "${titleText}",
  "size": "default",
  "weight": "bolder"
- }
+}
 
 ```
 
