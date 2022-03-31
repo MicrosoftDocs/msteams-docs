@@ -264,7 +264,9 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
-You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and  curly braces. Check the following JSON example:
+You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
+
+Example:
 
 ```json
 { 
