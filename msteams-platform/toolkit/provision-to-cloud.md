@@ -1,6 +1,5 @@
 ---
-title: Use Teams Toolkit to provision cloud resources
-author: MuyangAmigo
+title: Use Teams Toolkit to provision app in the cloud
 description: Provision to cloud resource
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -8,7 +7,7 @@ ms.topic: overview
 ms.date: 03/31/2022
 ---
 
-# Use Teams Toolkit to provision cloud resource
+# Use Teams Toolkit to provision app in the cloud
 
 TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.  
 
@@ -27,12 +26,14 @@ You can create and automatically configure cloud resources for hosting your app 
 1. Select the **Project > Teams Toolkit > Provision in the Cloud** menu.
 2. In the Select your subscription window, choose the Azure subscription you want to use to create resources with.
 
-Teams Toolkit will create Azure resources in this subscription but no code is deployed during this step. 
+Teams Toolkit creates Azure resources in this subscription but code is not deployed during this step.
+
 # [TeamsFx Command Line Interface](#tab/TeamsFxCommandlineinterface)
 
 Provision is performed with single command in for TeamsFx CLI as follows:
 
 [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
+
 
 ## See also
 
