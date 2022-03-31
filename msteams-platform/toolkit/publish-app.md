@@ -1,11 +1,10 @@
 ---
 title: Publish Teams apps
-author: zyxiaoyuer
 description:  publish Teams apps
-ms.author: yanjiang
-ms.localizationpriority: medium
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03//2022
+ms.date: 03/31/2022
 ---
 
 # Publish Teams apps
