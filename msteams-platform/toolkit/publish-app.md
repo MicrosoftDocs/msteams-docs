@@ -1,6 +1,6 @@
 ---
 title: Publish Teams apps
-description:  publish Teams apps
+description:  publish Teams apps using Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
