@@ -18,7 +18,7 @@ The following image displays the pop-up window for Share to Teams preview experi
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.
 
-You can also add link unfurling for the shared link through Share to Teams button on webpages. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
+You can also add link unfurling for the links shared through Share to Teams button hosted in web app, personal app or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
 
 The following image displays the link unfurling experience through Share to Teams button:
 
