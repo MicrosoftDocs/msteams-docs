@@ -427,7 +427,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdown" border="true":::&nbsp; > **Add to team** to load the tab in a team. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetmvcuploaded.png" alt-text="Channel tab ASPNET uploaded" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded" border="true":::
 
 ::: zone-end
 
@@ -651,7 +651,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select  &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="Channel tab ASPNET uploaded" border="true":::&nbsp; > **Add to team** to load the tab on Teams. Your tab is now available in Teams.
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetmvcuploaded.png" alt-text="Channel tab ASPNET MVC uploaded" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded" border="true":::
 
 ::: zone-end
 
