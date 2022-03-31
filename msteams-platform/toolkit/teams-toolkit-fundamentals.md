@@ -172,4 +172,4 @@ Let's explore Teams Toolkit features.
 * [Prepare accounts to build Teams apps](accounts.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Deploy to the cloud](deploy.md)
+
