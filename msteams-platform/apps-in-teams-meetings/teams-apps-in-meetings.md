@@ -33,7 +33,7 @@ The new custom Together Mode scenes feature enables users to collaborate in a me
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Meeting app extensibility](meeting-app-extensibility.md)
+> [Unified meeting apps](meeting-app-extensibility.md)
 
 ## See also
 
