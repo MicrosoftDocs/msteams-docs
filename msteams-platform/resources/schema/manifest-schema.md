@@ -804,6 +804,10 @@ Specify meeting extension definition. For more information, see [custom Together
 
 **Optional** — object
 
+> [!NOTE]
+> Setting the version property to 1.12 makes your authorization property incompatible with older manifest version. as they do not support .
+>Authorization supported to manifest schema version V1.12.
+
 Specify and consolidate authorization related information for the app.
 
 |Name| Type|Maximum size|Required |Description|
