@@ -425,7 +425,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select the **View details** option. The app details window appears for your app.
 
-1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="Channel tab ASPNET uploaded" border="true":::&nbsp; > **Add to team** to load the tab in a team. Your tab is now available in Teams.
+1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdown" border="true":::&nbsp; > **Add to team** to load the tab in a team. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded" border="true":::
 
