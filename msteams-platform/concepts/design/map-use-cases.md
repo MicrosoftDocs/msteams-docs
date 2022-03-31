@@ -20,7 +20,7 @@ You can map your use case based on:
 
 The next step is to match use cases with app capabilities.
 
-Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
+Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but helps you think through some of the possibilities available to you.
 </br>
 </br>
 <details>

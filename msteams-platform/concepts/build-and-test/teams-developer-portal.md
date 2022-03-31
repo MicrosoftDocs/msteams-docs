@@ -14,7 +14,9 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
 > [!NOTE]
-> Currently, Developer Portal is not available for Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
+>
+> * Currently, Developer Portal is not available for Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
+> * However, you can use a regular tenant to build an app in the Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
 
 ## Register an app
 
@@ -65,17 +67,6 @@ The Developer Portal provides options for testing and debugging your app:
 From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
 
 For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
-
-## Analyze your app's usage
-
-On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal and scoped to the app ID.
-
-| Metric | Definition |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
-| *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
-
-Monthly and daily usage is shown for the past seven, 30 days, and 60 days. You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
 
 ## Use tools to create app features
 
