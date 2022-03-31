@@ -1,12 +1,13 @@
 ---
-title: Deploy to the cloud
+title: Deploy to cloud
 description:  Deploy app to the cloud, Azure, or SharePoint
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/31/2022
+---
 
-# Use Teams Toolkit to deploy to cloud
+# Use Teams Toolkit to deploy to the cloud
 
 Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
 
