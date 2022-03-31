@@ -446,10 +446,9 @@ items:
 
     ![Content Bubble Demo desktop and mobile](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
-- title: Complete challenge
+- title: Points to remember
   durationInMinutes: 1
   content: |
-    Points to remember
     * Remember the path where you are cloning the sample.
     * Select **type of app** `Multi Tenant`f631****.
     * Select **Microsoft Teams** from channels.
