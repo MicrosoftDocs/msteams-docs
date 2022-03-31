@@ -217,8 +217,6 @@ gulp ngrok-serve
 
 ## Create a custom channel or group tab with ASP.NET Core
 
-You can create a custom channel or group tab using C# and ASP.NET Core Razor pages.
-
 1. At the command prompt, create a new directory for your tab project.
 
 1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
@@ -432,8 +430,6 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 ::: zone pivot="mvc-csharp"
 
 ## Create a custom channel or group tab with ASP.NET Core MVC
-
-You can create a custom channel or group tab using C# and ASP.Net Core MVC.
 
 1. At the command prompt, create a new directory for your tab project.
 
