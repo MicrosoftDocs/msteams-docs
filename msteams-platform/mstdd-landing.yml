@@ -57,8 +57,6 @@ landingContent:
     - linkListType: tutorial
       links:
       - text: Build your first app using Blazor
-        url:  sbs-gs-blazorapp.yml
-      - text: Build your first app using Blazor with Visual Studio latest version
         url:  sbs-gs-blazorupdate.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
