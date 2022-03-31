@@ -82,8 +82,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select your subscription.
-    1. From the **Resource group** dropdown list, select your existing resource group.
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
     
         :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Select resource Azure bot" border="true":::
     
@@ -104,7 +104,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/appidcreate.png" alt-text="Create Microsoft App ID" border="true":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/Review-create.png" alt-text="Review Create" border="true":::
 
     1. If the validation passes, select **Create**. 
 
