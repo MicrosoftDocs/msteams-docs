@@ -22,26 +22,25 @@ Teams Toolkit for Microsoft Visual Studio Code helps you to create, debug, and d
 
 Teams Toolkit automates work and provides great integration of Teams and Azure resources.
 
+Use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) with Toolkit `teamsfx` to develop Teams app.
+<br>
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="User Journey" border="true":::
 
 
-Use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) with Toolkit `teamsfx` to develop Teams app.
-<br>The Advantages of toolkit are:
+<br>**The Advantages of toolkit are:**
 
 * Integrated identity
 * Access to cloud storage
 * Data from Microsoft Graph
 * Azure and Microsoft 365 services with zero-configuration
 
- <br>
+ 
 
 Teams Toolkit is based on three major platforms.
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-ide.png" alt-text="ide":::
 
-## The flow of the events:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/flow.png" alt-text="fl":::
 
 
 
@@ -75,9 +74,9 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
 
-Let's take a tour of the topics covered in this document:
 
-## User capabilities
+
+### Let's take a tour of the topics covered in this document:
 
 
 |Feature  |What you can do  |
@@ -99,15 +98,11 @@ Let's take a tour of the topics covered in this document:
 |TeamsFx SDK     | TeamsFx SDK helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.        |
 
 
+## Help and Feedback
 
+You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 
-
-
-
-
-
-**Let's explore the Teams Toolkit features.**
-
+**Let's explore the Teams Toolkit features.
 |Features | Includes... | What you can do |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
@@ -136,11 +131,6 @@ Let's take a tour of the topics covered in this document:
 > [!TIP]
 > Browse existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 |
-## Help and Feedback
-
-You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
-
-
 ## See also
 
 * [Create new project using Teams Toolkit](create-new-project.md)
