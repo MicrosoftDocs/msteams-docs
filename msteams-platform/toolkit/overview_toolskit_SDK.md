@@ -10,9 +10,7 @@ ms.date: 11/29/2021
 
 # Overview
 
-> [!NOTE]
-> Currently, this feature is available in **public developer preview** only.
-
+>
 Teams Toolkit for Microsoft Visual Studio Code helps you to create, debug, and deploy your Teams app from the Visual Studio Code.
 <br> Teams Toolkit brings all tools needed for building a Teams app in one place.
 <br>
@@ -66,7 +64,7 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 
 
-### Let's take a tour of the topics covered in this document:
+#### Let's take a tour of the topics covered in this document:
 
 
 |Feature  |What you can do  |
@@ -88,11 +86,12 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 |TeamsFx SDK     | TeamsFx SDK helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.        |
 
 
+
 ## Help and Feedback
 
 You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 
-**Let's explore the Teams Toolkit features.
+**Let's explore the Teams Toolkit features.**
 
 |Features | Includes... | What you can do |
 | --- | --- | --- |
