@@ -553,7 +553,7 @@
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
-  - name: Integrate People Picker  
+  - name: Integrate People Picker
     href: concepts/device-capabilities/people-picker-capability.md   
 - name: Resources
   items:
