@@ -60,7 +60,9 @@ You don't have to sideload your app again if you make code changes (these are re
 To remove your app, right click the app icon in Teams and select **Uninstall**.
 
 > [!NOTE]
-> You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+>
+> * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [Publish your app to the Microsoft Teams store](appsource/publish.md).
 
 ## Next step
 
