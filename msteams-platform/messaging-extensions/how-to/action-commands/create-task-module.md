@@ -983,10 +983,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+[Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md){: .btn .btn--primary }
 
 ## See also
 
