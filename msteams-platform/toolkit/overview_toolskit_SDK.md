@@ -77,69 +77,34 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 Let's take a tour of the topics covered in this document:
 
-## Accounts
+## User capabilities
 
-To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
-## Environment
+|Feature  |What you can do  |
+|---------|---------|
+|Accounts     |To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+|Environment     | Teams Toolkit helps you to create and manage multiple environments like provision and deploy artifacts to the target environment for Teams App.        |
+|TeamsFx Collaboration     |  TeamsFx Collaboration allows developers and project owners to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.       |
+|Development    | Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.        |
+|Create a new Teams appRow5     | It helps you to start with Teams app development by creating a new Teams project using Teams Toolkit either by **Create new project** or **Create from samples**.        |
+|Add capabilities     |  Add capabilities helps to add other required Teams capabilities to Teams app during development process.       |
+|Add cloud resources     | Add cloud resources        |
+|Edit manifest file     | Edit manifest file helps you to edit the Teams app integration with Teams client.        |
+|Deployment     |   During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.      |
+|Provision in the cloud    |Provision in the cloud integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.         |
+|Deploy to the cloud     |   Deploy to the cloud helps you to deploy the source code to Azure.      |
+|  Publish to Teams   |   After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.      |
+|  CI/CD guide   | CI/CD guide helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates to get started while setting up CI or CD pipelines.        |
+|TeamsFx CLI     |   TeamsFx CLI is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation.      |
+|TeamsFx SDK     | TeamsFx SDK helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.        |
 
-Teams Toolkit helps you to create and manage multiple environments like provision and deploy artifacts to the target environment for Teams App.
 
-### TeamsFx Collaboration
 
-TeamsFx Collaboration allows developers and project owners to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
-## Development
 
-Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.
 
-### Create a new Teams app
 
-It helps you to start with Teams app development by creating a new Teams project using Teams Toolkit either by **Create new project** or **Create from samples**.
 
-### Add capabilities
-
-Add capabilities helps to add other required Teams capabilities to Teams app during development process.
-
-### Add cloud resources
-
-Add cloud resources helps you to optionally add cloud resources that fits your development needs.
-
-### Edit manifest file
-
-Edit manifest file helps you to edit the Teams app integration with Teams client.
-
-## Deployment
-
-During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.
-
-### Provision in the cloud
-
-Provision in the cloud integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.
-
-### Deploy to the cloud
-
- Deploy to the cloud helps you to deploy the source code to Azure.
-
-### Publish to Teams
-
-After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
-
-### CI/CD guide
-
-CI/CD guide helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates to get started while setting up CI or CD pipelines.
-
-#### TeamsFx CLI
-
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation.
-
-#### TeamsFx SDK
-
-TeamsFx SDK helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
-
-## Help and Feedback
-
-You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 
 Let's explore the Teams Toolkit features.
 
@@ -168,10 +133,13 @@ Let's explore the Teams Toolkit features.
 | &nbsp; | Quick Start | View the Teams Toolkit Quick Start help within Visual Studio Code.  |
 | &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
 | &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
-|
-
 > [!TIP]
 > Browse existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
+|
+## Help and Feedback
+
+You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
+
 
 ## See also
 
