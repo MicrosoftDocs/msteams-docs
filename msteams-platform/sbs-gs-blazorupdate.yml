@@ -510,7 +510,6 @@ items:
     
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
-
 - title: Build and run your first bot app
   durationInMinutes: 1
   content: |
