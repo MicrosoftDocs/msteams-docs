@@ -43,7 +43,7 @@ If you are already familiar with Yeoman workflow, you may prefer using [YoTeams 
 Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
 
 > [!div class="nextstepaction"]
-> [Build a Teams app with Blazor](../sbs-gs-blazorupdate?tabs=vs.yml)
+> [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
