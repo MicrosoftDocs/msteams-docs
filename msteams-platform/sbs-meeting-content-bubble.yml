@@ -446,6 +446,16 @@ items:
 
     ![Content Bubble Demo desktop and mobile](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Points to remember
+    * Remember the path where you are cloning the sample.
+    * Select **type of app** `Multi Tenant`f631****.
+    * Select **Microsoft Teams** from channels.
+    * Select **User.read** from permission**.
+    * Ensure ngrok url is added everywhere.
+    * Ensure Microsoft app idd, ngrok is updated in the jason and manifest file in Visual studio.
 
 - content: |
     You've completed the tutorial to get started with a meeting content bubble app.
