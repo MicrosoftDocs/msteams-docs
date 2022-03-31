@@ -90,7 +90,8 @@ const profile = await graphClient.api("/me").get();
 ## Core Concepts & Code Structure
 
 ### TeamsFx class
-`TeamsFx` class instance reads all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Please check [Override configuration](#override-configuration) for details
+
+`TeamsFx` class instance reads all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Please check Override configuration for details
 
 Use the following snippet:
 
