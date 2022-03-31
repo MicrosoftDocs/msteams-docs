@@ -25,7 +25,7 @@ items:
 
     ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
-- title: Prerequisites.
+- title: Prerequisites
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
