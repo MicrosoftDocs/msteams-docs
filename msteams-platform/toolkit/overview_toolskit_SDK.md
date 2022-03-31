@@ -36,16 +36,6 @@ Use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manua
 * Azure and Microsoft 365 services with zero-configuration
 
  
-
-Teams Toolkit is based on three major platforms.
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-ide.png" alt-text="ide":::
-
-
-
-
-
-
-
 ### Install Teams Toolkit for Visual Studio Code
 
 1. Open **Visual Studio Code.**
