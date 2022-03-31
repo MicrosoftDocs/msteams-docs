@@ -16,118 +16,120 @@ Channel or group tabs deliver content to channels and group chats, and are a gre
 
 ## Create a custom channel or group tab with Node.js
 
-To create custom channel and group tab with Node.js:
+To create a custom channel or group tab with Node.js
 
-1. At a command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
+1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
     ```cmd
     npm install yo gulp-cli --global
     ```
 
-2. Install the Microsoft Teams App generator by entering the following command in your command prompt:
+2. At the command prompt, install Microsoft Teams App generator by entering the following command:
 
     ```cmd
     npm install generator-teams --global
     ```
 
-Follow the below steps to create a channel or group tab:
+Following are the steps to create a channel or group tab:
 
-* [Generate your channel or group tab](#generate-your-channel-or-group-tab)
+* [Generate your application with a channel or group tab](#generate-your-application-with-a-channel-or-group-tab)
+* [Create your app package](#create-your-app-package)
 * [Build and run your application](#build-and-run-your-application)
+* [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
 * [Upload your application to Teams](#upload-your-application-to-teams)
 
-### Generate your channel or group tab
+### Generate your application with a channel or group tab
 
-1. At a command prompt, create a new directory for your channel or group tab.
+1. At the command prompt, create a new directory for your channel or group tab.
 
-1. To start the Microsoft Teams App generator, enter the following command in your new directory.
+1. Enter the following command in your new directory to start the Microsoft Teams App generator:
 
     ```cmd
     yo teams
     ```
 
-1. Microsoft Teams App generator will prompt a series of questions as folowing to which by providing your values you update your **manifest.json** file:
+1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your **manifest.json** file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
     <details>
     <summary><b>Series of questions to update your manifest.json file</b></summary>
 
-    **What is your solution name?**
+    * **What is your solution name?**
 
-    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+        The solution name is your project name. You can accept the suggested name by selecting **Enter**.
 
-    **Where do you want to place the files?**
+    * **Where do you want to place the files?**
 
-    You're currently in your project directory. Select **Enter**.
+        You're currently in your project directory. Select **Enter**.
 
-    **Title of your Microsoft Teams app project?**
+    * **Title of your Microsoft Teams app project?**
 
-    The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+        The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
 
-    **Your (company) name? (max 32 characters)**
+    * **Your (company) name? (max 32 characters)**
 
-    Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+        Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
-    **Which manifest version would you like to use?**
+    * **Which manifest version would you like to use?**
 
-    Select the default schema.
+        Select the default schema.
 
-    **Quick scaffolding? (Y/n)**
+    * **Quick scaffolding? (Y/n)**
 
-    The default is yes; enter **n** to enter your Microsoft Partner ID.
+        The default is yes; enter **n** to enter your Microsoft Partner ID.
 
-    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    * **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+        This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
-    **What do you want to add to your project?**
+    * **What do you want to add to your project?**
 
-    Select **( &ast; ) A Tab**.
+        Select **( &ast; ) A Tab**.
 
-    **The URL where you will host this solution?**
+    * **The URL where you will host this solution?**
 
-    By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
+        By default, the generator suggests an Azure Web Sites URL. You're only testing your app locally, so a valid URL isn't necessary.
 
-    **Would you like show a loading indicator when your app/tab loads?**
+    * **Would you like show a loading indicator when your app/tab loads?**
 
-    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+        Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
 
-    **Would you like personal apps to be rendered without a tab header-bar?**
+    * **Would you like personal apps to be rendered without a tab header-bar?**
 
-    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+        Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
 
-    **Would you like to include Test framework and initial tests? (y/N)**
+    * **Would you like to include Test framework and initial tests? (y/N)**
 
-    Choose **not** to include a test framework for this project. The default is no, enter **n**.
+        Choose **not** to include a test framework for this project. The default is no, enter **n**.
 
-    **Would you like to include ESLint support? (y/N)**
+    * **Would you like to include ESLint support? (y/N)**
 
-    Choose not to include ESLint support. The default is no, enter **n**.
+        Choose not to include ESLint support. The default is no, enter **n**.
 
-    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
+    * **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
-    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+        Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
 
-    **Default Tab Name (max 16 characters)?**
+    * **Default Tab Name (max 16 characters)?**
 
-    Name your tab. This tab name is used throughout your project as a file or URL path component.
+        Name your tab. This tab name is used throughout your project as a file or URL path component.
 
-    **What kind of Tab would you like to create?**
+    * **What kind of Tab would you like to create?**
 
-    Use the arrow keys to select **Configurable** tab.
+        Use the arrow keys to select **Configurable** tab.
 
-    **What scopes do you intend to use for your Tab?**
+    * **What scopes do you intend to use for your Tab?**
 
-    You can select a team or a group chat.
+        You can select a team or a group chat.
 
-    **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+    * **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
-    Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
+        Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
 
-    **Do you want this tab to be available in SharePoint Online? (Y/n)**
+    * **Do you want this tab to be available in SharePoint Online? (Y/n)**
 
-    Enter **n**.
+        Enter **n**.
 
     </details>
 
@@ -136,21 +138,19 @@ Follow the below steps to create a channel or group tab:
 >
 > For example: DefaultTabName is **MyTab** then **/MyTabTab/**
 
-### Build and run your application
+### Create your app package
 
-You must have an [app package](~/concepts/build-and-test/apps-package.md) to build and run your application in Teams.
-
-#### Create the app package
-
-The package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. In the command prompt, enter the following command:
+You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
 
 ```cmd
 gulp manifest
 ```
 
+### Build and run your application
+
 #### Build your application
 
-The build command transpiles your solution into the **./dist** folder. Enter the following command in the command prompt:
+Enter the following command at the command prompt to transpile your solution into the **./dist** folder:
 
 ```cmd
 gulp build
@@ -158,19 +158,19 @@ gulp build
 
 #### Run your application
 
-1. Start a local web server by entering the following in the command prompt:
+1. At the command prompt enter the following command to start a local web server:
 
     ```bash
     gulp serve
     ```
 
-1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser, replace **yourDefaultAppNameTab** with your tab name, and view your application's home page as shown in the following image:
+1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
 
-    ![home page screenshot](~/assets/images/tab-images/homePage.png)
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
 
 1. To view your tab configuration page, go to `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
 
-    ![Configuration page screenshot](~/assets/images/tab-images/configurationPage.png)
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page" border="true":::
 
 ### Establish a secure tunnel to your tab
 
@@ -181,25 +181,21 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your tab has been uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends. If you restart your ngrok session, you must update your app with the new URL. 
+> After your tab is uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends. If you restart your ngrok session, you must update your app with the new URL.
 
 ### Upload your application to Teams
 
-**To upload your application to Teams**
+1. Go to Microsoft Teams and select **Store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Select **Manage your apps**
+1. Select **Publish an app** and **Upload a custom app**.
 
-1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-1. From your teams on the left pane, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
-1. In left pane of Teams, select **Store** icon.
-1. Select **Manage your apps** > **Publish an app**.
-1. Choose **Upload a custom app**.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams." border="true":::
+    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload custom app" border="true":::
 
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
+    
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab" border="true":::
 
-    ![Channel tab added](../../assets/images/tab-images/channeltabadded.png)
-
-1. Select **Add** in the pop-up dialog box. Your tab uploads into Teams.
+1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
     
     > [!NOTE]
     > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
@@ -211,11 +207,11 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Return to your team, choose the channel where you want to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
+1. Return to your team, choose the channel where you want to add the tab, select ➕ from the tab bar, and choose your tab from the list.
 1. Follow the directions for adding a tab. There is a custom configuration dialog box for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
-    ![Channel tab uploaded](../../assets/images/tab-images/channeltabuploaded.png)
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded" border="true":::
 
 ::: zone-end
 
@@ -223,9 +219,9 @@ gulp ngrok-serve
 
 ## Create a custom channel or group tab with ASP.NET Core
 
-You can create a custom channel or group tab using C# and ASP.NET Core Razor pages. To create a channel or group tab with ASP.NET Core Razor pages:
+You can create a custom channel or group tab using C# and ASP.NET Core Razor pages. To create a channel or group tab with ASP.NET Core
 
-1. At a command prompt, create a new directory for your tab project.
+1. At the command prompt, create a new directory for your tab project.
 
 1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
@@ -233,32 +229,33 @@ You can create a custom channel or group tab using C# and ASP.NET Core Razor pag
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-Follow the below steps to create a channel or group tab:
+Following are the steps to create a channel or group tab:
 
-* [Generate your channel or group tab](#generate-your-channel-or-group-tab)
+* [Generate your application with a channel or group tab](#Generate-your-application-with-a-channel-or-group-tab)
+* [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-1)
 * [Update your application](#update-your-application)
 * [Build and run your application](#build-and-run-your-application)
 * [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 * [Preview your app in Teams](#preview-your-app-in-teams)
 
-### Generate your channel or group tab
+### Generate your application with a channel or group tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-channel-group** > **razor-csharp** folder and open **channelGroupTab.sln**.
+1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-channel-group** > **razor-csharp** folder and open **channelGroupTab.sln**.
 
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+1. In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* https://localhost:3978/
-* https://localhost:3978/privacy
-* https://localhost:3978/tou
+    * https://localhost:3978/
+    * https://localhost:3978/privacy
+    * https://localhost:3978/tou
 
 <details>
 <summary><b>Review the source code</b></summary>
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -318,9 +315,9 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 </details>
 
-### Establish a secure tunnel to your tab for Teams
+### Establish a secure tunnel to your tab
 
-To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
+At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -406,7 +403,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. A default **App ID** is created and populated in **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add the Short and Long description for your app in **Descriptions**.
 
 1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
 
@@ -414,9 +411,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank. 
 
-1. Select Save.
+1. Select **Save**.
 
-1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
 ### Preview your app in Teams
 
@@ -424,13 +421,13 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
 
-1. Find your app using the search box, select the three-dots in its row
+1. Find your app using the search, select &#x25CF;&#x25CF;&#x25CF;.
 
 1. Select the **View** option. The **Add to team** page appears for your app.
 
 1. Select **Add to team** to load the tab on Teams. Your tab is now available in Teams.
 
-    ![Channel tab ASPNET uploaded](../../assets/images/tab-images/channeltabaspnetuploaded.png)
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded" border="true":::
 
 ::: zone-end
 
@@ -438,9 +435,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ## Create a custom channel or group tab with ASP.NET Core MVC
 
-You can create a custom channel or group tab using C# and ASP.Net Core MVC. 
+You can create a custom channel or group tab using C# and ASP.Net Core MVC. To create a channel or group tab with ASP.NET Core MVC
 
-1. At a command prompt, create a new directory for your tab project.
+1. At the command prompt, create a new directory for your tab project.
 
 1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
@@ -448,32 +445,33 @@ You can create a custom channel or group tab using C# and ASP.Net Core MVC.
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-Follow the below steps to create a channel or group tab:
+Following are the steps to create a channel or group tab:
 
-* [Generate your channel or group tab](#generate-your-channel-or-group-tab)
+* [Generate your application with a channel or group tab](#generate-your-application-with-a-channel-or-group-tab)
+* [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-2)
 * [Update your application](#update-your-application)
 * [Build and run your application](#build-and-run-your-application)
 * [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 * [Preview your app in Teams](#preview-your-app-in-teams)
 
-### Generate your channel or group tab
+### Generate your application with a channel or group tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-channel-group** > **mvc-csharp** folder and open **ChannelGroupTabMVC.sln**.
+1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-channel-group** > **mvc-csharp** folder and open **ChannelGroupTabMVC.sln**.
 
-In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+1. In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* https://localhost:3978/
-* https://localhost:3978/privacy
-* https://localhost:3978/tou
+    * https://localhost:3978/
+    * https://localhost:3978/privacy
+    * https://localhost:3978/tou
 
 <details>
 <summary><b>Review the source code</b></summary>
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -543,7 +541,7 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 ### Establish a secure tunnel to your tab
 
-To establish a secure tunnel to your tab, at a command prompt in the root of your project directory run the following command:
+At the command prompt in the root of your project directory run the following command to establish a secure tunnel to your tab:
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -615,7 +613,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-1. Navigate to your **Developer portal** in Teams.
+1. Go to **Developer portal** in Teams.
 
 1. Open **Apps** and select **Import app**.
 
@@ -635,11 +633,11 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank. 
+1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank.
 
-1. Select Save.
+1. Select **Save**.
 
-1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
 ### Preview your app in Teams
 
@@ -647,12 +645,13 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
 
-1. Find your app using the search box, select the three-dots in its row
+1. Find your app using the search, select &#x25CF;&#x25CF;&#x25CF;.
 
 1. Select the **View** option. The **Add to team** page appears for your app.
 
 1. Select **Add to team** to load the tab on Teams. Your tab is now available in Teams.
-    ![Channel tab ASPNET MVC uploaded](../../assets/images/tab-images/channeltabaspnetmvcuploaded.png)
+
+     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetmvcuploaded.png" alt-text="Channel tab ASPNET MVC uploaded" border="true":::
 
 ::: zone-end
 
