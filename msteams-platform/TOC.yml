@@ -88,17 +88,17 @@
     items:
         - name: Teams Toolkit overview
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: Build basic Teams app using Toolkit
+        - name: Build Teams app using Toolkit
           items:
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
-          - name: Create a new app
+          - name: Create a new Teams app
             href: toolkit/create-new-teams-app.md
           - name: Debug the app locally
             href: toolkit/debug-local.md 
           - name: Debug background process
             href: toolkit/debug-background-process.md
-          - name: Provision cloud resources
+          - name: Provision to cloud resources
             href: toolkit/provision-to-cloud.md
           - name: Deploy app to the cloud
             href: toolkit/deploy-to-cloud.md
