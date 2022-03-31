@@ -231,7 +231,7 @@ You can create a custom channel or group tab using C# and ASP.NET Core Razor pag
 
 Following are the steps to create a channel or group tab:
 
-* [Generate your application with a channel or group tab](#Generate-your-application-with-a-channel-or-group-tab)
+* [Generate your application with a channel or group tab](#generate-your-application-with-a-channel-or-group-tab)
 * [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-1)
 * [Update your application](#update-your-application)
 * [Build and run your application](#build-and-run-your-application)
