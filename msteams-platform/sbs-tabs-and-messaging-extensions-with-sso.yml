@@ -239,7 +239,7 @@ items:
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
-    1. Select **Add a client application**. 
+    1. Select **Add a client application**.  
 
     1. Enter each of the following client IDs and select the authorized scope:</br>
 
