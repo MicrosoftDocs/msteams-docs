@@ -103,6 +103,7 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 You can select **Report issues on GitHub** in the Teams Toolkit to get **Quick support** from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
 
 **Let's explore the Teams Toolkit features.
+
 |Features | Includes... | What you can do |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
