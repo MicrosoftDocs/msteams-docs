@@ -115,6 +115,7 @@ items:
          :::image type="content" source="~/assets/images/meetings-side-panel/botdeployment.png" alt-text="Deploy App" border="true":::
 
         Your Azure bot is created.
+        
         :::image type="content" source="~/assets/images/meetings-side-panel/bot-page.png" alt-text="Azure bot resource created" border="true":::
 
     **To create client secret**
