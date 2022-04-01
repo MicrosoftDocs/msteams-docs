@@ -10,22 +10,22 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK for TypeScript or JavaScript
 
-TeamsFx aims to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single-line statements with zero configuration.
+TeamsFx helps to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single-line statements with zero configuration.
 
 Use the library to:
 
-* Access core functionalities in client and server environment in a similar way.
+* Access the core functionalities in client and server environment in a similar way.
 * Write user authentication code in a simplified way.
 
 ## Get started
 
-TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI.
+TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
 For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### Prerequisites
 
 * Node.js version `10.x.x` or later.
-* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version is `>= 4.15.0`. ([Issue - all of the BOTBUILDER packages should be the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies. Ensure they are of the same version and the version is `>= 4.15.0`. ([Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
 For more information, see:
 
@@ -51,7 +51,7 @@ TeamsFx SDK is built to be used in browser and NodeJS environment. Common scenar
 
 ### Create and authenticate a service like MicrosoftGraphClient
 
-* To create a graph client object to access the Microsoft Graph API, you will need the credential to do authentication. The SDK provides APIs to configure for developers. Please choose the proper identity type and follow below steps:
+* To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers. Choose the proper identity type and follow the steps below:
 
 ```ts
 loadConfiguration({
@@ -84,33 +84,35 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 ## Core Concepts & Code Structure
 
 ### TeamsFx class
-`TeamsFx` class instance reads all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Please check Override configuration for details
+`TeamsFx` class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Please check Override configuration for details.
 
-When creating a TeamsFx instance, you also need to specify the identity type. There are 2 identity types:
+When creating a TeamsFx instance, you also need to specify the identity type. 
+There are 2 identity types:
 
 #### User Identity
-Using `new TeamsFx(IdentityType.User)` means the application will be authenticated as current Teams user. This one is the default choice. You need to call `TeamsFx:setSsoToken()` when you use user identity in NodeJS environment(without browser).
+Using `new TeamsFx(IdentityType.User)` means the application is authenticated as current Teams user. This one is the default choice. You need to call `TeamsFx:setSsoToken()` when you use user identity in NodeJS environment (without browser).
 
 You can use `TeamsFx:getUserInfo()` to get user's basic information.
-`TeamsFx:login()` is used to let user perform consent process if you want to use SSO to get access token for certain OAuth scopes.
+`TeamsFx:login()` is used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes.
 
 #### Application Identity
-Using `new TeamsFx(IdentityType.App)` means the application will be authenticated as an application. The permission usually need administrator's approval.
+Using `new TeamsFx(IdentityType.App)` means the application is authenticated as an application. The permission usually needs administrator's approval.
 
 `TeamsFx:getCredential()` provides credential instances automatically corresponding to identity type:
-- User Identity: It means that you can access resources on behalf of current Teams user.
-- App Identity: It means that you are acting as a managed app identity which usually need admin consent for resources.
+- User Identity: You can access resources on behalf of current Teams user.
+- App Identity: You are acting as a managed app identity which needs admin consent for resources.
 
 ### Credentials
 
-//Developers should choose identity type when initializing TeamsFx. SDK provides 2 types: User and App.
+Developers must choose identity type when initializing TeamsFx. 
+SDK provides 2 types namely: User and App.
 After developer has specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
 
-There are 3 credential classes located under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) to help simplify authentication.
+There are 3 credential classes located under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) to help to simplify authentication.
 
-Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs. They are designed to provide access tokens for specific scopes.Other APIs that relies on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
+Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs. They are designed to provide access tokens for specific scopes. Other APIs relies on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
 
-*Here's the corresponding scenarios that each credential class targets.
+Here's the corresponding scenarios for each credential class targets.
 
 ### User Identity in browser environment
 `TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It leverages the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developer choose "User" identity in browser environment.
