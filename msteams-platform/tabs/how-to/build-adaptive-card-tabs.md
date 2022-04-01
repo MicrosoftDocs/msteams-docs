@@ -14,14 +14,14 @@ keywords: adaptive card personal app authentication data flow
 >
 > * Tabs with Adaptive Cards are currently only supported as personal apps.
 
-When developing a tab using the traditional method, you might run into these issues:
-
-* HTML and CSS considerations
-* Slow load times
-* iFrame constraints
-* Server maintenance and costs
-
 Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+
+
+## Why do you need Adaptive Cards?
+
+* Customize card layout
+* Avoid custom HTML elements in cards
+* Same card object can be used in multiple applications
 
 You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
 
@@ -29,16 +29,18 @@ The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
 :::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card in tabs." border="false":::
 
-## Why do you need Adaptive Cards?
+## Challenges faced in developing a tab using the traditional method
 
-* Customize card layout
-* Avoid custom HTML elements in cards
+When developing a tab using the traditional method, you might run into these issues:
 
+* HTML and CSS considerations
+* Slow load times
+* iFrame constraints
+* Server maintenance and costs
 
 ## Properties
 
-Learn about some of the Adaptive Card properties:
-
+Learn about some of the Adaptive Card properties to customize your actions or invoke card actions.
 
 :::image type="content" source="../../assets/videos/adaptivecard.gif" alt-text="Adaptive Card rendered." border="false":::
 
