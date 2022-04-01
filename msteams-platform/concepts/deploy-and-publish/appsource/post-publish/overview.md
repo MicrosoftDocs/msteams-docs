@@ -64,10 +64,9 @@ Create the link using the following URL appended with your app ID: `https://team
 
 You can remove apps from the [Microsoft commercial marketplace](/azure/marketplace/overview), which prevents new customers from finding and using them.
 
-To stop distribution of an app after you've published, follow the steps:
+**To stop distribution of an app after you've published, follow the steps:**
 
-1. Select **Stop selling** from the **Product overview** page.
-Within a few hours of your confirmation, the app will no longer be available in the [commercial marketplace](/azure/marketplace/overview).
+1. Select **Stop selling** from the **Product overview** page. The app is removed from the [commercial marketplace](/azure/marketplace/overview) within a few hours.
 2. To initiate de-listing the app, follow the steps:
     * Go to **Partner Center** and select **Overview** page.
     * Select **Stop selling**.
