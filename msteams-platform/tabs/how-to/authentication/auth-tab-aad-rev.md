@@ -5,9 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
-# Use Teams SSO with Azure AD to authenticate a user
+# Enable Teams single sign-on (SSO) in a tab application
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user sign in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user sign in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is pre-fetched to improve performance and load times.
+
+> [!NOTE]
+> Teams SSO can be implemented only with Azure AD.
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -22,7 +25,7 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 > [!NOTE]
 > **Quickstart**  
 >
-> The simplest path to get started with tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+> The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## Teams SSO for tabs at runtime
 
@@ -336,9 +339,9 @@ In this section, you'll learn to:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Authorized client application" border="true":::
 
-    The **Add a client application page appears.
+    The **Add a client application** page appears.
 
-1. Enter the details for adding a client application. For this tutorial, you'll add two client applications.
+1. Enter the details for adding a client application. For this section, you'll add two client applications.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
 
@@ -528,7 +531,6 @@ To update the app settings:
 
 3. Save the file.
 
-
 #### View the updated file
 
 <details>
@@ -546,7 +548,7 @@ To update the app settings:
   },
 ```
 
-This is updated as per sample details configured in Azure AD:
+This example is updated as per sample details configured in Azure AD:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-overview.png" alt-text="Overview of app details on Azure AD portal":::
 
