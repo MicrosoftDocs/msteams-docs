@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams app templates
-description: Links and descriptions of app templates for the Microsoft Teams platform
+description: Learn how to use app templates for Microsoft Teams platform with detailed instructions for deploying and installing an app.
 ms.topic: reference
 keywords: Microsoft Teams templates samples demo
 ms.localizationpriority: medium
@@ -172,3 +172,4 @@ To provide feedback, see [App template feedback](https://forms.office.com/Pages/
 * [Understand Microsoft Teams app capabilities](../concepts/capabilities-overview.md)
 * [Designing your personal app for Microsoft Teams](../concepts/design/personal-apps.md)
 * [Design System](../concepts/design/design-teams-app-fundamentals.md)
+* [Transition conversations from bot to human](/azure/bot-service/bot-service-design-pattern-handoff-human)

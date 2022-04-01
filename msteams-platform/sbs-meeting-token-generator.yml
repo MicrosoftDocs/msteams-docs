@@ -96,8 +96,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select your subscription.
-    1. From the **Resource group** dropdown list, select your existing resource group.
+    1. Select your **Subscription** from the dropdown list.
+    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-create-bot.png" alt-text="azure" border="true":::
 
