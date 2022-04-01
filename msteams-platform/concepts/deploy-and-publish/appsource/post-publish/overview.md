@@ -60,7 +60,7 @@ Create the link using the following URL appended with your app ID: `https://team
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem. Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.
 
-## Stop distribution of an app
+## Stop app distribution
 
 You can remove apps from the [Microsoft commercial marketplace](/azure/marketplace/overview), which prevents new customers from finding and using them.
 
