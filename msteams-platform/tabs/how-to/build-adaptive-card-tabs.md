@@ -27,7 +27,7 @@ You can build your tabs with ready-made user interface (UI) building blocks nati
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card in tabs." border="false":::
 
 ## Why do you need Adaptive Cards?
 
@@ -40,7 +40,7 @@ The following image shows build tabs with Adaptive Cards in desktop and mobile:
 Learn about some of the Adaptive Card properties:
 
 
-:::image type="content" source="../../assets/videos/card-action.pptx" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+:::image type="content" source="../../assets/videos/adaptivecard.gif" alt-text="Adaptive Card rendered." border="false":::
 
 
 ## Prerequisites
