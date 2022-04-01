@@ -27,7 +27,7 @@ items:
     This step-by-step guide helps you to generate **Side Panel** app to add and publish agenda.
     You'll see the following output:
 
-      :::image type="content" source="~/msteams-platform/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token" border="true":::
+      :::image type="content" source="~ /msteams-platform/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
