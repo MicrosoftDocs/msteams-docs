@@ -102,9 +102,9 @@ items:
     
         It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. ?
+    1. Select **Go to resource**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment.png" alt-text="select resource" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deploy-ment.png" alt-text="select resource" border="true":::
         
         Your Azure bot is created.
 
