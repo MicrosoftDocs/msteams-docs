@@ -19,18 +19,6 @@ Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding we
 
 ## Why do you need Adaptive Cards?
 
-* Customize card layout
-* Avoid custom HTML elements in cards
-* Same card object can be used in multiple applications
-
-You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
-
-The following image shows build tabs with Adaptive Cards in desktop and mobile:
-
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card in tabs." border="false":::
-
-## Challenges faced in developing a tab using the traditional method
-
 When developing a tab using the traditional method, you might run into these issues:
 
 * HTML and CSS considerations
@@ -38,12 +26,17 @@ When developing a tab using the traditional method, you might run into these iss
 * iFrame constraints
 * Server maintenance and costs
 
-## Properties
+When building a tab using Adaptive Cards you can:
 
-Learn about some of the Adaptive Card properties to customize your actions or invoke card actions.
+* Customize card layout
+* Avoid custom HTML elements in cards
+* Usage of same card object in multiple applications
 
-:::image type="content" source="../../assets/videos/adaptivecard.gif" alt-text="Adaptive Card rendered." border="false":::
+You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
 
+The following image shows build tabs with Adaptive Cards in desktop and mobile:
+
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card in tabs." border="false":::
 
 ## Prerequisites
 
@@ -52,12 +45,18 @@ Before you start using Adaptive Cards to build tabs, you must:
 * Be familiar with [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
 
+## Properties
+
+Learn about some of the Adaptive Card properties to customize your actions or invoke card actions.
+
+:::image type="content" source="../../assets/videos/adaptivecard.gif" alt-text="Adaptive Card rendered." border="false":::
+
 ## Changes to app manifest
 
 Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience.
 
-> [!NOTE]
-> The `contentBotId` property is currently available in manifest version 1.9 or later.
+> **Note:**
+The `contentBotId` property is currently available in manifest version 1.9 or later.
 
 Provide the `contentBotId` property with the `botId` that the Adaptive Card tab must communicate with. The `entityId` configured for the Adaptive Card tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 
@@ -128,8 +127,8 @@ Communication between your Adaptive Card tab and your bot is done through `invok
 `tab/fetch` is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab **continue** response or a tab **auth** response.
 The **continue** response includes an array for **cards**, which is rendered vertically to the tab in the order of the array.
 
-> [!NOTE]
-> For more information on **auth** response, see [authentication](#authentication).
+> **Note:**
+For more information on **auth** response, see [authentication](#authentication).
 
 The following code provides examples of `tab/fetch` request and response:
 
@@ -355,8 +354,8 @@ In the previous sections, you've seen that most of the development paradigms can
 
 1. Open your app. The sign in page appears.
 
-    > [!NOTE]
-    > The app logo is provided through the `icon` property defined in the app manifest. The title appearing after the logo is defined in the `title` property returned in the tab **auth** response body.
+    > **Note:**
+    The app logo is provided through the `icon` property defined in the app manifest. The title appearing after the logo is defined in the `title` property returned in the tab **auth** response body.
 
 1. Select **Sign in**. You're redirected to the authentication URL provided in the `value` property of the **auth** response body.
 1. A pop-up window appears. This pop-up window hosts your web page using the authentication URL.
