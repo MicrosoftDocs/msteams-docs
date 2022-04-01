@@ -261,7 +261,7 @@ Now you can send an introduction message when your bot is first installed or add
 
 When your bot is first added to the group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Send a personal message to each team member when the bot is added. To do this, get the team roster and send each user a direct message.
+You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 Don't send a message in the following cases:
 
