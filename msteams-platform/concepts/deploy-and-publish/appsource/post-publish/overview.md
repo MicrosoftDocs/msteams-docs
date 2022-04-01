@@ -67,9 +67,9 @@ You can remove apps from the [Microsoft commercial marketplace](/azure/marketpla
 **To stop distribution of an app after you've published, follow the steps:**
 
 1. Select **Stop selling** from the **Product overview** page. The app is removed from the [commercial marketplace](/azure/marketplace/overview) within a few hours.
-2. To initiate de-listing the app, follow the steps:
-    * Go to **Partner Center** and select **Overview** page.
-    * Select **Stop selling**.
+1. To initiate de-listing the app, follow the steps:
+    1. Go to **Partner Center** and select **Overview** page.
+    1. Select **Stop selling**.
 
 After you stop distribution of an app, you'll still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
 
