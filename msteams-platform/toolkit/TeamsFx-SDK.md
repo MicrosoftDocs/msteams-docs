@@ -49,7 +49,7 @@ TeamsFx SDK is built to be used in browser and NodeJS environment. Common scenar
 - Azure Function
 - Teams bot
 
-### Create and authenticate a service like `MicrosoftGraphClient
+### Create and authenticate a service like MicrosoftGraphClient
 
 * To create a graph client object to access the Microsoft Graph API, you will need the credential to do authentication. The SDK provides APIs to configure for developers. Please choose the proper identity type and follow below steps:
 
