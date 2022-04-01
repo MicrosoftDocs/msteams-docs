@@ -29,6 +29,20 @@ The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
 :::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
+## Why do you need Adaptive Cards?
+
+* Customize card layout
+* Avoid custom HTML elements in cards
+
+
+## Properties
+
+Learn about some of the Adaptive Card properties:
+
+
+:::image type="content" source="../../assets/videos/card-action.pptx" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+
+
 ## Prerequisites
 
 Before you start using Adaptive Cards to build tabs, you must:
