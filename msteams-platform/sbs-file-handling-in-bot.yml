@@ -104,8 +104,8 @@ items:
 
     1. Select **Go to resource**. 
 
-        :::image type="content" source="~/msteams-platform/assets/images/teams-file-upload-bot/deploy.png" alt-text="create resource" border="true":::
-
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deploy.png" alt-text="select manage" border="true":::
+        
         Your Azure bot is created.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created.png" alt-text="creation of bot" border="true":::
