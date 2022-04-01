@@ -87,7 +87,7 @@
   - name: Tools and Software Development Kits 
     items:
         - name: Teams Toolkit overview
-          href: toolkit/teams-toolkit-fundamentals.md
+          href: toolkit/teams-toolkit-overview.md
         - name: Build Teams app using Toolkit
           items:
           - name: Prepare accounts to build the app
