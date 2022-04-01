@@ -56,15 +56,12 @@ To build an tab app that uses Teams SSO to authenticate users:
       1. Build your Teams tab app
     
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         
       For this section, you'll use the Teams tab sample app.
 
         - [Download the sample app](#download-the-code-sample)
     
-      > [!NOTE]
-      > You can use the Get started sample available for Teams Toolkit and Visual Studio Code to build a sample tab app with JavaScript.
-
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -73,7 +70,7 @@ To build an tab app that uses Teams SSO to authenticate users:
       2. Register your app with Azure AD
 
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
 
       Your Teams app users are authenticated using their Teams user credentials and Azure AD provides an access token for them.
       You'll need to create a new tab app registration in Azure AD:
@@ -91,7 +88,7 @@ To build an tab app that uses Teams SSO to authenticate users:
       1. Update sample app code
 
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
 
       After you register your app in Azure AD, update the app properties in your app's manifest file.
       Next, you update the sample app with details configured on Azure AD in:
@@ -107,7 +104,7 @@ To build an tab app that uses Teams SSO to authenticate users:
       4. Get an access token from client side
 
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
 
       This step requires your app user to give their consent for using their credentials for user-level permission. Azure AD receives the user credentials and sends an access token to Teams.
       In the sample app, this step is already done for your.
@@ -277,7 +274,6 @@ In this section, you'll learn to:
 - [Expose an API](#to-expose-an-api)
 - [Configure the app scope](#to-configure-api-scope)
 - [Configure authorized client application](#to-configure-authorized-client-application)
-- [Create client secret](#create-client-secret)
 
 #### To expose an API
 
@@ -407,8 +403,8 @@ The next step is to update your sample app with the app configuration details yo
 
 In this section, you'll learn to:
 
-- Update the app manifest
-- Update the `appsettings.json`
+- [Update the app manifest](#update-the-app-manifest)
+- [Update the Azure AD settings`](#update-app-settings)
 
 ### Update the app manifest
 
@@ -503,7 +499,7 @@ You'll need to add the the `webApplicationInfo` property to the app manifest fil
 ```
 </details>
 
-### Update app settings
+### Update Azure AD
 
 The `appsettings.json` file includes the configuration for Azure AD app.
 
