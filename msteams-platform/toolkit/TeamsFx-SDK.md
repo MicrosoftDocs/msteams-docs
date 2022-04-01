@@ -301,6 +301,46 @@ dialogs.add(
 
 You can set customer log level and redirect outputs when using this library. Logging is turned off by default, you can turn it on by setting log level.
 
+### Override configuration
+You can pass custom config when creating `TeamsFx` instance to override default configuration or set required fields when environment variables are missing.
+
+- If you have created tab project using VS Code toolkit, the following config values will be used from pre-configured environment variables:
+  * authorityHost (REACT_APP_AUTHORITY_HOST)
+  * tenantId (REACT_APP_TENANT_ID)
+  * clientId (REACT_APP_CLIENT_ID)
+  * initiateLoginEndpoint (REACT_APP_START_LOGIN_PAGE_URL)
+  * applicationIdUri (REACT_APP_START_LOGIN_PAGE_URL)
+  * apiEndpoint (REACT_APP_FUNC_ENDPOINT)
+  * apiName (REACT_APP_FUNC_NAME)
+
+- If you have created Azure Function / Bot project using VS Code toolkit, the following config values will be used from pre-configured environment variables:
+  * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
+  * authorityHost (M365_AUTHORITY_HOST)
+  * tenantId (M365_TENANT_ID)
+  * clientId (M365_CLIENT_ID)
+  * clientSecret (M365_CLIENT_SECRET)
+  * applicationIdUri (M365_APPLICATION_ID_URI)
+  * apiEndpoint (API_ENDPOINT)
+  * sqlServerEndpoint (SQL_ENDPOINT)
+  * sqlUsername (SQL_USER_NAME)
+  * sqlPassword (SQL_PASSWORD)
+  * sqlDatabaseName (SQL_DATABASE_NAME)
+  * sqlIdentityId (IDENTITY_ID)
+
+## How to fix the breaking change if upgraded from previous SDK version
+
+If you are using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
+1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`.
+2. Replace `new TeamsUserCredential()` with `new TeamsFx()`.
+3. Replace `new M365TenantCredential()` with `new TeamsFx(IdentityType.App)`.
+4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new TeamsFx().setSsoToken(ssoToken)`.
+5. Pass the instance of `TeamsFx` to helper functions to replace credential instance.
+
+Also see [TeamsFx class](#teamsfx-class) for furthur description.
+
+## Next steps
+
+Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
 
 #### Enable log by setting log level
 
