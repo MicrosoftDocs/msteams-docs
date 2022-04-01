@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Enable Teams single sign-on (SSO) in a tab application
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user sign in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is pre-fetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is pre-fetched to improve performance and load times.
 
 > [!NOTE]
 > Teams SSO can be implemented only with Azure AD.
@@ -51,7 +51,7 @@ The SSO API also works in [task modules](../../../task-modules-and-cards/what-ar
 
 This section describes the tasks involved in creating a Teams tab that uses SSO. These tasks are language- and framework-agnostic.
 
-To build an tab app that uses Teams SSO to authenticate users:
+To build a tab app that uses Teams SSO to authenticate users:
 
 :::row:::
     :::column span="":::
@@ -184,11 +184,11 @@ In this section, you'll learn to create and register an Azure-based Teams tab ap
 To register your tab app in Azure AD:
 
 1. Open a web browser to the [Azure portal](https://ms.portal.azure.com/).
-   The Microsoft Azure Portal page opens.
+   The Microsoft Azure AD Portal page opens.
 
 1. Select **App registrations** icon.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure Portal page." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal page." border="false":::
 
    The **App registrations** page appears.
 
@@ -260,15 +260,15 @@ To configure API permissions:
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions." border="true":::
 
-    A message pops up on the browser stating that the app was created.
+    A message pops up on the browser stating that the permissions were updated.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Permissions updated message." border="false":::
 
     The added permissions are displayed in the **API permissions** page.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions configured." border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured." border="true":::
 
-    You have configures API permissions with Microsoft Graph.
+    You've configures API permissions with Microsoft Graph.
 
 ### Expose an API
 
@@ -399,21 +399,22 @@ A client secret is a string that the application uses to prove its identity when
 The next step is to update your sample app with the app configuration details you defined in Azure AD.
 
 > [!NOTE]
-> Prerequisites
+> **Prerequisites**:
 > Before you update the app manifest, you'll need to:
-> - Build and debug the sample
+> 
+> - Build and debug the sample code
 > - Create an ngrok tunnel
 
 In this section, you'll learn to:
 
 - [Update the app manifest](#update-the-app-manifest)
-- [Update the Azure AD settings`](#update-azure-ad-details)
+- [Update the Azure AD settings](#update-azure-ad-details)
 
 ### Update the app manifest
 
 The Teams app manifest describes how your app integrates into the Microsoft Teams. Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
 
-You'll need to add the the `webApplicationInfo` property to the app manifest file.
+You'll need to add the `webApplicationInfo` property to the app manifest file.
 
 > [!NOTE]
 > You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
