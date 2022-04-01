@@ -1,5 +1,5 @@
 ---
-title: CI or CD Support for Teams Application Developers
+title: Learn how to use CI or CD pipeline templates in GitHub, Azure Devops and Jenkins for Teams Application Developers
 author: MuyangAmigo
 description:  CICD templates
 ms.author: ruhe
