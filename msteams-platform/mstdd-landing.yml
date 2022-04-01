@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Create Teams conversation bot
+        url: ~/sbs-teams-conversation-bot.yml
       - text: Build your first app using Blazor
         url:  sbs-gs-blazorupdate.yml
       - text: Device permissions for the browser
@@ -42,10 +44,7 @@ landingContent:
         url: ~/resources/schema/manifest-schema.md
       - text: Test preview for monetized apps
         url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-      - text: In-app purchase flow for monetization of apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
       
- 
 
 - title: Get started
   linkLists:
@@ -129,6 +128,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Create Teams conversation bot
+          url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure Tab device permissions
@@ -145,10 +146,7 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Create a meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Generate a Meetings Stage View
-          url: ~/sbs-meetings-stage-view.yml
-        - text: Interact with content bubble bot in Meetings
-          url: ~/sbs-meeting-content-bubble.yml
+      
     - linkListType: tutorial
       links:
         - text: Upload files to Teams from a bot
