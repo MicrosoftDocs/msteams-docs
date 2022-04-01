@@ -438,13 +438,6 @@ items:
        ![Bot sends you feedback card](~/assets/images/meeting-content-bubble/content-bubble-feedback.png)
 
         Bot sends you feedback message.
-      
-- title: Complete challenge
-  durationInMinutes: 1
-  content: |
-    Did you come up with something like this?
-
-    ![Content Bubble Demo desktop and mobile](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
 - title: Points to remember
   durationInMinutes: 1
@@ -462,8 +455,14 @@ items:
     Watch this short recap for creating a meeting content bubble in  Teams.
     
     ![Create a Teams app](~/assets/videos/points-to-remember.gif)
-    </details>
-    
+    </details>      
+      
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+    ![Content Bubble Demo desktop and mobile](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
 
 - content: |
     You've completed the tutorial to get started with a meeting content bubble app.
