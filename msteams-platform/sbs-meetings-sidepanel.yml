@@ -347,7 +347,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-        ![App settings location](~/assets/images/meetings-side-panel/appsettingslocation.png)
+          :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="App settings location" border="true":::
 
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
@@ -355,18 +355,18 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        ![App settings](~/assets/images/meetings-side-panel/appsettings.png)
+          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings" border="true":::
 
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/meetings-side-panel/manifestlocation.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location" border="true":::
     
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        ![Manifest image2](~/assets/images/meetings-side-panel/manifest-2.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2.png" alt-text="Manifest image2" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -378,21 +378,21 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+           :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Open file" border="true":::
 
        1. Select **SidePanel.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/meetings-side-panel/Tokenfileready.png)
+           :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready.png" alt-text="Solution File" border="true":::
 
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
+            :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Trust Certificate" border="true":::
 
           A webpage opens with a message **Your bot is ready!**.
 
-          ![App ready](~/assets/images/meetings-side-panel/appisready.png) 
+           :::image type="content" source="~/assets/images/meetings-side-panel/appisready.png" alt-text="App ready" border="true"::: 
 
         
     # [Command line](#tab/cli)
@@ -402,8 +402,7 @@ items:
     ```bash
     dotnet run
     ```
-   
-    ![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)
+    :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Dotnet" border="true"::: 
       
 - title: Add Meetings SidePanel app to Teams
   durationInMinutes: 1
@@ -417,33 +416,33 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/meetings-side-panel/zipfile.png) 
+         :::image type="content" source="~/assets/images/meetings-side-panel/zipfile.png" alt-text="Zip file" border="true"::: 
     
     1. Create a meeting with a few presenters and attendees.
    
     1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
-       ![Add an app](~/assets/images/meetings-side-panel/addanapp.png) 
+         :::image type="content" source="~/assets/images/meetings-side-panel/addanapp.png" alt-text="Add an app" border="true":::
    
     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/meeting-token-generator-manageapps.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/manageapps.png" alt-text="Manage apps" border="true"::: 
    
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/meetings-side-panel/uploadcustomapp.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp.png" alt-text="Upload custom app" border="true"::: 
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       ![Select zip file](~/assets/images/meetings-side-panel/selectzip.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectzip.png" alt-text="Select zip file" border="true"::: 
 
     1. Select **Add**.
 
-       ![Add the app](~/assets/images/meetings-side-panel/addtheapp.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/addtheapp.png" alt-text="Add the app" border="true"::: 
 
        The **Manage apps** section displays the list of applications.
-
-       ![App in Manage apps](~/assets/images/meetings-side-panel/manageappsection.png)
+   
+        :::image type="content" source="~/assets/images/meetings-side-panel/manageappsection.png" alt-text="App in Manage apps" border="true"::: 
    
     1. Go to Teams meeting.
     
@@ -451,13 +450,13 @@ items:
     
        In the app selection page, the app displays as **Side Panel**.
   
-       ![App icon in Teams](~/assets/images/meetings-side-panel/appicon.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/appicon.png" alt-text="App icon in Teams" border="true"::: 
 
     1. Select the **Side Panel** app.
     
     1. Select **Save**.
 
-       ![Welcome App](~/assets/images/meetings-side-panel/welcomeapp.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp.png" alt-text="Welcome App" border="true"::: 
    
        The app is visible in the meeting SidePanel.         
 
@@ -468,28 +467,28 @@ items:
 
     1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelinmeet.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet.png" alt-text="Token in Meet" border="true"::: 
 
     1. Enter a new agenda item to the list and select **Add**.
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/newagenda.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/newagenda.png" alt-text="Token in Meet" border="true"::: 
 
        The new agenda is added in the list.
 
     1. Select **Publish Agenda**.
 
-       ![Your Token](~/assets/images/meetings-side-panel/youragenda.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/youragenda.png" alt-text="Your Token" border="true"::: 
 
        The new agenda list is displayed in the meeting chat.
 
-       ![Your Token](~/assets/images/meetings-side-panel/agendainchat.png)
+         :::image type="content" source="~/assets/images/meetings-side-panel/agendainchat.png" alt-text="Your Token" border="true"::: 
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)
+       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Token in Meet" border="true"::: 
 
 
 - content: |
