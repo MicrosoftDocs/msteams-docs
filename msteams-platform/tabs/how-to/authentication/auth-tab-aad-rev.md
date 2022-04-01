@@ -56,7 +56,7 @@ To build an tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      1. Build your Teams tab app
+      1. **Build your Teams tab app**
     
     :::column-end:::
     :::column span="2":::
@@ -70,7 +70,7 @@ To build an tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      2. Register your app with Azure AD
+      2. **Register your app with Azure AD**
 
     :::column-end:::
     :::column span="2":::
@@ -88,7 +88,7 @@ To build an tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      1. Update sample app code
+      3. **Update sample app code**
 
     :::column-end:::
     :::column span="2":::
@@ -104,7 +104,7 @@ To build an tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      1. Get an access token from client side
+      4. **Get an access token from client side**
 
     :::column-end:::
     :::column span="2":::
@@ -168,7 +168,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
    > [!NOTE]
    > The Microsoft Teams Toolkit can to register the Azure Active Directory (Azure AD) application in a single sign-in (SSO) project.
 
-   In this exercise, you'll learn how to manually register and configure the Azure AD app that can be used to implement SSO in a Microsoft Teams app.
+   In this section, you'll learn how to register and configure the Azure AD app that can be used to implement SSO in a Microsoft Teams tab app.
 
    To complete the registration of your tab app in Azure AD:
 
@@ -179,7 +179,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
 ### Register your app
 
-In this section, you'll learn to create and register an Azure-based Teams tab app. 
+In this section, you'll learn to create and register an Azure-based Teams tab app.
 
 To register your tab app in Azure AD:
 
@@ -205,7 +205,7 @@ To register your tab app in Azure AD:
     1. Enter the name of your app that will be displayed to the user.
         You can change this name at a later stage, if you want to.
 
-    1. Select the intended types of user accounts that can access your app. For this tutorial, select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
+    1. Select the intended types of user accounts that can access your app. For this section, select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
 
 1. Select the **Redirect URI** details.
 
@@ -256,7 +256,7 @@ To configure API permissions:
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="true":::
 
-1. Select relevant permissions for your app. For this tutorial, select **email** and **offline_access**, and then select **Add permissions**.
+1. Select relevant permissions for your app. For this section, select **email** and **offline_access**, and then select **Add permissions**.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions." border="true":::
 
@@ -268,7 +268,7 @@ To configure API permissions:
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions configured." border="true":::
 
-Next, you will expose API and define scope.
+    You have configures API permissions with Microsoft Graph.
 
 ### Expose an API
 
@@ -378,7 +378,7 @@ A client secret is a string that the application uses to prove its identity when
     :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="Client secret page":::
 
 2. Select **+ New client secret**.
-   
+
    The **Add a client secret** page appears.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Add a client secret page" border="true":::
@@ -386,7 +386,7 @@ A client secret is a string that the application uses to prove its identity when
 3. Enter the description.
 4. Select the duration of validity for the secret.
 5. Select **Add**.
-   
+
    A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-secret-added.png" alt-text="Client secret added":::
@@ -432,8 +432,8 @@ You'll need to add the the `webApplicationInfo` property to the app manifest fil
     ```
 
     where,
-    *{Azure AD AppId}* is app ID you created when you registered your app in Azure AD
-    *{ngrokSubdomain}* is the ngrok URL
+    - {Azure AD AppId}* is app ID you created when you registered your app in Azure AD
+    - {ngrokSubdomain}* is the ngrok URL
 
 4. Update the Azure app ID in the **id** property.
 5. Update the ngrok URL in the following properties:
