@@ -10,7 +10,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is pre-fetched to improve performance and load times.
 
 > [!NOTE]
-> Teams SSO can be implemented only with Azure AD.
+> Teams SSO can be implemented only with Azure Active Directory (Azure AD).
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -145,7 +145,7 @@ The sample repo for C# app is cloned on your computer in the default location.
 
 <a name="BuildRun"></a>
 
-You can view the cloned repository by opening it in Visual Studio 2019.
+You can view the cloned repository by opening it in Visual Studio 2022.
 </details>
 
 <details>
@@ -166,7 +166,7 @@ You can view the cloned repository by opening it in Visual Studio 2019.
 This section describes the tasks involved in creating a Teams tab that uses SSO. These tasks are language- and framework-agnostic.
 
    > [!NOTE]
-   > The Microsoft Teams Toolkit can to register the Azure Active Directory (Azure AD) application in a single sign-in (SSO) project.
+   > The Microsoft Teams Toolkit can to register the Azure AD application in a SSO project.
 
    In this section, you'll learn how to register and configure the Azure AD app that can be used to implement SSO in a Microsoft Teams tab app.
 
@@ -194,13 +194,13 @@ To register your tab app in Azure AD:
 
 1. Select **+ New registration** icon.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Azure Portal." border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Azure AD Portal." border="false":::
 
     The **Register an application** page appears.
 
 1. Enter the app details for your tab app.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure Portal." border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal." border="false":::
 
     1. Enter the name of your app that will be displayed to the user.
         You can change this name at a later stage, if you want to.
@@ -218,7 +218,7 @@ To register your tab app in Azure AD:
 1. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
 
     The app is created and displayed.
 
@@ -268,7 +268,7 @@ To configure API permissions:
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured." border="true":::
 
-    You've configures API permissions with Microsoft Graph.
+    You've configured API permissions with Microsoft Graph.
 
 ### Expose an API
 
@@ -325,7 +325,7 @@ In this section, you'll learn to:
     1. Select the **Enabled** option for state.
     1. Select **Add scope**.
 
-    A message pops up on the browser stating that the scope was added. 
+    A message pops up on the browser stating that the scope was added.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message" border="false":::
 
@@ -375,9 +375,9 @@ A client secret is a string that the application uses to prove its identity when
 
 1. Select **Manage** > **Certificates & secrets**.
 
-    :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="Client secret page":::
-
 2. Select **+ New client secret**.
+
+    :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="Client secret page":::
 
    The **Add a client secret** page appears.
 
@@ -393,6 +393,9 @@ A client secret is a string that the application uses to prove its identity when
 
 6. Select the copy button next to the **Value** of client secret.
 7. Save the value that you copied for later use.
+
+   > [!NOTE]
+   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
 ## Update the sample app code
 
