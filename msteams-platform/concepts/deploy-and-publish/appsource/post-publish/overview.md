@@ -50,11 +50,6 @@ If you make any of the following changes to your app, however, your existing use
 
 Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
 
-## Stop distribution of an app
-
-To remove your app, right click the app icon in Teams and select **Uninstall**.
-[Remove your app](/concepts/deploy-and-publish/apps-upload#remove-your-app)
-
 ## Promote your app on another site
 
 When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
@@ -64,6 +59,18 @@ Create the link using the following URL appended with your app ID: `https://team
 ## Complete Microsoft 365 Certification
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem. Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.
+
+## Stop distribution of an app
+
+You can remove apps from the Microsoft commercial marketplace, which prevents new customers from finding and using them.
+
+To stop distribution of an app after you've published it, select **Stop Selling** from the **Product overview** page. Within a few hours of your confirmation, the app will no longer be visible in the commercial marketplace. You can initiate de-listing the app by following the steps:
+
+1. Go to **Partner Center**.
+1. Select **Overview** page.
+1. Select **Stop Selling**.
+
+After you stop distribution of an app, you'll still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
 
 ## See also
 
