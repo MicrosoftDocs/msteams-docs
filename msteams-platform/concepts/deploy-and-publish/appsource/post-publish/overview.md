@@ -53,7 +53,7 @@ Microsoft runs daily automation tests on apps listed on the Teams store. If issu
 ## Stop distribution of an app
 
 To remove your app, right click the app icon in Teams and select **Uninstall**.
-[Remove your app](~/concepts/deploy-and-publish/apps-upload#remove-your-app)
+[Remove your app](/concepts/deploy-and-publish/apps-upload#remove-your-app)
 
 ## Promote your app on another site
 
