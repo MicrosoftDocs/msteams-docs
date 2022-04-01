@@ -301,6 +301,8 @@ dialogs.add(
 
 You can set customer log level and redirect outputs when using this library. Logging is turned off by default, you can turn it on by setting log level.
 
+### Override configuration
+
 #### Enable log by setting log level
 
 Logging is enabled only when you set log level. By default, it prints log information to console.
