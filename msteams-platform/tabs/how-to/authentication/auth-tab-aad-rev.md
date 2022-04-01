@@ -81,7 +81,7 @@ To build an tab app that uses Teams SSO to authenticate users:
       - [Register your new Teams app](#register-your-app)
       - [Configure API permissions](#configure-api-permissions-with-microsoft-graph)
       - [Expose an API](#expose-an-api)
-      - [Create client secret](#to-create-client-secret)
+      - [Create client secret](#create-client-secret)
 
     :::column-end:::
 :::row-end:::
@@ -96,8 +96,8 @@ To build an tab app that uses Teams SSO to authenticate users:
       After you register your app in Azure AD, update the app properties in your app's manifest file.
       Next, you update the sample app with details configured on Azure AD in:
 
-      - Update the app manifest, `manifest.json`.
-      - Update `appsetting.json`.
+      - [Update the app manifest, `manifest.json`](#update-the-app-manifest)
+      - [Update `appsetting.json`](#update-app-settings)
 
     :::column-end:::
 :::row-end:::
@@ -175,6 +175,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
    1. [Register your app](#register-your-app)
    1. [Configure API permissions with Microsoft Graph](#configure-api-permissions-with-microsoft-graph)
    2. [Expose an API](#expose-an-api)
+   3. [Create a client secret](#create-client-secret)
 
 ### Register your app
 
@@ -208,7 +209,7 @@ To register your tab app in Azure AD:
 
 1. Select the **Redirect URI** details.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="App registration page on Azure Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
     1. Select the platform where your app will be accessible.
     2. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app.
@@ -217,11 +218,11 @@ To register your tab app in Azure AD:
 1. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="App registration page on Azure Portal." border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure Portal." border="true":::
 
     The app is created and displayed.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration page on Azure Portal." border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="false":::
 
 1. Note and save the **Application ID**. You'll need it for updating the app manifest.
 
@@ -269,14 +270,14 @@ To configure API permissions:
 
 Next, you will expose API and define scope.
 
-### Expose an API for the app
+### Expose an API
 
 In this section, you'll learn to:
 
 - [Expose an API](#to-expose-an-api)
 - [Configure the app scope](#to-configure-api-scope)
 - [Configure authorized client application](#to-configure-authorized-client-application)
-- [Create client secret](#to-create-client-secret)
+- [Create client secret](#create-client-secret)
 
 #### To expose an API
 
@@ -288,7 +289,7 @@ In this section, you'll learn to:
 
 1. Select **Set** to generate app ID URI.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Expose an API menu option." border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI" border="false":::
 
     The section for setting app ID URI appears.
 
@@ -369,7 +370,9 @@ In this section, you'll learn to:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
 
-#### Create client secret
+### Create client secret
+
+A client secret is a string that the application uses to prove its identity when requesting a token.
 
 1. Select **Manage** > **Certificates & secrets**.
 
@@ -553,3 +556,6 @@ This is updated as per sample details configured in Azure AD:
 
 </details>
 
+## Get an access token with graph permissions
+
+\ Add content \
