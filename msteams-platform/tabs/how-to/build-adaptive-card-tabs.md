@@ -38,9 +38,9 @@ The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
 :::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card in tabs." border="false":::
 
-The following image shows Adaptive Cards supports multiple platforms:
+ The following image shows Adaptive Cards supports multiple platforms:
 
-:::image type="content" source="../../assets/images/card-details.png" alt-text="Interactive card." border="false":::
+ :::image type="content" source="../../assets/images/card-details.png" alt-text="Interactive card." border="false":::
 
 ## Prerequisites
 
