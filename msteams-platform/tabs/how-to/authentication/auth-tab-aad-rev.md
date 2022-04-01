@@ -94,14 +94,14 @@ To build an tab app that uses Teams SSO to authenticate users:
       Next, you update the sample app with details configured on Azure AD in:
 
       - [Update the app manifest, `manifest.json`](#update-the-app-manifest)
-      - [Update `appsetting.json`](#update-app-settings)
+      - [Update `appsetting.json`](#update-azure-ad-details)
 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
 
-      4. Get an access token from client side
+      1. Get an access token from client side
 
     :::column-end:::
     :::column span="2":::
@@ -404,7 +404,7 @@ The next step is to update your sample app with the app configuration details yo
 In this section, you'll learn to:
 
 - [Update the app manifest](#update-the-app-manifest)
-- [Update the Azure AD settings`](#update-app-settings)
+- [Update the Azure AD settings`](#update-azure-ad-details)
 
 ### Update the app manifest
 
@@ -499,7 +499,7 @@ You'll need to add the the `webApplicationInfo` property to the app manifest fil
 ```
 </details>
 
-### Update Azure AD
+### Update Azure AD details
 
 The `appsettings.json` file includes the configuration for Azure AD app.
 
