@@ -10,7 +10,7 @@ keywords: adaptive card personal app authentication data flow
 
 # Build tabs with Adaptive Cards
 
-> **Important:**
+> **Important:**</br>
 Tabs with Adaptive Cards are currently only supported as personal apps.
 
 Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
