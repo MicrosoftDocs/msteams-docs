@@ -50,6 +50,11 @@ If you make any of the following changes to your app, however, your existing use
 
 Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
 
+## Stop distribution of an app
+
+To remove your app, right click the app icon in Teams and select **Uninstall**.
+[Remove your app](~/concepts/deploy-and-publish/apps-upload#remove-your-app)
+
 ## Promote your app on another site
 
 When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
