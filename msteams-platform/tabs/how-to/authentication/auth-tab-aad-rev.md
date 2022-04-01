@@ -81,6 +81,7 @@ To build an tab app that uses Teams SSO to authenticate users:
       - [Register your new Teams app](#register-your-app)
       - [Configure API permissions](#configure-api-permissions-with-microsoft-graph)
       - [Expose an API](#expose-an-api)
+      - [Create client secret](#to-create-client-secret)
 
     :::column-end:::
 :::row-end:::
@@ -275,6 +276,7 @@ In this section, you'll learn to:
 - [Expose an API](#to-expose-an-api)
 - [Configure the app scope](#to-configure-api-scope)
 - [Configure authorized client application](#to-configure-authorized-client-application)
+- [Create client secret](#to-create-client-secret)
 
 #### To expose an API
 
@@ -366,6 +368,29 @@ In this section, you'll learn to:
     The client app IDs display on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
+
+#### Create client secret
+
+1. Select **Manage** > **Certificates & secrets**.
+
+    :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="Client secret page":::
+
+2. Select **+ New client secret**.
+   
+   The **Add a client secret** page appears.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Add a client secret page" border="true":::
+
+3. Enter the description.
+4. Select the duration of validity for the secret.
+5. Select **Add**.
+   
+   A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-secret-added.png" alt-text="Client secret added":::
+
+6. Select the copy button next to the **Value** of client secret.
+7. Save the value that you copied for later use.
 
 ## Update the sample app code
 
@@ -481,4 +506,50 @@ The `appsettings.json` file includes the configuration for Azure AD app.
 
 To update the app settings:
 
-1. 
+1. Open **TeamsTabSSO** > **appsettings.json** from the **Solution Explorer**.
+2. Update the `AzureAd` code snippet with configured app details on Azure AD portal:
+
+   ```json
+     "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "TenantId": "[AzureAD Tenant Id]",
+    "ClientId": "[AzureAD Client Id]",
+    "AppSecret": "[Azure App secret]",
+    "ApplicationIdURI": "[Application ID URI]",
+    "AuthUrl": "/oauth2/v2.0/token",
+    "ValidIssuers": "https://login.microsoftonline.com/TENANT_ID/v2.0,https://sts.windows.net/TENANT_ID/"
+    },
+    ```
+    where,
+    - `[AzureAD Tenant Id]` is **Directory (tenant) ID**
+    - `[AzureAD Client Id]` is **Application (client) ID**
+    - `[Azure App secret]` is the **Value** of **Client credentials**, which is client secret
+    - `[Application ID URI]` is **Application ID URI**
+    - `TENANT_ID` is **Directory (tenant) ID**
+
+3. Save the file.
+
+
+#### View the updated file
+
+<details>
+<summary>Here's an example of app manifest after it's updated:</summary>
+
+```json
+    "AzureAd": {
+    "Instance": "https://login.microsoftonline.com/",
+    "TenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "ClientId": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
+    "AppSecret": "p-t7Q~wiGyaPdXcmn6E_XnQBmfANChRx5QtZG",
+    "ApplicationIdURI": "api://bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
+    "AuthUrl": "/oauth2/v2.0/token",
+    "ValidIssuers": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0,https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/"
+  },
+```
+
+This is updated as per sample details configured in Azure AD:
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-overview.png" alt-text="Overview of app details on Azure AD portal":::
+
+</details>
+
