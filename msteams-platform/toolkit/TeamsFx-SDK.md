@@ -49,18 +49,9 @@ TeamsFx SDK is built to be used in browser and NodeJS environment. Common scenar
 - Azure Function
 - Teams bot
 
-### Create and authenticate a service like MicrosoftGraphClient
+### Create and authenticate a service like `MicrosoftGraphClient`
 
 * To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers. Choose the proper identity type and follow the steps below:
-
-```ts
-loadConfiguration({
-  authentication: {
-    initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    clientId: process.env.REACT_APP_CLIENT_ID,
-  },
-});
-```
 
 #### Invoke Graph API without user (Application Identity)
 
@@ -297,9 +288,50 @@ dialogs.add(
 );
 ```
 
+## Advanced Customization
+
 ### Configure log
 
 You can set customer log level and redirect outputs when using this library. Logging is turned off by default, you can turn it on by setting log level.
+
+#### Enable log by setting log level
+
+Logging is enabled only when you set log level. By default, it prints log information to console.
+
+Set log level using the following snippet:
+
+```ts
+// Only need the warning and error messages.
+setLogLevel(LogLevel.Warn);
+```
+
+You can redirect log output by setting custom logger or log function.
+
+##### Redirect by setting custom logger
+
+```ts
+setLogLevel(LogLevel.Info);
+// Set another logger if you want to redirect to Application Insights in Azure Function
+setLogger(context.log);
+```
+
+##### Redirect by setting custom log function
+
+> [!NOTE]
+> Log function will not take effect, if you set a custom logger.
+
+```ts
+setLogLevel(LogLevel.Info);
+// Only log error message to Application Insights in bot application.
+setLogFunction((level: LogLevel, message: string) => {
+  if (level === LogLevel.Error) {
+    this.telemetryClient.trackTrace({
+      message: message,
+      severityLevel: Severity.Error,
+    });
+  }
+});
+```
 
 ### Override configuration
 You can pass custom config when creating `TeamsFx` instance to override default configuration or set required fields when environment variables are missing.
@@ -341,45 +373,6 @@ Also see [TeamsFx class](#teamsfx-class) for furthur description.
 ## Next steps
 
 Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
-
-#### Enable log by setting log level
-
-Logging is enabled only when you set log level. By default, it prints log information to console.
-
-Set log level using the following snippet:
-
-```ts
-// Only need the warning and error messages.
-setLogLevel(LogLevel.Warn);
-```
-
-You can redirect log output by setting custom logger or log function.
-
-##### Redirect by setting custom logger
-
-```ts
-setLogLevel(LogLevel.Info);
-// Set another logger if you want to redirect to Application Insights in Azure Function
-setLogger(context.log);
-```
-
-##### Redirect by setting custom log function
-
-> [!NOTE]
-> Log function will not take effect, if you set a custom logger.
-
-```ts
-setLogLevel(LogLevel.Info);
-// Only log error message to Application Insights in bot application.
-setLogFunction((level: LogLevel, message: string) => {
-  if (level === LogLevel.Error) {
-    this.telemetryClient.trackTrace({
-      message: message,
-      severityLevel: Severity.Error,
-    });
-  }
-});
-```
 
 ## See also
 
