@@ -1,12 +1,12 @@
 ---
-title: Microsoft Teams Developer Documentation - Glossary
-description: Learn about the glossary and terms used for Microsoft Teams Developer Documentation
+title: Microsoft Teams developer documentation - Glossary
+description: Learn about the terms used in Microsoft Teams developer documentation
 ms.localizationpriority: high
 ms.topic: reference
 ---
 # Glossary
 
-Common terms and definitions used in Teams Developer Documentation.
+Common terms and definitions used in Teams developer documentation.
 
 ## A
 
