@@ -1,6 +1,6 @@
 ---
 title: Request device permissions for your Microsoft Teams app
-description: Learn how to update your app manifest and request access to native features involving user consent, location, QE code and barcode, image, audio, and video capabilities
+description: Learn how to update your app manifest and request access to native features involving user consent, location, QR code and barcode, image, audio, and video capabilities
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
