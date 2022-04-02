@@ -46,8 +46,8 @@ items:
    
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
-    > [!NOTE]
-    > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
+      > [!NOTE]
+      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -371,11 +371,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio 2019 or Command line**
+    **To build and run the service using Visual Studio or Command line**
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Visual Studio](#tab/vs)
 
-       1. Launch **Visual Studio 2019**.
+       1. Launch **Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Open file" border="true":::
