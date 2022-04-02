@@ -58,20 +58,18 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Complete Microsoft 365 Certification
 
-[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem. Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and is supported by Microsoft.
 
 ## Stop app distribution
 
-You can remove apps from the [Microsoft commercial marketplace](/azure/marketplace/overview), which prevents new customers from finding and using them.
+You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) to prevent its discovery and use.
 
-**To stop distribution of an app after you've published, follow the steps:**
+To stop distribution of an app after you've published, follow the steps:
 
-1. Select **Stop selling** from the **Product overview** page. The app is removed from the [commercial marketplace](/azure/marketplace/overview) within a few hours.
-1. To initiate de-listing the app, follow the steps:
-    1. Go to **Partner Center** and select **Overview** page.
-    1. Select **Stop selling**.
+1. On the **Product overview** page, select **Stop selling**. It removed the app from the [commercial marketplace](/azure/marketplace/overview) within a few hours.
+1. To initiate de-listing the app, on the **Partner Center**, select **Overview** page, and select **Stop selling**.
 
-   After you stop distribution of an app, you'll still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
+After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](/concepts/deploy-and-publish/appsource/publish#teams-app-submission).
 
 ## See also
 
