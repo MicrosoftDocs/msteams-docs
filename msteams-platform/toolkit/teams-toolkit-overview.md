@@ -10,7 +10,7 @@ ms.date: 03/31/2022
 
 # Overview on Teams Toolkit
 
-You can improve collaboration and productivity using Teams app. The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and Teams Fx. Teams Toolkit provides you with all the necessary tools needed for building a Teams app in one place.
+You can improve collaboration and productivity using Teams app. The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and TeamsFx. Teams Toolkit provides you with all the necessary tools needed for building a Teams app in one place.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams-toolkit-ide.png" alt-text="Teams toolkit ide":::
 ## User journey for Teams Toolkit
@@ -56,7 +56,7 @@ After Toolkit installation, you'll see the Teams Toolkit User Interface (UI) as 
 
 You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** option to create an app. 
 
- a Teams project created by Teams Toolkit using the latest version opened in Visual Studio Code, you'll see the following image with the functionalities:
+ A Teams project created by Teams Toolkit using the latest version opened in Visual Studio Code, you'll see the following image with the functionalities:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
 
