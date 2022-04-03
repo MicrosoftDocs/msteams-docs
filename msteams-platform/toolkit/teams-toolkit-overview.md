@@ -137,5 +137,5 @@ You can select **Report issues on GitHub** in  Teams Toolkit to get **Quick supp
 * [Create new project using Teams Toolkit](create-new-project.md)
 * [Prepare accounts to build Teams apps](accounts.md)
 * [Publish Teams apps using Teams Toolkit](publish-app.md)
-* [Use Teams Toolkit to provision cloud resources](provision-to-cloud.md)
+* [Provision cloud resources using Teams Toolkit](provision-to-cloud.md)
 * [Deploy to the cloud](deploy-to-cloud.md)
