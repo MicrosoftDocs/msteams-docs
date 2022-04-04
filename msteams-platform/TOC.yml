@@ -359,6 +359,15 @@
     href: concepts/authentication/authentication.md
   - name: Configure identity providers
     href: concepts/authentication/configure-identity-provider.md
+  - name: Enable Teams SSO for tabs
+    items:
+      - name: Overview
+        href: tabs/how-to/authentication/tab-sso-overview.md
+      - name: Register your app in Azure AD
+        href: tabs/how-to/authentication/tab-sso-register-aad.md
+      - name: Configure admin consent
+        href: tabs/how-to/authentication/tab-sso-admin-consent.md
+      - name: 
   - name: Tabs
     items:
     - name: Authentication flow in tabs

@@ -1,6 +1,6 @@
 ---
 title: Code configuration for enabling Teams SSO for tabs
-description: Describes creating client secret
+description: Describes Code configuration for enabling Teams SSO for tabs
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
@@ -18,8 +18,11 @@ The next step is to update your sample app with the app configuration details yo
 
 In this section, you'll learn to:
 
-- [Update the app manifest](#update-the-app-manifest)
-- [Update the Azure AD settings](#update-azure-ad-details)
+- [Code configuration for enabling Teams SSO for tabs](#code-configuration-for-enabling-teams-sso-for-tabs)
+    - [Update the app manifest](#update-the-app-manifest)
+      - [To update the app manifest](#to-update-the-app-manifest)
+      - [View manifest sample](#view-manifest-sample)
+    - [Update Azure AD details](#update-azure-ad-details)
 
 ### Update the app manifest
 
