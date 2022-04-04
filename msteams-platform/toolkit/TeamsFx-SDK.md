@@ -25,7 +25,7 @@ For more information, see [Teams app project](https://github.com/OfficeDev/Teams
 ### Prerequisites
 
 * Latest version of Node.js.
-* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies. Ensure they are of the same version and the version is `>= 4.15.0`. ([Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)).
+* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version is `>= 4.15.0`. ([Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)).
 
 For more information, see:
 
