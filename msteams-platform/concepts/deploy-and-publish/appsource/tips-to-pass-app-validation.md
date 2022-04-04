@@ -28,6 +28,11 @@ Here are the most common reasons for your app to get rejected during app certifi
    :::column-end:::
 :::row-end:::
 
+||||||
+|---|---|---|---|---|
+|:::image type="icon" source="../../../assets/icons/broken-links-errors-icon-1.png" border="false"::: <br/>[**Broken links, Bugs and errors**](#broken-links-functional-bugs-app-crashes-and-unexpected-errors)|:::image type="icon" source="../../../assets/icons/app-description-icon.png" border="false"::: <br/>[**App description**](#app-description)|:::image type="icon" source="../../../assets/icons/trademark-icon.png" border="false"::: <br/>[Violation of Microsoft Trademark and Brand Guidelines](#violation-of-microsoft-trademark-and-brand-guidelines)|:::image type="icon" source="../../../assets/icons/trademark-icon.png" border="false"::: <br/>[Testability](#violation-of-microsoft-trademark-and-brand-guidelines)|:::image type="icon" source="../../../assets/icons/trademark-icon.png" border="false"::: <br/>[Microsoft 365 App compliance program](#violation-of-microsoft-trademark-and-brand-guidelines)|
+
+
 
 ## Broken links, functional bugs, app crashes and unexpected errors  
 
