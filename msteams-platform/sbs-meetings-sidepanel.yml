@@ -47,7 +47,7 @@ items:
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
       > [!NOTE]
-      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
+      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting side panel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -404,10 +404,10 @@ items:
     ```
     :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Dotnet" border="true"::: 
       
-- title: Add Meetings SidePanel app to Teams
+- title: Add Meetings Side Panel to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings SidePanel App**
+    **To create a Teams meeting and add Meetings Side Panel App**
 
     1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
 
@@ -458,7 +458,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp.png" alt-text="Welcome App" border="true"::: 
    
-       The app is visible in the meeting SidePanel.         
+       The app is visible in the meeting Side Panel.         
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
