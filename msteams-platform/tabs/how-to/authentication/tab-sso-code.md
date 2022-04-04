@@ -150,7 +150,7 @@ To update the app settings:
 3. Save the file.
 
 #### View the updated file
-
+ 
 <details>
 <summary>Here's an example of `appsettings.json` update:</summary>
 
