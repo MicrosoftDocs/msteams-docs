@@ -1,3 +1,4 @@
+---
 title: Configure API permissions with Microsoft Graph
 description: Describes configuring API permissions with Microsoft Graph
 ms.topic: how-to
