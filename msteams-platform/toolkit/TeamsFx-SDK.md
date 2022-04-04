@@ -126,7 +126,7 @@ Bot related classes are stored under [bot folder](https://github.com/OfficeDev/T
 
 `TeamsBotSsoPrompt` can integrate with Bot framework. It simplifies the authentication process for developing bot application and want to leverage the Bot SSO.
 
-Required configuration: initiateLoginEndpoint, tenantId, clientId, applicationIdUri
+Required configuration: initiateLoginEndpoint, tenantId, clientId, applicationIdUri.
 
 ### Helper functions
 
@@ -139,8 +139,8 @@ TeamsFx SDK provides several helper functions to ease the configuration for thir
 `getTediousConnectionConfig` returns a tedious connection config.
 
 Required configuration:
-- sqlServerEndpoint, sqlUsername, sqlPassword if you want to use user identity
-- sqlServerEndpoint, sqlIdentityId if you want to use MSI identity
+- sqlServerEndpoint, sqlUsername, sqlPassword if you want to use user identity.
+- sqlServerEndpoint, sqlIdentityId if you want to use MSI identity.
 
 ### Error handling
 
