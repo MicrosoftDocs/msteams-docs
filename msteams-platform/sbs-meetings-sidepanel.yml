@@ -61,14 +61,14 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure AD portal
+- title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
@@ -183,11 +183,11 @@ items:
      ```
 
     > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
     **To add messaging endpoint**
 
-    1. From ngrok, copy the HTTPS URL (https to io).
+    1. From ngrok, copy the HTTPS URL.
 
         ![ngrok HTTPS URL](~/assets/images/meetings-side-panel/ngrok1.png)
 
@@ -209,7 +209,6 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -227,12 +226,9 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/exposeanapi.png" alt-text="Expose an API" border="true":::
 
-    1. Set the **Application ID URI** in the form of `api://{AppID}`.
+    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/setlink.png" alt-text="Set link" border="true":::
-
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://4d52****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
@@ -290,7 +286,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope.png" alt-text="Add client application 2" border="true":::
 
-       The following image displays the client IDs:
+       The following image displays the client Id:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications" border="true"::: 
   
@@ -332,7 +328,7 @@ items:
              :::image type="content" source="~/assets/images/meetings-side-panel/webauth.png" alt-text="Web" border="true":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://4d52****.ngrok.io/auth-end`. </br>
+           `https://your ngrok/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -349,11 +345,11 @@ items:
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseUrl"` to the fully qualified domain name.
+         * Set `"BaseUrl"` to the fully qualified ngrok domain name.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings" border="true":::
 
@@ -361,9 +357,9 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location" border="true":::
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio** and make the following changes:
 
-         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified domain name.
+         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2.png" alt-text="Manifest image2" border="true":::
@@ -407,7 +403,6 @@ items:
 - title: Add Meetings Side Panel to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meetings Side Panel App**
 
     1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
 
@@ -424,7 +419,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/addanapp.png" alt-text="Add an app" border="true":::
    
-    1. In the pop-up that opens, select **Manage apps**.
+    1. In the pop-up window opens, select **Manage apps**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/manageapps.png" alt-text="Manage apps" border="true"::: 
    
@@ -448,7 +443,7 @@ items:
     
     1. Select **Add an app**. 
     
-       In the app selection page, the app displays as **Side Panel**.
+       In the app selection page, the app is displayed as **Side Panel**.
   
         :::image type="content" source="~/assets/images/meetings-side-panel/appicon.png" alt-text="App icon in Teams" border="true"::: 
 
