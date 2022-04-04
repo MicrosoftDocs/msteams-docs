@@ -88,7 +88,7 @@ To build a tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      1. **Update sample app code**
+      3. **Update sample app code**
 
     :::column-end:::
     :::column span="2":::
@@ -104,7 +104,7 @@ To build a tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      1. **Get an access token from client side**
+      4. **Get an access token from client side**
 
     :::column-end:::
     :::column span="2":::
