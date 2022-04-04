@@ -1,24 +1,23 @@
 ---
-title: Code configuration for enabling Teams SSO for tabs
-description: Describes Code configuration for enabling Teams SSO for tabs
+title: App code configuration for enabling Teams SSO for tabs
+description: Describes app code configuration for enabling Teams SSO for tabs
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Code configuration for enabling Teams SSO for tabs
+# Update app code for enabling Teams SSO
 
-The next step is to update your sample app with the app configuration details you defined in Azure AD. Teams SSO can be implemented only with Azure Active Directory (Azure AD).
-
-## Prerequisites
+After you register your app in Azure AD, update the app properties in your app's manifest file.
+and the sample app with details configured on Azure AD.
 
 Before you update the app manifest, you'll need to:
- 
-- Build and debug the sample code
+
+- Build and debug a tab app
 - Create an ngrok tunnel
 
 ## SDK Prerequisites
 
-Teams mobile client versions supporting SSO
+Teams mobile client versions supporting SSO:
 
 - Teams for Android (1416/1.0.0.2020073101 and later)
 

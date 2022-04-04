@@ -11,11 +11,10 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 
 With Teams SSO, the access token is pre-fetched to improve app performance and load times.
 
+<!--
 ## Teams SSO for tabs at runtime
 
 The following image shows how the Teams SSO with Azure AD process works:
-
-<!-- markdownlint-disable MD033 -->
 
 :::image type="content" source="../../../assets/images/tabs/tabs-sso-diagram.png" alt-text="Tab single sign-on SSO diagram":::
 
@@ -29,13 +28,23 @@ The following image shows how the Teams SSO with Azure AD process works:
 > [!NOTE]
 > The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see Get an access token with Graph permissions- \add x-ref\.
 
-The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.-->
 
-## Build a Teams tab app with Teams SSO authentication
+## Build a Teams tab app with Teams SSO
 
-This section describes the tasks involved in creating a Teams tab that uses SSO. These tasks are language- and framework-agnostic.
+This section describes the tasks involved in implementing SSO for a tab app. These tasks are language- and framework-agnostic.
 
 To build a tab app that uses Teams SSO to authenticate users:
+
+<!-->
+| 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- |
+| Build a tab app | Register app on Azure AD | Update code for authentication | Get access token from client side |
+| For more information, see [Create a personal tab](../create-personal-tab.md) | - [Register your tab app in Azure AD](tab-sso-register-aad.md) <br> - [Create client secret](tab-sso-client-secret.md) <br> - [Configure admin consent](tab-sso-admin-consent.md) | [Update app code for enabling Teams SSO](tab-sso-code.md) | [Acquire token for MS Graph](tab-sso-token-graph.md) |
+
+> [!NOTE]
+> You can build a simple tab app and enable SSO for it.
+> **Quickstart**: The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [Create a personal tab](../create-personal-tab.md)-->
 
 :::row:::
     :::column span="":::
@@ -46,7 +55,6 @@ To build a tab app that uses Teams SSO to authenticate users:
     :::column span="2":::
         
       You can build a simple tab app and enable SSO for it.
-
       **Quickstart**: The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [Create a personal tab](../create-personal-tab.md)
     
     :::column-end:::
