@@ -11,20 +11,20 @@ ms.localizationpriority: high
 Here are the most common reasons for your app to get rejected during app certification. Ensure that your app doesn’t contain any of the common reasons addressed in this article and also follow the [Microsoft Teams store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies) to increase the likelihood of your app to pass the Microsoft Teams store submission process and help you prepare your app for [review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
 
 :::row:::
-   :::column span="":::
-      :::image type="icon" source="../../../assets/icons/broken-links-errors-icon-1.png" border="false"::: <br/>[**Broken links, Bugs and errors**](#broken-links-functional-bugs-app-crashes-and-unexpected-errors)
+   :::column:::
+      :::image type="icon" source="../../../assets/icons/broken-links-errors-icon-1.png" link="#broken-links-functional-bugs-app-crashes-and-unexpected-errors":::
    :::column-end:::
    :::column span="":::
-     :::image type="icon" source="../../../assets/icons/app-description-icon.png" border="false"::: <br/>[**App description**](#app-description)
+     :::image type="icon" source="../../../assets/icons/app-description-icon.png" link="#app-description":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/trademark-icon.png" border="false"::: <br/>[Violation of Microsoft Trademark and Brand Guidelines](#violation-of-microsoft-trademark-and-brand-guidelines)
+      :::image type="icon" source="../../../assets/icons/broken-links-errors-icon-1.png" link="#violation-of-microsoft-trademark-and-brand-guidelines":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/trademark-icon.png" border="false"::: <br/>[Testability](#violation-of-microsoft-trademark-and-brand-guidelines)
+      :::image type="icon" source="../../../assets/icons/broken-links-errors-icon-1.png" link="#testability":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/trademark-icon.png" border="false"::: <br/>[Microsoft 365 App compliance program](#violation-of-microsoft-trademark-and-brand-guidelines)
+      :::image type="icon" source="../../../assets/icons/broken-links-errors-icon-1.png" link="#violation-of-microsoft-trademark-and-brand-guidelines":::
    :::column-end:::
 :::row-end:::
 
