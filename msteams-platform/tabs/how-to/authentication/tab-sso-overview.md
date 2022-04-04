@@ -9,24 +9,6 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 
 Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is pre-fetched to improve performance and load times.
 
-> [!NOTE]
-> Teams SSO can be implemented only with Azure Active Directory (Azure AD).
-
-> [!NOTE]
-> **Teams mobile client versions supporting SSO**  
->
-> ✔Teams for Android (1416/1.0.0.2020073101 and later)
->
-> ✔Teams for iOS (_Version_: 2.0.18 and later)  
->
-> ✔Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
->
-> For the best experience with Teams, use the latest version of iOS and Android.
-> [!NOTE]
-> **Quickstart**  
->
-> The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
-
 ## Teams SSO for tabs at runtime
 
 The following image shows how the Teams SSO with Azure AD process works:
@@ -61,16 +43,17 @@ To build a tab app that uses Teams SSO to authenticate users:
     :::column-end:::
     :::column span="2":::
         
-      For this section, you'll use the Teams tab sample app.
+      You can build a simple tab app and enable SSO for it.
 
-        - [Download the sample app](#download-the-code-sample)
+       **Quickstart**  
+      The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
     
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
 
-      2. **Register your app with Azure AD**
+      1. **Register your app with Azure AD**
 
     :::column-end:::
     :::column span="2":::
