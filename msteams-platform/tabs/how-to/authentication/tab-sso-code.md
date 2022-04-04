@@ -152,7 +152,13 @@ To update the app settings:
 #### View the updated file
 
 <details>
-<summary>Here's an example of app manifest after it's updated:</summary>
+<summary>Here's an example of `appsettings.json` update:</summary>
+
+This following sample details are configured in Azure AD:
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-overview.png" alt-text="Overview of app details on Azure AD portal":::
+
+The authentication details from Azure AD are updated in `appsettings.json`:
 
 ```json
     "AzureAd": {
@@ -165,9 +171,5 @@ To update the app settings:
     "ValidIssuers": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0,https://sts.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47/"
   },
 ```
-
-This example is updated as per sample details configured in Azure AD:
-
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-overview.png" alt-text="Overview of app details on Azure AD portal":::
 
 </details>
