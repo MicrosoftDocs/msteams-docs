@@ -257,7 +257,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
 
-1. Select **Add** in the pop-up window. Your tab is uploaded to Teams.
+1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
 
@@ -414,9 +414,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
-
-1. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
@@ -585,9 +583,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
-
-1. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 

@@ -193,7 +193,7 @@ gulp ngrok-serve
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab" border="true":::
 
-1. Select **Add** in the pop-up window. Your tab is uploaded to Teams.
+1. Select **Add** in the dialog. Your tab is uploaded to Teams.
     
     > [!NOTE]
     > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
@@ -205,7 +205,7 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Follow the directions for adding a tab. There is a custom configuration dialog box for your channel or group tab.
+1. Follow the directions for adding a tab. There is a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded" border="true":::
@@ -414,9 +414,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
-
-1. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
@@ -634,9 +632,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
-
-1. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
