@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK for TypeScript or JavaScript
 
-TeamsFx helps to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single-line statements with zero configuration.
+TeamsFx helps to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single line statements with zero configuration.
 
 Use the library to:
 
