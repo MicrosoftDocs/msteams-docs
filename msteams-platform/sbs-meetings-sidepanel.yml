@@ -106,7 +106,7 @@ items:
 
     1. Select **Review + create**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/appidcreate.png" alt-text="Create Microsoft App ID" border="true":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/Review-create.png" alt-text="Create Microsoft App ID" border="true":::
 
     1. If the validation passes, select **Create**. 
 
@@ -168,11 +168,11 @@ items:
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/terms.png" alt-text="Terms of service" border="true":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/terms-of-service1.png" alt-text="Terms of service" border="true":::
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/config-teams1.png" alt-text="Select Teams" border="true":::  
+        :::image type="content" source="~/assets/images/meetings-side-panel/apply-1.png" alt-text="Select Teams" border="true":::  
     
     **To create tunnel for local web server**
 
