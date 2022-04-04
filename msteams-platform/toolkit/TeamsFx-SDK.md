@@ -51,7 +51,7 @@ TeamsFx SDK is built to be used in browser and NodeJS environment. Common scenar
 
 ### Create and authenticate a service like `MicrosoftGraphClient`
 
-* To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers. Choose the proper identity type and follow the steps below:
+* To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.     Choose the proper identity type and follow the steps below:
 
 #### Invoke Graph API without user (Application Identity)
 
@@ -93,13 +93,13 @@ Using `new TeamsFx(IdentityType.App)` means the application is authenticated as 
 - User Identity: You can access resources on behalf of current Teams user.
 - App Identity: You are acting as a managed app identity which needs admin consent for resources.
 
-### Credentials
+### Credential
 
 Developers must choose identity type when initializing TeamsFx. 
 SDK provides 2 types namely: User and App.
 After developer has specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
 
-There are 3 credential classes located under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) to help to simplify authentication.
+There are 3 credential classes located under to help to simplify authentication.[credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
 Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs. They are designed to provide access tokens for specific scopes. Other APIs relies on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
 
@@ -124,7 +124,7 @@ Required configuration: tenantId, clientId, clientSecret / certificateContent.
 
 Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` can integrate with Bot framework. It simplifies the authentication process for developing bot application and want to leverage the Bot SSO.
+`TeamsBotSsoPrompt` has a good integration with Bot framework. It simplifies the authentication process when you develops bot application and want to leverage the Bot SSO.
 
 Required configuration: initiateLoginEndpoint, tenantId, clientId, applicationIdUri.
 
