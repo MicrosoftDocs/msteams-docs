@@ -19,7 +19,7 @@ Microsoft Teams app Store provides features that enable you to monetize your app
     :::column-end:::
     :::column span="2":::
 
-[Include a SaaS offer with your app](#include-a-saas-offer-with-your-app)
+
 
     :::column-end:::
 :::row-end:::
