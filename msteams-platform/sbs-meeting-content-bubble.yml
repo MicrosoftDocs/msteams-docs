@@ -36,18 +36,15 @@ items:
 
     * Microsoft Teams with a valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-      Ensure you have working knowledge of [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
-
 - title: Set up local environment
   durationInMinutes: 1
-  content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+  content: | 
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
@@ -60,11 +57,11 @@ items:
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    The following steps help you to create and register your bot in Azure portal:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
@@ -81,9 +78,11 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
-    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
+    1. Select your **Resource group** from the dropdown list.
+     
+     You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. Select the required location from **New resource group location** dropdown list.
+    1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
         ![Create resource Azure bot](~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png)
 
@@ -93,6 +92,8 @@ items:
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
+
+    1. Select **Type of App** as **Multi Tenant**
 
     1. Select **Review + create**.
 
@@ -117,11 +118,7 @@ items:
     1. In the left panel, select **Configuration**. 
 
        > [!TIP]
-       > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **Multitenant** under **Bot Type**.
-
-       ![Microsoft App ID](~/assets/images/meeting-content-bubble/bot-type.png)       
+       > Save the **Microsoft App ID** or **Client ID** for future reference.      
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -146,7 +143,7 @@ items:
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
 
-    **To add the Microsoft Teams channel**
+    **To add the Teams channel**
 
     1. Select **Home**.
 
@@ -162,7 +159,7 @@ items:
 
           ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
 
-    1. Select **Save**.
+    1. Select **Apply**.
 
           ![Select Teams](~/assets/images/meeting-token-generator/config-teams.png)   
     
@@ -174,9 +171,13 @@ items:
      ngrok http -host-header=localhost 3978
      ```
 
+    > [!TIP]
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+    
+    
     **To add messaging endpoint**
 
-    1. From ngrok, copy the HTTPS URL (https to io).
+    1. From ngrok, copy the HTTPS URL.
 
         ![ngrok HTTPS URL](~/assets/images/meeting-content-bubble/meeting-content-bubble-messaging-end-point.png)
 
@@ -211,12 +212,11 @@ items:
 
     1. Select **Set**.
 
-    1. Set the **Application ID URI** in the form of `api://{AppID}`.
+    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
        ![Set link](~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api.png)
 
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://****.ngrok.io/{AppID}`</br>
+       The following image shows the domain name:
         
         ![App ID URI](~/assets/images/meeting-content-bubble/meeting-content-bubble-expose-api.png)
 
@@ -272,7 +272,7 @@ items:
 
          ![Add client application](~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png)
 
-       The following image displays the client IDs:
+       The following image displays the client Id:
 
          ![Client applications](~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png) 
 
@@ -312,7 +312,7 @@ items:
             ![Web](~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://****.ngrok.io/auth-end`. </br>
+           `https://your ngrok/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -329,7 +329,7 @@ items:
 
         ![App settings location](~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png)
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
@@ -342,7 +342,7 @@ items:
   content: |
     1. Navigate to **manifest.json** in cloned repository.
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio** and make the following changes:
 
          * Set `id` to `[MicrosoftAppId]`
          * Set `botId` to `[MicrosoftAppId]`
@@ -358,7 +358,7 @@ items:
   content: |
     **To build and run the service using Visual Studio 2019**
 
-       1. Launch **Visual Studio 2019**.
+       1. Open **Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
@@ -367,7 +367,7 @@ items:
 
           ![Open file](~/assets/images/meeting-content-bubble/proj-sln.png)
 
-       1. Press **fn+F5** to run the project.
+       1. Press **F5** to run the project.
 
           A webpage opens with a message **Your bot is ready!**.
 
@@ -382,7 +382,9 @@ items:
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
+
        * icon-outline.png
+
        * icon-color.png
 
        ![Zip file](~/assets/images/meeting-content-bubble/create-manifest-zip.png) 
@@ -393,7 +395,7 @@ items:
 
        ![Add an app](~/assets/images/meeting-content-bubble/add-an-app.png) 
    
-    1. In the pop-up that opens, select **Manage apps**.
+    1. In the pop-up window opens, select **Manage apps**.
 
        ![Manage apps](~/assets/images/meeting-content-bubble/manage-apps.png)
    
