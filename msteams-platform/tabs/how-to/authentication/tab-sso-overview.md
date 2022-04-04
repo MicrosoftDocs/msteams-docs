@@ -43,7 +43,7 @@ The following image shows how the Teams SSO with Azure AD process works:
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see Get an access token with Graph permissions- \add x-ref\.
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
@@ -78,9 +78,10 @@ To build a tab app that uses Teams SSO to authenticate users:
       Your Teams app users are authenticated using their Teams user credentials and Azure AD provides an access token for them.
       You'll need to create a new tab app registration in Azure AD:
 
-      - [Register your new Teams app](#register-your-app)
-      - [Configure API permissions](#configure-api-permissions-with-microsoft-graph)
-      - [Expose an API](#expose-an-api)
+      - [Register your tab application in Azure AD](tab-sso-register-aad.md)
+      - [Configure API permissions with Microsoft Graph](tab-sso-graph-api.md)
+      - [Configure admin consent](tab-sso-admin-consent.md)
+      - 
       - [Create client secret](#create-client-secret)
 
     :::column-end:::
@@ -88,7 +89,7 @@ To build a tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      3. **Update sample app code**
+      1. **Update sample app code**
 
     :::column-end:::
     :::column span="2":::
@@ -96,15 +97,15 @@ To build a tab app that uses Teams SSO to authenticate users:
       After you register your app in Azure AD, update the app properties in your app's manifest file.
       Next, you update the sample app with details configured on Azure AD in:
 
-      - [Update the app manifest, `manifest.json`](#update-the-app-manifest)
-      - [Update `appsetting.json`](#update-azure-ad-details)
+      - Update the app manifest, `manifest.json` \Add x-ref\
+      - Update `appsetting.json` \Add x-ref\
 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
 
-      4. **Get an access token from client side**
+      1. **Get an access token from client side**
 
     :::column-end:::
     :::column span="2":::

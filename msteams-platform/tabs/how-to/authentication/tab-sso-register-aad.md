@@ -14,14 +14,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
    In this section, you'll learn how to register and configure the Azure AD app that can be used to implement SSO in a Microsoft Teams tab app.
 
-   To complete the registration of your tab app in Azure AD:
-
-   1. [Register your app](#register-your-app)
-   1. [Configure API permissions with Microsoft Graph](#configure-api-permissions-with-microsoft-graph)
-   2. [Expose an API](#expose-an-api)
-   3. [Create a client secret](#create-client-secret)
-
-### Register your app
+## Register your app
 
 In this section, you'll learn to create and register an Azure-based Teams tab app.
 
