@@ -372,7 +372,11 @@
       - name: Configure app code for authentication
         href: tabs/how-to/authentication/tab-sso-code.md
       - name: Configure API permissions with Microsoft Graph
-        href: tabs/how-to/authentication/tab-sso-graph-api.md  
+        href: tabs/how-to/authentication/tab-sso-graph-api.md
+      - name: Acquire token for MS Graph
+        href: tabs/how-to/authentication/tab-sso-token-graph.md
+      - name: Troubleshooting
+        href: tabs/how-to/authentication/tab-sso-troubleshooting.md
   - name: Tabs
     items:
     - name: Authentication flow in tabs
