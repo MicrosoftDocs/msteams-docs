@@ -9,12 +9,12 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 
 The next step is to update your sample app with the app configuration details you defined in Azure AD. Teams SSO can be implemented only with Azure Active Directory (Azure AD).
 
-> [!NOTE]
-> **Prerequisites**:
-> Before you update the app manifest, you'll need to:
-> 
-> - Build and debug the sample code
-> - Create an ngrok tunnel
+## Prerequisites
+
+Before you update the app manifest, you'll need to:
+ 
+- Build and debug the sample code
+- Create an ngrok tunnel
 
 ## SDK Prerequisites
 

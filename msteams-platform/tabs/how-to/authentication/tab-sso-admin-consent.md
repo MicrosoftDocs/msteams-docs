@@ -7,12 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Configure admin consent
 
-To configure admin consent:
-
-- [Configure admin consent](#configure-admin-consent)
-  - [To expose an API](#to-expose-an-api)
-  - [To configure API scope](#to-configure-api-scope)
-  - [To configure authorized client application](#to-configure-authorized-client-application)
+You can define app scope for an exposed API and determine if users can consent to this scope in directories where user consent is enabled. You can let only admins provide consent for higher-privileged permissions.
 
 ## To expose an API
 
