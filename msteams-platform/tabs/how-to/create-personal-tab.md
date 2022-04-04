@@ -19,8 +19,6 @@ Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) t
 
 ## Create a personal tab with Node.js
 
-To create a personal tab with Node.js
-
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
 
     ```cmd
@@ -173,8 +171,8 @@ Create a content page and update the existing files of the personal tab applicat
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -274,8 +272,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## Create a personal tab with ASP.NET Core
-
-You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with ASP.NET Core
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -439,8 +435,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## Create a personal tab with ASP.NET Core MVC
-
-You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC
 
 1. At the command prompt, create a new directory for your tab project.
 
