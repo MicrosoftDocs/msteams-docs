@@ -51,7 +51,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/clonerepository1.png" alt-text="Clone repository" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clonerepository1.png" alt-text="Clone repository" border="true":::
 
     1. Select **Clone**. 
 
@@ -68,7 +68,7 @@ items:
 
     1. Select **New registration**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/newregisteration.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/newregisteration.png" alt-text="New registration" border="true":::
 
     1. On the **Register an application** page, set the value as follows:
 
@@ -78,14 +78,14 @@ items:
 
        * Leave the **Redirect URI** empty.
 
-       * Select **Register**.
+       * Select **Register*
 
-        ![Register](~/assets/images/sbs-graphactivity-feedbroadcast/register.png)
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
+
     1. From the app **Overview** page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
 
-        ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/overview.png)
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/overview.png" alt-text="New registration" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/overview.png" alt-text="New registration" border="true":::
+
     **To create tunnel for local web server**
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
@@ -101,19 +101,18 @@ items:
 
     1. Select **Set**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="New registration" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="New registration" border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       ![Set link](~/assets/images/sbs-graphactivity-feedbroadcast/setlinkapplication.png)
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/setlinkapplication.png" alt-text="Set a link" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlinkapplication.png" alt-text="Set a link" border="true":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://bff2****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Save a link" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Save a link" border="true":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -121,7 +120,7 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
 
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -141,7 +140,7 @@ items:
   
     1. Select **Add scope** to save.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/addascopeuser.png" alt-text="Add scope" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascopeuser.png" alt-text="Add scope" border="true":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -153,23 +152,23 @@ items:
     
     1. Select **Add a client application**. 
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/selectclientapp.png" alt-text="Select client" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectclientapp.png" alt-text="Select client" border="true":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png" alt-text="Add client application" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png" alt-text="Add client application" border="true":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png" alt-text="Add client" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png" alt-text="Add client" border="true":::
 
     1. Select **Authorized scopes**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/authorizedscope.png" alt-text="Authroized scope" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/authorizedscope.png" alt-text="Authroized scope" border="true":::
 
        The following image displays the client IDs:
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
 
     1. In the left panel, select **API Permissions**. 
 
@@ -178,7 +177,7 @@ items:
 
     1. Select **Add a permission**.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/addpermission.png" alt-text="Add a permission" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addpermission.png" alt-text="Add a permission" border="true":::
 
     1. Select **Microsoft Graph**.
 
@@ -193,9 +192,9 @@ items:
          * **TeamsActivity.Send**
          * **TeamsAppInstallation.ReadForUser.All**
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Permission" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Permission" border="true":::
 
-           :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Permission" border="true":::
+           :::image type="content" source=".~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Permission" border="true":::
 
     1. Select **Add permissions**.
 
@@ -211,9 +210,9 @@ items:
          * **TeamsActivity.Send** 
          * **Directory.Read.All**
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png" alt-text="Request permission" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png" alt-text="Request permission" border="true":::
 
-           :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png" alt-text="Request permission" border="true":::  
+           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png" alt-text="Request permission" border="true":::  
 
     1. Select **Add permissions**.
 
@@ -226,7 +225,7 @@ items:
 
          1. Select **Web**.
 
-             :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png" alt-text="Add platform" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png" alt-text="Add platform" border="true":::
 
          1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
            `https://bff2****.ngrok.io/Auth/end`. </br>
@@ -237,13 +236,13 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/configureweb.png" alt-text="Configure web" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configureweb.png" alt-text="Configure web" border="true":::
 
          1. Select **Add URI** and enter `https://bff2****.ngrok.io/Auth/Start`. 
 
          1. Select **Save**.
 
-             :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/redirect.png" alt-text="Redirect uri" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/redirect.png" alt-text="Redirect uri" border="true":::
 
 
     **To create client secret**
@@ -252,7 +251,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/clientsecret.png" alt-text="Client secret" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecret.png" alt-text="Client secret" border="true":::
     
        The **Add a client secret** window appears.  
 
@@ -260,11 +259,11 @@ items:
     
     1. Select **Add**.
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/secretsave.png" alt-text="Secret id" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secretsave.png" alt-text="Secret id" border="true":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/clientsecretcode.png" alt-text="Client secret code" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecretcode.png" alt-text="Client secret code" border="true":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -275,7 +274,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-          :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png" alt-text="App settings location" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png" alt-text="App settings location" border="true":::
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -284,19 +283,18 @@ items:
          * Set `"BaseUrl"` to the `[WebAppDomainName]`.
 
       
-      :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/appsettingjson.png" alt-text="Appsettings" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingsjson.png" alt-text="Appsettings" border="true":::
     1. Navigate to **manifest.json** in cloned repository.
 
         ![Manifest file location](~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png)
-         :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png" alt-text="Manifest location" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png" alt-text="Manifest location" border="true":::
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
          * Set `validDomains` to `[WebAppDomainName]`.
 
-        ![Manifest image2](~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png)
- :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png" alt-text="Manifest file" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png" alt-text="Manifest file" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -308,23 +306,22 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png)
- :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
+
        1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
 
-          ![Solution File](~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png)
-             :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/openproject.png" alt-text="Open a project" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png" alt-text="Open a project" border="true":::
+
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
-           :::image type="content" source="../msteams-platform/assets/images/meeting-token-generator/meeting-token-generator-certificate.png" alt-text="Select certificate" border="true":::
+      :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png" alt-text="Select certificate" border="true":::
 
           A webpage opens with a message **Your bot is ready!**.
 
           ![App is ready](~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png)
-           :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/appisready.png" alt-text="App is ready" border="true":::
+           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png" alt-text="App is ready" border="true":::
 
    
 - title: Add activity feed broadcast app to Teams
@@ -340,8 +337,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       ![Zip file](~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png) 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="SElect zip file" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="SElect zip file" border="true":::
     
     1. Go to **Microsoft Teams**.
 
@@ -351,29 +347,25 @@ items:
     
     1. Select **Upload a custom app**. 
 
-       ![Upload custom app](~/assets/images/sbs-graphactivity-feedbroadcast/uploadacustomapp.png)
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/uploadacustomapp.png" alt-text="Upload a custom app" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/uploadacustomapp.png" alt-text="Upload a custom app" border="true":::
 
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
-       ![Select zip file](~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png)
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text=Open a custom app" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text=Open a custom app" border="true":::
 
     1. Select **Add**.
 
-       ![Add an app](~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png) 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png" alt-text="Add app" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png" alt-text="Add app" border="true":::
    
           The app is visible in the meeting SidePanel.      
 
     1. The **Broadcast Tab** displays Message title and Message description.
 
-        ![Output](~/assets/images/sbs-graphactivity-feedbroadcast/output1.png) 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/output1.png" alt-text="Output" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output1.png" alt-text="Output" border="true":::
 
     1. Enter the message and select **Send message**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/output2.png" alt-text="Output" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output2.png" alt-text="Output1" border="true":::
 
      
 - title: Complete challenge
@@ -381,8 +373,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Activity feed](~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png)
-        :::image type="content" source="../msteams-platform/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="New registration" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="New registration" border="true":::
 
 
 - content: |
