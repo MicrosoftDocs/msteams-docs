@@ -1,15 +1,15 @@
 ---
-title: Configure API permissions with Microsoft Graph
-description: Describes configuring API permissions with Microsoft Graph
+title: Configure Admin consent
+description: Describes configuring Admin consent
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Configure API permissions with Microsoft Graph
+# Configure admin consent
 
-To configure API permissions with Microsoft Graph:
+To configure admin consent:
 
-- [Configure API permissions with Microsoft Graph](#configure-api-permissions-with-microsoft-graph)
+- [Configure admin consent](#configure-admin-consent)
   - [To expose an API](#to-expose-an-api)
   - [To configure API scope](#to-configure-api-scope)
   - [To configure authorized client application](#to-configure-authorized-client-application)
