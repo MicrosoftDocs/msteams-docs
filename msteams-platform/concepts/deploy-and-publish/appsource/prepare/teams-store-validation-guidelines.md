@@ -26,9 +26,10 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 </details>
 
-
 ### App name
 
+<details>
+<summary><b>App name</b></summary>
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with Microsoft [commercial certification policy number 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) and provides additional guidance to developers on naming their apps.
@@ -56,6 +57,8 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
  > [!TIP]  
  > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+
+</details>
 
 ### Suitable for workplace consumption
 
