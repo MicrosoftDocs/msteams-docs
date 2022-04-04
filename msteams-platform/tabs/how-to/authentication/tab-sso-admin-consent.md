@@ -4,11 +4,11 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Expose an API
+# Configure API permissions with Microsoft Graph
 
-In this section, you'll learn to:
+To configure API permissions with Microsoft Graph:
 
-- [Expose an API](#expose-an-api)
+- [Configure API permissions with Microsoft Graph](#configure-api-permissions-with-microsoft-graph)
   - [To expose an API](#to-expose-an-api)
   - [To configure API scope](#to-configure-api-scope)
   - [To configure authorized client application](#to-configure-authorized-client-application)
