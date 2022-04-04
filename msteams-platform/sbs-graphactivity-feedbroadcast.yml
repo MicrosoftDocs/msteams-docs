@@ -26,7 +26,7 @@ items:
 
     You'll see the following output:
 
-      ![Activity feed](~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png)
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Clone repository" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -105,7 +105,7 @@ items:
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlinkapplication.png" alt-text="Set a link" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Set a link" border="true":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://bff2****.ngrok.io/{AppID}`</br>
@@ -242,7 +242,7 @@ items:
 
          1. Select **Save**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/redirect.png" alt-text="Redirect uri" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/adduri.png" alt-text="Redirect uri" border="true":::
 
 
     **To create client secret**
@@ -351,7 +351,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text=Open a custom app" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text="Open a custom app" border="true":::
 
     1. Select **Add**.
 
