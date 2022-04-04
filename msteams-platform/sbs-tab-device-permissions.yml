@@ -25,7 +25,7 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
+    * [Microsoft Teams] (https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
     * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
     * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
@@ -45,6 +45,19 @@ items:
        :::image type="content" source="~/msteams-platform/assets/images/tab-device-permission/clone-repository.png" alt-text="cloning the repository" border="true":::
 
      1. Select **Clone**. 
+
+- title: Set up tunnel for local web server
+  durationInMinutes: 1
+  content: |    
+     Use ngrok or **Command Prompt** to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+     ```bash
+     ngrok http -host-header=localhost 3978
+     ``` 
+       > [!TIP]
+       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+
+       :::image type="content" source="~/msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png" alt-text="tunnelling" border="true":::
 
 - title: Configure and run the Tab device permissions app on Teams
   durationInMinutes: 1
