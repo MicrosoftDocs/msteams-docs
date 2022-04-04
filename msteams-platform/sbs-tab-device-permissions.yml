@@ -25,10 +25,10 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/microsoft-365/dev-program)
-    * [Visual Studio code](https://code.visualstudio.com/Download)
-    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt
+    * [Microsoft Teams](https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
+    * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
+    * [Latest version of nodejs](https://nodejs.org/en/download/)
+    * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -38,8 +38,6 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-    Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
-
      1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
      1. Select **Code**.
      1. From the dropdown menu, select **Open with GitHub Desktop**.
