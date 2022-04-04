@@ -81,8 +81,7 @@ To build a tab app that uses Teams SSO to authenticate users:
       - [Register your tab application in Azure AD](tab-sso-register-aad.md)
       - [Configure API permissions with Microsoft Graph](tab-sso-graph-api.md)
       - [Configure admin consent](tab-sso-admin-consent.md)
-      - 
-      - [Create client secret](#create-client-secret)
+      - [Create client secret](tab-sso-client-secret.md)
 
     :::column-end:::
 :::row-end:::
