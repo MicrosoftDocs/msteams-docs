@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 02/08/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/concepts/design/activity-feed-notifications.md
+  nextTutorialHref: concepts/design/activity-feed-notifications.md
   nextTutorialTitle: Read more on activity feed notifications.
   ms.custom: mvc
   ms.localizationpriority: high
@@ -152,7 +152,7 @@ items:
     
     1. Select **Add a client application**. 
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectclientapp.png" alt-text="Select client" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaclient.png" alt-text="Select client" border="true":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
@@ -194,7 +194,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Permission" border="true":::
 
-           :::image type="content" source=".~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Permission" border="true":::
+          :::image type="content" source=".~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Permission" border="true":::
 
     1. Select **Add permissions**.
 
@@ -212,7 +212,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png" alt-text="Request permission" border="true":::
 
-           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png" alt-text="Request permission" border="true":::  
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png" alt-text="Request permission" border="true":::  
 
     1. Select **Add permissions**.
 
@@ -275,6 +275,7 @@ items:
     1. Navigate to **appsettings.json** in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png" alt-text="App settings location" border="true":::
+
     1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
@@ -283,18 +284,19 @@ items:
          * Set `"BaseUrl"` to the `[WebAppDomainName]`.
 
       
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingsjson.png" alt-text="Appsettings" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingsjson.png" alt-text="Appsettings" border="true":::
+
     1. Navigate to **manifest.json** in cloned repository.
 
-        ![Manifest file location](~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png)
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png" alt-text="Manifest location" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png" alt-text="Manifest location" border="true":::
+
     1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
 
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
          * Set `validDomains` to `[WebAppDomainName]`.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png" alt-text="Manifest file" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png" alt-text="Manifest file" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -306,22 +308,21 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
 
        1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png" alt-text="Open a project" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png" alt-text="Open a project" border="true":::
 
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-      :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png" alt-text="Select certificate" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png" alt-text="Select certificate" border="true":::
 
-          A webpage opens with a message **Your bot is ready!**.
+          A webpage opens with a message **Your bot is ready!**
 
-          ![App is ready](~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png)
-           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png" alt-text="App is ready" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appisready.png" alt-text="App is ready" border="true":::
 
    
 - title: Add activity feed broadcast app to Teams
@@ -361,7 +362,7 @@ items:
 
     1. The **Broadcast Tab** displays Message title and Message description.
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output1.png" alt-text="Output" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output1.png" alt-text="Output" border="true":::
 
     1. Enter the message and select **Send message**.
 
