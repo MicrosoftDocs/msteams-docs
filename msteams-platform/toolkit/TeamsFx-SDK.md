@@ -44,12 +44,12 @@ npm install @microsoft/teamsfx
 
 ### Scenarios
 
-TeamsFx SDK is built to be used in browser and NodeJS environment. Common scenarios include:
+TeamsFx SDK is built to be used in browser and Node.js environment. Common scenarios include:
 - Teams tab application
 - Azure Function
 - Teams bot
 
-### Create and authenticate a service like `MicrosoftGraphClient`
+### Create and authenticate a `MicrosoftGraphClient` service
 
 To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.The following steps helps you to choose the proper identity type:
 
@@ -81,7 +81,7 @@ When creating a TeamsFx instance, you also need to specify the identity type.
 There are 2 identity types:
 
 #### User Identity
-Using `new TeamsFx(IdentityType.User)` means the application is authenticated as current Teams user. This one is the default choice. You need to call `TeamsFx:setSsoToken()` when you use user identity in NodeJS environment (without browser).
+Using `new TeamsFx(IdentityType.User)` means the application is authenticated as current Teams user. This one is the default choice. You need to call `TeamsFx:setSsoToken()` when you use user identity in Node.js environment (without browser).
 
 You can use `TeamsFx:getUserInfo()` to get user's basic information.
 `TeamsFx:login()` is used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes.
@@ -110,13 +110,13 @@ Here's the corresponding scenarios for each credential class targets.
 
 Required configuration: initiateLoginEndpoint, clientId.
 
-#### User Identity in NodeJS environment
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams ssoToken. It's designed to be used in Azure Function or Bot scenarios. SDK uses this credential when developer choose "User" identity in NodeJS environment.
+#### User Identity in Node.js environment
+`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams ssoToken. It's designed to be used in Azure Function or Bot scenarios. SDK uses this credential when developer choose "User" identity in Node.js environment.
 
 Required configuration: authorityHost, tenantId, clientId, clientSecret / certificateContent.
 
-#### Application Identity in NodeJS environment
-`AppCredential` represents the application identity. It is usually used when user is not involved like time-triggered automation job. SDK uses this credential when developer choose "App" identity in NodeJS environment.
+#### Application Identity in Node.js environment
+`AppCredential` represents the application identity. It is usually used when user is not involved like time-triggered automation job. SDK uses this credential when developer choose "App" identity in Node.js environment.
 
 Required configuration: tenantId, clientId, clientSecret / certificateContent.
 
