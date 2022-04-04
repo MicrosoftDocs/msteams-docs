@@ -21,7 +21,7 @@ items:
       ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
 
 
-- title: Prerequisites
+- title: Prerequisites?
   durationInMinutes: 1
   content: |
     Ensure that you install the following tools and set up your development environment:  
