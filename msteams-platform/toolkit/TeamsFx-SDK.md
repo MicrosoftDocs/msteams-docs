@@ -24,8 +24,8 @@ For more information, see [Teams app project](https://github.com/OfficeDev/Teams
 
 ### Prerequisites
 
-* Node.js version `10.x.x` or later.
-* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies. Ensure they are of the same version and the version is `>= 4.15.0`. ([Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+* Latest version of Node.js.
+* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies. Ensure they are of the same version and the version is `>= 4.15.0`. ([Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)).
 
 For more information, see:
 
@@ -51,12 +51,12 @@ TeamsFx SDK is built to be used in browser and NodeJS environment. Common scenar
 
 ### Create and authenticate a service like `MicrosoftGraphClient`
 
-* To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.     Choose the proper identity type and follow the steps below:
+To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.The following steps helps you to choose the proper identity type:
 
 #### Invoke Graph API without user (Application Identity)
 
 It doesn't require the interaction with Teams user. You can call Microsoft Graph as application identity.
-Use the snippet below:
+Use the following snippet:
 
 ```ts
 // Equivalent to:
