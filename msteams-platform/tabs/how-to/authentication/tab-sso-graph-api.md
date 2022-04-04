@@ -2,7 +2,7 @@ title: Configure API permissions with Microsoft Graph
 description: Describes configuring API permissions with Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
 # Configure API permissions with Microsoft Graph
 
