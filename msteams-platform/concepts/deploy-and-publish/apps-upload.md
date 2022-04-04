@@ -28,17 +28,16 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 
 You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
-1. Log in to the Teams client with your [Microsoft 365 development account](~/build-your-first-app/build-and-run.md#prerequisites).
+1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
 1. Select **Apps** and select **Manage your apps**.
 1. Select **Upload a custom app**.
-1. Select your app package .zip file, the following screen appears:
+1. Select your app package .zip file.
+2. Add your app to Teams as per your requirement:</br>
 
-    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
+   a. Select **Add** to add your personal app.</br>
+   b. Use the dropdown menu to add your app to a Team or chat.
 
-1. Select **Add** to add your app to Teams.
-
-    > [!NOTE]
-    > `onInstallationUpdateActivityAsync()` method is used to get Microsoft Teams Locale while adding the bot to Microsoft Teams.
+![Create a Teams app](~/assets/videos/app-teams.gif)
 
 ## Troubleshooting
 
@@ -61,7 +60,9 @@ You don't have to sideload your app again if you make code changes (these are re
 To remove your app, right click the app icon in Teams and select **Uninstall**.
 
 > [!NOTE]
-> You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+>
+> * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [Publish your app to the Microsoft Teams store](appsource/publish.md).
 
 ## Next step
 
