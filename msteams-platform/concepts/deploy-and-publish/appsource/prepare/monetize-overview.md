@@ -16,11 +16,26 @@ Microsoft Teams app Store provides features that enable you to monetize your app
 :::row:::
     :::column:::
         :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app" link="#include-a-saas-offer-with-your-app":::
+
     :::column-end:::
-    :::column span="2":::
+    :::column span="":::
+        
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app" link="#include-a-saas-offer-with-your-app":::
+    
+    :::column-end:::
+    :::column span="":::
 
+       :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app" link="#include-a-saas-offer-with-your-app":::
 
-
+    :::column-end:::
+    :::column span="":::
+        
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app" link="#include-a-saas-offer-with-your-app":::
+    
+    :::column-end:::
+    :::column span=""::: 
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="Charge a price for your app" link="#include-a-saas-offer-with-your-app":::
+    
     :::column-end:::
 :::row-end:::
 
