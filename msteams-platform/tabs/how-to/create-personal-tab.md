@@ -587,7 +587,7 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
 
-1. The **Add** page appears for your app.
+1. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 

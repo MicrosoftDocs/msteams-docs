@@ -416,7 +416,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
 
-1. The app details window appears for your app in Teams.
+1. The **Add** page appears for your app in Teams.
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
@@ -636,7 +636,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
 
-1. The app details window appears for your app in Teams.
+1. The **Add** page appears for your app in Teams.
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
