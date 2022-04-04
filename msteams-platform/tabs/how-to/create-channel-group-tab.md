@@ -324,7 +324,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Update your application
 
-1. Open Visual Studio Solution Explorer and go to to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
+1. Open Visual Studio Solution Explorer and go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
