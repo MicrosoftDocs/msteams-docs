@@ -365,9 +365,14 @@
         href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Register your app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
+      - name: Create client secret
+        href: tabs/how-to/authentication/tab-sso-client-secret.md
       - name: Configure admin consent
         href: tabs/how-to/authentication/tab-sso-admin-consent.md
-      - name: 
+      - name: Configure app code for authentication
+        href: tabs/how-to/authentication/tab-sso-code.md
+      - name: Configure API permissions with Microsoft Graph
+        href: tabs/how-to/authentication/tab-sso-graph-api.md  
   - name: Tabs
     items:
     - name: Authentication flow in tabs
