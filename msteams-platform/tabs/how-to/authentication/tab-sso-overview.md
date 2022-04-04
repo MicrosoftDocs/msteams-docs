@@ -7,7 +7,9 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Enable Teams single sign-on (SSO) in a tab application
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is pre-fetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365 and Microsoft Outlook. You can use single sign-on to authorize your tab app on desktop or mobile clients. If a user signs in once, they don't have to sign in again on any other device as they're signed in automatically.
+
+With Teams SSO, the access token is pre-fetched to improve app performance and load times.
 
 ## Teams SSO for tabs at runtime
 
@@ -45,15 +47,14 @@ To build a tab app that uses Teams SSO to authenticate users:
         
       You can build a simple tab app and enable SSO for it.
 
-       **Quickstart**  
-      The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+      **Quickstart**: The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [Create a personal tab](../create-personal-tab.md)
     
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
 
-      1. **Register your app with Azure AD**
+      2. **Register your app with Azure AD**
 
     :::column-end:::
     :::column span="2":::
@@ -77,10 +78,9 @@ To build a tab app that uses Teams SSO to authenticate users:
     :::column span="2":::
 
       After you register your app in Azure AD, update the app properties in your app's manifest file.
-      Next, you update the sample app with details configured on Azure AD in:
+      Next, you update the sample app with details configured on Azure AD.
 
-      - Update the app manifest, `manifest.json` \Add x-ref\
-      - Update `appsetting.json` \Add x-ref\
+      - [Code configuration for enabling Teams SSO for tabs](tab-sso-code.md)
 
     :::column-end:::
 :::row-end:::
