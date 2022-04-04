@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Meeting Side Panel enhances your in-meeting experience and it helps organizers and presenters to have different set of views and actions. In the meeting and in all scenarios, the app is rendered in an in-meeting tab. Messaging extension work as expected when a user is in an in-meeting view. 
+    The Meeting Side Panel enhances your in-meeting experience and helps organizers and presenters to have different set of views and actions. The app is rendered in an in-meeting tab in the meeting and in all scenarios. When a user is in a meeting view, the messaging extension works as expected. 
 
     
 
     Key features of Meeting Side Panel
 
-    * It gives provision to add new agenda point.
-    * Adds the agenda as text input to the **Side Panel** agenda list.
+    * Gives provision to add new agenda point.
+    * Adds the agenda as text input to the **Side Panel** list.
     * Publish the agenda list to the meeting chat. 
     
     This step-by-step guide helps you to generate **Side Panel** app to add and publish agenda.
@@ -47,7 +47,7 @@ items:
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
       > [!NOTE]
-      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting side panel.
+      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions earlier to it don't support meeting side panel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -102,7 +102,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as **Multi Tenant**
+    1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
 
@@ -371,7 +371,7 @@ items:
 
     # [Visual Studio](#tab/vs)
 
-       1. Launch **Visual Studio**.
+       1. Open **Visual Studio**.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Open file" border="true":::
