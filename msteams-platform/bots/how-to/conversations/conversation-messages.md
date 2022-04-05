@@ -217,6 +217,10 @@ The following is an example for implementation and experience of suggested actio
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
 
+> [!NOTE]
+> * `SuggestedActions` are only applicable for the bots installed in the personal scope.
+> * Currently `imBack` is the only supported action type.
+
 ## Teams channel data
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
