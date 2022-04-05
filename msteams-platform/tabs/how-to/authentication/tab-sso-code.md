@@ -1,6 +1,6 @@
 ---
-title: App code configuration for enabling Teams SSO for tabs
-description: Describes app code configuration for enabling Teams SSO for tabs
+title: Code configuration for enabling Teams SSO for tabs
+description: Describes code configuration for enabling Teams SSO for tabs
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
@@ -180,6 +180,8 @@ This step requires your app user to give their consent for using their credentia
 
 ### Using Teams identity for authentication
 
+Teams SSO reuses the identity of the app user.  
+
 \ Add content \
 
 > [!NOTE]
@@ -204,6 +206,9 @@ After you receive access token in success callback, decode access token to view 
 </p>
 
 ## Code snippets
+
+
+\ Add content for ID token and access token. \
 
 The following code provides an example of on-behalf-of flow to fetch access token using MSAL library :
 
