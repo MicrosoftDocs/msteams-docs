@@ -9,12 +9,15 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 
 Your Teams app users are authenticated using their Teams user credentials and Azure AD provides an access token for them. You'll need to create a new tab app registration in Azure AD.
 
-This section describes the tasks involved in creating a Teams tab that uses SSO. These tasks are language- and framework-agnostic.
+The tasks involved in creating a Teams tab that uses SSO are language- and framework-agnostic.
 
    > [!NOTE]
    > The Microsoft Teams Toolkit can to register the Azure AD application in a SSO project.
 
-   In this section, you'll learn how to register and configure the Azure AD app that can be used to implement SSO in a Microsoft Teams tab app.
+In this section, you'll learn:
+
+- [How to register and configure the Azure AD app](#register-your-app)
+- [How to configure admin consent](#configure-admin-consent)
 
 ## Register your app
 
@@ -67,17 +70,20 @@ To register your tab app in Azure AD:
 
     Your Teams tab app is created.
 
-### Expose an API
+## Configure admin consent
+
+You can define app scope for an exposed API and determine if users can consent to this scope in directories where user consent is enabled. You can let only admins provide consent for higher-privileged permissions.
 
 In this section, you'll learn:
 
-- [To expose an API](#to-expose-an-api)
-  
-- [To configure API scope](#to-configure-api-scope)
-  
-- [To configure authorized client application](#to-configure-authorized-client-application)
+- [Register your tab application in Azure AD](#register-your-tab-application-in-azure-ad)
+  - [Register your app](#register-your-app)
+  - [Configure admin consent](#configure-admin-consent)
+    - [To expose an API](#to-expose-an-api)
+    - [To configure API scope](#to-configure-api-scope)
+      - [To configure authorized client application](#to-configure-authorized-client-application)
 
-#### To expose an API
+### To expose an API
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
@@ -103,7 +109,7 @@ In this section, you'll learn:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App ID URI updated" border="false":::
 
-#### To configure API scope
+### To configure API scope
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
