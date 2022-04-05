@@ -59,6 +59,12 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png" alt-text="tunnelling" border="true":::
 
+- title: Set up manifest file
+  durationInMinutes: 1
+  content: | 
+     1. 
+
+
 - title: Configure and run the Tab device permissions app on Teams
   durationInMinutes: 1
   content: |
