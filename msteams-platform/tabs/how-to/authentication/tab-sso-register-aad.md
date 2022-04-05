@@ -17,7 +17,10 @@ The tasks involved in creating a Teams tab that uses SSO are language- and frame
 In this section, you'll learn:
 
 - [How to register and configure the Azure AD app](#register-your-app)
+
 - [How to configure admin consent](#configure-admin-consent)
+
+- [How to configure authentication for different platforms](#configure-authentication-for-different-platforms)
 
 ## Register your app
 
@@ -76,12 +79,11 @@ You can define app scope for an exposed API and determine if users can consent t
 
 In this section, you'll learn:
 
-- [Register your tab application in Azure AD](#register-your-tab-application-in-azure-ad)
-  - [Register your app](#register-your-app)
-  - [Configure admin consent](#configure-admin-consent)
-    - [To expose an API](#to-expose-an-api)
-    - [To configure API scope](#to-configure-api-scope)
-      - [To configure authorized client application](#to-configure-authorized-client-application)
+- [To expose an API](#to-expose-an-api)
+
+ [To configure API scope](#to-configure-api-scope)
+
+- [To configure authorized client application](#to-configure-authorized-client-application)
 
 ### To expose an API
 
@@ -138,7 +140,7 @@ In this section, you'll learn:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed" border="false":::
 
-#### To configure authorized client application
+### To configure authorized client application
 
 1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
 
@@ -173,3 +175,27 @@ In this section, you'll learn:
     The client app IDs display on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
+
+## Configure authentication for different platforms
+
+Depending on the platform or device on which you want to target your your app, additional configuration may be required such as redirect URIs, specific authentication settings, or fields specific to the platform.
+
+### To configure authentication for a platform
+
+1. Select **Manage** > **Authentication** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms" border="false":::
+
+    The **Platform configurations** page appears.
+
+1. Select **+ Add a platform**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms" border="false":::
+
+    The **Configure platforms** page appears.
+
+1. Select **Web** to configure the app as a web app.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platforms" border="false":::
+
+    
