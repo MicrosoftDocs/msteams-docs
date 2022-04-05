@@ -212,3 +212,5 @@ Depending on the platform or device on which you want to target your your app, a
     The platform is configured and displayed in the **Platform configurations** page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/web-platform-configured.png" alt-text="Web platform configured" border="false":::
+
+Congratulations! You've completed the app registration prerequisites to continue with your tab SSO app.
