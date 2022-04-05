@@ -15,6 +15,11 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 * [Create a new Teams app](create-new-project.md#create-a-new-teams-app)
 * [View samples](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
+## Prerequisite
+
+[Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+
+
 ### Create a new Teams app
 
 1. Open Visual Studio Code.
