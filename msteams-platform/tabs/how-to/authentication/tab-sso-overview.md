@@ -126,13 +126,13 @@ The sample repo for C# app is cloned on your computer in the default location.
 
 <a name="BuildRun"></a>
 
-You can view the cloned repository by opening it in Visual Studio 2022.
+You can view the cloned repository by opening it in Visual Studio.
 </details>
 
 <details>
-<summary>To use Visual Studio 2022 to clone the sample repo</summary>
+<summary>To use Visual Studio to clone the sample repo</summary>
 
-1. Open Visual Studio 2019.
+1. Open Visual Studio.
 2. Select **Clone a repository**.
 3. Enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git` as path for cloning the repo:
 4. Enter the location where you want to clone the repo, and select **Clone**.

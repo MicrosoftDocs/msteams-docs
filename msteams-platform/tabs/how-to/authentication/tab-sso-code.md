@@ -27,7 +27,7 @@ Teams mobile client versions supporting SSO:
 
 - For the best experience with Teams, use the latest version of iOS and Android.
 
-### Update the app manifest
+## Update the app manifest
 
 The Teams app manifest describes how your app integrates into the Microsoft Teams. Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
 
@@ -36,7 +36,7 @@ You'll need to add the `webApplicationInfo` property to the app manifest file.
 > [!NOTE]
 > You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
-#### To update the app manifest
+### To update the app manifest
 
 1. Open the sample app project **TeamsTabSSO.csproj** from the **/Microsoft-Teams-Samples/samples/tab-sso/csharp/** directory of the cloned repo.
 2. Open **TeamsTabSSO** > **Manifest** > **manifest.json** from the **Solution Explorer**.
@@ -60,7 +60,7 @@ You'll need to add the `webApplicationInfo` property to the app manifest file.
    3. `validDomains`
 6. Save the app manifest file.
 
-#### View manifest sample
+### View manifest sample
 
 <details>
 <summary>Here's an example of app manifest after it's updated:</summary>
@@ -120,11 +120,11 @@ You'll need to add the `webApplicationInfo` property to the app manifest file.
 ```
 </details>
 
-### Update Azure AD details
+## Update Azure AD details
 
 The `appsettings.json` file includes the configuration for Azure AD app.
 
-To update the app settings:
+### To update the app settings
 
 1. Open **TeamsTabSSO** > **appsettings.json** from the **Solution Explorer**.
 2. Update the `AzureAd` code snippet with configured app details on Azure AD portal:
@@ -149,7 +149,7 @@ To update the app settings:
 
 3. Save the file.
 
-#### View the updated file
+### View the updated app settings
 
 <details>
 <summary>Here's an example of `appsettings.json` update:</summary>
