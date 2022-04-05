@@ -25,7 +25,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
 
-## Add capabilities using Teams Toolkit
+## Add capabilities
 
 > [!IMPORTANT]
 > You need to perform provision for each environment after you successfully add capabilities to your Teams app.
@@ -48,7 +48,12 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 
 The selected capabilities are succesfully added to your project. The Teams Toolkit generate source code for newly added capabilities.
 
-## Add capabilities using TeamsFx CLI in command window
+
+<details>
+
+<br>
+<summary><b>Add capabilities using TeamsFx CLI in command window</b></summary>
+
 
 1. Change directory to your **project directory**.
 1. Execute the following command to add different capabilities to your project:
@@ -59,7 +64,17 @@ The selected capabilities are succesfully added to your project. The Teams Toolk
    |To add bot|`teamsfx capability add bot`|
    |To add messaging extension|`teamsfx capability add messaging-extension`|
 
-## Supported capabilities matrix
+
+<br>
+
+</details>
+
+
+
+<details>
+
+<summary><b>Supported capabilities matrix</b></summary>
+
 
 Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app. The following table provides the different Teams app capabilities:
 
@@ -74,7 +89,16 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 |Tabs, bot, and messaging extension|Tabs|
 |Tabs |Bot and message extension|
 
-## Add capabilities
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>Add capabilities</b></summary>
+
+<br>
 
 After adding bot and messaging extension, the changes in your project are as follows:
 
@@ -96,6 +120,12 @@ After adding tab, the changes in your project are as follows:
   * The scopes of the tabs.
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.
 * The file under `.fx/config` are regenerated, which ensures your project is set with right configurations for newly added capability.
+<br>
+
+</details> 
+
+## 
+
 
 ## Limitations
 
