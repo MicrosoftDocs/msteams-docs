@@ -75,8 +75,11 @@ items:
 - title: Build and run client app using npm
   durationInMinutes: 1
   content: |
-     
+     1. In your cloned repository, navigate to **samples > tab-device-permissions > nodejs**.
 
+     1. Copy the **nodejs** folder path. 
+
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png" alt-text="copy the path" border="true":::  
 
 
 
