@@ -3,14 +3,14 @@ title: Authentication for tabs using Azure Active Directory
 description: Describes authentication in Teams and how to use it in tabs
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication tabs Azure AD
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Authenticate a user in a Microsoft Teams tab
 
 > [!Note]
 > For authentication to work for your tab on mobile clients, you need to ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
 
-There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and Teams. Teams user profile information is stored in Azure Active Directory using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and Teams. Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow with the goal of eventually reading the user's profile information from Azure AD and Microsoft Graph.
 
@@ -22,7 +22,7 @@ Authentication flow in tabs differs slightly from authentication flow in bots.
 
 ## Configuring identity providers
 
-See the topic [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See the topic [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure AD as an identity provider.
 
 ## Initiate authentication flow
 
@@ -142,10 +142,9 @@ If successful, you can refresh or reload the page and show content relevant to t
 Your app can set its own session cookie so that the user need not sign in again when they return to your tab on the current device.
 
 > [!NOTE]
-> Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
-
->[!NOTE]
->To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
+>
+> * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
+> * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
 
 For more information on Single Sign-On (SSO) see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
@@ -159,7 +158,7 @@ Sample code showing the tab authentication process using Azure AD:
 
 ## See also
 
-* [Plan user authentication](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Plan user authentication](../../../concepts/design/understand-use-cases.md)
 * [Design your tab for Microsoft Teams](~/tabs/design/tabs.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)
 * [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)

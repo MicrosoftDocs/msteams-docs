@@ -156,6 +156,7 @@ this.onMessage(async (context, next) => {
 |-------------|-------------|------|----|
 |Channel messages with RSC permissions|Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
+
 ## See also
 
 * [Bot conversations](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)

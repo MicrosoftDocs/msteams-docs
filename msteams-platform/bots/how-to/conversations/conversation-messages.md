@@ -199,7 +199,7 @@ The `channelData` object is not included in messages in personal conversations, 
 A typical `channelData` object in an activity sent to your bot contains the following information:
 
 * `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Azure Active Directory tenant ID passed in all contexts.
+* `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
 * `team`: Passed only in channel contexts, not in personal chat.
   * `id`: GUID for the channel.
   * `name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -377,7 +377,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
     ![Success message](~/assets/images/Cards/success.PNG)
 
-You can select **Close** or switch chat to dismiss the message.    
+You can select **Close** or switch chat to dismiss the message.
 
 **Response on mobile**:
 

@@ -30,7 +30,7 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+    * [Microsoft Teams with an account (not a guest account)](https://developer.microsoft.com/microsoft-365/dev-program)
     * [Visual Studio code](https://code.visualstudio.com/Download)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution such as Command Prompt
@@ -40,9 +40,9 @@ items:
 
     Ensure you have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+    * [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
-    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1
+    * [ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) version 3.1
     * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 or later
 
 - title: Set up local environment
@@ -127,7 +127,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png" alt-text="Add an app" border="false":::
     1. In the pop-up that opens, select **Manage apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-manageapps.png" alt-text="manage apps" border="false":::
+       :::image type="content" source="../msteams-platform/assets/meeting-token-generator-manageapps.png" alt-text="manage apps" border="false":::
 
     1. Select **Upload a custom app**. 
 

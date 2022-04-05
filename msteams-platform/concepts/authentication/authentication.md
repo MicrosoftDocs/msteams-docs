@@ -3,14 +3,14 @@ title: Authenticating app users
 description: Describes authentication in Teams and how to use it in the apps
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication OAuth SSO Azure AD
+keywords: teams authentication OAuth SSO Microsoft Azure Active Directory (Azure AD)
 ---
 # Authenticate users in Microsoft Teams
 
 > [!Note]
 > Web-based authentication on mobile clients requires version 1.4.1 or later of the Teams JavaScript client SDK.
 
-To access user information protected by Azure Active Directory and to access data from services like Facebook and Twitter, the app establishes a trusted connection with those providers. If the app uses Microsoft Graph APIs in the user scope, authenticate the user to retrieve the appropriate authentication tokens.
+To access user information protected by Azure AD and to access data from services like Facebook and Twitter, the app establishes a trusted connection with those providers. If the app uses Microsoft Graph APIs in the user scope, authenticate the user to retrieve the appropriate authentication tokens.
 
 In Teams, there are two different authentication flows for the app. Perform a traditional web-based authentication flow in a [content page](~/tabs/how-to/create-tab-pages/content-page.md) embedded in a tab, a configuration page, or a task module. If the app contains a conversational bot, use the OAuthPrompt flow and optionally the Azure Bot Framework's token service to authenticate a user as part of a conversation.
 
@@ -42,10 +42,9 @@ provides Bot authentication v3 SDK sample.
 | Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Tab, Bot and Messaging Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
 
-
 ## Configure the identity provider
 
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using Azure AD as the identity provider. The concepts however, apply regardless of the identity provider. 
+Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walk throughs primarily deal with using Azure AD as the identity provider. The concepts however, apply regardless of the identity provider.
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
