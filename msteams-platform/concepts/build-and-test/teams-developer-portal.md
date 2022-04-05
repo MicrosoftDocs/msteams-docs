@@ -13,6 +13,11 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
+> [!NOTE]
+>
+> * Currently, Developer Portal is not available for Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
+> * However, you can use a regular tenant to build an app in the Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
+
 ## Register an app
 
 The Developer Portal provides a couple ways to register a Teams app:
@@ -27,18 +32,18 @@ The Developer Portal provides a couple ways to register a Teams app:
 
 You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
-**To set up an environment**
+To set up an environment:
 
 1. In the Developer Portal, select the app you're working on.
 2. Go to the **Environments** page and select **+ Add an environment**.
 3. Select **+ Add a variable** to create configuration variables for your environment.
 
-**To use variables**
+To use variables:
 
 Use the variable names instead of hard-coded values to set your app configurations.
 
 1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment. 
+1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
 ## Identify app owners
 
@@ -63,24 +68,13 @@ From the Developer Portal, use the **Distribute** button to download an app pack
 
 For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
-## Analyze your app's usage
-
-On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal and scoped to the app ID.
-
-| Metric | Definition |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
-| *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
-
-Monthly and daily usage is shown for the past seven, 30 days, and 60 days. You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
-
 ## Use tools to create app features
 
 The Developer Portal also includes tools to help you build some key features of Teams apps. Some of these tools include:
 
 * **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
-* **Microsoft identity platform management**: Register your apps with Azure Active Directory (Azure AD) to help users sign in and provide access to APIs.
+* **Microsoft identity platform management**: Register your apps with Azure Active Directory to help users sign in and provide access to APIs.
 
 ## See also
 

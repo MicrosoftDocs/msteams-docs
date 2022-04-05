@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -34,32 +34,73 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
-    | &nbsp; | [Install Git](https://git-scm.com/downloads) | Sample C# app repo from GitHub |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-    | **Optional** | &nbsp; | &nbsp; |
-    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
+    | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample C# app repo from GitHub. |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and messaging extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+    | **Optional** | &nbsp; | &nbsp; |
+    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+    
 
     ## Verify git installation
 
     If Visual Studio installation prompts you to add `git` to the path, select it. 
-    In a terminal window, run the following command to verify the `git` installation:
+   
+    To verify the version of git installed:
 
-    ```bash
-    $ git --version
-    git version 2.17.1.windows.2
+    1. Open a terminal window. 
+    2. Run the following command to verify the `git` version installed on your machine:
 
-    ```
+        ```bash
+        $ git --version
+        ```
+
+        Output example: `git version 2.17.1.windows.2`
+
+    ## Install Teams Toolkit
+
+    Teams Toolkit helps simplify the development process with tools to create a project scaffolding for your app. It creates the necessary directory structure for all selected capabilities with the required files in place, ready to build the project.
+
+    Teams Toolkit is available as a Visual Studio 2019 extension.
+
+    To install Teams Toolkit extension:
+
+    1. Open Visual Studio 2019 and select the **Extensions** > **Manage Extensions**.
+    1. In the search box, enter **Teams Toolkit**.
+    1. Select **Download** next to the Teams Toolkit.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/install-teams-toolkit-vs19.png" alt-text="Image shows installation for Teams Toolkit"::: 
+    
+        The changes are available after you close Visual Studio 2019. It's required as Visual Studio 2019 must restart after the installing the extension.
+
+    1. Select **Close**.
+    
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/toolkit-installed.png" alt-text="Image shows installation done for Teams Toolkit":::
+    
+    1. Close Visual Studio 2019.
+        
+        The VSIX installer opens with instructions for installing the extension.
+
+    1. Follow the instructions of VSIX installer to complete the installation of the toolkit.
+    1. Open Visual Studio 2019 again.
+    
+    The Teams Apps will be available as a template in Visual Studio 2019.
+
+    You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit).
 
     ## Set up your Teams development tenant
 
     A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Enable sideloading option
+    ### Check for sideloading option
 
     After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
-      
+
+    > [!NOTE]
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
     Verify if you can sideload apps in Teams:
@@ -80,7 +121,7 @@ items:
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
     1. In the welcome screen, select **Set up E5 subscription**.
-    1. Set up your administrator account. After you finish, the following screen appears.
+    1. Set up your administrator account. After you finish, the following screen appears:
 
         :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 
@@ -90,7 +131,7 @@ items:
 
     If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-    Now you’ve got all tools and set up your accounts. Next, let's set up your development environment and start building!
+    Now you've got all tools and set up your accounts. Next, let's set up your development environment and start building!
 
     > [!NOTE]
     > Use a suitable terminal window on your platform. These examples use Git Bash but can be run on most platforms.
@@ -103,19 +144,21 @@ items:
 
     ## Download the sample
 
-    You can get started with a [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. To use this sample, clone the sample repo in one of the following ways:
+    For this tutorial, use the [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. You can download and clone it from GitHub.
     
-    - Using Git Bash
-    - Using Visual Studio 2019
+    To use this sample, clone the sample repo in one of the following ways:
     
-    **To use Git Bash to clone sample repo**
+    - [Using Git Bash](#to-use-git-bash-to-clone-the-sample-repo)
+    - [Using Visual Studio 2019](#to-use-visual-studio-2019-to-clone-the-sample-repo)
+    
+    ### To use Git Bash to clone the sample repo
     
     - Run the following command in a terminal window to clone the sample repository to your computer:
 
         ```bash
         git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
         ```
-        The sample repo for C# app is cloned on your computer in the default location C:\Users\<user name>\Source\Repos
+        The sample repo for C# app is cloned on your computer in the default location.
 
         > [!TIP]
         > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repository](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub.
@@ -124,9 +167,9 @@ items:
 
         You can view the cloned repository by opening it in Visual Studio 2019. 
 
-    **To use Visual Studio clone sample repo**
+    ### To use Visual Studio 2019 to clone the sample repo
 
-    1. Open Visual Studio 2019
+    1. Open Visual Studio 2019.
     1. Select **Clone a repository**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-clone-repo.png" alt-text="Clone sample repo for c# Teams app" border="false":::
@@ -171,7 +214,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="false":::
 
-    1. Move through the screen to view the Web server settings section.
+    1. Move through the screen to view the **Web Server Settings**.
 
     1. Make the following settings in **Debug** pane:
         - Set **App URL** to `http://localhost:3333/`.
@@ -226,14 +269,16 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="false":::
 
-        *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
+        You can try adding `hello`, `first`, or `second` to the ngrok tunnel url to view different tab pages of the app.
+        
+        Ngrok listens to requests from the internet and routes them to your app running on port 3333.
 
     To verify the app's local deployment:
 
     1. Open the browser.
     1. Load your app using the following URL:
 
-        `https://<forwarding address in ngrok console session>/hello`
+        `https://<forwarding address in ngrok console session>/`
 
         Here's an example of the URL:
 
@@ -248,21 +293,32 @@ items:
         > [!IMPORTANT]
         > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
-- title: Configure your first C# app using Dev Portal
+- title: Configure your first C# app using Developer Portal
   durationInMinutes: 1
   content: |
 
-    After you build and test your Teams app, you can test it using Developer Portal.
-
+    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams and configure app capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+    
+    After you build and test your Teams app, you can configure and preview it using Developer Portal.
+    
     In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
 
-    ## Publish option in Visual Studio 2019
+    <details>
+    <summary>Publish option in Visual Studio 2019</summary>
+
+    This tutorial uses Developer Portal to configure app capabilities and publish your app. 
+    
+    However, Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
 
     Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
-    Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
+    If you use this option, you can enter the details of the Azure site and Azure resources and publish your app. 
+    
+    For this tutorial, you do not need to use this step.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
+    </details>
 
     ## Configure the app package in Developer Portal
 
@@ -295,7 +351,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-app.png" alt-text="Developer Portal app" border="false":::
 
-    1. Select **Import an existing app**.
+    1. Select **Import app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
@@ -374,8 +430,9 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png" alt-text="Image showing Hello tab details" border="false":::
 
         Enter the following details:
-        - Name: Hello tab
-        - Content URL and Website URL: the forwarding address in ngrok console session
+        - **Name**: Hello tab.
+        - **Content URL** and **Website URL**: the forwarding address in ngrok console session.
+        - **Context**: Select **Personal tab**.
 
     1. Select **Update**.
 
@@ -407,15 +464,18 @@ items:
 
     1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Bot** card on the **App features** pane, and select **Delete**.
 
-    1. Select **Bot** on the **App features** pane.
+    1. Select **Tools** to add capability.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-card.png" alt-text="Image showing bot card" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/tools-option.png" alt-text="Image showing Tools option" border="false":::
+    
+    1. Select **Bot management** on the **Tools** pane.
 
-    1. Select **Create a new bot** on the **Bot** pane.
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tools-bot-card.png" alt-text="Image showing bot management pane" border="false":::
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-page.png" alt-text="Image showing bot pane" border="false":::
+    1. Select **+ New Bot** on the **Bot management** pane.
 
-    1. Select **New Bot** on the **Bot management** pane.
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-management-new-bot.png" alt-text="Image showing new bot option" border="false":::
+
     1. Enter a suitable name for your bot, and select **Add**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot.png" alt-text="Image showing how to add bot" border="false":::
@@ -432,7 +492,7 @@ items:
 
         Developer Portal generates a password for the bot.
 
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password, and save it in a text file.
+        You can use the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password. For this tutorial, you don't need to copy it.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-client-secret-generated.png" alt-text="Image showing Client secret generated" border="false":::
 
@@ -575,16 +635,13 @@ items:
 
         The Developer Portal informs you that your app is sideloaded successfully.
 
-    1. Select **Publish** from the left pane, and select **Download app package** to download the configured app package from Developer Portal.
-    1. Save the app package zip file. The file name is Hello World.zip.
     1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon.
     1. Select **Manage your apps**.
-    1. Select **Upload a custom app**.
-    1. Select Hello World.zip to upload it to Teams in the local environment.
-
+       Your app is listed in the sideloaded apps. 
+    1. Find your app using the search box, select the three-dots in its row.
+    1. Select the **View** option.
         The **Add** page appears for your app.
-
-    1. Select **Add** to install the app on Teams.
+    1. Select **Add** to load the app on Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-nodejs-app-sideload.png" alt-text="Image showing Add app dialog" border="false":::
 

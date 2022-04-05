@@ -10,30 +10,29 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK for TypeScript or JavaScript
 
-TeamsFx aims to reduce you the tasks of implementing identity and access to cloud resources down to single-line statements with "zero configuration".
+TeamsFx aims to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.
 
 Use the library to:
 
-- Access core functionalities in client and server environment in a similar way.
-- Write user authentication code in a simplified way.
-
-   * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-   * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-   * [API reference documentation](https://aka.ms/teamsfx-sdk-help) 
-   * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
+* Access core functionalities in client and server environment in a similar way.
+* Write user authentication code in a simplified way.
 
 ## Get started
 
 TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI.
-For more information on Teams app project, see [README](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### Prerequisites
 
-- Node.js version `10.x.x` or higher.
-- If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version `>= 4.9.3`. ([Issue - all of the BOTBUILDER packages should be the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+* Node.js version `10.x.x` or later.
+* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version is `>= 4.9.3`. ([Issue - all of the BOTBUILDER packages should be the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
-> [!TIP]
-> A project created by TeamsFx toolkit VS Code extension or CLI tool.
+For more information, see:
+
+* [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
+* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [API reference documentation](https://aka.ms/teamsfx-sdk-help)
+* [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### Install the `@microsoft/teamsfx` package
 
@@ -43,23 +42,22 @@ Install the TeamsFx SDK for TypeScript or JavaScript with `npm`:
 npm install @microsoft/teamsfx
 ```
 
-### Create and authenticate a `MicrosoftGraphClient`
+### Create and authenticate `MicrosoftGraphClient`
 
-To create a graph client object to access the Microsoft Graph API, you will need the credential to do authentication. The SDK provides several credential classes to choose that meets various requirements.You need to load configuration before using any credentials.
+To create graph client object for accessing Microsoft Graph API, you will need the credentials to authenticate. The SDK provides several credential classes to choose that meets various requirements. You need to load configuration before using any credentials.
 
-- In browser environment, you need to explicitly pass in the configuration parameters. The scaffolded React project has provided environment variables to use.
+* In browser environment, you need to explicitly pass in the configuration parameters. The scaffolded React project has provided environment variables to use.
 
 ```ts
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
 ```
 
-- In NodeJS environment like Azure Function, you can just call `loadConfiguration`. It will load from environment variables by default.
+* In NodeJS environment like Azure Function, you can just call `loadConfiguration`. It will load from environment variables by default.
 
 ```ts
 loadConfiguration();
@@ -67,16 +65,12 @@ loadConfiguration();
 
 #### Using Teams app user credential
 
-Use the snippet below:
-
-> [Note]
-> You can only use this credential class in browser application like Teams Tab App.
+Use the following snippet:
 
 ```ts
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -85,10 +79,14 @@ const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // In
 const profile = await graphClient.api("/me").get();
 ```
 
+> [!NOTE]
+> You can use this credential class in browser application, such as Teams Tab App.
+
 #### Using Microsoft 365 tenant credential
 
-It doesn't require the interaction with Teams App user. You can call Microsoft Graph as application.
-Use the snippet below:
+Microsoft 365 tenant credential doesn't require to interact with Teams App user. You can call Microsoft Graph as application.
+
+Use the following snippet:
 
 ```ts
 loadConfiguration();
@@ -101,30 +99,29 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### Credentials
 
-There are 3 credential classes located under [credential](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) folder to help simplifying authentication. 
+There are 3 credential classes located under [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) to help simplify authentication.
 
-Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs. They are designed to provide access token for specific scopes.
-The credential classes represent different identity under certain scenarios.
+Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs. They are designed to provide access tokens for specific scopes. The following credential classes represent different identity under certain scenarios:
 
-`TeamsUserCredential` represent Teams current user's identity. Using this credential will request user consent at the first time.
-`M365TenantCredential` represent Microsoft 365 tenant identity. It is usually used when user is not involved like time-triggered automation job.
-`OnBehalfOfUserCredential` uses on-behalf-of flow. It needs an access token and you can get a new token for different scope. It's designed to be used in Azure Function or Bot scenarios.
+* `TeamsUserCredential` represent Teams current user's identity. Using this credential will request user consent at the first time.
+* `M365TenantCredential` represent Microsoft 365 tenant identity. It is usually used when user is not involved like time-triggered automation job.
+* `OnBehalfOfUserCredential` uses on-behalf-of flow. It needs an access token and you can get a new token for different scope. It's designed to be used in Azure Function or Bot scenarios.
 
 ### Bots
 
-Bot related classes are stored under [bot](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot) folder.
+Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` has a good integration with Bot framework. It simplifies the authentication process when you develop bot application.
+`TeamsBotSsoPrompt` can integrate with Bot framework. It simplifies the authentication process for developing bot application.
 
 ### Helper functions
 
-TeamsFx SDK provides helper functions to ease the configuration for third-party libraries. They are located under [core](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) folder.
+TeamsFx SDK provides helper functions to ease the configuration for third-party libraries. They are located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 ### Error handling
 
-API will throw `ErrorWithCode` if error happens. Each `ErrorWithCode` contains error code and error message.
+API error response is `ErrorWithCode`, which contains error code and error message.
 
-For example, to filter out specific error, you could use the following check:
+For example, to filter out specific error, you can use the following snippet:
 
 ```ts
 try {
@@ -140,7 +137,7 @@ try {
 }
 ```
 
-And if credential instance is used in other library like Microsoft Graph, it's possible that error is caught and transformed.
+And if credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed.
 
 ```ts
 try {
@@ -159,13 +156,7 @@ try {
 
 ## Scenarios
 
-The following sections provide several code snippets covering some of the most common scenarios:
-
-- [Use Graph API in tab app](#use-graph-api-in-tab-app)
-- [Call Azure Function in tab app](#call-azure-function-in-tab-app)
-- [Access SQL database in Azure Function](#access-sql-database-in-azure-function)
-- [Use certificate-based authentication in Azure Function](#use-certificate-based-authentication-in-azure-function)
-- [Use Graph API in Bot application](#use-graph-api-in-bot-application)
+The following section provides several code snippets for common scenarios:
 
 ### Use Graph API in tab app
 
@@ -175,7 +166,6 @@ Use `TeamsUserCredential` and `createMicrosoftGraphClient`.
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -192,7 +182,6 @@ Use `axios` library to make HTTP request to Azure Function.
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -215,7 +204,10 @@ Apart from `tedious`, you can also compose connection config of other SQL librar
 ```ts
 loadConfiguration();
 const sqlConnectConfig = new DefaultTediousConnectionConfiguration();
+// If there's only one SQL database
 const config = await sqlConnectConfig.getConfig();
+// If there are multiple SQL databases
+const config2 = await sqlConnectConfig.getConfig("your database name");
 const connection = new Connection(config);
 connection.on("connect", (error) => {
   if (error) {
@@ -279,14 +271,13 @@ dialogs.add(
 
 ### Configure log
 
-You can set customer log level and redirect outputs when using this library.
-Logging is turned off by default, you can turn it on by setting log level.
+You can set customer log level and redirect outputs when using this library. Logging is turned off by default, you can turn it on by setting log level.
 
 #### Enable log by setting log level
 
-When log level is set, logging is enabled. It prints log information to console by default.
+Logging is enabled only when you set log level. By default, it prints log information to console.
 
-Set log level using the snippet below:
+Set log level using the following snippet:
 
 ```ts
 // Only need the warning and error messages.
@@ -305,7 +296,8 @@ setLogger(context.log);
 
 ##### Redirect by setting custom log function
 
-Note that log function will not take effect if you set a custom logger.
+> [!NOTE]
+> Log function will not take effect, if you set a custom logger.
 
 ```ts
 setLogLevel(LogLevel.Info);

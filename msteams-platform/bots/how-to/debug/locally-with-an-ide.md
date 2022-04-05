@@ -16,11 +16,13 @@ When testing your bot you need to take into consideration both the contexts you 
 The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
 There are two methods for uploading your app:
+
 * Use [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Create an app package](~/concepts/build-and-test/apps-package.md) manually, and then [upload your app](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
-> If you need to alter your manifest and re-upload your app, you must [delete your bot](#delete-a-bot-from-teams) before uploading your altered app package.
+> To alter the manifest and re-upload your app, [delete the bot](#delete-a-bot-from-teams) before uploading the altered app package.
+> To test the bot, enable sideloading in Teams. See [enable sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## Debug your bot locally
 
@@ -30,7 +32,7 @@ If you are hosting your bot locally during development, you need to use a tunnel
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your app manifest. 
+Use the https endpoint provided by ngrok in your app manifest.
 
 > [!NOTE]
 > If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
@@ -67,6 +69,9 @@ You can also initiate a conversation with your bot by using its ID. When a bot h
 
    3. Select your bot and send a message to initiate a conversation.
       Alternatively, you can paste your bot's app ID in the search box in the top left in Microsoft Teams. In the search results page, navigate to the **People** tab to see your bot and to start chatting with it.
+
+> [!Note]
+> For Microsoft Teams to refer to your bot's app ID, enable [sideloading of apps](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 Your bot receives the `conversationUpdate` event as you add the bots to a team, without the team information in the `channelData` object.
 

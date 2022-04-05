@@ -1,6 +1,6 @@
 ### (Optional) Adjust your browser launch settings
 
-When developing a Teams app, it is common to run your app in an alternate developer tenant or with alternate credentials.  Both Microsoft Edge and Google Chrome provide facilities to adjust the launch settings for your browser.  For example, to update the project to support InPrivate mode (Microsoft Edge), open the `.vscode/launch.json` file in your project.  Look for the appropriate launch settings, and add the following block to each one:
+When developing a Teams app, it is common to run your app in an alternate developer tenant or with alternate credentials. Both Microsoft&nbsp;Edge and Google Chrome provide facilities to adjust the launch settings for your browser. For example, to update the project to support InPrivate mode (Microsoft&nbsp;Edge), open the `.vscode/launch.json` file in your project. Look for the appropriate launch settings, and add the following block to each one:
 
 ``` json
 "runtimeArgs": [ "--inprivate" ]
@@ -24,9 +24,9 @@ For instance, the launch setting for running locally looks like this:
 },
 ```
 
-Alternatively, you can configure your browser to use the last known profile. [Create a new profile](https://support.microsoft.com/topic/sign-in-and-create-multiple-profiles-in-microsoft-edge-df94e622-2061-49ae-ad1d-6f0e43ce6435) in Microsoft Edge.  Then adjust the settings to use the last known profile for new links:
+Alternatively, you can configure your browser to use the last known profile. [Create a new profile](https://support.microsoft.com/topic/sign-in-and-create-multiple-profiles-in-microsoft-edge-df94e622-2061-49ae-ad1d-6f0e43ce6435) in Microsoft&nbsp;Edge.  Then adjust the settings to use the last known profile for new links:
 
-- In Microsoft Edge, open `edge://settings/profiles/multiProfileSettings`.
+- In Microsoft&nbsp;Edge, open `edge://settings/profiles/multiProfileSettings`.
 - Turn off **Automatic profile switching**.
 - For the **Default profile for external links**, select **Last used (default)**.
 

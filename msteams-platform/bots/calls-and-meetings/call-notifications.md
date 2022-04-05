@@ -36,7 +36,6 @@ Location: your-new-location
 
 Enable your bot to answer an incoming call using the [answer](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition, and you want to embed this information in the `callbackUri` for routing to the right instance.
 
-
 The next section provides details on authenticating the callback by inspecting the token posted to your webhook.
 
 ## Authenticate the callback
@@ -91,3 +90,8 @@ For more information, see [validate inbound requests](https://github.com/microso
 
 > [!div class="nextstepaction"]
 > [Requirements and considerations for application-hosted media bots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+
+## See also
+
+* [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

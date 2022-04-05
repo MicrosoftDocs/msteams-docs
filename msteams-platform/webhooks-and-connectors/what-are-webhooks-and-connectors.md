@@ -2,7 +2,7 @@
 title: Webhooks and connectors
 author: clearab
 description: Understand how webhooks and connectors can connect your web services to the Teams client.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
 ---

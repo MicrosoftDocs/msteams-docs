@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -37,8 +37,12 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+    
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
+    * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
     > [!NOTE]
     > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support meeting sidepanel.
@@ -56,10 +60,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in AAD portal
+- title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in Azure Active Directory (AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -69,7 +73,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -79,8 +83,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
-    1. From the **Resource group** dropdown list, select your existing resource group. 
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list. 
     
         ![Select resource Azure bot](~/assets/images/meetings-side-panel/review-plus-create.png) 
     
@@ -121,6 +125,10 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+    1. Select **Multitenant** under **Bot Type**.
+
+        ![Bot type](~/assets/images/meetings-side-panel/bot-type.png)
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -165,7 +173,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/meetings-side-panel/config-teams.png)   
+          ![Select Teams](~/assets/images/meetings-side-panel/config-teams1.png)   
     
     **To create tunnel for local web server**
 
@@ -199,10 +207,10 @@ items:
         You have successfully set up a bot in Azure Bot Service.
 
 
-- title: Update the AAD app registration
+- title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    **To register your app through the AAD portal**  
+    **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -225,7 +233,7 @@ items:
        ![Set link](~/assets/images/meetings-side-panel/setlink.png)
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://ae57****.ngrok.io/{AppID}`</br>
+        `api://4d52****.ngrok.io/{AppID}`</br>
         
        The following image shows the domain name:
         
@@ -237,7 +245,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       ![Select scope](~/assets/images/meetings-side-panel/selectscope.png)
+       ![Select scope](~/assets/selectscope.png)
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -261,7 +269,7 @@ items:
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://4d52****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         ![Scopes](~/assets/images/meetings-side-panel/scopes.png) 
   
@@ -290,11 +298,11 @@ items:
     1. In the left panel, select **API Permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the AAD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
-        ![Add permission](~/assets/images/meetings-side-panel/addpermission.png)
+        ![Add permission](~/assets/add-permission.png)
 
     1. Select **Microsoft Graph**.
 
@@ -325,7 +333,7 @@ items:
             ![Web](~/assets/images/meetings-side-panel/webauth.png)
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://ae57****.ngrok.io/auth-end`. </br>
+           `https://4d52****.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -421,7 +429,7 @@ items:
    
     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
+       ![Manage apps](~/assets/meeting-token-generator-manageapps.png)
    
     1. Select **Upload a custom app**. 
 

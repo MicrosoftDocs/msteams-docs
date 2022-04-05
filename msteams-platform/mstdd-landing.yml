@@ -13,6 +13,7 @@ metadata:
   author: surbhigupta12 #Required; your GitHub user alias, with correct capitalization.
   ms.author: msauthor #Required; microsoft alias of author; optional team alias.
   ms.date: 11/10/2021 #Required; mm/dd/yyyy format.
+  ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -23,53 +24,40 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Introduced new store icon
-        url: ~/concepts/design/personal-apps.md
-      - text: Teams Toolkit for Visual Studio Code (Preview)
-        url: ~/toolkit/teams-toolkit-fundamentals.md
-      - text: Microsoft Teams store validation guidelines
-        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-      - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
-        url: ~/m365-apps/overview.md
-      - text: Typeahead search in Adaptive Card
-        url: ~/task-modules-and-cards/cards/dynamic-search.md
-      - text: Enable bots to receive all channel messages using resource-specific consent (RSC)
-        url: ~/bots/how-to/conversations/channel-messages-with-rsc.md        
-      - text: Monetize your Teams app with a transactable SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: Create low-code custom apps
-        url: ~/samples/teams-low-code-solutions.md
-        
-- title: Tutorials
-  linkLists:
-    - linkListType: concept
-      links:
-        - text: Proactive messages
-          url: ~/bots/how-to/conversations/send-proactive-messages.md
-        - text: Add authentication to bots
-          url: ~/bots/how-to/authentication/add-authentication.md
-        - text: Enable and configure apps for meetings
-          url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-    - linkListType: tutorial
-      links:
-        - text: Step-by-step guide for Proactive messages
-          url: ~/sbs-send-proactive.yml
-        - text: Step-by-step guide for adding authentication to bots
-          url: ~/sbs-bots-with-sso.yml
-        - text: Step-by-step guide for generating meeting token
-          url: ~/sbs-meeting-token-generator.yml
-        - text: Step-by-step guide for creating meeting sidepanel
-          url: ~/sbs-meetings-sidepanel.yml
-        - text: Step-by-step guide for Meetings Stage View
-          url: ~/sbs-meetings-stage-view.yml
+      - text: Create Teams conversation bot
+        url: ~/sbs-teams-conversation-bot.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
+      - text: Device permissions for the browser
+        url: ~/concepts/device-capabilities/browser-device-permissions.md
+      - text: Integrate People Picker
+        url: ~/concepts/device-capabilities/people-picker-capability.md
+      - text: Adaptive Cards overflow menu
+        url: ~/task-modules-and-cards/cards/cards-format.md
+      - text: Glossary
+        url: ~/get-started/glossary.md
+      - text: Overview
+        url: ~/overview.md
+      - text: Plan your app
+        url: ~/concepts/app-fundamentals-overview.md  
+      - text: App manifest schema version 1.12
+        url: ~/resources/schema/manifest-schema.md
+      - text: Test preview for monetized apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+      
+
 - title: Get started
   linkLists:
     - linkListType: get-started
       links:
       - text: Get started with building apps
         url: ../msteams-platform/get-started/get-started-overview.md
+      - text: Get started with GitHub
+        url: /contribute/additional-resources
     - linkListType: tutorial
       links:
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
       - text: Build app with SPFx
@@ -78,6 +66,23 @@ landingContent:
         url: sbs-gs-csharp.yml
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
+
+
+- title: Monetize your app
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Guidelines for apps linked to SaaS offers
+        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
+      - text: Microsoft Teams store validation guidelines
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+      - text: Monetize your Teams app with a transactable SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: In-app purchases
+        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+      - text: Test preview for monetized apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md 
+
 - title: Build apps for Teams
   linkLists:
     - linkListType: overview
@@ -94,6 +99,9 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
+     
+
+
 - title: Build app capabilities
   linkLists:
   - linkListType: concept
@@ -112,6 +120,49 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Public developer preview manifest schema
+      url: ~/resources/schema/manifest-schema-dev-preview.md  
+
+
+- title: Step-by-step guides
+  linkLists:        
+    - linkListType: tutorial
+      links:
+        - text: Create Teams conversation bot
+          url: ~/sbs-teams-conversation-bot.yml
+        - text: Create Calling and meeting bot
+          url: ~/sbs-calling-and-meeting.yml
+        - text: Configure Tab device permissions
+          url: ~/sbs-tab-device-permissions.yml
+        - text: Configure SSO for tabs and messaging extensions
+          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
+        - text: Build tabs with adaptive cards
+          url: ~/sbs-tab-with-adaptive-cards.yml
+        - text: Build a bot to send Proactive messages
+          url: ~/sbs-send-proactive.yml
+        - text: Build a bot with SSO authentication
+          url: ~/sbs-bots-with-sso.yml
+        - text: Generate a meeting token to extend a meeting
+          url: ~/sbs-meeting-token-generator.yml
+        - text: Create a meeting sidepanel
+          url: ~/sbs-meetings-sidepanel.yml
+      
+    - linkListType: tutorial
+      links:
+        - text: Upload files to Teams from a bot
+          url: ~/sbs-file-handling-in-bot.yml
+        - text: Invoke task modules from Microsoft Teams
+          url: ~/sbs-botbuilder-taskmodule.yml
+        - text: Build search based messaging extension
+          url: ~/sbs-messagingextension-searchcommand.yml
+        - text: Build action based messaging extension
+          url: ~/sbs-meetingextension-action.yml
+        - text: Build Outgoing Webhooks
+          url: ~/sbs-outgoing-webhooks.yml
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
+        - text: Build Teams connectors
+          url: ~/sbs-teams-connectors.yml
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
@@ -119,7 +170,9 @@ landingContent:
     - text: Build scenarios for Teams app
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
+    - text: Explore low-code apps for Teams
+      url:  ~/samples/teams-low-code-solutions.md
 - title: Publish and distribute
   linkLists:
   - linkListType: concept

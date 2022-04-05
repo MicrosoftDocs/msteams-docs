@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description:  Deploy to the cloud
+description:  Deploy app to the cloud, Azure, or SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -12,53 +12,43 @@ ms.date: 11/29/2021
 
 Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
 
-* The Tab, such as frontend applications are deployed to Azure storage and configured for static web hosting or a SharePoint site.
-* The backend APIs are deployed to Azure Functions.
-* The Bot or Messaging Extension is deployed to Azure App Service.
+* The tab, such as frontend applications are deployed to Azure storage and configured for static web hosting or a sharepoint site.
+* The backend APIs are deployed to Azure functions.
+* The bot or messaging extension is deployed to Azure app service.
 
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
-> [!TIP]
-> You should already have a Teams app project opened in VS code.
-
 > [!NOTE]
-> Before you deploy project code to cloud, perform the [provision cloud resources](provision.md) steps first.
-
+>
+> * Ensure you have Teams app project opened in VS code.
+> * Before you deploy project code to cloud, [provision the cloud resources](provision.md).
 
 ## Deploy Teams apps using Teams Toolkit
 
-In Get started tutorials, there are step-by-step guides of how to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
+The get started guides help you to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
 * [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## Details on Teams app workloads
+## Details on Teams app workload
 
-| Teams App Workloads| Source Code | Build Artifacts| Target Resources |
+| Teams app workload | Source code | Build artifact| Target resource |
 |-------------|----------|---------------|---------------|
-|Tabs with React </br> The frontend workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
+|Tabs with React </br> The frontend workload| `yourProjectFolder/tabs`| `tabs/build` |Azure storage |
 |Tabs with SharePoint </br> The frontend workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint app catalog |
-|APIs on Azure Functions </br> The backend workload | `yourProjectFolder/api`| N/A |Azure Functions |
-|Bots and messaging extensions </br> The backend workload | `yourProjectFolder/bot` | N/A | Azure App Service |
+|APIs on Azure functions </br> The backend workload | `yourProjectFolder/api`| Not applicable |Azure functions |
+|Bots and messaging extensions </br> The backend workload | `yourProjectFolder/bot` | Not applicable | Azure app service |
 
 > [!NOTE]
-> When you include Azure API management resource in your project and trigger deploy. You can publish your APIs in Azure Functions to Azure API Management Service.
+> When you include Azure API management resource in your project and trigger deploy. You can publish your APIs in Azure functions to Azure API management service.
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Add more cloud resources](add-resource.md)
-
-> [!div class="nextstepaction"]
-> [Add more Teams app capabilities](add-capability.md)
-
-> [!div class="nextstepaction"]
-> [Deploy project code with CI/CD pipelines](use-CICD-template.md)
-
-> [!div class="nextstepaction"]
-> [Manage multiple environments](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Add more cloud resources](add-resource.md)
+* [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
+* [Add more Teams app capabilities](add-capability.md)
+* [Deploy project code with CI/CD pipelines](use-CICD-template.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
+* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

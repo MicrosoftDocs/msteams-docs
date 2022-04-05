@@ -26,7 +26,7 @@ For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Mi
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads. 
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads.
 
 The following code provides an example of how your page and the Teams client communicate:
 
@@ -76,11 +76,12 @@ Ensure that all URL domains used in your tabs are included in the `validDomains`
 Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
+>
 > * The behavior on mobile clients is not configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
 If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 
-**To show the loading indicator**
+To show the loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your manifest.
 1. Call `microsoftTeams.initialize();`.
@@ -103,7 +104,7 @@ If you indicate `showLoadingIndicator : true`  in your app manifest, then all ta
 > [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
 
 ## See also
- 
+
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
