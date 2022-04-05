@@ -86,17 +86,6 @@ You can use the Visual Studio version 17.2.0 preview 2.0 to develop Teams apps.
 1. Download the Visual Studio version 17.2.0 preview 2.0 .
 1. Open vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
 1. Select **Continue** in Visual Studio Installer to configure your installation.
-
-1. Select **ASP.NET and web development** under workloads.
-
-    1. Select **Microsoft Teams development tools**.
-       
-    1. Select **Install**.
-
-     
-       
-     Your Visual Studio is installed in few minutes.
-
 1. If you have installed Visual Studio 2022 17.2 Preview 2.
 2. Open the Visual Studio Installer.
 3. Select **Modify** for your existing VS 2022 Preview installation.
@@ -148,10 +137,10 @@ You can use the Visual Studio version 17.2.0 preview 2.0 to develop Teams apps.
 
 |Features | Includes... | What you can do |
 | --- | --- | --- |
-| **Create** | &nbsp; | &nbsp; |
+| **Create a new project** | &nbsp; | &nbsp; |
 | &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
 | &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
-| **Configure** | &nbsp; | &nbsp; |
+| **Configure you** | &nbsp; | &nbsp; |
 | &nbsp; | Local | Deploy your app in the default local environment with local machine environment configurations. |
 | &nbsp; | Dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
 | **Development** | &nbsp; | &nbsp; |
