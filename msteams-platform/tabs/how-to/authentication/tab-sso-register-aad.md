@@ -196,6 +196,19 @@ Depending on the platform or device on which you want to target your your app, a
 
 1. Select **Web** to configure the app as a web app.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platforms" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
 
-    
+    The **Configure Web** page appears.
+
+1. Enter the configuration details for the web platform.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
+
+    1. Enter the Application ID URI as the **Redirect URIs**.
+    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.
+
+1. Select **Configure**.
+
+    The platform is configured and displayed in the **Platform configurations** page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/web-platform-configured.png" alt-text="Web platform configured" border="false":::
