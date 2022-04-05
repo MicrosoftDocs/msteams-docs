@@ -24,10 +24,6 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Receive meeting start and end events from channel meetings
-        url: ~/apps-in-teams-meetings/API-references.md#get-real-time-teams-meeting-events-api
-      - text: Create Teams conversation bot
-        url: ~/sbs-teams-conversation-bot.yml
       - text: Build your first app using Blazor
         url:  sbs-gs-blazorupdate.yml
       - text: Device permissions for the browser
