@@ -201,7 +201,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-```javascript
+```Node.js
 
 // Exchange cliend side token with server token
   app.post('/getProfileOnBehalfOf', function(req, res) {
