@@ -17,11 +17,7 @@
         "Webpart",
         "webparts"
     ],
-    "[typescript]": {
-          "editor.formatOnSave": true,
-          "editor.formatOnPaste": true
-        },
-        "[markdown]": {
+    "[markdown]": {
           "editor.formatOnSave": false,
           "editor.wordWrap": "on",
           "editor.renderWhitespace": "all",
