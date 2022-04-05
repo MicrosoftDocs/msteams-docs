@@ -10,8 +10,7 @@ ms.date: 03/30/2022
 
 # Teams Toolkit in Integrated Development Environments
 
-Teams Toolkit provides you with all the tools required for successfully building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code, Visual Studio, or Teams CLI to create apps in Teams. For more information, see 
-
+Teams Toolkit provides you with all the tools required for successfully building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code, Visual Studio, or Teams CLI to create apps in Teams. 
 
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
@@ -142,8 +141,6 @@ By default, `teamsfx new` goes into interactive mode and guides you through the 
 |`--spfx-web part-name`| No | Applicable if `Tab(SPfx)` capability is selected. The default value is "helloworld".|
 |`--spfx-web part-desp`| No | Applicable if `Tab(SPfx)` capability is selected. The default value is "helloworld description". |
 |`--azure-resources`| No| Applicable if contains `tab` capability. Add Azure resources to your project. The multiple options are `sql` (Azure SQL Database) and `function` (Azure Functions). |
-
-
 
 ## See also
 

@@ -30,9 +30,7 @@ Teams Toolkit's extension for Visual Studio makes it easy to create new projects
 
 ## Get started quickly with a new project
 
-Teams Toolkit project templates provide all code, files, and configuration you need to get started with a Teams app project.
-
-The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app.
+Teams Toolkit project templates provide all code, files, and configuration you need to get started with a Teams app project. The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app.
 
 > [!NOTE]
 > If you do not have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's free for 90 days and renews as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).

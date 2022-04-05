@@ -86,9 +86,12 @@
     href: concepts/design/enable-app-customization.md
   - name: Tools and SDK
     items:
+        - name: Overview
+          href: toolkit/tools-sdk-overview.md
+          items: 
         - name: Teams Toolkit overview
           href: toolkit/teams-toolkit-overview.md
-        - name: Build Teams app using Toolkit
+        - name: Teams Toolkit in Visual Studio Code
           items:
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
@@ -104,14 +107,14 @@
             href: toolkit/provision-to-cloud.md
           - name: Deploy app to the cloud
             href: toolkit/deploy-to-cloud.md
+          - name: Customize Teams app manifest
+            href: toolkit/TeamsFx-manifest-customization.md
+          - name: Preview Teams app manifest
+            href: toolkit/TeamsFx-manifest-preview.md  
           - name: Publish apps 
             href: toolkit/publish.md
           - name: Add cloud resources to the app
             href: toolkit/add-resource.md
-          - name: Customize Teams app manifest
-            href: toolkit/TeamsFx-manifest-customization.md
-          - name: Preview Teams app manifest
-            href: toolkit/TeamsFx-manifest-preview.md
           - name: Manage multiple environments
             href: toolkit/TeamsFx-multi-env.md
           - name: Collaborate using Toolkit

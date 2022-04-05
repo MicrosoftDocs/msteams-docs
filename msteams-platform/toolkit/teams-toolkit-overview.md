@@ -30,7 +30,7 @@ Teams Toolkit automates work and provides great integration of Teams and Azure r
 |Environment| Teams Toolkit helps you to create and manage multiple environments like provision and deploy artifacts to the target environment for Teams App.|
 |TeamsFx Collaboration| TeamsFx Collaboration allows developers and project owners to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.|
 |Development| Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.|
-|Create a new Teams app| It helps you to start with Teams app development by creating a new Teams project using Teams Toolkit.|
+|Create a new Teams app| Helps you to start with Teams app development by creating a new Teams project using Teams Toolkit.|
 |Deployment| During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.      |
 |Provision in the cloud |Provision in the cloud integrates with Azure resource manager that enables you to provision Azure resources, which your application needs for code approach.|
 |Deploy to the cloud| Deploy to the cloud helps you to deploy the source code to Azure.      |
@@ -90,7 +90,7 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/modify-vs-installer-msteams.png" alt-text="Modify VS installer":::
 
-## Let's explore the Teams Toolkit features
+## Let's explore the Teams Toolkit User Interface
 
 <br>
 
@@ -132,10 +132,10 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
 |Features | Includes... | What you can do |
 | --- | --- | --- |
-| **Accounts** | &nbsp; | &nbsp; |
+| **Create** | &nbsp; | &nbsp; |
 | &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
 | &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
-| **Environment** | &nbsp; | &nbsp; |
+| **Configure** | &nbsp; | &nbsp; |
 | &nbsp; | Local | Deploy your app in the default local environment with local machine environment configurations. |
 | &nbsp; | Dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
 | **Development** | &nbsp; | &nbsp; |
@@ -151,10 +151,6 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 | &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
 | &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
 | &nbsp; | CI/CD guide | Automate your development workflow while building Teams application. |
-| **Help and Feedback** | &nbsp; | &nbsp; |
-| &nbsp; | Quick Start | View the Teams Toolkit Quick Start help within Visual Studio Code.  |
-| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
-| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 
 </details>
 
