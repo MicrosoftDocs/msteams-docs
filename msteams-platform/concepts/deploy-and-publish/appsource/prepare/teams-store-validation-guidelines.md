@@ -17,6 +17,51 @@ Following these guidelines increases the chances of your app to pass the Microso
 > * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission will pass Microsoft Teams store Validation only after you have fixed the issues.
 > * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues.
 
+:::row:::
+   :::column:::
+      :::image type="icon" source="../../../assets/icons/value-proposition.png" link="#value-proposition":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="icon" source="../../../assets/icons/security.png" link="#security":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/function.png" link="#general-functionality-and-performance":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/package.png" link="#app-package-and-store-listing":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/saas-offer.png" link="#apps-linked-to-saas-offer":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/tab-icon.png" link="#tabs":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../../../assets/icons/bot-icon.png" link="#bots-1":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+     :::image type="icon" source="../../../assets/icons/messaging-icon.png" link="#messaging-extensions":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/task-module-icon.png" link="#task-modules":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/schema-icon.png" link="#meeting-extensions":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/messaging-icon.png" link="#notifications":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/microsoft-icon.png" link="#microsoft-365-app-compliance-program":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../assets/icons/small-graph-icon.png" link="#advertising":::
+   :::column-end:::
+:::row-end:::
+
 ## Value proposition
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
