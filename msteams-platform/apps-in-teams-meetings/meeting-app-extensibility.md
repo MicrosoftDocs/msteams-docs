@@ -81,7 +81,7 @@ To use tabs during a meeting:
 
 # [Desktop](#tab/desktop)
 
-<img src="../assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+<img src="../assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt="desktop dialog box view" width="200"/>
 
 # [Mobile](#tab/mobile)
 
