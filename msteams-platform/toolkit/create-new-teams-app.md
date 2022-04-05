@@ -60,16 +60,13 @@ Teams Toolkit's extension for Visual Studio makes it easy to create new projects
 
 Teams Toolkit project templates provide all code, files, and configuration you need to get started with a Teams app project.
 
-The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app.
+The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app. For more information refer to Prepare your accounts.
 
-> [!NOTE]
-> If you do not have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's free for 90 days and renews as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
-
-1. Open the latest version Visual Studio.
-1. In the start window, choose **Create a new project**. 
+1. Open the latest version of Visual Studio.
+1. In the start window, choose **Create a new project**.
      
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project.png" alt-text="Create project using Visual Studio" border="true":::
- 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option.png" alt-text="create new project ":::
+
 1. In the **Search for templates** box, enter Microsoft Teams App.
 1. Select the **Microsoft Teams App** template and select **Next**.
 1. In the **Configure your new project** window, type or enter name of the **Project name** box and select select **Create**.
@@ -90,7 +87,7 @@ Visual Studio opens up the new project and Teams Toolkit setup you new project i
 
 ## TeamsFx command line interface
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. 
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
 
 ## Get Started
 
@@ -148,4 +145,4 @@ By default, `teamsfx new` goes into interactive mode and guides you through the 
 * [Deploy Teams app to the cloud](deploy.md)
 * [Publish your Teams app](TeamsFx-collaboration.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
-* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Collaborate on project](TeamsFx-collaboration.md)
