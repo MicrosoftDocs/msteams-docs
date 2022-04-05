@@ -179,7 +179,7 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Task modules](../task-modules-and-cards/what-are-task-modules.md) | A feature of Teams app to create modal popup for completing tasks, displaying videos, or dashboard. |
 | [Thread discussion](../tabs/design/tabs.md#thread-discussion) | A conversation posted on a channel or chat between users. <br>**See also** [Conversation](#c); [Channel](#c) |
 | [Teams](../overview.md) | Microsoft Teams is the ultimate messaging app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
-| [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
+| [Teams Toolkit](../toolkit/teams-toolkit-overview.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
 | [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK enables you to create hosted experiences in Teams. The functionalities in [latest version](~/m365-apps/using-teams-client-sdk-preview.md) extend Teams app to run in Outlook and Office. |
