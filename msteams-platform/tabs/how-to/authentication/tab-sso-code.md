@@ -178,6 +178,10 @@ The authentication details from Azure AD are updated in `appsettings.json`:
 
 This step requires your app user to give their consent for using their credentials for user-level permission. Azure AD receives the user credentials and sends an access token to Teams.
 
+### Using Teams identity for authentication
+
+\ Add content \
+
 > [!NOTE]
 > To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD app registration and in your Teams app.
 

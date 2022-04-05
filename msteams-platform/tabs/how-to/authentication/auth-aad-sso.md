@@ -172,7 +172,7 @@ After you receive access token in success callback, decode access token to view 
 
 ## Code snippets
 
-The following code provides an example of on-behalf-of flow to fetch access token using MSAL library :
+The following code provides an example of on-behalf-of flow to fetch access token using MSAL library:
 
 ### [C#](#tab/dotnet)
 
