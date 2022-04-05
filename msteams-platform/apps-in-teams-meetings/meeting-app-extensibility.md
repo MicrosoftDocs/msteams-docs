@@ -29,6 +29,65 @@ Tabs allow the team members to access services and content in a specific space w
 
 Users can also add or interact with an app in the scheduled private channel meetings.
 
+### TFW
+
+| Feature | Type | yellow are WIP in H1 Desktop| yellow are WIP in H1 Mobile | Scheduled Private Meeting | Scheduled Channel Meeting | Meet Now (besides Channel meet now) | 1-1 Calls | Group Calls |
+|---|---|---|---|---|---|---|---|---|
+| Add Apps to meetings | Partial/Consumption | | | No | No | No | No | No |
+| View Apps added to meeting | Full | | | Yes | Yes | Yes | Yes | Yes |
+| In Meeting Side panel | Full | | | Yes | Yes | Yes | Yes | Yes |
+| Banner & Content Bubble | Full | | | Yes | Yes | No | No | No |
+| Pre/Post tab of Apps | Full | | | Yes | Yes | No | No | No |
+| App Actions (like Rename, delete etc) | Full | | | Yes | Yes | Yes | Yes | Yes |
+| User Support TFW (Tenant, guest) | Full | | | Yes | Yes | Yes | Yes | Yes |
+| Anon User Support TFW | Full | | | Yes | No (backlog) | Yes | NA | NA |
+| Generic App Share to Stage | Partial/Consumption | App share cant be started from Mobile, only can be viewed by all user types once shared from Desktop | | Yes | Yes | Yes | Yes | Yes |
+| Generic App Share to Stage | Full | | Start app share from Mobile | No | No | No | No | No |
+| AV Filter | Partial/Consumption | Filters applied on desktop for a user show up on Mobile | | Yes | Yes | Yes | Yes | Yes |
+| AV Filter | Full | | Filters applied from mobile | No | No | No | No | No |
+| Together Mode | Partial/Consumption | | Users on mobile with video on are placed into the TM mode | Yes | Yes | Yes | Yes | Yes |
+| AV Filter | Full | | Filters applied from mobile | No | No | No | No | No |
+| Together Mode | Partial/Consumption | | Users on mobile with video on are placed into the TM mode | Yes | Yes | Yes | Yes | Yes |
+| Together Mode | Full | Backlog | | No | No | No | No | No |
+| Deeplinks to Pre/post/in-meeting tabs | Partial/Consumption | Deeplink shared from desktop user on chat should be handled gracefully when clicked on by a mobile user | | Yes | Yes | Yes | Yes | Yes |
+| Deeplinks to Pre/post/inmeeting tabs | Full | | Deeplink shared from desktop/mobile user on chat work on mobile too correctly | No | No | No | No | No |
+
+### TFL
+
+| Feature | Type | Schedule Private Meeting | Meet now | 1-1 Calls | Group Calls |
+|---|---|---|---|---|---|
+| Add Apps to meetings | Full | No | No | No | No |
+| View Apps added to meeting | Full | Yes | Yes | Yes | Yes |
+| In Meeting Side panel | Full | Yes | Yes | Yes | Yes |
+| Banner & Content Bubble | Full | No | No | No | No |
+| Pre/Post tab of Apps | Full | No | No | No | No |
+| App Actions (like Rename, delete etc) | Full | Yes | Yes | Yes | Yes |
+| User Support TFW (Tenant, guest) | Full | Yes | Yes | Yes | Yes |
+
+### APIs Client SDK TFW
+
+| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet Now (besides Channel meet now) | 1-1 Calls | Group Calls |
+|---|---|---|---|---|---|
+| Get meeting details | Yes | No | No | No | No |
+| Get user | No | No | No | No | No |
+| Get context | No | No | No | No | No |
+| Share app to stage | Yes | Yes | Yes | Yes | Yes |
+| Get app content sharing stage | No | No | No | No | No |
+| Get app sharing content capabilities | No | No | No | No | No |
+| Mute/unmute | Yes | Yes | Yes | Yes | Yes |
+
+### APIs Client SDK TFL
+
+| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet Now (besides Channel meet now) | 1-1 Calls | Group Calls |
+|---|---|---|---|---|---|
+| Get meeting details | No | No | No | No |
+| Get user | No | No | No | No |
+| Get context | No | No | No | No |
+| Share app to stage | Yes | Yes | Yes | Yes |
+| Get app content sharing stage | No | No | No | No |
+| Get app sharing content capabilities | No | No | No | No |
+| Mute/unmute | Yes | Yes | Yes | Yes | Yes |
+
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
