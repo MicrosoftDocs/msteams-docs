@@ -1,7 +1,7 @@
 ---
 title: Create a new Teams apps
 author: zyxiaoyuer
-description:  Create new Teams app using Teams Toolkit
+description:  Create new Teams app using Teams Toolkit1
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
