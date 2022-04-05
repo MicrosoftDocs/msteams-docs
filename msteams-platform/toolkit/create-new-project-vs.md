@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 
 # Create new Teams app using Visual Studio
 
-## Teams Toolkit for Visual Studio
+## Microsoft Teams apps for Visual Studio
 
 Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically set up apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your Integrated Development Environment (IDE).
 
@@ -19,8 +19,8 @@ The Microsoft Teams app project template provide you all code, files, and config
 
 1. Open the latest version of Visual Studio.
 1. In the start window, choose **Create a new project**.
-     
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option_v1.png" alt-text="create":::
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option_v1.png" alt-text="create":::
 
 1. In the **Search for templates** box, enter Microsoft Teams App.
 1. Select the **Microsoft Teams App** template and select **Next**.
@@ -38,5 +38,7 @@ Use Teams Toolkit to create your first project. The toolkit takes you through a 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/configure-project.png" alt-text="configure project":::
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-teams-app.png" alt-text="create":::
-    
-Visual Studio opens up the new project and Teams Toolkit setup you new project in Teams Developer Portal. The project is added for the Teams organization linked to the Microsoft 365 account you chose in the steps above and create a new Azure Active Directory registration. This is required for the app to run in Teams.
+
+1. Visual Studio opens up the new project and Teams Toolkit setup you new project in Teams Developer Portal. The project is added for the Teams organization linked to the Microsoft 365 account you chose in the steps above and create a new Azure Active Directory registration. This is required for the app to run in Teams.
+
+## See Also
