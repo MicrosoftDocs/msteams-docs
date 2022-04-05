@@ -12,8 +12,8 @@ ms.date: 11/29/2021
 
 After scaffolding, the following are the manifest template files available under `templates/appPackage` folder:
 
-- `manifest.local.template.json` - local debug teams app.
-- `manifest.remote.template.json` - shared between all remote environments.
+* `manifest.local.template.json` - local debug teams app.
+* `manifest.remote.template.json` - shared between all remote environments.
 
 The Template files consisting placeholders, and the actual values from Teams Toolkit are resolved in files under `.fx/configs` and `.fx/states`.
 
@@ -69,7 +69,7 @@ If there are more than one environment, you need to select the environment you w
 
 After previewing the manifest file, you can sync your local changes to Dev portal by following the steps:
 
-1.  Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
+1. Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
 2. Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
 
  You can also trigger **Teams: update manifest to Teams platform** from command palette
@@ -83,9 +83,9 @@ If the manifest file is outdated due to configuration file change or template ch
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-- **Preview only**: local manifest file will be overwritten according to current configuration
-- **Preview and update**: local manifest file will be overwritten according to current configuration and also updated to Teams platform
-- **Cancel**: do nothing
+* **Preview only**: local manifest file will be overwritten according to current configuration
+* **Preview and update**: local manifest file will be overwritten according to current configuration and also updated to Teams platform
+* **Cancel**: do nothing
 
 > [!NOTE]
 > The changes will be updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.

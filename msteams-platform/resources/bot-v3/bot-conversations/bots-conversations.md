@@ -80,7 +80,7 @@ We recommend that you specify the height and width of each image by using XML. I
 Depending on which scopes are declared, your bot can receive messages in the following contexts:
 
 * **personal chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
-* **Channels** A bot can be mentioned ("@_botname_") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
+* **Channels** A bot can be mentioned ("@*botname*") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
 
 For incoming messages, your bot receives an [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/resources/bot-v3/bots-notifications.md#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
 
@@ -155,7 +155,7 @@ The `channelData` object contains Teams-specific information and is the definiti
 A typical channelData object in an activity sent to your bot contains the following information:
 
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `tenant.id` Azure Active Directory tenant ID; passed in all contexts.
+* `tenant.id` Microsoft Azure Active Directory (Azure AD) tenant ID; passed in all contexts.
 * `team` Passed only in channel contexts, not in personal chat.
   * `id` GUID for the channel.
   * `name` Name of the team; passed only in cases of [team rename events](~/resources/bot-v3/bots-notifications.md#team-name-updates).

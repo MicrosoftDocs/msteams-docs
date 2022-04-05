@@ -4,7 +4,7 @@ description: Learn the basic tasks and concepts needed to implement in-app purch
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal 
+ms.localizationpriority: high 
 ---
 
 # In-app purchases
@@ -38,10 +38,11 @@ To enable in-app purchase experience, update your Teams app **manifest.json** fi
     "permissions": {
         "resourceSpecific": [
             {
-             "name": "InAppPurchase.Allow.User",
-             "type": "Delegated"
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated"
             }
         ]
+    }
 }
 ```
 
@@ -82,24 +83,23 @@ The following example shows the users to purchase subscription plans for a ficti
 
 1. In the Teams **Store**, find and select the app.
 
-1. In the app details dialog, select **Buy a subscription** or **Add for me**. 
+1. In the app details dialog, select **Buy a subscription** or **Add for me**.
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app." border="true":::
 
-    
 1. **Add for me** offers a free trial version of the app and later **Upgrade** it to a paid version.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
 1. In the **Choose a subscription plan** dialog, choose the plan and select **Checkout**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
 1. Complete the transaction and select **Configure now** to set up your subscription.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
 
 ## Next step
 

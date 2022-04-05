@@ -13,7 +13,7 @@ keywords: teams authorization OAuth SSO Azure AD rsc Graph
 > [!NOTE]
 > Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. The RSC permissions model enables *team owners* and *chat owners* to grant consent for an application to access and modify a team's data and a chat's data, respectively. 
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. The RSC permissions model enables *team owners* and *chat owners* to grant consent for an application to access and modify a team's data and a chat's data, respectively.
 
 **Note:** If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
@@ -89,7 +89,7 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Microsoft Azure portal:
 
-1. Sign in to the [Microsoft Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. The default is **Allow group owner consent for all group owners**. For a team owner to install an app using RSC, group owner consent must be enabled for that user.
 
@@ -99,9 +99,9 @@ In addition, you can enable or disable group owner consent using PowerShell, fol
 
 ### Configure user consent settings for RSC in a chat
 
-You can enable or disable [user consent](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directly within the Microsoft Azure portal:
+You can enable or disable [user consent](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) directly within the Azure portal:
 
-1. Sign in to the [Microsoft Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **User consent for applications**. The default is **Allow user consent for apps**. For a chat member to install an app using RSC, user consent must be enabled for that user.
 
@@ -130,15 +130,15 @@ To make Graph API calls, you must obtain an access token for your app from the i
 
 You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
 
-- The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO) you must use the same Application ID for your app and SSO.
-- The **Client secret/password** or a public or private key pair that is **Certificate**. This is not required for native apps.
-- A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
+* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO) you must use the same Application ID for your app and SSO.
+* The **Client secret/password** or a public or private key pair that is **Certificate**. This is not required for native apps.
+* A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
 
 For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
 
 ## Update your Teams app manifest
 
-The RSC permissions are declared in your app manifest JSON file. 
+The RSC permissions are declared in your app manifest JSON file.
 
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
@@ -308,7 +308,7 @@ Example for RSC in a chat
 
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `authorization`.
-    
+
 <br>
 
 </details>
@@ -379,7 +379,7 @@ Example for RSC in a chat
 
 > [!NOTE]
 > If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
-    
+
 <br>
 
 </details>
@@ -433,6 +433,6 @@ For more information on how to get details of apps installed in a specific chat,
 | Resource-Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## See also
- 
+
 * [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
 * [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)

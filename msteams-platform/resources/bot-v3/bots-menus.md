@@ -17,7 +17,8 @@ To aid discovery and to help educate users about your bot’s functionality, you
 When a user selects a menu item, the command string is inserted into the text box to aid in user completion of the bot message.
 
 ## Bot menu support on Teams mobile app
-> [!NOTE] 
+
+> [!NOTE]
 > Bot menus are not displayed on mobile devices.
 
 ## App manifest

@@ -33,17 +33,17 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+    * [Office 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program)
     * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
+    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * Microsoft Teams with an account (not a guest account)
-    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install) by executing all the commands
+    * Install [Windows PowerShell](/microsoftteams/teams-powershell-install) by executing all the commands
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
   content: |
-    Register an application using App registration in the Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
+    Register an application using App registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
 
     1. Use ngrok to create a tunnel to your web server's endpoints.
     1. Create Azure Bot resource to register bot with Azure Bot Service.
@@ -244,7 +244,7 @@ items:
         
             :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new.png" alt-text="Teams Link.":::
         
-        * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) site.
+        * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site.
             * Login to the page using your Teams account and add `Users` at the end of the URl in the search box and select **Run query**.
             * Display names and User IDs linked to your account are generated.
             * Pick any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.

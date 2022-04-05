@@ -91,7 +91,7 @@ People might use the in-meeting tab to:
 
 ### Anatomy: In-meeting tab
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting tab." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -147,7 +147,7 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 
 ### Anatomy: In-meeting dialog
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog." border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="Example shows the structural anatomy of an in-meeting dialog." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -178,9 +178,6 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
 
 ## Use the shared meeting stage
-
-> [!NOTE]
-> Currently the feature is available in [**public developer preview**](../../whats-new.md#developer-preview) only.
 
 You can allow users to share and interact with some or all of your app content on the meeting stage. Here are examples of how people might use this feature during a meeting:
 
