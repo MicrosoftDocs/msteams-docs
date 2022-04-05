@@ -147,8 +147,7 @@ landingContent:
           url: ~/sbs-meetings-sidepanel.yml
         - text: View Meeting Stage in Teams
           url: ~/sbs-meetings-stage-view.yml
-        - text: Interact with content bubble bot in Meetings
-          url: ~/sbs-meeting-content-bubble.yml
+
 
     - linkListType: tutorial
       links:
@@ -168,6 +167,10 @@ landingContent:
           url: ~/sbs-teams-connectors.yml
         - text: Share meeting stage in Teams
           url: ~/sbs-meetings-stage-view.yml
+        - text: Interact with content bubble bot in Meetings
+          url: ~/sbs-meeting-content-bubble.yml
+          
+          
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
