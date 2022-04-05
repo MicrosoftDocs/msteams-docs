@@ -1,5 +1,5 @@
 ---
-title: Create a new Teams app using Teams Toolkit
+title: Create a new Teams app
 author: zyxiaoyuer
 description:  Create new Teams app using Teams Toolkit
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create a new Teams app using Teams Toolkit
+# Create a new Teams app
 
 To create a new Teams app using Teams Toolkit, you can select from one of the following options:
 
@@ -23,7 +23,7 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). 
 1. Select at least one option to start creating the Teams app.
 
-### Create a new Teams app using view samples
+### Create a new Teams app using View samples
 
 You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
 
@@ -39,11 +39,13 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 
 ## Step-by-step guides using Teams Toolkit
 
+
 * [Build a Teams app with Blazor](../sbs-gs-blazorapp.yml)
 * [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 * [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
-* [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
+* [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)<br>
 
+<br>
 ## See also
 
 * [Provision cloud resources](provision.md)
