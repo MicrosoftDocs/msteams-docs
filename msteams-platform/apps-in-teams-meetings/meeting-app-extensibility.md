@@ -46,8 +46,6 @@ Users can also add or interact with an app in the scheduled private channel meet
 | AV Filter | Partial/Consumption | Filters applied on desktop for a user show up on Mobile | | Yes | Yes | Yes | Yes | Yes |
 | AV Filter | Full | | Filters applied from mobile | No | No | No | No | No |
 | Together Mode | Partial/Consumption | | Users on mobile with video on are placed into the TM mode | Yes | Yes | Yes | Yes | Yes |
-| AV Filter | Full | | Filters applied from mobile | No | No | No | No | No |
-| Together Mode | Partial/Consumption | | Users on mobile with video on are placed into the TM mode | Yes | Yes | Yes | Yes | Yes |
 | Together Mode | Full | Backlog | | No | No | No | No | No |
 | Deeplinks to Pre/post/in-meeting tabs | Partial/Consumption | Deeplink shared from desktop user on chat should be handled gracefully when clicked on by a mobile user | | Yes | Yes | Yes | Yes | Yes |
 | Deeplinks to Pre/post/inmeeting tabs | Full | | Deeplink shared from desktop/mobile user on chat work on mobile too correctly | No | No | No | No | No |
@@ -78,15 +76,15 @@ Users can also add or interact with an app in the scheduled private channel meet
 
 ### APIs Client SDK TFL
 
-| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet Now (besides Channel meet now) | 1-1 Calls | Group Calls |
-|---|---|---|---|---|---|
+| Feature | Scheduled Private Meeting | Meet now | 1-1 Calls | Group Calls |
+|---|---|---|---|---|
 | Get meeting details | No | No | No | No |
 | Get user | No | No | No | No |
 | Get context | No | No | No | No |
 | Share app to stage | Yes | Yes | Yes | Yes |
 | Get app content sharing stage | No | No | No | No |
 | Get app sharing content capabilities | No | No | No | No |
-| Mute/unmute | Yes | Yes | Yes | Yes | Yes |
+| Mute/unmute | Yes | Yes | Yes | Yes |
 
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
