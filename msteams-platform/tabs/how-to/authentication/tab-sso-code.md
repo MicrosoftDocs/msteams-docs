@@ -152,7 +152,7 @@ The `appsettings.json` file includes the configuration for Azure AD app.
 ### View the updated app settings
 
 <details>
-<summary>Here's an example of `appsettings.json` update:</summary>
+<summary>Here's an example of app settings update:</summary>
 
 This following sample details are configured in Azure AD:
 

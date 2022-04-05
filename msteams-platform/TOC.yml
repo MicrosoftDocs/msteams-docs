@@ -382,7 +382,7 @@
     - name: Use silent authentication
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
-      href: tabs/how-to/authentication/auth-tab-aad-rev.md
+      href: tabs/how-to/authentication/auth-aad-sso.md
     - name: Use external OAuth providers
       href: tabs/how-to/authentication/auth-oauth-provider.md
   - name: Bots
