@@ -124,9 +124,6 @@ After adding tab, the changes in your project are as follows:
 
 </details> 
 
-## 
-
-
 ## Limitations
 
 The limitations to TeamsFx while adding more capabilities are as follows:
