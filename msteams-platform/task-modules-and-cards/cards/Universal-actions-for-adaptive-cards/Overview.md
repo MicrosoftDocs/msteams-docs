@@ -48,7 +48,7 @@ The following image depicts the Universal Actions for Adaptive Cards for both Te
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="Mobile same card to Teams and Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="Mobile same card to Teams and Outlook":::
 
 # [Desktop](#tab/desktop)
 

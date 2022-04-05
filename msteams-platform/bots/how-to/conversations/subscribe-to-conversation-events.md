@@ -24,6 +24,7 @@ When building your conversational bots for Microsoft Teams, you can work with co
 You can use conversation update events to provide better notifications and more effective bot actions.
 
 > [!IMPORTANT]
+>
 > * You can add new events any time and your bot begins to receive them.
 > * You must design your bot to receive unexpected events.
 > * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
@@ -130,13 +131,13 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_created(
-	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(
-			f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-		)
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
 ```
 
 ---
@@ -214,11 +215,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_renamed(
-	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(f"The new channel name is {channel_info.name}")
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The new channel name is {channel_info.name}")
+ )
 ```
 
 ---
@@ -298,11 +299,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_deleted(
-	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(f"The deleted channel is {channel_info.name}")
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The deleted channel is {channel_info.name}")
+ )
 ```
 
 ---
@@ -385,13 +386,13 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_restored(
-	self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(
-			f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
-		)
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
 ```
 
 ---
@@ -529,13 +530,13 @@ This is the message your bot receives when the bot is added to a one-to-one chat
 
 ```python
 async def on_teams_members_added(
-	self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
+ self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
 ):
-	for member in teams_members_added:
-		await turn_context.send_activity(
-			MessageFactory.text(f"Welcome your new team member {member.id}")
-		)
-	return
+ for member in teams_members_added:
+  await turn_context.send_activity(
+   MessageFactory.text(f"Welcome your new team member {member.id}")
+  )
+ return
 ```
 
 ---
@@ -641,13 +642,13 @@ The `channelData` object in the following payload example is based on adding a m
 
 ```python
 async def on_teams_members_removed(
-	self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
+ self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
 ):
-	for member in teams_members_removed:
-		await turn_context.send_activity(
-			MessageFactory.text(f"Say goodbye to {member.id}")
-		)
-	return
+ for member in teams_members_removed:
+  await turn_context.send_activity(
+   MessageFactory.text(f"Say goodbye to {member.id}")
+  )
+ return
 ```
 
 ---
@@ -723,11 +724,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_renamed(
-	self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(f"The new team name is {team_info.name}")
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The new team name is {team_info.name}")
+ )
 ```
 
 ---
@@ -800,10 +801,10 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_deleted(
-	self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-	//handle delete event
-	)
+ //handle delete event
+ )
 ```
 
 ---
@@ -879,11 +880,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_restored(
-	self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(f"The team name is {team_info.name}")
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
@@ -959,15 +960,14 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_archived(
-	self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(f"The team name is {team_info.name}")
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
-
 
 ### Team unarchived
 
@@ -1040,11 +1040,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_unarchived(
-	self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-	return await turn_context.send_activity(
-		MessageFactory.text(f"The team name is {team_info.name}")
-	)
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
@@ -1152,21 +1152,21 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_reactions_added(
-	self, message_reactions: List[MessageReaction], turn_context: TurnContext
+ self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
-	for reaction in message_reactions:
-		activity = await self._log.find(turn_context.activity.reply_to_id)
-		if not activity:
-			await self._send_message_and_log_activity_id(
-				turn_context,
-				f"Activity {turn_context.activity.reply_to_id} not found in log",
-			)
-		else:
-			await self._send_message_and_log_activity_id(
-				turn_context,
-				f"You added '{reaction.type}' regarding '{activity.text}'",
-			)
-	return
+ for reaction in message_reactions:
+  activity = await self._log.find(turn_context.activity.reply_to_id)
+  if not activity:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"Activity {turn_context.activity.reply_to_id} not found in log",
+   )
+  else:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"You added '{reaction.type}' regarding '{activity.text}'",
+   )
+ return
 ```
 
 ---
@@ -1261,21 +1261,21 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_reactions_removed(
-	self, message_reactions: List[MessageReaction], turn_context: TurnContext
+ self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
-	for reaction in message_reactions:
-		activity = await self._log.find(turn_context.activity.reply_to_id)
-		if not activity:
-			await self._send_message_and_log_activity_id(
-				turn_context,
-				f"Activity {turn_context.activity.reply_to_id} not found in log",
-			)
-		else:
-			await self._send_message_and_log_activity_id(
-				turn_context,
-				f"You removed '{reaction.type}' regarding '{activity.text}'",
-			)
-	return
+ for reaction in message_reactions:
+  activity = await self._log.find(turn_context.activity.reply_to_id)
+  if not activity:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"Activity {turn_context.activity.reply_to_id} not found in log",
+   )
+  else:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"You removed '{reaction.type}' regarding '{activity.text}'",
+   )
+ return
 ```
 
 ---
@@ -1283,7 +1283,7 @@ async def on_reactions_removed(
 ## Installation update event
 
 The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
- 
+
 > [!NOTE]
 > When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
 
@@ -1341,7 +1341,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
   "serviceUrl": "https://smba.trafficmanager.net/amer/", 
   "from": { 
     "id": "sample id", 
-    "aadObjectId": "sample AAD Object ID" 
+    "aadObjectId": "sample Azure AD Object ID" 
   },
   "conversation": { 
     "isGroup": true, 

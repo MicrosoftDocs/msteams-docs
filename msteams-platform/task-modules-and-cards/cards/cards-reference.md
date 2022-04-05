@@ -1,7 +1,7 @@
 ---
 title: Types of cards
 description: Describes all the cards and card actions available to bots in Teams
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: bots cards reference
 ms.topic: reference
 ---
@@ -14,7 +14,7 @@ Before you identify the different card types, understand how to create a hero ca
 
 ## Create a hero card, thumbnail card, or Adaptive Card
 
-**To create a hero card, thumbnail card, or Adaptive Card from App Studio**
+To create a hero card, thumbnail card, or Adaptive Card from App Studio:
 
 1. Go to **App Studio** from Teams.
 1. Select **Card editor**.
@@ -117,6 +117,7 @@ The following table provides the features that support Adaptive Cards:
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
+>
 > * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based messaging extensions.
 > * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based messaging extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
@@ -124,7 +125,7 @@ The following table provides the features that support Adaptive Cards:
 
 ### Example of Adaptive Card
 
-![Example of an Adaptive Card](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card" border="true":::
 
 The following code shows an example of an Adaptive Card:
 
@@ -263,10 +264,26 @@ The following code shows an example of an Adaptive Card:
 
 #### Additional information on Adaptive Cards
 
+You can pass dynamic values in an Adaptive Card using the dollar symbol ($) and curly braces. For more information, see [Adaptive Cards Templating](/adaptive-cards/templating/).
+
+Example:
+
+```json
+{ 
+ "type": "TextBlock",
+ "text": "${titleText}",
+ "size": "default",
+ "weight": "bolder"
+}
+
+```
+
 Bot Framework reference:
 
 * [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+To know more about Adaptive Cards, see [Adaptive Cards](/adaptive-cards/).
 
 You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.
 
@@ -948,3 +965,4 @@ The following cards are implemented by the Bot Framework, but are not supported 
 * [Format cards](~/task-modules-and-cards/cards/cards-format.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

@@ -10,14 +10,10 @@ metadata:
   nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
   nextTutorialTitle: Read more on Device permissions for browser
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
-    > [!NOTE]
-    > The latest update on how device permissions are handled in the browser is currently available in [public developer preview](resources/dev-preview/developer-preview-intro.md) only. 
-    > This update will be generally available (GA) by February 01, 2022.
-
     Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
 
     This step-by-step guide helps you to do tab device permissions at Microsoft Teams. You'll see the following output:
@@ -33,7 +29,7 @@ items:
     * Install [ngrok](https://ngrok.com/) or equivalent tunneling solution.
     * Install [Node.js](https://nodejs.org/en/).
     * Visual Studio Code or the latest version.
-    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
+    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
 - title: Configure and run the Tab device permissions app on Teams
   durationInMinutes: 1

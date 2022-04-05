@@ -28,14 +28,14 @@ Before the introduction of SameSite restrictions, the cookies were stored on the
 
 ## SameSite cookie attribute: initial release
 
-Google Chrome version 51 introduced the `SetCookie SameSite` specification as an optional attribute. Starting with Build 17672, Windows 10 introduced SameSite cookie support for the [Microsoft Edge browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/).
+Google Chrome version 51 introduced the `SetCookie SameSite` specification as an optional attribute. Starting with Build 17672, Windows 10 introduced SameSite cookie support for the [Microsoft&nbsp;Edge browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/).
 
 You can opt out of adding the SameSite cookie attribute to the `SetCookie` header or add it with one of two settings, **Lax** and **Strict**. An unimplemented SameSite attribute was considered the default state.
 
 ## SameSite cookie attribute: 2020 release
 
 Chrome 80, released in February 2020, introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
- 
+
 SameSite cookie attributes are as follows:
 
 |Setting | Enforcement | Value |Attribute Specification |
@@ -76,6 +76,7 @@ According to the updated SameSite restrictions, a browser does not add a cookie 
 Android WebView is a Chrome system component that allows Android apps to display the web content. While the new restrictions are default, starting with Chrome 80, they are not immediately enforced on WebViews. They will be applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
+>
 > * You must declare first party cookies as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 > * You must declare third party cookies as `SameSite=None; Secure`.
 

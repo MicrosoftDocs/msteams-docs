@@ -17,11 +17,11 @@ The following sections describe how to do this:
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### Action type message extensions
+## Action type message extensions
 
 To initiate actions from a messaging extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
 
-#### Complete app manifest example
+### Complete app manifest example
 
 ```json
 {

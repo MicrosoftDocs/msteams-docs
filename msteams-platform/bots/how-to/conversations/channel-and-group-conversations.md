@@ -18,6 +18,8 @@ Bots in a group or channel only receive messages when they are mentioned @botnam
 > This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only.
 >
 > Using resource-specific consent (RSC), bots can receive all channel messages in teams that it is installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+>
+> Posting a message or Adaptive Card to a private channel is currently not supported.
 
 ## Design guidelines
 
@@ -263,6 +265,10 @@ Do not send a message in the following cases:
 * A team member is added to a group or channel.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create a Teams conversational bot.
 
 ## Next step
 
