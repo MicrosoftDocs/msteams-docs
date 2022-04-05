@@ -69,14 +69,13 @@ To register your tab app in Azure AD:
 
 ### Expose an API
 
-In this section, you'll learn to:
+In this section, you'll learn:
 
-- [Register your tab application in Azure AD](#register-your-tab-application-in-azure-ad)
-  - [Register your app](#register-your-app)
-    - [Expose an API](#expose-an-api)
-      - [To expose an API](#to-expose-an-api)
-      - [To configure API scope](#to-configure-api-scope)
-      - [To configure authorized client application](#to-configure-authorized-client-application)
+- [To expose an API](#to-expose-an-api)
+  
+- [To configure API scope](#to-configure-api-scope)
+  
+- [To configure authorized client application](#to-configure-authorized-client-application)
 
 #### To expose an API
 
