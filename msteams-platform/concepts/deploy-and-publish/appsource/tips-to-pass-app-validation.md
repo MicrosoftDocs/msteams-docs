@@ -24,7 +24,7 @@ Here are the most common reasons for your app to get rejected during app certifi
       :::image type="icon" source="../../../assets/icons/testability-icon.png" link="#testability":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/compliance-icon.png" link="#violation-of-microsoft-trademark-and-brand-guidelines":::
+      :::image type="icon" source="../../../assets/icons/compliance-icon.png" link="#microsoft-365-app-compliance-program":::
    :::column-end:::
 :::row-end:::
 
@@ -42,12 +42,15 @@ Here are the most common reasons for your app to get rejected during app certifi
       :::image type="icon" source="../../../assets/icons/schema-icon.png" link="#manifest-schema":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/domain-icon.png" link="#valid-domains":::
+      :::image type="icon" source="../../../assets/icons/app-ui-icon.png" link="#app-ui":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column:::
+      :::image type="icon" source="../../../assets/icons/domain-icon.png" link="#valid-domains":::
+   :::column-end:::
+   :::column span="":::
       :::image type="icon" source="../../../assets/icons/localization-icon.png" link="#localization-information":::
    :::column-end:::
    :::column span="":::
@@ -59,24 +62,21 @@ Here are the most common reasons for your app to get rejected during app certifi
    :::column span="":::
       :::image type="icon" source="../../../assets/icons/terms-of-use-icon.png" link="#terms-of-use-link":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../assets/icons/domain-icon.png" link="#valid-domains":::
-   :::column-end:::
 :::row-end:::
 
 ## Broken links, functional bugs, app crashes and unexpected errors
 
-Check the following reasons which contribute to most app rejections:
+Check the following reasons, which contribute to most app rejections:
 
-* Broken links in an app
+* Broken links in an app.
 
-* Functional bugs that block app usage
+* Functional bugs that block app usage.
 
-* App crashes
+* App crashes.
 
-* Continuous loading of app surfaces that prevent completion of stated workflows that the app supports
+* Continuous loading of app surfaces that prevent completion of stated workflows that the app supports.
 
-* Unexpected error messages during the app usage, login, and sign-up experience and for scenarios where the app feature simply doesn't work as expected.
+* Unexpected error messages during the app usage, sign in, and sign-up experience and for scenarios where the app feature simply doesn't work as expected.
 
 * Ensure your app is complete and ready to publish before you submit for review.
 
@@ -86,19 +86,19 @@ Ensure to test your app thoroughly, check all the end to end workflows that your
 
 A great description can make your app stand out in the Microsoft Store and help encourage customers to download it. Avoid the following mistakes in your app description:
 
-* Way forward: Way forward information for new users such as, sign up or Get Started or Help and Contact Us links are not included in the Manifest and App Source full description.
+* Way forward: Way forward information for new users such as, sign up or get started or help and contact us links aren't included in the Manifest and App Source full description.
 
 * Regional dependency: Region specific app name or functionality not called out in manifest and partner center app descriptions.
 
-* Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out and Sign-Up experience are not called out in app Manifest  and long description.
+* Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out and Sign-Up experience aren't called out in app Manifest  and long description.
 
 * Short and full description in the app manifest doesn't highlight the app’s value proposition.
 
-* Supported app features are not updated.
+* Supported app features aren't updated.
 
 * App comparison with another app.
 
-* References to the integrations which are not part of app functionality.
+* References to the integrations, which aren't part of app functionality.
 
 * Grammatical errors.
 
@@ -108,7 +108,7 @@ A great description can make your app stand out in the Microsoft Store and help 
 
 Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies.
 
-When referring to Microsoft trademarks, products names , and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks).
+When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks).
 
 Common violations that lead to app rejection:
 
@@ -116,7 +116,7 @@ Common violations that lead to app rejection:
 
 * Using Microsoft brand assets in the offer content without an express license from Microsoft.
 
-* Creating an offer listing (including the offer description, title, icon, screenshots and videos) that impersonates or provides an impression that it is an official Microsoft app for the Microsoft Teams store.
+* Creating an offer listing (including the offer description, title, icon, screenshots and videos) that impersonates or provides an impression that it's an official Microsoft app for the Microsoft Teams store.
 
 ## Testability  
 
@@ -124,23 +124,17 @@ You must provide [detailed test instructions](prepare/teams-store-validation-gui
 
 * Developers don't provide any test instructions or credentials to test the app.
 
-* Developers don't provide two test accounts when there is a dependency to test collaboration scenarios whereas they provide only one account.
+* Developers don't provide two test accounts when there's a dependency to test collaboration scenarios whereas they provide only one account.
 
-* Developers provide only one test account when there is a dependency on two test accounts to test collaboration scenarios.
+* Developers provide only one test account when there's a dependency on two test accounts to test collaboration scenarios.
 
 * Inability to complete full app functional testing following the provided test instructions or test credentials.
 
-* The provided test instructions and credentials are not sufficient to complete app functional testing.
+* The provided test instructions and credentials aren't sufficient to complete app functional testing.
 
-* Enter all the details needed to review your app in the Notes for Certification Information section of Partner Center.
+Enter all the details required to review your app in the Notes for Certification Information section of Partner Center.Provide valid demo credentials for features that require sign in and instructions to set any special configuration.
 
-* Provide a valid demo credentials for features that require sign in.
-
-* Provide instructions to set any special configuration.
-
-* Provide a demo video or hardware for features that require an environment that is hard to replicate.
-
-* Ensure your contact information is complete and up-to-date.
+Provide a demo video or hardware for features that require an environment that is hard to replicate and ensure your contact information is complete and up-to-date.
 
 ## Microsoft 365 App Compliance Program  
 
@@ -148,9 +142,9 @@ The Microsoft 365 App Compliance Program helps organizations assess and manage r
 
 ## Violation of App Icon guidelines
 
-Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to the App Icon guidelines.
+Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to [App Icon guidelines](../../build-and-test/apps-package.md#app-icons).
 
-Most common violations of [App Icon guidelines](../../build-and-test/apps-package.md#app-icons) that result in app rejection include:
+Most common violations of the App Icon guidelines that result in app rejection include:
 
 * App submissions that contain app packages with different color and outline icons or non-white and non-transparent outline icons.
 
@@ -163,8 +157,8 @@ Your app name plays a critical role for users to discover your app on the Micros
 Most common violations of App naming guidelines include:
 
 * Inconsistent usage of app name throughout the app’s functionality.
-* Mismatch between the app name mentioned in the app manifest submitted as part of the app package and the app name in Partner Center.
-* App names that have words such as **Beta**, **Dev**, and **Prod** appended to indicate app is not production ready.
+* Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
+* App names appended with **Beta**, **Dev**, and **Prod** to indicate app isn't production ready.
 * App submissions where the developer has changed the app name, but the old app name is sill used within the app.
 
 ## Support Link
@@ -173,7 +167,7 @@ You must ensure your app includes a valid support link for users to contact. Sup
 
 ## Manifest Schema
 
-Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If you are submitting an app update, you must increment the app version declared in the manifest. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update. App packages that contain preview schemas (not publicly released) fail app review. Ensure the manifest schema version is the same in the Microsoft Teams Store and Microsoft AppSource. If your app supports localization, ensure to use a localization manifest schema version greater than 1.5. Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
+Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If you're submitting an app update, you must increment the app version declared in the manifest. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update. App packages that contain preview schemas (not publicly released) fail app review. Ensure the manifest schema version is the same in the Microsoft Teams Store and Microsoft AppSource. If your app supports localization, ensure to use a localization manifest schema version greater than 1.5. Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
 
 ## App UI
 
