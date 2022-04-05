@@ -25,7 +25,7 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams] (https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
+    * [Microsoft Teams](https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
     * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
     * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
