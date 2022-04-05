@@ -13,7 +13,6 @@ ms.date: 11/29/2021
 TeamsFx helps to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single line statements with zero configuration.
 
 Use the library to:
-
 * Access the core functionalities in client and server environment in a similar way.
 * Write user authentication code in a simplified way.
 
@@ -24,10 +23,14 @@ For more information, see [Teams app project](https://github.com/OfficeDev/Teams
 
 ### Prerequisites
 
-* Latest version of Node.js.
-* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version is `>= 4.15.0`. ([Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548)).
+Install the following tools and set up your development environment:
 
-For more information, see:
+* Latest version of Node.js.
+* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. 
+  > [!NOTE] 
+  > Currently, the required version is 4.15.0` or later. For more information, see: [Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
+
+Ensure you have working knowledge of the following:
 
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
@@ -44,14 +47,15 @@ npm install @microsoft/teamsfx
 
 ### Scenarios
 
-TeamsFx SDK is built to be used in browser and Node.js environment. Common scenarios include:
-- Teams tab application
-- Azure Function
-- Teams bot
+The folllowing are the scenarios of using TeamsFx SDK in browser and Node.js environment: 
 
-### Create and authenticate a `MicrosoftGraphClient` service
+* Teams tab application
+* Azure Function
+* Teams bot
 
-To create a graph client object to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.The following steps helps you to choose the proper identity type:
+### Create and authenticate `MicrosoftGraphClient` service
+
+To create a graph client object and to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.
 
 #### Invoke Graph API without user (Application Identity)
 
