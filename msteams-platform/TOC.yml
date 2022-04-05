@@ -212,10 +212,6 @@
     href: tabs/how-to/conversational-tabs.md
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
-  - name: Build authentication for tabs
-    items:
-      - name: Teams SSO with Azure AD for tab app
-        href: sbs-teams-sso-tabs.yml  
 - name: Build bots
   items:
   - name: Overview
