@@ -190,6 +190,33 @@ async def on_members_added_activity(
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
+## Send suggested actions
+
+Suggested actions enable your bot to present buttons that the user can tap to provide input. Suggested actions appear close to the composer and enhance user experience by enabling the user to answer a question or make a selection with a simple tap of a button, rather than having to type a response with a keyboard. Unlike buttons that appear within rich cards (which remain visible and accessible to the user even after being tapped), buttons that appear within the suggested actions pane will disappear after the user makes a selection. This prevents the user from tapping stale buttons within a conversation and simplifies bot development (since you will not need to account for that scenario).
+
+To add suggested actions to a message, set the `suggestedActions` property of the [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+The following is an example for implementation and experience of suggested actions:
+
+``` json
+"suggestedActions": {
+        "actions": [
+            {
+                "type": "imBack",
+                "title": "Action 1",
+                "value": "Action 1"
+            },
+            {
+                "type": "imBack",
+                "title": "Action 1",
+                "value": "Action 1"
+            }
+        ]
+    }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+
 ## Teams channel data
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
@@ -370,12 +397,12 @@ The following code shows an example of sending a simple Adaptive Card:
 Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
 
 * **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears.
-
-    ![Error message](~/assets/images/Cards/error-message.png)
+    
+    :::image type="content" source="~/assets/images/Cards/error-message.png" alt-text="Error message" border="true":::
 
 * **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
-
-    ![Success message](~/assets/images/Cards/success.PNG)
+    
+    :::image type="content" source="~/assets/images/Cards/success.PNG" alt-text="Success message" border="true":::
 
 You can select **Close** or switch chat to dismiss the message.
 
