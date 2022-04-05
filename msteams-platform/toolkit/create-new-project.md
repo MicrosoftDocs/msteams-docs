@@ -45,7 +45,7 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 * [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)<br>
 
-<br>
+
 ## See also
 
 * [Provision cloud resources](provision.md)
