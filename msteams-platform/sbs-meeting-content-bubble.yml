@@ -27,7 +27,7 @@ items:
     
     This step-by-step guide helps you to send feedback to content bubble bot during meetings in Teams with attendees. You'll see the following output:
 
-       ![Meeting content bubble introduction](~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png)
+      :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting content bubble introduction" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
