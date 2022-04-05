@@ -18,16 +18,16 @@ Teams Toolkit provides you with all the tools required for successfully building
 
 # [Visual Studio Code](#tab/VisualStudioCode)
 
-#### Create a new Teams app using Toolkit**
+#### Create a new Teams app using Toolkit
 
 Install Teams Toolkit extension in Visual Studio Code and to view the Teams Toolkit icon in the sidebar :::image type="icon" source="../assets/images/teams-toolkit-v2/manual/toolkit-icon.png" border="false":::. To start creating a new app select from any one of the following options:
 
 * [Create a new Teams app](create-new-project.md#create-a-new-teams-app)
 * [View samples](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-#### Steps to create a new Teams app
+#### Create a new Teams app
 
-1. Open latest version of Visual Studio Code.
+1. Open the latest version of Visual Studio Code.
 1. Select Teams Toolkit icon in the Visual Studio Code sidebar and select any one option.
 1. Select **Create a new Teams app**.
 1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx).
@@ -35,7 +35,7 @@ Install Teams Toolkit extension in Visual Studio Code and to view the Teams Tool
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/create-new-teams-app.png" alt-text="Create a new Teams app":::
 
-#### Steps to create a new Teams app using samples
+#### Create a new Teams app using samples
 
 You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
 
@@ -55,9 +55,9 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 
 #### Teams Toolkit for Visual Studio
 
-Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your IDE.
+Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically set up apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your IDE.
 
-## Get started with a new project
+## Create a new project
 
 Teams Toolkit project templates provide all code, files, and configuration you need to get started with a Teams app project.
 
@@ -73,7 +73,7 @@ The Microsoft Teams App project template allows you to specify a Microsoft 365 a
  
 1. In the **Search for templates** box, enter Microsoft Teams App.
 1. Select the **Microsoft Teams App** template and select **Next**.
-1. In the **Configure your new project** window, type or enter _HelloWorld_ in the **Project name** box. Then, select **Create**.
+1. In the **Configure your new project** window, type or enter name of the **Project name** box and select select **Create**.
 1. In the **Create a new Teams application** window, choose or sign in to a Microsoft 365 account using the **Choose an account** selector. Then, select **Create**.
 
 Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
