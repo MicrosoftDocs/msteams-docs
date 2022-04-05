@@ -361,8 +361,6 @@
         href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Register your app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Create client secret
-        href: tabs/how-to/authentication/tab-sso-client-secret.md
       - name: Configure admin consent
         href: tabs/how-to/authentication/tab-sso-admin-consent.md
       - name: Configure app code for authentication

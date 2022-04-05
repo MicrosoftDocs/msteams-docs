@@ -11,7 +11,6 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 
 With Teams SSO, the access token is pre-fetched to improve app performance and load times.
 
-<!--
 ## Teams SSO for tabs at runtime
 
 The following image shows how the Teams SSO with Azure AD process works:
@@ -28,7 +27,7 @@ The following image shows how the Teams SSO with Azure AD process works:
 > [!NOTE]
 > The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see Get an access token with Graph permissions- \add x-ref\.
 
-The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.-->
+The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 ## Build a Teams tab app with Teams SSO
 
@@ -138,6 +137,4 @@ You can view the cloned repository by opening it in Visual Studio.
 4. Enter the location where you want to clone the repo, and select **Clone**.
 
    The sample repo is cloned, and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
-
-   Now that you've got the sample repo cloned, let's build your first C# app for Teams.
 </details>
