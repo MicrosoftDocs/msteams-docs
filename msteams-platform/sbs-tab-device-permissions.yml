@@ -62,7 +62,25 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: | 
-     1. 
+     1. Navigate to **manifest.json** in cloned repository.
+  
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-manifest.png" alt-text="manifest file" border="true":::
+
+     1. Open **manifest.json** in **Visual Studio** and make the following changes:
+       
+        Replace `<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok excluding the https:// part in all the places.
+
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/visual-studio.png" alt-text="update ngrok" border="true":::
+               
+- title: Build and run client app using npm
+  durationInMinutes: 1
+  content: |
+     
+
+
+
+
+
 
 
 - title: Configure and run the Tab device permissions app on Teams
