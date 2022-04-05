@@ -19,8 +19,6 @@ Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) t
 
 ## Create a personal tab with Node.js
 
-To create a personal tab with Node.js
-
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
 
     ```cmd
@@ -173,8 +171,8 @@ Create a content page and update the existing files of the personal tab applicat
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -259,7 +257,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
 
-1. Select **Add** in the pop-up window. Your tab is uploaded to Teams.
+1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded" border="true":::
 
@@ -274,8 +272,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## Create a personal tab with ASP.NET Core
-
-You can create a custom personal tab using C# and ASP.NET Core Razor pages. To create a personal tab with ASP.NET Core
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -369,14 +365,14 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 
 ### Update and run your application
 
-1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml** and add the following to the `<head>` tags section:
+1. Open Visual Studio Solution Explorer and go to **Pages** > **Shared** folder and open **_Layout.cshtml** and add the following to the `<head>` tags section:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -390,7 +386,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Update your app package with Developer Portal
 
-1. Go to **Developer portal** in Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. Open **Apps** and select **Import app**.
 
@@ -410,7 +406,7 @@ ngrok http 3978 --host-header=localhost
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank.
+1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and **Add**.
 
 1. Select **Save**.
 
@@ -418,15 +414,9 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
-1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
-
-1. Find your app using the search , select the three-dots in its row.
-
-1. Select the **View** option. The **Add** page appears for your app.
-
-1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
+1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab" border="true":::
 
@@ -439,8 +429,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## Create a personal tab with ASP.NET Core MVC
-
-You can create a custom personal tab using C# and ASP.NET Core MVC. To create a personal tab with ASP.NET Core MVC
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -546,14 +534,14 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 ### Update and run your application
 
-1. Go to **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
+1. Open Visual Studio Solution Explorer and go to **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
+1. In Visual Studio Solution Explorer open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -567,7 +555,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Update your app package with Developer Portal
 
-1. Go to **Developer portal** in Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. Open **Apps** and select **Import app**.
 
@@ -587,7 +575,7 @@ ngrok http 3978 --host-header=localhost
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank.
+1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and **Add**.
 
 1. Select **Save**.
 
@@ -595,13 +583,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
-
-1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
-
-1. Find your app using the search, select the three-dots in its row.
-
-1. Select **View** option. The **Add** page appears for your app.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
