@@ -31,7 +31,7 @@ Users can also add or interact with an app in the scheduled private channel meet
 
 ### Feature supported for TFW
 
-| Feature | yellow are WIP in H1 Desktop| yellow are WIP in H1 Mobile | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
+| Feature | WIP in H1 Desktop| WIP in H1 Mobile | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
 |---|---|---|---|---|---|---|
 | Add Apps to meetings |  |  | No | No | No | No |
 | Manage apps added in meeting |  |  |Yes | Yes | Yes | Yes |
@@ -39,10 +39,10 @@ Users can also add or interact with an app in the scheduled private channel meet
 | In meeting dialog |  |  | Yes | Yes | No | No |
 | Pre/Post meeting support |  |  | Yes | Yes | No | No |
 | Support for anonymous users| | | Yes | No (backlog) | NA | NA |
-| Generic app share to stage | | | Apps can't be shared from Mobile, it can only be viewed by all user types when shared on Desktop | Yes | Yes | Yes |
-| AV Filter | Filters applied on desktop for a user show up on Mobile | | Yes | Yes | Yes |
-| Together Mode |  | Users on mobile with video on are placed into the TM mode | Yes | Yes | Yes |
-| Deeplinks to Pre/post/in-meeting tabs | Deeplinks are shared by desktop user on chat when clicked by a mobile user | | Yes | Yes | Yes |
+| Generic app share to stage | Apps can't be shared from Mobile, it can only be viewed by all user types when shared on Desktop | | Yes | Yes | Yes | Yes |
+| AV Filter | Filters applied on desktop for a user, appears on Mobile | | Yes | Yes | Yes | Yes |
+| Together Mode |  | Users on mobile with video are placed on TM mode | Yes | Yes | Yes | Yes |
+| Deeplinks to Pre/post/in-meeting tabs | Deeplinks are shared by desktop user on chat when, clicked by a mobile user | | Yes | Yes | Yes | Yes |
 
 > [!NOTE]
 > Mobile does not support AV filter, generic app share stage and together mode.
