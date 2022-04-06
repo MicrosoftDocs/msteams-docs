@@ -574,13 +574,18 @@ items:
   durationInMinutes: 1
   content: |
      
-    To build and run your app locally:
+    To provision your tab app in the cloud
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.    
 
      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png" alt-text="provisioning in cloud" border="false":::
 
+    1. Enter the following in the **Provision** dialog box:
 
+       1. **Subscription name**: Visual Studio Enterprise Subscription. </br>
+       1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
+       1. **Region**: East Asia.
+       1. Select **Provision**.
 
 
 
