@@ -7,9 +7,9 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
-Before you begin, select the environment in which you want to build
+Before you begin, select the environment in which you want to build:
 
-::: zone pivot="web-app"
+# [Web-app)](#tab/web-app)
 
 # Integrate location capabilities
 
@@ -110,9 +110,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 |----------------|-----------------|--------------|--------------|
 | App check-in current location | Users can check-in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
-::: zone-end
-
-::: zone pivot="desktop-app"
+# [Desktop](#tab/desktop)
 
 # Location attributes
 
@@ -209,9 +207,6 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | App check-in current location | Users can check-in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
-
-::: zone-end
-
 
 
 
