@@ -176,7 +176,10 @@ The authentication details from Azure AD are updated in `appsettings.json`:
 
 ## Get an access token from your client-side code
 
-This step requires your app user to give their consent for using their credentials for user-level permission. Azure AD receives the user credentials and sends an access token to Teams.
+This step requires your app user to give their consent for using their Teams identity for user-level permission. Azure AD receives the user identity token (ID token) and sends an access token to Teams.
+
+- **ID token**: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user attempts to access an app.
+- **Access token**: An access token is an artifact contains user identity and permission scopes.
 
 ### Using Teams identity for authentication
 
