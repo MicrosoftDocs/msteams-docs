@@ -363,6 +363,8 @@
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Configure code to enable Teams SSO
         href: tabs/how-to/authentication/tab-sso-code.md
+      - name: Update Teams app manifest
+        href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Configure API permissions with Microsoft Graph
         href: tabs/how-to/authentication/tab-sso-graph-api.md
       - name: Acquire token for MS Graph
