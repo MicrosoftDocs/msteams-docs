@@ -19,7 +19,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value" link="#value-proposition":::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition":::
    :::column-end:::
    :::column span="":::
      :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security":::
@@ -34,31 +34,31 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/tab-icon.png" alt-text="tab" link="#tabs":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs":::
    :::column-end:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/bot-icon.png" alt-text="bot" link="#bots-1":::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/messaging-icon.png" alt-text="messaging" link="#messaging-extensions":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#messaging-extensions":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/task-module-icon.png" alt-text="task-module" link="#task-modules":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules":::
    :::column-end:::
    :::column span="":::
       :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/messaging-icon.png" alt-text="messaging-extension" link="#notifications":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/microsoft-icon.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/graph-small-icon.png" alt-text="advertising" link="#advertising":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising":::
    :::column-end:::
 :::row-end:::
 
