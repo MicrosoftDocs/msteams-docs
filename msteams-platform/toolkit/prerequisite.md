@@ -158,7 +158,26 @@ The following table lists the configuration of the authentication as follows:
   | Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
   | Bot or messaging extension | `https://ngrok.io/auth-end.html` | NA |
   
+  
+### Registers and configures bot 
 
+For tab app or messaging extension app:
+
+1. Registers an Azure AD application.
+
+1. Creates a Client Secret for the Azure AD application.
+
+1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
+
+1. Adds Microsoft Teams channel.
+
+1. Configures messaging endpoint as `https://{ngrokTunnelId}.ngrok.io/api/messages`.
+
+### Registers and configures Teams app
+
+Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
+
+After registering and configuring the app, local debug files get generated.
 
 
 
