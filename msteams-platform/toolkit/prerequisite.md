@@ -22,9 +22,10 @@ This section helps you to set up your account or prerequisites related to Teams 
 
 ### Prepare accounts to build Teams apps
 
-* [Microsoft 365 account with valid subscription.](https://review.docs.microsoft.com/microsoftteams/platform/toolkit/accounts#microsoft-365-account)
 
-* [Azure account to host the backend resources on Azure.](https://review.docs.microsoft.com/microsoftteams/platform/toolkit/accounts#azure-account-to-host-backend-resources)
+* [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)
+* [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources).
+
 
 ### Debug background process
 
