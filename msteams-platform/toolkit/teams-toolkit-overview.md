@@ -9,7 +9,7 @@ ms.date: 03/31/2022
 
 # Overview on Teams Toolkit
 
-You can improve collaboration and productivity using Teams app. The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and TeamsFx. Teams Toolkit provides you with all the necessary tools needed for building a Teams app in one place.
+Team Toolkit helps you to improve collaboration and productivity using Teams app. The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in differnt Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and also Teams CLI. Teams Toolkit provides you with all the necessary tools needed for building a Teams app in one place.
 
 Teams Toolkit automates work and provides great integration of Teams and Azure resources. The user journey using Teams Toolkit is as shown in the following image:
 
@@ -28,7 +28,6 @@ Teams Toolkit automates work and provides great integration of Teams and Azure r
 |---------|---------|
 |[Prepare accounts to build Teams apps](accounts.md)|To develop a Teams app, you need at least one Microsoft 365 account with a valid subscription. If you want to host your backend resources on Azure, an Azure account is also needed. Teams Toolkit supports integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 |Environment| Teams Toolkit helps you to create and manage multiple environments like provision and deploy artifacts to the target environment for Teams App.|
-|TeamsFx Collaboration| TeamsFx Collaboration allows developers and project owners to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.|
 |Development| Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.|
 |Create a new Teams app| Helps you to start with Teams app development by creating a new Teams project using Teams Toolkit.|
 |Deployment| During or after the development, ensure to provision, deploy, and publish Teams app before it is accessible to users.      |
@@ -39,7 +38,7 @@ Teams Toolkit automates work and provides great integration of Teams and Azure r
 |Add cloud resources| Add cloud resources |
 |Edit manifest file| Edit manifest file helps you to edit the Teams app integration with Teams client. |
 |CI/CD guide| CI/CD guide helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates to get started while setting up CI or CD pipelines.|
-|TeamsFx CLI|TeamsFx CLI is a text-based command line interface that accelerates Teams application development and also enables CI/CD scenario where you can integrate CLI in scripts for automation. |
+|TeamsFx Collaboration| TeamsFx Collaboration allows developers and project owners to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.|
 |TeamsFx SDK| TeamsFx SDK helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.|
 
 ## Prerequisites

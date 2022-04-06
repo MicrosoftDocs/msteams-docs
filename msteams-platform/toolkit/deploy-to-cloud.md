@@ -17,19 +17,21 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 
 # [Visual Studio Code](#tab/VisualStudioCode)
 
-#### Prerequisite
-
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-
- * Ensure you have Teams app project opened in VS code.
- * Before you deploy project code to cloud, [provision the cloud resources](provision.md).
-
-## Deploy Teams apps using Teams Toolkit
+### Deploy Teams apps using Teams Toolkit
 
 The get started guides help you to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
+
 * [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
+
+## Deploy to Azure
+
+Deploy your project to Azure by following these steps:
+
+| From Visual Studio Code | From TeamsFx CLI                                                 |
+| :---------------------------------------------------| :--------------------------------------------------- 
+| <ul><li>Open Teams Toolkit, and sign into Azure by clicking the **Sign in to Azure** under the **ACCOUNTS** section from sidebar.</li> <li>After you signed in, select a subscription under your account.</li><li>Open the Teams Toolkit and click **Provision in the cloud** from **DEPLOYMENT** section or open the command palette and select: `Teams: Provision in the cloud`.</li><li>Open the Teams Toolkit and click **Deploy to the cloud** or open the command palette and select: `Teams: Deploy to the cloud`.</li></ul> | <ul> <li>Run command `teamsfx account login azure`.</li> <li>Run command `teamsfx account set --subscription <your-subscription-id>`.</li> <li> Run command `teamsfx provision`.</li> <li>Run command: `teamsfx deploy`. </li></ul> |
 
 ### Details on Teams app workload
 
@@ -64,7 +66,6 @@ Provision is performed with single command in for TeamsFx CLI as follows:
 
 ## See also
 
-* [Deploy Teams app to the cloud](deploy.md)
 * [Publish your Teams app](TeamsFx-collaboration.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
-* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Collaborate on Teams project](TeamsFx-collaboration.md)

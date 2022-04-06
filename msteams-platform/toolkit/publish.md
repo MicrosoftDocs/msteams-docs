@@ -8,7 +8,6 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-
 # Publish Teams apps using Teams Toolkit
 
 After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. The distribution depends on multiple factors, including needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
