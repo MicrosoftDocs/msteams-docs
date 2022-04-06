@@ -573,7 +573,7 @@ items:
 - title: Build and run your app in Azure
   durationInMinutes: 1
   content: |
-     To provision your tab app in the cloud
+     To provision your bot app in the cloud
     
      1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.    
 
