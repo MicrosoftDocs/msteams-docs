@@ -1,22 +1,22 @@
 ---
-title: Create Share-to-Teams button
+title: Share to Teams from web apps
 description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples 
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Share Teams Share-to-Teams
+keywords: Share Teams Share to Teams
 ---
-# Create Share-to-Teams button
+# Share to Teams from web apps
 
-Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to create and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
+Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
 
 > [!NOTE]
 >
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.  
 
-The following image displays the Share-to-Teams pop-up experience:
+The following image displays the Share to Teams pop-up experience:
 
-![Share-to-Teams popup](~/assets/images/share-to-teams-popup.png)
+:::image type="content" source="../../assets/images/share-to-teams-popup.png" alt-text="Share to Teams popup":::
 
 ## Embed a Share to Teams button
 
@@ -35,7 +35,7 @@ The following image displays the Share-to-Teams pop-up experience:
     </div>
     ```
 
-    After completing this, the Microsoft Teams icon gets added to your website. The following image shows the Share-to-Teams icon:
+    After completing this, the Microsoft Teams icon gets added to your website. The following image shows the Share to Teams icon:
 
     ![Share to Teams icon](~/assets/icons/share-to-teams-icon.png)
 
@@ -82,9 +82,9 @@ You can use either the HTML default versions or the Open Graph version.
 
 ## Share to Teams for Education
 
-For teachers using the Share to Teams button, there is an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team, based on the shared link. The following image displays Share-to-Teams for education:
+For teachers using the Share to Teams button, there is an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team, based on the shared link. The following image displays Share to Teams for education:
 
-![Share to Teams popup education](~/assets/images/share-to-teams-popup-edu.png)
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Share to Teams popup education":::
 
 ## Full launcher.js definition
 
@@ -92,7 +92,7 @@ For teachers using the Share to Teams button, there is an additional option to `
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | n/a | The href of the content to share. |
 | preview | `data-preview` | Boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
-| iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share-to-Teams button to render. |
+| iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share to Teams button to render. |
 | msgText | `data-msg-text` | string | n/a | Default text to be inserted before the link in the message compose box. Maximum number of characters is 200. |
 | assignInstr | `data-assign-instr` | string | n/a | Default text to be inserted in the assignments "Instructions" field. Maximum number of characters is 200. |
 | assignTitle | `data-assign-title` | string | n/a | Default text to be inserted in the assignments "Title" field. Maximum number of characters is 50. |
@@ -129,4 +129,5 @@ You can select to set default values for the following fields on the Share to Te
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Share to Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)
