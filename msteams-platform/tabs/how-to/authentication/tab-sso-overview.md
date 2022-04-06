@@ -107,6 +107,8 @@ To build a tab app that uses Teams SSO to authenticate users:
 
 Here's a list of best practices:
 
+## Known limitations 
+
 - **Tenant Admin Consent**
 
     A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
