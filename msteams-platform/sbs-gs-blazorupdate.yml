@@ -607,11 +607,11 @@ items:
         
       1. After the provision is complete, select **OK**. 
   
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="permission ok" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="permission ok" border="false":::
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="provisioned resource" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="provisioned resource" border="false":::
 
     1. Sign in to your Azure portal account on sign in prompt. 
 
