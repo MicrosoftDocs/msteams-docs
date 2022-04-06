@@ -570,7 +570,7 @@ items:
 
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
-- title: Build and run your app in Azure
+- title: Preview your first bot app
   durationInMinutes: 1
   content: |
   
@@ -592,7 +592,7 @@ items:
 
         1. **Subscription name**: Teams Cloud - Dev Test with TTL = 3 Days. </br>
         1.  **Resource group**: Select **New** to add the resource group generated for your app.</br>
-        1. **Region**: East Asia.
+        1.   Select your **Region**.
         1.   Select **Provision**.
 
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure.png" alt-text="edit provision window" border="false":::
