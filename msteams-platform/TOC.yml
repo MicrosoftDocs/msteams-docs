@@ -84,9 +84,9 @@
       href: concepts/design/activity-feed-notifications.md
   - name: App customization
     href: concepts/design/enable-app-customization.md
-- name: Tools and SDK 
+- name: Tools and SDK
   items:
-  - name: Overview
+  - name: Overview 
     href: toolkit/tools-sdk-overview.md
     items: 
     - name: Teams Toolkit
