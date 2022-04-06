@@ -20,6 +20,9 @@ You'll need to add the `webApplicationInfo` property to the Teams app manifest f
 > - You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 > - Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
 
+> [!NOTE]
+> The Teams manifest describes how the app integrates into the Microsoft Teams product. If your app doesn't have a manifest, you can add it using the steps given at /add cross-reference/.
+
 ## To configure Teams app manifest for Azure AD registration
 
 1. Open the app project.
