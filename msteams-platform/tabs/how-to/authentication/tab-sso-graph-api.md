@@ -46,3 +46,4 @@ To configure API permissions:
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured." border="true":::
 
     You've configured API permissions with Microsoft Graph.
+ 
