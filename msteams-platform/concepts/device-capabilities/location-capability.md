@@ -42,7 +42,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 * The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
 * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
-# [Web-app)](#tab/web-app)
+# [Web-app](#tab/web-app)
 
 
 ## Location APIs

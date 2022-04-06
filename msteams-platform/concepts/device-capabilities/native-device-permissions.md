@@ -27,9 +27,9 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Record audio memos and save them for later use.
 * Use the location information of the user to display relevant information.
 
-> [!NOTE]
-> * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
-> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+> **Note**</br>
+ * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.</br>
+ * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Access device permissions
 
@@ -37,8 +37,8 @@ The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-cli
 
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop client.
 
-> [!NOTE]
-> Currently, Microsoft Teams support for media capabilities and QR barcode scanner capability is only available for mobile clients.
+> **Note**</br>
+Currently, Microsoft Teams support for media capabilities and QR barcode scanner capability is only available for mobile clients.
 
 ## Manage permissions
 
@@ -114,10 +114,10 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 Leverage appropriate HTML5 or Teams API, to display a prompt for getting consent to access device permissions.
 
-> [!IMPORTANT]
->
-> * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop client.
+> **Important**
+
+* Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.</br>
+* Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop client.
 
 For example:
 
@@ -245,8 +245,8 @@ Device permissions are stored for every login session. It means that if you sign
 |Yes | Browser prompt shown (prompt #2)|No prompt|Throw permission denied error. App developer is expected to handle this error code and show a prompt ![Device](~/assets/images/tabs/dictationprompt.png)|
 
 
-> [!NOTE]
-> When you consent to the native device permissions, it is valid only for your _current_ login session.
+> **Note**</br>
+When you consent to the native device permissions, it is valid only for your _current_ login session.
 
 ## Code sample
 
