@@ -90,5 +90,5 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 * [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Create Share-to-Teams button](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
