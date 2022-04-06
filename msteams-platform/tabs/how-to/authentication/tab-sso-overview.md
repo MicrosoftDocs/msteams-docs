@@ -107,7 +107,7 @@ To build a tab app that uses Teams SSO to authenticate users:
 
 Here's a list of best practices:
 
-## Known limitations 
+## Known limitations
 
 - **Tenant Admin Consent**
 
