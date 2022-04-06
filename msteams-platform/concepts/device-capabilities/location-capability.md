@@ -18,6 +18,7 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 
 The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
 
+
 Following examples show how the integration of location capabilities is used in different scenarios:
 
 * In a factory, the supervisor can track the attendance of workers by asking them to take a selfie in the vicinity of the factory and share it through the specified app. The location data also gets captured and sent along with the image.
