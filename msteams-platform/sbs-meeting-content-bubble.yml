@@ -58,13 +58,13 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure AD portal
+- title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret that enables SSO authentication of the bot.
+    * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
@@ -177,8 +177,11 @@ items:
      ngrok http -host-header=localhost 3978
      ```
 
-    > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+     > [!NOTE]
+     > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
+     
+     > [!TIP]
+     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
     
     
     **To add messaging endpoint**
@@ -292,13 +295,15 @@ items:
 
     1. Select **Add a permission**.
 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/addpermission.png" alt-text="Add Permission" border="true":::
+
     1. Select **Microsoft Graph**.
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is selected.
+    1. Select **User.Read**
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-userpermission.png" alt-text="User" border="true":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-userpermission.png" alt-text="User" border="true":::
 
     1. Add the following permissions:</br>
          * **email**
@@ -372,7 +377,7 @@ items:
     
            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile.png" alt-text="Open file" border="true":::
 
-       1. Open `ContentBubbleBot.sln` file.
+       1. Open **ContentBubbleBot.sln** file.
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln.png" alt-text="Open file" border="true":::
 
@@ -424,7 +429,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/Manage.png" alt-text="Manage apps" border="true"::: 
 
-    1. Go to meeting chat.
+    1. Go to Teams meeting chat.
     
     1. **Content Bubble Demo** app sends an automatic reply to the meeting chat.
 
