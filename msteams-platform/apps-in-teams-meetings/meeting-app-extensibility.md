@@ -29,12 +29,12 @@ Tabs allow the team members to access services and content in a specific space w
 
 Users can also add or interact with an app in the scheduled private channel meetings.
 
-Feature supported for Work tenant
+**Features supported for work tenant**
 
 | Feature | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
 | Add Apps to meetings | No | No | No | No |
-| Manage apps added in meeting | Yes | Yes | Yes | Yes |
+| Manage apps added in meeting (like view , rename, delete) | Yes | Yes | Yes | Yes |
 | In Meeting Side panel | Yes | Yes | Yes | Yes |
 | In meeting dialog | Yes | Yes | No | No |
 | Pre/Post meeting support | Yes | Yes | No | No |
@@ -47,7 +47,7 @@ Feature supported for Work tenant
 > [!NOTE]
 > Mobile does not support AV filter, generic app share stage and together mode.
 
-APIs Client SDK for work tenant
+**APIs Client SDK for work tenant**
 
 | Feature | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
@@ -58,7 +58,7 @@ APIs Client SDK for work tenant
 | Get app content sharing stage | No | No | No | No |
 | Get app sharing content capabilities | No | No | No | No |
 
-Feature supported for personal tenant
+**Features supported for personal tenant**
 
 | Feature | Schedule Private Meeting | Meet now | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
@@ -67,7 +67,7 @@ Feature supported for personal tenant
 | In-meeting dialog | No | No | No | No |
 | Pre/Post meeting support | No | No | No | No |
 
-APIs Client SDK for personal tenant
+**APIs Client SDK for personal tenant**
 
 | Feature | Scheduled Private Meeting | Meet now | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
