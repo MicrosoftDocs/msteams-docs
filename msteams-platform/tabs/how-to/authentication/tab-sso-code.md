@@ -55,8 +55,8 @@ You'll need to add the `webApplicationInfo` property to the Teams app manifest f
     ```
 
     where,
-    - {Azure AD AppId}* is app ID you created when you registered your app in Azure AD
-    - {ngrokSubdomain}* is the ngrok URL
+    - {Azure AD AppId} is app ID you created when you registered your app in Azure AD
+    - {ngrokSubdomain} is the ngrok URL
 
 4. Update the Azure app ID in the **id** property.
 5. Update the ngrok URL in the following properties:
@@ -184,7 +184,7 @@ The authentication details from Azure AD are updated in `appsettings.json`:
 
 This step requires your app user to give their consent for using their Teams identity for user-level permission. Azure AD receives the user identity token (ID token) and sends an access token to Teams.
 
-- **ID token**: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user attempts to access an app.
+- **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the user who is currently logged into Teams.
 - **Access token**: An access token is an artifact contains user identity and permission scopes.
 
 > [!NOTE]
@@ -210,7 +210,7 @@ After you receive access token in success callback, decode access token to view 
 
 ## Code snippets
 
-The following code provides an example of on-behalf-of flow to fetch access token using MSAL library :
+The following code provides an example of on-behalf-of (OBO) flow to fetch access token using Microsoft Authentication Library (MSAL):
 
 ### [C#](#tab/dotnet)
 
