@@ -79,7 +79,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 |Resource|Purpose| Description|
 |----------|--------------------------------|-----|
 | App service plan for function app | Host the function app |Not applicable |
-| Function app | Host your Azure functions APIs | Adds user assigned identity to access other Azure resources. <br /> Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app <br /> Adds authentication setting that only allows requests from your Teams app. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
+| Function app | Host your Azure functions APIs | Adds user assigned identity to access other Azure resources. <br /> Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app <br /> Adds authentication setting that  allows only requests from your Teams app. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Azure storage for function app | Required to create function app |Not applicable|
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
@@ -126,7 +126,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 |Resources|Purpose|
 |----------|--------------------------------|
-| Azure Key Vault Service | Manage secrets (e.g. Azure AD app client secret) used by other Azure Services |
+| Azure Key Vault Service | Manage secrets (For example, Azure AD app client secret) used by other Azure Services |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
 <br>
@@ -139,7 +139,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 <summary><b>Customize resource provision</b></summary>
 
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit enables you to use an *infrastructure as code* approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
@@ -225,8 +225,8 @@ In the meanwhile, following parameters are available with values populated durin
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Customize the value](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Customize the value](#use-an-existing-azure-ad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's Azure AD app client ID created during provision | Delete the placeholder and fill the actual value |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's Azure AD app client secret created during provision | Delete the placeholder and fill the actual value |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's Azure AD app client ID created during provision | Delete the placeholder and enter the actual value |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's Azure AD app client secret created during provision | Delete the placeholder and enter the actual value |
 
 <br>
 
@@ -239,10 +239,10 @@ In the meanwhile, following parameters are available with values populated durin
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server admin account you provided during provision | Delete the placeholder and fill the actual value |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server admin password you provided during provision | Delete the placeholder and fill the actual value |
-| apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM's publisher email, default value is your Azure account | Delete the placeholder and fill the actual value |
-| apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM's publisher name, default value is your Azure account | Delete the placeholder and fill the actual value |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server admin account you provided during provision | Delete the placeholder and enter the actual value |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server admin password you provided during provision | Delete the placeholder and enter the actual value |
+| apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM's publisher email, default value is your Azure account | Delete the placeholder and enter the actual value |
+| apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM's publisher name, default value is your Azure account | Delete the placeholder and enter the actual value |
 
 
 <br>
@@ -280,11 +280,11 @@ If the predefined templates doesn't meet your application requirement, you can c
 > [!NOTE]
 > The ARM template is shared by all environments. You can use [conditional deployment](/azure/azure-resource-manager/bicep/conditional-resource-deployment) if the provision behavior varies between environments.
 
-To ensure the TeamsFx tool functions properly, ensure you customize ARM template, which satisfies the following requirement. If you use other tool for further development, you can ignore these requirements.
+Customize the ARM template with the following requirement to ensure that the TeamsFx tool functions properly. If you use other tool for further development, you can ignore these requirement.
 
-* Keep the folder structure and file name unchanged. The tool may append new content to existing files when you add more resources or capabilities to your project.
-* Keep the name of auto-generated parameters as well as its property names unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Keep the output of auto-generated ARM template unchanged. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
+* Retain the folder structure and file name as tool appends new content to existing files when you add more resources or capabilities to your project.
+* Retain the name of auto-generated parameters and its property names as auto-generated parameters is used when you add more resources or capabilities to your project.
+* Retain the output of auto-generated ARM template. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` file and it can be used in other features such as deploy, validate manifest file.
 
 
 <br>
@@ -295,9 +295,9 @@ To ensure the TeamsFx tool functions properly, ensure you customize ARM template
 
 <summary><b>Customization scenarios</b></summary>
 You can customize the following scenarios:
-#### Use an existing Azure AD app for your bot
+<summary><b>Use an existing Azure AD app for your bot</b></summary>
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
+Add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by you for Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -361,9 +361,9 @@ If you have insufficient permission error when the tool tries to add user to SQL
 You can use `contosoteamsappapi` for function app instance instead of using the default name.
 
 > [!NOTE]
-> If you have already provisioned the environment, specifying the name can create a new function app instance for you, instead of renaming the instance created previously.
+> If you have already provisioned the environment, specify the name to create a new function app instance for you, instead of renaming the instance created previously.
 
-Follow the steps below to specify the name of Function App instance:
+Follow the steps mentioned below to specify the name of the Function App instance:
 
 1. Open `.fx/configs/azure.parameters.{env}.json` for your current environment
 2. Add a new property `functionAppName` to the value of parameter `provisionParameters`
@@ -395,9 +395,9 @@ Follow the steps below to specify the name of Function App instance:
 <summary><b>Scenario</b></summary>
 
 
-To add other Azure resource or storage to the application:
+### To add other Azure resource or storage to the application:
 
-Consider the scenario, you want to add Azure storage to your Azure function backend to store blob data. There is no auto flow to update the bicep template with Azure storage support. However, you can edit the bicep file and add the resource. The steps are as follows:
+To add Azure storage to your Azure function backend to store blob data, there is no auto flow to update the bicep template with Azure storage support. However, you can edit the bicep file and add the resource. The steps are as follows:
 
 1. Create a tab project.
 2. Add function to the project. For more information, see [add resources](./add-resource.md).
