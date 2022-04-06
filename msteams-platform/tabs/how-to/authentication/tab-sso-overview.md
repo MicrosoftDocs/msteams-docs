@@ -11,6 +11,10 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 
 With Teams SSO, the access token is pre-fetched to improve app performance and load times.
 
+## Using Teams identity for authentication
+
+Teams SSO is an authentication method that uses a user's Teams sign-in identity to provide them app access. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the user, the Teams app retrieves access token for them from Azure Active Directory (AD).
+
 ## Teams SSO for tabs at runtime
 
 The following image shows how the Teams SSO with Azure AD process works:
@@ -28,6 +32,8 @@ The following image shows how the Teams SSO with Azure AD process works:
 > The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see Get an access token with Graph permissions- \add x-ref\.
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+
+
 
 ## Build a Teams tab app with Teams SSO
 

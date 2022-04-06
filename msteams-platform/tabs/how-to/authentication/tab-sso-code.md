@@ -27,19 +27,24 @@ Teams mobile client versions supporting SSO:
 
 - For the best experience with Teams, use the latest version of iOS and Android.
 
-## Update the app manifest
+## Configure code for Azure AD registration details
 
-The Teams app manifest describes how your app integrates into the Microsoft Teams. Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
+After you register your tab app on Azure AD, the next step is to configure the app code with the registration details. You'll make these updates in:
 
-You'll need to add the `webApplicationInfo` property to the app manifest file.
+- manifest.json
+- appsettings.json
+
+### Configure code in app manifest
+
+You'll need to add the `webApplicationInfo` property to the Teams app manifest file.
 
 > [!NOTE]
 > You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
-### To update the app manifest
+#### To configure Teams app manifest for Azure AD registration
 
-1. Open the sample app project **TeamsTabSSO.csproj** from the **/Microsoft-Teams-Samples/samples/tab-sso/csharp/** directory of the cloned repo.
-2. Open **TeamsTabSSO** > **Manifest** > **manifest.json** from the **Solution Explorer**.
+1. Open the app project file.
+2. Open manifest.json.
 3. Append the following code snippet to the manifest to add the new property:
 
     ```json
@@ -60,7 +65,7 @@ You'll need to add the `webApplicationInfo` property to the app manifest file.
    3. `validDomains`
 6. Save the app manifest file.
 
-### View manifest sample
+#### View manifest sample
 
 <details>
 <summary>Here's an example of app manifest after it's updated:</summary>
@@ -120,11 +125,11 @@ You'll need to add the `webApplicationInfo` property to the app manifest file.
 ```
 </details>
 
-## Update Azure AD details
+### Update Azure AD details in app settings
 
 The `appsettings.json` file includes the configuration for Azure AD app.
 
-### To update the app settings
+#### To configure Teams app settings for Azure AD registration
 
 1. Open **TeamsTabSSO** > **appsettings.json** from the **Solution Explorer**.
 2. Update the `AzureAd` code snippet with configured app details on Azure AD portal:
@@ -149,7 +154,7 @@ The `appsettings.json` file includes the configuration for Azure AD app.
 
 3. Save the file.
 
-### View the updated app settings
+#### View the updated app settings
 
 <details>
 <summary>Here's an example of app settings update:</summary>
@@ -264,6 +269,12 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 ```
 
 ---
+
+## Update the app manifest
+
+The Teams app manifest describes how your app integrates into the Microsoft Teams. Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
+
+\ Teams app manifest is updated as the last step. \
 
 ## Code sample
 
