@@ -33,8 +33,6 @@ The following image shows how the Teams SSO with Azure AD process works:
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
-
-
 ## Build a Teams tab app with Teams SSO
 
 This section describes the tasks involved in implementing SSO for a tab app. These tasks are language- and framework-agnostic.
@@ -106,4 +104,23 @@ To build a tab app that uses Teams SSO to authenticate users:
 
 ## Best practices
 
-## Known limitations
+Here's a list of best practices:
+
+- **Tenant Admin Consent**
+
+    A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
+
+- **Ask for consent using the Auth API**
+
+    Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
+
+    To ask for additional consent using the Auth API, follow these steps:
+
+    1. The token retrieved using `getAuthToken()` must be exchanged server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
+    2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
+    3. When the exchange fails, you must ask for consent. Show some user interface (UI) asking the user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog box using our [Azure AD authentication API](~/concepts/authentication/auth-silent-aad.md).
+    4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD doesn't ask for the other scopes.
+        * Instead of `?scope={scopes}`
+        * Use this `?prompt=consent&scope={scopes}`
+        * Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
+    5. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
