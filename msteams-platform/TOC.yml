@@ -92,7 +92,7 @@
     - name: Teams Toolkit
       href: toolkit/teams-toolkit-overview.md
       items:
-      - name: Teams Toolkit in Visual Studio Code
+      - name: Teams Toolkit in IDE
         items:
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
@@ -122,15 +122,15 @@
             href: toolkit/TeamsFx-collaboration.md
           - name: Add CI/CD Workflows
             href: toolkit/use-CICD-template.md
-      - name: Teams Toolkit in Visual Studio
-        href: toolkit/visual-studio-overview.md
-        items:
-        - name: Create new Teams App
-          href: toolkit/create-new-project-vs.md
-        - name: Build Blazor app
-          href: sbs-gs-blazorapp.yml
-      - name: Teams Toolkit in Command Line Interface
-        href: toolkit/teamsfx-cli.md    
+      # - name: Visual Studio
+      #   href: toolkit/visual-studio-overview.md
+      #   items:
+      #   - name: Create new Teams App
+      #     href: toolkit/create-new-project-vs.md
+      #   - name: Build Blazor app
+      #     href: sbs-gs-blazorapp.yml
+      # - name: Teams Toolkit in Command Line Interface
+      #   href: toolkit/teamsfx-cli.md    
       - name: Teams Toolkit FAQ 
         href: toolkit/FAQ.md   
     - name: SDK       

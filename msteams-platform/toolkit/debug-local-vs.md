@@ -14,8 +14,6 @@ ms.date: 04/06/2022
 1. Open the latest version of Visual Studio.
 1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode. This is as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="":::    
-
 ## Debug process using F5
 
 When you select **F5**, Teams Toolkit:

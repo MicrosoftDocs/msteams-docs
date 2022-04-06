@@ -11,20 +11,20 @@ ms.date: 03/14/2022
 
 ## Microsoft Teams apps for Visual Studio
 
-Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically set up apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your Integrated Development Environment (IDE).
+Teams Toolkit extension for Visual Studio termed as Microsoft Teams app makes it easy to create new projects for Teams, automatically set up apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your Integrated Development Environment (IDE).
 
 ## Create a new project
 
-The Microsoft Teams app project template provide you all code, files, and configuration you need to get started with a Teams app project. The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app. For more information refer to Prepare your accounts.
+The Microsoft Teams app project template provides you all code, files, and configurations you need to get started with a Teams app project. The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app. For more information, see [Prepare your development environment](../toolkit/accounts.md)
 
-1. Open the latest version of Visual Studio that you have installed.
+1. Open the latest version of Visual Studio that you've installed.
 1. In the start window, choose **Create a new project**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option_v1.png" alt-text="create a new project":::
 
 1. In the **Search for templates** box, enter Microsoft Teams App.
 1. Select the **Microsoft Teams App** template and select **Next**.
-1. In the **Configure your new project** window, type or enter name of the **Project name** box and select select **Create**.
+1. In the **Configure your new project** window, type or enter name of the **Project name** box and select **Create**.
 1. In the **Create a new Teams application** window, choose or sign in to a Microsoft 365 account using the **Choose an account** selector. Then, select **Create**.
 
 Use Teams Toolkit to create your first project. The toolkit takes you through a series of pages to create and configure your Teams app project:
@@ -39,9 +39,8 @@ Use Teams Toolkit to create your first project. The toolkit takes you through a 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-teams-app.png" alt-text="create":::
 
-1. Visual Studio opens up the new project and Teams Toolkit setup you new project in Teams Developer Portal. The project is added for the Teams organization linked to the Microsoft 365 account you chose in the steps above and create a new Azure Active Directory registration. This is required for the app to run in Teams.
+1. Visual Studio opens up the new project and Teams Toolkit sets up your new project to test locally and Teams Developer Portal. The project is added to Teams organization linked to the Microsoft 365 account chosen while signing in the Microsoft 365 account along with Azure Active Directory registration. Azure AD registration is  for the app to run in Teams.
 
 ## See Also
-
 
 [Provision app in the cloud](provision-to-cloud.md)
