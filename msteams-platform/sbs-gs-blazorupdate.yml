@@ -582,11 +582,12 @@ items:
 
     1. Enter the following in the **Provision** dialog box:
 
-       1. **Subscription name**: Visual Studio Enterprise Subscription. </br>
+       1. **Subscription name**: Teams Cloud - Dev Test with TTL = 3 Days. </br>
        1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
        1. **Region**: East Asia.
        1. Select **Provision**.
 
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure.png" alt-text="edit provision window" border="false":::
 
 
 
