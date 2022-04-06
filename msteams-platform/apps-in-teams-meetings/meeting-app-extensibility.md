@@ -29,55 +29,6 @@ Tabs allow the team members to access services and content in a specific space w
 
 Users can also add or interact with an app in the scheduled private channel meetings.
 
-**Features supported for work tenant**
-
-| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
-|---|---|---|---|---|
-| Add Apps to meetings | No | No | No | No |
-| Manage apps added in meeting (like view , rename, delete) | Yes | Yes | Yes | Yes |
-| In Meeting Side panel | Yes | Yes | Yes | Yes |
-| In meeting dialog | Yes | Yes | No | No |
-| Pre/Post meeting support | Yes | Yes | No | No |
-| Support for anonymous users | Yes | No (backlog) | NA | NA |
-| Generic app share to stage | Yes | Yes | Yes | Yes |
-| AV Filter | Yes | Yes | Yes | Yes |
-| Together Mode | Yes | Yes | Yes | Yes |
-| Deeplinks to Pre/post/in-meeting tabs  | Yes | Yes | Yes | Yes |
-
-> [!NOTE]
-> Mobile does not support AV filter, generic app share stage and together mode.
-
-**APIs Client SDK for work tenant**
-
-| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
-|---|---|---|---|---|
-| Get meeting details | Yes | No | No | No
-| Get user | No | No | No | No |
-| Get context | No | No | No | No |
-| Share app to stage | Yes | Yes | Yes | Yes |
-| Get app content sharing stage | No | No | No | No |
-| Get app sharing content capabilities | No | No | No | No |
-
-**Features supported for personal tenant**
-
-| Feature | Schedule Private Meeting | Meet now | 1-1 Calls | Group Calls |
-|---|---|---|---|---|
-| Add Apps to meetings | No | No | No | No |
-| Manage apps added in meeting | Yes | Yes | Yes | Yes |
-| In-meeting dialog | No | No | No | No |
-| Pre/Post meeting support | No | No | No | No |
-
-**APIs Client SDK for personal tenant**
-
-| Feature | Scheduled Private Meeting | Meet now | 1-1 Calls | Group Calls |
-|---|---|---|---|---|
-| Get meeting details | No | No | No | No |
-| Get user | No | No | No | No |
-| Get context | No | No | No | No |
-| Share app to stage | Yes | Yes | Yes | Yes |
-| Get app content sharing stage | No | No | No | No |
-| Get app sharing content capabilities | No | No | No | No |
-
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
@@ -255,6 +206,55 @@ The following table provides the user types and lists the features that each use
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
+
+**Features supported for work tenant**
+
+| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet now | 1-1 Calls | Group Calls |
+|---|---|---|---|---|---|
+| Add Apps to meetings | No | No | No | No | No |
+| Manage apps added in meeting (like view , rename, delete) | Yes | Yes | Yes | Yes | Yes |
+| In Meeting Side panel | Yes | Yes | Yes | Yes | Yes |
+| In meeting dialog | Yes | Yes | No | No | No |
+| Pre/Post meeting support | Yes | Yes | No | No | No |
+| Support for anonymous users | Yes | No (backlog) | Yes | NA | NA |
+| Generic app share to stage | Yes | Yes | Yes | Yes | Yes |
+| AV Filter | Yes | Yes | Yes | Yes | Yes |
+| Together Mode | Yes | Yes | Yes | Yes | Yes |
+| Deeplinks to Pre/post/in-meeting tabs  | Yes | Yes | Yes | Yes | Yes |
+
+> [!NOTE]
+> Mobile does not support AV filter, generic app share stage and together mode.
+
+**APIs Client SDK for work tenant**
+
+| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet now | 1-1 Calls | Group Calls |
+|---|---|---|---|---|---|
+| Get meeting details | Yes | No | No | No | No
+| Get user | No | No | No | No | No |
+| Get context | No | No | No | No | No |
+| Share app to stage | Yes | Yes | Yes | Yes | Yes |
+| Get app content sharing stage | No | No | No | No | No |
+| Get app sharing content capabilities | No | No | No | No |
+
+**Features supported for personal tenant**
+
+| Feature | Schedule Private Meeting | Meet now | 1-1 Calls | Group Calls |
+|---|---|---|---|---|
+| Add Apps to meetings | No | No | No | No |
+| Manage apps added in meeting | Yes | Yes | Yes | Yes |
+| In-meeting dialog | No | No | No | No |
+| Pre/Post meeting support | No | No | No | No |
+
+**APIs Client SDK for personal tenant**
+
+| Feature | Scheduled Private Meeting | Meet now | 1-1 Calls | Group Calls |
+|---|---|---|---|---|
+| Get meeting details | No | No | No | No |
+| Get user | No | No | No | No |
+| Get context | No | No | No | No |
+| Share app to stage | Yes | Yes | Yes | Yes |
+| Get app content sharing stage | No | No | No | No |
+| Get app sharing content capabilities | No | No | No | No |
 
 ## Next step
 
