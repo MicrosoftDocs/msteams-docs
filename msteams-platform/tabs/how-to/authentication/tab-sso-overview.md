@@ -98,3 +98,6 @@ To build a tab app that uses Teams SSO to authenticate users:
     :::column-end:::
 :::row-end:::
 
+## Best practices
+
+## Known limitations

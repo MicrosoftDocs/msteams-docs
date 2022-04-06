@@ -181,12 +181,6 @@ This step requires your app user to give their consent for using their Teams ide
 - **ID token**: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user attempts to access an app.
 - **Access token**: An access token is an artifact contains user identity and permission scopes.
 
-### Using Teams identity for authentication
-
-Teams SSO reuses the identity of the app user.  
-
-\ Add content \
-
 > [!NOTE]
 > To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD app registration and in your Teams app.
 
@@ -209,9 +203,6 @@ After you receive access token in success callback, decode access token to view 
 </p>
 
 ## Code snippets
-
-
-\ Add content for ID token and access token. \
 
 The following code provides an example of on-behalf-of flow to fetch access token using MSAL library :
 
