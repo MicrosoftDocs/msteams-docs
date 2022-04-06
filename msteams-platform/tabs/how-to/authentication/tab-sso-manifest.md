@@ -130,7 +130,7 @@ To preview your app in Teams:
 
 1. Select **Accept**.
 
-    Congratulations! You can use the tab app now.
+    Congratulations! You have enabled Teams SSO for your tab app.
 
 <!--
 ### Configure code in app settings - Specific to Bot apps
