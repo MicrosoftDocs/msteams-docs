@@ -42,6 +42,10 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
+    You must have working knowledge of the following technologies:
+
+    * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments) 
+
 - title: Set up local environment
   durationInMinutes: 1
   content: | 
@@ -80,11 +84,13 @@ items:
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
      
-     You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png" alt-text="Create resource Azure bot" border="true":::
+
+       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png" alt-text="Create resource Azure bot" border="true":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/newresource.png" alt-text="Create resource Azure bot" border="true":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -97,7 +103,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-appidcreate.png" alt-text="Create Microsoft App ID" border="true":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create.png" alt-text="Review Create" border="true":::
 
     1. If the validation passes, select **Create**.
 
@@ -161,7 +167,7 @@ items:
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/config-teams.png" alt-text="Select Teams" border="true":::  
+        :::image type="content" source="~/assets/images/meeting-content-bubble/apply.png" alt-text="Apply" border="true":::  
     
     **To create tunnel for local web server**
 
@@ -197,8 +203,7 @@ items:
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
-  content: |
-    **To register your app through the Azure AD portal**  
+  content: | 
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -242,11 +247,15 @@ items:
 
          * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
+       The following image shows the fields and the values:
+
+          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user.png" alt-text="Add a scope" border="true":::
+
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user.png" alt-text="Add a scope" border="true":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/add-scope.png" alt-text="Add a scope" border="true":::
 
        > [!NOTE]
        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
