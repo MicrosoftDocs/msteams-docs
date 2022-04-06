@@ -7,13 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Configure code to enable Teams SSO
 
-After you register your app in Azure AD, update the app properties in your app's manifest file.
-and the sample app with details configured on Azure AD.
-
-Before you update the app manifest, you'll need to:
-
-- Build and debug a tab app
-- Create an ngrok tunnel
+You need to configure your app code to obtain an access token from Azure AD using Teams identity of the app user.
 
 ## SDK Prerequisites
 
@@ -117,12 +111,6 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 ```
 
 ---
-
-## Update the app manifest
-
-The Teams app manifest describes how your app integrates into the Microsoft Teams. Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
-
-\ Teams app manifest is updated as the last step. \
 
 ## Code sample
 

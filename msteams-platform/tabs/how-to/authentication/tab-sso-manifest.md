@@ -5,14 +5,20 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Update Teams app manifest
+# Update Teams app manifest and preview the app
 
-After you register your tab app on Azure AD, the next step is to configure the app manifest with the registration details.
+You've registered your app in Azure AD, and obtained an app ID. Now, you must update the Teams app manifest with the app ID and subdomain URL.
+
+Before you update the app manifest, you'll need to:
+
+- Build and debug a tab app
+- Create an ngrok tunnel
 
 You'll need to add the `webApplicationInfo` property to the Teams app manifest file.
 
 > [!NOTE]
 > You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
+> Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
 
 ## To configure Teams app manifest for Azure AD registration
 
@@ -96,10 +102,38 @@ You'll need to add the `webApplicationInfo` property to the Teams app manifest f
   }
 }
 ```
+
 </details>
 
+## Sideload and Preview in Teams
+
+After you update the manifest, you can preview your app in Teams environment.
+
+To preview your app in Teams:
+
+1. Create an app package.
+    The app package contains the app manifest and app icons. For more information, please see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+
+1. Open Teams.
+
+1. Select **Teams Store** > **Manage your apps** > **Publish an app**.
+
+    The **Publish an app** options appear.
+
+1. Select **Upload a custom app** to sideload the tab app to Teams.
+
+1. Select your app package to upload.
+
+1. Select **Add**.
+
+    The Tab app is loaded and the consent form appears.
+
+1. Select **Accept**.
+
+    Congratulations! You can use the tab app now.
+
 <!-->
-### Configure code in app settings
+### Configure code in app settings - Specific to Bot apps
 
 The `appsettings.json` file includes the configuration for Azure AD app.
 
