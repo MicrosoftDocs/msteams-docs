@@ -322,7 +322,7 @@ items:
 
     Let's deploy the first bot app on Azure using Teams Toolkit.
 
-    #### **To provision your tab app in the cloud**
+    #### **To provision your bot app in the cloud**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
