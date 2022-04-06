@@ -17,10 +17,10 @@ Teams Toolkit's extension for Visual Studio makes it easy to create new projects
 
 The Microsoft Teams app project template provide you all code, files, and configuration you need to get started with a Teams app project. The Microsoft Teams App project template allows you to specify a Microsoft 365 account that is required to automatically register and configure your new Teams app. For more information refer to Prepare your accounts.
 
-1. Open the latest version of Visual Studio.
+1. Open the latest version of Visual Studio that you have installed.
 1. In the start window, choose **Create a new project**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option_v1.png" alt-text="create":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option_v1.png" alt-text="create a new project":::
 
 1. In the **Search for templates** box, enter Microsoft Teams App.
 1. Select the **Microsoft Teams App** template and select **Next**.
@@ -32,8 +32,8 @@ Use Teams Toolkit to create your first project. The toolkit takes you through a 
 * Creating a new project page: You select the project type.
 * Configure your new project page: You enter the project details.
 * Create a new Teams application page: You select the Teams app capabilities and the Microsoft 365 credentials.
-     
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option_v1.png" alt-text="create project":::
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/create-new-project-types-option_v1.png" alt-text="Create p":::
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/visual-studio-create-project/configure-project.png" alt-text="configure project":::
 
@@ -42,3 +42,5 @@ Use Teams Toolkit to create your first project. The toolkit takes you through a 
 1. Visual Studio opens up the new project and Teams Toolkit setup you new project in Teams Developer Portal. The project is added for the Teams organization linked to the Microsoft 365 account you chose in the steps above and create a new Azure Active Directory registration. This is required for the app to run in Teams.
 
 ## See Also
+
+[Provision app in the cloud](provision-to-cloud.md)
