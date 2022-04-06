@@ -17,8 +17,8 @@ Before you update the app manifest, you'll need to:
 You'll need to add the `webApplicationInfo` property to the Teams app manifest file.
 
 > [!NOTE]
-> You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
-> Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
+> - You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
+> - Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
 
 ## To configure Teams app manifest for Azure AD registration
 
@@ -132,7 +132,7 @@ To preview your app in Teams:
 
     Congratulations! You can use the tab app now.
 
-<!-->
+<!--
 ### Configure code in app settings - Specific to Bot apps
 
 The `appsettings.json` file includes the configuration for Azure AD app.
