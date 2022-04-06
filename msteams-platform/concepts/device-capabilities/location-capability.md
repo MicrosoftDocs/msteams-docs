@@ -112,15 +112,15 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ::: zone-end
 
-::: zone pivot="Desktop"
+::: zone pivot="desktop-app"
 
-# Integrate location capabilities
+# Location attributes
 
 You can integrate the location capabilities of native device with your Teams app.  
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app.
 
-## Advantages of integrating location capabilities
+## Scenarios
 
 The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
 
@@ -133,7 +133,7 @@ Following examples show how the integration of location capabilities is used in 
 To integrate location capabilities, you must update the app manifest file and call the APIs. For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the location APIs.
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
-## Update manifest
+## Manifest file
 
 Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for requisite permissions from users before they start using the location capabilities. The update for app manifest is as follows:
 
@@ -147,7 +147,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 > * The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
-## Location APIs
+## APIs
 
 You must use the following set of APIs to enable your device's location capabilities:
 
@@ -191,7 +191,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
-## Error handling
+## Error codes
 
 You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
 
@@ -204,7 +204,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 | **8000** | USER_ABORT |User cancelled the operation.|
 | **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
 
-### Code sample
+### Code samples
 
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
