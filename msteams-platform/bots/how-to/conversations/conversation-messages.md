@@ -192,7 +192,8 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Send suggested actions
 
-Suggested actions enable your bot to present buttons that the user can tap to provide input. Suggested actions appear close to the composer and enhance user experience by enabling the user to answer a question or make a selection with a simple tap of a button, rather than having to type a response with a keyboard. Unlike buttons that appear within rich cards (which remain visible and accessible to the user even after being tapped), buttons that appear within the suggested actions pane will disappear after the user makes a selection. This prevents the user from tapping stale buttons within a conversation and simplifies bot development (since you will not need to account for that scenario).
+Suggested actions enable your bot to present buttons that the user can tap to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a selection with a simple tap of a button, rather than typing a response with a keyboard. 
+The buttons remain visible and accessible to the user in the rich cards even after user makes a selection whereas for suggested actions, buttons aren't available. This prevents the user from tapping stale buttons within a conversation and simplifies bot development.
 
 To add suggested actions to a message, set the `suggestedActions` property of the [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
 
@@ -208,8 +209,8 @@ The following is an example for implementation and experience of suggested actio
             },
             {
                 "type": "imBack",
-                "title": "Action 1",
-                "value": "Action 1"
+                "title": "Action 2",
+                "value": "Action 2"
             }
         ]
     }
