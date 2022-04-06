@@ -617,7 +617,7 @@ items:
 
         Your app-dev-rg appears.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure.png" alt-text="Azure app created" border="true":::
+        :::image type="content" source="~assets/images/teams-toolkit-v2/blazor-vs-preview2/azure.png" alt-text="Azure app created" border="true":::
 
         Your resources are provisioned in the Azure portal!
 
