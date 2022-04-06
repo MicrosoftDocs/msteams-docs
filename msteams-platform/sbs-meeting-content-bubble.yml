@@ -351,7 +351,7 @@ items:
           > [!NOTE]
           > `WebAppDomain` is your ngrok domain.
 
-            :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set.png" alt-text="Manifest image1" border="true":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set.png" alt-text="Manifest image1" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
