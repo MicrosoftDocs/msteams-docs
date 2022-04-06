@@ -570,41 +570,40 @@ items:
 
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
-- title: Preview your first bot app
+- title: Preview your first Teams tab app
   durationInMinutes: 1
   content: |
- 
-  
-  You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
+
+    You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
 
     1. [Provision in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
     1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
     1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
-      Let's deploy the first app with tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
     #### **To provision your tab app in the cloud**
- 
-    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.    
+    
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png" alt-text="provisioning in cloud" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png" alt-text="provisioning in cloud" border="false":::
 
     1. Enter the following in the **Provision** dialog box:
 
         1. **Subscription name**: Teams Cloud - Dev Test with TTL = 3 Days. </br>
-        1.  **Resource group**: Select **New** to add the resource group generated for your app.</br>
-        1.   Select your **Region**.
-        1.   Select **Provision**.
+        1. **Resource group**: Select **New** to add the resource group generated for your app.</br>
+        1. Select your **Region**.
+        1. Select **Provision**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure.png" alt-text="edit provision window" border="false":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure.png" alt-text="edit provision window" border="false":::
 
-       Provision warning displays. 
+           Provision warning displays. 
 
     1. Select **Provision**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="warning" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="warning" border="false":::
 
-      It takes a few minutes for your resource group to provision in the cloud. 
+       It takes a few minutes for your resource group to provision in the cloud.
         
       1. After the provision is complete, select **OK**. 
   
