@@ -209,7 +209,7 @@ The following table provides the user types and lists the features that each use
 
 **Features supported for work tenant**
 
-| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet now | 1-1 Calls | Group Calls |
+| Feature | Scheduled private meeting | Scheduled channel meeting | Meet now | One-on-one calls | Group Calls |
 |---|---|---|---|---|---|
 | Add apps to meetings | No | No | No | No | No |
 | Manage apps added in meeting (like view , rename, delete) | Yes | Yes | Yes | Yes | Yes |
@@ -227,7 +227,7 @@ The following table provides the user types and lists the features that each use
 
 **APIs Client SDK for work tenant**
 
-| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet now | 1-1 Calls | Group Calls |
+| Feature | Scheduled private meeting | Scheduled channel meeting | Meet now | One-on-one calls | Group calls |
 |---|---|---|---|---|---|
 | Get meeting details | Yes | No | No | No | No
 | Get user | No | No | No | No | No |
@@ -238,7 +238,7 @@ The following table provides the user types and lists the features that each use
 
 **Features supported for personal tenant**
 
-| Feature | Schedule Private Meeting | Meet now | 1-1 Calls | Group Calls |
+| Feature | Schedule private meeting | Meet now | One-on-one calls | Group calls |
 |---|---|---|---|---|
 | Add apps to meetings | No | No | No | No |
 | Manage apps added in meeting | Yes | Yes | Yes | Yes |
@@ -247,7 +247,7 @@ The following table provides the user types and lists the features that each use
 
 **APIs Client SDK for personal tenant**
 
-| Feature | Scheduled Private Meeting | Meet now | 1-1 Calls | Group Calls |
+| Feature | Scheduled private meeting | Meet now | One-on-one calls | Group calls |
 |---|---|---|---|---|
 | Get meeting details | No | No | No | No |
 | Get user | No | No | No | No |
