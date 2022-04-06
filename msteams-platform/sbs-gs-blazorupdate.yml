@@ -570,6 +570,21 @@ items:
 
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
+- title: Build and run your app in Azure
+  durationInMinutes: 1
+  content: |
+     
+    To build and run your app locally:
+    
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.    
+
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png" alt-text="provisioning in cloud" border="false":::
+
+
+
+
+
+
 
 - title: Congratulations!
   durationInMinutes: 1
