@@ -29,25 +29,25 @@ Tabs allow the team members to access services and content in a specific space w
 
 Users can also add or interact with an app in the scheduled private channel meetings.
 
-### Feature supported for TFW
+Feature supported for Work tenant
 
-| Feature | WIP in H1 Desktop| WIP in H1 Mobile | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
-|---|---|---|---|---|---|---|
-| Add Apps to meetings |  |  | No | No | No | No |
-| Manage apps added in meeting |  |  |Yes | Yes | Yes | Yes |
-| In Meeting Side panel |  |  | Yes | Yes | Yes | Yes |
-| In meeting dialog |  |  | Yes | Yes | No | No |
-| Pre/Post meeting support |  |  | Yes | Yes | No | No |
-| Support for anonymous users| All capabilities work for anonymous users except adding and installing apps. Anonymous users can view and interact with post apps added by other Teams user.  | | Yes | No (backlog) | NA | NA |
-| Generic app share to stage | Apps can't be shared from Mobile, it can only be viewed by all user types when shared on Desktop. | | Yes | Yes | Yes | Yes |
-| AV Filter | Filters applied on desktop for a user, appears on Mobile. | | Yes | Yes | Yes | Yes |
-| Together Mode |  | Users on mobile with video are placed on TM mode. | Yes | Yes | Yes | Yes |
-| Deeplinks to Pre/post/in-meeting tabs | Deeplinks are shared by desktop user on chat when, clicked by a mobile user. | | Yes | Yes | Yes | Yes |
+| Feature | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
+|---|---|---|---|---|
+| Add Apps to meetings | No | No | No | No |
+| Manage apps added in meeting | Yes | Yes | Yes | Yes |
+| In Meeting Side panel | Yes | Yes | Yes | Yes |
+| In meeting dialog | Yes | Yes | No | No |
+| Pre/Post meeting support | Yes | Yes | No | No |
+| Support for anonymous users | Yes | No (backlog) | NA | NA |
+| Generic app share to stage | Yes | Yes | Yes | Yes |
+| AV Filter | Yes | Yes | Yes | Yes |
+| Together Mode | Yes | Yes | Yes | Yes |
+| Deeplinks to Pre/post/in-meeting tabs  | Yes | Yes | Yes | Yes |
 
 > [!NOTE]
 > Mobile does not support AV filter, generic app share stage and together mode.
 
-### APIs Client SDK TFW
+APIs Client SDK for work tenant
 
 | Feature | Scheduled Private Meeting | Scheduled Channel Meeting | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
@@ -58,7 +58,7 @@ Users can also add or interact with an app in the scheduled private channel meet
 | Get app content sharing stage | No | No | No | No |
 | Get app sharing content capabilities | No | No | No | No |
 
-### Feature supported for TFL
+Feature supported for personal tenant
 
 | Feature | Schedule Private Meeting | Meet now | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
@@ -67,7 +67,7 @@ Users can also add or interact with an app in the scheduled private channel meet
 | In-meeting dialog | No | No | No | No |
 | Pre/Post meeting support | No | No | No | No |
 
-### APIs Client SDK TFL
+APIs Client SDK for personal tenant
 
 | Feature | Scheduled Private Meeting | Meet now | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
