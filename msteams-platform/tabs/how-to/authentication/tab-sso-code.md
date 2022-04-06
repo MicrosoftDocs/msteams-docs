@@ -31,8 +31,8 @@ Teams mobile client versions supporting SSO:
 
 After you register your tab app on Azure AD, the next step is to configure the app code with the registration details. You'll make these updates in:
 
-- manifest.json
-- appsettings.json
+- [manifest.json](#configure-code-in-app-manifest)
+- [appsettings.json](#configure-code-in-app-settings)
 
 ### Configure code in app manifest
 
@@ -43,7 +43,7 @@ You'll need to add the `webApplicationInfo` property to the Teams app manifest f
 
 #### To configure Teams app manifest for Azure AD registration
 
-1. Open the app project file.
+1. Open the app project.
 2. Open manifest.json.
 3. Append the following code snippet to the manifest to add the new property:
 
@@ -125,14 +125,15 @@ You'll need to add the `webApplicationInfo` property to the Teams app manifest f
 ```
 </details>
 
-### Update Azure AD details in app settings
+### Configure code in app settings
 
 The `appsettings.json` file includes the configuration for Azure AD app.
 
 #### To configure Teams app settings for Azure AD registration
 
-1. Open **TeamsTabSSO** > **appsettings.json** from the **Solution Explorer**.
-2. Update the `AzureAd` code snippet with configured app details on Azure AD portal:
+1. Open the app project.
+2. Open appsettings.json.
+3. Update the `AzureAd` code snippet with configured app details on Azure AD portal:
 
    ```json
      "AzureAd": {
@@ -152,7 +153,7 @@ The `appsettings.json` file includes the configuration for Azure AD app.
     - `[Application ID URI]` is **Application ID URI**
     - `TENANT_ID` is **Directory (tenant) ID**
 
-3. Save the file.
+4. Save the file.
 
 #### View the updated app settings
 
