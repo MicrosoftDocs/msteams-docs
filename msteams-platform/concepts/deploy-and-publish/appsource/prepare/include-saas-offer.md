@@ -217,9 +217,9 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 1. After Teams marketplace supports flat rate pricing, update your app manifest with the Offer ID and Publisher ID and resubmit your app for validation.
 
-## 1st party license management of 3P SaaS offers enabled in Teams/client
+## First party license management of third party SaaS offers enabled in Teams/client
 
-With 1st party license management of 3P SaaS offers in the Teams surface area, our goal is to enable customers to easily assign, use, and track SaaS licenses purchased in Teams Storefront. This document focusses on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration, where the license management happens post purchase of the said app (the associated SaaS offer) via Teams surface areas or via AppSource. Without licenses being assigned to the given users, the app is unusable.
+With first party license management of third party SaaS offers in the Teams surface area, our goal is to enable customers to easily assign, use, and track SaaS licenses purchased in Teams Storefront. This article focusses on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration, where the license management happens post purchase of the said app (the associated SaaS offer) via Teams surface areas or via AppSource. Without licenses being assigned to the given users, the app is unusable.
 
 The objective of this document is to outline the scenario, business justification and detailed specifications for simplified license management for Teams ISV apps from within Teams surface areas.
 
@@ -238,7 +238,7 @@ If license is assigned to multiple users, we build a queue to the commerce team 
 
 You will see a pending status if the license has failed to assign and there is an opportunity to retry.
 
-## Process
+### Process
 
 1. License Assignment for single and multiple users.
 1. View all paid subscriptions after uploading app to Teams.
@@ -251,7 +251,7 @@ You will see a pending status if the license has failed to assign and there is a
 
 Customer is able to assign licenses for a new SaaS purchase - to a single or multiple users at a time or Teams Channel for their purchases.
 
-## Single User assignment
+### Single User assignment
 
 1. From the purchase completion screen or from the license landing page in Teams, IW is able to navigate to a screen to assign licenses to users.
 1. IW can only assign licenses for plans they purchase.
@@ -262,7 +262,9 @@ Customer is able to assign licenses for a new SaaS purchase - to a single or mul
 1. Each user that is assigned a license should  Receive an email about assignment.
 1. As each license is assigned, the number of available licenses is decremented and displayed to the purchaser.
 
-## Multiple User assignment
+    :::image type="content" source="~/assets/images/first-party-license-mgt/user-begins-assigning-licenses.png" alt-text="User begins assigning licenses":::
+
+### Multiple User assignment
 
 1. User can select multiple users or a Teams channel for license assignment.
 1. While multi user/channel assignment is in progress, Teams should render a message of update in progress.
@@ -271,6 +273,8 @@ Customer is able to assign licenses for a new SaaS purchase - to a single or mul
 1. For channel assignment, purchaser can "select all" users in the channel for assignment.
 1. As each license is assigned, the number of available licenses is decremented and displayed to the purchaser.
 1. If maximum licenses available exceeds size of channel, user receives a notification in the CX and prompted to select users from list to be assigned a license.
+
+    :::image type="content" source="~/assets/images/first-party-license-mgt/user-selects-multiple-individuals.png" alt-text="User begins assigning licenses to multiple individuals":::
 
 ## See also
 
