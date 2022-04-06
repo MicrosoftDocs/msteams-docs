@@ -573,18 +573,19 @@ items:
 - title: Preview your first bot app
   durationInMinutes: 1
   content: |
+ 
   
-     You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
+  You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
 
     1. [Provision in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
     1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
     1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
-    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
+      Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
     #### **To provision your tab app in the cloud**
 
-     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.    
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.    
 
      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app.png" alt-text="provisioning in cloud" border="false":::
 
