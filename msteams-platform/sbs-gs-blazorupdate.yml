@@ -310,7 +310,7 @@ items:
     To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
     </details>
 
-- title: Preview your first Teams tab app
+- title: Preview your first bot app
   durationInMinutes: 1
   content: |
 
@@ -320,7 +320,7 @@ items:
     1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
     1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
-    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
+    Let's deploy the first bot app on Azure using Teams Toolkit.
 
     #### **To provision your tab app in the cloud**
     
@@ -347,7 +347,7 @@ items:
         
     1. After the provision is complete, select **OK**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Resource group is generated" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Resource group is generated" border="true":::
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
@@ -365,7 +365,7 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="true":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud.png" alt-text="Select deploy to cloud" border="true":::
 
     1. Select **OK**. 
 
