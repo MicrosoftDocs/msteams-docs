@@ -34,7 +34,6 @@ Provision is performed with single command in for TeamsFx CLI as follows:
 
 [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
-
 ## See also
 
 * [Deploy Teams app to the cloud](deploy.md)
