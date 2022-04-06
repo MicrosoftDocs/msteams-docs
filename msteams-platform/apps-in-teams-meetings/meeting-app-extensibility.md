@@ -211,16 +211,16 @@ The following table provides the user types and lists the features that each use
 
 | Feature | Scheduled Private Meeting | Scheduled Channel Meeting | Meet now | 1-1 Calls | Group Calls |
 |---|---|---|---|---|---|
-| Add Apps to meetings | No | No | No | No | No |
+| Add apps to meetings | No | No | No | No | No |
 | Manage apps added in meeting (like view , rename, delete) | Yes | Yes | Yes | Yes | Yes |
-| In Meeting Side panel | Yes | Yes | Yes | Yes | Yes |
-| In meeting dialog | Yes | Yes | No | No | No |
-| Pre/Post meeting support | Yes | Yes | No | No | No |
+| In-meeting side panel | Yes | Yes | Yes | Yes | Yes |
+| In-meeting dialog | Yes | Yes | No | No | No |
+| Pre/post meeting support | Yes | Yes | No | No | No |
 | Support for anonymous users | Yes | No (backlog) | Yes | NA | NA |
 | Generic app share to stage | Yes | Yes | Yes | Yes | Yes |
-| AV Filter | Yes | Yes | Yes | Yes | Yes |
-| Together Mode | Yes | Yes | Yes | Yes | Yes |
-| Deeplinks to Pre/post/in-meeting tabs  | Yes | Yes | Yes | Yes | Yes |
+| AV filter | Yes | Yes | Yes | Yes | Yes |
+| Together mode | Yes | Yes | Yes | Yes | Yes |
+| Deeplinks to pre/post/in-meeting tabs  | Yes | Yes | Yes | Yes | Yes |
 
 > [!NOTE]
 > Mobile does not support AV filter, generic app share stage and together mode.
@@ -240,10 +240,10 @@ The following table provides the user types and lists the features that each use
 
 | Feature | Schedule Private Meeting | Meet now | 1-1 Calls | Group Calls |
 |---|---|---|---|---|
-| Add Apps to meetings | No | No | No | No |
+| Add apps to meetings | No | No | No | No |
 | Manage apps added in meeting | Yes | Yes | Yes | Yes |
 | In-meeting dialog | No | No | No | No |
-| Pre/Post meeting support | No | No | No | No |
+| Pre/post meeting support | No | No | No | No |
 
 **APIs Client SDK for personal tenant**
 
