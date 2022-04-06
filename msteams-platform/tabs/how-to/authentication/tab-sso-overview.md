@@ -48,7 +48,8 @@ To build a tab app that uses Teams SSO to authenticate users:
     :::column span="2":::
         
       You can build a simple tab app and enable SSO for it.
-      **Quickstart**: The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. For more information, see [Create a personal tab](../create-personal-tab.md)
+      **Quickstart**: The simplest path to get started with Teams tab SSO is with the Teams toolkit for Microsoft Visual Studio Code. 
+      You can also create a simple personal tab app. For more information, see [Create a personal tab](../create-personal-tab.md)
     
     :::column-end:::
 :::row-end:::
