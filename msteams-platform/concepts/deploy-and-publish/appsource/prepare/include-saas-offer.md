@@ -232,9 +232,9 @@ APIs are managed by commerce team for license management. If a user is assigned 
 
 If license is assigned to multiple users, we build a queue to the commerce team to add the licenses.
 
-1. Partial failures.
-1. A user may or may not have approval.
-1. Time lag based on the queue.
+* Partial failures.
+* A user may or may not have approval.
+* Time lag based on the queue.
 
 You will see a pending status if the license has failed to assign and there is an opportunity to retry.
 
