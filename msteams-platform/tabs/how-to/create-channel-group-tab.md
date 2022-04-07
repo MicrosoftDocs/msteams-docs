@@ -166,7 +166,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab" border="true":::
 
-1. To view your tab configuration page, go to `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
+1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page" border="true":::
 
@@ -183,17 +183,13 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to Microsoft Teams and select **Store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps**.
-1. Select **Publish an app** and **Upload a custom app**.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload custom app" border="true":::
-
+1. Go to Microsoft Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab" border="true":::
 
-1. Select **Add** in the pop-up window. Your tab is uploaded to Teams.
+1. Select **Add** in the dialog. Your tab is uploaded to Teams.
     
     > [!NOTE]
     > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
@@ -205,11 +201,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. Return to your team, choose the channel where you want to add the tab, select ➕ from the tab bar, and choose your tab from the list.
-1. Follow the directions for adding a tab. There is a custom configuration dialog box for your channel or group tab.
+1. Follow the directions for adding a tab. There is a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded" border="true":::
+    
+    Now you have succesfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -240,7 +237,7 @@ Following are the steps to create a channel or group tab:
 
 1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-channel-group** > **razor-csharp** folder and open **channelGroupTab.sln**.
 
-1. In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -323,7 +320,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Update your application
 
-1. Go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
+1. Open Visual Studio Solution Explorer and go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -333,9 +330,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     > [!IMPORTANT]
     > Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of the SDK, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. At the top of the `script` tag, insert a call to `microsoftTeams.initialize();`.
+1. Insert a call to `microsoftTeams.initialize();` in the `script` tag.
 
-1. Go to the **Pages** folder and open **Tab.cshtml**
+1. In Visual Studio Solution Explorer go to the **Pages** folder and open **Tab.cshtml**
 
     Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have completed the configuration requirements and the installation can proceed. The parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
@@ -374,7 +371,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Build and run your application
 
-1. In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu.
+1. In Visual Studio, select **F5** or choose **Start Debugging** from the **Debug** menu.
 
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
@@ -385,7 +382,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-1. Navigate to your **Developer portal** in Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. Open **Apps** and select **Import app**.
 
@@ -405,7 +402,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank. 
+1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
@@ -413,17 +410,13 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
-1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
-
-1. Find your app using the search, select &#x25CF;&#x25CF;&#x25CF;.
-
-1. Select the **View details** option. The app details window appears for your app.
-
-1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdown" border="true":::&nbsp; > **Add to team** to load the tab in a team. Your tab is now available in Teams.
+1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded" border="true":::
+    
+    Now you have succesfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -454,7 +447,7 @@ Following are the steps to create a channel or group tab:
 
 1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-channel-group** > **mvc-csharp** folder and open **ChannelGroupTabMVC.sln**.
 
-1. In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
+1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -545,7 +538,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Update your application
 
-1. Go to the **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
+1. Open Visual Studio Solution Explorer and go to the **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -555,9 +548,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     > [!IMPORTANT]
     > Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of the SDK, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
     
-1. At the top of the `script` tag, insert a call to `microsoftTeams.initialize();`.
+1. Insert a call to `microsoftTeams.initialize();` in the `script` tag.
 
-1. Go to the **Tab** folder and open **Tab.cshtml**
+1. In Visual Studio Solution Explorer go to the **Tab** folder and open **Tab.cshtml**
 
     Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have completed the configuration requirements and the installation can proceed. The parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved. 
 
@@ -596,7 +589,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Build and run your application
 
-1. In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu.
+1. In Visual Studio, select **F5** or choose **Start Debugging** from the **Debug** menu.
 
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
@@ -607,7 +600,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-1. Go to **Developer portal** in Teams.
+1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
 
 1. Open **Apps** and select **Import app**.
 
@@ -627,7 +620,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and save.
 
-1. In **App features**, select Personal app and enter the Name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank.
+1. In **App features**, select Group and channel app. Update the **Configuration URL** with `https://<yourngrokurl>/tab` and select your tab **Scope**.
 
 1. Select **Save**.
 
@@ -635,17 +628,13 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your app is sideloaded successfully.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
-1. Select **Manage your apps**. Your app is listed in the sideloaded apps.
-
-1. Find your app using the search, select &#x25CF;&#x25CF;&#x25CF;.
-
-1. Select the **View details** option. The app details window appears for your app.
-
-1. Select  &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="Channel tab ASPNET uploaded" border="true":::&nbsp; > **Add to team** to load the tab on Teams. Your tab is now available in Teams.
+1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded" border="true":::
+    
+    Now you have succesfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
