@@ -11,20 +11,24 @@ Users sign in to Microsoft Teams using either their personal Microsoft account o
 
 ## Teams SSO for tabs at runtime
 
-Teams SSO authentication is achieved through a validation process that involves the tab app, Microsoft Teams, and Azure AD.
+Teams SSO authentication is achieved through a validation process that involves the tab app, Microsoft Teams, and Azure AD. During this interaction, the user must consent for use of their Teams identity to obtain access token.
 
 The following image shows how the Teams SSO works when a Teams user attempts to access the tab app:
 
 :::image type="content" source="../../../assets/images/tabs/tabs-sso-diagram.png" alt-text="Tab single sign-on SSO diagram":::
 
-1. The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token for the tab application.
-2. If the current user is using your tab application for the first time, Teams displays request prompt to consent, if consent is required. The user must provide their consent to Teams for using their Teams identity to obtain access token from Azure AD.
-  Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication.
-3. Teams requests Azure AD endpoint for the tab access token for the current Teams user.
-4. Azure AD sends the tab access token to the Teams application. Teams will cache the token on your behalf so that future calls to getAccessToken simply return the cached token.
-5. Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call.
-6. The token is both an access token and an identity token. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
-  Optionally, the tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side. Because the access token contains identity claims, the server can store information associated with the user's identity; such as the user's preferences.
+| # | Interaction | What's going on |
+| --- | --- | --- |
+| 1 | Tab -> Teams | The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token for the tab application. |
+| 2 | Teams - > Consent form | If the current user is using your tab application for the first time, Teams displays request prompt to consent, if consent is required. The user must provide their consent to Teams for using their Teams identity to obtain access token from Azure AD. <br> Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication. |
+| 3 | Teams -> Azure AD | Teams requests Azure AD endpoint for the tab access token for the current Teams user. |
+| 4 | Azure AD -> Teams | Azure AD sends the tab access token to the Teams application. Teams will cache the token on your behalf so that future calls to getAccessToken simply return the cached token. |
+| 5 | Teams -> Tab | Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call. |
+| 6 | Tab app | The Tab parses the token using JavaScript to extract required information, such as the user's email address. |
+
+The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side. Because the access token contains identity claims, the server can store information associated with the user's identity; such as the user's preferences.
+
+For more information on access tokens, please see [Configure code to enable Teams SSO](tab-sso-code.md).
 
 > [!IMPORTANT]
 > The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](tab-sso-token-graph.md).
