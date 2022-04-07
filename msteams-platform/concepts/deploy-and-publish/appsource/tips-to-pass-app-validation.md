@@ -157,7 +157,7 @@ You must ensure your app includes a valid support link for users to contact. Sup
 
 ## Manifest schema
 
-The Teams manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). App packages that contain preview schemas (not publicly released) fail app review.
+The Teams manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure to use a localization manifest schema version greater than 1.5. App packages that contain preview schemas (not publicly released) fail app review.
 
 You must update the app version declared in the manifest if you're submitting an app update. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure the manifest schema version in Microsoft Teams Store and Microsoft AppSource is the same.
 
@@ -173,7 +173,7 @@ Your app submission must adhere to the [external domains](/legal/marketplace/cer
 
 ## Localization information
 
-For apps that support localization, you must include the localized language files in your app package and use the Microsoft Teams app schema `v1.5` and later to localize your app. The localization files must conform to the [Teams localization schema](../../build-and-test/apps-localization.md). Apps that support localization but missing localization information in the app manifest fail app review.
+You must include the localized language files in your app package if your app supports localization. The localization files must conform to the [Teams localization schema](../../build-and-test/apps-localization.md). Apps that support localization but missing localization information in the app manifest fail app review.
 
 ## Provider or developer name mismatch
 
