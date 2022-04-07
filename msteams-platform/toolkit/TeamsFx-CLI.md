@@ -1,5 +1,5 @@
 ---
-title: TeamsFx Command Line Interface
+title: TeamsFx Library
 author: MuyangAmigo
 description:  Describes TeamsFx Command Line Interface
 ms.author: surbhigupta

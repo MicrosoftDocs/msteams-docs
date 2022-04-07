@@ -1,11 +1,12 @@
 ---
 title: Create a new Teams app
 author: zyxiaoyuer
-description:  Create new Teams app using Toolkit
+description: Create new Teams app using Teams Toolkit environment
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/30/2022
+zone_pivot_groups: teams-apps-ide
 ---
 
 # Teams Toolkit in Integrated Development Environments
@@ -89,7 +90,7 @@ Visual Studio opens up the new project and Teams Toolkit setup you new project i
 
 ::: zone-end
 
-::: zone pivot=teamsfx-cli"
+::: zone pivot="teamsfx-cli"
 
 ## Create a new Teams app usingTeamsFx command line interface
 
@@ -144,6 +145,8 @@ By default, `teamsfx new` goes into interactive mode and guides you through the 
 |`--spfx-web part-name`| No | Applicable if `Tab(SPfx)` capability is selected. The default value is "helloworld".|
 |`--spfx-web part-desp`| No | Applicable if `Tab(SPfx)` capability is selected. The default value is "helloworld description". |
 |`--azure-resources`| No| Applicable if contains `tab` capability. Add Azure resources to your project. The multiple options are `sql` (Azure SQL Database) and `function` (Azure Functions). |
+
+::: zone-end
 
 ## See also
 
