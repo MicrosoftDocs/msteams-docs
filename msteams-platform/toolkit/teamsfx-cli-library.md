@@ -16,13 +16,17 @@ Here's a list of main TeamsFx features:
 
 * **TeamsFx Collaboration**: Let developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
 
-* **TeamsFx CLI**: It accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+* **TeamsFx CLI**: TeamsFx CLI accelerates Teams application development and also enables CI/CD scenario to integrate CLI in scripts for automation.
 
 * **TeamsFx SDK**: TeamsFx Software Development Kit (SDK) is the main TeamsFx code library encapsulating simple authentication for both client and server-side code tailored for Teams developers.
 
 ## TeamsFx command line interface
 
-TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+TeamsFx CLI is a text-based command line interface which allow user to perform the following :
+
+* Accelerate Teams application development.
+* Provides keyboard centric experience while building Teams applications.
+* Enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 For more information, see:
 
@@ -31,14 +35,14 @@ For more information, see:
 
 ## Get Started
 
-Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
+### Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
 
 ```bash
   npm install -g @microsoft/teamsfx-cli
   teamsfx -h
 ```
 
-## Supported commands
+### Supported commands
 
 | Command | Description |
 |----------------|-------------|
@@ -62,7 +66,7 @@ By default, `teamsfx new` goes into interactive mode and guides you through the 
 
 | `teamsFx new` Command | Description |
 |:----------------  |:-------------|
-| `teamsfx new template <template-name>`     | Create an app from an existing template |
+| `teamsfx new template <template-name>`| Create an app from an existing template |
 | `teamsfx new template list`     | List all the available templates |
 
 ### Parameters for `teamsfx new`
@@ -81,7 +85,7 @@ By default, `teamsfx new` goes into interactive mode and guides you through the 
 
 ### Scenarios for `teamsfx new`
 
-You can use interactive mode to create a Teams app.The scenarios on controlling all the parameters with `teamsfx new` are as follows:
+You can use interactive mode to create a Teams app. The scenarios on controlling all the parameters with `teamsfx new` are as follows:
 
 #### Tab app hosted on SPFx using React
 
@@ -107,7 +111,7 @@ Manage cloud service accounts. The supported cloud services are `Azure` and `Mic
 
 | `teamsFx account` Command | Description |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | Log in to the selected cloud service. |
+| `teamsfx account login <service>`  | log in to the selected cloud service. |
 | `teamsfx account logout <service>`  | log out of selected cloud service. |
 | `teamsfx account set --subscription` | Update account settings to set a subscription ID. |
 
@@ -189,7 +193,7 @@ Manage the resources in the current application. Supported `<resource-type>` are
 
 ## `teamsfx provision`
 
-Provision the cloud resources in the current application.
+This command allows you to provision the current application to cloud resources.
 
 ### Parameters for `teamsfx provision`
 
@@ -445,7 +449,7 @@ As a Project Collaborator:
   teamsfx account login Microsoft 365
   ```
 
-* Login to Azure account with contributor permission for all Azure resources.
+* Log in to Azure account with contributor permission for all Azure resources.
 
   ```bash
   teamsfx account login azure
