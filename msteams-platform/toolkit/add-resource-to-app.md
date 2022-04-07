@@ -4,14 +4,14 @@ author: MuyangAmigo
 description:  Add cloud Resources using Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: Add resources to teams app
 ms.date: 11/29/2021
 zone_pivot_groups: teams-apps-ide
 ---
 
 # Add cloud resources to Teams app
 
-TeamsFx helps to provision cloud resources for hosting your application. You can also add optional cloud resources which fits as per your development requirements.
+TeamsFx helps to provision cloud resources for hosting your application. You can also add optional cloud resources, which fits as per your development requirements.
 
 ::: zone pivot="visual-studio-code"
 
@@ -39,9 +39,11 @@ TeamsFx helps to provision cloud resources for hosting your application. You can
 1. Select **OK**. The selected resources are successfully added to your project.
 
 ::: zone-end
-::: zone pivot="visual-studio-"
 
-Currently add resource to app option to be added.
+::: zone pivot="visual-studio"
+
+Content to be added
+
 ::: zone-end
 
 ::: zone pivot="teamsfx-cli"

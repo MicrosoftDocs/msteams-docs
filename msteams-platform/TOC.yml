@@ -89,7 +89,7 @@
   - name: Overview 
     href: toolkit/tools-sdk-overview.md
     items: 
-  - name: Install Teams Toolkit extensions
+  - name: Teams Toolkit
     href: toolkit/teams-toolkit-overview.md
     items:
     - name: Build app using Teams Toolkit
@@ -122,13 +122,6 @@
             href: toolkit/TeamsFx-collaboration.md
           - name: Add CI/CD Workflows
             href: toolkit/use-CICD-template.md
-    - name: Teams Toolkit in Visual Studio
-      href: toolkit/visual-studio-overview.md
-      items:
-      - name: Create new Teams App
-        href: toolkit/create-new-project-vs.md
-    - name: Teams Toolkit in Command Line Interface
-      href: toolkit/teamsfx-cli.md    
     - name: Teams Toolkit FAQ 
       href: toolkit/FAQ.md   
   - name: SDK
