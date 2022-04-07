@@ -68,9 +68,7 @@ Following are the most common reasons for your app to get rejected:
 
 ## Broken links, functional bugs, app crashes, and unexpected errors
 
-Test your app to verify your app’s correctness, functionality, and usage and collect more actionable feedback. Ensure to test your app thoroughly, check all the end to end workflows that your app supports, test the app compatibility on the operating systems and browsers as per the  [Commercial Marketplace Certification policy](/legal/marketplace/certification-policies) and fix all the bugs.
-
-You must avoid the following mistakes in your app before your submit for review:
+Test your app to verify your app’s correctness, functionality, and usage and collect more actionable feedback. Ensure to test your app thoroughly, check all the end to end workflows that your app supports, test the app compatibility on the operating systems and browsers as per the  [Commercial Marketplace Certification policy](/legal/marketplace/certification-policies) and fix all the bugs. You must avoid the following mistakes in your app before you submit for review:
 
 * Broken links in an app.
 
@@ -86,9 +84,9 @@ You must avoid the following mistakes in your app before your submit for review:
 
 ## App description
 
-A great description can make your app stand out in the Microsoft Store and help encourage customers to download it. Avoid the following mistakes in your app description:
+A great description can make your app stand out in the Microsoft Store and help encourage customers to download it. You must avoid the following mistakes in your app description:
 
-* Way forward: Way forward information for new users such as, sign up or get started or help and contact us links aren't included in the Manifest and App Source full description.
+* Way forward: Way forward information for new users such as, Sign Up or Get Started or Help and Contact Us links aren't included in the Manifest and App Source full description.
 
 * Regional dependency: Region specific app name or functionality not called out in manifest and partner center app descriptions.
 
@@ -110,9 +108,7 @@ A great description can make your app stand out in the Microsoft Store and help 
 
 Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies.
 
-When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
-
-Common violations that lead to app rejection:
+When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). You must avoid the following common violations that lead to app rejection:
 
 * Abbreviating Microsoft as MS or MSFT in the offer listing, referencing the first instance of Microsoft Teams in the offer listing as **Teams** instead of **Microsoft Teams**.
 
@@ -128,11 +124,9 @@ Ensure to provide all the details required to review your app in the Notes for C
 
 You must avoid the following issues that occur in 20% of apps that are rejected during app review:
 
-* No test instructions or credentials to test the app.
+* No Test instructions or credentials to test the app.
 
-* Provide only one test account when there's a dependency with two test accounts to test collaboration scenarios.
-
-* Provide only one test account when there's a dependency on two test accounts to test collaboration scenarios.
+* Only one test account provided when there's a dependency with two test accounts to test collaboration scenarios.
 
 * The provided test instructions and credentials aren't sufficient to complete app functional testing.
 
@@ -142,19 +136,15 @@ The Microsoft 365 App Compliance Program helps organizations assess and manage r
 
 ## Violation of app icon guidelines
 
-Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to [App Icon guidelines](../../build-and-test/apps-package.md#app-icons).
-
-Avoid the following app icon violations that result in app rejection:
+Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to [App Icon guidelines](../../build-and-test/apps-package.md#app-icons). You must avoid the following violations that result in app rejection:
 
 * App submissions that contain app packages with different color and outline icons or non-white and non-transparent outline icons.
 
 * App submissions with different logos in the Partner Center and the app package submitted for review.
 
-## App Name
+## App name
 
-Your app name plays a critical role for users to discover your app on the Microsoft Teams store. Ensure your [app name](prepare/teams-store-validation-guidelines.md#app-name) meets App name guidelines and doesn't violate the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks).
-
-Avoid the following common violations of App naming guidelines:
+Your app name plays a critical role for users to discover your app on the Microsoft Teams store. Ensure your [app name](prepare/teams-store-validation-guidelines.md#app-name) meets App name guidelines and doesn't violate the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks). You must avoid the following violations that result in app rejection:
 
 * Inconsistent usage of app name throughout the app’s functionality.
 * Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
@@ -167,7 +157,11 @@ You must ensure your app includes a valid support link for users to contact. Sup
 
 ## Manifest schema
 
-Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If you're submitting an app update, you must increment the app version declared in the manifest. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update. App packages that contain preview schemas (not publicly released) fail app review. Ensure the manifest schema version is the same in the Microsoft Teams Store and Microsoft AppSource. If your app supports localization, ensure to use a localization manifest schema version greater than 1.5. Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
+The Teams manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure to use a localization manifest schema version greater than 1.5. App packages that contain preview schemas (not publicly released) fail app review.
+
+You must update the app version declared in the manifest if you're submitting an app update. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure the manifest schema version in Microsoft Teams Store and Microsoft AppSource is the same.
+
+Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
 
 ## App UI
 
@@ -175,20 +169,20 @@ Your app’s UI must not look incomplete and should be intuitive. Ensure users a
 
 ## Valid domains
 
-For your app to pass review, ensure the valid domains listed in the manifest are under your organization's direct control. Your submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy.
+Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure the valid domains listed in the manifest are under your organization's direct control.
 
 ## Localization information
 
-If your app supports localization, you must include the localized language files in your app package. Localization files must conform to the [Teams localization schema](../../build-and-test/apps-localization.md). Apps that support localization but missing localization information in the app manifest fail app review.
+You must include the localized language files in your app package if your app supports localization. The localization files must conform to the [Teams localization schema](../../build-and-test/apps-localization.md). Apps that support localization but missing localization information in the app manifest fail app review.
 
 ## Provider or developer name mismatch
 
-To avoid end-user confusion during the app’s acquisition from the Microsoft Teams Store or Microsoft AppSource, ensure to provide the same developer name in your offer listing in both storefronts.
+You must ensure to provide the same developer name in your offer listing in both storefronts to avoid end-user confusion during the app’s acquisition from the Microsoft Teams Store or Microsoft AppSource.
 
 ## Privacy policy
 
-Your offer listing must include a valid privacy policy link. Offers with invalid, unsecured, broken privacy policy links fail app review. Your privacy policy must follow the [privacy policy guidelines](prepare/teams-store-validation-guidelines.md#privacy-policy).
+Your offer listing must include a valid privacy policy link. Offers with invalid, unsecured, and broken privacy policy links fail app review. Your privacy policy must follow the [privacy policy guidelines](prepare/teams-store-validation-guidelines.md#privacy-policy).
 
 ## Terms of Use link
 
-Your offer listing must include a valid Terms of Use link. Offers with invalid, unsecured, broken Terms of Use links fail app review. Terms of Use links must follow [Terms of Use link guidelines](prepare/teams-store-validation-guidelines.md#terms-of-use).
+Your offer listing must include a valid Terms of Use link. Offers with invalid, unsecured, and broken Terms of Use links fail app review. Terms of Use links must follow [Terms of Use link guidelines](prepare/teams-store-validation-guidelines.md#terms-of-use).
