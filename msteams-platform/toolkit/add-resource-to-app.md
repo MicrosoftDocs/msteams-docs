@@ -13,7 +13,7 @@ zone_pivot_groups: teams-apps-ide
 
 TeamsFx helps to provision cloud resources for hosting your application. You can also add optional cloud resources which fits as per your development requirements.
 
-::: zone pivot="node-visual-studio-code"
+::: zone pivot="visual-studio-code"
 
 <!-- # [Visual Studio Code](#tab/VisualStudioCode) -->
 

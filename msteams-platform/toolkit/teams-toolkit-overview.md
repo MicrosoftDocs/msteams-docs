@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Install Teams Toolkit
 ms.author: surbhigupta
 description: Overview on Teams Toolkit
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.topic: overview
 ms.date: 03/31/2022
 ---
 
-# Overview on Teams Toolkit
+# Teams Toolkit
 
 Team Toolkit helps you to improve collaboration and productivity using Teams app. The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in differnt Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and also Teams CLI. Teams Toolkit provides you with all the necessary tools needed for building a Teams app in one place.
 
@@ -41,9 +41,9 @@ Teams Toolkit automates work and provides great integration of Teams and Azure r
 |TeamsFx Collaboration| TeamsFx Collaboration allows developers and project owners to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.|
 |TeamsFx SDK| TeamsFx SDK helps you to reduce tasks of implementing identity and access to cloud resources to single-line statements with zero configuration.|
 
-## Prerequisites
+<!-- ## Prerequisites
 
-Install latest version of Teams Toolkit in Visual Studio Code and Visual Studio.
+Install latest version of Teams Toolkit in Visual Studio Code and Visual Studio. -->
 
 ### Install Teams Toolkit in Visual Studio Code
 
@@ -101,31 +101,7 @@ You can use the Visual Studio version 17.2.0 preview 2.0 to develop Teams apps.
 <details>
 <summary><b>Visual studio code</b></summary>
 
-|Features | Includes... | What you can do |
-| --- | --- | --- |
-| **Accounts** | &nbsp; | &nbsp; |
-| &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
-| &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
-| **Environment** | &nbsp; | &nbsp; |
-| &nbsp; | Local | Deploy your app in the default local environment with local machine environment configurations. |
-| &nbsp; | Dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
-| **Development** | &nbsp; | &nbsp; |
-| &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
-| &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
-| &nbsp; | Add capabilities | Add other required Teams capabilities to Teams app during development process. |
-| &nbsp; | Add cloud resources | Add optional cloud resources suitable for your app. |
-| &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
-| **Deployment** | &nbsp; | &nbsp; |
-| &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
-| &nbsp; | Zip Teams metadata package | Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.  |
-| &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
-| &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
-| &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
-| &nbsp; | CI/CD guide | Automate your development workflow while building Teams application. |
-| **Help and Feedback** | &nbsp; | &nbsp; |
-| &nbsp; | Quick Start | View the Teams Toolkit Quick Start help within Visual Studio Code.  |
-| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
-| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
+Add image/screentogif for over all GUI understanding
 
 </details>
 
@@ -133,7 +109,7 @@ You can use the Visual Studio version 17.2.0 preview 2.0 to develop Teams apps.
 
 <details>
 <summary><b>Visual Studio</b></summary>
-
+<!-- 
 |Features | Includes... | What you can do |
 | --- | --- | --- |
 | **Create a new project** | &nbsp; | &nbsp; |
@@ -154,7 +130,7 @@ You can use the Visual Studio version 17.2.0 preview 2.0 to develop Teams apps.
 | &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
 | &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
 | &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
-| &nbsp; | CI/CD guide | Automate your development workflow while building Teams application. |
+| &nbsp; | CI/CD guide | Automate your development workflow while building Teams application. | -->
 
 </details>
 
