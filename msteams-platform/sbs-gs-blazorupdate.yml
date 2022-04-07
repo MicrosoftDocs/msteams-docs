@@ -316,9 +316,9 @@ items:
 
     You've learned to create, build, and run Teams app with tab capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
 
-    1. [Provision in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
-    1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
-    1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
+    1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
+    1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
+    1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
     Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
@@ -576,9 +576,9 @@ items:
 
     You've learned to create, build, and run Teams app with bot capability. The final step is to deploy your app on Azure and Preview on Teams. It includes the following:
 
-    1. [Provision in the cloud](#to-provision-your-bot-app-in-the-cloud): You can provision your bot app in the cloud.
-    1. [Deploy to cloud](#to-deploy-your-bot-app-to-cloud): You can deploy your bot app to cloud. 
-    1. [Preview Teams app](#to-preview-your-bot-app-in-teams): Your bot app opens in Teams. 
+    1. [Provision your bot app in the cloud](#to-provision-your-bot-app-in-the-cloud): You can provision your bot app in the cloud.
+    1. [Deploy your bot app to cloud](#to-deploy-your-bot-app-to-cloud): You can deploy your bot app to cloud. 
+    1. [Preview your bot app in Teams](#to-preview-your-bot-app-in-teams): Your bot app opens in Teams. 
 
     Let's deploy the first bot app on Azure using Teams Toolkit.
 
@@ -633,7 +633,7 @@ items:
 
         Your bot app is successfully deployed to the cloud!
 
-     **To preview your bot app in Teams**    
+    #### **To preview your bot app in Teams** 
 
      1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
 
