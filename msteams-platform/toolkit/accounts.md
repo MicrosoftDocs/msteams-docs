@@ -11,8 +11,8 @@ ms.date: 03/14/2022
 
 To create a Teams app and Deploy, you need to prepare the following accounts::
 
-* [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)
-* [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources).
+<!-- * [Microsoft 365 account with valid subscription.](accounts.d#microsoft-365-account)
+* [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources). -->
 
 ## Create Microsoft 365 account
 

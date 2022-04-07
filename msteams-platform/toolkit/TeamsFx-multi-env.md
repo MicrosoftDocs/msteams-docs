@@ -105,7 +105,7 @@ Perform the following steps for customization:
   }
   ```
 
-    3. Create new environment and name it `staging` if it doesn't exist.
+3. Create new environment and name it `staging` if it doesn't exist.
 4. Open config file `.fx/configs/config.staging.json`.
 5. Update the same property `myapp(staging)`.
 6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
@@ -161,7 +161,7 @@ Perform the following steps for customization:
   }
   ```
 
-    6. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+6. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
 ### Scenario 3: customize Teams App description for all environments
 

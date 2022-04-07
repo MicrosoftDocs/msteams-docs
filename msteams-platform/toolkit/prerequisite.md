@@ -24,7 +24,7 @@ This section helps you to setup your account or prerequisites related to Teams T
 
 Install the following to prepare the account  to build Teams apps.
 
-* [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)
+* [Microsoft 365 account with valid subscription.](accounts.d#microsoft-365-account)
 * [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources).
 
 
