@@ -1,5 +1,5 @@
 ---
-title: Tools and SDK Overview
+title: Overview of Tools and SDK
 author: zyxiaoyuer
 description:  Overview of Tools and SDK
 ms.author: surbhigupta
@@ -10,19 +10,14 @@ ms.date: 11/29/2021
 
 # Overview of Tools and SDK
 
-<!-- > [!NOTE]
-> Currently, this feature is available in **public developer preview** only. -->
+Teams Toolkit for Microsoft Visual Studio Code makes it easy for you to create, debug, and deploy a new Teams App as it reduces the amount of development time and improves our developer workflow. Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use TeamsFx from your IDE. The Microsoft Teams JavaScript client SDK and other SDK help you create hosted experiences in Team. The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library. Other legacy SDK's help you to create a bot 
 
-# Overview of Tools and SDK
+ [!NOTE]
+> Currently, this feature is available in **public developer preview** only.
 
-Introduction goes here.
+## Teams Toolkit
 
-<!-- > [!NOTE]
-> Currently, this feature is available in **public developer preview** only. -->
-
-## Teams Toolkit 
-
-     The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and TeamsFx.
+The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and TeamsFx.
 
 ### Teams toolkit for Visual Studio Code
 

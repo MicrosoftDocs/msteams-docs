@@ -89,7 +89,7 @@
   - name: Overview 
     href: toolkit/tools-sdk-overview.md
     items: 
-  - name: Teams Toolkit
+  - name: Tools
     href: toolkit/teams-toolkit-overview.md
     items:
     - name: Build app using Teams Toolkit
