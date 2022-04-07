@@ -165,10 +165,10 @@ The default participant settings are determined by an organization's IT administ
 
 * **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting, such as:
   * They can interact with other meeting members but can't manage any of the meeting settings or share the content.  
-  * They can view or interact with the tab app on the meeting stage in Teams desktop client without installing the app or without any app entitlements. They can’t view or interact with the app on the meeting stage on a web client.
+  * They can view or interact with the tab app on the meeting stage in Teams desktop client without installing the app or without any app entitlements. They can’t view or interact with the app on the meeting stage in a Teams web client.
   * They can’t view or interact with the app in the side panel without any app entitlements.
   * They aren't authorized to act as a presenter.
-  * If the attendee joins as an anonymous user, they can’t view or interact with the tab app on the meeting stage.
+  * If the attendee joins as an anonymous user, they can’t view or interact with the tab app on the meeting stage in both Teams web and desktop client.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
