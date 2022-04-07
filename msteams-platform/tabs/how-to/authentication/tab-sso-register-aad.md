@@ -93,16 +93,27 @@ In this section, you'll learn:
 
     The **Expose an API** page appears.
 
-1. Select **Set** to generate app ID URI.
+1. Select **Set** to generate app ID URI in the form of `api://{AppID}`.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI" border="false":::
 
     The section for setting app ID URI appears.
 
-1. Enter the app ID URI, and then select **Save**.
+2. Enter the app ID URI in the format shown here.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
 
+    - The app ID URI displays pre-filled with application ID in the format `api://{AppID}`.
+    - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}`
+
+    where,
+    - `fully-qualified-domain-name.com` is the human readable domain name from which your app is served.
+      If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
+    - `AppID` is the **Application (client) ID** that was generated when you registered your app. You can view it in the **Overview** section.
+
+3. Select **Save**.
+    
     A message pops up on the browser stating that the app ID URI was updated.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message" border="false":::
@@ -213,4 +224,4 @@ Depending on the platform or device on which you want to target your your app, a
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/web-platform-configured.png" alt-text="Web platform configured" border="false":::
 
-Congratulations! You've completed the app registration prerequisites to continue with your tab SSO app.
+Congratulations! You've completed the app registration required to enable SSO for your tab app.

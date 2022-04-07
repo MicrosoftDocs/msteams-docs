@@ -29,7 +29,7 @@ This step requires your app user to give their consent for using their Teams ide
 - **Access token**: An access token is an artifact contains user identity and permission scopes.
 
 > [!NOTE]
-> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD app registration and in your Teams app.
+> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
 
 Use the following authentication API:
 
@@ -40,6 +40,8 @@ var authTokenRequest = {
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
+
+
 
 When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
 
