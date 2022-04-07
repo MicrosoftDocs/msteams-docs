@@ -104,8 +104,8 @@ In this section, you'll learn:
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
 
     - The app ID URI displays pre-filled with application ID in the format `api://{AppID}`.
-    - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`
-    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}`
+    - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}`.
 
     where,
     - `fully-qualified-domain-name.com` is the human readable domain name from which your app is served.
@@ -113,7 +113,7 @@ In this section, you'll learn:
     - `AppID` is the **Application (client) ID** that was generated when you registered your app. You can view it in the **Overview** section.
 
 3. Select **Save**.
-    
+
     A message pops up on the browser stating that the app ID URI was updated.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message" border="false":::

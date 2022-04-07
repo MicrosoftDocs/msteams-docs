@@ -42,6 +42,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
 
+With Teams SSO, the access token is pre-fetched to improve app performance and load times.
 
 When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
 
