@@ -57,7 +57,7 @@ Call the `getAuthToken` at the time when you need to validate the user identity.
 
 You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
 
-There is no significant performance degradation with redundant calls of `getAuthToken` because Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
+Teams caches the access token and will reuse it. As the access token is pre-fetched to improve app performance and load times. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
 > As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
@@ -142,8 +142,6 @@ For more information on token validation, see [Microsoft identity platform acces
 
 #### Use the access token as an identity token
 
-With Teams SSO, the access token is pre-fetched to improve app performance and load times.
-
 When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
 
 After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as [jwt.ms](https://jwt.ms/). If you aren't receiving the UPN in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
@@ -151,6 +149,15 @@ After you receive access token in success callback, decode access token to view 
 For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
 
 :::image type="content" source="../../../assets/images/tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
+
+The access token returned from getAccessToken() contains information that can be used to establish the identity. The following claims in the token relate to identity.
+
+- name: The user's display name.
+- preferred_username: The user's email address.
+- oid: A GUID representing the ID of the user in the Microsoft identity system.
+- tid: A GUID representing the tenant tha the user is signing in to.
+
+For more details on these and other claims, see [Microsoft identity platform ID tokens](/azure/active-directory/develop/id-tokens). If you need to construct a unique ID to represent the user in your system, refer to [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id) for more information.
 
 ## Code sample
 
