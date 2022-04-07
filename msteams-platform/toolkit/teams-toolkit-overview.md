@@ -1,5 +1,5 @@
 ---
-title: Install Teams Toolkit
+title: Teams Toolkit
 ms.author: surbhigupta
 description: Overview on Teams Toolkit
 ms.localizationpriority: medium
@@ -63,7 +63,7 @@ Install latest version of Teams Toolkit in Visual Studio Code and Visual Studio.
 <!-- > [!TIP]
 > You can install Teams Toolkit from [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). -->
 
-### Take a tour of Teams Toolkit in Visual Studio Code
+#### Take a tour of Teams Toolkit in Visual Studio Code
 
 After Toolkit installation, you'll see the Teams Toolkit User Interface (UI) as shown in the following image:
 
@@ -75,18 +75,17 @@ You can select **Quick Start** to explore the Teams Toolkit, or select **Create 
 
  :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
 
-### Install the Microsoft Teams Toolkit extension in Visual Studio
+### Install Microsoft Teams Toolkit extension in Visual Studio
 
 >[!NOTE]
-> As a prerequisite, ensure you use latest version of Visual Studio to follow the instructions below.
+> As a prerequisite, ensure you use latest version of Visual Studio to follow the instructions specified.
 
 You can use the Visual Studio version 17.2.0 preview 2.0 to develop Teams apps.
 
 1. Download the Visual Studio version 17.2.0 preview 2.0 .
-1. Open vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
+1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
 1. Select **Continue** in Visual Studio Installer to configure your installation.
-1. If you have installed Visual Studio 2022 17.2 Preview 2.
-2. Open the Visual Studio Installer.
+1. If you have installed Visual Studio 2022 17.2 Preview 2, then open the Visual Studio Installer.
 3. Select **Modify** for your existing VS 2022 Preview installation.
 4. Select the **ASP.NET and web development** workload.
 5. On the right, expand the **ASP.NET and web development** section and select **Microsoft Teams development tools** from the optional list of components.

@@ -115,7 +115,7 @@
           - name: Publish apps 
             href: toolkit/publish.md
           - name: Add cloud resources to the app
-            href: toolkit/add-resource.md
+            href: toolkit/add-resource-to-app.md
           - name: Manage multiple environments
             href: toolkit/TeamsFx-multi-env.md
           - name: Collaborate using Toolkit
@@ -123,7 +123,7 @@
           - name: Add CI/CD Workflows
             href: toolkit/use-CICD-template.md
     - name: Teams Toolkit FAQ 
-      href: toolkit/FAQ.md   
+      href: toolkit/FAQ.md
   - name: SDK
     items:
       - name: JavaScript client SDK and versions

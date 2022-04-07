@@ -9,9 +9,9 @@ ms.date: 03/30/2022
 zone_pivot_groups: teams-apps-ide
 ---
 
-# Teams Toolkit in Integrated Development Environments
+# Create new Teams app using Teams Toolkit
 
-Teams Toolkit provides you with all the tools required for successfully building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code and Visual Studio to create app in Teams or use Teams Command Line Interface (CLI) to create apps in Teams.
+Teams Toolkit provides you with all the necessary tools required for successfully building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code and Visual Studio to create  or use Teams Command Line Interface (CLI) to create apps in Teams.
 
 > [!NOTE]
 > Currently, the feature is available in **public developer preview** only.

@@ -13,21 +13,58 @@ ms.date: 11/29/2021
 <!-- > [!NOTE]
 > Currently, this feature is available in **public developer preview** only. -->
 
-* Teams Toolkit overview
-* Teams toolkit for Visual Studio Code
-* Teams Toolkit for Visual Studio
-* Teams Toolkit in Command Line
-* App Studio
-* Developer Portal for Teams
-* SDK's
-* JavaScript SDK and versions
-* Microsoft Graph SDK
-* Legacy SDK's
+# Overview of Tools and SDK
+
+Introduction goes here.
+
+<!-- > [!NOTE]
+> Currently, this feature is available in **public developer preview** only. -->
+
+## Teams Toolkit 
+
+     The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and TeamsFx.
+
+### Teams toolkit for Visual Studio Code
+
+Teams Toolkit automates work and provides great integration of Teams and Azure resources.The Teams Toolkit extension for Visual Studio Code provides you with all the necessary tools needed for building a Teams app in one place.
+
+### Teams Toolkit for Visual Studio
+
+Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use TeamsFx from your IDE.
+
+### Teams Toolkit in Command Line
+
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
+
+## App Studio
+
+App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+
+## SDKs
+
+### JavaScript SDK and versions
+
+The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, which means displaying your app content in an iframe.
+
+### Microsoft Graph SDK
+
+The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library.
+
+### Legacy SDK's
+
+#### Bot SDK's
+
+Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience.
+
+#### Messaging extensions SDKs
+
+Messaging extensions are a powerful way for users to engage with your app from Teams. With this capability, users can query or post information to and from your service and post that information, in the form of cards, right into a message.
 
 ## See also
 
-* [Create new project using Teams Toolkit](create-new-project.md)
+* [Create a new project using Teams Toolkit](create-new-project.md)
 * [Prepare accounts to build Teams apps](accounts.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
+
