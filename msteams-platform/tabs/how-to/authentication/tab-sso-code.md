@@ -64,15 +64,83 @@ There is no significant performance degradation with redundant calls of `getAuth
 
 ### Pass the access token to server-side code
 
+If you need to access web APIs on your server, or additional services such as Microsoft Graph, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. Also the server-side code can parse the token for identity information if it needs it. (See Use the access token as an identity token below.) There are many libraries available for different languages and platforms that can help simplify the code you write.
 
+For more information, see [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-### Validate the access token
+If you need to access Microsoft Graph data, your server-side code should do the following:
 
-#### Example access token
+- Validate the access token (see Validate the access token below).
+- Initiate the [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the add-in (its ID and secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
+- Get data from Microsoft Graph by using the new token.
+- If you need to cache the new access token for multiple calls, we recommend using [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet).
 
-The following is a typical decoded payload of an access token.
+> [!IMPORTANT]
+> As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#protocol-diagram).
 
-### Use the access token as an identity token
+The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method, but `GET` is sufficient to send the access token when you are not writing to the server.
+
+```javascript
+$.ajax({
+    type: "POST",
+    url: "/api/DoSomething",
+    headers: {
+        "Authorization": "Bearer " + accessToken
+    },
+    data: { /* some JSON payload */ },
+    contentType: "application/json; charset=utf-8"
+}).done(function (data) {
+    // Handle success
+}).fail(function (error) {
+    // Handle error
+}).always(function () {
+    // Cleanup
+});
+```
+
+#### Validate the access token
+
+Web APIs on your server must validate the access token if it is sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
+
+There are a number of libraries available that can handle JWT validation, but the basics include:
+
+- Checking that the token is well-formed
+- Checking that the token was issued by the intended authority
+- Checking that the token is targeted to the Web API
+
+Keep in mind the following guidelines when validating the token:
+
+- Valid SSO tokens will be issued by the Azure authority, https://login.microsoftonline.com. The `iss` claim in the token should start with this value.
+- The token's `aud1 parameter will be set to the application ID of the add-in's Azure app registration.
+- The token's `scp` parameter will be set to `access_as_user`.
+
+For more information on token validation, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#validating-tokens).
+
+**Example access token**: The following is a typical decoded payload of an access token.
+
+```javascript
+{
+    aud: "2c3caa80-93f9-425e-8b85-0745f50c0d24",
+    iss: "https://login.microsoftonline.com/fec4f964-8bc9-4fac-b972-1c1da35adbcd/v2.0",
+    iat: 1521143967,
+    nbf: 1521143967,
+    exp: 1521147867,
+    aio: "ATQAy/8GAAAA0agfnU4DTJUlEqGLisMtBk5q6z+6DB+sgiRjB/Ni73q83y0B86yBHU/WFJnlMQJ8",
+    azp: "e4590ed6-62b3-5102-beff-bad2292ab01c",
+    azpacr: "0",
+    e_exp: 262800,
+    name: "Mila Nikolova",
+    oid: "6467882c-fdfd-4354-a1ed-4e13f064be25",
+    preferred_username: "milan@contoso.com",
+    scp: "access_as_user",
+    sub: "XkjgWjdmaZ-_xDmhgN1BMP2vL2YOfeVxfPT_o8GRWaw",
+    tid: "fec4f964-8bc9-4fac-b972-1c1da35adbcd",
+    uti: "MICAQyhrH02ov54bCtIDAA",
+    ver: "2.0"
+}
+```
+
+#### Use the access token as an identity token
 
 With Teams SSO, the access token is pre-fetched to improve app performance and load times.
 
