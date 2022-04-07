@@ -21,7 +21,7 @@ groups:
   - id: mvc-csharp
     title: ASP.NET Core MVC
 - id: teams-app-ide
-  title: teams-app-ide
+  title: teams-apps-ide
   prompt: Select the environment in which you want to build Teams app
   pivots:
   - id: visual-studio-code

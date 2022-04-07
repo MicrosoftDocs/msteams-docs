@@ -39,6 +39,10 @@ TeamsFx helps to provision cloud resources for hosting your application. You can
 1. Select **OK**. The selected resources are successfully added to your project.
 
 ::: zone-end
+::: zone pivot="visual-studio-"
+
+Currently add resource to app option to be added.
+::: zone-end
 
 ::: zone pivot="teamsfx-cli"
 
