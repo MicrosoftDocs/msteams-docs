@@ -132,7 +132,7 @@ For more information on token validation, see [Microsoft identity platform acces
 }
 ```
 
-#### Use the access token as an identity token
+### Use the access token as an identity token
 
 When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
 
