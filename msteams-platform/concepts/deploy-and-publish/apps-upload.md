@@ -122,8 +122,10 @@ You can remove your app either from Teams or from a particular scope.
     
 1. Select **Remove** to remove your app.
         
-    > [!NOTE]
-    > You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+> [!NOTE]
+>
+> * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [Publish your app to the Microsoft Teams store](appsource/publish.md).
 
 ## Next step
 
