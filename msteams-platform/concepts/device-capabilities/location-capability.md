@@ -112,8 +112,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 The following image depicts web app and desktop app experience of location capabilities:
 
-  :::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-desktop.png" alt-text="Screenshot showing location in desktop." border="true":::
-
+  ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png)
 
   ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
 
@@ -122,7 +121,8 @@ The following image depicts web app and desktop app experience of location capab
 
 The following image depicts mobile app experience of location capabilities:
 
-  :::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-mobile.png" alt-text="Screenshot showing location in mobile." border="true":::
+  ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png)
+
 
 ## See also
 
