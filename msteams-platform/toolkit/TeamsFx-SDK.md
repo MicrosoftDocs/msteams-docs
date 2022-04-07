@@ -47,7 +47,7 @@ npm install @microsoft/teamsfx
 
 ### Scenarios
 
-The folllowing are the scenarios of using TeamsFx SDK in browser and Node.js environment: 
+The folllowing are the scenarios of using TeamsFx SDK in browser and Node.js environment:
 
 * Teams tab application
 * Azure Function
