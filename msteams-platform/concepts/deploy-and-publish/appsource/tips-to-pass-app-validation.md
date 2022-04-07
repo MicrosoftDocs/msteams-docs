@@ -8,7 +8,9 @@ ms.localizationpriority: high
 ---
 # Tips to pass app validation
 
-Here are the most common reasons for your app to get rejected during app certification. Ensure that your app doesn’t contain any of the common reasons addressed in this article and also follow the [Microsoft Teams store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies) to increase the likelihood of your app to pass the Microsoft Teams store submission process and help you prepare your app for [review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
+Here are the most common reasons for your app to get rejected during app certification. Ensure that your app doesn’t contain any of the common reasons addressed in this article and also follow the [Microsoft Teams store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies) to increase the likelihood of your app to pass the Microsoft Teams store submission process and help you prepare your app better before submitting for [review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
+
+Following are the most common reasons for your app to get rejected:
 
 :::row:::
    :::column:::
@@ -64,9 +66,11 @@ Here are the most common reasons for your app to get rejected during app certifi
    :::column-end:::
 :::row-end:::
 
-## Broken links, functional bugs, app crashes and unexpected errors
+## Broken links, functional bugs, app crashes, and unexpected errors
 
-Check the following reasons, which contribute to most app rejections:
+Test your app to verify your app’s correctness, functionality, and usage and collect more actionable feedback. Ensure to test your app thoroughly, check all the end to end workflows that your app supports, test the app compatibility on the operating systems and browsers as per the  [Commercial Marketplace Certification policy](/legal/marketplace/certification-policies) and fix all the bugs.
+
+You must avoid the following mistakes in your app before your submit for review:
 
 * Broken links in an app.
 
@@ -78,9 +82,7 @@ Check the following reasons, which contribute to most app rejections:
 
 * Unexpected error messages during the app usage, sign in, and sign-up experience and for scenarios where the app feature simply doesn't work as expected.
 
-* Ensure your app is complete and ready to publish before you submit for review.
-
-Ensure to test your app thoroughly, check all the end to end workflows that your app supports and fix all the bugs. Test the app compatibility on the operating systems and browsers as per the [Commercial Marketplace Certification policy](/legal/marketplace/certification-policies).
+* Ensure your app is complete and ready to publish before you submit for review. 
 
 ## App description
 
@@ -108,7 +110,7 @@ A great description can make your app stand out in the Microsoft Store and help 
 
 Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies.
 
-When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks).
+When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
 
 Common violations that lead to app rejection:
 
@@ -120,31 +122,29 @@ Common violations that lead to app rejection:
 
 ## Testability  
 
-You must provide [detailed test instructions](prepare/teams-store-validation-guidelines.md#app-package-and-store-listing) and credentials for a successful review of your app. Almost 20% of apps fail because of the following issues with the test instructions or credentials:
+ [Detailed test instructions](prepare/teams-store-validation-guidelines.md#app-package-and-store-listing) and credentials help you with a successful review of your app.
 
-* Developers don't provide any test instructions or credentials to test the app.
+Ensure to provide all the details required to review your app in the Notes for Certification Information section of Partner Center, valid demo credentials for features that require sign in and instructions to set any special configuration, a demo video or hardware for features that require an environment that is hard to replicate, and complete and latest contact information.
 
-* Developers don't provide two test accounts when there's a dependency to test collaboration scenarios whereas they provide only one account.
+You must avoid the following issues that occur in 20% of apps that are rejected during app review:
 
-* Developers provide only one test account when there's a dependency on two test accounts to test collaboration scenarios.
+* No test instructions or credentials to test the app.
 
-* Inability to complete full app functional testing following the provided test instructions or test credentials.
+* Provide only one test account when there's a dependency with two test accounts to test collaboration scenarios.
+
+* Provide only one test account when there's a dependency on two test accounts to test collaboration scenarios.
 
 * The provided test instructions and credentials aren't sufficient to complete app functional testing.
 
-Enter all the details required to review your app in the Notes for Certification Information section of Partner Center.Provide valid demo credentials for features that require sign in and instructions to set any special configuration.
-
-Provide a demo video or hardware for features that require an environment that is hard to replicate and ensure your contact information is complete and up-to-date.
-
 ## Microsoft 365 App Compliance Program  
 
-The Microsoft 365 App Compliance Program helps organizations assess and manage risk by evaluating security and compliance information about an app. If you're publishing an app to the Teams store, you must complete [Publisher Verification](/azure/active-directory/develop/mark-app-as-publisher-verified) before you submit your app for review.
+The Microsoft 365 App Compliance Program helps organizations assess and manage risk by evaluating security and compliance information about an app. You **must complete** [Publisher Verification](/azure/active-directory/develop/mark-app-as-publisher-verified) before you submit your app for review to publish on the Teams store.
 
-## Violation of App Icon guidelines
+## Violation of app icon guidelines
 
 Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to [App Icon guidelines](../../build-and-test/apps-package.md#app-icons).
 
-Most common violations of the App Icon guidelines that result in app rejection include:
+Avoid the following app icon violations that result in app rejection:
 
 * App submissions that contain app packages with different color and outline icons or non-white and non-transparent outline icons.
 
@@ -154,18 +154,18 @@ Most common violations of the App Icon guidelines that result in app rejection i
 
 Your app name plays a critical role for users to discover your app on the Microsoft Teams store. Ensure your [app name](prepare/teams-store-validation-guidelines.md#app-name) meets App name guidelines and doesn't violate the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks).
 
-Most common violations of App naming guidelines include:
+Avoid the following common violations of App naming guidelines:
 
 * Inconsistent usage of app name throughout the app’s functionality.
 * Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
 * App names appended with **Beta**, **Dev**, and **Prod** to indicate app isn't production ready.
 * App submissions where the developer has changed the app name, but the old app name is sill used within the app.
 
-## Support Link
+## Support link
 
 You must ensure your app includes a valid support link for users to contact. Support links must not ask users for authentication and must lead directly to appropriate support information.
 
-## Manifest Schema
+## Manifest schema
 
 Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If you're submitting an app update, you must increment the app version declared in the manifest. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update. App packages that contain preview schemas (not publicly released) fail app review. Ensure the manifest schema version is the same in the Microsoft Teams Store and Microsoft AppSource. If your app supports localization, ensure to use a localization manifest schema version greater than 1.5. Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
 
