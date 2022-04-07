@@ -805,7 +805,7 @@ Specify meeting extension definition. For more information, see [custom Together
 **Optional** — object
 
 > [!NOTE]
-> If you set the manifestVersion property to 1.12, the authorization property is incompatible with the older versions (version 1.11 or earlier) of the manifest. Authorization is supported for manifest version 1.12.
+> If you set the `manifestVersion` property to 1.12, the authorization property is incompatible with the older versions (version 1.11 or earlier) of the manifest. Authorization is supported for manifest version 1.12.
 
 Specify and consolidate authorization related information for the app.
 
