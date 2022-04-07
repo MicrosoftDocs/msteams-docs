@@ -21,11 +21,53 @@ For effective integration, you must have a good understanding of [code snippets]
 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
-> [!NOTE]
+> **Note**</br>
 >
-> * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.
-> * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.
-> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+* Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.</br>
+* Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+
+The following use cases are mapped to Teams capabilities for web, desktop, and mobile clients:
+
+</br>
+</br>
+<details>
+<summary>Web or desktop app </summary>
+
+Apps to interact with your device
+
+| **Use cases** |  **API input** |**API output** |
+| --- | --- |-- |
+| **Submit request to invoke camera and select captured picture/s as attachments** | **API: selectMedia(input_params)** |- |
+| Restricts you to capture single image | Input param values – source: Camera| Camera captures image/s and returns them as a set of attachment |
+| Allows you to take a document or whiteboard scan |  Input param values – source: Camera| Camera captures image/s and returns them as a set of attachment |
+| Edit image: ink / annotate / text stickers | Input param values – source: Camera| Camera captures image/s and returns them as a set of attachment|
+| Restricts you from making edits to the captured image/s | Input param values – source: Camera|  Camera captures image/s and returns them as a set of attachment|
+| **View image attachment/s** | **viewImages(params)** |--|
+
+>**Note**</br>
+These use cases are supported in web/desktop, iOS, and Android.
+
+</details>
+</br>
+
+</br>
+</br>
+<details>
+<summary>Mobile app </summary>
+
+Apps to interact with your device
+
+| **Use cases** | **API input** |**API output** |
+| --- | --- |-- |
+| **Submit request to pick image/s from storage as attachment/s** | **API: selectMedia(input_params)** |---|
+|Restricts you to pick single image from gallery  | Input param values – source: Gallery    | Image picker view in gallery returns a set of images as attachments |
+| Pick picture/s right from capture screen. | Input param values – source: Gallery    |  Image picker view in gallery returns a set of images as attachments |
+| Edit image:  ink / annotate / text stickers | Input param values – source: Gallery    | Camera captures image/s and returns them as a set of attachment|
+| Restricts you from making edits to the captured image/s. | Input param values – source: Gallery    |  Camera captures image/s and returns them as a set of attachment|
+| **View image attachment/s** | **viewImages(params)** |--|
+
+</details>
+</br>
 
 ## Update manifest
 
@@ -37,8 +79,8 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ],
 ```
 
-> [!NOTE]
-> The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [Request device permissions](native-device-permissions.md).
+>**Note**</br>
+The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [Request device permissions](native-device-permissions.md).
 
 ## Media capability APIs
 
@@ -50,12 +92,12 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
 * Use native **image viewer control** to **preview multiple images** at one time.
 * Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
 * Support **advanced image capabilities** allow users to preview and edit images:
-  * Scan documents, whiteboard, and business cards  through the camera.
+* Scan documents, whiteboard, and business cards through the camera.
   
-> [!IMPORTANT]
+>**Important**</br>
 >
-> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
-> * `selectMedia` API has been extended to support microphone and audio properties.
+* The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).</br>
+* `selectMedia` API has been extended to support microphone and audio properties.
 
 You must use the following set of APIs to enable your device's media capabilities:
 
