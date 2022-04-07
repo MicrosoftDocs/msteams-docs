@@ -1,7 +1,7 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description:  Describes Add Resources of Teams Toolkit
+description:  Add cloud Resources using Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
 
-::: zone pivot="node-java-script"
+::: zone pivot="node-visual-studio-code"
 
 <!-- # [Visual Studio Code](#tab/VisualStudioCode) -->
 
@@ -36,6 +36,10 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addresources.png" alt-text="add":::
 
 1. Select **OK**. The selected resources are successfully added to your project.
+
+::: zone-end
+
+::: zone pivot="TeamsFx-CLI"
 
 <!-- # [Teams CLI](#tab/teamscli) -->
 
@@ -69,7 +73,7 @@ After adding any resource, the changes in your project are as follows:
 - The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
 - `.fx/projectSettings.json` is updated to track the resources present in your project.
 
-After adding resouces, the additional changes in your project are as follows:
+After adding resources, the additional changes in your project are as follows:
 
 |Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
@@ -79,6 +83,8 @@ After adding resouces, the additional changes in your project are as follows:
 ## Limitation
 
 You can't add resources if you've created SPFx based tab project.
+
+::: zone-end
 
 ## See also
 

@@ -10,12 +10,12 @@ ms.date: 03/30/2022
 
 # Teams Toolkit in Integrated Development Environments
 
-Teams Toolkit provides you with all the tools required for successfully building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code and Visual Studio to create app in Teams or use Teams Commnad Line Interface (CLI) to create apps in Teams.
+Teams Toolkit provides you with all the tools required for successfully building a Teams app in one place. You can use the Teams Toolkit extension in Visual Studio Code and Visual Studio to create app in Teams or use Teams Command Line Interface (CLI) to create apps in Teams.
 
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
 
-::: zone pivot="node-java-script"
+::: zone pivot="visual-studio-code"
 
 <!-- # [Visual Studio Code](#tab/VisualStudioCode) -->
 
@@ -54,6 +54,10 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 
 <!-- # [Visual Studio](#tab/VisualStudio) -->
 
+::: zone-end
+
+::: zone pivot="Visual-Studio"
+
 ## Create a new Teams app using Visual Studio
 
 Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically set up apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your IDE.
@@ -86,6 +90,10 @@ Visual Studio opens up the new project and Teams Toolkit setup you new project i
  For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 
 <!-- # [TeamsFx Command Line Interface](#tab/TeamsFxCommandlineinterface) -->
+
+::: zone-end
+
+::: zone pivot=TeamsFx-CLI"
 
 ## Create a new Teams app usingTeamsFx command line interface
 
