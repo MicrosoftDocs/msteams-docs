@@ -18,7 +18,7 @@ This section helps you to setup your account or prerequisites related to Teams T
 [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> Ensure you have Teams app project opened in VS code.
+> Ensure you have Teams app project opened in Visual Studio code.
 
 ### Prepare the accounts to build Teams apps
 
@@ -49,9 +49,9 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok is'nt installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
-* Azure Functions Core Tools version 3. If Azure Functions Core Tools is'nt installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* If Azure Functions Core Tools version 3. is'nt installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 
-* .NET Core SDK version, applicable for Azure Functions. If .NET Core SDK is'nt installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOs in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
+* If .NET Core SDK version, applicable for Azure Functions is'nt installed then the Teams Toolkit installs .NET Core SDK for Windows and MacOs in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
 
   The following table lists the .NET Core versions:
 
@@ -60,15 +60,15 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Windows, macOs (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Development certificate, if the development certificate for localhost is'nt installed for tab in Windows or macOs, the Teams toolkit prompts you to install it.
+* If the development certificate for localhost is'nt installed for tab in Windows or macOs, the Teams toolkit prompts you to install it.
 
-* Azure Functions binding extensions defined in `api/extensions.csproj`. If Azure Functions binding extensions is'nt installed, the Teams Toolkit installs Azure Functions binding extensions.
+* If Azure Functions binding extensions defined in `api/extensions.csproj` is'nt installed, the Teams Toolkit installs Azure Functions binding extensions.
 
-* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is'nt installed, the Teams Toolkit installs all NPM packages.
+* If NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions  is'nt installed, the Teams Toolkit installs all NPM packages.
 
-* Bot and messaging extension. The Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and messaging extension.
+* The Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and messaging extension.
 
-* Ports available, if tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates.
+* If tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates.
 
   The following table lists the ports available for components:
 
@@ -179,10 +179,7 @@ Install the following for tab app or messaging extension app:
 
 Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
 
-After registering and configuring the app, local debug files get generated.
-
-
-
+After registering and configuring the app, local debug files are generated.
 
 ### Collaborate using Toolkit
 

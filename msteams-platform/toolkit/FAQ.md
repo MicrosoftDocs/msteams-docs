@@ -46,7 +46,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <summary><b>How can I change resource group while Provisioning?</b></summary>
 
-Before provision, the tool will ask you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
+Before provision, the tool will ask you, if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 
 <br>
 
@@ -66,18 +66,20 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 </details>
 <details>
 
-<summary><b>How to create an Oauth for my Bot?</b></summary>
+<summary><b>Is it possible to use already build Azure resources in Teams toolkit?</b></summary>
 
-Ans.
+Ans. If you have already your own Azure Bot service and hosted bot application code. The only thing you need to do to connect your bot with Teams is to update the bot definition part in Teams manifest file.
 
 <br>
 
 </details>
 <details>
 
-<summary><b>How to Provision Teams App due to Storage domain conflict?</b></summary>
+<summary><b>How to Enable the user install the bot by default and not tab on teams app manifest?</b></summary>
 
-Ans.
+Ans. 'defaultGroupCapability' provides the default capability that will be added to the team, groupchat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition. Could you just check it once? or share the error log?
+
+Reference Document:-Configure default install options for your Microsoft Teams app.
 
 <br>
 
@@ -85,9 +87,11 @@ Ans.
 
 <details>
 
-<summary><b>Is there a way for a Microsoft Teams Bot to receive emergency call notification on Teams?</b></summary>
+<summary><b>Teams-cli using Github actions fails to find package.json</b></summary>
 
-Ans.
+Ans. You don't have to be so troublesome to use the action alone and write the workflow file all by yourself. There exists CI/CD support for Teams app development which covers platforms of GitHub, Azure DevOps, Jenkins, and other platforms by scripts. You just need to copy the pre-defined yml files for GitHub and do customizations to suit your own requirements.
+
+Please refer to https://aka.ms/teamsfx-cicd-insider-guide for more details.
 
 <br>
 
@@ -167,9 +171,9 @@ Ans.
 
 <details>
 
-<summary><b>How to Enable the user install the bot by default and not as a tab on teams app manifest?</b></summary>
+<summary><b>Getting an error in unit testing with TeamsFx App</b></summary>
 
-Ans.
+Ans.In practice,  we use Jest or Mocha for unit testing framework. Since it is a standard Node project, you can follow the industry best practice to setup unit test by Jest/Mocha. We use Sinon for Mock technique.
 
 <br>
 
@@ -211,4 +215,7 @@ Ans.
 
 <details>
 <summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
+Ans.
+
+
 </details>

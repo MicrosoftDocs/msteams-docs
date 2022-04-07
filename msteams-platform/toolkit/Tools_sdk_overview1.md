@@ -18,28 +18,50 @@ Introduction goes here.
 
 * **Teams Toolkit overview**
 
- The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and TeamsFx.
+     The Teams Toolkit extension helps you to create, debug, deploy, and publish your Teams app in multiple Integrated Development Environments (IDE) like Visual Studio Code, Visual Studio, and TeamsFx.
 
 * **Teams toolkit for Visual Studio Code**
 
-Teams Toolkit automates work and provides great integration of Teams and Azure resources.The Teams Toolkit extension for Visual Studio Code provides you with all the necessary tools needed for building a Teams app in one place.
+    Teams Toolkit automates work and provides great integration of Teams and Azure resources.The Teams Toolkit extension for Visual Studio Code provides you with all the necessary tools needed for building a Teams app in one place.
 
 * **Teams Toolkit for Visual Studio**
 
-Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use TeamsFx from your IDE.
+    Teams Toolkit's extension for Visual Studio makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use TeamsFx from your IDE.
 * **Teams Toolkit in Command Line**
+
 TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
 
 * **App Studio**
 
-App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+    App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
 ## SDKs
 
 * **JavaScript SDK and versions**
-The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, which means displaying your app content in an iframe.
+
+    The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, which means displaying your app content in an iframe.
 * **Microsoft Graph SDK**
-The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library.
+
+    The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library.
+    
+* **Manage your apps with the Developer Portal for Microsoft Teams**
+
+    The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+
+* **Manage your apps with App Studio for Microsoft Teams**
+
+    App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
+
+* **Add bots to Microsoft Teams apps**
+    Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
+
+* **Create a bot**
+
+    Teams App Studio is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see Getting started with Teams App Studio.
+
+* ** **
+
+
 
 
 ## See also
