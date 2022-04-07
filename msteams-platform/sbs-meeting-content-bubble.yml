@@ -25,7 +25,7 @@ items:
     * You can select any option in the given agenda.
     * You can submit your feedback on either content bubble or Adaptive Card sent in chat.
     
-    This step-by-step guide helps you generate meeting content bubble using bot during meetings in Teams with attendees. You'll see the following output:
+    This step-by-step guide helps you to generate meeting content bubble using bot in Teams with attendees. You'll see the following output:
 
       :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting content bubble introduction" border="true":::
 
