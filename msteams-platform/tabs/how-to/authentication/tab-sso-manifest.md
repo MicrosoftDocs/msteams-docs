@@ -7,21 +7,25 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Update Teams app manifest and preview the app
 
-You've registered your app in Azure AD, and obtained an app ID. Now, you must update the Teams app manifest with the app ID and subdomain URL.
+You've registered your app in Azure AD, and obtained an app ID. Now, you must update the Teams app manifest with the app ID and subdomain URL. The Teams manifest describes how the app integrates into the Microsoft Teams product.
+
+For more details on Teams manifest, please see [Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 Before you update the app manifest, you'll need to:
 
 - Build and debug a tab app
 - Create an ngrok tunnel
 
-You'll need to add the `webApplicationInfo` property to the Teams app manifest file.
+You'll need to add the `webApplicationInfo` property to the Teams app manifest file. It helps users seamlessly sign into your app. For more information about this property, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo)
 
 > [!NOTE]
 > - You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 > - Your app manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json.
 
 > [!NOTE]
-> The Teams manifest describes how the app integrates into the Microsoft Teams product. If your app doesn't have a manifest, you can add it using the steps given at /add cross-reference/.
+> If your app doesn't have a manifest, you can add it using the steps given at /add cross-reference/.
+
+/ Add a section to explain steps to add a manifest to a web app. /
 
 ## To configure Teams app manifest for Azure AD registration
 
