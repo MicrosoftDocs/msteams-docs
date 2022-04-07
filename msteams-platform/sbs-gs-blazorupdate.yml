@@ -582,7 +582,7 @@ items:
 
      Let's deploy the first bot app on Azure using Teams Toolkit.
 
-     ###**To provision your bot app in the cloud**
+     **To provision your bot app in the cloud**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
@@ -605,7 +605,7 @@ items:
 
        It takes a few minutes for your resource group to provision in the cloud.
         
-      1. After the provision is complete, select **OK**. 
+    1. After the provision is complete, select **OK**. 
   
           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="permission ok" border="false":::
 
@@ -621,19 +621,19 @@ items:
 
         Your resources are provisioned in the Azure portal!
 
-     ###**To deploy your bot app to cloud**
+     **To deploy your bot app to cloud**
 
-      1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure.png" alt-text="deploy to cloud" border="true":::
 
-    1. Select **OK**. 
+     1. Select **OK**. 
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="deployment success" border="true":::
 
         Your bot app is successfully deployed to the cloud!
 
-     ###**To preview your bot app in Teams**    
+     **To preview your bot app in Teams**    
 
      1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
 
