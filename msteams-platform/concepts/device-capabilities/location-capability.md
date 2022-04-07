@@ -12,11 +12,11 @@ ms.author: surbhigupta
 
 You can integrate the location capabilities of native device with your Teams app.  
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app. The location features are supported in web, desktop and mobile. Teams will expose well defined APIs via TeamsJS SDK  and accordingly bridge to the native calls, ask for user permissions to access device capability and return the appropriate data back to the requested app.
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app. The location features are supported in web, desktop, and mobile. Teams will expose well-defined APIs via TeamsJS SDK  and accordingly bridge to the native calls, ask for user permissions to access device capability, and return the appropriate data back to the requested app.
 
 ## Advantages of integrating location capabilities
 
-The main advantage of integrating location capabilities in your Teams apps is that it allows we, desktop, or mobile app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
+The main advantage of integrating location capabilities in your Teams apps is that it allows web, desktop, and mobile app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
 
 
 The following examples show how the integration of location capabilities is used in different scenarios:
@@ -41,8 +41,6 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 > **Note** </br>
 The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
 Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-
-# [Web-app](#tab/web-app)
 
 
 ## Location APIs
@@ -110,14 +108,21 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 |----------------|-----------------|--------------|--------------|
 | App check-in current location | Users can check-in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
-# [Desktop](#tab/desktop)
+# [Desktop or web](#tab/desktop)
 
-:::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-desktop.png" alt-text="Screenshot showing location in desktop." border="true":::
+The following image depicts web app and desktop app experience of location capabilities:
+
+  :::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-desktop.png" alt-text="Screenshot showing location in desktop." border="true":::
+
+
+  ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
 
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-mobile.png" alt-text="Screenshot showing location in mobile." border="true":::
+The following image depicts mobile app experience of location capabilities:
+
+  :::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-mobile.png" alt-text="Screenshot showing location in mobile." border="true":::
 
 ## See also
 
