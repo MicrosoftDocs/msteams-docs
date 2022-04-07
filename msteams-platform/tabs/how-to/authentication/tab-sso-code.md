@@ -31,7 +31,14 @@ This step requires your app user to give their consent for using their Teams ide
 > [!NOTE]
 > To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
 
-Use the following authentication API:
+### Add client-side code
+
+Add JavaScript to the add-in to:
+
+- Call getAccessToken.
+- Parse the access token or pass it to the add-in’s server-side code.
+
+The following code shows a simple example of calling getAccessToken and parsing the token for the user name and other credentials.
 
 ```javascript
 var authTokenRequest = {
@@ -41,16 +48,41 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
+### When to call getAuthToken
+
+Call the `getAuthToken` at the time when you need to validate the user identity.
+
+- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
+- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
+
+You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
+
+There is no significant performance degradation with redundant calls of `getAuthToken` because Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
+
+> [!IMPORTANT]
+> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
+
+### Pass the access token to server-side code
+
+
+
+### Validate the access token
+
+#### Example access token
+
+The following is a typical decoded payload of an access token.
+
+### Use the access token as an identity token
 
 With Teams SSO, the access token is pre-fetched to improve app performance and load times.
 
 When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
 
-After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as [jwt.ms](https://jwt.ms/). If you aren't receiving the UPN in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD. For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
+After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as [jwt.ms](https://jwt.ms/). If you aren't receiving the UPN in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
 
-<p>
-    <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
-</p>
+For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
+
+:::image type="content" source="../../../assets/images/tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
 ## Code sample
 
