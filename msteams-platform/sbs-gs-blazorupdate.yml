@@ -310,7 +310,7 @@ items:
     To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
     </details>
 
-- title: Preview your first bot app
+- title: Preview your first Teams tab app
   durationInMinutes: 1
   content: |
 
@@ -320,11 +320,11 @@ items:
     1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
     1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
-    Let's deploy the first bot app on Azure using Teams Toolkit.
+    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
-    #### **To provision your bot app in the cloud**
+    #### **To provision your tab app in the cloud**
     
-    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.?
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
 
@@ -570,7 +570,7 @@ items:
 
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
-- title: Preview your first Teams tab app
+- title: Preview your first bot app
   durationInMinutes: 1
   content: |
 
@@ -580,9 +580,9 @@ items:
     1. [Deploy to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
     1. [Preview Teams app](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams. 
 
-    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
+    Let's deploy the first bot app on Azure using Teams Toolkit.
 
-    #### **To provision your tab app in the cloud**
+    #### **To provision your bot app in the cloud**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
