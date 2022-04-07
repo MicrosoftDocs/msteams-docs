@@ -6,6 +6,7 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+zone_pivot_groups: teams-apps-ide
 ---
 
 # Add cloud resources to Teams app
