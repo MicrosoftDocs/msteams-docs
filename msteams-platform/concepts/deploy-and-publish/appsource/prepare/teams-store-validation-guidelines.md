@@ -62,7 +62,7 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column-end:::
 :::row-end:::
 
-## <details><summary><b>Value proposition</b></summary>
+## <details open><summary><b>Value proposition</b></summary>
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
