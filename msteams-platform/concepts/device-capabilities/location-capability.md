@@ -12,11 +12,11 @@ ms.author: surbhigupta
 
 You can integrate the location capabilities of native device with your Teams app.  
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app.
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app. The location features are supported in web, desktop and mobile. Teams will expose well defined APIs via TeamsJS SDK  and accordingly bridge to the native calls, ask for user permissions to access device capability and return the appropriate data back to the requested app.
 
 ## Advantages of integrating location capabilities
 
-The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
+The main advantage of integrating location capabilities in your Teams apps is that it allows we, desktop, or mobile app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
 
 
 The following examples show how the integration of location capabilities is used in different scenarios:
@@ -39,8 +39,8 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > **Note** </br>
-* The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
-* Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
+Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 # [Web-app](#tab/web-app)
 
@@ -49,10 +49,10 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 You must use the following set of APIs to enable your device's location capabilities:
 
-| API      | Description   |
-| --- | --- |
-|`getLocation`| Gives user’s current device location or opens native location picker and returns the location chosen by the user. |
-|`showLocation`| Shows location on map. |
+| API      | Web or desktop  |Mobile|
+| --- | --- |-- |
+|`getLocation`| Gives user’s current device location or opens native location picker and returns the location chosen by the user. |• IOS: Use iOS Location APIs to read current location. Teams iOS client is using the same. </br> • Android: Uses google play services for location which is already integrated with Teams Android App.|
+|`showLocation`| Shows location on map. |• IOS: Same flow as done on Teams iOS. </br> • Android: Uses google play services for location which is already integrated with Teams Android App.|
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
@@ -112,42 +112,12 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 # [Desktop](#tab/desktop)
 
-## Scenarios
-
-The main advantage of integrating location capabilities in your Teams apps is that it allows desktop app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
+:::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-desktop.png" alt-text="Screenshot showing location in desktop." border="true":::
 
 
-The following examples show how the integration of location capabilities is used in different scenarios:
+# [Mobile](#tab/mobile)
 
-* An account manager is using an app in Teams to find technical support staff in their area. They open the app in Teams, the app asks for permission to use their location to find support staff near them. After they give permission, the search results are filtered near their location and they're able to find someone to come help them with their issue.
-* A field engineer needs to report to their location after they complete a job in the field. They open their Surface Pro, open Teams, and go to their job processing app. They are asked to provide their location and give the app permission to find their location. Once the app has found their location, they are able to drag a "pin" to the exact location where they completed the job. They fill in the rest of the processing form and close the ticket before moving onto their next job.
-
-To integrate location capabilities, you must update the app manifest file and call the APIs. For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the location APIs.
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
-
-
-## APIs
-
-You must use the following set of APIs to enable your device's location capabilities:
-
-| API      | Description   |
-| --- | --- |
-|`getLocation`| • Doesn't support capturing current location. </br>  • For picking location on map, integrate with google maps sdk  `https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete`.|
-|`showLocation`| Same flow as being used in web teams, when a user clicks on a map image in adaptive card of `Share location`.|
-
-For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
-
-> **Note**</br>
-The `getLocation()` API comes along with following [input configurations](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation` and `showMap`. <br/> If the value of `allowChooseLocation` is *true*, then the users can choose any location of their choice.<br/>  If the value is *false*, then the users cannot change their current location.<br/> If the value of `showMap` is *false*, the current location is fetched without displaying the map. `showMap` is ignored if `allowChooseLocation` is set to *true*.
-
-# [Mobile-IOS/Android](#tab/mobile)
-
-| API      | Description   |
-| --- | --- |
-|`getLocation`|• IOS: Use iOS Location APIs to read current location. Teams iOS client is using the same. </br> • Android: Uses google play services for location which is already integrated with Teams Android App.|
-|`showLocation`|• IOS: Same flow as done on Teams iOS. </br> • Android: Uses google play services for location which is already integrated with Teams Android App.|
-
-For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
+:::image type="content" source="../msteams-platform/assets/images/tabs/location-picker-mobile.png" alt-text="Screenshot showing location in mobile." border="true":::
 
 ## See also
 
