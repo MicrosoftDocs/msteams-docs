@@ -24,13 +24,11 @@ Provision is performed with single command in Teams Toolkit for Visual Studio Co
 You can create and automatically configure cloud resources for hosting your app in Azure using Teams Toolkit.
 
 1. Select the **Project > Teams Toolkit > Provision in the Cloud** menu.
-2. In the Select your subscription window, choose the Azure subscription you want to use to create resources with.
-
-Teams Toolkit creates Azure resources in this subscription but code is not deployed during this step.
+2. In the Select your subscription window, choose the Azure subscription you want to use to create resources with. Teams Toolkit creates Azure resources in this subscription however the code is not deployed during this stage.
 
 # [TeamsFx Command Line Interface](#tab/TeamsFxCommandlineinterface)
 
-Provision is performed with single command in for TeamsFx CLI as follows:
+Provision is performed with single command in TeamsFx CLI as follows:
 
 [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 

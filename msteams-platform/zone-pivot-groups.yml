@@ -20,9 +20,9 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
-- id: teams-app-ide
-  title: teams-apps-ide
-  prompt: Select the environment in which you want to build Teams app
+- id: teams-apps-ide
+  title: Teams app integrated development environments
+  prompt: Select the integrated development environment in which you want to build Teams app
   pivots:
   - id: visual-studio-code
     title: Visual Studio Code
