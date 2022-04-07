@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Meeting content bubble
+title: Generate meeting content bubble
 metadata:
-  title: Meeting content bubble
+  title: Generate meeting content bubble
   description: In this tutorial, you'll learn to send reply to meeting content bubble in Teams.
   audience: Developer
   level: Beginner
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams helps you to interact with content bubble bot in Teams meeting.
+    Microsoft Teams helps you to interact with content bubble using bot in Teams meeting.
 
     > [!NOTE]
     > Meeting content bubble is available only for Azure AD users and not for anonymous users.
@@ -25,7 +25,7 @@ items:
     * You can select any option in the given agenda.
     * You can submit your feedback on either content bubble or Adaptive Card sent in chat.
     
-    This step-by-step guide helps you to send feedback to content bubble bot during meetings in Teams with attendees. You'll see the following output:
+    This step-by-step guide helps you generate meeting content bubble using bot during meetings in Teams with attendees. You'll see the following output:
 
       :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting content bubble introduction" border="true":::
 
@@ -61,7 +61,7 @@ items:
 - title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your bot in Azure portal:
+    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
@@ -301,8 +301,6 @@ items:
 
     1. Select **Delegated permissions**.
 
-    1. Select **User.Read**
-
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-userpermission.png" alt-text="User" border="true":::
 
     1. Add the following permissions:</br>
@@ -310,6 +308,7 @@ items:
          * **offline_access**
          * **OpenId**
          * **profile**
+         * **User.Read**
 
     1. Select **Add permissions**.
 
@@ -390,7 +389,6 @@ items:
 - title: Add Meeting content bubble App to Teams
   durationInMinutes: 1
   content: |
-    **To create a Teams meeting and add Meeting content bubble**
 
     1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
 
