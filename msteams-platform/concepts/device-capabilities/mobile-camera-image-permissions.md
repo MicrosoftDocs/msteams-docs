@@ -46,10 +46,8 @@ Apps to interact with your device
 
 >**Note**</br>
 These use cases are supported in web/desktop, iOS, and Android.
-
 </details>
 </br>
-
 </br>
 </br>
 <details>
@@ -65,7 +63,6 @@ Apps to interact with your device
 | Edit image:  ink / annotate / text stickers | Input param values – source: Gallery    | Camera captures image/s and returns them as a set of attachment|
 | Restricts you from making edits to the captured image/s. | Input param values – source: Gallery    |  Camera captures image/s and returns them as a set of attachment|
 | **View image attachment/s** | **viewImages(params)** |--|
-
 </details>
 </br>
 
