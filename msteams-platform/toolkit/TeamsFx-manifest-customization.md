@@ -22,13 +22,13 @@ Teams Toolkit consists of the following manifest template files under `templates
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio Code.
 
-During provision, Teams Toolkit loads manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+During provision, Teams Toolkit loads manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json`, `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 During local debug, Teams Toolkit loads manifest from `manifest.local.template.json`, combined with configurations from `localSettings.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 ## Supported placeholder in manifest.remote.template.json
 
-* `{{state.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json.
+* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json.
 * `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
   * You can add a customized parameter as follows:
     * Add a placeholder in manifest.remote.template.json with pattern: `{{config.manifest.xx}}`
@@ -46,7 +46,7 @@ During local debug, Teams Toolkit loads manifest from `manifest.local.template.j
 
 ## Supported placeholder in manifest.local.template.json
 
-`{{localSettings.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `localSettings.json`. Ensure not to modify the values in localSettings.json.
+`{{localSettings.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit defined in `localSettings.json`. Ensure not to modify the values in localSettings.json.
 
  > [!NOTE]
  > Ensure not to customize the local manifest.

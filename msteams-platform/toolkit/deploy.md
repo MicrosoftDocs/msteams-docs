@@ -42,7 +42,7 @@ The get started guides help you to deploy using Teams Toolkit. You can use the f
 |Bots and messaging extensions </br> The backend workload | `yourProjectFolder/bot` | Not applicable | Azure app service |
 
 > [!NOTE]
-> When you include Azure API management resource in your project and trigger deploy. You can publish your APIs in Azure functions to Azure API management service.
+> When you include Azure API management resource in your project and select deploy. You can publish your APIs in Azure functions to Azure API management service.
 
 ## See also
 

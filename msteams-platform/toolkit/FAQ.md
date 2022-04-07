@@ -14,14 +14,11 @@ This section provides the answer and relevant information to the common question
 <br>
 <details>
 <summary><b>How to login using CLI for CI/CD?</b></summary>
-
-<br>
 Ans.
 
-<br>
 
 </details>
-<br>
+
 
 <details>
 
@@ -35,10 +32,10 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <details>
 
-<summary><b>How can I switch to another Azure subscription while provisioning?</b></summary>
+<summary><b>How can I switch to another Azure subscription while Provisioning?</b></summary>
 
 1. Switch subscription in current account or log out and select a new subscription.
-2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
+2. If you have already provisioned current environment, you need to create a new environment and perform Provision because ARM doesn't support moving resources.
 3. If you didn't provision current environment, you can trigger provision directly.
 
 <br>
@@ -47,7 +44,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <details>
 
-<summary><b>How can I change resource group while provisioning?</b></summary>
+<summary><b>How can I change resource group while Provisioning?</b></summary>
 
 Before provision, the tool will ask you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 
@@ -57,7 +54,7 @@ Before provision, the tool will ask you if you want to create a new resource gro
 
 <details>
 
-<summary><b>How can I provision sharepoint-based app?</b></summary>
+<summary><b>How can I Provision sharepoint-based app?</b></summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
@@ -118,7 +115,7 @@ Ans.
 </details>
 <details>
 
-<summary><b>How to provision my app resources in Azure using the TeamsToolkit?</b></summary>
+<summary><b>How to Provision my app resources in Azure using the TeamsToolkit?</b></summary>
 
 Ans.
 
@@ -130,7 +127,7 @@ Ans.
 
 <details>
 
-<summary><b>Can't found personal application of Microsoft Teams Toolkit when I sideload it in Teams?</b></summary>
+<summary><b>Can't find personal application of Microsoft Teams Toolkit when I sideload it in Teams?</b></summary>
 
 Ans.
 
@@ -160,7 +157,7 @@ Ans.
 
 <details>
 
-<summary><b>How to trigger Microsoft Graph Toolkit PeoplePicker onChange event in mobile?</b></summary>
+<summary><b>How to trigger Microsoft Graph Toolkit PeoplePicker on Change event in mobile?</b></summary>
 
 Ans.
 

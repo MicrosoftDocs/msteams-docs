@@ -9,9 +9,9 @@ ms.date: 11/29/2021
 ---
 
 
-# Publish Teams apps using Teams Toolkit
+# Publish Teams app using Teams Toolkit
 
-After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. The distribution depends on multiple factors, including needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
+After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. The distribution depends on multiple factors, including needs, business, technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
 ## Prerequisite
 
@@ -22,7 +22,7 @@ After creating the app, you can distribute your app to different scope, such as 
 
 ## Publish to individual scope or sideload permission
 
-The users can add custom app to Teams by uploading an app package in a *.zip file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading and allows you to test app while being developed, before the app is ready to be widely distributed as mentioned in the following scenarios:
+The users can add custom app to Teams by uploading an app package in a *.zip file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being developed, before the app is ready to be widely distributed as mentioned in the following scenarios:
 
 * Test and debug an app locally.
 * Build an app for yourself, such as to automate a workflow.
@@ -30,11 +30,11 @@ The users can add custom app to Teams by uploading an app package in a *.zip fil
 
 You can build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store.
 
-**To build your app to *.zip app package file**
+**To build your app to .zip app package file**
 
 You can build the app package by selecting `Zip Teams metadata package` from **DEPLOYMENT** in Treeview of Teams Toolkit. You need to run `Provision in the cloud` first. The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip`.
 
-Perform the following steps to upload app package:
+Execute the following steps to upload app package:
 
 1. In the Teams client, select **Apps** in left bar.
 2. Select **Manage your apps**.
@@ -52,19 +52,19 @@ When the app is ready for use in production, you can submit the app using the Te
 
 ![Install for your organization](./images/installforyourorganization.png)
 
-The app is available on the **Manage apps** of Microsoft Teams admin center, where you, and the admin, can review and approve it.
+The app is available on the **Manage apps** of Microsoft Teams admin center, where you and the admin can review and approve it.
 
-As an admin, **Manage apps** in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps) is where you can view and manage all Teams apps for your organization. You can see the org level status and properties of apps, approve or upload new custom apps to your organization's app store, block or allow apps at the org level, add apps to teams, purchase services for third-party apps, view permissions requested by apps, grant admin consent to apps, and [manage org wide app settings](https://admin.teams.microsoft.com/policies/manage-apps).
+As an admin, **Manage apps** in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps) is where you can view and manage all the Teams apps for your organization. You can see the org level status and properties of apps, approve or upload new custom apps to your organization's app store, block or allow apps at the org level, add apps to teams, purchase services for third-party apps, view permissions requested by apps, grant admin consent to apps, and [manage org wide app settings](https://admin.teams.microsoft.com/policies/manage-apps).
 
-Teams toolkit for Visual Studio Code built on top of the Teams App Submission API and it allows you to automates the submission-to-approval process for custom apps on Teams.
+Teams toolkit for Visual Studio Code built on top of the Teams App Submission API and it allows you to automate the submission-to-approval process for custom apps on Teams.
 
 > [!NOTE]
 > The app doesn't publish to your organization's app store yet. The step submits the app to the Microsoft Teams admin center where you can approve it for publishing to your organization's app store.
 
 ## Admin approval for Teams apps
 
-The admin of your Teams tenant can then go to the **Manage apps** in the Microsoft Teams admin center, in the left navigation, go to Teams apps > Manage apps. You can view into all Teams apps for your organization. In the Pending approval widget at the top of the page lets you know when a custom app is submitted for approval.
-In the table, a newly submitted app automatically publish the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app:
+The admin of your Teams tenant can then go to the **Manage apps** in the Microsoft Teams admin center, in the left navigation pane, go to Teams apps > Manage apps. You can view all Teams apps for your organization. In the Pending approval widget at the top of the page lets you know when a custom app is submitted for approval.
+In the table, a newly submitted app automatically publish the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="approval":::
 
@@ -74,7 +74,7 @@ Select the app name to go to the app details page. On the About tab, you can vie
 
 Perform the following steps to publish the app :
 
-1. In the left navigation of the Microsoft Teams admin center, go to Teams apps > **Manage apps**.
+1. In the left navigation pane of the Microsoft Teams admin center, go to Teams apps > **Manage apps**.
 2. Select the app name to go to the app details page, and then in the status box, select **Publish**.
 After you publish the app, the publishing status changes to published and the status automatically changes to allowed.
 

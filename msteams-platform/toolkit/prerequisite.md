@@ -20,8 +20,9 @@ This section helps you to setup your account or prerequisites related to Teams T
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
 
-### Prepare accounts to build Teams apps
+### Prepare the accounts to build Teams apps
 
+Install the following to prepare the account  to build Teams apps.
 
 * [Microsoft 365 account with valid subscription.](accounts.md#microsoft-365-account)
 * [Azure account to host the backend resources on Azure](accounts.md#azure-account-to-host-backend-resources).
@@ -162,7 +163,7 @@ The following table lists the configuration of the authentication as follows:
   
 ### Registers and configures bot 
 
-For tab app or messaging extension app:
+Install the following for tab app or messaging extension app:
 
 1. Registers an Azure AD application.
 
