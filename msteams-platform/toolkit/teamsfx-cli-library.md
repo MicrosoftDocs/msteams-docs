@@ -1,5 +1,5 @@
 ---
-title: TeamsFx Library
+title: TeamsFx Command Line Interface
 author: MuyangAmigo
 description:  Describes about TeamsFx Command Line Interface
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# TeamsFx Library
+# TeamsFx Coomand Line Interface 
 
 Microsoft Teams Framework (TeamsFx) is a library encapsulating common functionality and integration patterns (like simplified access to Microsoft Identity). You can build apps for Microsoft Teams with zero configuration.
 

@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add cloud resources to your Teams app
+# Add cloud resources to Teams app
 
-TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
+TeamsFx helps to provision cloud resources for hosting your application. You can also add optional cloud resources which fits as per your development requirements.
 
 ::: zone pivot="node-visual-studio-code"
 
@@ -39,14 +39,14 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
 ::: zone-end
 
-::: zone pivot="TeamsFx-CLI"
+::: zone pivot="teamsfx-cli"
 
 <!-- # [Teams CLI](#tab/teamscli) -->
 
 ## Add cloud resources using TeamsFx CLI in command window
 
 1. Change directory to your **project directory**.
-1. Execute the following command to add different resources in your project:
+1. Execute the commands as shown in the following table to add different resources in your project:
 
 |Cloud Resource|Command|
 |---------------|----------|

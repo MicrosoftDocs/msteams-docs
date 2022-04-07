@@ -89,11 +89,11 @@
   - name: Overview 
     href: toolkit/tools-sdk-overview.md
     items: 
-    - name: Teams Toolkit
-      href: toolkit/teams-toolkit-overview.md
+  - name: Install Teams Toolkit extensions
+    href: toolkit/teams-toolkit-overview.md
+    items:
+    - name: Build app using Teams Toolkit
       items:
-      - name: Teams Toolkit in IDE
-        items:
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
           - name: Create a new Teams app
@@ -122,44 +122,42 @@
             href: toolkit/TeamsFx-collaboration.md
           - name: Add CI/CD Workflows
             href: toolkit/use-CICD-template.md
-      # - name: Visual Studio
-      #   href: toolkit/visual-studio-overview.md
-      #   items:
-      #   - name: Create new Teams App
-      #     href: toolkit/create-new-project-vs.md
-      #   - name: Build Blazor app
-      #     href: sbs-gs-blazorapp.yml
-      # - name: Teams Toolkit in Command Line Interface
-      #   href: toolkit/teamsfx-cli.md    
-      - name: Teams Toolkit FAQ 
-        href: toolkit/FAQ.md   
-    - name: SDK       
+    - name: Teams Toolkit in Visual Studio
+      href: toolkit/visual-studio-overview.md
       items:
-        - name: JavaScript client SDK and versions
-          href: tabs/how-to/using-teams-client-sdk.md
-        - name: JavaScript client SDK v2 Preview
-          href: m365-apps/using-teams-client-sdk-preview.md 
-        - name: Microsoft Graph SDKs
-          href: /graph/sdks/sdks-overview
-        - name: Developer Portal for Teams
-          href: concepts/build-and-test/teams-developer-portal.md
-        - name: Recommended content for GitHub
+      - name: Create new Teams App
+        href: toolkit/create-new-project-vs.md
+    - name: Teams Toolkit in Command Line Interface
+      href: toolkit/teamsfx-cli.md    
+    - name: Teams Toolkit FAQ 
+      href: toolkit/FAQ.md   
+  - name: SDK
+    items:
+      - name: JavaScript client SDK and versions
+        href: tabs/how-to/using-teams-client-sdk.md
+      - name: JavaScript client SDK v2 Preview
+        href: m365-apps/using-teams-client-sdk-preview.md 
+      - name: Microsoft Graph SDKs
+        href: /graph/sdks/sdks-overview
+      - name: Developer Portal for Teams
+        href: concepts/build-and-test/teams-developer-portal.md
+      - name: Recommended content for GitHub
+        items:
+         - name: Yeoman generator for Teams (GitHub)
+           href: https://github.com/pnp/generator-teams
+         - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
+           href: https://github.com/Microsoft/botbuilder-js
+         - name: .NET Bot Framework for bots and messaging extensions (GitHub)
+           href: https://github.com/Microsoft/botbuilder-dotnet     
+      - name: App Studio
+        href: concepts/build-and-test/app-studio-overview.md
+      - name: Developer Portal for Teams
+        href: concepts/build-and-test/teams-developer-portal.md
+      - name: Legacy SDKs
+        items:
+        - name: Bots SDK (v3)
+          href: resources/bot-v3/bots-overview.md
           items:
-          - name: Yeoman generator for Teams (GitHub)
-            href: https://github.com/pnp/generator-teams
-          - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
-            href: https://github.com/Microsoft/botbuilder-js
-          - name: .NET Bot Framework for bots and messaging extensions (GitHub)
-            href: https://github.com/Microsoft/botbuilder-dotnet     
-        - name: App Studio
-          href: concepts/build-and-test/app-studio-overview.md
-        - name: Developer Portal for Teams
-          href: concepts/build-and-test/teams-developer-portal.md
-        - name: Legacy SDKs
-          items:
-          - name: Bots SDK (v3)
-            href: resources/bot-v3/bots-overview.md
-            items:
             - name: Create a bot
               href: resources/bot-v3/bots-create.md
             - name: Conversations
@@ -191,8 +189,8 @@
               href: resources/bot-v3/bots-text-formats.md  
             - name: Test a bot
               href: resources/bot-v3/bots-test.md
-          - name: Messaging extensions SDK (v3)
-            items:
+        - name: Messaging extensions SDK (v3)
+          items:
             - name: Messaging extensions SDK (v3)
               href: resources/messaging-extension-v3/messaging-extensions-overview.md
             - name: Search extensions

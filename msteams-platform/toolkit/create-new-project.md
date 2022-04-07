@@ -15,7 +15,7 @@ Visual Studio code allows you to create a new Teams app using Teams Toolkit. Aft
 * [Create a new Teams app](create-new-project.md#create-a-new-teams-app)
 * [View samples](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-<!-- ## Create a new Teams app
+## Create a new Teams app
 
 1. Open latest version of Visual Studio Code.
 1. Select the Teams Toolkit icon in the Visual Studio Code sidebar and select any once option.
@@ -23,7 +23,7 @@ Visual Studio code allows you to create a new Teams app using Teams Toolkit. Aft
 1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx).
 1. Select at least one option to start creating the Teams app. 
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/create-new-teams-app.png" alt-text="Create a new Teams app"::: -->
+   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/create-new-teams-app.png" alt-text="Create a new Teams app":::
 
 ## Create a new Teams app using view samples
 
