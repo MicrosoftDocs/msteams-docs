@@ -580,9 +580,9 @@ items:
     1. [Deploy to cloud](#to-deploy-your-bot-app-to-cloud): You can deploy your bot app to cloud. 
     1. [Preview Teams app](#to-preview-your-bot-app-in-teams): Your bot app opens in Teams. 
 
-     Let's deploy the first bot app on Azure using Teams Toolkit.
+    Let's deploy the first bot app on Azure using Teams Toolkit.
 
-     **To provision your bot app in the cloud**
+    #### **To provision your bot app in the cloud**
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
@@ -621,7 +621,7 @@ items:
 
         Your resources are provisioned in the Azure portal!
 
-     **To deploy your bot app to cloud**
+    #### **To deploy your bot app to cloud**
 
      1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
