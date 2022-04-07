@@ -16,12 +16,7 @@ Use the library to:
 * Access the core functionalities in client and server environment in a similar way.
 * Write user authentication code in a simplified way.
 
-## Get started
-
-TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
-For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
-
-### Prerequisites
+## Prerequisites
 
 Install the following tools and set up your development environment:
 
@@ -29,6 +24,11 @@ Install the following tools and set up your development environment:
 * If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. 
   > [!NOTE] 
   > Currently, the required version is 4.15.0` or later. For more information, see: [Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
+
+## Get started
+
+TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
+For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 Ensure you have working knowledge of the following:
 
@@ -57,7 +57,7 @@ The folllowing are the scenarios of using TeamsFx SDK in browser and Node.js env
 
 To create a graph client object and to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.
 
-#### Invoke Graph API without user (Application Identity)
+### Invoke Graph API without user (Application Identity)
 
 It doesn't require the interaction with Teams user. You can call Microsoft Graph as application identity.
 Use the following snippet:
@@ -109,7 +109,7 @@ Credential classes implement `TokenCredential` interface, which is broadly used 
 
 Here's the corresponding scenarios for each credential class targets.
 
-### User Identity in browser environment
+#### User Identity in browser environment
 `TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It leverages the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developer choose "User" identity in browser environment.
 
 Required configuration: initiateLoginEndpoint, clientId.
@@ -136,10 +136,10 @@ Required configuration: initiateLoginEndpoint, tenantId, clientId, applicationId
 
 TeamsFx SDK provides several helper functions to ease the configuration for third-party libraries. They are located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
-#### Microsoft Graph Service
+### Microsoft Graph Service
 `createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
 
-#### SQL
+### SQL
 `getTediousConnectionConfig` returns a tedious connection config.
 
 Required configuration:
@@ -311,7 +311,7 @@ setLogLevel(LogLevel.Warn);
 
 You can redirect log output by setting custom logger or log function.
 
-##### Redirect by setting custom logger
+#### Redirect by setting custom logger
 
 ```ts
 setLogLevel(LogLevel.Info);
@@ -319,7 +319,7 @@ setLogLevel(LogLevel.Info);
 setLogger(context.log);
 ```
 
-##### Redirect by setting custom log function
+#### Redirect by setting custom log function
 
 > [!NOTE]
 > Log function will not take effect, if you set a custom logger.
@@ -337,7 +337,7 @@ setLogFunction((level: LogLevel, message: string) => {
 });
 ```
 
-### Override configuration
+## Override configuration
 You can pass custom config when creating `TeamsFx` instance to override default configuration or set required fields when environment variables are missing.
 
 - If you have created tab project using VS Code toolkit, the following config values will be used from pre-configured environment variables:
@@ -363,7 +363,7 @@ You can pass custom config when creating `TeamsFx` instance to override default 
   * sqlDatabaseName (SQL_DATABASE_NAME)
   * sqlIdentityId (IDENTITY_ID)
 
-## How to fix the breaking change if upgraded from previous SDK version
+## Follow the steps to upgrade the latest SDK version.
 
 If you are using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
 1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`.
@@ -374,10 +374,10 @@ If you are using the version of SDK that has `loadConfiguration()`, you can foll
 
 Also see [TeamsFx class](#teamsfx-class) for furthur description.
 
+## See also
+
+[Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
+
 ## Next steps
 
 Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
-
-## See also
-
-[Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples)
