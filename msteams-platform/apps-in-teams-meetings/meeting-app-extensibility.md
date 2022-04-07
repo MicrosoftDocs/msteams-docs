@@ -168,7 +168,7 @@ The default participant settings are determined by an organization's IT administ
   * They can view or interact with the tab app on the meeting stage in Teams desktop client without installing the app or without any app entitlements. They can’t view or interact with the app on the meeting stage in a Teams web client.
   * They can’t view or interact with the app in the side panel without any app entitlements.
   * They aren't authorized to act as a presenter.
-  * If the attendee joins as an anonymous user, they can’t view or interact with the tab app on the meeting stage in both Teams web and desktop client.
+  * If the attendee joins as an anonymous user, they can’t view or interact with the tab app on the meeting stage in both Teams web and desktop clients.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
