@@ -15,7 +15,7 @@ Present-in-Teams allows users to share any documents or third party app as a web
 
 (content to be added)
 
-When you select Present-in-Teams button, it launches the deep link to the meeting stage. The following is the deep link format:
+When you select Present-in-Teams button, it launches the deep link to the meeting stage. The following are the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
@@ -56,12 +56,22 @@ Optional:
 
 ## Limitations
 
+(content to be added)
+
 ## End user experience - 3P
 
-:::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
+After you enable present to teams, you can share the document or web apps in the meeting stage. To access, follow the steps:
 
-:::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Present in teams share":::
+1. Open web app and select **open in meeting** button.
 
-:::image type="content" source="../../assets/images/present-in-teams/share-stage.PNG" alt-text="present in teams":::
+    :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
+
+1. Select **open** button.
+
+    :::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Present in teams share":::
+
+1. Now, the web app shared to meeting stage.
+
+    :::image type="content" source="../../assets/images/present-in-teams/share-stage.PNG" alt-text="present in teams":::
 
 ## End user experience - 1P
