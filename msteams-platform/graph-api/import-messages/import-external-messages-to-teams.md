@@ -377,6 +377,7 @@ The following table provides the content scope:
 ||Emojis|
 ||Quotes|
 ||Cross posts between channels|
+||Shared channels|
 
 ## See also
 
