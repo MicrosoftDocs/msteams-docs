@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Collaborate on Teams project using Teams Toolkit
 
-Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and Microsoft Azure Active Directory (Azure AD) App.Teams Toolkit supports collaboration feature to allow  developers and project owner to invite other developers or collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
+Multiple developers can work together to debug, provision and deploy on the same TeamsFx project, however it requires manually setting the right permissions for Teams App and Microsoft Azure Active Directory (Azure AD) App. Teams Toolkit supports collaboration feature to allow  developers and project owners to invite other developers or collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Multiple developers can work together to debug, provision and deploy for the sam
 
 ## Collaborate with other developers
 
-The following list guides us to understand the collaboration process and its limitation:
+The following list guides you to understand the collaboration process and its limitation:
 
 ### As project owner
 
@@ -43,7 +43,7 @@ The following list guides us to understand the collaboration process and its lim
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add envi":::
 
-* To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in following image:
+* To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then collaborators are listed in the output channel as shown in the following image:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
@@ -63,7 +63,7 @@ The following list guides us to understand the collaboration process and its lim
 For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
 
 > [!NOTE]
-> Collaborators must log in using the account added by project owner, which is under the same tenant with project owner.
+> The Collaborators must log in using the account added by project owner, which is under the same tenant with project owner.
 
 ### Limitation
 
@@ -78,7 +78,7 @@ You can't remove collaborators directly from Teams Toolkit extension. Perform th
 
 > [!NOTE]
 >
-> * Collaborator added to your project will not receive any notification. Project owner needs to notify collaborator offline.
+> * The Collaborator added to your project  will not receive any notification. Project owner needs to notify collaborator offline.
 > * Azure related permissions must be set manually by Azure subscription administrator on Microsoft Azure portal. Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
 
 ## See also

@@ -17,7 +17,7 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
-> Ensure you have Teams app project in Visual Studio Code.
+> Ensure you have Teams app project open in Visual Studio Code.
 
 ## Add cloud resources using Teams Toolkit
 
@@ -45,7 +45,7 @@ The selected resources are succesfully added to your project.
 ## Add cloud resources using TeamsFx CLI in command window
 
 1. Change directory to your **project directory**.
-1. Execute the following command to add different resources in your project:
+1. Execute the following commands to add different resources in your project:
 
 |Cloud Resource|Command|
 |---------------|----------|
@@ -67,8 +67,8 @@ TeamsFx integrates with Azure services for the following scenarios:
 
 After adding any resource, the changes in your project are as follows:
 
-- New parameters may be added to azure.parameter.{env}.json to provide required information for provision.
-- New content are appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
+- New parameters may be added to `azure.parameter.{env}.json` to provide required information for provision.
+- New content is appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
 - The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
 - `.fx/projectSettings.json` is updated to track the resources present in your project.
 

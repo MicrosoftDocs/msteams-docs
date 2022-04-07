@@ -32,7 +32,7 @@ During local debug, Teams Toolkit loads manifest from `manifest.local.template.j
 * `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
   * You can add a customized parameter as follows:
     * Add a placeholder in manifest.remote.template.json with pattern: `{{config.manifest.xx}}`
-    * Add a config value in config.{env}.json
+    * Add a config value in `config.{env}.json`
 
         ```json
         {

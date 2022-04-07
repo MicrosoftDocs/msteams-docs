@@ -67,7 +67,7 @@ If there are more than one environment, you need to select the environment you w
 
 ## Sync local changes to Dev portal
 
-After previewing the manifest file, you can sync your local changes to Dev portal by following the steps:
+After previewing the manifest file, you can sync your local changes to Dev portal by following the steps mentioned below:
 
 1. Select **Update to Teams platform** at the top left corner of `manifest.{env}.json`
 2. Select **Teams: Update manifest to Teams platform** at the menu bar of `manifest.{env}.json`
@@ -77,18 +77,18 @@ After previewing the manifest file, you can sync your local changes to Dev porta
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
 
 > [!NOTE]
-> Trigger from editor codelens or **title** will update current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
+> Trigger from editor codelens or **title** updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
 
 If the manifest file is outdated due to configuration file change or template change, ensure to confirm the following action:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-* **Preview only**: local manifest file will be overwritten according to current configuration
-* **Preview and update**: local manifest file will be overwritten according to current configuration and also updated to Teams platform
+* **Preview only**: local manifest file is overwritten according to current configuration
+* **Preview and update**: local manifest file is overwritten according to current configuration and also updated to Teams platform
 * **Cancel**: do nothing
 
 > [!NOTE]
-> The changes will be updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
+> The changes are updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
 
 ## See also
 
