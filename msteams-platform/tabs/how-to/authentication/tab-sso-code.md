@@ -9,6 +9,8 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 
 You need to configure your app code to obtain an access token from Azure AD using Teams identity of the app user.
 
+This section describes the tasks involved in implementing SSO for a tab app. These tasks are language- and framework-agnostic.
+
 ## SDK Prerequisites
 
 Teams mobile client versions supporting SSO:

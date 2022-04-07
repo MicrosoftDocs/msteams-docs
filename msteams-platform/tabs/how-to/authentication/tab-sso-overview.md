@@ -35,7 +35,7 @@ For more information on access tokens, please see [Configure code to enable Team
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
-## Build a Teams tab app with Teams SSO
+## Enable Teams SSO for a tab app
 
 This section describes the tasks involved in implementing SSO for a tab app. These tasks are language- and framework-agnostic.
 
@@ -69,20 +69,18 @@ To build a tab app that uses Teams SSO to authenticate users:
       - [Register your tab application in Azure AD](tab-sso-register-aad.md)
       - [Configure API permissions with Microsoft Graph](tab-sso-graph-api.md)
       - [Configure admin consent](tab-sso-admin-consent.md)
-      - [Create client secret](tab-sso-client-secret.md)
 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
 
-      3. **Update sample app code**
+      1. **Configure code**
 
     :::column-end:::
     :::column span="2":::
 
-      After you register your app in Azure AD, update the app properties in your app's manifest file.
-      Next, you update the sample app with details configured on Azure AD.
+      Next, you configure the code for acquiring access token from Azure AD:
 
       - [Code configuration for enabling Teams SSO for tabs](tab-sso-code.md)
 
@@ -91,17 +89,15 @@ To build a tab app that uses Teams SSO to authenticate users:
 :::row:::
     :::column span="":::
 
-      4. **Get an access token from client side**
+      1. **Update Teams manifest**
 
     :::column-end:::
     :::column span="2":::
 
-      This step requires your app user to give their consent for using their credentials for user-level permission. Azure AD receives the user credentials and sends an access token to Teams.
-      In the sample app, this step is already done for your.
-      To do this for your app:
-
-      - Update authentication API.
-      - Use on-behalf-of flow to fetch access token using Microsoft Authentication Library (MSAL).
+      Update the app properties in your app's manifest file:
+      
+      - [Update Teams app manifest and preview the app](tab-sso-manifest.md)
+      
     :::column-end:::
 :::row-end:::
 
@@ -129,3 +125,7 @@ Here's a list of best practices:
         * Use this `?prompt=consent&scope={scopes}`
         * Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
     5. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
+
+## See also
+
+- [Configure code to enable Teams SSO](tab-sso-code.md)

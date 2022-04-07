@@ -12,7 +12,14 @@ Your Teams app users are authenticated using their Teams user credentials and Az
 The tasks involved in creating a Teams tab that uses SSO are language- and framework-agnostic.
 
    > [!NOTE]
-   > The Microsoft Teams Toolkit can to register the Azure AD application in a SSO project.
+   > The Microsoft Teams Toolkit can register the Azure AD application in an SSO project.
+
+## Prerequisites to registering your tab app
+
+Before you register your app, ensure that you've read information on the following configuration options:
+
+- Single-tenant or multi-tenant options
+- App scope
 
 In this section, you'll learn:
 
@@ -50,9 +57,9 @@ To register your tab app in Azure AD:
     1. Enter the name of your app that will be displayed to the user.
         You can change this name at a later stage, if you want to.
 
-    1. Select the intended types of user accounts that can access your app. For this section, select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
+    1. Select the intended types of user accounts that can access your app. You can choose from single- or multi-tenant options.
 
-1. Select the **Redirect URI** details.
+2. Select the **Redirect URI** details.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
@@ -60,7 +67,7 @@ To register your tab app in Azure AD:
     2. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app.
        You can change this URL at a later stage, if needed.
 
-1. Select **Register**.
+3. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
@@ -69,9 +76,11 @@ To register your tab app in Azure AD:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="false":::
 
-1. Note and save the **Application ID**. You'll need it for updating the app manifest.
+4. Note and save the **Application ID**. You'll need it for updating the app manifest.
 
-    Your Teams tab app is created.
+    Your Teams tab app is registered in Azure AD.
+
+You should now have Application ID for your tab app.
 
 ## Configure admin consent
 
@@ -81,7 +90,7 @@ In this section, you'll learn:
 
 - [To expose an API](#to-expose-an-api)
 
- [To configure API scope](#to-configure-api-scope)
+- [To configure API scope](#to-configure-api-scope)
 
 - [To configure authorized client application](#to-configure-authorized-client-application)
 
@@ -224,4 +233,4 @@ Depending on the platform or device on which you want to target your your app, a
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/web-platform-configured.png" alt-text="Web platform configured" border="false":::
 
-Congratulations! You've completed the app registration required to enable SSO for your tab app.
+Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your tab app.
