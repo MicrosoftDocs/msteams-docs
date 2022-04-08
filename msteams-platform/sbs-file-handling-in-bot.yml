@@ -77,7 +77,7 @@ items:
     1. From the **Subscription** dropdown list, select your subscription.
     1. From the **Resource group** dropdown list, select your existing resource group.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-resource.png" alt-text="azure resource selection" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource.png" alt-text="azure resource selection" border="true":::
        
          You can also create a new resource group (select **Create new** > enter resource name > select **OK**)
 
@@ -108,7 +108,7 @@ items:
         
         Your Azure bot is created.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot.png" alt-text="creation of bot" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/azure-bot-created.png" alt-text="creation of bot" border="true":::
 
      **To create client secret**
 
