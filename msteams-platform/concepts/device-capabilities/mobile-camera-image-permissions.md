@@ -28,12 +28,12 @@ It is important to familiarize yourself with the [API response errors](#error-ha
 
 The following use cases are mapped to Teams capabilities for web, desktop, and mobile clients:
 
-</br>
-</br>
+<br>
+
 <details>
 <summary>Web or desktop app </summary>
 
-Apps to interact with your device
+Web or desktop app media capability
 
 | **Use cases** |  **API input** |**API output** |
 | --- | --- |-- |
@@ -47,13 +47,11 @@ Apps to interact with your device
 >**Note**</br>
 These use cases are supported in web/desktop, iOS, and Android.
 </details>
-</br>
-</br>
-</br>
-<details>
+
+<br>
 <summary>Mobile app </summary>
 
-Apps to interact with your device
+Mobile app media capability
 
 | **Use cases** | **API input** |**API output** |
 | --- | --- |-- |
@@ -63,6 +61,7 @@ Apps to interact with your device
 | Edit image:  ink / annotate / text stickers | Input param values – source: Gallery    | Camera captures image/s and returns them as a set of attachment|
 | Restricts you from making edits to the captured image/s. | Input param values – source: Gallery    |  Camera captures image/s and returns them as a set of attachment|
 | **View image attachment/s** | **viewImages(params)** |--|
+
 </details>
 </br>
 
