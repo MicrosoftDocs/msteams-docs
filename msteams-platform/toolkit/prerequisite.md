@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 ## Prerequisite
 
-This section helps you to setup your account or prerequisites related to Teams Toolkit and Software Development Kit (SDK).
+To setup your account or prerequisites related to Teams Toolkit and Software Development Kit (SDK) and 
 
 ### Install Teams Toolkit
 [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
@@ -27,10 +27,7 @@ Install the following to prepare the account  to build Teams apps.
 * [Microsoft 365 account with valid subscription.](/microsoftteams/platform/toolkit/accounts#microsoft-365-account)
 * [Azure account to host the backend resources on Azure](/microsoftteams/platform/toolkit/accounts#azure-account-to-host-backend-resources)
 
-
-
 ### Debug background process
-
 
 Teams Toolkit checks the following prerequisites during the debug process:
 
@@ -111,7 +108,6 @@ Use the following .NET Core versions:
 
 > [!NOTE]
 > If the development certificate for localhost is'nt installed for tab in Windows or macOs, the Teams toolkit prompts you to install it.</br> -->
-
 
 When you select **Start Debugging (F5)**, the Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
