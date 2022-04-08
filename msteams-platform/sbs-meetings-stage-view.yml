@@ -74,7 +74,7 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in node.js folder in cloned repository.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest path.png" alt-text="path for manifest.json" border="true":::
 
