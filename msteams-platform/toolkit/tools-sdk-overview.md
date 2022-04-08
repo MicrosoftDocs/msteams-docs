@@ -10,11 +10,13 @@ ms.date: 11/29/2021
 
 # Overview of Tools and SDK
 
-Teams Toolkit for Microsoft Visual Studio Code and Teams Toolkit's extension for Visual Studio makes it easy for you to create, debug, and deploy a new Teams App as it reduces the amount of development time and improves our developer workflow.
-Teams Toolkit makes it easy to create new projects for Teams, automatically setup apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use TeamsFx from your IDE. 
+There are various tools and SDKs for Teams app development; however, you need to pick the right and the preferred tool based on the app requirement.
 
-The Microsoft Teams JavaScript client SDK and other SDK's help you create hosted experiences in Team. The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library. Other legacy SDK's help you to create a bot 
+Teams Toolkit Visual Studio Code extension quickly scaffolds all types of Teams apps. Teams Toolkit for Visual Studio makes it easy for you to create, debug, and deploy a new Teams App. The tools reduce the amount of development time and improves the developer workflow.
 
+The Microsoft Teams JavaScript client SDK and other SDKs help you create hosted experiences in Team. Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library.
+
+Some of the tools are not only created for Teams development, but also multiple Microsoft products. 
 
  [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
@@ -38,6 +40,22 @@ TeamsFx CLI is a text-based command line interface that accelerates Teams applic
 ## App Studio
 
 App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+
+### Manage your apps with App Studio for Microsoft Teams
+
+    App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
+
+### Add bots to Microsoft Teams apps
+
+    Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
+
+### Create a bot
+
+    Teams App Studio is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see Getting started with Teams App Studio.
+
+## Developer Portal for Teams
+
+The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and access other resources.
 
 ## SDKs
 
@@ -66,4 +84,3 @@ Messaging extensions are a powerful way for users to engage with your app from T
 * [Publish Teams apps using Teams Toolkit](publish.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
-
