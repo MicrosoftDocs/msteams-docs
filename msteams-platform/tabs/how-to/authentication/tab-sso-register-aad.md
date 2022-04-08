@@ -234,3 +234,8 @@ Depending on the platform or device on which you want to target your your app, a
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/web-platform-configured.png" alt-text="Web platform configured" border="false":::
 
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your tab app.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Configure code to enable Teams SSO](tab-sso-code.md)

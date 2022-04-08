@@ -176,3 +176,8 @@ For more details on these and other claims, see [Microsoft identity platform ID 
 |**Sample name**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Update Teams app manifest and preview the app](tab-sso-manifest.md)
