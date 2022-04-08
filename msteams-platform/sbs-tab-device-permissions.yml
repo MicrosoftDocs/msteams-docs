@@ -135,8 +135,12 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
   
-     1. Select **Add** and you will see the following output:
+     1. Select **Add**.
 
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams.png" alt-text="add the app tab device permission" border="true":::               
+
+     1. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
+     
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/dekstop-tab-device-permission.png" alt-text="add tab device to desktop" border="true":::               
 
 
@@ -158,23 +162,20 @@ items:
 
     1. Select **Apps**.
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device.png" alt-text="select apps" border="true":::         
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device.png" alt-text="select apps" border="true":::         
 
     1. In the lower left corner, select **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
 
+    1. Select **Upload a custom app**. 
 
-    1. Select **Upload a custom app**.
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
-    2. Open the `manifest.json` file in visual studio code.
-    3. In the `manifest.json` file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
+   
+    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
-
-
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
-
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
+  
     1. Select **Add**.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams.png" alt-text="add the app tab device permission" border="true":::               
@@ -183,10 +184,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png" alt-text="get location" border="true":::               
 
-    11. Open desktop Teams.
-    12. To upload `manifest.zip`, select **Apps > Upload a custom app** and open `manifest.zip`.
-    13. Select **Add** to add the tab device permission app and you will see the following output:  
-
+    
 
     # [Mobile](#tab/mobile)
 
