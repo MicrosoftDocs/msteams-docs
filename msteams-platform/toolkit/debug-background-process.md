@@ -183,7 +183,6 @@ You can view the project folders and files in the Explorer area of Visual Studio
 |  `bot/.env.teamsfx.local` | Environment variables file for bot and messaging extension| The values of each environment variable generates and saves during local debug. |
 | `api/.env.teamsfx.local`  | Environment variables file for Azure Functions | The values of each environment variable generates and saves during local debug. |
 
-
 ## See also
 
 [Debug your Teams app using Teams Toolkit](debug-local.md)
