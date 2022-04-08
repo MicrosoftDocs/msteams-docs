@@ -36,22 +36,24 @@ This section covers:
 
 - [Add client-side code](#add-client-side-code)
 
-- [When to call getAuthToken](#when-to-call-getauthtoken)
+  - [When to call getAuthToken](#when-to-call-getauthtoken)
 
 - [User consent for getting access token](#user-consent-for-getting-access-token)
 
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 
-- [Validate the access token](#validate-the-access-token)
+  - [Validate the access token](#validate-the-access-token)
 
-- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
+  - [Example access token](#example-access-token)
+
+  - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
 ### Add client-side code
 
 Add JavaScript to the add-in to:
 
-- Call getAccessToken.
-- Parse the access token or pass it to the add-in’s server-side code.
+- Call `getAuthToken`.
+- Parse the access token or pass it to the server-side code.
 
 The following code shows a simple example of calling getAccessToken and parsing the token for the user name and other credentials.
 
@@ -135,7 +137,9 @@ Keep in mind the following guidelines when validating the token:
 
 For more information on token validation, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#validating-tokens).
 
-**Example access token**: The following is a typical decoded payload of an access token.
+#### Example access token
+
+The following is a typical decoded payload of an access token.
 / Need an updated example /
 
 ```javascript
