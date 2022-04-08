@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Configure API permissions with Microsoft Graph
 
-In this section, you'll learn to configure API permissions with Microsoft Graph, such as User.Read, email, offline_access, and more.
+In this section, you'll learn to configure API permissions with Microsoft Graph, such as email, offline_access, and more.
 
 To configure API permissions:
 

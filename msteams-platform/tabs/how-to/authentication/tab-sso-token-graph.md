@@ -7,11 +7,9 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Acquire token for MS Graph
 
-You can extend your Teams tab app for Microsoft Graph. You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
+You can extend your Teams tab app for Microsoft Graph. You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD on-behalf-of flow.
 
 Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes.
-
-For more information, please see [Get access for MS Graph](/graph/auth-v2-user).
 
 \ Add content to enable user to transition to MS Graph page. Verify cross-reference to MS Graph pages - existing pages that have information regarding acquiring token. \
 
@@ -83,9 +81,17 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 If you need to access Microsoft Graph data, your server-side code should do the following:
 
 - Validate the access token (see Validate the access token below).
-- Initiate the [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the add-in (its ID and secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
+- Initiate the OAuth 2.0 On-Behalf-Of flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the add-in (its ID and secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
 - Get data from Microsoft Graph by using the new token.
-- If you need to cache the new access token for multiple calls, we recommend using [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet).
+- If you need to cache the new access token for multiple calls, we recommend using token cache serialization in MSAL.NET.
 
 > [!IMPORTANT]
-> As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#protocol-diagram).
+> As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the OAuth 2.0 protocol diagram.
+
+
+## See also
+
+- [On-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
+- [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
+- [Get access for MS Graph](/graph/auth-v2-user)
+- [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet).
