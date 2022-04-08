@@ -19,7 +19,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" :::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" link="#value-proposition" :::
    :::column-end:::
    :::column span="":::
      :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security":::
@@ -454,8 +454,10 @@ If your app supports localization, your app package must include a file with lan
 ## Apps linked to SaaS offer
 
 * ISVs must support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant.
+
 *
  The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) for Teams apps linked to a SaaS offer.
+
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas).
 * `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
