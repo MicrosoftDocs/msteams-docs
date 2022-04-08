@@ -173,7 +173,7 @@ try {
     throw err;
   } else {
     // Silently fail because user cancels the consent dialog
-    return;
+        return;
   }
 }
 ```
