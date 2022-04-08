@@ -85,16 +85,11 @@ When you call `getAuthToken` and user consent is required for user-level permiss
 
 :::image type="content" source="../../../assets/images/tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as [jwt.ms](https://jwt.ms/). If you aren't receiving the UPN in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
-
-For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
+After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
 ### Pass the access token to server-side code
 
 If you need to access web APIs on your server, or additional services such as Microsoft Graph, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
-
-> [!NOTE]
-> There are many libraries available for different languages and platforms that can help simplify the code you write. For more information, see [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
 If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
 
@@ -136,8 +131,6 @@ Keep in mind the following guidelines when validating the token:
 - The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
-For more information on token validation, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#validating-tokens).
-
 #### Example access token
 
 The following is a typical decoded payload of an access token.
@@ -178,7 +171,8 @@ The access token returned from `getAuthToken()` contains information that can be
 
 Teams can cache this information associated with the user's identity; such as the user's preferences.
 
-For more details on these and other claims, see [Microsoft identity platform ID tokens](/azure/active-directory/develop/id-tokens). If you need to construct a unique ID to represent the user in your system, refer to [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id) for more information.
+> [!NOTE]
+> If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
 
 ## Code sample
 
@@ -190,3 +184,12 @@ For more details on these and other claims, see [Microsoft identity platform ID 
 
 > [!div class="nextstepaction"]
 > [Update Teams app manifest and preview the app](tab-sso-manifest.md)
+
+## See also
+
+- [jwt.ms](https://jwt.ms/)
+- [Active directory optional claim](/azure/active-directory/develop/active-directory-optional-claims)
+- [Access tokens](/azure/active-directory/develop/access-tokens)
+- [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
+- [Microsoft identity platform ID tokens](/azure/active-directory/develop/id-tokens)
+- [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#validating-tokens)

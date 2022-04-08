@@ -88,7 +88,6 @@ If you need to access Microsoft Graph data, your server-side code should do the 
 > [!IMPORTANT]
 > As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the OAuth 2.0 protocol diagram.
 
-
 ## See also
 
 - [On-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
