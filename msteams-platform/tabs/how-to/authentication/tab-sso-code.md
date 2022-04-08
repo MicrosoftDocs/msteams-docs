@@ -21,7 +21,7 @@ Teams mobile client versions supporting SSO:
 
 - For the best experience with Teams, use the latest version of iOS and Android.
 
-## 
+## Get an access token from your client-side code
 
 This step requires your app user to give their consent for using their Teams identity for user-level permission. Azure AD receives the user identity token (ID token) and sends an access token to Teams.
 
@@ -30,6 +30,20 @@ This step requires your app user to give their consent for using their Teams ide
 
 > [!NOTE]
 > To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
+
+This section covers:
+
+- [Add client-side code](#add-client-side-code)
+
+- [When to call getAuthToken](#when-to-call-getauthtoken)
+
+- [User consent for getting access token](#user-consent-for-getting-access-token)
+
+- [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
+
+- [Validate the access token](#validate-the-access-token)
+
+- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
 ### Add client-side code
 
@@ -100,7 +114,7 @@ $.ajax({
 });
 ```
 
-#### Validate the access token
+### Validate the access token
 
 Web APIs on your server must validate the access token if it is sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
