@@ -63,7 +63,7 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-### When to call getAuthToken
+#### When to call getAuthToken
 
 Call the `getAuthToken` at the time when you need to validate the user identity.
 
@@ -72,7 +72,7 @@ Call the `getAuthToken` at the time when you need to validate the user identity.
 
 You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`. / Verify this code snippet for relevance. /
 
-Teams caches the access token and will reuse it. As the access token is pre-fetched to improve app performance and load times. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
+Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
 > As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
@@ -117,7 +117,7 @@ $.ajax({
 });
 ```
 
-### Validate the access token
+#### Validate the access token
 
 Web APIs on your server must validate the access token if it is sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
@@ -160,7 +160,7 @@ For more information on token validation, see [Microsoft identity platform acces
 }
 ```
 
-### Use the access token as an identity token
+#### Use the access token as an identity token
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
