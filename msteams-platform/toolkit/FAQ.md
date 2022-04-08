@@ -12,23 +12,10 @@ ms.date: 11/29/2021
  
 This section provides the answer and relevant information to the common questions asked about Teams Toolkit and SDK.  
 <br>
-<details>
-<summary><b>How to login using CLI for CI/CD?</b></summary>
-Ans.
 
 
-</details>
 
 
-<details>
-
-<summary><b>How to troubleshoot?</b></summary>
-
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to navigate to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
-
-<br>
-
-</details>
 
 <details>
 
@@ -66,9 +53,9 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 </details>
 <details>
 
-<summary><b>Is it possible to use already build Azure resources in Teams toolkit?</b></summary>
+<summary><b>Is it possible to use already built Azure resources in Teams toolkit?</b></summary>
 
-Ans. If you have already your own Azure Bot service and hosted bot application code. The only thing you need to do to connect your bot with Teams is to update the bot definition part in Teams manifest file.
+If you have already your own Azure Bot service and hosted bot application code. The only thing you need to do to connect your bot with Teams is to update the bot definition part in Teams manifest file.
 
 <br>
 
@@ -77,7 +64,7 @@ Ans. If you have already your own Azure Bot service and hosted bot application c
 
 <summary><b>How to Enable the user install the bot by default and not tab on teams app manifest?</b></summary>
 
-Ans. 'defaultGroupCapability' provides the default capability that will be added to the team, groupchat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition. Could you just check it once? or share the error log?
+`defaultGroupCapability` provides the default capability that will be added to the team, groupchat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition. Could you just check it once? or share the error log?
 
 Reference Document:-Configure default install options for your Microsoft Teams app.
 
@@ -87,9 +74,9 @@ Reference Document:-Configure default install options for your Microsoft Teams a
 
 <details>
 
-<summary><b>Teams-cli using Github actions fails to find package.json</b></summary>
+<summary><b>Teams-CLI using Github actions fails to find package.json</b></summary>
 
-Ans. You don't have to be so troublesome to use the action alone and write the workflow file all by yourself. There exists CI/CD support for Teams app development which covers platforms of GitHub, Azure DevOps, Jenkins, and other platforms by scripts. You just need to copy the pre-defined yml files for GitHub and do customizations to suit your own requirements.
+You don't have to be so troublesome to use the action alone and write the workflow file all by yourself. There exists CI/CD support for Teams app development which covers platforms of GitHub, Azure DevOps, Jenkins, and other platforms by scripts. You just need to copy the pre-defined yml files for GitHub and do customizations to suit your own requirements.
 
 Please refer to https://aka.ms/teamsfx-cicd-insider-guide for more details.
 
@@ -211,11 +198,24 @@ Ans.
 </b></summary>
 Ans.
 </details>
+<details>
 
+<summary><b>How to troubleshoot?</b></summary>
+
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to navigate to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+
+<br>
+
+</details>
 
 <details>
 <summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
 Ans.
 
 
+</details>
+<details>
+<summary><b>How to login using CLI for CI/CD?</b></summary>
+
+<br>
 </details>
