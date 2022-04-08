@@ -57,7 +57,21 @@ TeamsFx SDK is built to be used in browser and Node.js environment. Common scena
 
 To create a graph client object and to access the Microsoft Graph API, you need the credentials to authenticate. The SDK provides APIs to configure for developers.
 
-### Invoke Graph API without user (Application Identity)
+#### Invoke Graph API on behalf of Teams User (User Identity)
+
+Use the following snippet:
+
+// Equivalent to:
+// const teamsfx = new TeamsFx(IdentityType.User, {
+//   initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+//   clientId: process.env.REACT_APP_CLIENT_ID,
+// }
+const teamsfx = new TeamsFx();
+const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
+const profile = await graphClient.api("/me").get(); // Get the profile of current user
+```
+
+#### Invoke Graph API without user (Application Identity)
 
 It doesn't require the interaction with Teams user. You can call Microsoft Graph as application identity.
 Use the following snippet:
