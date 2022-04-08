@@ -64,7 +64,9 @@ Optional:
 
 After you enable present to teams, you can share the document or web apps in the meeting stage. To access, follow the steps:
 
-1. Open web app and select **open in meeting** button.
+If meeting extension app installed:
+
+1. Open web app and select **Share in meeting** button.
 
     :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
 
