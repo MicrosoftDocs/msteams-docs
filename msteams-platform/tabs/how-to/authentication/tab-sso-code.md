@@ -117,7 +117,7 @@ $.ajax({
 
 #### Validate the access token
 
-Web APIs on your server must validate the access token if it is sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
+Web APIs on your server must validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
 There are a number of libraries available that can handle JWT validation, but the basics include:
 

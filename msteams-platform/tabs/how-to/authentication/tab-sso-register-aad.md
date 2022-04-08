@@ -21,6 +21,13 @@ Before you register your app, ensure that you've read information on the followi
 - Single-tenant or multi-tenant options
 - App scope
 
+> [!NOTE]
+> There are some important restrictions that you must know:
+> - Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as User.Read or Mail.Read, see Get an access token with Graph permissions.
+> - It is important that your application's domain name is the same as the domain name you have registered for your Azure AD application.
+> - Currently multiple domains per app are not supported.
+> - The user must set accessTokenAcceptedVersion to 2 for a new application.
+
 In this section, you'll learn:
 
 - [How to register and configure the Azure AD app](#register-your-app)
@@ -244,3 +251,4 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 
 - [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [App scopes](/azure/active-directory/develop/v2-permissions-and-consent.md#openid-connect-scopes)
+- [Get an access token with Graph permissions](/tabs/how-to/authentication/auth-aad-sso?tabs=dotnet#get-an-access-token-with-graph-permissions)
