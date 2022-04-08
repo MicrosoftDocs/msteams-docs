@@ -11,6 +11,9 @@ In this section, you'll learn to configure API permissions with Microsoft Graph,
 
 To configure API permissions:
 
+1. Open a web browser to the [Azure portal](https://ms.portal.azure.com/).
+   The Microsoft Azure AD Portal page opens.
+
 1. Select **Manage** > **API permission** from the left pane.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option." border="false":::
