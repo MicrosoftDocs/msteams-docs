@@ -23,8 +23,9 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure that you install the following:  
+    Ensure you install the following tools and set up your development environment:
 
+ 
     * [Microsoft Teams](https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
     * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
     * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
