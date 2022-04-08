@@ -204,7 +204,8 @@ items:
 
       To test the app on desktop, select **App Permission** icon and get the following prompts to accept permission request:
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="desktop" border="true":::                   
+        
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="desktop" border="true":::                   
       
       
        # [Browser](#tab/Browser)
@@ -212,7 +213,8 @@ items:
       
       To test the app in browser, select **Get Location** to see the following outputs:
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/get-location-output-tab-device.png" alt-text="get location" border="true":::                   
+        
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/get-location-output-tab-device.png" alt-text="get location" border="true":::                   
      
      
      # [Mobile](#tab/Mobile)
@@ -220,7 +222,8 @@ items:
       
       To test the app on mobile, select the respective button to test the scenario and get the following prompts to accept permission request:
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="mobile output" border="true":::                   
+        
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="mobile output" border="true":::                   
     --- 
     
 - title: Complete challenge
@@ -228,9 +231,8 @@ items:
   content: |
     Did you come up with something like this?
 
-      ![tabdeviceimage](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
-
+    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-location.png" alt-text="location" border="true":::                   
 
 - content: |
-    You've completed the tutorial and now you can grant tab device permission at Microsoft Teams apps.
+    You've completed the tutorial and now you can grant tab device permission to Teams apps.
 
