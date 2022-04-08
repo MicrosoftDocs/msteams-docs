@@ -55,7 +55,7 @@ Add JavaScript to the add-in to:
 - Call `getAuthToken`.
 - Parse the access token or pass it to the server-side code.
 
-The following code shows a simple example of calling getAccessToken and parsing the token for the user name and other credentials.
+The following code shows a simple example of calling `getAuthToken` and parsing the token for the user name and other credentials.
 
 ```javascript
 var authTokenRequest = {
@@ -134,6 +134,7 @@ Keep in mind the following guidelines when validating the token:
 #### Example access token
 
 The following is a typical decoded payload of an access token.
+
 / Need an updated example /
 
 ```javascript
