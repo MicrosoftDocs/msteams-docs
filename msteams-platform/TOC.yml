@@ -96,6 +96,8 @@
       items:
           - name: Prepare accounts to build the app
             href: toolkit/accounts.md
+          - name: Prerequisites
+            href: toolkit/prerequisite.md  
           - name: Create a new Teams app
             href: toolkit/create-new-teams-app.md
           - name: Add capabilities to the app
