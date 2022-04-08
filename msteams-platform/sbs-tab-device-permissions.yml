@@ -92,17 +92,17 @@ items:
 
      1. Run the following command in the **Command Prompt** to download packages and dependencies:
 
-       ```Command-Prompt
-        npm install
-        ```  
+        ```Command-Prompt
+         npm install
+         ```  
 
      1. Run the following command in the **Command Prompt** to start the app:
 
-       ```Command-Prompt
-       npm start
-       ```
+        ```Command-Prompt
+        npm start
+        ```
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install.png" alt-text="install and start npm" border="true":::     
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install.png" alt-text="install and start npm" border="true":::     
 
 - title: Add tab device permission to Teams
   durationInMinutes: 1
@@ -144,11 +144,34 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png" alt-text="get location" border="true":::               
 
+     
+
+    # [Mobile](#tab/mobile)
+     
      1. Open mobile Teams to see the following outputs:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-teams-output.png" alt-text="mobile tab device" border="true":::                   
 
-     1. 
+     
+
+    # [Desktop](#tab/desktop)  
+
+     1. Go to **Microsoft Teams**.
+
+     1. Select **Apps**.
+
+      1. In the lower left corner, select **Manage your apps**.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
+
+    1. Select **Upload a custom app**.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
+
+    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
+  
 
 
 
