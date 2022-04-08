@@ -20,7 +20,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 ## Value proposition
 
 <details>
-<summary><b>Value proposition</b></summary>
+<summary><b>Additional guidance</b></summary>
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
@@ -29,7 +29,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 ### App name
 
 <details>
-<summary><b>App name</b></summary>
+<summary><b>Guidelines</b></summary>
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with Microsoft [commercial certification policy number 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) and provides additional guidance to developers on naming their apps.
