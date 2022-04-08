@@ -74,14 +74,14 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to `manifest.json` in node.js folder in cloned repository.
+    1. Navigate to **manifest.json** in node.js folder in cloned repository.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest path.png" alt-text="path for manifest.json" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path.png" alt-text="path for manifest.json" border="true":::
 
-    1. Open **manifest.json** in **Visual Studio** and make the following changes:
+    1. Open **manifest.json** in Visual Studio and make the following changes:
 
          * Replace `<<App-ID>>` with your bot's **Microsoft App ID**.
-         * Replace `<<BASE-URL>>` to the fully qualified ngrok domain name.
+         * Replace `<<BASE-URL>>` to the fully qualified your ngrok domain name.
          * Replace `<<VALID DOMAIN>>` with your fully qualified ngrok domain name.
          
          :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="true":::   
