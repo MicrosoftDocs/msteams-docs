@@ -13,7 +13,7 @@ You can extend and enhance the user experience by supporting removal and modific
 
 ## Enable your tab to be reconfigured after installation
 
-Your **manifest.json** defines your tab's features and capabilities. The tab instance `canUpdateConfiguration` property takes a Boolean value that indicates whether a user can modify or reconfigure the tab after it is created. The following table provides the property details:
+Your `manifest.json` defines your tab's features and capabilities. The tab instance `canUpdateConfiguration` property takes a Boolean value that indicates whether a user can modify or reconfigure the tab after it is created. The following table provides the property details:
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|

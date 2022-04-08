@@ -385,11 +385,11 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest.png" alt-text="manifest" border="true":::
     
-    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
+    1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
          * Set `manifestVersion` to `1.11`.
 
