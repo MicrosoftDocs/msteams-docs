@@ -9,8 +9,6 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 
 You need to configure your app code to obtain an access token from Azure AD using Teams identity of the app user.
 
-This section describes the tasks involved in implementing SSO for a tab app. These tasks are language- and framework-agnostic.
-
 ## SDK Prerequisites
 
 Teams mobile client versions supporting SSO:
@@ -23,7 +21,7 @@ Teams mobile client versions supporting SSO:
 
 - For the best experience with Teams, use the latest version of iOS and Android.
 
-## Get an access token from your client-side code
+## 
 
 This step requires your app user to give their consent for using their Teams identity for user-level permission. Azure AD receives the user identity token (ID token) and sends an access token to Teams.
 
@@ -63,6 +61,16 @@ Teams caches the access token and will reuse it. As the access token is pre-fetc
 
 > [!IMPORTANT]
 > As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
+
+### User consent for getting access token
+
+When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
+
+:::image type="content" source="../../../assets/images/tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
+
+After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as [jwt.ms](https://jwt.ms/). If you aren't receiving the UPN in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
+
+For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
 
 ### Pass the access token to server-side code
 
@@ -135,14 +143,6 @@ For more information on token validation, see [Microsoft identity platform acces
 ```
 
 ### Use the access token as an identity token
-
-When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
-
-After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as [jwt.ms](https://jwt.ms/). If you aren't receiving the UPN in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
-
-For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
-
-:::image type="content" source="../../../assets/images/tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
 The access token returned from getAccessToken() contains information that can be used to establish the identity. The following claims in the token relate to identity.
 

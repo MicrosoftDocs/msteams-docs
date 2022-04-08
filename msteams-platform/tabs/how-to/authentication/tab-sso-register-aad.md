@@ -172,7 +172,7 @@ In this section, you'll learn:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
 
-    1. Enter **1fec8e78-bce4-4aaf-ab1b-5451cc387264** as client ID for Teams mobile or desktop application.
+    1. Enter the client ID for Teams mobile or desktop application.
     1. Select the app ID you created for your app for the **Authorized scopes**.
     1. Select **Add application**.
 
@@ -184,7 +184,7 @@ In this section, you'll learn:
 
 1. Repeat the previous step to add client app for Teams web application.
 
-    1. Enter **5e3ce6c0-2b1f-4285-8d4b-75ee78787346** as client ID for web app.
+    1. Enter the client ID for web app.
     1. Select the app ID you created for your app for the **Authorized scopes**.
     1. Select **Add application**.
 
