@@ -116,7 +116,7 @@ Developers must choose identity type when initializing TeamsFx.
 SDK provides 2 types namely: User and App.
 After developer has specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
 
-There are 3 credential classes located under to help to simplify authentication.[credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+There are 3 credential classes located under to help to simplify authentication. [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
 Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs. They are designed to provide access tokens for specific scopes. Other APIs relies on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
 
@@ -387,10 +387,10 @@ If you are using the version of SDK that has `loadConfiguration()`, you can foll
 
 Also see [TeamsFx class](#teamsfx-class) for furthur description.
 
-## See also
-
-[Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
-
 ## Next steps
 
 Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
+
+## See also
+
+[Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
