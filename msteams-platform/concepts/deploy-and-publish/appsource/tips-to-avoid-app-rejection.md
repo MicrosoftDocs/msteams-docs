@@ -2,7 +2,7 @@
 title: Tips to avoid app rejection and pass app validation
 description: Learn the most common reasons for your app to fail the app certification and increase the likelihood of your app to pass the Teams store submission process.
 ms.topic: overview
-author: v-ypalikala
+author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
 ---
@@ -62,7 +62,7 @@ Following are the most common reasons for your app to get rejected:
       :::image type="icon" source="../../../assets/icons/privacy-policy-icon.png" link="#privacy-policy":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/terms-of-use-icon.png" link="#terms-of-use-link":::
+      :::image type="icon" source="../../../assets/icons/terms-of-use-icon.png" link="#terms-of-use":::
    :::column-end:::
 :::row-end:::
 
@@ -88,7 +88,7 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Way forward information for new users such as, Sign Up or Get Started, or Help and Contact Us links aren't included in the manifest and AppSource full description.
 
-* Region specific app name or functionality is not called out in manifest and Partner Center app descriptions.
+* Region specific app name or functionality isn't called out in manifest and Partner Center app descriptions.
 
 * Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
 
@@ -191,4 +191,4 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
 * [Microsoft Teams store validation guidelines](prepare/teams-store-validation-guidelines.md)
 * [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies)
-* [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks)
+* [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks)
