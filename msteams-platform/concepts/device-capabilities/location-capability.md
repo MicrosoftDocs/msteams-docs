@@ -16,7 +16,6 @@ ms.author: surbhigupta
 
 The main advantage of integrating location functionalities in your Teams apps is that it allows web, desktop, and mobile app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
 
-
 The following examples show how the integration of location functionalities is used in different scenarios:
 
 ### Mobile:
@@ -26,12 +25,14 @@ The following examples show how the integration of location functionalities is u
 
 ### Desktop:
 
-* Locate technical support staff in the particular area. The app asks for permission to use the location to find support staff near the specified area. After permission is granted, the search results are filtered near that particular location and support staff gets displayed.
+* Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area. After the permission is granted, the search results are filtered near that particular location and support staff IDs get displayed.
 * Report the location after completing a job in the field.
 
-To integrate location functionalities, you must update the app manifest file and call the APIs. For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the location APIs.
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+To integrate location functionalities, you must do the following:
 
+* Update the app manifest file and call the APIs.
+* Have working knowledge of [code snippets](#code-snippets) for calling the location APIs.
+* Handle errors in your Teams app with the help of [API response errors](#error-handling).
 
 ## Update manifest
 
@@ -44,8 +45,8 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > **Note** </br>
-The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
-Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+• The request permissions prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
+• The device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 
 ## Location APIs
