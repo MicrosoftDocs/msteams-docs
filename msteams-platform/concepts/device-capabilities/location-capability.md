@@ -125,7 +125,6 @@ The following image depicts desktop app experience of location capabilities:
 
   ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
 
-
 # [Mobile](#tab/mobile)
 
 The following image depicts mobile app experience of location capabilities:

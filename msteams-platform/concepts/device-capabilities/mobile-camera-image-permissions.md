@@ -35,17 +35,19 @@ The following use cases are mapped to Teams capabilities for web, desktop, and m
 
 Web or desktop app media capability
 
+>**Note**</br>
+The use cases are supported in web, desktop, iOS, and Android apps.
+
 | **Use cases** |  **API input** |**API output** |
 | --- | --- |-- |
-| **Submit request to invoke camera and select captured picture/s as attachments** | **API: selectMedia(input_params)** |- |
-| Restricts you to capture single image | Input param values: Source: Camera| Camera captures image/s and returns them as a set of attachment |
-| Allows you to take a document or whiteboard scan |  Input param values: Source: Camera| Camera captures image/s and returns them as a set of attachment |
-| Edit image: ink / annotate / text stickers | Input param values: Source: Camera| Camera captures image/s and returns them as a set of attachment|
-| Restricts you from making edits to the captured image/s | Input param values: Source: Camera|  Camera captures image/s and returns them as a set of attachment|
-| **View image attachment/s** | **viewImages(params)** |--|
+| **Submit request to invoke camera and select captured pictures as attachments** | **API: selectMedia(input_params)** |- |
+| Restricts you to capture single image | Input param values: Source: Camera| Camera captures images and returns them as a set of attachment |
+| Allows you to take a document or whiteboard scan |  Input param values: Source: Camera| Camera captures images and returns them as a set of attachment |
+| Edit image: ink, annotate, and text stickers | Input param values: Source: Camera| Camera captures images and returns them as a set of attachment|
+| Restricts you from making edits to the captured images | Input param values: Source: Camera|  Camera captures images and returns them as a set of attachment|
+| **View image attachments** | **viewImages(params)** |--|
 
->**Note**</br>
-These use cases are supported in web/desktop, iOS, and Android.
+
 </details>
 
 <br>
@@ -56,12 +58,12 @@ Mobile app media capability
 
 | **Use cases** | **API input** |**API output** |
 | --- | --- |-- |
-| **Submit request to pick image/s from storage as attachment/s** | **API: selectMedia(input_params)** |---|
+| **Submit request to pick images from storage as attachments** | **API: selectMedia(input_params)** |---|
 |Restricts you to pick single image from gallery  | Input param values: Source: Gallery    | Image picker view in gallery returns a set of images as attachments |
-| Pick picture/s right from capture screen. |  Input param values: Source: Gallery    |  Image picker view in gallery returns a set of images as attachments |
-| Edit image:  ink / annotate / text stickers | Input param values: Source: Gallery  | Camera captures image/s and returns them as a set of attachment|
-| Restricts you from making edits to the captured image/s. |  Input param values: Source: Gallery  |  Camera captures image/s and returns them as a set of attachment|
-| **View image attachment/s** | **viewImages(params)** |--|
+| Pick pictures right from capture screen |  Input param values: Source: Gallery    |  Image picker view in gallery returns a set of images as attachments |
+| Edit image:  ink, annotate, and text stickers | Input param values: Source: Gallery  | Camera captures images and returns them as a set of attachment|
+| Restricts you from making edits to the captured images |  Input param values: Source: Gallery  |  Camera captures images and returns them as a set of attachment|
+| **View image attachments** | **viewImages(params)** |--|
 
 </details>
 </br>
