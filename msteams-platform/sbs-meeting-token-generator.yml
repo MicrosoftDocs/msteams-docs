@@ -36,7 +36,7 @@ items:
     > [!NOTE]
     > Skip is available only to the meeting organizers.
     
-    This step-by-step guide helps you to build meeting token generate in Teams. You'll see the following output:
+    This step-by-step guide helps you to generate meeting token to extend meetings in Teams. You'll see the following output:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="final output" border="true":::)
 
