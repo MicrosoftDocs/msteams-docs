@@ -22,12 +22,12 @@ Teams mobile client versions supporting SSO:
 - For the best experience with Teams, use the latest version of iOS and Android.
 
 > [!NOTE]
-> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
+> To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
 > For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
 
 ## Get an access token from your client-side code
 
-This step requires your app user to give their consent for using their Teams identity for user-level permission. Azure AD receives the user identity token (ID token) and sends an access token to Teams.
+Your app user must give their consent for using their Teams identity to get user-level permission. Azure AD receives the user identity token (ID token) and sends an access token to Teams.
 
 - **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the user who is currently logged into Teams.
 - **Access token**: An access token is an artifact contains user identity and permission scopes.
@@ -70,7 +70,7 @@ Call the `getAuthToken` at the time when you need to validate the user identity.
 - If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
 - If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
 
-You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
+You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`. / Verify this code snippet for relevance. /
 
 Teams caches the access token and will reuse it. As the access token is pre-fetched to improve app performance and load times. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
 
@@ -93,11 +93,11 @@ If you need to access web APIs on your server, or additional services such as Mi
 
 For more information, see [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-If you need to access Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
+If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
 
 The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method, but `GET` is sufficient to send the access token when you are not writing to the server.
 
-/ Verify the code snippet /
+/ Verify the code snippet for relevance /
 
 ```javascript
 $.ajax({
