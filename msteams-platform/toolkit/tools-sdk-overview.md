@@ -16,9 +16,9 @@ Teams Toolkit Visual Studio Code extension quickly scaffolds all types of Teams 
 
 The Microsoft Teams JavaScript client SDK and other SDKs help you create hosted experiences in Team. Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library.
 
-Some of the tools are not only created for Teams development, but also multiple Microsoft products. 
+Some of the tools are not only created for Teams development, but also multiple Microsoft products.
 
- [!NOTE]
+> [!NOTE]
 > Currently, this feature is available in **public developer preview** only.
 
 ## Teams Toolkit

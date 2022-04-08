@@ -1,20 +1,19 @@
 ---
 title: prerequisite
 author: MuyangAmigo
-description:  Prerequisite forTools and SDK
+description:  Prerequisite to install Teams Toolkit and SDK
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Prerequisite for Teams Toolkit and SDK
+# Prerequisite to install Teams Toolkit and SDK
 
-## Prerequisite
+There are prerequisites in install Teams Toolkit and Software Development Kit (SDK). 
 
-To setup your account or prerequisites related to Teams Toolkit and Software Development Kit (SDK) and 
+## Install Teams Toolkit
 
-### Install Teams Toolkit
 [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
 
 > [!TIP]
@@ -39,13 +38,12 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Tab with Azure Functions | 10, 12, **14 (recommended)**|
   |Bot |  10, 12, **14 (recommended)**, 16|
   |Messaging extension | 10, 12, **14 (recommended)**, 16 |
-
-   
+  
 * Microsoft 365 account with valid credentials, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in.
 
 * Custom app uploading or sideloading for your developer tenant is turned on. If not, the local debug terminates.
 
-* Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok is'nt installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* Ngrok binary version 2.3, applicable for bot and messaging extension.  If Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
 * If Azure Functions Core Tools version 3. is'nt installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 
