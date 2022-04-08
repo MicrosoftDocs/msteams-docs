@@ -2,10 +2,10 @@
 title: Add Capabilities to Your Teams apps
 author: MuyangAmigo
 description:  Describes Add Capabilities of Teams Toolkit
-ms.author: zhany
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 04/06/2022
 ---
 
 # Add capabilities to your Teams apps
@@ -107,4 +107,4 @@ The limitations to TeamsFx while adding more capabilities are as follows:
 ## See also
 
 * [Provision cloud resources](provision.md)
-* [Create new Teams project](create-new-project-app.md)
+* [Create new Teams project](create-new-teams-app.md)
