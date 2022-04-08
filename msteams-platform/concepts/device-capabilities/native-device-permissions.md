@@ -241,7 +241,7 @@ Device permissions are stored for every login session. It means that if you sign
 
 | **App level permission** | **Teams level permission, NA** | **Teams level permission, yes** | **Teams level permission, no** |
 |---------------|--------------|--------|-------|
-|No | • Prompt #1 within Teams web client </br> ![Tabs](~/assets/images/tabs/prompt2.png) </br> • If prompt #1 is allowed, then prompt #2 (browser) is shown when app tries to access location: `teams.microsoft.com wants to access your location.`</br> If either of the prompts is denied, then throw permission denied error.|Show prompt #1 |Throw permission denied error. App developer is expected to handle this error code and show a prompt ![Device permissions](~/assets/images/tabs/dictationprompt.png) |
+|No | • Prompt #1 within Teams web cliente </br> ![Tabs](~/assets/images/tabs/prompt2.png) </br> • If prompt #1 is allowed, then prompt #2 (browser) is shown when app tries to access location: `teams.microsoft.com wants to access your location.`</br> If either of the prompts is denied, then throw permission denied error.|Show prompt #1 |Throw permission denied error. App developer is expected to handle this error code and show a prompt ![Device permissions](~/assets/images/tabs/dictationprompt.png) |
 |Yes | Browser prompt shown (prompt #2)|No prompt|Throw permission denied error. App developer is expected to handle this error code and show a prompt ![Device](~/assets/images/tabs/dictationprompt.png)|
 
 
