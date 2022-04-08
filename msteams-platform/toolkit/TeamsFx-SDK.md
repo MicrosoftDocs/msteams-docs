@@ -74,6 +74,7 @@ const profile = await graphClient.api("/me").get(); // Get the profile of curren
 #### Invoke Graph API without user (Application Identity)
 
 It doesn't require the interaction with Teams user. You can call Microsoft Graph as application identity.
+
 Use the following snippet:
 
 ```ts
@@ -86,9 +87,6 @@ const teamsfx = new TeamsFx(IdentityType.App);
 const graphClient = createMicrosoftGraphClient(teamsfx);
 const profile = await graphClient.api("/users/{object_id_of_another_people}").get(); // Get the profile of certain user
 ```
-
-> [!NOTE]
-> You can use this credential class in browser application, such as Teams Tab App.
 
 ## Core Concepts & Code Structure
 
