@@ -61,7 +61,7 @@ items:
 - title: Set up tunnel for local web server
   durationInMinutes: 1
   content: |
-    Use ngrok or **Command Prompt** to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
@@ -194,4 +194,4 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
 
 - content: |
-    You've completed the tutorial to get started with a Share meeting stage in Teams.
+    You've completed the tutorial to get started with a share meeting stage in Teams.
