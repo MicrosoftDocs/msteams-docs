@@ -39,13 +39,17 @@ items:
   durationInMinutes: 1
   content: |
      1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+
      1. Select **Code**.
+
      1. From the dropdown menu, select **Open with GitHub Desktop**.
+
 
      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/clonerepository.png" alt-text="cloning the repository" border="true":::
 
+    
+     1. Select **Clone**.
 
-     1. Select **Clone**. 
 
 - title: Set up tunnel for local web server
   durationInMinutes: 1
@@ -81,6 +85,73 @@ items:
      1. Copy the **nodejs** folder path. 
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png" alt-text="copy the path" border="true":::  
+
+     1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
+
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-folder-path-tab-device.png" alt-text="copy the path" border="true":::     
+
+     1. Run the following command in the **Command Prompt** to download packages and dependencies:
+
+       ```Command-Prompt
+        npm install
+        ```  
+
+     1. Run the following command in the **Command Prompt** to start the app:
+
+       ```Command-Prompt
+       npm start
+       ```
+
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install.png" alt-text="install and start npm" border="true":::     
+
+- title: Add tab device permission to Teams
+  durationInMinutes: 1
+  content: |
+    # [Browser](#tab/Browser)
+    
+    1. In your cloned repository, navigate to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
+
+    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device.png" alt-text="create a zip" border="true":::        
+
+    1. Go to **Microsoft Teams**. 
+
+    1. Select **Apps**.
+
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device.png" alt-text="select apps" border="true":::         
+
+    1. In the lower left corner, select **Manage your apps**.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
+
+    1. Select **Upload a custom app**.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
+
+    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
+
+    1. Select **Add**.
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams.png" alt-text="add the app tab device permission" border="true":::               
+
+    1. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png" alt-text="get location" border="true":::               
+
+     1. Open mobile Teams to see the following outputs:
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-teams-output.png" alt-text="mobile tab device" border="true":::                   
+
+     1. 
+
+
+
 
 
 
