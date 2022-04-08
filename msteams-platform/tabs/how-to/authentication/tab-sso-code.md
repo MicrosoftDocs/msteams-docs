@@ -162,12 +162,16 @@ For more information on token validation, see [Microsoft identity platform acces
 
 ### Use the access token as an identity token
 
-The access token returned from getAccessToken() contains information that can be used to establish the identity. The following claims in the token relate to identity.
+The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
+
+The access token returned from `getAuthToken()` contains information that can be used to establish the identity. The following claims in the token relate to identity.
 
 - name: The user's display name.
 - preferred_username: The user's email address.
 - oid: A GUID representing the ID of the user in the Microsoft identity system.
 - tid: A GUID representing the tenant tha the user is signing in to.
+
+Teams can cache this information associated with the user's identity; such as the user's preferences.
 
 For more details on these and other claims, see [Microsoft identity platform ID tokens](/azure/active-directory/develop/id-tokens). If you need to construct a unique ID to represent the user in your system, refer to [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id) for more information.
 
