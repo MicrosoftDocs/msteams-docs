@@ -18,7 +18,7 @@ The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.j
 
 3. Visual Studio Code then launches the debuggers specified in the compound configuration, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
-4.  Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
+4. Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
 
 ## Prerequisites
 
@@ -111,11 +111,11 @@ When you select **Start Debugging (F5)**, the Teams Toolkit output channel displ
 
 In the set up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-<!-- 1. [Register and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application. -->
+1.  [Register and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
 
-<!-- 1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or messaging extension app. -->
+1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or messaging extension app.
 
-<!-- 1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app. -->
+1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app.
 
 ### Register and configure an Azure AD application
 
