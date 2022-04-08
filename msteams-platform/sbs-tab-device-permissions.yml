@@ -18,7 +18,7 @@ items:
 
     This step-by-step guide helps you to grant tab device permission at Teams. You'll see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-location.png" alt-text="final output" border="true":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/MicrosoftTeams-image.png" alt-text="final output" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -231,7 +231,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-location.png" alt-text="location" border="true":::                   
+    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/MicrosoftTeams-image.png" alt-text="location" border="true":::                   
 
 - content: |
     You've completed the tutorial and now you can grant tab device permission to Teams apps.
