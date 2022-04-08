@@ -164,11 +164,14 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
 
+
     1. Select **Upload a custom app**.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
+    2. Open the `manifest.json` file in visual studio code.
+    3. In the `manifest.json` file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
 
-    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
 
@@ -180,7 +183,10 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png" alt-text="get location" border="true":::               
 
-     
+    11. Open desktop Teams.
+    12. To upload `manifest.zip`, select **Apps > Upload a custom app** and open `manifest.zip`.
+    13. Select **Add** to add the tab device permission app and you will see the following output:  
+
 
     # [Mobile](#tab/mobile)
 
