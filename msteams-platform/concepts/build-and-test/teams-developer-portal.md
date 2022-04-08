@@ -7,9 +7,9 @@ ms.topic: overview
 ms.author: surbhigupta
 ---
 
-# Manage your apps with the Developer Portal for Microsoft Teams
+# Manage your apps with the Developer Portal for Teams
 
-The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and access Resources.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
@@ -20,7 +20,7 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 ## Register an app
 
-The Developer Portal provides a couple ways to register a Teams app:
+The Developer Portal provides you with the following ways to register a Teams app:
 
 * Register a brand new app
 * Import an existing app package
@@ -30,7 +30,7 @@ The Developer Portal provides a couple ways to register a Teams app:
 
 ## Set up an environment
 
-You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
+You can configure environments and global variables to help transition your app from your local runtime to production. All the environment use global variables.
 
 To set up an environment:
 
@@ -42,22 +42,22 @@ To use variables:
 
 Use the variable names instead of hard-coded values to set your app configurations.
 
-1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
+1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment is shown along with the global variables.  
 1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
 ## Identify app owners
 
-Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Owner** role except the ability to delete an app.
+Each app includes an **Owners** page, where you can share your app registration with colleagues in your organization. The **Contributor** role has the same permissions as the **Owner** role except for the ability to delete an app.
 
-## Configure your app's capabilities and other important metadata
+## Configure your app's capabilities and other necessary metadata
 
-A Teams app is a web app. Like all web apps, its source code is typically developed in an IDE or code editor and hosted somewhere in the cloud (like Azure).
+A Teams app is a web app. Like all web apps, its source code is typically developed in an IDE or code editor and hosted in the cloud (like Azure).
 
-To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
+To install and render your app in Teams, you must include a set of configurations that Teams recognize. Teams uses an app manifest, a JSON file that contains all the metadata needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
 
 ## Test your app directly in Teams
 
-The Developer Portal provides options for testing and debugging your app:
+The Developer Portal provides the following options for testing and debugging your app:
 
 * On the **Overview** page, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
 * The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
@@ -70,7 +70,7 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Use tools to create app features
 
-The Developer Portal also includes tools to help you build some key features of Teams apps. Some of these tools include:
+The Developer Portal includes the following tools which help you to build some key features of Teams apps:
 
 * **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.

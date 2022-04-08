@@ -30,3 +30,13 @@ groups:
     title: Visual Studio
   - id: teamsfx-cli
     title: TeamsFx-CLI   
+- id: teams-apps-add-resource
+  title: Teams app add resource to cloud
+  prompt: Add cloud resources to Teams app
+  pivots:
+  - id: visual-studio-code
+    title: Visual Studio Code
+  - id: visual-studio
+    title: Visual Studio
+  - id: teamsfx-cli
+    title: TeamsFx-CLI   

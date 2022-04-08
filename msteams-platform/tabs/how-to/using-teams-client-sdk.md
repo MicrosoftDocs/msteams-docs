@@ -1,5 +1,5 @@
 ---
-title: Building tabs and other hosted experiences with the JavaScript client SDK
+title: Build tabs and other hosted experiences with the JavaScript client SDK
 author: heath-hamilton
 ms.author: surbhigupta
 description: Overview of the Microsoft Teams JavaScript client SDK, which can help you build Teams app experiences hosted in an <iframe>. It includes basic functions, authentication namespace, and settings namespace.
@@ -7,32 +7,30 @@ ms.localizationpriority: medium
 keywords: teams tabs group channel configurable static SDK JavaScript personal
 ms.topic: conceptual
 ---
-# Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK
+# Build tabs with the Teams JavaScript client SDK
 
-The Microsoft Teams JavaScript client SDK can help you create hosted experiences in Teams, which means displaying your app content in an iframe.
-
-The SDK is helpful for developing apps with any of the following Teams capabilities:
+The Microsoft Teams JavaScript client SDK helps you create hosted experiences in Teams, which means displaying your app content in an iframe. The SDK is helpful for developing apps with any of the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Task modules](../../task-modules-and-cards/what-are-task-modules.md)
 
 For example, the SDK can make your [tab react to theme changes](../../build-your-first-app/build-personal-tab.md#3-update-your-tab-theme) your users make in the Teams client.
 
-## Getting started
+## Get started
 
-Do one of the following depending on your development preferences:
+Perform any one of the following options based on your development preferences:
 
 * [Install the SDK with npm or Yarn](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
 * [Clone the SDK (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
 
 ## Common SDK functions
 
-See the following tables to understand commonly used SDK functions. The [SDK reference documentation](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) provides more comprehensive information.
+The following tables helps youto understand commonly used SDK functions. The [SDK reference documentation](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) provides more comprehensive information.
 
 ### Basic functions
 
-| Function  | Description          | Documentation|
-| -----     | -----     | -----    |
+| Function| Description | Documentation|
+| ----- | ----- | -----|
 | `microsoftTeams.initialize()` | Initializes the SDK. This function must be called before any other SDK calls.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-initialize&preserve-view=true)|
 |`microsoftTeams.getContext(callback: (context: Context)`| Gets the current state in which the page is running. The callback retrieves the **Context** object.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest&preserve-view=true)<br/>[context obj](/javascript/api/@microsoft/teams-js/@microsoft.teams-js?view=msteams-client-js-latest&preserve-view=true)|
 | `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Initializes the Teams library and sets the tab's [frame context](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) depending on the contentUrl and websiteUrl. This ensures the go-to-website/reload functionality operates on the correct URL.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-initializewithframecontext&preserve-view=true)|
@@ -70,3 +68,8 @@ See the following tables to understand commonly used SDK functions. The [SDK ref
 | -----     | -----     | -----    |
 |`microsoftTeams.tasks.startTask(taskInfo: TaskInfo, submitHandler?: (err: string, result: string)`|Takes the **TaskInfo** object as input and allows an app to open the task module. The optional **submitHandler** is registered when the task module is completed. |[function](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest&preserve-view=true)<br/>[taskInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.taskinfo?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.tasks.submitTask(result?: string | object, appIds?: string | string[])`|Submits the task module. The optional **result** string parameter is the result sent to the bot or the app and is typically a JSON object or serialization; The optional **appIds** string or string array parameter aids in validating that the call originated from the same appId as the one that invoked the task module.|[function](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true)|
+
+## See Also
+
+* [Microsoft Teams JavaScript client SDK v2 Preview](../../m365-apps/using-teams-client-sdk-preview.md)
+

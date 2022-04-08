@@ -6,11 +6,12 @@ ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
 ---
+
 # Microsoft Teams JavaScript client SDK v2 Preview
 
 With the [Microsoft Teams JavaScript client SDK v2 Preview](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true), the existing Teams SDK (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable Teams developers the ability to [extend Teams apps to run in Outlook and Office](overview.md). From a functional perspective, the TeamsJS SDK v2 Preview (`@microsoft/teams-js@next`) is a superset of the current TeamsJS SDK, it supports existing Teams app functionality while adding the ability to host Teams apps in Outlook and Office.
 
-There are two significant changes in the TeamsJS SDK v2 Preview that your code will need to account for in order to run in other Microsoft 365 applications:
+The following two significant changes in the Teams JavaScript SDK v2 Preview code needs to account for to run in other Microsoft 365 applications:
 
 * [**Callback functions now return Promise objects.**](#callbacks-converted-to-promises) All existing functions with a callback parameter have been modernized to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object for improved handling of asynchronous operations and code readability.
 

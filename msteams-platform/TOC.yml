@@ -126,10 +126,12 @@
       href: toolkit/FAQ.md
   - name: SDK
     items:
-      - name: JavaScript client SDK and versions
-        href: tabs/how-to/using-teams-client-sdk.md
-      - name: JavaScript client SDK v2 Preview
-        href: m365-apps/using-teams-client-sdk-preview.md 
+      - name: JavaScript client SDK
+        items:
+        - name: Teams JavaScript client SDK
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: Teams JavaScript client SDK v2 Preview
+          href: m365-apps/using-teams-client-sdk-preview.md 
       - name: Microsoft Graph SDKs
         href: /graph/sdks/sdks-overview
       - name: Developer Portal for Teams

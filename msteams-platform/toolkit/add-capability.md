@@ -101,10 +101,10 @@ After adding tab, the changes in your project are as follows:
 
 The limitations to TeamsFx while adding more capabilities are as follows:
 
-* You can add tabs up to 16 instances.
-* You can add bot and messaging extension for one instance each.
+* You can add tabs up to only 16 instances.
+* You can add a bot and messaging extension only for one instance each.
 
 ## See also
 
 * [Provision cloud resources](provision.md)
-* [Create new Teams project](create-new-project.md)
+* [Create new Teams project](create-new-project-app.md)
