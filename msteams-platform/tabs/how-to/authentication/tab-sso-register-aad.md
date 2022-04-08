@@ -239,3 +239,8 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 
 > [!div class="nextstepaction"]
 > [Configure code to enable Teams SSO](tab-sso-code.md)
+
+## See also
+
+- [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
+- [App scopes](/azure/active-directory/develop/v2-permissions-and-consent.md#openid-connect-scopes)
