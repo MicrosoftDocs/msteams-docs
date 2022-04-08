@@ -107,7 +107,43 @@ items:
 - title: Add tab device permission to Teams
   durationInMinutes: 1
   content: |
+    # [Desktop](#tab/desktop) 
+
+
+    1. In your cloned repository, navigate to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
+
+    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device.png" alt-text="create a zip" border="true":::        
+     
+     1. Go to **Microsoft Teams**.
+
+     1. Select **Apps**.
+
+     1. In the lower left corner, select **Manage your apps**.
+
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
+
+     1. Select **Upload a custom app**.
+
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
+
+     1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
+
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
+  
+     1. Select **Add** and you will see the following output:
+
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/dekstop-tab-device-permission.png" alt-text="add tab device to desktop" border="true":::               
+
+
+
+
     # [Browser](#tab/Browser)
+
     
     1. In your cloned repository, navigate to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
@@ -147,109 +183,14 @@ items:
      
 
     # [Mobile](#tab/mobile)
+
      
-     1. Open mobile Teams to see the following outputs:
+      Open mobile Teams to see the following outputs:
+
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-teams-output.png" alt-text="mobile tab device" border="true":::                   
 
      
-
-    # [Desktop](#tab/desktop)  
-
-     1. Go to **Microsoft Teams**.
-
-     1. Select **Apps**.
-
-      1. In the lower left corner, select **Manage your apps**.
-
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
-
-    1. Select **Upload a custom app**.
-
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
-
-    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
-
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device.png" alt-text="add the manifest zip" border="true":::             
-  
-
-
-
-
-
-
-
-
-
-- title: Configure and run the Tab device permissions app on Teams
-  durationInMinutes: 1
-  content: |
-    The most comprehensive way to test your app is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your app, across all scopes. 
-    
-    To configure and run the Teams app by uploading the manifest.zip file, perform the following:
-
-    1. Configure and run your tab device permissions app.
-    2. Begin your tunneling service to get an https endpoint.
-    3. Run the tab device permissions by uploading the manifest.zip file in Teams.
-
-    **To configure and run your tab device permissions app:**
-
-    1. Open **command prompt** and clone a repository **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Ensure that you note the **Path** where the repository is cloned.
-    2. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs** folder and copy the folder location.
-    3. In the **command prompt**, enter **cd location (node js folder location)** and run this command.
-    4. Run the following command in the **command prompt**:
-    
-       ```command-prompt
-        npm install
-        ```
-    5. Run the application in the **command prompt** using following command:
-    
-       ```command-prompt
-       npm start
-       ```
-    6. You can see the following output in the browser:
-
-       ![react](~/assets/images/tab-device-permission/sbs-react.PNG)
-
-    **Begin your tunneling service to get an https endpoint:**
-
-    1. Go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs**.
-    2. Open **ngrok** terminal and start a ngrok tunnel with the following command (you'll need the https endpoint to update the manifest file):
-
-       ```ngrok
-       ngrok http 3000 --host-header=localhost
-       ```  
-        
-    **To run the tab device permissions by uploading the manifest.zip file in Teams:**
-
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
-    2. Open the **manifest.json** file in visual studio code.
-    3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
-
-       ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)
-
-    4. Zip the files in the **appPackage/folder** as manifest.zip.
-    5. Open Teams on browser using tenant ID.
-    6. To upload **manifest.zip**, select **Apps > Upload a custom app** and open **manifest.zip**.
-    7. Select **Tab Device Permission** app.
-    8. Select **Add** to add the tab device permission app.
-
-        ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)
-
-    9. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
-
-        ![desktopteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)
-
-    10. Open mobile Teams to see the following outputs:
-
-        ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)
-
-    11. Open desktop Teams.
-    12. To upload **manifest.zip**, select **Apps > Upload a custom app** and open **manifest.zip**.
-    13. Select **Add** to add the tab device permission app and you will see the following output:  
-
-        ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
-
 - title: Test your app
   durationInMinutes: 1
   content: |
@@ -259,20 +200,23 @@ items:
 
       To test the app on desktop, select **App Permission** icon and get the following prompts to accept permission request:
 
-       ![desktoppermissionteams](~/assets/images\tab-device-permission\desktop-teams-permission.png)
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="desktop" border="true":::                   
+      
+      
+       # [Browser](#tab/Browser)
 
-      # [Browser](#tab/Browser)
-
+      
       To test the app in browser, select **Get Location** to see the following outputs:
 
-       ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)
-
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/get-location-output-tab-device.png" alt-text="get location" border="true":::                   
+     
+     
      # [Mobile](#tab/Mobile)
 
+      
       To test the app on mobile, select the respective button to test the scenario and get the following prompts to accept permission request:
 
-       ![mobileappteams](~/assets/images/tab-device-permission/prompt-mobile-app.png)
-
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="mobile output" border="true":::                   
     --- 
     
 - title: Complete challenge
