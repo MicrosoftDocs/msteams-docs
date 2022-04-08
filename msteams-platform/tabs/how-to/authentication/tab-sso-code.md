@@ -21,15 +21,16 @@ Teams mobile client versions supporting SSO:
 
 - For the best experience with Teams, use the latest version of iOS and Android.
 
+> [!NOTE]
+> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
+> For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
+
 ## Get an access token from your client-side code
 
 This step requires your app user to give their consent for using their Teams identity for user-level permission. Azure AD receives the user identity token (ID token) and sends an access token to Teams.
 
 - **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the user who is currently logged into Teams.
 - **Access token**: An access token is an artifact contains user identity and permission scopes.
-
-> [!NOTE]
-> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
 
 This section covers:
 
