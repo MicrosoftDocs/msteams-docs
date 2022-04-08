@@ -41,7 +41,8 @@ groups:
   - id: teamsfx-cli
     title: TeamsFx-CLI   
 - id: teams-app-publish
-  title: Publish your teams app
+  title: Publish your Teams app
+  prompt: Publish your Teams app
   pivots:
   - id: visual-studio-code
     title: Visual Studio Code

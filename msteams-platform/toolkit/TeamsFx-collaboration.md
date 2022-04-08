@@ -2,8 +2,8 @@
 title: Collaborate on TeamsFx Project using Teams Toolkit
 author: yanjiang
 description:  Collaborate on TeamsFx Project using Teams Toolkit
-ms.author: rentu
-ms.localizationpriority: medium
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/29/2021
 ---

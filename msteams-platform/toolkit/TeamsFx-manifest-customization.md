@@ -2,8 +2,8 @@
 title: Customize Teams App Manifest in Teams Toolkit
 author: zyxiaoyuer
 description:  Customize Teams App Manifest
-ms.author: nliu
-ms.localizationpriority: medium
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/29/2021
 ---
@@ -15,9 +15,9 @@ Teams Toolkit consists of the following manifest template files under `templates
 * `manifest.local.template.json` - local debug teams app
 * `manifest.remote.template.json` - shared in all environments
 
-## Prerequisite
+<!-- ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+. -->
 
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio Code.

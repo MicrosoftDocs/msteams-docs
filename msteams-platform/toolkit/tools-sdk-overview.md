@@ -43,15 +43,15 @@ App Studio makes it easy to start creating or integrating your own Microsoft Tea
 
 ### Manage your apps with App Studio for Microsoft Teams
 
-    App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
+App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
 
 ### Add bots to Microsoft Teams apps
 
-    Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
+Build and connect intelligent bots to interact with Microsoft Teams users naturally through chat. Or provide a simple commands-based bot, to be used as your "command-line" interface for your broader Teams app experience. You can make a notification-only bot, which can push information relevant to your users directly to them in a channel or direct message. You can even bring your existing Bot Framework-based bot and add Teams-specific support to make your experience shine.
 
 ### Create a bot
 
-    Teams App Studio is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see Getting started with Teams App Studio.
+Teams App Studio is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see Getting started with Teams App Studio.
 
 ## Developer Portal for Teams
 
