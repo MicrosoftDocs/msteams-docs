@@ -26,6 +26,7 @@ items:
     Ensure that you install the following:  
 
     * [Microsoft Teams](https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
+    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
     * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
     * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
@@ -33,8 +34,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
-
+    
 - title: Set up local environment
   durationInMinutes: 1
   content: |
@@ -54,13 +54,13 @@ items:
 - title: Set up tunnel for local web server
   durationInMinutes: 1
   content: |    
-     Use ngrok or **Command Prompt** to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+     Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
      ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps,as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png" alt-text=" ngrok tunnelling" border="true":::
 
@@ -182,14 +182,14 @@ items:
 
     1. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png" alt-text="get location" border="true":::               
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device.png" alt-text="get location" border="true":::               
 
     
 
     # [Mobile](#tab/mobile)
 
      
-      Open mobile Teams to see the following outputs:
+      Open Teams in mobile to see the following outputs:
 
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-teams-output.png" alt-text="mobile tab device" border="true":::                   
@@ -202,7 +202,7 @@ items:
 
      # [Desktop](#tab/Desktop)
 
-      To test the app on desktop, select **App Permission** icon and get the following prompts to accept permission request:
+      To test the app on desktop, select **App Permission** icon and get the following prompts to accept the permission request:
 
         
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="desktop" border="true":::                   
@@ -211,7 +211,7 @@ items:
        # [Browser](#tab/Browser)
 
       
-      To test the app in browser, select **Get Location** to see the following outputs:
+      To test the app in browser, select **Get Location** to see the following output:
 
         
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/get-location-output-tab-device.png" alt-text="get location" border="true":::                   
@@ -220,10 +220,12 @@ items:
      # [Mobile](#tab/Mobile)
 
       
-      To test the app on mobile, select the respective button to test the scenario and get the following prompts to accept permission request:
+      To test the app on mobile, the following pop-ups are displayed to select the course of action:
 
-        
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="mobile output" border="true":::                   
+      * Select **ALLOW** if you want to grant permission.
+      * Select **DENY** if you do not want to grant permission.
+
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="mobile output" border="true":::                   
     --- 
     
 - title: Complete challenge
@@ -234,5 +236,5 @@ items:
     :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/MicrosoftTeams-image.png" alt-text="location" border="true":::                   
 
 - content: |
-    You've completed the tutorial and now you can grant tab device permission to Teams apps.
+    You've completed the tutorial and now you can grant tab device permission to Teams app.
 
