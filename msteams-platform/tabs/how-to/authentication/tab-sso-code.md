@@ -97,6 +97,8 @@ If you need to access Microsoft Graph data, see [Acquire token for MS Graph](tab
 
 The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method, but `GET` is sufficient to send the access token when you are not writing to the server.
 
+/ Verify the code snippet /
+
 ```javascript
 $.ajax({
     type: "POST",
@@ -127,13 +129,14 @@ There are a number of libraries available that can handle JWT validation, but th
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens will be issued by the Azure authority, https://login.microsoftonline.com. The `iss` claim in the token should start with this value.
-- The token's `aud1 parameter will be set to the application ID of the add-in's Azure app registration.
+- Valid SSO tokens will be issued by the Azure AD. The `iss` claim in the token should start with this value.
+- The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
 For more information on token validation, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#validating-tokens).
 
 **Example access token**: The following is a typical decoded payload of an access token.
+/ Need an updated example /
 
 ```javascript
 {
