@@ -94,4 +94,4 @@ If you need to access Microsoft Graph data, your server-side code should do the 
 - [On-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)
 - [OAuth 2.0 On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [Get access for MS Graph](/graph/auth-v2-user)
-- [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet).
+- [Token cache serialization in MSAL.NET](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
