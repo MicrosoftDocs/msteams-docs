@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Tips to avoid app rejection and pass app validation
+        url: ~/concepts/deploy-and-publish/appsource/tips-to-avoid-app-rejection.md
       - text: Share to Teams from personal app or tab
         url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
       - text: Create Teams conversation bot
@@ -41,9 +43,7 @@ landingContent:
       - text: Overview
         url: ~/overview.md
       - text: Plan your app
-        url: ~/concepts/app-fundamentals-overview.md  
-      - text: App manifest schema version 1.12
-        url: ~/resources/schema/manifest-schema.md
+        url: ~/concepts/app-fundamentals-overview.md
 
       
 

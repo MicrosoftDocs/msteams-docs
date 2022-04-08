@@ -481,6 +481,8 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+    -  name: Tips to avoid app rejections and pass app validation
+       href: concepts/deploy-and-publish/appsource/tips-to-avoid-app-rejection.md
 - name: Monetize your app
   items:
   - name: Overview
