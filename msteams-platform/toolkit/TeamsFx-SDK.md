@@ -61,6 +61,7 @@ To create a graph client object and to access the Microsoft Graph API, you need 
 
 Use the following snippet:
 
+```ts
 // Equivalent to:
 // const teamsfx = new TeamsFx(IdentityType.User, {
 //   initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
