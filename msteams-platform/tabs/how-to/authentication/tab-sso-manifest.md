@@ -16,7 +16,7 @@ Before you update the app manifest, you'll need to:
 - Build and debug a tab app
 - Create an ngrok tunnel
 
-You'll need to add the `webApplicationInfo` property to the Teams app manifest file. It helps users seamlessly sign into your app. For more information about this property, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo)
+You'll need to add the `webApplicationInfo` property to the Teams app manifest file. It helps users seamlessly sign into your app. For more information about this property, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
 
 > [!NOTE]
 > - You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
@@ -136,6 +136,8 @@ To preview your app in Teams:
     The Tab app is loaded and the consent form appears.
 
 1. Select **Accept**.
+
+    The tab app is loaded and you can use it.
 
     Congratulations! You have enabled Teams SSO for your tab app.
 
