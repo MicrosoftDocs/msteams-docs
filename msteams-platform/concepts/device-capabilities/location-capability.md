@@ -117,11 +117,11 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 # [Desktop or web](#tab/desktop)
 
-The following image depicts web app experience of location capabilities:
+The following image depicts desktop app experience of location capabilities:
 
   ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png)
 
-The following image depicts desktop app experience of location capabilities:
+The following image depicts web app experience of location capabilities:
 
   ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
 
