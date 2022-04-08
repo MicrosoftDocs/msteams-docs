@@ -31,7 +31,7 @@ The following use cases are mapped to Teams capabilities for web, desktop, and m
 <br>
 
 <details>
-<summary>Web or desktop app </summary>
+<summary><b> Web or desktop app </b> </summary>
 
 Web or desktop app media capability
 
@@ -49,7 +49,8 @@ These use cases are supported in web/desktop, iOS, and Android.
 </details>
 
 <br>
-<summary>Mobile app </summary>
+<details>
+<summary><b>Mobile app </b></summary>
 
 Mobile app media capability
 
