@@ -36,7 +36,7 @@ In addition, this project requires that you have the following installed in your
     yo teams
     ```
 
-1. Next, provide a series of values that are used in your application's **manifest.json** file:
+1. Next, provide a series of values that are used in your application's `manifest.json` file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
