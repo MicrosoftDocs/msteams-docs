@@ -26,8 +26,8 @@ items:
     Ensure you install the following tools and set up your development environment:
 
  
-    * [Microsoft Teams](https://developer.microsoft.com/microsoft-365/dev-program) with valid account.
-    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
+    * [Microsoft Teams with a valid account](https://developer.microsoft.com/microsoft-365/dev-program)
+    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app.
     * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
     * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
