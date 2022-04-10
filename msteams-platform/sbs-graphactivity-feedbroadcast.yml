@@ -192,7 +192,7 @@ items:
          * **TeamsActivity.Send**
          * **TeamsAppInstallation.ReadForUser.All**
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Permission" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png" alt-text="Permission" border="true":::
 
           :::image type="content" source=".~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Permission for request" border="true":::
 
@@ -348,7 +348,7 @@ items:
     
     1. Select **Upload a custom app**. 
 
-        :::image type="content" source="" alt-text="Upload a custom app" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text="Upload a custom app" border="true":::
 
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
