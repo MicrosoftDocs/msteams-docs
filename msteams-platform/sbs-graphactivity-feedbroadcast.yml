@@ -284,7 +284,7 @@ items:
          * Set `"BaseUrl"` to the `[WebAppDomainName]`.
 
       
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingsjson.png" alt-text="Appsettings" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details.png" alt-text="Appsettings" border="true":::
 
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -296,7 +296,7 @@ items:
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
          * Set `validDomains` to `[WebAppDomainName]`.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile1.png" alt-text="Manifest file" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile.png" alt-text="Manifest file" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
