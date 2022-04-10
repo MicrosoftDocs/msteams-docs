@@ -14,9 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. 
+    The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your app.
 
-    This step-by-step guide shows a feature where user can broadcast a message to all members of organization using activity feed notification.
+    This step-by-step guide shows a feature where users can broadcast a message to all members of the organization using activity feed notification.
 
     **Interactions of graph activity feed broadcast**
 
@@ -26,21 +26,21 @@ items:
 
     You'll see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Clone repository" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    To set up your development environment, install the following:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * Latest version of Visual Studio
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    * [Teams](https://teams.microsoft.com/) with valid account
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -51,14 +51,14 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clonerepository1.png" alt-text="Clone repository" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clonerepository.png" alt-text="Clone repository" border="true":::
 
     1. Select **Clone**. 
 
-- title: Register your Teams auth single sign-on (SSO) with Microsoft Azure Active Directory (Azure AD)
+- title: Register your Teams auth single sign-on (SSO) with Azure Active Directory (Azure AD)
   durationInMinutes: 1
   content: |
-    **To register your app through the Microsoft Azure AD portal**  
+    **To register your app through the Azure AD portal**  
 
     1. Go to the [Azure portal] (https://portal.azure.com/).
 
@@ -68,7 +68,7 @@ items:
 
     1. Select **New registration**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/newregisteration.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration.png" alt-text="New registration" border="true":::
 
     1. On the **Register an application** page, set the value as follows:
 
@@ -78,13 +78,13 @@ items:
 
        * Leave the **Redirect URI** empty.
 
-       * Select **Register*
+       * Select **Register*.
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
     1. From the app **Overview** page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/overview.png" alt-text="New registration" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id.png" alt-text="New registration" border="true":::
 
     **To create tunnel for local web server**
 
@@ -95,13 +95,13 @@ items:
      ```
 
     > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="New registration" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="Expose and api" border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
@@ -116,7 +116,7 @@ items:
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+        > `For example: api://f631****.ngrok.io/c4e88a5d-e3d4-47f4-accb-0ef9de3bce8a`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
 
@@ -152,15 +152,15 @@ items:
     
     1. Select **Add a client application**. 
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaclient.png" alt-text="Select client" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaclient.png" alt-text="Add client" border="true":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png" alt-text="Add client application" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png" alt-text="Add client for Teams mobile or desktop application" border="true":::
 
-       You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+       Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png" alt-text="Add client" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png" alt-text="Add client application for Teams web application" border="true":::
 
     1. Select **Authorized scopes**.
 
@@ -177,7 +177,7 @@ items:
 
     1. Select **Add a permission**.
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addpermission.png" alt-text="Add a permission" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission.png" alt-text="Add a permission" border="true":::
 
     1. Select **Microsoft Graph**.
 
@@ -236,7 +236,7 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configureweb.png" alt-text="Configure web" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configurewebdetails.png" alt-text="Configure web" border="true":::
 
          1. Select **Add URI** and enter `https://bff2****.ngrok.io/Auth/Start`. 
 
@@ -290,7 +290,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png" alt-text="Manifest location" border="true":::
 
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
@@ -301,11 +301,11 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio**
+    **To build and run the service using Visual Studio
 
-    # [Visual Studio 2019](#tab/vs2019)
+    # [Latest version of Visual Studio](#tab/vs2022)
 
-       1. Launch **Visual Studio 2019**.
+       1. Open the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
@@ -318,7 +318,7 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png" alt-text="Select certificate" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/graphactivity-generator-certificate.png" alt-text="Select certificate" border="true":::
 
           A webpage opens with a message **Your bot is ready!**
 
@@ -338,7 +338,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="SElect zip file" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
     
     1. Go to **Microsoft Teams**.
 
@@ -374,7 +374,7 @@ items:
   content: |
     Did you come up with something like this?
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="New registration" border="true":::
+        
 
 
 - content: |
