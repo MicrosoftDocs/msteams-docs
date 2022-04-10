@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Graph activity feed broadcast
+title: Send message using activity feed notification
 metadata:
-  title: Graph activity feed broadcast
+  title: Send message using activity feed notification
   description: In this tutorial, you'll learn to broadcast a message to all members of organization using activity feed notification.
   audience: Developer
   level: Beginner
@@ -16,15 +16,13 @@ items:
   content: |
     The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your app.
 
-    This step-by-step guide shows a feature where users can broadcast a message to all members of the organization using activity feed notification.
-
-    **Interactions of graph activity feed broadcast**
+    **Key features of graph activity feed broadcast**
 
     * Broadcasts message for all the members.
     * Displays activity feed notification.
     * Broadcasts details available for members. 
 
-    You'll see the following output:
+    This step-by-step guide shows a feature where users can broadcast a message to all members of the organization using activity feed notification. You'll see the following output:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
 
@@ -33,14 +31,14 @@ items:
   content: |
     To set up your development environment, install the following:  
 
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * Latest version of Visual Studio
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-    
-    * [Teams](https://teams.microsoft.com/) with valid account
+
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -55,12 +53,11 @@ items:
 
     1. Select **Clone**. 
 
-- title: Register your Teams auth single sign-on (SSO) with Azure Active Directory (Azure AD)
+- title: Register your Teams Auth SSO with Azure AD
   durationInMinutes: 1
   content: |
-    **To register your app through the Azure AD portal**  
-
-    1. Go to the [Azure portal] (https://portal.azure.com/).
+    
+    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
 
@@ -328,9 +325,7 @@ items:
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |
-    **To add activity feed broadcast app to Teams**
-
-             
+          
     1. In your cloned repository, navigate to **csharp > ActivityFeedBroadcast > AppPackage**.
 
     1. Create a .zip with the following files that are present in the **AppPackage** folder: 
@@ -360,13 +355,11 @@ items:
    
           The app is visible in the meeting SidePanel. 
 
-    1. The **Broadcast Tab** displays Message title and Message description.
-
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output1.png" alt-text="Output" border="true":::
-
+    1. The Broadcast Tab displays Message title and Message description.
+            
     1. Enter the message and select **Send message**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output2.png" alt-text="Output1" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output2.png" alt-text="Final output" border="true":::
 
      
 - title: Complete challenge
@@ -374,8 +367,8 @@ items:
   content: |
     Did you come up with something like this?
 
-        
-
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output2.png" alt-text="Final output" border="true"::: 
 
 - content: |
     You've completed the tutorial to get started with a **activity feed broadcast** app!
+
