@@ -11,7 +11,7 @@ ms.date: 03/14/2022
 
 ## Microsoft Teams apps for Visual Studio
 
-Teams Toolkit extension for Visual Studio termed as Microsoft Teams app makes it easy to create new projects for Teams, automatically set up apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your Integrated Development Environment (IDE).
+Teams Toolkit extension for Visual Studio seen as as Microsoft Teams app in VD makes it easy to create new projects for Teams, automatically set up apps in Teams Developer Portal, run and debug in Teams, configure cloud hosting, and use [TeamsFx](https://github.com/OfficeDev/teamsfx) from your Integrated Development Environment (IDE).
 
 ## Create a new project
 
