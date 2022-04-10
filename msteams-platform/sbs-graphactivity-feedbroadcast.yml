@@ -56,8 +56,7 @@ items:
 - title: Register your Teams Auth SSO with Azure AD
   durationInMinutes: 1
   content: |
-    
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
 
@@ -206,12 +205,23 @@ items:
     1. Add the following permissions:</br>
          * **TeamsActivity.Send** 
          * **Directory.Read.All**
+         * **Directory.ReadWrite.All**
+         * **TeamsAppInstallation.ReadForUser**
+         * **TeamsAppInstallation.ReadWriteForUser**
+         * **TeamsActivity.Send**
+         * **TeamsAppInstallation.ReadForUser.All**
+
+          > [!NOTE]
+          > You need to add TeamsActivity.Send and Directory.Read.All as application level permissions too.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png" alt-text="Request permission" border="true":::
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png" alt-text="Request permission" border="true":::  
 
-    1. Select **Add permissions**.
+    1. Select **Add permissions**. Please make sure to grant the admin consent for the required permissions.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
+
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -256,11 +266,11 @@ items:
     
     1. Select **Add**.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secretsave.png" alt-text="Secret id" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secretsave.png" alt-text="Secret id" border="true":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecretcode.png" alt-text="Client secret code" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecretcode.png" alt-text="Client secret code" border="true":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
