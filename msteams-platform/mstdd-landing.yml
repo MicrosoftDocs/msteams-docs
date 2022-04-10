@@ -129,6 +129,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Send message using activity feed notification
+          url: ~/sbs-graphactivity-feedbroadcst.yml
         - text: Create Teams conversation bot
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
