@@ -89,10 +89,12 @@ items:
      ```bash
      ngrok http -host-header=localhost 3978
      ```
+     
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok-new.png" alt-text="New registration" border="true":::
 
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
-
+     
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
@@ -308,7 +310,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using Visual Studio
+    To build and run the service using Visual Studio
 
     # [Latest version of Visual Studio](#tab/vs2022)
 
@@ -334,9 +336,7 @@ items:
 
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
-  content: |
-   Add activity feed broadcast app to Teams
-        
+  content: |      
     1. In your cloned repository navigate to  ** graph-activity-feed-broadcast > csharp > ActivityFeedBroadcast > AppPackage.
 
     1. Create a .zip with the following files that are present in the **AppPackage** folder: 
@@ -378,7 +378,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output2.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true"::: 
 
 - content: |
     You've completed the tutorial to get started with a **activity feed broadcast** app!
