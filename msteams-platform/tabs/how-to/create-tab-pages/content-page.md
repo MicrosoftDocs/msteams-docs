@@ -50,7 +50,7 @@ The following code provides an example of how your page and the Teams client com
 
 ## Access additional content
 
-You can access additional content by using the SDK to interact with Teams, creating deep links, using task modules, and verifying if URL domains are included in the `validDomains` array.
+You can access additional content by using the SDK to interact with Teams, creating deep links, using task modules, and verifying if URL domains are included in the `validDomains` array. 
 
 ### Use the SDK to interact with Teams
 
