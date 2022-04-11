@@ -19,7 +19,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-propositionassetsiconsvalue-proposition-iconpng-value-proposition" border="false":::
    :::column-end:::
    :::column span="":::
      :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
