@@ -52,6 +52,9 @@ The following image depicts desktop app experience of `selectMedia` API for imag
 
 :::image type="content" source="~/assets/images/tabs/media-capability-desktop.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
+
+
+
 ## Update manifest
 
 Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the **camera** to capture the image, open the gallery to select an image to submit as an attachment, or use the **microphone** to record the conversation. The update for app manifest is as follows:
