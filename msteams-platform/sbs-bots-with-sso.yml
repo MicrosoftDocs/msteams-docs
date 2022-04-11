@@ -28,56 +28,59 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure that you install the following tools and set up your development environment:  
+    Ensure you install the following tools and set up your development environment:  
 
-    * Active Microsoft Teams account with profile picture
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
 
       > [!TIP]
       > Ensure the Microsoft Teams account is not a guest account.
 
-    * [ngrok](https://ngrok.com/) or equivalent tunneling solution
+    * [Latest version of ngrok](https://ngrok.com/download) or any equivalent tunneling solution
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    * Visual Studio 2019 or the latest version.
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md) or access to Teams account with the appropriate permissions to install an app
 
-- title: Set up bot in Azure Bot Service
+- title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
-    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+    The following steps help you to create and register your bot in Azure portal:
 
-    * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret that enables SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Teams channel to deploy the bot to Teams channel.
+    * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
-
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-    ```bash
-    ngrok http -host-header=rewrite 3978
-    ```
 
     **To create Azure Bot resource**
 
     1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure bot** and select the Enter key.
+    1. In the search box, enter **Azure bot** 
+    1. Select **Enter**.
     1. Select **Azure Bot**.
 
         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select the subscription.
-    1. From the **Resource group** dropdown list, select the resource group.
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
         
-        To create a new resource, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
+        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
-        > [!NOTE]
-        > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
+    1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
+        
+    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
+    
+       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+
+       > [!NOTE]
+       > You can't create more than one bot with the same **Microsoft App ID**.
+
+    1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
 
@@ -87,56 +90,85 @@ items:
 
         It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
+    1. Select **Go to resource**. 
 
-        Now your Azure bot has been created.
+       Your Azure bot is created.
 
         ![Azure bot resource created](~/assets/images/bots/Azurebotresource.png)
 
     **To create client secret**
 
-    1. In **Settings**, select **Configuration**.
+     Perform the following steps if you have created a new **Microsoft App ID**:
+
+    1. In the left panel, select **Configuration**. .
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-    1. Select **MultiTenant** under **Bot Type**.
-
-         ![Bot Type](~/assets/images/bots/bot-type.png)
     
     1. Next to **Microsoft App ID**, select **Manage**.
 
          ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
 
-    1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
+    1. In the **Client secrets** section, select **New client secret**.   
 
-    1. Enter **Description** and select **Add**.
+       The **Add a client secret** window appears.
+
+    1. Enter **Description** 
+    
+    1. Select **Add**.
  
         <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="500"/>
 
-    1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
+    1. In the **Value** column, select **Copy to clipboard** 
 
-         ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+        ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+
+       > [!TIP]
+       > Save the **Client secrets** value or app password for future reference.
        
-    **To add the Microsoft Teams channel**
+    **To add the Teams channel**
 
-    1. Go to **Home**.
+    1. Select **Home**.
 
         <img src="~/assets/images/bots/homepage.png" alt="Home page" width="600"/>
 
-    1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
+    1. Select your bot from **Recent resources**.
+
+    1. Select **Channels** in the left pane.
+
+    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+
           ![Open Teams from channels](~/assets/images/bots/channel-teams.png)    
+
           ![Select Teams](~/assets/images/bots/select-teams.png)    
-    1. Select **Save**.
-    1. Select the checkbox to accept the terms of service and select **Agree**.</br>
+    
+    1. Select the checkbox to accept the **Terms of Service** 
+    
+    1. Select **Agree**.
+
           ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
+
+    1. Select **Save**.
+    
+    **To create tunnel for local web server**
+
+         Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+       ```bash
+       ngrok http -host-header=localhost 3978
+       ```
+       > [!TIP]
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
     **To add messaging endpoint**
 
+    1. From ngrok, copy the HTTPS URL (https to io).
+
+        > [!NOTE]
+        > The HTTPS URL in your ngrok is your fully qualified domain name.
+        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
+
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
-    1. Go to ngrok.
-    1. Copy the HTTPS URL (https to io) as shown in the following image:
 
         ![ngrok HTTPS URL](~/assets/images/bots/ngrokURL.png)
 
@@ -146,7 +178,7 @@ items:
 
     1. Select **Apply**.
 
-        You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
+        You have successfully set up a bot in Azure Bot Service.
 
 - title: Configure SSO for your bot
   durationInMinutes: 5
