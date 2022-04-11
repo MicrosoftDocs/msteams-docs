@@ -580,6 +580,14 @@ The following are the navigation guidelines:
 
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 <br></br>
+<details><summary><b>Pass case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
+
+</details>
+
 <details><summary><b>Fail case</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="validation-navigation-left-nav":::
@@ -587,14 +595,6 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-icon-text.png" alt-text="validation-nav-icon-text":::
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
-
-</details>
-
-<details><summary><b>Pass case</b></summary>
-
-:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
-
-:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
 
 </details>
 
@@ -875,15 +875,17 @@ A notification provides value in Teams if:
 
 Apps that provide only notifications with content such as **You have a new notification, click to view**, and require user to navigate outside of Teams for everything else don't provide significant value within Teams.
 <br></br>
-<details><summary><b>Fail case</b></summary>
+<details><summary><b>Pass case</b></summary>
 
-:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="validation-bot-notifications-only-inadequete-info":::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
 
 </details>
 
-<details><summary><b>Pass case</b></summary>
+<details><summary><b>Fail case</b></summary>
 
-:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-adequete-info.png" alt-text="validation-bot-notifications-only-adequete-info":::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="validation-bot-notifications-only-inadequete-info":::
 
 </details>
 
@@ -978,15 +980,15 @@ To pass validation for a search-based message extension only app, the following 
 1. Posted card provides adequate details requiring no further user action.
 1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
 
-<details><summary><b>Fail case</b></summary>
-
-:::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
-
-</details>
-
 <details><summary><b>Pass case</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
+
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
 
 </details>
 
