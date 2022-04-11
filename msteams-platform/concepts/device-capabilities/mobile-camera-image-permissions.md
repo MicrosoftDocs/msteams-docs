@@ -52,8 +52,7 @@ The following image depicts desktop app experience of `selectMedia` API for imag
 
 :::image type="content" source="~/assets/images/tabs/media-capability-desktop.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
-
-
+---
 
 ## Update manifest
 
