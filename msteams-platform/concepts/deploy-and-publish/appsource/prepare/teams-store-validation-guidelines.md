@@ -639,47 +639,27 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Usability App Provides Workflows](~/assets/images/submission/validation-usability-app-provides-workflows.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   <details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Usability Website I-Frame](~/assets/images/submission/validation-usability-website-i-framed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="validation-usability-app-provides-workflows":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Usability Teams app identical](~/assets/images/submission/validation-usability-teams-app-identical-website.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   </details>
+
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="validation-usability-website-i-frame":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-teams-app-identical-website.png" alt-text="validation-usability-teams-app-identical-websites":::
+
+   </details>
 
 * Content must not truncate or overlap within the tab.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Usability Content Truncation](~/assets/images/submission/validation-usability-content-truncation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
+
+   </details>
 
 * Users must be able to undo their last action in the tab.
 
@@ -687,37 +667,25 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Usability Responsive tabs](~/assets/images/submission/validation-usability-responsive-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   <details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Usability unresponsive tabs](~/assets/images/submission/validation-usability-unresponsive-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="validation-usability-responsive-tab":::
+
+   </details>
+
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
+
+   </details>
 
 * Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Usability different font](~/assets/images/submission/validation-usability-app-uses-diff-font.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
+
+   </details>
 
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
 * Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
@@ -730,27 +698,19 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Usability Configurable tab personal Info](~/assets/images/submission/validation-usability-configurable-tab-personal-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
+
+   </details>
 
 * Configurable tabs must have focused functionality.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Usability Configurable Nested tabs](~/assets/images/submission/validation-usability-configurable-nested-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
+
+   </details>
 
 * Tab experiences must be fully responsive on mobile (Android and iOS).
 
@@ -774,49 +734,33 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Listing supported bot commands in your app configurations is highly recommended. These commands display in the compose box when a user tries to message your bot.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Bot Commands Listed](~/assets/images/submission/validation-bot-commands-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
-  
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Bot Commands not Listed](~/assets/images/submission/validation-bot-commands-not-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   <details><summary><b>Pass case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="validation-bot-commands-list":::
+
+   </details>
+
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="validation-bot-commands-not-list":::
+
+   </details>
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**.
+<br></br>
+   <details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Bot Help Command](~/assets/images/submission/validation-bot-help-command.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="validation-bots-help-command":::
+
+   </details>
 
 * Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
+<br></br>
+   <details><summary><b>Fail case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Bot Command Dead](~/assets/images/submission/validation-bot-commands-deadend.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-deadend":::
+
+   </details>
 
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
@@ -824,48 +768,33 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 ### Bot welcome messages
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run. For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Bot Welcome Message](~/assets/images/submission/validation-bot-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot No Welcome Message](~/assets/images/submission/validation-bot-no-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   </details>
+
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
+
+   </details>
 
 * Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#bot-message-spamming)). The message must also mention the person who added the bot.
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Welcome Message Not Triggered](~/assets/images/submission/validation-bot-welcome-message-not-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Welcome Message Triggered](~/assets/images/submission/validation-bot-welcome-message-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
+
+   </details>
+
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-welcome-message-trigger":::
+
+   </details>
 
 > [!TIP]
 > In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features to encourage users to try bot commands. For example, **Create a task**.
@@ -875,26 +804,18 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 Bots must not spam users by sending multiple messages in short duration.
 
 * **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread.
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot Spamming One Message](~/assets/images/submission/validation-bot-message-spamming-one-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-one-message.png" alt-text="validation-bot-message-spam-one-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot Spamming Multiple Message](~/assets/images/submission/validation-bot-message-spamming-multiple-messages.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   </details>
+
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spam-multiple-messages.png" alt-text="validation-bot-welcome-message-trigger":::
+
+   </details>
 
 * **Bot messages in personal apps**:
   * Don't send multiple messages in quick duration.
@@ -902,52 +823,36 @@ Bots must not spam users by sending multiple messages in short duration.
   * Avoid multi-turn conversations to complete a single repetitive workflow.
   * Use a form (or task module) to collect all inputs from a user at one time.
   * NLP based conversational chatbots can use multi turn conversation to make the discussion more engaging and complete a workflow.
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Bot Using task Module](~/assets/images/submission/validation-bot-messages-using-task-module.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Bot Using Multiple Conversation](~/assets/images/submission/validation-bot-messages-using-mutliple-conversation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+   </details>
+
+   <details><summary><b>Fail case</b></summary>
+
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="validation-bot-messages-using-mutliple-conversations":::
+
+   </details>
 
 * **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
 
 ### Bot notifications
 
 Bot notifications must include content relevant for the scope you define for the bot (team, chat, or personal).
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Bot Notification Relevant](~/assets/images/submission/validation-bot-notifications-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-relevant.png" alt-text="validation-bot-notification-relevant":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Bot Notification not relevant](~/assets/images/submission/validation-bot-notifications-not-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-not-relevant.png" alt-text="validation-bot-notification-not-relevant":::
+
+</details>
 
 ### Bots and Adaptive Cards
 
@@ -970,26 +875,18 @@ A notification provides value in Teams if:
 1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
 
 Apps that provide only notifications with content such as **You have a new notification, click to view**, and require user to navigate outside of Teams for everything else don't provide significant value within Teams.
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![Bot inadequete information](~/assets/images/submission/validation-bot-notification-only-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="validation-bot-notifications-only-inadequete-info":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![Bot Adequete information](~/assets/images/submission/validation-bot-notification-only-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Pass case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-adequete-info.png" alt-text="validation-bot-notifications-only-adequete-info":::
+
+</details>
 
 > [!TIP]
 > Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
@@ -1008,70 +905,46 @@ If your app includes a messaging extension, ensure it adheres to these guideline
 Action-based messaging extensions must do the following:
 
 * Allow users to trigger actions on a message without completing intermediate steps, such as sign in.
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![No Intermediate Step ](~/assets/images/submission/validation-messaging-extension-no-intermediate-step.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-no-intermediate-step.png" alt-text="validation-messaging-extension-no-intermediate-steps":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Intermediate Step Available](~/assets/images/submission/validation-messaging-extension-intermediate-step-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-intermediate-step-available.png" alt-text="validation-messaging-extension-intermediate-steps-available":::
+
+</details>
 
 * Pass the message context to the next work state. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![App Passes Message](~/assets/images/submission/validation-messaging-extension-app-passes-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-passes-message.png" alt-text="validation-messaging-extension-app-passes-messages":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![App doesn't Pass Message](~/assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png" alt-text="validation-messaging-extension-app-doesnot-pass-messages":::
+
+</details>
 
 * Incorporate the host app name instead of a generic verb for action commands triggered from a chat message, channel post, or call to action within apps. For example, use **Start a Skype Meeting** for **Start Meeting**, **Upload file to DocuSign** for **Upload file**, and so on. [*Suggested Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Action Command Host name](~/assets/images/submission/validation-messaging-extension-action-command-host-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="validation-messaging-extension-action-command-host-names":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![Action Command verb](~/assets/images/submission/validation-messaging-extension-action-command-verb.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
+
+</details>
 
 ### Preview links (link unfurling)
 
@@ -1080,28 +953,20 @@ Messaging extensions must preview recognized links in the Teams compose box. Don
 ### Search commands
 
 * Search based messaging extensions must provide text that helps the users to search effectively. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Help Text available](~/assets/images/submission/validation-search-commands-text-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-search-commands-text-available.png" alt-text="validation-search-command-text-available":::
+
+</details>
 
 * @mention executables must be clear, easy to understand, and readable.
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Search Command Unclear Excecutable](~/assets/images/submission/validation-search-command-unclear-executable.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
+
+</details>
 
 ### Search based messaging extension only apps
 
@@ -1113,26 +978,18 @@ To pass validation for a search-based message extension only app, the following 
 
 1. Posted card provides adequate details requiring no further user action.
 1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Search based messaging inadequate](~/assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-   ![Search based messaging adequete](~/assets/images/submission/validation-search-based-messaging-ext-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Pass case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
+
+</details>
 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
@@ -1143,26 +1000,18 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 A task module must include an icon and the short name of the app it's associated with. Task modules must not embed an entire app and only display the components required to complete a specific action. [*Mandatory Fix*]
 
 For more information, see [Teams task module design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Task module Displays Components](~/assets/images/submission/validation-task-module-displays-components.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-displays-components.png" alt-text="validation-task-module-displays-component":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Task Module Embeds app](~/assets/images/submission/validation-task-module-embeds-app.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-embeds-app.png" alt-text="validation-task-module-embed-app":::
+
+</details>
 
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
@@ -1201,16 +1050,12 @@ Use the following guidelines for meeting extensions:
 
 * Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
 * A tooltip must display the app name when hovering over the app icon during meetings.
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Tooltip Display app name](~/assets/images/submission/validation-in-meeting-exp-display-app-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
+
+</details>
 
 * Messaging extensions must function the same during meetings as they do outside meetings.
 
@@ -1219,26 +1064,18 @@ Use the following guidelines for meeting extensions:
 * Must be responsive.
 * Must maintain padding and component sizes.
 * Must have a back button if there's more than one layer of navigation.
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![In-meeting Back Button Available](~/assets/images/submission/validation-in-meeting-exp-back-button.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="validation-in-meeting-exp-back-buttons":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![In-meeting Back Button Absent](~/assets/images/submission/validation-in-meeting-exp-back-button-absent.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="validation-in-meeting-exp-back-buttons-absent":::
+
+</details>
 
 * Must not include more than one close button. It may confuse users since there's already a built-in header button to dismiss the tab.
 * Must not have horizontal scrolling.
@@ -1249,16 +1086,12 @@ Use the following guidelines for meeting extensions:
 * Must display content in a single column and not have multiple navigation levels.
 * Must not use task modules.
 * Must align with the center of the meeting stage.
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![In-meeting dialog not aligned](~/assets/images/submission/validation-in-meeting-dialog-not-aligned.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="validation-in-meeting-dialog-not-align":::
+
+</details>
 
 * Must be dismissed after a user selects a button or performs an action.
 
@@ -1304,16 +1137,12 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program:
 
 * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Publisher Verification](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="validation-365-compliance-publisher-verifications":::
+
+</details>
 
 * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
 
