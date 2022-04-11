@@ -16,7 +16,7 @@ items:
   content: |
     The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your app.
 
-    **Key features of graph activity feed broadcast**
+    **Key features of activity feed broadcast**
 
     * Broadcasts message for all the members.
     * Displays activity feed notification.
@@ -31,10 +31,10 @@ items:
   content: |
     To set up your development environment, install the following:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account.
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
+    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
+    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -58,12 +58,10 @@ items:
   content: |
     The following steps help you to create and register Teams authentication SSO in Azure portal:
 
-    * Create and register a new application under App registrations.
-    * Use ngrok to create a tunnel to your web server's endpoints.
-    * Update the Azure AD app registration 
-    * Create client secret to enable SSO 
-  
-    ** To create and register new app**
+    * Create and register a new application under App registrations
+    * Use ngrok to create a tunnel to your web server's endpoints
+      
+    ** To create and register new application**
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Azure Active Directory**.
@@ -74,10 +72,10 @@ items:
 
     1. On the **Register an application** page, set the value as follows:
 
-       * Set **Name** to your app name.
-       * Set **Supported account types** to any account type.
-       * Leave the **Redirect URI** empty.
-       * Select **Register**.
+       * Set **Name** to your app name
+       * Set **Supported account types** to any account type
+       * Leave the **Redirect URI** empty
+       * Select **Register**
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
@@ -97,11 +95,12 @@ items:
 
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
-     
-    **To update the Azure AD app registration**
 
-    1. Under **Manage**, select **Expose an API**.
-
+- title: Update the Azure AD app registration
+  durationInMinutes: 1
+  content: |  
+   
+    1. In the left navigation panel, **Manage**, select **Expose an API**.
     1. Select **Set**.
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="Expose and api" border="true":::
@@ -126,9 +125,7 @@ items:
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
 
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
-  
     1. Set **Who can consent?** to `Admins and users`.
-  
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
@@ -140,7 +137,6 @@ items:
          * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
     1. Ensure that **State** is set to **Enabled**.
-  
     1. Select **Add scope** to save.
 
          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascopeuser.png" alt-text="Add scope" border="true":::
@@ -314,8 +310,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service using Visual Studio
-
+    
        1. Open the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
