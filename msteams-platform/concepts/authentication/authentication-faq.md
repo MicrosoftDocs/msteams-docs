@@ -60,12 +60,6 @@ Common questions asked regarding Authentication in Teams.
 </details>
 <br>
 <details>
-<summary>How can I use AAD SSO with SAML?</summary>
-
-**Answer**: For implementing SAML with AAD SSO, please see [Single Sign-On SAML protocol](/azure/active-directory/develop/single-sign-on-saml-protocol).
-</details>
-<br>
-<details>
 <summary>How can I use Teams SSO with SAML?</summary>
 
 **Answer**: SAML with Teams SSO isn't supported. Teams SSO relies on the OAuth 2.0 protocol, which serves a similar role to SAML. It's widely used in cloud-based applications where SAML was designed for federating identity between enterprises.
@@ -90,9 +84,15 @@ Other advantages are for enterprise customers, such as:
 
 <br>
 <details>
+<summary>How can I use AAD SSO with SAML?</summary>
+
+**Answer**: For implementing SAML with AAD SSO, please see [Single Sign-On SAML protocol](/azure/active-directory/develop/single-sign-on-saml-protocol).
+</details>
+<br>
+<details>
 <summary>I want to use a CIAM - which one should I use?</summary>
 
-**Answer**:
+**Answer**: You can use Azure AD B2C.
 </details>
 <br>
 <details>
@@ -113,7 +113,8 @@ Other advantages are for enterprise customers, such as:
 
 1. Use the pop-up authentication in the Teams JavaScript SDK for web page-based capabilities, such as tabs, task modules, and configuration pages. Use the Bot Framework’s Auth prompt dialog for bots.
 
-2. / links to be added /
+1. / links to be added /
+
 </details>
 <br>
 <details>
