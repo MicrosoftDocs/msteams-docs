@@ -177,18 +177,17 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
+        :::image type="content" source="~/assets/images/bots/ngrokURL.png" alt-text="ngrok HTTPS URL" border="true":::
+
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
-         :::image type="content" source="~/assets/images/bots/ngrokURL.png" alt-text="ngrok HTTPS URL" border="true":::
-        ![ngrok HTTPS URL](~/assets/images/bots/ngrokURL.png)
-
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        <img src="~/assets/images/bots/messagingURL.png" alt="Messaging endpoint" width="600"/>
+        :::image type="content" source="~/assets/images/bots/messagingURL.png" alt-text="Messaging endpoint" border="true":::
 
     1. Select **Apply**.
 
@@ -211,7 +210,7 @@ items:
 
     1. Select **Manage**.
 
-        ![Manage app ID](~/assets/images/bots/select-manage.png)
+         :::image type="content" source="~/assets/images/bots/select-manage.png" alt-text="Manage app ID" border="true":::
 
     1. From the left pane, select **Authentication**.
 
@@ -223,11 +222,11 @@ items:
     
     1. Select **Configure**.
 
-        <img src="~/assets/images/bots/redirectURI.png" alt="Configure Redirect URI" width="600"/>
-
+        :::image type="content" source="~/assets/images/bots/redirectURI.png" alt-text="Configure Redirect URI" border="true":::
+ 
         The Redirect URI is added to the Azure bot resource.
 
-        ![Redirect URI added to bot resource](~/assets/images/bots/redirectURIadded.png)
+        :::image type="content" source="~/assets/images/bots/redirectURIadded.png" alt-text="Redirect URI added to bot resource" border="true":::
 
     **To expose API endpoint**
 
@@ -237,7 +236,7 @@ items:
 
     1. Use the Application ID URI shown and append **api://botid-** at the beginning of the URI.
 
-        <img src="~/assets/images/bots/exposeAPI.png" alt="Expose an API" width="500"/>
+        :::image type="content" source="~/assets/images/bots/exposeAPI.png" alt-text="Expose an API" border="true":::
 
     1. Select **Save**. Save the **Application ID URI** for future reference.
 
@@ -261,7 +260,7 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
 
-        <img src="~/assets/images/bots/addscope.png" alt="Add a scope to app" width="500"/>
+        :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Add a scope to app" border="true":::
 
     1. Select **Add scope**.
 
@@ -279,7 +278,7 @@ items:
 
        Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
          
-        ![Add client application to app](~/assets/images/bots/addclientapplication1.png)        
+         :::image type="content" source="~/assets/images/bots/addclientapplication1.png" alt-text="Add client application to app" border="true":::    
     
     1. Select **Authorized scopes**.
 
@@ -301,7 +300,7 @@ items:
 
     1. Select **Add permissions**.
 
-        ![API user permissions](~/assets/images/bots/APIpermissions.png)
+        :::image type="content" source="~/assets/images/bots/configure-permission.png" alt-text="API user permissions" border="true":::
 
     1. From the left panel, select **Authentication** to set a redirect URI.
 
@@ -360,7 +359,7 @@ items:
         | Tenant ID | Enter **common**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
-        <img src="~/assets/images/bots/botserviceconnection.png" alt="Bot Service connection" width="300"/>
+        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Bot Service connection" border="true":::
 
     1. Select **Save**.
 
