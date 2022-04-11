@@ -34,6 +34,11 @@ To integrate location capabilities, you must do the following:
 
 The following image depicts mobile app experience of location capabilities:
 
+1. Open your Teams app.
+1. Select **Media App**.
+1. Select `getLocation` from the list.
+1. Select **Allow** to access your location details.
+
   <!-- ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png) -->
   
   :::image type="content" source="~/assets/images/tabs/location-picker-mobile.png" alt-text="Illustration shows the location picker." border="true":::
@@ -83,7 +88,7 @@ You must use the following set of APIs to enable your device's location capabili
 |`showLocation`| Shows location on map. |* True: Users can choose any location of their choice.</br> * False: users cannot change their current location.| False: The current location is fetched without displaying the map. [If `allowChooseLocation` is set to *true*, the `showMap` is ignored]. | 
 
 > [!NOTE]
-> * Desktop doesn't support capturing current location.
+> Desktop doesn't support capturing current location.
 
 
 
