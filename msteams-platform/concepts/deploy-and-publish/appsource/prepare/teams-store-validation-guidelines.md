@@ -1086,7 +1086,7 @@ Use the following guidelines for meeting extensions:
 * Must display content in a single column and not have multiple navigation levels.
 * Must not use task modules.
 * Must align with the center of the meeting stage.
-
+   <br></br>
    <details><summary><b>Pass case</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="validation-in-meeting-dialog-not-align":::
@@ -1136,8 +1136,8 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program:
 
-* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).  
-
+* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).
+   <br></br>
    <details><summary><b>Pass case</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="validation-365-compliance-publisher-verifications":::
