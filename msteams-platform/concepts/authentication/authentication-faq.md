@@ -22,7 +22,7 @@ Common questions asked regarding Authentication in Teams.
 <details>
 <summary>How do I fetch more permissions for a user and when can I do it?</summary>
 
-**Answer**: You can use the On-behalf-of (OBO) flow in your application to request more permissions for your user from Azure AD. The permissions may require the user to give consent for using their Teams identity. To resolve consent requirement in two ways:
+**Answer**: You can use the On-behalf-of (OBO) flow in your application to request more permissions for your user from Azure AD. The permissions may require the user to give consent for using their Teams identity. You can resolve consent requirement in two ways:
 
 - Prompt the user to give consent.
 - The admin can consent on user's behalf. In this case, you may need to ensure the first user is an administrator or provide some kind of installation or setup process to gain the consent. 
