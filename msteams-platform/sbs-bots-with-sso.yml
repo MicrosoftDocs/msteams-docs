@@ -402,10 +402,10 @@ items:
 
         </details>
 
+
 - title: Configure and run the Teams app
   durationInMinutes: 2
   content: |
-    
     
     1. In Visual Studio, open **appPackage** folder.
 
