@@ -641,7 +641,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
    <details><summary><b>Pass case</b></summary>
 
-   :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="validation-usability-app-provides-workflows":::
+   :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="validation-usability-app-provides-work-flows":::
 
    </details>
 
@@ -758,7 +758,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 <br></br>
    <details><summary><b>Fail case</b></summary>
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-deadend":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
    </details>
 
@@ -792,7 +792,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    <details><summary><b>Fail case</b></summary>
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-welcome-message-trigger":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
    </details>
 
@@ -813,7 +813,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
    <details><summary><b>Fail case</b></summary>
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spam-multiple-messages.png" alt-text="validation-bot-welcome-message-trigger":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spam-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
    </details>
 
