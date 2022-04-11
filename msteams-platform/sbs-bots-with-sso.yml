@@ -82,6 +82,8 @@ items:
 
     1. If you have created a new resource group, select the required location from **New resource group location** dropdown list.
         
+        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource" border="true":::
+
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
@@ -92,12 +94,16 @@ items:
     1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
+
+        :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Review Create" border="true":::
     
     1. If the validation passes, select **Create**.
-
+  
         It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**. 
+
+        :::image type="content" source="~/assets/images/bots/gotoresource.png" alt-text="Resource" border="true":::
 
        Your Azure bot is created.
 
@@ -114,9 +120,11 @@ items:
     
     1. Next to **Microsoft App ID**, select **Manage**.
 
-         ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
+          :::image type="content" source="~/assets/images/bots/MicrosoftAppID.png" alt-text="Microsoft App ID" border="true":::
 
     1. In the **Client secrets** section, select **New client secret**.   
+
+          :::image type="content" source="~/assets/images/bots/newclientsecret.png" alt-text="New Client Secret" border="true":::
 
        The **Add a client secret** window appears.
 
@@ -124,11 +132,11 @@ items:
     
     1. Select **Add**.
  
-        <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="500"/>
+        :::image type="content" source="~/assets/images/bots/addclientsecret.png" alt-text="Add client secret to app" border="true":::
 
     1. In the **Value** column, select **Copy to clipboard** 
 
-        ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+        :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Value of client secret" border="true":::
 
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -137,25 +145,23 @@ items:
 
     1. Select **Home**.
 
-        <img src="~/assets/images/bots/homepage.png" alt="Home page" width="600"/>
+        :::image type="content" source="~/assets/images/bots/homepage.png" alt-text="Home page" border="true":::
 
     1. Select your bot from **Recent resources**.
 
     1. Select **Channels** in the left pane.
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-
-          ![Open Teams from channels](~/assets/images/bots/channel-teams.png)    
-
-          ![Select Teams](~/assets/images/bots/select-teams.png)    
+    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
     
     1. Select the checkbox to accept the **Terms of Service** 
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
+        :::image type="content" source="~/assets/images/bots/Terms-of-service.png" alt-text="Terms" border="true":::
 
-    1. Select **Save**.
+    1. Select **Apply**.
+
+        :::image type="content" source="~/assets/images/bots/apply.png" alt-text="Apply" border="true":::
     
     **To create tunnel for local web server**
 
@@ -177,6 +183,7 @@ items:
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
+         :::image type="content" source="~/assets/images/bots/ngrokURL.png" alt-text="ngrok HTTPS URL" border="true":::
         ![ngrok HTTPS URL](~/assets/images/bots/ngrokURL.png)
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
