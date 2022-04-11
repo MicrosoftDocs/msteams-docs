@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 # Overview
 
-You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience.
+You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams app, and build a richer experience.
 
 ## Advantages 
 
@@ -25,8 +25,7 @@ The following list provides the advantages of media capabilities:
 
 * Claim a car insurance to the insurance company. The custom-built insurance claim settlement app on Teams lets you scan the physical document from the smartphone, confirm that all documents have been scanned through an image viewer, and upload the soft copy of the same.
 
-* Track audit visits in retail outlets. The audit officer visits stores, refers the audit checklist on the cell phone, and checks if everything conforms to the protocol/guidelines. The officer attaches images of store layout as proof of visit and in case something doesn’t align to the guidelines, and the officer highlights respective section in images itself.
-
+* Track audit visits in retail outlets. The audit officer visits stores, refers the audit checklist on the cell phone, and checks if everything conforms to the protocol/guidelines. The officer attaches images of store layout as proof of visit and in case something doesn’t align to the guidelines, the officer highlights respective section in images itself.
 
 
 > [!NOTE]
@@ -75,7 +74,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
 * Use native **gallery support** to allow users to **select device images** as attachments.
 * Use native **image viewer control** to **preview multiple images** at one time.
 * Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
-* Support **advanced image capabilities** allow users to preview and edit images:
+* Support **advanced image capabilities** allow users to preview and edit images.
 * Scan documents, whiteboard, and business cards through the camera.
   
 > [!IMPORTANT]
@@ -91,7 +90,6 @@ You must use the following set of APIs to enable your device's media capabilitie
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) to `4` in `selectMedia` API for accessing microphone  capability. This API also allows users to record audio from the device microphone and return recorded clips to the web-app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
-
 
 
 ## Error handling
