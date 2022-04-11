@@ -43,7 +43,7 @@ Common questions asked regarding Authentication in Teams.
   
   However, it's possible and many large apps use this method.
 
-- Implement an identity mapping scheme. This is a design pattern that has been used by many partners. The idea is to get users to log into both the app’s IdP and Azure AD, and then the app stores this mapping somewhere (either in their own database or write it back to the user’s Azure AD profile). Then the app’s authentication code needs to accommodate Azure AD SSO and look up the user’s identity, content, and permission within the app.
+- Implement an identity mapping scheme. This is a design already used by many partners. Users to log into both your app’s IdP and Azure AD. Your app stores this mapping (either in its database or in user’s Azure AD profile). Your app’s authentication code must accommodate Azure AD SSO, and look up the user’s identity, content, and permission within the app.
 
 </details>
 <br>
