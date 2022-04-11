@@ -98,8 +98,7 @@ items:
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
-  content: |  
-   
+  content: |
     1. In the left navigation panel, **Manage**, select **Expose an API**.
     1. Select **Set**.
 
@@ -310,7 +309,6 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    
        1. Open the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
