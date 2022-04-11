@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to broadcast a message to all members of organization using activity feed notification.
   audience: Developer
   level: Beginner
-  ms.date: 04/08/2022
+  ms.date: 04/08/2022 
   ms.topic: interactive-tutorial
   nextTutorialHref: concepts/design/activity-feed-notifications.md
   nextTutorialTitle: Read more on activity feed notifications.
