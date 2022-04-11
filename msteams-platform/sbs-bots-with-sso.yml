@@ -413,7 +413,6 @@ items:
 - title: Configure and run the Teams app
   durationInMinutes: 2
   content: |
-    
     1. In Visual Studio, open **appPackage** folder.
 
     1. Open the **manifest.json** file.
