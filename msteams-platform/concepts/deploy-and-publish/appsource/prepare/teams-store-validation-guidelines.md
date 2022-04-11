@@ -191,7 +191,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 For apps that use the Microsoft Azure Bot Service (such as bots and messaging extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Bots must always ask permission to upload a file and display a confirmation message.
-
+<br></br>
 <details><summary><b>Pass case
 </b></summary>
 
