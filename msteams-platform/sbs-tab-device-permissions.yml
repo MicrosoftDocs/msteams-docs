@@ -26,8 +26,8 @@ items:
     Ensure you install the following tools and set up your development environment:
 
  
-    * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) with a valid account.
-    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app.
+    * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) with a valid account
+    * [Microsoft 365 developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program) or access to Teams account with the appropriate permissions to install an app
     * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
     * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
@@ -225,8 +225,8 @@ items:
       
       To test the app on mobile, the following pop-up windows are displayed to select the course of action:
 
-      * Select **ALLOW** if you want to grant permission.
-      * Select **DENY** if you do not want to grant permission.
+      * Select **ALLOW** if you want to grant permission
+      * Select **DENY** if you do not want to grant permission
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app.png" alt-text="mobile output" border="true":::                   
     --- 
