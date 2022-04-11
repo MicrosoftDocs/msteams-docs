@@ -1,7 +1,7 @@
 ---
 title: Unified meetings apps
 author: surbhigupta
-description: Learn about Meeting lifecycle, building user's meeting experience throughout meeting lifecycle in desktop and mobile environment, participant roles and user types. In addition, learn about integrating bots and messaging extension in meeting lifecycle.
+description: Learn about Teams meeting lifecycle and user's meeting experience in desktop and mobile environment, participant and user roles and types, integrate bots and messaging extension in meeting lifecycle.
 ms.topic: conceptual
 ms.localizationpriority: none
 ---
@@ -80,6 +80,9 @@ To use tabs during a meeting:
 1. In the in-meeting dialog box, enter your response as feedback.
 
 # [Desktop](#tab/desktop)
+
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Desktop view":::
+
 
 # [Mobile](#tab/mobile)
 
