@@ -355,23 +355,23 @@ You can create and automatically configure cloud resources for hosting your app 
 
 1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="false":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-build-provision.png" alt-text="Select the provision operation for the project" border="true":::
 
 1. Select the required subscription.
 
- :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select-subscription.png" alt-text="Select the subscription operation for the project" border="true":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/select-subscription.png" alt-text="Select the subscription operation for the project" border="true":::
 
- :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/provision-warning.png" alt-text="Select the provision" border="true":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/provision-warning.png" alt-text="Select the provision" border="true":::
 
 It takes a few minutes for your resource group to be provisioned in the cloud. You can view it in the Azure portal.
 
-:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/resource-group.png" alt-text="Resource group is generated" border="true
+:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/resource-group.png" alt-text="Resource group is generated" border="true":::
 
 ::: zone-end
 
 ::: zone pivot="teamfx-cli"
 
-# [TeamsFx Command Line Interface](#tab/TeamsFxCommandlineinterface)
+<!-- # [TeamsFx Command Line Interface](#tab/TeamsFxCommandlineinterface) -->
 
 Provision is performed with single command in TeamsFx CLI as follows:
 
