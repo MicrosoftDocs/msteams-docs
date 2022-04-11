@@ -71,6 +71,7 @@ Common questions asked regarding Authentication in Teams.
 **Answer**: In the case of Teams apps, Teams SSO is better because Teams uses it to validate identity. The user identity is the same in Teams, Graph (and all the M365 content) and the app. This A single identity enables single sign-On with Teams.
 
 Other advantages are for enterprise customers, such as:
+
 - Integration with Azure AD (on-premises).
 - Self-service password reset.
 - Advanced auditing and compliance features.
@@ -78,6 +79,7 @@ Other advantages are for enterprise customers, such as:
 - Multi-factor authentication.
 - Conditional access (for example, users can only log in from a certain location or during certain times of day).
 - Ability to work w/guest users from other enterprises (this is called Azure AD B2B).
+  
 </details>
 
 ## Other authentication methods
