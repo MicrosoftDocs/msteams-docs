@@ -42,7 +42,7 @@ Teams app that require device permissions in the browser must show instructions 
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-tab-device-permissions.yml) to grant tab device permission in Microsoft Teams.
+Follow the [step-by-step guide](../../sbs-tab-device-permissions.yml) to grant tab device permission at Teams.
 
 ## See also
 

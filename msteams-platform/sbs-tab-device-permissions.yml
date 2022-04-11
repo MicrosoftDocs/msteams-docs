@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
+    Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission at per app level in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Teams.
 
     This step-by-step guide helps you to grant tab device permission at Teams. You'll see the following output:
 
@@ -124,13 +124,15 @@ items:
 
      1. Select **Apps**.
 
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/apps-tab-device.png" alt-text="select apps" border="true":::         
+
      1. In the lower left corner, select **Manage your apps**.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-tab-device.png" alt-text="select manage app" border="true":::         
 
      1. Select **Upload a custom app**.
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device.png" alt-text="upload custom app" border="true":::           
 
      1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
@@ -171,7 +173,7 @@ items:
 
     1. Select **Upload a custom app**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-tab-device.png" alt-text="upload custom app" border="true":::           
+        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device.png" alt-text="upload custom app" border="true":::           
    
     1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
 
