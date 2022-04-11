@@ -62,6 +62,7 @@ The following image depicts web app experience of location capabilities:
 
   :::image type="content" source="~/assets/images/tabs/location-capability.png" alt-text="Illustration shows mobile location picker" border="true":::
 
+---
 
 ## Update manifest
 
