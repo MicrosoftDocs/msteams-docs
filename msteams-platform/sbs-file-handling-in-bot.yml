@@ -173,7 +173,7 @@ items:
       
     **To create tunnel for local web server**
 
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
@@ -465,7 +465,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-file-bot.png" alt-text="add" border="true"::: 
 
-       1. In the compose message area, type `hi` and wait for few seconds for it to respond with a card.
+       1. In the compose message area, type **hi** and wait for few seconds for it to respond with a card.
 
           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="card send by bot" border="true":::
  
