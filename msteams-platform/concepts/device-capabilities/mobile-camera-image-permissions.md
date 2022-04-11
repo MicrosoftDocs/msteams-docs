@@ -23,9 +23,9 @@ It is important to familiarize yourself with the [API response errors](#error-ha
 
 > [!NOTE]
 >
-> * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.
-> * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.
+> * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.</br>
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+
 
 ## Update manifest
 
@@ -50,11 +50,11 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
 * Use native **image viewer control** to **preview multiple images** at one time.
 * Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
 * Support **advanced image capabilities** allow users to preview and edit images:
-  * Scan documents, whiteboard, and business cards  through the camera.
+* Scan documents, whiteboard, and business cards through the camera.
   
 > [!IMPORTANT]
 >
-> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).
+> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).</br>
 > * `selectMedia` API has been extended to support microphone and audio properties.
 
 You must use the following set of APIs to enable your device's media capabilities:
@@ -123,7 +123,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-**Calling `getMedia` API** to retrieve large media in chunks:
+**Call `getMedia` API** to retrieve large media in chunks:
 
 ```javascript
 let media: microsoftTeams.media.Media = attachments[0]
@@ -143,7 +143,7 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 });
 ```
 
-**Calling `viewImages` API by ID returned by `selectMedia` API**:
+**Call `viewImages` API by ID returned by `selectMedia` API**:
 
 ```javascript
 // View images by id:
@@ -178,7 +178,7 @@ if (uriList.length > 0) {
 }
 ```
 
-**Calling `viewImages` API by URL**:
+**Call `viewImages` API by URL**:
 
 ```javascript
 // View Images by URL:
@@ -213,7 +213,7 @@ if (uriList.length > 0) {
 }
 ```
 
-**Calling `selectMedia` and `getMedia` APIs for recording audio through microphone**:
+**Call `selectMedia` and `getMedia` APIs for recording audio through microphone**:
 
 ```javascript
 let mediaInput: microsoftTeams.media.MediaInputs = {
