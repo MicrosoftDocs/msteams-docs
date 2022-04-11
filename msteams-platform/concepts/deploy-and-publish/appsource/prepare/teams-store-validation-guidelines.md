@@ -154,8 +154,8 @@ If your app authenticates users with an external service, follow these guideline
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
 
 Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.
-
-<details><summary style="color:red;"><b>Fail case
+<br></br>
+<details><summary><b>Fail case
 </b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
@@ -169,26 +169,15 @@ Don't facilitate payments through an app for goods or services prohibited by [Ge
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
 * Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins.
+<br></br>
+<details><summary><b>Fail case
+</b></summary>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
+
+</details>
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
@@ -204,15 +193,12 @@ For apps that use the Microsoft Azure Bot Service (such as bots and messaging ex
 
 Bots must always ask permission to upload a file and display a confirmation message.
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Confirmation Message](~/assets/images/submission/validation-bot-confirmation-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+<details><summary><b>Pass case
+</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-confirmation-message.png" alt-text="validation-bot-confirmation":::
+
+</details>
 
 ### External domains
 
@@ -442,8 +428,13 @@ Use the following guidelines to write the Terms of use:
 Your app's support URLs must not require authentication. For example, users must not login to contact you.
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Fail case
+</b></summary>
 
-  ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
+:::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
+
+</details>
 
 ### Localization
 
@@ -503,132 +494,84 @@ If your app includes a tab, ensure it adheres to these guidelines.
 ### Setup
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![Create new account](~/assets/images/submission/validation-tabs-setup-create-new-account.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-create-new-account.png" alt-text="validation-tabs-setup-create-new-acc":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Missing Forward Guidance](~/assets/images/submission/validation-tabs-missing-forward-guidance.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![New User Signup](~/assets/images/submission/validation-tabs-setup-new-user.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-missing-forward-guidance.png" alt-text="validation-tabs-missing-fwd-guidance":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="validation-tabs-set-up-new-user":::
+
+</details>
 
 * For the best first run experience, authenticate your users during the tab setup and not after. Authentication can happen outside the tab configuration window. [*Suggested Fix*]
 
 * The user must not leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Acquire Profile Name](~/assets/images/submission/validation-tabs-setup-profile-name.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
+
+</details>
 
 * Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Configuration Experience](~/assets/images/submission/validation-tabs-setup-configuration-experience.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Configuration Screen](~/assets/images/submission/validation-tabs-setup-configuration-screen.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-screen.png" alt-text="validation-tabs-set-up-configuration-screen":::
+
+</details>
 
 * Tab configuration screen must not ask users to embed a URL. Asking users to configure a URL during tab setup is a broken UX, user leaves tab configuration screen, acquires URL, returns to the configuration screen and inputs the URL. A preexisting Teams feature already allows users to pin a website link in the channel. If your app asks user to embed a website URL during tab configuration and the app is limited to display the entire website content in the channel tab, your app doesn't offer significant value to the user. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Configured URL](~/assets/images/submission/validation-tabs-setup-configured-url.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url.png" alt-text="validation-tabs-set-up-configured-url":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![Configured URL limited](~/assets/images/submission/validation-tabs-setup-configured-url-two.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url-two.png" alt-text="validation-tabs-set-up-configured-url-two":::
+
+</details>
 
 ### Views
 
 * The sign in screen area must not use large logos. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![View large logo](~\assets\images\submission\validation-views-applogin.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
+
+</details>
 
 * Content can be simplified by breaking down across multiple tabs. [*Suggested Fix*]
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Multiple Tabs](~/assets/images/submission/validation-views-multiple-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
+
+</details>
 
 * Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![Duplicate Header Logo](~/assets/images/submission/validation-views-duplicate-header-logo.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
+
+</details>
 
 ### Navigation
 
@@ -637,68 +580,32 @@ The following are the navigation guidelines:
 * Tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="validation-navigation-left-nav":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![Icon and Text](~/assets/images/submission/validation-navigation-icon-text.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-icon-text.png" alt-text="validation-nav-icon-text":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Collapsible Left Rail](~/assets/images/submission/validation-navigation-collapsable-left-rail.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Static Tab](~/assets/images/submission/validation-navigation-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Horizontal Rail](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+<details><summary><b>Pass case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
+
+</details>
 
 * Tabs with toolbar in left rail must leave 20px spacing from Teams left navigation. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Spacing between Toolbar](~/assets/images/submission/validation-navigation-spacing-between-toolbar.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
+
+</details>
 
 * The secondary and third pages in a tab must be opened in a level two (L2) and level three (L3) view in the main tab area, which is navigated via breadcrumbs or left navigation. You can also include the following components to aid tab navigation: [*Mandatory Fix*]
   * Back buttons
@@ -707,38 +614,26 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 * Tab must not have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
 
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Fail case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![View Button not Linked](~/assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
+
+</details>
 
 * Tabs must not allow users to navigate outside Teams for the core app experience. Tabs can redirect outside Teams for non-core workflows. For example, to raise a support ticket. [*Mandatory Fix*]
+<br></br>
+<details><summary><b>Pass case</b></summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![Core Workflow within Configuration Tab](~/assets/images/submission/validation-navigation-core-workflow-within-configuration.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-within-configuration.png" alt-text="validation-nav-core-workflow-within-configuration":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![App Core Workflow Redirects Outside](~/assets/images/submission/validation-navigation-core-workflow-redirects-outside.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+</details>
+
+<details><summary><b>Fail case</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
+
+</details>
 
 ### Usability
 
