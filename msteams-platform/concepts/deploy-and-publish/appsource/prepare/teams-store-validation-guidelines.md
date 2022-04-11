@@ -155,7 +155,7 @@ If your app authenticates users with an external service, follow these guideline
 
 Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.
 <br></br>
-<details><summary><b>Fail case</b></summary>
+<details><summary><b>Fail case ❌</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
 
@@ -169,7 +169,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 
 * Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins.
    <br></br>
-   <details><summary><b>Fail case
+   <details><summary><b>Fail case ❌
    </b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
@@ -428,7 +428,7 @@ Your app's support URLs must not require authentication. For example, users must
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
 <br></br>
-<details><summary><b>Fail case
+<details><summary><b>Fail case ❌
 </b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
@@ -500,7 +500,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
     </details>
 
-    <details><summary><b>Fail case</b></summary>
+    <details><summary><b>Fail case ❌</b></summary>
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-missing-forward-guidance.png" alt-text="validation-tabs-missing-fwd-guidance":::
 
@@ -512,7 +512,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * The user must not leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
@@ -526,7 +526,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-screen.png" alt-text="validation-tabs-set-up-configuration-screen":::
 
@@ -540,7 +540,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url-two.png" alt-text="validation-tabs-set-up-configured-url-two":::
 
@@ -558,7 +558,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Content can be simplified by breaking down across multiple tabs. [*Suggested Fix*]
 <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
@@ -566,7 +566,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
@@ -588,7 +588,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 </details>
 
-<details><summary><b>Fail case</b></summary>
+<details><summary><b>Fail case ❌</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="validation-navigation-left-nav":::
 
@@ -614,7 +614,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
@@ -628,7 +628,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
 
@@ -644,7 +644,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="validation-usability-website-i-frame":::
 
@@ -654,7 +654,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Content must not truncate or overlap within the tab.
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
 
@@ -672,7 +672,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
@@ -680,7 +680,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
@@ -697,7 +697,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
 
@@ -705,7 +705,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Configurable tabs must have focused functionality.
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
 
@@ -739,7 +739,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="validation-bot-commands-not-list":::
 
@@ -755,7 +755,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
@@ -774,7 +774,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
 
@@ -789,7 +789,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
@@ -810,7 +810,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
@@ -829,7 +829,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="validation-bot-messages-using-mutliple-conversations":::
 
@@ -847,7 +847,7 @@ Bot notifications must include content relevant for the scope you define for the
 
 </details>
 
-<details><summary><b>Fail case</b></summary>
+<details><summary><b>Fail case ❌</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-not-relevant.png" alt-text="validation-bot-notification-not-relevant":::
 
@@ -883,7 +883,7 @@ Apps that provide only notifications with content such as **You have a new notif
 
 </details>
 
-<details><summary><b>Fail case</b></summary>
+<details><summary><b>Fail case ❌</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="validation-bot-notifications-only-inadequete-info":::
 
@@ -913,7 +913,7 @@ Action-based messaging extensions must do the following:
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-intermediate-step-available.png" alt-text="validation-messaging-extension-intermediate-steps-available":::
 
@@ -927,7 +927,7 @@ Action-based messaging extensions must do the following:
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png" alt-text="validation-messaging-extension-app-doesnot-pass-messages":::
 
@@ -941,7 +941,7 @@ Action-based messaging extensions must do the following:
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
 
@@ -963,7 +963,7 @@ Messaging extensions must preview recognized links in the Teams compose box. Don
 
 * @mention executables must be clear, easy to understand, and readable.
    <br></br>
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
@@ -980,13 +980,13 @@ To pass validation for a search-based message extension only app, the following 
 1. Posted card provides adequate details requiring no further user action.
 1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
 
-<details><summary><b>Pass case ✔️ ✔️</b></summary>
+<details><summary><b>Pass case ✔️</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
 
 </details>
 
-<details><summary><b>Fail case</b></summary>
+<details><summary><b>Fail case ❌</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
 
@@ -1008,7 +1008,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 </details>
 
-<details><summary><b>Fail case</b></summary>
+<details><summary><b>Fail case ❌</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-task-module-embeds-app.png" alt-text="validation-task-module-embed-app":::
 
@@ -1072,7 +1072,7 @@ Use the following guidelines for meeting extensions:
 
    </details>
 
-   <details><summary><b>Fail case</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="validation-in-meeting-exp-back-buttons-absent":::
 
