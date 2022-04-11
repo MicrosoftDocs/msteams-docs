@@ -813,7 +813,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
    <details><summary><b>Fail case</b></summary>
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spam-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
    </details>
 
