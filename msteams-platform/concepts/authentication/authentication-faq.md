@@ -34,7 +34,15 @@ Common questions asked regarding Authentication in Teams.
 
 **Answer**: There are two options for resolving this issue:
 
-- Don’t use Azure AD SSO. Teams can provide pop-ups to allow other identity services to present their login screen. This has some distinct disadvantages: users have to juggle multiple user accounts and do extra logins; setting permission within the app requires an admin or Team owner to determine the app’s login by each AAD user; when users leave the organization who will remember to clear out their non-AAD accounts; etc. But it is possible and many large apps like Trello or Jira use this method and probably would never invest in AAD integration, so we’d lose them entirely.
+- You don't need to use Azure AD. Teams can provide pop-ups to allow other identity services to present their login screen.
+  This may have disadvantages, such as:
+  
+  - Users juggle multiple user accounts using extra logins.
+  - Setting permission within the app requires an admin or Team owner to determine the app’s login by each AAD user.
+  - Removing non-AAD accounts accounts for users who leave the organization; etc.
+  
+  However, it's possible and many large apps use this method.
+
 - Implement an identity mapping scheme. This is a design pattern that has been used by many partners. The idea is to get users to log into both the app’s IdP and Azure AD, and then the app stores this mapping somewhere (either in their own database or write it back to the user’s Azure AD profile). Then the app’s authentication code needs to accommodate Azure AD SSO and look up the user’s identity, content, and permission within the app.
 
 </details>
