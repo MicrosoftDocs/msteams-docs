@@ -56,12 +56,18 @@ items:
 - title: Register your Teams Auth SSO with Azure AD
   durationInMinutes: 1
   content: |
+    The following steps help you to create and register Teams authentication SSO in Azure portal:
+
+    * Create and register a new application under App registrations.
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Update the Azure AD app registration 
+    * Create client secret to enable SSO 
+  
+    ** To create and register new app**
+
     1. Go to the [Azure portal](https://portal.azure.com/).
-
     1. Select **Azure Active Directory**.
-
     1. In the left navigation panel, select **App Registrations**.
-
     1. Select **New registration**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration.png" alt-text="New registration" border="true":::
@@ -69,12 +75,9 @@ items:
     1. On the **Register an application** page, set the value as follows:
 
        * Set **Name** to your app name.
-
        * Set **Supported account types** to any account type.
-
        * Leave the **Redirect URI** empty.
-
-       * Select **Register*.
+       * Select **Register**.
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
@@ -90,11 +93,13 @@ items:
      ngrok http -host-header=localhost 3978
      ```
      
-     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok-new.png" alt-text="New registration" border="true":::
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok.png" alt-text="New registration" border="true":::
 
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
      
+    **To update the Azure AD app registration**
+
     1. Under **Manage**, select **Expose an API**.
 
     1. Select **Set**.
@@ -216,9 +221,9 @@ items:
           > [!NOTE]
           > You need to add TeamsActivity.Send and Directory.Read.All as application level permissions too.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png" alt-text="Request permission" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions2.png" alt-text="Request permission" border="true":::  
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Request permission" border="true":::
 
     1. Select **Add permissions**. Ensure to grant the admin consent for the required permissions.
 
@@ -285,13 +290,12 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in **Visual Studio 2019** and update the following information:  
+    1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"TenantID"` to **Directory (tenant) ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the `[WebAppDomainName]`.
-
       
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details.png" alt-text="Appsettings" border="true":::
 
@@ -311,8 +315,6 @@ items:
   durationInMinutes: 1
   content: |
     To build and run the service using Visual Studio
-
-    # [Latest version of Visual Studio](#tab/vs2022)
 
        1. Open the latest version of Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
