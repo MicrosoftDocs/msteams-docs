@@ -10,7 +10,7 @@ keywords: teams authentication OAuth SSO Azure AD
 Common questions asked regarding Authentication in Teams.
 <br><br>
 
-## AAD SSO
+## Teams SSO
 
 <br>
 <details>
@@ -30,7 +30,7 @@ Common questions asked regarding Authentication in Teams.
 </details>
 <br>
 <details>
-<summary>If I use AAD SSO, what about my existing users who don't have an Azure AD account?</summary>
+<summary>If I use Teams SSO, what about my existing users who don't have an Azure AD account?</summary>
 
 **Answer**: There are two options for resolving this issue:
 
@@ -48,7 +48,7 @@ Common questions asked regarding Authentication in Teams.
 </details>
 <br>
 <details>
-<summary>Will I need to build AAD SSO credentials on my webapp too?</summary>
+<summary>Will I need to build Teams SSO credentials on my webapp too?</summary>
 
 **Answer**: If you want your app to run both within Teams and as a stand-alone web-site, you can use either Teams SSO in Teams or a library like MSAL 2.0 if in a web browser.
 </details>
@@ -63,14 +63,27 @@ Common questions asked regarding Authentication in Teams.
 <summary>How can I use AAD SSO with SAML?</summary>
 
 **Answer**: For implementing SAML with AAD SSO, please see [Single Sign-On SAML protocol](m/azure/active-directory/develop/single-sign-on-saml-protocol).
-
-However, SAML with Teams SSO isn't supported. Teams SSO relies on the OAuth 2.0 protocol, which serves a similar role to SAML. It's widely used in cloud-based applications where SAML was designed for federating identity between enterprises.
 </details>
 <br>
 <details>
-<summary>How is AAD SSO better than SSO from Google, Facebook, etc.?</summary>
+<summary>How can I use Teams SSO with SAML?</summary>
 
-**Answer**:
+**Answer**: SAML with Teams SSO isn't supported. Teams SSO relies on the OAuth 2.0 protocol, which serves a similar role to SAML. It's widely used in cloud-based applications where SAML was designed for federating identity between enterprises.
+</details>
+<br>
+<details>
+<summary>How is Teams SSO better than SSO from Google, Facebook, etc.?</summary>
+
+**Answer**: In the case of Teams apps, Teams SSO is better because Teams uses it to validate identity. The user identity is the same in Teams, Graph (and all the M365 content) and the app. This A single identity enables single sign-On with Teams.
+
+Other advantages are for enterprise customers, such as:
+- Integration with Azure AD (on-premises).
+- Self-service password reset.
+- Advanced auditing and compliance features.
+- Dynamic groups based on rules.
+- Multi-factor authentication.
+- Conditional access (for example, users can only log in from a certain location or during certain times of day).
+- Ability to work w/guest users from other enterprises (this is called Azure AD B2B).
 </details>
 
 ## Other authentication methods
