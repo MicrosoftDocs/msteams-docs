@@ -98,17 +98,22 @@ Other advantages are for enterprise customers, such as:
 <details>
 <summary>Can I use AAD B2C?</summary>
 
-**Answer**:
+**Answer**: AAD B2C can work with the same SDK as AAD but it’s a completely different identity service.
+/ Need more details /
 </details>
 <br>
 
 <details>
 <summary>If we have partners or customers using their own Identity Provider, true AAD SSO experience isn't possible.
 
-- What's the next best experience for such cases where we have non-AAD identity providers?
-- Do we have code samples or guiding documents?</summary>
+1. What's the next best experience for such cases where we have non-AAD identity providers?
+1. Do we have code samples or guiding documents?</summary>
 
 **Answer**:
+
+1. Use the pop-up authentication in the Teams JavaScript SDK for web page-based capabilities, such as tabs, task modules, and configuration pages. Use the Bot Framework’s Auth prompt dialog for bots.
+
+2. / links to be added /
 </details>
 <br>
 <details>
