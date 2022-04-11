@@ -375,7 +375,9 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-app-manifest.png" alt-text="open manifest file" border="true":::
          
-    1. Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
+    1. Open **manifest.json** in Visual Studio and make the following changes:
+    
+       Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/bot-id.png" alt-text="replace bot id" border="true"::: 
 
