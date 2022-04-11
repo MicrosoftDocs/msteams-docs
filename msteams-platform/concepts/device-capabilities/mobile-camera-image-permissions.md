@@ -34,6 +34,24 @@ The following list provides the advantages of media capabilities:
 > * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.</br>
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
+# [Mobile](#tab/mobile)
+
+
+The following image depicts web app experience of `selectMedia` API for image capability:
+
+<!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
+:::image type="content" source="~/assets/images/tabs/image-capability.png" alt-text="Illustration shows the image capability for web." border="true":::
+
+The following image depicts web app experience of `selectMedia` API for microphone capability:
+
+<!-- ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png) -->
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for web." border="true":::
+
+# [Desktop](#tab/desktop)
+
+The following image depicts desktop app experience of `selectMedia` API for image capability:
+
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
 ## Update manifest
 
@@ -74,24 +92,6 @@ You must use the following set of APIs to enable your device's media capabilitie
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
 
-# [Mobile](#tab/mobile)
-
-
-The following image depicts web app experience of `selectMedia` API for image capability:
-
-<!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
-:::image type="content" source="~/assets/images/tabs/image-capability.png" alt-text="Illustration shows the image capability for web." border="true":::
-
-The following image depicts web app experience of `selectMedia` API for microphone capability:
-
-<!-- ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png) -->
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for web." border="true":::
-
-# [Desktop](#tab/desktop)
-
-The following image depicts desktop app experience of `selectMedia` API for image capability:
-
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
 
 ## Error handling
