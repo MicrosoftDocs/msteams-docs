@@ -254,7 +254,7 @@ items:
     
     1. Select **Add a scope**. 
     
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-scope.png" alt-text="scope" border="true":::
+        :::image type="content" source="~/assets/images/meeting-token-generator/selectscope.png" alt-text="bot home" border="true":::
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -314,7 +314,7 @@ items:
 
     1. Select **Add a permission**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png" alt-text="bot home" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/addpermission.png" alt-text="bot home" border="true":::
 
     1. Select **Microsoft Graph**.
 
@@ -331,7 +331,7 @@ items:
 
     1. Select **Add permissions**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-request-app-permission.png" alt-text="app permission" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png" alt-text="bot home" border="true":::
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -450,17 +450,17 @@ items:
 
       1. Select **TokenApp.csproj** file from **csharp** folder.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-token-csproj.png" alt-text="csproj" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png" alt-text="bot home" border="true":::
 
       1. Press **F5** to run the project.
     
       1. Select **Yes** if the following dialog appears:
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-warning.png" alt-text="warning" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png" alt-text="bot home" border="true":::
 
          A webpage opens with a message **App is ready!**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-meeting-token-output.png" alt-text="output" border="true"::: 
+         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png" alt-text="bot home" border="true":::
 
    # [Command line](#tab/cli)
 
