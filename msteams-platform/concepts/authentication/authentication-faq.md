@@ -25,14 +25,18 @@ Common questions asked regarding Authentication in Teams.
 **Answer**: You can use the On-behalf-of (OBO) flow in your application to request more permissions for your user from Azure AD. The permissions may require the user to give consent for using their Teams identity. You can resolve consent requirement in two ways:
 
 - Prompt the user to give consent.
-- The admin can consent on user's behalf. In this case, you may need to ensure the first user is an administrator or provide some kind of installation or setup process to gain the consent. 
+- The admin can consent on user's behalf. In this case, you may need to ensure the first user is an administrator or provide some kind of installation or setup process to gain the consent.
 
 </details>
 <br>
 <details>
-<summary>If I use AAD SSO, what about my existing users who haven't signed up using AAD SSO?</summary>
+<summary>If I use AAD SSO, what about my existing users who don't have an Azure AD account?</summary>
 
-**Answer**:
+**Answer**: There are two options for resolving this issue:
+
+- Don’t use Azure AD SSO. Teams can provide pop-ups to allow other identity services to present their login screen. This has some distinct disadvantages: users have to juggle multiple user accounts and do extra logins; setting permission within the app requires an admin or Team owner to determine the app’s login by each AAD user; when users leave the organization who will remember to clear out their non-AAD accounts; etc. But it is possible and many large apps like Trello or Jira use this method and probably would never invest in AAD integration, so we’d lose them entirely.
+- Implement an identity mapping scheme. This is a design pattern that has been used by many partners. The idea is to get users to log into both the app’s IdP and Azure AD, and then the app stores this mapping somewhere (either in their own database or write it back to the user’s Azure AD profile). Then the app’s authentication code needs to accommodate Azure AD SSO and look up the user’s identity, content, and permission within the app.
+
 </details>
 <br>
 <details>
