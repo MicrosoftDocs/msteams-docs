@@ -42,7 +42,7 @@ TeamsFx helps to provision cloud resources for hosting your application. You can
 
 ::: zone pivot="visual-studio"
 
-Content to be added
+
 
 ::: zone-end
 

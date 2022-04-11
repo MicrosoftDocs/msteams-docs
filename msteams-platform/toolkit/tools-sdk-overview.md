@@ -12,11 +12,11 @@ ms.date: 11/29/2021
 
 There are various tools and SDKs for Teams app development; however, you need to pick the right and the preferred tool based on the app requirement.
 
-Teams Toolkit Visual Studio Code extension quickly scaffolds all types of Teams apps. Teams Toolkit for Visual Studio makes it easy for you to create, debug, and deploy a new Teams App. The tools reduce the amount of development time and improves the developer workflow.
+Teams Toolkit Visual Studio Code extension quickly scaffolds all types of Teams apps. Teams Toolkit for Visual Studio makes it easy for you to create, debug, and deploy a new Teams App. The tools reduce the amount of development time and improve the developer workflow.
 
 The Microsoft Teams JavaScript client SDK and other SDKs help you create hosted experiences in Team. Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components: a service library and a core library.
 
-Some of the tools are not only created for Teams development, but also multiple Microsoft products.
+Some of the tools are not only created for Teams development but also for multiple Microsoft products.
 
 > [!NOTE]
 > Currently, this feature is available in **public developer preview** only.

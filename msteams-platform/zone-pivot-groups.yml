@@ -50,3 +50,13 @@ groups:
     title: Visual Studio
   - id: teamsfx-cli
     title: TeamsFx-CLI  
+-id: teams-app-provision
+ title: Provision your Teams app
+ prompt: Provision your Teams app
+ pivots:
+  - id: visual-studio-code
+    title: Visual Studio Code
+  - id: visual-studio
+    title: Visual Studio
+  - id: teamsfx-cli
+    title: TeamsFx-CLI  

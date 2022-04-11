@@ -82,9 +82,7 @@ The Microsoft Teams App project template allows you to specify a Microsoft 365 a
 
 ![Creating a new Microsoft Teams App project in Visual Studio.](images/teams-toolkit-vs-new-project.png)
 
-Visual Studio opens up the new project and Teams Toolkit setup you new project in Teams Developer Portal. The project will be added for the Teams organization linked to the Microsoft 365 account you chose in the steps above and create a new Azure Active Directory registration. This is required for the app to run in Teams.
-
- For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
+Visual Studio opens up the new project and Teams Toolkit setup you new project in Teams Developer Portal. The project is added to the Teams organization linked to the Microsoft 365 account you choose and creates a new Azure Active Directory registration. This is required for the app to run in Teams.
 
 <!-- # [TeamsFx Command Line Interface](#tab/TeamsFxCommandlineinterface) -->
 
@@ -95,6 +93,8 @@ Visual Studio opens up the new project and Teams Toolkit setup you new project i
 ## Create a new Teams app usingTeamsFx command line interface
 
 TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
+
+<!-- For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`. -->
 
 ## Get Started
 

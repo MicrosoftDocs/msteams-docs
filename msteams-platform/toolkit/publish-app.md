@@ -88,6 +88,8 @@ For more information, see [publish to microsoft Teams store]([Publish your app t
 
 ## Publish your app to Teams
 
+Cloud Explorer is no longer supported in the latest version of Visual Studio.
+
 In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users.
 
 - Your IT admin will review these submissions.
