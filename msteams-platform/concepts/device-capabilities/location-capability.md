@@ -62,8 +62,6 @@ You must use the following set of APIs to enable your device's location capabili
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
-> **Note**</br>
-• The `getLocation()` API comes along with following [input configurations](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation` and `showMap`. <br/> • If the value of `allowChooseLocation` is *true*, then the users can choose any location of their choice.<br/> • If the value is *false*, then the users cannot change their current location.<br/> • If the value of `showMap` is *false*, the current location is fetched without displaying the map. `showMap` is ignored if `allowChooseLocation` is set to *true*.
 
 ### Code snippets
 
