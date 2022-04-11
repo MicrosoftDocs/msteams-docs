@@ -61,7 +61,7 @@ items:
     * Create and register a new application under App registrations
     * Use ngrok to create a tunnel to your web server's endpoints
       
-    ** To create and register new application**
+    **To create and register new application**
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Azure Active Directory**.
@@ -77,15 +77,15 @@ items:
        * Leave the **Redirect URI** empty
        * Select **Register**
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
     1. From the app **Overview** page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id.png" alt-text="New registration" border="true":::
 
     **To create tunnel for local web server**
 
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+      Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
@@ -99,14 +99,14 @@ items:
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
-    1. In the left navigation panel, **Manage**, select **Expose an API**.
+    1. In the left navigation panel, select **Expose an API**.
     1. Select **Set**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="Expose and api" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="Expose and api" border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Set a link" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Set a link" border="true":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://bff2****.ngrok.io/{AppID}`</br>
@@ -124,7 +124,7 @@ items:
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
 
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
-    1. Set **Who can consent?** to `Admins and users`.
+    1. Set **Who can consent** to `Admins and users`.
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
@@ -138,10 +138,10 @@ items:
     1. Ensure that **State** is set to **Enabled**.
     1. Select **Add scope** to save.
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascopeuser.png" alt-text="Add scope" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascopeuser.png" alt-text="Add scope" border="true":::
 
-        > [!NOTE]
-        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+       > [!NOTE]
+       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
@@ -183,28 +183,6 @@ items:
 
     1. Add the following permissions:</br>
          * **User.Read** (enabled by default)
-         * **Directory.Read.All**
-         * **Directory.ReadWrite.All**
-         * **TeamsAppInstallation.ReadForUser**
-         * **TeamsAppInstallation.ReadWriteForUser**
-         * **TeamsActivity.Send**
-         * **TeamsAppInstallation.ReadForUser.All**
-
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestapplicationpermission.png" alt-text="Permission" border="true":::
-
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Permission for request" border="true":::
-
-    1. Select **Add permissions**.
-
-    1. Go to **Add a permission**.
-
-    1. Select **Add a permission**.
-
-    1. Select **Microsoft Graph**.
-
-    1. Select **Application permissions**.
-
-    1. Add the following permissions:</br>
          * **TeamsActivity.Send** 
          * **Directory.Read.All**
          * **Directory.ReadWrite.All**
@@ -213,17 +191,16 @@ items:
          * **TeamsActivity.Send**
          * **TeamsAppInstallation.ReadForUser.All**
 
-          > [!NOTE]
-          > You need to add TeamsActivity.Send and Directory.Read.All as application level permissions too.
-
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Request permission" border="true":::
 
+          > [!NOTE]
+          > You need to add TeamsActivity.Send and Directory.Read.All as application level permissions too.
+
     1. Select **Add permissions**. Ensure to grant the admin consent for the required permissions.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
-
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -253,19 +230,17 @@ items:
 
              :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/adduri.png" alt-text="Redirect uri" border="true":::
 
-
     **To create client secret**
 
     1. In the left panel, select **Certificates & secrets**. 
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecret.png" alt-text="Client secret" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecret.png" alt-text="Client secret" border="true":::
     
        The **Add a client secret** window appears.  
 
     1. Enter a value in **Description**.
-    
     1. Select **Add**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secretsave.png" alt-text="Secret id" border="true":::
@@ -349,11 +324,11 @@ items:
     
     1. Select **Upload a custom app**. 
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text="Upload a custom app" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text="Upload a custom app" border="true":::
 
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text="Open a custom app" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text="Open a custom app" border="true":::
 
     1. Select **Add**.
 
