@@ -110,21 +110,28 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 |----------------|-----------------|--------------|--------------|
 | App check-in current location | Users can check-in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
-# [Desktop or web](#tab/desktop)
-
-The following image depicts desktop app experience of location capabilities:
-
-  ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png)
-
-The following image depicts web app experience of location capabilities:
-
-  ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
-
 # [Mobile](#tab/mobile)
 
 The following image depicts mobile app experience of location capabilities:
 
-  ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png)
+  <!-- ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png) -->
+  
+  :::image type="content" source="~/assets/images/tabs/location-picker-mobile.png" alt-text="Illustration shows the location picker." border="true":::
+
+# [Desktop or web](#tab/desktop)
+
+The following image depicts desktop app experience of location capabilities:
+
+  <!-- ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png) -->
+
+  :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
+
+The following image depicts web app experience of location capabilities:
+
+  <!-- ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png) -->
+
+  :::image type="content" source="~/assets/images/tabs/location-capability.png" alt-text="Illustration shows mobile location picker" border="true":::
+
 
 
 ## See also
