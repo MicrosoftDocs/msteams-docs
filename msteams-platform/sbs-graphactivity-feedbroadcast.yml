@@ -20,7 +20,7 @@ items:
 
     * Broadcasts message for all the members.
     * Displays activity feed notification.
-    * Broadcasts details available for members. 
+    * Broadcasts details available for members.
 
     This step-by-step guide shows a feature where users can broadcast a message to all members of the organization using activity feed notification. You'll see the following output:
 
@@ -31,10 +31,10 @@ items:
   content: |
     To set up your development environment, install the following:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account.
+    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
+    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
+    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
