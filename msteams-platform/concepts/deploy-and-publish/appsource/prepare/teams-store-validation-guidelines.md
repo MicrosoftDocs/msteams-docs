@@ -65,7 +65,7 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column-end:::
 :::row-end:::
 
-## :::image type="content" source="../../../../assets/icons/value-proposition-icon.png" alt-text="value-proposition-icon"border="false"::: Value proposition
+## Value proposition
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
@@ -155,8 +155,7 @@ If your app authenticates users with an external service, follow these guideline
 
 Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.
 <br></br>
-<details><summary><font color=red><b>Fail case
-</b></font></summary>
+<details><summary><b>Fail case</b></summary>
 
 :::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
 
@@ -173,11 +172,11 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    <details><summary><b>Fail case
    </b></summary>
 
-:::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
+   :::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
+   :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
-</details>
+   </details>
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
