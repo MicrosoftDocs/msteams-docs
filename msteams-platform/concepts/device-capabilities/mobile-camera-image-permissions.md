@@ -8,18 +8,26 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ---
 
-# Integrate media capabilities
+# Overview
 
 You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience.
 
-## Advantage of integrating media capabilities
+## Advantages 
 
-The main advantage of integrating device capabilities in your Teams apps is it leverages native Teams controls to provide a rich and immersive experience to your users.
-To integrate media capabilities you must update the app manifest file and call the media capability APIs.
+TThe primary advantage of integrating location capabilities in your Teams apps is to leverage native Teams controls to provide a rich and immersive experience to your users. To integrate media capabilities, you must update the app manifest file and call the media capability APIs.
 
-For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allow you to use native media capabilities.
+For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allow you to use native media capabilities. It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+
+The following list provides the advantages of media capabilities:
+
+* Choose the most popular logo design with rough mockups on whiteboard in the cell phone and post a poll with scans of whiteboard designs as poll options on the group chat in Teams. When the team members vote for different designs, the highest vote count can be the most popular choice.
+
+* Claim a car insurance to the insurance company. The custom-built insurance claim settlement app on Teams lets you scan the physical document from the smartphone, confirm that all documents have been scanned through an image viewer, and upload the soft copy of the same.
+
+* Track audit visits in retail outlets. The audit officer visits stores, refers the audit checklist on the cell phone, and checks if everything conforms to the protocol/guidelines. The officer attaches images of store layout as proof of visit and in case something doesn’t align to the guidelines, and the officer highlights respective section in images itself.
+
+
 
 > [!NOTE]
 >
@@ -66,19 +74,31 @@ You must use the following set of APIs to enable your device's media capabilitie
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
 
+# [Mobile](#tab/mobile)
+
+
 The following image depicts web app experience of `selectMedia` API for image capability:
 
-![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png)
+<!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
+:::image type="content" source="~/assets/images/tabs/image-capability.png" alt-text="Illustration shows the image capability for web." border="true":::
 
 The following image depicts web app experience of `selectMedia` API for microphone capability:
 
-![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png)
+<!-- ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png) -->
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for web." border="true":::
+
+# [Desktop](#tab/desktop)
+
+The following image depicts desktop app experience of `selectMedia` API for image capability:
+
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop.png" alt-text="Illustration shows the media capability for desktop." border="true":::
+
 
 ## Error handling
 
 You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
 
-|Error code |  Error name     | Condition|
+|Error code |  Error name     | Description|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
 | **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
@@ -92,7 +112,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## Code snippets
 
-**Calling `selectMedia` API** for capturing images using camera:
+**Call `selectMedia` API** for capturing images using camera:
 
 ```javascript
 let imageProp: microsoftTeams.media.ImageProps = {
