@@ -276,6 +276,14 @@ Customer is able to assign licenses for a new SaaS purchase - to a single or mul
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/user-selects-multiple-individuals.png" alt-text="User begins assigning licenses to multiple individuals":::
 
+## Purchase offer in Teams or AppSource
+
+### Launch Teams and go to the Appstore. Search for and select your App
+
+1. Select **Buy a subscription**.
+
+
+
 ## See also
 
 [Maintaining and supporting your published app](../post-publish/overview.md)
