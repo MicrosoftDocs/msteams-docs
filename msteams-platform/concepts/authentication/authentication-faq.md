@@ -50,7 +50,7 @@ Common questions asked regarding Authentication in Teams.
 <details>
 <summary>Will I need to build AAD SSO credentials on my webapp too?</summary>
 
-**Answer**:
+**Answer**: If you want your app to run both within Teams and as a stand-alone web-site, you can use either Teams SSO in Teams or a library like MSAL 2.0 if in a web browser.
 </details>
 <br>
 <details>
@@ -62,7 +62,9 @@ Common questions asked regarding Authentication in Teams.
 <details>
 <summary>How can I use AAD SSO with SAML?</summary>
 
-**Answer**:
+**Answer**: For implementing SAML with AAD SSO, please see [Single Sign-On SAML protocol](m/azure/active-directory/develop/single-sign-on-saml-protocol).
+
+However, SAML with Teams SSO isn't supported. Teams SSO relies on the OAuth 2.0 protocol, which serves a similar role to SAML. It's widely used in cloud-based applications where SAML was designed for federating identity between enterprises.
 </details>
 <br>
 <details>
