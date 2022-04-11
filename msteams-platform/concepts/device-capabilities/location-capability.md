@@ -8,21 +8,21 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 
-# Integrate location capabilities
+# Overview
 
- You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides well-defined APIs and the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). You can integrate the location capabilities of native device with your Teams app. Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app. At present, the web, desktop, and mobile apps support the location features.
+ You can integrate the location capabilities within your Teams app. Use Microsoft Teams JavaScript client SDK, which provides well-defined APIs and the tools necessary for your app to access the user’s native device capabilities. Use the location APIs, such as `getLocation` and `showLocation` to integrate location capabilities within your app. At present, the web browsers, desktop apps, and mobile apps support the location capability.
 
-## Advantages of integrating location capabilities
+## Advantages
 
 
-The main advantage of integrating location capabilities in your Teams apps is that it allows web, desktop, and mobile app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
+The primary advantage of integrating location capabilities in your Teams apps is to leverage location functionality in web, desktop, and mobile app using Microsoft Teams JavaScript client SDK.
 
-The following examples show how the integration of location capabilities is used in different scenarios:
+The following list provides the advantage of location capabilities:
 
-* Track the attendance by using a selfie in the vicinity of the area. The location data also gets captured and sent along with the image.
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
 * Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area. After the permission is granted, the search results are filtered near that particular location and support staff IDs get displayed.
 * Report the location after completing a job in the field.
+* Track the attendance by using a selfie in the vicinity of the area. The location data also gets captured and sent along with the image. This scenario is specific for mobile apps.
 
 To integrate location capabilities, you must do the following:
 
@@ -30,10 +30,37 @@ To integrate location capabilities, you must do the following:
 * Have working knowledge of [code snippets](#code-snippets) for calling the location APIs.
 * Handle errors in your Teams app with the help of [API response errors](#error-handling).
 
+# [Mobile](#tab/mobile)
+
+The following image depicts mobile app experience of location capabilities:
+
+  <!-- ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png) -->
+  
+  :::image type="content" source="~/assets/images/tabs/location-picker-mobile.png" alt-text="Illustration shows the location picker." border="true":::
+
+# [Desktop or web](#tab/desktop)
+
+The following image depicts desktop app experience of location capabilities:
+
+1. Open your Teams app.
+1. Select **Apps**  > **Manage your Apps** > **Publish an app** > **Upload a custom app**.
+1. Select Media App .zip package.
+1. Select **Add** to add app to your Teams.
+
+  <!-- ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png) -->
+
+  :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
+
+The following image depicts web app experience of location capabilities:
+
+  <!-- ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png) -->
+
+  :::image type="content" source="~/assets/images/tabs/location-capability.png" alt-text="Illustration shows mobile location picker" border="true":::
+
+
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for requisite permissions from users before they start using the location  capabilities
-. The update for app manifest is as follows:
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -52,44 +79,16 @@ You must use the following set of APIs to enable your device's location capabili
 
 | API      | Description |Input configuration `allowChooseLocation` |Input configuration `showMap` |
 | --- | --- |--- |--- |
-|`getLocation`| Gives user’s current device location or opens native location picker and returns the location chosen by the user. |True: Users can choose any location of their choice.</br> False: users cannot change their current location |False: The current location is fetched without displaying the map. | 
-|`showLocation`| Shows location on map. |True: Users can choose any location of their choice.</br> False: users cannot change their current location| False: The current location is fetched without displaying the map. | 
+|`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | * True: Users can choose any location of their choice.</br> * False: Users cannot change their current location. |False: The current location is fetched without displaying the map. [If `allowChooseLocation` is set to *true*, the `showMap` is ignored]. | 
+|`showLocation`| Shows location on map. |* True: Users can choose any location of their choice.</br> * False: users cannot change their current location.| False: The current location is fetched without displaying the map. [If `allowChooseLocation` is set to *true*, the `showMap` is ignored]. | 
 
 > [!NOTE]
 > * Desktop doesn't support capturing current location.
-> * If `allowChooseLocation` is set to *true*, the `showMap` is ignored.
+
 
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
-
-### Code snippets
-
-**Calling `getLocation` API to retrieve the location:**
-
-```javascript
-let locationProps = {"allowChooseLocation":true,"showMap":true};
-microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-          if (err) {
-            output(err);
-            return;
-          }
-          output(JSON.stringify(location));
-});
-```
-
-**Calling `showLocation` API to display the location:**
-
-```javascript
-let location = {"latitude":17,"longitude":17};
-microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, result: boolean) => {
-          if (err) {
-            output(err);
-            return;
-          }
-     output(result);
-});
-```
 
 ## Error handling
 
@@ -104,33 +103,42 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 | **8000** | USER_ABORT |User cancelled the operation.|
 | **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
 
+
+### Code snippets
+
+**Call `getLocation` API to retrieve the location:**
+
+```javascript
+let locationProps = {"allowChooseLocation":true,"showMap":true};
+microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+          if (err) {
+            output(err);
+            return;
+          }
+          output(JSON.stringify(location));
+});
+```
+
+**Call `showLocation` API to display the location:**
+
+```javascript
+let location = {"latitude":17,"longitude":17};
+microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, result: boolean) => {
+          if (err) {
+            output(err);
+            return;
+          }
+     output(result);
+});
+```
+
+
+
 ### Code sample
 
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | App check-in current location | Users can check-in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
-
-# [Mobile](#tab/mobile)
-
-The following image depicts mobile app experience of location capabilities:
-
-  <!-- ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png) -->
-  
-  :::image type="content" source="~/assets/images/tabs/location-picker-mobile.png" alt-text="Illustration shows the location picker." border="true":::
-
-# [Desktop or web](#tab/desktop)
-
-The following image depicts desktop app experience of location capabilities:
-
-  <!-- ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png) -->
-
-  :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
-
-The following image depicts web app experience of location capabilities:
-
-  <!-- ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png) -->
-
-  :::image type="content" source="~/assets/images/tabs/location-capability.png" alt-text="Illustration shows mobile location picker" border="true":::
 
 
 
