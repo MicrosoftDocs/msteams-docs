@@ -62,7 +62,7 @@ Common questions asked regarding Authentication in Teams.
 <details>
 <summary>How can I use AAD SSO with SAML?</summary>
 
-**Answer**: For implementing SAML with AAD SSO, please see [Single Sign-On SAML protocol](m/azure/active-directory/develop/single-sign-on-saml-protocol).
+**Answer**: For implementing SAML with AAD SSO, please see [Single Sign-On SAML protocol](/azure/active-directory/develop/single-sign-on-saml-protocol).
 </details>
 <br>
 <details>
