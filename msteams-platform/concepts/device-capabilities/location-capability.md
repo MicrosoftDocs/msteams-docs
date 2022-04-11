@@ -50,13 +50,14 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 You must use the following set of APIs to enable your device's location capabilities:
 
-| API      | Web or desktop  |Mobile|
-| --- | --- |-- |
-|`getLocation`| Gives user’s current device location or opens native location picker and returns the location chosen by the user. |• IOS: Use IOS Location APIs to read current location.  </br> • Android: Uses google play services for location which is already integrated with Teams Android App.|
-|`showLocation`| Shows location on map. |• IOS: Same flow as done on Teams iOS. </br> • Android: Uses google play services for location which is already integrated with Teams Android App.|
+| API      | Description |Input configuration `allowChooseLocation` |Input configuration `showMap` |
+| --- | --- |--- |--- |
+|`getLocation`| Gives user’s current device location or opens native location picker and returns the location chosen by the user. |True: Users can choose any location of their choice.</br> False: users cannot change their current location |False: The current location is fetched without displaying the map. | 
+|`showLocation`| Shows location on map. |True: Users can choose any location of their choice.</br> False: users cannot change their current location| False: The current location is fetched without displaying the map. | 
 
 > **Note**</br>
-Desktop doesn't support capturing current location.
+• Desktop doesn't support capturing current location.
+• If `allowChooseLocation` is set to *true*, the `showMap` is ignored.
 
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
