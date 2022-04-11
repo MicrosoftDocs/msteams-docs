@@ -8,27 +8,23 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 
-# Integrate location functionality
+# Integrate location capabilities
 
- You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides well-defined APIs and the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). You can integrate the location functionalities of native device with your Teams app. Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the functionalities within your app. At present, the web, desktop, and mobile apps support the location features.
+ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides well-defined APIs and the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). You can integrate the location capabilities of native device with your Teams app. Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app. At present, the web, desktop, and mobile apps support the location features.
 
-## Advantages of integrating location functionalities
+## Advantages of integrating location capabilities
 
-The main advantage of integrating location functionalities in your Teams apps is that it allows web, desktop, and mobile app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
 
-The following examples show how the integration of location functionalities is used in different scenarios:
+The main advantage of integrating location capabilities in your Teams apps is that it allows web, desktop, and mobile app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client SDK.
 
-### Mobile:
+The following examples show how the integration of location capabilities is used in different scenarios:
 
 * Track the attendance by using a selfie in the vicinity of the area. The location data also gets captured and sent along with the image.
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
-
-### Desktop:
-
 * Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area. After the permission is granted, the search results are filtered near that particular location and support staff IDs get displayed.
 * Report the location after completing a job in the field.
 
-To integrate location functionalities, you must do the following:
+To integrate location capabilities, you must do the following:
 
 * Update the app manifest file and call the APIs.
 * Have working knowledge of [code snippets](#code-snippets) for calling the location APIs.
@@ -36,7 +32,8 @@ To integrate location functionalities, you must do the following:
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for requisite permissions from users before they start using the location functionalities. The update for app manifest is as follows:
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for requisite permissions from users before they start using the location  capabilities
+. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -51,7 +48,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 ## Location APIs
 
-You must use the following set of APIs to enable your device's location functionalities:
+You must use the following set of APIs to enable your device's location capabilities:
 
 | API      | Web or desktop  |Mobile|
 | --- | --- |-- |
@@ -116,17 +113,17 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 # [Desktop or web](#tab/desktop)
 
-The following image depicts desktop app experience of location functionalities:
+The following image depicts desktop app experience of location capabilities:
 
   ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png)
 
-The following image depicts web app experience of location functionalities:
+The following image depicts web app experience of location capabilities:
 
   ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
 
 # [Mobile](#tab/mobile)
 
-The following image depicts mobile app experience of location functionalities:
+The following image depicts mobile app experience of location capabilities:
 
   ![Mobile app experience for location capabilities](../../assets/images/tabs/location-picker-mobile.png)
 
