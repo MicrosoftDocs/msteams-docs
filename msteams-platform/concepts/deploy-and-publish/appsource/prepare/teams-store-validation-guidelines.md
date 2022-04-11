@@ -153,17 +153,14 @@ If your app authenticates users with an external service, follow these guideline
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
 
-Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.  
+Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![In App Payments](~/assets/images/submission/validation-financial-information-1.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+<details><summary style="color:red;"><b>Fail case
+</b></summary>
+
+:::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
+
+</details>
 
 You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agrees to use the app.
 
