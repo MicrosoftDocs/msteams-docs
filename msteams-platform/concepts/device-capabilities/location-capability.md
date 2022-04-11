@@ -63,6 +63,7 @@ The following image depicts web app experience of location capabilities:
   :::image type="content" source="~/assets/images/tabs/location-capability.png" alt-text="Illustration shows mobile location picker" border="true":::
 
 ---
+When your application or services access a Microsoft API that provides a location using Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft Api.
 
 ## Update manifest
 
