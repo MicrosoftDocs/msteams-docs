@@ -355,9 +355,9 @@ items:
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
-         * Set `id` to `MicrosoftAppId`
-         * Set `botId` to `MicrosoftAppId`
-         * Set `validDomains` to `WebAppDomainName`
+         * Set `id` to **Microsoft App Id**
+         * Set `botId` to **Microsoft App Id**
+         * Set `validDomains` to **Web App Domain Name**
 
           > [!NOTE]
           > `WebAppDomain` is your ngrok domain.
