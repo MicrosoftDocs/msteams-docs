@@ -1,7 +1,7 @@
 ---
 title: Teams solution for building apps
 author: heath-hamilton
-description: In this module, learn the overview of Teams solution for building apps and provide support from planning your app to distributing it.
+description: Learn the overview of Teams solution for building apps and provide support from planning your app to distributing it.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
