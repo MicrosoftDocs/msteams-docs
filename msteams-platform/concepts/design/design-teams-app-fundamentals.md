@@ -1,12 +1,12 @@
 ---
 title: Design your app - Understand the design system
-description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
+description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, Segoe UI typography and more.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-keywords: layout grid avatars icons segoe ui typography  
 ---
+
 # Microsoft Teams app design system
 
 Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma)</a>.

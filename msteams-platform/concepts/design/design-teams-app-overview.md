@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 ---
+
 # Designing your Microsoft Teams app
 
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Conceptual image introducing the Microsoft Teams design guidelines.":::
