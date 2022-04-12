@@ -37,7 +37,7 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [latest version of .NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download) 
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
     
