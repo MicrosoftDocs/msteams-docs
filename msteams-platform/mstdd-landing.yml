@@ -143,15 +143,17 @@ landingContent:
           url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
-        - text: Generate a meeting token to extend a meeting
+        - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Create a meeting sidepanel
+        - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
       
     - linkListType: tutorial
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
+        - text: Generate meeting content bubble
+          url: ~/sbs-meeting-content-bubble.yml
         - text: Invoke task modules from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
         - text: Build search based messaging extension
@@ -164,8 +166,6 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
-        - text: Generate meeting token
-          url: ~/sbs-meeting-token-generator.yml
 - title: Teams app scenarios
   linkLists:
   - linkListType: reference
