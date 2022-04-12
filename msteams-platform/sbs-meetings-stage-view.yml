@@ -54,7 +54,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository1.png" alt-text="cloning the repository" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository" border="true":::
 
     1. Select **Clone**. 
 
@@ -180,7 +180,7 @@ items:
        * **Assigned To**
        * **Description**
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add status.png" alt-text="add status in meeting" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png" alt-text="add status in meeting" border="false":::
        
        App in side panel view:
 
