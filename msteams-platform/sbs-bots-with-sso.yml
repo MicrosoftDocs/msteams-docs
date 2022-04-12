@@ -359,9 +359,9 @@ items:
         | Tenant ID | Enter **common**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
-        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Bot Service connection" border="true":::
-
     1. Select **Save**.
+
+        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Bot Service connection" border="true":::
 
     1. Select **Apply**.
 
