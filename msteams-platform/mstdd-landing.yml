@@ -145,7 +145,7 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Generate a meeting token to extend a meeting
           url: ~/sbs-meeting-token-generator.yml
-        - text: Create a meeting sidepanel
+        - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
       
     - linkListType: tutorial
