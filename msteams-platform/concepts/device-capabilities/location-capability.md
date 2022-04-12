@@ -21,7 +21,7 @@ The following list provides the advantage of location capabilities:
 
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
 * Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area. After the permission is granted, the search results are filtered near that particular location and support staff IDs get displayed.
-* Report the location after completing a job in the field.
+* Report the location after completing a job in the field. The job processing app asks for permission to  find the location. Once the app has found the location, you can drag a "pin" to the exact location where the job is completed.
 * Track the attendance by using a selfie in the vicinity of the area. The location data also gets captured and sent along with the image. This scenario is specific for mobile apps.
 
 To integrate location capabilities, you must do the following:
