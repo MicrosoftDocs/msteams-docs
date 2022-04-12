@@ -376,8 +376,7 @@ items:
         > [!NOTE]
         > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-app settings.png" alt-text="bot home" border="true":::
-
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs app setting Latest.png" alt-text="bot home" border="true":::
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
@@ -397,12 +396,12 @@ items:
            * `termsOfUseUrl`
 
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-Manifest 1 new.png" alt-text="bot home" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 1 latest new.png" alt-text="bot home" border="true":::
 
          * Replace all occurrences of `WebAppDomainName` with your ngrok domain name
          * Replace all occurrences of `MicrosoftAppId` with your bot's **Microsoft App ID**
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 2.png" alt-text="bot home" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 2 Latest.png" alt-text="bot home" border="true":::
 
 
 - title: Build client app using npm install
@@ -412,7 +411,7 @@ items:
     1. Copy the **App** folder path.
     1. Open a new **Command Prompt** window, change the current directory to the copied **App** path.
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png" alt-text="bot home" border="true":::
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command prompt new.png" alt-text="bot home" border="true":::
 
     1. Run the following command in the **Command Prompt** to download packages and dependencies.
     
