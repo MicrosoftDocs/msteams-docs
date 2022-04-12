@@ -76,7 +76,7 @@ items:
   content: |
     1. Navigate to **manifest.json** in node.js folder in cloned repository.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path.png" alt-text="path for manifest.json" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png" alt-text="path for manifest.json" border="true":::
 
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
@@ -124,7 +124,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file.png" alt-text="manifest" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file1.png" alt-text="manifest" border="true":::
     
     1. Create a Teams meeting with a few presenters and attendees.
    
@@ -142,7 +142,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app.png" alt-text="upload the app" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app1.png" alt-text="upload the app" border="true":::
 
     1. Select **Add**.
 
