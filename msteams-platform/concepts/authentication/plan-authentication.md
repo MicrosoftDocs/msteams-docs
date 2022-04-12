@@ -100,7 +100,7 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 
 - ID token: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user attempts to access an app.
 - Access token: An access token is an artifact contains user identity and permission scopes.
-- Bearer token: 
+- Bearer token: Bearer Token is a type of access token used with OAuth 2.0.
 
 ## Next step
 
