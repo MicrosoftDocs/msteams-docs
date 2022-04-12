@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ---
 # Tips to avoid app rejection and pass app validation
 
-Here are the most common reasons for your app to get rejected during app certification. Ensure that your app doesn’t contain any of the common reasons addressed in this article. Also, follow the [Microsoft Teams store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies) to increase the likelihood of your app to pass the Microsoft Teams store submission process and to help you prepare your app better before submitting for [review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
+In this article, We have addressed the common reasons for your app to get rejected during app certification and ensure that your app doesn’t contain any of these common reasons. Also, follow the [Microsoft Teams store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies) to increase the likelihood of your app to pass the Microsoft Teams store submission process and to help you prepare your app better before submitting for [review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json).
 
 Following are the most common reasons for your app to get rejected:
 
