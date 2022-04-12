@@ -266,7 +266,7 @@ The following schema sample shows all extensibility options:
             ]
         }
     },
-    "showLoadingIndicator": false,
+    "showLoadingIndicator": true,
     "isFullScreen": false,
     "activities": {
         "activityTypes": [
