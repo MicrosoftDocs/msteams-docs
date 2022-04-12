@@ -37,7 +37,7 @@ The query parameters are:
 
   * When the meeting is scheduled for Teams for business, the fqdn is: **teams.microsoft.com** or **team.microsoft.us** (for Gov) etc. Teams client will find the right linked identity and suggest switching to the right one.​
 
-### Deep link example
+## Deep link example
 
 `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=teams.microsoft.com&appContext=`
 
@@ -97,3 +97,8 @@ If meeting extension is not installed:
 1. Web app is shared to meeting stage and all the participant can interact and edit together.
 
    :::image type="content" source="../../assets/images/present-in-teams/share-stage.PNG" alt-text="present in team":::
+
+## See also
+
+* [Share to Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)
+* [Share to Teams from web apps](share-to-teams-from-web-apps.md)
