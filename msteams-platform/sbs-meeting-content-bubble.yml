@@ -14,10 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams helps you to interact with content bubble using bot in Teams meeting.
-
-    > [!NOTE]
-    > Meeting content bubble is available only for Azure AD users and not for anonymous users.
+    Teams helps you to interact with content bubble using bot in Teams meeting.
 
     **Key features of meeting content bubble**:
 
@@ -29,12 +26,15 @@ items:
 
       :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting content bubble introduction" border="true":::
 
+     > [!NOTE]
+     > Meeting content bubble is available only for Azure AD users and not for anonymous users.
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * Microsoft Teams with a valid account
+    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
@@ -71,7 +71,7 @@ items:
 
     **To create Azure Bot resource**
 
-    1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
+    1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
@@ -171,7 +171,7 @@ items:
     
     **To create tunnel for local web server**
 
-    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+    Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
@@ -181,7 +181,7 @@ items:
      > While creating ngrok tunnel, use `localhost 5000` instead of `3978` if you choose **Command line** to run your app.
      
      > [!TIP]
-     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
     
     
     **To add messaging endpoint**
@@ -284,7 +284,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png" alt-text="Add client application" border="true":::
 
-       The following image displays the client Id:
+       The following image displays the Client Id:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-applications.png" alt-text="Client applications" border="true":::
 
@@ -342,20 +342,20 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in **Visual Studio** and update the following information:  
+    1. Open **appsettings.json** in Visual Studio and update the following information:  
 
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseURL"` to your `webAppDomain`.
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value
+         * Set `"BaseURL"` to your `webAppDomain`
 
           :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json.png" alt-text="App settings" border="true":::
 
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to `manifest.json` in cloned repository.
+    1. Navigate to **manifest.json** in cloned repository.
     
-    1. Open **manifest.json** in **Visual Studio** and make the following changes:
+    1. Open **manifest.json** in Visual Studio and make the following changes:
     
          * Set `id` to `[MicrosoftAppId]`
          * Set `botId` to `[MicrosoftAppId]`
@@ -407,7 +407,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/add-an-app.png" alt-text="Add an app" border="true"::: 
    
-    1. In the pop-up window opens, select **Manage apps**.
+    1. In the pop-up window, select **Manage apps**.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps.png" alt-text="Manage apps" border="true"::: 
    
@@ -462,7 +462,7 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a meeting content bubble app.
+    You've completed the tutorial to get started with a generate meeting content bubble app.
 
     
 
