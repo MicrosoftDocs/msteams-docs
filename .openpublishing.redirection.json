@@ -729,8 +729,8 @@
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings"
       },
       {
-        "source_path": "/microsoftteams/platform/sbs-gs-blazorapp.yml",
-        "redirect_url": "/microsoftteams/platform/sbs-gs-blazor"
+        "source_path": "/msteams-platform/platform/sbs-gs-blazorapp.yml",
+        "redirect_url": "/msteams-platform/platform/sbs-gs-blazor"
       }
     ]
 }
