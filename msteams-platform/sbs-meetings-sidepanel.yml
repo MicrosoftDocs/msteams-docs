@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Generate meeting side panel
 metadata:
-  title: Generate meeting side panel
+  title: Meeting Side Panel
   description: In this tutorial, you'll learn to set up meetings side panel for Teams.
   audience: Developer
   level: Beginner
@@ -14,18 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Meeting Side Panel enhances your in-meeting experience and helps organizers and presenters to have different set of views and actions.
+    The meeting side panel enhances your in-meeting experience and helps organizers and presenters to have different set of views and actions.
 
-    
+    Key features of meeting side panel
 
-    Key features of Meeting Side Panel
-
-    * Gives provision to add new agenda point
+    * Provisions to add new agenda point
     * Adds the agenda as text input to the **Side Panel** list
-    * Publish the agenda list to the meeting chat
+    * Publishes the agenda list to the meeting chat
     
-    This step-by-step guide helps you to generate **Side Panel** app to add and publish agenda.
-    You'll see the following output:
+    This step-by-step guide helps you to generate meeting side panel to add and publish agenda. You'll see the following output:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token" border="true":::
 
@@ -35,9 +32,9 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
+    * [Latest version of nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -47,7 +44,7 @@ items:
     * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
 
       > [!NOTE]
-      > Use version 1.7.0 or later of [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions earlier to it don't support meeting side panel.
+      > Use [the latest version of Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions earlier to it don't support meeting side panel.
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -61,10 +58,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure portal
+- title: Create and register your bot
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your bot in Azure portal:
+    The following steps help you to create and register your bot in Azure portal.
 
     * Create Azure Bot resource to register bot with Azure Bot Service
     * Create client secret to enable SSO authentication of the bot
@@ -303,15 +300,12 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default, **User.Read** is selected.
-
-        :::image type="content" source="~/assets/images/meetings-side-panel/userpermission.png" alt-text="User" border="true":::
-
     1. Add the following permissions:</br>
          * **email**
          * **offline_access**
          * **OpenId**
          * **profile**
+         * **User.Read**
 
     1. Select **Add permissions**.
 
