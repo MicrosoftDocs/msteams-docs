@@ -634,7 +634,7 @@ items:
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
 
-        Your web browser runs the app.
+        Teams runs your app in a web browser.
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
@@ -864,12 +864,24 @@ items:
 
         When you select **F5**, the Teams Toolkit:
 
-        1. Registers your application with Azure Active Directory.
-        1. Registers your application for "side loading" in Teams.
-        1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-        1. Starts ngrok tunnel so Teams can communicate with your app.
-        1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
+        1. Checks all the following prerequisites:
+          - You're logged in with a Microsoft 365 account.
+          - Sideloading is enabled for your Microsoft 365 account.
+          - Supported Node.js version is installed.
+          - NPM packages for bot app are installed.
+          - Ngrok is installed.
+          - Port required by bot app is available.
 
+          > [!NOTE]
+          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+
+        1. Starts Ngrok to create a HTTP tunnel.
+        1. Registers the app in Azure AD and configures the app.
+        1. Registers the bot app in Bot Framework and configures the app.
+        1. Registers the app in Teams Developer Portal and configures the app.
+        1. Starts the messaging extension app hosted locally.
+        1. Starts Teams in a web browser and sideloads the Teams app.
+        
         </details>
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
@@ -877,7 +889,7 @@ items:
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
 
-        Teams opens in a web browser.
+        Teams run your app in a web browser.
         
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
