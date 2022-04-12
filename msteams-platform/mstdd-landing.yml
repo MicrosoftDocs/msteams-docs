@@ -152,6 +152,8 @@ landingContent:
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
+        - text: Generate meeting content bubble
+          url: ~/sbs-meeting-content-bubble.yml
         - text: Invoke task modules from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
         - text: Build search based messaging extension
