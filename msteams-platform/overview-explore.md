@@ -1,7 +1,7 @@
 ---
 title: Exploring Teams as a platform for building apps
 author: heath-hamilton
-description: Overview of exploring Microsoft Teams platform features.
+description: In this module, learn the overview of exploring Microsoft Teams platform features for your app.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar

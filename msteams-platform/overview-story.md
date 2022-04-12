@@ -1,7 +1,7 @@
 ---
 title: Overview - User story for Microsoft Teams platform
 author: heath-hamilton
-description: Overview user story of how app idea fits user requirements.
+description: In this module, learn the overview user story of how app idea fits user requirements for Microsoft Teams platform.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
