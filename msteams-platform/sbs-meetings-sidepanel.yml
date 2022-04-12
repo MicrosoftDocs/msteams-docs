@@ -32,19 +32,17 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Latest version of Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
+    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download) 
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version of nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    * [Latest version of nodejs](https://nodejs.org/en/download/)
+    * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
+    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
-   
-    * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
-
-      > [!NOTE]
-      > Use [the latest version of Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions earlier to it don't support meeting side panel.
+    
 
 - title: Set up local environment
   durationInMinutes: 1
