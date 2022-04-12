@@ -14,20 +14,22 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams helps you to interact with content bubble using bot in Teams meeting.
+    Teams helps you to generate and interact with content bubble using bot.
 
     **Key features of meeting content bubble**:
 
-    * You will see agenda items listed in an Adaptive Card
-    * You can select any option in the given agenda
-    * You can submit your feedback on either content bubble or Adaptive Card sent in chat
+    * View agenda items listed in an Adaptive Card
+    * Select any option in the given agenda
+    * Submit your feedback on either content bubble or Adaptive Card sent in chat
     
-    This step-by-step guide helps you to generate meeting content bubble using bot in Teams with attendees. You'll see the following output:
+    > [!NOTE]
+    > Meeting content bubble is available only for Azure AD users and not for anonymous users.
+    
+    This step-by-step guide helps you to generate meeting content bubble using bot in Teams meeting with attendees. You'll see the following output:
 
       :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting content bubble introduction" border="true":::
 
-     > [!NOTE]
-     > Meeting content bubble is available only for Azure AD users and not for anonymous users.
+     
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -35,16 +37,14 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [latest version of .NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    * [latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    You must have working knowledge of the following technologies:
-
-    * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments) 
+    Ensure you have working knowledge of [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -58,10 +58,10 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure portal
+- title: Create and register your bot 
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    The following steps help you to create and register your bot in Azure portal.
 
     * Create Azure Bot resource to register bot with Azure Bot Service
     * Create client secret to enable SSO authentication of the bot
@@ -301,8 +301,6 @@ items:
 
     1. Select **Delegated permissions**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-userpermission.png" alt-text="User" border="true":::
-
     1. Add the following permissions:</br>
          * **email**
          * **offline_access**
@@ -357,9 +355,9 @@ items:
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
-         * Set `id` to `[MicrosoftAppId]`
-         * Set `botId` to `[MicrosoftAppId]`
-         * Set `validDomains` to `[WebAppDomainName]`
+         * Set `id` to `MicrosoftAppId`
+         * Set `botId` to `MicrosoftAppId`
+         * Set `validDomains` to `WebAppDomainName`
 
           > [!NOTE]
           > `WebAppDomain` is your ngrok domain.
