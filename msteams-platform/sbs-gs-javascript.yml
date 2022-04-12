@@ -355,10 +355,10 @@ items:
           > [!NOTE]
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
-        1. Registers the app with Azure AD and configures the app.
-        1. Registers the app in Teams Developer Portal and configures the app.
-        1. Starts the tab app.
-        1. Starts Teams in a web browser and sideloads the tab app.
+        2. Registers the app with Azure AD and configures the app.
+        3. Registers the app in Teams Developer Portal and configures the app.
+        4. Starts the tab app.
+        5. Starts Teams in a web browser and sideloads the tab app.
 
         </details>
 
@@ -619,12 +619,12 @@ items:
           > [!NOTE]
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
-        1. Starts Ngrok to create a HTTP tunnel.
-        1. Registers the app in Azure AD and configures the app.
-        1. Registers the bot app in Bot Framework and configures the bot app.
-        1. Registers the app in Teams Developer Portal and configures the app.
-        1. Starts the bot app.
-        1. Starts Teams in a web browser and sideloads the bot app.
+        2. Starts Ngrok to create a HTTP tunnel.
+        3. Registers the app in Azure AD and configures the app.
+        4. Registers the bot app in Bot Framework and configures the bot app.
+        5. Registers the app in Teams Developer Portal and configures the app.
+        6. Starts the bot app.
+        7. Starts Teams in a web browser and sideloads the bot app.
 
 
         </details>
@@ -875,12 +875,12 @@ items:
           > [!NOTE]
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
-        1. Starts Ngrok to create a HTTP tunnel.
-        1. Registers the app in Azure AD and configures the app.
-        1. Registers the bot app in Bot Framework and configures the app.
-        1. Registers the app in Teams Developer Portal and configures the app.
-        1. Starts the messaging extension app hosted locally.
-        1. Starts Teams in a web browser and sideloads the Teams app.
+        2. Starts Ngrok to create a HTTP tunnel.
+        3. Registers the app in Azure AD and configures the app.
+        4. Registers the bot app in Bot Framework and configures the app.
+        5. Registers the app in Teams Developer Portal and configures the app.
+        6. Starts the messaging extension app hosted locally.
+        7. Starts Teams in a web browser and sideloads the Teams app.
         
         </details>
 
