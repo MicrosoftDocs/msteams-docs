@@ -76,7 +76,7 @@ items:
 - title: Create and register your bot in Azure portal
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your bot in Azure portal:
+    To create and register your bot in Azure Active Directory, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service
     * Create client secret to enable SSO authentication of the bot
@@ -403,7 +403,7 @@ items:
            * `[termsOfUseUrl]`
 
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 1.png" alt-text="bot home" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-Manifest 1 new.png" alt-text="bot home" border="true":::
 
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name
          * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**
