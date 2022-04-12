@@ -55,7 +55,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="teams-notification" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
@@ -67,7 +67,7 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="teams-notification" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1" border="false":::
    :::column-end:::
 :::row-end:::
 
