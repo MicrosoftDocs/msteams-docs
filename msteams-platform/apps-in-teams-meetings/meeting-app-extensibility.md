@@ -216,10 +216,7 @@ The following table provides the user types and lists the features that each use
 | In-meeting side panel | Yes | Yes | Yes | Yes | Yes |
 | In-meeting dialog | Yes | Yes | No | No | No |
 | Pre/post meeting support | Yes | Yes | No | No | No |
-| Support for anonymous users | Yes | No (backlog) | Yes | NA | NA |
 | Generic app share to stage | Yes | Yes | Yes | Yes | Yes |
-| AV filter | Yes | Yes | Yes | Yes | Yes |
-| Together mode | Yes | Yes | Yes | Yes | Yes |
 | Deeplinks to pre/post/in-meeting tabs  | Yes | Yes | Yes | Yes | Yes |
 
 > [!NOTE]
@@ -235,29 +232,6 @@ The following table provides the user types and lists the features that each use
 | Share app to stage | Yes | Yes | Yes | Yes | Yes |
 | Get app content sharing stage | No | No | No | No | No |
 | Get app sharing content capabilities | No | No | No | No | No |
-
-**Features supported for personal tenant**
-
-| Feature | Schedule private meeting | Meet now | One-on-one calls | Group calls |
-|---|---|---|---|---|
-| Add apps to meetings | No | No | No | No |
-| Manage apps added in meeting | Yes | Yes | Yes | Yes |
-| In-meeting side panel | Yes | Yes | Yes | Yes |
-| In-meeting dialog | No | No | No | No |
-| Pre/post meeting support | No | No | No | No |
-| Support for anonymous users | Yes | Yes | NA | NA |
-| Generic app share to stage | Yes | Yes | Yes | Yes |
-
-**APIs Client SDK for personal tenant**
-
-| Feature | Scheduled private meeting | Meet now | One-on-one calls | Group calls |
-|---|---|---|---|---|
-| Get meeting details | No | No | No | No |
-| Get user | No | No | No | No |
-| Get context | No | No | No | No |
-| Share app to stage | Yes | Yes | Yes | Yes |
-| Get app content sharing stage | No | No | No | No |
-| Get app sharing content capabilities | No | No | No | No |
 
 ## Next step
 

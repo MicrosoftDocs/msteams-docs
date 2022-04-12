@@ -16,6 +16,17 @@ The meeting extensibility provide APIs to enhance meeting experience. You can pe
 * Use APIs to make your app aware of meeting.
 * Select required APIs to improve the meeting experience.
 
+**APIs Client SDK for work tenant**
+
+| Feature | Scheduled private meeting | Scheduled channel meeting | Meet now | One-on-one calls | Group calls |
+|---|---|---|---|---|---|
+| Get meeting details | Yes | No | No | No | No
+| Get user | No | No | No | No | No |
+| Get context | No | No | No | No | No |
+| Share app to stage | Yes | Yes | Yes | Yes | Yes |
+| Get app content sharing stage | No | No | No | No | No |
+| Get app sharing content capabilities | No | No | No | No | No |
+
 > [!NOTE]
 > Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
 
