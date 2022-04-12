@@ -342,6 +342,7 @@ items:
          * Set `"BaseUrl"` to the fully qualified ngrok domain name.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings" border="true":::
+          
 
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -435,7 +436,7 @@ items:
     
        In the app selection page, the app is displayed as **Side Panel**.
   
-        :::image type="content" source="~/assets/images/meetings-side-panel/appicon.png" alt-text="App icon in Teams" border="true"::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/appicon-1.png" alt-text="App icon in Teams" border="true"::: 
 
     1. Select the **Side Panel** app.
     
