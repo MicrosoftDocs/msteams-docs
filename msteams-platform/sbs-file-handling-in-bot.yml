@@ -197,7 +197,7 @@ items:
 
        1.  In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api.png" alt-text="adding api" border="true":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-teams-bot.png" alt-text="adding api" border="true":::
         
        1. Select **Apply**.
 
@@ -224,7 +224,7 @@ items:
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{your AppID}`.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri.png" alt-text="redirect uri" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri1.png" alt-text="redirect uri" border="true":::
 
        The following image shows the domain name:
 
@@ -280,7 +280,7 @@ items:
 
        The following image displays the **Client Id**:
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-ids.png" alt-text="shows ids" border="true":::   
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/client-id-teams-bot.png" alt-text="shows ids" border="true":::   
 
     1. In the left panel, select **API Permissions**. 
 
@@ -370,7 +370,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value
          * Set `"MicrosoftAppTenantId"` as blank for MultiTenant bot
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json.png" alt-text="appsettings file in visual studio" border="true":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json1.png" alt-text="appsettings file in visual studio" border="true":::
            
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -450,11 +450,11 @@ items:
 
       1. Select **Apps**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/AppStore.png" alt-text="adding app" border="true"::: 
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/AppStore1.png" alt-text="adding app" border="true"::: 
 
       1. In the lower left corner, select **Manage your apps**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manageapps.png" alt-text="apps" border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manage-apps.png" alt-text="apps" border="true":::
 
       1. Select **Upload a custom app**
 
