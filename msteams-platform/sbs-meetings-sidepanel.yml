@@ -345,7 +345,7 @@ items:
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in **Visual Studio** and update the following information:  
+    1. Open **appsettings.json** in Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
@@ -353,11 +353,11 @@ items:
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings" border="true":::
 
-    1. Navigate to `manifest.json` in cloned repository.
+    1. Navigate to **manifest.json** in cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location" border="true":::
     
-    1. Open **manifest.json** in **Visual Studio** and make the following changes:
+    1. Open **manifest.json** in Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -419,7 +419,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/addanapp.png" alt-text="Add an app" border="true":::
    
-    1. In the pop-up window opens, select **Manage apps**.
+    1. In the pop-up window, select **Manage apps**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/manageapps.png" alt-text="Manage apps" border="true"::: 
    
