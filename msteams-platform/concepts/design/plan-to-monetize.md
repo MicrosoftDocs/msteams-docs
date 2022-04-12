@@ -1,6 +1,6 @@
 ---
 title: Plan to monetize your app
-description: learn how plan to monetize your Microsoft Teams app.
+description: Learn how to plan to monetize your Microsoft Teams app, common ways to monetize your app, and factors that influence for the best monetization option.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
