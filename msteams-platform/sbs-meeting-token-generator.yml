@@ -336,7 +336,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app is not granted IT admin consent, users must provide consent the first time they use an app. </br>
                
         
          1. Select **Add a platform**.
@@ -353,7 +353,7 @@ items:
    
          1. Select **Configure**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-configureweb.png" alt-text="bot home" border="true":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/sbs-configure-web.png" alt-text="bot home" border="true":::
 
 
 - title: Set up app settings
@@ -378,7 +378,7 @@ items:
         > [!NOTE]
         > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png" alt-text="app setting" border="true":::
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-app settings.png" alt-text="bot home" border="true":::
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -403,12 +403,12 @@ items:
            * `[termsOfUseUrl]`
 
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-manifest-1.png" alt-text="manifest old" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 1.png" alt-text="bot home" border="true":::
 
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
          * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png" alt-text="manifest" border="true":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 2.png" alt-text="bot home" border="true":::
 
 
 - title: Build client app using npm install
