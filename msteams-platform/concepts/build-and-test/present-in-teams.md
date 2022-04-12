@@ -19,6 +19,8 @@ The following image shows the present in Teams experience:
 
 (content to be added)
 
+## Deep link Format
+
 When you select Present in Teams button, it launches the deep link to the meeting stage. The following are the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
