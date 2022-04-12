@@ -101,8 +101,7 @@ You must use the following set of APIs to enable your device's location capabili
 |`showLocation`| Shows location on map. |* True: Users can choose any location of their choice.</br> * False: users cannot change their current location.| False: The current location is fetched without displaying the map. [If `allowChooseLocation` is set to *true*, the `showMap` is ignored]. | 
 
 > [!NOTE]
-> Desktop doesn't support capturing current location. However, after device permission is set, it captures the current location.
-
+> Desktop supports capturing the current location after the device permission is granted.
 
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
