@@ -43,8 +43,8 @@ items:
 
     * [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
-    * [ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) version 3.1
-    * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 or later
+    * [Latest version of ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) 
+    * [Latest version of React.JS](https://reactjs.org/tutorial/tutorial.html) 
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -152,7 +152,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/list of apps.png" alt-text="list of applications" border="true":::
 
-- title: Interacting with the app in Teams
+- title: Interact with the app in Teams
   durationInMinutes: 1
   content: | 
     1. Go to Teams meeting.
