@@ -12,9 +12,9 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 > [!NOTE]
 >
-> * To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
+> * To integrate media capabilities within your Microsoft Teams app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
-> * To integrate location capabilities within your Microsoft Teams mobile app, see [Integrate location capabilities](location-capability.md).
+> * To integrate location capabilities within your Microsoft Teams app, see [Integrate location capabilities](location-capability.md).
 
 ## Native device permissions
 
@@ -234,15 +234,15 @@ Device permissions are stored for every login session. It means that if you sign
 # [Desktop (angular)](#tab/desktop-angular)
 | **App level permission** | **Teams level permission, na** | **Teams level permission, yes** | **Teams level permission, no** |
 |---------------|--------------|--------|------|
-|No | • Show app specific permission prompt. (no longer required per new permission model implementation) </br> ![Tabs desktop device permissions](~/assets/images/tabs/allow-permission.png) </br> • If Teams doesn’t have location access, then provide it implicitly </br> • User response: </br> a. Allow - launch API. </br> b. Deny - throw permission denied error. On subsequent calls to API show an alert dialog asking user to provide consent in permission settings page. </br>![Tabs desktop](~/assets/images/tabs/microphone.png) </br>|-|
-|Yes | If Teams doesn’t have location access, then provide it implicitly (aligned with desktop model)|-|-|
+|No | • Show app specific permission prompt (no longer required per new permission model implementation). </br> ![Tabs desktop device permissions](~/assets/images/tabs/allow-permission.png) </br> • If Teams doesn’t have location access, then provide it implicitly. </br> • User response: </br> a. Allow - launch API. </br> b. Deny - throw permission denied error. On subsequent calls to API show an alert dialog asking user to provide consent in permission settings page. </br>![Tabs desktop](~/assets/images/tabs/microphone.png) </br>|-|
+|Yes | If Teams doesn’t have location access, then provide it implicitly (aligned with desktop model).|-|-|
 
 # [Web (angular)](#tab/web-angular)
 
 | **App level permission** | **Teams level permission, na** | **Teams level permission, yes** | **Teams level permission, no** |
 |---------------|--------------|--------|-------|
-|No | • Prompt #1 within Teams web cliente </br> ![Tabs](~/assets/images/tabs/prompt2.png) </br> • If prompt #1 is allowed, then prompt #2 (browser) is shown when app tries to access location: `teams.microsoft.com wants to access your location.`</br> If either of the prompts is denied, then throw permission denied error.|Show prompt #1 |Throw permission denied error. App developer is expected to handle this error code and show a prompt ![Device permissions](~/assets/images/tabs/dictationprompt.png) |
-|Yes | Browser prompt shown (prompt #2)|No prompt|Throw permission denied error. App developer is expected to handle this error code and show a prompt ![Device](~/assets/images/tabs/dictationprompt.png)|
+|No | • Prompt #1 within Teams web client is shown. </br> ![Tabs](~/assets/images/tabs/prompt2.png) </br> • If prompt #1 is allowed, then prompt #2 (browser) is shown when app tries to access location: `teams.microsoft.com wants to access your location`. </br> If either of the prompts is denied, then throw permission denied error.|Show prompt #1.|Throw permission denied error. App developer is expected to handle this error code and show a prompt. ![Device permissions](~/assets/images/tabs/dictationprompt.png) |
+|Yes | Browser prompt shown. (prompt #2)|No prompt.|Throw permission denied error. App developer is expected to handle this error code and show a prompt. ![Device](~/assets/images/tabs/dictationprompt.png)|
 
 
 > [!NOTE]
