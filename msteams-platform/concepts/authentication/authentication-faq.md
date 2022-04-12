@@ -62,13 +62,13 @@ Common questions asked regarding Authentication in Teams.
 <details>
 <summary>How can I use Teams SSO with SAML?</summary>
 
-**Answer**: SAML with Teams SSO isn't supported. Teams SSO relies on the OAuth 2.0 protocol, which serves a similar role to SAML. It's widely used in cloud-based applications where SAML was designed for federating identity between enterprises.
+**Answer**: Teams SSO with SAML isn't supported. Teams SSO relies on the OAuth 2.0 protocol, which serves a similar role to SAML. It's widely used in cloud-based applications where SAML was designed for federating identity between enterprises.
 </details>
 <br>
 <details>
 <summary>How is Teams SSO better than SSO from Google, Facebook, etc.?</summary>
 
-**Answer**: In the case of Teams apps, Teams SSO is better because Teams uses it to validate identity. The user identity is the same in Teams, Graph (and all the M365 content) and the app. This A single identity enables single sign-On with Teams.
+**Answer**: In the case of a Teams app, Teams SSO is better. Teams uses it to validate user identity. The user identity is the same in Teams, Graph (and all the M365 content) and the app. This Teams identity enables single sign-on with Teams SSO.
 
 Other advantages are for enterprise customers, such as:
 
