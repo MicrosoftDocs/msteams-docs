@@ -233,18 +233,15 @@ Device permissions are stored for every login session. It means that if you sign
 # [Desktop (angular)](#tab/desktop-angular)
 | **App level permission** | **Teams level permission, na** | **Teams level permission, yes** | **Teams level permission, no** |
 |---------------|--------------|--------|------|
-|No | • Show app specific permission prompt (no longer required per new permission model implementation).<br> :::image type="content" source="~/assets/images/tabs/allow-permission.png" alt-text="Screenshot that shows prompt2" border="true"::: </br> • If Teams doesn’t have location access, then provide it implicitly. </br> • User response: </br> a. Allow - launch API. </br> b. Deny - throw permission denied error. On subsequent calls to API show an alert dialog asking user to provide consent in permission settings page.<br>
-:::image type="content" source="~/assets/images/tabs/microphone.png" alt-text="Screenshot that shows prompt2" border="true"::: </br>|-|
-|Yes | If Teams doesn’t have location access, then provide it implicitly (aligned with desktop model).|-|-|
+|No | • Show app specific permission prompt. (no longer required per new permission model implementation) </br> ![Tabs desktop device permissions](~/assets/images/tabs/allow-permission.png) </br> • If Teams doesn’t have location access, then provide it implicitly. </br> • User response: </br> a. Allow - launch API. </br> b. Deny - throw permission denied error. On subsequent calls to API show an alert dialog asking user to provide consent in permission settings page. </br>![Tabs desktop](~/assets/images/tabs/microphone.png) </br>|-|
+|Yes | If Teams doesn’t have location access, then provide it implicitly.|-|-|
 
 # [Web (angular)](#tab/web-angular)
 
 | **App level permission** | **Teams level permission, na** | **Teams level permission, yes** | **Teams level permission, no** |
 |---------------|--------------|--------|-------|
-|No | • Prompt #1 within Teams web client is shown. </br> :::image type="content" source="~/assets/images/tabs/allow-permission.png" alt-text="Screenshot that shows allow permission" border="true":::</br> • If prompt #1 is allowed, then prompt #2 (browser) is shown when app tries to access location: `teams.microsoft.com wants to access your location`. 
-:::image type="content" source="~/assets/images/tabs/prompt2.png" alt-text="Screenshot that shows prompt2" border="true"::: </br> If either of the prompts is denied, then throw permission denied error.|Show prompt #1.|Throw permission denied error. App developer is expected to handle this error code and show a prompt.
-:::image type="content" source="~/assets/images/tabs/dictationprompt.png" alt-text="Screenshot that shows problem with dictation" border="true"::: |
-|Yes | Browser prompt shown. (prompt #2)|No prompt.|Throw permission denied error. App developer is expected to handle this error code and show a prompt. </br> :::image type="content" source="~/assets/images/tabs/dictationprompt.png" alt-text="Screenshot that shows problem with dictation" border="true":::|
+|No | • Prompt #1 within Teams web client is shown </br> ![Tabs web device permissions](~/assets/images/tabs/allow-permission.png) </br> • If prompt #1 is allowed, then prompt #2 (browser) is shown when app tries to access location: `teams.microsoft.com wants to access your location.`</br> ![Tabs](~/assets/images/tabs/prompt2.png)</br> If either of the prompts is denied, then throw permission denied error.|Show prompt #1 |Throw permission denied error. App developer is expected to handle this error code and show a prompt. </br>![Device permissions](~/assets/images/tabs/dictationprompt.png) |
+|Yes | Browser prompt shown (prompt #2).|No prompt.|Throw permission denied error. App developer is expected to handle this error code and show a prompt. </br> ![Device](~/assets/images/tabs/dictationprompt.png)|
 
 > [!NOTE]
 > When you consent to the native device permissions, it is valid only for your _current_ login session.
