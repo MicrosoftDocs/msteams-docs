@@ -15,13 +15,13 @@ The following image shows the present in Teams experience:
 
 :::image type="content" source="../../assets/images/present-in-teams/present.PNG" alt-text="present-in-teams":::
 
-## Enable Present in Teams on 3P app
+## Enable Present in Teams on third party app
 
 (content to be added)
 
 ## Deep link Format
 
-When you select Present in Teams button, it launches the deep link to the meeting stage. The following are the deep link format:
+When you select Present in Teams button, it launches the deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
@@ -29,7 +29,7 @@ The query parameters are:
 
 * `msteams`: All deep links should start with **msteams**, so that Teams app recognizes it and can open the deep link.​
 
-* `meeting-stage`: Verb that specifies the protocol type, and the deep link type​.
+* `meeting-stage`: Verb that specifies the protocol type and the deep link type​.
 
 * `deep link Id`: **GUID/UUID** used for telemetry correlation​.
 
