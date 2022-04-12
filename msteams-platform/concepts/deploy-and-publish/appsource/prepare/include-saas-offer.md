@@ -282,8 +282,6 @@ Customer is able to assign licenses for a new SaaS purchase - to a single or mul
 
 1. Select **Buy a subscription**.
 
-
-
 ## See also
 
 [Maintaining and supporting your published app](../post-publish/overview.md)
