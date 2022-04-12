@@ -73,14 +73,14 @@ items:
     **To run the tab device permissions by uploading the manifest.zip file in Teams:**
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples > samples > tab-device-permissions > nodejs > appPackage** folder.
-    2. Open the **manifest.json** file in visual studio code.
-    3. In the **manifest.json** file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
+    2. Open the `manifest.json` file in visual studio code.
+    3. In the `manifest.json` file, find **<<BASE_URI_DOMAIN>>** and replace it with your https endpoint from ngrok excluding the "https://" part in all the places.
 
        ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)
 
     4. Zip the files in the **appPackage/folder** as manifest.zip.
     5. Open Teams on browser using tenant ID.
-    6. To upload **manifest.zip**, select **Apps > Upload a custom app** and open **manifest.zip**.
+    6. To upload `manifest.zip`, select **Apps > Upload a custom app** and open `manifest.zip`.
     7. Select **Tab Device Permission** app.
     8. Select **Add** to add the tab device permission app.
 
@@ -95,7 +95,7 @@ items:
         ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)
 
     11. Open desktop Teams.
-    12. To upload **manifest.zip**, select **Apps > Upload a custom app** and open **manifest.zip**.
+    12. To upload `manifest.zip`, select **Apps > Upload a custom app** and open `manifest.zip`.
     13. Select **Add** to add the tab device permission app and you will see the following output:  
 
         ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)
