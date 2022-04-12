@@ -72,7 +72,7 @@ If meeting extension is installed:
 
    :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
 
-1. Select **open** button.
+1. Select **Start sharing** button.
 
    :::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Present in teams share":::
 
@@ -82,9 +82,17 @@ If meeting extension is installed:
 
 If meeting extension is not installed:
 
+1. Open web app in the browser and select **Share in meeting** button.
+
+   :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
+
 1. Select **Add** to install meeting extension app.
 
    :::image type="content" source="../../assets/images/present-in-teams/meeting-extension-app.PNG" alt-text="meeting-extension":::
+
+1. Select **Start sharing** button.
+
+   :::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Present in teams share":::
 
 1. Web app is shared to meeting stage and all the participant can interact and edit together.
 
