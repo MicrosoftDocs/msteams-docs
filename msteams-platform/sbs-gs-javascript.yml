@@ -179,7 +179,7 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create a new Teams app** to create an app using Teams Toolkit.
 
@@ -344,12 +344,21 @@ items:
 
         In case you're wondering, when you press the **F5** key, Teams Toolkit:
 
-        - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-        - *Sideloads* the app in Teams.
-        - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-        - Starts the app's frontend hosted locally.
-        - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-        - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+        1. Checks for the following prerequisites:
+          * You're logged in with a Microsoft 365 account.
+          * Sideloading is enabled for your Microsoft 365 account.
+          * Supported Node.js version is installed.
+          * NPM packages for tab app are installed.
+          * Development certificate for localhost is installed.           
+          * Port is available for the tab app.
+
+          > [!NOTE]
+          > If Teams Toolkit doesn’t check a particular prerequisite, it prompts you to check it.
+
+        1. Registers the app with Azure AD and configures the app.
+        1. Registers the app in Teams Developer Portal and configures the app.
+        1. Starts the tab app.
+        1. Starts Teams in a web browser and sideloads the tab app.
 
         </details>
 
@@ -443,7 +452,7 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
@@ -685,7 +694,7 @@ items:
 
     1. Select **Create New Project** from the left-hand side of the Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create New Project** to create an app using the Teams Toolkit.
 
