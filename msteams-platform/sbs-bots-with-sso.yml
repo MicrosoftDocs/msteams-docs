@@ -287,9 +287,9 @@ items:
 
         :::image type="content" source="~/assets/images/bots/authorizedscope.png" alt-text="Authorized Scope" border="true":::
 
-    The following image displays the **Client Id**:
+        The following image displays the **Client Id**:
 
-        :::image type="content" source="~/assets/images/bots/clientapps.png" alt-text="Client Apps" border="true":::
+          :::image type="content" source="~/assets/images/bots/clientapps.png" alt-text="Client Apps" border="true":::
 
     1. In the left panel, select **API Permissions**.
 
