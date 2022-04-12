@@ -45,7 +45,7 @@ Complete the following steps to update the app package:
     [13:39:27] Finished 'default' after 62 μs
     ```
 
-    The name of the generated app package is **helloworldapp.zip**. You can search for this file if the location is not clear in the tool you are using.
+    The name of the generated app package is `helloworldapp.zip`. You can search for this file if the location is not clear in the tool you are using.
 
 1. Now to modify this app package, select **Import an existing app** in the **Manifest editor**:
 

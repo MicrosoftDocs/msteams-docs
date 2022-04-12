@@ -340,9 +340,9 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
     
-    1. Open **manifest.json** in **Visual Studio 2019** and make the following changes:
+    1. Open `manifest.json` in **Visual Studio 2019** and make the following changes:
 
          * Set `id` to `[MicrosoftAppId]`
          * Set `botId` to `[MicrosoftAppId]`

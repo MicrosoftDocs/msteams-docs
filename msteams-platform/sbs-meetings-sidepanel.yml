@@ -353,7 +353,7 @@ items:
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings" border="true":::
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location" border="true":::
     
