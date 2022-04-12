@@ -344,7 +344,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value
          * Set `"BaseURL"` to your `webAppDomain`
 
-          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json.png" alt-text="App settings" border="true":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1.png" alt-text="App settings" border="true":::
 
 - title: Set up manifest file
   durationInMinutes: 1
