@@ -1,9 +1,8 @@
 ---
 title: Get started - Overview
-description: Overview to Get started for Microsoft Teams Developer Documentation
+description: Overview to Get started for Microsoft Teams developer documentation and introduces you to common tools, fundamental concepts, and more advanced features.
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams developer samples
 ---
 # Get started
 

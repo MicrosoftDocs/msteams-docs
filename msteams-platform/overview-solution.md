@@ -1,7 +1,7 @@
 ---
 title: Teams solution for building apps
 author: heath-hamilton
-description: Overview of Teams solution for building apps
+description: Overview of Teams solution for building apps and provide support from planning your app to distributing it.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
