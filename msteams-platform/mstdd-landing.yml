@@ -57,10 +57,10 @@ landingContent:
         url: /contribute/additional-resources
     - linkListType: tutorial
       links:
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
       - text: Build app with SPFx
         url: sbs-gs-spfx.yml
       - text: Build app with C# or .NET
