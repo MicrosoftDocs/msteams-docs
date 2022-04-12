@@ -1,27 +1,27 @@
 ---
-title: Present in Teams
-description: Learn to add the present in Teams button on app and document to share in the meeting stage
+title: Share in Teams Meeting
+description: Learn to add the Share in Teams Meeting button on app and document to share in the meeting stage
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Present in Teams
+keywords: Share in Teams Meeting
 ---
-# Present in Teams
+# Share in Teams Meeting
 
-Present in Teams allows users to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together.
+Share in Teams Meeting allows users to share any documents or third party app as a web view in the meeting stage and all the participants can interact and edit together.
 
-Users can select Present in Teams button and it launches the deep link to the meeting stage. If users not installed meeting extension, it request users to install the meeting extension app for the third party apps to control the meeting stage and to have access to the meeting stage.
+Users can select Share in Teams Meeting button and it launches the deep link to the meeting stage. If users not installed meeting extension, it request users to install the meeting extension app for the third party apps to control the meeting stage and to have access to the meeting stage.
 
-The following image shows the present in Teams experience:
+The following image shows the Share in Teams Meeting experience:
 
 :::image type="content" source="../../assets/images/present-in-teams/present.PNG" alt-text="present-in-teams":::
 
-## Enable Present in Teams on third party app
+## Enable Share in Teams Meeting on third party app
 
 (content to be added)
 
 ## Deep link Format
 
-When you select Present in Teams button, it launches the deep link to the meeting stage. The following is the deep link format:
+When you select Share in Teams Meeting button, it launches the deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
@@ -66,27 +66,27 @@ Optional:
 
 ## End user experience on third party apps
 
-After you enable present to teams on third party apps, you can share the document or web apps in the meeting stage. To access, follow the steps:
+After you enable Share in Teams Meeting on third party apps, you can share the document or web apps in the meeting stage. To access, follow the steps:
 
 If meeting extension is installed:
 
 1. Open web app in the browser and select **Share in meeting** button.
 
-   :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
+   :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Share in Teams Meeting web app":::
 
 1. Select **Start sharing** button.
 
-   :::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Present in teams share":::
+   :::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Share in Teams Meeting share":::
 
 1. Web app is shared to meeting stage and all the participant can interact and edit together.
 
-   :::image type="content" source="../../assets/images/present-in-teams/share-stage.PNG" alt-text="present in teams":::
+   :::image type="content" source="../../assets/images/present-in-teams/share-stage.PNG" alt-text="Share in Teams Meeting":::
 
 If meeting extension is not installed:
 
 1. Open web app in the browser and select **Share in meeting** button.
 
-   :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Present in teams web app":::
+   :::image type="content" source="../../assets/images/present-in-teams/web-app.PNG" alt-text="Share in Teams Meeting web app":::
 
 1. Select **Add** to install meeting extension app.
 
@@ -94,7 +94,7 @@ If meeting extension is not installed:
 
 1. Select **Start sharing** button.
 
-   :::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Present in teams share":::
+   :::image type="content" source="../../assets/images/present-in-teams/share.PNG" alt-text="Share in Teams Meeting share":::
 
 1. Web app is shared to meeting stage and all the participant can interact and edit together.
 
