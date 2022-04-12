@@ -146,9 +146,7 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Create a meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: View Meeting Stage in Teams
-          url: ~/sbs-meetings-stage-view.yml
-
+       
 
     - linkListType: tutorial
       links:
@@ -166,10 +164,7 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
-        - text: Share meeting stage in Teams
-          url: ~/sbs-meetings-stage-view.yml
-        - text: Interact with content bubble bot in Meetings
-          url: ~/sbs-meeting-content-bubble.yml
+        
           
           
 - title: Teams app scenarios
