@@ -18,7 +18,7 @@ items:
     
     A bot behaves differently depending on the conversation it's involved in:
 
-    * Bots in channel and group chat conversations require the user to @mention the bot.
+    * Bots in channel and group chat conversations require the user to @mention the bot
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
     This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
@@ -439,6 +439,8 @@ items:
        * manifest.json
        * icon-outline.png
        * icon-color.png
+
+        :::image type="content" source="~/assets/images/bots/manifest.png" alt-text="Ca" border="true":::
 
     1. Go to Teams.
     1. Select **Store**
