@@ -353,10 +353,10 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
     
     1. Open **manifest.json** in **Visual Studio** and make the following changes:
-
+    
          * Set `id` to `[MicrosoftAppId]`
          * Set `botId` to `[MicrosoftAppId]`
          * Set `validDomains` to `[WebAppDomainName]`
