@@ -10,13 +10,14 @@ metadata:
   nextTutorialHref: bots/how-to/bots-filesv4.md
   nextTutorialTitle: Read more on send and receive files through the bot
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
-   The bot uses Teams API to directly send and receive files with users in the personal chats. The bot also helps in implementing features like expense reporting, image recognition, file archival, and e-signatures which involves editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
+   The bot uses Teams API to send and receive files with users in the personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features like expense reporting, image recognition, file archival, and e-signatures which involves editing of file content. 
+   
 
-   **Key features of upload file in Teams using bot** 
+   **Key features of uploading file in Teams using bot** 
    
      * Upload files to Teams using a bot
      * Receive a file sent to bot as an attachment
@@ -33,7 +34,7 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [.NET Core SDK version 3.1](https://dotnet.microsoft.com/download).
+    * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download).
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
    
       > [!NOTE]
@@ -51,7 +52,7 @@ items:
 
     1. Select **Clone**. 
 
-- title: Create and register your bot in Azure portal
+- title: Create and register your bot 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
