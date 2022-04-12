@@ -222,17 +222,6 @@ The following table provides the user types and lists the features that each use
 > [!NOTE]
 > Mobile does not support AV filter, generic app share stage and together mode.
 
-**APIs Client SDK for work tenant**
-
-| Feature | Scheduled private meeting | Scheduled channel meeting | Meet now | One-on-one calls | Group calls |
-|---|---|---|---|---|---|
-| Get meeting details | Yes | No | No | No | No
-| Get user | No | No | No | No | No |
-| Get context | No | No | No | No | No |
-| Share app to stage | Yes | Yes | Yes | Yes | Yes |
-| Get app content sharing stage | No | No | No | No | No |
-| Get app sharing content capabilities | No | No | No | No | No |
-
 ## Next step
 
 > [!div class="nextstepaction"]
