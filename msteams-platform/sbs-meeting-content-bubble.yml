@@ -39,7 +39,7 @@ items:
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download) 
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
+    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -224,7 +224,7 @@ items:
 
        The following image shows the domain name:
         
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-expose-api.png" alt-text="App ID URI" border="true":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-exposeapi.png" alt-text="App ID URI" border="true":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
