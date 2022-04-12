@@ -29,7 +29,7 @@ This module covers:
 
 Authentication is all about validating the identity of your app users. It's one of the ways you secure your app and app users against unwarranted access.
 
-You can validate app users in several ways, such as using login credentials, ID tokens, access tokens, and more. Identity Provider (IdP) is a key player in the process of authentication. An app and its users must be registered with the same IdP to facilitate verification of user identity. Azure Active Directory, Google, and Facebook are commonly used for their IdP services.
+You can validate app users in several ways, such as using ID tokens, access tokens, and more. Identity Provider (IdP) is a key player in the process of authentication. An app and its users must be registered with the same IdP to facilitate verification of user identity. Azure Active Directory, Google, and Facebook are commonly used for their IdP services.
 
 ## Considerations for planning authentication
 
@@ -43,7 +43,7 @@ You can use an authentication method suitable for your app to validate the crede
 
 1. Compatible with standards: Ensure that the authentication method you choose offers you the best options for your particular app requirements.
 
-1. Distribution of app: Desktop app, web app, mobile app
+1. App platform: Desktop app, web app, mobile app
 
 1. App users: Within organization or on Teams store
 
@@ -100,7 +100,7 @@ Within Teams, there are multiple ways you can implement authentication. Here's a
 
 - ID token: An ID token is granted for a user by an IdP when they have been verified successfully. It's used to cache user profile information. The IdP provides it to the Teams application when a user attempts to access an app.
 - Access token: An access token is an artifact contains user identity and permission scopes.
-- Bearer token: \add details\
+- Bearer token: 
 
 ## Next step
 
