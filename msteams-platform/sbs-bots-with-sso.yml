@@ -372,31 +372,39 @@ items:
 
     **To configure and run your bot sample**
 
-    1. Open Visual Studio.
+    1. Open Visual Studio
 
-    1. In Visual Studio, select **Clone a repository**.
+    1. Select **Clone a repository**
 
-    1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned.
+    1. In the **Repository location**, enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`. Ensure that you note the **Path** where the repository is cloned
     
-    1. Navigate to **File** > **Open** > **Project/Solution**.
+    1. Navigate to **File** > **Open** > **Project/Solution**
 
-    1. Select **BotSSOCSharp.csproj** file from **csharp_dotnetcore** folder.
+        :::image type="content" source="~/assets/images/bots/project-solution.png" alt-text="Bot Service connection" border="true":::
 
-    1. Open the **appsettings.json** file.
+    1. Select **BotSSOCSharp.csproj** file from **csharp_dotnetcore** folder
 
-    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
+        :::image type="content" source="~/assets/images/bots/filepath.png" alt-text="File Path" border="true":::
+
+    1. Open the **appsettings.json** file
+
+    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**
 
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
 
         ![Appsettings json](~/assets/images/bots/appsettingsjson.png)
 
-    1. Select **F5**  to run the project.
+    1. Select **F5**  to run the project
+
+        :::image type="content" source="~/assets/images/bots/certificate.png" alt-text="Ca" border="true":::
 
     1. Select **Yes** if the following dialog appears
 
        A webpage opens with a message **Bot is Ready**
 
+        :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Ca" border="true":::
+        
         <br>
 
         <details>
