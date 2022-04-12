@@ -1030,6 +1030,8 @@ A notification provides value in Teams if:
 1. Posted card or text provides adequate details requiring no further user action.
 1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
 
+A good high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
+
 Apps that provide only notifications with content such as **You have a new notification, click to view**, and require user to navigate outside of Teams for everything else don't provide significant value within Teams.
 
 :::row:::
