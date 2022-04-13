@@ -27,20 +27,21 @@ The following list provides the advantages of media capabilities:
 
 * Track audit visits in the retail outlets. The audit officer visits stores, refers the audit checklist on the cell phone, and checks if everything conforms to the protocol or guidelines. The officer attaches images of store layout as proof of visit and in case something doesn’t align to the guidelines, the officer highlights respective section in the images itself.
 
-
 > [!NOTE]
 >
 > * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.</br>
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+> * The Request Permissions prompt is automatically displayed on mobile when a relevant Teams API is initiated. For more information, see [Request device permissions](native-device-permissions.md).
+
 
 # [Mobile](#tab/mobile)
 
-The following image depicts web app experience of `selectMedia` API for image capability:
+The following image depicts mobile app experience of `selectMedia` API for image capability:
 
 <!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
-:::image type="content" source="~/assets/images/tabs/image-capability.png" alt-text="Illustration shows the image capability for web." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile.png" alt-text="Illustration shows the image capability for web." border="true":::
 
-The following image depicts web app experience of `selectMedia` API for microphone capability:
+The following image depicts mobile app experience of `selectMedia` API for microphone capability:
 
 <!-- ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png) -->
 :::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for web." border="true":::
@@ -62,9 +63,6 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
     "media",
 ],
 ```
-
-> [!NOTE]
-> The Request Permissions prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [Request device permissions](native-device-permissions.md).
 
 ## Media capability APIs
 
@@ -88,14 +86,16 @@ You must use the following set of APIs to enable your device's media capabilitie
 | API      | Description   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**Camera)**| This API allows users to **capture or select media from the device camera** and return it to the web-app. The users can edit, crop, rotate, annotate, or draw over images before submission. In response to `selectMedia`, the web-app receives the media IDs of selected images and a thumbnail of the selected media. This API can be further configured through the [ImageProps](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageprops?view=msteams-client-js-latest&preserve-view=true) configuration. |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) to `4` in `selectMedia` API for accessing microphone  capability. This API also allows users to record audio from the device microphone and return recorded clips to the web-app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) to `4` in `selectMedia` API for accessing microphone capability. This API also allows users to record audio from the device microphone and return recorded clips to the web-app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
-| [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
+| [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in full-screen mode as a scrollable list.|
 
+> [!NOTE]
+> `selectMedia` API for accessing microphone capability supports on mobile only.
 
 ## Error handling
 
-You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
+You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the descriptions under which the errors are generated:
 
 |Error code |  Error name     | Description|
 | --------- | --------------- | -------- |
