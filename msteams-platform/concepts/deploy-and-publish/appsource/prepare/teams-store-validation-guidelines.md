@@ -787,7 +787,6 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    </details>
 
 * Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#bot-message-spamming)). The message must also mention the person who added the bot.
-
    <br></br>
    <details><summary><b>Pass case ✔️</b></summary>
 
@@ -1145,7 +1144,7 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
 * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).
    <br></br>
-   <details><summary><b><red>Pass case</red></b></summary>
+   <details><summary><b>Pass case ✔️</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="validation-365-compliance-publisher-verifications":::
 
