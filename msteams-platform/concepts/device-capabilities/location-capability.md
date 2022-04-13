@@ -101,7 +101,7 @@ You must use the following set of APIs to enable your device's location capabili
 |`showLocation`| Shows location on map. |* True: Users can choose any location of their choice.</br> * False: users cannot change their current location.| False: The current location is fetched without displaying the map. [If `allowChooseLocation` is set to *true*, the `showMap` is ignored]. | 
 
 > [!NOTE]
-> Desktop doesnot support capturing the current location after the device permission is granted.
+> Desktop supports capturing the current location after the device permission is granted.
 
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
@@ -118,7 +118,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 | **1000** | PERMISSION_DENIED |User denied location permissions to the Teams App or the web-app .|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|
-| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
+| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build resolves the issue.|
 
 
 ### Code snippets
