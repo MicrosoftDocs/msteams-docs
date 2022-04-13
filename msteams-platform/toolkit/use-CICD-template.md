@@ -61,6 +61,8 @@ The following table lists all the secrets you need to create environment in GitH
 8. Follow the README files under `.github/workflows` to set up the workflow in GitHub.
 
 The following table lists all the secrets required to create environment:
+
+
 |Name|Description|
 |---|---|
 |`AZURE_SERVICE_PRINCIPAL_NAME`|The service principal name of Azure used to provision resources.|
