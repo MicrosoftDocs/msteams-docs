@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Share to Teams from personal app or tab
+        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
       - text: Create Teams conversation bot
         url: ~/sbs-teams-conversation-bot.yml
       - text: Build your first app using Blazor
@@ -42,8 +44,7 @@ landingContent:
         url: ~/concepts/app-fundamentals-overview.md  
       - text: App manifest schema version 1.12
         url: ~/resources/schema/manifest-schema.md
-      - text: Test preview for monetized apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+
       
 
 - title: Get started
@@ -142,15 +143,17 @@ landingContent:
           url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
-        - text: Generate a meeting token to extend a meeting
+        - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Create a meeting sidepanel
+        - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
       
     - linkListType: tutorial
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
+        - text: Generate meeting content bubble
+          url: ~/sbs-meeting-content-bubble.yml
         - text: Invoke task modules from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
         - text: Build search based messaging extension

@@ -50,7 +50,7 @@ Following are the steps to create a personal tab:
     yo teams
     ```
 
-1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your **manifest.json** file.
+1. Provide your values to a series of questions prompted by Microsoft Teams App generator to update your `manifest.json` file.
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator" border="true":::
 
@@ -159,7 +159,7 @@ Create a content page and update the existing files of the personal tab applicat
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Open **manifest.json** from the following location in your Visual Studio Code:
+1. Open `manifest.json` from the following location in your Visual Studio Code:
 
     ```
      ./src/manifest/manifest.json
@@ -184,7 +184,7 @@ Create a content page and update the existing files of the personal tab applicat
 
 1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
 
-1. Save the updated **manifest.json** file.
+1. Save the updated `manifest.json` file.
 
 1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an IFrame:
 
@@ -202,11 +202,7 @@ Create a content page and update the existing files of the personal tab applicat
 
 ### Create your app package
 
-You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the **manifest.json** file and generates the zip folder in the **./package** directory. At the command prompt, enter the following command:
-
-```cmd
-gulp manifest
-```
+You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the `manifest.json` file and generates the zip folder in the `./package` directory. At the command prompt, use the command `gulp manifest`.
 
 ### Build and run your application
 
@@ -247,12 +243,8 @@ gulp ngrok-serve
 
 ### Upload your application to Teams
 
-1. Go to Microsoft Teams and select **Store**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
-1. Select **Manage your apps**
-1. Select **Publish an app** and **Upload a custom app**.
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload custom app" border="true":::
-
+1. Go to Microsoft Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Select **Manage your apps** and **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab" border="true":::
@@ -333,9 +325,9 @@ ASP.NET Core treats files called **Index** as the default or home page for the s
 
 This folder contains the following required app package files:
 
-* A **full color icon** measuring 192 x 192 pixels.
-* A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A full color icon measuring 192 x 192 pixels.
+* A transparent outline icon measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
 
 These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
 
@@ -390,13 +382,9 @@ ngrok http 3978 --host-header=localhost
 
 1. Open **Apps** and select **Import app**.
 
-1. The name of your app package is **tab.zip**. It's available in the following path:
+1. The app package file name is `tab.zip` and it is available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
 
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Select **tab.zip** and open it in the Developer Portal.
+1. Select `tab.zip` and open it in the Developer Portal.
 
 1. A default **App ID** is created and populated in **Basic information** section.
 
@@ -488,7 +476,7 @@ This folder contains the following required app package files:
 
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
-* A **manifest.json** file that specifies the attributes of your app.
+* A `manifest.json` file that specifies the attributes of your app.
 
 These files must be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
 
@@ -699,3 +687,4 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
