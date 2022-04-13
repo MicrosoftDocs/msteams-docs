@@ -166,25 +166,20 @@ items:
 
     1. Deselect **Tab**, select **Tab(SPFx)**, and select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfxTab-spfx.png" alt-text="bot home" border="true":::
 
     1. Select **React** in the **Framework** section.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-react-page.png" alt-text="bot home" border="true":::
 
     1. Select **Enter** to accept the default **Web Part Name**.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/webpart-name.png" alt-text="Enter Webpart name":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-helloworld.png" alt-text="bot home" border="true":::
 
-    1. Select **Enter** to accept the default **Web Part Description**.
+    1. Enter a suitable name for your app, like `HelloWorld`. Ensure that the name of the app is alphanumeric. 
+       Select **Enter** to continue.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/webpart-description.png" alt-text="Enter Webpart description":::
-
-    1. Select a workspace folder. The Toolkit creates a folder in the workspace folder for the project.
-
-    1. Enter a suitable name for your app, like `HelloWorld`. Ensure that the name of the app is alphanumeric.  Select **Enter** to continue.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-name.png" alt-text="Enter SPFx app name":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
         Your Teams app is created within a few seconds.
 
