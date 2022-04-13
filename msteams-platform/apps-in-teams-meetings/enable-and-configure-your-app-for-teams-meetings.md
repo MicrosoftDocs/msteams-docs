@@ -123,7 +123,7 @@ During a meeting, you can use the `meetingSidePanel` or in-meeting notification 
 
 The `meetingSidePanel` enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. In your app manifest, you must add `meetingSidePanel` to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
-To create a deeplink to your Meeting SidePanel, see [deep links](~/concepts/build-and-test/deep-links#generate-a-deep-link-to-your-tab). When a deeplink is selected anywhere in the meeting stage it will open the side panel or else it would open in the pre or post meeting tab.
+To create a deeplink to your Meeting SidePanel, see [deep links](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-your-tab). When a deeplink is selected anywhere in the meeting stage it will open the side panel or else it would open in the pre or post meeting tab.
 
 To use the `userContext` API to route requests, see [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). For more information, see [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is similar to the authentication flow for websites. So tabs can use OAuth 2.0 directly. For more information, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
