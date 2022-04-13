@@ -5,7 +5,6 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: UI kit manage tab set-up single-sign-on sso deep linking role-based view thread discussion
 ---
 # Design your tab for Microsoft Teams
 

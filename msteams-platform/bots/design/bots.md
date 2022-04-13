@@ -1,6 +1,6 @@
 ---
 title: Designing your bot
-description: Learn how to design a Teams bot and get the Microsoft Teams UI Kit.
+description: Learn how to design a Teams bot for desktop, web, and mobile, and get the Microsoft Teams UI Kit. Learn about the bot functionality and appearance, authentication with single sign-on, use tabs with bots, and how to manage bots.
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high

@@ -1,7 +1,6 @@
 ---
 title: Designing your messaging extension
-description: Learn how to design a Teams messaging extension and get the Microsoft Teams UI Kit.
-keywords: teams design guidelines reference messaging extensions tips best practice
+description: Learn how to design a Teams messaging extension for desktop, web, and mobile, and get the Microsoft Teams UI Kit. Learn about the messaging extension functionality and appearance, teams design guidelines reference, messaging extensions tips, and best practices.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: qinch
