@@ -1145,7 +1145,7 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
 * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).
    <br></br>
-   <details><summary><b>Pass case ✔️</b></summary>
+   <details><summary><b><red>Pass case</red></b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="validation-365-compliance-publisher-verifications":::
 
