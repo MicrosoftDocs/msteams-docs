@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 # Overview
 
-You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams app, and build a richer experience.
+You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams app, and build a richer experience. At present, the web browsers, desktop, and mobile apps support the media capability.
 
 ## Advantages 
 
@@ -39,12 +39,14 @@ The following list provides the advantages of media capabilities:
 The following image depicts mobile app experience of `selectMedia` API for image capability:
 
 <!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile.png" alt-text="Illustration shows the image capability for web." border="true":::
+
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile." border="true":::
 
 The following image depicts mobile app experience of `selectMedia` API for microphone capability:
 
 <!-- ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png) -->
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for web." border="true":::
+
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile." border="true":::
 
 # [Desktop](#tab/desktop)
 
