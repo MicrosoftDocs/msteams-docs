@@ -201,19 +201,20 @@ The following is an example for implementation and experience of suggested actio
 
 ``` json
 "suggestedActions": {
-        "actions": [
-            {
-                "type": "imBack",
-                "title": "Action 1",
-                "value": "Action 1"
-            },
-            {
-                "type": "imBack",
-                "title": "Action 2",
-                "value": "Action 2"
-            }
-        ]
-    }
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
 ```
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
