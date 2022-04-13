@@ -985,17 +985,17 @@ To pass validation for a search-based message extension only app, the following 
 1. Posted card provides adequate details requiring no further user action.
 1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
 
-<details><summary><b>Pass case ✔️</b></summary>
+   <details><summary><b>Pass case ✔️</b></summary>
 
-:::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
+   :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
 
-</details>
+   </details>
 
-<details><summary><b>Fail case ❌</b></summary>
+   <details><summary><b>Fail case ❌</b></summary>
 
-:::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
+   :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
 
-</details>
+   </details>
 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
