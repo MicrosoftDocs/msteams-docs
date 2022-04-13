@@ -217,13 +217,12 @@ items:
     The CLI walks through some questions to create the project. Every question includes an instruction on answering it, for example, Use arrow keys to select an option. When you've answered the question, select **Enter** to confirm it.
 
     1. Select **Create a new Teams app**.
-    1. Select **Tab**.
-    1. Select **SharePoint Framework (SPFx)** frontend hosting.
-    1. Select **React** framework.
-    1. Press **Enter** for the **Web Part Name**.
-    1. Press **Enter** for the **Web Part Description**.
-    1. Press **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
+    2. Select **Tab**.
+    3. Select **SharePoint Framework (SPFx)** frontend hosting.
+    4. Select **React** Framework.
+    5. Press **Enter** for the **Web Part Name**.
+    6. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.
+
 
       After all the questions have been answered, your project will be created.
 
