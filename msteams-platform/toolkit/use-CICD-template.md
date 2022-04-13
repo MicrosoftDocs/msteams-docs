@@ -73,7 +73,7 @@ Perform the following the steps to customize the CD workflow:
 ### Create workflow templates using the TeamsFx CLI
 
 1. Enter `cd` to your Teams app project directory.
-2. Type `teamsfx add cicd` command to start the interactive command process.
+2. Enter `teamsfx add cicd` command to start the interactive command process.
 3. Select an environment from the command prompt.
 4. Select **Azure DevOps** as CI/CD provider.
 5. Select at least one template from these options: CI, CD, Provision, and Publish to Teams.
