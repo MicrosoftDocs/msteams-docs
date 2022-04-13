@@ -21,11 +21,11 @@ For effective integration, you must have a good understanding of [code snippets]
 
 The following list provides the advantages of media capabilities:
 
-* Choose the most popular logo design with rough mockups on whiteboard in the cell phone and post a poll with scans of whiteboard designs as poll options on the group chat in Teams. When the team members vote for different designs, the highest vote count can be the most popular choice.
+* Choose the most popular logo design with rough mockups on whiteboard in the cell phone and post a poll with scans of whiteboard designs as poll options on the group chat in Teams. When the team members vote for different designs, the highest vote count can be considered the most popular choice.
 
-* Claim a car insurance to the insurance company. The custom-built insurance claim settlement app on Teams lets you scan the physical document from the smartphone, confirm that all documents have been scanned through an image viewer, and upload the soft copy of the same.
+* Claim a car insurance to the insurance company. The custom-built insurance claim settlement app on Teams lets you scan the physical document from the smartphone, you can confirm that all documents have been scanned through an image viewer, and upload the soft copy of the same.
 
-* Track audit visits in retail outlets. The audit officer visits stores, refers the audit checklist on the cell phone, and checks if everything conforms to the protocol/guidelines. The officer attaches images of store layout as proof of visit and in case something doesn’t align to the guidelines, the officer highlights respective section in images itself.
+* Track audit visits in the retail outlets. The audit officer visits stores, refers the audit checklist on the cell phone, and checks if everything conforms to the protocol or guidelines. The officer attaches images of store layout as proof of visit and in case something doesn’t align to the guidelines, the officer highlights respective section in the images itself.
 
 
 > [!NOTE]
@@ -34,7 +34,6 @@ The following list provides the advantages of media capabilities:
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 # [Mobile](#tab/mobile)
-
 
 The following image depicts web app experience of `selectMedia` API for image capability:
 
@@ -65,7 +64,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
-> The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [Request device permissions](native-device-permissions.md).
+> The Request Permissions prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [Request device permissions](native-device-permissions.md).
 
 ## Media capability APIs
 
