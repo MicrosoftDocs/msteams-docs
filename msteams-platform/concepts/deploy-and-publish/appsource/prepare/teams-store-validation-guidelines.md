@@ -942,13 +942,13 @@ Action-based messaging extensions must do the following:
 
 * Incorporate the host app name instead of a generic verb for action commands triggered from a chat message, channel post, or call to action within apps. For example, use **Start a Skype Meeting** for **Start Meeting**, **Upload file to DocuSign** for **Upload file**, and so on. [*Suggested Fix*]
    <br></br>
-   <details><summary><b>Pass case ✔️</b></summary>
+   <details><summary><b>Pass case 👍</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="validation-messaging-extension-action-command-host-names":::
 
    </details>
 
-   <details><summary><b>Fail case ❌</b></summary>
+   <details><summary><b>Fail case 👎</b></summary>
 
    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
 
