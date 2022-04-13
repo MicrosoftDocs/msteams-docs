@@ -32,14 +32,6 @@ To integrate location capabilities, you must do the following:
 
 # [Mobile](#tab/mobile)
 
-1. Open your Teams app.
-1. Select **Apps**>**Manage your Apps**>**Upload a custom app**.
-1. Select Media app package .zip file.
-1. Add your app to Teams.
-1. Select `getLocation` from the list.
-1. Select **Allow** to access your location details.
-
-Your current location is displayed.
 
 The following image depicts mobile app experience of location capabilities:
 
@@ -49,13 +41,6 @@ The following image depicts mobile app experience of location capabilities:
 
 # [Desktop or web](#tab/desktop)
 
-1. Open your Teams app.
-1. Select **Apps**>**Manage your Apps**>**Upload a custom app**.
-1. Select Media app package .zip file.
-1. Add your app to Teams.
-1. Select `getLocation` from the list.
-
-Your current location is displayed.
 
 The following image depicts desktop app experience of location capabilities:
 
@@ -63,17 +48,11 @@ The following image depicts desktop app experience of location capabilities:
 
   :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
 
-The following image depicts web app experience of location capabilities:
-
-  <!-- ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png) -->
-
-  :::image type="content" source="~/assets/images/tabs/location-capability.png" alt-text="Illustration shows mobile location picker" border="true":::
 
 ---
 
-
 > [!NOTE]
-> When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at go.microsoft.com/?linkid=9710837 and the Microsoft Privacy Statement available at go.microsoft.com/fwlink/?LinkID=248686.
+> When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at go.microsoft.com/?linkid=9710837 and the Microsoft Privacy Statement available at go.microsoft.com/fwlink/?LinkID=248686.</br>
 > Further, you must provide a hypertext link to Bing Maps TOU, which is located at bottom of each page in your application where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you will comply with Microsoft's reasonable instructions in doing so. You will not encourage or require any end user to breach the terms of the Bing Maps TOU. In the event an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
 
 ## Update manifest
