@@ -14,15 +14,18 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your app.
+    The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your app.
+    
 
     **Key features of activity feed broadcast**
 
+    * Provides enhanced experience
+    * Keeps users up to date
     * Broadcasts message for all the members.
     * Displays activity feed notification.
     * Broadcasts details available for members.
 
-    This step-by-step guide helps you to extend your app services to broadcast message to all members of the organization using activity feed notification. You'll see the following output:
+    This step-by-step guide helps you broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
 
