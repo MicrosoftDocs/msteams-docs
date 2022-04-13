@@ -184,19 +184,12 @@ items:
         Your Teams app is created within a few seconds.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" border="true":::
-
-        After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This is the default location specified in Visual Studio Code.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
-
-        The message offers two options:
-        
-        - **Change location**
-        - **Local Debug**
+ 
+        The scaffolding should take a couple of minutes.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home" border="true":::
         
-        For this tutorial, you don't need to use these options.
+       For this tutorial, you don't need to use these options.
 
         > [!NOTE]
         > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
