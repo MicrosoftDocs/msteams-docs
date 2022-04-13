@@ -430,9 +430,11 @@ Use the following guidelines to write the Terms of use:
 
 ### Support links
 
+[*Mandatory Fix*]
+
 Your app's support URLs must not require authentication. For example, users must not login to contact you.
 
-Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
+Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket.
 <br></br>
 <details><summary><b>Fail case ❌
 </b></summary>
@@ -954,7 +956,9 @@ Action-based messaging extensions must do the following:
 
 ### Preview links (link unfurling)
 
-Messaging extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
+[*Mandatory Fix*]
+
+Messaging extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`.
 
 ### Search commands
 
@@ -1001,9 +1005,11 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 
 ## Task modules
 
+[*Mandatory Fix*]
+
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
 
-A task module must include an icon and the short name of the app it's associated with. Task modules must not embed an entire app and only display the components required to complete a specific action. [*Mandatory Fix*]
+A task module must include an icon and the short name of the app it's associated with. Task modules must not embed an entire app and only display the components required to complete a specific action.
 
 For more information, see [Teams task module design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
 <br></br>
