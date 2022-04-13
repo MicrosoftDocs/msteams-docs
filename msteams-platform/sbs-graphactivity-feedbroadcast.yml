@@ -42,14 +42,13 @@ items:
 
 - title: Set up local environment
   durationInMinutes: 1 
-  content: |
-   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+  content: | 
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**. 
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clonerepository.png" alt-text="Clone repository" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Clone repository" border="true":::
 
     1. Select **Clone**. 
 
@@ -68,7 +67,7 @@ items:
     1. In the left navigation panel, select **App Registrations**.
     1. Select **New registration**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration2.png" alt-text="New registration" border="true":::
 
     1. On the **Register an application** page, set the value as follows:
 
@@ -81,20 +80,20 @@ items:
 
     1. From the app **Overview** page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id2.png" alt-text="New registration" border="true":::
 
     **To create tunnel for local web server**
 
-      Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+      Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
      ngrok http -host-header=localhost 3978
      ```
      
-     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok.png" alt-text="New registration" border="true":::
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok2.png" alt-text="New registration" border="true":::
 
     > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
@@ -102,14 +101,14 @@ items:
     1. In the left navigation panel, select **Expose an API**.
     1. Select **Set**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/exposeanapi.png" alt-text="Expose and api" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api1.png" alt-text="Expose and api" border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Set a link" border="true":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://bff2****.ngrok.io/{AppID}`</br>
+        `api:// your ngrok/{AppID}`</br>
         
        The following image shows the domain name:
         
@@ -138,7 +137,7 @@ items:
     1. Ensure that **State** is set to **Enabled**.
     1. Select **Add scope** to save.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascopeuser.png" alt-text="Add scope" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Add scope" border="true":::
 
        > [!NOTE]
        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -164,7 +163,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/authorizedscope.png" alt-text="Authroized scope" border="true":::
 
-       The following image displays the client IDs:
+       The following image displays the Client ID:
 
          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
 
@@ -175,7 +174,7 @@ items:
 
     1. Select **Add a permission**.
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission.png" alt-text="Add a permission" border="true":::
+         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Add a permission" border="true":::
 
     1. Select **Microsoft Graph**.
 
@@ -193,7 +192,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions1.png" alt-text="Request permission" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Request permission" border="true":::
 
           > [!NOTE]
           > You need to add TeamsActivity.Send and Directory.Read.All as application level permissions too.
@@ -214,7 +213,7 @@ items:
              :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png" alt-text="Add platform" border="true":::
 
          1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
-           `https://bff2****.ngrok.io/Auth/end`. </br>
+           `https://your ngrok/Auth/end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -222,7 +221,7 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configurewebdetails.png" alt-text="Configure web" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configure-web-details.png" alt-text="Configure web" border="true":::
 
          1. Select **Add URI** and enter `https://bff2****.ngrok.io/Auth/Start`. 
 
@@ -243,7 +242,7 @@ items:
     1. Enter a value in **Description**.
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secretsave.png" alt-text="Secret id" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secret-save.png" alt-text="Secret id" border="true":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
@@ -258,7 +257,7 @@ items:
   content: |
     1. Navigate to **appsettings.json** in cloned repository.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettingslocation.png" alt-text="App settings location" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="App settings location" border="true":::
 
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
@@ -267,7 +266,7 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the `[WebAppDomainName]`.
       
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details.png" alt-text="Appsettings" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
 
     1. Navigate to **manifest.json** in cloned repository.
 
@@ -291,7 +290,7 @@ items:
 
        1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openproject.png" alt-text="Open a project" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-project.png" alt-text="Open a project" border="true":::
 
        1. Press **F5** to run the project.
     
@@ -328,7 +327,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/openacustomapp.png" alt-text="Open a custom app" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::
 
     1. Select **Add**.
 
@@ -340,7 +339,7 @@ items:
             
     1. Enter the message and select **Send message**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output2.png" alt-text="Final output" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-2.png" alt-text="Final output" border="true":::
 
      
 - title: Complete challenge
