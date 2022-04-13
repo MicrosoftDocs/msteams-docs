@@ -22,7 +22,7 @@ items:
     * Displays activity feed notification.
     * Broadcasts details available for members.
 
-    This step-by-step guide shows a feature where users can broadcast a message to all members of the organization using activity feed notification. You'll see the following output:
+    This step-by-step guide helps you to extend your app services to broadcast message to all members of the organization using activity feed notification. You'll see the following output:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
 
@@ -32,9 +32,9 @@ items:
     To set up your development environment, install the following:  
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download) 
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    * [Latest version ofngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -283,7 +283,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-       1. Open the latest version of Visual Studio.
+       1. Open Visual Studio.
        1. Navigate to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
