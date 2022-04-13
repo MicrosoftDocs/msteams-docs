@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-environment
 
 # Create a personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for personal tabs.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
 Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
@@ -257,7 +257,7 @@ gulp ngrok-serve
 
    Now you have succesfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -410,7 +410,7 @@ ngrok http 3978 --host-header=localhost
 
    Now you have succesfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -579,7 +579,7 @@ ngrok http 3978 --host-header=localhost
   
    Now you have succesfully created and added your personal tab in Teams.
 
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
