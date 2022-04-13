@@ -181,10 +181,10 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
-        Teams Toolkit will invoke Yeoman CLI to scaffold your Teams app, and install required dependencies in the process.
+        Teams Toolkit will invoke Yeoman CLI to scaffold your Teams app, and install required dependencies in the process.</br/>
         Your Teams app is created within a few seconds.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-Teams-toolkit.png" alt-text="bot home" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-teams-toolkit-new.png" alt-text="bot home" border="true":::
 
         After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This is the default location specified in Visual Studio Code.
 
