@@ -1021,16 +1021,14 @@ For more information about cards, see:
 
 Bot experience must be fully responsive on mobile. Bot responses must provide a way forward where applicable. Bot musts be responsive and fail with a graceful error message for failures. Bot messages sent in the personal scope to user's base on triggers in a collaborative scope must provide contextual information (including the message’s origin).
 
-### Notification only Bots
+### Notification only bots
 
-Apps that consist of notification only bots provide user value by triggering user notifications based on certain triggers or events in the core app or backend. For example, a new sales lead or prospect is added for the sales team to follow up on.
+Apps that consist of notification only bots provide user value by triggering user notifications based on certain triggers or events in the core app or backend. For example, a new sales lead or prospect is added for the sales team to follow up on. A high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
 
 A notification provides value in Teams if:
 
 1. Posted card or text provides adequate details requiring no further user action.
 1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
-
-A good high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
 
 Apps that provide only notifications with content such as **You have a new notification, click to view**, and require user to navigate outside of Teams for everything else don't provide significant value within Teams.
 
