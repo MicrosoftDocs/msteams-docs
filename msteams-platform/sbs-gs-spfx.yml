@@ -181,9 +181,10 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
+        Teams Toolkit will invoke Yeoman CLI to scaffold your Teams app, and install required dependencies in the process.
         Your Teams app is created within a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-created.png" alt-text="SPFx app created":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-Teams-toolkit.png" alt-text="bot home" border="true":::
 
         After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This is the default location specified in Visual Studio Code.
 
@@ -193,6 +194,8 @@ items:
         
         - **Change location**
         - **Local Debug**
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home" border="true":::
         
         For this tutorial, you don't need to use these options.
 
@@ -306,7 +309,7 @@ items:
         - **Teams workbench (Edge)**
         - **Teams workbench (Chrome)**
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-teams-workbench.png" alt-text="Screenshot showing how to run and debug an SPFx app in a Teams workbench.":::
+            :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-debug.png" alt-text="bot home" border="true":::
 
     1. Select the play button or select the **F5** key to start debugging.
         > [!NOTE]
