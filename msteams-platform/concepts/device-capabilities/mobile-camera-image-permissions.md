@@ -52,7 +52,7 @@ The following image depicts mobile app experience of `selectMedia` API for micro
 
 The following image depicts desktop app experience of `selectMedia` API for image capability:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop.png" alt-text="Illustration shows the media capability for desktop." border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
 ---
 
