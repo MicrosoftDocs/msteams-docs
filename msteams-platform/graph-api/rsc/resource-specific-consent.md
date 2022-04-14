@@ -44,7 +44,6 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 |TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. |
 
 For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
-
 </details>
 
 <br>
@@ -52,7 +51,6 @@ For more details, see [team resource-specific consent permissions](/graph/permis
 
 <details>
 <summary><b>Resource-specific permissions for a chat</b></summary>
-
 The following table provides resource-specific permissions for a chat:
 
 |Application permission| Action |
