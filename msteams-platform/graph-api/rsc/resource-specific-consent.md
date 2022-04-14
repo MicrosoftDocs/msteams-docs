@@ -79,6 +79,7 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 </details>
 
 <br>
+
 ## Enable RSC in your application
 
 1. [Configure consent settings in the Azure AD portal](#configure-consent-settings-in-the-azure-ad-portal).
