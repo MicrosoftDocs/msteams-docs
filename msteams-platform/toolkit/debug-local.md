@@ -191,7 +191,16 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 1. In Visual Studio Code settings, clear **Ensure Ngrok is installed and started (ngrok)**.
 
-1. Set botDomain and botEndpoint configuration in `.fx/configs/localSettings.json` to your domain and endpoint.
+1. Set siteEndpoint configuration in `.fx/configs/config.local.json` to your endpoint.
+
+```json
+{
+    "bot": {
+        "siteEndpoint": "https://your-bot-tunneling-url"
+    }
+}
+
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="Customize bot endpoint":::
 
@@ -202,7 +211,16 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
 
-1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/localSettings.json` to your certificate file path and key file path.
+1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/config.local.json` to your certificate file path and key file path.
+
+```json
+{
+    "frontend": {
+        "sslCertFile": "",
+        "sslKeyFile": ""
+    }
+}
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="Customize certificate":::
 

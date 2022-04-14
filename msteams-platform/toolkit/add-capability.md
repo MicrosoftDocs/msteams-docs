@@ -80,7 +80,7 @@ After adding bot and messaging extension, the changes in your project are as fol
 
 * A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project.
 * `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
-* `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated, which includes bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
+* `manifest.template.json` file under `templates/appPackage` folder are updated, which includes bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
   * The ID of your bot.
   * The scopes of your bot.
   * The commands that hello world bot application can respond to.
@@ -91,7 +91,7 @@ After adding tab, the changes in your project are as follows:
 
 * A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.
 * `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
-* `manifest.remote.template.json` and `manifest.local.template.json` file under `templates/appPackage` folder are updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform, the changes are as follows:
+* `manifest.template.json` file under `templates/appPackage` folder are updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform, the changes are as follows:
   * The configurable and static tabs.
   * The scopes of the tabs.
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.

@@ -167,7 +167,7 @@ For tab app or messaging extension app:
 
 ### Registers and configures Teams app
 
-Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.local.template.json`.
+Registers a Teams app in [Developer](https://dev.teams.microsoft.com/home) using the manifest template in `templates/appPackage/manifest.template.json`.
 
 After registering and configuring the app, local debug files get generated.
 
@@ -177,8 +177,8 @@ You can view the project folders and files in the Explorer area of Visual Studio
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
-|  `.fx/configs/localSettings.json` | Local debug configuration file | The values of each configuration generates and saves during local debug. |
-|  `templates/appPackage/manifest.local.template.json` | Teams app manifest template file for local debug | The placeholders in the file resolves during local debug. |
+|  `.fx/configs/config.local.json` | Local debug configuration file | The values of each configuration generates and saves during local debug. |
+|  `templates/appPackage/manifest.template.json` | Teams app manifest template file for local debug | The placeholders in the file resolves during local debug. |
 |  `tabs/.env.teams.local`  | Environment variables file for tab  | The values of each environment variable generates and saves during local debug. |
 |  `bot/.env.teamsfx.local` | Environment variables file for bot and messaging extension| The values of each environment variable generates and saves during local debug. |
 | `api/.env.teamsfx.local`  | Environment variables file for Azure Functions | The values of each environment variable generates and saves during local debug. |

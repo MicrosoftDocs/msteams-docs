@@ -10,12 +10,9 @@ ms.date: 11/29/2021
 
 # Preview Teams app manifest in Teams Toolkit
 
-After scaffolding, the following are the manifest template files available under `templates/appPackage` folder:
+After scaffolding, a manifest template file `manifest.template.json` will be available under `templates/appPackage` folder.
 
-* `manifest.local.template.json` - local debug teams app.
-* `manifest.remote.template.json` - shared between all remote environments.
-
-The Template files consisting placeholders, and the actual values from Teams Toolkit are resolved in files under `.fx/configs` and `.fx/states`.
+The Template file consisting placeholders, and the actual values are resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
 
 ## Prerequisite
 
@@ -43,12 +40,13 @@ To preview manifest file of local teams app, you need to press **F5** to run loc
 
 You can also preview local manifest by following the steps:
 
-1. Select **Preview** in the codelens of **manifest.local.template.json** file.
-2. Select **Preview manifest file** at the menu bar of **manifest.local.template.json** file.
-3. Select **Zip Teams metadata package** in Treeview and select **Local**.
+1. Select **Preview** in the codelens of **manifest.template.json** file and select **local**.
+2. Select **Preview manifest file** at the menu bar of **manifest.template.json** file.
+3. Select **Zip Teams metadata package** in Treeview and select **local**.
+
 The preview local appears as shown in the image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="Preview":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-2.png" alt-text="Preview":::
 
 ### Preview manifest in remote environment
 
@@ -56,8 +54,8 @@ To preview manifest file of remote teams app, select **Provision in the cloud** 
 
 You can also preview manifest in remote environment by following the steps:
 
-1. Select **Preview** in the codelens of **manifest.remote.template.json** file.
-2. Select **Preview manifest file** at the menu bar of **manifest.remote.template.json** file.
+1. Select **Preview** in the codelens of **manifest.template.json** file.
+2. Select **Preview manifest file** at the menu bar of **manifest.template.json** file.
 3. Select **Zip Teams metadata package** in Treeview.
 4. Select your environment.
 
