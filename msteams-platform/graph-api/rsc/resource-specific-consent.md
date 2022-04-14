@@ -76,11 +76,9 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 > [!NOTE]
 > Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory (AAD) portal.
-
 </details>
 
 <br>
-
 ## Enable RSC in your application
 
 1. [Configure consent settings in the Azure AD portal](#configure-consent-settings-in-the-azure-ad-portal).
