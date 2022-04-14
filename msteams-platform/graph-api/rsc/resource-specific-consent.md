@@ -21,7 +21,10 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 
 The granular, Teams-specific, RSC permissions define what an application can do within a specific resource.
 
-### Resource-specific permissions for a team
+<br>
+
+<details>
+<summary><b>Resource-specific permissions for a team</b></summary>
 
 |Application permission| Action |
 | ----- | ----- |
@@ -42,7 +45,13 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 
 For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
 
-### Resource-specific permissions for a chat
+</details>
+
+<br>
+<br>
+
+<details>
+<summary><b>Resource-specific permissions for a chat</b></summary>
 
 The following table provides resource-specific permissions for a chat:
 
@@ -67,6 +76,10 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 
 > [!NOTE]
 > Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory (AAD) portal.
+
+</details>
+
+<br>
 
 ## Enable RSC in your application
 
