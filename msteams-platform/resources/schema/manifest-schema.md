@@ -331,7 +331,7 @@ The schema defines the following properties:
 
 ## $schema
 
-Optional, but recommended—string
+Optional, however recommended—string
 
 The https:// URL referencing the JSON Schema for the manifest.
 
@@ -438,7 +438,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 **Required**—HTML Hex color code
 
-A color to use and as a background for your outline icons.
+A color to use and a background color for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
@@ -446,7 +446,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**—array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the `team` and `groupchat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
+Used when your app experience has a team channel tab experience that requires extra configuration before it is added. configurable tabs are supported only in the `team` and `groupchat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -491,15 +491,15 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 |---|---|---|---|---|
 |`botId`|string|64 characters|✔|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`scopes`|array of enums|3|✔|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
-|`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
+|`needsChannelSelector`|Boolean|||Describes whether the bot uses a user hint to add the bot to a specific channel Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
-|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
+|`supportsCalling`|Boolean|||A value indicating whether a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -534,7 +534,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 Defines a messaging extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, however the manifest name remains the same so that existing extensions continue to function.
 
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
 
@@ -560,7 +560,7 @@ Each command item is an object with the following structure:
 |`type`|string|64 characters||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
-|`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
+|`context`|array of Strings|3||Defines from where the message extension can be invoked. Any combination of `compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
 |`taskInfo`|object|||Specify the task module to pre-load when using a messaging extension command.|
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
@@ -581,7 +581,7 @@ Each command item is an object with the following structure:
 
 **Optional**—array of strings
 
-An array of `string`, which specifies which permissions the app requests, which let end users know how the extension does. The following options are non-exclusive:
+An `array of string`, which specifies what permissions the app requests and, which let end users know how the extension works. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
@@ -639,7 +639,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 
  **Optional**—Boolean
 
-Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
+Indicates where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
 > `isFullScreen` works only for apps published to your organization.
