@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Customize app manifest in Teams Toolkit
 
-Teams Toolkit consists a manifest template file `templates/appPackage` under folder: `manifest.template.json` used across local and remote environments.
+Teams Toolkit consists a `manifest.template.json` file `templates/appPackage` under folder: `manifest.template.json` used across local and remote environments.
 
 ## Prerequisite
 
