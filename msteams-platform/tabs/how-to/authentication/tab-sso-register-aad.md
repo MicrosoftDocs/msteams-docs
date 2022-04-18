@@ -161,13 +161,13 @@ In this section, you'll learn:
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details" border="true":::
 
     1. Enter the scope name. This is a mandatory field.
-    1. Select **Admins and users** to configure the users who can give consent to use user's login credentials. The default option is **Admins only**.
-    1. Enter the **Admin consent display name**. This is a mandatory field.
-    1. Enter the description for admin consent. This is a mandatory field.
-    1. Enter the **User consent display name**.
-    1. Enter the description for user consent description.
-    1. Select the **Enabled** option for state.
-    1. Select **Add scope**.
+    2. Select the users who can give consent for this scope. The default option is **Admins only**.
+    3. Enter the **Admin consent display name**. This is a mandatory field.
+    4. Enter the description for admin consent. This is a mandatory field.
+    5. Enter the **User consent display name**.
+    6. Enter the description for user consent description.
+    7. Select the **Enabled** option for state.
+    8. Select **Add scope**.
 
     A message pops up on the browser stating that the scope was added.
 
