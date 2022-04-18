@@ -10,9 +10,9 @@ ms.date: 11/29/2021
 
 # Preview Teams app manifest in Teams Toolkit
 
-After scaffolding, a manifest template file `manifest.template.json` will be available under `templates/appPackage` folder.
+After scaffolding, a manifest template file `manifest.template.json` is available under `templates/appPackage` folder.
 
-The Template file consisting placeholders, and the actual values are resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
+The Template file with placeholders, and the actual values is resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
 
 ## Prerequisite
 

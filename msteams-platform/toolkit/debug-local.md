@@ -211,7 +211,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 1. In Visual Studio Code settings, clear **Ensure development certificate is trusted (devCert)**.
 
-1. Set sslCertFile and sslKeyFile configuration in `.fx/configs/config.local.json` to your certificate file path and key file path.
+1. Set `sslCertFile` and `sslKeyFile` configuration in `.fx/configs/config.local.json` to your certificate file path and key file path.
 
 ```json
 {
