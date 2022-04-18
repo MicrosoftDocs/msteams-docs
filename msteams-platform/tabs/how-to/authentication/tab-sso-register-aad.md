@@ -80,7 +80,7 @@ To register your tab app in Azure AD:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
-    1. Select the platform where your app will be accessible.
+    1. Select the platform where your app will be accessible. You can choose from **Public client/native (mobile & desktop)**, **Web**, **Single-page application (SPA)**.
     2. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app.
        You can change this URL at a later stage, if needed.
 
@@ -284,3 +284,5 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 - [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [App scopes](/azure/active-directory/develop/v2-permissions-and-consent.md#openid-connect-scopes)
 - [Get an access token with Graph permissions](/tabs/how-to/authentication/auth-aad-sso?tabs=dotnet#get-an-access-token-with-graph-permissions)
+
+<!-- https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app>
