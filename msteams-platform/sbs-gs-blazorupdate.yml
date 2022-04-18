@@ -403,7 +403,6 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot showing user information in the tab" border="true":::
 
-
 - title: Create project workspace for your bot app
   durationInMinutes: 1
   content: |
