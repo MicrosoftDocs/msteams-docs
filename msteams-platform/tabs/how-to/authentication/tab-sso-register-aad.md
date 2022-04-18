@@ -33,7 +33,7 @@ The tasks involved in registering a Teams tab app that uses SSO are language- an
 
 > [!NOTE]
 > There are some important restrictions that you must know:
-> - Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as User.Read or Mail.Read, see Get an access token with Graph permissions.
+> - Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 > - It is important that your application's domain name is the same as the domain name you have registered for your Azure AD application.
 > - Currently, multiple domains per app are not supported.
 > - The user must set `accessTokenAcceptedVersion` to 2 for a new application. This configuration is made in the Manifest option on Azure AD portal.
