@@ -142,13 +142,9 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png" alt-text="add the app tab device permission" border="true":::               
 
-     1. Open **Tab Device Permission**.
+     1. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
      
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="add tab device to desktop" border="true"::: 
-
-     1. Select **Device Permission Tab** to see the following output:   
-
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/permission-device.png" alt-text="add tab device to desktop" border="true":::            
 
 
     # [Browser](#tab/Browser)
@@ -189,12 +185,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device.png" alt-text="get location" border="true":::
 
-    1. Select **Device Permission Tab** to see the following output:   
-
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/permission-device.png" alt-text="add tab device to desktop" border="true":::            
-
-               
-
+  
     # [Mobile](#tab/mobile)
 
      
