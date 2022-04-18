@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams app that requires device permissions, such as location, camera, or microphone access, the users require to manually grant permission at per app level in the web browser. Now these permissions are handled in Teams.
+    Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Microsoft Teams.
 
     This step-by-step guide helps you to grant tab device permission at Teams. You'll see the following output:
 
@@ -74,7 +74,7 @@ items:
 
      1. Open **manifest.json** in Visual Studio and make the following changes:
        
-        Replace `<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok excluding the https:// in all the places.
+        Replace `<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok excluding the https:// part in all the places.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png" alt-text="update ngrok in visual studio" border="true":::
                
@@ -146,7 +146,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png" alt-text="add the app tab device permission" border="true":::               
 
-     1. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
+     1. Select **Device Permission Tab** to see the following output:
      
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png" alt-text="add tab device to desktop" border="true"::: 
 
@@ -185,7 +185,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png" alt-text="add the app tab device permission" border="true":::               
 
-    1. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
+    1. Select **Device Permission Tab** to see the following output:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="get location" border="true":::
 
@@ -206,7 +206,7 @@ items:
 
      # [Desktop](#tab/Desktop)
 
-      To test the app on desktop, select **App Permission** icon and you will get the following prompts to accept the permission request:
+      To test the app on desktop, select **App Permission** icon to allow access to the permission requests:
 
         
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png" alt-text="desktop" border="true":::                   
@@ -215,7 +215,7 @@ items:
        # [Browser](#tab/Browser)
 
       
-      To test the app in browser, select **Get Location** to see the following output:
+      To test the app in browser, select **App Permission** icon to allow access to the permission requests:
 
         
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="get location" border="true":::                   
