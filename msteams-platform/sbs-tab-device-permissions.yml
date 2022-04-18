@@ -18,7 +18,7 @@ items:
 
     This step-by-step guide helps you to grant tab device permission at Teams. You'll see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/final-output-tab-device.png" alt-text="final output" border="true":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-tab.png" alt-text="final output" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -61,7 +61,7 @@ items:
      ngrok http -host-header=localhost 3000
      ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3000` command.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png" alt-text=" ngrok tunnelling" border="true":::
 
@@ -234,7 +234,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/final-output-tab-device.png" alt-text="location" border="true":::                   
+    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-tab.png" alt-text="location" border="true":::                   
 
 - content: |
     You've completed the tutorial and now you can grant tab device permission at Teams.
