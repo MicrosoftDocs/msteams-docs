@@ -10,6 +10,12 @@ ms.date: 11/29/2021
 
 # Customize app manifest in Teams Toolkit
 
+Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder used across local and remote environments:
+
+* `manifest.template.json`
+* `templates/appPackage`
+
+
 Teams Toolkit consists a `manifest.template.json` file `templates/appPackage` under folder: `manifest.template.json` used across local and remote environments.
 
 ## Prerequisite
@@ -19,7 +25,7 @@ Teams Toolkit consists a `manifest.template.json` file `templates/appPackage` un
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio Code.
 
-During local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+During local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, along with configurations from `state.{env}.json`, and `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 
 ## Supported placeholder in manifest.template.json
