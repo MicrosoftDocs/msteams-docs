@@ -15,9 +15,9 @@ Registering your app in Azure AD requires making app configurations that will en
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions).  Configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You may also need to configure additional configuration for the platform or device where you want to target your app.
 
-It's helpful to learn about the details that you'll configure for your app when you register it on Azure AD. It includes the following:
+It's helpful to learn about the configuration required for registering your app on Azure AD. It includes the following:
 
-- Single- or multi-tenant option
+- Single- or multi-tenant options.
 - App's platform and the URL from where your app is accessible.
 - App ID URI, a globally-unique URI used to identify the web API you expose for your app's access through scopes. It's also referred to as an identifier URI.
 - Scope, which defines the permissions that an authorized user or your app can be granted for accessing a resource exposed by the API.
@@ -32,7 +32,7 @@ The tasks involved in registering a Teams tab app that uses SSO are language- an
 > [!IMPORTANT]
 > There are some important restrictions that you must know:
 > - Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
-> - It is important that your application's domain name is the same as the domain name you have registered for your Azure AD application.
+> - Your application's domain name should be the same as the domain name you've registered for your Azure AD application.
 > - Currently, multiple domains per app are not supported.
 > - You must set `accessTokenAcceptedVersion` to 2 for a new application. This configuration is made in the Manifest option on Azure AD portal.
 
@@ -44,7 +44,7 @@ In this section, you'll learn:
 
 - [How to configure authentication for different platforms](#configure-authentication-for-different-platforms)
 
-- [Configure access token version](#configure-access-token-version)
+- [How to configure access token version](#configure-access-token-version)
 
 ## Register your app
 
