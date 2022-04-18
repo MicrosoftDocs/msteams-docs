@@ -11,11 +11,9 @@ Your Teams app users are authenticated and authorized by Azure AD for using your
 
 ## Configuration on Azure AD
 
-Azure AD provides an access token for the users based on their identity token in Teams.
+Registering your app in Azure AD requires making app configurations that will enable SSO for your app in Teams.
 
-You'll need to create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Then, you'll configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow.
-
-You may also need to configure additional configuration for the platform or device where you want to target your app.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions).  Configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You may also need to configure additional configuration for the platform or device where you want to target your app.
 
 It's helpful to learn about the details that you'll configure for your app when you register it on Azure AD. It includes the following:
 
@@ -31,12 +29,12 @@ The tasks involved in registering a Teams tab app that uses SSO are language- an
 > [!NOTE]
 > The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
 
-> [!NOTE]
+> [!IMPORTANT]
 > There are some important restrictions that you must know:
 > - Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 > - It is important that your application's domain name is the same as the domain name you have registered for your Azure AD application.
 > - Currently, multiple domains per app are not supported.
-> - The user must set `accessTokenAcceptedVersion` to 2 for a new application. This configuration is made in the Manifest option on Azure AD portal.
+> - You must set `accessTokenAcceptedVersion` to 2 for a new application. This configuration is made in the Manifest option on Azure AD portal.
 
 In this section, you'll learn:
 
@@ -45,6 +43,8 @@ In this section, you'll learn:
 - [How to configure admin consent](#configure-admin-consent)
 
 - [How to configure authentication for different platforms](#configure-authentication-for-different-platforms)
+
+- [Configure access token version](#configure-access-token-version)
 
 ## Register your app
 
@@ -249,6 +249,28 @@ Depending on the platform or device on which you want to target your your app, a
     The platform is configured and displayed in the **Platform configurations** page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/web-platform-configured.png" alt-text="Web platform configured" border="false":::
+
+## Configure access token version
+
+You must define the access token version that is acceptable for your app. This configuration is made in the Azure AD application manifest.
+
+### To define the access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal Manifest"::: 
+
+    The Azure AD application manifest appears.
+
+1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version ":::
+
+1. Select **Save**
+
+    A message pops up on the browser stating that the manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
 
 Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your tab app.
 
