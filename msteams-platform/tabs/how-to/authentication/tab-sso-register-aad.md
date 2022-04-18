@@ -5,14 +5,24 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
-# Register your tab application in Azure AD
+# Register your tab app in Azure AD
 
-Your Teams app users are authenticated using their Teams user credentials and Azure AD provides an access token for them. You'll need to create a new tab app registration in Azure AD.
+Your Teams app users are authenticated and authorized by Azure AD for using your app. Azure AD provides them access to your app based on their Teams identity. You'll need to register your app with Azure AD so that the user who has signed into Teams can be given access to your app.
 
-The tasks involved in creating a Teams tab that uses SSO are language- and framework-agnostic.
+Azure AD provides an access token for the users based on their identity token in Teams. You'll need to create a new app registration in Azure AD.
+
+This process includes the following configuration:
+
+- App's platform and the URL from where your app is accessible.
+- App ID URI
+- 
+
+The tasks involved in registering a Teams tab app that uses SSO are language- and framework-agnostic.
 
    > [!NOTE]
    > The Microsoft Teams Toolkit can register the Azure AD application in an SSO project.
+
+
 
 ## Prerequisites to registering your tab app
 
