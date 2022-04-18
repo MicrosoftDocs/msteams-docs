@@ -179,7 +179,7 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create a new Teams app** to create an app using Teams Toolkit.
 
@@ -342,12 +342,21 @@ items:
 
         In case you're wondering, when you press the **F5** key, Teams Toolkit:
 
-        - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-        - *Sideloads* the app in Teams.
-        - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-        - Starts the app's frontend hosted locally.
-        - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-        - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+        1. Checks for the following prerequisites:
+          * You're logged in with a Microsoft 365 account.
+          * Sideloading is enabled for your Microsoft 365 account.
+          * Supported Node.js version is installed.
+          * NPM packages for tab app are installed.
+          * Development certificate for localhost is installed.           
+          * Port is available for the tab app.
+
+          > [!NOTE]
+          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+
+        2. Registers the app with Azure AD and configures the app.
+        3. Registers the app in Teams Developer Portal and configures the app.
+        4. Starts the tab app.
+        5. Starts Teams in a web browser and sideloads the tab app.
 
         </details>
 
@@ -441,7 +450,7 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
@@ -595,20 +604,33 @@ items:
 
         In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
-        - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-        - *Sideloads* the app in Teams.
-        - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-        - Starts the app's frontend hosted locally.
-        - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-        - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+        1. Checks all the following prerequisites:
+          - You're logged in with a Microsoft 365 account.
+          - Sideloading is enabled for your Microsoft 365 account.
+          - Supported Node.js version is installed.
+          - NPM packages for bot app are installed.
+          - Ngrok is installed.
+          - Port required by bot app is available.
+
+          > [!NOTE]
+          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+
+        2. Starts Ngrok to create a HTTP tunnel.
+        3. Registers the app in Azure AD and configures the app.
+        4. Registers the bot app in Bot Framework and configures the bot app.
+        5. Registers the app in Teams Developer Portal and configures the app.
+        6. Starts the bot app.
+        7. Starts Teams in a web browser and sideloads the bot app.
+
 
         </details>
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
 
+        > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
 
-        Your web browser starts to run the app.
+        Teams runs your app in a web browser.
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
@@ -681,7 +703,7 @@ items:
 
     1. Select **Create New Project** from the left-hand side of the Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create New Project** to create an app using the Teams Toolkit.
 
@@ -836,12 +858,24 @@ items:
 
         When you select **F5**, the Teams Toolkit:
 
-        1. Registers your application with Azure Active Directory.
-        1. Registers your application for "side loading" in Teams.
-        1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-        1. Starts ngrok tunnel so Teams can communicate with your app.
-        1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
+        1. Checks all the following prerequisites:
+          - You're logged in with a Microsoft 365 account.
+          - Sideloading is enabled for your Microsoft 365 account.
+          - Supported Node.js version is installed.
+          - NPM packages for bot app are installed.
+          - Ngrok is installed.
+          - Port required by bot app is available.
 
+          > [!NOTE]
+          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+
+        2. Starts Ngrok to create a HTTP tunnel.
+        3. Registers the app in Azure AD and configures the app.
+        4. Registers the bot app in Bot Framework and configures the app.
+        5. Registers the app in Teams Developer Portal and configures the app.
+        6. Starts the messaging extension app hosted locally.
+        7. Starts Teams in a web browser and sideloads the Teams app.
+        
         </details>
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug.":::
@@ -849,7 +883,7 @@ items:
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
 
-        Teams opens in a web browser.
+        Teams run your app in a web browser.
         
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
