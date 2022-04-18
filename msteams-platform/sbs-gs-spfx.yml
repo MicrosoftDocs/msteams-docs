@@ -311,7 +311,7 @@ items:
         
     1. Select **Yes** when the following dialog appears:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-microsoft-365.png" alt-text="Microsoft 365" border="true":::
 
         Teams web client opens in a browser window.
 
