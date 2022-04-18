@@ -180,7 +180,7 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
-        Teams Toolkit will invoke Yeoman CLI to scaffold your Teams app, and install required dependencies in the process.</br>
+        Teams Toolkit will invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
         Your Teams app is created within a few seconds.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" border="true":::
@@ -216,10 +216,10 @@ items:
     3. Select **SharePoint Framework (SPFx)** frontend hosting.
     4. Select **React** Framework.
     5. Press **Enter** for the **Web Part Name**.
-    6. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.
+    6. Enter a suitable name for your app, like `helloworld`. The name of the app must be alphanumeric.
 
 
-      After all the questions have been answered, your project will be created.
+       Your project is created after all the questions are answered.
 
     ---
 
