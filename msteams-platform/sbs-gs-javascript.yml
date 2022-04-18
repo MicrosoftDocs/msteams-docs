@@ -369,7 +369,7 @@ items:
 
     1. Select **Yes** if the following dialog appears:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Microsoft" border="true":::
 
         Or select **Continue**, depending on your operating system:
 
@@ -395,7 +395,7 @@ items:
 
         The app requests permission to grant access for displaying user details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission.png" alt-text="Screenshot of authorizing app for accessing user details":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission-1.png" alt-text="Microsoft" border="true":::
 
     1. Select **Accept** to let your app access user details.
 
