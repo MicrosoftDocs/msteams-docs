@@ -16,7 +16,7 @@ The Template file with placeholders, and the actual values is resolved by Teams 
 
 ## Prerequisite
 
-* Latest version of [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+* Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio code.

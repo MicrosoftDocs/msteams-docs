@@ -20,7 +20,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 
 ## Prerequisite
 
-* Latest version of [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+* Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
