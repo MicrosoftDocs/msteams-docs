@@ -20,7 +20,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 
 ## Prerequisite
 
-[Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* Latest version of [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
@@ -28,11 +28,11 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 ## Add capabilities using Teams Toolkit
 
 > [!IMPORTANT]
-> You need to perform provision for each environment after you successfully add capabilities to your Teams app.
+> You need to perform provision for each environment, after you successfully add capabilities to your Teams app.
 
 1. Open **Microsoft Visual Studio Code**.
 1. Select **Teams Toolkit** from left panel.
-1. Select **Add capabilities**:
+1. Select **Add capabilities**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
 
@@ -63,7 +63,7 @@ The selected capabilities are succesfully added to your project. The Teams Toolk
 
 Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app. The following table provides the different Teams app capabilities:
 
-|Existing capabilities|Other supported capabilities can be added|
+|Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
 |Tabs with SPFx|None|
 |Tabs with Azure|Bot and messaging extension|

@@ -20,14 +20,14 @@ ms.date: 11/29/2021
 
 ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* Latest version of [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Ensure you have Teams app project opened in Microsoft Visual Studio code.
 
 ## Create a new environment
 
-After creating new project, Teams Toolkit by default creates:
+After creating a new project, Teams Toolkit by default creates:
 
 * One `local` environment to represent the local machine environment configurations.
 * One `dev` environment to represent the remote or cloud environment configurations.
@@ -35,7 +35,7 @@ After creating new project, Teams Toolkit by default creates:
 > [!NOTE]
 > Each project can have only one `local` environment but multiple remote environments.
 
-To add another remote environment, select the Teams icon in the sidebar, select create new environment the under Environment section as shown in the following image:
+To add another remote environment, select the **Teams** icon in the sidebar, select create new environment the under Environment section as shown in the following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 
@@ -79,7 +79,7 @@ The following table lists the common scenarios supported for customized provisio
 
 ## Scenarios
 
-### Scenario 1: customize Teams app name for different environment
+### Scenario 1: Customize Teams app name for the different environment
 
 You can set the Teams app name to `myapp(dev)` for the default environment `dev`  and `myapp(staging)` for the staging environment `staging`.
 
@@ -104,17 +104,17 @@ Perform the following steps for customization:
   }
   ```
 
-* 3. Create new environment and name it `staging` if it doesn't exist.
+* 3. Create a new environment and name it `staging` if it doesn't exist.
 * 4. Open config file `.fx/configs/config.staging.json`.
 * 5. Update the same property `myapp(staging)`.
 * 6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
-### Scenario 2: customize Teams App description for different environment
+### Scenario 2: Customize Teams app description for the different environment
 
-In this scenario, you will learn how to set different Teams app description for different environments:
+In this scenario, you will learn how to set different Teams app description for the 9different environments:
 
-* For the default environment `dev`, the description will be `my app description for dev`;
-* For the staging environment `staging`, the description will be `my app description for staging`;
+* For the default environment `dev`, the description will be `my app description for dev`.
+* For the staging environment `staging`, the description will be `my app description for staging`.
 
 Perform the following steps for customization:
 
@@ -162,9 +162,9 @@ Perform the following steps for customization:
 
 * 8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
-### Scenario 3: customize Teams App description for all environments
+### Scenario 3: Customize Teams app description for all the environments
 
-In this scenario, you will learn how to set the description of Teams app to `my app description` for all environments.
+In this scenario, you will learn how to set the description of Teams app to `my app description` for all the environments.
 
 As the Teams app manifest template is shared across all environments, we can update the description value in it for our target:
 
@@ -186,7 +186,7 @@ As the Teams app manifest template is shared across all environments, we can upd
     ...
   }
 
-* 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+* 3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
 ### Scenario 4: customize Azure resources for different environment
 

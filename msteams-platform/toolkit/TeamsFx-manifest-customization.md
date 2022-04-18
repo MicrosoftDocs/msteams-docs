@@ -18,7 +18,7 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 
 ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* Latest version of [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio Code.
@@ -28,8 +28,8 @@ During local debug or provision, Teams Toolkit loads manifest from `manifest.tem
 
 ## Supported placeholder in manifest.template.json
 
-* `{{state.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json.
-* `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
+* `{{state.xx}}` is pre-defined placeholder it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json.
+* `{{config.manifest.xx}}` is customized placeholder it's value is resolved from `config.{env}.json`.
   * You can add a customized parameter as follows:
     * Add a placeholder in manifest.template.json with pattern: `{{config.manifest.xx}}`
     * Add a config value in config.{env}.json
