@@ -208,7 +208,7 @@ items:
       To test the app on desktop, select **App Permission** icon and you will get the following prompts to accept the permission request:
 
         
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png" alt-text="desktop" border="true":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission.png" alt-text="desktop" border="true":::                   
       
       
        # [Browser](#tab/Browser)
@@ -217,7 +217,7 @@ items:
       To test the app in browser, select **Get Location** to see the following output:
 
         
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/get-location-output-tab-device1.png" alt-text="get location" border="true":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/get-location-output-tab-device.png" alt-text="get location" border="true":::                   
      
      
      # [Mobile](#tab/Mobile)
