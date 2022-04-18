@@ -62,7 +62,7 @@ Optional:
 
 ## Known limitations
 
-(content to be added)
+The App developer needs to have a Meeting Extension with 'Share to Meeting Stage' capability.
 
 ## End user experience on third party apps
 
