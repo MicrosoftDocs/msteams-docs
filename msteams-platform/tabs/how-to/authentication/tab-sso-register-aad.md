@@ -9,27 +9,25 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 
 Your Teams app users are authenticated and authorized by Azure AD for using your app. Azure AD provides them access to your app based on their Teams identity. You'll need to register your app with Azure AD so that the user who has signed into Teams can be given access to your app.
 
-Azure AD provides an access token for the users based on their identity token in Teams. You'll need to create a new app registration in Azure AD.
+Azure AD provides an access token for the users based on their identity token in Teams. You'll need to create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Then, you'll configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow.
 
-This process includes the following configuration:
-
-- App's platform and the URL from where your app is accessible.
-- App ID URI
-- 
+You may also need to configure additional configuration for the platform or device where you want to target your app.
 
 The tasks involved in registering a Teams tab app that uses SSO are language- and framework-agnostic.
 
+## Prerequisites
+
+It's helpful to learn about the detail that you'll configure for your app when you register it on Azure AD. It includes the following:
+
+- Single- or multi-tenant option
+- App's platform and the URL from where your app is accessible.
+- App ID URI, a globally-unique URI used to identify the web API you expose for your app's access through scopes. It's also referred to as an identifier URI.
+- Scope, which defines the permissions that an authorized user or your app can be granted for accessing a resource exposed by the API.
+
+Ensure that you learn about these before you start registering your app.
+
    > [!NOTE]
    > The Microsoft Teams Toolkit can register the Azure AD application in an SSO project.
-
-
-
-## Prerequisites to registering your tab app
-
-Before you register your app, ensure that you've read information on the following configuration options:
-
-- Single-tenant or multi-tenant options
-- App scope
 
 > [!NOTE]
 > There are some important restrictions that you must know:
