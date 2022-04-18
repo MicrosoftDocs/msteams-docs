@@ -105,6 +105,10 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png" alt-text="install and start npm" border="true":::     
 
+     1. You can see the following output in the browser:
+
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-react.png" alt-text="Browser output" border="true":::     
+
 - title: Add tab device permission to Teams
   durationInMinutes: 1
   content: |
