@@ -18,7 +18,7 @@ items:
 
     This step-by-step guide helps you to grant tab device permission at Teams. You'll see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-tab.png" alt-text="final output" border="true":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output.png" alt-text="final output" border="true":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -187,7 +187,7 @@ items:
 
     1. Open **Tab Device Permission** and select **Device Permission Tab** to see the following output:
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device.png" alt-text="get location" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="get location" border="true":::
 
   
     # [Mobile](#tab/mobile)
@@ -218,7 +218,7 @@ items:
       To test the app in browser, select **Get Location** to see the following output:
 
         
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/get-location-output-tab.png" alt-text="get location" border="true":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png" alt-text="get location" border="true":::                   
      
      
      # [Mobile](#tab/Mobile)
@@ -237,7 +237,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output-tab.png" alt-text="location" border="true":::                   
+    :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output.png" alt-text="location" border="true":::                   
 
 - content: |
     You've completed the tutorial and now you can grant tab device permission at Teams.
