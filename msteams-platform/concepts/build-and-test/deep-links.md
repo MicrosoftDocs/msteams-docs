@@ -216,7 +216,7 @@ Create deeplinks for the app after the app is listed in the Teams store. To crea
 
 Capabilities supported for deeplinks to pre/post/in-meeting tabs
 
-| Capabilities | :::image type="icon" source="../../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✖ | ✔ |
 | Scheduled channel meeting | ✖ | ✔ |

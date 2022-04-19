@@ -39,7 +39,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 APIs Client SDK for `get user`
 
-| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✔ |  |
 | Scheduled channel meeting | ✖ |  |
@@ -48,7 +48,7 @@ APIs Client SDK for `get user`
 
 APIs Client SDK for `get context`
 
-| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✖|  |
 | Scheduled channel meeting | ✖ |  |
@@ -250,7 +250,7 @@ The `Meeting Details` API must have a bot registration and bot ID. It requires B
 
 APIs Client SDK for `get meeting details`
 
-| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✔ |  |
 | Scheduled channel meeting | ✖ |  |
@@ -463,7 +463,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 APIs Client SDK for `share app to stage`
 
-| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✔ |  |
 | Scheduled channel meeting | ✔ |  |
@@ -490,7 +490,7 @@ APIs Client SDK for `share app to stage`
 
 APIs Client SDK for `Get app content sharing stage`
 
-| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✖ |  |
 | Scheduled channel meeting | ✖ |  |
@@ -577,7 +577,7 @@ The `getAppContentStageSharingCapabilities` API enables you to fetch the app's c
 
 APIs Client SDK for `Get app sharing content capabilities`
 
-| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✖ |  |
 | Scheduled channel meeting | ✖ |  |

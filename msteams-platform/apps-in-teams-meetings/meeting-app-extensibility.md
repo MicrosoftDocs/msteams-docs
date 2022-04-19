@@ -25,7 +25,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 Capabilities supported for generic app share to stage
 
-| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✖ | ✔ |
 | Scheduled channel meeting | ✖ | ✔ |
@@ -48,7 +48,7 @@ Users can also add or interact with an app in the scheduled private channel meet
 
 Capabilities supported for add apps to meetings
 
-| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✖ | ✔ |
 | Scheduled channel meeting | ✖ | ✔ |
@@ -91,7 +91,7 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 Capabilities supported for manage apps in meeting (like view , rename, delete)
 
-| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✔ |  |
 | Scheduled channel meeting | ✔ |  |
@@ -120,7 +120,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 
 Capabilities supported for in-meeting dialog
 
-| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✔ |  |
 | Scheduled channel meeting | ✔   |   |
@@ -140,7 +140,7 @@ Capabilities supported for in-meeting dialog
 
 Capabilities supported for in-meeting side panel
 
-| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✔ |  |
 | Scheduled channel meeting | ✔ |   |
@@ -184,7 +184,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 Capabilities supported for pre/post meeting
 
-| Capabilities |:::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Type |:::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 |:---:|:---:|:---:|
 | Scheduled private meeting | ✔ |  |
 | Scheduled channel meeting | ✔ |   |
