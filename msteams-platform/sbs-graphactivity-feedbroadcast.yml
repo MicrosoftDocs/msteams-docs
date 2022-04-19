@@ -191,7 +191,7 @@ items:
          * **TeamsAppInstallation.ReadForUser**
          * **TeamsAppInstallation.ReadWriteForUser**
          * **TeamsActivity.Send**
-         * **TeamsAppInstallation.ReadForUser.All**
+        
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
 
@@ -203,6 +203,20 @@ items:
     1. Select **Add permissions**. Ensure to grant the admin consent for the required permissions.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
+
+    1. Select **Add a permission**.
+
+    1. Select **Microsoft Graph**.
+
+    1. Select **Application permissions**.
+
+    1. Add the following permissions:</br> 
+
+         * **TeamsActivity.Send** 
+         * **Directory.Read.All**
+         * **TeamsAppInstallation.ReadForUser.All**
+
+    1. Select **Add permissions**. Ensure to grant the admin consent for the required permissions.
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -216,7 +230,7 @@ items:
              :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png" alt-text="Add platform" border="true":::
 
          1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
-           `https://your ngrok/Auth/end`. </br>
+           `https://ngrok.io/Auth/end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -226,7 +240,7 @@ items:
 
              :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configure-web-details.png" alt-text="Configure web" border="true":::
 
-         1. Select **Add URI** and enter `https://bff2****.ngrok.io/Auth/Start`. 
+         1. Select **Add URI** and enter `https://ngrok.io/Auth/Start`. 
 
          1. Select **Save**.
 
