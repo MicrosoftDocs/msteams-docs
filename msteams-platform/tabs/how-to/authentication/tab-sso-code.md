@@ -46,7 +46,7 @@ This section covers:
 
   - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
-### Call getAuthToken
+### When to call getAuthToken
 
 Call `getAuthToken` at the time when you need to validate the user identity.
 
