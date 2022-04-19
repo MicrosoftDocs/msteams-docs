@@ -27,9 +27,8 @@ This section covers:
 
 - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
-## SDK Prerequisites
-
-Teams mobile client versions supporting SSO:
+> [!NOTE]
+> **Teams mobile client versions supporting SSO:**
 
 - Teams for Android (1416/1.0.0.2020073101 and later)
 
@@ -37,7 +36,7 @@ Teams mobile client versions supporting SSO:
 
 - Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
 
-- For the best experience with Teams, use the latest version of iOS and Android.
+For the best experience with Teams, use the latest version of iOS and Android.
 
 > [!NOTE]
 > To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
