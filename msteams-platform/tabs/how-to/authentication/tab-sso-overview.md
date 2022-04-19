@@ -45,6 +45,12 @@ This section describes the tasks involved in implementing SSO for a tab app. The
 
 To build a tab app that uses Teams SSO to authenticate users:
 
+/Infographic TBA /
+
+1. Create an Azure AD app to generate an app ID and app ID URI You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current user logged into Teams.
+2. Configure code of your Teams app to handle access token, including calling it when a user accesses your app and validating it when received.
+3. Update your Teams app manifest with the app ID generated on Azure AD and the app ID URI.
+
 :::row:::
     :::column span="":::
 

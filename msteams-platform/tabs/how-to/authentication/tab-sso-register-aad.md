@@ -95,6 +95,16 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     2. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app.
        You can change this URL at a later stage, if needed.
 
+    <details>
+    <summary>Platform and redirect URI options</summary>
+
+    | Option | Select this to... |
+    | --- | --- |
+    | Web | Configure a redirect URI for your app where client app is redirected. It's also where access token is sent after authentication. <br> Select this platform for standard web applications that run on a server. |
+    | Mobile and desktop applications | Configure a redirect URI for mobile applications that aren't using the latest Microsoft Authentication Library (MSAL) or for desktop applications. |
+    | Single-page application | Configure a redirect URI for a client-side web app by using JavaScript or a framework like Angular, Vue.js, React.js, or Blazor WebAssembly. |
+    </details>
+
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
 

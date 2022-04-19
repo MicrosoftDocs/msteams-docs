@@ -123,7 +123,7 @@ There are a number of libraries available that can handle JWT validation, but th
 
 - Checking that the token is well-formed
 - Checking that the token was issued by the intended authority
-- Checking that the token is targeted to the Web API
+- Checking that the token is targeted to the web API
 
 Keep in mind the following guidelines when validating the token:
 

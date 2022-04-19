@@ -32,13 +32,13 @@ If your app doesn't have a manifest, you can add it using the steps given at /ad
     ```json
     "webApplicationInfo": {
     "id": "{Azure AD AppId}",
-    "resource": "api://{ngrokSubdomain}.ngrok.io/{Azure AD AppId}"
+    "resource": "api://{Subdomain}.example.com/{Azure AD AppId}"
     }
     ```
 
     where,
     - {Azure AD AppId} is app ID you created when you registered your app in Azure AD
-    - {ngrokSubdomain} is the ngrok URL
+    - {{Subdomain}.example.com} is the  domain and subdomain of your application. This is the same URI that you registered when creating scope in Azure AD.
 
 4. Update the Azure app ID in the **id** property.
 5. Update the ngrok URL in the following properties:
