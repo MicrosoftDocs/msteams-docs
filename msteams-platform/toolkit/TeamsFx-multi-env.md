@@ -35,7 +35,7 @@ After creating a new project, Teams Toolkit by default creates:
 > [!NOTE]
 > Each project can have only one `local` environment but multiple remote environments.
 
-To add another remote environment, select the **Teams** icon in the sidebar, select create new environment the under Environment section as shown in the following image:
+To add another remote environment, select the **Teams** icon in the sidebar, select create new environment under the Environment section as shown in the following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 

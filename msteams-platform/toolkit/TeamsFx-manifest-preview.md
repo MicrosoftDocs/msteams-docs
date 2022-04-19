@@ -65,7 +65,7 @@ If there are more than one environment, you need to select the environment you w
 
 ## Sync local changes to Dev portal
 
-After previewing the `manifest` file, you can sync your local changes to Dev portal by following the steps mentioned below:
+After previewing the `manifest` file, you can sync your local changes to Dev portal by following the steps:
 
 1. Select **Update to Teams platform** on the top left corner of `manifest.{env}.json`
 2. Select **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
