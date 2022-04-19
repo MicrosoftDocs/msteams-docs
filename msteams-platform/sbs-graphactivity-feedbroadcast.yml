@@ -362,7 +362,7 @@ items:
 
     1. The **BroadcastTab** displays **Message title** and **Message description**.
             
-    1. Enter the message and select **Send message**. Message broadcast successfully appears.
+    1. Enter the message and select **Send message**. Message broadcasted successfully appears.
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true":::
 
