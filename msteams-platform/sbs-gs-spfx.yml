@@ -193,11 +193,13 @@ items:
         
         :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/location-change-new.png" alt-text="location" border="true":::
 
-         The message offers two options:
+        The message offers two options:
         
         - **Change location**
         - **Local Debug**
         
+        For this tutorial, you don't need to use these options.
+
         > [!NOTE]
         > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
 
