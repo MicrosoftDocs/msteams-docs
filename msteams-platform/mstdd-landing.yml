@@ -24,8 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Tips to avoid app rejection and pass app validation
-        url: ~/concepts/deploy-and-publish/appsource/tips-to-avoid-app-rejection.md
+      - text: Common reasons for app validation failure
+        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
       - text: Share to Teams from personal app or tab
         url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
       - text: Create Teams conversation bot
