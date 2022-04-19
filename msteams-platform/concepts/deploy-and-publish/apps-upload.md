@@ -45,7 +45,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
     :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Create a Teams app" border="true":::
 
-## Troubleshooting
+## Troubleshoot
 
 If your app fails to sideload or any issues to upload, check the following options:
 
