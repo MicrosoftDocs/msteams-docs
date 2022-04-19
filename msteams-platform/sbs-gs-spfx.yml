@@ -278,13 +278,15 @@ items:
     ``` bash
         teamsfx account login m365
     ```
-        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
+
+
+    Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
  
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+    The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+    Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
-        ---
+    ---
 
     ## Build and run your app locally in Visual Studio Code
 
