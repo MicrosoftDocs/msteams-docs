@@ -31,6 +31,7 @@ The tasks involved in registering a Teams tab app that uses SSO are language- an
 
 > [!IMPORTANT]
 > There are some important restrictions that you must know:
+> 
 > - Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 > - Your application's domain name should be the same as the domain name you've registered for your Azure AD application.
 > - Currently, multiple domains per app are not supported.
@@ -70,7 +71,7 @@ To register your tab app in Azure AD:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal." border="false":::
 
-2. Select the types of user accounts that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
+1. Select the types of user accounts that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
 
     <details>
     <summary>Options for supported account types</summary>
@@ -78,16 +79,11 @@ To register your tab app in Azure AD:
     | Option | Select this to... |
     | --- | --- |
     | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called a line-of-business (LOB) application, this app is a single-tenant application in the Microsoft identity platform. |
-    | Accounts in any organizational directory (Any Azure AD directory - Multitenant) | Let users in any Azure Active Directory (Azure AD) tenant to be able to use your application. This option is appropriate if, for example, you're building a software-as-a-service (SaaS) application that you intend to provide to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.|
-    | Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can also support users who have personal Microsoft accounts. |
+    | Accounts in any organizational directory (Any Azure AD directory - Multitenant) | Let users in any Azure Active Directory (Azure AD) tenant to be able to use your application. This option is appropriate if, for example, you're building a software-as-a-service (SaaS) application that you intend to provide to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
+    | Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can also support users who have personal Microsoft accounts. |
     | Personal Microsoft accounts only | Select this option if you're building an application only for users who have personal Microsoft accounts. Personal Microsoft accounts. |
 
     </details>
-
-This type of app is known as a multitenant application in the Microsoft identity platform.
-
-Often called a line-of-business (LOB) application, this app is a single-tenant application in the Microsoft identity platform.
-
 
 1. Select the **Redirect URI** details.
 
@@ -97,7 +93,7 @@ Often called a line-of-business (LOB) application, this app is a single-tenant a
     2. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app.
        You can change this URL at a later stage, if needed.
 
-2. Select **Register**.
+1. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
@@ -106,7 +102,7 @@ Often called a line-of-business (LOB) application, this app is a single-tenant a
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="false":::
 
-3. Note and save the **Application ID**. You'll need it for updating the app manifest.
+1. Note and save the **Application ID**. You'll need it for updating the app manifest.
 
     Your Teams tab app is registered in Azure AD.
 
@@ -138,7 +134,7 @@ In this section, you'll learn:
 
     The section for setting app ID URI appears.
 
-2. Enter the app ID URI in the format shown here.
+1. Enter the app ID URI in the format shown here.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
 
@@ -151,7 +147,7 @@ In this section, you'll learn:
       If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
     - `AppID` is the **Application (client) ID** that was generated when you registered your app. You can view it in the **Overview** section.
 
-3. Select **Save**.
+1. Select **Save**.
 
     A message pops up on the browser stating that the app ID URI was updated.
 
@@ -198,7 +194,7 @@ In this section, you'll learn:
 
     The **Add a client application** page appears.
 
-2. Enter the details for adding a client application.
+1. Enter the details for adding a client application.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
 
