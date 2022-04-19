@@ -23,6 +23,15 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 > [!NOTE]
 > Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage aren't currently fully supported.
 
+Capabilities supported for generic app share to stage
+
+| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✖ | ✔ |
+| Scheduled channel meeting | ✖ | ✔ |
+| One-on-one calls | ✖ | ✔ |
+| Group Calls | ✖ | ✔ |
+
 ### Integrate tabs into the meeting lifecycle
 
 Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
@@ -36,6 +45,15 @@ Users can also add or interact with an app in the scheduled private channel meet
 >
 > * The private scheduled meetings only support apps.
 > * Add app option for Teams meeting extension tab app is not supported in Teams web client.
+
+Capabilities supported for add apps to meetings
+
+| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✖ | ✔ |
+| Scheduled channel meeting | ✖ | ✔ |
+| One-on-one calls | ✖ | ✔ |
+| Group Calls | ✖ | ✔ |
 
 #### Pre-meeting app experience
 
@@ -71,6 +89,15 @@ After adding the tabs to an existing meeting on mobile, you can see the same app
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
 
+Capabilities supported for manage apps in meeting (like view , rename, delete)
+
+| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✔ |  |
+| Scheduled channel meeting | ✔ |  |
+| One-on-one calls | ✔ |  |
+| Group Calls | ✔ |  |
+
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
 To use tabs during a meeting:
@@ -91,6 +118,15 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 
 <img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
 
+Capabilities supported for in-meeting dialog
+
+| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✔ |  |
+| Scheduled channel meeting | ✔   |   |
+| One-on-one calls | ✖ |  |
+| Group Calls | ✖ |  |
+
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
 
@@ -101,6 +137,15 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
 > * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
+
+Capabilities supported for in-meeting side panel
+
+| Capabilities | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✔ |  |
+| Scheduled channel meeting | ✔ |   |
+| One-on-one calls | ✔ |  |
+| Group Calls | ✔ |  |
 
 The following image illustrates the in-meeting side panel:
 
@@ -136,6 +181,15 @@ The following image displays the **Contoso** tab with results of poll and feedba
 :::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="Post meeting app experience":::
 
 ---
+
+Capabilities supported for pre/post meeting
+
+| Capabilities |:::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✔ |  |
+| Scheduled channel meeting | ✔ |   |
+| One-on-one calls | ✖ |  |
+| Group Calls | ✖ |  |
 
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
@@ -206,21 +260,6 @@ The following table provides the user types and lists the features that each use
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage | Not available |
 | Guest, part of the tenant Azure AD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage | Available |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage | Not available |
-
-**Features supported for work tenant**
-
-| Feature | Scheduled private meeting | Scheduled channel meeting | Meet now | One-on-one calls | Group Calls |
-|---|---|---|---|---|---|
-| Add apps to meetings | No | No | No | No | No |
-| Manage apps added in meeting (like view , rename, delete) | Yes | Yes | Yes | Yes | Yes |
-| In-meeting side panel | Yes | Yes | Yes | Yes | Yes |
-| In-meeting dialog | Yes | Yes | No | No | No |
-| Pre/post meeting support | Yes | Yes | No | No | No |
-| Generic app share to stage | Yes | Yes | Yes | Yes | Yes |
-| Deeplinks to pre/post/in-meeting tabs  | Yes | Yes | Yes | Yes | Yes |
-
-> [!NOTE]
-> Mobile does not support AV filter, generic app share stage and together mode.
 
 ## Next step
 

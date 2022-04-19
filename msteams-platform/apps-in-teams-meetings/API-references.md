@@ -37,6 +37,24 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
+APIs Client SDK for `get user`
+
+| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✔ |  |
+| Scheduled channel meeting | ✖ |  |
+| One-on-one calls | ✖ |  |
+| Group Calls | ✖ |  |
+
+APIs Client SDK for `get context`
+
+| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✖|  |
+| Scheduled channel meeting | ✖ |  |
+| One-on-one calls | ✖ |  |
+| Group Calls | ✖ |  |
+
 ## Get participant API
 
 The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
@@ -139,17 +157,6 @@ The following table provides the response codes:
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participants are not available.|
 
-**APIs Client SDK for work tenant**
-
-| Feature | Scheduled private meeting | Scheduled channel meeting | Meet now | One-on-one calls | Group calls |
-|---|---|---|---|---|---|
-| Get meeting details | Yes | No | No | No | No
-| Get user | No | No | No | No | No |
-| Get context | No | No | No | No | No |
-| Share app to stage | Yes | Yes | Yes | Yes | Yes |
-| Get app content sharing stage | No | No | No | No | No |
-| Get app sharing content capabilities | No | No | No | No | No |
-
 ## Send an in-meeting notification
 
 All users in a meeting receive the notifications sent through in-meeting notification payload. In-meeting notification payload triggers an in-meeting notification and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting notification based on user action. The payload is available through Bot Services.
@@ -240,6 +247,15 @@ The following table includes the response codes:
 The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
 The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+
+APIs Client SDK for `get meeting details`
+
+| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✔ |  |
+| Scheduled channel meeting | ✖ |  |
+| One-on-one calls | ✖ |  |
+| Group Calls | ✖ |  |
 
 ### Prerequisite
 
@@ -445,6 +461,15 @@ The following table provides the error codes:
 
 The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client SDK.
 
+APIs Client SDK for `share app to stage`
+
+| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✔ |  |
+| Scheduled channel meeting | ✔ |  |
+| One-on-one calls | ✔ |  |
+| Group Calls | ✔ |  |
+
 ### Prerequisite
 
 *  To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
@@ -462,6 +487,15 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
     }
     ```
 *  `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
+
+APIs Client SDK for `Get app content sharing stage`
+
+| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✖ |  |
+| Scheduled channel meeting | ✖ |  |
+| One-on-one calls | ✖ |  |
+| Group Calls | ✖ |  |
 
 ### Query parameter
 
@@ -540,6 +574,15 @@ The following table provides the response codes:
 ## Get app content stage sharing capabilities API
 
 The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage.
+
+APIs Client SDK for `Get app sharing content capabilities`
+
+| APIs Client SDK | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✖ |  |
+| Scheduled channel meeting | ✖ |  |
+| One-on-one calls | ✖ |  |
+| Group Calls | ✖ |  |
 
 ### Query parameter
 

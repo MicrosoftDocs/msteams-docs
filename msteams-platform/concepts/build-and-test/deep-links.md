@@ -213,6 +213,15 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 ## Deep linking to an app
 
 Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app.
+
+Capabilities supported for deeplinks to pre/post/in-meeting tabs
+
+| Capabilities | :::image type="icon" source="../../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../../assets/icons/desktop.svg" border="false"::: |
+|:---:|:---:|:---:|
+| Scheduled private meeting | ✖ | ✔ |
+| Scheduled channel meeting | ✖ | ✔ |
+| One-on-one calls | ✖ | ✔ |
+| Group Calls | ✖ | ✔ |
   
 ## Deep linking for SharePoint Framework tabs
 
