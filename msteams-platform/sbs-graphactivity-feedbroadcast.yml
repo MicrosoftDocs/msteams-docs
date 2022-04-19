@@ -340,9 +340,9 @@ items:
 
     1. Select **Manage your apps**.
     
-    1. Select **Upload a custom app**. 
+    1. Select **Upload an app tp your org's app catalog**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-custom-app-sbs-graph.png" alt-text="Upload a custom app" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-app-org.png" alt-text="Upload a custom app" border="true":::
 
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
@@ -354,12 +354,25 @@ items:
    
           The app is visible in the meeting SidePanel. 
 
-    1. The Broadcast Tab displays Message title and Message description.
+- title: Interact with the app in Teams
+  durationInMinutes: 1
+  content: |
+
+    Let's interact with the app in Teams!
+
+    1. The **BroadcastTab** displays **Message title** and **Message description**.
             
-    1. Enter the message and select **Send message**.
+    1. Enter the message and select **Send message**. Message broadcast successfully appears.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-2.png" alt-text="Final output" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true":::
 
+    1. Activity feed notification displays in Teams app with the same tenant ID**.  
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/activity-feed.png" alt-text="Final output" border="true":::
+
+    1. The message details appears on selecting the message.  
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/message-members.png" alt-text="Final output" border="true":::
      
 - title: Complete challenge
   durationInMinutes: 1
