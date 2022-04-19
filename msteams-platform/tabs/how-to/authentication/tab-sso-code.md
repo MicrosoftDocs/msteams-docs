@@ -36,9 +36,6 @@ This section covers:
 
 - [Add client-side code](#add-client-side-code)
 
-
-  - [When to call getAuthToken](#when-to-call-getauthtoken)
-
 - [User consent for getting access token](#user-consent-for-getting-access-token)
 
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
@@ -49,7 +46,21 @@ This section covers:
 
   - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
-## Add client-side code
+### Call getAuthToken
+
+Call `getAuthToken` at the time when you need to validate the user identity.
+
+- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
+- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
+
+You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
+
+Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
+
+> [!IMPORTANT]
+> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
+
+### Add client-side code
 
 Add the following code to the Teams app to:
 
@@ -65,20 +76,6 @@ var authTokenRequest = {
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
-
-## When to call getAuthToken
-
-Call the `getAuthToken` at the time when you need to validate the user identity.
-
-- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
-- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
-
-You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
-
-Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
-
-> [!IMPORTANT]
-> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
 
 ### User consent for getting access token
 
@@ -114,7 +111,7 @@ $.ajax({
 });
 ```
 
-## Validate the access token
+### Validate the access token
 
 Web APIs on your server must validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
@@ -130,7 +127,7 @@ Keep in mind the following guidelines when validating the token:
 - The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
-### Example access token
+#### Example access token
 
 The following is a typical decoded payload of an access token.
 
@@ -158,7 +155,7 @@ The following is a typical decoded payload of an access token.
 }
 ```
 
-## Use the access token as an identity token
+### Use the access token as an identity token
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
