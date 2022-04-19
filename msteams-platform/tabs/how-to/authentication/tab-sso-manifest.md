@@ -19,9 +19,76 @@ You'll need to add the `webApplicationInfo` property to the Teams app manifest f
 > [!NOTE]
 > - You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
-If your app doesn't have a manifest, you can add it using the steps given at /add cross-reference/.
+<details>
+<summary>Learn to create a manifest if your app doesn't have it</summary>
 
-/ Add a section to explain steps to add a manifest to a web app. /
+To create a manifest file:
+
+1. Use the content shown below to create an json file named, manifest.json.
+
+  The manifest content shown here is only for a tab app.
+  For more information, please see [Manifest schema](/resources/schema/manifest-schema)
+
+  ```
+{ 
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
+ "manifestVersion": "1.12", 
+ "version": "1.0.0", 
+ "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
+ "packageName": "com.contoso.teamsauthsso", 
+ "developer": { 
+ "name": "Microsoft", 
+ "websiteUrl": "https://www.microsoft.com", 
+ "privacyUrl": "https://www.microsoft.com/privacy", 
+ "termsOfUseUrl": "https://www.microsoft.com/termsofuse" 
+  }, 
+
+  "name": { 
+    "short": "Teams Auth SSO", 
+    "full": "Teams Auth SSO" 
+  }, 
+
+
+  "description": { 
+    "short": "Teams Auth SSO app", 
+    "full": "The Teams Auth SSO app" 
+  }, 
+
+  "icons": { 
+    "outline": "outline.png", 
+    "color": "color.png" 
+  }, 
+
+  "accentColor": "#60A18E", 
+  "staticTabs": [ 
+    { 
+     "entityId": "auth", 
+     "name": "Auth", 
+     "contentUrl": "https://{subDomain}.ngrok.io/Home/Index", 
+     "scopes": [ "personal" ] 
+    } 
+  ], 
+
+  "configurableTabs": [ 
+    { 
+     "configurationUrl": "https://{subDomain}.ngrok.io/Home/Configure", 
+     "canUpdateConfiguration": true, 
+     "scopes": [ 
+     "team" 
+      ] 
+    } 
+  ], 
+  "permissions": [ "identity", "messageTeamMembers" ], 
+  "validDomains": [ 
+   "{subdomain or ngrok url}" 
+  ], 
+  "webApplicationInfo": { 
+    "id": "{Azure AD AppId}", 
+    "resource": "api://{subdomain or ngrok url} /{Azure AD AppId}" 
+  }
+} 
+```
+</details>
 
 ## To configure Teams app manifest for Azure AD registration
 
