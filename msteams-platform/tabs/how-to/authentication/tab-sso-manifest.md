@@ -18,16 +18,17 @@ You'll need to add the `webApplicationInfo` property to the Teams app manifest f
 
 > [!NOTE]
 > - You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
-
+<br>
+<br>
 <details>
-<summary>Learn to create a manifest if your app doesn't have it</summary>
+<summary>Learn to create a manifest file</summary>
 
-To create a manifest file:
+If your app doesn't have a manifest file, you'll need to create it.
 
-1. Use the content shown below to create an json file named, manifest.json.
+To create a manifest file, use the content shown below to create an json file named, manifest.json.
 
-  The manifest content shown here is only for a tab app.
-  For more information, please see [Manifest schema](/resources/schema/manifest-schema)
+> [!NOTE]
+> The manifest content shown here is only for a tab app. For more information, please see [Manifest schema](/resources/schema/manifest-schema)
 
   ```
 { 
