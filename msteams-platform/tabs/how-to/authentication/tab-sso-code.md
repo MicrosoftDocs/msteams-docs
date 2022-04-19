@@ -36,6 +36,7 @@ This section covers:
 
 - [Add client-side code](#add-client-side-code)
 
+
   - [When to call getAuthToken](#when-to-call-getauthtoken)
 
 - [User consent for getting access token](#user-consent-for-getting-access-token)
@@ -48,9 +49,9 @@ This section covers:
 
   - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
-### Add client-side code
+## Add client-side code
 
-Add JavaScript to the add-in to:
+Add the following code to the Teams app to:
 
 - Call `getAuthToken`.
 - Parse the access token or pass it to the server-side code.
@@ -65,14 +66,14 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-#### When to call getAuthToken
+## When to call getAuthToken
 
 Call the `getAuthToken` at the time when you need to validate the user identity.
 
 - If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
 - If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
 
-You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`. / Verify this code snippet for relevance. /
+You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
 
 Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
 
@@ -87,15 +88,13 @@ When you call `getAuthToken` and user consent is required for user-level permiss
 
 After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
-### Pass the access token to server-side code
+## Pass the access token to server-side code
 
 If you need to access web APIs on your server, or additional services such as Microsoft Graph, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
 
 If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
 
 The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method, but `GET` is sufficient to send the access token when you are not writing to the server.
-
-/ Verify the code snippet for relevance /
 
 ```javascript
 $.ajax({
@@ -115,7 +114,7 @@ $.ajax({
 });
 ```
 
-#### Validate the access token
+## Validate the access token
 
 Web APIs on your server must validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
@@ -131,7 +130,7 @@ Keep in mind the following guidelines when validating the token:
 - The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
-#### Example access token
+### Example access token
 
 The following is a typical decoded payload of an access token.
 
@@ -159,7 +158,7 @@ The following is a typical decoded payload of an access token.
 }
 ```
 
-#### Use the access token as an identity token
+## Use the access token as an identity token
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
