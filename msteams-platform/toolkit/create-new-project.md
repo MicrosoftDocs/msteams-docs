@@ -39,7 +39,7 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 
 ## Step-by-step guides using Teams Toolkit
 
-* [Build a Teams app with Blazor](../sbs-gs-blazorapp.yml)
+* [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 * [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 * [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
