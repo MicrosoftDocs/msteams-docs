@@ -29,7 +29,7 @@ This section covers:
 
 ## Get an access token from your client-side code
 
-Your app user must give their consent to Teams for using their Teams identity to get user-level permission. Azure AD receives the user's identity token (ID token) and sends an access token to Teams.
+Your app user must give their consent to Teams for using their identity to get user-level permission. Azure AD receives the user's identity token (ID token) and sends an access token to Teams.
 
 - **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the user who is currently logged into Teams.
 - **Access token**: An access token is an artifact contains user identity and permission scopes. With Teams SSO, it is granted through Azure AD.
@@ -43,7 +43,7 @@ Your Teams app sends a JavaScript call to obtain an access token for a Teams use
 - If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
 - If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
 
-Once Teams obtains the access token, it will cache it and reuse it when needed for this user. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
+Once Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken` is called until it expires, without making another call to the Azure AD. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
 > As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
