@@ -13,7 +13,11 @@ This section covers:
 
 - [Get an access token from your client-side code](#get-an-access-token-from-your-client-side-code)
 
-- [User consent for getting access token](#user-consent-for-getting-access-token)
+  - [Client-side code to obtain access token](#client-side-code-to-obtain-access-token)
+  
+  - [Code for getAuthToken](#code-for-getauthtoken)
+
+  - [User consent for getting access token](#user-consent-for-getting-access-token)
 
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 
@@ -21,7 +25,7 @@ This section covers:
 
   - [Example access token](#example-access-token)
 
-  - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
+- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
 ## SDK Prerequisites
 
@@ -159,7 +163,7 @@ The following is a typical decoded payload of an access token.
 }
 ```
 
-### Use the access token as an identity token
+## Use the access token as an identity token
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
