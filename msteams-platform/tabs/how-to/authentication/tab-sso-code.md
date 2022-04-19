@@ -60,6 +60,8 @@ Once Teams obtains the access token, it will cache it and reuse it when needed f
 > [!IMPORTANT]
 > As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
 
+### Code for getAuthToken
+
 Add the following code to the Teams app to:
 
 - Call `getAuthToken`.
@@ -79,19 +81,21 @@ You should also pass `allowSignInPrompt: true` in the options parameter of `getA
 
 ### User consent for getting access token
 
-When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
+When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to seek consent.
 
-:::image type="content" source="../../../assets/images/tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
 After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
 ## Pass the access token to server-side code
 
-If you need to access web APIs on your server, or additional services such as Microsoft Graph, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
+If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
 
 If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
 
-The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method, but `GET` is sufficient to send the access token when you are not writing to the server.
+### Code for passing access token to server-side
+
+The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you are not writing to the server.
 
 ```javascript
 $.ajax({
