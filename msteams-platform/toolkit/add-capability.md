@@ -28,7 +28,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 ## Add capabilities using Teams Toolkit
 
 > [!IMPORTANT]
-> You need to perform provision for each environment, after you successfully add capabilities to your Teams app.
+> You need to perform the provision for each environment, after you successfully add capabilities to your Teams app.
 
 1. Open **Microsoft Visual Studio Code**.
 1. Select **Teams Toolkit** from left panel.
@@ -46,7 +46,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 
 1. Select **OK**.
 
-The selected capabilities are succesfully added to your project. The Teams Toolkit generate source code for newly added capabilities.
+The selected capabilities are successfully added to your project. The Teams Toolkit generate source code for newly added capabilities.
 
 ## Add capabilities using TeamsFx CLI in command window
 
@@ -76,11 +76,11 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 
 ## Add capabilities
 
-After adding bot and messaging extension, the changes in your project are as follows:
+After adding a bot and messaging extension, the changes in your project are as follows:
 
 * A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project.
 * `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
-* `manifest.template.json` file under `templates/appPackage` folder are updated, which includes bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
+* `manifest.template.json` file under `templates/appPackage` folder is updated, which includes the bot related information in the manifest file that represents your application in the Teams Platform. The changes are as follows:
   * The ID of your bot.
   * The scopes of your bot.
   * The commands that hello world bot application can respond to.
@@ -91,7 +91,7 @@ After adding tab, the changes in your project are as follows:
 
 * A frontend tab template code is added into a subfolder with path `yourProjectFolder/tab`, which includes a **hello world** tab application template into your project.
 * `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
-* `manifest.template.json` file under `templates/appPackage` folder are updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform, the changes are as follows:
+* `manifest.template.json` file under `templates/appPackage` folder is updated, which includes tab-related information in the manifest file that represents your application in the Teams Platform. The changes are:
   * The configurable and static tabs.
   * The scopes of the tabs.
 * The files under `templates/azure/teamsfx` will be updated, and `templates/azure/provision/xxx`.bicep file will be regenerated.

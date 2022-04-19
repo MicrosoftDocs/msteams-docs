@@ -42,7 +42,7 @@ During local debug or provision, Teams Toolkit loads manifest from `manifest.tem
         }
         ```
 
-    Besides each config placeholder in `manifest.template.json`, there is a `Go to config file` or `View the state file`. You can navigate to configuration file by selecting it.
+     You can navigate to configuration file by selecting any one of the config placeholder `Go to config file` or `View the state file` in `manifest.template.json`.
 
 ## See also
 

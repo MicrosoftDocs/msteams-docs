@@ -75,11 +75,11 @@ The following table lists the common scenarios supported for customized provisio
 | Reuse existing Azure AD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`.</li> </ul> |  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app). |
 | Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`.</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot). |
 | Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`.</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database). |
-| Customize app manifest | <ul> <li>`templates/manifest.template.json`.</li> <li>`manifest` section in`.fx/config.<envName>.json`.</li>  </ul> | [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md). |
+| Customize app manifest | <ul> <li>`templates/manifest.template.json`.</li> <li>`manifest` section in `.fx/config.<envName>.json`.</li>  </ul> | [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md). |
 
 ## Scenarios
 
-### Scenario 1: Customize Teams app name for the different environment
+### Scenario 1: Customize Teams app name for  different environment
 
 You can set the Teams app name to `myapp(dev)` for the default environment `dev`  and `myapp(staging)` for the staging environment `staging`.
 
@@ -109,12 +109,12 @@ Perform the following steps for customization:
 * 5. Update the same property `myapp(staging)`.
 * 6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
-### Scenario 2: Customize Teams app description for the different environment
+### Scenario 2: Customize Teams app description for different environment
 
-In this scenario, you will learn how to set different Teams app description for the 9different environments:
+In this scenario, you will learn how to set different Teams app description for the different environments:
 
-* For the default environment `dev`, the description will be `my app description for dev`.
-* For the staging environment `staging`, the description will be `my app description for staging`.
+* For the default environment `dev`, the description is `my app description for dev`.
+* For the staging environment `staging`, the description is `my app description for staging`.
 
 Perform the following steps for customization:
 
@@ -162,7 +162,7 @@ Perform the following steps for customization:
 
 * 8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
-### Scenario 3: Customize Teams app description for all the environments
+### Scenario 3: Customize Teams app description for all environments
 
 In this scenario, you will learn how to set the description of Teams app to `my app description` for all the environments.
 
