@@ -27,19 +27,6 @@ This section covers:
 
 - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
-> [!NOTE]
-> **Teams mobile client versions supporting SSO:**
->
-> - Teams for Android (1416/1.0.0.2020073101 and later)
-> - Teams for iOS (_Version_: 2.0.18 and later)  
-> - Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
->
->  For the best experience with Teams, use the latest version of iOS and Android.
-
-> [!NOTE]
-> To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
-> For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
-
 ## Get an access token from your client-side code
 
 Your app user must give their consent to Teams for using their Teams identity to get user-level permission. Azure AD receives the user's identity token (ID token) and sends an access token to Teams.
@@ -79,6 +66,20 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
 You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
+
+> [!NOTE]
+> To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
+> For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
+
+#### Teams mobile client
+
+For Teams mobile client version that support SSO are:
+
+- Teams for Android (1416/1.0.0.2020073101 and later)
+- Teams for iOS (_Version_: 2.0.18 and later)  
+- Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
+
+For the best experience with Teams, use the latest version of iOS and Android.
 
 ### User consent for getting access token
 
