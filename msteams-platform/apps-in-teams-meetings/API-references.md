@@ -39,21 +39,21 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 APIs Client SDK for `get user`
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✔ |  |
-| Scheduled channel meeting | ✖ |  |
-| One-on-one calls | ✖ |  |
-| Group Calls | ✖ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 APIs Client SDK for `get context`
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✖|  |
-| Scheduled channel meeting | ✖ |  |
-| One-on-one calls | ✖ |  |
-| Group Calls | ✖ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 ## Get participant API
 
@@ -250,12 +250,12 @@ The `Meeting Details` API must have a bot registration and bot ID. It requires B
 
 APIs Client SDK for `get meeting details`
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✔ |  |
-| Scheduled channel meeting | ✖ |  |
-| One-on-one calls | ✖ |  |
-| Group Calls | ✖ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled channel meeting |:::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 ### Prerequisite
 
@@ -463,12 +463,12 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 APIs Client SDK for `share app to stage`
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✔ |  |
-| Scheduled channel meeting | ✔ |  |
-| One-on-one calls | ✔ |  |
-| Group Calls | ✔ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
 
 ### Prerequisite
 
@@ -490,12 +490,12 @@ APIs Client SDK for `share app to stage`
 
 APIs Client SDK for `Get app content sharing stage`
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✖ |  |
-| Scheduled channel meeting | ✖ |  |
-| One-on-one calls | ✖ |  |
-| Group Calls | ✖ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 ### Query parameter
 
@@ -577,12 +577,12 @@ The `getAppContentStageSharingCapabilities` API enables you to fetch the app's c
 
 APIs Client SDK for `Get app sharing content capabilities`
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✖ |  |
-| Scheduled channel meeting | ✖ |  |
-| One-on-one calls | ✖ |  |
-| Group Calls | ✖ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 ### Query parameter
 

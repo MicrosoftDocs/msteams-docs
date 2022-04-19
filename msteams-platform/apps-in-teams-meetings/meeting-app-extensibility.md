@@ -25,12 +25,12 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 Capabilities supported for generic app share to stage
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✖ | ✔ |
-| Scheduled channel meeting | ✖ | ✔ |
-| One-on-one calls | ✖ | ✔ |
-| Group Calls | ✖ | ✔ |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 ### Integrate tabs into the meeting lifecycle
 
@@ -48,12 +48,12 @@ Users can also add or interact with an app in the scheduled private channel meet
 
 Capabilities supported for add apps to meetings
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✖ | ✔ |
-| Scheduled channel meeting | ✖ | ✔ |
-| One-on-one calls | ✖ | ✔ |
-| Group Calls | ✖ | ✔ |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 #### Pre-meeting app experience
 
@@ -91,12 +91,12 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 Capabilities supported for manage apps in meeting (like view , rename, delete)
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✔ |  |
-| Scheduled channel meeting | ✔ |  |
-| One-on-one calls | ✔ |  |
-| Group Calls | ✔ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false":::  |
+| Group Calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false":::  |
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
@@ -120,12 +120,12 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 
 Capabilities supported for in-meeting dialog
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✔ |  |
-| Scheduled channel meeting | ✔   |   |
-| One-on-one calls | ✖ |  |
-| Group Calls | ✖ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false":::  |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -140,12 +140,12 @@ Capabilities supported for in-meeting dialog
 
 Capabilities supported for in-meeting side panel
 
-| Type | :::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✔ |  |
-| Scheduled channel meeting | ✔ |   |
-| One-on-one calls | ✔ |  |
-| Group Calls | ✔ |  |
+| Type | Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
 
 The following image illustrates the in-meeting side panel:
 
@@ -184,12 +184,12 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 Capabilities supported for pre/post meeting
 
-| Type |:::image type="icon" source="../assets/icons/mobilephone.png" border="false"::: | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
-|:---:|:---:|:---:|
-| Scheduled private meeting | ✔ |  |
-| Scheduled channel meeting | ✔ |   |
-| One-on-one calls | ✖ |  |
-| Group Calls | ✖ |  |
+| Type |Capabilities |
+|:---:|:---:|
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desktop.svg" border="false"::: |
 
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
