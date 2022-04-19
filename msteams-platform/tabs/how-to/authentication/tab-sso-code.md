@@ -65,6 +65,13 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
+<details>
+<summary>Here's an example of code:</summary>
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configure client code":::
+
+</details>
+
 You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
 
 > [!NOTE]
