@@ -74,10 +74,6 @@ To access apps through **Manage your apps** follow the steps:
     >[!NOTE]
     > Currently, group chat scope where the app is installed is not listed in the app dropdown.
     
-To access apps through channels, find the team name and select **More options** &#x25CF;&#x25CF;&#x25CF; > **Manage team** > **Apps** to access the installed apps in that Team.
-
- :::image type="content" source="~/assets/images/publish-app/apps-in-channels.png" alt-text="Access Teams app in a channel" border="true":::
-
 Teams provide several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
 ### Update your app
@@ -99,27 +95,17 @@ If an update is available to your app, then the **Update available** option is e
 
 ### Remove your app
 
-You can remove your app either from Teams or from a particular scope.
-
 **To remove app from Teams, follow the steps:**
 
 1. Find the app in **Manage your app**.
-1. Select **More options** &#x25CF;&#x25CF;&#x25CF; and **Uninstall**.
-    
-    :::image type="content" source="~/assets/images/publish-app/uninstall-from-teams.png" alt-text="Uninstall an app from Teams" border="true":::
-    
+1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; at the scope of the installed app.
+        
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
+
 1. Select **Remove** to remove your app.
     
     :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams" border="true":::
 
-**To remove app from a particular scope, follow the steps:**
-
-1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams" border="false":::&nbsp; at the scope of the installed app.
-    
-    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel" border="true":::
-    
-1. Select **Remove** to remove your app.
-        
 > [!NOTE]
 >
 > * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
