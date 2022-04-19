@@ -11,18 +11,20 @@ Your Teams app users are authenticated and authorized by Azure AD for using your
 
 ## Configuration on Azure AD
 
-Registering your app in Azure AD requires making app configurations that will enable SSO for your app in Teams.
+Registering your app in Azure AD and enabling it for Teams SSO requires making app configurations, such as generating app ID, defining API scope, permissions, and more.
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You may also need to configure additional configuration for the platform or device where you want to target your app.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. These configurations will enable Teams SSO for your app in Teams.
+
+You may also need to configure additional configuration for authenticating users on the platform or device where you want to target your app.
 
 It's helpful to learn about the configuration required for registering your app on Azure AD. It includes the following:
 
 - Single- or multi-tenant options.
-- App's platform and the URL from where your app is accessible.
+- Platform for your app and the URL from where your app is accessible.
 - App ID URI, a globally-unique URI used to identify the web API you expose for your app's access through scopes. It's also referred to as an identifier URI.
 - Scope, which defines the permissions that an authorized user or your app can be granted for accessing a resource exposed by the API.
 
-Ensure that you learn about these configurations before you start registering your app.
+Ensure that you've prepared to configure these details before you start registering your app.
 
 The tasks involved in registering a Teams tab app that uses SSO are language- and framework-agnostic.
 
@@ -40,38 +42,38 @@ In this section, you'll learn:
 
 - [How to register and configure the Azure AD app.](#register-your-app)
 
-- [How to configure admin consent.](#configure-admin-consent)
+- [How to configure scope and permission.](#configure-scope-and-permission)
 
 - [How to configure authentication for different platforms.](#configure-authentication-for-different-platforms)
 
 - [How to configure access token version.](#configure-access-token-version)
 
-## Register your app
+## Create an app registration in Azure AD
 
-In this section, you'll learn to create and register an Azure-based Teams tab app.
+Register a new app in Azure AD, and configure the tenancy and app's platform and URI options. You'll generate a new application ID that will be updated later in your Teams app manifest file.
 
-To register your tab app in Azure AD:
+### To register a new app in Azure AD
 
 1. Open a web browser to the [Azure portal](https://ms.portal.azure.com/).
    The Microsoft Azure AD Portal page opens.
 
-1. Select **App registrations** icon.
+2. Select **App registrations** icon.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal page." border="false":::
 
    The **App registrations** page appears.
 
-1. Select **+ New registration** icon.
+3. Select **+ New registration** icon.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Azure AD Portal." border="false":::
 
     The **Register an application** page appears.
 
-1. Enter the name of your app that will be displayed to the user. You can change this name at a later stage, if you want to.
+4. Enter the name of your app that will be displayed to the user. You can change this name at a later stage, if you want to.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal." border="false":::
 
-1. Select the types of user accounts that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
+5. Select the types of user accounts that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
 
     <details>
     <summary>Options for supported account types</summary>
@@ -81,11 +83,11 @@ To register your tab app in Azure AD:
     | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called a line-of-business (LOB) application, this app is a single-tenant application in the Microsoft identity platform. |
     | Accounts in any organizational directory (Any Azure AD directory - Multitenant) | Let users in any Azure Active Directory (Azure AD) tenant to be able to use your application. This option is appropriate if, for example, you're building a software-as-a-service (SaaS) application that you intend to provide to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
     | Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can also support users who have personal Microsoft accounts. |
-    | Personal Microsoft accounts only | Select this option if you're building an application only for users who have personal Microsoft accounts. Personal Microsoft accounts. |
+    | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. Personal Microsoft accounts. |
 
     </details>
 
-1. Select the **Redirect URI** details.
+6. Select the **Redirect URI** details.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
@@ -93,7 +95,7 @@ To register your tab app in Azure AD:
     2. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app.
        You can change this URL at a later stage, if needed.
 
-1. Select **Register**.
+7. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
@@ -102,15 +104,15 @@ To register your tab app in Azure AD:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="false":::
 
-1. Note and save the **Application ID**. You'll need it for updating the app manifest.
+8. Note and save the **Application ID**. You'll need it for updating the app manifest.
 
-    Your Teams tab app is registered in Azure AD.
+    Your app is registered in Azure AD. You should now have application ID for your tab app.
 
-You should now have Application ID for your tab app.
+## Configure scope and permission
 
-## Configure admin consent
+After you've created a new registration, configure scope and permission options for your app. To do this, you'll expose a web API, and configure the app ID URI. Define scope for the API, and configure the users who can consent for a scope. You'll then create an authorized client app and configure a trust relationship with the API you exposed earlier. This enables the user to access the app resources without any further consent.
 
-You can define app scope for an exposed API and determine if users can consent to this scope in directories where user consent is enabled. You can let only admins provide consent for higher-privileged permissions.
+You can let only admins provide consent for higher-privileged permissions.
 
 In this section, you'll learn:
 
