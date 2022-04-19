@@ -175,29 +175,26 @@ items:
         
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-helloworld.png" alt-text="bot home" border="true":::
 
-    1. Enter a suitable name for your app, like `HelloWorld`. Ensure that the name of the app is alphanumeric. 
-       Select **Enter** to continue.
+    1. Enter a suitable name for your app, such as `HelloWorld`. Ensure that the name of the app is alphanumeric. 
+       Select **Enter**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
-        Teams Toolkit will invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
+        Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
         Your Teams app is created within a few seconds.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" border="true":::
  
-        The scaffolding should take a couple of minutes.
+        The scaffolding takes a couple of minutes.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home" border="true":::
         
-       For this tutorial, you don't need to use these options.
-
         > [!NOTE]
         > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
-    Watch this short recap for creating a Teams app.
-
+    
     ![Create a Teams app](~/assets/videos/spfx-tab-source.gif)
     </details>
 
@@ -276,7 +273,7 @@ items:
 
     # [Command line](#tab/cline)
 
-    - Sign in to Microsoft 365 with the TeamsFx CLI:
+      Sign in to Microsoft 365 with the TeamsFx CLI.
 
         ``` bash
         teamsfx account login m365
