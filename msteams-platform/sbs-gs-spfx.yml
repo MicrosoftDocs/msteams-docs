@@ -247,7 +247,8 @@ items:
 
     - `fx`: App's state in the `.fx` directory.  
     - templates/resources: contains the app icons, `color.png` and `outline.png`.
-    - `manifest.template.json`: contains the app manifest template.
+    - `manifest.local.template.json`: contains the app manifest for local debug
+    - `manifest.remote.template.json`: contains the app manifest for publishing to Developer Portal for Teams.
     - `.fx/configs/projectSettings.json`: the settings you chose when creating the project.
 
     As you selected an SPFx Web part project, the following files are relevant to your UI:
@@ -475,4 +476,4 @@ items:
 
         Congratulations! Your app is now added to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::"
