@@ -40,7 +40,7 @@ The tasks involved in registering a Teams tab app that uses SSO are language- an
 
 In this section, you'll learn:
 
-- [How to register and configure the Azure AD app.](#register-your-app)
+- [How to register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
 
 - [How to configure scope and permission.](#configure-scope-and-permission)
 
