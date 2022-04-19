@@ -46,6 +46,7 @@ This section covers:
 
   - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
+<!--
 ### When to call getAuthToken
 
 Call `getAuthToken` at the time when you need to validate the user identity.
@@ -58,9 +59,19 @@ You should also pass `allowSignInPrompt: true` in the options parameter of `getA
 Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
-> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
+> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.-->
 
-### Add client-side code
+### Client-side code to obtain access token
+
+Your Teams app sends a JavaScript call to obtain an access token for a Teams user when they attempt to access the app. Use `getAuthToken` at the time when you need to validate the user identity. You can call `getAuthToken`:
+
+- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
+- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
+
+Once Teams obtains the access token, it will cache it and reuse it when needed for this user. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
+
+> [!IMPORTANT]
+> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
 
 Add the following code to the Teams app to:
 
@@ -76,6 +87,9 @@ var authTokenRequest = {
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
+
+You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
+
 
 ### User consent for getting access token
 
