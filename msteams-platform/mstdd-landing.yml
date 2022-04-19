@@ -57,10 +57,10 @@ landingContent:
         url: /contribute/additional-resources
     - linkListType: tutorial
       links:
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
       - text: Build app with SPFx
         url: sbs-gs-spfx.yml
       - text: Build app with C# or .NET
@@ -133,7 +133,7 @@ landingContent:
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
-        - text: Configure Tab device permissions
+        - text: Grant tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and messaging extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
