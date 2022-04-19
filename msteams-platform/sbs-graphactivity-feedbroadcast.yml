@@ -192,18 +192,13 @@ items:
          * **TeamsAppInstallation.ReadWriteForUser**
          * **TeamsActivity.Send**
         
+    1. Select **Add permissions**.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Request permission" border="true":::
 
-          > [!NOTE]
-          > You need to add TeamsActivity.Send and Directory.Read.All as application level permissions too.
-
-    1. Select **Add permissions**. Ensure to grant the admin consent for the required permissions.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
-
+   
     1. Select **Add a permission**.
 
     1. Select **Microsoft Graph**.
@@ -216,7 +211,14 @@ items:
          * **Directory.Read.All**
          * **TeamsAppInstallation.ReadForUser.All**
 
-    1. Select **Add permissions**. Ensure to grant the admin consent for the required permissions.
+    1. Select **Add permissions**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/request-application-permission.png" alt-text="Request permission" border="true":::
+
+    1. Ensure to grant the admin consent for the required permissions.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
+
 
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
@@ -323,7 +325,7 @@ items:
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |      
-    1. In your cloned repository navigate to  ** graph-activity-feed-broadcast > csharp > ActivityFeedBroadcast > AppPackage.
+    1. In your cloned repository navigate to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
 
     1. Create a .zip with the following files that are present in the **AppPackage** folder: 
        * manifest.json
