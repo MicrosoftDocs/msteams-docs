@@ -264,10 +264,10 @@ items:
 
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"TenantID"` to **Directory (tenant) ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"BaseUrl"` to the `[WebAppDomainName]`.
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**
+         * Set `"TenantID"` to **Directory (tenant) ID**
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value
+         * Set `"BaseUrl"` to the `[WebAppDomainName]`
       
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
 
@@ -277,9 +277,9 @@ items:
 
     1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
-         * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
-         * Set `validDomains` to `[WebAppDomainName]`.
+         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**
+         * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name
+         * Set `validDomains` to `[WebAppDomainName]`
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile.png" alt-text="Manifest file" border="true":::
 
