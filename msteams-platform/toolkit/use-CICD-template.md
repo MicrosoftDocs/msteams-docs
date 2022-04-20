@@ -12,9 +12,9 @@ ms.date: 04/20/2022
 
 ## Overview
 
-TeamsFx helps to automate your development workflow while building Teams application. The following tools and templates you can use to set up CI/CD pipelines with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+TeamsFx helps to automate your development workflow while building Teams application. You can use the tools and templates to set up CI/CD pipelines with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-The following are tools and templates with the descriptions:
+The following tools and templates with the descriptions:
 
 |Tools and Templates | Description |
 |---|---|
@@ -22,6 +22,7 @@ The following are tools and templates with the descriptions:
 |[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app as well as automation workflows for GitHub, Azure DevOps, and Jenkins. |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app as well as automation workflows for GitHub, Azure DevOps, and Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
+
 
 ## Set up pipelines
 
