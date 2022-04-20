@@ -41,19 +41,19 @@ APIs Client SDK for `get user`
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 APIs Client SDK for `get context`
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ## Get participant API
 
@@ -252,10 +252,10 @@ APIs Client SDK for `get meeting details`
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| Scheduled channel meeting |:::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Scheduled channel meeting |:::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Prerequisite
 
@@ -465,10 +465,10 @@ APIs Client SDK for `share app to stage`
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled private meeting |:::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| One-on-one calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Group Calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 
 ### Prerequisite
 
@@ -492,10 +492,10 @@ APIs Client SDK for `Get app content sharing stage`
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Query parameter
 
@@ -579,10 +579,10 @@ APIs Client SDK for `Get app sharing content capabilities`
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Query parameter
 

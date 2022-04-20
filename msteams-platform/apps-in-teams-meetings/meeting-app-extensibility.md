@@ -27,10 +27,10 @@ Capabilities supported for generic app share to stage
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Integrate tabs into the meeting lifecycle
 
@@ -50,10 +50,10 @@ Capabilities supported for add apps to meetings
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false":::|
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false":::|
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 #### Pre-meeting app experience
 
@@ -93,10 +93,10 @@ Capabilities supported for manage apps in meeting (like view , rename, delete)
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="content" source="../assets/images/apps-in-meetings/mobile-phone.png" alt-text="mobile and desktop"::: |
-| One-on-one calls | :::image type="content" source="../assets/images/apps-in-meetings/mobile-phone.png" alt-text="mobile and desktop":::  |
-| Group Calls | :::image type="content" source="../assets/images/apps-in-meetings/mobile-phone.png" alt-text="mobile and desktop":::  |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| One-on-one calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
@@ -122,10 +122,10 @@ Capabilities supported for in-meeting dialog
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false":::  |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::   |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
@@ -142,10 +142,10 @@ Capabilities supported for in-meeting side panel
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 The following image illustrates the in-meeting side panel:
 
@@ -187,10 +187,10 @@ Capabilities supported for pre/post meeting
 
 | Type |Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../assets/icons/phone and desktop.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 > [!NOTE]
 > Tab layout must be organized when there are more than 10 polls or surveys.
