@@ -12,7 +12,7 @@ ms.date: 04/20/2022
 
 ## Overview
 
-TeamsFx helps to automate your development workflow while building Teams application. The following tools and templates you can use to set up CI/CD pipelines with GitHub, Azure DevOps, Jenkins, and other platforms. You can also create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+TeamsFx helps to automate your development workflow while building Teams application. The following tools and templates you can use to set up CI/CD pipelines with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 The following are tools and templates with the descriptions:
 
@@ -24,6 +24,8 @@ The following are tools and templates with the descriptions:
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
 
 ## Set up pipelines
+
+You can set up pipelines with different platforms:
 
 1. [Set up pipelines with GitHub](#set-up-pipelines-with-github)
 1. [Set up pipelines with Azure DevOps](#set-up-pipelines-with-azure-devops)
@@ -44,7 +46,7 @@ To set up pipelines with GitHub for CI/CD:
 You can create workflow templates using one of the following:
 
 * Visual Studio Code
-* CLI
+* TeamsFx CLI
 
 ### Create workflow templates using the Teams Toolkit in Visual Studio Code
 
@@ -80,7 +82,7 @@ You can change or remove the test scripts to customize CI/CD workflow:
 
 ### Set up pipelines with Azure DevOps
 
-To set up pipelines with Azure DevOps for CI/CD, create workflow templates using Visual Studio Code or TeamsFx CLI.
+To set up pipelines with Azure DevOps for CI/CD, do the following
 
 1. Create workflow templates using Visual Studio Code or TeamsFx CLI.
 1. Customize CI/CD workflow
@@ -90,7 +92,7 @@ To set up pipelines with Azure DevOps for CI/CD, create workflow templates using
 You can create workflow templates using one of the following:
 
 * Visual Studio Code
-* CLI
+* TeamsFx CLI
 
 ### Create workflow templates using the Teams Toolkit in Visual Studio Code
 
@@ -142,7 +144,7 @@ To set up pipelines with Jenkins for CI/CD, create workflow templates using Visu
 You can create workflow templates using one of the following:
 
 * Visual Studio Code
-* CLI
+* TeamsFx CLI
 
 ### Create workflow templates using the Teams Toolkit in Visual Studio Code
 
