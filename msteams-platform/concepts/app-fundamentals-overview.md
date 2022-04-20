@@ -62,7 +62,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 * Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
 * Use Developer Portal to configure, manage, and deploy your app.
 
-## Learn about Government Community Cloud (GCC)
+#### Government Community Cloud (GCC)
 
 Government Community Cloud is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
 
