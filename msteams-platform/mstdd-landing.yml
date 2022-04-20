@@ -151,8 +151,6 @@ landingContent:
           url: ~/sbs-graphactivity-feedbroadcast.yml
     - linkListType: tutorial
       links:
-        - text: Send activity feed notifications
-          url: ~/sbs-graphactivity-feedbroadcast.yml
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
         - text: Generate meeting content bubble
