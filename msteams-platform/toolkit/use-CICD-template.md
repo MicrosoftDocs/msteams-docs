@@ -12,7 +12,7 @@ ms.date: 04/20/2022
 
 TeamsFx helps to automate your development workflow while building Teams application. The document provides tools and templates for you to set up CI/CD pipelines with GitHub, Azure DevOps, Jenkins, and other platforms.
 
-# Overview
+## Overview
 
 You can set up the pipeline for CI/CD in the following platforms. You can also create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
@@ -193,7 +193,7 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 * [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
-# Publish Teams app using Teams Developer Portal
+## Publish Teams app using Teams Developer Portal
 
 If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again.
 
