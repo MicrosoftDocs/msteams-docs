@@ -46,7 +46,7 @@ You can also preview local manifest by following the steps:
 
 The preview local appears as shown in the image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-2.png" alt-text="Preview":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Preview":::
 
 ### Preview manifest in remote environment
 
