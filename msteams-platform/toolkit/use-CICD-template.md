@@ -10,11 +10,9 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-## Overview
 
-TeamsFx helps to automate your development workflow while building Teams application. You can use the tools and templates to set up CI/CD pipelines with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+TeamsFx helps to automate your development workflow while building Teams application. The following tools and templates you can use to set up CI/CD pipelines with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-The following tools and templates with the descriptions:
 
 |Tools and Templates | Description |
 |---|---|
@@ -39,10 +37,10 @@ You can set up pipelines with different platforms:
 To set up pipelines with GitHub for CI/CD:
 
 1. Create workflow templates using Visual Studio Code or TeamsFx CLI.
-1. Customize CI/CD workflow
+1. Customize CI/CD workflow.
 
 
-### Create workflow templates
+## Create workflow templates
 
 You can create workflow templates using one of the following:
 
@@ -86,9 +84,9 @@ You can change or remove the test scripts to customize CI/CD workflow:
 To set up pipelines with Azure DevOps for CI/CD, do the following
 
 1. Create workflow templates using Visual Studio Code or TeamsFx CLI.
-1. Customize CI/CD workflow
+1. Customize CI/CD workflow.
 
-### Create workflow templates
+## Create workflow templates for Azure DevOps
 
 You can create workflow templates using one of the following:
 
@@ -140,7 +138,7 @@ To set up pipelines with Jenkins for CI/CD, create workflow templates using Visu
 1. Create workflow templates using Visual Studio Code or TeamsFx CLI.
 1. Customize CI/CD workflow
 
-### Create workflow templates
+## Create workflow templates for Jenkins
 
 You can create workflow templates using one of the following:
 
