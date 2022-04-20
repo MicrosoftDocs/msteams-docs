@@ -86,6 +86,36 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
+`Config` requests the user to provide additional configuration details such as following example:
+
+```json
+
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+  {
+      // The user has requested the Messaging Extension Configuration page.
+      // var escapedSettings = string.Empty;
+          var userConfigSettings = await _userConfigProperty.GetAsync(turnContext, () => string.Empty);
+            if (!string.IsNullOrEmpty(userConfigSettings))
+            {
+                escapedSettings = Uri.EscapeDataString(userConfigSettings);
+            }
+            return new MessagingExtensionResponse            {
+                ComposeExtension = new MessagingExtensionResult                {
+                    Type = "config",
+                    SuggestedActions = new MessagingExtensionSuggestedAction                    {
+                        Actions = new List<CardAction>                        {
+                            new CardAction                            {
+                                Type = ActionTypes.OpenUrl,
+                                Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",
+                            },
+                        },
+                    },
+                },
+            };
+        }
+
+```
+
 ### Response card types and previews
 
 Teams supports the following card types:
