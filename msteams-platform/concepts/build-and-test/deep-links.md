@@ -214,7 +214,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app.
 
-Capabilities supported for deeplinks to pre/post/in-meeting tabs
+Capabilities supported for deeplinks in pre and post in-meeting tabs
 
 | Type | Capabilities |
 |---|:---:|
