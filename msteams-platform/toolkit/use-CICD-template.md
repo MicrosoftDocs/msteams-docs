@@ -80,7 +80,7 @@ You can change or remove the test scripts to customize CI/CD workflow:
 
 ### Set up pipelines with Azure DevOps
 
-To set up pipelines with Azure DevOps for CI/CD, do the following
+To set up pipelines with Azure DevOps for CI/CD:
 
 1. Create workflow templates.
 
@@ -132,7 +132,7 @@ The following are the changes you can make for the script or workflow definition
 
 ### Set up pipelines with Jenkins
 
-To set up pipelines with Jenkins for CI/CD, create workflow templates using Visual Studio Code or TeamsFx CLI.
+To set up pipelines with Jenkins for CI/CD:
 
 1. Create workflow templates.
 
