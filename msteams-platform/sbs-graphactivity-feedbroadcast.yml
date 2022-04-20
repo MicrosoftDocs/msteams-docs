@@ -21,9 +21,9 @@ items:
 
     * Provides enhanced experience
     * Keeps users up to date
-    * Broadcasts message for all the members.
-    * Displays activity feed notification.
-    * Broadcasts details available for members.
+    * Broadcasts message for all the members
+    * Displays activity feed notification
+    * Broadcasts details available for members
 
     **The following are the requirements for sending activity feed notifications**:
 
@@ -33,6 +33,8 @@ items:
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
+
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Final output" border="true"::: 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -134,13 +136,13 @@ items:
     1. Set **Who can consent** to `Admins and users`.
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
-         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+         * Enter `Teams can access the user’s profile` as **Admin consent display name**
 
-         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
 
-         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
 
-         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
+         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
   
     1. Ensure that **State** is set to **Enabled**.
     1. Select **Add scope** to save.
@@ -149,7 +151,7 @@ items:
 
        > [!NOTE]
        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+           `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
 
@@ -373,7 +375,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true":::
 
-    1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID**.  
+    1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID.  
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/activity-feed.png" alt-text="Final output" border="true":::
 
@@ -391,4 +393,4 @@ items:
     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Final output" border="true"::: 
 
 - content: |
-    You've completed the tutorial to get started with a **activity feed broadcast** app!
+    You've completed the tutorial to get started with the **activity feed broadcast** app!
