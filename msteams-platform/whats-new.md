@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|05/30/2022| Share in Teams Meeting (developer preview) | Integrate with Teams > [Share in Teams Meeting](concepts/build-and-test/share-in-teams-meeting.md) |
 |04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| Share to Teams from personal app or tab (developer preview) | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |04/01/2022| Introduced step-by-step guide to create Teams conversational bot| Build bots > Bot conversations > Channel and group conversations > [Step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml) |
@@ -261,6 +262,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|05/30/2022| Share in Teams Meeting | Integrate with Teams > [Share in Teams Meeting](concepts/build-and-test/share-in-teams-meeting.md) |
 |04/06/2022| Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
