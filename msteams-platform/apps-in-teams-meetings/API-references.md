@@ -41,7 +41,7 @@ APIs Client SDK for `get user`
 
 | Type | Capabilities |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
