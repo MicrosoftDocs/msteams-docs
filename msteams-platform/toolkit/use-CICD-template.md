@@ -202,7 +202,7 @@ The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI
 Ensure to set up Azure and Microsoft 365 credentials in your environment variables safely. For example, if you are using GitHub as your source code repository, see [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 
-### Provision and deploy resources
+## Provision and deploy resources
 
 To provision and deploy resources targeting Azure inside CI/CD, you must create an Azure service principal for use.
 
