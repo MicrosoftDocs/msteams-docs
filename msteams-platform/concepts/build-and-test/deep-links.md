@@ -217,11 +217,11 @@ Create deeplinks for the app after the app is listed in the Teams store. To crea
 Capabilities supported for deeplinks to pre/post/in-meeting tabs
 
 | Type | Capabilities |
-|:---:|:---:|
-| Scheduled private meeting | :::image type="icon" source="../../assets/icons/desktop.svg" border="false"::: |
-| Scheduled channel meeting | :::image type="icon" source="../../assets/icons/desktop.svg" border="false"::: |
-| One-on-one calls | :::image type="icon" source="../../assets/icons/desktop.svg" border="false"::: |
-| Group Calls | :::image type="icon" source="../../assets/icons/desktop.svg" border="false"::: |
+|---|:---:|
+| Scheduled private meeting | :::image type="icon" source="../../assets/icons/desktop-icon.svg" border="false"::: |
+| Scheduled channel meeting | :::image type="icon" source="../../assets/icons/desktop-icon.svg" border="false"::: |
+| One-on-one calls | :::image type="icon" source="../../assets/icons/desktop-icon.svg" border="false"::: |
+| Group Calls | :::image type="icon" source="../../assets/icons/desktop-icon.svg" border="false"::: |
   
 ## Deep linking for SharePoint Framework tabs
 
