@@ -180,7 +180,7 @@ Perform the following steps to publish your app:
 1. Sign in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 2. Import your app package in zip by selecting `App -> Import app -> Replace`.
 3. Select the target app in app list.
-4. Publish your app by selecting `Publish -> Publish to your org`
+4. Publish your app by selecting `Publish -> Publish to your org`.
 
 ### See also
 
