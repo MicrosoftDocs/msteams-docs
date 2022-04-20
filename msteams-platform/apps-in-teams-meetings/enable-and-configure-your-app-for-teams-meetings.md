@@ -20,7 +20,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 
 * Adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios. For experiences during meetings, refer to the [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, see `completionBotId` parameter in [in-meeting notification payload](API-references.md#send-an-in-meeting-notification).
+* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog and other stages across the meeting lifecycle. For the in-meeting dialog, see `completionBotId` parameter in [in-meeting notification payload](API-references.md#send-an-in-meeting-notification).
 
 ## Enable your app for Teams meetings
 
@@ -109,8 +109,7 @@ To add a bot to a meeting:
 In a meeting chat, enter the **@** key and select **Get bots**.
 
 > [!NOTE]
->
-> * The content bubble posts an Adaptive Card or a card simultaneously in the meeting chat that users can access. This helps the users when the meeting or the Teams app is minimized.
+> * The in-meeting dialog displays a dialog in a meeting and simultaneously posts an Adaptive Card in the meeting chat that users can access. The Adaptive Card in the meeting chat helps users while attending the meeting or if the Teams app is minimized.
 > * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
 > * Role assignments can be changed while a meeting is in progress. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
@@ -201,7 +200,7 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 * Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting sidepanel in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to generate meeting stage view in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting stage view in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate meeting content bubble in your Teams meeting.
 
 ## Next step
