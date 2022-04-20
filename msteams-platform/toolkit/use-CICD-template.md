@@ -90,7 +90,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 1. Customize CI/CD workflow.
 
 
-## Create workflow templates for Azure DevOps
+## Create workflow templates with Azure DevOps
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
@@ -141,7 +141,7 @@ To set up pipelines with Jenkins for CI/CD:
 
 1. Customize CI/CD workflow.
 
-## Create workflow templates for Jenkins
+## Create workflow templates with Jenkins
 
 **Create workflow templates using the Teams Toolkit in Visual Studio Code**
 
