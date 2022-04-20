@@ -5,7 +5,7 @@ description:  CICD templates
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 20/04/2022
 ---
 
 # CI/CD guide
@@ -15,13 +15,13 @@ TeamsFx helps to automate your development workflow while building Teams applica
 |Tools and Templates | Description |
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Action that integrates with TeamsFx CLI.|
-|[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you develop Teams app as well as automation workflows for Github, Azure DevOps, and Jenkins. |
-|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you develop Teams app as well as automation workflows for Github, Azure DevOps, and Jenkins.|
+|[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app as well as automation workflows for Github, Azure DevOps, and Jenkins. |
+|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app as well as automation workflows for Github, Azure DevOps, and Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
 
 ## Set up pipelines with GitHub
 
-**To include workflows to automate Teams app development process in GitHub**:
+To include workflows to automate Teams app development process in GitHub:
 
 ### Create workflow templates using Teams Toolkit in Visual Studio Code
 
@@ -31,7 +31,7 @@ TeamsFx helps to automate your development workflow while building Teams applica
 1. Select an environment from the command prompt.
 1. Select **GitHub** as CI/CD provider.
 1. Select at least one template from these options: CI, CD, Provision, and Publish to Teams.
-1. Open the template and customize the workflows that fit your scenarios.
+1. Open the template and customize the workflows that fit into your scenarios.
 1. Follow the README files under `.github/workflows` to set up the workflow in GitHub.
 
 ### Create workflow templates using TeamsFx CLI
@@ -49,15 +49,15 @@ TeamsFx helps to automate your development workflow while building Teams applica
 
 ### Customize CI workflow
 
-Perform the following the steps to customize the CD workflow:
+Perform the following steps to customize the CD workflow:
 
 1. By default, the CD workflow is triggered, when new commits are made to the `main` branch.
-1. Change the build scripts if necessary.
+1. Change the build scripts if required.
 1. Remove the test scripts as required.
 
 ## Set up pipelines with Azure DevOps
 
-**To include workflows to automate Teams app development process in Azure DevOps**:
+To include workflows to automate Teams app development process in Azure DevOps:
 
 ### Create workflow templates using the Teams Toolkit in Visual Studio Code
 
@@ -77,7 +77,7 @@ Perform the following the steps to customize the CD workflow:
 3. Select an environment from the command prompt.
 4. Select **Azure DevOps** as CI/CD provider.
 5. Select at least one template from these options: CI, CD, Provision, and Publish to Teams.
-7. Open the template and customize the workflows that fit your scenarios.
+7. Open the template and customize the workflows that fit into your scenarios.
 8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
 
 > [!NOTE]
@@ -100,7 +100,7 @@ The following are the changes you can make for the script or workflow definition
 
 ## Set up pipelines with Jenkins
 
-**To include workflows to automate Teams app development process with Jenkins**:
+To include workflows to automate Teams app development process with Jenkins:
 
 ### Create workflow templates using the Teams Toolkit in Visual Studio Code
 
@@ -126,8 +126,6 @@ The following are the changes you can make for the script or workflow definition
 > [!NOTE]
 > If you need to add additional workflow templates, you can follow the same process again.
 
-Follow the steps to check how to connect Jenkins with different SCM platforms:
-
 The following are some of the changes you can make to your project:
 
 1. Change how the CI flow is triggered. The default is to use the triggers of **pollSCM** when a new change is pushed into the **dev** branch.
@@ -143,7 +141,7 @@ Perform the following steps to customize the CD pipeline:
 
 ## Get started guide for other platforms
 
-You can follow the listed pre-defined example bash scripts to build and customize CI or CD pipelines on other platforms:
+You can follow the listed pre-defined example bash scripts to build and customize CI or CD pipelines on the other platforms:
 
 * [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
 * [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
@@ -155,7 +153,7 @@ The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI
 > * To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI or CD.
 > * To enable `@microsoft/teamsfx-cli` running in the non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In the non-interactive mode, `@microsoft/teamsfx-cli` does not prompt for inputs.
 
-Ensure to set Azure and Microsoft 365 credentials in your environment variables safely. For example if you are using GitHub as your source code repository. For more information, see [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Ensure to set Azure and Microsoft 365 credentials in your environment variables safely. For example, if you are using GitHub as your source code repository. For more information, see [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 ## Other tips and guides
 
@@ -180,7 +178,7 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 
 ### Publish Teams app using Teams Developer Portal
 
-If there's any changes related to Teams app's manifest file, you may want to publish the Teams app again to update the manifest.
+If there are any changes related to Teams app's manifest file, you may want to publish the Teams app again to update the manifest.
 
 To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
