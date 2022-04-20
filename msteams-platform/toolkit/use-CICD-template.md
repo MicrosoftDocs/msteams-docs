@@ -57,7 +57,7 @@ To set up pipelines with GitHub for CI/CD:
 1. Open the template and customize the workflows that fit into your scenarios.
 1. Follow the README files under `.github/workflows` to set up the workflow in GitHub.
 
-### Create workflow templates using TeamsFx CLI
+**Create workflow templates using TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
@@ -103,7 +103,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 7. Open the template and customize the workflows that fit into your scenarios.
 8. Follow the README files under `.azure/pipelines` to set up the workflow in Azure DevOps.
 
-### Create workflow templates using the TeamsFx CLI
+**Create workflow templates using the TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
@@ -154,7 +154,7 @@ To set up pipelines with Jenkins for CI/CD:
 7. Open the template and customize the workflows that fit into your scenarios.
 8. Follow the README files under `.jenkins/pipelines` to set up the workflow with Jenkins.
 
-### Create workflow templates using TeamsFx CLI
+**Create workflow templates using TeamsFx CLI**
 
 1. Enter `cd` to your Teams app project directory.
 2. Enter `teamsfx add cicd` command to start the interactive command process.
