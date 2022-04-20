@@ -163,9 +163,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-    1. Deselect **Tab**, select **Tab(SPFx)**, and select **OK**.
+    1. Deselect **Tab**, select **Tab (SPFx)**, and select **OK**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfxTab-spfx.png" alt-text="tab spfx new" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfx-tab.png" alt-text="new tab spfx" border="true":::
 
     1. Select **React** in the **Framework** section.
 
@@ -181,8 +181,7 @@ items:
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
         Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
-        Your Teams app is created within a few seconds.
-
+        
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" border="true":::
  
         The scaffolding takes a couple of minutes.
