@@ -25,6 +25,11 @@ items:
     * Displays activity feed notification.
     * Broadcasts details available for members.
 
+    **The following are the requirements for sending activity feed notifications**:
+
+    * The Teams app must be installed for the recipient, either personally, or in a team or chat
+    * The Tenant ID for sending and receiving notifications must match
+
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
@@ -185,13 +190,12 @@ items:
 
     1. Add the following permissions:</br>
          * **User.Read** (enabled by default)
-         * **TeamsActivity.Send** 
          * **Directory.Read.All**
          * **Directory.ReadWrite.All**
+         * **TeamsActivity.Send**
          * **TeamsAppInstallation.ReadForUser**
          * **TeamsAppInstallation.ReadWriteForUser**
-         * **TeamsActivity.Send**
-        
+          
     1. Select **Add permissions**.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
@@ -207,8 +211,8 @@ items:
 
     1. Add the following permissions:</br> 
 
-         * **TeamsActivity.Send** 
          * **Directory.Read.All**
+         * **TeamsActivity.Send** 
          * **TeamsAppInstallation.ReadForUser.All**
 
     1. Select **Add permissions**. 
@@ -259,6 +263,7 @@ items:
        The **Add a client secret** window appears.  
 
     1. Enter a value in **Description**.
+
     1. Select **Add**.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secret-save.png" alt-text="Secret id" border="true":::
@@ -278,7 +283,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="App settings location" border="true":::
 
-    1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
+    1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**
          * Set `"TenantID"` to **Directory (tenant) ID**
@@ -291,7 +296,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png" alt-text="Manifest location" border="true":::
 
-    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
+    1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name
@@ -340,7 +345,7 @@ items:
 
     1. Select **Manage your apps**.
     
-    1. Select **Upload an app tp your org's app catalog**. 
+    1. Select **Upload an app to your org's app catalog**. 
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-app-org.png" alt-text="Upload a custom app" border="true":::
 
@@ -362,11 +367,13 @@ items:
 
     1. The **BroadcastTab** displays **Message title** and **Message description**.
             
-    1. Enter the message and select **Send message**. Message broadcasted successfully appears.
+    1. Enter the message title and description and select **Send message**. 
+
+    1. The Message broadcasted successfully appears.
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true":::
 
-    1. Activity feed notification displays in Teams app with the same tenant ID**.  
+    1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID**.  
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/activity-feed.png" alt-text="Final output" border="true":::
 
@@ -380,6 +387,8 @@ items:
     Did you come up with something like this?
 
     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true"::: 
+
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Final output" border="true"::: 
 
 - content: |
     You've completed the tutorial to get started with a **activity feed broadcast** app!
