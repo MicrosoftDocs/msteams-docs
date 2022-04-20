@@ -87,6 +87,8 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 * For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
+</details>
+
 ## Next step
 
 > [!div class="nextstepaction"]
