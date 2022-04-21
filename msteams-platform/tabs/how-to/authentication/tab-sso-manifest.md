@@ -24,8 +24,10 @@ To enable Teams SSO for your app, configure the `webApplicationInfo` property in
 
   :::column-end:::
   :::column span="1":::
+    <br>
+    <br>
     > [!NOTE]
-    > You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
+    > Use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
   :::column-end:::
 :::row-end:::
 
