@@ -8,7 +8,7 @@ ms.author: v-abirade
 ---
 # Plan responsive tabs for Teams mobile
 
- Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, messaging extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile. The article guides to plan your responsive web pages on Teams mobile.
+ Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile. The article guides to plan your responsive web pages on Teams mobile.
 
 ## Identify apps scope
 
