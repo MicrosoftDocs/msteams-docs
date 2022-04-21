@@ -7,15 +7,25 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Enable Teams single sign-in in a tab application
 
-Use Teams Single sign-in (SSO) to authenticate user identity and provide them access to your app. Users sign in to Microsoft Teams using either their personal Microsoft account or their Microsoft 365 account. Take advantage of this and use Teams SSO to authenticate and authorize the user. You can let users access and use your Teams app without ever having to sign-in.
+Single sign-on (SSO) is an authentication method where a user must sign-in only once to access an application or a web service. Once a user signs in, they can access the app without going through authentication again.
 
-/ Teams SSO description and a gif showing the single-sign in UX for the app user /
+With Teams SSO your app users have an added advantage. A user logged into Teams can access an app within Teams environment without signing in. Use Teams Single sign-in (SSO) to authenticate user identity and provide them access to your app.
 
-Here's what you'll learn:
+Here's what you'll learn in this section:
 
 - Teams SSO user experience, and why it's true SSO.
 - Teams SSO at runtime and how your app handles authenticating and authorizing the user.
 - The steps you follow to enable Teams SSO for your app.
+
+## Teams SSO user experience
+
+Users sign in to Microsoft Teams using either their personal Microsoft account or their Microsoft 365 account. Take advantage of this and use Teams SSO to authenticate and authorize the user. You can let users access and use your Teams app without ever having to sign-in.
+
+
+
+/ Teams SSO description and a gif showing the single-sign in UX for the app user /
+
+
 
 ## Teams SSO at runtime for tabs
 
