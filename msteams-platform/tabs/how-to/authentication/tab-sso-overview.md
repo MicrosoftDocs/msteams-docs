@@ -23,9 +23,10 @@ Here's what you'll learn in this section:
 
 Users sign in to Microsoft Teams using either their personal Microsoft account or their Microsoft 365 account. Take advantage of this and use Teams SSO to authenticate and authorize the user. You can let users access and use your Teams app without ever having to sign-in.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-ux.png" alt-text="Teams SSO user experience":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-ux.png" alt-text="Teams SSO user experience":::
 
-Teams authenticates and stores the identity of a user who signs in the first time. When this user who is already signed into Teams attempts to access your app, the app can use the user identity that is already validated. The user only sees a consent dialog where they let the app use their Teams identity information to obtain access permission for using your app.
+- Teams authenticates and stores the identity of a user who signs in the first time. When this user who is already signed into Teams attempts to access your app, the app can use the user identity that is already validated.
+- The user only sees a consent dialog where they let the app use their Teams identity information to obtain access permission for using your app.
 
 Although, Teams gets the access token for the current user from Azure AD, that process is invisible to the user. After the user consents to the app, they can access and use the app. For this reason, Teams SSO is true SSO.
 
