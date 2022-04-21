@@ -14,8 +14,7 @@ This document guides you on how to add link unfurling to your app manifest using
 
 > [!NOTE]
 >
-> * Currently, link unfurling is not supported on Mobile clients.
-> * The link unfurling result is cached for 30 minutes.
+>  The link unfurling result is cached for 30 minutes.
 
 The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
 
