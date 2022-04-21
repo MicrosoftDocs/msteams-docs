@@ -7,11 +7,9 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Enable Teams single sign-on in a tab application
 
-Single sign-on (SSO) is an authentication method where a user must sign-in only once to access an application or a web service. Once a user signs in, they can access the app without going through authentication again.
+Single sign-on (SSO) lets a user sign-in only once to access an application or a web service. Once a user signs in, they can access the app without going through authentication again.
 
-With Teams SSO your app users have an added advantage. A user logged into Teams can access an app within Teams environment without signing in to the app.
-
-Use Teams SSO to authenticate user identity and provide them access to your app.
+With Teams SSO your app users have an added advantage. A user logged into Teams can access your app within Teams environment without signing in to the app.
 
 Here's what you'll learn in this section:
 
@@ -21,14 +19,15 @@ Here's what you'll learn in this section:
 
 ## Teams SSO user experience
 
-Users sign in to Microsoft Teams using either their personal Microsoft account or their Microsoft 365 account. Take advantage of this and use Teams SSO to authenticate and authorize the user. You can let users access and use your Teams app without ever having to sign-in.
+Users sign in to Microsoft Teams using either their personal Microsoft account or their Microsoft 365 account. Take advantage of this and use Teams SSO to authenticate and authorize the user.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-ux.png" alt-text="Teams SSO user experience":::
 
-- Teams authenticates and stores the identity of a user who signs in the first time. When this user who is already signed into Teams attempts to access your app, the app can use the user identity that is already validated.
-- The user only sees a consent dialog where they let the app use their Teams identity information to obtain access permission for using your app.
+- Teams authenticates and stores the identity of its user.
+- When a Teams user attempts to access your app, the app uses the identity that's already validated by Teams.
+- The user sees only a consent dialog where they let your app use their Teams identity to obtain access permission for using your app.
 
-Although, Teams gets the access token for the current user from Azure AD, that process is invisible to the user. After the user consents to the app, they can access and use the app. For this reason, Teams SSO is true SSO.
+Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user. After the user consents to the app, they can access and use the app. For this reason, Teams SSO is true SSO. In addition, the access token is pre-fetched to improve performance and load times.
 
 Next, let's see what happens at the backend during runtime to achieve true SSO user experience.
 
