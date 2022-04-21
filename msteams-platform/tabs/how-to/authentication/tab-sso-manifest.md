@@ -9,10 +9,10 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 
 You've registered your app in Azure AD, and obtained an app ID. Now, you must update the Teams app manifest with the app ID and subdomain URL. The Teams manifest describes how the app integrates into the Microsoft Teams product.
 
-You'll need to add the `webApplicationInfo` property to the Teams app manifest file. It helps users seamlessly sign into your app.
+You'll need to add the `webApplicationInfo` property to the Teams app manifest file. This property enables Teams SSO for your app and helps users seamlessly access your app. It uses the OBO flow for your app. You update the app ID (GUID) that you created in Azure AD and your app's domain URI.
 
 > [!NOTE]
-> - You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
+> You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field. For more information, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
 
 <br>
 <br>
@@ -99,7 +99,7 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
     ```
 
     where,
-    - {Azure AD AppId} is app ID you created when you registered your app in Azure AD
+    - {Azure AD AppId} is app ID you created when you registered your app in Azure AD. It is the GUID. 
     - {{Subdomain}.example.com} is the  domain and subdomain of your application. This is the same URI that you registered when creating scope in Azure AD.
 
 4. Update the Azure app ID in the **id** property.
