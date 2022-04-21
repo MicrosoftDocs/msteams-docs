@@ -59,14 +59,14 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
     { 
      "entityId": "auth", 
      "name": "Auth", 
-     "contentUrl": "https://{subDomain}.ngrok.io/Home/Index", 
+     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
      "scopes": [ "personal" ] 
     } 
   ], 
 
   "configurableTabs": [ 
     { 
-     "configurationUrl": "https://{subDomain}.ngrok.io/Home/Configure", 
+     "configurationUrl": "https://subdomain.example.com/Home/Configure", 
      "canUpdateConfiguration": true, 
      "scopes": [ 
      "team" 
@@ -79,7 +79,7 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
   ], 
   "webApplicationInfo": { 
     "id": "{Azure AD AppId}", 
-    "resource": "api://{subdomain or ngrok url} /{Azure AD AppId}" 
+    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
   }
 } 
 ```
@@ -144,13 +144,13 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
     {
       "entityId": "auth",
       "name": "Auth",
-      "contentUrl": "https://23c3-103-50-148-128.ngrok.io/Home/Index",
+      "contentUrl": "https://contoso.com/Home/Index",
       "scopes": [ "personal" ]
     }
   ],
   "configurableTabs": [
     {
-      "configurationUrl": "https://23c3-103-50-148-128.ngrok.io/Home/Configure",
+      "configurationUrl": "https://contoso.com/Home/Configure",
       "canUpdateConfiguration": true,
       "scopes": [
         "team"
@@ -163,12 +163,15 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
   ],
   "webApplicationInfo": {
     "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-    "resource": "api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c"
+    "resource": "api://contoso.com/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c"
   }
 }
 ```
 
 </details>
+
+> [!NOTE]
+> During build, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok url. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
 ## Sideload and Preview in Teams
 
