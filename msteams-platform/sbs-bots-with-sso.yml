@@ -25,7 +25,7 @@ items:
 
     ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
-- title: Prerequisites
+- title: Prerequisites.
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
