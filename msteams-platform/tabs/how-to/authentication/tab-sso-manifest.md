@@ -5,14 +5,23 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Update Teams app manifest and preview the app
+# Enable Teams SSO in app manifest and preview the app
 
-You've registered your app in Azure AD, and obtained an app ID. Now, you must update the Teams app manifest with the app ID and subdomain URL. The Teams manifest describes how the app integrates into the Microsoft Teams product.
+You've registered your app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable Teams SSO for your app. The Teams manifest describes how the app integrates into the Microsoft Teams product.
 
-You'll need to add the `webApplicationInfo` property to the Teams app manifest file. This property enables Teams SSO for your app and helps users seamlessly access your app. It uses the OBO flow for your app. You update the app ID (GUID) that you created in Azure AD and your app's domain URI.
+## webApplicationInfo property
 
-> [!NOTE]
-> You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field. For more information, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
+To enable Teams SSO for your app, configure the `webApplicationInfo` property in the Teams app manifest file. This property enables Teams SSO for your app and invokes the OBO flow to help users seamlessly access your app.
+
+:::row:::
+  :::column span="2":::
+    It has two element, `ID` and `resource`. You update the app ID (GUID) that you created in Azure AD. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken` between Teams app and Azure AD is from the domain given in Teams app manifest.
+  :::column-end:::
+  :::column span="1":::
+    > [!NOTE]
+    > You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field. For more information, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
+  :::column-end:::
+:::row-end:::
 
 <br>
 <br>
