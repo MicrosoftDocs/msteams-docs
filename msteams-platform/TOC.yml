@@ -365,10 +365,8 @@
         href: tabs/how-to/authentication/tab-sso-code.md
       - name: Update Teams app manifest and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
-      - name: Configure API permissions with Microsoft Graph
+      - name: Extend your app for Microsoft Graph permissions
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-      - name: Acquire token for MS Graph
-        href: tabs/how-to/authentication/tab-sso-token-graph.md
       - name: Troubleshooting
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
   - name: Tabs
