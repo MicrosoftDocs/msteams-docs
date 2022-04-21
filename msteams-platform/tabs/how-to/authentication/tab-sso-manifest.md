@@ -15,13 +15,13 @@ To enable Teams SSO for your app, configure the `webApplicationInfo` property in
 
 :::row:::
   :::column span="2":::
-    It has two element, `ID` and `resource`.
-    
+    It has two elements, `id` and `resource`.
+
     | Element | Description |
     | --- | --- |
-    | ID | You update the app ID (GUID) that you created in Azure AD. |
-    | resource | You update the app ID (GUID) that you created in Azure AD. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken` between Teams app and Azure AD is from the domain given in Teams app manifest. |
-        
+    | id | You update the app ID (GUID) that you created in Azure AD. |
+    | resource | You update the app ID URI that you created in Azure AD. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken` between Teams app and Azure AD is from the domain given in Teams app manifest. |
+
   :::column-end:::
   :::column span="1":::
     > [!NOTE]
@@ -114,8 +114,8 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
     ```
 
     where,
-    - {Azure AD AppId} is app ID you created when you registered your app in Azure AD. It is the GUID. 
-    - {{Subdomain}.example.com} is the  domain and subdomain of your application. This is the same URI that you registered when creating scope in Azure AD.
+    - {Azure AD AppId} is app ID you created when you registered your app in Azure AD. It is the GUID.
+    - {{Subdomain}.app ID URI} is the  domain and subdomain of your application. This is the same URI that you registered when creating scope in Azure AD.
 
 4. Update the Azure app ID in the **id** property.
 5. Update the ngrok URL in the following properties:
