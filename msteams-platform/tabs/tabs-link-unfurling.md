@@ -9,15 +9,17 @@ ms.localizationpriority: none
 
 # Tabs link unfurling and Stage View
 
-Stage View is a new user interface (UI) component, which allows you to render the content that is opened in full screen in Teams and pinned as a tab.
+Stage View is a new user interface (UI) component, which allows you to render the content opened in new pop up window with chat docked to the side in Teams and pinned as a tab.
 
 ## Stage View
 
-Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select View in the card, and pin the content as a tab directly from Stage View.
+Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card. When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window with chat docked to the side.When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
 
 ## Advantage of Stage View
 
-Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
+* Stage View helps provide a more seamless experience of viewing content in Teams
+* Users can now pop out app content in a new window, allowing them to multi-task within Teams
+* Stage View also allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience.
 
 ## Stage View vs. Task module
 
@@ -34,7 +36,7 @@ You can invoke Stage View in the following  ways:
 
 ## Invoke Stage View from Adaptive Card
 
-When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. After a stage is launched and the `tabInfo` is provided, you can add the ability to pin the stage as a tab.  
+When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. Now Stage View opens in a new window with chat docked to the side. After a stage is launched and the `tabInfo` is provided, you can add the ability to pin the stage as a tab.  
 
 The following images display a stage opened from an Adaptive Card:
 
