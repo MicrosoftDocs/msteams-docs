@@ -43,7 +43,9 @@ landingContent:
       - text: Overview
         url: ~/overview.md
       - text: Plan your app
-        url: ~/concepts/app-fundamentals-overview.md  
+        url: ~/concepts/app-fundamentals-overview.md 
+      - text: Link unfurling
+        url: ~/messaging-extensions/how-to/link-unfurling.md
 
       
 
