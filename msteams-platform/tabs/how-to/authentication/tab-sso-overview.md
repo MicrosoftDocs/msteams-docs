@@ -53,6 +53,8 @@ The following image shows how the Teams SSO works when a Teams user attempts to 
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
+To achieve Teams SSO, you must configure your app to enable SSO for authenticating and authorizing your users.
+
 ## Enable Teams SSO for a tab app
 
 This section describes the tasks involved in implementing SSO for a tab app. These tasks are language- and framework-agnostic.
