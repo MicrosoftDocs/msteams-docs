@@ -45,7 +45,7 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 > [!div class="nextstepaction"]
 > [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Build a Teams app with Blazor](../sbs-gs-blazor.yml)
+> [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
 > [!div class="nextstepaction"]
