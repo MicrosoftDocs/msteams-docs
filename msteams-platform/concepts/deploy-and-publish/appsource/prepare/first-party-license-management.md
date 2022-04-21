@@ -50,7 +50,7 @@ A test tenant with a Teams environment in it. This is to simulate how a customer
 
 ### Create an offer in Partner Center
 
-1. Login to [Partner Center](partner.microsoft.com) and click on “Partner Center” to open your dashboard.
+1. Login to [Partner Center](https://partner.microsoft.com/) and click on “Partner Center” to open your dashboard.
 
 (Image)
 
@@ -80,11 +80,11 @@ To enable license management for your offer, select the checkbox **< PLACEHOLDER
 
 (Image)
 
-1. Select **Create** and enter your plan description in the page. Now select **Save draft** to save the plan information. This plan information displays on Teams marketplace and [Appsource](appsource.microsoft.com) under offer listing (plans section).
+1. Select **Create** and enter your plan description in the page. Now select **Save draft** to save the plan information. This plan information displays on Teams marketplace and [Appsource](https://appsource.microsoft.com/) under offer listing (plans section).
 
 (Image)
 
-1. Add pricing and availability details <placeholder>.
+1. Add pricing and availability details (placeholder).
 
 (Image)
 
