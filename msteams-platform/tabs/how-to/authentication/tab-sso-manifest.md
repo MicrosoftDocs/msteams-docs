@@ -15,7 +15,13 @@ To enable Teams SSO for your app, configure the `webApplicationInfo` property in
 
 :::row:::
   :::column span="2":::
-    It has two element, `ID` and `resource`. You update the app ID (GUID) that you created in Azure AD. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken` between Teams app and Azure AD is from the domain given in Teams app manifest.
+    It has two element, `ID` and `resource`.
+    
+    | Element | Description |
+    | --- | --- |
+    | ID | You update the app ID (GUID) that you created in Azure AD. |
+    | resource | You update the app ID (GUID) that you created in Azure AD. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken` between Teams app and Azure AD is from the domain given in Teams app manifest. |
+        
   :::column-end:::
   :::column span="1":::
     > [!NOTE]
