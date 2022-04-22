@@ -6,27 +6,30 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Link unfurling on mobile into rich Adaptive Cards
+# Link unfurling
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
+This document guides you on how to add link unfurling to your app manifest using App studio and manually.With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
 
-> [!NOTE]
->  The link unfurling result is cached for 30 minutes.
+>[!NOTE]
+>The link unfurling result is cached for 30 minutes.
+
+The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
+
+![Example of link unfurling](~/assets/images/compose-extensions/messagingExtensions_LinkUnfurling.png)
 
 ## Scenarios where link unfurling on mobile are used
 
-### Link unfurling on mobile when sharing from outside Teams to inside Teams 
+### Link unfurling on mobile when sharing from outside Teams to inside Teams
 
-In the following image, the user has shared a URL from an app outside Teams through share button on the Teams group chat of mobile client, 
-the bot is invoked and returns an Adaptive Card before he shares in the chat:
+In the following image, the user has shared a URL from an app outside Teams through share button on the Teams group chat of mobile client, the bot is invoked and returns an Adaptive Card before he shares in the chat:
 
 ![Example of link unfurling 1](~/assets/images/compose-extensions/capture_1.png)
 
-### Link unfurling on mobile when sharing within Teams 
+### Link unfurling on mobile when sharing within Teams
 
-When the user pastes URL for a work item in compose message area, which the messaging extension has resolved into a card: 
+When the user pastes URL for a work item in compose message area, which the messaging extension has resolved into a card:
 
 ![Example of link unfurling 2](~/assets/images/compose-extensions/capture_2.png)
 
