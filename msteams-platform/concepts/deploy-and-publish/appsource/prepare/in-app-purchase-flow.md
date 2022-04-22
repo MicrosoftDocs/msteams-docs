@@ -11,9 +11,6 @@ ms.localizationpriority: high
 
 Microsoft Teams provide APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
 
-> [!NOTE]
-> In-app purchases for Teams apps is currently available only in [**Developer preview**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro).
-
 ## Implement in-app purchases
 
 To offer an in-app purchase experience to the users of your app, ensure the following:
