@@ -8,7 +8,24 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 # Troubleshooting authentication for using Teams SSO for tabs
 
 <details>
-<summary>Does it work in Postman?</summary>
+<summary>What is a 'consent missing' error, and how can I fix them?</summary>
+If AAD has no record that consent (to the Microsoft Graph resource) was granted to the Tab by the user (or tenant administrator), AAD will send an error message to your web service. Your code must tell the client (for example, in the body of a 403 Forbidden response).
+
+If the Tab needs Microsoft Graph scopes that can only be consented to by an admin, your code should throw an error. If the only scopes that are needed can be consented to by the user, then your code should fall back to an alternate system of user authentication.
+</details>
+<br>
+<details>
+<summary>What is a missing scope (permission) error?</summary>
+This kind of error should only be seen in development. Your server-side code should send a 403 Forbidden response to the client which should log the error to the console or record it in a log.
+</details>
+<br>
+<details>
+<summary>What is an Invalid audience error in the access token for Microsoft Graph</summary>
+The server-side code should send a 403 Forbidden response to the client to show a message to the user, and possibly log the error to the console or record it in a log.
+</details>
+<br>
+<details>
+<summary>Does SSO for Teams work in Postman?</summary>
 
 </details>
 <br>

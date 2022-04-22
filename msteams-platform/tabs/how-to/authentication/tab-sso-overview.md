@@ -60,13 +60,13 @@ Here are some use cases where enabling SSO is beneficial. Call `getAuthToken` in
 
 1. Get user’s teams identity from Teams: If you have an existing app that you want to be available within a tab app in Teams for your app users, `getAuthToken` will make identity validation and obtain app access possible for them.
 
-2. Authenticating user’s by reusing the team’s identity inside your Tab application.
+1. Authenticating user’s by reusing the team’s identity inside your Tab application.
 
-3. Authenticate and get user’s teams identity without them re-signing inside Configurable Tabs. This is applicable to some settings need to be configured at an config stage.
+1. Authenticate and get user’s teams identity without them re-signing inside Configurable Tabs. This is applicable to some settings need to be configured at an config stage.
 
-4. Getting an access token inside Task Module when it is invoked from Tab, Bots, Messaging Extension or Adaptive Cards.
+1. Getting an access token inside Task Module when it is invoked from Tab, Bots, Messaging Extension or Adaptive Cards.
 
-5. Authenticating user in Stage view.
+1. Authenticating user in Stage view.
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
