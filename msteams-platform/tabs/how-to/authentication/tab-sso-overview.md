@@ -31,7 +31,7 @@ Teams gets the access token for the current user from Azure AD. This interaction
 
 Next, let's see what happens at the backend during runtime to achieve true SSO user experience.
 
-## Teams SSO at runtime for tabs
+## Obtaining access for app users at runtime
 
 Teams SSO authentication is achieved through a validation process that involves the tab app, Microsoft Teams, and Azure AD. During this interaction, the user must consent for use of their Teams identity to obtain access token.
 
@@ -84,6 +84,37 @@ To build a tab app that uses Teams SSO to authenticate users:
 2. Configure code of your Teams app to handle access token, including calling it when a user accesses your app and validating it when received.
 3. Update your Teams app manifest with the app ID generated on Azure AD and the app ID URI.
 
+## Best practices
+
+Here's a list of best practices:
+
+## Known limitations
+
+- **Tenant Admin Consent**: A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
+
+- **Ask for consent using the Auth API**: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
+
+    To ask for additional consent using the Auth API, follow these steps:
+
+    1. The token retrieved using `getAuthToken()` must be exchanged server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
+    2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
+    3. When the exchange fails, you must ask for consent. Show some user interface (UI) asking the user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog box using our [Azure AD authentication API](~/concepts/authentication/auth-silent-aad.md).
+    4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD doesn't ask for the other scopes.
+        * Instead of `?scope={scopes}`
+        * Use this `?prompt=consent&scope={scopes}`
+        * Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
+    5. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Register your tab application in Azure AD](tab-sso-register-aad.md)
+
+## See also
+
+- [Configure code to enable Teams SSO](tab-sso-code.md)
+
+<!--
 :::row:::
     :::column span="":::
 
@@ -142,38 +173,4 @@ To build a tab app that uses Teams SSO to authenticate users:
       - [Update Teams app manifest and preview the app](tab-sso-manifest.md)
       
     :::column-end:::
-:::row-end:::
-
-## Best practices
-
-Here's a list of best practices:
-
-## Known limitations
-
-- **Tenant Admin Consent**
-
-    A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
-
-- **Ask for consent using the Auth API**
-
-    Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
-
-    To ask for additional consent using the Auth API, follow these steps:
-
-    1. The token retrieved using `getAuthToken()` must be exchanged server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
-    2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
-    3. When the exchange fails, you must ask for consent. Show some user interface (UI) asking the user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog box using our [Azure AD authentication API](~/concepts/authentication/auth-silent-aad.md).
-    4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD doesn't ask for the other scopes.
-        * Instead of `?scope={scopes}`
-        * Use this `?prompt=consent&scope={scopes}`
-        * Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
-    5. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Register your tab application in Azure AD](tab-sso-register-aad.md)
-
-## See also
-
-- [Configure code to enable Teams SSO](tab-sso-code.md)
+:::row-end:::-->
