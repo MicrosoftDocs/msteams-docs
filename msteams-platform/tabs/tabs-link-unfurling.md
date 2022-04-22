@@ -9,17 +9,19 @@ ms.localizationpriority: none
 
 # Tabs link unfurling and Stage View
 
-Stage View is a new user interface (UI) component, that renders the content to open in a new pop up window with chat docked to the side in Teams and pinned as a tab.
+Stage View is a user interface (UI) component, which allows you to render content opened in full screen in Teams and pinned as a tab. Now you can access Stage View in different chat window. It allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience. For developers to enable this, they need to enable ‘Tab Link Unfurling’ for their app; if they have already done so, this Stageview update comes for free, with no additional developer investment required. Users are still able to pin the app content as a tab. This is a new entry point to pinning app content but does not change the existing functionality of tabs/pinning in any material way. 
 
 ## Stage View
 
-Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat services. When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window with chat docked to the side. When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
+Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat services.
 
-## Advantage of Stage View
+* When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window.
+* When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
 
-* Stage View provides a more seamless experience of viewing content in Teams
-* Users can now pop out app content in a new window, allowing them to do multi-task within Teams
-* Stage View also allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience.
+## Advantages of Stage View
+
+* Provides enhanced experience to view content in Teams
+* Allows users to do multi-task within Teams in a separate window
 
 ## Stage View vs. Task module
 
@@ -38,7 +40,7 @@ You can invoke Stage View in the following  ways:
 
 When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. Now Stage View opens in a new window with chat docked to the side. After a stage is launched and the **tabInfo** is provided, you can pin the stage as a tab.
 
-The following images display a stage opened from an Adaptive Card:
+An Adaptive Card opens a stage in the following images:
 
 :::image type="content" source="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Open a stage from Adaptive Card" border="true":::
 
@@ -77,11 +79,11 @@ The `invoke` request type must be `composeExtension/queryLink`.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
 
-Following is the process to invoke Stage View:
+**To invoke Stage View**:
 
-* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
-* `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
-* The bot responds with a `200` code.
+1 When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
+1 `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
+1 The bot responds with a `200` code.
 
 > [!NOTE]
 > On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
@@ -90,12 +92,18 @@ Following is the process to invoke Stage View:
 
 To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `microsoftTeams.executeDeeplink(url)` API. The deep link can also be passed through an `OpenURL` action in the card.
 
+> [!NOTE]
+> All deeplinks must be encoded before pasting the URL. We don't support unencoded URLs.
+>
+> * The `name` is optional in deep link. If not included, the app name replaces it.
+> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
+
 ### Syntax
 
 Following is the deeplink syntax:
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
- 
+
 ### Examples
 
 When a user enters a URL, it is unfurled into an Adaptive card.
@@ -121,13 +129,6 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 Encoded URL:
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
-
-> [!NOTE]
-> All deeplinks must be encoded before pasting the URL. We don't support unencoded URLs.
->
-> * The `name` is optional in deep link. If not included, the app name replaces it.
-> * The deep link can also be passed through an `OpenURL` action.
-> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 ## Tab information property
 
