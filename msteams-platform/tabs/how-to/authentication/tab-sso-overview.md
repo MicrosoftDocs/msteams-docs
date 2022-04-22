@@ -85,14 +85,18 @@ To build a tab app that uses Teams SSO to authenticate users:
 3. Update your Teams app manifest with the app ID generated on Azure AD and the app ID URI.
 
 ## Best practices
- 
+
 Here's a list of best practices:
+
+- **Don’t cache the access token**: Never cache or store the access token in your app's client-side code. Always call `getAuthToken` when you need an access token. Teams Client caches the access token (or request a new one if it expires). This makes sure that there's no accidental leak of your token from your web-app.
 
 ## Known limitations
 
-- **Tenant Admin Consent**: A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
-
-- **Ask for consent using the Auth API**: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
+- SSO in teams only work with OAuth 2.0 protocol.  
+- SSO only works with Azure AD. To extend it to different OAuth Identity providers, the flow needs to be implemented.
+- Multiple domains per app is not supported. For this, please read about LOB apps. 
+- Tenant Admin Consent: A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
+- Ask for consent using the Auth API: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
     To ask for additional consent using the Auth API, follow these steps:
 
