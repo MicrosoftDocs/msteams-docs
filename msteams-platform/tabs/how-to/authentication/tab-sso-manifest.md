@@ -32,7 +32,7 @@ To enable SSO for your app, configure the `webApplicationInfo` property in the T
   :::column-end:::
 :::row-end:::
 
-The app ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken` between Teams app and Azure AD is from the domain given in Teams app manifest.
+The app ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken` is from the domain given in Teams app manifest.
 
 For more information, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
 <br>
