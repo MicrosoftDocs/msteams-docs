@@ -38,7 +38,7 @@ You can achieve SSO in a tab by obtaining access token for the Teams user curren
 > [!NOTE]
 > Tabs are Teams-aware web pages. To enable SSO in a web page hosted inside a tab, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. Once you've initialized Microsoft Teams, call `microsoftTeams.getAuthToken()`, which will get the access token for your app.
 
-The following image shows how the SSO works when a Teams user attempts to access the tab app:
+The following image shows how SSO works when a Teams user attempts to access the tab app:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-run-time.png" alt-text="Tab single sign-on SSO diagram":::
 

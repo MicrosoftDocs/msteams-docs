@@ -1,11 +1,11 @@
 ---
-title: Code configuration for enabling Teams SSO for tabs
-description: Describes code configuration for enabling Teams SSO for tabs
+title: Code configuration for enabling SSO for tabs
+description: Describes code configuration for enabling SSO for tabs
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Configure code to enable Teams SSO
+# Configure code to enable SSO
 
 You need to configure your app code to obtain an access token from Azure AD using Teams identity of the app user.
 
@@ -32,7 +32,7 @@ This section covers:
 Your app user must give their consent to Teams for using their identity to get user-level permission. Azure AD receives the user's identity token (ID token) and sends an access token to Teams.
 
 - **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the user who is currently logged into Teams.
-- **Access token**: An access token is an artifact contains user identity and permission scopes. With Teams SSO, it is granted through Azure AD.
+- **Access token**: An access token is an artifact contains user identity and permission scopes. For enabling SSO in tab, it's granted through Azure AD.
 
 To achieve this access, your app code must make a call to Teams for getting an access token for the current Teams user.
 

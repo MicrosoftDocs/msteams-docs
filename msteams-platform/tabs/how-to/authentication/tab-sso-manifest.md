@@ -1,17 +1,17 @@
 ---
-title: Update manifest for enabling Teams SSO for tabs
-description: Describes updating manifest for enabling Teams SSO for tabs
+title: Update manifest for enabling SSO for tabs
+description: Describes updating manifest for enabling SSO for tabs
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Enable Teams SSO in app manifest and preview the app
+# Enable SSO in Teams app manifest and preview the app
 
-You've registered your app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable Teams SSO for your app. The Teams manifest describes how the app integrates into the Microsoft Teams product.
+You've registered your app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your app. The app manifest describes how an app integrates into the Microsoft Teams product.
 
 ## webApplicationInfo property
 
-To enable Teams SSO for your app, configure the `webApplicationInfo` property in the Teams app manifest file. This property enables Teams SSO for your app and invokes the OBO flow to help users seamlessly access your app.
+To enable SSO for your app, configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app and invokes the OBO flow to help users seamlessly access your app.
 
 :::row:::
   :::column span="2":::
@@ -222,7 +222,7 @@ To preview your app in Teams:
 
     The tab app is loaded and you can use it.
 
-    Congratulations! You have enabled Teams SSO for your tab app.
+    Congratulations! You have enabled SSO for your tab app.
 
 ## See also
 
