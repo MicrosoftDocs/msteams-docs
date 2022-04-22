@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Messaging extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select  search command invoke locations, and add the search command to your app manifest.
+Messaging extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select search command invoke locations, and add the search command to your app manifest.
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
@@ -39,9 +39,9 @@ The prerequisite to create a search command is that you must already have create
 **To create a search command**
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1.  If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
+1. If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
 1. After importing app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page: 
+1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page:
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -49,7 +49,11 @@ The prerequisite to create a search command is that you must already have create
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.   
+1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
+
+    <img src="~/assets/images/messaging-extension/use-existing-bot.png" alt="use existing bot for messaging extension" width="500"/>
+
+1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.
 The following image displays command addition for messaging extension:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
