@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # User Specific Views
 
-Earlier if Adaptive Cards were sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. Maximum 60 different users can see a different version of the card with additional information or actions. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
+Earlier if Adaptive Cards were sent in a Teams conversation, all users would see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. Maximum 60 different users can see a different version of the card with additional information or actions. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
 
 > [!NOTE]
 > User Specific View is supported for Adaptive Cards sent by a bot and is dependent on Universal Actions.
