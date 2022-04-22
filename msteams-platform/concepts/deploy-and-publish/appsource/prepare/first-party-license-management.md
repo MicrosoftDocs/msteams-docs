@@ -111,6 +111,6 @@ To enable license management for your offer, select the checkbox **< PLACEHOLDER
 ## Chapter 3: Purchase offer in Teams or Appsource
 
 1. In Teams, go to the Appstore and select your app.
+1. Select **Buy a subscription**.
 
-
-
+(image)
