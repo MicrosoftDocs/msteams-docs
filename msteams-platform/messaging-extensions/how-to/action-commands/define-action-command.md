@@ -98,6 +98,7 @@ You can create an action command using **App Studio** or **Developer Portal**.
     <img src="~/assets/images/messaging-extension/use-existing-bot.png" alt="use existing bot for messaging extension" width="500"/>
 
 1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.
+
 The following image displays command addition for messaging extension:
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
