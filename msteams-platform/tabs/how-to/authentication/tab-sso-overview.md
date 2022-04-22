@@ -35,8 +35,7 @@ Next, let's see what happens at the backend during runtime to achieve true SSO u
 
 You can achieve SSO in a tab by obtaining access token for the Teams user currently logged in. This process involves the tab app, Microsoft Teams, and Azure AD. During this interaction, the user must consent for use of their Teams identity to obtain access token.
 
-> [!NOTE]
-> Tabs are Teams-aware web pages. To enable SSO in a web page hosted inside a tab, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. Once you've initialized Microsoft Teams, call `microsoftTeams.getAuthToken()`, which will get the access token for your app.
+
 
 The following image shows how SSO works when a Teams user attempts to access the tab app:
 
@@ -52,7 +51,7 @@ The following image shows how SSO works when a Teams user attempts to access the
 | 6 | Tab app | The tab app parses the token using JavaScript to extract required information, such as the user's email address. The token returned to the tab app is both an access token and an identity token. |
 
 > [!IMPORTANT]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](tab-sso-token-graph.md).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 ### Use cases for enabling SSO for tab
 
@@ -69,6 +68,9 @@ Here are some use cases where enabling SSO is beneficial. Call `getAuthToken` in
 5. To authenticate a user in stage view.
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
+
+> [!NOTE]
+> Tabs are Teams-aware web pages. To enable SSO in a web page hosted inside a tab, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. Once you've initialized Microsoft Teams, call `microsoftTeams.getAuthToken()`, which will get the access token for your app.
 
 To achieve Teams SSO, you must configure your app to enable SSO for authenticating and authorizing your users.
 
