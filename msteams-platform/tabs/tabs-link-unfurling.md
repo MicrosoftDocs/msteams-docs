@@ -13,7 +13,7 @@ Stage View is a new user interface (UI) component, that renders the content to o
 
 ## Stage View
 
-Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat services. When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window with chat docked to the side.When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
+Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat services. When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window with chat docked to the side. When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
 
 ## Advantage of Stage View
 
