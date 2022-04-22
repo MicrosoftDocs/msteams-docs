@@ -363,8 +363,6 @@
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Use silent authentication
       href: tabs/how-to/authentication/auth-silent-aad.md
-    - name: Use SSO authentication
-      href: tabs/how-to/authentication/auth-aad-sso.md
     - name: Enable SSO for tabs
       items:
       - name: Overview
