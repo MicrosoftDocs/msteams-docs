@@ -54,6 +54,20 @@ The following image shows how the Teams SSO works when a Teams user attempts to 
 > [!IMPORTANT]
 > The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](tab-sso-token-graph.md).
 
+### Use cases for enabling SSO for tab
+
+Here are some use cases where enabling SSO is beneficial. Call `getAuthToken` in these scenarios to use Teams identity for obtaining access token for your app users:
+
+1. Get user’s teams identity from Teams: If you have an existing app that you want to be available within a tab app in Teams for your app users, `getAuthToken` will make identity validation and obtain app access possible for them.
+
+2. Authenticating user’s by reusing the team’s identity inside your Tab application.
+
+3. Authenticate and get user’s teams identity without them re-signing inside Configurable Tabs. This is applicable to some settings need to be configured at an config stage.
+
+4. Getting an access token inside Task Module when it is invoked from Tab, Bots, Messaging Extension or Adaptive Cards.
+
+5. Authenticating user in Stage view.
+
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 To achieve Teams SSO, you must configure your app to enable SSO for authenticating and authorizing your users.
