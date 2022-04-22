@@ -61,7 +61,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD OBO flow.
 
-Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes.
+The current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes.
 
 \ Add content to enable user to transition to MS Graph page. Verify cross-reference to MS Graph pages - existing pages that have information regarding acquiring token. \
 
