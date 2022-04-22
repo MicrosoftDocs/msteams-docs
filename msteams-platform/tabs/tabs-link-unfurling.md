@@ -114,7 +114,7 @@ Following are the deep link examples to invoke Stage View:
 
 <details>
 <summary><b>Example 1</b></summary>
-**URL with threadId**
+URL with threadId
 
 Unencoded URL:
 
@@ -127,7 +127,10 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 </details>
 
 <br>
-**Example 2: URL without threadId**
+
+<details>
+<summary><b>Example 2</b></summary>
+URL without threadId
 
 Unencoded URL:
 
@@ -136,6 +139,10 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 Encoded URL:
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
+
+</details>
+
+<br>
 
 ## Tab information property
 
