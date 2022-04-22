@@ -78,13 +78,13 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 > [!NOTE]
 >
 > * The behavior on mobile clients is not configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
-> * The value of `showLoadingIndicator` must be `true` for Store apps from v1.13.
+> * The value of `showLoadingIndicator` must be **true** for Store apps from v1.13.
 
-When you indicate `showLoadingIndicator: true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
+When you indicate `showLoadingIndicator~: **true**  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 
 To show the loading indicator:
 
-1. Add `"showLoadingIndicator": true` to your manifest.
+1. Add `"showLoadingIndicator"`: **true** to your manifest.
 1. Call `microsoftTeams.initialize();`.
 1. As a **mandatory** step, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams then hides the loading indicator, if applicable. If `notifySuccess`  is not called within 30 seconds, it is assumed that your app timed out and an error screen with a retry option appears.
 1. **Optionally**, if you are ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`.
