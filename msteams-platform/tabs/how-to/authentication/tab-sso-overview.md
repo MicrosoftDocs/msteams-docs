@@ -85,7 +85,7 @@ To build a tab app that uses Teams SSO to authenticate users:
 3. Update your Teams app manifest with the app ID generated on Azure AD and the app ID URI.
 
 ## Best practices
-
+ 
 Here's a list of best practices:
 
 ## Known limitations
