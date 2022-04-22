@@ -81,9 +81,9 @@ The `invoke` request type must be `composeExtension/queryLink`.
 
 **To invoke Stage View**:
 
-1 When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
-1 `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
-1 The bot responds with a `200` code.
+1. When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
+1. `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
+1. The bot responds with a `200` code.
 
 > [!NOTE]
 > On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
@@ -110,7 +110,11 @@ When a user enters a URL, it is unfurled into an Adaptive card.
 
 Following are the deep link examples to invoke Stage View:
 
-**Example 1: URL with threadId**
+<br>
+
+<details>
+<summary><b>Example 1</b></summary>
+**URL with threadId**
 
 Unencoded URL:
 
@@ -120,6 +124,9 @@ Encoded URL:
 
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
 
+</details>
+
+<br>
 **Example 2: URL without threadId**
 
 Unencoded URL:
