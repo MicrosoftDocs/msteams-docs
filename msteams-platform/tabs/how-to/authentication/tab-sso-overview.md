@@ -21,7 +21,7 @@ Here's what you'll learn in this section:
 
 Users sign in to Microsoft Teams using either their personal Microsoft account or their Microsoft 365 account. Take advantage of this and use SSO to authenticate and authorize a Teams user.
 
-&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Teams SSO user experience":::
+&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Teams SSO user experience" border="false":::
 
 - Teams authenticates and stores the identity of its user.
 - When a Teams user attempts to access your app, the app uses the identity that's already validated by Teams.
