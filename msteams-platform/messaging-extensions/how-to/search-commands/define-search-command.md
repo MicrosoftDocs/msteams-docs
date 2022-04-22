@@ -36,7 +36,7 @@ To add the search command to your app manifest, you must add a new `composeExten
 
 The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-**To create a search command**
+To create a search command:
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
 1. If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
@@ -119,6 +119,7 @@ Following section is an example of the simple app manifest of the `composeExtens
 ...
 }
 ```
+
 For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
@@ -127,8 +128,11 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 |:---------------------|:--------------|:---------|:--------|
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.yml) to build a search based messaging extension.
+
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-

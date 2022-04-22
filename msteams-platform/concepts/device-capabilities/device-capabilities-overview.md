@@ -17,20 +17,21 @@ Device permissions are different in the browser. Previously, browser handled how
 ## Native device capabilities
 
 A mobile or desktop has built-in devices, such as camera and microphone, called capabilities. You can access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
+
 * Media capabilities, such as
-    * Camera
-    * Microphone
-    * Gallery
-    * QR or barcode scanner
+  * Camera
+  * Microphone
+  * Gallery
+  * QR or barcode scanner
 * Location
 
-After getting access to the device capabilities, you can integrate them with the Teams platform to enhance the collaborative experience. 
+After getting access to the device capabilities, you can integrate them with the Teams platform to enhance the collaborative experience.
 
 ## Request device permissions
 
 Use the tools present in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to request the required  [permissions](native-device-permissions.md) for accessing the native device capabilities. While access to these capabilities is standard in modern web browsers, you must inform Teams about the capabilities that you are using by updating your app manifest. This update allows you to request permissions while your app runs on Teams mobile or desktop clients.
- 
- ## Integrate device capabilities
+
+## Integrate device capabilities
 
 After getting access to device capabilities, use Teams media capability APIs to [integrate media capabilities](mobile-camera-image-permissions.md) with the Teams platform to enhance the user experience. These integrated capabilities allow your app to:
 

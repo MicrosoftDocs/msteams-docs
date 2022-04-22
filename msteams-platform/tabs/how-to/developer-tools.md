@@ -24,9 +24,13 @@ While the web version and the desktop version of Teams are almost the same, ther
 1. Ensure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 1. Open up a tab so you have something to inspect with the DevTools.
 1. Open the DevTools one of the following ways:
-    * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray:<br>
-  ![Right-click to open DevTools](~/assets/images/dev-preview/devtools-right-click.png)
-    * On MacOS, click on the Microsoft Teams icon in the Dock.
+    * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray.
+
+      :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="developer-tool-windows":::
+
+    * On MacOS, select the Microsoft Teams icon in the Dock.
+
+      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="mac-os-dev-tools":::
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 

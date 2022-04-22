@@ -75,9 +75,9 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 * **Service-hosted media**: Bots focus on managing application workflow, such as routing calls and offload audio processing to the Microsoft Real-time Media Platform. With service-hosted media, you have several options to implement and host your bot. A service-hosted media bot can be implemented as a stateless service as it does not process media locally. Service-hosted media bots can use the following APIs:
 
-    * `PlayPrompt` for playing an audio clip.
-    * `Record` for recording audio clips.
-    * `SubscribeToTone` for subscribing to dual tone multiple frequency (DTMF) tones.
+  * `PlayPrompt` for playing an audio clip.
+  * `Record` for recording audio clips.
+  * `SubscribeToTone` for subscribing to dual tone multiple frequency (DTMF) tones.
 
     For example, knowing when a user has pressed **0** to reach the operator.
 
@@ -88,7 +88,6 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
 | Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| Calling and meeting bot | The sample app demonstartes how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## Next step
 
@@ -97,10 +96,12 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 ## See also
 
-- [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-- [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-- [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
-- [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
-- [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
-- [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
-- [Technical information on handling incoming call notifications](./call-notifications.md)
+* [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
+* [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
+* [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
+* [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
+* [Technical information on handling incoming call notifications](./call-notifications.md)
+* [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

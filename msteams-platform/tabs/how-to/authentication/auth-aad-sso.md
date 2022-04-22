@@ -17,10 +17,9 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 >
 > ✔Teams for iOS (_Version_: 2.0.18 and later)  
 >
-> ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
+> ✔Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
 >
 > For the best experience with Teams, use the latest version of iOS and Android.
-
 > [!NOTE]
 > **Quickstart**  
 >
@@ -80,7 +79,10 @@ To register your app through the Azure AD portal, follow these steps:
 1. Under **Manage**, select **Expose an API**.
 
     > [!NOTE]
-    > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Use lower case letters for domain name, don't use upper case. For example, to create an app service or web app, enter base resource name as `demoapplication`, then the URL will be `https://demoapplication.azurewebsites.net`. But if you use base resource name as `DemoApplication`, then the URL will be `https://DemoApplication.azurewebsites.net` and this supports in desktop, web, and iOS, but not in android.
 
 1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. ² For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
 1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
@@ -137,15 +139,18 @@ Use the following code to add new properties to your Teams manifest:
 * **WebApplicationInfo** is the parent of the following elements:
 
 > [!div class="checklist"]
+>
 > * **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with Azure AD.
 >* **resource** - The domain and subdomain of your application. This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in step 6. You must not include the `access_as_user` path in your resource. The domain part of this URI must match the domain, including any subdomains, used in the URLs of your Teams application manifest.
-
 > [!NOTE]
 >
 >* The resource for an Azure AD app is usually the root of its site URL and the appID (e.g. `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). This value is also used to ensure your request is coming from the same domain. Ensure that the `contentURL` for your tab uses the same domains as your resource property.
 >* You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
 ### 3. Get an access token from your client-side code
+
+> [!NOTE]
+> To avoid errors such as `Teams SDK Error: resourceDisabled`, ensure that Application ID URI is configured properly in Azure AD app registration and in your Teams app.
 
 Use the following authentication API:
 
@@ -225,6 +230,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
             });
         });
 ```
+
 ---
 
 ## Code sample

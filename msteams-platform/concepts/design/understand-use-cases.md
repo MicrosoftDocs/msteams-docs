@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: Plan your app, understand your user and their need, understand the user problems that your app would solve, plan user authentication and their onboarding experience
+description: In this article learn about Microsoft Teams app capabilities, plan your Teams app, understand your app user and their needs, understand the user problems that your Teams app would solve, plan user authentication and their onboarding experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Understand your use cases
 
-In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For instance, an app that bridges gap in achieving effective collaboration is a great fit.
+In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges gap in achieving effective collaboration is a great fit.
 
 The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
@@ -145,7 +145,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Microsoft Graph for Teams
 
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that helps you to create or enhance features for your app.
 
    :::column-end:::
 
@@ -158,7 +158,7 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
 > [!NOTE]
 > Teams store has evolved:
-> 
+>
 > Previously, the LOB apps were updated by selecting the ellipses on the tile. With the updated Teams store experience, you can now update the LOB apps by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
 
 ### App scope

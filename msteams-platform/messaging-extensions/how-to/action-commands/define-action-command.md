@@ -162,7 +162,7 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 |`taskInfo.title`|Initial task module title. |No | 1.4 |
 |`taskInfo.width`|Task module width, either a number in pixels or default layout such as `large`, `medium`, or `small`. |No | 1.4 |
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
-|`taskInfo.url`|Initial web view URL.|No | 1.4 | 
+|`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
 #### App manifest example
 
@@ -221,6 +221,10 @@ The following section is an example of a `composeExtensions` object defining two
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action based messaging extension.
 
 ## Next step
 

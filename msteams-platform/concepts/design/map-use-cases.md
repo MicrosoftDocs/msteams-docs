@@ -12,15 +12,15 @@ A well-defined use case helps you to chart out the framework of features you wan
 
 You can map your use case based on:
 
-- Sharing and collaborating on items in an external system.
-- Starting workflows and sending notifications to users.
-- Using social platforms, conversational bots, and combining multiple features.
+* Sharing and collaborating on items in an external system.
+* Starting workflows and sending notifications to users.
+* Using social platforms, conversational bots, and combining multiple features.
 
 ## Common use cases mapped to Teams capabilities
 
 The next step is to match use cases with app capabilities.
 
-Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
+Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but helps you think through some of the possibilities available to you.
 </br>
 </br>
 <details>
@@ -35,7 +35,7 @@ Apps to interact with your data
 | Create embedded web experiences to view, work with and share data. | Tabs |
 | Push data and send data out of the Teams client. | Connectors and webhooks|
 | Interactive modal forms from wherever you need them to collect or display information. | Task modules |
-|
+
 </details>
 </br>
 <details>
@@ -49,7 +49,7 @@ A quick way to start a process or workflow in an external system.
 | Open messages from a tab, a bot, or a messaging extension to collect information before initiating a workflow. | Task modules |
 | Interact with your users through text and rich cards. | Conversational bots |
 | A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
-|
+
 </details>
 </br>
 <details>
@@ -61,7 +61,7 @@ Send asynchronous notifications and alerts to your users in Teams.
 | --- | --- |
 | Send proactive messages to groups, channels, or individual users. | Conversational bots |
 | Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
-|
+
 </details>
 </br>
 <details>
@@ -73,7 +73,7 @@ Connect with your users and resolve their queries
 | --- | --- |
 | Natural language processing, AI, machine learning, and all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need. | Conversational bots |
 | Embed your existing web portal in Teams or create a Teams-specific version for added functionality. | Tabs |
-|
+
 </details>
 
 ## App capabilities mapped to features
@@ -86,10 +86,10 @@ Let's look at how Teams capabilities enable different features for your app.
 
 For example:
 
-- Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
-- Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
+* Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
+* Use the **messaging extension** capability to send cards, unfurl links, or take action on messages.
 
 ## See also
 
-- [Planning checklist](../design/planning-checklist.md)
-- [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)
+* [Planning checklist](../design/planning-checklist.md)
+* [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)
