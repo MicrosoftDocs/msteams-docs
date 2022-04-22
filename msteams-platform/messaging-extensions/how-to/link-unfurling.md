@@ -22,13 +22,13 @@ With link unfurling, your app can register to receive an `invoke` activity when 
 In the following image, the user has shared a URL from an app outside Teams through share button on the Teams group chat of mobile client, 
 the bot is invoked and returns an Adaptive Card before he shares in the chat:
 
-![Example of link unfurling](~/assets/images/compose-extensions/Capture_1.png)
+![Example of link unfurling 1](~/assets/images/compose-extensions/capture_1.png)
 
 ### Link unfurling on mobile when sharing within Teams 
 
 When the user pastes URL for a work item in compose message area, which the messaging extension has resolved into a card: 
 
-![Example of link unfurling](~/assets/images/compose-extensions/Capture_2.png)
+![Example of link unfurling 2](~/assets/images/compose-extensions/capture_2.png)
 
 ## Add link unfurling to your app manifest
 
