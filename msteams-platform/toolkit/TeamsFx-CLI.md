@@ -14,19 +14,19 @@ Microsoft Teams Framework (TeamsFx) is a library encapsulating common functional
 
 Here's a list of main TeamsFx features:
 
-- **TeamsFx Collaboration**: Let developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
+* **TeamsFx Collaboration**: Let developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
 
-- **TeamsFx CLI**: It accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+* **TeamsFx CLI**: It accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
-- **TeamsFx SDK**: TeamsFx Software Development Kit (SDK) is the main TeamsFx code library encapsulating simple authentication for both client and server-side code tailored for Teams developers.
-
+* **TeamsFx SDK**: TeamsFx Software Development Kit (SDK) is the main TeamsFx code library encapsulating simple authentication for both client and server-side code tailored for Teams developers.
 
 ## TeamsFx command line interface
 
 TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 For more information, see:
-* [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) 
+
+* [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
 ## Get Started
@@ -256,9 +256,9 @@ Preview the current application from local or remote.
 
 Dependencies:
 
-- Node.js
-- .NET SDK
-- Azure Functions Core Tools
+* Node.js
+* .NET SDK
+* Azure Functions Core Tools
 
 ```bash
 teamsfx preview --local
@@ -305,8 +305,9 @@ teamsfx config set telemetry off
 #### Disable environment checker
 
 There are three configuration to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
+
 * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
-* [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk) 
+* [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
 * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools).
 
 To disable .NET SDK validation, you can use the following command:
@@ -398,26 +399,26 @@ teamsfx permission status --env dev --list-all-collaborators
 
 As a project creator:
 
-- To create a new TeamsFx tab or bot project, and select Azure as the host type:
+* To create a new TeamsFx tab or bot project, and select Azure as the host type:
 
   ```bash
   teamsfx new --interactive false --app-name newapp --host-type azure
   ```
 
-- To login to Microsoft 365 account and Azure account:
+* To login to Microsoft 365 account and Azure account:
 
   ```bash
   teamsfx account login azure
   teamsfx account login Microsoft 365
   ```
 
-- To provision your project:
+* To provision your project:
 
   ```bash
   teamsfx provision
   ```
 
-- To view collaborators:
+* To view collaborators:
 
   ```bash
   teamsfx permission status --env dev --list-all-collaborators
@@ -425,7 +426,7 @@ As a project creator:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
 
-- To add another account as collaborator. Ensure the added account is under the same tenant:
+* To add another account as collaborator. Ensure the added account is under the same tenant:
 
   ```bash
   teamsfx permission grant --env dev --email user-email@user-tenant.com
@@ -433,36 +434,37 @@ As a project creator:
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
 
-- To push your project to GitHub
+* To push your project to GitHub
 
 As a Project Collaborator:
 
-- Clone the project from GitHub.
-- Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
+* Clone the project from GitHub.
+* Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
 
   ```bash
   teamsfx account login Microsoft 365
   ```
 
-- Login to Azure account with contributor permission for all Azure resources.
+* Login to Azure account with contributor permission for all Azure resources.
 
   ```bash
   teamsfx account login azure
   ```
 
-- Check permission status. You should find yourself have the owner permission of the project:
+* Check permission status. You should find yourself have the owner permission of the project:
 
   ```bash
   teamsfx permission status --env dev
   ```
+
   ![permission status](./images/permission-status.png)
 
-- Update Tab code, and deploy the project to remote.
-- Launch remote and the project should work fine.
+* Update Tab code, and deploy the project to remote.
+* Launch remote and the project should work fine.
 
 ## See also
 
 * [TeamsFx SDK for TypeScript or JavaScript](TeamsFx-SDK.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
 * [Collaborate on Teams project using Teams Toolkit](TeamsFx-collaboration.md)
- 
+* [Teams Toolkit overview](teams-toolkit-fundamentals.md)

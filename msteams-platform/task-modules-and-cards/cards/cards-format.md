@@ -10,6 +10,7 @@ ms.date: 06/25/2021
 # Format cards in Microsoft Teams
 
 Following are the two ways to add rich text formatting to your cards:
+
 * [Markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -119,13 +120,14 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 
 :::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Adaptive card with an emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
-### Mention support within Adaptive Cards 
+### Mention support within Adaptive Cards
 
 You can add @mentions within an Adaptive Card body for bots and messaging extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
 > [!NOTE]
+>
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions are not supported in bot messages.
 
@@ -168,29 +170,29 @@ The following code shows an example of Adaptive Card with a mention:
 }
 ```
 
-### Microsoft Azure Active Directory (Azure AD) Object ID and UPN in user mention 
+### Microsoft Azure Active Directory (Azure AD) Object ID and UPN in user mention
 
-Teams platform allows to mention users with their Azure AD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs. 
+Teams platform allows to mention users with their Azure AD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
 
 The following table describes the newly supported user mention IDs:
 
-|IDs  | Supporting capabilities |	Description	| Example |
+|IDs  | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
-| Azure AD object ID | Bot, Connector |  Azure AD user’s object ID |	49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN |	Bot, Connector | Azure AD user’s UPN | john.smith@microsoft.com |
+| Azure AD object ID | Bot, Connector |  Azure AD user’s object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Connector | Azure AD user’s UPN | john.smith@microsoft.com |
 
-#### User mention in bots with Adaptive Cards 
+#### User mention in bots with Adaptive Cards
 
-Bots support user mention with the Azure AD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and messaging extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs. 
+Bots support user mention with the Azure AD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and messaging extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs.
 
 > [!NOTE]
 > Schema update and UI/UX changes are not required for user mentions with Adaptive Cards in Bot.
 
-##### Example 
+##### Example
 
 Example for user mention in bots with Adaptive Cards as follows:
 
-```json 
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.0",
@@ -228,15 +230,16 @@ Following image illustrates the user mention with Adaptive Card in Bot:
 
 ![User mention in bot with Adaptive Card](~/assets/images/authentication/user-mention-in-bot.png)
 
-#### User mention in Incoming Webhook with Adaptive Cards 
+#### User mention in Incoming Webhook with Adaptive Cards
 
 Incoming webhooks start to support user mention in Adaptive Cards with the Azure AD Object ID and UPN.
 
-> [!NOTE]    
-> * Enable user mention in the schema for Incoming webhooks to support Azure AD Object ID and UPN. 
-> * UI/UX changes are not required for user mentions with Azure AD Object ID and UPN.      
+> [!NOTE]
+>
+> * Enable user mention in the schema for Incoming webhooks to support Azure AD Object ID and UPN.
+> * UI/UX changes are not required for user mentions with Azure AD Object ID and UPN.
 
-##### Example 
+##### Example
 
 Example for user mention in Incoming Webhook as follows:
 
@@ -412,6 +415,7 @@ The image appears in stage view when the user selects the expand icon as shown i
 In the stage view, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
 
 > [!NOTE]
+>
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
@@ -422,7 +426,7 @@ Connector cards support limited Markdown and HTML formatting.
 | Style | Example | Markdown |
 | --- | --- | --- |
 | Bold | **text** | `**text**` |
-| Italic | *text* | `*text*` |
+| Italic | _text_ | `*text*` |
 | Header (levels 1&ndash;3) | **Text** | `### Text`|
 | Strikethrough | ~~text~~ | `~~text~~` |
 | Unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
@@ -520,7 +524,7 @@ Connector cards support limited Markdown and HTML formatting.
 | Style | Example | HTML |
 | --- | --- | --- |
 | Bold | **text** | `<strong>text</strong>` |
-| Italic | *text* | `<em>text</em>` |
+| Italic | _text_ | `<em>text</em>` |
 | Header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | Strikethrough | ~~text~~ | `<strike>text</strike>` |
 | Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -610,7 +614,7 @@ HTML tags are supported for simple cards, such as the hero and thumbnail cards. 
 | Style | Example | HTML |
 | --- | --- | --- |
 | Bold | **text** | `<strong>text</strong>` |
-| Italic | *text* | `<em>text</em>` |
+| Italic | _text_ | `<em>text</em>` |
 | Header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | Strikethrough | ~~text~~ | `<strike>text</strike>` |
 | Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -656,3 +660,4 @@ You can test formatting in your own cards by modifying this code.
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Task modules](~/task-modules-and-cards/cards/cards-format.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
+* [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)

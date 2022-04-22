@@ -9,7 +9,6 @@ keywords: Microsoft Teams developer definition
 
 Common terms and definitions used in Teams Developer Documentation.
 
-
 ## A
 
 | Term | Definition |
@@ -28,7 +27,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external Azure resources. |
 | [Authentication](../concepts/authentication/authentication.md) | A process to validate user access for your app's usage. It can be done using Microsoft Graph APIs or web-based authentication. <br> **See also**: [Identity providers](#i); [SSO](#s) |
 | [Authentication flow](../concepts/authentication/authentication.md#web-based-authentication-flow) | In Teams, there are two authentication flows to authenticate a user for using an app: web-based authentication and OAuthPrompt flow. |
-|
 
 ## B
 
@@ -39,7 +37,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Bot](../bots/what-are-bots.md) | A bot is an app that executes programmed repetitive tasks. <br> **See also**: [Conversational bot](#c); [Chat bot](#c) |
 | [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that lets you test and debug bots, either locally or remotely. |
 | [Bot Framework](../bots/bot-features.md) | A rich SDK used to create bots using C#, Java, Python, and JavaScript. If you have a bot that is based on the Bot Framework, you can modify it to work in Teams. |
-|
 
 ## C
 
@@ -57,8 +54,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It lets users subscribe to receive notifications and messages from the web services. Connectors expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: [Webhook](#w) |
 | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: [One-on-one chat](#o); [Group chat](#g); [Channel](#c) |
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and task modules. <br>**See also** [Chat bot](#c) |
-|
-
 
 ## D
 
@@ -73,8 +68,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Dev environment](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | A type of development environment that Teams Toolkit creates by default. It represents remote or cloud environment configurations. A project can have multiple remote environments. You can add more dev environments to your project using Teams Toolkit. <br>**See also** [Environment](#e); [Local environment](#l) |
 | [DevTools](../tabs/how-to/developer-tools.md) | Browser's Devtools are used to view console logs, view or modify runtime network requests, add breakpoints to code (JavaScript) and perform interactive debugging for a Teams app. The feature is only available for desktop and Android clients after the Developer Preview has been enabled. |
 | [Dynamic search](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | A search feature for Adaptive Cards that is useful to search and select data from large data sets. It helps to filter out the choices as the user enters the search string. <br>**See also**: [Static search](#s) |
-|
-
 
 ## E
 
@@ -83,15 +76,12 @@ Common terms and definitions used in Teams Developer Documentation.
 | [E5 developer account](../toolkit/accounts.md) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
 | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can use your app. |
 | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default, local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
-|
-
 
 ## F
 
 | Term | Definition |
 | --- | --- |
 | [Federated user](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of user in a Teams app meeting who is external and is invited to the meeting. This user has valid credentials that are federated by authorized Teams partners. They're also called External users. <br>**See also**: [Anonymous user](#a) |
-|
 
 ## G
 
@@ -99,8 +89,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | --- | --- |
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | A RESTful web API for Microsoft Graph that enables you to access Microsoft Cloud service resources. <br>**See also**: [Microsoft Graph Explorer](#m) |
 | [Group chat](../resources/bot-v3/bot-conversations/bots-conversations.md) | A chat feature where a user is able to chat with a bot in a group setting by using @mention to invoke the bot. <br>**See also**: [One-on-one chat](#o); [Chat bot](#c) |
-|
-
 
 ## I
 
@@ -109,8 +97,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Identity provider](../concepts/authentication/configure-identity-provider.md) | An entity that stores and provides credentials to the user. Users can register themselves with an identity provider as well.  <br>**See also**: [Authentication](#a) |
 | [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
 | [In-meeting app experience](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
-|
-
 
 ## L
 
@@ -121,8 +107,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug a Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
 | [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d); [Teams Mobile](#t) |
 | [Low code apps](../samples/teams-low-code-solutions.md) | A custom Teams app built from scratch using Microsoft Power Platform that requires little or no coding, and can be developed and deployed quickly. |
-|
-
 
 ## M
 
@@ -134,15 +118,13 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Meeting stage](../sbs-meetings-stage-view.yml) | A feature of meeting extension app. It's a shared space accessible to all participants during the meeting. It helps participants interact and collaborate with app content in real time. <br>**See also**: [Stage view](#s) |
 | [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md) | Messaging extensions are shortcuts for inserting app content or acting on a message. You can use a messaging extension without navigating away from the conversation. <br>**See also**: [Search commands](#s); [Action commands](#a) |
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app that is designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
-| [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
-| [Microsoft 365 developer program](../toolkit/accounts.md#join-microsoft-365-developer-program) | The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
+| [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
+| [Microsoft 365 developer program](../toolkit/accounts.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
-|
-
 
 ## O
 
@@ -152,8 +134,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Outgoing Webhook](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | It acts as a bot and search for messages in channels using @mention. It sends notifications to external web services and responds with rich messages, which include cards and images. <br>**See also**: [Webhook](#w); [Incoming Webhook](#i) |
 | [Outlook channel](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | A feature of Teams messaging extension app that lets the users interact with it from Microsoft Outlook. |
 | [One-on-one chat](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | A type of chat between a Teams personal bot app and a single user. <br>**See also**: [Group chat](#g); [Chat bot](#c) |
-|
-
 
 ## P
 
@@ -164,8 +144,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
-|
-
 
 ## R
 
@@ -174,8 +152,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Rate-limiting](../bots/how-to/rate-limit.md) | A method to limit messages to a certain maximum frequency to ensure that number of messages are sufficient and don't appear as spam. |
 | [Role-based views](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md) | A feature of tabs where the tab experience may be different for users depending on their permission level. |
 | [RSC permission](../graph-api/rsc/resource-specific-consent.md) | Resource-specific consent (RSC) permission feature is needed by team owners to let a bot app receive messages across channels in a team without being @mentioned. |
-|
-
 
 ## S
 
@@ -193,8 +169,6 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration aap](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
 | [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
-|
-
 
 ## T
 
@@ -208,11 +182,10 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
+| [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK enables you to create hosted experiences in Teams. The functionalities in [latest version](~/m365-apps/using-teams-client-sdk-preview.md) extend Teams app to run in Outlook and Office. |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
-|
-
 
 ## U
 
@@ -221,16 +194,12 @@ Common terms and definitions used in Teams Developer Documentation.
 | [UI components](../concepts/design/design-teams-app-basic-ui-components.md) | For Teams app development, you can use Fluent UI components to build your app from scratch. |
 | [UI templates](../concepts/design/design-teams-app-ui-templates.md) | For Teams app development, you can use Teams UI templates to design your apps quickly. |
 | [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) | A way to implement Adaptive Cards across platforms and applications. It uses a bot as a common backend for handling actions. |
-|
-
 
 ## V
 
 | Term | Definition |
 | --- | --- |
 | [Virtual Assistant](../samples/virtual-assistant.md) | A Microsoft open-source template that enables you to create a robust conversational solution. |
-|
-
 
 ## W
 
@@ -242,10 +211,8 @@ Common terms and definitions used in Teams Developer Documentation.
 | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using Visual Studio Code and SharePoint Framework. <br>**See also**: [SPFx](#s) |
 | [Workbench](../sbs-gs-spfx.yml) | Overall Visual Studio Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
 
-    
 ## Y
 
 | Term | Definition |
 | --- | --- |
 | [YoTeams](../get-started/get-started-overview.md) | A development toolkit for building Microsoft Teams applications based on TypeScript and node.js. |
-|

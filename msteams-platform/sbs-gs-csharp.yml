@@ -39,10 +39,10 @@ items:
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and messaging extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
-    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
-    |
+    
 
     ## Verify git installation
 
@@ -121,7 +121,7 @@ items:
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
     1. In the welcome screen, select **Set up E5 subscription**.
-    1. Set up your administrator account. After you finish, the following screen appears.
+    1. Set up your administrator account. After you finish, the following screen appears:
 
         :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 
@@ -355,7 +355,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
-    1. Select the app package **helloworldapp.zip** from the following path in your C# sample repo directory structure:
+    1. Select the app package `helloworldapp.zip` from the following path in your C# sample repo directory structure:
 
         `<path to cloned C# repo>/Source/Repos/Microsoft-Teams-Samples/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/bin/Debug/netcoreapp3.1`
 

@@ -1,5 +1,5 @@
 ---
-title: Overview - Teams app store publishing process
+title: Overview - Publish your app to the Microsoft Teams store
 description: Describes the process for submitting your app to Partner Center and getting it published to the Microsoft Teams store (and AppSource).
 ms.topic: overview
 author: heath-hamilton
@@ -21,13 +21,13 @@ When you feel your app is production ready, you can begin the process of getting
 
 :::row:::
    :::column span="":::
-      
+
    :::column-end:::
    :::column span="3":::
       :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams app store publishing process" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
    :::column-end:::
    :::column span="":::
-      
+
    :::column-end:::
 :::row-end:::
 
@@ -45,33 +45,39 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **Deep functional and experience tests**
 
-  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients.
+  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you a detailed test report in 24 working hours post submission.
 
 * **Guided app publish through concierge service**
 
   If there are no issues observed with your app, your app will be approved and published to the Teams store. If there are issues, you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
 
-   * Summary of all issues
+  * Summary of all issues
 
-   * Details of failures or issues with policy links and categorization: 
+  * Details of failures or issues with policy links and categorization:
 
-     * Mandatory fix: These issues must be fixed prior to app approval.
+    * Mandatory fix: These issues must be fixed prior to app approval.
 
-     * Suggested fix: These issues can be fixed post app approval as these are recommendations to improve your app’s experience.
+    * Suggested fix: These issues can be fixed post app approval as these are recommendations to improve your app’s experience.
 
-     * Blocker: These issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
+    * Blocker: These issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
 
-     * Query: These queries can be shared to get answers to specific questions related to your app.
+    * Query: These queries can be shared to get answers to specific questions related to your app.
 
-   * Steps to recreate issues through written instructions or video format.
+  * Steps to recreate issues through written instructions or video format.
 
-   * Recommendations to fix the reported issues with links to guidance docs.
- 
+  * Recommendations to fix the reported issues with links to guidance docs.
+
   After you've reviewed the list of issues, fix all the reported issues and share the updated app package over email, for the validation team to re-validate your app thoroughly. If you've any queries related to the reported issues, contact the validation team at [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com).
 
   If there are issues remaining or regression issues observed in your app, the validation team will share an updated validation report with you. If your app had blockers, you might see new issues reported when your app is validated after the blockers are resolved. Sometimes, the validation team has also noticed regression issues in apps post deployment of fixes. It takes a few re-submissions to close all the issues for an app that consists of bugs, and get it approved to publish to the Teams store.
 
   After all reported issues are closed and final submission is made in the Partner Center, the validation team will approve and publish your app. Allow at least one business day for the app to be available in the Teams store.
+
+* **Analyze app usage**
+
+  After your app is approved and published, you can track your app usage in the [Teams app usage report](/office/dev/store/teams-apps-usage) in Partner Center. Metrics include Monthly, Daily, and Weekly active users, and retention and intensity charts enabling you to track churn and frequency of usage.
+
+  Data for newly published apps takes about a week to appear in the report.
 
 ## Tips for rapid approval to publish your app
 
@@ -90,7 +96,7 @@ When you feel your app is production ready, you can begin the process of getting
      1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
- 
+
      1. Self-test your app thoroughly prior to app submission to ensure it adheres with store policies. Sideload the app in Teams and test the end-to-end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
      1. Test your app across desktop, web, and mobile clients. Ensure that the app is responsive across different form factors.
@@ -127,3 +133,4 @@ When you feel your app is production ready, you can begin the process of getting
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distributing tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
+* [Microsoft Teams store ranking parameters](post-publish/teams-store-ranking-parameters.md)
