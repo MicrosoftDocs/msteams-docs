@@ -9,23 +9,23 @@ ms.localizationpriority: none
 
 # Tabs link unfurling and Stage View
 
-Stage View is a new user interface (UI) component, which allows you to render the content opened in new pop up window with chat docked to the side in Teams and pinned as a tab.
+Stage View is a new user interface (UI) component, that renders the content to open in a new pop up window with chat docked to the side in Teams and pinned as a tab.
 
 ## Stage View
 
-Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card. When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window with chat docked to the side.When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
+Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat services. When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window with chat docked to the side.When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
 
 ## Advantage of Stage View
 
-* Stage View helps provide a more seamless experience of viewing content in Teams
-* Users can now pop out app content in a new window, allowing them to multi-task within Teams
+* Stage View provides a more seamless experience of viewing content in Teams
+* Users can now pop out app content in a new window, allowing them to do multi-task within Teams
 * Stage View also allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience.
 
 ## Stage View vs. Task module
 
 |Stage View|Task module|
 |:-----------|:-----------|
-|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides rich features that helps to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+|Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that helps to render your content in the new pop up window.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
   
 ## Invoke Stage View
 
@@ -36,7 +36,7 @@ You can invoke Stage View in the following  ways:
 
 ## Invoke Stage View from Adaptive Card
 
-When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. Now Stage View opens in a new window with chat docked to the side. After a stage is launched and the `tabInfo` is provided, you can add the ability to pin the stage as a tab.  
+When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. Now Stage View opens in a new window with chat docked to the side. After a stage is launched and the **tabInfo** is provided, you can pin the stage as a tab.
 
 The following images display a stage opened from an Adaptive Card:
 
@@ -112,13 +112,13 @@ Encoded URL:
 
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
 
-**Example 2: URL with no threadId**
+**Example 2: URL without threadId**
 
 Unencoded URL:
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
 
-Encoded
+Encoded URL:
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
