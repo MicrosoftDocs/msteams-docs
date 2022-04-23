@@ -20,10 +20,10 @@
   items:
   - name: Get started overview
     href: get-started/get-started-overview.md  
-  - name: Build your first app using Blazor
-    href: sbs-gs-blazorapp.yml
   - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
+  - name: Build your first app using Blazor
+    href: sbs-gs-blazorupdate.yml
   - name: Build your first app using SPFx
     href: sbs-gs-spfx.yml
   - name: Build your first app using C# or .NET
@@ -116,8 +116,8 @@
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: CI/CD guide
-      href: toolkit/use-CICD-template.md
+    - name: Set up CI/CD pipelines
+      href: toolkit/use-CICD-template.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
   - name: Teams Toolkit CLI
@@ -529,14 +529,20 @@
       href: resources/partner-apps-for-moodle.md
     - name: Moodle FAQ
       href: resources/faqs.md
-  - name: Create Share-to-Teams button
-    href: concepts/build-and-test/share-to-teams.md
+  - name: Share to Teams
+    items:
+    - name: Overview
+      href: concepts/build-and-test/share-to-teams-overview.md
+    - name: Share to Teams from web apps
+      href: concepts/build-and-test/share-to-teams-from-web-apps.md
+    - name: Share to Teams from personal app or tab
+      href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
-  - name: Integrate People Picker
-    href: concepts/device-capabilities/people-picker-capability.md   
+  - name: Integrate People Picker  
+    href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
   items:
   - name: Localization
