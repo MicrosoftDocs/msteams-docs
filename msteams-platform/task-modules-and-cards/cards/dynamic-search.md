@@ -56,7 +56,7 @@ The following image illustrates mobile experience of typeahead search:
 ---
 
 > [!NOTE]
-> You can't get rich card experiences with dynamic search, such as query based messaging extensions.
+> You can't get rich card experiences with dynamic search, such as query based message extensions.
 
 ## Implement typeahead search
 
