@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Customize app manifest in Teams Toolkit
+# Customize app manifest in Toolkit
 
 Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
@@ -26,13 +26,14 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 During local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`,  with configurations from `state.{env}.json`, `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 
-## Supported placeholder in manifest.template.json
+## Placeholder supported in manifest.template.json
 
-* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json.
-* `{{config.manifest.xx}}` is customized placeholder and it's value is resolved from `config.{env}.json`.
-  * You can add a customized parameter as follows:
-    * Add a placeholder in manifest.template.json with pattern: `{{config.manifest.xx}}`
-    * Add a config value in config.{env}.json
+* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json
+* `{{config.manifest.xx}}` is customized placeholder and it's value is resolved from `config.{env}.json`
+
+  1. You can add a customized parameter as follows:
+      1. Add a placeholder in manifest.template.json with pattern: `{{config.manifest.xx}}`
+      2. Add a config value in config.{env}.json
 
         ```json
         {
@@ -42,7 +43,7 @@ During local debug or provision, Teams Toolkit loads manifest from `manifest.tem
         }
         ```
 
-     You can navigate to configuration file by selecting any one of the config placeholder `Go to config file` or `View the state file` in `manifest.template.json`.
+   2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`
 
 ## See also
 
