@@ -20,10 +20,10 @@
   items:
   - name: Get started overview
     href: get-started/get-started-overview.md  
-  - name: Build your first app using Blazor
-    href: sbs-gs-blazorupdate.yml
   - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
+  - name: Build your first app using Blazor
+    href: sbs-gs-blazorupdate.yml
   - name: Build your first app using SPFx
     href: sbs-gs-spfx.yml
   - name: Build your first app using C# or .NET
@@ -116,8 +116,8 @@
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: CI/CD guide
-      href: toolkit/use-CICD-template.md
+    - name: Set up CI/CD pipelines
+      href: toolkit/use-CICD-template.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
   - name: Teams Toolkit CLI
