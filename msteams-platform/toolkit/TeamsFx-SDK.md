@@ -16,11 +16,6 @@ Use the library to:
 * Access the core functionalities in client and server environment in a similar way
 * Write user authentication code in a simplified way
 
-## Get started
-
-TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
-For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
-
 ## Prerequisites
 
 Install the following tools and set up your development environment:
