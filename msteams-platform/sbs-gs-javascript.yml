@@ -15,19 +15,19 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You'll create three Teams apps: a tab app, a bot app, and a messaging extension app. 
+    You'll create three Teams apps: a tab app, a bot app, and a message extension app. 
 
     Each of your app will have a capability, which comes with its own UI and UX:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
     
     > [!NOTE]
-    > In this tutorial, you'll create a tab app first, followed by a bot app, and then a messaging extension app. However, you can choose to build an app with any capability first, without hindering the functionality of other apps.
+    > In this tutorial, you'll create a tab app first, followed by a bot app, and then a message extension app. However, you can select to build an app with any capability first, without hindering the functionality of other apps.
 
     In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
-    - How to build three apps with a different capability each—tab, bot, and messaging extension.
+    - How to build three apps with a different capability each—tab, bot, and message extension.
     - The structure of the app:
         - The tab portion with JavaScript using React.
         - The rest of the features with Node.js.
@@ -157,12 +157,12 @@ items:
   durationInMinutes: 1
   content: |
 
-    Start Microsoft Teams app development by creating your first app. This app uses the Tab capability.
+    Start Microsoft Teams app development by creating your first app. This app uses the tab capability.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
 
     In this page, you'll learn:
-    1. [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project-workspace)
+    1. [How to set up a new tab project with Teams Toolkit](#create-your-tab-project-workspace)
     1. [About the directory structure of your app](#take-a-tour-of-the-tab-app-source-code)
 
     ## Create your tab project workspace
@@ -430,7 +430,7 @@ items:
 
     In this tutorial, you'll learn:
 
-    1. [How to set up a new Bot project with Teams Toolkit.](#create-your-bot-project-workspace)
+    1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
     > [!IMPORTANT]
@@ -468,7 +468,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
-        Your Teams app with a Bot capability is created in a few seconds.
+        Your Teams app with a bot capability is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created." border="false":::
 
@@ -661,35 +661,35 @@ items:
       > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
       </details> 
 
-- title: Create project workspace for your messaging extension app
+- title: Create project workspace for your message extension app
   durationInMinutes: 1
   content: |
 
-    You've built your bot app. Now, let's create your first messaging extension app.
+    You've built your bot app. Now, let's create your first message extension app.
 
-    Messaging Extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
+    Message Extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. messaging extension is highlighted." border="false":::
 
-    There are two types of Teams **messaging extensions**:
+    There are two types of Teams **message extensions**:
 
     - [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
     - [Action commands](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
-    Let's create a messaging extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
+    Let's create a message extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
 
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the messaging extension app.
+    As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
 
     > [!NOTE]
-    > Messaging extensions rely on bots to provide a dialog between the user and your code.
+    > Message extensions rely on bots to provide a dialog between the user and your code.
 
 
     In this tutorial, you'll learn:
 
-    1. [How to set up a new Messaging Extension project with Teams Toolkit.](#create-your-messaging-extension-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-messaging-extension-app-source-code)
+    1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
+    1. [About the directory structure of your app project.](#take-a-tour-of-the-message-extension-app-source-code)
 
-    ## Create your messaging extension project workspace
+    ## Create your message extension project workspace
 
     If the prerequisites are in place, let's begin!
 
@@ -769,9 +769,9 @@ items:
 
     ---
 
-    ## Take a tour of the messaging extension app source code
+    ## Take a tour of the message extension app source code
 
-    A messaging extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+    A message extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/hw-folder-structure-mex-2345.png" alt-text="tab 23" border="true":::
 
@@ -785,15 +785,15 @@ items:
     | `.fx/states/state.<envName>.json` | Provision output file for every environment. |
     | `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
     | `bot` |  Code for the Bot needed at runtime. |
-    | `bot/messageExtensionBot.js` | Main entry point for the messaging extension app. |
+    | `bot/messageExtensionBot.js` | Main entry point for the message extension app. |
     | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
     | `templates/appPackage/manifest.template.json` | App manifest for running the app in local and remote environment.  |
     | `templates/azure` | BICEP template files |
 
     > [!Tip]
-    > Familiarize yourself with bots and messaging extension outside of Teams before you integrate your app within Teams.
+    > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
 
-- title: Build and run your first messaging extension app
+- title: Build and run your first message extension app
   durationInMinutes: 1
   content: |
 
@@ -847,7 +847,7 @@ items:
 
     ## Build and run your app in the local environment
 
-    A messaging extension lets you interact with a web service. It takes advantage of the messaging feature and secure communication of a bot. The messaging extension app is added to a web service registered as a bot. 
+    A message extension lets you interact with a web service. It takes advantage of the messaging feature and secure communication of a bot. The message extension app is added to a web service registered as a bot. 
     
     ### Build and run your app locally
 
@@ -873,7 +873,7 @@ items:
         3. Registers the app in Azure AD and configures the app.
         4. Registers the bot app in Bot Framework and configures the app.
         5. Registers the app in Teams Developer Portal and configures the app.
-        6. Starts the messaging extension app hosted locally.
+        6. Starts the message extension app hosted locally.
         7. Starts Teams in a web browser and sideloads the Teams app.
         
         </details>
@@ -899,18 +899,18 @@ items:
 
     1. Select **Try it**.
 
-        The Messaging Extension app is loaded in a chat bot app.
+        The Message Extension app is loaded in a chat bot app.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows app sideloaded in Teams" border="false":::
 
-        As messaging extension apps rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
+        As message extension apps rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
 
-        - If you've created a bot app before you created the messaging extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
-        - If you created a messaging extension first, your app is loaded in any chat that is open on Teams.
+        - If you've created a bot app before you created the message extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
+        - If you created a message extension first, your app is loaded in any chat that is open on Teams.
 
     ### Test your app
 
-    The first time your app loads, the messaging extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
+    The first time your app loads, the message extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
     
     #### To run a search query
 
@@ -926,11 +926,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot that shows the search result sent on chat" border="false":::
     
-        Now, you've learned how to build and run a basic messaging extension app!         
+        Now, you've learned how to build and run a basic message extension app!         
 
     ## Optional scenarios
 
-    You've tested the search feature of a basic messaging extension app. Now, you can try out some other functionalities of this app. These are optional scenarios in this app.
+    You've tested the search feature of a basic message extension app. Now, you can try out some other functionalities of this app. These are optional scenarios in this app.
     <br>
     <br>
     <details>
@@ -984,12 +984,12 @@ items:
 
     **Using three-dot icon:**
     
-    1. Launch the messaging extension from three dots at the bottom of the composing area.
-    1. Select your messaging extension app.       
+    1. Launch the message extension from three dots at the bottom of the composing area.
+    1. Select your message extension app.       
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
 
-        The messaging extension app loads with the options to run a search and create adaptive cards.
+        The message extension app loads with the options to run a search and create adaptive cards.
     </details>
     <br>
     <details>
@@ -1020,7 +1020,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Tab, Bot, and Messaging Extension capabilities. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
 
     Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
 
@@ -1098,7 +1098,7 @@ items:
 
     You've done it!
 
-    You've created three apps, each with a different capability: a tab app, a bot app, and a messaging extension app.
+    You've created three apps, each with a different capability: a tab app, a bot app, and a message extension app.
 
     Now that you've learned to create basic apps, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
 
