@@ -16,6 +16,11 @@ Use the library to:
 * Access the core functionalities in client and server environment in a similar way.
 * Write user authentication code in a simplified way.
 
+## Get started
+
+TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
+For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+
 ## Prerequisites
 
 Install the following tools and set up your development environment:
@@ -23,12 +28,7 @@ Install the following tools and set up your development environment:
 * Latest version of Node.js.
 * If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. 
   > [!NOTE] 
-  > Currently, the required version is 4.15.0` or later. For more information, see: [Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
-
-## Get started
-
-TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
-For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+  > Currently, the required version is 4.15.0 or later. For more information, see: [Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
 
 Ensure you have working knowledge of the following:
 
