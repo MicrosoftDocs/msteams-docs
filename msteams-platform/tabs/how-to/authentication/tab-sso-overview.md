@@ -27,7 +27,7 @@ Users sign in to Microsoft Teams using either their personal Microsoft account o
 - When a Teams user attempts to access your app, the app uses the identity that's already validated by Teams.
 - The user sees only a consent dialog where they let your app use their Teams identity to obtain access permission for using your app.
 
-### SSO improves user experience in Teams
+### SSO enhances user experience in Teams
 
 - Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user.
 - After the user consents to the app, they can access and use the app. For this reason, it is true SSO.
