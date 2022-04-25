@@ -36,8 +36,8 @@ For effective integration, you must have a good understanding of [code snippets]
 
 The `selectMedia` API allows user to capture images on mobile using the following steps:
 
-1. Select camera.
-1. Pick images as attachments from gallery.
+1. Select **Camera**, then select **PHOTO** to capture the image.
+1. Select **Open photo library** to pick images as attachments from gallery.
 
 <!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
 
@@ -45,7 +45,7 @@ The `selectMedia` API allows user to capture images on mobile using the followin
 
 The `selectMedia` API for microphone capability allows user to record audio on mobile using the following steps:
 
-1. Select Record description button.
+1. Select **Record description**.
 1. The recording bar shows progression at the bottom of the mobile.
 1. Recorded audio gets returned back to the app.
 
@@ -57,8 +57,8 @@ The `selectMedia` API for microphone capability allows user to record audio on m
 
 The `selectMedia` API allows user to capture images on desktop using the following steps: 
 
-1. Select camera.
-1. Pick images as attachments from gallery.
+1. Select **Camera** to capture image and then select **Attach**.
+1. Select **Attach** to pick images as attachments from your documents.
 
 :::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
