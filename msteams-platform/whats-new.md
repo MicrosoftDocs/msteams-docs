@@ -17,6 +17,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|04/25/2022| Updated the App Manifest - showLoadingIndicator in Manifest schema for Teams| App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
+|04/25/2022| Updated the App Manifest - showLoadingIndicator in Create a content page for your tab|  Build tabs > [Create a content page](tabs/how-to/create-tab-pages/content-page.md)|
 |04/20/2022 |  Set up CI/CD pipelines | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Set up CI/CD pipelines](toolkit/use-CICD-template.md)|
 |04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| Share to Teams from personal app or tab (developer preview) | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
