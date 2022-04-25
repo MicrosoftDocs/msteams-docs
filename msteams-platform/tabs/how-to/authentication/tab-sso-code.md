@@ -9,6 +9,8 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 
 You need to configure your app's client-side code to obtain an access token from Azure AD using Teams identity of the app user. After the access token is received from, you need to pass it to the server side and validate the token. You can also use the access token as an identity token for authenticating and authorizing your users.
 
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
+
 This section covers:
 
 - [Get an access token from your client-side code](#get-an-access-token-from-your-client-side-code)
