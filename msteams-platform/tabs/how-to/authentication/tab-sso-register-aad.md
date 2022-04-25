@@ -120,7 +120,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 ## Configure scope and permission
 
-After you've created a new registration, configure scope and permission options for your app. To do this, you'll expose a web API, and configure the app ID URI. Define scope for the API, and configure the users who can consent for a scope. You'll then create an authorized client app and configure a trust relationship with the API you exposed earlier. This enables the user to access the app resources without any further consent.
+After you've created a new registration, configure scope and permission options for your app. To do this, you'll expose a web API, and configure the app ID URI. Define scope for the API, and configure the users who can consent for a scope. You'll then create an authorized client app for the applications that you want to authorize for your app’s web application, and configure a trust relationship with the API you exposed earlier. This enables the user to access the app resources without any further consent.
 
 You can let only admins provide consent for higher-privileged permissions.
 
@@ -219,21 +219,29 @@ In this section, you'll learn:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
 
-    1. Enter the client ID for the Teams client.
-    2. Select the app ID you created for your app for the **Authorized scopes**.
-    3. Select **Add application**.
+1. Enter the client ID for the Teams client for the applications that you want to authorize for your app’s web application.
+
+   | Add client ID | For authorizing... |
+   | --- | --- |
+   | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+   | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+
+    > [!NOTE]
+    > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
+
+1. Select the app ID you created for your app for the **Authorized scopes**.
+2. Select **Add application**.
 
     A message pops up on the browser stating that the client app was added.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message" border="false":::
 
-    A message pops up on the browser stating that the client app was added.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message for web app" border="false":::
-
     The client app ID displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
+
+> [!NOTE]
+> You can authorize more than one client application. Repeat the steps for configuring authorized client application.
 
 ## Configure authentication for different platforms
 
