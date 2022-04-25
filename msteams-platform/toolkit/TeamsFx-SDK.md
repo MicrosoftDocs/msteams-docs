@@ -37,7 +37,7 @@ You must have working knowledge of the following:
 
 ## Get started
 
-TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
+TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx Toolkit or CLI.
 For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### Install the `@microsoft/teamsfx` package
@@ -112,9 +112,9 @@ There are two identity types:
 | Command | Description |
 |----------------|-------------|
 | `new TeamsFx(IdentityType.User)`| Application is authenticated as current Teams user. |
-| `TeamsFx:setSsoToken()`| user identity in Node.js environment (without browser). |
+| `TeamsFx:setSsoToken()`| User identity in Node.js environment (without browser). |
 | `TeamsFx:getUserInfo()` | To get user's basis information. |
-| `TeamsFx:login()` | Its used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
+| `TeamsFx:login()` | It is used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
 
 In user identity, You can access resources on behalf of current Teams user.
 
@@ -123,7 +123,7 @@ In user identity, You can access resources on behalf of current Teams user.
 | Command | Description |
 |----------------|-------------|
 | `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application.The permission usually needs administrator's approval.|
-| `TeamsFx:getCredential()`| provides credential instances automatically corresponding to identity type. |
+| `TeamsFx:getCredential()`| Its provides credential instances automatically corresponding to identity type. |
 
 In app identity, You are acting as a managed app identity which needs admin consent for resources.
 
@@ -138,10 +138,10 @@ Here's the corresponding scenarios for each credential class targets.
 #### User Identity in browser environment
 `TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It leverages the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developer choose user identity in browser environment.
 
-Required configuration: initiateLoginEndpoint, clientId.
+Required configuration: `initiateLoginEndpoint`, `clientId`.
 
 #### User Identity in Node.js environment
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. It's designed to be used in Azure Function or Bot scenarios. SDK uses this credential when developer choose user identity in Node.js environment.
+`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. It's designed to be used in Azure Function or bot scenarios. SDK uses this credential when developer choose user identity in Node.js environment.
 
 Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 
@@ -154,7 +154,7 @@ Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateCo
 
 Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` has a good integration with Bot framework. It simplifies the authentication process when you develops bot application and want to leverage the Bot SSO.
+`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develops bot application and want to leverage the bot SSO.
 
 Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `applicationIdUri`.
 
@@ -170,7 +170,7 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 
 Required configuration:
 * `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` if you want to use user identity
-* sqlServerEndpoint, sqlIdentityId if you want to use MSI identity
+* `sqlServerEndpoint`, `sqlIdentityId` if you want to use MSI identity
 
 ### Error handling
 
@@ -364,7 +364,7 @@ setLogFunction((level: LogLevel, message: string) => {
 ## Override configuration
 You can pass custom config when creating `TeamsFx` instance to override default configuration or set required fields when environment variables are missing.
 
-- If you have created tab project using VS Code toolkit, the following config values will be used from pre-configured environment variables:
+- If you have created tab project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
   * authorityHost (REACT_APP_AUTHORITY_HOST)
   * tenantId (REACT_APP_TENANT_ID)
   * clientId (REACT_APP_CLIENT_ID)
@@ -373,7 +373,7 @@ You can pass custom config when creating `TeamsFx` instance to override default 
   * apiEndpoint (REACT_APP_FUNC_ENDPOINT)
   * apiName (REACT_APP_FUNC_NAME)
 
-- If you have created Azure Function / Bot project using VS Code toolkit, the following config values will be used from pre-configured environment variables:
+- If you have created Azure Function / bot project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
   * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
   * authorityHost (M365_AUTHORITY_HOST)
   * tenantId (M365_TENANT_ID)
