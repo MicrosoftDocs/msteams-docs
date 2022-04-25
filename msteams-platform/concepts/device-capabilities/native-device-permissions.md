@@ -12,33 +12,30 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 > [!NOTE]
 >
-> * To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
+> * To integrate media capabilities within your Microsoft Teams app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
-> * To integrate location capabilities within your Microsoft Teams mobile app, see [Integrate location capabilities](location-capability.md).
+> * To integrate location capabilities within your Microsoft Teams app, see [Integrate location capabilities](location-capability.md).
 
 ## Native device permissions
 
-You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions.
-By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
+You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions. You can build richer experiences on the Teams platform with the help of device capabilities, such as:
 
-* Capture and view images.
-* Scan QR or barcode.
-* Record and share short videos.
-* Record audio memos and save them for later use.
-* Use the location information of the user to display relevant information.
+* Capture and view images
+* Scan QR or barcode
+* Record and share short videos
+* Record audio memos and save them for later use
+* Use the location information of the user to display relevant information
 
 > [!NOTE]
 > * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
+> * Currently, Microsoft Teams support for QR barcode scanner capability is only available for mobile clients.
 
 ## Access device permissions
 
 The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
 
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop client.
-
-> [!NOTE]
-> Currently, Microsoft Teams support for media capabilities and QR barcode scanner capability is only available for mobile clients.
 
 ## Manage permissions
 
@@ -78,7 +75,7 @@ Update your app's `manifest.json` by adding `devicePermissions` and specifying w
 ],
 ```
 
-Each property allows you to prompt the user to ask for their consent:
+Each property allows you to prompt the users to ask for their consent:
 
 | Property      | Description   |
 | --- | --- |
@@ -112,12 +109,12 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## Use Teams APIs to get device permissions
 
-Leverage appropriate HTML5 or Teams API, to display a prompt for getting consent to access device permissions.
+Leverage appropriate HTML5 or Teams API to display a prompt for getting consent to access device permissions.
 
 > [!IMPORTANT]
 >
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop client.
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location.
 
 For example:
 
@@ -154,7 +151,7 @@ For example:
         } 
     ```
 
-* Notifications will prompt the user when you call `requestPermission()`:
+* Notifications prompts the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
