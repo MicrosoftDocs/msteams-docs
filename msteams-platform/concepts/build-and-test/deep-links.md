@@ -112,7 +112,7 @@ The query parameters are:
 
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
-    When a deeplink to meeting sidepanel is selected in the meeting stage, it will open the sidepanel in the meeting stage itself. If the deeplink to meeting sidepanel is selected anywhere other than meeting stage, deeplink opens pre-meeting or post-meeting tab.
+    When a deeplink to meeting sidepanel is selected in the meeting stage, it opens the sidepanel in the meeting stage. If the deeplink to meeting sidepanel is selected anywhere other than meeting stage, deeplink opens pre-meeting or post-meeting tab.
 
 > [!IMPORTANT]
 > Ensure that all query parameters are properly URI encoded. You must follow the preceeding examples using the last example:
