@@ -229,6 +229,9 @@ In this section, you'll learn:
     > [!NOTE]
     > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
 
+    > [!IMPORTANT]
+    > For a teams tab, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams. You might need this detail, if you're using the same Azure AD app for a mobile or desktop client also.
+
 1. Select the app ID you created for your app for the **Authorized scopes**.
 2. Select **Add application**.
 
