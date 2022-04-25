@@ -124,7 +124,7 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
     - {{Subdomain}.app ID URI} is the  domain and subdomain of your application. This is the same URI that you registered when creating scope in Azure AD.
 
 4. Update the Azure app ID in the **id** property.
-5. Update the ngrok URL in the following properties:
+5. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
@@ -180,7 +180,7 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
   ],
   "permissions": [ "identity", "messageTeamMembers" ],
   "validDomains": [
-    "23c3-103-50-148-128.ngrok.io"
+    "contoso.com"
   ],
   "webApplicationInfo": {
     "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
