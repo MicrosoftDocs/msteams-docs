@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
+TeamsFx helps to reduce the developer tasks by leveraging Teams SSO and access to cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
 
 * Teams tab application
 * Azure Function
@@ -96,7 +96,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 <br>
 
-## Core concepts & code structure
+## Core concepts and code structure
 
 ### TeamsFx class
 
@@ -116,7 +116,8 @@ There are two identity types:
 | `TeamsFx:getUserInfo()` | To get user's basis information. |
 | `TeamsFx:login()` | It is used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
 
-In user identity, You can access resources on behalf of current Teams user.
+> [!NOTE]
+> You can access resources on behalf of current Teams user.
 
 #### Application Identity
 
@@ -125,7 +126,8 @@ In user identity, You can access resources on behalf of current Teams user.
 | `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application.The permission usually needs administrator's approval.|
 | `TeamsFx:getCredential()`| Its provides credential instances automatically corresponding to identity type. |
 
-In app identity, You are acting as a managed app identity which needs admin consent for resources.
+> [!NOTE]
+> You are acting as a managed app identity which needs admin consent for resources.
 
 ### Credential
 
@@ -154,7 +156,7 @@ Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateCo
 
 Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develops bot application and want to leverage the bot SSO.
+`TeamsBotSsoPrompt` has a good integration with bot framework. It simplifies the authentication process when you develop bot application and want to leverage the bot SSO.
 
 Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `applicationIdUri`.
 
@@ -162,11 +164,8 @@ Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `ap
 
 TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They are located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
-### Microsoft Graph Service
-`createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
-
-### SQL
-`getTediousConnectionConfig` returns a tedious connection config.
+*  Microsoft Graph Service:`createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
+*  SQL:`getTediousConnectionConfig` returns a tedious connection config.
 
 Required configuration:
 * `sqlServerEndpoint`, `sqlUsername`, `sqlPassword` if you want to use user identity
@@ -190,7 +189,7 @@ try {
 }
 ```
 
-And if credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed.
+If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed.
 
 ```ts
 try {
@@ -278,7 +277,7 @@ teamsfx.setCustomeConfig({
 const token = teamsfx.getCredential().getToken();
 ```
 
-### Use Graph API in Bot application
+### Use Graph API in bot application
 
 Add `TeamsBotSsoPrompt` to dialog set.
 
@@ -387,7 +386,7 @@ You can pass custom config when creating `TeamsFx` instance to override default 
   * sqlDatabaseName (SQL_DATABASE_NAME)
   * sqlIdentityId (IDENTITY_ID)
 
-## Follow the steps to upgrade the latest SDK version.
+## Upgrade the latest SDK version
 
 If you are using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
 1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`
