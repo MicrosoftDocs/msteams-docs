@@ -88,15 +88,9 @@ When you call `getAuthToken` and user consent is required for user-level permiss
 
 After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
-## Pass the access token to server-side code
+## Decode the access token
 
-If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
-
-If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
-
-### Validate the access token
-
-Web APIs on your server must validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
+Web APIs on your server must decode and validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
 There are a number of libraries available that can handle JWT validation, but the basics include:
 
@@ -110,7 +104,7 @@ Keep in mind the following guidelines when validating the token:
 - The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
-#### Example access token
+### Example access token
 
 The following is a typical decoded payload of an access token.
 
@@ -138,7 +132,7 @@ The following is a typical decoded payload of an access token.
 }
 ```
 
-## Use the access token as an identity token
+### Use the access token as an identity token
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
@@ -153,6 +147,12 @@ Teams can cache this information associated with the user's identity; such as th
 
 > [!NOTE]
 > If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
+
+## Pass the access token to server-side code
+
+If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
+
+If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
 
 ### Code for passing access token to server-side
 
