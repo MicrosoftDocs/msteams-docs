@@ -79,12 +79,11 @@ After previewing the `manifest` file, you can sync your local changes to Dev por
 
 If the manifest file is outdated due to configuration file change or template change, ensure to confirm the following action:
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
+
 * **Preview only**: Local manifest file is overwritten according to current configuration
 * **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform
 * **Cancel**: No action is taken
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
-
-
 
 > [!NOTE]
 > The changes are updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
