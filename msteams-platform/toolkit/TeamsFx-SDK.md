@@ -13,8 +13,8 @@ ms.date: 11/29/2021
 TeamsFx helps to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single line statements with zero configuration.
 
 Use the library to:
-* Access the core functionalities in client and server environment in a similar way.
-* Write user authentication code in a simplified way.
+* Access the core functionalities in client and server environment in a similar way
+* Write user authentication code in a simplified way
 
 ## Get started
 
@@ -25,8 +25,8 @@ For more information, see [Teams app project](https://github.com/OfficeDev/Teams
 
 Install the following tools and set up your development environment:
 
-* Latest version of Node.js.
-* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. 
+* Latest version of Node.js
+* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version
   > [!NOTE] 
   > Currently, the required version is 4.15.0 or later. For more information, see: [Issue - all of the BOTBUILDER packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
 
@@ -107,8 +107,8 @@ You can use `TeamsFx:getUserInfo()` to get user's basic information.
 Using `new TeamsFx(IdentityType.App)` means the application is authenticated as an application. The permission usually needs administrator's approval.
 
 `TeamsFx:getCredential()` provides credential instances automatically corresponding to identity type:
-- User Identity: You can access resources on behalf of current Teams user.
-- App Identity: You are acting as a managed app identity which needs admin consent for resources.
+- User Identity: You can access resources on behalf of current Teams user
+- App Identity: You are acting as a managed app identity which needs admin consent for resources
 
 ### Credential
 
@@ -156,8 +156,8 @@ TeamsFx SDK provides several helper functions to ease the configuration for thir
 `getTediousConnectionConfig` returns a tedious connection config.
 
 Required configuration:
-- sqlServerEndpoint, sqlUsername, sqlPassword if you want to use user identity.
-- sqlServerEndpoint, sqlIdentityId if you want to use MSI identity.
+- sqlServerEndpoint, sqlUsername, sqlPassword if you want to use user identity
+- sqlServerEndpoint, sqlIdentityId if you want to use MSI identity
 
 ### Error handling
 
@@ -379,11 +379,11 @@ You can pass custom config when creating `TeamsFx` instance to override default 
 ## Follow the steps to upgrade the latest SDK version.
 
 If you are using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
-1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`.
-2. Replace `new TeamsUserCredential()` with `new TeamsFx()`.
-3. Replace `new M365TenantCredential()` with `new TeamsFx(IdentityType.App)`.
-4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new TeamsFx().setSsoToken(ssoToken)`.
-5. Pass the instance of `TeamsFx` to helper functions to replace credential instance.
+1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`
+2. Replace `new TeamsUserCredential()` with `new TeamsFx()`
+3. Replace `new M365TenantCredential()` with `new TeamsFx(IdentityType.App)`
+4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new TeamsFx().setSsoToken(ssoToken)`
+5. Pass the instance of `TeamsFx` to helper functions to replace credential instance
 
 Also see [TeamsFx class](#teamsfx-class) for furthur description.
 
