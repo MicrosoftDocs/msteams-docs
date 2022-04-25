@@ -114,3 +114,76 @@ To enable license management for your offer, select the checkbox **< PLACEHOLDER
 1. Select **Buy a subscription**.
 
 (image)
+
+1. Select the plan you want to purchase and select **Checkout**.
+
+(Image)
+
+1. Enter the number of licenses you would like to purchase, update sold to address and payment information. Select “place order”. This completes the purchase of the subscription.
+
+(Image)
+
+1. Once subscription is purchased successfully, purchaser is redirected to the ISV site to complete configuration steps required to activate the subscription.
+
+(Image)
+
+## Chapter 4: Manage third-party licenses in Teams
+
+1. On Teams client, subscription purchaser can manage license assignments from within the Teams. From **Manage your apps**, you can go to **Subscriptions** tab to view the list of purchases.
+
+(Image)
+
+1. On the **Subscriptions** tab, select **Assign licenses** to manage licenses for the purchases.
+
+(Image)
+
+1. Purchaser is able to view license utilization and assign licenses by selecting **Assign licenses**.
+
+(Image)
+
+1. Purchaser can begin assigning licenses to users in the tenant by entering the user names. Purchaser can add one or more users for license assignment.
+
+(Image)
+
+1. Select **Assign** after adding all the users.
+
+(Image)
+
+1. Licenses are successfully assigned and purchaser see the list of assigned users as below.
+
+(Image)
+
+1. Purchaser can also assign licenses to a **Team** in Teams. Purchaser can search for the team and select **Assign**.
+
+(Image)
+
+1. If the number of users in the team exceeds the number of available licenses, the purchaser can select a subset of users to whom licenses are assigned. After doing so, select **Save**.
+
+(Image)
+
+1. Purchaser can unassign licenses from one or multiple users from the license page. The purchaser can select the users and select **Unassign**.
+
+(Image)
+
+1. If there is a delay in a multi user assignment or un-assignment action, the purchaser see a **Pending** status while the action completes on the Microsoft services.
+
+(Image)
+
+## Chapter 5: Test the app by launching in Teams environment
+
+### App runtime consent flow for user
+
+(Content)
+
+## Check license usage in Partner Center analytics
+
+### Check license usage of ISV apps in the Partner Center analytics section
+
+1. Sign into [Partner Center](https://partner.microsoft.com/) with your partner account.
+1. In the left pane select **Commercial Marketplace > Analyze > Licensing** to go to licensing dashboard.
+1. Select the **Plan** and **Tenant** in the reporting widget to see the month wise usage.
+
+(Image)
+
+## Limitations
+
