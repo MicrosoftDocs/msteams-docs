@@ -9,7 +9,7 @@ ms.localizationpriority: none
 
 # Tabs link unfurling and Stage View
 
-Stage View is a user interface (UI) component, that allows you to render content opened in full screen in Teams and pinned as a tab. Now you can access Stage View in different chat window. It allows users to maintain their context within their new window experience while continuing  group chat conversation. <br> Developers has to enable Tab link Unfurling for their app to get Stage View update for free. Users are still able to pin the app content as a tab and it is a new entry point to pinning app content but it will not change the existing functionality of tabs or pinning.
+Stage View is a user interface (UI) component, that allows you to render content opened in full screen in Teams and pinned as a tab. Now you can access Stage View in different chat window. It allows users to maintain their context within their new window experience while continuing  group chat conversation. <br> Developers have to enable Tab link Unfurling for their app to get Stage View update for free. Users are still able to pin the app content as a tab. It's a new entry point to pinning app content but it will not change the existing functionality of tabs or pinning.
 
 ## Stage View
 
@@ -116,9 +116,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
 
 ### Examples
 
-When a user enters a URL, it's unfurled into an Adaptive card.
-
-Following are the deep link examples to invoke Stage View:
+When a user enters a URL, it's unfurled into an Adaptive card.Following are the deep link examples to invoke Stage View:
 
 <br>
 
