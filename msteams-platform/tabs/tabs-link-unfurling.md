@@ -15,8 +15,8 @@ Stage View is a user interface (UI) component, which allows you to render conten
 
 Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat services.
 
-* When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window.
-* When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
+* When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window
+* When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View
 
 ## Advantages of Stage View
 
@@ -25,9 +25,9 @@ Stage View is a full screen UI component that you can invoke to surface your web
 
 ## Limitations of Stage View
 
-* If a Stage View is already open, and the user clicks on another stage link in the same chat, it will replace the existing stage view
+* If a Stage View is already open, and the user clicks on another stage link in the same chat, it will replace the existing Stage View window
 
-* If a Stage View with chat is open and a meeting with the same chat gets started, Stage View window will get closed automatically. When the meeting ends, Stage View window will be restored.
+* If a Stage View with chat is open and a meeting with the same chat gets started, Stage View window will get closed automatically. When the meeting ends, Stage View window will be restored
 
 * If a Stage View link is opened from main window or pop out chat window, it will replace with the Stage View window with side chat pane
 
@@ -83,9 +83,9 @@ The `invoke` request type must be `composeExtension/queryLink`.
 
 > [!NOTE]
 >
-> * `invoke` workflow is similar to the current `appLinking` workflow.
-> * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
-> * `websiteUrl` is a required property to be passed in the `TabInfo` object.
+> * `invoke` workflow is similar to the current `appLinking` workflow
+> * To maintain consistency, it is recommended to name `Action.Submit` as `View`
+> * `websiteUrl` is a required property to be passed in the `TabInfo` object
 
 **To invoke Stage View**:
 
@@ -103,8 +103,8 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 > [!NOTE]
 > All deeplinks must be encoded before pasting the URL. We don't support unencoded URLs.
 >
-> * The `name` is optional in deep link. If not included, the app name replaces it.
-> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
+> * The `name` is optional in deep link. If not included, the app name replaces it
+> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope
 
 ### Syntax
 
