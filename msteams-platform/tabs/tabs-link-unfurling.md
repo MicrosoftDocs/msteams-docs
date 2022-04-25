@@ -9,7 +9,7 @@ ms.localizationpriority: none
 
 # Tabs link unfurling and Stage View
 
-Stage View is a user interface (UI) component, which allows you to render content opened in full screen in Teams and pinned as a tab. Now you can access Stage View in different chat window. It allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience. <br> For developers to enable this, they need to enable ‘Tab Link Unfurling’ for their app; if they've already done so, this Stage View update comes for free, with no more developer investment required. Users are still able to pin the app content as a tab. This is a new entry point to pinning app content but it will not change the existing functionality of tabs/pinning.
+Stage View is a user interface (UI) component, which allows you to render content opened in full screen in Teams and pinned as a tab. Now you can access Stage View in different chat window. It allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience. <br> For developers to enable this, they need to enable Tab Link Unfurling for their app; if they've already done so, this Stage View update comes for free, with no more developer investment required. Users are still able to pin the app content as a tab. This is a new entry point to pinning app content but it will not change the existing functionality of tabs/pinning.
 
 ## Stage View
 
@@ -110,7 +110,7 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 
 ### Syntax
 
-Following is the deeplink syntax:
+Following is the keeplink syntax:
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
 
@@ -158,7 +158,7 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 
 | Property name | Type | Number of characters | Description |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays. This is a required field.|
+| `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays and it is a required field.|
 | `name` | String | 128 | This property is the display name of the tab in the channel interface. This is an optional field.|
 | `contentUrl` | String | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
 | `websiteUrl?` | String | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
