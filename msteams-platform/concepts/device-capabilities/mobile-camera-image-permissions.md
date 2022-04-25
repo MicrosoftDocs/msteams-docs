@@ -12,7 +12,7 @@ ms.author: lajanuar
 
 You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams app, and build a richer experience. At present, the web browsers, desktop, and mobile apps support the media capability.
 
-## Advantages 
+## Advantages
 
 TThe primary advantage of integrating location capabilities in your Teams apps is to leverage native Teams controls to provide a rich and immersive experience to your users. To integrate media capabilities, you must update the app manifest file and call the media capability APIs.
 
@@ -93,7 +93,7 @@ You must use the following set of APIs to enable your device's media capabilitie
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in full-screen mode as a scrollable list.|
 
 > [!NOTE]
-> `selectMedia` API for accessing microphone capability supports on mobile only.
+> `selectMedia` API for accessing microphone capability supports for mobile clients only.
 
 ## Error handling
 
