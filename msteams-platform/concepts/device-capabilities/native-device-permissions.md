@@ -114,7 +114,7 @@ Leverage appropriate HTML5 or Teams API to display a prompt for getting consent 
 > [!IMPORTANT]
 >
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
-> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop client.
+> * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location.
 
 For example:
 
@@ -151,7 +151,7 @@ For example:
         } 
     ```
 
-* Notifications will prompt the user when you call `requestPermission()`:
+* Notifications prompts the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
@@ -227,19 +227,6 @@ For example:
 ## Permission behavior across login sessions
 
 Device permissions are stored for every login session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.  
-
-# [Desktop (angular)](#tab/desktop-angular)
-| **App level permission** | **Teams level permission, na** | **Teams level permission, yes** | **Teams level permission, no** |
-|---------------|--------------|--------|------|
-|No | • Show app specific permission prompt. (no longer required per new permission model implementation) </br> ![Tabs desktop device permissions](~/assets/images/tabs/allow-permission.png) </br> • If Teams doesn’t have location access, then provide it implicitly. </br> • User response: </br> a. Allow - launch API. </br> b. Deny - throw permission denied error. On subsequent calls to API show an alert dialog asking user to provide consent in permission settings page. </br>![Tabs desktop](~/assets/images/tabs/microphone.png) </br>|-|
-|Yes | If Teams doesn’t have location access, then provide it implicitly.|-|-|
-
-# [Web (angular)](#tab/web-angular)
-
-| **App level permission** | **Teams level permission, na** | **Teams level permission, yes** | **Teams level permission, no** |
-|---------------|--------------|--------|-------|
-|No | • Prompt #1 within Teams web client is shown </br> ![Tabs web device permissions](~/assets/images/tabs/allow-permission.png) </br> • If prompt #1 is allowed, then prompt #2 (browser) is shown when app tries to access location: `teams.microsoft.com wants to access your location.`</br> ![Tabs](~/assets/images/tabs/prompt2.png)</br> If either of the prompts is denied, then throw permission denied error.|Show prompt #1 |Throw permission denied error. App developer is expected to handle this error code and show a prompt. </br>![Device permissions](~/assets/images/tabs/dictationprompt.png) |
-|Yes | Browser prompt shown (prompt #2).|No prompt.|Throw permission denied error. App developer is expected to handle this error code and show a prompt. </br> ![Device](~/assets/images/tabs/dictationprompt.png)|
 
 > [!NOTE]
 > When you consent to the native device permissions, it is valid only for your _current_ login session.
