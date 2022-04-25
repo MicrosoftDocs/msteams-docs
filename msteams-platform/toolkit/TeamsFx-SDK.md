@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 TeamsFx helps to reduce the developer tasks of leveraging Teams SSO and access to cloud resources down to single line statements with zero configuration.
 
-Use the library to:
+Use the Teamsfx library to:
 * Access the core functionalities in client and server environment in a similar way
 * Write user authentication code in a simplified way
 
@@ -31,6 +31,11 @@ Ensure you have working knowledge of the following:
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
 * [API reference documentation](https://aka.ms/teamsfx-sdk-help)
 * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
+
+## Get started
+
+TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx toolkit or CLI.
+For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
 ### Install the `@microsoft/teamsfx` package
 
@@ -84,13 +89,22 @@ const graphClient = createMicrosoftGraphClient(teamsfx);
 const profile = await graphClient.api("/users/{object_id_of_another_people}").get(); // Get the profile of certain user
 ```
 
-## Core Concepts & Code Structure
+## Core concepts & code structure
 
 ### TeamsFx class
-`TeamsFx` class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Please check Override configuration for details.
+`TeamsFx` class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Please check Override configuration for details. (## Override configuration)
 
 When creating a TeamsFx instance, you also need to specify the identity type. 
-There are 2 identity types:
+There are two identity types:
+
+       **User Identity**
+       **Application Identity**
+
+| Command | Description |
+|----------------|-------------|
+| `new TeamsFx(IdentityType.User)`| Application is authenticated as current Teams user. |
+| `TeamsFx:setSsoToken()`| user identity in Node.js environment (without browser). |
+| `TeamsFx:getUserInfo()` | To get user's basis information. |
 
 #### User Identity
 Using `new TeamsFx(IdentityType.User)` means the application is authenticated as current Teams user. This one is the default choice. You need to call `TeamsFx:setSsoToken()` when you use user identity in Node.js environment (without browser).
@@ -107,9 +121,9 @@ Using `new TeamsFx(IdentityType.App)` means the application is authenticated as 
 
 ### Credential
 
-Developers must choose identity type when initializing TeamsFx. 
-SDK provides 2 types namely: User and App.
-After developer has specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
+You must choose identity type when initializing TeamsFx. 
+SDK provides two types: User and App.
+After you have specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
 
 There are 3 credential classes located under to help to simplify authentication. [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
