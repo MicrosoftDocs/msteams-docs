@@ -219,7 +219,7 @@ In this section, you'll learn:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
 
-    1. Enter the client ID for the Teams application.
+    1. Enter the client ID for the Teams client.
     2. Select the app ID you created for your app for the **Authorized scopes**.
     3. Select **Add application**.
 

@@ -42,7 +42,7 @@ Once Teams obtains the access token, it's cached and reused as needed. This toke
 
 ### Code for getAuthToken
 
-Add the following code to the Teams app to:
+Add the following code to the Teams client to:
 
 - Call `getAuthToken`.
 - Parse the access token or pass it to the server-side code.
@@ -67,7 +67,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
 
 > [!NOTE]
-> To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams app.
+> To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams client.
 > For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
 
 #### Teams mobile client
