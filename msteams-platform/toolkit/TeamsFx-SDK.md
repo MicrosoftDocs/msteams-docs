@@ -21,9 +21,7 @@ Use the Teamsfx library to:
 Install the following tools and set up your development environment:
 
 * Latest version of Node.js
-* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version
-  > [!NOTE] 
-  > Currently, the required version is 4.15.0 or later. For more information, see [bot builder packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
+* If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version. Currently, the required version is 4.15.0 or later, for more information, see [bot builder packages should be of the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548).
 
 Ensure you have working knowledge of the following:
 
