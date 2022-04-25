@@ -25,7 +25,7 @@ items:
     * Displays activity feed notification
     * Broadcasts details available for members
 
-    **The following are the requirements for sending activity feed notifications**:
+    **The requirements for sending activity feed notifications**:
 
     * The Teams app must be installed for the recipient, either personally, or in a team or chat
     * The Tenant ID for sending and receiving notifications must match
@@ -86,7 +86,7 @@ items:
        * Leave the **Redirect URI** empty
        * Select **Register**
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
 
     1. From the app **Overview** page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save the values for later use.
 
@@ -100,7 +100,7 @@ items:
      ngrok http -host-header=localhost 3978
      ```
      
-     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok2.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok2.png" alt-text="New registration" border="true":::
 
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
@@ -122,7 +122,7 @@ items:
         
        The following image shows the domain name:
         
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Save a link" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Save a link" border="true":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -130,7 +130,7 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
 
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
     1. Set **Who can consent** to `Admins and users`.
@@ -153,29 +153,29 @@ items:
        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaclient.png" alt-text="Add client" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaclient.png" alt-text="Add client" border="true":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png" alt-text="Add client for Teams mobile or desktop application" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication1.png" alt-text="Add client for Teams mobile or desktop application" border="true":::
 
        Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png" alt-text="Add client application for Teams web application" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addclientapplication2.png" alt-text="Add client application for Teams web application" border="true":::
 
     1. Select **Authorized scopes**.
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/authorizedscope.png" alt-text="Authroized scope" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/authorizedscope.png" alt-text="Authroized scope" border="true":::
 
        The following image displays the Client ID:
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
 
     1. In the left panel, select **API Permissions**. 
 
@@ -184,7 +184,7 @@ items:
 
     1. Select **Add a permission**.
 
-         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Add a permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Add a permission" border="true":::
 
     1. Select **Microsoft Graph**.
 
@@ -200,9 +200,9 @@ items:
           
     1. Select **Add permissions**.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Request permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Request permission" border="true":::
 
    
     1. Select **Add a permission**.
@@ -339,7 +339,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
     
     1. Go to **Microsoft Teams**.
 
@@ -357,7 +357,7 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png" alt-text="Add app" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png" alt-text="Add app" border="true":::
    
           The app is visible in the meeting SidePanel. 
 
@@ -373,7 +373,7 @@ items:
 
     1. The Message broadcasted successfully appears.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true":::
 
     1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID.  
 
