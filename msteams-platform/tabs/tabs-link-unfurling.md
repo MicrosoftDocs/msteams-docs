@@ -23,6 +23,14 @@ Stage View is a full screen UI component that you can invoke to surface your web
 * Provides enhanced experience to view content in Teams
 * Allows users to do multi-task within Teams in a separate window
 
+## Limitations of Stage View
+
+* If a Stage View is already open, and the user clicks on another stage link in the same chat, it will replace the existing stage view
+
+* If a Stage View with chat is open and a meeting with the same chat gets started, Stage View window will get closed automatically. When the meeting ends, Stage View window will be restored.
+
+* If a Stage View link is opened from main window or pop out chat window, it will replace with the Stage View window with side chat pane
+
 ## Stage View vs. Task module
 
 |Stage View|Task module|
