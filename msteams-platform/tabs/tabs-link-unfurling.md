@@ -9,11 +9,11 @@ ms.localizationpriority: none
 
 # Tabs link unfurling and Stage View
 
-Stage View is a user interface (UI) component, which allows you to render content opened in full screen in Teams and pinned as a tab. Now you can access Stage View in different chat window. It allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience. <br> For developers to enable this, they need to enable ‘Tab Link Unfurling’ for their app; if they have already done so, this Stage View update comes for free, with no additional developer investment required. Users are still able to pin the app content as a tab. This is a new entry point to pinning app content but it will not change the existing functionality of tabs/pinning.
+Stage View is a user interface (UI) component, which allows you to render content opened in full screen in Teams and pinned as a tab. Now you can access Stage View in different chat window. It allows users to continue their group chat conversation side-by-side, so that they can maintain their context while keeping productive within their new window experience. <br> For developers to enable this, they need to enable ‘Tab Link Unfurling’ for their app; if they've already done so, this Stage View update comes for free, with no more developer investment required. Users are still able to pin the app content as a tab. This is a new entry point to pinning app content but it will not change the existing functionality of tabs/pinning.
 
 ## Stage View
 
-Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat services.
+Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it's used to turn URLs into a tab using an Adaptive Card and Chat services.
 
 * When users invoke Stage View from Adaptive cards within chats, Stage View opens in a new window
 * When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View
@@ -27,17 +27,17 @@ Stage View is a full screen UI component that you can invoke to surface your web
 
 ## Limitations of Stage View
 
-* If a Stage View is already open, and the user clicks on another stage link in the same chat, it will replace the existing Stage View window
+* If a Stage View is already open, and the user selects on another stage link in the same chat, it will replace the existing Stage View window
 
 * If a Stage View with chat is open and a meeting with the same chat gets started, Stage View window will get closed automatically. When the meeting ends, Stage View window will be restored
 
-* If a Stage View link is opened from main window or pop out chat window, it will replace with the Stage View window with side chat pane
+* If a Stage View link is opened from main window or pops out chat window, it will replace with the Stage View window with side chat pane
 
 ## Stage View vs. Task module
 
 |Stage View|Task module|
 |:-----------|:-----------|
-|Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that helps to render your content in the new pop up window.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+|Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the new pop-up window.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
   
 ## Invoke Stage View
 
@@ -116,7 +116,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
 
 ### Examples
 
-When a user enters a URL, it is unfurled into an Adaptive card.
+When a user enters a URL, it's unfurled into an Adaptive card.
 
 Following are the deep link examples to invoke Stage View:
 
@@ -128,7 +128,7 @@ URL with threadId
 
 Unencoded URL:
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 Encoded URL:
 
@@ -144,7 +144,7 @@ URL without threadId
 
 Unencoded URL:
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous"}
 
 Encoded URL:
 
