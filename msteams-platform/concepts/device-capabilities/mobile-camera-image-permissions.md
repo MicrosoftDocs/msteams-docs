@@ -43,9 +43,9 @@ The `selectMedia` API allows user to capture images on mobile using the followin
 
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile." border="true":::
 
-The `selectMedia` API for microphone capability om mobile using the following steps:
+The `selectMedia` API for microphone capability allows user to record audio on mobile using the following steps:
 
-1. Select on Record description button.
+1. Select Record description button.
 1. The recording bar shows progression at the bottom of the mobile.
 1. Recorded audio gets returned back to the app.
 
@@ -90,6 +90,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media
 >
 > * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more details, see [Entry points for Teams apps](../extensibility-points.md).</br>
 > * `selectMedia` API has been extended to support microphone and audio properties.
+> * `selectMedia` API for accessing microphone capability supports for mobile clients only.
 
 You must use the following set of APIs to enable your device's media capabilities:
 
@@ -100,8 +101,6 @@ You must use the following set of APIs to enable your device's media capabilitie
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in full-screen mode as a scrollable list.|
 
-> [!NOTE]
-> `selectMedia` API for accessing microphone capability supports for mobile clients only.
 
 ## Error handling
 
