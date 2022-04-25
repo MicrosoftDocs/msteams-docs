@@ -94,28 +94,6 @@ If you need to access web APIs on your server, you'll need to pass the access to
 
 If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
 
-### Code for passing access token to server-side
-
-The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you are not writing to the server.
-
-```javascript
-$.ajax({
-    type: "POST",
-    url: "/api/DoSomething",
-    headers: {
-        "Authorization": "Bearer " + accessToken
-    },
-    data: { /* some JSON payload */ },
-    contentType: "application/json; charset=utf-8"
-}).done(function (data) {
-    // Handle success
-}).fail(function (error) {
-    // Handle error
-}).always(function () {
-    // Cleanup
-});
-```
-
 ### Validate the access token
 
 Web APIs on your server must validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
@@ -175,6 +153,28 @@ Teams can cache this information associated with the user's identity; such as th
 
 > [!NOTE]
 > If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
+
+### Code for passing access token to server-side
+
+The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you are not writing to the server.
+
+```javascript
+$.ajax({
+    type: "POST",
+    url: "/api/DoSomething",
+    headers: {
+        "Authorization": "Bearer " + accessToken
+    },
+    data: { /* some JSON payload */ },
+    contentType: "application/json; charset=utf-8"
+}).done(function (data) {
+    // Handle success
+}).fail(function (error) {
+    // Handle error
+}).always(function () {
+    // Cleanup
+});
+```
 
 ## Code sample
 
