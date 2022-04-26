@@ -389,7 +389,7 @@ setLogFunction((level: LogLevel, message: string) => {
 ```
 
 ## Override configuration
-You can pass custom config when creating `TeamsFx` instance to override default configuration or set required fields when environment variables are missing.
+You can pass custom config when creating TeamsFx instance to override default configuration or set required fields when environment variables are missing.
 
 - If you have created tab project using VS Code Toolkit, the following config values will be used from pre-configured environment variables:
   * authorityHost (REACT_APP_AUTHORITY_HOST)
@@ -414,7 +414,7 @@ You can pass custom config when creating `TeamsFx` instance to override default 
   * sqlDatabaseName (SQL_DATABASE_NAME)
   * sqlIdentityId (IDENTITY_ID)
 
-## Upgrade the latest SDK version
+## Upgrade latest SDK version
 
 If you are using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
 1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`
