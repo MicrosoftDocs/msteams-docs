@@ -81,7 +81,7 @@ The following table lists the common scenarios to customized the resource provis
 
 ## Scenarios
 
-There are four scenarios explained to customized the resources provision.
+There are four scenarios to customized the resources provision in different environments.
 <br>
 
 <details>
@@ -177,15 +177,7 @@ Perform the following steps for customization:
 <br>
 
 <details>
-<summary><b>Scenario 3: customize Azure resources for different environment</b></summary>
-You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to `.fx/configs/azure.parameters.{env}.json` file.
-
-For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
-</details>
-<br>
-
-<details>
-<summary><b>Scenario 4: Customize Teams app description for all environments</b></summary>
+<summary><b>Scenario 3: Customize Teams app description for all environments</b></summary>
 
 In this scenario, you will learn how to set the description of Teams app to `my app description` for all the environments.
 
@@ -208,9 +200,19 @@ As the Teams app manifest template is shared across all environments, we can upd
     },
     ...
   }
-
+ ```
 3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 <br></details>
+
+<details>
+<summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
+You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to `.fx/configs/azure.parameters.{env}.json` file.
+
+For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
+</details>
+<br>
+
+
 
 ## See also
 
