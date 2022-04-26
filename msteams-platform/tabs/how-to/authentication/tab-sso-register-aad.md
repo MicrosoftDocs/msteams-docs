@@ -13,9 +13,15 @@ Your Teams app users are authenticated and authorized by Azure AD for using your
 
 Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, permissions, and more.
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. These configurations will enable SSO for your app in Teams.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client ID for the mobile, desktop, and web application that you want to pre-authorize 
+
+You'll need to authorize client IDs for mobile, desktop, and web application.
+
+These configurations will enable SSO for your app in Teams.
 
 You may also need to configure additional configuration for authenticating users on the platform or device where you want to target your app.
+
+### Before you register with Azure AD
 
 It's helpful to learn about the configuration required for registering your app on Azure AD. It includes the following:
 
@@ -33,7 +39,7 @@ The tasks involved in registering a Teams tab app that uses SSO are language- an
 
 > [!IMPORTANT]
 > There are some important restrictions that you must know:
-> 
+>
 > - Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 > - Your application's domain name should be the same as the domain name you've registered for your Azure AD application.
 > - Currently, multiple domains per app are not supported.
@@ -120,7 +126,9 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 ## Configure scope and permission
 
-After you've created a new registration, configure scope and permission options for your app. To do this, you'll expose a web API, and configure the app ID URI. Define scope for the API, and configure the users who can consent for a scope. You'll then create an authorized client app for the applications that you want to authorize for your app’s web application, and configure a trust relationship with the API you exposed earlier. This enables the user to access the app resources without any further consent.
+After you've created a new registration, configure scope and permission options for your app. To do this, you'll expose a web API, and configure the app ID URI. Define scope for the API, and configure the users who can consent for a scope.
+
+You'll then create an authorized client app for the applications that you want to pre-authorize for your app’s web application, and configure a trust relationship with the API you exposed earlier. This enables the user to access the app scopes (permissions) you've configured without requiring any further consent. Pre-authorize only those client applications you trust since your users won't have the opportunity to decline consent.
 
 You can let only admins provide consent for higher-privileged permissions.
 
