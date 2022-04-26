@@ -127,7 +127,7 @@ There are two identity types:
 | `TeamsFx:getCredential()`| Its provides credential instances automatically corresponding to identity type. |
 
 > [!NOTE]
-> You are acting as a managed app identity which needs admin consent for resources.
+> You need admin consent for resources.
 
 ### Credential
 
@@ -423,11 +423,11 @@ If you are using the version of SDK that has `loadConfiguration()`, you can foll
 4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new TeamsFx().setSsoToken(ssoToken)`
 5. Pass the instance of `TeamsFx` to helper functions to replace credential instance
 
-Also see [TeamsFx class](#teamsfx-class) for furthur description.
+For more information, see [TeamsFx class](#teamsfx-class).
 
-## Next steps
+## Next step
 
-Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
+[Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use TeamsFx SDK.
 
 ## See also
 
