@@ -44,7 +44,8 @@ landingContent:
         url: ~/overview.md
       - text: Plan your app
         url: ~/concepts/app-fundamentals-overview.md  
-
+      - text: Integrate location capabilities
+        url: ~/concepts/device-capabilities/location-capability.md
       
 
 - title: Get started
