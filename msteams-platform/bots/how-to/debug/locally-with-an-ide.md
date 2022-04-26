@@ -22,7 +22,7 @@ There are two methods for uploading your app:
 
 > [!NOTE]
 > To alter the manifest and re-upload your app, [delete the bot](#delete-a-bot-from-teams) before uploading the altered app package.
-> To test the bot, enable sideloading in Teams. See [enable sideloading](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> To test the bot, enable sideloading in Teams. See [enable sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## Debug your bot locally
 
