@@ -16,7 +16,7 @@ items:
   content: |
     Start Microsoft Teams app development by building your first app with a tab, a bot, and a message extension capability.
 
-    >This app will have all capabilities and each has its own UI and UX:
+    > This app will have all capabilities and each has its own UI and UX:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
 
@@ -358,7 +358,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
-    1. Open the app package **helloworldapp.zip** from the following path in your C# sample repo directory structure:
+    1. Open the app package `helloworldapp.zip` from the following path in your C# sample repo directory structure:
 
         `<path to cloned node.js sample repo>\Source\Repos\Microsoft-Teams-Samples\samples\app-hello-world\nodejs\manifest`
 
