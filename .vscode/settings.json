@@ -1,8 +1,21 @@
 {
     "cSpell.words": [
         "addpart",
+
         "buildbots",
         "channles",
+
+        "anclear",
+        "appsource",
+        "Chatbots",
+        "Contoso",
+        "lajanuar",
+        "laujan",
+        "localizationpriority",
+        "microsoftteams",
+        "nextstepaction",
+        "officedev",
+
         "sideload",
         "sideloaded",
         "sideloading",
@@ -14,5 +27,6 @@
         "MD025": {
             "front_matter_title": ""
         }
-    }
+    },
+    "docsImages.maxWidth": 0
 }

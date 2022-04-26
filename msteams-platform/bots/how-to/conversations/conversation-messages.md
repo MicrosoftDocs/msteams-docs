@@ -377,7 +377,7 @@ Form completion message appears in Adaptive Cards while sending a response to th
 
     :::image type="content" source="~/assets/images/buildbots-revamp/success-bot.png" alt-text="Success message.":::
 
-You can select **Close** or switch chat to dismiss the message.    
+You can select **Close** or switch chat to dismiss the message.
 
 **Response on mobile**:
 

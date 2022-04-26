@@ -88,7 +88,10 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
 | Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+
 | Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+
+
 
 ## Next step
 
@@ -104,3 +107,9 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 * [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
 * [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
 * [Technical information on handling incoming call notifications](./call-notifications.md)
+
+
+* [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Teams recording policy](/MicrosoftTeams/teams-recording-policy)
+

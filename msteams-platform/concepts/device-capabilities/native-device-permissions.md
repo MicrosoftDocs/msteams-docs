@@ -11,6 +11,7 @@ ms.topic: how-to
 You can enrich your Teams app with native device capabilities, such as camera, microphone, and location. This document guides you on how to request user consent and access the native device permissions.
 
 > [!NOTE]
+>
 > * To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
 > * To integrate location capabilities within your Microsoft Teams mobile app, see [Integrate location capabilities](location-capability.md).
@@ -27,7 +28,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Use the location information of the user to display relevant information.
 
 > [!NOTE]
-> * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.    
+> * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Access device permissions
@@ -114,23 +115,25 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 Leverage appropriate HTML5 or Teams API, to display a prompt for getting consent to access device permissions.
 
 > [!IMPORTANT]
+>
 > * Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true). Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.
 > * Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true). You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop client.
 
 For example:
- * To prompt the user to access their location you must call `getCurrentPosition()`:
+
+* To prompt the user to access their location you must call `getCurrentPosition()`:
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
- * To prompt the user to access their camera on desktop or web you must call `getUserMedia()`:
+* To prompt the user to access their camera on desktop or web you must call `getUserMedia()`:
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
- * To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
+* To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
 
     ```JavaScript
             function captureImage() {
@@ -151,7 +154,7 @@ For example:
         } 
     ```
 
- * Notifications will prompt the user when you call `requestPermission()`:
+* Notifications will prompt the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
@@ -206,7 +209,7 @@ For example:
 
 * To prompt the user to share location on the map interface, Teams mobile asks permission when you call `getLocation()`:
 
-    ```JavaScript 
+    ```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
          let currentLocation = JSON.stringify(location);

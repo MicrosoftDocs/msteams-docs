@@ -119,7 +119,7 @@ conceptualContent:
         - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
           itemType: reference
           text: Build scenarios for Teams apps
-        - url:  https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+        - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
           itemType: reference
           text: Best practices for Teams app scenarios
       
@@ -155,7 +155,7 @@ conceptualContent:
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams community calls
-        - url: https://docs.microsoft.com/en-us/teamblog/
+        - url: https://docs.microsoft.com/teamblog/
           itemType: whats-new
           text: Announcements
         - url: /microsoftteams/platform/feedback
@@ -174,7 +174,7 @@ conceptualContent:
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: IT professionals
-        - url: https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics
+        - url: https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b
           itemType: concept
           text: End users
 

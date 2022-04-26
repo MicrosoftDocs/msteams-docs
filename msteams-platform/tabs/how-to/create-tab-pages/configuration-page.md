@@ -94,7 +94,7 @@ The following image displays the tab content with **Red** icon selected:
 
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
-* Set `settings.setValidityState(true)` to true. 
+* Set `settings.setValidityState(true)` to true.
 * The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 * **Save** on the app's configuration page, is enabled.
 

@@ -43,7 +43,7 @@ Using integers for `TaskInfo.width` and `TaskInfo.height`, sets the height and w
 
 If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
 
-![Task module example](~/assets/images/task-module/task-module-example.png)
+:::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="task module example":::
 
 Task modules invoked from a tab can be dynamically resized. After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo specification, for example `{ height: 'medium', width: 'medium' }`.
 
@@ -53,11 +53,11 @@ The next section provides examples of embedding task modules in a YouTube video 
 
 HTML or JavaScript-based task modules have access to the entire area of the task module below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, the user must provide the right CSS. The next sections provide some examples for a few use cases.
 
-**Example 1: YouTube video**
+### Example 1: YouTube video
 
 YouTube offers the ability to embed videos on web pages. It is easy to embed videos on web pages in a task module using a simple stub web page.
 
-![YouTube video](~/assets/images/task-module/youtube-example.png)
+:::image type="content" source="../../assets/images/task-module/youtube-example.png" alt-text="Youtube example":::
 
 The following code provides an example of the HTML for the web page without the CSS:
 
@@ -92,11 +92,11 @@ The following code provides an example of the CSS:
 }
 ```
 
-**Example 2: PowerApp**
+### Example 2: PowerApp
 
 The user can use the same approach to embed a PowerApp as well. As the height or width of any individual PowerApp is customizable, the user can adjust the height and width to achieve the desired presentation.
 
-![Asset management PowerApp](~/assets/images/task-module/powerapp-example.png)
+:::image type="content" source="../../assets/images/task-module/powerapp-example.png" alt-text="powerapp":::
 
 The following code provides an example of the HTML for PowerApp:
 
@@ -203,7 +203,7 @@ The next section provides details on using a keyboard with your app's task modul
 
 With HTML or JavaScript-based task modules, you must ensure your app's task module can be used with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. This includes the following two things:
 
-* Using the [tabindex attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused. Also, use tabindex attribute to identify where it participates in sequential keyboard navigation usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
+* Using the [tabindex attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused. Also, use tabindex attribute to identify where it participates in sequential keyboard navigation usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
 * Handling the <kbd>Esc</kbd> key in the JavaScript for your task module. The following code provides an example of how to handle the <kbd>Esc</kbd> key:
 
     ```javascript
@@ -222,7 +222,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 |Sample name | Description | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
 |Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-|Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
 ## Next step
 
