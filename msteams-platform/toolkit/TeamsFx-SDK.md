@@ -227,10 +227,6 @@ const profile = await graphClient.api("/me").get();
 
 <br>
 
-### Call Azure Function in tab app
-
-<br>
-
 <details>
 <summary><b>Call Azure Function in tab app</b></summary>
 
