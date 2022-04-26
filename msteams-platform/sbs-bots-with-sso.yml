@@ -365,10 +365,7 @@ items:
 - title: Configure and run your bot sample
   durationInMinutes: 1
   content: |
-    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams.
-
-    **To configure and run your bot sample**
-
+    
     1. Open **Visual Studio**.
 
     1. Select **Clone a repository**.
