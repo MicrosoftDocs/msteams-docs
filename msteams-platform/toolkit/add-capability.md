@@ -16,7 +16,7 @@ You can create a new Teams app with one of the Teams app capabilities. During ap
 |--------|-------------|
 | Tabs |  Tabs are simple HTML tags that point to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
-| Messaging extensions | Messaging extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
+| Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
 
 ## Prerequisite
 
@@ -57,7 +57,7 @@ The selected capabilities are succesfully added to your project. The Teams Toolk
    |-----------------------|----------|
    |To add tab|`teamsfx capability add tab`|
    |To add bot|`teamsfx capability add bot`|
-   |To add messaging extension|`teamsfx capability add messaging-extension`|
+   |To add message extension|`teamsfx capability add messaging-extension`|
 
 ## Supported capabilities matrix
 
@@ -66,17 +66,17 @@ Apart from the capabilities your Teams app already have, you can choose to add d
 |Existing capabilities|Other supported capabilities can be added|
 |--------------------|--------------------|
 |Tabs with SPFx|None|
-|Tabs with Azure|Bot and messaging extension|
+|Tabs with Azure|Bot and message extension|
 |Bot|Tabs|
-|Messaging extension|Tabs and bot|
+|Message extension|Tabs and bot|
 |Tabs and bot|Tabs and message extension|
-|Tabs and messaging extension|Tabs and bot|
-|Tabs, bot, and messaging extension|Tabs|
+|Tabs and message extension|Tabs and bot|
+|Tabs, bot, and message extension|Tabs|
 |Tabs |Bot and message extension|
 
 ## Add capabilities
 
-After adding bot and messaging extension, the changes in your project are as follows:
+After adding bot and message extension, the changes in your project are as follows:
 
 * A bot template code is added into a subfolder with path `yourProjectFolder/bot`. This includes a **hello world** bot application template into your project.
 * `launch.json` and `task.json` under `.vscode` folder are updated, which includes necessary scripts for Visual Studio Code, and is executed when you want to debug your application locally.
@@ -102,7 +102,7 @@ After adding tab, the changes in your project are as follows:
 The limitations to TeamsFx while adding more capabilities are as follows:
 
 * You can add tabs up to 16 instances.
-* You can add bot and messaging extension for one instance each.
+* You can add bot and message extension for one instance each.
 
 ## See also
 
