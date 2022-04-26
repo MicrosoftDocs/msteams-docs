@@ -144,7 +144,7 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 | --- | --- | --- |
 |  Tab |  **Start Frontend** |  tabs |
 |  Bot or messaging extensions |  **Start Bot** |  bot |
-|  Azure Functions |  **Start Backend** |  api |
+|  Azure Functions |  **Start Backend** |  API |
 
 The following image displays task names on the **Output** **Terminal** tab of the Visual Studio Code while running tab, bot or messaging extension, and Azure Functions.
 

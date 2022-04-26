@@ -72,21 +72,23 @@ After previewing the `manifest` file, you can sync your local changes to Dev por
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
 
-* Trigger from editor codelens or **title** will update current manifest file to Teams platform
+* Trigger from editor codelens or **title**  updates current manifest file to Teams platform
 * Trigger from command palette requires selecting target environment
 
   
 
-If the manifest file is outdated due to configuration file change or template change, ensure to confirm the following action:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
+If the manifest file is outdated due to configuration file change or template change, select any one of the following action:
 
 * **Preview only**: Local manifest file is overwritten according to current configuration
 * **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform
 * **Cancel**: No action is taken
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
+
+
+
 > [!NOTE]
-> The changes are updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
+> The changes are updated in Dev Portal. Any manual updates in dev portal are  overwritten.
 
 ## See also
 
