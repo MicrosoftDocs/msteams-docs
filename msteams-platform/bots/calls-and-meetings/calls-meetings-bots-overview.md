@@ -105,3 +105,4 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 * [Technical information on handling incoming call notifications](./call-notifications.md)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Teams recording policy](/MicrosoftTeams/teams-recording-policy)
