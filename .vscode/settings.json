@@ -4,8 +4,10 @@
         "anclear",
         "appsource",
         "Appstore",
+        "botid",
         "Chatbots",
         "Contoso",
+        "debugcheck",
         "lajanuar",
         "laujan",
         "localizationpriority",
@@ -15,8 +17,11 @@
         "sideload",
         "sideloaded",
         "sideloading",
+        "surbhigupta",
+        "teamsfx",
         "Webpart",
-        "webparts"
+        "webparts",
+        "zyxiaoyuer"
     ],
     "markdownlint.config": {
         "MD028": false,
