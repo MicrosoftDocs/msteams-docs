@@ -365,7 +365,6 @@ items:
 - title: Configure and run your bot sample
   durationInMinutes: 1
   content: |
-    
     1. Open **Visual Studio**.
 
     1. Select **Clone a repository**.
