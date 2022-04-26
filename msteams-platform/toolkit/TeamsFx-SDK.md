@@ -10,13 +10,13 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce the developer tasks by leveraging Teams SSO and access to cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
+TeamsFx helps to reduce the developer tasks by leveraging Teams SSO and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
 
 * Teams tab application
 * Azure Function
 * Teams bot
 
-You can use the TeamsFx library to:
+You can use the TeamsFx SDK to:
 
 * Access the core functionalities in client and server environment 
 * Write user authentication code in a simplified way
@@ -210,8 +210,11 @@ try {
 
 The following section provides several code snippets for common scenarios:
 
-### Use Graph API in tab app
+<br>
 
+<details>
+<summary><b>Use Graph API in tab app</b></summary>
+ 
 Use `TeamsFx` and `createMicrosoftGraphClient`.
 
 ```ts
@@ -236,7 +239,13 @@ const response = await axios.default.get(apiEndpoint + "api/httptrigger1", {
 });
 ```
 
-### Access SQL database in Azure Function
+</details>
+
+<br>
+
+<details>
+<summary><b>Access SQL database in Azure Function</b></summary>
+
 
 Use `tedious` library to access SQL and leverage `DefaultTediousConnectionConfiguration` that manages authentication.
 Apart from `tedious`, you can also compose connection config of other SQL libraries based on the result of `sqlConnectionConfig.getConfig()`.
