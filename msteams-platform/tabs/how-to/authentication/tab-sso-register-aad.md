@@ -161,7 +161,7 @@ In this section, you'll learn:
 
     > [!IMPORTANT]
     >
-    > - If you're building an app with a bot, a messaging extension, and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/clientid-{YourclientId}`, where the ID is your bot app ID.
+    > - If you're building an app with a bot, a messaging extension, and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
     > - Use lower case letters for domain name. Don't use upper case.
     >
     >   For example, to create an app service or web app, enter base resource name as *demoapplication*. Then, the URL will be https://demoapplication.azurewebsites.net. This format is supported for all platforms.
