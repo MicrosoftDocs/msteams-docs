@@ -38,7 +38,7 @@ After creating a new project, Teams Toolkit by default creates:
 **To add another remote environment**:
 
 1. Select the **Teams** icon in the sidebar
-2. Select **+ Teams: Create new environment** under the Environment section as shown in the following image:
+2. Select **+Teams: Create new environment** under the Environment section as shown in the following image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
 
@@ -65,11 +65,11 @@ After creating the project, you can view the project folders and files in the ex
   * `appPackage`: app manifest template files
   * `azure`: Bicep template files
 
-## Customize the resource provision
+## Customize resource provision
 
 Teams Toolkit allows you to change the configuration files and template files to customize the resource provision in each environment.
 
-The following table lists the common scenarios to customized the resource provision:
+The following table lists the common scenarios for customized resource provision:
 
 | Scenarios | Location| Description |
 | --- | --- | --- |
@@ -84,7 +84,7 @@ The following table lists the common scenarios to customized the resource provis
 There are four scenarios to customized the resources provision in different environments.
 <br>
 
-<details>
+<br><details>
 <summary><b>Scenario 1: Customize Teams app name for  different environment
 </b></summary>
 
@@ -201,16 +201,17 @@ As the Teams app manifest template is shared across all environments, we can upd
     ...
   }
  ```
-3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+3. Run the provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit)
 <br></details>
-
+<br>
 <details>
-<summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
-You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to `.fx/configs/azure.parameters.{env}.json` file.
+<br><summary><b>Scenario 4: customize Azure resources for different environment</b></summary>
+You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to 
+fx/configs/azure.parameters.{env}.json. file.
 
 For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
 </details>
-<br>
+<br
 
 
 

@@ -63,7 +63,7 @@ If there are more than one environment, you need to select the environment you w
 
 ## Sync local changes to Developer Portal
 
-After previewing the `manifest` file, you can sync your local changes to Dev portal by following the steps:
+After previewing the manifest file, you can sync your local changes to Developer Portal by following the steps:
 
 1. Select **Update to Teams platform** on the top left corner of `manifest.{env}.json`
 2. Select **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
@@ -72,8 +72,8 @@ After previewing the `manifest` file, you can sync your local changes to Dev por
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
 
-* Trigger from editor codelens or **title**  updates current manifest file to Teams platform
-* Trigger from command palette requires selecting target environment
+> [!NOTE]
+> Trigger from editor codelens or **title**  updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment
 
   
 

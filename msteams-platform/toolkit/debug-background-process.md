@@ -12,13 +12,13 @@ ms.date: 03/03/2022
 
 The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in VS Code, then the VS Code launches the debuggers, and Microsoft Edge or Chrome debugger launches a new browser instance as follows:
 
-1. The `launch.json` file configures the debugger in VS Code. 
+1. The `launch.json` file configures the debugger in VS Code
 
-2. VS Code runs the compound **preLaunchTask**, **Pre Debug Check & Start All** in `.vscode/tasks.json` file.
+2. VS Code runs the compound **preLaunchTask**, **Pre Debug Check & Start All** in `.vscode/tasks.json` file
 
-3. VS Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
+3. VS Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**
 
-4.  Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client.
+4.  Microsoft Edge or Chrome debugger launches a new browser instance and opens a web page to load Teams client
 
 ## Prerequisites
 
@@ -34,15 +34,15 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Messaging extension | 10, 12, **14 (recommended)**, 16 |
 
    
-* Microsoft 365 account with valid credentials, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in.
+* Microsoft 365 account with valid credentials, the Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in
 
-* Custom app uploading or sideloading for your developer tenant is turned on, if not then the local debug terminates.
+* Custom app uploading or sideloading for your developer tenant is turned on, if not then the local debug terminates
 
-* Ngrok binary version 2.3 is applicable for bot and messaging extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* Ngrok binary version 2.3 is applicable for bot and messaging extension, if Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`
 
-* Azure Functions Core Tools version 3, if Azure Functions Core Tools is'nt installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* Azure Functions Core Tools version 3, if Azure Functions Core Tools is'nt installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates
 
-* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK is'nt installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates.
+* .NET Core SDK version applicable for Azure Functions, if .NET Core SDK is'nt installed or the version  doesn't match the requirement, the Teams Toolkit installs .NET Core SDK for Windows and MacOS in `~/.fx/bin/dotnet`. For Linux, the local debug terminates
 
   The following table lists the .NET Core versions:
 
@@ -51,15 +51,15 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Windows, macOs (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* Development certificate, if the development certificate for localhost is'nt installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.
+* Development certificate, if the development certificate for localhost is'nt installed for tab in Windows or macOS, the Teams toolkit prompts you to install it
 
-* Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions is not installed, the Teams Toolkit installs Azure Functions binding extensions.
+* Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions is not installed, the Teams Toolkit installs Azure Functions binding extensions
 
-* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is'nt installed, the Teams Toolkit installs all NPM packages.
+* NPM packages, applicable for tab app, bot app, messaging extension app, and Azure Functions. If NPM is'nt installed, the Teams Toolkit installs all NPM packages
 
-* Bot and messaging extension, the Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and messaging extension.
+* Bot and messaging extension, the Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and messaging extension
 
-* Ports available, if tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates.
+* Ports available, if tab, bot, messaging extension, and Azure Functions ports are unavailable, the local debug terminates
 
   The following table lists the ports available for components:
 
@@ -111,26 +111,26 @@ When you select **Start Debugging (F5)**, the Teams Toolkit output channel displ
 
 In the set up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application.
+1. [Registers and configures Azure AD application](#registers-and-configures-azure-ad-application): Teams Toolkit registers and configures your Azure AD application
 
-1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or messaging extension app.
+1. [Registers and configures bot](#registers-and-configures-bot): Teams Toolkit registers and configures your bot for tab or messaging extension app
 
-1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app.
+1. [Registers and configures Teams app](#registers-and-configures-teams-app): Teams Toolkit registers and configures your Teams app
 
 ### Registers and configures Azure AD application
 
-1. Registers an Azure AD application.
+1. Registers an Azure AD application
 
-1. Creates a Client Secret.
+1. Creates a Client Secret
 
-1. Exposes an API.
+1. Exposes an API
 
-    a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or messaging extension,  `api://botid-{botid}`.
+    a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or messaging extension,  `api://botid-{botid}`
 
-    b. Adds a scope named `access_as_user`. Enables it for **Admin and users**.
+    b. Adds a scope named `access_as_user`. Enables it for **Admin and users**
 
 
-4. Configures API permissions. Adds Microsoft Graph permission to **User.Read**.
+4. Configures API permissions. Adds Microsoft Graph permission to **User.Read**
 
     The following table lists the configuration of the authentication as follows:
     
@@ -140,32 +140,32 @@ In the set up process, Teams Toolkit prepares the following registrations and co
       | Bot or messaging extension | `https://ngrok.io/auth-end.html` | NA |
   
 
-The following table lists the configurations of Microsoft 365 client application with the client Ids:
-
-  | Microsoft 365 client application |  Client ID  |
-  | --- | --- |
-  | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-  | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-  | Office.com | 4345a7b9-9a63-4910-a426-35363201d503 |
-  | Office.com | 4765445b-32c6-49b0-83e6-1d93765276ca |
-  | Office desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-  | Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-  | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-  | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
-
+    The following table lists the configurations of Microsoft 365 client application with the client Ids:
+    
+      | Microsoft 365 client application |  Client ID  |
+      | --- | --- |
+      | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+      | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+      | Office.com | 4345a7b9-9a63-4910-a426-35363201d503 |
+      | Office.com | 4765445b-32c6-49b0-83e6-1d93765276ca |
+      | Office desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+      | Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+      | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+      | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    
 ### Registers and configures bot 
 
 For tab app or messaging extension app:
 
-1. Registers an Azure AD application.
+1. Registers an Azure AD application
 
-1. Creates a Client Secret for the Azure AD application.
+1. Creates a Client Secret for the Azure AD application
 
-1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
+1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application
 
-1. Adds Microsoft Teams channel.
+1. Adds Microsoft Teams channel
 
-1. Configures messaging endpoint as `https://{ngrokTunnelId}.ngrok.io/api/messages`.
+1. Configures messaging endpoint as `https://{ngrokTunnelId}.ngrok.io/api/messages`
 
 ### Registers and configures Teams app
 

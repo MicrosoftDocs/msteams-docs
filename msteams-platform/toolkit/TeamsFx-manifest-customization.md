@@ -26,7 +26,7 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 During local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`,  with configurations from `state.{env}.json`, `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 
-## Placeholder supported in manifest.template.json
+## Placeholders supported in manifest.template.json
 
 * `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json
 * `{{config.manifest.xx}}` is customized placeholder and it's value is resolved from `config.{env}.json`
