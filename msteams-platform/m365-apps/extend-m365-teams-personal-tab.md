@@ -115,7 +115,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 |--|--|
 | Teams | `teams.microsoft.com` |
 | Office | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com` |
+| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## Update Azure AD app registration for SSO
 
@@ -134,7 +134,6 @@ In the **Authorized client applications** section, ensure all of the following `
 |--|--|
 |Teams desktop, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
 |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4345a7b9-9a63-4910-a426-35363201d503|
 |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
 |Office desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
 |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
@@ -168,9 +167,9 @@ You can pin the app for quick access, or you can find your app in the ellipses (
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
-When you upgrade your Teams personal tab and sideload it in Teams, it will also run in Outlook desktop and web clients and Office on the web (office.com). Here's how to preview it from those Microsoft 365 experiences.
+When you upgrade your Teams personal tab and sideload it in Teams, it runs in Outlook on Windows, on the web, Office on Windows and on the web (office.com). Here's how to preview it from those Microsoft 365 experiences.
 
-### Outlook
+### Outlook on Windows
 
 To view your app running in Outlook on Windows desktop:
 
@@ -190,7 +189,7 @@ To view your app in Outlook on the web:
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
 
-### Office
+### Office on Windows
 
 To view your app running in Office on Windows desktop:
 

@@ -2,7 +2,7 @@
 title: Send Proactive Messages
 metadata:
   title: Send Proactive Messages
-  description: In this scenario, you'll learn how to send proactive messages
+  description: In this module, learn how to send proactive messages, such as welcome messages, scheduled messages, and notifications from a bot
   audience: Developer
   level: Beginner
   ms.date: 06/23/2021
@@ -35,7 +35,7 @@ items:
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
     * [ASP.NET and web development](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer), or [.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer) cross-platform development workload.
     * [ngrok](https://ngrok.com/download): A cross-platform application that enables you to expose a local development server to the internet with minimal effort.
-    * [Get a free Teams developer tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+    * [Get a free Teams developer tenant](https://developer.microsoft.com/microsoft-365/dev-program).
 
 - title: Set up local environment
   durationInMinutes: 3
@@ -57,7 +57,7 @@ items:
         1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
         1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
         1.	Select **Add**.
-        1.	Enter **nuget.org** in the **Name** and **https://api.nuget.org/v3/index.json** in the **Source** fields.
+        1.	Enter `nuget.org` in the **Name** and `https://api.nuget.org/v3/index.json` in the **Source** fields.
         1.	Select **Update** and **OK**.
         1.	Rebuild your project.
         <br>
@@ -65,7 +65,7 @@ items:
         </details>
         
     1. Unzip to install ngrok.
-       * Windows: Double-click **ngrok.zip**.
+       * Windows: Double-click `ngrok.zip`.
        * Linux or OS X: Unzip ngrok from the terminal and run the `unzip /path/to/ngrok.zip` command.
     1. Run ngrok from the command line with following arguments:
     
@@ -78,7 +78,7 @@ items:
 - title: Create and install Teams app
   durationInMinutes: 5
   content: |
-    1. Go to Teams > **App Studio** and import the **AppManifest.zip** file available in the downloaded sample code (Zip file).
+    1. Go to Teams > **App Studio** and import the `AppManifest.zip` file available in the downloaded sample code (Zip file).
 
         ![App Studio import App](~/assets/images/proactive-scenario/app-studio-import-app.png) 
 
