@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 # Overview
 
-You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams app, and build a richer experience. At present, the web browsers, desktop, and mobile apps support the media capability.
+You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams app, and build a richer experience. At present, the web browsers, desktop, and mobile apps support the media capability.
 
 ## Advantages
 
@@ -34,10 +34,12 @@ For effective integration, you must have a good understanding of [code snippets]
 
 # [Mobile](#tab/mobile)
 
-The `selectMedia` API allows user to capture images on mobile using the following steps:
+The `selectMedia` API allows the user to capture or select media on mobile using the following steps:
 
-1. Select **Camera**, then select **PHOTO** to capture the image.
-1. Select **Open photo library** to pick images as attachments from gallery.
+You can capture or select media using any one of the following:
+
+1. Select **Camera**, then select **PHOTO** to capture the image, and select **Done**.
+1. Select **Open photo library** to pick images as attachments from your device, and select **Done**.
 
 <!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
 
@@ -55,10 +57,12 @@ The `selectMedia` API for microphone capability allows user to record audio on m
 
 # [Desktop](#tab/desktop)
 
-The `selectMedia` API allows user to capture images on desktop using the following steps: 
+The `selectMedia` API allows the user to capture or select media on desktop using the following steps: 
+
+You can capture or select media using any one of the following:
 
 1. Select **Camera** to capture image and then select **Attach**.
-1. Select **Attach** to pick images as attachments from your documents.
+1. Select **Attach** to pick images as attachments from your device.
 
 :::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
