@@ -35,9 +35,9 @@ Following are the pre-requisites for enabling third-party app license management
 [Introduction to the Microsoft commercial marketplace - Learn | Microsoft Docs](/learn/modules/intro-commercial-marketplace/)
 * [Create a commercial marketplace account in Partner Center for Azure Marketplace | Microsoft Docs](/azure/marketplace/create-account)
 
-Access to development environments and tools required to create Teams Add-ons.
+* Access to development environments and tools required to create Teams Add-ons.
 
-A test tenant with a Teams environment in it. This is to simulate how a customer will experience the license management or enforcement for your solution.  
+* A test tenant with a Teams environment in it. This is to simulate how a customer will experience the license management or enforcement for your solution.  
 
 ## Chapter 1: Defining an offer in Partner Center
 
