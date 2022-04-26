@@ -278,6 +278,7 @@ connection.on("connect", (error) => {
   }
 });
 ```
+
 </details>
 
 <br>
