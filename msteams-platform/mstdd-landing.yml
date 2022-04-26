@@ -129,10 +129,13 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Grant tab device permissions
+          url: ~/sbs-tab-device-permissions.yml
         - text: Create Teams conversation bot
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
+
         - text: Grant tab device permissions
           url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and message extensions
