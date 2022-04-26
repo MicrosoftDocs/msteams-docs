@@ -33,7 +33,7 @@ You must request the device permissions to access native device capabilities. Th
 
 ## Access device permissions
 
-The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
+The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
 
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop client.
 
@@ -134,7 +134,7 @@ For example:
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
-* To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:
+* To capture the image, Teams app asks for permission when you call `captureImage()`:
 
     ```JavaScript
             function captureImage() {
@@ -161,7 +161,7 @@ For example:
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-* To use the camera or access photo gallery, Teams mobile asks permission when you call `selectMedia()`:
+* To use the camera or access photo gallery, Teams app asks permission when you call `selectMedia()`:
 
     ```JavaScript
      function selectMedia() {
@@ -208,7 +208,7 @@ For example:
      }
     ```
 
-* To prompt the user to share location on the map interface, Teams mobile asks permission when you call `getLocation()`:
+* To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
     ```JavaScript
      function getLocation() {
