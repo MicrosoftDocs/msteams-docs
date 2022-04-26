@@ -52,11 +52,11 @@ A test tenant with a Teams environment in it. This is to simulate how a customer
 
 1. Login to [Partner Center](https://partner.microsoft.com/) and click on “Partner Center” to open your dashboard.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Partner Center Homepage":::
 
 1. Select **Commercial Marketplace** or **Overview** on left pane and then select **New Offer**. Now select **Software as a Service** to create a new offer.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="Commercial marketplace":::
 
 1. To create an offer, enter **Offer ID** and **Offer alias** and select **Create**.
 
@@ -113,41 +113,41 @@ To enable license management for your offer, select the checkbox **< PLACEHOLDER
 1. In Teams, go to the Appstore and select your app.
 1. Select **Buy a subscription**.
 
-(image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/buy-subscription.png" alt-text="Buy subscription":::
 
 1. Select the plan you want to purchase and select **Checkout**.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/checkout-button.png" alt-text="Checkout button":::
 
 1. Enter the number of licenses you would like to purchase, update sold to address and payment information. Select “place order”. This completes the purchase of the subscription.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/place-order.png" alt-text="Place order":::
 
 1. Once subscription is purchased successfully, purchaser is redirected to the ISV site to complete configuration steps required to activate the subscription.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/configure-now.png" alt-text="Configure button":::
 
 ## Chapter 4: Manage third-party licenses in Teams
 
 1. On Teams client, subscription purchaser can manage license assignments from within the Teams. From **Manage your apps**, you can go to **Subscriptions** tab to view the list of purchases.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/manage-your-apps.png" alt-text="Manage your apps":::
 
 1. On the **Subscriptions** tab, select **Assign licenses** to manage licenses for the purchases.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/manage-your-apps-page.png" alt-text="Manage your apps page":::
 
 1. Purchaser is able to view license utilization and assign licenses by selecting **Assign licenses**.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/assign-licenses-button.png" alt-text="Assign licenses button":::
 
 1. Purchaser can begin assigning licenses to users in the tenant by entering the user names. Purchaser can add one or more users for license assignment.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/assign-licenses-popup.png" alt-text="Assign licenses popup":::
 
 1. Select **Assign** after adding all the users.
 
-(Image)
+    :::image type="content" source="./assets/images/first-party-license-mgt/assign-button.png" alt-text="Assign button":::
 
 1. Licenses are successfully assigned and purchaser see the list of assigned users as below.
 
