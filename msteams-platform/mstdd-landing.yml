@@ -24,8 +24,18 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Moodle LMS and Microsoft 365 plugins
-        url: ~/resources/moodle-overview.md
+      - text: Upload your app in Microsoft Teams
+        url: ~/concepts/deploy-and-publish/apps-upload.md
+      - text: Share to Teams from personal app or tab
+        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
+      - text: Create Teams conversation bot
+        url: ~/sbs-teams-conversation-bot.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
+      - text: Device permissions for the browser
+        url: ~/concepts/device-capabilities/browser-device-permissions.md
+      - text: Integrate People Picker
+        url: ~/concepts/device-capabilities/people-picker-capability.md
       - text: Adaptive Cards overflow menu
         url: ~/task-modules-and-cards/cards/cards-format.md
       - text: Glossary
@@ -34,16 +44,7 @@ landingContent:
         url: ~/overview.md
       - text: Plan your app
         url: ~/concepts/app-fundamentals-overview.md  
-      - text: App manifest schema version 1.12
-        url: ~/resources/schema/manifest-schema.md
-      - text: Test preview for monetized apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-      - text: In-app purchase flow for monetization of apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-      - text: Adaptive Cards form completion feedback
-        url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-      - text: Authentication using external OAuth providers  
-        url: ~/tabs/how-to/authentication/auth-oauth-provider.md 
+
       
 
 - title: Get started
@@ -58,6 +59,8 @@ landingContent:
       links:
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
       - text: Build app with SPFx
         url: sbs-gs-spfx.yml
       - text: Build app with C# or .NET
@@ -97,7 +100,7 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
-
+     
 
 
 - title: Build app capabilities
@@ -126,10 +129,12 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Grant tab device permissions
+          url: ~/sbs-tab-device-permissions.yml
+        - text: Create Teams conversation bot
+          url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
-        - text: Configure Tab device permissions
-          url: ~/sbs-tab-device-permissions.yml
         - text: Configure SSO for tabs and messaging extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
         - text: Build tabs with adaptive cards
@@ -138,18 +143,17 @@ landingContent:
           url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
-        - text: Generate a meeting token to extend a meeting
+        - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Create a meeting sidepanel
+        - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-        - text: Generate a Meetings Stage View
-          url: ~/sbs-meetings-stage-view.yml
-        - text: Interact with content bubble bot in Meetings
-          url: ~/sbs-meeting-content-bubble.yml
+      
     - linkListType: tutorial
       links:
         - text: Upload files to Teams from a bot
           url: ~/sbs-file-handling-in-bot.yml
+        - text: Generate meeting content bubble
+          url: ~/sbs-meeting-content-bubble.yml
         - text: Invoke task modules from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
         - text: Build search based messaging extension
@@ -158,6 +162,8 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
 - title: Teams app scenarios
@@ -167,11 +173,9 @@ landingContent:
     - text: Build scenarios for Teams app
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
     - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
-
-
 - title: Publish and distribute
   linkLists:
   - linkListType: concept

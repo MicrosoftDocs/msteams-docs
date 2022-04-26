@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description:  Deploy to the cloud
+description:  Deploy app to the cloud, Azure, or SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -47,6 +47,7 @@ The get started guides help you to deploy using Teams Toolkit. You can use the f
 ## See also
 
 * [Add more cloud resources](add-resource.md)
+* [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Add more Teams app capabilities](add-capability.md)
 * [Deploy project code with CI/CD pipelines](use-CICD-template.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
