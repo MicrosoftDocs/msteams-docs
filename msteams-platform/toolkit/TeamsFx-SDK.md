@@ -223,7 +223,16 @@ const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
 const profile = await graphClient.api("/me").get();
 ```
 
+</details>
+
+<br>
+
 ### Call Azure Function in tab app
+
+<br>
+
+<details>
+<summary><b>Call Azure Function in tab app</b></summary>
 
 Use `axios` library to make HTTP request to Azure Function.
 
@@ -269,8 +278,12 @@ connection.on("connect", (error) => {
   }
 });
 ```
+</details>
 
-### Use certificate-based authentication in Azure Function
+<br>
+
+<details>
+<summary><b>Use certificate-based authentication in Azure Function</b></summary>
 
 ```ts
 const authConfig = {
@@ -286,7 +299,12 @@ teamsfx.setCustomeConfig({
 const token = teamsfx.getCredential().getToken();
 ```
 
-### Use Graph API in bot application
+</details>
+
+<br>
+
+<details>
+<summary><b>Use Graph API in bot application</b></summary>
 
 Add `TeamsBotSsoPrompt` to dialog set.
 
@@ -323,6 +341,10 @@ dialogs.add(
   ])
 );
 ```
+
+</details>
+
+<br>
 
 ## Advanced Customization
 
