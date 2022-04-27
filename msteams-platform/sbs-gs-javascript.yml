@@ -252,6 +252,7 @@ items:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-folder-structure-tab12.png" alt-text="structure tab" border="true":::
 
+
     Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
     Among other items in this directory structure, the Toolkit maintains:
@@ -960,7 +961,7 @@ items:
 
     Choose one of the following ways to open your app.
     
-    **Using `@mention`:**
+    * **Using `@mention`:**
     
     1. Enter `@your-app-name` in the command area of your app.
         
@@ -982,7 +983,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot that shows search result in a chat" border="false":::
 
-    **Using three-dot icon:**
+    * **Using three-dot icon:**
     
     1. Launch the message extension from three dots at the bottom of the composing area.
     1. Select your message extension app.       
