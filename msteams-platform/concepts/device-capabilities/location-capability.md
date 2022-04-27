@@ -52,7 +52,7 @@ Your location detail displays:
 To integrate location capabilities, you must do the following:
 
 * [Update the app manifest file](#update-manifest) and call the APIs.
-* Have working knowledge of [code snippets](#code-snippets) for calling the [location APIs](#location-api).
+* Have working knowledge of [code snippets](#code-snippets) for calling the [location APIs](#location-apis).
 * Handle errors in your Teams app with the help of [API response errors](#error-handling).
 
 ## Update manifest
