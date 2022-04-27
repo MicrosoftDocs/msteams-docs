@@ -22,6 +22,8 @@
     href: get-started/get-started-overview.md  
   - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
+  - name: Build your first app using Blazor
+    href: sbs-gs-blazorupdate.yml
   - name: Build your first app using SPFx
     href: sbs-gs-spfx.yml
   - name: Build your first app using C# or .NET
@@ -84,12 +86,16 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
-  - name: Teams Toolkit for Visual Studio Code
+  - name: Teams Toolkit for Visual Studio Code 
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
     - name: Create a new Teams app
       href: toolkit/create-new-project.md
+    - name: Debug your Teams app locally
+      href: toolkit/debug-local.md
+    - name: Debug background processes
+      href: toolkit/debug-background-process.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
     - name: Provision cloud resources
@@ -110,12 +116,12 @@
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: CI/CD guide
-      href: toolkit/use-CICD-template.md
-    - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
+    - name: Set up CI/CD pipelines
+      href: toolkit/use-CICD-template.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
+  - name: Teams Toolkit CLI
+    href: toolkit/TeamsFx-CLI.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
@@ -133,7 +139,7 @@
   - name: .NET Bot Framework for bots and messaging extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-dotnet
   - name: Microsoft Graph SDKs
-    href: https://docs.microsoft.com/graph/sdks/sdks-overview
+    href: /graph/sdks/sdks-overview
   - name: Legacy SDKs
     items:
     - name: Bots SDK (v3)
@@ -392,11 +398,11 @@
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
-    href: https://docs.microsoft.com/graph/teams-concept-overview
+    href: /graph/teams-concept-overview
   - name: Microsoft Graph Toolkit
-    href: https://docs.microsoft.com/graph/toolkit/overview
+    href: /graph/toolkit/overview
   - name: Get started
-    href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
+    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
   - name: Proactive installation of apps using Graph API to send messages
@@ -523,14 +529,20 @@
       href: resources/partner-apps-for-moodle.md
     - name: Moodle FAQ
       href: resources/faqs.md
-  - name: Create Share-to-Teams button
-    href: concepts/build-and-test/share-to-teams.md
+  - name: Share to Teams
+    items:
+    - name: Overview
+      href: concepts/build-and-test/share-to-teams-overview.md
+    - name: Share to Teams from web apps
+      href: concepts/build-and-test/share-to-teams-from-web-apps.md
+    - name: Share to Teams from personal app or tab
+      href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
   - name: Integrate People Picker  
-    href: concepts/device-capabilities/people-picker-capability.md   
+    href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
   items:
   - name: Localization

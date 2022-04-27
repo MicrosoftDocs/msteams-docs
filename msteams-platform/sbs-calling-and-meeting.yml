@@ -33,12 +33,12 @@ items:
   content: |
     Ensure that you install the following tools and set up your development environment:  
 
-    * [Office 365 tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+    * [Office 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program)
     * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) version 3.1
+    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * Microsoft Teams with an account (not a guest account)
-    * Install [Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install) by executing all the commands
+    * Install [Windows PowerShell](/microsoftteams/teams-powershell-install) by executing all the commands
 
 - title: Setup Calling and Meeting Bot
   durationInMinutes: 5
@@ -244,7 +244,7 @@ items:
         
             :::image type="content" source="./assets/images/calls-and-meetings/teams-link-new.png" alt-text="Teams Link.":::
         
-        * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) site.
+        * You can obtain the `DisplayName` and `UserId` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site.
             * Login to the page using your Teams account and add `Users` at the end of the URl in the search box and select **Run query**.
             * Display names and User IDs linked to your account are generated.
             * Pick any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
@@ -266,20 +266,20 @@ items:
     **To update manifest:**
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
-    1. Open the **manifest.json** file in Visual Studio.
-    1. In the **manifest.json** file, find **{id}, {BotId}** and add your Microsoft App ID.
+    1. Open the `manifest.json` file in Visual Studio.
+    1. In the `manifest.json` file, find **{id}, {BotId}** and add your Microsoft App ID.
     1. Add your ngrok url in **validDomains** excluding https:// and save.
 
         :::image type="content" source="./assets/images/calls-and-meetings/manifest.png" alt-text="Manifest.":::
 
-    1. Zip the contents of the **Manifest** folder to create **manifest.zip**.
+    1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
     
         > [!NOTE]
         > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         > Upload your manifest in your demo tenant for organisation or your Teams account and run your solution in Visual Studio.
     
     1. Go to Teams.
-    1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip** from the repo folder in File explorer.
+    1. To upload `manifest.zip`, select **Store > Manage your apps > Upload a custom app** and open `manifest.zip` from the repo folder in File explorer.
     1. Select **Add** to install Calling bot in Teams.
 
         :::image type="content" source="./assets/images/calls-and-meetings/output.png" alt-text="Add Output.":::

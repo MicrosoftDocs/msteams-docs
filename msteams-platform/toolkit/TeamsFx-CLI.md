@@ -467,3 +467,4 @@ As a Project Collaborator:
 * [TeamsFx SDK for TypeScript or JavaScript](TeamsFx-SDK.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
 * [Collaborate on Teams project using Teams Toolkit](TeamsFx-collaboration.md)
+* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
