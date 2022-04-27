@@ -21,7 +21,7 @@ To create a hero card, thumbnail card, or Adaptive Card from App Studio:
 1. Select **Create a new card**.
 1. Select **Create** for one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**. The metadata details, buttons, and json, csharp, and node code examples are shown for that card.
 
-    ![Hero card details](~/assets/images/Cards/Herocarddetails.png)
+    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Hero card details":::
 
 1. Select **Send me this card**. The card is sent to you as a chat message.
 
@@ -314,7 +314,7 @@ The following table provides the properties of a hero card:
 
 ### Example of a hero card
 
-![Example of a hero card](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero card":::
 
 The following code shows an example of a hero card:
 
@@ -568,7 +568,7 @@ The following table provides the features that support receipt cards:
 
 ### Example of a receipt card
 
-![Example of a receipt card](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="receipt card":::
 
 The following code shows an example of a receipt card:
 
@@ -659,7 +659,7 @@ The following table provides the features that support thumbnail cards:
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail card":::
 
 ### Properties of a thumbnail card
 
@@ -751,7 +751,7 @@ Properties of a carousel card are same as the hero and thumbnail cards.
 
 #### Example of a carousel collection
 
-![Example of a carousel of cards](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Carousel collection":::
 
 The following code shows an example of a carousel collection:
 
@@ -938,7 +938,7 @@ The following table provides the features that support list collections:
 
 #### Example of a list collection
 
-![Example of a list of cards](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="list collection":::
 
 Properties of list collections are same as the hero or thumbnail cards.
 
