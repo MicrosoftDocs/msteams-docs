@@ -3,7 +3,7 @@ title: Deploy to the cloud
 author: MuyangAmigo
 description:  Deploy app to the cloud, Azure, or SharePoint
 ms.author: zhany
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/29/2021
 ---
