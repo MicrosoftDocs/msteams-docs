@@ -10,7 +10,7 @@ ms.date: 03/14/2022
 
 # Create a new Teams app using Teams Toolkit
 
-To create a new Teams app using Teams Toolkit, you can select from one of the following options:
+To create a new Teams app using Teams Toolkit, you can select from one of the following options: 
 
 * [Create a new Teams app](create-new-project.md#create-a-new-teams-app)
 * [View samples](create-new-project.md#create-a-new-teams-app-using-view-samples)
