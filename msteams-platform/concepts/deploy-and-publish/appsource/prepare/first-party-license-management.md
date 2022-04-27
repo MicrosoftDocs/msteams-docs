@@ -67,7 +67,7 @@ Following are the pre-requisites for enabling third-party app license management
 
 ### Define the licensing options
 
-To enable license management for your offer, select the checkbox **< PLACEHOLDER >**.
+To enable license management for your offer, select the checkbox (Placeholder).
 
 > [!NOTE]
 > This is a one-time setting, and you cannot change it once your offer is published.
