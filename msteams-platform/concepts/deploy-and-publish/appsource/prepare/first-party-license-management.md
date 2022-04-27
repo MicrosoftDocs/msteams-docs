@@ -151,23 +151,23 @@ To enable license management for your offer, select the checkbox **< PLACEHOLDER
 
 1. Licenses are successfully assigned and purchaser see the list of assigned users as below.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/users-assigned-successfully.png" alt-text="Users were assigned licenses":::
 
 1. Purchaser can also assign licenses to a **Team** in Teams. Purchaser can search for the team and select **Assign**.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/assign-licenses-to-team.png" alt-text="Assign licenses to team":::
 
 1. If the number of users in the team exceeds the number of available licenses, the purchaser can select a subset of users to whom licenses are assigned. After doing so, select **Save**.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/save-button.png" alt-text="Save button":::
 
 1. Purchaser can unassign licenses from one or multiple users from the license page. The purchaser can select the users and select **Unassign**.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/unassign-button.png" alt-text="Unassign button":::
 
 1. If there is a delay in a multi user assignment or un-assignment action, the purchaser see a **Pending** status while the action completes on the Microsoft services.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/pending-status.png" alt-text="Pending status":::
 
 ## Chapter 5: Test the app by launching in Teams environment
 
@@ -191,8 +191,8 @@ APIs are managed by commerce team for license management. If a user is assigned 
 
 If a license is assigned to multiple users, you build a queue to the commerce team to add the licenses.
 
-* Partial failures.
-* A user may or may not have approval.
-* Time lag based on the queue.
+* Partial failures - A user may or may not have approval, or their matrix may be a failure in the API assignment action, so there could be a partial failure in assigning licenses.
+
+* Time lag based on the queue - There may be a lag based on number of users in the queue that needs to be assigned.
 
 You will see a pending status if the license has failed to assign and there is an opportunity to **Retry**.
