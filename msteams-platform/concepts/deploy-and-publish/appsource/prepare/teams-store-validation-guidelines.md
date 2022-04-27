@@ -967,7 +967,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::column-end:::
 :::row-end:::
 
-* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#bot-message-spamming)). The message must also mention the person who added the bot.
+* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#botmessagespamming)). The message must also mention the person who added the bot.
 
 :::row:::
     :::column span="":::
@@ -993,8 +993,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 > In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features to encourage users to try bot commands. For example, **Create a task**.
 
 </details>
-
-<details><summary>BBot message spamming</summary>
+<details><summary><a id="botmessagespamming">Bot message spamming</a></summary>
 
 Bots must not spam users by sending multiple messages in short duration.
 
