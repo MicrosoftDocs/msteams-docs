@@ -51,7 +51,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
-    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+    Your apps appear on Teams as Tabs, Bots, Message Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
     Together, these capabilities bring your app solution to life.
 
@@ -77,7 +77,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
 | Custom or Lob bots | ✔️ | ❌ | ❌ |
-| Custom messaging extensions | ❌ | ❌ | ❌ |
+| Custom message extensions | ❌ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:

@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: wireframe channel chat meeting messaging extensions mobile desktop
+keywords: wireframe channel chat meeting message extensions mobile desktop
 --- 
 # Understand the Microsoft Teams app structure
 
@@ -69,19 +69,19 @@ Bots are conversational apps that integrate with Teams native messaging features
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for bots on desktop." border="false":::
 
-## Messaging extensions
+## Message extensions
 
-Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. Action-based messaging extensions give you more control of the experience, while Teams handles much of what renders for search-based messaging extensions.
+Message extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. Action-based message extensions give you more control of the experience, while Teams handles much of what renders for search-based message extensions.
 
 ***Supported scopes**: Personal, Channels, Chats, Meetings*
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for messaging extensions on mobile." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for message extensions on mobile." border="false":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for messaging extensions on desktop." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for message extensions on desktop." border="false":::
 
 ## Meeting extensions
 
