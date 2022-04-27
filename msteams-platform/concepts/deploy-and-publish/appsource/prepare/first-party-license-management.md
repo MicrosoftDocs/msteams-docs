@@ -187,7 +187,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
 ## Limitations
 
-APIs are managed by commerce team for license management. If a user is assigned with a license, in the background you are sending an API request to license core on commerce to add a license.
+APIs are managed by commerce team for license management. If a user is assigned with a license, in the background you're sending an API request to license core on commerce to add a license.
 
 If a license is assigned to multiple users, you build a queue to the commerce team to add the licenses.
 
