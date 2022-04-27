@@ -29,7 +29,7 @@ A bot behaves differently depending on what kind of conversation it is involved 
 
 For more information, see [Have a conversation with a Microsoft Teams bot](~/resources/bot-v3/bot-conversations/bots-conversations.md).
 
-With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md).
+With Microsoft Teams apps, you can make the bot the star of your experience, or just a helper. Bots are distributed as part of your broader app package which can include other capabilities such as [tabs](~/tabs/what-are-tabs.md) or [message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ## Bot APIs
 
@@ -37,7 +37,7 @@ Microsoft Teams supports most of the [Microsoft Bot Framework](https://dev.botfr
 
 * Using specialized card types like the Office 365 Connector card.
 * Consuming and setting Teams-specific channel data on activities.
-* Processing messaging extension requests.
+* Processing message extension requests.
 
 The SDK extensions install dependencies, including the Bot Builder SDK.
 
