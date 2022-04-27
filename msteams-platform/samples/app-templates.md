@@ -173,3 +173,4 @@ To provide feedback, see [App template feedback](https://forms.office.com/Pages/
 * [Designing your personal app for Microsoft Teams](../concepts/design/personal-apps.md)
 * [Design System](../concepts/design/design-teams-app-fundamentals.md)
 * [Transition conversations from bot to human](/azure/bot-service/bot-service-design-pattern-handoff-human)
+* [How to deploy Teams app templates](/microsoft-365/community/how-to-deploy-teams-app-templates)
