@@ -2,7 +2,7 @@
 title: SSO support for your messaging extensions
 author: KirtiPereira
 description: Learn how to enable SSO support for your messaging extensions with Code samples.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
