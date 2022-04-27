@@ -165,7 +165,7 @@ items:
 
     1. Deselect **Tab**, select **Tab (SPFx)**, and select **OK**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfx-tab.png" alt-text="new tab spfx" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx" border="true":::
 
     1. Select **React** in the **Framework** section.
 
@@ -473,4 +473,4 @@ items:
 
         Congratulations! Your app is now added to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::"
