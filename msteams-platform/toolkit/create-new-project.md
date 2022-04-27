@@ -8,22 +8,37 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create a new Teams app using Teams Toolkit
+# Create a new Teams app
 
-To create a new Teams app using Teams Toolkit, you can select from one of the following options: 
+App development from the toolkit has the following advantages:
+
+* Integrated identity
+* Access to cloud storage
+* Data from Microsoft Graph
+* Azure and Microsoft 365 services with zero-configuration approach
+
+## Prerequisite
+
+Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+<br>
+
+**You can select one of the following options to create a new Teams app.**
 
 * [Create a new Teams app](create-new-project.md#create-a-new-teams-app)
 * [View samples](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-### Create a new Teams app
 
-1. Open Visual Studio Code.
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar.
-1. Select **Create a new Teams app**.
-1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). 
-1. Select at least one option to start creating the Teams app.
 
-### Create a new Teams app using view samples
+### Create a new app
+
+1. Open Visual Studio Code
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
+1. Select **Create a new Teams app**
+1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx)
+1. Select at least one option to start creating the Teams app
+
+### Create an new app using view samples
 
 You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
 
