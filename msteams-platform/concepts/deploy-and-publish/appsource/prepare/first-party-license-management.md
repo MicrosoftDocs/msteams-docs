@@ -1,6 +1,6 @@
 ---
 title: First party license management enabled in Microsoft Teams
-description: Learn how to enable customers to easily assign, use, and track SaaS licenses purchased in Teams storefront with first party license management.
+description: Learn how to enable customers to easily assign, use, and track SaaS licenses purchased in Teams storefront.
 author: v-dreddipogu
 ms.author: surbhigupta
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # First party license management enabled in Teams for third-party SaaS offers
 
-The Microsoft Teams Third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This article details on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration. With 1st party license management of third party SaaS offers in the Teams surface area, the license management happens post-purchase of the said app (the associated SaaS offer) via Teams surface areas or AppSource. The app is unusable if the licenses are not assigned.
+The Microsoft Teams Third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This article details on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration. With first party license management of third party SaaS offers in the Teams surface area, the license management happens post-purchase of the said app (the associated SaaS offer) via Teams surface areas or AppSource. The app is unusable if the licenses aren't assigned.
 
 Third-party app license management enables independent software vendors (ISVs) to manage and enforce licenses for their solutions using systems provided by Microsoft. By adopting this, ISVs can:
 
@@ -29,7 +29,7 @@ The ISV creates an offer in Partner Center and manage licenses for this offer th
 
 Following are the pre-requisites for enabling third-party app license management in Dynamics 365 customer engagement and Power Apps.
 
-* Valid partner (MPN) account in Microsoft.  
+* Valid partner (MPN) account at Microsoft.  
 [Create an MPN account in Partner Center - Partner Center | Microsoft Docs](/partner-center/mpn-create-a-partner-center-account)
 * Enrollment in commercial marketplace program.
 [Introduction to the Microsoft commercial marketplace - Learn | Microsoft Docs](/learn/modules/intro-commercial-marketplace/)
@@ -44,13 +44,13 @@ Following are the pre-requisites for enabling third-party app license management
 1. Create an offer in Partner Center.
 1. Define the licensing options.
 1. Add one or more plans.
-1. Copy service ids from offer details and update your Teams app to map to the paid functionality.
+1. Copy service IDs from offer details and update your Teams app to map to the paid functionality.
 1. Map your Teams app to your offer and publish.
 1. Best practices on ISV logic to determine ISV managed offers vs Microsoft managed offers for license management.
 
 ### Create an offer in Partner Center
 
-1. Login to [Partner Center](https://partner.microsoft.com/) and click on “Partner Center” to open your dashboard.
+1. Log in to [Partner Center](https://partner.microsoft.com/) and click on “Partner Center” to open your dashboard.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Partner Center Homepage":::
 
@@ -61,7 +61,7 @@ Following are the pre-requisites for enabling third-party app license management
 1. To create an offer, enter **Offer ID** and **Offer alias** and select **Create**.
 
     > [!NOTE]
-    > If you are creating an offer for testing purpose, add the text **-ISVPILOT** to the end of your offer alias. This indicates the certification team that the offer is for testing purposes. Microsoft delete offers with **-ISVPILOT** periodically. So, don't use this tag for reasons other than testing the license management capability.
+    > If you're creating an offer for testing purpose, add the text **-ISVPILOT** to the end of your offer alias. This indicates the certification team that the offer is for testing purposes. Microsoft delete offers with **-ISVPILOT** periodically. So, don't use this tag for reasons other than testing the license management capability.
 
 (Image)
 
@@ -76,7 +76,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
 ### Add one or more plans
 
-1. Select **Plan overview** on left pane and then select **Create new plan** to define the plans you want to enable for the offer. You are required to define *at least* one plan.
+1. Select **Plan overview** on left pane and then select **Create new plan** to define the plans you want to enable for the offer. You're required to define *at least* one plan.
 
 (Image)
 
@@ -88,11 +88,11 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
 (Image)
 
-1. Select **Plan overview** to go to the listing page which shows all the plans you have created for this offer.
+1. Select **Plan overview** to go to the listing page that shows all the plans you've created for this offer.
 
 (Image)
 
-### Copy service ids from offer details and update your Teams app to map to the paid functionality
+### Copy service IDs from offer details and update your Teams app to map to the paid functionality
 
 (Content and image needs to be added)
 
@@ -149,7 +149,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/assign-button.png" alt-text="Assign button":::
 
-1. Licenses are successfully assigned and purchaser see the list of assigned users as below.
+1. Licenses are successfully assigned and purchaser sees the list of assigned users as below.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/users-assigned-successfully.png" alt-text="Users were assigned licenses":::
 
@@ -165,7 +165,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/unassign-button.png" alt-text="Unassign button":::
 
-1. If there is a delay in a multi user assignment or un-assignment action, the purchaser see a **Pending** status while the action completes on the Microsoft services.
+1. If there is a delay in a multi user assignment or un-assignment action, the purchaser sees a **Pending** status while the action completes on the Microsoft services.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/pending-status.png" alt-text="Pending status":::
 
@@ -180,7 +180,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 ### Check license usage of ISV apps in the Partner Center analytics section
 
 1. Sign into [Partner Center](https://partner.microsoft.com/) with your partner account.
-1. In the left pane select **Commercial Marketplace > Analyze > Licensing** to go to licensing dashboard.
+1. In the left pane, select **Commercial Marketplace > Analyze > Licensing** to go to licensing dashboard.
 1. Select the **Plan** and **Tenant** in the reporting widget to see the month wise usage.
 
 (Image)
@@ -195,4 +195,4 @@ If a license is assigned to multiple users, you build a queue to the commerce te
 
 * Time lag based on the queue - There may be a lag based on number of users in the queue that needs to be assigned.
 
-You will see a pending status if the license has failed to assign and there is an opportunity to **Retry**.
+You'll see a pending status if the license has failed to assign and there is an opportunity to **Retry**.
