@@ -21,7 +21,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 <br></br>
-<details><summary>App name</summary>
+<details><summary><a id="appname">App name</a></summary>
 
 [*Mandatory Fix*]
 
@@ -374,7 +374,7 @@ The long description can provide an engaging narrative that highlights your app'
 
 </details>
 
-<details><summary>Screenshots</summary>
+<details><summary><a id="screenshots">Screenshots</a></summary>
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions. Remember the following:
 

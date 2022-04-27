@@ -81,7 +81,7 @@ Your app's name (specifically, its [*short name*](~/resources/schema/manifest-sc
 
 :::row-end:::
 
-Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
+Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#appname).
 
 ### Write descriptions
 
