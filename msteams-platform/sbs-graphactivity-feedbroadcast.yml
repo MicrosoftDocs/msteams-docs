@@ -25,11 +25,6 @@ items:
     * Displays activity feed notification
     * Broadcasts details available for members
 
-    **The requirements for sending activity feed notifications**:
-
-    * The Teams app must be installed for the recipient, either personally, or in a team or chat
-    * The Tenant ID for sending and receiving notifications must match
-
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
@@ -48,6 +43,9 @@ items:
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
+    * The Teams app must be installed for the recipient, either personally, or in a team or chat
+    * The Tenant ID for sending and receiving notifications must match
 
 
 - title: Set up local environment
