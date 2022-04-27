@@ -107,7 +107,7 @@ If your app authenticates users with an external service, follow these guideline
 ## Security
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.3](/legal/marketplace/certification-policies#11403-security).
-
+<br></br>
 <details><summary>Financial information</summary>
 
 [*Mandatory Fix*]
@@ -213,7 +213,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 ## General functionality and performance
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4](/legal/marketplace/certification-policies#11404-functionality).
-
+<br></br>
 <details><summary>
 Launching external functionality</summary>
 
@@ -273,7 +273,7 @@ App packages must be correctly formatted and include all required information an
 > * **Clearly describe Limitations**, conditions, or exceptions to the functionality, features, and deliverables in the app long description and related materials.
 > * **Emphasis on any considerations** for testers while validating your app submission.  
 > * **Pre-populate the test accounts with dummy data** to aid testing.
-
+<br></br>
 <details><summary>
 App manifest</summary>
 
@@ -287,7 +287,8 @@ The Teams app manifest defines your app's configuration.
 
 </details>
 
-### App icons
+<details><summary>
+App icons</summary>
 
 [*Mandatory Fix*]
 
@@ -453,8 +454,7 @@ If your app supports localization, your app package must include a file with lan
 ## Apps linked to SaaS offer
 
 * ISVs must support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant.
-*
- The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) for Teams apps linked to a SaaS offer.
+* The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) for Teams apps linked to a SaaS offer.
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas).
 * `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
@@ -506,7 +506,7 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 If your app includes a tab, ensure it adheres to these guidelines.
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams tab design guidelines](~/tabs/design/tabs.md).
-
+<br></br>
 <details><summary>Setup</summary>
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
@@ -887,7 +887,7 @@ If your app includes a bot, ensure it adheres to these guidelines.
 
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams bot design guidelines](~/bots/design/bots.md).
-
+<br></br>
 <details><summary>Bot commands</summary>
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
@@ -1134,7 +1134,7 @@ If your app includes a messaging extension, ensure it adheres to these guideline
 
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
-
+<br></br>
 <details><summary>Action commands</summary>
 
 Action-based messaging extensions must do the following:
@@ -1329,7 +1329,7 @@ Use the following guidelines for meeting extensions:
 
 > [!TIP]
 > You must declare `groupchat` as a scope under `configurableTabs` and `meetingDetailsTab`, or `meetingChatTab` and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
-
+<br></br>
 <details><summary>Pre and post meeting experience</summary>
 
 * Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md).
@@ -1422,8 +1422,8 @@ Use the following guidelines for meeting extensions:
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
 
 If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), ensure it adheres to the following guidelines.
-
-<details><summary>XXXXX</summary>General
+<br></br>
+<details><summary>>General</summary
 
 * All the notification triggers specified in your app configuration must work.
 * Notifications must be localized per the supported languages configured for your app.
@@ -1431,14 +1431,14 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 </details>
 
-<details><summary>XXXXX</summary>Avatars
+<details><summary>Avatars</summary>
 
 * The notification avatar must match your app's color icon.
 * Notifications triggered by a user must include the user's avatar.
 
 </details>
 
-<details><summary>XXXXX</summary>Spamming
+<details><summary>Spamming</summary>
 
 * Apps must not send more than 10 notifications per minute to a user.
 * Bots and the activity feed must not trigger duplicate notifications.
@@ -1446,7 +1446,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 </details>
 
-<details><summary>XXXXX</summary>Navigation and layout
+<details><summary>Navigation and layout</summary>
 
 * Notifications must adhere to the Teams activity feed layout and experience.
 * When selecting a notification, the user must be directed to relevant content within Teams.
