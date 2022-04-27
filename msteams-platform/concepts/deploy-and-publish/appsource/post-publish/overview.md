@@ -40,7 +40,7 @@ If you make any of the following changes to your app, however, your existing use
 * Change the bot ID.
 * Modify a bot's one-way notification configuration.
 * Modify a bot's support for uploading and downloading files.
-* Add or remove a messaging extension.
+* Add or remove a message extension.
 * Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.

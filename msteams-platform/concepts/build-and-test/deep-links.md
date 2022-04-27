@@ -58,7 +58,7 @@ Provide the following fields:
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [manifest](~/resources/schema/manifest-schema.md) reference for more information on tab scopes.
 > * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
 
-Use the following format for a deep link that you can use in a bot, connector, or messaging extension card:
+Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
@@ -153,7 +153,7 @@ As an example use case, if you’re returning an Office 365 user profile from yo
 
 ### Generate a deep link to a chat
 
-Use this format for a deep link that you can use in a bot, connector, or messaging extension card:
+Use this format for a deep link that you can use in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -169,7 +169,7 @@ To use this deep link with your bot, specify this as the URL target in your card
 
 ## Generate deep links to file in channel
 
-The following deep link format can be used in a bot, connector, or messaging extension card:
+The following deep link format can be used in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -187,7 +187,7 @@ The query parameters are:
 > [!NOTE]
 > You can see `threadId` and `groupId` in the URL from the channel.  
 
-The following deep link format is used in a bot, connector, or messaging extension card:
+The following deep link format is used in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -216,7 +216,7 @@ Create deeplinks for the app after the app is listed in the Teams store. To crea
   
 ## Deep linking for SharePoint Framework tabs
 
-The following deep link format can be used in a bot, connector or messaging extension card:
+The following deep link format can be used in a bot, connector or message extension card:
 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
@@ -242,7 +242,7 @@ You can create deep links to the Teams built-in scheduling dialog. This is espec
 
 ### Generate a deep link to the scheduling dialog
 
-Use the following format for a deep link that you can use in a bot, Connector, or messaging extension card:
+Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
