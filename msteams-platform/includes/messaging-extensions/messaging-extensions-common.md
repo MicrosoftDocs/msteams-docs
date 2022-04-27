@@ -1,25 +1,25 @@
-## Add a messaging extension to your app
+## Add a message extension to your app
 
-A messaging extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/task-modules-and-cards/what-are-cards.md). You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js extensions for the Bot Builder SDK can help you add messaging extension functionality to your app.
+A message extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/task-modules-and-cards/what-are-cards.md). You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js extensions for the Bot Builder SDK can help you add message extension functionality to your app.
 
-![Diagram of message flow for messaging extensions](~/assets/images/compose-extensions/ceflow.png)
+![Diagram of message flow for message extensions](~/assets/images/compose-extensions/ceflow.png)
 
 ### Register in the Bot Framework
 
-If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your messaging extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
 Record your bot app ID and app password, you will need to supply the app ID in your app manifest.
 
 ### Update your app manifest
 
-As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the messaging extension properties. These properties govern how your messaging extension appears and behaves in the Microsoft Teams client. Messaging extensions are supported beginning with v1.0 of the manifest.
+As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the message extension properties. These properties govern how your message extension appears and behaves in the Microsoft Teams client. Message extensions are supported beginning with v1.0 of the manifest.
 
-#### Declare your messaging extension
+#### Declare your message extension
 
-To add a messaging extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single messaging extension for your app.
+To add a message extension, include a new top-level JSON structure in your manifest with the `composeExtensions` property. Currently, you are limited to creating a single message extension for your app.
 
 > [!NOTE]
-> The manifest refers to messaging extensions as `composeExtensions`. This is to maintain backward compatibility.
+> The manifest refers to message extensions as `composeExtensions`. This is to maintain backward compatibility.
 
 The extension definition is an object that has the following structure:
 
@@ -28,13 +28,13 @@ The extension definition is an object that has the following structure:
 | `botId` | The unique Microsoft app ID for the bot as registered with the Bot Framework. This should typically be the same as the ID for your overall Teams app. | Yes |
 | `scopes` | Array declaring whether this extension can be added to `personal` or `team` scopes (or both). | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
-| `commands` | Array of commands that this messaging extension supports. You are limited to 10 commands. | Yes |
+| `commands` | Array of commands that this message extension supports. You are limited to 10 commands. | Yes |
 
 #### Define commands
 
-Your messaging extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
+Your message extension should declare one command, which appears when the user selects your app from the **More options** (**&#8943;**) button in the compose box.
 
-![Screenshot of list of messaging extensions in Teams](~/assets/images/compose-extensions/compose-extension-list.png)
+![Screenshot of list of message extensions in Teams](~/assets/images/compose-extensions/compose-extension-list.png)
 
 In the app manifest, your command item is an object with the following structure:
 
