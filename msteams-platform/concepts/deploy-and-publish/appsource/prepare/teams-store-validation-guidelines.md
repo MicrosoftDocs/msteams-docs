@@ -194,7 +194,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
 
-For apps that use the Microsoft Azure Bot Service (such as bots and messaging extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
+For apps that use the Microsoft Azure Bot Service (such as bots and message extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Bots must always ask permission to upload a file and display a confirmation message.
 <br></br>
@@ -265,7 +265,7 @@ Teams apps must respond within a reasonable timeframe or show a loading or typin
 
 * Tabs must respond within two seconds or display a loading message or warning.
 * Bots must respond to user commands within two seconds or display a typing indicator.
-* Messaging extensions must respond to user commands within two seconds.
+* Message extensions must respond to user commands within two seconds.
 * Notifications must display within two seconds of the user action.
 
 ## App package and store listing
@@ -290,7 +290,7 @@ App packages must be correctly formatted and include all required information an
 The Teams app manifest defines your app's configuration.
 
 * Your manifest must conform to a publicly released manifest schema. For more information, see [manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the manifest.
-* If your app includes a bot or messaging extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
+* If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
 * If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### App icons
@@ -303,7 +303,7 @@ Icons are one of the main elements people see when browsing the Teams store. You
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background.
 * The outline version of your icon is displayed in the following scenarios:
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
-  * When a user pins your app's messaging extension.
+  * When a user pins your app's message extension.
 
 * The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon must not have any extra padding around the symbol.
 
@@ -697,7 +697,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
 * Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
-* Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, and so on.
+* Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, message extensions, calling, meeting, and so on.
 
 * Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
 
@@ -899,18 +899,18 @@ Apps that provide only notifications with content such as **You have a new notif
 > [!TIP]
 > Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
 
-## Messaging extensions
+## Message extensions
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
 
-If your app includes a messaging extension, ensure it adheres to these guidelines.
+If your app includes a message extension, ensure it adheres to these guidelines.
 
 > [!TIP]
-> For more information on creating a high-quality app experience, see the [Teams messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
+> For more information on creating a high-quality app experience, see the [Teams message extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
 ### Action commands
 
-Action-based messaging extensions must do the following:
+Action-based message extensions must do the following:
 
 * Allow users to trigger actions on a message without completing intermediate steps, such as sign in.
    <br></br>
@@ -958,11 +958,11 @@ Action-based messaging extensions must do the following:
 
 [*Mandatory Fix*]
 
-Messaging extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`.
+Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
 
 ### Search commands
 
-* Search based messaging extensions must provide text that helps the users to search effectively. [*Mandatory Fix*]
+* Search based message extensions must provide text that helps the users to search effectively. [*Mandatory Fix*]
    <br></br>
    <details><summary><b>Pass case 👍</b></summary>
 
@@ -978,13 +978,13 @@ Messaging extensions must preview recognized links in the Teams compose box. Don
 
    </details>
 
-### Search based messaging extension only apps
+### Search based message extension only apps
 
 [*Mandatory Fix*]
 
-Apps that consist of search-based messaging extension provide user value by sharing cards that allow for contextual conversations without context switching.
+Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
 
-To pass validation for a search-based message extension only app, the following are required as baseline to ensure the user experience isn't broken. A card shared via a messaging extension provides value in Teams if:
+To pass validation for a search-based message extension only app, the following are required as baseline to ensure the user experience isn't broken. A card shared via a message extension provides value in Teams if:
 
 1. Posted card provides adequate details requiring no further user action.
 1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
@@ -1069,7 +1069,7 @@ Use the following guidelines for meeting extensions:
 
    </details>
 
-* Messaging extensions must function the same during meetings as they do outside meetings.
+* Message extensions must function the same during meetings as they do outside meetings.
 
 ### In-meeting tabs
 
