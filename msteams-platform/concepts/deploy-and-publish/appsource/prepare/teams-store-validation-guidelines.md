@@ -50,6 +50,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
  > [!TIP]  
  > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+
 </details>
 
 <details><summary>Suitable for workplace consumption</summary>
@@ -273,6 +274,7 @@ App packages must be correctly formatted and include all required information an
 > * **Clearly describe Limitations**, conditions, or exceptions to the functionality, features, and deliverables in the app long description and related materials.
 > * **Emphasis on any considerations** for testers while validating your app submission.  
 > * **Pre-populate the test accounts with dummy data** to aid testing.
+
 <br></br>
 <details><summary>
 App manifest</summary>
@@ -506,6 +508,7 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 If your app includes a tab, ensure it adheres to these guidelines.
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams tab design guidelines](~/tabs/design/tabs.md).
+
 <br></br>
 <details><summary>Setup</summary>
 
@@ -887,6 +890,7 @@ If your app includes a bot, ensure it adheres to these guidelines.
 
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams bot design guidelines](~/bots/design/bots.md).
+
 <br></br>
 <details><summary>Bot commands</summary>
 
@@ -1133,6 +1137,7 @@ If your app includes a message extension, ensure it adheres to these guidelines.
 
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams message extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
+
 <br></br>
 <details><summary>Action commands</summary>
 
@@ -1328,6 +1333,7 @@ Use the following guidelines for meeting extensions:
 
 > [!TIP]
 > You must declare `groupchat` as a scope under `configurableTabs` and `meetingDetailsTab`, or `meetingChatTab` and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
+
 <br></br>
 <details><summary>Pre and post meeting experience</summary>
 
@@ -1422,7 +1428,7 @@ Use the following guidelines for meeting extensions:
 
 If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), ensure it adheres to the following guidelines.
 <br></br>
-<details><summary>>General</summary
+<details><summary>General</summary
 
 * All the notification triggers specified in your app configuration must work.
 * Notifications must be localized per the supported languages configured for your app.
