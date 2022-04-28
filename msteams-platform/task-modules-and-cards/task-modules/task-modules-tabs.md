@@ -39,7 +39,7 @@ The next section gives an example of invoking a task module.
 
 The following image displays the task module:
 
-![Task Module - Custom Form](~/assets/images/task-module/task-module-custom-form.png)
+:::image type="content" source="../../assets/images/task-module/task-module-custom-form.png" alt-text="Task Module Custom Form":::
 
 The following code is adapted from [the task module sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
 

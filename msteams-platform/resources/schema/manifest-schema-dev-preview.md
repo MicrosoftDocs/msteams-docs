@@ -11,7 +11,7 @@ ms.date: 11/15/2021
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> If you aren't using developer preview features, including running [Teams personal tabs and messaging extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
+> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -457,22 +457,22 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 Optional:
 
-Defines a messaging extension for the app.
+Defines a message extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
 
-The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
+The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. The default is `false`.|
-|`commands`|Array of object|10|✔|Array of commands the messaging extension supports|
+|`botId`|String|64|✔|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. This may well be the same as the overall [app ID](#id).|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
+|`commands`|Array of object|10|✔|Array of commands the message extension supports|
 
 ### composeExtensions.commands
 
-Your messaging extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There is a maximum of 10 commands.
+Your message extension should declare one or more commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point. There is a maximum of 10 commands.
 
 Each command item is an object with the following structure:
 
@@ -483,9 +483,9 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
-|`context`|Array of Strings|3||Defines where the messaging extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
+|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it should fetch the task module dynamically.|
-|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command.|
+|`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
