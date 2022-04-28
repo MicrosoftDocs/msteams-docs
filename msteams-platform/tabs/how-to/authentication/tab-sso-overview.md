@@ -43,7 +43,7 @@ You can achieve SSO in a tab by obtaining access token for the Teams user curren
 
 The following image shows how SSO works when a Teams user attempts to access the tab app:
 
-:::mermaid
+```mermaid
 sequenceDiagram
     User->>Tab: Installs or Opens the Teams app
     Tab->>Teams Client: Tab app call getAuthToken() using JavaScript.
@@ -53,7 +53,7 @@ sequenceDiagram
     Azure AD->>Teams Client: Send access token to Teams client.
     Teams Client->>Tab: Sends access token as part of the result object returned by the getAuthToken call.
     Tab->>Tab: Parses the access token to get the required information and redirect the user to target page.
-:::
+```
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
