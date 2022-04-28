@@ -14,7 +14,7 @@ This document gives an overview of the message extension, tasks performed under 
 
 The following image displays the locations from where message extensions are invoked:
 
-![message extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="message extension invoke locations":::
 
 > [!NOTE]
 > @mentioning message extensions is no longer supported in the compose box.
@@ -45,7 +45,8 @@ There are two types of message extension commands, action command and search com
 Action commands are used to present the users with a modal popup to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or by inserting a message into the compose message area. After that the user can submit the message. You can chain multiple forms together for more complex workflows.
 
 The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the message extension action command task module:
-![message extension action command task module](~/assets/images/task-module.png)
+
+:::image type="content" source="~/assets/images/task-module.png" alt-text="Message extension action command task module":::
 
 ### Search commands
 
@@ -54,7 +55,7 @@ Search commands allow the users to search an external system for information eit
 The cards are triggered from the compose message area or the command box and not triggered from a message. They cannot be triggered from a message.
 The following image displays the message extension search command task module:
 
-![message extension search command](~/assets/images/search-extension.png)
+:::image type="content" source="~/assets/images/search-extension.png" alt-text="Message extension search command":::
 
 > [!NOTE]
 > For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
@@ -64,7 +65,7 @@ The following image displays the message extension search command task module:
 A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Microsoft Teams client.
 The following images display link unfurling feature when a link is pasted in message extension:
 
-![unfurl link](../assets/images/messaging-extension/unfurl-link.png)
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="unfurl link":::
 
 ![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
