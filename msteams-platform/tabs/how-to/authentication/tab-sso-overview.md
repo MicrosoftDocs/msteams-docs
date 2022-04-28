@@ -46,7 +46,7 @@ The following image shows how SSO works when a Teams user attempts to access the
 <!--
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-run-time.png" alt-text="Tab single sign-on SSO diagram":::-->
 
-::: mermaid
+``` mermaid
 sequenceDiagram
     User->>Tab: Installs or Opens the Teams app
     Tab->>Teams Client: Tab app call getAuthToken() using JavaScript.
@@ -56,7 +56,7 @@ sequenceDiagram
     Azure AD->>Teams Client: Send access token to Teams client.
     Teams Client->>Tab: Sends access token as part of the result object returned by the getAuthToken call.
     Tab->>Tab: Parses the access token to get the required information and redirect the user to target page.
-:::
+```
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
@@ -116,7 +116,7 @@ Here's a list of best practices:
 
 - SSO in teams only work with OAuth 2.0 protocol.  
 - SSO only works with Azure AD. To extend it to different OAuth Identity providers, the flow needs to be implemented.
-- Multiple domains per app is not supported. For this, please read about LOB apps. 
+- Multiple domains per app is not supported. For this, please read about LOB apps.
 - Tenant Admin Consent: A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 - Ask for consent using the Auth API: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
@@ -126,9 +126,9 @@ Here's a list of best practices:
     2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
     3. When the exchange fails, you must ask for consent. Show some user interface (UI) asking the user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog box using our [Azure AD authentication API](~/concepts/authentication/auth-silent-aad.md).
     4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD doesn't ask for the other scopes.
-        * Instead of `?scope={scopes}`
-        * Use this `?prompt=consent&scope={scopes}`
-        * Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
+        - Instead of `?scope={scopes}`
+        - Use this `?prompt=consent&scope={scopes}`
+        - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
     5. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
 
 ## Next step
