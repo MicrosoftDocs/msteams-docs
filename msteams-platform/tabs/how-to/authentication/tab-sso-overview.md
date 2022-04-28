@@ -43,6 +43,9 @@ You can achieve SSO in a tab by obtaining access token for the Teams user curren
 
 The following image shows how SSO works when a Teams user attempts to access the tab app:
 
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png" alt-text="Tab single sign-on SSO diagram" border="false":::
+
+<!--
 ```mermaid
 sequenceDiagram
     User->>Tab: Opens Teams app
@@ -54,6 +57,7 @@ sequenceDiagram
     Teams Client->>Tab: Respond to getAuthToken() with access token
     Tab->>Tab: Parse access token to give access to user
 ```
+-->
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
@@ -197,6 +201,3 @@ Here's a list of best practices:
       
     :::column-end:::
 :::row-end:::-->
-
-<!--
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-run-time.png" alt-text="Tab single sign-on SSO diagram":::-->
