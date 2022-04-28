@@ -13,9 +13,7 @@ Your Teams app users are authenticated and authorized by Azure AD for using your
 
 Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, permissions, and more.
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets your app users access the app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client ID for the mobile, desktop, and web application that you want to pre-authorize
-
-You'll need to authorize client IDs for mobile, desktop, and web application.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets users access your app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the mobile, desktop, and web application that you want to pre-authorize. Ensure that you pre-authorize only those client applications that you trust as users won't be able to decline.
 
 These configurations will enable SSO for your app in Teams.
 
