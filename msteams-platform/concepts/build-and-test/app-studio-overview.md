@@ -10,7 +10,8 @@ ms.topic: overview
 
 > [!TIP]
 > **Try the Developer Portal**: App Studio has evolved. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/). 
-App studio will be deprecated by June 30, 2022
+
+> App studio will be deprecated by June 30, 2022
 
 App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
 
