@@ -25,8 +25,7 @@ To enable SSO for your app, configure the `webApplicationInfo` property in the T
   :::column-end:::
   :::column span="1":::
     <br>
-    <br>
-    
+
     > [!NOTE]
     > Use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
   :::column-end:::
@@ -104,6 +103,7 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
   }
 } 
 ```
+
 </details>
 
 ## To configure Teams app manifest for Azure AD registration
