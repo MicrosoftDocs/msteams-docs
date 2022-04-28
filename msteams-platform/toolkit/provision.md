@@ -54,7 +54,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for simple auth | Host simple auth server to gain access to other services in your single page application | Adds user assigned identity to access other Azure resources |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Teams bot or messaging extension application
+### Resource creation for Teams bot or message extension application
 
 |Resource|Purpose| Description |
 |----------|--------------------------------|-----|
