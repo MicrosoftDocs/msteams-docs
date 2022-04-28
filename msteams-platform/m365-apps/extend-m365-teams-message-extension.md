@@ -4,6 +4,7 @@ description: Here's how to update your search-based Teams message extension to r
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
+ms.localizationpriority: high
 ---
 # Extend a Teams message extension across Microsoft 365
 
