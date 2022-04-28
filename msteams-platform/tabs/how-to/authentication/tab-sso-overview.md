@@ -46,7 +46,7 @@ The following image shows how SSO works when a Teams user attempts to access the
 <!--
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-run-time.png" alt-text="Tab single sign-on SSO diagram":::-->
 
-``` mermaid
+```mermaid
 sequenceDiagram
     User->>Tab: Installs or Opens the Teams app
     Tab->>Teams Client: Tab app call getAuthToken() using JavaScript.
