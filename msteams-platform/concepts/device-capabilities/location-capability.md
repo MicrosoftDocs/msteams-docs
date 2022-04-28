@@ -14,11 +14,15 @@ ms.author: surbhigupta
 
 ## Advantages
 
-The advantage of integrating location capabilities in your Teams apps is to leverage location functionality in web, desktop, and mobile app using Microsoft Teams JavaScript client SDK. The following list provides the advantages of location capabilities:
+The advantage of integrating location capabilities in your Teams apps is to leverage location functionality in web, desktop, and mobile app using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The following list provides the advantages of location capabilities:
 
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
 * Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area. After the permission is granted, the search results are filtered near that particular location and support staff profiles get displayed.
+Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area, the support staff profiles gets displayed after you grant the permission.
+
 * Report the location after completing a job in the field. The job processing app asks for permission to  find the location. Once the app has found the location, you can drag a pin to the exact location where the job is completed.
+ Report the location after completing a job in the field. The job processing app asks for permission to find the location. After you grant the permission, the app finds the location, you can drag a pin to the exact location where the job is completed.
+
 * Track attendance by using a selfie in the vicinity of the area. The location data also gets captured and sent along with the image. This scenario is specific for mobile apps.
 
 # [Mobile](#tab/mobile)
@@ -68,13 +72,11 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 > [!NOTE]
 > * The request permissions prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
 > * The device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * Desktop supports capturing the current location after the device permission is granted.
+> * The desktop support for `getLocation` and  `showLocation` is available after you grant the device permission.
 
 
 ## Location APIs
 
-When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at [product terms](https://www.microsoft.com/en-us/maps/product/enduserterms) and the Microsoft Privacy Statement available at [privacy statement](https://privacy.microsoft.com/en-US/privacystatement).</br>
-Further, you must provide a hypertext link to Bing Maps TOU, where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you will comply with Microsoft's reasonable instructions in doing so. You will not encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
 
 You must use the following set of APIs to enable your device's location capabilities:
 
@@ -83,9 +85,11 @@ You must use the following set of APIs to enable your device's location capabili
 |`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | - True: Users can choose any location of their choice.</br> - False: Users cannot change their current location. |False: The current location is fetched without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
 |`showLocation`| Shows location on map. |- True: Users can choose any location of their choice.</br> - False: users cannot change their current location.| False: The current location is fetched without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
 
-
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
+> [!NOTE]
+> When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at [product terms](https://www.microsoft.com/en-us/maps/product/enduserterms) and the Microsoft Privacy Statement available at [privacy statement](https://privacy.microsoft.com/en-US/privacystatement).</br>
+> Further, you must provide a hypertext link to Bing Maps TOU, where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you will comply with Microsoft's reasonable instructions in doing so. You will not encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
 
 ## Error handling
 
