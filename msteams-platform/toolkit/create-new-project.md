@@ -36,7 +36,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
     1. Select **Create a new Teams app** from the dropdown options
     1. Select an option from the available capabilities **Tab**, **Bot**, **Messaging Extension**, or a **Tab (SPFx)**
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/capability.png" alt-text="":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/capability.png" alt-text="cap":::
     1. Select **OK**
     1. Select an option from the dropdown options **JavaScript** or **TypeScript**
     1. Type an **Application name** and Press Enter (Application name must start with a letter and can only contain letters and digits.)
