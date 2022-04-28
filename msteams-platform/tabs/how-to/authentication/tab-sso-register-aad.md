@@ -13,7 +13,7 @@ Your Teams app users are authenticated and authorized by Azure AD for using your
 
 Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, permissions, and more.
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets users access your app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the mobile, desktop, and web application that you want to pre-authorize. Ensure that you pre-authorize only those client applications that you trust as users won't be able to decline.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets users access your app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
 These configurations will enable SSO for your app in Teams.
 
@@ -126,9 +126,9 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 After you've created a new registration, configure scope (permission) options for sending access token to client app. In this section, you'll learn:
 
-- [To expose an API](#to-expose-an-api): configure scope (permission) options for your app. To do this, you'll expose a web API, and configure the app ID URI.
+- [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. To do this, you'll expose a web API, and configure the app ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and configure the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-- [To configure authorized client application](#to-configure-authorized-client-application): create an authorized client app for the applications that you want to pre-authorize for your app’s web application, and configure a trust relationship with the API you exposed earlier. This enables the user to access the app scopes (permissions) you've configured without requiring any further consent. Pre-authorize only those client applications you trust since your users won't have the opportunity to decline consent.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create an authorized client ID for the applications that you want to pre-authorize for your app’s web application. It lets the user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your users won't have the opportunity to decline consent.
 
 ### To expose an API
 
