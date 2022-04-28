@@ -45,14 +45,14 @@ The following image shows how SSO works when a Teams user attempts to access the
 
 ```mermaid
 sequenceDiagram
-    User->>Tab: Installs or Opens the Teams app
-    Tab->>Teams Client: Tab app call getAuthToken() using JavaScript.
-    Teams Client->>Sign-in and Consent: Check if consent in required.
-    Sign-in and Consent->>Teams Client: If the user is signing in for the first time, prompt Consent box.
-    Teams Client->>Azure AD: Request access token from Azure AD endpoint.
-    Azure AD->>Teams Client: Send access token to Teams client.
-    Teams Client->>Tab: Sends access token as part of the result object returned by the getAuthToken call.
-    Tab->>Tab: Parses the access token to get the required information and redirect the user to target page.
+    User->>Tab: Opens Teams app
+    Tab->>Teams Client: Call getAuthToken()
+    Teams Client->>Sign-in and Consent: Check if consent is required
+    Sign-in and Consent->>Teams Client: Prompt for consent from new user
+    Teams Client->>Azure AD: Request access token from Azure AD
+    Azure AD->>Teams Client: Send access token to Teams client
+    Teams Client->>Tab: Respond to getAuthToken() with access token
+    Tab->>Tab: Parse access token to give access to user
 ```
 
 | # | Interaction | What's going on |
