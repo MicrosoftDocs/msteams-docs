@@ -3,7 +3,7 @@ title: Create a command menu for your bot
 author: surbhigupta
 description: Learn how to create a command menu for your Microsoft Teams bot with Code samples.
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
 keywords: command menu compose message conversation @mention 
 ---

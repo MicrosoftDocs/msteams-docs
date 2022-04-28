@@ -3,7 +3,7 @@ title: Develop message extensions
 description: Describes how to get started with message extensions in Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: teams message extensions message extensions
+keywords: teams messaging extensions messaging extensions
 ---
 # Develop message extensions for Microsoft Teams
 
