@@ -32,7 +32,7 @@ You must have working knowledge of the following:
 
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
-* [API reference documentation](https://aka.ms/teamsfx-sdk-help)
+* [API reference documentation](../apps-in-teams-meetings/API-references.md)
 * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ## Get started

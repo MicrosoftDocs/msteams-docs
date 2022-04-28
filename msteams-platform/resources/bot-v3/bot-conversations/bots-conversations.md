@@ -82,7 +82,7 @@ Depending on which scopes are declared, your bot can receive messages in the fol
 * **personal chat** Users can interact in a private conversation with a bot by simply selecting the added bot in the chat history, or typing its name or app ID in the To: box on a new chat.
 * **Channels** A bot can be mentioned ("@*botname*") in a channel if it has been added to the team. Note that additional replies to a bot in a channel require mentioning the bot. It will not respond to replies where it is not mentioned.
 
-For incoming messages, your bot receives an [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/resources/bot-v3/bots-notifications.md#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
+For incoming messages, your bot receives an [Activity](../../../bots/how-to/conversations/conversation-messages.md) object of type `messageType: message`. Although the `Activity` object can contain other types of information, like [channel updates](~/resources/bot-v3/bots-notifications.md#channel-updates) sent to your bot, the `message` type represents communication between bot and user.
 
 Your bot receives a payload that contains the user message `Text` as well as other information about the user, the source of the message, and Teams information. Of note:
 
@@ -273,7 +273,7 @@ See [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-con
 
 ## Deleting messages
 
-Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) method in the [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted).
+Messages can be deleted using the connectors [`delete()`](../../../bots/how-to/update-and-delete-bot-messages.md#delete-messages) method in the [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted).
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {

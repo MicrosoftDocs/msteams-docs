@@ -125,5 +125,5 @@ For more information, see [Manage custom app policies and settings in Teams](/mi
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Publish your Teams app](TeamsFx-collaboration.md)
+* [Publish your Teams app](../concepts/deploy-and-publish/appsource/publish.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

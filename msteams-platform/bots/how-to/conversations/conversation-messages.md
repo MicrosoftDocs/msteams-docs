@@ -202,7 +202,7 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `tenant.id`: Microsoft Azure Active Directory (Azure AD) tenant ID passed in all contexts.
 * `team`: Passed only in channel contexts, not in personal chat.
   * `id`: GUID for the channel.
-  * `name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+  * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
 * `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot has been added.
   * `id`: GUID for the channel.
   * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
