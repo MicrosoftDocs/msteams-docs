@@ -49,7 +49,7 @@ sequenceDiagram
     Tab->>Teams Client: Tab app call getAuthToken() using JavaScript.
     Teams Client->>Sign-in and Consent: Check if consent in required.
     Sign-in and Consent->>Teams Client: If the user is signing in for the first time, prompt Consent box.
-    Teams client->>Azure AD: Request access token from Azure AD endpoint.
+    Teams Client->>Azure AD: Request access token from Azure AD endpoint.
     Azure AD->>Teams Client: Send access token to Teams client.
     Teams Client->>Tab: Sends access token as part of the result object returned by the getAuthToken call.
     Tab->>Tab: Parses the access token to get the required information and redirect the user to target page.
