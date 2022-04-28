@@ -9,7 +9,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, messaging extension, and Azure Functions. Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -32,17 +32,17 @@ You can perform single operation, select **F5** to start debugging. The Teams T
 
 #### Multi-target debugging
 
-Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, messaging extension, and Azure Functions at the same time.
+Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
 
 #### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, messaging extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows the toggle breakpoints:
+You can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows the toggle breakpoints:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints":::
 
 #### Hot reload
 
-You can update and save the source codes of tab, bot, messaging extension, and Azure Functions at the same time when you are debugging the Teams app. The app reloads and the debugger reattaches to the programming languages.
+You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you are debugging the Teams app. The app reloads and the debugger reattaches to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes":::
 
@@ -143,10 +143,10 @@ Runs the tasks defined in `.vscode/tasks.json` as follows:
 |  Component |  Task name  | Folder |
 | --- | --- | --- |
 |  Tab |  **Start Frontend** |  tabs |
-|  Bot or messaging extensions |  **Start Bot** |  bot |
+|  Bot or message extensions |  **Start Bot** |  bot |
 |  Azure Functions |  **Start Backend** |  API |
 
-The following image displays task names on the **Output** **Terminal** tab of the Visual Studio Code while running tab, bot or messaging extension, and Azure Functions.
+The following image displays task names on the **Output** **Terminal** tab of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
 
@@ -161,15 +161,15 @@ The following table lists the debug configuration names and types for project wi
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
 |  Tab |  **Attach to Frontend (Edge)** or  **Attach to Frontend (Chrome)**  |  pwa-msedge or pwa-chrome  |
-|  Bot or messaging extensions |   **Attach to Bot** |  pwa-node |
+|  Bot or message extensions |   **Attach to Bot** |  pwa-node |
 | Azure Functions |   **Attach to Backend** |  pwa-node |
 
 The following table lists the debug configuration names and types for project with bot app and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or messaging extension  | **Launch Bot (Edge)** or  **Launch Bot (Chrome)**  |   pwa-msedge or pwa-chrome  |
-|  Bot or messaging extension  |   **Attach to Bot** |  pwa-node  |
+|  Bot or message extension  | **Launch Bot (Edge)** or  **Launch Bot (Chrome)**  |   pwa-msedge or pwa-chrome  |
+|  Bot or message extension  |   **Attach to Bot** |  pwa-node  |
 |  Azure Functions |  **Attach to Backend** |  pwa-node |
 
 #### Sideloads the Teams app
@@ -231,19 +231,19 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 1. For tab, update `dev:teamsfx` script in `tabs/package.json`
 
-1. For bot or messaging extension, update `dev:teamsfx` script in `bot/package.json`
+1. For bot or message extension, update `dev:teamsfx` script in `bot/package.json`
 
 1. For Azure Functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script
 
    > [!NOTE]
-   > Currently, the tab, bot, messaging extension apps, and Azure Functions ports don't support customization.
+   > Currently, the tab, bot, message extension apps, and Azure Functions ports don't support customization.
 
 </details>
 
 <details>
 <summary><b>Add environment variables</b></summary>
 
-You can add environment variables to `.env.teamsfx.local` file for tab, bot, messaging extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
+You can add environment variables to `.env.teamsfx.local` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
  > Ensure to start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
@@ -254,7 +254,7 @@ You can add environment variables to `.env.teamsfx.local` file for tab, bot, mes
 <summary><b>Debug partial component</b></summary>
 
 
-Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, messaging extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
+Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, message extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
 
 1. Comment **Attach to Bot** and **Attach to Backend** from debug compound in `.vscode/launch.json`
 
