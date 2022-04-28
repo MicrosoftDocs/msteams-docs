@@ -3,7 +3,7 @@ title: Contribute to Teams documentation
 description: steps for creating and publishing Teams documentation
 author: surbhigupta
 ms.author: lajanuar
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: contributor-guide
 ---
 

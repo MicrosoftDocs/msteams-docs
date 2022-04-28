@@ -2,7 +2,7 @@
 title: Authentication for tabs using Azure Active Directory
 description: Describes authentication in Teams and how to use it in tabs
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Authenticate a user in a Microsoft Teams tab
@@ -161,5 +161,5 @@ Sample code showing the tab authentication process using Azure AD:
 * [Plan user authentication](../../../concepts/design/understand-use-cases.md)
 * [Design your tab for Microsoft Teams](~/tabs/design/tabs.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)
-* [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)
+* [Add authentication to your message extension](~/messaging-extensions/how-to/add-authentication.md)
 * [Single sign-on (SSO) support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)

@@ -62,7 +62,7 @@ Today every user in the Teams chat or channel sees the exact same view and butto
 
 For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button. On the other hand, the incident creator must see an **Edit** button and all other users must only be able to view details of the incident. This is made possible by User Specific Views that is enabled by the `refresh` property.
 
-The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
+The following image shows an example of a ticketing message extension (ME) where different users in the chat are shown different actions based on the requirement:
 
 # [Mobile](#tab/mobile)
 

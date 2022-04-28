@@ -2,6 +2,7 @@
 title: Set up your dev environment for extending Teams apps across Microsoft 365
 description: Here are the prerequisites for extending your Teams apps across Microsoft 365
 ms.date: 02/11/2022 
+ms.localizationpriority: high
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
 
@@ -51,7 +52,7 @@ For more information on Office 365 release options, see [Set up the Standard or 
 ## Install Office apps in your test environment
 
 > [!IMPORTANT]
-> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook for Windows desktop support for Teams messaging extensions is available to your test tenant.
+> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook for Windows desktop support for Teams message extensions is available to your test tenant.
 
 You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [Change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install an Office 365 Beta Channel build.
 
@@ -78,7 +79,7 @@ You can verify test tenant support for your tenant account:
 
     :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses ('...') option on the left sidebar of Outlook":::
 
-* For messaging extensions in outlook.com and Outlook for Windows, check for **More Apps** option at the bottom of the Outlook compose message pane.
+* For message extensions in outlook.com and Outlook for Windows, check for **More Apps** option at the bottom of the Outlook compose message pane.
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="'More apps' option in the Outlook compose message pane":::
 
@@ -104,4 +105,4 @@ The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolki
 ## Next steps
 
 * [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
-* [Enable a Teams messaging extension for Outlook](extend-m365-teams-message-extension.md)
+* [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)

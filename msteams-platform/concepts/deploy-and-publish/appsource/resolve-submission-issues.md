@@ -4,7 +4,7 @@ description: Understand how to troubleshoot and correct problems with your Micro
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: medium
 ---
 # Resolve issues if your Microsoft Teams store submission fails
 
