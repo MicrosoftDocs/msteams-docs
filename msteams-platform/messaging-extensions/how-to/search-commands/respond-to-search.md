@@ -88,9 +88,9 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-`config` is used when your extension is needed to either authenticate or configure to continue. It asks the user to set up the messaging extension and request the user to provide additional configuration.
+`config` is used when your extension is needed to either authenticate or configure to continue. It asks the user to set up the message extension and request the user to provide additional configuration.
 
-If message extension use a configuration page, the handler for onQuery should first check for any stored configuration information, if the messaging extension isn't configured, return a config response with a link to your configuration such as following example:
+If message extension use a configuration page, the handler for onQuery should first check for any stored configuration information, if the message extension isn't configured, return a config response with a link to your configuration such as following example:
 
 ```HTML
 <html>
@@ -148,7 +148,11 @@ The response from the configuration page is also handled by onQuery. The sole ex
 
 ```csharp
 
-protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionResponse>
+
+OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity>
+
+turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
 {
     // The user has requested the Messaging Extension Configuration page.
     var escapedSettings = string.Empty;
