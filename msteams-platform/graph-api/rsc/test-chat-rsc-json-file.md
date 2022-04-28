@@ -1,7 +1,7 @@
 ---
 title: Test resource-specific consent for a chat in Teams
 description: Learn how to test resource-specific consent for a chat in Teams using Postman with a sample JSON file.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 author: jecha
 ms.author: jecha
 ms.topic: how-to
