@@ -72,7 +72,7 @@ The following table provides a list of application permissions for online meetin
 
 ### Assign permissions
 
-You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://aka.ms/aadapplist) if you prefer to use the [Microsoft Azure Active Directory (Azure AD) V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://portal.azure.com) if you prefer to use the [Microsoft Azure Active Directory (Azure AD) V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### Get tenant administrator consent
 
