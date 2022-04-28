@@ -46,7 +46,7 @@ In this section, you'll learn:
 
 - [How to register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
 
-- [How to configure scope and permission.](#configure-scope-and-permission)
+- [How to configure scope for access token.](#configure-scope-for-access-token)
 
 - [How to configure authentication for different platforms.](#configure-authentication-for-different-platforms)
 
