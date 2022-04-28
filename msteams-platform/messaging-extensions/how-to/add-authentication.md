@@ -1,8 +1,8 @@
 ---
 title: Add authentication to your message extension
 author: surbhigupta
-description: Learn how to add authentication to a message extension using code examples and sample
-ms.localizationpriority: medium
+description: Learn how to add authentication to a messaging extension using code examples and sample
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
 ---

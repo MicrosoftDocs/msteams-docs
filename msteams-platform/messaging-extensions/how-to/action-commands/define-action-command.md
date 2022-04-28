@@ -1,8 +1,8 @@
 ---
 title: Define message extension action commands
 author: surbhigupta
-description: An overview of message extension action commands with app manifest example
-ms.localizationpriority: medium
+description: An overview of messaging extension action commands with app manifest example
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
 ---

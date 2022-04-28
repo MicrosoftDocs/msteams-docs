@@ -3,7 +3,7 @@ title: Test and debug your bot locally
 author: surbhigupta
 description: Learn about testing and debugging your bot locally with an IDE within Teams environment via sideloading, outside Teams using Bot emulator, and by talking directly to your bot.
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
 ---
 

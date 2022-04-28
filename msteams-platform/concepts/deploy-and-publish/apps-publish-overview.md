@@ -4,7 +4,7 @@ description: Describes the options for publishing your Microsoft Teams app, uplo
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 keywords: deploy publish app upload gcc 
 ---
 
