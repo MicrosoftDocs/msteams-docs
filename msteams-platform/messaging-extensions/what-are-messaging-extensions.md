@@ -51,7 +51,7 @@ The action commands are triggered from the compose message area, the command box
 
 Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
-The cards are triggered from the compose message area or the command box and not triggered from a message. They can not be triggered from a message.
+The cards are triggered from the compose message area or the command box and not triggered from a message. They cannot be triggered from a message.
 The following image displays the message extension search command task module:
 
 ![message extension search command](~/assets/images/search-extension.png)
