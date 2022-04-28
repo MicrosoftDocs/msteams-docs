@@ -10,17 +10,17 @@ ms.date: 03/14/2022
 
 # Create a new app
 
-Creating a new app from the Toolkit has the following advantages:
-
-* Integrated identity
-* Access to cloud storage
-* Access to data from Microsoft Graph
-* Access to Azure and Microsoft 365 services with zero-configuration approach
-
-You can create an Teams app by using any one of the following options.
+You can create a new Teams app using any one of the following option.
 
 1. [**Create a new Teams app**](create-new-project.md#create-a-new-teams-app)
 2. [Create a new Teams app using **View samples**](create-new-project.md#create-a-new-teams-app-using-view-samples)
+
+Creating a new Teams app from the Toolkit has the following advantages:
+
+* Integrated identity
+* Access to cloud storage
+* Access to data from the Microsoft Graph
+* Access to Azure and Microsoft 365 services with zero-configuration approach
 
 ## Prerequisite
 
@@ -52,6 +52,8 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
 You can explore and download samples and run your app locally or remotely to preview in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample in the `TeamsFx Samples repository` and browse the source code.
+
+For more information, see [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
 
 ## Step-by-step guides to create an app
 
