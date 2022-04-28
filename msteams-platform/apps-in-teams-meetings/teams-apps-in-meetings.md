@@ -4,7 +4,7 @@ author: surbhigupta
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams apps meetings user participant role api  
 ---
 
@@ -24,7 +24,7 @@ The following illustration gives you an idea of the meeting app extensibility fe
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
+Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and message extensions. You can identify various participant roles and user types, get meeting events, and generate in-meeting dialogs.
 
 To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
 

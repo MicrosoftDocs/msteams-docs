@@ -2,7 +2,7 @@
 title: Calls and online meetings bots
 description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings and learn about real-time media streams
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: calling calls audio video IVR voice online meetings real-time media streams bot 
 ---
 
@@ -40,7 +40,7 @@ Calls in Teams can be purely audio or audio and video. Instead of audio or video
 
 Calls are either peer-to-peer between a person and your bot, or multiparty between your bot and two or more people in a group call.
 
-![Calling types](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="Calling types"border="true":::
 
 Following are the different call types and permissions required for the call:
 
@@ -58,7 +58,7 @@ There are two types of signals, incoming call and in-call. Following are the dif
 
 * To receive an incoming call, you enter an endpoint in your bot settings. This endpoint receives a notification when an incoming call is initiated. You can answer the call, reject it, or redirect it to someone else.
 
-    ![Call handling](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="Call handling"border="true":::
 
 * When a bot is in a call, there are APIs for muting and unmuting the bot and to start or stop sharing video or desktop content with other participants.
 * The bot can also access the list of participants, invite new participants, and mute them.

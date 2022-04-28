@@ -3,7 +3,7 @@ title: Test and debug your bot locally
 author: surbhigupta
 description: Learn about testing and debugging your bot locally with an IDE within Teams environment via sideloading, outside Teams using Bot emulator, and by talking directly to your bot.
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
 ---
 
@@ -52,7 +52,7 @@ For more information, see [complete instructions on the Bot Framework Emulator](
 > [!Important]
 > Talking to your bot by ID is intended for basic testing purposes only. Any Teams-specific functionality you have added to your bot fails to work.
 
-You can also initiate a conversation with your bot by using its ID. When a bot has been added through one of these methods it is not addressable in channel conversations and you cannot take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions. You can initiate a conversation in one of the following ways:
+You can also initiate a conversation with your bot by using its ID. When a bot has been added through one of these methods it is not addressable in channel conversations and you cannot take advantage of other Microsoft Teams app capabilities like tabs or message extensions. You can initiate a conversation in one of the following ways:
 
 * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams launches a personal chat with your bot.
 

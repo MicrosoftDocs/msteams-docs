@@ -2,7 +2,7 @@
 title: Device permissions for the browser
 keywords: teams apps capabilities permissions
 description: Securely bring back device permissions support for apps in our web client
-localization_priority: medium
+localization_priority: high
 ms.topic: how-to
 ---
 
