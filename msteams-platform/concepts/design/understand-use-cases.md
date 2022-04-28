@@ -92,15 +92,15 @@ Conversations often result in the need to do something (generate an order, revie
 
    :::column span="":::
 
-#### Messaging extensions
+#### Message extensions
 
-With [messaging extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+With [message extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what message extensions look like in the Teams client." border="false":::
 
    :::column-end:::
 :::row-end:::

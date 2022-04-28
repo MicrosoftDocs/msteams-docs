@@ -31,7 +31,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 * Use specialized card types like the Office 365 connector card.
 * Set Teams-specific channel data on activities.
-* Process messaging extension requests.
+* Process message extension requests.
 
 > [!IMPORTANT]
 > You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.

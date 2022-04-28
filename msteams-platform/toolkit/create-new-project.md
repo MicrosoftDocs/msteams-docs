@@ -20,7 +20,7 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar.
 1. Select **Create a new Teams app**.
-1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). 
+1. Select from the available capabilities tab, bot, message extension, or a tab using SharePoint Framework (SPFx). 
 1. Select at least one option to start creating the Teams app.
 
 ### Create a new Teams app using view samples
