@@ -28,27 +28,27 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ### Create a new Teams app
 
-    1. Open Visual Studio Code
-    1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
-    1. Select **Create a new Teams app** tab
-    1. Select **Create a new Teams app** from the dropdown options
-    1. Select required capability
+1. Open Visual Studio Code
+1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
+1. Select **Create a new Teams app** tab
+1. Select **Create a new Teams app** from the dropdown options
+1. Select required capability
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/capability.png" alt-text="cap":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/capability.png" alt-text="cap":::
 
-    1. Select **OK**
-    1. Select an option from the dropdown options **JavaScript** or **TypeScript**
-    1. Type an **Application name** and Press Enter (Application name must start with a letter and can only contain letters and digits.)
+1. Select **OK**
+1. Select an option from the dropdown options **JavaScript** or **TypeScript**
+2. Type an **Application name** and Press Enter (Application name must start with a letter and can only contain letters and digits.)
 
 ### View samples
 
-    You can create a new Teams app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.<br>
+You can create a new Teams app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.<br>
 
-    1. Open **Teams Toolkit** from Microsoft Visual Studio Code
-    2. Select **DEVELOPMENT** section in Treeview
-    3. Select **View samples**. The sample gallery appears as shown in the following image:
+1. Open **Teams Toolkit** from Microsoft Visual Studio Code
+2. Select **DEVELOPMENT** section in Treeview
+3. Select **View samples**. The sample gallery appears as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
 You can explore and download samples and run your app locally or remotely to preview in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample in the `TeamsFx Samples repository` and browse the source code.
 
