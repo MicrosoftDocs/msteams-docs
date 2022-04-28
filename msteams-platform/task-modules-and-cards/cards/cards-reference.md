@@ -112,14 +112,14 @@ An Adaptive Card is a customizable card that can contain any combination of text
 
 The following table provides the features that support Adaptive Cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
 >
-> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based messaging extensions.
-> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based messaging extensions and link unfurling), tabs, and task modules.
+> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
+> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 
@@ -295,7 +295,7 @@ A card that typically contains a single large image, one or more buttons, and te
 
 The following table provides the features that support hero cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -362,7 +362,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 The following table provides the features that support list cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -440,7 +440,7 @@ You can work with an Office 365 Connector card that provides a flexible layout a
 
 The following table provides the features that support Office 365 Connector cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
@@ -562,7 +562,7 @@ Teams supports receipt card. It is a card that enables a bot to provide a receip
 
 The following table provides the features that support receipt cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -636,7 +636,7 @@ The signin action can be used from any card in Teams, not just the signin card. 
 
 The following table provides the features that support signin cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -655,7 +655,7 @@ You can work with a thumbnail card that is used for sending a simple actionable 
 
 The following table provides the features that support thumbnail cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -738,7 +738,7 @@ The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments
 
 The following table provides the features that support carousel collections:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -932,7 +932,7 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 
 The following table provides the features that support list collections:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
