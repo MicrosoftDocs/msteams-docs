@@ -1,6 +1,6 @@
 ---
 title: Cards
-description: Describes cards and how they are used in bots, connectors, and messaging extensions
+description: Describes cards and how they are used in bots, connectors, and message extensions
 ms.localizationpriority: high
 keywords: connectors bots cards messaging
 ms.topic: overview
@@ -21,13 +21,13 @@ The bots for Teams support the following types of cards:
 * Thumbnail card
 * Card collections
 
-You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
+You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and message extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
 Teams uses cards in three different places:
 
 * Connectors
 * Bots
-* Messaging extensions
+* Message extensions
 
 ## Cards in connectors
 
@@ -39,9 +39,9 @@ The Microsoft Bot Framework extends the cards specification by adding a set of p
 
 Bots in Teams can use simple cards, connector cards, or Adaptive Cards. [Types of cards](~/task-modules-and-cards/cards/cards-reference.md) provides information on cards, supported by bots in Teams.
 
-## Cards in messaging extensions
+## Cards in message extensions
 
-[Messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) can also return a card. Messaging extensions can use simple cards, connector cards, or Adaptive Cards. These cards are found in [types of cards](~/task-modules-and-cards/cards/cards-reference.md).
+[Message extensions](~/messaging-extensions/what-are-messaging-extensions.md) can also return a card. Message extensions can use simple cards, connector cards, or Adaptive Cards. These cards are found in [types of cards](~/task-modules-and-cards/cards/cards-reference.md).
 
 ## Types of cards
 
