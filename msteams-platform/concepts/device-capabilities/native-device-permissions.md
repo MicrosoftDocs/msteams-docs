@@ -231,6 +231,7 @@ For example:
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
    :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="Device permission in desktop." border="true":::
+
 ---
 
 ## Permission behavior across login sessions

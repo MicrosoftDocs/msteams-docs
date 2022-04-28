@@ -24,6 +24,8 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Integrate media capabilities
+        url: ~/concepts/device-capabilities/mobile-camera-image-permissions.md
       - text: Upload your app in Microsoft Teams
         url: ~/concepts/deploy-and-publish/apps-upload.md
       - text: Share to Teams from personal app or tab
@@ -42,8 +44,7 @@ landingContent:
         url: ~/get-started/glossary.md
       - text: Overview
         url: ~/overview.md
-      - text: Integrate media capabilities
-        url: ~/concepts/device-capabilities/mobile-camera-image-permissions.md
+     
 
       
 
