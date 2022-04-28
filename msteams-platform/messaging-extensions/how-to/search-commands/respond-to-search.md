@@ -86,13 +86,13 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
-`composeExtension.type`: `config`
+### `config` response type
 
 `config` is used when your extension is needed to either authenticate or configure to continue. It asks the user to set up the messaging extension and request the user to provide additional configuration.
 
 If message extension use a configuration page, the handler for onQuery should first check for any stored configuration information, if the messaging extension isn't configured, return a config response with a link to your configuration such as following example:
 
-```json
+```HTML
 <html>
 <body>
 <form>
@@ -108,30 +108,36 @@ If message extension use a configuration page, the handler for onQuery should fi
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function () 
 {
-var urlParams = new URLSearchParams(window.location.search);
-var settings = urlParams.get('settings');
-if (settings) {
-var checkboxes = document.getElementsByName("includeInSearch");
-for (var i = 0; i < checkboxes.length; i++) {
-var thisCheckbox = checkboxes[i];
-if (settings.includes(thisCheckbox.value)) {
-checkboxes[i].checked = true;
-}
-}
-}
+    var urlParams = new URLSearchParams(window.location.search);
+    var settings = urlParams.get('settings');
+    if (settings) 
+    {
+        var checkboxes = document.getElementsByName("includeInSearch");
+        for (var i = 0; i < checkboxes.length; i++) 
+        {
+            var thisCheckbox = checkboxes[i];
+            if (settings.includes(thisCheckbox.value)) 
+            {
+                checkboxes[i].checked = true;
+            }
+        }
+    }
 });
 </script>
 <script type="text/javascript">
 microsoftTeams.initialize();
-function onSubmit() {
-var newSettings = [];
-var checkboxes = document.getElementsByName("includeInSearch");
-for (var i = 0; i < checkboxes.length; i++) {
-if (checkboxes[i].checked) {
-newSettings.push(checkboxes[i].value);
-}
-}
-microsoftTeams.authentication.notifySuccess(JSON.stringify(newSettings));
+function onSubmit() 
+{
+    var newSettings = [];
+    var checkboxes = document.getElementsByName("includeInSearch");
+    for (var i = 0; i < checkboxes.length; i++) 
+    {
+        if (checkboxes[i].checked) 
+        {
+            newSettings.push(checkboxes[i].value);
+        }
+    }
+    microsoftTeams.authentication.notifySuccess(JSON.stringify(newSettings));
 }
 </script>
 </body>
@@ -140,52 +146,57 @@ microsoftTeams.authentication.notifySuccess(JSON.stringify(newSettings));
 
 The response from the configuration page is also handled by onQuery. The sole exception is when the configuration page is called by the handler for onQuerySettingsUrl. The handler for onQuerySettingsUrl returns the URL for the configuration page. After the configuration page closes, the handler for onSettingsUpdate accepts and saves the returned state as shown in the following example
 
-```JSON
+```csharp
 
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
 {
-// The user has requested the Messaging Extension Configuration page.
-var escapedSettings = string.Empty;
-var userConfigSettings = await _userConfigProperty.GetAsync(turnContext, () => string.Empty);
-if (!string.IsNullOrEmpty(userConfigSettings))
-{
-escapedSettings = Uri.EscapeDataString(userConfigSettings);
-}
-return new MessagingExtensionResponse
-{
-ComposeExtension = new MessagingExtensionResult
-{
-Type = "config",
-SuggestedActions = new MessagingExtensionSuggestedAction
-{
-Actions = new List<CardAction>
-{
-new CardAction
-{
-Type = ActionTypes.OpenUrl,
-Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",
-},
-},
-},
-},
-};
+    // The user has requested the Messaging Extension Configuration page.
+    var escapedSettings = string.Empty;
+    var userConfigSettings = await _userConfigProperty.GetAsync(turnContext, () => string.Empty);
+    if (!string.IsNullOrEmpty(userConfigSettings))
+    {
+        escapedSettings = Uri.EscapeDataString(userConfigSettings);
+    }
+    return new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+            {
+                Type = "config",
+                SuggestedActions = new MessagingExtensionSuggestedAction
+                    {
+                        Actions = new List<CardAction>
+                            {
+                                new CardAction
+                                {
+                                    Type = ActionTypes.OpenUrl,
+                                    Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",
+                                },
+                            },
+                    },
+            },
+    };
 }
 
 ```
 
-`composeExtension.type`: `message`
+### `auth` response type
+
+If your service requires user authentication, the users must sign in before they use the message extension. For more information, see [authentication](~/messaging-extensions/how-to/add-authentication.md#authentication)
+
+### `message` response type
 
 `message` is used when your extension needs to display a plain text message
 
-```json
+```csharp
+
 return new MessagingExtensionResponse
-{
-ComposeExtension = new MessagingExtensionResult
-{
-Type = "message",
-Text = "Here is the message you want to show!"
-}
-};
+    {
+        ComposeExtension = new MessagingExtensionResult
+            {
+                Type = "message",
+                Text = "Here is the message you want to show!"
+            }
+    };
 
 ```
 
