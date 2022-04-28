@@ -21,7 +21,7 @@ To create a hero card, thumbnail card, or Adaptive Card from App Studio:
 1. Select **Create a new card**.
 1. Select **Create** for one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**. The metadata details, buttons, and json, csharp, and node code examples are shown for that card.
 
-    ![Hero card details](~/assets/images/Cards/Herocarddetails.png)
+    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="Hero card details":::
 
 1. Select **Send me this card**. The card is sent to you as a chat message.
 
@@ -112,14 +112,14 @@ An Adaptive Card is a customizable card that can contain any combination of text
 
 The following table provides the features that support Adaptive Cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
 >
-> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based messaging extensions.
-> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based messaging extensions and link unfurling), tabs, and task modules.
+> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
+> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 
@@ -295,7 +295,7 @@ A card that typically contains a single large image, one or more buttons, and te
 
 The following table provides the features that support hero cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -314,7 +314,7 @@ The following table provides the properties of a hero card:
 
 ### Example of a hero card
 
-![Example of a hero card](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero card":::
 
 The following code shows an example of a hero card:
 
@@ -362,7 +362,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 The following table provides the features that support list cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -440,7 +440,7 @@ You can work with an Office 365 Connector card that provides a flexible layout a
 
 The following table provides the features that support Office 365 Connector cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
@@ -562,13 +562,13 @@ Teams supports receipt card. It is a card that enables a bot to provide a receip
 
 The following table provides the features that support receipt cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 ### Example of a receipt card
 
-![Example of a receipt card](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="receipt card":::
 
 The following code shows an example of a receipt card:
 
@@ -636,7 +636,7 @@ The signin action can be used from any card in Teams, not just the signin card. 
 
 The following table provides the features that support signin cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -655,11 +655,11 @@ You can work with a thumbnail card that is used for sending a simple actionable 
 
 The following table provides the features that support thumbnail cards:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail card":::
 
 ### Properties of a thumbnail card
 
@@ -738,7 +738,7 @@ The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments
 
 The following table provides the features that support carousel collections:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -751,7 +751,7 @@ Properties of a carousel card are same as the hero and thumbnail cards.
 
 #### Example of a carousel collection
 
-![Example of a carousel of cards](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Carousel collection":::
 
 The following code shows an example of a carousel collection:
 
@@ -932,13 +932,13 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 
 The following table provides the features that support list collections:
 
-| Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 #### Example of a list collection
 
-![Example of a list of cards](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="list collection":::
 
 Properties of list collections are same as the hero or thumbnail cards.
 

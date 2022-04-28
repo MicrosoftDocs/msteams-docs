@@ -18,7 +18,7 @@ items:
 
     >This app will have all capabilities and each has its own UI and UX:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="true":::
 
     In this tutorial, you'll learn:
 
@@ -36,7 +36,7 @@ items:
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
     | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample C# app repo from GitHub. |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and messaging extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and message extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
@@ -77,7 +77,7 @@ items:
 
     1. Select **Close**.
     
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/toolkit-installed.png" alt-text="Image shows installation done for Teams Toolkit":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/toolkit-installed.png" alt-text="Image shows installation done for Teams Toolkit" lightbox="~/assets/images/teams-toolkit-v2/toolkit-installed.png" border="true":::
     
     1. Close Visual Studio 2019.
         
@@ -172,17 +172,17 @@ items:
     1. Open Visual Studio 2019.
     1. Select **Clone a repository**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-clone-repo.png" alt-text="Clone sample repo for c# Teams app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-clone-repo.png" alt-text="Clone sample repo for c# Teams app" border="true":::
 
     1. Enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git` as path for cloning the repo:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/repo-clone-path.png" alt-text="Clone sample repo for c# Teams app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/repo-clone-path.png" alt-text="Clone sample repo for c# Teams app" border="true":::
 
     1. Enter the location where you want to clone the repo, and select **Clone**.
 
         The sample repo is cloned, and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="true":::
 
     Now that you've got the sample repo cloned, let's build your first C# app for Teams.
 
@@ -204,15 +204,15 @@ items:
 
     1. Open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="true":::
 
     1. Select the **Project** menu, and select **Microsoft.Teams.Samples.HelloWorld.Web Properties**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-menu.png" alt-text="Image showing Project menu to select Properties option" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-menu.png" alt-text="Image showing Project menu to select Properties option" border="true":::
 
     1. Select **Debug** from the left pane of the **Properties** window.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="true":::
 
     1. Move through the screen to view the **Web Server Settings**.
 
@@ -220,11 +220,11 @@ items:
         - Set **App URL** to `http://localhost:3333/`.
         - Clear **Enable SSL**.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="true":::
 
     1. Select **Build Solution** from the **Build** menu.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="true":::
 
     1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
 
@@ -232,19 +232,19 @@ items:
 
         - `https://localhost:3333/`
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-after-debug.png" alt-text="Image showing local host" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-after-debug.png" alt-text="Image showing local host" border="true":::
 
         - `https://localhost:3333/hello`
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-hello.png" alt-text="Image showing Hello page of the app" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-hello.png" alt-text="Image showing Hello page of the app" border="true":::
 
         - `https://localhost:3333/first`
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-first-tab.png" alt-text="Image showing first tab of the app" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-first-tab.png" alt-text="Image showing first tab of the app" border="true":::
 
         - `https://localhost:3333/second`
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app" border="true":::
 
         > [!Note]
         > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`.
@@ -267,7 +267,7 @@ items:
         ````
         The ngrok tunnel is created. Here's an example:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="true":::
 
         You can try adding `hello`, `first`, or `second` to the ngrok tunnel url to view different tab pages of the app.
         
@@ -282,7 +282,7 @@ items:
 
         Here's an example of the URL:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-verify-tunnel.png" alt-text="Image showing C# app running locally on ngrok tunnel" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-verify-tunnel.png" alt-text="Image showing C# app running locally on ngrok tunnel" border="true":::
 
     1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
 
@@ -310,7 +310,7 @@ items:
     
     However, Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="true":::
 
     Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
@@ -339,21 +339,21 @@ items:
 
     1. Search for **Developer Portal** in the search bar, and select **Developer Portal**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="true":::
 
     1. Select **Open**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-dev-portal.png" alt-text="Image showing open Developer Portal app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-dev-portal.png" alt-text="Image showing open Developer Portal app" border="true":::
 
         The Developer Portal opens.
 
     1. Select the **Apps** tab.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-app.png" alt-text="Developer Portal app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-app.png" alt-text="Developer Portal app" border="true":::
 
     1. Select **Import app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="true":::
 
     1. Select the app package `helloworldapp.zip` from the following path in your C# sample repo directory structure:
 
@@ -361,7 +361,7 @@ items:
 
         The **Hello World** app is imported in Developer Portal.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="true":::
 
     ### Take a tour of your app in Developer Portal
 
@@ -371,7 +371,7 @@ items:
 
     1. Select **Basic Information** from the left pane of Developer Portal.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-left-pane-basic.png" alt-text="Image shows the left pane of Developer Portal" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-left-pane-basic.png" alt-text="Image shows the left pane of Developer Portal" border="true":::
 
     1. Note the following information from the basic information:
         - App ID
@@ -380,7 +380,7 @@ items:
 
     1. Select **Branding** from the left pane to view the branding information.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-branding.png" alt-text="Image showing branding information of the app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-branding.png" alt-text="Image showing branding information of the app" border="true":::
 
         These details are important if you are writing a new app for distribution.
 
@@ -390,7 +390,7 @@ items:
 
         The App features appear in the right pane. You can view cards for Personal app, Bot, and Message Extension.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-csharp-app-features.png" alt-text="Image showing features of the app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-csharp-app-features.png" alt-text="Image showing features of the app" border="true":::
 
     #### View the app manifest
 
@@ -402,7 +402,7 @@ items:
         
         The manifest file appears on the right pane.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="true":::
 
     ### Configure your app capabilities
 
@@ -423,11 +423,11 @@ items:
 
     1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon for Hello tab, and select **Edit** to open the app details for updating.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-edit-tab.png" alt-text="Image showing Hello tab menu" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-edit-tab.png" alt-text="Image showing Hello tab menu" border="true":::
 
     1. Enter the app details for the Hello tab in **Add a tab to your personal app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png" alt-text="Image showing Hello tab details" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png" alt-text="Image showing Hello tab details" border="true":::
 
         Enter the following details:
         - **Name**: Hello tab.
@@ -440,17 +440,17 @@ items:
 
     1. Select **Save**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-tab-update.png" alt-text="Image showing Hello tab details to be saved" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-tab-update.png" alt-text="Image showing Hello tab details to be saved" border="true":::
     
         The **Personal app** pane now shows the new tab and an About tab created automatically.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-about-tab-added.png" alt-text="Image showing Hello tab and About tab details" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-about-tab-added.png" alt-text="Image showing Hello tab and About tab details" border="true":::
 
     #### Configure bot
 
     It's easy to add the bots functionality to your app. The Hello World sample app already has a bot as its part, but you must register it with Teams.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-no-id.png" alt-text="Image showing bot app imported with no app ID" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-no-id.png" alt-text="Image showing bot app imported with no app ID" border="true":::
 
     The bot that was imported from the sample doesn't have an associated app ID. You'll need to delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
 
@@ -466,35 +466,35 @@ items:
 
     1. Select **Tools** to add capability.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/tools-option.png" alt-text="Image showing Tools option" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/tools-option.png" alt-text="Image showing Tools option" border="true":::
     
     1. Select **Bot management** on the **Tools** pane.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tools-bot-card.png" alt-text="Image showing bot management pane" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tools-bot-card.png" alt-text="Image showing bot management pane" border="true":::
 
     1. Select **+ New Bot** on the **Bot management** pane.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-management-new-bot.png" alt-text="Image showing new bot option" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-management-new-bot.png" alt-text="Image showing new bot option" border="true":::
 
     1. Enter a suitable name for your bot, and select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot.png" alt-text="Image showing how to add bot" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot.png" alt-text="Image showing how to add bot" border="true":::
 
         The **Configure** pane appears showing details of the new bot in the left pane.
 
     1. Enter the forwarding URL from the `ngrok` console, and select **Save**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-configure-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-configure-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="true":::
 
     1. Select **Client secrets** and then select **Add a client secret to your bot** to generate a password for the bot.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-client-secret-pane.png" alt-text="Image showing Client secret section" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-client-secret-pane.png" alt-text="Image showing Client secret section" border="true":::
 
         Developer Portal generates a password for the bot.
 
         You can use the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password. For this tutorial, you don't need to copy it.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-client-secret-generated.png" alt-text="Image showing Client secret generated" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-client-secret-generated.png" alt-text="Image showing Client secret generated" border="true":::
 
     1. Select **OK**.
 
@@ -502,7 +502,7 @@ items:
 
         The **Bot management** pane shows the new Bot added with an app ID.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-mgmt-pane.png" alt-text="Image showing new bot with app ID" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-mgmt-pane.png" alt-text="Image showing new bot with app ID" border="true":::
 
     1. Ensure that you save the Bot ID along with the password from the **Client secret** section.
 
@@ -510,17 +510,17 @@ items:
 
     1. Open the **App features** pane, and select the **Bot** card.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-card.png" alt-text="Image showing bot card" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-card.png" alt-text="Image showing bot card" border="true":::
 
         The **Bot** pane appears.
 
     1. Select your bot app from **Select an existing bot**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-new-bot-app.png" alt-text="Image showing how to add an existing bot app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-new-bot-app.png" alt-text="Image showing how to add an existing bot app" border="true":::
 
         The new bot is added to your app with its own app ID.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-new-bot-added.png" alt-text="Image showing new bot added to app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-new-bot-added.png" alt-text="Image showing new bot added to app" border="true":::
 
     ##### To configure bot scope
 
@@ -528,38 +528,38 @@ items:
 
     1. Move through the **Bot** pane to view the **Commands** section, and select **+ Add a Command**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section" border="true":::
 
     1. Enter a suitable name and description for the **Command**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot-command.png" alt-text="Image showing how to add commands details" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot-command.png" alt-text="Image showing how to add commands details" border="true":::
 
     1. Select all the three scopes for the command, and select **Add**.
         - **Personal**
         - **Team**
         - **Group Chat**
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Image showing how to save commands details" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Image showing how to save commands details" border="true":::
 
         The new command is added to the **Commands** section of the **Bot** pane.
 
     1. Select **Save**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-new-bot-command.png" alt-text="Image showing commands details to be saved" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-new-bot-command.png" alt-text="Image showing commands details to be saved" border="true":::
 
         The command details are saved.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-added.png" alt-text="Image showing commands details saved" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-added.png" alt-text="Image showing commands details saved" border="true":::
 
     1. Open **App features** pane, and select **Personal app** card to view your app's tab details.
 
         You'll see that a tab for your new chat bot is added to your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tab-chat-tab-conf.png" alt-text="Image showing chat bot configured" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tab-chat-tab-conf.png" alt-text="Image showing chat bot configured" border="true":::
 
     #### Configure message extension
 
-    Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
+    Message extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Message extensions appear at the bottom of the compose box.
 
     To add a new message extension:
 
@@ -569,21 +569,21 @@ items:
 
     1. Select the name of your bot app from the **Select an existing bot** dropdown list on the **Message extension** pane.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-select-bot.png" alt-text="Image showing Message extension pane to select existing bot" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-select-bot.png" alt-text="Image showing Message extension pane to select existing bot" border="true":::
 
     1. Select **Save**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-save.png" alt-text="Image showing Message extension save button" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-save.png" alt-text="Image showing Message extension save button" border="true":::
 
         The message extension is saved, and the **Commands** section appears on the **Message extension** pane.
 
     1. Select **+ Add a command** to define the scope of what your message extension app can do.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Image showing Command section" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Image showing Command section" border="true":::
 
     1. Ensure that **Search** is selected as the type of command you want to add in the **Add a command** dialog.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-new-command.png" alt-text="Image showing Add a Command dialog" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-new-command.png" alt-text="Image showing Add a Command dialog" border="true":::
 
     1. Enter suitable information the following details:
         - Command ID
@@ -592,7 +592,7 @@ items:
 
     1. Move through the dialog to view the remaining details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command-b.png" alt-text="Image showing remaining details in Add a Command dialog" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command-b.png" alt-text="Image showing remaining details in Add a Command dialog" border="true":::
 
     1. Ensure **Make default** is selected.
     1. Select the following contexts for the message extension command:
@@ -608,12 +608,12 @@ items:
     1. Select **Save**
     1. The message extension command is saved, and shows on the list of commands in the **Message extension** pane.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-command-added.png" alt-text="Image showing new Command added" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-command-added.png" alt-text="Image showing new Command added" border="true":::
 
     1. Select **Save**.
     1. Open **App features** pane.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-capabilities-configured.png" alt-text="Image showing capabilities configured for Hello World app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-capabilities-configured.png" alt-text="Image showing capabilities configured for Hello World app" border="true":::
 
         You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app. The next step is to register your app in Teams and test your app.
 
@@ -631,7 +631,7 @@ items:
 
     1. Select **Preview in Teams** from the Developer Portal toolbar.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button" border="true"lightbox="~/assets/images/teams-toolkit-v2/preview-in-teams.png":::
 
         The Developer Portal informs you that your app is sideloaded successfully.
 
@@ -643,30 +643,30 @@ items:
         The **Add** page appears for your app.
     1. Select **Add** to load the app on Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-nodejs-app-sideload.png" alt-text="Image showing Add app dialog" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-nodejs-app-sideload.png" alt-text="Image showing Add app dialog" border="true":::
 
         Your app is now available in Teams. You can view all the tabs and test the capabilities:
 
         - Hello tab:
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-tab.png" alt-text="Image showing Hello tab in local environment" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-tab.png" alt-text="Image showing Hello tab in local environment" border="true":::
 
         - Chat bot:
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot.png" alt-text="Image showing the app's bot in local environment" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot.png" alt-text="Image showing the app's bot in local environment" border="true":::
 
             You can send a message using the chat.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot-chat.png" alt-text="Image showing chat in local environment" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot-chat.png" alt-text="Image showing chat in local environment" border="true":::
 
         - Message extension:
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext.png" alt-text="Image showing message extension in local environment" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext.png" alt-text="Image showing message extension in local environment" border="true":::
 
             You can try a search using the message extension.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext-query.png" alt-text="Image showing search using message extension in local environment" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext-query.png" alt-text="Image showing search using message extension in local environment" border="true"lightbox="~/assets/images/teams-toolkit-v2/helloworld-msgext-query.png":::
 
         - About tab:
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-about.png" alt-text="Image showing About tab in local environment" border="false":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-about.png" alt-text="Image showing About tab in local environment" border="true":::

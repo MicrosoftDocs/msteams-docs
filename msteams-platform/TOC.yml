@@ -64,7 +64,7 @@
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
-    - name: Messaging extensions
+    - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md  
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
@@ -116,8 +116,8 @@
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: CI/CD guide
-      href: toolkit/use-CICD-template.md
+    - name: Set up CI/CD pipelines
+      href: toolkit/use-CICD-template.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
   - name: Teams Toolkit CLI
@@ -134,9 +134,9 @@
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Teams JavaScript client SDK v2 Preview
     href: m365-apps/using-teams-client-sdk-preview.md
-  - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
+  - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
-  - name: .NET Bot Framework for bots and messaging extensions (GitHub)
+  - name: .NET Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-dotnet
   - name: Microsoft Graph SDKs
     href: /graph/sdks/sdks-overview
@@ -176,9 +176,9 @@
         href: resources/bot-v3/bots-text-formats.md  
       - name: Test a bot
         href: resources/bot-v3/bots-test.md
-    - name: Messaging extensions SDK (v3)
+    - name: Message extensions SDK (v3)
       items:
-      - name: Messaging extensions SDK (v3)
+      - name: Message extensions SDK (v3)
         href: resources/messaging-extension-v3/messaging-extensions-overview.md
       - name: Search extensions
         href: resources/messaging-extension-v3/search-extensions.md
@@ -265,7 +265,7 @@
       href: resources/media-formats.md
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md
-- name: Build messaging extensions
+- name: Build message extensions
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
@@ -375,11 +375,11 @@
       href: bots/how-to/authentication/add-authentication.md
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
-  - name: Messaging extensions
+  - name: Message extensions
     items:
-    - name: Add authentication to your messaging extension
+    - name: Add authentication to your message extension
       href: messaging-extensions/how-to/add-authentication.md
-    - name: Enable SSO for messaging extensions
+    - name: Enable SSO for message extensions
       href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Integrate device capabilities
   items:
@@ -419,7 +419,7 @@
     href: m365-apps/prerequisites.md
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
-  - name: Enable a Teams messaging extension for Outlook
+  - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
 - name: Test your app
   items:
