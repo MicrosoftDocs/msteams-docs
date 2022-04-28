@@ -12,8 +12,8 @@ ms.date: 03/14/2022
 
 You can create a new Teams app using any one of the following option.
 
-1. [**Create a new Teams app**](#create-a-new-teams-app)
-2. [**View samples**](#view-samples)
+* [**Create a new Teams app**](create-new-project.md#create-a-new-teams-app)
+* [**View samples**](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
 Creating a new Teams app from the Toolkit has the following advantages:
 
@@ -26,7 +26,7 @@ Creating a new Teams app from the Toolkit has the following advantages:
 
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-1. **To create a new Teams app**
+#### Create a new Teams ap
 
     1. Open Visual Studio Code
     1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
@@ -40,7 +40,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
     1. Select an option from the dropdown options **JavaScript** or **TypeScript**
     1. Type an **Application name** and Press Enter (Application name must start with a letter and can only contain letters and digits.)
 
-2. **View samples**
+#### View samples
 
     You can create a new Teams app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.<br>
 
