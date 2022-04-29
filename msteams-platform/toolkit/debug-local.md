@@ -174,15 +174,16 @@ The following table lists the debug configuration names and types for project wi
 
 #### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
+The configuration **Attach to Frontend** or **Launch Bot** launches a new browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select any one of the dropdown list option.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
+ 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app.png" alt-text="local debug":::
 
    Your app is added to Teams!
 
 ## Customize debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your tab or bot by unchecking some prerequisites:
+You can customize the debug settings to create your own tab or bot by selecting prerequisites:
 
 <br>
 
@@ -302,21 +303,11 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ## See also
 
-:::row:::
-    :::column span="1":::
-        **Plan your app**
-    :::column-end:::
-    :::column span="2":::
-        Understand and map your app use cases to Teams features.
-
-        > [!div class="nextstepaction"]
-        > [Plan your app](~/concepts/app-fundamentals-overview.md)
-    :::column-end:::
-:::row-end:::
 
 
 
-* [](provision.md)
+
+* [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
