@@ -934,14 +934,18 @@ Use the following guidelines for meeting extensions:
 
 </details>
 
-### Pre and post meeting experience
+</br>
+<details><summary>Pre and post meeting experience</summary>
 
 * Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md).
 * Tabs must not have horizontal scrolling.
 * Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**.
 
-### In-meeting experience
+</details>
+
+</br>
+<details><summary>In-meeting experience</summary>
 
 * Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
 * A tooltip must display the app name when hovering over the app icon during meetings.
@@ -950,7 +954,10 @@ Use the following guidelines for meeting extensions:
 
 * Message extensions must function the same during meetings as they do outside meetings.
 
-### In-meeting tabs
+</details>
+
+</br>
+<details><summary>In-meeting tabs</summary>
 
 * Must be responsive.
 * Must maintain padding and component sizes.
@@ -963,7 +970,10 @@ Use the following guidelines for meeting extensions:
 * Must not include more than one close button. It may confuse users since there's already a built-in header button to dismiss the tab.
 * Must not have horizontal scrolling.
 
-### In-meeting dialogs
+</details>
+
+</br>
+<details><summary>In-meeting dialogs</summary>
 
 * Must be used sparingly and for scenarios that are light and task oriented.
 * Must display content in a single column and not have multiple navigation levels.
@@ -981,33 +991,43 @@ Use the following guidelines for meeting extensions:
   * The maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image.
   * Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as Transparent to indicate that they're overlapping images in the scene.
 
+</details>
+
 ## Notifications
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
 
 If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), ensure it adheres to the following guidelines.
-
-### General
+<br></br>
+<details><summary>General</summary>
 
 * All the notification triggers specified in your app configuration must work.
 * Notifications must be localized per the supported languages configured for your app.
 * Notifications must display within five seconds of user action.
 
-### Avatars
+</details>
+</br>
+<details><summary>Avatars</summary>
 
 * The notification avatar must match your app's color icon.
 * Notifications triggered by a user must include the user's avatar.
 
-### Spamming
+</details>
+</br>
+<details><summary>Spamming</summary>
 
 * Apps must not send more than 10 notifications per minute to a user.
 * Bots and the activity feed must not trigger duplicate notifications.
 * Notifications must provide some value to users and not be used for trivial or irrelevant events.
 
-### Navigation and layout
+</details>
+</br>
+<details><summary>Navigation and layout</summary>
 
 * Notifications must adhere to the Teams activity feed layout and experience.
 * When selecting a notification, the user must be directed to relevant content within Teams.
+
+</details>
 
 ## Microsoft 365 App Compliance Program
 
