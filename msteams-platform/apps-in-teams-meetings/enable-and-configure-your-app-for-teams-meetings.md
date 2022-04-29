@@ -3,7 +3,7 @@ title: Enable and configure your apps for Teams meetings
 author: surbhigupta
 description: Enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features, such as, in-meeting dialog, shared meeting stage, meeting sidepanel, and more  
 ms.topic: conceptual
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 
 # Enable and configure your apps for Teams meetings

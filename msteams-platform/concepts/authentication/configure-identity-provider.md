@@ -2,7 +2,7 @@
 title: Configure OAuth 2.0 identity providers
 description: Describes how to configure identity providers with a focus on Microsoft Azure Active Directory (Azure AD)
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication Azure AD oauth identity provider
 ---
 # Configure identity providers
