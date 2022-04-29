@@ -19,6 +19,11 @@ Link unfurling is a method, your app can register to receive an invoke activity 
 * Responds to the full hyperlink with adaptive cards and provides the additional information or   action
 * You can access this feature both on desktop and mobile 
 
+## Limitations of link unfurling 
+
+* Message extension or bot is required to provide the link unfurling in message compose area
+* Link Unfurling is not supporting to out of the box in Teams
+
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
 
@@ -37,6 +42,51 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 ![Example of link unfurling](~/assets/images/Teams-link-unfurling/result-output-new.png)
 
 ---
+
+## Types of preview in mobile link unfurling
+
+* Card preview 
+* Url preview 
+* Install preview 
+* Auth/Config preview 
+
+<br>
+
+<details>
+<summary><b>Card preview</b></summary>
+
+:::image type="content" source="~/assets/images/Teams-link-unfurling/card-preview.png" alt-text="card preview" border="true":::
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Url Preview</b></summary>
+
+:::image type="content" source="~/assets/images/Teams-link-unfurling/Url-preview.png" alt-text="Url-preview" border="true":::
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Install preview</b></summary>
+
+:::image type="content" source="~/assets/images/Teams-link-unfurling/install-preview.png" alt-text="install-preview" border="true":::
+
+</details>
+
+<br>
+
+<details>
+<summary><b>Auth/Config</b></summary>
+
+:::image type="content" source="~/assets/images/Teams-link-unfurling/congi-preview.png" alt-text="congi-preview" border="true":::
+
+</details>
+
+<br>
 
 ## Add link unfurling to your app manifest
 
@@ -77,11 +127,13 @@ To enable your message extension to interact with links, first you must add the 
 ...
 ```
 
+After adding the domain to the app manifest, you must update your web service code to handle the invoke request. 
+
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Handle the `composeExtension/queryLink` invoke
+## Types of Cards
 
-After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+If you respond with more than one card, only the first card response is used.
 
 The following card types are supported:
 
