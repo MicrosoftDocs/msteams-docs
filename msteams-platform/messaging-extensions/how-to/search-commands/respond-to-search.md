@@ -88,7 +88,7 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-`config` is used when your extension is needed to either authenticate or configure to continue. It asks the user to set up the message extension and request the user to provide additional configuration.
+`config` response is used when you want  user to set up the message extension before start using it. It asks the user to set up the message extension and request the user to provide additional configuration.
 
 If message extension use a configuration page, the handler for onQuery should first check for any stored configuration information, if the message extension isn't configured, return a config response with a link to your configuration such as following example:
 
