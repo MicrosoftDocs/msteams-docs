@@ -7,9 +7,9 @@ ms.topic: overview
 ms.date: 03/21/2022
 ---
 
-# Debug your Teams app locally
+# Debug Teams app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
+Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting conflicts to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -302,7 +302,21 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ## See also
 
-* [Use Teams Toolkit to provision cloud resources](provision.md)
+:::row:::
+    :::column span="1":::
+        **Plan your app**
+    :::column-end:::
+    :::column span="2":::
+        Understand and map your app use cases to Teams features.
+
+        > [!div class="nextstepaction"]
+        > [Plan your app](~/concepts/app-fundamentals-overview.md)
+    :::column-end:::
+:::row-end:::
+
+
+
+* [](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)

@@ -38,7 +38,7 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 1. Select **OK**
 1. Select an option from the dropdown options **JavaScript** or **TypeScript**
-2. Type an **Application name** and Press Enter (Application name must start with a letter and can only contain letters and digits.)
+2. Type an **Application name** and Press **Enter** (Application name must start with a letter and can only contain letters and digits.)
 
 ### View samples
 
