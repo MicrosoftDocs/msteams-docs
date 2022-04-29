@@ -474,15 +474,13 @@ If your app supports localization, your app package must include a file with lan
 
 ## Apps linked to SaaS offer
 
-### Testability
-
 * ISVs must support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant.
 * The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) for Teams apps linked to a SaaS offer.
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas).
 * `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
-
-### Offer metadata
+<br></br>
+<details><summary>Offer metadata</summary>
 
 * Offer metadata must match across the Teams manifest, the Teams app listing in AppSource, and the SaaS offer in AppSource.
 * Teams app and SaaS offer must be from the same publisher or developer. The SaaS offer referenced in the App manifest must belong to the same publisher as the Teams app is submitted to the commercial marketplace.
@@ -492,7 +490,9 @@ If your app supports localization, your app package must include a file with lan
 * The Teams apps linked to SaaS offer are designed to support licenses assigned on a named, per-user basis. Sometimes, the SaaS offer is built with other method or has specialized purchase flows. You must clearly mention in the app metadata and subscription plan details about the method and purchase flows.
 * SaaS offer must provide messages and guidance to all users in all applicable states of purchase flow.
 
-### SaaS offer home page and license management  
+</details>
+
+<details><summary>SaaS offer home page and license management</summary>
 
 * Provide introduction to subscribers on how to use the product.
 * Allow the subscriber to assign licenses.
@@ -501,19 +501,25 @@ If your app supports localization, your app package must include a file with lan
 * Notify users after license assignment.
 * Guide users through Teams chat bot or email, on how to add the app to Teams and get started.
 
-### Usability and functionality  
+</details>
+
+<details><summary>Usability and functionality</summary>
 
 * After successful purchase and assignment of licenses, you must provide the following:
 * Access to users for subscribed plan features.
 * Value addition and significant benefits of subscription plan to users.
 * From your Teams app, provide link to the SaaS application home page for subscribers to manage the licenses in the future.
 
-### Configure and test SaaS application
+</details>
+
+<details><summary>Configure and test SaaS application</summary>
 
 If setup of your app for testing purposes is complex, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your "Notes for Certification".
 
 > [!TIP]  
 > You can add a video on how your app and license management works to assist the team for testing.
+
+</details>
 
 ## Tabs
 
@@ -525,6 +531,8 @@ If your app includes a tab, ensure it adheres to these guidelines.
 ### Setup
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
+<br></br>
+<details><summary>Expand to know more</summary>
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-create-new-account.png" alt-text="validation-tabs-setup-create-new-acc":::
 
@@ -550,6 +558,8 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url-two.png" alt-text="validation-tabs-set-up-configured-url-two":::
 
+</details>
+
 ### Views
 
 * The sign in screen area must not use large logos. [*Mandatory Fix*]
@@ -568,7 +578,10 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 The following are the navigation guidelines:
 
-* Tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
+* Tabs must not provide navigation that conflicts with the primary Teams navigation. 
+<br></br>
+<details><summary>Expand to know more</summary>
+If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
@@ -601,6 +614,8 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-within-configuration.png" alt-text="validation-nav-core-workflow-within-configuration":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
+
+</details>
 
 ### Usability
 
