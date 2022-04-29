@@ -148,11 +148,7 @@ The response from the configuration page is also handled by onQuery. The sole ex
 
 ```csharp
 
-protected override async Task<MessagingExtensionResponse>
-
-OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity>
-
-turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
 {
     // The user has requested the Messaging Extension Configuration page.
     var escapedSettings = string.Empty;
@@ -204,7 +200,7 @@ return new MessagingExtensionResponse
 
 ```
 
-### Response card types and previews
+### `result` Response type
 
 Teams supports the following card types:
 
