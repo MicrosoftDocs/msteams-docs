@@ -166,7 +166,7 @@ The query parameters are:
 
 To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
-### Generate deep links to channel conversation
+## Generate deep links to channel conversation
 
 Use this deep link format to navigate to a particular conversation within channel thread:
 
