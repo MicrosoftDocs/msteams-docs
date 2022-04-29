@@ -1,9 +1,8 @@
 ---
 title: Create deep links 
-description: Describes deep links and how to use them in your apps
+description: Learn how to describe Teams deep links and how to use them in your apps.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams deep link deeplink
 ---
 
 # Create deep links
@@ -64,7 +63,7 @@ Use the following format for a deep link that you can use in a bot, connector, o
 
 > [!NOTE]
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
-> If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab is not opened.
+> If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab isn't opened.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
@@ -74,7 +73,7 @@ Use the following format for a deep link that you can use in a bot, connector, o
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.
 * Check for markdownlint errors.
-* Table with just a row is not really needed. Provide the content without tabulating it.
+* Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
 The query parameters are:
@@ -86,7 +85,7 @@ The query parameters are:
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
 | `context.subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
-| `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
 
@@ -162,10 +161,30 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 The query parameters are:
 
 * `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
-* `topicName`: An optional field for chat's display name, in the case of a chat with 3 or more users. If this field is not specified, the chat's display name is based on the names of the participants.
+* `topicName`: An optional field for chat's display name, in the case of a chat with three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
+
+## Generate deep links to channel conversation
+
+Use this deep link format to navigate to a particular conversation within channel thread:
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+Example: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+The query parameters are:
+
+* `channelId`: Channel ID of the conversation. For example `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `tenantId`: Tenant ID such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `groupId`: Group ID of the file. For example `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `parentMessageId`: Parent message Id of the conversation.
+* `teamName`: Name of the team.
+* `channelName`: Name of the team's channel.
+
+> [!NOTE]
+> You can see `channelId` and `groupId` in the URL from the channel.
 
 ## Generate deep links to file in channel
 
@@ -191,7 +210,7 @@ The following deep link format is used in a bot, connector, or message extension
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
-The following example format illustrates the deeplink to files:
+The following example format illustrates the deep link to files:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
@@ -228,7 +247,7 @@ The query parameters are:
 * `appID`: Your manifest ID, for example `fe4a8eba-2a31-4737-8e33-e5fae6fee194`.
 
 * `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, `tasklist123`.
-* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`.
+* `entityWebUrl`: An optional field with a fallback URL to use if the client doesn't support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`.
 * `entityName`: A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
@@ -259,7 +278,7 @@ The query parameters are:
 * `content`: An optional field for the meeting details field.
 
 > [!NOTE]
-> Currently, specifying the location is not supported. You must specify the UTC offset, it means time zones when generating your start and end times.
+> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
