@@ -45,11 +45,6 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 
 ## Types of preview in mobile link unfurling
 
-* Card preview 
-* Url preview 
-* Install preview 
-* Auth/Config preview 
-
 <br>
 
 <details>
@@ -64,7 +59,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 <details>
 <summary><b>Url Preview</b></summary>
 
-:::image type="content" source="~/assets/images/Teams-link-unfurling/Url-preview.png" alt-text="Url-preview" border="true":::
+:::image type="content" source="~/assets/images/Teams-link-unfurling/Url-preview.png" alt-text="preview url" border="true":::
 
 </details>
 
@@ -73,7 +68,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 <details>
 <summary><b>Install preview</b></summary>
 
-:::image type="content" source="~/assets/images/Teams-link-unfurling/install-preview.png" alt-text="install-preview" border="true":::
+:::image type="content" source="~/assets/images/Teams-link-unfurling/install-preview.png" alt-text="preview install" border="true":::
 
 </details>
 
@@ -82,7 +77,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 <details>
 <summary><b>Auth/Config</b></summary>
 
-:::image type="content" source="~/assets/images/Teams-link-unfurling/congi-preview.png" alt-text="congi-preview" border="true":::
+:::image type="content" source="~/assets/images/Teams-link-unfurling/congi-preview.png" alt-text="preview auth" border="true":::
 
 </details>
 
