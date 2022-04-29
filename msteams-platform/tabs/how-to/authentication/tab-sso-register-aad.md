@@ -146,16 +146,16 @@ After you've created a new registration, configure scope (permission) options fo
 
     The section for setting app ID URI appears.
 
-1. Enter the app ID URI in the format shown here.
+1. Enter the app ID URI.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
 
-    - The app ID URI displays pre-filled with application ID in the format `api://{AppID}`.
+    - The **App ID URI** displays pre-filled with application ID (GUID) in the format `api://{AppID}`.
     - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
-    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (GUID).
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID).
 
     where,
-    - `fully-qualified-domain-name.com` is the human readable domain name from which your app is served.
+    - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served.
       If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
     - `AppID` is the **Application (client) ID** (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
