@@ -533,7 +533,8 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 If your app includes a tab, ensure it adheres to these guidelines.
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams tab design guidelines](~/tabs/design/tabs.md).
-<br></br>
+
+</br>
 <details><summary>Setup</summary>
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
@@ -682,12 +683,10 @@ If your app includes a bot, ensure it adheres to these guidelines.
 
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams bot design guidelines](~/bots/design/bots.md).
-
-### Bot commands
+<br></br>
+<details><summary>Bot commands</summary>
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
-<br></br>
-<details><summary>Expand to know more</summary>
 
 * Listing supported bot commands in your app configurations is highly recommended. These commands display in the compose box when a user tries to message your bot.
 
@@ -708,11 +707,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 </details>
 
-### Bot welcome messages
+<details><summary>Bot welcome messages</summary>
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run.
-</br>
-<details><summary>Expand to know more</summary>
 
 For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
@@ -731,11 +728,9 @@ For best experience, the welcome message must include the value offered by the b
 
 </details>
 
-### Bot message spamming
+<details><summary>Bot message spamming</summary>
 
 Bots must not spam users by sending multiple messages in short duration.
-<br></br>
-<details><summary>Expand to know more</summary>
 
 * **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread.
 
@@ -758,7 +753,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
 </details>
 
-### Bot notifications
+<details><summary>Bot notifications</summary>
 
 Bot notifications must include content relevant for the scope you define for the bot (team, chat, or personal).
 
@@ -766,11 +761,12 @@ Bot notifications must include content relevant for the scope you define for the
 
 :::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-not-relevant.png" alt-text="validation-bot-notification-not-relevant":::
 
-### Bots and Adaptive Cards
+</details>
+
+<details><summary>Bots and Adaptive Cards</summary>
 
 Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a task module or tab.
-<br></br>
-<details><summary>Expand to know more</summary>
+
 For more information about cards, see:
 
 * [Designing Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
@@ -780,11 +776,9 @@ Bot experience must be fully responsive on mobile. Bot responses must provide a 
 
 </details>
 
-### Notification only bots
+<details><summary>Notification only bots</summary>
 
 Apps that consist of notification only bots provide user value by triggering user notifications based on certain triggers or events in the core app or backend. For example, a new sales lead or prospect is added for the sales team to follow up on. A high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
-<br></br>
-<details><summary>Expand to know more</summary>
 
 A notification provides value in Teams if:
 
@@ -813,7 +807,7 @@ If your app includes a message extension, ensure it adheres to these guidelines.
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams message extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
-### Action commands
+<details><summary>Action commands</summary>
 
 Action-based message extensions must do the following:
 
@@ -835,13 +829,17 @@ Action-based message extensions must do the following:
 
     :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
 
-### Preview links (link unfurling)
+</details>
+
+<details><summary>Preview links (link unfurling)</summary>
 
 [*Mandatory Fix*]
 
 Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
 
-### Search commands
+</details>
+
+<details><summary>Search commands</summary>
 
 * Search based message extensions must provide text that helps the users to search effectively. [*Mandatory Fix*]
 
@@ -851,13 +849,13 @@ Message extensions must preview recognized links in the Teams compose box. Don't
 
     :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
-### Search based message extension only apps
+</details>
+
+<details><summary>Action commands</summary>Search based message extension only apps
 
 [*Mandatory Fix*]
 
 Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
-<br></br>
-<details><summary>Expand to know more</summary>
 
 To pass validation for a search-based message extension only app, the following are required as baseline to ensure the user experience isn't broken. A card shared via a message extension provides value in Teams if:
 
@@ -898,7 +896,8 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
-<br></br>
+
+</br>
 <details><summary>Expand to know more</summary>
 
 Use the following guidelines for meeting extensions:
@@ -998,7 +997,6 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 ## Microsoft 365 App Compliance Program
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
-
 <br></br>
 <details><summary>Expand to know more</summary>
 
