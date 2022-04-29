@@ -32,6 +32,12 @@ In the following image, the user has shared a URL from an app outside Teams thro
 
 # [Desktop](#tab/Sampledesktop)
 
+The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
+
+![Example of link unfurling](~/assets/images/compose-extensions/messagingExtensions_LinkUnfurling.png)
+
+---
+
 ## Add link unfurling to your app manifest
 
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array either with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
@@ -72,12 +78,6 @@ To enable your message extension to interact with links, first you must add the 
 ```
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
-
-Scenario:
-
-The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
-
-![Example of link unfurling](~/assets/images/compose-extensions/messagingExtensions_LinkUnfurling.png)
 
 ## Handle the `composeExtension/queryLink` invoke
 
