@@ -9,7 +9,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 
 Your Teams app users are authenticated and authorized by Azure AD for using your app. Azure AD provides them access to your app based on their Teams identity. You'll need to register your app with Azure AD so that the user who has signed into Teams can be given access to your app.
 
-## Configuration on Azure AD
+## Enabling SSO on Azure AD
 
 Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, permissions, and more.
 
