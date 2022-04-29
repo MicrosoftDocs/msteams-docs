@@ -16,7 +16,7 @@ If the Tab needs Microsoft Graph scopes that can only be consented to by an admi
 <br>
 <details>
 <summary>What is a missing scope (permission) error?</summary>
-This kind of error should only be seen in development. Your server-side code should send a 403 Forbidden response to the client which should log the error to the console or record it in a log.
+This kind of error should be seen only in development. Your server-side code should send a 403 Forbidden response to the client which should log the error to the console or record it in a log.
 </details>
 <br>
 <details>
