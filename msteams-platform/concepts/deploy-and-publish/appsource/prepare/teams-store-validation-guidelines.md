@@ -527,12 +527,10 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 If your app includes a tab, ensure it adheres to these guidelines.
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams tab design guidelines](~/tabs/design/tabs.md).
-
-### Setup
+<br></br>
+<details><summary>Setup</summary>
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
-<br></br>
-<details><summary>Expand to know more</summary>
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-create-new-account.png" alt-text="validation-tabs-setup-create-new-acc":::
 
@@ -560,7 +558,8 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 </details>
 
-### Views
+<br></br>
+<details><summary>Views</summary>
 
 * The sign in screen area must not use large logos. [*Mandatory Fix*]
 
@@ -574,14 +573,13 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
-### Navigation
+</details>
+
+<details><summary>Navigation</summary>
 
 The following are the navigation guidelines:
 
-* Tabs must not provide navigation that conflicts with the primary Teams navigation. 
-<br></br>
-<details><summary>Expand to know more</summary>
-If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
+* Tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
@@ -617,7 +615,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 </details>
 
-### Usability
+<details><summary>Usability</summary>
 
 * Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
 
@@ -669,6 +667,8 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 > * Include a personal bot alongside a personal tab.
 > * Allow users to share content from their personal tab.
 
+</details>
+
 ## Bots
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.3](/legal/marketplace/certification-policies#114043-bots).
@@ -681,6 +681,8 @@ If your app includes a bot, ensure it adheres to these guidelines.
 ### Bot commands
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 * Listing supported bot commands in your app configurations is highly recommended. These commands display in the compose box when a user tries to message your bot.
 
@@ -699,9 +701,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
 
+</details>
+
 ### Bot welcome messages
 
-* If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run. For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
+* If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run.
+<br></br>
+<details><summary>Expand to know more</summary>
+
+For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
@@ -716,9 +724,13 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 > [!TIP]
 > In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features to encourage users to try bot commands. For example, **Create a task**.
 
+</details>
+
 ### Bot message spamming
 
 Bots must not spam users by sending multiple messages in short duration.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 * **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread.
 
@@ -738,6 +750,8 @@ Bots must not spam users by sending multiple messages in short duration.
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="validation-bot-messages-using-mutliple-conversations":::
 
 * **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
+
+</details>
 
 ### Bot notifications
 
@@ -761,6 +775,8 @@ Bot experience must be fully responsive on mobile. Bot responses must provide a 
 ### Notification only bots
 
 Apps that consist of notification only bots provide user value by triggering user notifications based on certain triggers or events in the core app or backend. For example, a new sales lead or prospect is added for the sales team to follow up on. A high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 A notification provides value in Teams if:
 
@@ -777,6 +793,8 @@ Apps that provide only notifications with content such as **You have a new notif
 
 > [!TIP]
 > Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
+
+<details>
 
 ## Message extensions
 
@@ -830,6 +848,8 @@ Message extensions must preview recognized links in the Teams compose box. Don't
 [*Mandatory Fix*]
 
 Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 To pass validation for a search-based message extension only app, the following are required as baseline to ensure the user experience isn't broken. A card shared via a message extension provides value in Teams if:
 
@@ -842,11 +862,15 @@ To pass validation for a search-based message extension only app, the following 
 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
+</details>
+
 ## Task modules
 
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules).
+<br></br>
+<details><summary>Expand to know more</summary>
 
 A task module must include an icon and the short name of the app it's associated with. Task modules must not embed an entire app and only display the components required to complete a specific action.
 
@@ -859,11 +883,15 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
+</details>
+
 ## Meeting extensions
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+<br></br>
+<details><summary>Expand to know more</summary>
 
 Use the following guidelines for meeting extensions:
 
@@ -881,6 +909,8 @@ Use the following guidelines for meeting extensions:
 
 > [!TIP]
 > You must declare `groupchat` as a scope under `configurableTabs` and `meetingDetailsTab`, or `meetingChatTab` and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
+
+</details>
 
 ### Pre and post meeting experience
 
@@ -961,6 +991,9 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
 
+<br></br>
+<details><summary>Expand to know more</summary>
+
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program:
 
 * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).
@@ -970,6 +1003,8 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
+
+</details>
 
 ## Advertising
 
