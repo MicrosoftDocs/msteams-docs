@@ -143,7 +143,9 @@ App feature names in buttons and other UI text must not duplicate with terminolo
 
 For more information on how to implement app authentication, see [authentication in Teams](~/concepts/authentication/authentication.md).
 <br></br>
-<details><summary> Authenticating with external services</summary>
+<details><summary>Expand to know more</summary>
+
+#### Authenticating with external services
 
 If your app authenticates users with an external service, follow these guidelines:
 
