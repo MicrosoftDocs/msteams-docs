@@ -17,12 +17,12 @@ If AAD has no record that consent (to the Microsoft Graph resource) was granted 
 </details>
 <br>
 <details>
-<summary>What is a missing scope (permission) error?</summary>
-This kind of error should be seen only in development. Your server-side code should send a 403 Forbidden response to the client which should log the error to the console or record it in a log.
+<summary>What is a missing scope (permission) error, and how should I handle it?</summary>
+This kind of error should be seen only in development. To handle this error, your server-side code should send a 403 Forbidden response to the client, which should log the error to the console or record it in a log.
 </details>
 <br>
 <details>
-<summary>What is an Invalid audience error in the access token for Microsoft Graph</summary>
+<summary>What is an Invalid audience error in the access token for Microsoft Graph, and how should I handle it?</summary>
 The server-side code should send a 403 Forbidden response to the client to show a message to the user, and possibly log the error to the console or record it in a log.
 </details>
 <br>
