@@ -28,7 +28,7 @@ The following image displays the experience of link unfurling on mobile and desk
 
 In the following image, the user has shared a URL from an app outside Teams through share button on the Teams group chat of mobile client, the bot is invoked and returns an Adaptive Card before he shares in the chat:
 
-![Example of link unfurling 2](~/assets/images/Teams-link-unfurling/feature-mobile-new..png)
+![Example of link unfurling 2](~/assets/images/Teams-link-unfurling/feature-mobile-new.png)
 
 # [Desktop](#tab/Sampledesktop)
 
