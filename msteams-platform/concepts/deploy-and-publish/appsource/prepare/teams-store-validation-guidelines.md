@@ -108,7 +108,6 @@ An app's name plays a critical role in how users discover it in the store. Use t
  > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 </details>
-</br>
 
 ### Suitable for workplace consumption
 
@@ -123,7 +122,6 @@ App content must be suitable for general workplace consumption and follow all re
 Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity.
 
 </details>
-</br>
 
 ### Similar platforms and services
 
@@ -132,9 +130,6 @@ Your app must enable group collaboration, improve an individual's productivity, 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
 
 Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services within the app content or in the app’s metadata unless the app provides specific interoperability.
-
-</details>
-</br>
 
 ### Feature names
 
@@ -163,7 +158,6 @@ If your app authenticates users with an external service, follow these guideline
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to un share content must be present in your Teams app.
 
 </details>
-</br>
 
 ## Security
 
@@ -198,7 +192,6 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 * Your app's privacy policy and terms of use must be free of any commerce-related UI or links.
 
 </details>
-</br>
 
 ### Bots
 
@@ -215,7 +208,6 @@ Bots must always ask permission to upload a file and display a confirmation mess
 :::image type="content" source="../../../../assets/images/submission/validation-bot-confirmation-message.png" alt-text="validation-bot-confirmation":::
 
 </details>
-</br>
 
 ### External domains
 
@@ -235,7 +227,6 @@ Don't include domains outside of your organization's control (including wildcard
 To distribute your app to Government Community Cloud (GCC) users, the authentication process must identify and route users to a GCC-specific or expected URL while avoiding duplicate listings in the Teams store.
 
 </details>
-</br>
 
 ### Sensitive content
 
@@ -262,7 +253,6 @@ Link users within Teams app and not to an external site or app. For scenarios th
 Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
 
 </details>
-</br>
 
 ### Compatibility
 
@@ -338,7 +328,6 @@ Your icons must communicate your app's brand and purpose while adhering to the f
 For more information, see [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
 </details>
-</br>
 
 ### App descriptions
 
@@ -407,7 +396,6 @@ The long description can provide an engaging narrative that highlights your app'
 * Compare your offer with other marketplace offers.
 
 </details>
-</br>
 
 ### Screenshots
 
@@ -442,7 +430,6 @@ Remember the following:
 > A video can be the most effective way to communicate why people must use your app. A video also is the first thing users see in your listing. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
 
 </details>
-</br>
 
 ### Privacy policy
 
@@ -482,7 +469,6 @@ Support URLs must include your contact details or a way forward for users to rai
 :::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
 
 </details>
-</br>
 
 ### Localization
 
@@ -541,7 +527,6 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 > You can add a video on how your app and license management works to assist the team for testing.
 
 </details>
-</br>
 
 ## Tabs
 
@@ -693,7 +678,6 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 > * Allow users to share content from their personal tab.
 
 </details>
-</br>
 
 ## Bots
 
@@ -822,7 +806,6 @@ Apps that provide only notifications with content such as **You have a new notif
 > Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
 
 </details>
-</br>
 
 ## Message extensions
 
@@ -899,7 +882,6 @@ To pass validation for a search-based message extension only app, the following 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
 </details>
-</br>
 
 ## Task modules
 
@@ -921,7 +903,6 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 > For more information on creating a high-quality app experience, see [Teams task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 </details>
-</br>
 
 ## Meeting extensions
 
@@ -950,7 +931,6 @@ Use the following guidelines for meeting extensions:
 > You must declare `groupchat` as a scope under `configurableTabs` and `meetingDetailsTab`, or `meetingChatTab` and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
 
 </details>
-</br>
 
 ### Pre and post meeting experience
 
@@ -1044,7 +1024,6 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
 
 </details>
-</br>
 
 ## Advertising
 
