@@ -170,6 +170,8 @@ If your app authenticates users with an external service, follow these guideline
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.
 
@@ -191,11 +193,15 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
 * Your app's privacy policy and terms of use must be free of any commerce-related UI or links.
 
+</details>
+
 ### Bots
 
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension).
+<br></br>
+<details><summary>Expand to know more</summary>
 
 For apps that use the Microsoft Azure Bot Service (such as bots and message extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
@@ -203,16 +209,22 @@ Bots must always ask permission to upload a file and display a confirmation mess
 
 :::image type="content" source="../../../../assets/images/submission/validation-bot-confirmation-message.png" alt-text="validation-bot-confirmation":::
 
+</details>
+
 ### External domains
 
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) and provides developer guidance on usage of restricted domains in the `validDomains` manifest property.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work.
 * If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property.
+
+</details>
 
 #### Government Community Cloud listings
 
@@ -235,10 +247,14 @@ App must warn users before downloading any files or executables (.exe) into the 
 [*Mandatory Fix*]
 
 Apps must not take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and task modules.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality.
 
 Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
+
+</details>
 
 ### Compatibility
 
@@ -312,6 +328,8 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 ### App descriptions
 
 You must have a short and long description of your app. The descriptions in your app configurations and Partner Center must be the same.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 Descriptions must not directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure your description doesn't include claims that can't be substantiated. For example, **Guaranteed 200 percent increase in efficiency**.
 
@@ -373,9 +391,15 @@ The long description can provide an engaging narrative that highlights your app'
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
 
+</details>
+
 ### Screenshots
 
-Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions. Remember the following:
+Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
+<br></br>
+<details><summary>Expand to know more</summary>
+
+Remember the following:
 
 * You can have up to five screenshots per listing.
 * Supported file types include PNG, JPEG, and GIF.
@@ -400,6 +424,8 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 > [!TIP]  
 > A video can be the most effective way to communicate why people must use your app. A video also is the first thing users see in your listing. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
+
+</details>
 
 ### Privacy policy
 
@@ -431,10 +457,14 @@ Use the following guidelines to write the Terms of use:
 [*Mandatory Fix*]
 
 Your app's support URLs must not require authentication. For example, users must not login to contact you.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket.
 
 :::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
+
+</details>
 
 ### Localization
 
@@ -444,9 +474,10 @@ If your app supports localization, your app package must include a file with lan
 
 ## Apps linked to SaaS offer
 
+### Testability
+
 * ISVs must support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant.
-*
- The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) for Teams apps linked to a SaaS offer.
+* The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) for Teams apps linked to a SaaS offer.
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas).
 * `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
