@@ -13,6 +13,8 @@ Your Teams app users are authenticated and authorized by Azure AD for using your
 
 Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, permissions, and more.
 
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to client app" border="false":::
+
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets users access your app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
 These configurations enable SSO for your app in Teams.
@@ -150,12 +152,12 @@ After you've created a new registration, configure scope (permission) options fo
 
     - The app ID URI displays pre-filled with application ID in the format `api://{AppID}`.
     - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
-    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}`.
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (GUID).
 
     where,
     - `fully-qualified-domain-name.com` is the human readable domain name from which your app is served.
       If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
-    - `AppID` is the **Application (client) ID** that was generated when you registered your app. You can view it in the **Overview** section.
+    - `AppID` is the **Application (client) ID** (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
     > [!IMPORTANT]
     >
