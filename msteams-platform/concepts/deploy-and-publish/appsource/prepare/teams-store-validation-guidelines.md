@@ -108,6 +108,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
  > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 </details>
+</br>
 
 ### Suitable for workplace consumption
 
@@ -122,6 +123,7 @@ App content must be suitable for general workplace consumption and follow all re
 Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity.
 
 </details>
+</br>
 
 ### Similar platforms and services
 
@@ -132,6 +134,7 @@ Your app must enable group collaboration, improve an individual's productivity, 
 Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services within the app content or in the app’s metadata unless the app provides specific interoperability.
 
 </details>
+</br>
 
 ### Feature names
 
@@ -160,6 +163,7 @@ If your app authenticates users with an external service, follow these guideline
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to un share content must be present in your Teams app.
 
 </details>
+</br>
 
 ## Security
 
@@ -194,6 +198,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 * Your app's privacy policy and terms of use must be free of any commerce-related UI or links.
 
 </details>
+</br>
 
 ### Bots
 
@@ -210,6 +215,7 @@ Bots must always ask permission to upload a file and display a confirmation mess
 :::image type="content" source="../../../../assets/images/submission/validation-bot-confirmation-message.png" alt-text="validation-bot-confirmation":::
 
 </details>
+</br>
 
 ### External domains
 
@@ -229,6 +235,7 @@ Don't include domains outside of your organization's control (including wildcard
 To distribute your app to Government Community Cloud (GCC) users, the authentication process must identify and route users to a GCC-specific or expected URL while avoiding duplicate listings in the Teams store.
 
 </details>
+</br>
 
 ### Sensitive content
 
@@ -255,6 +262,7 @@ Link users within Teams app and not to an external site or app. For scenarios th
 Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
 
 </details>
+</br>
 
 ### Compatibility
 
@@ -330,6 +338,7 @@ Your icons must communicate your app's brand and purpose while adhering to the f
 For more information, see [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
 </details>
+</br>
 
 ### App descriptions
 
@@ -398,6 +407,7 @@ The long description can provide an engaging narrative that highlights your app'
 * Compare your offer with other marketplace offers.
 
 </details>
+</br>
 
 ### Screenshots
 
@@ -432,6 +442,7 @@ Remember the following:
 > A video can be the most effective way to communicate why people must use your app. A video also is the first thing users see in your listing. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
 
 </details>
+</br>
 
 ### Privacy policy
 
@@ -471,6 +482,7 @@ Support URLs must include your contact details or a way forward for users to rai
 :::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
 
 </details>
+</br>
 
 ### Localization
 
@@ -497,6 +509,7 @@ If your app supports localization, your app package must include a file with lan
 * SaaS offer must provide messages and guidance to all users in all applicable states of purchase flow.
 
 </details>
+</br>
 
 <details><summary>SaaS offer home page and license management</summary>
 
@@ -508,6 +521,7 @@ If your app supports localization, your app package must include a file with lan
 * Guide users through Teams chat bot or email, on how to add the app to Teams and get started.
 
 </details>
+</br>
 
 <details><summary>Usability and functionality</summary>
 
@@ -517,6 +531,7 @@ If your app supports localization, your app package must include a file with lan
 * From your Teams app, provide link to the SaaS application home page for subscribers to manage the licenses in the future.
 
 </details>
+</br>
 
 <details><summary>Configure and test SaaS application</summary>
 
@@ -526,6 +541,7 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 > You can add a video on how your app and license management works to assist the team for testing.
 
 </details>
+</br>
 
 ## Tabs
 
@@ -564,6 +580,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url-two.png" alt-text="validation-tabs-set-up-configured-url-two":::
 
 </details>
+</br>
 
 <details><summary>Views</summary>
 
@@ -580,6 +597,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
 </details>
+</br>
 
 <details><summary>Navigation</summary>
 
@@ -620,6 +638,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
 
 </details>
+</br>
 
 <details><summary>Usability</summary>
 
@@ -674,6 +693,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 > * Allow users to share content from their personal tab.
 
 </details>
+</br>
 
 ## Bots
 
@@ -707,6 +727,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 > For personal bots, include a **Help** tab that further describes what your bot can do.
 
 </details>
+</br>
 
 <details><summary>Bot welcome messages</summary>
 
@@ -728,6 +749,7 @@ For best experience, the welcome message must include the value offered by the b
 > In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features to encourage users to try bot commands. For example, **Create a task**.
 
 </details>
+</br>
 
 <details><summary><a id="botmessagespamming">Bot message spamming</a></summary>
 
@@ -753,6 +775,7 @@ Bots must not spam users by sending multiple messages in short duration.
 * **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
 
 </details>
+</br>
 
 <details><summary>Bot notifications</summary>
 
@@ -763,7 +786,7 @@ Bot notifications must include content relevant for the scope you define for the
 :::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-not-relevant.png" alt-text="validation-bot-notification-not-relevant":::
 
 </details>
-
+</br>
 <details><summary>Bots and Adaptive Cards</summary>
 
 Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a task module or tab.
@@ -776,6 +799,7 @@ For more information about cards, see:
 Bot experience must be fully responsive on mobile. Bot responses must provide a way forward where applicable. Bot musts be responsive and fail with a graceful error message for failures. Bot messages sent in the personal scope to user's base on triggers in a collaborative scope must provide contextual information (including the message’s origin).
 
 </details>
+</br>
 
 <details><summary>Notification only bots</summary>
 
@@ -798,6 +822,7 @@ Apps that provide only notifications with content such as **You have a new notif
 > Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
 
 </details>
+</br>
 
 ## Message extensions
 
@@ -832,6 +857,7 @@ Action-based message extensions must do the following:
     :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
 
 </details>
+</br>
 
 <details><summary>Preview links (link unfurling)</summary>
 
@@ -840,6 +866,7 @@ Action-based message extensions must do the following:
 Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
 
 </details>
+</br>
 
 <details><summary>Search commands</summary>
 
@@ -852,6 +879,7 @@ Message extensions must preview recognized links in the Teams compose box. Don't
     :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
 </details>
+</br>
 
 <details><summary>Action commands</summary>Search based message extension only apps
 
@@ -871,6 +899,7 @@ To pass validation for a search-based message extension only app, the following 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
 </details>
+</br>
 
 ## Task modules
 
@@ -892,6 +921,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 > For more information on creating a high-quality app experience, see [Teams task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 </details>
+</br>
 
 ## Meeting extensions
 
@@ -920,6 +950,7 @@ Use the following guidelines for meeting extensions:
 > You must declare `groupchat` as a scope under `configurableTabs` and `meetingDetailsTab`, or `meetingChatTab` and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
 
 </details>
+</br>
 
 ### Pre and post meeting experience
 
@@ -1013,6 +1044,7 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
 
 </details>
+</br>
 
 ## Advertising
 
