@@ -8,7 +8,7 @@ brand: teams
 metadata:
   title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: msteams #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: msteams
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: akjo #Required; your GitHub user alias, with correct capitalization.
