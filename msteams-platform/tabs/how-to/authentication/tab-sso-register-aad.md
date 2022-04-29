@@ -15,7 +15,7 @@ Registering your app in Azure AD and enabling it for SSO requires making app con
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets users access your app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
-These configurations will enable SSO for your app in Teams.
+These configurations enable SSO for your app in Teams.
 
 You may also need to configure additional configuration for authenticating users on the platform or device where you want to target your app.
 
