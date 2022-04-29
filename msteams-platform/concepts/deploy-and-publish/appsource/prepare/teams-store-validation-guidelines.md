@@ -80,6 +80,8 @@ Following these guidelines increases the chances of your app to pass the Microso
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with Microsoft [commercial certification policy number 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) and provides additional guidance to developers on naming their apps.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 An app's name plays a critical role in how users discover it in the store. Use the following guidelines to name an app:
 
@@ -105,15 +107,21 @@ An app's name plays a critical role in how users discover it in the store. Use t
  > [!TIP]  
  > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
+</details>
+
 ### Suitable for workplace consumption
 
 [*Mandatory Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with Microsoft commercial certification policy number [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness), [100.8](/legal/marketplace/certification-policies#1008-significant-value), and [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) and provides additional guidance to developers on building workplace appropriate apps.
+<br></br>
+<details><summary>Expand to know more</summary>
 
 App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
 
 Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity.
+
+</details>
 
 ### Similar platforms and services
 
@@ -122,6 +130,8 @@ Your app must enable group collaboration, improve an individual's productivity, 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
 
 Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services within the app content or in the app’s metadata unless the app provides specific interoperability.
+
+</details>
 
 ### Feature names
 
@@ -134,8 +144,8 @@ App feature names in buttons and other UI text must not duplicate with terminolo
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial certification policy number 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) and provides guidance to developers on authenticating their apps with external services.
 
 For more information on how to implement app authentication, see [authentication in Teams](~/concepts/authentication/authentication.md).
-
-#### Authenticating with external services
+<br></br>
+<details><summary> Authenticating with external services</summary>
 
 If your app authenticates users with an external service, follow these guidelines:
 
@@ -148,6 +158,8 @@ If your app authenticates users with an external service, follow these guideline
   Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup or config page), help text as considered necessary as part of bot response, compose extension, or static tab content.
   
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to un share content must be present in your Teams app.
+
+</details>
 
 ## Security
 
