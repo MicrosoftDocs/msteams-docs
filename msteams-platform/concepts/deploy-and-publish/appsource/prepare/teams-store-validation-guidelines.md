@@ -717,7 +717,7 @@ For best experience, the welcome message must include the value offered by the b
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
 
-* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#bot-message-spamming)). The message must also mention the person who added the bot.
+* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#Bot-message-spamming)). The message must also mention the person who added the bot.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
 
@@ -728,7 +728,7 @@ For best experience, the welcome message must include the value offered by the b
 
 </details>
 
-<details><summary>Bot message spamming</summary>
+<details><summary><a id="#z">Bot message spamming</a></summary>
 
 Bots must not spam users by sending multiple messages in short duration.
 
