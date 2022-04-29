@@ -28,13 +28,13 @@ The following image displays the experience of link unfurling on mobile and desk
 
 In the following image, the user has shared a URL from an app outside Teams through share button on the Teams group chat of mobile client, the bot is invoked and returns an Adaptive Card before he shares in the chat:
 
-![Example of link unfurling 2](~/assets/images/compose-extensions/capture_2.png)
+![Example of link unfurling 2](~/assets/images/Teams-link-unfurling/feature-mobile-new..png)
 
 # [Desktop](#tab/Sampledesktop)
 
-The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
+Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Teams, which the messaging extension has resolved into a card:
 
-![Example of link unfurling](~/assets/images/compose-extensions/messagingExtensions_LinkUnfurling.png)
+![Example of link unfurling](~/assets/images/Teams-link-unfurling/result-output-new.png)
 
 ---
 
