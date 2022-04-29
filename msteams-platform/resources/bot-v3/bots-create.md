@@ -44,6 +44,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 > * If you register your bot using Microsoft Azure, your bot code does not need to be *hosted* on Microsoft Azure.
 > * If you do register a bot using Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.
 > * You can now use App Studio to register/update app and bot information directly within Microsoft Teams. You'll only have to use the Azure portal for adding or configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
+>* If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022
 
 ## See also
 
