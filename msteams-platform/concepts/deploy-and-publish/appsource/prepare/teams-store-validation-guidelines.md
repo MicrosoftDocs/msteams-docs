@@ -683,7 +683,8 @@ If your app includes a bot, ensure it adheres to these guidelines.
 
 > [!TIP]
 > For more information on creating a high-quality app experience, see [Teams bot design guidelines](~/bots/design/bots.md).
-<br></br>
+
+</br>
 <details><summary>Bot commands</summary>
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
@@ -807,6 +808,7 @@ If your app includes a message extension, ensure it adheres to these guidelines.
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams message extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
+</br>
 <details><summary>Action commands</summary>
 
 Action-based message extensions must do the following:
