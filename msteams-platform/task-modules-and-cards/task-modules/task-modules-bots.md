@@ -1,7 +1,7 @@
 ---
 title: Use Task Modules in Microsoft Teams bots
 description: How to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: how-to
 keywords: task modules teams bots deep links adaptive card 
 ---
@@ -24,7 +24,7 @@ The next section provides details on invoking a task module using `task/fetch`.
 
 When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there is a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object, which Teams uses to display the task module.
 
-![task/fetch request or response](~/assets/images/task-module/task-module-invoke-request-response.png)
+:::image type="content" source="../../assets/images/task-module/task-module-invoke-request-response.png" alt-text="task/fetch request or response":::
 
 The following steps provides the invoke task module using task/fetch:
 

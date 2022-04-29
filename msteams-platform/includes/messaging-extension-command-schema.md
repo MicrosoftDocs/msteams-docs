@@ -12,7 +12,7 @@
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 | `context` | Optional array of values that defines the context the message action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
-|`taskInfo`||Specify the task module to preload when using a messaging extension command| No | 1.4 |
+|`taskInfo`||Specify the task module to preload when using a message extension command| No | 1.4 |
 |`taskInfo.title`|Initial dialog title|No | 1.4 |
 |`taskInfo.width`|Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
 |`taskInfo.height`|Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|No | 1.4 |
