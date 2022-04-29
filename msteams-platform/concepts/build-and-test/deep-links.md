@@ -1,9 +1,8 @@
 ---
 title: Create deep links 
-description: Describes deep links and how to use them in your apps
+description: Learn how to describe Teams deep links and how to use them in your apps.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams deep link deeplink
 ---
 
 # Create deep links
@@ -166,6 +165,26 @@ The query parameters are:
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
 To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
+
+### Generate deep links to channel conversation
+
+Use this deeplink format to navigate to a particular conversation within channel thread:
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+Example: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+The query parameters are:
+
+* `channelId`: Channel ID of the conversation. For example `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`.
+* `tenantId`: Tenant ID such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
+* `groupId`: Group ID of the file. For example `3606f714-ec2e-41b3-9ad1-6afb331bd35d`.
+* `parentMessageId`: Parent message Id of the conversation.
+* `teamName`: Name of the team.
+* `channelName`: Name of the team's channel.
+
+> [!NOTE]
+> You can see `channelId` and `groupId` in the URL from the channel.
 
 ## Generate deep links to file in channel
 
