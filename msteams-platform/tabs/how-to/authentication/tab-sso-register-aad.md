@@ -250,6 +250,8 @@ After you've created a new registration, configure scope (permission) options fo
 
 Depending on the platform or device on which you want to target your your app, additional configuration may be required such as redirect URIs, specific authentication settings, or fields specific to the platform.
 
+The redirect URI you defined on the **Register an application** page for Web platform appears on this page. You can configure authentication for more platforms also.
+
 ### To configure authentication for a platform
 
 1. Select **Manage** > **Authentication** from the left pane.
