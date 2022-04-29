@@ -224,11 +224,11 @@ Don't include domains outside of your organization's control (including wildcard
 * If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work.
 * If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property.
 
-</details>
-
 #### Government Community Cloud listings
 
 To distribute your app to Government Community Cloud (GCC) users, the authentication process must identify and route users to a GCC-specific or expected URL while avoiding duplicate listings in the Teams store.
+
+</details>
 
 ### Sensitive content
 
@@ -311,7 +311,11 @@ The Teams app manifest defines your app's configuration.
 
 [*Mandatory Fix*]
 
-Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to the following requirements:
+Icons are one of the main elements people see when browsing the Teams store. 
+<br></br>
+<details><summary>Expand to know more</summary>
+
+Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
 * Your app package must include two .png versions of your app icon: A color icon and an outline icon.
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background.
@@ -324,6 +328,8 @@ Icons are one of the main elements people see when browsing the Teams store. You
 * Your app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata.
 
 For more information, see [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
+
+</details>
 
 ### App descriptions
 
@@ -558,7 +564,6 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 </details>
 
-<br></br>
 <details><summary>Views</summary>
 
 * The sign in screen area must not use large logos. [*Mandatory Fix*]
@@ -706,7 +711,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 ### Bot welcome messages
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run.
-<br></br>
+</br>
 <details><summary>Expand to know more</summary>
 
 For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
@@ -764,13 +769,16 @@ Bot notifications must include content relevant for the scope you define for the
 ### Bots and Adaptive Cards
 
 Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a task module or tab.
-
+<br></br>
+<details><summary>Expand to know more</summary>
 For more information about cards, see:
 
 * [Designing Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Cards reference](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
 Bot experience must be fully responsive on mobile. Bot responses must provide a way forward where applicable. Bot musts be responsive and fail with a graceful error message for failures. Bot messages sent in the personal scope to user's base on triggers in a collaborative scope must provide contextual information (including the message’s origin).
+
+</details>
 
 ### Notification only bots
 
@@ -794,7 +802,7 @@ Apps that provide only notifications with content such as **You have a new notif
 > [!TIP]
 > Preview information and provide basic inline user actions in the posted card so that the user is not required to navigate outside Teams for all actions (irrespective of complexity).
 
-<details>
+</details>
 
 ## Message extensions
 
