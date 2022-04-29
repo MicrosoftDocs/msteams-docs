@@ -480,7 +480,7 @@ If your app supports localization, your app package must include a file with lan
 
 ## Apps linked to SaaS offer
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.5](/legal/marketplace/certification-policies). If you are building a Teams app linked to a SaaS offer, ensure it adheres to these guidelines.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: This section is inline with [Microsoft commercial marketplace policy number 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673). If you are building a Teams app linked to a SaaS offer, ensure it adheres to these guidelines.
 <br></br>
 <details><summary>General</summary>
 
