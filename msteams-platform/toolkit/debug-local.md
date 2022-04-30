@@ -9,7 +9,7 @@ ms.date: 03/21/2022
 
 # Debug Teams app locally
 
- Debug is the process of checking, detecting, and resolving the conflicts to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit helps you to debug and preview your Teams app locally and also supports the following debug features:
+ Debug is the process of resolving the conflicts to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit helps you to debug and preview your Teams app locally and also supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -18,21 +18,21 @@ ms.date: 03/21/2022
 * [Stop debugging](#stop-debugging)  
 
 
-During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. The Teams app is available for preview in Teams web client locally after the debugging. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
+During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. You can also customize the debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app. The Teams app is available for preview in Teams web client locally after the debugging.
 
 ## Prerequisite
 
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Key features of Teams Toolkit
+## Key debug features
 
 #### Start debugging
 
-You can perform single operation, select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering Azure Active Directory app, registering Teams app, registering bot, starting services, and launching browser.
+You can Select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering Azure Active Directory app, registering Teams app, registering bot, starting services, and launching browser.
 
 #### Multi-target debugging
 
-Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
+You can select debut option under DEVELOPMENT activity bar, Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
 
 #### Toggle breakpoints
 
@@ -56,7 +56,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 #### 1. Set up your Teams Toolkit
 
-Complete the following steps to debug your app after creating a new app using the Teams Toolkit:
+Follow the steps to debug your app once you create a new app:
 
 <br>
 
