@@ -10,14 +10,14 @@ ms.date: 11/29/2021
 
 # Add cloud resources to your Teams app
 
-TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
+TeamsFx helps you to provision cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
 
 ## Prerequisite
 
-[Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
-> Ensure you have Teams app project in Visual Studio Code.
+> Ensure you have Teams app project opened in Visual Studio Code.
 
 ## Add cloud resources using Teams Toolkit
 
@@ -34,7 +34,7 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addcloud.png" alt-text="add cloud resources":::
 
-1. From the pop-up, select the cloud resources you want to add to your Teams app project:
+1. From the pop-up menu, select the cloud resources you want to add to your Teams app project:
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addresources.png" alt-text="add":::
 
@@ -44,7 +44,7 @@ The selected resources are succesfully added to your project.
 
 ## Add cloud resources using TeamsFx CLI in command window
 
-1. Change directory to your **project directory**.
+1. Change your working directory to your **project directory**.
 1. Execute the following command to add different resources in your project:
 
 |Cloud Resource|Command|
@@ -56,7 +56,7 @@ The selected resources are succesfully added to your project.
 
 ## Types of cloud resources
 
-TeamsFx integrates with Azure services for the following scenarios:
+TeamsFx integrates with Azure services in the following scenarios:
 
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
 - [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
@@ -67,7 +67,7 @@ TeamsFx integrates with Azure services for the following scenarios:
 
 After adding any resource, the changes in your project are as follows:
 
-- New parameters may be added to azure.parameter.{env}.json to provide required information for provision.
+- New parameters are added to azure.parameter.{env}.json to provide required information for provision.
 - New content are appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
 - The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
 - `.fx/projectSettings.json` is updated to track the resources present in your project.
