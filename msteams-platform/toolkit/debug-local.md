@@ -86,7 +86,7 @@ Follow the steps to debug your app once you create a new app:
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. Select **Yes** if the following dialog box appears:
+5. Select **Yes**, if the following dialog box appears:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
@@ -183,7 +183,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches a new browse
 
 ## Customize debug settings
 
-You can customize the debug settings to create your own tab or bot by selecting prerequisites:
+You can customize the debug settings to create your own tab or bot by not selecting some of the prerequisites:
 
 <br>
 
@@ -247,7 +247,7 @@ You can customize the debug settings to create your own tab or bot by selecting 
 You can add environment variables to `.env.teamsfx.local` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
- > Ensure to start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
+ > Start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
 
 </details>
 
@@ -310,4 +310,4 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
