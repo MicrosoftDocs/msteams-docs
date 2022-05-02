@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add cloud resources to your Teams app
 
-TeamsFx helps you to provision cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
+TeamsFx helps you to add cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
 
 ## Prerequisite
 
