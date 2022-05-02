@@ -16,12 +16,13 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 
 * It helps to provide a preview of the hyperlink 
 * Responds to the full hyperlink with adaptive cards and provides the additional information or   action
-* Link unfurling is enhancing the links in conversations 
+* Its allow to enrich links in conversations
+* To get the specific URLs in the compose message box
 * Now link unfurling is supported for both on desktop and mobile 
 
 ## Limitations of link unfurling 
 
-* Link unfurling on mobile implemented only for installed apps in Microsoft 365.
+* Link unfurling on mobile is implemented only for installed apps in Microsoft 365.
 * Message extension or bot is required to provide the link unfurling in message compose area
 * Link unfurling is not supporting to out of the box in Teams
 
@@ -127,7 +128,7 @@ After adding the domain to the app manifest, you must update your web service co
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Types of Cards in link unfurling
+## Types of Cards supported in link unfurling
 
 If you respond with more than one card, only the first card response is used.
 
