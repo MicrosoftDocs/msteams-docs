@@ -1,5 +1,5 @@
 ---
-title: Link unfurling
+title: Link unfurling for compose box extension on Mobile
 author: surbhigupta
 description: Learn how to add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually using code examples and samples.
 ms.localizationpriority: high
@@ -10,21 +10,20 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the full URL that was pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.
+In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URL is pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.Now link unfurling is supported for both on desktop and mobile.
 
 ## Advantages of link unfurling 
 
-* It helps to provide a preview of the hyperlink 
+* Link unfurling helps to provide the preview of the hyperlink 
 * Responds to the full hyperlink with adaptive cards and provides the additional information or   action
-* Its allow to enrich links in conversations
-* To get the specific URLs in the compose message box
-* Now link unfurling is supported for both on desktop and mobile 
+* Link unfurling allows to enrich the links in conversations
+* You can get the specific URLs in the compose message box
 
 ## Limitations of link unfurling 
 
-* Link unfurling on mobile is implemented only for installed apps in Microsoft 365.
+* Link unfurling on mobile is implemented only for installed apps in Microsoft 365
 * Message extension or bot is required to provide the link unfurling in message compose area
-* Link unfurling is not supporting to out of the box in Teams
+* Link unfurling is not supporting for out of the box in Teams
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
@@ -35,55 +34,16 @@ The following image displays the experience of link unfurling on mobile and desk
 
 In the following image, the user has shared a URL from an app outside Teams through share button on the Teams group chat of mobile client, the bot is invoked and returns an Adaptive Card before he shares in the chat:
 
-![Example of link unfurling 2](~/assets/images/Teams-link-unfurling/feature-mobile-new.png)
-
 # [Desktop](#tab/Sampledesktop)
 
-Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Teams, which the messaging extension has resolved into a card:
+Unfurl links in Teams using bot :
+
+1. Allows user to paste URLs and respond with a card.
+1. Allows user to register the app and receive invoke activity.
 
 ![Example of link unfurling](~/assets/images/Teams-link-unfurling/result-output-new.png)
 
 ---
-
-## Types of preview in link unfurling
-
-<br>
-
-<details>
-<summary><b>Card preview</b></summary>
-
-:::image type="content" source="~/assets/images/Teams-link-unfurling/card-preview.png" alt-text="card preview" border="true":::
-
-</details>
-
-<br>
-
-<details>
-<summary><b>Url Preview</b></summary>
-
-:::image type="content" source="~/assets/images/Teams-link-unfurling/Url-preview.png" alt-text="preview url" border="true":::
-
-</details>
-
-<br>
-
-<details>
-<summary><b>Install preview</b></summary>
-
-:::image type="content" source="~/assets/images/Teams-link-unfurling/install-preview-updated-new.png" alt-text="install pre" border="true":::
-
-</details>
-
-<br>
-
-<details>
-<summary><b>Auth/Config</b></summary>
-
-:::image type="content" source="~/assets/images/Teams-link-unfurling/auth-preview-updated.png" alt-text="config new" border="true":::
-
-</details>
-
-<br>
 
 ## Add link unfurling to your app manifest
 
