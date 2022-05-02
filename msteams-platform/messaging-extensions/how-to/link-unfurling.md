@@ -10,19 +10,20 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Link unfurling is a method, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the full URL that was pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually. 
+In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the full URL that was pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.
 
 ## Advantages of link unfurling 
 
-* Enhance the links in conversations 
-* Helps to provide a preview of the hyperlink 
+* It helps to provide a preview of the hyperlink 
 * Responds to the full hyperlink with adaptive cards and provides the additional information or   action
-* You can access this feature both on desktop and mobile 
+* Link unfurling is enhancing the links in conversations 
+* Now link unfurling is supported for both on desktop and mobile 
 
 ## Limitations of link unfurling 
 
+* Link unfurling on mobile implemented only for installed apps in Microsoft 365.
 * Message extension or bot is required to provide the link unfurling in message compose area
-* Link Unfurling is not supporting to out of the box in Teams
+* Link unfurling is not supporting to out of the box in Teams
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
@@ -43,7 +44,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 
 ---
 
-## Types of preview in mobile link unfurling
+## Types of preview in link unfurling
 
 <br>
 
@@ -68,7 +69,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 <details>
 <summary><b>Install preview</b></summary>
 
-:::image type="content" source="~/assets/images/Teams-link-unfurling/install-preview.png" alt-text="preview install" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams/install-preview-updated-new.png" alt-text="install preview updated" border="true":::
 
 </details>
 
@@ -77,7 +78,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 <details>
 <summary><b>Auth/Config</b></summary>
 
-:::image type="content" source="~/assets/images/Teams-link-unfurling/congi-preview.png" alt-text="preview auth" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams/auth-preview-updated.png" alt-text="auth preview updated" border="true":::
 
 </details>
 
@@ -126,7 +127,7 @@ After adding the domain to the app manifest, you must update your web service co
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Types of Cards
+## Types of Cards in link unfurling
 
 If you respond with more than one card, only the first card response is used.
 
