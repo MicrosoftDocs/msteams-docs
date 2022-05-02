@@ -2,7 +2,7 @@
 title: Calls and online meetings bots
 description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings and learn about real-time media streams
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: calling calls audio video IVR voice online meetings real-time media streams bot 
 ---
 
@@ -106,3 +106,4 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
 * [Teams recording policy](/MicrosoftTeams/teams-recording-policy)
+* [Work with communications API in Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)

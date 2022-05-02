@@ -3,7 +3,7 @@ title: Prerequisites
 author: surbhigupta
 description: Every tab in Microsoft Teams must adhere to these requirements.
 keywords: teams tabs group channel configurable
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
