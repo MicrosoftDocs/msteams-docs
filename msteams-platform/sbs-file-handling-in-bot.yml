@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The bot uses Teams API to send and receive files with users in the personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features like expense reporting, image recognition, file archival, and e-signatures which involves editing of file content. 
+   The bot uses Teams API to send and receive files with users in the personal chats. The files shared in Teams can appear as cards and allow rich in-app viewing. The bot also helps in implementing features like expense reporting, image recognition, file archival, and e-signatures that involve editing of file content. 
    
 
    **Key features of uploading file in Teams using bot** 
@@ -492,7 +492,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-4.png" alt-text="received" border="true":::
       
         > [!NOTE]
-        >  After the bot is installed in the personal scope, the user enters into an one on one chat conversation with the bot.
+        >  After the bot is installed in the personal scope, the user enters into a one on one chat conversation with the bot.
       
 - title: Complete challenge
   durationInMinutes: 1
