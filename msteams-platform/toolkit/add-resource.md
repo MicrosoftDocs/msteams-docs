@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add cloud resources to your Teams app
 
-TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fits your development needs.
+TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fit your development needs.
 
 ## Prerequisite
 
@@ -40,7 +40,7 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
 1. Select **OK**.
 
-The selected resources are succesfully added to your project.
+The selected resources are successfully added to your project.
 
 ## Add cloud resources using TeamsFx CLI in command window
 
@@ -68,16 +68,16 @@ TeamsFx integrates with Azure services for the following scenarios:
 After adding any resource, the changes in your project are as follows:
 
 - New parameters may be added to azure.parameter.{env}.json to provide required information for provision.
-- New content are appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
+- New content is appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
 - The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
 - `.fx/projectSettings.json` is updated to track the resources present in your project.
 
-After adding resouces, the additional changes in your project are as follows:
+After adding resources, the additional changes in your project are as follows:
 
 |Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
 |Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.visual studio code` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
-|Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it is the API specification file .|
+|Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it's the API specification file.|
 
 ## Limitation
 
