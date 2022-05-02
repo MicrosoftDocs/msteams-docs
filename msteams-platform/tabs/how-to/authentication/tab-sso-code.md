@@ -31,12 +31,16 @@ To achieve this access, your app code must make a call to Teams for getting an a
 
 The tab app needs to make a JavaScript call towards Teams using `getAuthToken()`. Teams seeks the user consent to use their identity for obtaining an access token. You need to configure your client-side code for using `getAuthToken()` to initiate the validation process.
 
+#### When to call getAuthToken
+
 Use `getAuthToken()` at the time when you need to validate the user identity:
 
-- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken()` from inside `microsoftTeams.initialize()`.
-- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken()` when the user takes an action that requires a signed-in user.
+| If user validation is needed... | Call getAuthToken()... |
+| --- | --- |
+| At the time user accesses the app | From inside `microsoftTeams.initialize()`. |
+| To use a particular functionality of the app | When the user takes an action that requires a signed-in user. |
 
-Once Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to the Azure AD. So you can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
+Once Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to the Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
 > As a best security practice, always call `getAuthToken()` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
