@@ -26,6 +26,8 @@ landingContent:
       links:
       - text: Integrate location capabilities
         url: ~/concepts/device-capabilities/location-capability.md
+      - text: Common reasons for app validation failure
+        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
       - text: Upload your app in Microsoft Teams
         url: ~/concepts/deploy-and-publish/apps-upload.md
       - text: Share to Teams from personal app or tab
@@ -44,7 +46,8 @@ landingContent:
         url: ~/get-started/glossary.md
       - text: Overview
         url: ~/overview.md
-      
+
+
 
 - title: Get started
   linkLists:
