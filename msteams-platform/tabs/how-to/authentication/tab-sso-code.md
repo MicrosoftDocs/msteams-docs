@@ -15,6 +15,7 @@ This section covers:
 
 - [Configure client-side code to get an access token](#configure-client-side-code-to-get-an-access-token)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
+- [Decode and validate the access token](#decode-and-validate-the-access-token)
 - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
 ## Configure client-side code to get an access token
@@ -40,7 +41,7 @@ Once Teams obtains the access token, it's cached and reused as needed. This toke
 > [!IMPORTANT]
 > As a best security practice, always call `getAuthToken()` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
 
-### Code for getAuthToken
+#### Code for getAuthToken
 
 Add the following code to the Teams client to:
 
@@ -71,7 +72,7 @@ You should also pass `allowSignInPrompt: true` in the options parameter of `getA
 > To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams client.
 > For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
 
-#### Teams mobile client
+### Teams mobile client
 
 For Teams mobile client version that support SSO are:
 
@@ -117,7 +118,7 @@ $.ajax({
 });
 ```
 
-## Decode the access token
+### Decode and validate the access token
 
 Web APIs on your server must decode and validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
@@ -133,7 +134,7 @@ Keep in mind the following guidelines when validating the token:
 - The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
-### Example access token
+#### Example access token
 
 The following is a typical decoded payload of an access token.
 
