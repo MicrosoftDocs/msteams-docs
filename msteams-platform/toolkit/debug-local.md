@@ -7,9 +7,9 @@ ms.topic: overview
 ms.date: 03/21/2022
 ---
 
-# Debug your Teams app locally
+# Debug Teams app locally
 
-Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
+ Debug is the process of resolving the conflicts to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit helps you to debug and preview your Teams app locally and also supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -18,21 +18,21 @@ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is th
 * [Stop debugging](#stop-debugging)  
 
 
-During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. The Teams app is available for preview in Teams web client locally after debugging. You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
+During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. You can also customize the debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app. The Teams app is available for preview in Teams web client locally after the debugging.
 
 ## Prerequisite
 
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Key features of Teams Toolkit
+## Key debug features
 
 #### Start debugging
 
-You can perform single operation, select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering Azure Active Directory app, registering Teams app, registering bot, starting services, and launching browser.
+You can Select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering Azure Active Directory app, registering Teams app, registering bot, starting services, and launching browser.
 
 #### Multi-target debugging
 
-Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
+You can select debut option under DEVELOPMENT activity bar, Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
 
 #### Toggle breakpoints
 
@@ -56,7 +56,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 #### 1. Set up your Teams Toolkit
 
-Complete the following steps to debug your app after creating a new app using the Teams Toolkit:
+Follow the steps to debug your app once you create a new app:
 
 <br>
 
@@ -86,7 +86,7 @@ Complete the following steps to debug your app after creating a new app using th
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. Select **Yes** if the following dialog box appears:
+5. Select **Yes**, if the following dialog box appears:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority" border="true":::
 
@@ -156,7 +156,7 @@ Launches the debug configurations defined in `.vscode/launch.json` as follows:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Launch debugger":::
 
-The following table lists the debug configuration names and types for project with tab app and bot app:
+The debug configuration names and types for project with Tab app and Bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
@@ -164,7 +164,7 @@ The following table lists the debug configuration names and types for project wi
 |  Bot or message extensions |   **Attach to Bot** |  pwa-node |
 | Azure Functions |   **Attach to Backend** |  pwa-node |
 
-The following table lists the debug configuration names and types for project with bot app and without tab app:
+The debug configuration names and types for project with Bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
@@ -174,15 +174,16 @@ The following table lists the debug configuration names and types for project wi
 
 #### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot** launches a new Edge or Chrome browser instance and opens a web page to load Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select one from the dropdown list as per your requirement.
+The configuration **Attach to Frontend** or **Launch Bot** launches a new browser instance and opens a web page to load the Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select any one of the dropdown list option.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="local debug" border="true":::
+ 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app.png" alt-text="local debug":::
 
    Your app is added to Teams!
 
 ## Customize debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your tab or bot by unchecking some prerequisites:
+You can customize the debug settings to create your own tab or bot by not selecting some of the prerequisites:
 
 <br>
 
@@ -246,7 +247,7 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 You can add environment variables to `.env.teamsfx.local` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
- > Ensure to start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
+ > Start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
 
 </details>
 
@@ -302,7 +303,11 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ## See also
 
+
+
+
+
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
+* [Manage multiple environments](TeamsFx-multi-env.md)
