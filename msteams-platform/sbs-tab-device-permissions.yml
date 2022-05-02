@@ -83,7 +83,7 @@ items:
   content: |
      1. In your cloned repository, navigate to **samples > tab-device-permissions > nodejs**.
 
-     1. Copy the **nodejs** folder path. 
+     1. Copy the **nodejs** folder path.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png" alt-text="copy the path" border="true":::  
 
@@ -117,7 +117,7 @@ items:
 
     1. In your cloned repository, navigate to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
-    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+    1. Create a .zip with the following files that are present in the **appPackage** folder:
        * manifest.json
        * icon-outline.png
        * icon-color.png
@@ -156,14 +156,14 @@ items:
     
     1. In your cloned repository, navigate to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
-    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+    1. Create a .zip with the following files that are present in the **appPackage** folder:
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png" alt-text="create a zip" border="true":::        
 
-    1. Go to **Microsoft Teams**. 
+    1. Go to **Microsoft Teams**.
 
     1. Select **Apps**.
 
@@ -173,7 +173,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png" alt-text="select manage app" border="true":::         
 
-    1. Select **Upload a custom app**. 
+    1. Select **Upload a custom app**.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png" alt-text="upload custom app" border="true":::           
    

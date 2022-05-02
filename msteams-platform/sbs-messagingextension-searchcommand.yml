@@ -90,7 +90,7 @@ items:
 
         ![Bot type](~/assets/images/Teams-Messaging-Extensions-Search/bot-type.png) 
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
+    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
        You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
@@ -101,11 +101,11 @@ items:
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
-    1. If the validation passes, select **Create**. 
+    1. If the validation passes, select **Create**.
 
-        It takes a few moments for your bot service to be provisioned. 
+        It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. 
+    1. Select **Go to resource**.
 
         ![Deploy App](~/assets/images/Teams-Messaging-Extensions-Search/botdeployment.png)
 
@@ -126,11 +126,11 @@ items:
 
         ![Microsoft App ID](~/assets/images/Teams-Messaging-Extensions-Search/config1.png)
 
-    1. In the **Client secrets** section, select **New client secret**. 
+    1. In the **Client secrets** section, select **New client secret**.
 
         ![New client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
     
-       The **Add a client secret** window appears.  
+       The **Add a client secret** window appears.
 
     1. Enter **Description**.
     
@@ -153,7 +153,7 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane.
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
@@ -165,7 +165,7 @@ items:
 
     1. Select **Save**.
 
-          ![Select Teams](~/assets/images/Teams-Messaging-Extensions-Search/config-teams.png)   
+          ![Select Teams](~/assets/images/Teams-Messaging-Extensions-Search/config-teams.png)
     
     **To create tunnel for local web server**
 
@@ -285,7 +285,7 @@ items:
 
         ![Client applications](~/assets/images/meetings-side-panel/clientapps.png) 
   
-    1. In the left panel, select **API Permissions**. 
+    1. In the left panel, select **API Permissions**.
 
        > [!NOTE]
        > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
@@ -309,7 +309,7 @@ items:
 
          ![Other permissions](~/assets/images/meetings-side-panel/other-permissions.png)
 
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left panel, select **Authentication** to set a redirect URI.
 
        > [!NOTE]
        > If an app is not granted IT admin consent, users must provide consent the first time they use an app.

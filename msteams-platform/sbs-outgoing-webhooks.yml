@@ -99,7 +99,7 @@ items:
         > [!NOTE]
         > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server, and client authentication tokens are equal. For example, an HMAC handshake.
                     
-         ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)   
+         ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -114,7 +114,7 @@ items:
 
            ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
 
-       1. Update the **"contoso"** to "M365x712764" and HMAC in **AuthProvider.cs** file.  
+       1. Update the **"contoso"** to "M365x712764" and HMAC in **AuthProvider.cs** file.
 
            ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
       

@@ -75,8 +75,8 @@ items:
        
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select your subscription.
-    1. From the **Resource group** dropdown list, select your existing resource group.
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/selection-of-resource.png" alt-text="azure resource selection" border="true":::
        
@@ -99,11 +99,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/review-create.png" alt-text="creation of new bot" border="true":::   
 
-    1. If the validation passes, select **Create**. 
+    1. If the validation passes, select **Create**.
     
         It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. 
+    1. Select **Go to resource**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/deployment.png" alt-text="select resource" border="true":::
         
@@ -115,7 +115,7 @@ items:
 
        Perform the following steps if you have created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left panel, select **Configuration**.
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
