@@ -324,7 +324,7 @@ To enhance your message, you can include pictures as attachments to that message
 
 ## Picture messages
 
-Pictures are sent by adding attachments to a message. For more information on attachments, see [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+Pictures are sent by adding attachments to a message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
 Pictures can be at most 1024×1024 MB and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
