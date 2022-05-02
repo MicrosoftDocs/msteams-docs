@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Configure code to enable SSO
 
-You need to configure your app's client-side code to obtain an access token from Azure AD using Teams identity of the app user. After the access token is received from, you need to pass it to the server side and validate the token. You can also use the access token as an identity token for authenticating and authorizing your users.
+You need to configure your app's code to handle access tokens. Configure the client-side code to obtain an access token from Azure AD using Teams identity of the app user. After the access token is received from, you need to pass it to the server side and validate the token. You can also use the access token as an identity token for authenticating and authorizing your users.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
 
@@ -56,6 +56,7 @@ var authTokenRequest = {
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
+
 <br>
 <details>
 <summary>Here's an example of the client-side code:</summary>
