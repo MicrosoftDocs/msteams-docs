@@ -414,6 +414,48 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
 
+       You can either publish to Teams or select the sharepoint site.
+
+        * Publish to Teams
+        * Select the link of the SharePoint site
+
+    ## Publish to Teams
+
+    1. Select **Publish to Teams**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provisioning-commands.png"alt-text="Screenshot for the publish to Teams." border="true":::
+
+    1. Select **Admin portal**.
+       
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/admin-portal.png"alt-text="Screenshot for the admin portal." border="true":::
+
+    1. Select **Manage Apps** and search your app in the search section to select your app.
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/manage-apps.png"alt-text="Screenshot for the Manage apps." border="true":::
+
+    1. Select **Publish** to publish your app in Teams.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-app.png"alt-text="Screenshot for the publish." border="true":::
+
+    1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
+
+    1. Select the triple-dot on the sidebar, then select **All apps**.  
+
+        The app displays in the **Apps built for your org** category. You can add the app from there.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app built in your org." border="true":::
+
+    1. Select your app, and then select **Add**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of app to be added in Teams." border="true":::
+
+        Congratulations! Your app is now added to Teams.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Ms. Teams." border="true":::"
+
+    ## Select the link of the SharePoint site
+
+
     1. Select the link of the SharePoint site.
 
         The SharePoint site opens to the Apps home page. Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharepoint) on SharePoint.
