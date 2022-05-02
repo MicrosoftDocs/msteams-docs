@@ -259,30 +259,33 @@ The redirect URI you defined on the **Register an application** page for Web pla
 
     The **Platform configurations** page appears.
 
+    The Platform and redirect URI that you configured while registering your app on Azure AD already displays on this page.
+
 1. Select **+ Add a platform**.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms" border="false":::
 
     The **Configure platforms** page appears.
 
-1. Select **Web** to configure the app as a web app.
+1. Select the platform that you want to configure. You can choose the platform type from web, SPA, and mobile/desktop applications.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
 
-    The **Configure Web** page appears.
+    You can configure multiple platform options for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
 
-1. Enter the configuration details for the web platform.
+    The configuration page appears.
 
+1. Enter the configuration details for the platform.
+
+    <!--
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform" border="true":::
 
-    1. Enter the Application ID URI as the **Redirect URIs**.
-    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.
+    1. Enter the Application ID URI as the **Redirect URIs**. The URI should be unique.
+    2. Enter the API route where an authentication response should be sent as **Front-channel logout URL**.-->
 
 1. Select **Configure**.
 
     The platform is configured and displayed in the **Platform configurations** page.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/web-platform-configured.png" alt-text="Web platform configured" border="false":::
 
 ## Configure access token version
 
