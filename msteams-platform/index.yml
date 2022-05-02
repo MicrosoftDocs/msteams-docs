@@ -64,7 +64,7 @@ conceptualContent:
           text: Create conversational interactions with bots
         - url: /learn/modules/msteams-messaging-extensions/
           itemType: learn
-          text: Create task-oriented interactions with messaging extensions
+          text: Create task-oriented interactions with message extensions
         - url: /learn/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
@@ -86,7 +86,7 @@ conceptualContent:
           text: Bots
         - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
           itemType: overview
-          text: Messaging extensions
+          text: Message extensions
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
           text: Apps for Teams meetings
@@ -208,12 +208,12 @@ tools:
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
     # Card
-    - title: Node.js Bot Framework SDK for bots and messaging extensions
+    - title: Node.js Bot Framework SDK for bots and message extensions
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_nodejs.png
       url: https://github.com/Microsoft/botbuilder-js
     # Card
-    - title: .NET Bot Framework SDK for bots and messaging extensions
+    - title: .NET Bot Framework SDK for bots and message extensions
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_net.png
       url: https://github.com/Microsoft/botbuilder-dotnet/
