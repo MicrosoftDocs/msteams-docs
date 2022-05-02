@@ -116,7 +116,7 @@ Here's a list of best practices:
 - SSO in teams only work with OAuth 2.0 protocol.  
 - SSO only works with Azure AD. To extend it to different OAuth Identity providers, the flow needs to be implemented.
 - Multiple domains per app is not supported. For this, please read about LOB apps.
-- Tenant Admin Consent: A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
+- Tenant Admin Consent: A simple way of [consenting on behalf of an organization as a tenant admin]((<https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant>) is by getting consent from admin using this link: `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 - Ask for consent using the Auth API: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
     To ask for additional consent using the Auth API, follow these steps:

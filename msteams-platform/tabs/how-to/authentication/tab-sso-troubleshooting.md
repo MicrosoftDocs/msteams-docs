@@ -25,7 +25,7 @@ This kind of error should be seen only in development. To handle this error, you
 <br>
 <details>
 <summary>What is an Invalid audience error in the access token for Microsoft Graph, and how should I handle it?</summary>
-The server-side code should send a 403 Forbidden response to the client to show a message to the user, and s log the error to the console or record it in a log.
+The server-side code should send a 403 Forbidden response to the client to show a message to the user, and possibly log the error to the console or record it in a log.
 </details>
 <br>
 <details>

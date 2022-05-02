@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
 # Acquire token for MS Graph - Merged
- 
+
 You can extend your Teams tab app for Microsoft Graph. You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD on-behalf-of flow.
 
 Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes.
@@ -86,7 +86,9 @@ If you need to access Microsoft Graph data, your server-side code should do the 
 - If you need to cache the new access token for multiple calls, we recommend using token cache serialization in MSAL.NET.
 
 > [!IMPORTANT]
-> As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the OAuth 2.0 protocol diagram.
+> As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+
+<!--For more information on the proper protocol flow, see the OAuth 2.0 protocol diagram.-->
 
 ## See also
 
