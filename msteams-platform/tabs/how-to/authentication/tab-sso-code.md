@@ -92,7 +92,7 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
+After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
 ## Pass the access token to server-side code
 
@@ -102,7 +102,7 @@ If you need to pass the access token to get Microsoft Graph data, see [Acquire t
 
 ### Code for passing access token to server-side
 
-The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you are not writing to the server.
+The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you're not writing to the server.
 
 ```javascript
 $.ajax({
@@ -134,7 +134,7 @@ There are a number of libraries available that can handle JWT validation, but th
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens will be issued by the Azure AD. The `iss` claim in the token should start with this value.
+- Valid SSO tokens are issued by the Azure AD. The `iss` claim in the token should start with this value.
 - The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
@@ -170,7 +170,7 @@ The following is a typical decoded payload of an access token.
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
-The access token returned from `getAuthToken()` contains information that can be used to establish the identity. The following claims in the token relate to identity.
+The access token returned from `getAuthToken()` contains information that can be used to establish the identity. The following claims in the token relate to identity:
 
 - name: The user's display name.
 - preferred_username: The user's email address.
