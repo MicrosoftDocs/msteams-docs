@@ -75,6 +75,6 @@ Explore and preview samples in Teams web client. Follow the instructions for eac
 * [Debug your Teams app locally](debug-local.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Publish your Teams app](TeamsFx-collaboration.md)
+* [Publish your Teams app](../concepts/deploy-and-publish/appsource/publish.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
