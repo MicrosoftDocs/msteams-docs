@@ -90,7 +90,7 @@ After completion, the utility will have updated your `package.json` file with th
 Teams APIs that previously took a callback parameter have been updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
 
 ```js
-app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, core.executeDeepLink, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, media.captureImage, media.getMedia, media.selectMedia, media.viewImages, media.scanBarCode, meeting.getAppContentStageSharingCapabilities, meeting.getAuthenticationTokenForAnonymousUser, meeting.getIncomingClientAudioState, meeting.getLiveStreamState, meeting.getMeetingDetails, meeting.requestStartLiveStreaming, meeting.requestStopLiveStreaming, meeting.shareAppContentToStage, meeting.stopSharingAppContentToStage, meeting.toggleIncomingClientAudio, meeting.getAppContentStageSharingState, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.config.setConfig, pages.config.getConfig, people.selectPeople, ChildAppWindow.postMessage, ParentAppWindow.postMessage
+app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, chat.openConversation, core.executeDeepLink, files.addCloudStorageFolder, files.deleteCloudStorageFolder, files.getCloudStorageFolderContents, files.getCloudStorageFolders, files.getFileDownloads, legacy.fullTrust.getConfigSetting, legacy.fullTrust.joinedTeams.getUserJoinedTeams, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, media.captureImage, media.getMedia, media.selectMedia, media.viewImages, media.scanBarCode, meeting.getAppContentStageSharingState, meeting.getAppContentStageSharingCapabilities, meeting.getAuthenticationTokenForAnonymousUser, meeting.getIncomingClientAudioState, meeting.getLiveStreamState, meeting.getMeetingDetails, meeting.requestStartLiveStreaming, meeting.requestStopLiveStreaming, meeting.shareAppContentToStage, meeting.stopSharingAppContentToStage, meeting.toggleIncomingClientAudio, meetingRoom.getPairedMeetingRoomInfo, meetingRoom.sendCommandToPairedMeetingRoom, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.config.setConfig, pages.config.getConfig, pages.backStack.navigateBack, people.selectPeople
 ```
 
 You'll need to update the way your code calls any of these APIs to use Promises. For example, if your code is calling a Teams API like this:
@@ -206,15 +206,6 @@ The `app` namespace contains top-level APIs required for overall app usage, acro
 | `appInitialization.IFailedRequest` enum | `app.IFailedRequest` |
 | `appInitialization.IExpectedFailureRequest` enum | `app.IExpectedFailureRequest` |
 
-#### *core* namespace
-
-The `core` namespace includes functionality for deep links.
-
-| Original namespace `publicAPIs` | New namespace `core` |
-| - | - |
-| `shareDeepLink` | `core.shareDeepLink` |
-| `executeDeepLink` | `core.executeDeepLink` |
-
 #### *pages* namespace
 
 The `pages` namespace includes functionality for running and navigating webpages within various Microsoft 365 clients, including Teams, Office, and Outlook. It also includes several sub-capabilities, implemented as sub-namespaces.
@@ -286,9 +277,11 @@ The TeamsJS *tasks* namespace has been renamed to *dialog*, and the following AP
 | - | - |
 | `tasks.startTask` | `dialog.open` (renamed) |
 | `tasks.submitTasks` | `dialog.submit` (renamed) |
-| `tasks.updateTasks` | `dialog.resize` (renamed) |
+| `tasks.updateTasks` | `dialog.update.resize` (renamed) |
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
+
+Additionally, this capability has been split into a main capability (`dialog`) for supporting HTML-based dialogs, and a sub-capability for bot-based dialogs, `dialog.bot`.
 
 #### *teamsCore* namespace
 
@@ -300,7 +293,30 @@ To generalize the TeamsJS SDK to run other Microsoft 365 hosts such as Office an
 | `print` | `teamsCore.print`
 | `registerOnLoadHandler` | `teamsCore.registerOnLoadHandler`
 | `registerBeforeUnloadHandler` | `teamsCore.registerBeforeUnloadHandler`
-| `registerFocusEnterHandler` | `teamsCore.registerFocusEnterHandler`
+| `registerFocusEnterHandler` | `pages.registerFocusEnterHandler`
+
+### App scenario considerations
+
+
+
+#### App permissions
+
+
+
+#### Deeplinking
+
+| Original namespace `publicAPIs` | New namespace |
+| - | - |
+| `shareDeepLink` | `pages.shareDeepLink` |
+| `executeDeepLink` | `app.openLink` |
+
+#### Dialogs
+
+
+
+#### Microsoft 365 support (running Teams apps in Office and Outlook)
+
+
 
 ### Updates to the *Context* interface
 
