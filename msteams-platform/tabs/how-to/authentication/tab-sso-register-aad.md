@@ -98,8 +98,9 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
     1. Select the platform where your app will be accessible. You can choose from **Public client/native (mobile & desktop)**, **Web**, **Single-page application (SPA)**.
-    2. Enter URL for your app. After user authentication is successful, Teams uses this URL to open your app.
+    2. Enter the URL for your app. After user authentication is successful, Teams uses this URL to open your app.
        You can change this URL at a later stage, if needed.
+    <br>
 
     <details>
     <summary>Platform and redirect URI options</summary>
@@ -116,17 +117,17 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
 
-    The app is created and displayed.
+    The page with app ID and other configurations is displayed.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="false":::
 
-8. Note and save the **Application ID**. You'll need it for updating the app manifest.
+8. Note and save the **Application ID**. You'll need it for updating the Teams Client manifest later.
 
     Your app is registered in Azure AD. You should now have application ID for your tab app.
 
 ## Configure scope for access token
 
-After you've created a new registration, configure scope (permission) options for sending access token to client app. In this section, you'll learn:
+After you've created a new app registration, configure scope (permission) options for sending access token to client app. In this section, you'll learn:
 
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. To do this, you'll expose a web API, and configure the app ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and configure the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
@@ -146,22 +147,22 @@ After you've created a new registration, configure scope (permission) options fo
 
     The section for setting app ID URI appears.
 
-1. Enter the app ID URI.
+1. Enter the app ID URI in the format explained here.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
 
     - The **App ID URI** displays pre-filled with application ID (GUID) in the format `api://{AppID}`.
     - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
-    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID).
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
     where,
     - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served.
-      If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
+      If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
     - `AppID` is the **Application (client) ID** (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
     > [!IMPORTANT]
     >
-    > - If you're building an app with a bot, a messaging extension, and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
+    > - If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
     > - Use lower case letters for domain name. Don't use upper case.
     >
     >   For example, to create an app service or web app, enter base resource name as *demoapplication*. Then, the URL will be **<https://demoapplication.azurewebsites.net>**. This format is supported for all platforms.
@@ -186,7 +187,7 @@ After you've created a new registration, configure scope (permission) options fo
 
     The **Add a scope** page appears.
 
-1. Enter the app details for your app scope.
+1. Enter the app details for configuring scope.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details" border="true":::
 
@@ -203,7 +204,7 @@ After you've created a new registration, configure scope (permission) options fo
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message" border="false":::
 
-    The app ID URI displays on the page.
+    The new scope you defined displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed" border="false":::
 
@@ -215,13 +216,11 @@ After you've created a new registration, configure scope (permission) options fo
 
     The **Add a client application** page appears.
 
-1. Enter the details for adding a client application.
+1. Enter the appropriate client ID for the Teams client for the applications that you want to authorize for your app’s web application.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
 
-1. Enter the client ID for the Teams client for the applications that you want to authorize for your app’s web application.
-
-   | Add client ID | For authorizing... |
+   | Use client ID | For authorizing... |
    | --- | --- |
    | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
    | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
@@ -230,9 +229,9 @@ After you've created a new registration, configure scope (permission) options fo
     > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
 
     > [!IMPORTANT]
-    > For a teams tab, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams. You might need this detail, if you're using the same Azure AD app for a mobile or desktop client also.
+    > For a Teams tab, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams. You might need this detail, if you're using the same Azure AD app for a mobile or desktop client also.
 
-1. Select the app ID you created for your app for the **Authorized scopes**.
+1. Select the app ID URI you created for your app for the **Authorized scopes**.
 2. Select **Add application**.
 
     A message pops up on the browser stating that the client app was added.
@@ -244,7 +243,7 @@ After you've created a new registration, configure scope (permission) options fo
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
 
 > [!NOTE]
-> You can authorize more than one client application. Repeat the steps for configuring authorized client application.
+> You can authorize more than one client application. Repeat the steps for configuring another authorized client application.
 
 ## Configure authentication for different platforms
 
