@@ -30,13 +30,15 @@ The server-side code should send a 403 Forbidden response to the client to s
 <br>
 <details>
 <summary>Does Graph API work in Postman?</summary>
-
+<br>
+You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
+For more information, please see [Use Postman with the Microsoft Graph API](/graph/use-postman).
 </details>
 <br>
 <details>
 <summary>Does Graph API work in Microsoft Graph explorer?</summary>
 
-For more information, please see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
+Yes, Graph API works in Microsoft Graph explorer. For more information, please see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 
 </details>
 <br>
