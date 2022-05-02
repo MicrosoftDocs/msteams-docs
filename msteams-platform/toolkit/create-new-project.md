@@ -21,24 +21,25 @@ You can use the toolkit with Visual Studio Code, or CLI (command-line interface)
 
 ### Prerequisite
 
-Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+1. Install the Visual Studio Code
+2. Add the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
-**To install Teams Toolkit in Visual Studio code**
+**To install Teams Toolkit in Visual Studio code**:
 
 1. Open Visual Studio Code and select the Extensions view (Ctrl+Shift+X / ⌘⇧-X or View > Extensions)
  :::image type="icon" source="../assets/images/teams-toolkit-v2/extension.png" border="true":::
 
-1. In the search box, enter Teams Toolkit and select Install next to the Teams Toolkit.
- :::image type="icon" source="../assets/images/teams-toolkit-v2/extension.png" border="true":::
+1. In the search box, enter Teams Toolkit and select **Install** next to the Teams Toolkit.
+ :::image type="icon" source="../assets/images/teams-toolkit-v2/extension1.png" border="true":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it is installed
  
 
-     Now the prerequisites are in place, let's begin!
+    
 
-1. Open Visual Studio Code
+
 1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
-1. Select **Creating a new Teams app...** tab
+1. Select **Creating a new Teams app...**
  :::image type="icon" source="../assets/images/teams-toolkit-v2/create123.png" border="true":::
 1. Select **Create a new Teams app** from the dropdown options
  :::image type="content" source="../assets/images/teams-toolkit-v2/create1234.png" alt-text="create-option":::
@@ -58,15 +59,15 @@ You can create a new Teams app by selecting **View samples**. Select one of the 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/sample2.png" alt-text="View samples":::
 
-Explore and download samples and run your app locally or remotely to preview in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample in the `TeamsFx Samples` repository and browse the source code.
+Explore and preview samples in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample in the `TeamsFx Samples` repository and browse the source code.
 
 
 ## Step-by-step guides to create an app
 
 * [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
-* [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
+* [Build a Teams app with JavaScript](../sbs-gs-javascript.yml)
 * [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
-* [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
+* [Build a Teams app with C#](../sbs-gs-csharp.yml)
 
 ## See also
 
