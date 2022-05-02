@@ -69,7 +69,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 <details>
 <summary><b>Install preview</b></summary>
 
-:::image type="content" source="~/assets/images/Teams-link-unfurling/install-preview.png" alt-text="install preview updated" border="true":::
+:::image type="content" source="~/assets/images/Teams-link-unfurling/install-preview-updated-new.png" alt-text="install pre" border="true":::
 
 </details>
 
@@ -78,7 +78,7 @@ Unfurl links in Teams using bot uses link unfurling to look for URLs pasted into
 <details>
 <summary><b>Auth/Config</b></summary>
 
-:::image type="content" source="~/assets/images/Teams-link-unfurling/congi-preview.png" alt-text="install preview updated" border="true":::
+:::image type="content" source="~/assets/images/Teams-link-unfurling/auth-preview-updated.png" alt-text="config new" border="true":::
 
 </details>
 
