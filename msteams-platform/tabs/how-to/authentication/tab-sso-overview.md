@@ -71,9 +71,6 @@ sequenceDiagram
 > [!IMPORTANT]
 > The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
-> [!NOTE]
-> Currently, SSO only supports OAuth 2.0 token and does not support SAML token.
-
 ### Use cases for enabling SSO for tab
 
 Here are some use cases where enabling SSO is beneficial. Call `getAuthToken` in these scenarios to use Teams identity for obtaining access token for your app users:
@@ -103,9 +100,9 @@ To build a tab app that uses Teams SSO to authenticate users:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-accesstoken.png" alt-text="Steps to enable SSO for tab" border="false":::
 
-1. Register with Azure AD: Create an Azure AD app to generate an app ID and app ID URI You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current user logged into Teams.
-2. Configure code: Update the Teams client to handle access token, calling it when a user accesses your app and validating it when received.
-3. Teams manifest: Update your Teams client manifest with the app ID generated on Azure AD and the app ID URI.
+1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and app ID URI. You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current user logged into Teams.
+2. **Configure code**: Update the code to handle access token, calling it when a user accesses your app and validating it when received.
+3. **Teams manifest**: Update your Teams client manifest with the app ID generated on Azure AD and the app ID URI.
 
 ## Best practices
 
@@ -115,6 +112,7 @@ Here's a list of best practices:
 
 ## Known limitations
 
+- Currently, SSO only supports OAuth 2.0 token and does not support SAML token.
 - SSO in teams only work with OAuth 2.0 protocol.  
 - SSO only works with Azure AD. To extend it to different OAuth Identity providers, the flow needs to be implemented.
 - Multiple domains per app is not supported. For this, please read about LOB apps.
