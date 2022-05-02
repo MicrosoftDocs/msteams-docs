@@ -11,19 +11,19 @@ Your Teams app users are authenticated and authorized by Azure AD for using your
 
 ## Enabling SSO on Azure AD
 
-Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, permissions, and more.
+Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and configuring the OBO flow.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to client app" border="false":::
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets users access your app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
-These configurations enable SSO for your app in Teams.
+These configurations enable SSO for your app in Teams, and respond to your app with an access token for the validating user.
 
-You may also need to configure additional configuration for authenticating users on the platform or device where you want to target your app.
+You may also need to configure additional configuration for authenticating users on the platform or device where you want to target your app, or for more Graph permissions.
 
 ### Before you register with Azure AD
 
-It's helpful to learn about the configuration required for registering your app on Azure AD. It includes the following:
+It's helpful to know about the configuration required for registering your app on Azure AD. It includes the following:
 
 - Single- or multi-tenant options.
 - Platform for your app and the URL from where your app is accessible.
@@ -60,10 +60,10 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 ### To register a new app in Azure AD
 
-1. Open a web browser to the [Azure portal](https://ms.portal.azure.com/).
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure AD Portal page opens.
 
-2. Select **App registrations** icon.
+2. Select the **App registrations** icon.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal page." border="false":::
 
@@ -75,7 +75,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
     The **Register an application** page appears.
 
-4. Enter the name of your app that will be displayed to the user. You can change this name at a later stage, if you want to.
+4. Enter the name of your app that you want to be displayed to the user. You can change this name at a later stage, if you want to.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal." border="false":::
 
@@ -87,9 +87,9 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     | Option | Select this to... |
     | --- | --- |
     | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called a line-of-business (LOB) application, this app is a single-tenant application in the Microsoft identity platform. |
-    | Accounts in any organizational directory (Any Azure AD directory - Multitenant) | Let users in any Azure Active Directory (Azure AD) tenant to be able to use your application. This option is appropriate if, for example, you're building a software-as-a-service (SaaS) application that you intend to provide to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
-    | Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can also support users who have personal Microsoft accounts. |
-    | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. Personal Microsoft accounts. |
+    | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) | Let users in any Azure AD tenant use your application. This option is appropriate if, for example, you're building a software-as-a-service (SaaS) application, and you intend make it available to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
+    | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can support users who have personal Microsoft accounts also. |
+    | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
 
     </details>
 
