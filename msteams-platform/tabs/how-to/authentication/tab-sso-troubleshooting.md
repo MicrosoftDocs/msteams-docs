@@ -35,6 +35,7 @@ The server-side code should send a 403 Forbidden response to the client to s
 <br>
 <details>
 <summary>Does it work in Microsoft Graph explorer?</summary>
+
 For more information, please see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 
 </details>
