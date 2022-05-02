@@ -32,11 +32,15 @@ The following image displays the experience of link unfurling on mobile and desk
 
 # [Mobile](#tab/Samplemobileapp)
 
-In the following image, the user has shared a URL from an app outside Teams through share button on the Teams group chat of mobile client, the bot is invoked and returns an Adaptive Card before he shares in the chat:
+Link unfurling on mobile using bot :
+
+1. Allows user to paste URLs and respond with a card.
+1. Allows user to register the app and receive invoke activity.
+
 
 # [Desktop](#tab/Sampledesktop)
 
-Unfurl links in Teams using bot :
+Link unfurling on desktop using bot :
 
 1. Allows user to paste URLs and respond with a card.
 1. Allows user to register the app and receive invoke activity.
