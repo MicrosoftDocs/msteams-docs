@@ -168,7 +168,9 @@ async function example() {
 
 A *capability* is a logical grouping of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Office, as hosts. A host supports a given capability if it supports all the APIs defined within that capability. A host cannot partially implement a capability.  Capabilities can be feature- or content-based, such as *dialog* or *authentication*. There are also capabilities for application types, such as *tabs/pages* or *bots*, and other groupings.
 
-In the TeamsJS SDK v2 Preview, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. If an app is running in a host that supports the dialog capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). Meanwhile, if an app attempts to call an API that's not supported in that host, the API will throw an exception.
+In the TeamsJS SDK v2 Preview, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. If an app is running in a host that supports the dialog capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in the current host, the API will throw an exception.
+
+[TODO capabilities and support notes]
 
 ### Differentiate your app experience
 
@@ -295,29 +297,6 @@ To generalize the TeamsJS SDK to run other Microsoft 365 hosts such as Office an
 | `registerBeforeUnloadHandler` | `teamsCore.registerBeforeUnloadHandler`
 | `registerFocusEnterHandler` | `pages.registerFocusEnterHandler`
 
-### App scenario considerations
-
-
-
-#### App permissions
-
-
-
-#### Deeplinking
-
-| Original namespace `publicAPIs` | New namespace |
-| - | - |
-| `shareDeepLink` | `pages.shareDeepLink` |
-| `executeDeepLink` | `app.openLink` |
-
-#### Dialogs
-
-
-
-#### Microsoft 365 support (running Teams apps in Office and Outlook)
-
-
-
 ### Updates to the *Context* interface
 
 The `Context` interface has been moved to the `app` namespace and updated to group similar properties for better scalability as it runs in Outlook and Office, in addition to Teams.
@@ -373,6 +352,25 @@ You can also visualize the changes by reviewing the  [`transformLegacyContextToA
 | `userTeamRole` | `app.Context.team.userRole`|
 | `userDisplayName` | `app.Context.user.displayName` |
 | N/A | `app.Context.app.host.name`|
+
+### Microsoft 365 support (running Teams apps in Office and Outlook)
+
+
+
+#### App permissions
+
+
+
+#### Deeplinking
+
+| Original namespace `publicAPIs` | New namespace |
+| - | - |
+| `shareDeepLink` | `pages.shareDeepLink` |
+| `executeDeepLink` | `app.openLink` |
+
+#### Dialogs
+
+
 
 ## Next steps
 
