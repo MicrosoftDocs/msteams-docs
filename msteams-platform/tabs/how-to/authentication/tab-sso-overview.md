@@ -64,7 +64,7 @@ sequenceDiagram
 | 1 | Tab -> Teams | The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token for the tab application. |
 | 2 | Teams - > Consent form | If the current user is using your tab application for the first time, Teams displays request prompt to consent, if consent is required. The user must provide their consent to Teams for using their Teams identity to obtain access token from Azure AD. <br> Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication. |
 | 3 | Teams -> Azure AD | Teams requests Azure AD endpoint for the tab access token for the current user based on their Teams identity. |
-| 4 | Azure AD -> Teams | Azure AD sends the tab access token to the Teams client. The token is a JSON Web Token (JWT), and it's validation works just like token validation in most standard OAuth flows. Teams will cache the token on your behalf so that future calls to getAccessToken simply return the cached token. |
+| 4 | Azure AD -> Teams | Azure AD sends the tab access token to the Teams client. The token is a JSON Web Token (JWT), and it's validation works just like token validation in most standard OAuth flows. Teams will cache the token on your behalf so that future calls to `getAccessToken()` simply return the cached token. |
 | 5 | Teams -> Tab | Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call. |
 | 6 | Tab app | The tab app parses the token using JavaScript to extract required information, such as the user's email address. The token returned to the tab app is both an access token and an identity token. |
 
@@ -117,7 +117,7 @@ Here's a list of best practices:
 - SSO only works with Azure AD. To extend it to different OAuth Identity providers, the flow needs to be implemented.
 - Multiple domains per app is not supported. For this, please read about LOB apps.
 - Tenant Admin Consent: A simple way of [consenting on behalf of an organization as a tenant admin]((/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant>) is by getting consent from admin using this link: `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
-- Ask for consent using the Auth API: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
+  - Ask for consent using the Auth API: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
     To ask for additional consent using the Auth API, follow these steps:
 
@@ -125,10 +125,10 @@ Here's a list of best practices:
     2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
     3. When the exchange fails, you must ask for consent. Show some user interface (UI) asking the user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog box using our [Azure AD authentication API](~/concepts/authentication/auth-silent-aad.md).
     4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD doesn't ask for the other scopes.
-        - Instead of `?scope={scopes}`
-        - Use this `?prompt=consent&scope={scopes}`
+
+        - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
         - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
-    5. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
+    1. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
 
 ## Next step
 

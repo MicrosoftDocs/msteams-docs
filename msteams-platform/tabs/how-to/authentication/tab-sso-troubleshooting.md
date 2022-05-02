@@ -31,6 +31,7 @@ The server-side code should send a 403 Forbidden response to the client to s
 <details>
 <summary>Does SSO for Teams work in Postman?</summary>
 
+SSO doesn't work in Postman. Use `microsoftTeams.getAuthToken()` to get access token. It works only when the page is loaded inside Teams Tab.
 </details>
 <br>
 <details>
