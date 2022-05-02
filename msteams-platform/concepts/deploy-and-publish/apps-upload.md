@@ -111,7 +111,7 @@ To remove app from Teams follow the steps:
 ## Next step
 
 > [!div class="nextstepaction"]
->[Apps for Teams meetings](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
+>[Create apps for Teams meetings](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 ## See also
 
