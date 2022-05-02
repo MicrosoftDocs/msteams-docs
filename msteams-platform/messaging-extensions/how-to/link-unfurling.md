@@ -128,7 +128,7 @@ After adding the domain to the app manifest, you must update your web service co
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Types of Cards supported in link unfurling
+## Types of cards supported in link unfurling
 
 If you respond with more than one card, only the first card response is used.
 
