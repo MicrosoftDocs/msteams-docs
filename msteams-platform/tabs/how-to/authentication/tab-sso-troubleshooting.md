@@ -29,34 +29,27 @@ The server-side code should send a 403 Forbidden response to the client to s
 </details>
 <br>
 <details>
-<summary>Does SSO for Teams work in Postman?</summary>
+<summary>Does Graph API work in Postman?</summary>
 
-SSO doesn't work in Postman. Use `microsoftTeams.getAuthToken()` to get access token. It works only when the page is loaded inside Teams Tab.
 </details>
 <br>
 <details>
-<summary>Does it work in Microsoft Graph explorer?</summary>
+<summary>Does Graph API work in Microsoft Graph explorer?</summary>
 
 For more information, please see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 
 </details>
 <br>
 <details>
-<summary>Is the App ID correct?</summary>
+<summary>How can I resolve the generic error I get when I run the app?</summary>
 
-</details>
-<br>
-<details>
-<summary>Is the App secret correct? Expired?</summary>
+A generic error may show up when one or more of the app configurations made in Azure AD are incorrect. To resolve this error, check the following:
 
-</details>
-<br>
-<details>
-<summary>Check if the application id uri is correct?</summary>
-
-</details>
-<br>
-<details>
-<summary>Are permissions correct? Are they granted to the app?</summary>
+- Is the App ID correct?
+- Is the App secret correct? Expired?
+- Check if the application id uri is correct?
+- Are permissions correct? Are they granted to the app?
+- Is application ID URI and web application info resource in manifest is same as in Azure AD?
+- Do any of the permissions require admin consent? Were the permissions granted?
 
 </details>

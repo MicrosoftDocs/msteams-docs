@@ -72,7 +72,7 @@ sequenceDiagram
 
 ### Use cases for enabling SSO for tab
 
-Here are some use cases where enabling SSO is beneficial. Call `getAuthToken` in these scenarios to use Teams identity for obtaining access token for your app users:
+Here are some use cases where enabling SSO is beneficial. Call `getAuthToken()` in these scenarios to use Teams identity for obtaining access token for your app users:
 
 1. To get user’s teams identity from Teams if you have an existing app that you want to be available within a tab app in Teams for your app users.
 

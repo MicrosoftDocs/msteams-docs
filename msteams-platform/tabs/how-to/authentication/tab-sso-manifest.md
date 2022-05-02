@@ -203,7 +203,7 @@ To preview your app in Teams:
 
 1. Create an app package.
 
-   The app package contains the app manifest and app icons.
+   The app package is a zip file that contains the app manifest and app icons.
 
 2. Open Teams.
 
