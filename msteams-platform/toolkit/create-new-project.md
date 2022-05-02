@@ -31,10 +31,9 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 1. Open Visual Studio Code
 1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
 1. Select **Create a new Teams app** tab
+1. 
 1. Select **Create a new Teams app** from the dropdown options
 1. Select required capability
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/capability.png" alt-text="cap":::
 
 1. Select **OK**
 1. Select an option from the dropdown options **JavaScript** or **TypeScript**
@@ -42,9 +41,9 @@ Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.c
 
 ### View samples
 
-You can create a new Teams app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.<br>
+You can create a new Teams app by selecting **View samples**. You can multiple samples displayed The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.<br>
 
-1. Open **Teams Toolkit** from Microsoft Visual Studio Code
+1. Select **Teams Toolkit** from Microsoft Visual Studio Code
 2. Select **DEVELOPMENT** section in Treeview
 3. Select **View samples**. The sample gallery appears as shown in the following image:
 
