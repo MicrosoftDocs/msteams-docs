@@ -17,7 +17,7 @@ This section covers:
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
-## Get an access token from your client-side code
+## Configure client-side code to get an access token
 
 Your app user must give their consent to Teams for using their identity to get user-level permission. Azure AD receives the user's identity token (ID token) and sends an access token to Teams.
 
@@ -28,26 +28,26 @@ To achieve this access, your app code must make a call to Teams for getting an a
 
 ### Client-side code to obtain access token
 
-The tab app needs to make a JavaScript call towards Teams using `getAuthToken`. Teams seeks the user consent to use their identity for obtaining an access token. You need to configure your client-side code for using `getAuthToken` to initiate the validation process.
+The tab app needs to make a JavaScript call towards Teams using `getAuthToken()`. Teams seeks the user consent to use their identity for obtaining an access token. You need to configure your client-side code for using `getAuthToken()` to initiate the validation process.
 
-Use `getAuthToken` at the time when you need to validate the user identity:
+Use `getAuthToken()` at the time when you need to validate the user identity:
 
-- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
-- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
+- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken()` from inside `microsoftTeams.initialize()`.
+- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken()` when the user takes an action that requires a signed-in user.
 
-Once Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken` is called, until it expires, without making another call to the Azure AD. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
+Once Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to the Azure AD. So you can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
-> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
+> As a best security practice, always call `getAuthToken()` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
 
 ### Code for getAuthToken
 
 Add the following code to the Teams client to:
 
-- Call `getAuthToken`.
+- Call `getAuthToken()`.
 - Parse the access token or pass it to the server-side code.
 
-The following code shows a simple example of calling `getAuthToken` and parsing the token for the user name and other credentials.
+The following code shows a simple example of calling `getAuthToken()` and parsing the token for the user name and other credentials.
 
 ```javascript
 var authTokenRequest = {
@@ -65,7 +65,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 </details>
 
-You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
+You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken()`.
 
 > [!NOTE]
 > To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams client.
@@ -83,11 +83,39 @@ For the best experience with Teams, use the latest version of iOS and Android.
 
 ### User consent for getting access token
 
-When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to seek consent.
+When you call `getAuthToken()` and user consent is required for user-level permissions, a dialog is shown to the user to seek consent.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
 After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
+
+## Pass the access token to server-side code
+
+If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
+
+If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
+
+### Code for passing access token to server-side
+
+The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you are not writing to the server.
+
+```javascript
+$.ajax({
+    type: "POST",
+    url: "/api/DoSomething",
+    headers: {
+        "Authorization": "Bearer " + accessToken
+    },
+    data: { /* some JSON payload */ },
+    contentType: "application/json; charset=utf-8"
+}).done(function (data) {
+    // Handle success
+}).fail(function (error) {
+    // Handle error
+}).always(function () {
+    // Cleanup
+});
+```
 
 ## Decode the access token
 
@@ -148,34 +176,6 @@ Teams can cache this information associated with the user's identity; such as th
 
 > [!NOTE]
 > If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
-
-## Pass the access token to server-side code
-
-If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
-
-If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
-
-### Code for passing access token to server-side
-
-The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you are not writing to the server.
-
-```javascript
-$.ajax({
-    type: "POST",
-    url: "/api/DoSomething",
-    headers: {
-        "Authorization": "Bearer " + accessToken
-    },
-    data: { /* some JSON payload */ },
-    contentType: "application/json; charset=utf-8"
-}).done(function (data) {
-    // Handle success
-}).fail(function (error) {
-    // Handle error
-}).always(function () {
-    // Cleanup
-});
-```
 
 ## Code sample
 
