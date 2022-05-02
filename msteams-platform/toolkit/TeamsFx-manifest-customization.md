@@ -12,8 +12,8 @@ ms.date: 11/29/2021
 
 Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
-* `manifest.template.json`
-* `templates/appPackage`
+* `manifest.template.json` 
+* `templates/appPackage` 
 
 
 ## Prerequisite
