@@ -45,13 +45,31 @@ Yes, Graph API works in Microsoft Graph explorer. For more information, please s
 <details>
 <summary>How can I resolve the generic error I get when I run the app?</summary>
 
-A generic error may show up when one or more of the app configurations made in Azure AD are incorrect. To resolve this error, check the following:
+A generic error may show up when one or more of the app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
 
-- Is the App ID correct?
-- Is the App secret correct? Expired?
-- Check if the application id uri is correct?
-- Are permissions correct? Are they granted to the app?
-- Is application ID URI and web application info resource in manifest is same as in Azure AD?
-- Do any of the permissions require admin consent? Were the permissions granted?
+The following image shows an example of the app details configured in Azure AD.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD" border="false":::
+
+- **App ID**: The app ID you generated in Azure AD should be the same in the code and in Teams manifest file. Check the app ID in Teams manifest matches the **Application (client) ID** in Azure AD.
+
+- **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Azure AD.
+    You should also check if the client secret is expired.
+
+- **Application ID URI**: The app ID URI in the code and in Teams app manifest file should match the **Application ID URI** in Azure AD.
+
+- **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they were granted to the user in the access token.
+
+- **Admin consent**: If any scope requires admin consent, check if the consent was granted for the particular scope to the user.
+
+In addition, inspect the access token that was sent to the tab if the following values are correct:
+
+- Audience (aud): Check if the app ID in the token is correct as given in Azure AD.
+- Tenant Id(tid): Check if the tenant mentioned in the token is correct.
+- User identity (preferred_username): Check if the user identity matches the username in the request for access token for the scope that the current user wants to access.
+- Scopes (scp): Check if the scope for which the access token is requested is correct, and as defined in Azure AD.
+- Azure AD version 1.0 or 2.0 (ver): Check if Azure AD version is correct.
+
+You can use [JWT](https://jwt.ms) for inspecting the token.
 
 </details>
