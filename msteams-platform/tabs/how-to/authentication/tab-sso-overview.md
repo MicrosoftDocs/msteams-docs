@@ -120,14 +120,14 @@ Here's a list of best practices:
 
     To ask for additional consent using the Auth API, follow these steps:
 
-    1. The token retrieved using `getAuthToken()` must be exchanged server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
-    2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
-    3. When the exchange fails, you must ask for consent. Show some user interface (UI) asking the user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog box using our [Azure AD authentication API](~/concepts/authentication/auth-silent-aad.md).
-    4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD doesn't ask for the other scopes.
+    1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
+    2. If the exchange fails, Azure AD returns an invalid grant exception. There are usually one of the two error messages, `invalid_grant` or `interaction_required`.
+    3. When the exchange fails, you must ask for consent. Use the app user interface (UI) to ask the user to grant other consent. This UI must include a button that triggers an Azure AD consent dialog using our [Azure AD authentication API](~/concepts/authentication/auth-silent-aad.md).
+    4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD wouldn't ask for other scopes.
 
         - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
         - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
-    1. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
+    1. Once the user has granted more permissions, retry the On-behalf-of flow to get access to these other APIs.
 
 ## Next step
 
