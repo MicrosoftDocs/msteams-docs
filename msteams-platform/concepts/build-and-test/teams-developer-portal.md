@@ -70,14 +70,14 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 
 ## Analyze your app's usage
 
-In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app. The app usage metrics are available for the apps that are published to the Teams store or an org's app catalog through **Developer Portal for Teams** (formerly App Studio) and scoped to each individual app ID.
+In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app.
 
 > [!NOTE]
-> Usage analytics are only available for new apps published to your org through **Developer Portal for Teams**. Usage analytics for all the apps published on the Teams store, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
+> Usage analytics are currently available only for new custom apps published to your org through **Developer Portal for Teams (formerly App Studio)** or imported into **Developer Portal for Teams (formerly App Studio)** after April 2022. Usage analytics for all the apps published on the Teams store, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly RL30* | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 day window in UTC. |
+| *Monthly R30* | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 day window in UTC. |
 | *Daily* | It shows you the count of unique active users who used your app in a given day in UTC. |
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for new apps can take up to 3 to 5 days to reflect in the charts.
@@ -115,14 +115,14 @@ The **Usage by time period** chart shows you the number of active users or tenan
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| Monthly RL30 | Each data point represents a given RL30 (Rolling 30 day) period. |
-| Monthly RL28 | Each data point represents a given RL28 (Rolling 28 day) period. |
-| Weekly RL7| Each data point represents a given RL7 (Rolling 7 day) period. |
-| Daily | Each data point represents a given RL1 (Rolling 1 day) period. |
+| Monthly R30 | Each data point represents a given R30 (Rolling 30 day) period. |
+| Monthly R28 | Each data point represents a given R28 (Rolling 28 day) period. |
+| Weekly R7| Each data point represents a given R7 (Rolling 7 day) period. |
+| Daily | Each data point represents a given R1 (Rolling 1 day) period. |
 
 ### Usage by platform and OS
 
-The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user or tenant can use an app on multiple endpoints. Each data point represents a given RL30 (Rolling 30 day) period.
+The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 day) period.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
 
@@ -134,10 +134,10 @@ The **Usage by retention state** chart lets you track four key retention or chur
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| New users or tenants | Active users or tenants who are new and not used your app. |
-| Returning users or tenants | Active users or tenants who used your app during a given RL30 time period and the immediately preceding RL30 time period. |
-| Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding RL30 time period. |
-| Lapsed users or tenants | Active users or tenants who were not seen during a given RL30 time period but were seen during the immediately preceding RL30 time period. |
+| New users or tenants | Active users or tenants who are new new and have not used your app. |
+| Returning users or tenants | Active users or tenants who used your app during a given R30 time period and the immediately preceding R30 time period. |
+| Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
+| Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
 ### Usage intensity
 
@@ -147,13 +147,13 @@ The **Usage intensity** chart shows you key usage intensity metrics for your app
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| Median days used per month | The median numbers of days in which your app was opened in the last RL30 (Rolling 30 day) period. |
-| % of 5+ Days usage | The % of Active Users who opened or used the app more than five days in the last RL30 (Rolling 30 day) period. |
-| DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected RL30 time period. |
+| Median days used per month | The median numbers of days in which your app was opened in the last R30 (Rolling 30 day) period. |
+| % of 5+ Days usage | The % of Active Users who opened or used the app more than five days in the last R30 (Rolling 30 day) period. |
+| DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. |
 
 ### App dashboard
 
-The **My App dashboard** table shows you the latest RL30 data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily RL30 data for the last 75 days and end of month RL30 data for up to 12 months.
+The **My App dashboard** table shows you the latest R30 data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 data for the last 75 days and end of month R30 data for up to 12 months.
 
 You can select each of these rows to see trends over time.
 
