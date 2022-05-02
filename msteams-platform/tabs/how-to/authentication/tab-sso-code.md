@@ -13,7 +13,7 @@ You need to configure your app's code to handle access tokens. Configure the cli
 
 This section covers:
 
-- [Get an access token from your client-side code](#get-an-access-token-from-your-client-side-code)
+- [Configure client-side code to get an access token](#configure-client-side-code-to-get-an-access-token)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
