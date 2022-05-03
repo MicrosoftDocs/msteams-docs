@@ -25,18 +25,18 @@ During the debug process, Teams Toolkit automatically starts app services, launc
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 ## Key debug features
-
+There are 5 main debug features used in Teams Toolkit:
 #### Start debugging
 
-You can Select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering Azure Active Directory app, registering Teams app, registering bot, starting services, and launching browser.
+You can select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering Azure Active Directory app, registering Teams app, registering bot, starting services, and launching browser.
 
 #### Multi-target debugging
 
-You can select debut option under DEVELOPMENT activity bar, Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
+You can select debut option under **DEVELOPMENT** activity bar, Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
 
 #### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows the toggle breakpoints:
+You can toggle breakpoints on the source code of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows the toggle breakpoints:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="toggle breakpoints":::
 
@@ -54,6 +54,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 ## Debug your Teams app locally
 
+
 #### 1. Set up your Teams Toolkit
 
 Follow the steps to debug your app once you create a new app:
@@ -63,7 +64,7 @@ Follow the steps to debug your app once you create a new app:
 <details>
 <summary><b>Windows</b></summary>
 
-1. Select **Debug Edge** or **Debug Chrome** from the **Run and Debug** in the activity bar
+1. Select **Debug Edge** or **Debug Chrome** from the **RUN and DEBUG** in the activity bar
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Browser option" border="false":::
 
@@ -130,7 +131,7 @@ Toolkit launches a new Edge or Chrome browser instance depending on your selecti
 
 #### 2. Debug your app
 
-After the initial set up process, the Teams Toolkit starts the following processes:
+After the initial set up, the Teams Toolkit starts the following process:
 
 a. [Starts app services](#starts-app-services) </br>
 b. [Launches debuggers](#launches-debuggers)   </br>
@@ -177,9 +178,9 @@ The debug configuration names and types for project with Bot app:
 The configuration **Attach to Frontend** or **Launch Bot** launches a new browser instance and opens a web page to load the Teams client. After the Teams client is loaded, Teams sideloads the Teams app controlled by the sideloading url defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).  When Teams client loads in the web browser, select **Add** or select any one of the dropdown list option.
 
  
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app.png" alt-text="local debug":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app1.png" alt-text="local debug":::
 
-   Your app is added to Teams!
+   Your app is added to the Teams!
 
 ## Customize debug settings
 
@@ -237,7 +238,7 @@ You can customize the debug settings to create your own tab or bot by not select
 1. For Azure Functions, update `dev:teamsfx` script in `api/package.json` and for TypeScript update `watch:teamsfx` script
 
    > [!NOTE]
-   > Currently, the tab, bot, message extension apps, and Azure Functions ports don't support customization.
+   > Currently, the tab, bot, message extension apps, and Azure Functions ports dn't support customization.
 
 </details>
 
@@ -247,7 +248,7 @@ You can customize the debug settings to create your own tab or bot by not select
 You can add environment variables to `.env.teamsfx.local` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
- > Start a new local debug after adding new environment variables as the environment variables don't  support hot reload.
+ > Start a new local debug after adding new environment variables as the environment variables d'nt  support hot reload.
 
 </details>
 
