@@ -28,6 +28,70 @@ Here's the current versioning guidance for various app scenarios:
 
 The remainder of this article will walk you through the structure and latest updates to the Teams JavaScript client SDK.
 
+### Microsoft 365 support (running Teams apps in Office and Outlook)
+
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 (M365) ecosystem. Currently, other M365 application hosts (including Office and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of M365 host support for Teams apps, see [Extend Teams apps across Microsoft 365](../m365-apps/overview.md).
+
+The following table lists capabilities (public namespaces) with expanded M365 support for Teams tabs and dialogs (task modules).
+
+> [!TIP]
+> Check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace).
+
+|Capability | M365 support | Notes |
+|-----------|--------------|-------|
+| app | X | Namespace representing app initialization and lifecycle. |
+| appInitialization| N/A | Deprecated. Replaced by `app` namespace. |
+| appInstallDialog |||
+| authentication | X | |
+| calendar |||
+| call |||
+| chat |||
+| dialog | X | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
+| location || See notes on [App permissions](#app-permissions).|
+| mail |||
+| media || See notes on [App permissions](#app-permissions).|
+| pages | X | Namespace representing page navigation. See notes on [Deeplinking](#deeplinking). |
+| people |||
+| settings || Deprecated. Replaced by `pages.config`.|
+| sharing | N/A ||
+| stageView |||
+| tasks | N/A | Deprecated. Replaced by `dialog` capability. See notes on [Dialogs](#dialogs).|
+| teamsCore | N/A | Namespace containing Teams-specific functionality.|
+| video |||
+
+#### App permissions
+
+App capabilities that require the user to grant [device permissions](../concepts/device-capabilities/device-capabilities-overview.md) (such as *location* and *media*) are not yet supported for apps running outside of Teams. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will thow an error and fail to display a system dialog asking for user consent.
+
+Current guidance for now is to modify your code to catch the failure:
+
+* Check [isSupported()](#differentiate-your-app-experience) on a capability before using it
+* Catch and handle errors when calling TeamsJS and HTML5 APIs
+
+When an API is unsupported or throws an error, add logic to fail gracefully or provide a workaround. For example:
+
+* Direct the user to your app's website
+* Direct the user to use the app in Teams to complete the flow
+* Notify the user the functionality is not yet available
+
+#### Deeplinking
+
+[TBD] Outline scenario guidance for:
+
+* `pages.shareDeepLink` (formerly `shareDeepLink`)
+* `app.openLink` (formerly `executeDeepLink`)
+* `pages.navigateToApp`
+
+#### Dialogs
+
+Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../task-modules-and-cards/task-modules/design-teams-task-modules) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
+
+This new dialog capability is split into a main capability (`dialog`) for supporting HTML-based dialogs and a sub-capability, `dialog.bot`, for bot-based dialog development.
+
+Currently, the dialog capability does not support adaptive card based dialogs. Adaptive-card based dialogs still need to be invoked using `tasks.startTask()`. 
+
+The `dialog.open` function only works for opening HTMl-based dialogs, and it returns a callback function (`PostMessageChannel`) you can use to pass messages (`ChildAppWindow.postMessage`) to the newly opened dialog.  `dialog.open` returns a callback (rather than a Promise) because it doesn't require app execution to pause waiting for the dialog to close (thus providing more flexibility for various user interaction patterns).
+
 ## What's new in TeamsJS version 2.0
 
 There are two significant changes between TeamsJS v.1.12 and v.2.0 and later:
