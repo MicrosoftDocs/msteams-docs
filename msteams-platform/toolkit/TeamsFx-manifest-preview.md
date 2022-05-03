@@ -62,7 +62,7 @@ If there are more than one environment, you need to select the environment you w
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 
 
-# Customize app manifest
+## Customize app manifest
 
 Teams Toolkit has the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
