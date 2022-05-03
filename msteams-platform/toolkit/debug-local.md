@@ -295,12 +295,12 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 </details>
 
 
-## Next step
+## Next step 
 
 > [!div class="nextstepaction"]
 > [Debug background process](debug-background-process.md).
 
-## See also
+## See also 
 
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
