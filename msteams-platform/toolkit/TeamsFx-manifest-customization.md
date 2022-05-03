@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Customize app manifest
+
 
 Teams Toolkit has the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
