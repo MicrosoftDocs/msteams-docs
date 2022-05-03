@@ -39,7 +39,7 @@ You can use the toolkit with Visual Studio Code, or CLI (command-line interface)
 
 1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
 1. Select **Creating a new Teams app...**
- :::image type="icon" source="../assets/images/teams-toolkit-v2/create123.png" border="true":::
+ :::image type="icon" source="../assets/images/teams-toolkit-v2/create123.PNG" border="true":::
 1. Select **Create a new Teams app** from the dropdown options
  :::image type="content" source="../assets/images/teams-toolkit-v2/create1234.png" alt-text="create-option" border="true":::
 1. Select required **capability**
@@ -56,7 +56,8 @@ You can create a new Teams app by selecting **View samples**. Select one of the 
    :::image type="content" source="../assets/images/teams-toolkit-v2/sample1.png" alt-text="View samples":::
 1. The sample gallery displays:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/sample2.png" alt-text="View samples2":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/samples2.png" alt-text="View samples2":::
+   
 
 Explore and preview samples in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample in the `TeamsFx Samples` repository and browse the source code.
 
