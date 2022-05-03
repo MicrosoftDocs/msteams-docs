@@ -38,7 +38,6 @@ To preview manifest file of local teams app, you can press **F5** to run local d
 
 You can also preview local manifest by following the steps:
 
-
 1. Select **Preview** in the codelens of `manifest.template.json` file and select **local**
 2. Select **Preview manifest file** on the menu bar of `manifest.template.json` file
 3. Select **Zip Teams metadata package** in Treeview and select **local**
