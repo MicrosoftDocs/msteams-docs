@@ -25,7 +25,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 Capabilities supported for generic app share to stage:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -48,7 +48,7 @@ Users can also add or interact with an app in the scheduled private channel meet
 
 Capabilities supported for add apps to meetings:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -91,7 +91,7 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 Capabilities supported for manage apps in meeting (like, view, rename, delete):
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
@@ -122,7 +122,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 
 Capabilities supported for in-meeting dialog:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::   |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
@@ -143,7 +143,7 @@ Capabilities supported for in-meeting dialog:
 
 Capabilities supported for in-meeting side panel:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -188,7 +188,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 Capabilities supported for pre and post meeting:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |

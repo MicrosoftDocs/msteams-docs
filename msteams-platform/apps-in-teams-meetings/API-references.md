@@ -39,7 +39,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 APIs Client SDK for `get user`:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -48,7 +48,7 @@ APIs Client SDK for `get user`:
 
 APIs Client SDK for `get context`:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -250,7 +250,7 @@ The `Meeting Details` API must have a bot registration and bot ID. It requires B
 
 APIs Client SDK for `get meeting details`:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Scheduled channel meeting |:::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -463,7 +463,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 APIs Client SDK for `share app to stage`:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting |:::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
@@ -490,7 +490,7 @@ APIs Client SDK for `share app to stage`:
 
 APIs Client SDK for `Get app content sharing stage`:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -577,7 +577,7 @@ The `getAppContentStageSharingCapabilities` API enables you to fetch the app's c
 
 APIs Client SDK for `Get app sharing content capabilities`:
 
-| Capability | Compatibility |
+| Capability | Compatibility (Mobile or Desktop) |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
