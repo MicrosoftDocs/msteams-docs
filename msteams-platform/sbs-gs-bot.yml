@@ -193,7 +193,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
-    1. Select **Bot**, deselect **Tab**, and select **OK**.
+    1. Select **Bot**, and select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
