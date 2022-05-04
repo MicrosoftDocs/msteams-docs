@@ -161,31 +161,35 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
     1. Select **Create a new Teams app** to create an app using Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="false":::
 
-    1. Ensure that **Tab** is selected as the capability that you want to build in your app. Select **OK**.
+    1. Ensure that **Notification Bot** is selected as the capability that you want to build in your app. Select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability" border="false":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
-    1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
+    1. Select **HTTP Trigger**as the trigger. Select **OK**
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="Screenshot showing where to enter the app name." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language." border="false":::  
+
+    1. Enter `mynotificationbot` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
         The Teams tab app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="Screenshot showing the app created." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created." border="false":::
 
         After your app is created, Teams Toolkit displays a message to indicate the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/location-change.png" alt-text="Location message":::
 
         The message offers two options:
         
@@ -196,13 +200,6 @@ items:
 
         > [!NOTE]
         > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
-
-        <details>
-        <summary>A quick recap of creating a Teams app.</summary>
-        Watch this short recap for creating a Teams app.
-
-        ![Create a Teams app](~/assets/videos/javascript-tab-app.gif)
-        </details>
 
     # [Command line](#tab/cli)
 
@@ -232,30 +229,28 @@ items:
 
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-folder-structure-tab12.png" alt-text="structure tab" border="true":::
+    :::image type="content" source="~/assets/images/sbs-notification-bot/folder-structure.png" alt-text="structure tab" border="true":::
 
 
     Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
-    Among other items in this directory structure, the Toolkit maintains:
+    This new project folder structure looks like:
 
     | Folder name | Contents |
     | --- | --- |
-    | `.fx/configs` | Configuration files that user can customize for the Teams app. |
-    | - `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
-    | - `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
-    | - `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
-    | - `.fx/states` | Provision output that is generated by Teams Toolkit.  The toolkit creates this folder after you provision resources for your app. |
-    | - `.fx/states/state.<envName>.json` | Provision output file for every environment. |
-    | - `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
-    | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
-    | - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
-    | - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../msteams-platform/tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
-    | - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
-    | - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
-    | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
-    | - `templates/appPackage/manifest.template.json` | App manifest for running the app in local or remote environment.  |
-    | `templates/azure` | BICEP template files |
+    | `.fx` | Project level settings, configuration, and environment information |
+    | - `vs code` | VS code files for local debug |
+    | - `bot` | The bot source code |
+    | - `templates` | Templates for Teams app manifest and corresponding Azure resources |
+    
+     The core notification implementation is in `bot` folder, containing following content:
+    | File or Folder name | Contents |
+    | `src/adaptiveCards/` | Adaptive card templates |
+    | `src/internal/` | Generated initialize code for notification functionality |
+    | `src/cardModels.*s` | Adaptive card data models |
+    | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
+    | `.gitignore` | The git ignore file to exclude local files from bot project |
+    | `package.json` | The NPM package file for bot project |
 
     When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
