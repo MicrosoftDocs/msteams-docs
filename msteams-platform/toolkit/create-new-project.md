@@ -22,20 +22,21 @@ You can create a new Teams app by selecting one of the following option.
 1. Install the Visual Studio Code
 2. Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) from Visual Studio Code
 
-**To install the Teams Toolkit in Visual Studio code**:
+**To install the Teams Toolkit in Visual Studio code**
 
 1. Open Visual Studio Code and select the Extensions view (Ctrl+Shift+X / View > Extensions)
 
    :::image type="icon" source="../assets/images/teams-toolkit-v2/extension.png" border="true":::
 
 1. In the search box, enter Teams Toolkit and select **Install** next to the Teams Toolkit
+
  :::image type="icon" source="../assets/images/teams-toolkit-v2/extension1.png" border="true":::
 
     The Teams Toolkit icon appears in the Visual Studio Code sidebar after it is installed.
  
 
  ### Create a new Teams app
-You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called TeamsFx.   
+You can use the toolkit with Visual Studio Code.
 
 
 1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
