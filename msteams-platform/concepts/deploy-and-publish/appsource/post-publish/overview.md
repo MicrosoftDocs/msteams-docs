@@ -60,6 +60,20 @@ Create the link using the following URL appended with your app ID: `https://team
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem. Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.
 
+## Update Apple Developer ID on Partner Center
+
+To acquire an app on the IOS, you must update your Apple Developer ID on the Microsoft Partner center.
+
+1. Log into [Microsoft Partner Center](https://partner.microsoft.com/en-us/dashboard/home) using the global admin credentials.
+1. Select the gear icon for settings on top right.
+1. Go to **Legal info** section under Organization profile on the left pane.
+1. Select the **Developer** tab.
+1. Enter your Apple Developer ID.
+
+   :::image type="content" source="../../../../assets/images/apple-id.png" alt-text="apple-id-partner-center"lightbox="../../../../assets/images/apple-id.png":::
+
+1. Go to the offer page and republish your Teams app.
+
 ## See also
 
 [Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
