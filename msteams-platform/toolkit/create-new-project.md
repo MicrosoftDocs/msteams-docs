@@ -10,7 +10,12 @@ ms.date: 03/14/2022
 
 # Create a new Teams app
 
-You can use Teams Toolkit as an extension of Visual Studio Code to create a new app. Teams Toolkit helps you with the tools to provision, deploy and publish the app to the Teams store. A new app allows you to have the integrated identity, data from the Microsoft Graph, Azure, and Microsoft 365 services with zero-configuration.
+You can use Teams Toolkit as an extension of Visual Studio Code to create a new app. Teams Toolkit helps you with the tools to provision, deploy and publish the app to the Teams store. A new app allows you to have the integrated identity, data from the Microsoft Graph, Azure, and Microsoft 365 services with zero-configuration.<br>
+You can create a new Teams app by selecting one of the following options:
+
+* [**Create a new Teams app**](create-new-project.md#create-a-new-teams-app)
+* [**View samples**](create-new-project.md#view-samples)
+
 
 ### Prerequisite
 
@@ -28,11 +33,8 @@ You can use Teams Toolkit as an extension of Visual Studio Code to create a new 
      :::image type="icon" source="../assets/images/teams-toolkit-v2/extension1.png" border="true":::
 
     The Teams Toolkit icon appears in the Visual Studio Code sidebar after it is installed.
+ 
 
-You can create a new Teams app by selecting one of the following options:
-
-* [**Create a new Teams app**](create-new-project.md#create-a-new-teams-app)
-* [**View samples**](create-new-project.md#view-samples)
  ### Create a new Teams app
 You can use the toolkit with Visual Studio Code.
 
