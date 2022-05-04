@@ -25,7 +25,8 @@ You can create a new Teams app by selecting one of the following option.
 **To install the Teams Toolkit in Visual Studio code**:
 
 1. Open Visual Studio Code and select the Extensions view (Ctrl+Shift+X / View > Extensions)
- :::image type="icon" source="../assets/images/teams-toolkit-v2/extension.png" border="true":::
+
+   :::image type="icon" source="../assets/images/teams-toolkit-v2/extension.png" border="true":::
 
 1. In the search box, enter Teams Toolkit and select **Install** next to the Teams Toolkit
  :::image type="icon" source="../assets/images/teams-toolkit-v2/extension1.png" border="true":::
@@ -39,9 +40,11 @@ You can use the toolkit with Visual Studio Code, or CLI (command-line interface)
 
 1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar
 1. Select **Creating a new Teams app...**
- :::image type="icon" source="../assets/images/teams-toolkit-v2/create123.PNG" border="true":::
+
+   :::image type="icon" source="../assets/images/teams-toolkit-v2/create123.PNG" border="true":::
 1. Select **Create a new Teams app** from the dropdown options
- :::image type="content" source="../assets/images/teams-toolkit-v2/create1234.png" alt-text="create-option" border="true":::
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create1234.png" alt-text="create-option" border="true":::
 1. Select required **capability**
 
 1. Select a programming language from the dropdown options **JavaScript** or **TypeScript**
