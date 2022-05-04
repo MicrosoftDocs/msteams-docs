@@ -76,11 +76,25 @@ When an API is unsupported or throws an error, add logic to fail gracefully or p
 
 #### Deeplinking
 
-[TBD] Outline scenario guidance for:
+Prior to TeamsJS version 2.0, all deeplinking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Office and Outlook, in addition to Teams). Here's the updated guidance for deeplinking scenarios:
 
-* `pages.shareDeepLink` (formerly `shareDeepLink`)
-* `app.openLink` (formerly `executeDeepLink`)
-* `pages.navigateToApp`
+##### Deep links into your app
+
+Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When clicked, a user will be prompted to install the app if its not already installed for the application host (specified in the link path).
+
+##### Navigation within your app
+
+Use the new `pages.tab.navigateToApp` API to navigate within your app within the hosting application.
+
+This API provides the equivalent of  navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
+
+##### Deep links out of your app
+
+For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS SDK. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
+
+For deep links from your app to other apps running in the same host, use `pages.tab.navigateToApp`.
+
+For any other external deeplinking scenarios, you can use `app.openLink`, which provides similar functionality to the now deprecated (starting in TeamsJS v.2.0) *executeDeepLink* API.
 
 #### Dialogs
 
@@ -88,9 +102,9 @@ Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module
 
 This new dialog capability is split into a main capability (`dialog`) for supporting HTML-based dialogs and a sub-capability, `dialog.bot`, for bot-based dialog development.
 
-Currently, the dialog capability does not support adaptive card based dialogs. Adaptive-card based dialogs still need to be invoked using `tasks.startTask()`. 
+The dialog capability does not yet support adaptive card based dialogs. Adaptive-card based dialogs still need to be invoked using `tasks.startTask()`.
 
-The `dialog.open` function only works for opening HTMl-based dialogs, and it returns a callback function (`PostMessageChannel`) you can use to pass messages (`ChildAppWindow.postMessage`) to the newly opened dialog.  `dialog.open` returns a callback (rather than a Promise) because it doesn't require app execution to pause waiting for the dialog to close (thus providing more flexibility for various user interaction patterns).
+The `dialog.open` function currently only works for opening HTMl-based dialogs, and it returns a callback function (`PostMessageChannel`) you can use to pass messages (`ChildAppWindow.postMessage`) to the newly opened dialog.  `dialog.open` returns a callback (rather than a Promise) because it doesn't require app execution to pause waiting for the dialog to close (thus providing more flexibility for various user interaction patterns).
 
 ## What's new in TeamsJS version 2.0
 
