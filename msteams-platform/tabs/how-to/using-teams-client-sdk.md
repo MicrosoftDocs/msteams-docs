@@ -32,32 +32,32 @@ The remainder of this article will walk you through the structure and latest upd
 
 TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 (M365) ecosystem. Currently, other M365 application hosts (including Office and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of M365 host support for Teams apps, see [Extend Teams apps across Microsoft 365](../m365-apps/overview.md).
 
-The following table lists capabilities (public namespaces) with expanded M365 support for Teams tabs and dialogs (task modules).
+The following table lists Teams tabs and dialogs (task modules) capabilities (public namespaces) with expanded support to run in other Microsoft 365 hosts.
 
 > [!TIP]
 > Check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace).
 
-|Capability | M365 support | Notes |
+|Capability | Host support | Notes |
 |-----------|--------------|-------|
-| app | X | Namespace representing app initialization and lifecycle. |
-| appInitialization| N/A | Deprecated. Replaced by `app` namespace. |
-| appInstallDialog |||
-| authentication | X | |
-| calendar |||
-| call |||
-| chat |||
-| dialog | X | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
-| location || See notes on [App permissions](#app-permissions).|
-| mail |||
-| media || See notes on [App permissions](#app-permissions).|
-| pages | X | Namespace representing page navigation. See notes on [Deeplinking](#deeplinking). |
-| people |||
+| app | Teams, Outlook, Office | Namespace representing app initialization and lifecycle. |
+| appInitialization| | Deprecated. Replaced by `app` namespace. |
+| appInstallDialog | Teams||
+| authentication | Teams, Outlook, Office | |
+| calendar | Teams, Outlook ||
+| call | Teams||
+| chat |Teams||
+| dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
+| location |Teams| See notes on [App permissions](#app-permissions).|
+| mail | Teams, Outlook||
+| media |Teams| See notes on [App permissions](#app-permissions).|
+| pages | Teams, Outlook, Office | Namespace representing page navigation. See notes on [Deeplinking](#deeplinking). |
+| people |Teams||
 | settings || Deprecated. Replaced by `pages.config`.|
-| sharing | N/A ||
-| stageView |||
-| tasks | N/A | Deprecated. Replaced by `dialog` capability. See notes on [Dialogs](#dialogs).|
-| teamsCore | N/A | Namespace containing Teams-specific functionality.|
-| video |||
+| sharing | Teams||
+| stageView | Teams||
+| tasks | | Deprecated. Replaced by `dialog` capability. See notes on [Dialogs](#dialogs).|
+| teamsCore | Teams | Namespace containing Teams-specific functionality.|
+| video | Teams||
 
 #### App permissions
 
