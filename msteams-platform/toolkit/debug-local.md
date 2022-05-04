@@ -25,7 +25,7 @@ During the debug process, Teams Toolkit automatically starts app services, launc
 Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 ## Key debug features
-There are 5 main debug features used in Teams Toolkit:
+The following list shows the primary debug features used in Teams Toolkit.
 #### Start debugging
 
 You can select **F5** to start debugging. The Teams Toolkit starts checking prerequisites, registering Azure Active Directory app, registering Teams app, registering bot, starting services, and launching browser.
