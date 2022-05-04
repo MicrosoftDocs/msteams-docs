@@ -77,18 +77,18 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
-    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
+    1. Select your **Resource group** from the dropdown list. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
         ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
+    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
        Select **Use existing app registration** and enter **Existing app ID** and **Existing app password** for an existing application. Select **Create new Microsoft App ID** for a new application.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as `Multi Tenant`
+    1. Select **Type of App** as `Multi Tenant`.
     1. Select **Review + create**.
 
        ![Register bot](~/assets/images/Tab-ME-SSO/register-bot-2.png)
@@ -109,7 +109,7 @@ items:
 
       Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left panel, select **Configuration**.
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -118,11 +118,11 @@ items:
 
         ![Microsoft App ID](~/assets/images/Tab-ME-SSO/manage.png)
 
-    1. In the **Client secrets** section, select **New client secret**. 
+    1. In the **Client secrets** section, select **New client secret**.
 
         ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
     
-       The **Add a client secret** window appears.  
+       The **Add a client secret** window appears.
 
     1. Enter **Description**.
     
@@ -145,7 +145,7 @@ items:
 
     1. Select your bot from **Recent resources**.
 
-    1. Select **Channels** in the left pane. 
+    1. Select **Channels** in the left pane.
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 

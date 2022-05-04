@@ -263,7 +263,7 @@ items:
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
-    1. Select **Add a client application**. 
+    1. Select **Add a client application**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Select client application" border="true":::
 
@@ -283,7 +283,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications" border="true"::: 
   
-    1. In the left panel, select **API Permissions**. 
+    1. In the left panel, select **API Permissions**.
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.

@@ -19,7 +19,7 @@ items:
     **Key features of share meeting stage in Teams**
 
     * Add status details in the side panel
-    * Add details for collaboration 
+    * Add details for collaboration
     
     This step-by-step guide helps you to share meeting stage in Teams to add status details for collaboration. You'll see the following output:
 
@@ -33,7 +33,7 @@ items:
 
     * [Microsoft Teams](https://teams.microsoft.com/) with valid account
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version of nodejs](https://nodejs.org/en/download/) 
+    * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
     
       > [!NOTE]
@@ -86,7 +86,7 @@ items:
          
          :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="true":::   
 
-- title: Build and run client app using npm 
+- title: Build and run client app using npm
   durationInMinutes: 1 
   content: |
     1. In your cloned repository, navigate to **samples** > **meetings-stage-view** > **nodejs**.
@@ -113,7 +113,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="true":::
        
-- title: Add meeting stage to Teams  
+- title: Add meeting stage to Teams
   durationInMinutes: 1
   content: |
 
@@ -136,7 +136,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/meeting-token-generator-manageapps.png" alt-text="manage apps" border="true":::
 
-    1. Select **Upload a custom app**. 
+    1. Select **Upload a custom app**.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/upload-custom-app.png" alt-text="upload a file" border="true":::
 
@@ -157,7 +157,7 @@ items:
   content: | 
     1. Go to Teams meeting.
     
-    1. Select **Add an app**. 
+    1. Select **Add an app**.
     
        In the app selection page, the app is displayed as **App In Meeting**.
   

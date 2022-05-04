@@ -14,8 +14,8 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development with your first Teams app. 
-    You'll create three Teams apps: a tab app, a bot app, and a message extension app. 
+    Start Microsoft Teams app development with your first Teams app.
+    You'll create three Teams apps: a tab app, a bot app, and a message extension app.
 
     Each of your app will have a capability, which comes with its own UI and UX:
     

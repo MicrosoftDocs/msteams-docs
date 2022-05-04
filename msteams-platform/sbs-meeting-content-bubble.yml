@@ -63,11 +63,11 @@ items:
   content: |
     The following steps help you to create and register your bot in Azure portal.
 
-    * Create Azure Bot resource to register bot with Azure Bot Service
-    * Create client secret to enable SSO authentication of the bot
-    * Add Teams channel to deploy the bot
-    * Use ngrok to create a tunnel to your web server's endpoints
-    * Add messaging endpoint to the ngrok tunnel you created
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Teams channel to deploy the bot.
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
@@ -99,7 +99,7 @@ items:
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as **Multi Tenant**
+    1. Select **Type of App** as **Multi Tenant**.
 
     1. Select **Review + create**.
 
@@ -109,7 +109,7 @@ items:
 
         It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. 
+    1. Select **Go to resource**.
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment.png" alt-text="Deploy App" border="true":::
         

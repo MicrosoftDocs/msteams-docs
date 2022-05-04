@@ -276,7 +276,7 @@ items:
     
         > [!NOTE]
         > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
-        > Upload your manifest in your demo tenant for organisation or your Teams account and run your solution in Visual Studio.
+        > Upload your manifest in your demo tenant for organization or your Teams account and run your solution in Visual Studio.
     
     1. Go to Teams.
     1. To upload `manifest.zip`, select **Store > Manage your apps > Upload a custom app** and open `manifest.zip` from the repo folder in File explorer.

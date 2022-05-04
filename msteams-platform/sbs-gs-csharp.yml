@@ -46,11 +46,11 @@ items:
 
     ## Verify git installation
 
-    If Visual Studio installation prompts you to add `git` to the path, select it. 
+    If Visual Studio installation prompts you to add `git` to the path, select it.
    
     To verify the version of git installed:
 
-    1. Open a terminal window. 
+    1. Open a terminal window.
     2. Run the following command to verify the `git` version installed on your machine:
 
         ```bash

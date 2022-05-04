@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
 
-    Blazor lets you build interactive web UIs using C#, instead of JavaScript. 
+    Blazor lets you build interactive web UIs using C#, instead of JavaScript.
     
     You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 

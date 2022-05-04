@@ -24,7 +24,7 @@ items:
 
     - How to set up a new project using command-line tools.
     - How to build three apps with a different capability each—tab, bot, and message extension.
-    - How to deploy your app from Developer Portal
+    - How to deploy your app from Developer Portal.
 
 - title: Prerequisites
   durationInMinutes: 1

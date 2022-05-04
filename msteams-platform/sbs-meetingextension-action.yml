@@ -76,7 +76,7 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
-    1. Select your **Resource group** from the dropdown list. 
+    1. Select your **Resource group** from the dropdown list.
     
         ![Select resource Azure bot](~/assets/images/sbs-messagingextension-action/create-azurebot.png) 
     

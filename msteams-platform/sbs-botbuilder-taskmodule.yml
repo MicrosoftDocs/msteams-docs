@@ -78,9 +78,9 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
-    1. Select your **Resource group** from the dropdown list. 
+    1. Select your **Resource group** from the dropdown list.
     
-        ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create.png) 
+        ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create.png)
     
        You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
@@ -105,7 +105,7 @@ items:
 
     1. If the validation passes, select **Create**. 
 
-        It takes a few moments for your bot service to be provisioned. 
+        It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**. 
 
@@ -119,18 +119,18 @@ items:
 
       Perform the following steps if you have created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left panel, select **Configuration**.
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-    1. In the **Client secrets** section, select **New client secret**. 
+    1. In the **Client secrets** section, select **New client secret**.
 
         ![New client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
     
-       The **Add a client secret** window appears.  
+       The **Add a client secret** window appears.
 
     1. Enter **Description**.
     
