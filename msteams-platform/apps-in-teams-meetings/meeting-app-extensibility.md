@@ -23,9 +23,9 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 > [!NOTE]
 > Meeting extensions such as bots, cards, message extensions, and message actions are supported in the web client. However, hosted experiences such as tabs, content bubbles, and share to stage aren't currently fully supported.
 
-Capabilities supported for generic app share to stage
+Capabilities supported for generic app share to stage:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -46,9 +46,9 @@ Users can also add or interact with an app in the scheduled private channel meet
 > * The private scheduled meetings only support apps.
 > * Add app option for Teams meeting extension tab app is not supported in Teams web client.
 
-Capabilities supported for add apps to meetings
+Capabilities supported for add apps to meetings:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -89,9 +89,9 @@ After adding the tabs to an existing meeting on mobile, you can see the same app
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted on the toolbar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md).
 
-Capabilities supported for manage apps in meeting (like view , rename, delete)
+Capabilities supported for manage apps in meeting (like, view, rename, delete):
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
@@ -112,7 +112,6 @@ To use tabs during a meeting:
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="Desktop view":::
 
-
 # [Mobile](#tab/mobile)
 
 After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in-meeting side panel of the app.
@@ -121,9 +120,9 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 
 <img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
 
-Capabilities supported for in-meeting dialog
+Capabilities supported for in-meeting dialog:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::   |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
@@ -142,9 +141,9 @@ Capabilities supported for in-meeting dialog
 > * Your app manifest specifies the places in which you want the apps to appear. This can be done by specifying context field in manifest. It is also the part of a share meeting stage experience, subject to specified [design guidelines](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md).
 > * Meeting stage is not supported for Anonymous users and Teams web client.
 
-Capabilities supported for in-meeting side panel
+Capabilities supported for in-meeting side panel:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -187,9 +186,9 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ---
 
-Capabilities supported for pre/post meeting
+Capabilities supported for pre and post meeting:
 
-| Type |Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |

@@ -37,18 +37,18 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
-APIs Client SDK for `get user`
+APIs Client SDK for `get user`:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
-APIs Client SDK for `get context`
+APIs Client SDK for `get context`:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -248,9 +248,9 @@ The Meeting Details API enables your app to get a meeting's static metadata. The
 
 The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
-APIs Client SDK for `get meeting details`
+APIs Client SDK for `get meeting details`:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Scheduled channel meeting |:::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -461,9 +461,9 @@ The following table provides the error codes:
 
 The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client SDK.
 
-APIs Client SDK for `share app to stage`
+APIs Client SDK for `share app to stage`:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting |:::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
@@ -488,9 +488,9 @@ APIs Client SDK for `share app to stage`
     ```
 *  `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
 
-APIs Client SDK for `Get app content sharing stage`
+APIs Client SDK for `Get app content sharing stage`:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -575,9 +575,9 @@ The following table provides the response codes:
 
 The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage.
 
-APIs Client SDK for `Get app sharing content capabilities`
+APIs Client SDK for `Get app sharing content capabilities`:
 
-| Type | Capabilities |
+| Capability | Compatibility |
 |---|:---:|
 | Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
