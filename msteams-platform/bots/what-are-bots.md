@@ -11,8 +11,8 @@ ms.author: anclear
 A bot is also referred to as a chatbot or conversational bot. It is an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
 
 > [!IMPORTANT]
-> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not available in Department of Defense (DOD).
-
+> Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+> 
 > Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Services](/azure/bot-service/channel-connect-teams).
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
