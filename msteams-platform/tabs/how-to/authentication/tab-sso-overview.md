@@ -27,7 +27,7 @@ Users sign in to Microsoft Teams using either their personal Microsoft account o
 - When a Teams user attempts to access your app, the app uses the identity that's already validated by Teams.
 - The user sees only a consent dialog where they let your app use their Teams identity to obtain access permission for using your app.
 
-### SSO enhances user experience in Teams
+### Enhance user experience with SSO in Teams
 
 - Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user. It translates to app access for the user without having to leave Teams environment.
 - After the user consents to the app the first time, they can use the app with no further need of consent, even on any other device. For this reason, it is true SSO and a better user experience.
@@ -36,35 +36,33 @@ Users sign in to Microsoft Teams using either their personal Microsoft account o
 
 Now, let's see what happens at the backend during runtime to achieve true SSO user experience within Teams.
 
-## Obtaining access for app users at runtime
+## Obtain access for app users at runtime
 
 You can achieve SSO in a tab by obtaining access token for the Teams user who's currently logged in. This process involves the tab app, Microsoft Teams, and Azure AD. During this interaction, the user must consent for use of their Teams identity to obtain access token.
 
-The following image shows how SSO works when a Teams user attempts to access the tab app:
+The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png" alt-text="Tab single sign-on SSO diagram" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png":::
 
-<!--
 ```mermaid
 sequenceDiagram
-    User->>Tab: Opens Teams app
-    Tab->>Teams Client: Call getAuthToken()
+    User->>Tab app: Opens Teams app
+    Tab app->>Teams Client: Call getAuthToken()
     Teams Client->>Sign-in and Consent: Check if consent is required
     Sign-in and Consent->>Teams Client: Prompt for consent from new user
     Teams Client->>Azure AD: Request access token from Azure AD
     Azure AD->>Teams Client: Send access token to Teams client
-    Teams Client->>Tab: Respond to getAuthToken() with access token
-    Tab->>Tab: Parse access token to give access to user
+    Teams Client->>Tab app: Respond to getAuthToken() with access token
+    Tab app->>Tab app: Parse access token to give access to user
 ```
--->
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1 | Tab -> Teams | The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token for the tab application. |
+| 1 | Tab app -> Teams | The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token for the tab application. |
 | 2 | Teams - > Consent form | If the current user is using your tab application for the first time, Teams displays request prompt to consent, if it's required. The user must provide their consent to Teams for using their Teams identity to obtain access token from Azure AD. <br> Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication. |
 | 3 | Teams -> Azure AD | Teams requests Azure AD endpoint for the access token for the current user based on their Teams identity. |
-| 4 | Azure AD -> Teams | Azure AD sends the access token to the Teams client. The token is a JSON Web Token (JWT), and it's validation works just like token validation in most standard OAuth flows. Teams will cache the token on your behalf so that future calls to `getAccessToken()` simply return the cached token. |
-| 5 | Teams -> Tab | Teams sends the access token to the tab as part of the result object returned by the `getAuthToken()` call. |
+| 4 | Azure AD -> Teams | Azure AD sends the access token to the Teams client. The token is a JSON Web Token (JWT), and it's validation works just like token validation in most standard OAuth flows. Teams will cache the token on your behalf so that future calls to `getAuthToken()` simply return the cached token. |
+| 5 | Teams -> Tab app | Teams sends the access token to the tab as part of the result object returned by the `getAuthToken()` call. |
 | 6 | Tab app | The tab app parses the token using JavaScript to extract required information, such as the user's email address. The token returned to the tab app is both an access token and an identity token. |
 
 > [!IMPORTANT]
