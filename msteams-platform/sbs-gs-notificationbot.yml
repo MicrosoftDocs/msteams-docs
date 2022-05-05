@@ -307,19 +307,21 @@ items:
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation" border="true":::
 
-    1. Select the drop-down to add the app in team or chat or meeting
+    1. Select the drop-down to add the app in team or chat or meeting.
 
-    1. Select **Add**
+    1. Select **Add**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation1.png" alt-text="My Notification Output1" border="true":::
 
-    1. In **Search box**, add any channel and select **Set up a Bot**
+    1. In **Search box**, add any channel and select **Set up a Bot**.
 
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/setup-bot.png" alt-text="Setup Bot" border="true":::
 
        Following screen will appear
 
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification" border="true":::
 
-    1. Delete default sentence in the Teams channel
+    1. Delete default sentence in the Teams channel.
 
     1. Open **Windows Powershell**
 
@@ -330,10 +332,11 @@ items:
 
        You'll get the notification to the Teams channel
 
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-output.png" alt-text="Channel Output" border="true":::
 
        You'll get the notification to the personal chat          
 
-
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" border="true":::
     
 - title: Build and run your first tab app
   durationInMinutes: 1
