@@ -7,19 +7,19 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Register your app in Azure AD
 
-Your Teams app users are authenticated and authorized by Azure AD for using your app. Azure AD provides them access to your app based on their Teams identity. You'll need to register your app with Azure AD so that the user who has signed into Teams can be given access to your app.
+Your app users are authenticated and authorized by Azure AD for using your app. Azure AD provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
 ## Enabling SSO on Azure AD
 
-Registering your app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and configuring the OBO flow.
+Registering your tab app in Azure AD and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and configuring the OBO flow.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to client app" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Azure AD to send access token to Teams Client app" border="false":::
 
-Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets users access your app without any further need of consent when your app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
+Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets app users access your tab app without any further need of consent when your tab app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
-These configurations enable SSO for your app in Teams, and respond to your app with an access token for the validating user.
+These configurations enable SSO for your tab app in Teams. Azure AD responds with an access token for the validating the app user.
 
-You may also need to configure additional configuration for authenticating users on the platform or device where you want to target your app, or for more Graph permissions.
+You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app, or for more Graph permissions.
 
 ### Before you register with Azure AD
 
@@ -28,11 +28,11 @@ It's helpful to know about the configuration required for registering your app o
 - Single- or multi-tenant options.
 - Platform for your app and the URL from where your app is accessible.
 - App ID URI, a globally-unique URI used to identify the web API you expose for your app's access through scopes. It's also referred to as an identifier URI.
-- Scope, which defines the permissions that an authorized user or your app can be granted for accessing a resource exposed by the API.
+- Scope, which defines the permissions that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 Ensure that you've prepared to configure these details before you start registering your app.
 
-The tasks involved in registering a Teams tab app that uses SSO are language- and framework-agnostic.
+The tasks involved in registering your app that uses SSO are language- and framework-agnostic.
 
 > [!NOTE]
 > The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
@@ -127,7 +127,9 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 ## Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to client app. In this section, you'll learn:
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client.
+
+To configure scope and the OBO flow, you'll need:
 
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. To do this, you'll expose a web API, and configure the app ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and configure the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
@@ -216,9 +218,9 @@ After you've created a new app registration, configure scope (permission) option
 
     The **Add a client application** page appears.
 
-1. Enter the appropriate client ID for the Teams client for the applications that you want to authorize for your app’s web application.
+1. Enter the appropriate client ID for the Teams Client for the applications that you want to authorize for your app’s web application.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a  client application" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client application" border="true":::
 
    | Use client ID | For authorizing... |
    | --- | --- |

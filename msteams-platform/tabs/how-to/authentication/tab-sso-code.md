@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Configure code to enable SSO
 
-Before you configure code to enable SSO, ensure you've registered your app with Azure AD.
+Before you configure code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
