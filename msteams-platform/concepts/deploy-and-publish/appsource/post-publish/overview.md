@@ -62,11 +62,11 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Update Apple Developer ID on Partner Center
 
-To acquire an app on the IOS, you must update your Apple Developer ID on the Microsoft Partner center.
+To acquire an app on the IOS, you must update your Apple Developer ID from the Microsoft Partner center.
 
-1. Log into [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
+1. Login to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
 1. Select the gear icon for settings on top right.
-1. Go to **Legal info** section under Organization profile on the left pane.
+1. Go to **Legal info** section under Organization profile from the left pane.
 1. Select the **Developer** tab.
 1. Enter your Apple Developer ID.
 
