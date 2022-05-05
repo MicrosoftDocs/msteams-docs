@@ -14,16 +14,16 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 
 ## Advantages of link unfurling 
 
-* Link unfurling helps to provide the preview of the hyperlink 
-* Responds to the full hyperlink with adaptive cards and provides the additional information or   action
+* Link unfurling helps to provides the hyperlink preview in the compose message box
+* Responds to the hyperlink with adaptive cards and provides the additional information or action
 * Link unfurling allows to enrich the links in conversations
-* You can get the specific URLs in the compose message box
+* You can get the specific URLs unfurl in the compose message box
 
 ## Limitations of link unfurling 
 
 * Link unfurling on mobile is implemented only for installed apps in Microsoft 365
 * Message extension or bot is required to provide the link unfurling in message compose area
-* Link unfurling is not supporting for out of the box in Teams
+* Link unfurling is not supporting to out of the box in Teams
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
@@ -32,15 +32,25 @@ The following image displays the experience of link unfurling on mobile and desk
 
 # [Mobile](#tab/Samplemobileapp)
 
-Link unfurling on mobile using bot :
+Link unfurling on mobile:
 
-1. Allows user to paste URLs and respond with a card.
-1. Allows user to register the app and receive invoke activity.
+1. URL is pasted into the compose message area in mobile
+2. You can see the link has unfurling on mobile
 
+![Example of link unfurling](~/assets/images/Teams-link-unfurling/Output-mobile.png)
 
 # [Desktop](#tab/Sampledesktop)
 
-Link unfurling on desktop using bot :
+Link unfurling on desktop:
+
+1. URL is pasted into the compose message area in desktop
+2. You can see the link has unfurling on desktop
+
+![Example of link unfurling](~/assets/images/Teams-link-unfurling/Output-desktop-new.png)
+
+Link unfurling on SBS Guide - Unfurl links in Teams using bot:
+
+Link unfurling using bot in Teams helps you to register your app and receive an invoke activity when the URL with particular domain is pasted into the compose message area.
 
 1. Allows user to paste URLs and respond with a card.
 1. Allows user to register the app and receive invoke activity.
