@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Enable SSO in Teams app manifest and preview the app
+# Enable SSO in Teams app manifest and preview app
 
 Before you update Teams app manifest, ensure that you've configure code to enable SSO.
 
@@ -16,7 +16,7 @@ You've registered your app in Azure AD, and obtained an app ID. You've also conf
 
 ## webApplicationInfo property
 
-To enable SSO for your app, configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app and invokes the OBO flow to help users seamlessly access your app.
+To enable SSO for your tab app, configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app, and invokes the OBO flow to help users seamlessly access your tab app.
 
 :::row:::
   :::column span="2":::
@@ -45,7 +45,7 @@ For more information, please see [webApplicationInfo](/resources/schema/manifest
 <details>
 <summary><b>Learn to create a manifest file</b></summary>
 
-If your app doesn't have a app manifest file, you'll need to create it. To create an app manifest file, use the content shown below to create a .json file named, `manifest.json`.
+If your tab app doesn't have a Teams app manifest file, you'll need to create it. To create a Teams app manifest file, use the content shown below to create a .json file named, `manifest.json`.
 
 > [!NOTE]
 > The manifest example content shown here is only for a tab app. It uses an ngrok url for subdomain address. For more information, please see [Manifest schema](/resources/schema/manifest-schema).
@@ -205,7 +205,7 @@ You've configured the app to enable SSO in Azure, code, and in Teams manifest fi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app" border="false":::
 
-To preview your app in Teams:
+To preview your tab app in Teams:
 
 1. Create an app package.
 
