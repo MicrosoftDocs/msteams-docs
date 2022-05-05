@@ -202,6 +202,20 @@ The following resources can also assist:
 
 </details>
 
+## Update Apple Developer ID on Partner Center
+
+To acquire an app on the IOS, you must update your Apple Developer ID from the Microsoft Partner center.
+
+1. Login to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
+1. Select the gear icon for settings on top right.
+1. Go to **Legal info** section under **Organization profile** from the left pane.
+1. Select the **Developer** tab.
+1. Enter your Apple Developer ID.
+
+   :::image type="content" source="../../../../assets/images/apple-id.png" alt-text="apple-id-partner-center"lightbox="../../../../assets/images/apple-id.png":::
+
+1. Go to the offer page and republish your Teams app.
+
 ## Next step
 
 > [!div class="nextstepaction"]
