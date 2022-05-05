@@ -20,9 +20,9 @@ Now link unfurling is supported for both on desktop and mobile.
 * Allows to enrich the links in conversations
 * You can get the specific URLs unfurling in the compose message box
 
-## Limitations of link unfurling 
-
-  Link unfurling on mobile works only for installed apps in Microsoft 365
+## Limitations of link unfurling
+ 
+* Link unfurling on mobile works only for installed apps in Microsoft 365
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
@@ -33,8 +33,8 @@ The following image displays the experience of link unfurling on mobile and desk
 
 Link unfurling on mobile using the following steps:
 
-1. URL is pasted into the compose message area in mobile
-2. You can see the link has unfurling on mobile
+     1. User has pasted an URL in the compose message area in mobile
+     2. You can see the link unfurling in the compose message area before he shares in the chat
 
    :::image type="content" source="~/assets/images/Teams-link-unfurling/Output-mobile.png" alt-text="mobile" border="true":::
 
@@ -42,8 +42,8 @@ Link unfurling on mobile using the following steps:
 
 * Link unfurling on desktop using the following steps:
 
-     1. URL is pasted into the compose message area in desktop
-     2. You can see the link has unfurling on desktop
+     1. User has pasted an URL in the compose message area in desktop
+     2. You can see the link unfurling in the compose message area before he shares in the chat
 
    :::image type="content" source="~/assets/images/Teams-link-unfurling/unfurl-desktop-updated.png" alt-text="desktop" border="true":::
 
