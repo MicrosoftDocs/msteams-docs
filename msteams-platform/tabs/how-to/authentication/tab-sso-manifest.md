@@ -32,7 +32,6 @@ To enable SSO for your tab app, configure the `webApplicationInfo` property in t
   :::column-end:::
   :::column span="1":::
     <br>
-    <br>
 
     > [!NOTE]
     > Use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
