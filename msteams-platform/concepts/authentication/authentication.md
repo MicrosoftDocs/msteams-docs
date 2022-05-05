@@ -33,6 +33,14 @@ For more information on using OAuthPrompt, see:
 * [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on Teams web, desktop app, and mobile apps.
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md) describes how to add OAuth authentication to the Teams bot.
 
+## Implement authentication in Teams app
+
+You can implement authentication in your app using one of the following methods:
+
+* Enable SSO for your app
+* Use Azure AD authentication
+* Use silent authentication
+
 ## Code sample
 
 provides Bot authentication v3 SDK sample.

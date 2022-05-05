@@ -38,7 +38,7 @@ Now, let's see what happens at the backend during runtime to achieve true SSO us
 
 ## SSO in Teams at runtime
 
-You can achieve SSO in a tab app by obtaining access token for the Teams user who's currently logged in. This process involves the tab app, Microsoft Teams, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
+You can achieve SSO in a tab app by obtaining access token for the Teams user who's currently logged in. This process involves the tab app, Teams, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
@@ -112,7 +112,8 @@ Don’t cache or store the access token in your app's client-side code. Always c
 - SSO works only with Azure AD. To extend it to other OAuth Identity providers, the flow needs to be implemented. For more information, please see, [Microsoft Teams authentication flow for tabs](/tabs/how-to/authentication/auth-flow-tab) and [Authenticate a user in a Microsoft Teams tab](/tabs/how-to/authentication/auth-tab-aad).
 - Multiple domains per app is not supported. For this, please read about LOB apps. / Need a link to page. /
 - Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID).
-  Ask for consent using the Auth API: Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
+  
+    You can ask for consent using the Auth API. Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
   <details>
   <summary>To ask for additional consent using the Auth API, follow these steps:</summary>
@@ -135,7 +136,7 @@ Don’t cache or store the access token in your app's client-side code. Always c
 
 ## See also
 
-- [Configure code to enable Teams SSO](tab-sso-code.md)
+[Configure code to enable Teams SSO](tab-sso-code.md)
 
 <!--
 :::row:::

@@ -7,6 +7,11 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Enable SSO in Teams app manifest and preview the app
 
+Before you update Teams app manifest, ensure you've configure code to enable SSO.
+
+> [!div class="nextstepaction"]
+> [Configure code](tab-sso-code.md)
+
 You've registered your app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
