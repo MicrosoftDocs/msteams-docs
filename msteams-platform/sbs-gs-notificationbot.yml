@@ -278,15 +278,15 @@ items:
 
          ```bash
          for (const target of await bot.notification.installations()) {
-    if (target.type === "Channel") {
-      const members = await target.members();
-      await target.sendMessage("This is a message to channel: " + members.length + " members.");
-      for (const member of members) {
-        await member.sendMessage("This is a message to Member: " + member.account.email);
-      }
-    }
-    /* 
-        ```    
+         if (target.type === "Channel") {
+         const members = await target.members();
+         await target.sendMessage("This is a message to channel: " + members.length + " members.");
+         for (const member of members) {
+         await member.sendMessage("This is a message to Member: " + member.account.email);
+         }
+         }
+         /* 
+         ```    
 
     1. Select **Run and Debug** 
 
