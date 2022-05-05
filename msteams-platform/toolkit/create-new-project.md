@@ -8,10 +8,9 @@ ms.topic: overview
 ms.date: 03/14/2022
 ---
 
-# Create a new Teams app using Teams Toolkit
+# Create a new Teams app
 
-Teams Toolkit is an extension of Visual Studio Code, you can use Teams Toolkit to create an app.
-Teams Toolkit provides enhanced experience for creating new apps. The advantages of using Teams toolkit are as follows:
+Teams Toolkit is an extension of Visual Studio Code. Teams Toolkit provides an enhanced experience of creating new apps. The advantages of using Teams Toolkit to create an app are as follows:
 
 *	Integrated identity
 *	Access data from Microsoft Graph
@@ -20,9 +19,9 @@ Teams Toolkit provides enhanced experience for creating new apps. The advantages
 
 
 
-### Prerequisites
+### Prerequisite
 
-Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).<br>
+Install [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).<br>
 
 
 To create a new Teams app using Teams Toolkit, you can select from one of the following options:
@@ -55,13 +54,12 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 
 ### View samples
 
-You can create a new Teams app by selecting an existing sample. Selecting an existing sample provides you with an inbuilt functionality. For example, a **Todo List with backend on Azure**, or **Hello World Bot with SSO**.<br>
+You can create a new Teams app by exploring **View samples** and selecting an existing sample. Selecting an existing sample provides you with an inbuilt functionality. For example a To-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.<br>
 
 1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
 2. Select **DEVELOPMENT** section in Treeview.
 1. Select **View samples**. The sample gallery appears as shown in the following image:
-1. Select **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar.
-1. Select **DEVELOPMENT** section in Treeview and then Select **View samples**.
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/sample1.png" alt-text="View samples":::
 
 1. The **Samples** gallery displays.

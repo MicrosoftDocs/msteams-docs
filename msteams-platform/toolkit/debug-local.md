@@ -9,7 +9,7 @@ ms.date: 03/21/2022
 
 # Debug Teams app locally
 
- Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit helps you to debug and preview your Teams app locally and also supports the following debug features:
+ Teams Toolkit helps you to debug and preview your Teams app locally. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully. Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions. Teams Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
@@ -32,7 +32,7 @@ You can select **F5** to start debugging. The Teams Toolkit starts checking prer
 
 #### Multi-target debugging
 
-You can select debut option under **DEVELOPMENT** activity bar, Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
+You can select debug option under **DEVELOPMENT** activity bar, Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
 
 #### Toggle breakpoints
 
@@ -57,7 +57,7 @@ When you complete local debug, you can select **Stop** or **Disconnect** from th
 
 #### 1. Set up your Teams Toolkit
 
-Follow the steps to debug your app once you create a new app:
+Complete the following steps to debug your app after creating a new app using the Teams Toolkit:
 
 <br>
 
@@ -157,7 +157,7 @@ Launches the debug configurations defined in `.vscode/launch.json` as follows:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Launch debugger":::
 
-The debug configuration names and types for project with Tab app and Bot app:
+The following table lists the debug configuration names and types for project with Tab app and Bot app:
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
@@ -165,7 +165,7 @@ The debug configuration names and types for project with Tab app and Bot app:
 |  Bot or message extensions |   **Attach to Bot** |  pwa-node |
 | Azure Functions |   **Attach to Backend** |  pwa-node |
 
-The debug configuration names and types for project with Bot app:
+The following table lists the debug configuration names and types for project with Bot app and without Tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
