@@ -16,6 +16,9 @@ A proactive message is any message sent by a bot that isn't in response to a req
 * Notifications
 * Scheduled messages
 
+> [!IMPORTANT]
+> For proactive messages the bots should use `https://smba.infra.gcc.teams.microsoft.com/gcc` as an end point for GCC environment.  
+
 For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if required, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
 
