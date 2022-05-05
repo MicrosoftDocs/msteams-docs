@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Enable SSO in Teams app manifest and preview the app
 
-You've registered your app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your app. The app manifest describes how an app integrates into the Microsoft Teams product.
+You've registered your app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
@@ -129,12 +129,11 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the app manifest file.
+6. Save the Teams app manifest file.
 
-### View manifest sample
-
+<br>
 <details>
-<summary>Here's an example of app manifest after it's updated:</summary>
+<summary>Here's an example of app manifest after it's updated</summary>
 
 ```json
 {
@@ -193,7 +192,7 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
 </details>
 
 > [!NOTE]
-> During build, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok url. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok url. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
 ## Sideload and Preview in Teams
 
