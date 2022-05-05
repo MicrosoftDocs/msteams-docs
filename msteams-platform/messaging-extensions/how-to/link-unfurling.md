@@ -44,7 +44,8 @@ The following images displays the experience of link unfurling on mobile and des
      1. User has pasted an URL in the compose message area in desktop
      2. You can see the link unfurling in the compose message area before he shares in the chat
 
-   :::image type="content" source="~/assets/images/Teams-link-unfurling/result-output-new.png)" alt-text="desktop" border="true":::
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/Output-mobile.png" alt-text="mobile" border="true":::
+
 ---
 
 ## Add link unfurling to your app manifest
