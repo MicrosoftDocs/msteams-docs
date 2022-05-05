@@ -1,5 +1,5 @@
 ---
-title: Link unfurling for compose box extension on Mobile
+title: Link unfurling
 author: surbhigupta
 description: Learn how to add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually using code examples and samples.
 ms.localizationpriority: high
@@ -19,12 +19,9 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 * Allows to enrich the links in conversations
 * You can get the specific URLs unfurling in the compose message box
 
-## Limitations of link unfurling on mobile
- 
-   Link unfurling on mobile works only for installed apps in Microsoft 365
-
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
+>Link unfurling on mobile works only for installed apps in Microsoft 365
 
 The following images displays the experience of link unfurling on mobile and desktop:
 
@@ -35,7 +32,7 @@ The following images displays the experience of link unfurling on mobile and des
      1. User has pasted an URL in the compose message area in mobile
      2. You can see the link unfurling in the compose message area before he shares in the chat
 
-   :::image type="content" source="~/assets/images/Teams-link-unfurling/Output-mobile.png" alt-text="mobile" border="true":::
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/desktop-link.png" alt-text="mobile" border="true":::
 
 # [Desktop](#tab/Sampledesktop)
 
@@ -44,7 +41,7 @@ The following images displays the experience of link unfurling on mobile and des
      1. User has pasted an URL in the compose message area in desktop
      2. You can see the link unfurling in the compose message area before he shares in the chat
 
-   :::image type="content" source="~/assets/images/Teams-link-unfurling/search-new-desktop-updated.png" alt-text="desktop unfurl updated" border="true":::
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/mobile-link.png" alt-text="desktop unfurl updated" border="true":::
 
 ---
 
