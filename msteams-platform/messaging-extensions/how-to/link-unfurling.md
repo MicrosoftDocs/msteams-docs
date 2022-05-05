@@ -19,7 +19,7 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 * Allows to enrich the links in conversations
 * You can get the specific URLs unfurling in the compose message box
 
-## Limitations of link unfurling
+## Limitations of link unfurling on mobile
  
    Link unfurling on mobile works only for installed apps in Microsoft 365
 
@@ -30,7 +30,7 @@ The following images displays the experience of link unfurling on mobile and des
 
 # [Mobile](#tab/Samplemobileapp)
 
-* Link unfurling on desktop using the following steps:
+  Link unfurling on desktop using the following steps:
 
      1. User has pasted an URL in the compose message area in mobile
      2. You can see the link unfurling in the compose message area before he shares in the chat
@@ -39,7 +39,7 @@ The following images displays the experience of link unfurling on mobile and des
 
 # [Desktop](#tab/Sampledesktop)
 
-* Link unfurling on desktop using the following steps:
+  Link unfurling on desktop using the following steps:
 
      1. User has pasted an URL in the compose message area in desktop
      2. You can see the link unfurling in the compose message area before he shares in the chat
