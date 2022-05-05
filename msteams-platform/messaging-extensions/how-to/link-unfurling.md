@@ -21,7 +21,7 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 
 ## Limitations of link unfurling
  
-* Link unfurling on mobile works only for installed apps in Microsoft 365
+   Link unfurling on mobile works only for installed apps in Microsoft 365
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
@@ -44,7 +44,7 @@ The following images displays the experience of link unfurling on mobile and des
      1. User has pasted an URL in the compose message area in desktop
      2. You can see the link unfurling in the compose message area before he shares in the chat
 
-   :::image type="content" source="~/assets/images/Teams-link-unfurling/result-output-new.png" alt-text="desktop" border="true":::
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/search-new-desktop-updated.png" alt-text="desktop unfurl updated" border="true":::
 
 ---
 
