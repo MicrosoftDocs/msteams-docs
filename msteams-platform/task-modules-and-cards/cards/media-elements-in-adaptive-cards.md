@@ -7,11 +7,11 @@ ms.topic: reference
 
 # Overview
 
-Media elements (For example audio or video clips) are supported in the Adaptive Cards SDK but not in Teams. This was originally de-scoped when moving Teams to Adaptive Cards v1.2 but we are looking to address now. There is no media support in Teams cards today (since we also don't support the audio/video/animation cards from Bot Framework), so there is no workaround. This will drive parity with the SDK (which already supports media elements) and would increase engagement with cards and bring new experiences to them.
+Media elements (For example audio or video clips) are supported in the Adaptive Cards SDK but not in Teams. This was originally de-scoped when moving Teams to Adaptive Cards v1.2 but we are looking to address now. There's no media support in Teams cards today (since we also don't support the audio/video/animation cards from Bot Framework), so there's no workaround. This will drive parity with the SDK (which already supports media elements) and would increase engagement with cards and bring new experiences to them.
 
 ## User problems
 
-There is a need to embed Media Elements in Adaptive Cards within the Teams experience. Partners that have shared this requirement include Accenture (200K+ user impact), Workday, Chata.ai, Inditex, ServiceNow, Blinkist.
+There's a need to embed Media Elements in Adaptive Cards within the Teams experience. Partners that have shared this requirement include Accenture (200K+ user impact), Workday, Chata.ai, Inditex, ServiceNow, Blinkist.
 
 Today, users are forced to exit Teams to view media. This feature supports consumption of Media Elements directly within Teams Adaptive Cards. Following are the example scenarios:
 
@@ -31,7 +31,7 @@ Audio: Contoso Medical has a scrum Bot that is deployed on their tenant. The Bot
 
 ### Phase 1: Support LOB scenarios
 
-For the MVP of the Media Elements feature, we will support three scenarios primarily for in-line media playback for both user-sent and bot-sent (H1CY22):
+For the MVP of the Media Elements feature, we'll support three scenarios primarily for in-line media playback for both user-sent and bot-sent (H1CY22):
 
 Files of a supported type available externally via any publicly available URL that is sanitized
 
