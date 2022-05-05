@@ -50,7 +50,7 @@ Link unfurling on mobile using the following steps:
 
 * Link unfurling on SBS Guide - Unfurl links in Teams using bot:
 
-      Link unfurling using bot in Teams helps you to register your app and receive an invoke activity when the URL with particular domain is pasted into the compose message area.
+  Link unfurling using bot in Teams helps you to register your app and receive an invoke activity when the URL with particular domain is pasted into the compose message area.
 
      1. Allows user to paste URLs and respond with a card.
      1. Allows user to register the app and receive invoke activity.
