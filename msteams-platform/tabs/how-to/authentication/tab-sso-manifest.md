@@ -197,7 +197,9 @@ If your app doesn't have a app manifest file, you'll need to create it. To creat
 
 ## Sideload and Preview in Teams
 
-After you update the manifest, you can preview your app in Teams environment.
+You've configured the app to enable SSO in Azure, code, and in Teams manifest file. You can now sideload your app in Teams and preview it in Teams environment.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app" border="false":::
 
 To preview your app in Teams:
 
