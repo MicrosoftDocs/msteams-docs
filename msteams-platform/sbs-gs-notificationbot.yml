@@ -175,7 +175,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
 
-    1. Select **HTTP Trigger**as the trigger. Select **OK**
+    1. Select **HTTP Trigger** as the trigger. Select **OK**
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language." border="true":::  
 
@@ -203,13 +203,13 @@ items:
     
     1. Select **Run and Debug** 
 
-    1. Select **Debug(Edge) from the drop-down
+    1. Select **Debug(Edge)** from the drop-down
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true":::
 
-     You'll get the following output in Teams
+       You'll get the following output in Teams
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output"border="true"::: 
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output"border="true"::: 
 
     1. Select the drop-down to add the app in team or chat or meeting
 
@@ -223,9 +223,9 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/powershell-trigger.png" alt-text="Powershell Trigger"border="true":::   
 
-     You'll get the following output in Teams
+        You'll get the following output in Teams
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
+          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
     # [Command line](#tab/cli)
 
