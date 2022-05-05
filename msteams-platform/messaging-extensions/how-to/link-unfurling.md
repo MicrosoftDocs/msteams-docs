@@ -10,20 +10,19 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URL is pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.Now link unfurling is supported for both on desktop and mobile.
+In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URL is pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.</br>
+Now link unfurling is supported for both on desktop and mobile.
 
 ## Advantages of link unfurling 
 
-* Link unfurling helps to provides the hyperlinks preview in the compose message box
+* Provides preview of the hyperlink
 * Responds to the hyperlink with adaptive cards and provides the additional information or action
-* Link unfurling allows to enrich the links in conversations
+* Allows to enrich the links in conversations
 * You can get the specific URLs unfurling in the compose message box
 
 ## Limitations of link unfurling 
 
-* Link unfurling on mobile is implemented only for installed apps in Microsoft 365
-* Message extension or bot is required to provide the link unfurling in message compose area
-* Link unfurling is not supporting to out of the box in Teams
+  Link unfurling on mobile works only for installed apps in Microsoft 365
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
