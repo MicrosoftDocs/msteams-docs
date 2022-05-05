@@ -10,8 +10,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URL is pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.</br>
-Now link unfurling is supported for both on desktop and mobile.
+In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URL is pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually. Now link unfurling is supported for both on mobile and desktop.
 
 ## Advantages of link unfurling 
 
@@ -27,11 +26,11 @@ Now link unfurling is supported for both on desktop and mobile.
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.
 
-The following image displays the experience of link unfurling on mobile and desktop:
+The following images displays the experience of link unfurling on mobile and desktop:
 
 # [Mobile](#tab/Samplemobileapp)
 
-Link unfurling on mobile using the following steps:
+* Link unfurling on desktop using the following steps:
 
      1. User has pasted an URL in the compose message area in mobile
      2. You can see the link unfurling in the compose message area before he shares in the chat
@@ -45,17 +44,7 @@ Link unfurling on mobile using the following steps:
      1. User has pasted an URL in the compose message area in desktop
      2. You can see the link unfurling in the compose message area before he shares in the chat
 
-   :::image type="content" source="~/assets/images/Teams-link-unfurling/unfurl-desktop-updated.png" alt-text="desktop" border="true":::
-
-* Link unfurling on SBS Guide - Unfurl links in Teams using bot:
-
-  Link unfurling using bot in Teams helps you to register your app and receive an invoke activity when the URL with particular domain is pasted into the compose message area.
-
-     1. Allows user to paste URLs and respond with a card.
-     1. Allows user to register the app and receive invoke activity.
-
-![Example of link unfurling](~/assets/images/Teams-link-unfurling/result-output-new.png)
-
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/result-output-new.png)" alt-text="desktop" border="true":::
 ---
 
 ## Add link unfurling to your app manifest
