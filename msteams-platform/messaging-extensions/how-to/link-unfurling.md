@@ -14,10 +14,10 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 
 ## Advantages of link unfurling 
 
-* Link unfurling helps to provides the hyperlink preview in the compose message box
+* Link unfurling helps to provides the hyperlinks preview in the compose message box
 * Responds to the hyperlink with adaptive cards and provides the additional information or action
 * Link unfurling allows to enrich the links in conversations
-* You can get the specific URLs unfurl in the compose message box
+* You can get the specific URLs unfurling in the compose message box
 
 ## Limitations of link unfurling 
 
@@ -41,14 +41,14 @@ Link unfurling on mobile using the following steps:
 
 # [Desktop](#tab/Sampledesktop)
 
-Link unfurling on desktop using the following steps:
+* Link unfurling on desktop using the following steps:
 
 1. URL is pasted into the compose message area in desktop
 2. You can see the link has unfurling on desktop
 
-   :::image type="content" source="~/assets/images/Teams-link-unfurling/Output-desktop-new.png" alt-text="desktop" border="true":::
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/unfurl-desktop.png" alt-text="desktop" border="true":::
 
-Link unfurling on SBS Guide - Unfurl links in Teams using bot:
+* Link unfurling on SBS Guide - Unfurl links in Teams using bot:
 
 Link unfurling using bot in Teams helps you to register your app and receive an invoke activity when the URL with particular domain is pasted into the compose message area.
 
