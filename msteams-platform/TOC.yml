@@ -359,24 +359,24 @@
     items:
     - name: Authentication flow in tabs
       href: tabs/how-to/authentication/auth-flow-tab.md
+    - name: Enable SSO for tab app
+      items:
+      - name: Overview
+        href: tabs/how-to/authentication/tab-sso-overview.md
+      - name: Register tab app in Azure AD
+        href: tabs/how-to/authentication/tab-sso-register-aad.md
+      - name: Configure code to enable SSO
+        href: tabs/how-to/authentication/tab-sso-code.md
+      - name: Update Teams app manifest
+        href: tabs/how-to/authentication/tab-sso-manifest.md
+      - name: Extend tab app for Microsoft Graph permissions
+        href: tabs/how-to/authentication/tab-sso-graph-api.md
+      - name: Troubleshooting
+        href: tabs/how-to/authentication/tab-sso-troubleshooting.md
     - name: Use Azure AD authentication
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Use silent authentication
       href: tabs/how-to/authentication/auth-silent-aad.md
-    - name: Enable SSO for tabs
-      items:
-      - name: Overview
-        href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Register your app in Azure AD
-        href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Configure code to enable SSO
-        href: tabs/how-to/authentication/tab-sso-code.md
-      - name: Update Teams app manifest and preview app
-        href: tabs/how-to/authentication/tab-sso-manifest.md
-      - name: Extend your app for Microsoft Graph permissions
-        href: tabs/how-to/authentication/tab-sso-graph-api.md
-      - name: Troubleshooting
-        href: tabs/how-to/authentication/tab-sso-troubleshooting.md
     - name: Use external OAuth providers
       href: tabs/how-to/authentication/auth-oauth-provider.md
   - name: Bots
