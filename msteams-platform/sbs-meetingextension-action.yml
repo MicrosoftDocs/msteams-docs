@@ -1,27 +1,27 @@
 ### YamlMime:Tutorial
-title: Build action based messaging extension
+title: Build action based message extension
 metadata:
-  title: Build action based messaging extension
-  description: In this tutorial, you'll learn to set up action messaging extension for Teams.
+  title: Build action based message extension
+  description: In this tutorial, you'll learn to set up action message extension for Teams.
   audience: Developer
   level: Beginner
   ms.date: 24/02/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/action-commands/define-action-command.md
-  nextTutorialTitle: Read more to enable messaging extension action commands
+  nextTutorialTitle: Read more to enable message extension action commands
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extensions allow users to interact with web services in the Microsoft Teams client. They help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
+    Message extensions allow users to interact with web services in the Microsoft Teams client. They help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
-    **Key features of action based messaging extension**
+    **Key features of action based message extension**
 
     * Presents the user with a modal popup to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide helps you to build Teams action based messaging extension to initiate actions from compose message and message area. You'll see the following output:
+    This step-by-step guide helps you to build Teams action based message extension to initiate actions from compose message and message area. You'll see the following output:
        
       ![output](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
     
@@ -344,11 +344,11 @@ items:
 
         ![App settings](~/assets/images/sbs-messagingextension-action/json-file.png)
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/sbs-messagingextension-action/manifestlocation.png)
     
-    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
+    1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
@@ -392,7 +392,7 @@ items:
    
     ![Dotnet](~/assets/images/sbs-messagingextension-action/dotnetruncmd.png)
       
-- title: Add Action Messaging Extension app to Teams
+- title: Add Action Message Extension app to Teams
   durationInMinutes: 1
   content: |
     1. In your cloned repository, navigate to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
@@ -459,6 +459,6 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a **Action Messaging Extension** app!
+    You've completed the tutorial to get started with a **Action Message Extension** app!
 
 
