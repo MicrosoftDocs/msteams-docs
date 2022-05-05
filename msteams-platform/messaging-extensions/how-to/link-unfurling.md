@@ -32,21 +32,21 @@ The following image displays the experience of link unfurling on mobile and desk
 
 # [Mobile](#tab/Samplemobileapp)
 
-Link unfurling on mobile:
+Link unfurling on mobile using the following steps:
 
 1. URL is pasted into the compose message area in mobile
 2. You can see the link has unfurling on mobile
 
-![Example of link unfurling](~/assets/images/Teams-link-unfurling/Output-mobile.png)
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/Output-mobile.png" alt-text="mobile" border="true":::
 
 # [Desktop](#tab/Sampledesktop)
 
-Link unfurling on desktop:
+Link unfurling on desktop using the following steps:
 
 1. URL is pasted into the compose message area in desktop
 2. You can see the link has unfurling on desktop
 
-![Example of link unfurling](~/assets/images/Teams-link-unfurling/Output-desktop-new.png)
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/Output-desktop-new.png" alt-text="desktop" border="true":::
 
 Link unfurling on SBS Guide - Unfurl links in Teams using bot:
 
