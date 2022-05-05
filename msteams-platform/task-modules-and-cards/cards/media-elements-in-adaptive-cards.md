@@ -17,9 +17,9 @@ Today, users are forced to exit Teams to view media. This feature supports consu
 
 ### User sent scenarios
 
-Video: User Alice has found a relevant informational video on her company ODSP instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
+Video: User Alice has found a relevant informational video on her company OneDrive Sharepoint instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
 
-Audio: Nurse Carol locates an audio file with the daily memo on her company ODSP instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the ODSP App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
+Audio: Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the ODSP App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
 
 ### Bot sent scenarios
 
@@ -31,14 +31,23 @@ Audio: Contoso Medical has a scrum Bot that is deployed on their tenant. The Bot
 
 ### Phase 1: Support LOB scenarios
 
-For the MVP of the Media Elements feature, we'll support three scenarios primarily for in-line media playback for both user-sent and bot-sent (H1CY22):
+For the MVP of the Media Elements feature, three scenarios are supported primarily for in-line media playback for both user-sent and bot-sent:
 
-Files of a supported type available externally via any publicly available URL that is sanitized
+* Files of a supported type available externally via any publicly available URL that is sanitized.
+* Video or audio is linked via a URL that points to a supported video or audio file.
+* Inline YouTube video playback through Adaptive Cards SDK v1.6.
+* Files directly uploaded to OneDrive Sharepoint (ODSP) within the tenant.
+* Video or audio is shared from OneDrive Sharepoint (ODSP).
 
-Video/audio is linked via a URL that points to a supported video/audio file
+### Phase 2: Support third party partner scenarios
 
-Inline YouTube video playback through AC SDK v1.6
+Following are the dynamic user-uploaded scenarios where users submit video or audio files:
 
-Files directly uploaded to OneDrive Sharepoint (ODSP) within the tenant (no permission issues)
+* Files directly uploaded to OneDrive Sharepoint (ODSP) external to the tenant (potential permission issues)  
+* Files on third party external players (For example: Vimeo, Dailymotion, Spotify, Netflix, etc).
+* Files hidden behind external SSO or Authentication (For example: Google Drive, Dropbox, etc).
+* Inline Vimeo and Dailymotion playback (and potentially other media providers).
 
-Video/audio is linked/shared from ODSP
+> [!NOTE]
+> On desktop or web, support for Dailymotion and Vimeo should not induce any cost beyond supporting YouTube, as all three providers are supported out of the box in the latest AC JS SDK.
+> For that reason, while Vimeo and Dailymotion are in the “phase 2” bucket, it seems to make sense to promote them to “phase 1”.
