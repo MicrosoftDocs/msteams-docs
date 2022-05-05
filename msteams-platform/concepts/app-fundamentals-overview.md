@@ -73,11 +73,10 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-| Bots | ✔️ | ❌ | ❌ |
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
+| Custom or Lob bots | ✔️ | ✔️ | ❌ |
+| Custom message extensions | ✔️ | ✔️ | ❌ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
-| Custom or Lob bots | ✔️ | ❌ | ❌ |
-| Custom message extensions | ❌ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
