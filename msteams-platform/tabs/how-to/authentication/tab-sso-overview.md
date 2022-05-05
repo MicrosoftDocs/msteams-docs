@@ -44,6 +44,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png":::
 
+<!--
 ```mermaid
 sequenceDiagram
     User->>Tab app: Opens Teams app
@@ -55,6 +56,7 @@ sequenceDiagram
     Teams Client->>Tab app: 5. Respond to getAuthToken() with access token
     Tab app->>Tab app: 6. Parse access token to give access to user
 ```
+-->
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
