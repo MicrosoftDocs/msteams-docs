@@ -133,9 +133,7 @@ items:
 - title: Create a new notification bot app
   durationInMinutes: 1
   content: |
-  
-  
-    # [Visual Studio Code](#tab/vsc)
+   # [Visual Studio Code](#tab/vsc)
 
     1. Open Visual Studio Code.
     
