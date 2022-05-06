@@ -104,7 +104,7 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
     OAuthClientConfig.OAuthEndpoint = uri;
     ```
     
-    Where *<uri-to-use>* is one of the following URIs:
+    Where \<uri-to-use\> is one of the following URIs:
 
     |**URI**|**Description**|
     |---|---|
