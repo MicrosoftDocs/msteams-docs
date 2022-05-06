@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Overview
 
-Media elements for example, audio or video clips are supported in the Adaptive Cards SDK but not in Teams. This was originally de-scoped when moving Teams to Adaptive Cards v1.2 but we are looking to address now. There's no media support in Teams cards today (since we also don't support the audio or video or animation cards from Bot Framework), so there's no workaround. This will drive parity with the SDK (which already supports media elements) and would increase engagement with cards and bring new experiences to them.
+Media elements, for example, audio or video clips are supported in the Adaptive Cards SDK but not in Teams. This was originally de-scoped when moving Teams to Adaptive Cards v1.2 but we are looking to address now. There's no media support in Teams cards today (since we also don't support the audio or video or animation cards from Bot Framework), so there's no workaround. This will drive parity with the SDK (which already supports media elements) and would increase engagement with cards and bring new experiences to them.
 
 ## User problems
 
@@ -17,7 +17,7 @@ Today, users are forced to exit Teams to view media. This feature supports consu
 
 ### User sent scenarios
 
-Video: User Alice has found a relevant informational video on her company OneDrive Sharepoint (ODSP)instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
+Video: User Alice has found a relevant informational video on her company OneDrive Sharepoint instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
 
 Audio: Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
 
@@ -54,7 +54,7 @@ Following are the dynamic user-uploaded scenarios where users submit video or au
 
 ## Out of scope considerations
 
-1. Phase 1 does not support specific third party media players for example, Vimeo. Following is the fallback:
+1. Phase 1 doesn't support specific third party media players, for example, Vimeo. Following is the fallback:
 
     * Desktop links externally via browser.
     * Mobile deep-links into the native app (potentially through browser).
@@ -81,7 +81,7 @@ Following are the dynamic user-uploaded scenarios where users submit video or au
 
 Playing YouTube videos inline in any app requires the use of the YouTube embedded player, that relies on an IFrame. In other words, it is not possible to implement a custom inline player for YouTube videos and the same applies to Vimeo, Dailymotion and more. For that reason, there is no need to come up with a video player design when it comes to YouTube; the only design we can implement is that provided by YouTube, which does not allow for look and feel customization.
 
-YouTube, Vimeo and Dailymotion playback is implemented in the latest version of the Adaptive Cards JavaScript SDK (schema 1.6)(not released). It relies on the existing Adaptive Card Media element. Following is an example of a card embedding a YouTube video:
+YouTube, Vimeo and Dailymotion playback are implemented in the latest version of the Adaptive Cards JavaScript SDK (schema 1.6)(not released). It relies on the existing Adaptive Card Media element. Following is an example of a card embedding a YouTube video:
 
 ### Example
 
