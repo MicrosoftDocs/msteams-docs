@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Notification in Teams using JavaScript
+title: Send notification in Teams using JavaScript
 metadata:
-  title: Notification in Teams using JavaScript
-  description: In this tutorial, you'll learn to send Notification in Teams with JavaScript.
+  title: Send notification in Teams using JavaScript
+  description: In this tutorial, you'll learn to send notification in Teams with JavaScript.
   audience: Developer
   level: Beginner
   ms.date: 05/04/2021
@@ -53,7 +53,6 @@ items:
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
 
-
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
@@ -102,7 +101,7 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -180,11 +179,11 @@ items:
         For this tutorial, you don't need to use these options.
 
         > [!NOTE]
-        > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
+        > If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
     
     1. Select **Run and Debug**.
 
-    1. Select **Debug(Edge)** from the drop-down.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true":::
 
@@ -198,7 +197,7 @@ items:
 
     **Run PowerShell to make a trigger to Teams**
 
-    1. Open **Windows Powershell**.
+    1. Open **Windows PowerShell**.
 
     1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification`command.
 
@@ -292,13 +291,13 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" border="true":::
 
-    1. Select **Run and Debug** 
+    1. Select **Run and Debug**.
 
-    1. Select **Debug(Edge)** from the drop-down
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging" border="true":::
 
-        You'll get the app installation notification in Teams
+        You'll get the app installation notification in Teams.
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation" border="true":::
 
@@ -312,21 +311,21 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/setup-bot.png" alt-text="Setup Bot" border="true":::
 
-       Following screen will appear
+       Following screen will appear:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification" border="true":::
 
-    1. Open **Windows Powershell**
+    1. Open **Windows PowerShell**.
 
     1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification`command.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/powershell-trigger.png" alt-text="Powershell Trigger"border="true":::   
 
-       You'll get the notification to the Teams channel
+       You'll get the notification to the Teams channel:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-output.png" alt-text="Channel Output" border="true":::
 
-       You'll get the notification to the personal chat          
+       You'll get the notification to the personal chat:         
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" border="true":::
     
