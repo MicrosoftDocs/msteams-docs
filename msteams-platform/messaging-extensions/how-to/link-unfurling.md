@@ -16,11 +16,10 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 
 * Provides preview of the hyperlink
 * Responds to the hyperlink with adaptive cards and provides the additional information or action
-* Allows to enrich the links in conversations
 * You can get the specific URLs unfurling in the compose message box
 
 >[!NOTE]
->The link unfurling result is cached for 30 minutes.
+>The link unfurling result is cached for 30 minutes.</br>
 >Link unfurling on mobile works only for installed apps in Microsoft 365
 
 The following images displays the experience of link unfurling on mobile and desktop:
@@ -41,8 +40,6 @@ The following images displays the experience of link unfurling on mobile and des
    1. User has pasted an URL in the compose message area in desktop
    1. You can see the link unfurling in the compose message area before he shares in the chat
  
-   :::image type="content" source="~/assets/images/Teams-link-unfurling/desktop-newūnfurl.png" alt-text="desktop microsoft" border="true":::
-
 ---
 
 ## Add link unfurling to your app manifest
