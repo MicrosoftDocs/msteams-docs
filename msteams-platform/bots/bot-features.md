@@ -50,18 +50,21 @@ Webhooks and connectors connect your bot to your web services. Using webhooks an
 
 ## Azure bot service
 
-The Azure Bot Service, along with the Bot Framework, provides tools to build, test, deploy, and manage intelligent bots, all in one place.You can also create your bot in Azure bot service
+The Azure Bot Service, along with the Bot Framework, provides tools to build, test, deploy, and manage intelligent bots, all in one place. You can also create your bot in Azure bot service.
 
 > [!IMPORTANT]
 > Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
 
 > [!NOTE]
-> Bots in GCCH only support  upto manifest version v1.10.
-> Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri. 
+> * Bots in GCCH only support  upto manifest version v1.10.
+> * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri. 
 
-For GCCH, you would need to register a bot using [Azure Government portal](https://portal.azure.us).
+For GCCH environment, you would need to register a bot using [Azure Government portal](https://portal.azure.us).
 
-**Configuration changes**
+:::image type="content" source="../assets/images/bots/abs-bot.gif" alt-text="Azure Government portal" lightbox="../assets/images/bots/abs-bot.gif" border="true":::
+
+<details>
+<summary><b>Configuration changes</b></summary>
 
 As the bot registration occurs in Azure Government portal, ensure to update the bot configurations to connect to Azure govermnet instances. Following are the configuration details:
 
@@ -73,6 +76,8 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
 | ToChannelFromBotOAuthScope | `https://api.botframework.us` |
 | ToBotFromChannelTokenIssuer | `https://api.botframework.us`  |
 | BotOpenIdMetadata | `https://login.botframework.azure.us/v1/.well-known/openidconfiguration` |
+
+</details>
 
 <details>
 <summary><b>Update to appsettings.json & startup.cs</b></summary>
