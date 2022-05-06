@@ -12,15 +12,15 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 
 There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and Teams. Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
 
-OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow with the goal of eventually reading the user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow. It reads the user's profile information from Azure AD and Microsoft Graph.
 
 The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
 For general overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
-Authentication flow in tabs differs slightly from authentication flow in bots.
+Authentication flow in tabs differs from authentication flow in bots.
 
-## Configuring your app to use Azure AD as an identity provider
+## Configure your app to use Azure AD as an identity provider
 
 Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
 
@@ -36,19 +36,19 @@ Replace `<hostname>` with your actual host, which might be a dedicated hosting s
 
 ## Other authentication providers
 
-* **LinkedIn:** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
+* **LinkedIn:** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin).
 
-* **Google:** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
+* **Google:** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/).
 
-* **External OAuth providers from tabs:** For more information, see [Use external OAuth providers](../../tabs/how-to/authentication/auth-oauth-provider.md)
+* **External OAuth providers from tabs:** For more information, see [Use external OAuth providers](auth-oauth-provider.md).
 
 ## Initiate authentication flow
 
-Authentication flow should be triggered by a user action. You should not open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
+Authentication flow should be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider. In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
+Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you will need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
