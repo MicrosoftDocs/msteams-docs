@@ -15,6 +15,7 @@ You can create a bot that works in Microsoft Teams with one of the following too
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [Virtual Assistant](~/samples/virtual-assistant.md)
 * [Webhooks and connectors](#bots-with-webhooks-and-connectors)
+* [Azure bot service](#azure-bot-service)
 
 ## Bots with the Microsoft Bot Framework
 
@@ -46,6 +47,29 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 ## Bots with webhooks and connectors
 
 Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+
+## Azure bot service
+
+You can also create your bot in Azure bot service
+
+> [!IMPORTANT]
+> Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/channel-connect-teams).
+
+For GCCH, you would need to register a bot using [Azure Government portal](https://portal.azure.us).
+
+**Configuration changes**
+
+As the bot registration occurs in Azure government portal, you may have to update certain configuration to make sure that they connect to Azure government instances, following configuration changes that are needed:
+
+| Configuration Name | Value |
+| ChannelService | `https://botframework.azure.us` |
+| OAuthUrl | `https://tokengcch.botframework.azure.us` |
+| ToChannelFromBotLoginUrl | `https://login.microsoftonline.us/MicrosoftServices.onmicrosoft.us` |
+| ToChannelFromBotOAuthScope | `https://api.botframework.us` |
+| ToBotFromChannelTokenIssuer | `https://api.botframework.us`  |
+| BotOpenIdMetadata | `https://login.botframework.azure.us/v1/.well-known/openidconfiguration` |
+
+**
 
 ## Advantages of bots
 
