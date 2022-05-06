@@ -8,31 +8,31 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 # Authenticate a user in a Microsoft Teams tab
 
 > [!Note]
-> For authentication to work for your tab on mobile clients, you need to ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
 
 There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and Teams. Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow. It reads the user's profile information from Azure AD and Microsoft Graph.
 
-The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
+The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Azure AD.
 
-For general overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
+For overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
 Authentication flow in tabs differs from authentication flow in bots.
 
 ## Configure your app to use Azure AD as an identity provider
 
-Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
+Identity providers that support OAuth 2.0 don't authenticate requests from unknown applications. You must register the applications ahead of time. To do this with Azure AD, follow these steps:
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
+3. Select **Web** from the drop down menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
-Replace `<hostname>` with your actual host, which might be a dedicated hosting site such as Azure, Glitch, or a ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information if you haven't completed or hosted your app (or the sample app that's mentioned above), but you can always return to this page when that information is known.
+Replace `<hostname>` with your actual host, which may be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information if you haven't completed or hosted your app (or the sample app that's mentioned above), but you can always return to this page when that information is known.
 
 ## Other authentication providers
 
