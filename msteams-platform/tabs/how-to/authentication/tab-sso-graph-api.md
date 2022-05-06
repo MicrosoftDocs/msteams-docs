@@ -55,22 +55,22 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured." border="true":::
 
-    You've configured API permissions with Microsoft Graph.
+    You've configured your app with Microsoft Graph permissions.
 
 ## Acquire access token for MS Graph
 
 You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD OBO flow.
 
-The current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes.
+The current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
 After you've configured Graph permissions in Azure AD:
 
-- Configure your client-side code to fetch access token using Microsoft Authentication Library (MSAL).
-- Pass the access token to server-side code.
+- [Configure your client-side code to fetch access token using MSAL](#configure-code-to-fetch-access-token-using-msal)
+- [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 
-### Code snippets
+### Configure code to fetch access token using MSAL
 
-The following code provides an example of OBO flow to fetch access token using MSAL.
+The following code provides an example of OBO flow to fetch access token from the client side using MSAL.
 
 ### [C#](#tab/dotnet)
 

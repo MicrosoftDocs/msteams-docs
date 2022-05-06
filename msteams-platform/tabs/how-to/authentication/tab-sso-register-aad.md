@@ -23,17 +23,15 @@ You may also need to configure additional configuration for authenticating app u
 
 ### Before you register with Azure AD
 
-It's helpful to know about the configuration required for registering your app on Azure AD. It includes the following:
+It's helpful to know about the configuration required for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details before you start registering your app:
 
-- Single- or multi-tenant options: Your app can be line-of-business app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
-- App platform: Note the platform where you want your app is available. It also includes noting the URL from where your app is accessible.
-- App ID URI: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted.
-- Scope: These are the permissions that an authorized app user or your app can be granted for accessing a resource exposed by the API.
+- **Single- or multi-tenant options**: Your app can be line-of-business app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
+- **App platform**: Note the platform where you want your app is available. It also includes noting the URL from where your app is accessible.
+- **App ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted.
+- **Scope**: These are the permissions that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
 > **LOB applications**: Your organization can make line-of-business (LOB) applications available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
-
-Ensure that you've prepared to configure these details before you start registering your app.
 
 The tasks involved in registering your app that uses SSO are language- and framework-agnostic.
 
