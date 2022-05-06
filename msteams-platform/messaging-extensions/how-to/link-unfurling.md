@@ -15,7 +15,7 @@ In link unfurling, your app can register to receive an invoke activity when URLs
 ## Advantages of link unfurling 
 
 * Link unfurling provides preview of the hyperlink
-* In the compose message box,You can get the specfic URL unfurl
+* In the compose message box, you can get the specfic URL unfurl
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.</br>
