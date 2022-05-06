@@ -70,11 +70,11 @@ The following image shows an example of the app details configured in Azure AD.
 
 In addition, inspect the access token that was sent to the tab if the following values are correct:
 
-- Audience (aud): Check if the app ID in the token is correct as given in Azure AD.
-- Tenant Id(tid): Check if the tenant mentioned in the token is correct.
-- User identity (preferred_username): Check if the user identity matches the username in the request for access token for the scope that the current user wants to access.
-- Scopes (scp): Check if the scope for which the access token is requested is correct, and as defined in Azure AD.
-- Azure AD version 1.0 or 2.0 (ver): Check if Azure AD version is correct.
+- **Audience (aud)**: Check if the app ID in the token is correct as given in Azure AD.
+- **Tenant Id(tid)**: Check if the tenant mentioned in the token is correct.
+- **User identity (preferred_username)**: Check if the user identity matches the username in the request for access token for the scope that the current user wants to access.
+- **Scopes (scp)**: Check if the scope for which the access token is requested is correct, and as defined in Azure AD.
+- **Azure AD version 1.0 or 2.0 (ver)**: Check if Azure AD version is correct.
 
 You can use [JWT](https://jwt.ms) for inspecting the token.
 
