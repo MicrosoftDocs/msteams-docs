@@ -1,9 +1,9 @@
 ---
-title: Extend your app with Microsoft Graph permissions
+title: Extend tab app with Microsoft Graph permissions
 description: Describes configuring API permissions with Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token
 ---
 # Extend tab app with Microsoft Graph permissions
 
@@ -133,12 +133,12 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### Pass the access token to server-side code
 
-If you need to access Microsoft Graph data, your server-side code should do the following:
+If you need to access Microsoft Graph data, configure your server-side code to:
 
-- Validate the access token (see Validate the access token below).
-- Initiate the OAuth 2.0 On-Behalf-Of flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the add-in (its ID and secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
-- Get data from Microsoft Graph by using the new token.
-- If you need to cache the new access token for multiple calls, we recommend using token cache serialization in MSAL.NET.
+1. Validate the access token. For more information, please see [Decode and validate the access token](tab-sso-code.md#decode-and-validate-the-access-token).
+1. Initiate the OAuth 2.0 OBO flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the add-in (its ID and client secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
+1. Get data from Microsoft Graph by using the new token.
+1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if required.
 
 > [!IMPORTANT]
 > As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/tabs/how-to/authentication/auth-flow-tab).

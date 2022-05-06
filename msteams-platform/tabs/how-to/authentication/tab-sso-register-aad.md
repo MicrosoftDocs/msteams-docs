@@ -3,7 +3,7 @@ title: Register your tab app with Azure AD
 description: Describes registering your tab app with Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
 ---
 # Register your app in Azure AD
 
