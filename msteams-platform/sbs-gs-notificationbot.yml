@@ -337,17 +337,11 @@ items:
 
     You've done it!
 
-    You've created three apps, each with a different capability: a tab app, a bot app, and a message extension app.
+    You've created a new notification bot with Teams Toolkit.
 
-    Now that you've learned to create basic apps, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
+    You've completed the tutorial to create notification bot with JavaScript.
 
-    To add capabilities to your existing app:
+    Did you come up with something like this?
 
-    1. Select **Add capability** from the **Development** section of the Teams Toolkit sidebar.
-
-    1. Select the capability you want to add to your app.
-
-    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
-
-    You've completed the tutorial to build apps with JavaScript.
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
     
