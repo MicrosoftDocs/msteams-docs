@@ -17,15 +17,15 @@ Today, users are forced to exit Teams to view media. This feature supports consu
 
 ### User sent scenarios
 
-**Video** User Alice has found a relevant informational video on her company OneDrive Sharepoint instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
+**Video**: User Alice has found a relevant informational video on her company OneDrive Sharepoint instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
 
-**Audio** Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
+**Audio**: Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
 
 ### Bot sent scenarios
 
-**Video** Contoso has an onboarding Bot that is deployed on their tenant. Every new member on the tenant is greeted by the Contoso Onboarding Bot (COB) and presented a series of Media Elements Adaptive Cards that outlines the onboarding flow. Bob has joined the team. The onboarding videos are rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.
+**Video**: Contoso has an onboarding Bot that is deployed on their tenant. Every new member on the tenant is greeted by the Contoso Onboarding Bot (COB) and presented a series of Media Elements Adaptive Cards that outlines the onboarding flow. Bob has joined the team. The onboarding videos are rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.
 
-**Audio** Contoso Medical has a scrum Bot that is deployed on their tenant. The Bot automatically takes the audio recording of the daily scrum meeting and sends it to the wider Medical Team channel. The audio recording is presented as an Adaptive Card, that allows everyone in the Team channel to pause, play, change volume, and seek through the audio file as needed.
+**Audio**: Contoso Medical has a scrum Bot that is deployed on their tenant. The Bot automatically takes the audio recording of the daily scrum meeting and sends it to the wider Medical Team channel. The audio recording is presented as an Adaptive Card, that allows everyone in the Team channel to pause, play, change volume, and seek through the audio file as needed.
 
 ## Phases
 
@@ -140,77 +140,42 @@ Once the user clicks the central “Play” button, the actual player is instant
 
 [TODO: Need to add link to Dev Design Doc when it is ready]
 
+``` json
 {
-
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-
   "type": "AdaptiveCard",
-
   "version": "1.5",
-
   "body": [
-
-      { 
-
-      // Video Media on ODSP 
-
-      "type": "Media", 
-
-      "poster": "https://adaptivecards.io/content/poster-video.png", 
-
-      "altText": "Adaptive Cards overview video", 
-
-      "sources": [{ 
-
-        "mimeType": "video/mp4", 
-
-        "url": "https://microsoft-my.sharepoint-df.com/personal/stkong_microsoft_com/_layouts/15/stream.aspx?id=%VideoRecording.mp4 " 
-
-      }] 
-
-      }, 
-
-      { 
-
-      // Video Media 
-
-      "type": "Media", 
-
-      "poster": "https://adaptivecards.io/content/poster-video.png", 
-
-      "altText": "Adaptive Cards overview video", 
-
-      "sources": [{ 
-
-        "mimeType": "video/mp4", 
-
-        "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4" 
-
-      }] 
-
-      }, 
-
-      { 
-
-      // Audio Media 
-
-      "type": "Media", 
-
-      "poster": "https://adaptivecards.io/content/poster-audio.jpg", 
-
-      "altText": "Adaptive Cards overview audio", 
-
-      "sources": [{ 
-
-        "mimeType": "audio/mpeg", 
-
-        "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp3" 
-
-      }] 
-
-    } 
-
+      {
+      // Video Media on ODSP
+      "type": "Media",
+      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "altText": "Adaptive Cards overview video",
+      "sources": [{
+        "mimeType": "video/mp4",
+        "url": "https://microsoft-my.sharepoint-df.com/personal/stkong_microsoft_com/_layouts/15/stream.aspx?id=%VideoRecording.mp4 "
+      }]
+      },
+      {
+      // Video Media
+      "type": "Media",
+      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "altText": "Adaptive Cards overview video",
+      "sources": [{
+        "mimeType": "video/mp4",
+        "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4"
+      }]
+      },
+      {
+      // Audio Media
+      "type": "Media",
+      "poster": "https://adaptivecards.io/content/poster-audio.jpg",
+      "altText": "Adaptive Cards overview audio",
+      "sources": [{
+        "mimeType": "audio/mpeg",
+        "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp3"
+      }]
+    }
   ]
-
 }
-
+```
