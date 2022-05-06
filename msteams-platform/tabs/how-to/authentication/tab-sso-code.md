@@ -187,11 +187,15 @@ Teams can cache this information associated with the user's identity; such as th
 > [!NOTE]
 > If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
 
-## Code sample
+## Code samples
 
 |**Sample name**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
 
 ## Next step
 

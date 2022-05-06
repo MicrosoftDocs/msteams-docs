@@ -103,6 +103,10 @@ To enable SSO for a tab app:
 2. **Configure code**: Update the code to handle access token, calling it when a user accesses your app and validating it when received.
 3. **Update Teams app manifest**: Update your Teams Client manifest with the app ID generated on Azure AD and the app ID URI to ensure secure connection between Azure AD and your app.
 
+## Third-party cookies on iOS
+
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps will not be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
+
 ## Best practices
 
 Don’t cache or store the access token in your app's client-side code. Always call `getAuthToken()` when you need an access token. Teams Client caches the access token (or request a new one if it expires). This makes sure that there's no accidental leak of your token from your web app.
