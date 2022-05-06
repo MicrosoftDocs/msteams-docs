@@ -17,15 +17,15 @@ Today, users are forced to exit Teams to view media. This feature supports consu
 
 ### User sent scenarios
 
-Video: User Alice has found a relevant informational video on her company OneDrive Sharepoint instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
+**Video** User Alice has found a relevant informational video on her company OneDrive Sharepoint instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
 
-Audio: Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
+**Audio** Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
 
 ### Bot sent scenarios
 
-Video: Contoso has an onboarding Bot that is deployed on their tenant. Every new member on the tenant is greeted by the Contoso Onboarding Bot (COB) and presented a series of Media Elements Adaptive Cards that outlines the onboarding flow. Bob has joined the team. The onboarding videos are rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.
+**Video** Contoso has an onboarding Bot that is deployed on their tenant. Every new member on the tenant is greeted by the Contoso Onboarding Bot (COB) and presented a series of Media Elements Adaptive Cards that outlines the onboarding flow. Bob has joined the team. The onboarding videos are rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.
 
-Audio: Contoso Medical has a scrum Bot that is deployed on their tenant. The Bot automatically takes the audio recording of the daily scrum meeting and sends it to the wider Medical Team channel. The audio recording is presented as an Adaptive Card, that allows everyone in the Team channel to pause, play, change volume, and seek through the audio file as needed.
+**Audio** Contoso Medical has a scrum Bot that is deployed on their tenant. The Bot automatically takes the audio recording of the daily scrum meeting and sends it to the wider Medical Team channel. The audio recording is presented as an Adaptive Card, that allows everyone in the Team channel to pause, play, change volume, and seek through the audio file as needed.
 
 ## Phases
 
@@ -61,19 +61,35 @@ Following are the dynamic user-uploaded scenarios where users submit video or au
 
 1. Teams is not responsible for content moderation.
 
+**Media Elements-Video (Channel)**:
+
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/design-video-channel.png" alt-text="Video channel design":::
+
+**Media Elements-Video (Chat)**:
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-chat.png" alt-text="Video chat design":::
 
+**Media Elements-Video (Narrow card in meeting)**:
+
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-narrow-card-in-meeting.png" alt-text="Video narrow card in meeting design":::
+
+**Media Elements-Video (Mobile card in channel)**:
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-mobile-card-in-channel.png" alt-text="Video Mobile card in channel":::
 
+**Media Elements-Audio (Channel)**:
+
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-channel.png" alt-text="Audio channel":::
+
+**Media Elements-Audio (Chat)**:
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-chat.png" alt-text="Audio chat":::
 
+**Media Elements-Audio (Mobile)**:
+
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-mobile.png" alt-text="Audio mobile":::
+
+**Unsupported media error state**:
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/unsupported-media-error-state.png" alt-text="Unsupported Media error state":::
 
@@ -85,7 +101,8 @@ YouTube, Vimeo and Dailymotion playback are implemented in the latest version of
 
 ### Example
 
-{ 
+``` json
+{
     "type": "AdaptiveCard",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.6",
@@ -107,6 +124,7 @@ YouTube, Vimeo and Dailymotion playback are implemented in the latest version of
         }
     ]
 }
+```
 
 The above card renders as follows:
 
