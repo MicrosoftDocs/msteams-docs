@@ -63,8 +63,6 @@ You'll need to acquire access token for Microsoft Graph. You can do so by using 
 
 The current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes.
 
-\ Add content to enable user to transition to MS Graph page. Verify cross-reference to MS Graph pages - existing pages that have information regarding acquiring token. \
-
 After you've configured Graph permissions in Azure AD:
 
 - Configure your client-side code to fetch access token using Microsoft Authentication Library (MSAL).
@@ -143,7 +141,7 @@ If you need to access Microsoft Graph data, your server-side code should do the 
 - If you need to cache the new access token for multiple calls, we recommend using token cache serialization in MSAL.NET.
 
 > [!IMPORTANT]
-> As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/platform/tabs/how-to/authentication/auth-flow-tab).
+> As a best security practice, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/tabs/how-to/authentication/auth-flow-tab).
 
 ## See also
 
