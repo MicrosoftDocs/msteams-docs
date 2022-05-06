@@ -28,8 +28,8 @@ The following images displays the experience of link unfurling on mobile and des
   Link unfurling on mobile using the following steps:
 
    1. User has pasted an URL in the compose message area in mobile
-   1. You can see the link unfurling in the compose message area before he shares in the chat
-
+   1. You can see the link unfurling in the compose message area 
+   
    :::image type="content" source="~/assets/images/Teams-link-unfurling/mobile-link-unfurl.png" alt-text="mobile microsoft" border="true":::
 
 # [Desktop](#tab/Sampledesktop)
@@ -37,7 +37,7 @@ The following images displays the experience of link unfurling on mobile and des
   Link unfurling on desktop using the following steps:
 
    1. User has pasted an URL in the compose message area in desktop
-   1. You can see the link unfurling in the compose message area before he shares in the chat
+   1. You can see the link unfurling in the compose message area 
   
    :::image type="content" source="~/assets/images/Teams-link-unfurling/desktop-link-unfurl.png" alt-text="unfurl desktop" border="true":::
  
