@@ -59,12 +59,12 @@ The Azure Bot Service, along with the Bot Framework, provides tools to build, te
 > * Bots in GCCH only support  upto manifest version v1.10.
 > * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri. 
 
-For GCCH environment, you would need to register a bot using [Azure Government portal](https://portal.azure.us).
+For GCCH environment, you need to register a bot using [Azure Government portal](https://portal.azure.us).
 
-:::image type="content" source="../assets/videos/abs-bot.gif" alt-text="Azure Government portal" lightbox="../assets/videos/abs-bot.gif" border="true":::
+:::image type="content" source="../../assets/videos/abs-bot.gif" alt-text="Azure Government portal":::
 <br>
 <br>
-The following changes should be made within the bot for GCC-High environment:
+The following changes are needed within the bot for GCC-High environment:
 <br>
 <br>
 <details>
@@ -92,7 +92,7 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
 
     * Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
     
-    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
+    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) need to be encoded as `&amp;`.
 
     ```json
     {
