@@ -101,7 +101,7 @@ items:
    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -179,7 +179,7 @@ items:
         For this tutorial, you don't need to use these options.
 
         > [!NOTE]
-        > If you choose to change the location for workspace, it is reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
+        > If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
 
     1. Select **Run and Debug**.
 
