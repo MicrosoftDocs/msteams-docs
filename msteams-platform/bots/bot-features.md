@@ -66,7 +66,7 @@ For GCCH environment, you would need to register a bot using [Azure Government p
 <br>
 The following changes should be made within the bot for GCC-High environment:
 <br>
-
+<br>
 <details>
 <summary><b>Configuration changes</b></summary>
 
@@ -82,7 +82,7 @@ As the bot registration occurs in Azure Government portal, ensure to update the 
 | BotOpenIdMetadata | `https://login.botframework.azure.us/v1/.well-known/openidconfiguration` |
 
 </details>
-
+<br>
 <details>
 <summary><b>Update to appsettings.json & startup.cs</b></summary>
 

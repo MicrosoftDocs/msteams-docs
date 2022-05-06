@@ -66,6 +66,12 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
 
+Endpoints for government cloud are:
+
+    * GCC: [https://teams.microsoft.com](https://teams.microsoft.com)  
+    * GCCH: [https://gov.teams.microsoft.us/](https://gov.teams.microsoft.us/) 
+    * DOD: [https://dod.teams.microsoft.us/](https://dod.teams.microsoft.us/) 
+
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
 | Features   | GCC | GCC-High | DOD |
