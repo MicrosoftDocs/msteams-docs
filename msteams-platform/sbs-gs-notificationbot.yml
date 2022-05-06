@@ -14,13 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A notification bot is an app that proactively sends messages in Teams channel or group chat or personal chat in text or different cards.
+    A notification bot is an app that proactively sends messages in Teams channel or group chat or personal chat in text or Adaptive cards.
     
     In this tutorial, you'll learn:
 
     - How to create a new notification bot with Teams Toolkit
-    - How to understand notification bot project
-    - How to send more notification
+    - About the directory structure of your app
+    - How to send multiple notifications
 
     This step-by-step guide helps you to send notification to Teams. You'll see the following output:
 
@@ -159,7 +159,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language." border="true":::  
 
-    1. Enter a suitable name for your app, such as `mynotificationbot`. Ensure that you use only alphanumeric characters. Select **Enter**.
+    1. Enter a suitable name for your app, such as `mynotificationbot`. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name." border="true":::
 
@@ -181,9 +181,9 @@ items:
         > [!NOTE]
         > If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
     
-    1. Select **Run and Debug**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar..
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select **F5**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true":::
 
@@ -191,15 +191,19 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output"border="true"::: 
 
-    1. Select the drop-down to add the app in team or chat or meeting.
+    1. Select any of the following in the drop-down list:
+    
+         * **Add to a team**
+         * **Add to a chat** 
+         * **Add to a meeting**
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output1.png" alt-text="My Notification Output1"border="true":::
 
-    **Run PowerShell to make a trigger to Teams**
+    **Run PowerShell to trigger to Teams**
 
     1. Open **Windows PowerShell**.
 
-    1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification`command.
+    1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/powershell-trigger.png" alt-text="Powershell Trigger"border="true":::   
 
@@ -231,7 +235,7 @@ items:
 
     ---
 
-    ## Take a tour of the Notification bot app source code
+    ## Take a tour of the source code
 
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
@@ -253,13 +257,11 @@ items:
 
     | File or Folder name | Contents |
     | --- | --- |
-    | `src/adaptiveCards/` | Adaptive card templates |
+    | `src/adaptiveCards/` | Templates for Adaptive card  |
     | `src/internal/` | Generated initialize code for notification functionality |
     | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
     | `.gitignore` | The git ignore file to exclude local files from bot project |
     | `package.json` | The NPM package file for bot project |
-
-    When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
 - title: Send notification to Teams channel
   durationInMinutes: 1
@@ -269,14 +271,13 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path" border="true":::
 
-       Following page opens:
+       The following page opens:
 
          :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" border="true":::
 
-    1. Use the following code in **HTTP trigger to send notification**.
+    1. Use the following code after in `for (const target of await bot.notification.installations()) { `.
 
          ```bash
-         for (const target of await bot.notification.installations()) {
          if (target.type === "Channel") {
          const members = await target.members();
          await target.sendMessage("This is a message to channel: " + members.length + " members.");
@@ -287,37 +288,39 @@ items:
          /* 
          ```  
 
-       Code page looks like following image:  
-
           :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" border="true":::
 
-    1. Select **Run and Debug**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar..
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select **F5**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging" border="true":::
 
-        You'll get the app installation notification in Teams.
+        You'll get the following output in Teams.
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation" border="true":::
 
-    1. Select the drop-down to add the app in team or chat or meeting.
+    1. Select any of the following in the drop-down list:
+    
+         * **Add to a team**
+         * **Add to a chat** 
+         * **Add to a meeting**
 
     1. Select **Add**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation1.png" alt-text="My Notification Output1" border="true":::
 
-    1. In **Search box**, add any channel and select **Set up a Bot**.
+    1. In **Search box**, add any **channel** and select **Set up a bot**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/setup-bot.png" alt-text="Setup Bot" border="true":::
 
-       Following screen will appear:
+       The following screen appears:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification" border="true":::
 
     1. Open **Windows PowerShell**.
 
-    1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification`command.
+    1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/powershell-trigger.png" alt-text="Powershell Trigger"border="true":::   
 
