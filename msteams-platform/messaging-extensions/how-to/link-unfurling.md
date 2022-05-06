@@ -35,10 +35,12 @@ The following images displays the experience of link unfurling on mobile and des
 
 # [Desktop](#tab/Sampledesktop)
 
-  Link unfurling on desktop using the following steps:
+Link unfurling on desktop allows the user can paste the URL and get the link Unfurl using the following steps:
 
    1. User has pasted an URL in the compose message area in desktop
    1. You can see the link unfurling in the compose message area before he shares in the chat
+  
+   :::image type="content" source="~/assets/images/Teams-link-unfurling/desktop-link-unfurl.png" alt-text="unfurl desktop" border="true":::
  
 ---
 
