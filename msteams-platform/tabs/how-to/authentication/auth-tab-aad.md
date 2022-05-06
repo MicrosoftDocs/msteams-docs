@@ -32,7 +32,7 @@ Identity providers that support OAuth 2.0 don't authenticate requests from unkno
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
-Replace `<hostname>` with your actual host, which may be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information if you haven't completed or hosted your app (or the sample app that's mentioned above), but you can always return to this page when that information is known.
+Replace `<hostname>` with your actual host. This host can be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine, such as `abcd1234.ngrok.io`. If you don't have this information, ensure that you've completed or hosted your app (or the sample app). Resume this process when you have this information.
 
 ## Other authentication providers
 
