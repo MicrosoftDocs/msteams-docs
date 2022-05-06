@@ -10,13 +10,12 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URL is pasted into the compose message area, and you can respond with an Adaptive card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.</br> Now link unfurling is supported for both on mobile and desktop.
+In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the full URL and you can respond to it with a card. User can unfurl the link using message extension with additional information to get an enhanced experience. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.</br> Now link unfurling is supported for both on mobile and desktop.
 
 ## Advantages of link unfurling 
 
-* Provides preview of the hyperlink
-* Responds to the hyperlink with adaptive cards and provides the additional information or action
-* You can get the specific URLs unfurling in the compose message box
+* Link unfurling Provides preview of the hyperlink
+* You can get the URLs unfurl in the compose message box
 
 >[!NOTE]
 >The link unfurling result is cached for 30 minutes.</br>
@@ -26,7 +25,7 @@ The following images displays the experience of link unfurling on mobile and des
 
 # [Mobile](#tab/Samplemobileapp)
 
-  Link unfurling on desktop using the following steps:
+  Link unfurling on mobile using the following steps:
 
    1. User has pasted an URL in the compose message area in mobile
    1. You can see the link unfurling in the compose message area before he shares in the chat
@@ -35,7 +34,7 @@ The following images displays the experience of link unfurling on mobile and des
 
 # [Desktop](#tab/Sampledesktop)
 
-Link unfurling on desktop allows the user can paste the URL and get the link Unfurl using the following steps:
+  Link unfurling on desktop using the following steps:
 
    1. User has pasted an URL in the compose message area in desktop
    1. You can see the link unfurling in the compose message area before he shares in the chat
