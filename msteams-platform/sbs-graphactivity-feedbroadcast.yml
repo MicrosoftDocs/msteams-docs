@@ -326,7 +326,6 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="App is ready" border="true":::
 
-
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |      
@@ -357,7 +356,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png" alt-text="Add app" border="true":::
    
-          The app is visible in the meeting SidePanel. 
+          The app is visible in the meeting SidePanel.
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
