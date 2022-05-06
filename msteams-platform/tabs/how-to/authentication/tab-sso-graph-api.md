@@ -39,7 +39,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
     The options for Graph permissions display.
 
-5. Select **Delegated permissions** to view the list of possible permission that you can select.
+5. Select **Delegated permissions** to view the list of possible permissions that you can select.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions." border="true":::
 
@@ -61,7 +61,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD OBO flow.
 
-The current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
+The current implementation for SSO grants consent for only user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
 After you've configured Graph permissions in Azure AD:
 
