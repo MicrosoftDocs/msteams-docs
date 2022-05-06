@@ -68,9 +68,9 @@ Government Community Cloud (GCC) is a government focused copy of the commercial 
 
 Endpoints for government cloud are:
 
-    * GCC: [https://teams.microsoft.com](https://teams.microsoft.com)  
-    * GCCH: [https://gov.teams.microsoft.us/](https://gov.teams.microsoft.us/) 
-    * DOD: [https://dod.teams.microsoft.us/](https://dod.teams.microsoft.us/) 
+* GCC: [https://teams.microsoft.com](https://teams.microsoft.com)  
+* GCCH: [https://gov.teams.microsoft.us/](https://gov.teams.microsoft.us/) 
+* DOD: [https://dod.teams.microsoft.us/](https://dod.teams.microsoft.us/) 
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
