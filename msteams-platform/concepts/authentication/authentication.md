@@ -33,7 +33,7 @@ For more information on using OAuthPrompt, see:
 * [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on Teams web, desktop app, and mobile apps.
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md) describes how to add OAuth authentication to the Teams bot.
 
-## Implement authentication in Teams app
+## Add authentication in Teams app
 
 You can implement authentication in your app using one of the following methods:
 
@@ -49,12 +49,6 @@ provides Bot authentication v3 SDK sample.
 |---------------|------------|------------|-------------|---------------|
 | Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
-
-## Configure the identity provider
-
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walk throughs primarily deal with using Azure AD as the identity provider. The concepts however, apply regardless of the identity provider.
-
-For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
 ## Third-party cookies on iOS
 

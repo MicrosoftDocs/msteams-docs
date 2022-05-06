@@ -353,12 +353,8 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
-  - name: Configure identity providers
-    href: concepts/authentication/configure-identity-provider.md
   - name: Tabs
     items:
-    - name: Authentication flow in tabs
-      href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Enable SSO for tab app
       items:
       - name: Overview
@@ -373,12 +369,16 @@
         href: tabs/how-to/authentication/tab-sso-graph-api.md
       - name: Troubleshooting
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-    - name: Use Azure AD authentication
-      href: tabs/how-to/authentication/auth-tab-aad.md
+    - name: Add Azure AD authentication
+      items:
+      - name: Authentication flow in tabs
+        href: tabs/how-to/authentication/auth-flow-tab.md
+      - name: Use Azure AD authentication
+        href: tabs/how-to/authentication/auth-tab-aad.md
+      - name: Use external OAuth providers
+        href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: Use silent authentication
-      href: tabs/how-to/authentication/auth-silent-aad.md
-    - name: Use external OAuth providers
-      href: tabs/how-to/authentication/auth-oauth-provider.md
+      href: tabs/how-to/authentication/auth-silent-aad.md    
   - name: Bots
     items:
     - name: Authentication flow in bots
