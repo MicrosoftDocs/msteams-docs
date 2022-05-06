@@ -61,7 +61,7 @@ The Azure Bot Service, along with the Bot Framework, provides tools to build, te
 
 For GCCH environment, you need to register a bot using [Azure Government portal](https://portal.azure.us).
 
-:::image type="content" source="../../assets/videos/abs-bot.gif" alt-text="Azure Government portal":::
+:::image type="content" source="../assets/videos/abs-bot.gif" alt-text="Azure Government portal":::
 <br>
 <br>
 The following changes are needed within the bot for GCC-High environment:
