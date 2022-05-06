@@ -130,7 +130,7 @@ items:
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
-- title: Create project workspace for your tab app
+- title: Create command response bot
   durationInMinutes: 1
   content: |
     # [Visual Studio Code](#tab/vsc)
@@ -183,7 +183,7 @@ items:
 
     1. Select **Run and Debug**.
 
-    1. Select **Debug(Edge)** or Debug(Chrome)** from the drop-down.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
@@ -197,9 +197,9 @@ items:
 
        You'll get the following automatic helloWorld command in the app:
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app-drop-down.png" alt-text="Add an App drop-down" border="true":::  
+         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App drop-down" border="true":::  
 
-    1. Select the command and select **Enter**
+    1. Select the command and select **Enter**.
 
        You'll receive the following command response in adaptive card:
 
