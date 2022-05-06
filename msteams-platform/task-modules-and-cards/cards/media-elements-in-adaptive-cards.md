@@ -61,21 +61,21 @@ Following are the dynamic user-uploaded scenarios where users submit video or au
 
 1. Teams is not responsible for content moderation.
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/design-video-channel.png" alt-text="Video channel design":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/design-video-channel.png" alt-text="Video channel design":::
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/video-chat.png" alt-text="Video chat design":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-chat.png" alt-text="Video chat design":::
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/video-narrow-card-in-meeting.png" alt-text="Video narrow card in meeting design":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-narrow-card-in-meeting.png" alt-text="Video narrow card in meeting design":::
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/video-mobile-card-in-channel.png" alt-text="Video Mobile card in channel":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-mobile-card-in-channel.png" alt-text="Video Mobile card in channel":::
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/audio-channel.png" alt-text="Audio channel":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-channel.png" alt-text="Audio channel":::
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/audio-chat.png" alt-text="Audio chat":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-chat.png" alt-text="Audio chat":::
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/audio-mobile.png" alt-text="Audio mobile":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-mobile.png" alt-text="Audio mobile":::
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/unsupported-media-error-state.png" alt-text="Unsupported Media error state":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/unsupported-media-error-state.png" alt-text="Unsupported Media error state":::
 
 ## Inline YouTube playback
 
@@ -110,13 +110,13 @@ YouTube, Vimeo and Dailymotion playback is implemented in the latest version of 
 
 The above card renders as follows:
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo.png" alt-text="Inline youtube video player":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo.png" alt-text="Inline youtube video player":::
 
 Initially, as depicted above, only the poster of the video is displayed. For YouTube, the poster (or thumbnail) is automatically pulled from YouTube, but the card author can technically provide their own poster by explicitly specifying the Media.poster property.
 
 Once the user clicks the central “Play” button, the actual player is instantiated, and video playback starts:
 
-:::image type="content" source="./assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo-telegraph-road.png" alt-text="Inline youtube video player demo":::
+:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo-telegraph-road.png" alt-text="Inline youtube video player demo":::
 
 ## Dev design
 
