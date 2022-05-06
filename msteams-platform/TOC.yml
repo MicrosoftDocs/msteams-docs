@@ -297,18 +297,10 @@
     href: apps-in-teams-meetings/API-references.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
-- name: Teams live share - Cowatch
+- name: Cowatch Teams live share
   items:
   - name: Overview
-    href: 
-  - name: Unified meetings apps
-    href: 
-  - name: Enable and configure apps for meetings
-    href: 
-  - name: Meeting apps API references
-    href:
-  - name: Custom Together Mode scenes in Teams
-    href:  
+    href: apps-in-teams-meetings/cowatch-overview.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
