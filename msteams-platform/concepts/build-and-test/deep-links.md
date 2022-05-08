@@ -218,10 +218,11 @@ Capability supported for deeplinks in pre and post in-meeting tabs:
 
 | Meeting type | Compatibility (Mobile or Desktop) |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../../assets/icons/desk.svg" border="false"::: |
+| Scheduled private meeting |:::image type="icon" source="../../assets/icons/mob3.svg" border="false"::: :::image type="icon" source="../../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../../assets/icons/desk.svg" border="false"::: |
+| Meet now | :::image type="icon" source="../../assets/icons/desk.svg" border="false"::: |
   
 ## Deep linking for SharePoint Framework tabs
 

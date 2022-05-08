@@ -41,19 +41,21 @@ API Client SDK for `get user` :
 
 | Meeting type | Compatibility (Mobile and Desktop) |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Meet now | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 API Client SDK for `get context` :
 
 | Meeting type | Compatibility (Mobile and Desktop) |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::|
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Meet now | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ## Get participant API
 
@@ -252,10 +254,11 @@ API Client SDK for `get meeting details` :
 
 | Meeting type | Compatibility (Mobile and Desktop) |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting |:::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Meet now | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Prerequisite
 
@@ -465,10 +468,11 @@ API Client SDK for `share app to stage`:
 
 | Meeting type | Compatibility (Mobile and Desktop) |
 |---|:---:|
-| Scheduled private meeting |:::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Scheduled private meeting |:::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | One-on-one calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
 | Group Calls | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false":::  |
+| Meet now | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Prerequisite
 
@@ -492,7 +496,7 @@ API Client SDK for `Get app content sharing stage`:
 
 | Meeting type | Compatibility (Mobile and Desktop) |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
@@ -579,10 +583,11 @@ API Client SDK for `Get app sharing content capabilities` :
 
 | Meeting type | Compatibility (Mobile or Desktop) |
 |---|:---:|
-| Scheduled private meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Scheduled private meeting | :::image type="icon" source="../assets/icons/mob3.svg" border="false":::  :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Meet now | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Query parameter
 
