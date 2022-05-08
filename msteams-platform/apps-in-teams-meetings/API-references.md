@@ -500,6 +500,7 @@ API Client SDK for `Get app content sharing stage`:
 | Scheduled channel meeting | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | One-on-one calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 | Group Calls | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
+| Meet now | :::image type="icon" source="../assets/icons/desk.svg" border="false"::: |
 
 ### Query parameter
 
