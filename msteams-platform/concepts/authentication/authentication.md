@@ -17,12 +17,14 @@ Choose to add authentication for your app in one of the two ways:
 - **Enable authentication using third-party OAuth provider**
   You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. This is a non-SSO authentication method. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them access to the app. Azure AD is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
 
+These authentication methods are
+
 You can implement authentication in your app using one of the following methods:
 
-| Authentication method | Tab | Bot | Messaging extension |
+| Authentication method | Tab | Bot | Message extension |
 | --- | --- | --- | --- |
-|**SSO in Teams app** | [Enable single sign-on in a tab app](../../tabs/how-to/authentication/tab-sso-overview.md) | [Single sign-on (SSO) support for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) | [Single sign-on support for message extensions](../../messaging-extensions/how-to/enable-SSO-auth-me.md) |
-| **Third party OAuth provider** | [Authenticate a user in a Microsoft Teams tab](../../tabs/how-to/authentication/auth-tab-aad.md) | [Add authentication to your Teams bot](../../bots/how-to/authentication/add-authentication.md) | [Add authentication to your message extension](../../messaging-extensions/how-to/add-authentication.md) |
+|**Single sign-on** | [SSO in a tab](../../tabs/how-to/authentication/tab-sso-overview.md) | [SSO in a bot](../../bots/how-to/authentication/auth-aad-sso-bots.md) | [SSO in a message extension](../../messaging-extensions/how-to/enable-SSO-auth-me.md) |
+| **Third party OAuth provider authentication** | [Authentication in a tab](../../tabs/how-to/authentication/auth-tab-aad.md) | [Authentication in a bot](../../bots/how-to/authentication/add-authentication.md) | [Authentication in a message extension](../../messaging-extensions/how-to/add-authentication.md) |
 
 > [!NOTE]
 > Please note that the page Silent authentication is moved to Resources section. For more information, please see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).

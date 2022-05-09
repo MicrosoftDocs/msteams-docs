@@ -34,13 +34,8 @@ Identity providers that support OAuth 2.0 don't authenticate requests from unkno
 
 Replace `<hostname>` with your actual host. This host can be a dedicated hosting site such as Azure, Glitch, or a ngrok tunnel to localhost on your development machine, such as `abcd1234.ngrok.io`. If you don't have this information, ensure that you've completed or hosted your app (or the sample app). Resume this process when you have this information.
 
-## Other authentication providers
-
-* **LinkedIn:** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin).
-
-* **Google:** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/).
-
-* **External OAuth providers from tabs:** For more information, see [Use external OAuth providers](auth-oauth-provider.md).
+> [!NOTE]
+> You can choose any third party OAuth provider, such as LinkedIn, Google, and others. The process to enable authentication for these providers is similar to using Azure AD as a third party OAuth provider. For more information on using any third party OAuth provider, please visit the website of the particular provider.
 
 ## Initiate authentication flow
 

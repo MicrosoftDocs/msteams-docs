@@ -369,7 +369,7 @@
         href: tabs/how-to/authentication/tab-sso-graph-api.md
       - name: Troubleshooting
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-    - name: Enable third party OAuth provider authentication
+    - name: Enable authentication using third party OAuth provider 
       items:
       - name: Authentication flow in tabs
         href: tabs/how-to/authentication/auth-flow-tab.md
