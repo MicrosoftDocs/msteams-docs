@@ -18,10 +18,10 @@ With the latest release (v.2.0), the existing Teams client SDK (`@microsoft/team
 
 Here's the current versioning guidance for various app scenarios:
 
-|                  |[TeamsJS](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
+|                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
 |------------------|---------|--------|---|
 |**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across M365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new M365 app](m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](#backwards-compatibility) and [Update to TeamsJS v.2.0](#update-to-teamsjs-v-2-0) |
+|**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](#backwards-compatibility) and [Update to TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
 |**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
 
 **Best practice is to use the latest TeamsJS (v.2.0 or later) whenever possible, in order to benefit from the latest improvements and new feature support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.*
@@ -98,7 +98,7 @@ For any other external deeplinking scenarios, you can use `app.openLink`, which 
 
 #### Dialogs
 
-Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
+Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../../task-modules-and-cards/what-are-task-modules.md) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
 
 This new dialog capability is split into a main capability (`dialog`) for supporting HTML-based dialogs and a sub-capability, `dialog.bot`, for bot-based dialog development.
 
@@ -127,7 +127,7 @@ An API translation layer (mapping v.1 SDK to v.2 SDK API calls) is provided to e
 
 Even if you intend your app to only run in Teams (and not Office and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.
 
-Once you are able, the next step is to [update existing application code](#update-sdk-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
+Once you are able, the next step is to [update existing application code](#2-update-sdk-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
 #### Teams apps running across M365
 
@@ -135,9 +135,9 @@ Enabling an existing Teams app to run in Outlook and Office requires all of the 
 
 1. Dependency on TeamsJS version 2.0 ( `@microsoft/teams-js@2.0`) or later,
 
-2. [Modifying existing application code](#update-sdk-references) according to the required changes described in this article, and
+2. [Modifying existing application code](#2-update-sdk-references) according to the required changes described in this article, and
 
-3. [Updating your app manifest](#update-the-manifest-optional) to version 1.13 or later.
+3. [Updating your app manifest](#3-update-the-manifest-optional) to version 1.13 or later.
 
 For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
@@ -146,7 +146,7 @@ For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/over
 Teams APIs that previously took a callback parameter have been updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
 
 ```js
-app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, chat.openConversation, core.executeDeepLink, files.addCloudStorageFolder, files.deleteCloudStorageFolder, files.getCloudStorageFolderContents, files.getCloudStorageFolders, legacy.fulltrust.getConfigSetting, legacy.fulltrust.getUserJoinedTeams, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, media.captureImage, media.getMedia, media.selectMedia, media.viewImages, media.scanBarCode, meeting.getAppContentStageSharingState, meeting.getAppContentStageSharingCapabilities, meeting.getAuthenticationTokenForAnonymousUser, meeting.getIncomingClientAudioState, meeting.getLiveStreamState, meeting.getMeetingDetails, meeting.requestStartLiveStreaming, meeting.requestStopLiveStreaming, meeting.shareAppContentToStage, meeting.stopSharingAppContentToStage, meeting.toggleIncomingClientAudio, meetingRoom.getPairedMeetingRoomInfo, meetingRoom.sendCommandToPairedMeetingRoom, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.config.setConfig, pages.config.getConfig, pages.backStack.navigateBack, people.selectPeople, ChildAppWindow.postMessage, ParentAppWindow.postMessage
+app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, chat.openConversation, core.executeDeepLink, files.addCloudStorageFolder, files.deleteCloudStorageFolder, files.getCloudStorageFolderContents, files.getCloudStorageFolders, files.getFileDownloads, legacy.fullTrust.getConfigSetting, legacy.fullTrust.joinedTeams.getUserJoinedTeams, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, media.captureImage, media.getMedia, media.selectMedia, media.viewImages, media.scanBarCode, meeting.getAppContentStageSharingState, meeting.getAppContentStageSharingCapabilities, meeting.getAuthenticationTokenForAnonymousUser, meeting.getIncomingClientAudioState, meeting.getLiveStreamState, meeting.getMeetingDetails, meeting.requestStartLiveStreaming, meeting.requestStopLiveStreaming, meeting.shareAppContentToStage, meeting.stopSharingAppContentToStage, meeting.toggleIncomingClientAudio, meetingRoom.getPairedMeetingRoomInfo, meetingRoom.sendCommandToPairedMeetingRoom, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.config.setConfig, pages.config.getConfig, pages.backStack.navigateBack, people.selectPeople
 ```
 
 You'll need to update the way your code calls any of these APIs to use Promises. For example, if your code is calling a Teams API like this:
@@ -218,7 +218,7 @@ async function example() {
 ---
 
 > [!TIP]
-> When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v2), the required updates are flagged for you with `TODO` comments in your client code.
+> When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200), the required updates are flagged for you with `TODO` comments in your client code.
 
 ### APIs organized into capabilities
 
@@ -262,15 +262,6 @@ The `app` namespace contains top-level APIs required for overall app usage, acro
 | `appInitialization.IFailedRequest` enum | `app.IFailedRequest` |
 | `appInitialization.IExpectedFailureRequest` enum | `app.IExpectedFailureRequest` |
 
-##### *core* namespace
-
-The `core` namespace includes functionality for deep links.
-
-| Original namespace `publicAPIs` | New namespace `core` |
-| - | - |
-| `shareDeepLink` | `core.shareDeepLink` |
-| `executeDeepLink` | `core.executeDeepLink` |
-
 ##### *pages* namespace
 
 The `pages` namespace includes functionality for running and navigating webpages within various Microsoft 365 hosts, including Teams, Office, and Outlook. It also includes several sub-capabilities, implemented as sub-namespaces.
@@ -279,6 +270,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 | - | - |
 | `setFrameContext` | `pages.setCurrentFrame` (renamed) |
 | `initializeWithFrameContext` | `pages.initializeWithFrameContext` |
+| `registerFocusEnterHandler` | `pages.registerFocusEnterHandler`
 | `registerFullScreenHandler` | `pages.registerFullScreenHandler` |
 | `navigateCrossDomain` | `pages.navigateCrossDomain` |
 | `returnFocus` | `pages.returnFocus` |
@@ -342,9 +334,11 @@ The TeamsJS *tasks* namespace has been renamed to *dialog*, and the following AP
 | - | - |
 | `tasks.startTask` | `dialog.open` (renamed) |
 | `tasks.submitTasks` | `dialog.submit` (renamed) |
-| `tasks.updateTasks` | `dialog.resize` (renamed) |
+| `tasks.updateTasks` | `dialog.update.resize` (renamed) |
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
+
+Additionally, this capability has been split into a main capability (`dialog`) for supporting HTML-based dialogs, and a sub-capability for bot-based dialogs, `dialog.bot`.
 
 ##### *teamsCore* namespace
 
@@ -356,7 +350,6 @@ To generalize the TeamsJS SDK to run other Microsoft 365 hosts such as Office an
 | `print` | `teamsCore.print`
 | `registerOnLoadHandler` | `teamsCore.registerOnLoadHandler`
 | `registerBeforeUnloadHandler` | `teamsCore.registerBeforeUnloadHandler`
-| `registerFocusEnterHandler` | `teamsCore.registerFocusEnterHandler`
 
 #### Updates to the *Context* interface
 
@@ -414,7 +407,7 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 | `userDisplayName` | `app.Context.user.displayName` |
 | N/A | `app.Context.app.host.name`|
 
-## Updating to the Teams client SDK v.2.0
+## Updating to the Teams client SDK v.2.0.0
 
 The easiest way to update your Teams app to use TeamsJS v.2.0 is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
