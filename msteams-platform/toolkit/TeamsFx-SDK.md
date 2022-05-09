@@ -228,20 +228,33 @@ const profile = await graphClient.api("/me").get();
 <br>
 
 <details>
+<summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
+ 
+1. Select **Add Features** under **DEVELOPMENT**.
+1. Select **API Connection**.
+1. Enter API endpoint for local debugging.
+1. Select your project that requires to invoke this API.
+1. Select OK.
+1. Enter API alias to generate related appsetting names for your API.
+1. Select API authentication type.
+
+:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/createapiclient.png" alt-text="Create api client" border="false":::
+
+</details>
+
+<br>
+
+<details>
 <summary><b>Call Azure Function in tab app</b></summary>
 
 Use `axios` library to make HTTP request to Azure Function.
 
 ```ts
 const teamsfx = new TeamsFx();
-const token = teamsfx.getCredential().getToken(""); // Get SSO token for the use
-// Call API hosted in Azure Functions on behalf of user
-const apiEndpoint = teamsfx.getConfig("apiEndpoint");
-const response = await axios.default.get(apiEndpoint + "api/httptrigger1", {
-  headers: {
-    authorization: "Bearer " + token,
-  },
-});
+const credential = teamsfx.getCredential(); //Create an API Client that uses SSO token to authenticate requests
+const apiClient = CreateApiClient(teamsfx.getConfig("apiEndpoint")),
+new BearerTokenAuthProvider(async () =>  (await credential.getToken(""))!.token);// Call API hosted in Azure Functions on behalf of user
+const response = await apiClient.get("/api/" + functionName);
 ```
 
 </details>
