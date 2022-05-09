@@ -2,7 +2,7 @@
 title: Choosing a setup to test and debug your app
 description: Describes options for testing and debugging Microsoft Teams apps in local and cloud-hosted environment.
 keywords: teams run debug apps local cloud-hosted host
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 

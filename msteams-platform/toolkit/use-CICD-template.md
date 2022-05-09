@@ -3,7 +3,7 @@ title: Learn how to use CI/CD pipeline templates in GitHub, Azure DevOps, and Je
 author: MuyangAmigo
 description:  CI/CD templates
 ms.author: ruhe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
 ---

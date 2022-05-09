@@ -2,7 +2,7 @@
 title: Silent authentication
 description: Describes silent authentication, Single-sign-on, Azure AD for tabs
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams authentication SSO silent Azure AD tab
 ---
 # Silent authentication

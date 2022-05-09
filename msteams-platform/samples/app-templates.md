@@ -3,7 +3,7 @@ title: Microsoft Teams app templates
 description: Learn how to use app templates for Microsoft Teams platform with detailed instructions for deploying and installing an app.
 ms.topic: reference
 keywords: Microsoft Teams templates samples demo
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
 ---
