@@ -157,7 +157,7 @@ items:
     
     1. Select **Add a client application**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaclient.png" alt-text="Add client" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-client.png" alt-text="Add client" border="true":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
