@@ -23,7 +23,7 @@ ms.date: 11/29/2021
 The following limitations are while adding more capabilities in teamsFx:
 
 * You can add tabs up to 16 instances
-* For one instance, you can add bot and message extension
+* You can add bot and message extension in one instance
 
 ## Add capabilities
 
