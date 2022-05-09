@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Create your command bot using JavaScript
+title: Build command bot using JavaScript
 metadata:
-  title: Create command bot with JavaScript
+  title: Build command bot with JavaScript
   description: In this tutorial, you'll learn to create command bot with JavaScript.
   audience: Developer
   level: Beginner
@@ -19,9 +19,9 @@ items:
     In this tutorial, you'll learn:
 
     - How to create a command bot with Teams Toolkit
-    - How to understand command bot project
+    - About the directory structure of your app
     
-    This step-by-step guide helps you to create a command bot with Teams Toolkit. You'll see the following output:
+    This step-by-step guide helps you to build command bot with Teams Toolkit. You'll see the following output:
 
       :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output" border="true":::
 
@@ -38,7 +38,7 @@ items:
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest version.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use latest version. |
    | &nbsp; | [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
    ## Prepare development environment
@@ -159,7 +159,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-trigger.png" alt-text="Select Trigger" border="true":::
 
-    1. Enter a suitable name for your app, such as `commandbot` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
+    1. Enter a suitable name for your app, such as `commandbot` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Application name." border="true":::
 
@@ -183,7 +183,7 @@ items:
 
     1. Select **Run and Debug**.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select F5.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
@@ -191,11 +191,15 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App" border="true":::     
 
-    1. Select the drop-down to add the app in team or chat or meeting.
+    1. Select any of the following in drop-down list:
+    
+        * **Add to a team**
+        * **Add to a chat**
+        * **Add to a meeting.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app-drop-down.png" alt-text="Add an App drop-down" border="true":::
 
-       You'll get the following automatic helloWorld command in the app:
+       You'll get the following helloWorld command in the app:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App drop-down" border="true":::  
 
@@ -246,8 +250,6 @@ items:
     | `bot/src/index.js` | Server code to host the bot app and listen on /api/messages to process Teams activity with Bot Framework |
     | `bot/src/helloworldCommandHandler.js` | A hello world command handler to process a helloworld command and return an adaptive card as response |
     | `bot/src/adaptiveCards/*.json` | Adaptive card JSON file used as your command response |
-    
-    When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
 - title: Congratulations!
   durationInMinutes: 1
@@ -255,7 +257,7 @@ items:
 
     You've done it!
 
-    You've completed the tutorial to create a command response bot with JavaScript.
+    You've completed the tutorial to build command response bot with JavaScript.
 
     Did you come up with something like this?
 
