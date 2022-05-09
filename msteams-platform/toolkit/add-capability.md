@@ -10,8 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to your Teams apps
 
-During app development, you can create a new Teams app with Teams app capability. </br>
-The following table lists the Teams app capabilities:
+During app development, you can create a new Teams app with Teams app capability. The following table lists the Teams app capabilities:
 
 |**Capability**|**Description**|
 |--------|-------------|
