@@ -31,8 +31,6 @@ You can view here an example of user experience with SSO in a tab app:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-tab.gif" alt-text="SSO in tab app":::
 
-:::image-end:::
-
 ### Enhance user experience with SSO
 
 - Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user. It translates to app access for the user without having to leave Teams environment.
