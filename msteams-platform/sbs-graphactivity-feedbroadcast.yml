@@ -27,7 +27,7 @@ items:
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Output of feed broad cast" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready.png" alt-text="Output of feed broad cast" border="true":::
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Final output" border="true"::: 
 
@@ -366,11 +366,11 @@ items:
 
     1. The **BroadcastTab** displays **Message title** and **Message description**.
             
-    1. Enter the message title and description and select **Send message**. 
+    1. Enter the message title and description, and then select **Send message**. 
 
     1. The Message broadcasted successfully appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready.png" alt-text="Final output" border="true":::
 
     1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID.  
 
@@ -385,7 +385,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/outputready.png" alt-text="Final output" border="true"::: 
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready.png" alt-text="Final output" border="true"::: 
 
     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Final output" border="true"::: 
 
