@@ -37,6 +37,7 @@ microsoftTeams.sharing.shareWebContent({
           {
             type: 'URL',
             url: '<URL to be shared>',
+            message: 'Default message to be loaded in the compose box'
             preview: true
           }
         ]
