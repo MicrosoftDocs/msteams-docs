@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams allows you to automate simple and repetitive tasks right inside a conversation. You can build a Teams bot that can respond to simple commands sent in chats with adaptive cards. 
+    Microsoft Teams allows you to automate simple and repetitive tasks within a conversation. You can build a Teams bot that can respond to simple commands sent in chats with adaptive cards. 
 
     In this tutorial, you'll learn:
 
