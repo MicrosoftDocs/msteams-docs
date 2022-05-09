@@ -10,11 +10,13 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 <br>
 
 <details>
-<summary>What is a 'consent missing' error, and how can I fix them?</summary>
+<summary>What is a 'consent missing' error, and how can I fix it?</summary>
 <br>
-If AAD has no record that consent (to the Microsoft Graph resource) was granted to the Tab by the user (or tenant administrator), AAD sends an error message to your web service. Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
+When Azure AD receives a request for accessing a Microsoft Graph resource, it checks if the user (or tenant administrator) have given consent for this resource. If there's no record of consent from the user or administrator, Azure AD sends an error message to your web service.
 
-- If the Tab needs Microsoft Graph scopes that can only be consented to by an admin, your code should throw an error.
+Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
+
+- If the tab app needs Microsoft Graph scopes for which only an administrator can give consent, your code should throw an error.
 - If the only scopes that are needed can be consented to by the user, then your code should fall back to an alternate system of user authentication.
 
 </details>
@@ -49,7 +51,7 @@ For more information, please see [Graph explorer](https://developer.microsoft.co
 </details>
 <br>
 <details>
-<summary>How can I resolve the generic error I get when I run the app?</summary>
+<summary>How can I resolve the generic error I get when I run the tab app?</summary>
 <br>
 A generic error may show up when one or more of the app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
 

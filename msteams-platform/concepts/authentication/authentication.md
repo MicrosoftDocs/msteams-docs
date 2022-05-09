@@ -41,6 +41,9 @@ You can implement authentication in your app using one of the following methods:
 * Use Azure AD authentication
 * Use silent authentication
 
+> [!NOTE]
+> Please note that the page Silent authentication is moved to Resources section. For more information, please see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
+
 ## See also
 
 * [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)

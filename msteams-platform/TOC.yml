@@ -376,9 +376,7 @@
       - name: Use Azure AD authentication
         href: tabs/how-to/authentication/auth-tab-aad.md
       - name: Use external OAuth providers
-        href: tabs/how-to/authentication/auth-oauth-provider.md
-    - name: Use silent authentication
-      href: tabs/how-to/authentication/auth-silent-aad.md    
+        href: tabs/how-to/authentication/auth-oauth-provider.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
@@ -565,6 +563,8 @@
       href: concepts/build-and-test/apps-localization.md
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
+  - name: Use silent authentication
+    href: tabs/how-to/authentication/auth-silent-aad.md
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
   - name: Contribute to Teams documentation
