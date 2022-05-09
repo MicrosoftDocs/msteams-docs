@@ -230,15 +230,15 @@ const profile = await graphClient.api("/me").get();
 <details>
 <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
  
-1. Select **Add Features** under **DEVELOPMENT**.
-1. Select **API Connection**.
-1. Enter API endpoint for local debugging.
-1. Select your project that requires to invoke this API.
-1. Select OK.
-1. Enter API alias to generate related appsetting names for your API.
-1. Select API authentication type.
+1. Select **Add Features** under **DEVELOPMENT**.</br>
+1. Select **API Connection**.</br>
+1. Enter API endpoint for local debugging.</br>
+1. Select your project that requires to invoke this API.</br>
+1. Select OK.</br>
+1. Enter API name to generate related appsetting names for your API.</br>
+1. Select API authentication type.</br>
 
-:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/createapiclient.png" alt-text="Create api client" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/createapi-client.PNG" alt-text="Create api client" border="false":::
 
 </details>
 
