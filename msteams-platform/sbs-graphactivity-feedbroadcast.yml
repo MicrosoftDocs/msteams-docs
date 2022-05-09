@@ -233,7 +233,7 @@ items:
 
          1. Select **Web**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addaplatform.png" alt-text="Add platform" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-platform.png" alt-text="Add platform" border="true":::
 
          1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
            `https://ngrok.io/Auth/end`. </br>
@@ -250,7 +250,7 @@ items:
 
          1. Select **Save**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/adduri.png" alt-text="Redirect uri" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-uri.png" alt-text="Redirect uri" border="true":::
 
     **To create client secret**
 
@@ -258,7 +258,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecret.png" alt-text="Client secret" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret.png" alt-text="Client secret" border="true":::
     
        The **Add a client secret** window appears.  
 
@@ -270,7 +270,7 @@ items:
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientsecretcode.png" alt-text="Client secret code" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret-code.png" alt-text="Client secret code" border="true":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -294,7 +294,7 @@ items:
 
     1. Navigate to **manifest.json** in cloned repository.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestlocationpackage.png" alt-text="Manifest location" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Manifest location" border="true":::
 
     1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
 
@@ -302,7 +302,7 @@ items:
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name
          * Set `validDomains` to `[WebAppDomainName]`
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifestfile.png" alt-text="Manifest file" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-file.png" alt-text="Manifest file" border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -354,7 +354,7 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addanapp.png" alt-text="Add app" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-an-app.png" alt-text="Add app" border="true":::
    
           The app is visible in the meeting SidePanel.
 
