@@ -20,7 +20,7 @@ Here's the current versioning guidance for various app scenarios:
 
 |                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
 |------------------|---------|--------|---|
-|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across M365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new M365 app](m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
+|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across M365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new M365 app](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
 |**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](#backwards-compatibility) and [Update to TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
 |**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
 
@@ -115,7 +115,7 @@ There are two significant changes between TeamsJS v.1.12 and v.2.0 and later:
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
 > [!TIP]
-> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-the-teams-client-sdk-v.2.0) for an existing Teams app.
+> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-the-teams-client-sdk-v200) for an existing Teams app.
 
 ### Backwards compatibility
 

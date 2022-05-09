@@ -96,7 +96,7 @@ Ensure that you switch to the [Public Developer Preview](../resources/dev-previe
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="Public developer preview option in Teams":::
 
-## Install Visual Studio Code and Teams Toolkit Preview extension
+## Install Visual Studio Code and Teams Toolkit extension
 
 Optionally, you can use [Visual Studio Code](https://code.visualstudio.com/) to extend Teams apps into Office and Outlook.
 

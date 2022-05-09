@@ -48,7 +48,11 @@ To complete this tutorial, you'll need:
 
 If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID).
 
-If you'd like to use sample code to complete this tutorial, follow the setup steps in [Getting Started with Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code. Or, you can start with the same [Todo List Sample updated for TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) and proceed to [Preview your personal tab in other Microsoft 365 experiences](#preview-your-personal-tab-in-other-microsoft-365-experiences). The updated sample is  also available within Teams Toolkit extension: *Development* > *View samples* > **Todo List (Works in Teams, Outlook and Office)**.
+If you'd like to use sample code to complete this tutorial, follow the setup steps in [Getting Started with Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code. 
+
+### Quickstart
+
+Alternately, you can start with the same [Todo List Sample updated for TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) and proceed to [Preview your personal tab in other Microsoft 365 experiences](#preview-your-personal-tab-in-other-microsoft-365-experiences). The updated sample is  also available within Teams Toolkit extension: *Development* > *View samples* > **Todo List (Works in Teams, Outlook and Office)**.
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit":::
 
