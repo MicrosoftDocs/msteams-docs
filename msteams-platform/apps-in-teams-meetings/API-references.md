@@ -567,6 +567,9 @@ The following table provides the response codes:
 
 ## Get real-time Teams meeting events API
 
+> [!NOTE]
+> Real-time Teams meeting events are only supported for calendar scheduled meetings.
+
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 You must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.

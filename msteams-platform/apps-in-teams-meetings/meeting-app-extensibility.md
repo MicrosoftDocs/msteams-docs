@@ -71,6 +71,8 @@ With the in-meeting app experience, you can engage participants during the meeti
 
 For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
+For desktop, you can add apps during a meeting using **Add an app** :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: option from the in-meeting U-bar.
+
 To use tabs during a meeting:
 
 1. Go to Teams.

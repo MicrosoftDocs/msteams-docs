@@ -12,11 +12,17 @@ keywords: teams apps meetings user participant role api
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
-The users can access apps during meetings using the tab gallery from their calendar, such as:
+Teams supports access to apps during meeting for the following meeting types:
 
-* Pre-stage a Kanban board.
-* Launch an in-meeting actionable dialog.
-* Create a post-meeting survey.
+* Private scheduled meetings
+* 1:1 calls
+* Group calls
+* Meet now
+
+Users can add apps to the meeting using the + option from their Teams. Visit the [Teams store](https://go.microsoft.com/fwlink/p/?LinkID=2183121&clcid=0x4009&culture=en-in&country=IN) and explore apps designed specifically for meetings.
+
+> [!Note]
+> Meetings apps are currently not available for external users or people outside the organization.
 
 The following illustration gives you an idea of the meeting app extensibility features:
 
