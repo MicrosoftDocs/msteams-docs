@@ -19,7 +19,7 @@ To set up your development environment:
 > * [Enroll your Microsoft 365 tenant in *Office 365 Targeted Releases*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [Configure your account to access preview versions of Outlook and Office](#install-office-apps-in-your-test-environment)
 > * [Switch to the Developer Preview version of Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
 ## Prepare a Developer Tenant for testing
 
