@@ -2,7 +2,7 @@
 title: Request device permissions for your Microsoft Teams app
 keywords: teams apps capabilities permissions device native scan qr barcode image audio video 
 description: How to update your app manifest in order to request access to native features that usually require user consent, such as scan qr, barcode, image, audio, video capabilities
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: how-to
 ---
 
@@ -18,7 +18,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 ## Native device permissions
 
-You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions.
+You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 
 * Capture and view images.

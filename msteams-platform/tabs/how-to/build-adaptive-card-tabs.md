@@ -4,7 +4,7 @@ author: KirtiPereira
 description: Learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 keywords: adaptive card personal app authentication data flow
 ---
 
@@ -331,7 +331,7 @@ The following code provides examples of `task/submit` request and response:
 
 ## Authentication
 
-In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
+In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for message extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
 `tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign in page is shown to the user.
 

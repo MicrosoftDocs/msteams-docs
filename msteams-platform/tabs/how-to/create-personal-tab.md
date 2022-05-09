@@ -2,7 +2,7 @@
 title: Create a personal tab
 author: laujan
 description: A quickstart guide to creating a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-environment
 
 # Create a personal tab
 
-Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for personal tabs.
+Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
 Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
@@ -257,7 +257,7 @@ gulp ngrok-serve
 
    Now you have succesfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -410,7 +410,7 @@ ngrok http 3978 --host-header=localhost
 
    Now you have succesfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -579,7 +579,7 @@ ngrok http 3978 --host-header=localhost
   
    Now you have succesfully created and added your personal tab in Teams.
 
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) and add [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) for your personal tab.
+   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -606,75 +606,6 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 
 ```
-
-## Add `registerOnFocused` API for tabs or personal apps
-
-The `registerOnFocused` SDK API allows you to use a keyboard on Teams. You can return to a personal app and maintain focus on a tab or personal app with the help of Ctrl, Shift, and F6 keys. For example, you can move away from the personal app to search for something, and then return to the personal app or use Ctrl+F6 to go around the required places.
-
-The following code provides an example of handler definition on `registerFocusEnterHandler` SDK when the focus must be returned to the tab or personal app:
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines the type of events. The `focusEnterHandler` is invoked only by Ctrl+F6 and not by the tab key.
-The keys useful for move events within Teams are as follows:
-
-* Forward event: Ctrl+F6 keys
-* Backward event: Ctrl+Shift+F6 keys
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### Personal app
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="true":::
-
-#### Personal app: Forward event
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Example shows options for adding registerOnFocussed API forward move" border="true":::
-
-#### Personal app: Backward event
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Example shows options for adding registerOnFocussed API backward move" border="true":::
-
-### Tab
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Example shows options for adding registerOnFocussed API for tab" border="true":::
 
 ## Next step
 

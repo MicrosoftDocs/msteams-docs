@@ -24,6 +24,10 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
+      - text: Common reasons for app validation failure
+        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
+      - text: Upload your app in Microsoft Teams
+        url: ~/concepts/deploy-and-publish/apps-upload.md
       - text: Share to Teams from personal app or tab
         url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
       - text: Create Teams conversation bot
@@ -40,10 +44,6 @@ landingContent:
         url: ~/get-started/glossary.md
       - text: Overview
         url: ~/overview.md
-      - text: Plan your app
-        url: ~/concepts/app-fundamentals-overview.md  
-      - text: App manifest schema version 1.12
-        url: ~/resources/schema/manifest-schema.md
 
       
 
@@ -57,10 +57,10 @@ landingContent:
         url: /contribute/additional-resources
     - linkListType: tutorial
       links:
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
       - text: Build app with SPFx
         url: sbs-gs-spfx.yml
       - text: Build app with C# or .NET
@@ -129,13 +129,16 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Grant tab device permissions
+          url: ~/sbs-tab-device-permissions.yml
         - text: Create Teams conversation bot
           url: ~/sbs-teams-conversation-bot.yml
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
-        - text: Configure Tab device permissions
+
+        - text: Grant tab device permissions
           url: ~/sbs-tab-device-permissions.yml
-        - text: Configure SSO for tabs and messaging extensions
+        - text: Configure SSO for tabs and message extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
         - text: Build tabs with adaptive cards
           url: ~/sbs-tab-with-adaptive-cards.yml
@@ -156,9 +159,9 @@ landingContent:
           url: ~/sbs-meeting-content-bubble.yml
         - text: Invoke task modules from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
-        - text: Build search based messaging extension
+        - text: Build search based message extension
           url: ~/sbs-messagingextension-searchcommand.yml
-        - text: Build action based messaging extension
+        - text: Build action based message extension
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml

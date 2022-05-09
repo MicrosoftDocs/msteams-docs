@@ -1,7 +1,7 @@
 ---
 title: Use Task Modules in Microsoft Teams tabs
 description: Explains how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams client SDK. It includes code samples.
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: how-to
 keywords: task modules teams tabs client sdk
 ---
@@ -39,7 +39,7 @@ The next section gives an example of invoking a task module.
 
 The following image displays the task module:
 
-![Task Module - Custom Form](~/assets/images/task-module/task-module-custom-form.png)
+:::image type="content" source="../../assets/images/task-module/task-module-custom-form.png" alt-text="Task Module Custom Form":::
 
 The following code is adapted from [the task module sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
 
