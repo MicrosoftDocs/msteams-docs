@@ -27,11 +27,10 @@ TeamsFx helps to provision the cloud resources for your application hosting. You
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/addcloud-updated1234.png" alt-text="cloud" border="true":::
 
-1. From the pop-up, select the cloud resources you want to add to your Teams app project:
+. From the pop-up, select the cloud resources to include in your project:
 
      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
 
-    In that list ,select required resources.
     The selected resources are successfully added to your project.
 
 ## Add cloud resources using TeamsFx CLI
@@ -48,7 +47,7 @@ TeamsFx helps to provision the cloud resources for your application hosting. You
 
 ## Types of cloud resources
 
-The following scenarios for TeamsFx integrates with Azure services :
+The following scenarios for TeamsFx to integrates with Azure services :
 
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
 - [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
@@ -59,10 +58,10 @@ The following scenarios for TeamsFx integrates with Azure services :
 
 After adding the resource, the following changes are appears in your project:
 
-- New parameters may be added to azure.parameter.{env}.json to provide required information for provision.
-- New content is appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
+- New parameters added to azure.parameter.{env}.json to provide required information for provision.
+- New content is included to ARM template under `templates/azure`, except the files are in `templates/azure/teamsfx` folder for added the Azure resources.
 - The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
-- `.fx/projectSettings.json` is updated to track the resources present in your project.
+- `.fx/projectSettings.json` is updated to track the available resources in your project.
 
 After adding resources, the following additional changes are appears in your project:
 
@@ -73,7 +72,7 @@ After adding resources, the following additional changes are appears in your pro
 
 ## Limitation
 
-You can't add resources if you've created SPFx based tab project.
+If you created SPFx based tab project, then you can't add the resources.
 
 ## See also
 
