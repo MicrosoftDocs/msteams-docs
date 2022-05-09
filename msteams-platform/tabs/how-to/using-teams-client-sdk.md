@@ -18,11 +18,11 @@ With the latest release (v.2.0), the existing Teams client SDK (`@microsoft/team
 
 Here's the current versioning guidance for various app scenarios:
 
-|                  |[TeamsJS](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) version | [App manifest](resources/schema/manifest-schema.md) version| Next steps|
+|                  |[TeamsJS](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
 |------------------|---------|--------|---|
-|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across M365](m365-apps/extend-m365-teams-personal-tab.md) or [Create a new M365 app](m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
+|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across M365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new M365 app](m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
 |**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](#backwards-compatibility) and [Update to TeamsJS v.2.0](#update-to-teamsjs-v-2-0) |
-|**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md) |
+|**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
 
 **Best practice is to use the latest TeamsJS (v.2.0 or later) whenever possible, in order to benefit from the latest improvements and new feature support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.*
 
@@ -30,7 +30,7 @@ The remainder of this article will walk you through the structure and latest upd
 
 ### Microsoft 365 support (running Teams apps in Office and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 (M365) ecosystem. Currently, other M365 application hosts (including Office and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of M365 host support for Teams apps, see [Extend Teams apps across Microsoft 365](../m365-apps/overview.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 (M365) ecosystem. Currently, other M365 application hosts (including Office and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of M365 host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 The following table lists Teams tabs and dialogs (task modules) capabilities (public namespaces) with expanded support to run in other Microsoft 365 hosts.
 
@@ -61,7 +61,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 #### App permissions
 
-App capabilities that require the user to grant [device permissions](../concepts/device-capabilities/device-capabilities-overview.md) (such as *location* and *media*) are not yet supported for apps running outside of Teams. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will thow an error and fail to display a system dialog asking for user consent.
+App capabilities that require the user to grant [device permissions]../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location* and *media*) are not yet supported for apps running outside of Teams. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will thow an error and fail to display a system dialog asking for user consent.
 
 Current guidance for now is to modify your code to catch the failure:
 
@@ -98,7 +98,7 @@ For any other external deeplinking scenarios, you can use `app.openLink`, which 
 
 #### Dialogs
 
-Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../task-modules-and-cards/task-modules/design-teams-task-modules) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
+Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
 
 This new dialog capability is split into a main capability (`dialog`) for supporting HTML-based dialogs and a sub-capability, `dialog.bot`, for bot-based dialog development.
 
@@ -114,7 +114,8 @@ There are two significant changes between TeamsJS v.1.12 and v.2.0 and later:
 
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
-> [!TIP] You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-the-teams-client-sdk-v.2.0) for an existing Teams app.
+> [!TIP]
+> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-the-teams-client-sdk-v.2.0) for an existing Teams app.
 
 ### Backwards compatibility
 
@@ -136,7 +137,7 @@ Enabling an existing Teams app to run in Outlook and Office requires all of the 
 
 2. [Modifying existing application code](#update-sdk-references) according to the required changes described in this article, and
 
-3. [Updating your app manifest](#update-the-manifest-(optional)) to version 1.13 or later.
+3. [Updating your app manifest](#update-the-manifest-optional) to version 1.13 or later.
 
 For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
@@ -229,7 +230,7 @@ Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript names
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It will return `true` if it is supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
-The name of the host your app is running in is exposed as a *hostName* property on the Context interface (`app.Context.app.host.name`), which can be queried at runtime by calling `getContext`. It is also available as a `{hostName}` [URL placeholder value](../tabs/how-to/access-teams-context.md#get-context-by-inserting-url-placeholder-values). Best practice is to use the *hostName* mechanism sparingly:
+The name of the host your app is running in is exposed as a *hostName* property on the Context interface (`app.Context.app.host.name`), which can be queried at runtime by calling `getContext`. It is also available as a `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-by-inserting-url-placeholder-values). Best practice is to use the *hostName* mechanism sparingly:
 
 * **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
@@ -470,5 +471,5 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Next steps
 
-* Use the [TeamsJS reference](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) to get started with the Microsoft Teams JavaScript client SDK.
+* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the Microsoft Teams JavaScript client SDK.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.
