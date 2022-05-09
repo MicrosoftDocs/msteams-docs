@@ -24,7 +24,7 @@ You can implement authentication in your app using one of the following methods:
 | Authentication method | Tab | Bot | Message extension |
 | --- | --- | --- | --- |
 |**Single sign-on** | [SSO in a tab](../../tabs/how-to/authentication/tab-sso-overview.md) | [SSO in a bot](../../bots/how-to/authentication/auth-aad-sso-bots.md) | [SSO in a message extension](../../messaging-extensions/how-to/enable-SSO-auth-me.md) |
-| **Third party OAuth provider authentication** | [Authentication in a tab](../../tabs/how-to/authentication/auth-tab-aad.md) | [Authentication in a bot](../../bots/how-to/authentication/add-authentication.md) | [Authentication in a message extension](../../messaging-extensions/how-to/add-authentication.md) |
+| **Third party OAuth provider authentication** | [Third party authentication in a tab](../../tabs/how-to/authentication/auth-tab-aad.md) | [Third party authentication in a bot](../../bots/how-to/authentication/add-authentication.md) | [Third party authentication in a message extension](../../messaging-extensions/how-to/add-authentication.md) |
 
 > [!NOTE]
 > Please note that the page Silent authentication is moved to Resources section. For more information, please see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
