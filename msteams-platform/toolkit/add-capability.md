@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to your Teams apps
 
- Use of Teams app capability,you can create a new Teams app in app development. You can see the following Teams app capabilities table list:
+ Using Teams app capability,you can create a new Teams app in app development. You can see the following Teams app capabilities table list:
 
 |**Capability**|**Description**|
 |--------|-------------|
@@ -23,7 +23,7 @@ ms.date: 11/29/2021
 The following limitations are while adding more capabilities in teamsFx:
 
 * You can add tabs up to 16 instances
-* You can add each bot and message extension for one instance
+* For one instance,You can add bot and message extension
 
 ## Add capabilities
 
