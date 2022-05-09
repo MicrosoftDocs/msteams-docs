@@ -130,7 +130,7 @@ items:
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
-- title: Create command response bot
+- title: Build command response bot
   durationInMinutes: 1
   content: |
     # [Visual Studio Code](#tab/vsc)
@@ -183,7 +183,7 @@ items:
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select F5.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select **F5**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
