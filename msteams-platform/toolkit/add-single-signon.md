@@ -8,7 +8,7 @@ ms.topic:
 ms.date: 09/05/2022
 ---
 
-# Add single sign on to your Teams apps
+# Add single sign on to your Teams app
 
 Microsoft Teams has provided a mechanism to minimize the number of times users need to enter their sign in credentials and this is called single sign on. Teams Framework (TeamsFx) added support on top of this mechanism to help developers build single sign feature easily.
 
