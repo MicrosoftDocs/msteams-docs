@@ -1,11 +1,11 @@
 ---
 title: Add single sign-on to your Teams apps
-author: 
+author: zyxiaoyuer
 description:  Describes Add single sign-on of Teams Toolkit
-ms.author: 
-ms.localizationpriority: 
-ms.topic: 
-ms.date: 09/05/2022
+ms.author: surbhigupta
+ms.localizationpriority: medium
+ms.topic: overview
+ms.date: 05/09/2022
 ---
 
 # Add single sign-on to your Teams app
@@ -51,7 +51,7 @@ You can incrementally add SSO to the following project:
 1. Execute the `teamsfx add sso` command to add SSO to your project
 
 > [!Note]
-> This feature will enable SSO for all applicable capabilities. If you add an SSO-applicable capability later to the project, you can follow the same steps to enable SSO for that capability.
+> The feature enables SSO for all applicable capabilities. If you add an SSO-applicable capability later to the project, you can follow the same steps to enable SSO for that capability.
 
 ## Phases after 'Add SSO' command execution
 
@@ -80,7 +80,7 @@ You can follow the steps below to add SSO in your Teams app based on your Teams 
  
  2. Copy `sso` folder under `auth/tab to tabs/src/sso/`.
  
-      1. `InitTeamsFx`: This file implements a function that initialize TeamsFx SDK and will open `GetUserProfile` component after SDK is initialized.
+      1. `InitTeamsFx`: This file implements a function that initializes TeamsFx SDK and will open `GetUserProfile` component after SDK is initialized.
       
       1. `GetUserProfile`: This file implements a function that calls Microsoft Graph API to get user info.
     
@@ -99,13 +99,13 @@ import { InitTeamsFx } from "../../sso/InitTeamsFx";
     
  1. Copy `auth/bot/public` folder to `bot/src`. These folder contains HTML pages used for auth redirect, please note that you need to modify `bot/src/index` file to add routing to these pages.
  
- 2. Copy `auth/bot/sso` folder to `bot/src`. These folder contains three files as reference for sso implementation:
+ 2. Copy `auth/bot/sso` folder to `bot/src`. These folder contains three files as reference for SSO implementation:
  
       1. `showUserInfo`: This implements a function to get user info with SSO token. You can follow this method and create your own method that requires SSO token.
       
       1. `ssoDialog`: This creates a ComponentDialog that used for SSO.
       
-      1. `teamsSsoBot`: This create a TeamsActivityHandler with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
+      1. `teamsSsoBot`: This creates a TeamsActivityHandler with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
       
  3. Follow the code sample and register your own command with `addCommand` in this file.
  
@@ -129,7 +129,7 @@ with
 
   The HTML pages used for auth redirect will be copied when building this bot project after updating this command.
 
- 6. After adding the following files, you need to create a new `teamsSsoBot` instance in `bot/src/index` file. Please replace the following code:
+ 6. After adding the following files, you need to create a new `teamsSsoBot` instance in `bot/src/index` file. Replace the following code:
  
 ```Javascript
 
@@ -184,15 +184,15 @@ const path = require("path");
 
 Press F5 to debug your application.
 
-Teams Toolkit will use the AAD manifest file to register a AAD application for SSO.
+Teams Toolkit will use the Azure Active Directory (Azure AD) manifest file to register a Azure Active Directory (Azure AD) application for SSO.
 
 For Teams Toolkit local debug functionalities, see [Debug your Teams app locally](debug-local.md).
 
-## Customize AAD applications
+## Customize the Azure Active Directory (Azure AD) applications
 
-The AAD manifest lets you to customize various aspects of application registration. You can update the manifest as needed.
+The Azure Active Directory (Azure AD) manifest lets you customize various aspects of application registration. You can update the manifest as needed.
 
-Follow this document if you need to include additional API permissions to access your desired APIs.
+Follow this document if you need to include other API permissions to access your desired APIs.
 
 For more information, see:
 
@@ -209,7 +209,7 @@ Teams tabs and bots have similar flow for SSO support, for more information, see
    
 ### Simplification of SSO with TeamsFx
 
-TeamsFx helps to reduce the developer tasks by leveraging Teams SSO and accessing cloud resources down to single line statements with zero configuration.
+TeamsFx helps to reduce the developer tasks by using Teams SSO and accessing cloud resources down to single line statements with zero configuration.
 
 With TeamsFx SDK, you can write user authentication code in a simplified way using Credentials:
 
@@ -217,6 +217,6 @@ With TeamsFx SDK, you can write user authentication code in a simplified way usi
   2. User identity in Node.js environment: `OnBehalfOfUserCredentail` uses On-Behalf-Of flow and Teams SSO token.
   3. Application Identity in Node.js environment: `AppCredential` represents the application identity.
    
-For more information about TeamsFx SDK, see [TeamsFx SDK](TeamsFx-SDK.md) or check out the API [reference](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest).
+For more information about TeamsFx SDK, see [TeamsFx SDK](TeamsFx-SDK.md) or check out the API [reference](https://docs.microsoft.com/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true).
 
 You can also explore more samples with SSO built by Teams Framework in the [repo](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2).
