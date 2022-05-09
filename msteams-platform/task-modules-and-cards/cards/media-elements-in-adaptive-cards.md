@@ -7,23 +7,24 @@ ms.topic: reference
 
 # Overview
 
-Media elements, for example, audio or video clips are supported in the Adaptive Cards SDK but not in Teams. This was originally de-scoped when moving Teams to Adaptive Cards v1.2 but we are looking to address now. There's no media support in Teams cards today (since we also don't support the audio or video or animation cards from Bot Framework), so there's no workaround. This will drive parity with the SDK (which already supports media elements) and would increase engagement with cards and bring new experiences to them.
+The Media Elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams does not provide media support and similarly does not support audio or video or animation cards from Bot Framework and there is no workaround. However, efforts are done to drive parity with SDK which already support media elements so that it will increase engagement with cards and bring new experiences in the media elements.
 
 ## User problems
 
-There's a need to embed Media Elements in Adaptive Cards within the Teams experience. Partners that have shared this requirement include Accenture, Workday, Chata.ai, Inditex, ServiceNow, Blinkist.
+- Embed Media Elements in Adaptive Cards within the Teams experience. This feature request has come from partners such as Accenture, Workday, Chata.ai, Inditex, ServiceNow, Blinkist.
+- Force exit from Teams to view media.
 
-Today, users are forced to exit Teams to view media. This feature supports consumption of Media Elements directly within Teams Adaptive Cards. Following are the example scenarios:
+The Media Elements feature now supports consumption of media elements directly within Teams Adaptive Cards. Following are the example scenarios:
 
-### User sent scenarios
+### User scenarios
 
-**Video**: User Alice has found a relevant informational video on her company OneDrive Sharepoint instance. She uses the OneDrive Media Elements to unfurl the copied link and sends an Adaptive Card to Bob with the video. The corresponding card has the relevant video embedded in the card. The video is rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
+**Video**: User Alice has found a relevant informational video on her company OneDrive Sharepoint. She uses the OneDrive Media Elements to unfurl the copied link to send an Adaptive Card to Bob with the video. As the corresponding card has the relevant video embedded in the card, The video is rendered directly within a native Teams media player in the card, thereby allowing Bob to directly have the experience to view the video within the Teams. Bob can now pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
 
-**Audio**: Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint instance. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file. The audio file can be directly played within the native Teams media player in the card, allowing team members to directly listen to the audio recording within the Teams experience. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
+**Audio**: Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file directly within the native Teams media player in the card, there by allowing the team members to experience listening to the audio recording within the Teams. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
 
-### Bot sent scenarios
+### Bot scenarios
 
-**Video**: Contoso has an onboarding Bot that is deployed on their tenant. Every new member on the tenant is greeted by the Contoso Onboarding Bot (COB) and presented a series of Media Elements Adaptive Cards that outlines the onboarding flow. Bob has joined the team. The onboarding videos are rendered directly within a native Teams media player in the card, allowing Bob to directly view the video within the Teams experience. He can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.
+**Video**: Contoso has an onboarding Bot that is deployed on their tenant. Every new member on the tenant is greeted by the Contoso Onboarding Bot (COB) and it presents a series of Media Elements Adaptive Cards that outlines the onboarding flow. Bob has joined the team and the onboarding videos are rendered directly within a native Teams media player in the card thereby, allowing Bob to directly view the video within the Teams. Bob can pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.
 
 **Audio**: Contoso Medical has a scrum Bot that is deployed on their tenant. The Bot automatically takes the audio recording of the daily scrum meeting and sends it to the wider Medical Team channel. The audio recording is presented as an Adaptive Card, that allows everyone in the Team channel to pause, play, change volume, and seek through the audio file as needed.
 
@@ -31,33 +32,33 @@ Today, users are forced to exit Teams to view media. This feature supports consu
 
 ### Phase 1: Support LOB scenarios
 
-For the MVP of the Media Elements feature, three scenarios are supported primarily for in-line media playback for both user-sent and bot-sent:
+For the MVP of the media elements feature, the following three scenarios are supported primarily for the in-line media playback for both user-sent and bot-sent:
 
-* Files of a supported type available externally via any publicly available URL that is sanitized.
+* Files of a supported type are available externally via any publicly available URL that is sanitized.
 * Video or audio is linked via a URL that points to a supported video or audio file.
 * Inline YouTube video playback through Adaptive Cards SDK v1.6.
-* Files directly uploaded to OneDrive Sharepoint within the tenant.
+* Files are directly uploaded to OneDrive Sharepoint within the tenant.
 * Video or audio is shared from OneDrive Sharepoint.
 
 ### Phase 2: Support third party partner scenarios
 
 Following are the dynamic user-uploaded scenarios where users submit video or audio files:
 
-* Files directly uploaded to OneDrive Sharepoint external to the tenant (potential permission issues).
-* Files on third party external players. For example, Vimeo, Dailymotion, Spotify, Netflix, etc.
+* Files are directly uploaded to OneDrive Sharepoint external to the tenant (potential permission issues).
+* Files on third party external players such as Vimeo, Dailymotion, Spotify, Netflix, etc.
 * Files hidden behind external SSO or authentication. For example, Google Drive, Dropbox, etc.
 * Inline Vimeo and Dailymotion playback and other media providers.
 
 > [!NOTE]
 > On desktop or web, support for Dailymotion and Vimeo should not induce any cost beyond supporting YouTube, as all three providers are supported out of the box in the latest Adaptive Cards JavaScript SDK.
-> For that reason, while Vimeo and Dailymotion are in the “phase 2” bucket, it seems to make sense to promote them to “phase 1”.
+> Currently Vimeo and Dailymotion are in the “phase 2” bucket, and there are plans to promote them to “phase 1”.
 
 ## Out of scope considerations
 
 1. Phase 1 doesn't support specific third party media players, for example, Vimeo. Following is the fallback:
 
-    * Desktop links externally via browser.
-    * Mobile deep-links into the native app (potentially through browser).
+  * Desktop links externally via browser.
+  * Mobile deep-links into the native app (potentially through browser).
 
 1. Teams is not responsible for content moderation.
 
@@ -95,7 +96,7 @@ Following are the dynamic user-uploaded scenarios where users submit video or au
 
 ## Inline YouTube playback
 
-Playing YouTube videos inline in any app requires the use of the YouTube embedded player, that relies on an IFrame. In other words, it is not possible to implement a custom inline player for YouTube videos and the same applies to Vimeo, Dailymotion and more. For that reason, there is no need to come up with a video player design when it comes to YouTube; the only design we can implement is that provided by YouTube, which does not allow for look and feel customization.
+Playing YouTube videos inline in any app requires the use of the YouTube embedded player, that relies on an IFrame. So, it is not possible to implement a custom inline player for YouTube videos or Vimeo, Dailymotion and more. For that reason, there is no necessity to come up with a video player design when it comes to YouTube; the only design we can implement is provided by YouTube, which does not allow for look and feel customization.
 
 YouTube, Vimeo and Dailymotion playback are implemented in the latest version of the Adaptive Cards JavaScript SDK (schema 1.6)(not released). It relies on the existing Adaptive Card Media element. Following is an example of a card embedding a YouTube video:
 
@@ -130,9 +131,9 @@ The above card renders as follows:
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo.png" alt-text="Inline youtube video player":::
 
-Initially, as depicted above, only the poster of the video is displayed. For YouTube, the poster (or thumbnail) is automatically pulled from YouTube, but the card author can technically provide their own poster by explicitly specifying the Media.poster property.
+Initially, as depicted above, only the poster of the video is displayed. For YouTube, the poster (or thumbnail) is automatically pulled from YouTube, but the card author can technically provide their own poster to explicitly specify the Media.poster property.
 
-Once the user clicks the central “Play” button, the actual player is instantiated, and video playback starts:
+Once the user clicks the central **Play** button, the actual player is instantiated, and video playback starts:
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo-telegraph-road.png" alt-text="Inline youtube video player demo":::
 
