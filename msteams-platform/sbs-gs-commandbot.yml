@@ -181,7 +181,7 @@ items:
         > [!NOTE]
         > If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
 
-    1. Select **Run and Debug**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select F5.
 
