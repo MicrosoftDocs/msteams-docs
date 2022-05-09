@@ -29,7 +29,9 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 
 You can view here an example of user experience with SSO in a tab app:
 
-![SSO user experience with SSO in tab app](../../../assets/images/authentication/teams-sso-tab/sso-tab.gif)
+:::image type="complex" source="../../../assets/images/authentication/teams-sso-tabs/sso-tab.gif" alt-text="SSO in tab app":::
+
+:::image-end:::
 
 ### Enhance user experience with SSO
 
