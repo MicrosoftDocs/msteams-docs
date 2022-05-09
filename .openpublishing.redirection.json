@@ -731,6 +731,10 @@
       {
         "source_path": "msteams-platform/platform/sbs-gs-blazorapp.yml",
         "redirect_url": "/msteams-platform/platform/sbs-gs-blazorupdate"
+      },
+      {
+        "source_path": "msteams-platform/platform/m365-apps/using-teams-client-sdk-preview.md",
+        "redirect_url": "/msteams-platform/platform/tabs/how-to/using-teams-client-sdk"
       }
     ]
 }
