@@ -61,7 +61,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 #### App permissions
 
-App capabilities that require the user to grant [device permissions]../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location* and *media*) are not yet supported for apps running outside of Teams. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will thow an error and fail to display a system dialog asking for user consent.
+App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location* and *media*) are not yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Office. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will throw an error and fail to display a system dialog asking for user consent.
 
 Current guidance for now is to modify your code to catch the failure:
 
@@ -73,6 +73,8 @@ When an API is unsupported or throws an error, add logic to fail gracefully or p
 * Direct the user to your app's website
 * Direct the user to use the app in Teams to complete the flow
 * Notify the user the functionality is not yet available
+
+Additionally, best practice is to ensure your app manifest only specifies the device permissions its using.
 
 #### Deeplinking
 
