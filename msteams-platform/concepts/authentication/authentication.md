@@ -19,9 +19,10 @@ Choose to add authentication for your app in one of the two ways:
 
 You can implement authentication in your app using one of the following methods:
 
-- Enable SSO for your app
-- Use Azure AD authentication
-- Use silent authentication
+| Authentication method | Tab | Bot | Messaging extension |
+| --- | --- | --- | --- |
+|**SSO in Teams app** | [Enable single sign-on in a tab app](../../tabs/how-to/authentication/tab-sso-overview.md) | [Single sign-on (SSO) support for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md) | [Single sign-on support for message extensions](../../messaging-extensions/how-to/enable-SSO-auth-me.md) |
+| **Third party OAuth provider** | [Authenticate a user in a Microsoft Teams tab](../../tabs/how-to/authentication/auth-tab-aad.md) | [Add authentication to your Teams bot](../../bots/how-to/authentication/add-authentication.md) | [Add authentication to your message extension](../../messaging-extensions/how-to/add-authentication.md) |
 
 > [!NOTE]
 > Please note that the page Silent authentication is moved to Resources section. For more information, please see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
