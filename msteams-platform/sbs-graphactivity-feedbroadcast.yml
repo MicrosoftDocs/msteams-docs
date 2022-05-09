@@ -227,7 +227,7 @@ items:
     1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
 
@@ -329,7 +329,7 @@ items:
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |      
-    1. In your cloned repository navigate to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
+    1. In your cloned repository, navigate to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
 
     1. Create a .zip with the following files that are present in the **AppPackage** folder: 
        * manifest.json
