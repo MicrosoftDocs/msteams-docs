@@ -11,6 +11,8 @@ ms.author: lajanuar
 
 You can extend and enhance the user experience by supporting removal and modification options in your app. Teams enables users to rename or remove a channel or group tab and you can permit users to reconfigure your tab after installation. Additionally, the tab removal experience provides the users with post-removal options to delete or archive content.
 
+[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+
 ## Enable your tab to be reconfigured after installation
 
 Your `manifest.json` defines your tab's features and capabilities. The tab instance `canUpdateConfiguration` property takes a Boolean value that indicates whether a user can modify or reconfigure the tab after it is created. The following table provides the property details:
@@ -55,6 +57,30 @@ Authentication is required before allowing a user to delete the tab content. Con
 
 The following is a sample tab removal code block:
 
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<body>
+  <button onclick="onClick()">Delete this tab and all underlying data?</button>
+  <script>
+    app.initialize();
+    app.pages.config.registerOnRemoveHandler((removeEvent) => {
+      // Here you can designate the tab content to be removed and/or archived.
+        app.pages.config.getConfig((settings) => {
+        pages.config.contentUrl = "..."
+        });
+        removeEvent.notifySuccess();
+    });
+
+    const onClick() => {
+        app.pages.config.setValidityState(true);
+    }
+  </script>
+</body>
+```
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
@@ -75,7 +101,9 @@ The following is a sample tab removal code block:
 </body>
 ```
 
-When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an IFrame. The user is shown a button loaded with the `onClick()` function that calls `microsoftTeams.settings.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page IFrame.
+***
+
+When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an IFrame. The user is shown a button loaded with the `onClick()` function that calls `app.pages.config.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page IFrame.
 
 After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 

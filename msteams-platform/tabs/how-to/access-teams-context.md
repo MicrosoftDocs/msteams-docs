@@ -14,6 +14,8 @@ Your tab requires contextual information to display relevant content:
 * Locale and theme information.
 * Read the `entityId` or `subEntityId` that identifies what is in this tab.
 
+[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+
 ## User context
 
 Context about the user, team, or company can be especially useful when:
