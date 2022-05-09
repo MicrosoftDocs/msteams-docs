@@ -153,7 +153,7 @@ The **Usage intensity** chart shows you key usage intensity metrics for your app
 
 ### App dashboard
 
-The **My App dashboard** table shows you the latest R30 data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 (Rolling 30 day) data for the last 75 days and end of month R30 data for up to 12 months.
+The **My App dashboard** table shows you the latest R30 (Rolling 30 day) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 data for the last 75 days and end of month R30 data for up to 12 months.
 
 You can select each of these **Metric name** to see trends over time.
 
