@@ -29,7 +29,7 @@ The following limitations are while adding more capabilities in teamsFx:
 ## Add capabilities
 
 > [!Note]
-> You need to perform the provision for each environment, after your add capabilities successfully added to your Teams app.
+> You need to perform the provision for each environment, after capabilities are successfully added to your Teams app.
 
 * You can add capabilities using Teams Toolkit in Visual Studio Code
 
