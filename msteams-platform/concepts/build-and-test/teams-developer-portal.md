@@ -82,7 +82,7 @@ In the Developer Portal for Teams, on the **Overview** page, you can see the tot
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for new apps can take up to three to five days to reflect in the charts.
 
-You can view your app's usage and other more insights from the **Analytics** page. To access the page:
+You can view your app's usage and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
