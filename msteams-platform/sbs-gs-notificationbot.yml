@@ -205,7 +205,7 @@ items:
 
     1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/powershell-trigger.png" alt-text="Powershell Trigger"border="true":::   
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true":::   
 
         You'll get the following output in Teams:
 
@@ -320,7 +320,7 @@ items:
 
     1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/powershell-trigger.png" alt-text="Powershell Trigger"border="true":::   
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true":::   
 
        You'll get the notification to the Teams channel:
 
