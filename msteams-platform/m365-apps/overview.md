@@ -18,7 +18,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 |--|--|--|--|--|--|
 | [**Tabs**](../tabs/what-are-tabs.md) (personal scope)    |`staticTabs`  | Desktop, Web, Mobile | Desktop (Beta Channel), Web (Targeted Release) | Desktop, Web (Targeted Release)| Channel and group scope not yet supported for M365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
 | [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) (search-based)| `composeExtensions` | Desktop, Web, Mobile| Desktop (Beta Channel), Web (Targeted Release)| - |Action-based not yet supported for M365. See [notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
-| [**Graph connectors**](/microsoftsearch/connectors-overview) (preview)| `graphConnector` | Desktop, Web, Mobile| | | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#graph-connectors-preview)
+| [**Graph connectors**](/microsoftsearch/connectors-overview)| `graphConnector` | Desktop, Web, Mobile| | | See [notes](#graph-connectors-preview)
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | | Desktop, Web | | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
 \* The [M365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option requires admin opt-in for the entire organization or selected users.
@@ -42,9 +42,9 @@ Building your app with the latest [Teams app manifest](../resources/schema/manif
 
 ## Use Teams app manifest across Microsoft 365
 
-With an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, we're continuing to expand the Teams app manifest into other areas of Microsoft 365 with the following previews.
+With an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, we're continuing to expand the Teams app manifest into other areas of Microsoft 365 with the following.
 
-### Graph connectors (preview)
+### Graph connectors
 
 With Microsoft Graph connectors, your organization can index third-party data so that it appears as Microsoft Search results, expanding the types of searchable content sources in your Teams apps.
 To learn more, see [Microsoft Graph connectors overview for Microsoft Search](/microsoftsearch/connectors-overview).
