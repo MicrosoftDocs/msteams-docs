@@ -8,37 +8,63 @@ ms.localizationpriority: high
 ---
 # Extend Teams apps across Microsoft 365
 
-> [!NOTE]
-> This early developer preview is intended to provide Teams developers with existing applications the chance to try the new functionality and [provide feedback](/microsoftteams/platform/feedback) on this expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
+With the latest releases of [Microsoft Teams JavaScript client SDK](using-teams-client-sdk-preview.md) (version 2.0.0), [Team App manifest](../resources/schema/manifest-schema-dev-preview.md) (version 1.13), and [Teams Toolkit](../toolkit/visual-studio-code-overview.md), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to [Microsoft AppSource](https://appsource.microsoft.com/).
 
-You can test your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client SDK v2 Preview](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](../resources/schema/manifest-schema-dev-preview.md).
+Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, and Office environments. End users won't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
 
-With this preview, you can:
+The Teams app platform continues to evolve and expand holistically into the Microsoft 365 ecosystem. Here's the current support of Teams app platform elements across Microsoft 365 (Teams, Outlook, and Office as application hosts):
 
-- Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Office on the web (office.com).
-- Extend existing Teams [search-based message extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
+|          | App manifest element | Teams support |Outlook* support | Office* support | Notes |
+|--|--|--|--|--|--|
+| [**Tabs**](../tabs/what-are-tabs.md) (personal scope)    |`staticTabs`  | Desktop, Web, Mobile | Desktop (Beta Channel), Web (Targeted Release) | Desktop, Web (Targeted Release)| Channel and group scope not yet supported for M365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) (search-based)| `composeExtensions` | Desktop, Web, Mobile| Desktop (Beta Channel), Web (Targeted Release)| - |Action-based not yet supported for M365. See [notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
+| [**Graph connectors**](/microsoftsearch/connectors-overview) (preview)| `graphConnector` | Desktop, Web, Mobile| | | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#graph-connectors-(preview))
+| [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | | Desktop, Web | | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-(preview)).|
 
-For feedback and issues, continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
+\* The [M365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option requires admin opt-in for the entire organization or selected users.
 
-## Teams personal tabs in Office and Outlook
+For guidance on Teams app manifest and SDK versioning guidance and further details on current Teams platform capability support across M365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
 
-With this preview, you can extend a Teams personal tab application to run in both Outlook on Windows desktop and the web, and also Office on the web.
+> [!NOTE] We welcome your feedback and issue reporting as you expand Teams apps to run across Microsoft 365 ecosystem! Please use the regular [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
 
-After sideloading to Teams, your personal tab appears as one of your installed apps in Outlook and Office.
+## Personal tabs and messaging extensions in Outlook and Office
+
+You can extend a Teams personal tab application to run in both Outlook and Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in Outlook, Office, and Teams":::
 
-## Teams message extensions in Outlook
-
-With this preview, you can extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
-
-After sideloading to Teams, your message extension appears as one of your installed apps within the Outlook compose message area.
+You can also extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Message extension running in Outlook and Teams":::
 
+## Use Teams app manifest across Microsoft 365
+
+With an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, we're continuing to expand the Teams app manifest into other areas of Microsoft 365 with the following previews.
+
+### Graph connectors (preview)
+
+With Microsoft Graph connectors, your organization can index third-party data so that it appears as Microsoft Search results, expanding the types of searchable content sources in your Teams apps.
+To learn more, see [Microsoft Graph connectors overview for Microsoft Search](/microsoftsearch/connectors-overview).
+
+To get started with graph connectors in Teams apps, check out the [Teams Toolkit Graph connectors sample](https://aka.ms/teamsfx-graph-connector-sample) and [Microsoft Teams Developer preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) reference.
+
+### Office Add-ins (preview)
+
+You can now define and deploy Office Add-ins in the [developer preview version]() of the Microsoft Teams app manifest. Currently this preview is limited to Outlook Add-ins running on subscription Office for Windows.
+
+To learn more, see [Teams manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview). Get started and [Build an Outlook add-in with a Teams manifest(preview)](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest).
+
+## Microsoft AppSource submission
+
+[Store screenshots] https://appsource.microsoft.com/en-US/product/office/WA104381626?tab=Overview 
+[Production app support/audience]
+[Admin docs] 
+https://docs.microsoft.com/en-us/MicrosoftTeams/manage-third-party-teams-apps
+https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-teams-apps-designed-for-microsoft-365-coming-in/ba-p/3269538
+
 ## Next steps
 
-Set up your dev environment for extending Teams apps across Microsoft 365:
+Set up your dev environment to build Teams apps for Microsoft 365:
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
