@@ -238,7 +238,9 @@ const profile = await graphClient.api("/me").get();
 1. Enter API name to generate related appsetting names for your API.</br>
 1. Select API authentication type.</br>
 
-:::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/createapi-client.PNG" alt-text="Create api client" border="false":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="Create api client" border="false":::
+
+
 
 </details>
 
