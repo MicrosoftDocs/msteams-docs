@@ -122,7 +122,7 @@ The **Usage by time period** chart shows you the number of active users or tenan
 
 ### Usage by platform and OS
 
-The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as Windows, Mac, iOS, Android, and Web. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 day) period.
+The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 day) period.
 
  :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Platform":::
 
@@ -147,8 +147,8 @@ The **Usage intensity** chart shows you key usage intensity metrics for your app
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| Median days used per month | The median numbers of days in which your app was opened in the last R30 (Rolling 30 day) period. |
-| % of 5+ Days usage | The % of Active Users who opened or used the app more than five days in the last R30 period. |
+| Median days used per month | The median numbers of days in which your app was opened in the last R30 (Rolling 30 day) time period. |
+| % of 5+ Days usage | The % of Active Users who opened or used the app more than five days in the last R30 time period. |
 | DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. |
 
 ### App dashboard
