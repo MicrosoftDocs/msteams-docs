@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to your Teams apps
 
-During app development, you can create a new Teams app with Teams app capability. The following table lists the Teams app capabilities:
+During app development, you can create a new Teams app with Teams app capability. The following table list for the Teams app capabilities:
 
 |**Capability**|**Description**|
 |--------|-------------|
@@ -20,16 +20,18 @@ During app development, you can create a new Teams app with Teams app capability
 
 ## Limitations
 
-The limitations to TeamsFx while adding more capabilities are as follows:
+The following limitations are adding more capabilities in teamsFx:
 
 * You can add tabs up to 16 instances
-* You can add bot and message extension for one instance each
+* You can add each bot and message extension for one instance
 
 ## Add capabilities
 
 > [!Note]
-> You need to perform the provision for each environment, after you successfully add capabilities to your Teams app.
+> You need to perform the provision for each environment, after your add capabilities successfully added in to your Teams app.
+
 * You can add capabilities using Teams Toolkit in Visual Studio Code
+
     1. Open **Microsoft Visual Studio Code**
     1. Select **Teams Toolkit** from left panel
     1. Select **Add features**
