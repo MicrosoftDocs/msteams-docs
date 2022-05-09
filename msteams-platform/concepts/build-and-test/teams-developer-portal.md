@@ -7,7 +7,7 @@ ms.topic: overview
 ms.author: surbhigupta
 ---
 
-# Manage your apps with the Developer Portal for Microsoft Teams
+# Manage your Teams apps using Developer Portal
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
@@ -73,21 +73,21 @@ For more information, see [distribute your Teams app](~/concepts/deploy-and-publ
 In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app.
 
 > [!NOTE]
-> Usage analytics are currently available only for new custom apps published to your org through **Developer Portal for Teams (formerly App Studio)** or imported into **Developer Portal for Teams (formerly App Studio)** after April 2022. Usage analytics for all the apps published on the Teams store, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
+> Usage analytics are currently available only for new custom apps published to your org through **Developer Portal** for Teams (formerly App Studio) or imported into **Developer Portal** for Teams after April 2022. Usage analytics for all the apps published on the Teams store, for more information [Teams apps usage report](/office/dev/store/teams-apps-usage).
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *Monthly R30* | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 day window in UTC. |
 | *Daily* | It shows you the count of unique active users who used your app in a given day in UTC. |
 
-The app usage for a given day is reflected within 24 to 48 hours, and usage data for new apps can take up to 3 to 5 days to reflect in the charts.
+The app usage for a given day is reflected within 24 to 48 hours, and usage data for new apps can take up to three to five days to reflect in the charts.
 
 You can view your app's usage and other more insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal for Teams](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
-1. Select **Analytics** under the overview or select **View details** under the Active users (Preview) card.
+1. Select **Analytics** under the **Overview** or select **View details** under the **Active Users (Preview)** card.
 
  :::image type="content" source="../../assets/images/tdp/dev-app-portal.PNG" alt-text="dev-Portal-analytics"lightbox="../../assets/images/tdp/dev-app-portal.PNG":::
 
@@ -135,7 +135,7 @@ The **Usage by retention state** chart lets you track four key retention or chur
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | New users or tenants | Active users or tenants who are new new and have not used your app. |
-| Returning users or tenants | Active users or tenants who used your app during a given R30 time period and the immediately preceding R30 time period. |
+| Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 day) time period and the immediately preceding R30 time period. |
 | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
 | Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
@@ -148,14 +148,14 @@ The **Usage intensity** chart shows you key usage intensity metrics for your app
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | Median days used per month | The median numbers of days in which your app was opened in the last R30 (Rolling 30 day) period. |
-| % of 5+ Days usage | The % of Active Users who opened or used the app more than five days in the last R30 (Rolling 30 day) period. |
+| % of 5+ Days usage | The % of Active Users who opened or used the app more than five days in the last R30 period. |
 | DAU/MAU | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly Active Users for the selected R30 time period. |
 
 ### App dashboard
 
-The **My App dashboard** table shows you the latest R30 data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 data for the last 75 days and end of month R30 data for up to 12 months.
+The **My App dashboard** table shows you the latest R30 data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left and select the desired date, you can see daily R30 (Rolling 30 day) data for the last 75 days and end of month R30 data for up to 12 months.
 
-You can select each of these rows to see trends over time.
+You can select each of these **Metric name** to see trends over time.
 
  :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="app":::
 
