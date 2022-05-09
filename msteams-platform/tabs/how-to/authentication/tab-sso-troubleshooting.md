@@ -53,7 +53,7 @@ For more information, please see [Graph explorer](https://developer.microsoft.co
 <details>
 <summary>How can I resolve the generic error I get when I run the tab app?</summary>
 <br>
-A generic error may show up when one or more of the app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
+A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
 
 The following image shows an example of the app details configured in Azure AD.
 
