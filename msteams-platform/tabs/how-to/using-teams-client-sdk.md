@@ -84,7 +84,7 @@ Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to g
 
 ##### Navigation within your app
 
-Use the new `pages.tab.navigateToApp` API to navigate within your app within the hosting application.
+Use the new `pages.navigateToApp` API to navigate within your app within the hosting application.
 
 This API provides the equivalent of  navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
 
@@ -92,7 +92,7 @@ This API provides the equivalent of  navigating to a deep link (as the now depre
 
 For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS SDK. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
 
-For deep links from your app to other apps running in the same host, use `pages.tab.navigateToApp`.
+For deep links from your app to other apps running in the same host, use `pages.navigateToApp`.
 
 For any other external deeplinking scenarios, you can use `app.openLink`, which provides similar functionality to the now deprecated (starting in TeamsJS v.2.0) *executeDeepLink* API.
 
