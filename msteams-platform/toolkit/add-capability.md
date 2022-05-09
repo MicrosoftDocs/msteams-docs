@@ -10,7 +10,8 @@ ms.date: 11/29/2021
 
 # Add capabilities to your Teams apps
 
- Using Teams app capability,you can create a new Teams app in app development. You can see the following Teams app capabilities table list:
+Using Teams app capability,you can create a new Teams app in app development.
+You can see the following Teams app capabilities table list:
 
 |**Capability**|**Description**|
 |--------|-------------|
@@ -28,7 +29,7 @@ The following limitations are while adding more capabilities in teamsFx:
 ## Add capabilities
 
 > [!Note]
-> You need to perform the provision for each environment, after your add capabilities successfully added in to your Teams app.
+> You need to perform the provision for each environment, after your add capabilities successfully added to your Teams app.
 
 * You can add capabilities using Teams Toolkit in Visual Studio Code
 
@@ -46,9 +47,6 @@ The following limitations are while adding more capabilities in teamsFx:
     1. From the pop-up, select the capabilities to include in your project:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
-
-
-    2. Select **OK**
 
 The selected capabilities are successfully added to your project. The Teams Toolkit generate source code for newly added capabilities
 
@@ -68,7 +66,8 @@ The selected capabilities are successfully added to your project. The Teams Tool
 
 ## Supported capabilities
 
-Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app. The following table provides the different Teams app capabilities:
+Apart from the capabilities your Teams app already have, you can choose to add different capabilities to your Teams app. 
+The following table provides the different Teams app capabilities:
 
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
