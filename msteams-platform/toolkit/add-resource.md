@@ -10,12 +10,12 @@ ms.date: 11/29/2021
 
 # Add cloud resources to your Teams app
 
-TeamsFx helps to provision cloud resources for your application hosting. You can also optionally add cloud resources that fit your development needs.
+TeamsFx helps to provision the cloud resources for your application hosting. You can add cloud resources optionally,that it has to fit your development needs.
 
 ## Add cloud resources using Teams Toolkit
 
 > [!IMPORTANT]
-> You need to provision each environment after you add a resource.
+> You need to provision the each environment after successfully added a resource.
 
 1. Open **Microsoft Visual Studio Code**.
 1. Select **Teams Toolkit** from left pane.
@@ -25,20 +25,19 @@ TeamsFx helps to provision cloud resources for your application hosting. You can
 
    You can also open the command palette and enter **Teams: Add add features**:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/addcloud-updated-updated.png" alt-text="cloud" border="true":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/addcloud-updated1234.png" alt-text="cloud" border="true":::
 
 1. From the pop-up, select the cloud resources you want to add to your Teams app project:
 
-     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/cloud-resources-updated.png" alt-text="resources" border="true":::
+     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
 
-1. Select **OK**.
+    In that list ,select required resources.
+    The selected resources are successfully added to your project.
 
-The selected resources are successfully added to your project.
-
-## Add cloud resources using TeamsFx CLI in command window
+## Add cloud resources using TeamsFx CLI
 
 1. Change directory to your **project directory**.
-1. Execute the following command to add different resources in your project:
+1. Execute the following command and add different resources in your project:
 
 |Cloud Resource|Command|
 |---------------|----------|
@@ -49,7 +48,7 @@ The selected resources are successfully added to your project.
 
 ## Types of cloud resources
 
-TeamsFx integrates with Azure services for the following scenarios:
+The following scenarios for TeamsFx integrates with Azure services :
 
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
 - [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
@@ -58,14 +57,14 @@ TeamsFx integrates with Azure services for the following scenarios:
 
 ## Add Cloud resources
 
-After adding any resource, the changes in your project are as follows:
+After adding the resource, the following changes are appears in your project:
 
 - New parameters may be added to azure.parameter.{env}.json to provide required information for provision.
 - New content is appended to ARM template under `templates/azure` folder except the files under `templates/azure/teamsfx` folder to create the added Azure resources.
 - The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
 - `.fx/projectSettings.json` is updated to track the resources present in your project.
 
-After adding resources, the additional changes in your project are as follows:
+After adding resources, the following additional changes are appears in your project:
 
 |Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
