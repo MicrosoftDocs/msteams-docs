@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Overview
 
-The Media Elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams does not provide media support and similarly does not support audio or video or animation cards from Bot Framework and there is no workaround. However, efforts are done to drive parity with SDK which already support media elements so that it will increase engagement with cards and bring new experiences in the media elements.
+The Media Elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams does not provide media support and similarly does not support audio or video or animation cards from Bot Framework and there is no workaround. However, efforts are done to drive parity with SDK, that already support media elements so that it will increase engagement with cards and bring new experiences in the media elements.
 
 ## User problems
 
@@ -18,7 +18,7 @@ The Media Elements feature now supports consumption of media elements directly w
 
 ### User scenarios
 
-**Video**: User Alice has found a relevant informational video on her company OneDrive Sharepoint. She uses the OneDrive Media Elements to unfurl the copied link to send an Adaptive Card to Bob with the video. As the corresponding card has the relevant video embedded in the card, The video is rendered directly within a native Teams media player in the card, thereby allowing Bob to directly have the experience to view the video within the Teams. Bob can now pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
+**Video**: User Alice has found a relevant informational video on her company OneDrive Sharepoint. She uses the OneDrive Media Elements to unfurl the copied link to send an Adaptive Card to Bob with the video. As the corresponding card has the relevant video embedded in the card, the video is rendered directly within a native Teams media player in the card, thereby allowing Bob to directly have the experience to view the video within the Teams. Bob can now pause, play, change volume, and seek through the video as needed. He is also able to view the video in an expanded full-screen mode.  
 
 **Audio**: Nurse Carol locates an audio file with the daily memo on her company OneDrive Sharepoint. She sends the link to the audio memo to her team via chat, that unfurls into an Adaptive Card using the OneDrive Sharepoint App in the compose box. The corresponding card has an embedded audio player that can play the audio file directly within the native Teams media player in the card, there by allowing the team members to experience listening to the audio recording within the Teams. Nurse David, who is in the group chat, can pause, play, change volume, and seek through the audio file as needed.
 
