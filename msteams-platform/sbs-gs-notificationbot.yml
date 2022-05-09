@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A notification bot is an app that proactively sends messages in Teams channel or group chat or personal chat in text or Adaptive cards.
+    A notification bot is an app that proactively sends messages in Teams channel or group chat or personal chat. Once triggered, it sends text or cards to Teams.
     
     In this tutorial, you'll learn:
 
