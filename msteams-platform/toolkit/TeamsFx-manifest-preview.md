@@ -14,7 +14,7 @@ The manifest template file `manifest.template.json` is available under `template
 
 ## Prerequisite
 
-* Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+* Install the [Teams Toolkit version 3.8.1](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio code.
