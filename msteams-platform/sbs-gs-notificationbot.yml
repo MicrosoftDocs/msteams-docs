@@ -290,7 +290,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" border="true":::
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar..
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select **F5**.
 
