@@ -198,7 +198,7 @@ For more information, see:
 
 ## SSO authentication concepts
 
-### Working of in Teams
+### Working of SSO in Teams
 
 Single sign-on (SSO) authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times a user needs to enter their sign in credentials. If users agree to use the app, then they don't have to provide consent repeatedly on another device as they're signed in automatically.
 
@@ -217,6 +217,6 @@ With TeamsFx SDK, you can write user authentication code in a simplified way usi
   2. User identity in Node.js environment: `OnBehalfOfUserCredentail` uses On-Behalf-Of flow and Teams SSO token.
   3. Application Identity in Node.js environment: `AppCredential` represents the application identity.
    
-For more information about TeamsFx SDK, see [TeamsFx SDK](TeamsFx-SDK.md) or check out the API [reference](https://docs.microsoft.com/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true).
+For more information about TeamsFx SDK, see [TeamsFx SDK](TeamsFx-SDK.md) or check out the API [reference].
 
 You can also explore more samples with SSO built by Teams Framework in the [repo](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2).
