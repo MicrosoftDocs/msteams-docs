@@ -3,7 +3,7 @@ title: Preview Teams App Manifest in Teams Toolkit
 author: zyxiaoyuer
 description:  Preview Teams App Manifest
 ms.author: nliu
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
