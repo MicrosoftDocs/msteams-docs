@@ -40,7 +40,7 @@ Cloud resources can added for creating an application. There are two way to add 
 
 From the pop-up, select the cloud resources to include in your project:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
 
     The selected resources are successfully added in to your project.
 
