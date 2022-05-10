@@ -6,31 +6,6 @@ ms.localizationpriority: high
 keywords: teams live share cowatch  
 ---
 
-# Cowatch
+# Overview
 
-(what is cowatch feature)
-
-## Live shares in teams
-
-## Methods
-
-## Meeting apps API reference
-
-(add API's)
-
-## Enable Cowatch
-
-### Prerequisites
-
-(SDK)
-
-### Steps to enable Cowatch feature
-
-## Known Limitations
-
-(limitations)
-
-## End user experience
-
-(user exp)
-
+Co-watching has been identified as one of the top scenarios for the TFL target audience and for gen pop users to drive new user acquisition and ongoing usage. Users see co-watching as way to make and maintain real connection with their family and friends and they find significant pain in current approaches on the market which Teams can help address.
