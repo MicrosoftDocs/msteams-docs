@@ -31,7 +31,7 @@ The following list provides the limitations of while adding more capabilities in
 > [!Note]
 > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-Capabilities can be added for creating an application. There are two way to add the capabilities in visual studio code:
+Capabilities are adding for create an application. There are two way to add the capabilities in visual studio code:
 
    1. You can add capabilities using Teams Toolkit in Visual Studio Code
    1. You can add capabilities using open the command palette
