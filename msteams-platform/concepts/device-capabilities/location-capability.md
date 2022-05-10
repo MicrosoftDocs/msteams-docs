@@ -46,7 +46,6 @@ The location capabilities allow users to get locations on desktop using the foll
  
 Your location detail displays:
 
-  <!-- ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png) -->
 
   :::image type="content" source="~/assets/images/tabs/location-picker-desktop.png" alt-text="Location picker in desktop." border="true":::
 
