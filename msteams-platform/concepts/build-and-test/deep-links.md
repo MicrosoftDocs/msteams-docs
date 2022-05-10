@@ -12,7 +12,7 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre-populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
-[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
 >
@@ -154,7 +154,7 @@ The query parameters are:
 
 When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Microsoft Teams JavaScript library to retrieve the sub-page ID if it exists.
 
-The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext) call ([`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (or subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo).
+The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call ([`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (or subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
 ## Deep linking from your tab
 
@@ -168,7 +168,7 @@ A deep link can be used to navigate within an app. The following code demonstrat
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-You can trigger a navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp) function as shown in the following code:
+You can trigger a navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
 
 ```javascript
 if (pages.isSupported()) {

@@ -15,7 +15,7 @@ Personal tabs, along with personally-scoped bots, are part of personal apps and 
 
 Ensure that you have all the [prerequsites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
-[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 

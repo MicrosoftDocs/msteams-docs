@@ -14,7 +14,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 > [!IMPORTANT]
 > Currently, custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
 
-[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 The following image shows personal tabs:
 

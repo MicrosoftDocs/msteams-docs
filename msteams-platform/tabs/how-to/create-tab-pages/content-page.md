@@ -18,7 +18,7 @@ A content page is a webpage that is rendered within the Teams client. These are 
 
 This article is specific to using content pages as tabs; however the majority of the guidance here applies regardless of how the content page is presented to the user.
 
-[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Tab content and design guidelines
 

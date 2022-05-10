@@ -34,7 +34,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Microsoft Teams tab does'nt support the ability to load intranet websites that use self-signed certificates.
 
-[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Tools to build tabs
 

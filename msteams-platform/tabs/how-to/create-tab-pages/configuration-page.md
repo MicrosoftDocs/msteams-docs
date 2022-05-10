@@ -15,7 +15,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Configure a channel or group chat tab
 

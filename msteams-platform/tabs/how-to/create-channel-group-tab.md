@@ -12,7 +12,7 @@ zone_pivot_groups: teams-app-environment
 
 Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
-[!INCLUDE [sdk-include](msteams-docs/msteams-platform/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -348,61 +348,61 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-    ```javascript
+```javascript
         
-        let saveGray = () => {
-            pages.config.registerOnSaveHandler(function (saveEvent) {
-                pages.config.setConfig({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
-                    entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+    let saveGray = () => {
+        pages.config.registerOnSaveHandler(function (saveEvent) {
+            pages.config.setConfig({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
+                entityId: "grayIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
-        }
-
-        let saveRed = () => {
-            pages.config.registerOnSaveHandler(function (saveEvent) {
-               pages.config.setConfig({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
-                    entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+            saveEvent.notifySuccess();
         });
-        }
-    ```
+    }
+
+    let saveRed = () => {
+        pages.config.registerOnSaveHandler(function (saveEvent) {
+            pages.config.setConfig({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
+                entityId: "redIconTab",
+                suggestedDisplayName: "MyNewTab"
+            });
+            saveEvent.notifySuccess();
+    });
+    }
+```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-    ```javascript
+```javascript
         
-        let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
-                    entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+    let saveGray = () => {
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
+                entityId: "grayIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
-        }
-
-        let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
-                    entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+            saveEvent.notifySuccess();
         });
-        }
-    ```
+    }
+
+    let saveRed = () => {
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
+                entityId: "redIconTab",
+                suggestedDisplayName: "MyNewTab"
+            });
+            saveEvent.notifySuccess();
+        });
+    }
+```
 
 ***
 1. Save the updated **Tab.cshtml**.
@@ -608,61 +608,62 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-    ```javascript
+```javascript
 
-        let saveGray = () => {
-            pages.config.registerOnSaveHandler(function (saveEvent) {
-                pages.config.setConfig({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
-                    entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+    let saveGray = () => {
+        pages.config.registerOnSaveHandler(function (saveEvent) {
+            pages.config.setConfig({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
+                entityId: "grayIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
-        }
+            saveEvent.notifySuccess();
+        });
+    }
     
-        let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
-                    entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+    let saveRed = () => {
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
+                entityId: "redIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
-        }
-    ```
+            saveEvent.notifySuccess();
+        });
+    }
+```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-    ```javascript
+```javascript
 
-        let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
-                    entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+    let saveGray = () => {
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
+                entityId: "grayIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
-        }
+            saveEvent.notifySuccess();
+        });
+    }
     
-        let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
-                    websiteUrl: `https://y8rCgT2b.ngrok.io`,
-                    contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
-                    entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
-                });
-                saveEvent.notifySuccess();
+    let saveRed = () => {
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: `https://y8rCgT2b.ngrok.io`,
+                contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
+                entityId: "redIconTab",
+                suggestedDisplayName: "MyNewTab"
             });
-        }
-    ```
+            saveEvent.notifySuccess();
+        });
+    }
+```
+
 ***
 
 1. Make sure to save the updated **Tab.cshtml**.
