@@ -1,143 +1,235 @@
 ---
-title: Add single sign on to your Teams apps
+title: AAD manifest customization to your Teams apps
 author: 
-description:  Describes Add single sign on of Teams Toolkit
+description:  Describes AAD manifest customization on of Teams Toolkit
 ms.author: 
 ms.localizationpriority: 
 ms.topic: 
-ms.date: 09/05/2022
+ms.date: 05/10/2022
 ---
 
-# Add single sign on to your Teams apps
+# Add manifest
 
-Microsoft Teams has provided a mechanism to minimize the number of times users need to enter their sign in credentials and this is called single sign on. Teams Framework (TeamsFx) added support on top of this mechanism to help developers build single sign feature easily.
+The AAD manifest contains a definition of all the attributes of an AAD application object in the Microsoft identity platform. There is a document to introduce AAD manifest schema and definitions. You can also find AAD manifest from AAD application page on Azure Portal.
 
-## Prerequisite
+Before enabling AAD manifest features in Teams Toolkit extension, AAD application is created/update by the extension, and users can only modify/update AAD application from Azure portal, and some update may conflict with extension. With the latest version of Teams Toolkit extension, we added AAD manifest build-in support in the extension, which make it easier for user to customize AAD application.
 
-* Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+## AAD manifest in VSCode Teams Toolkit extension
 
-> [!TIP]
-> Ensure you have Teams app project opened in VS code.
+When create app using Teams Toolkit with SSO support, or after adding SSO support in a non-SSO project, AAD manifest template will be added to templates\appPackage\aad.template.json. Extension will use this AAD manifest template file to create/update AAD application for these scenarios:
 
-## Enable sso support
+### AAD manifest lifecycle in F5 local debug command
 
-If you started with following project, you can incrementally add SSO:
-
-* Tab
-* Bot
-* Notification bot (restify server)
-* Command bot
-
-### Add SSO using Visual Studio Code
-
-* You can add SSO using Teams Toolkit in Visual Studio Code
-
-    1. Open **Microsoft Visual Studio Code**
-    1. Select **Teams Toolkit** from left panel
-    1. Select **Add features** or open command palette and select **Teams: Add features**
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
-
-    1. Select **Single Sign-On**
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="sso select":::
-
-### Add SSO using TeamsFx CLI in command window
-
-1. Change directory to your **project directory**
-1. Execute the `teamsfx add sso` command to add SSO to your project
-
-> [!Note]
-> This feature will enable SSO for all applicable capabilities. If you add an SSO-applicable capability later to the project, you can follow the same steps to enable SSO for that capability.
-
-## What we will do in 'Add SSO' command
-
-After command execution, Teams Toolkit will do the following things:
-
-   |**Type**|**File**|**Purpose**|
-   |--------|--------|-----------|
-   |Create|`aad.template.json` under `template\appPackage`|This is the Azure Active Directory application manifest used to represent your AAD app. This template will be used to register an AAD app during local debug or provision stage.|
-   |Modify|`manifest.template.json` under `template\appPackage`|An `webApplicationInfo` object will be added into your Teams app manifest template. This field is required by Teams when enabling SSO. This change will take effect when you trigger local debug or provision.|
-   |Create|`auth/tab`|reference code, auth redirect pages and a `README.md` file will be generated in this path for a tab project.|
-   |Create|`auth/bot`|reference code, auth redirect pages and a `README.md` file will be generated in this path for a bot project.|
-
-> [!Note]
-> Please note this by adding SSO, Teams Toolkit won't change anything in the cloud until you trigger local debug or provision. You also need to update your code to ensure SSO works in your project.
-
-## What you need to do after triggering 'Add SSO' command
-
-You can follow the steps below to add SSO in your Teams app based on your Teams app capabilities.
-
-> [!Note]
-> These changes are based on the templates we scaffold.
-
-### Update your source code for Tab project
-    
- 1. Copy auth-start.html and auth-end.htm in auth/public folder to tabs/public/. These two HTML files are used for auth redirects.
- 2. Copy sso folder under auth/tab to tabs/src/sso/.
-      1. InitTeamsFx: This file implements a function that initialize TeamsFx SDK and will open GetUserProfile component after SDK is initialized.
-      1. GetUserProfile: This file implements a function that calls Microsoft Graph API to get user info.
- 3. Execute the following commands under tabs/: npm install @microsoft/teamsfx-react
- 4. Add the following lines to tabs/src/components/sample/Welcome.tsx to import InitTeamsFx:
- 5. Replace the following line: <AddSSO /> with <InitTeamsFx /> to replace the AddSso component with InitTeamsFx component.
- 
-### Update your source code for Bot project
-    
- 1. Copy auth/bot/public folder to bot/src. These folder contains HTML pages used for auth redirect, please note that you need to modify bot/src/index file to add routing to these pages.
- 2. Copy auth/bot/sso folder to bot/src. These folder contains three files as reference for sso implementation:
-      1. showUserInfo: This implements a function to get user info with SSO token. You can follow this method and create your own method that requires SSO token.
-      1. ssoDialog: This creates a ComponentDialog that used for SSO.
-      1. teamsSsoBot: This create a TeamsActivityHandler with ssoDialog and add showUserInfo as a command that can be triggered.
- 3. (Optional) Follow the code sample and register your own command with addCommand in this file.
- 4. Execute the following commands under bot/: npm install isomorphic-fetch
- 5. Execute the following commands under bot/: npm install copyfiles and replace following line in package.json:
+  1. Read state.local.json file to check whether AAD application for local debug has already been created, if yes then use the existing AAD application instead of creating new one.
   
-with
+  2. If need to create a new AAD application, extension will create it using AAD manifest template file, and for some properties which required additional context (such as replyUrls property need to know current local debug endpoint), it will ignore it during this creating stage.
+  
+  3. After local dev environment startup successfully, update AAD application's identifierUris, replyUrls and other properties which are not available during create stage according to local dev environment endpoint.
+  
+### AAD manifest lifecycle in provision command
 
-  By doing this, the HTML pages used for auth redirect will be copied when building this bot project.
- 6. After adding the following files, you need to create a new teamsSsoBot instance in bot/src/index file. Please replace the following code:
- 
-with
+  1. Read state.xxx.json file to check whether AAD application for the environment has already been created, if yes then use the existing AAD application instead of creating a new one.
+  
+  2. If need to create a new AAD application, extension will create it using AAD manifest template file, and for some properties which required additional context (such as replyUrls property need to know frontend or bot endpoint), it will ignore it during this creating stage.
+  
+  3. After other resources have successfully provisioned, update AAD application's identifierUris and replyUrls according to frontend hosting / bot endpoint.
 
- 7. Add routing in bot/src/index file as below:
- 
- 8. Add routing in bot/src/index file as below:
+### AAD manifest lifecycle in Deploy command
 
-## Debug your application
+  1. Deploy resource to cloud command will not handle AAD application, you need to use Deploy Azure Active Directory app manifest instead if you want to update AAD application.
+  
+  2. Deploy Azure Active Directory app manifest will update the AAD application according to the AAD manifest template file, if current environment hasn't provisioned and AAD application is not existed, it will throw errors. If your project has already been provisioned and you want to update your AAD application, you can use this command.
+  
+After the AAD application has successfully deployed, you can follow steps below to find the AAD app:
 
-You can debug your application by pressing F5.
+#### How to view AAD app on Azure portal
 
-Teams Toolkit will use the AAD manifest file to register a AAD application registered for SSO.
+  1. Copy AAD app client id from state.xxx.json (xxx is the environment name that you have deployed the AAD app) file in fx-resource-aad-app-for-teams property.
+  
+  2. Go to Azure portal and login your M365 account which used for the Teams app.
+  
+  3. Open app registrations page, search the AAD app using client id which copied from step 1. 
+. 
+  4. If everything works fine, you can find your AAD app.
+  
+## Placeholders in AAD manifest template
 
-To learn more about Teams Toolkit local debug functionalities, refer to this document.
+AAD manifest file contains placeholder arguments with {{...}} statements which will be replaced at build time according to different environment. Placeholder argument supports config file, state file and environment variables.
 
-## Customize AAD applications
+### Referencing state file values in AAD manifest template
 
-The AAD manifest allows you to customize various aspects of your application registration. You can update the manifest as needed.
+State file is located in .fx\states\state.xxx.json (xxx is represent different environment). A typical state file is as below:
 
-Follow this document if you need to include additional API permissions to access your desired APIs.
 
-## SSO authentication concepts
+   ```json
+   {
+    "solution": {
+        "teamsAppTenantId": "uuid",
+        ...
+    },
+    "fx-resource-aad-app-for-teams": {
+        "applicationIdUris": "api://xxx.com/uuid",
+        ...
+    }
+    ...
+}
+   ```
 
-### How SSO works in Teams
+If you want to reference applicationIdUris value in fx-resource-aad-app-for-teams property, you can use this placeholder argument in the AAD manifest: {{state.fx-resource-aad-app-for-teams.applicationIdUris}}
 
-Single sign-on (SSO) authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times users need to enter their sign in credentials. If users agree to use your app, they don't have to provide consent again on another device as they're signed in automatically.
+### Referencing config file values in AAD manifest template
 
-Teams Tabs and bots have similar flow for SSO support, to learn in detail, please refer to:
+Config file is located in .fx\configs\config.xxx.json (xxx is represent different environment). A typical config file is as below:
 
-   1. Use SSO authentication in Tabs
-   1. Use SSO authentication in Bots
-   
-### How SSO are simplified with TeamsFx
 
-TeamsFx helps to reduce the developer tasks by leveraging Teams SSO and accessing cloud resources down to single line statements with zero configuration.
+   ```json
+   {
+  "$schema": "https://aka.ms/teamsfx-env-config-schema",
+  "description": "description.",
+  "manifest": {
+    "appName": {
+      "short": "app",
+      "full": "Full name for app"
+    }
+  }
+}
+   ```
 
-With TeamsFx SDK, you can write user authentication code in a simplified way using Credentials:
+If you want to reference short value, you can use this placeholder argument in the AAD manifest: {{config.manifest.appName.short}}
 
-  1. User identity in browser environment: TeamsUserCredential represents Teams current user's identity.
-  1. User identity in Node.js environment: OnBehalfOfUserCredentail uses On-Behalf-Of flow and Teams SSO token.
-  1. Application Identity in Node.js environment: AppCredential represents the application identity.
-   
-To learn more about TeamsFx SDK, please read the documentation or check out the API reference.
+### Referencing environment variable in AAD manifest template
 
-You can also explore more samples with SSO built by Teams Framework in the repo.
+Some times you may not want to hardcode the values in AAD manifest template. For example, when the value is a secret. AAD manifest template file supports referencing the values from environment variables. You can use syntax {{env.YOUR_ENV_VARIABLE_NAME}} in parameter values to tell the tooling that the value needs to be resolved from current environment variable.
+
+## AAD manifest authoring supports
+
+AAD manifest template file has codelens to help you better reviewing and editing it.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
+
+#### Preview codelens
+
+At the beginning of the AAD manifest template file, there is a preview codelens. Click this codelens, it will generate AAD manifest based on the environment you selected.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
+
+#### Placeholder argument codelens
+
+Placeholder argument has codelens to help you take quick look of the values for local debug and develop environment. If your mouse hover on the placeholder argument, it will show tooltip box for the values of all the environment.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
+
+#### Required resource access codelens
+
+Different from official AAD manifest schema that resourceAppId and resourceAccess id in requiredResourceAccess property only support uuid, AAD manifest template in Teams Toolkit also support user readable strings for Microsoft Graph and Office 365 SharePoint Online permissions. If you input uuid, codelens will show user readable strings, otherwise, codelens will show uuid.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
+
+#### Pre-authorized applications codelens
+
+For preAuthorizedApplications property, codelens will show the application name for the per-authorized application id.
+
+### Customize AAD manifest template
+
+User can customize AAD manifest template to update AAD application.
+
+#### Customize requiredResourceAccess
+
+If your Teams app required more permissions to call API with additional permissions, you need to update requiredResourceAccess property in the AAD manifest template. Here is an example for this property:
+
+```json
+   "requiredResourceAccess": [
+    {
+        "resourceAppId": "Microsoft Graph",
+        "resourceAccess": [
+            {
+                "id": "User.Read", // For Microsoft Graph API, you can also use uuid for permission id
+                "type": "Scope" // Scope is for delegated permission
+            },
+            {
+                "id": "User.Export.All",
+                "type": "Role" // Role is for application permission
+            }
+        ]
+    },
+    {
+        "resourceAppId": "Office 365 SharePoint Online",
+        "resourceAccess": [
+            {
+                "id": "AllSites.Read",
+                "type": "Scope"
+            }
+        ]
+    }
+]
+   ```
+
+resourceAppId property is for different APIs, for Microsoft Graph and Office 365 SharePoint Online, you can input the name directly instead of uuid, and for other APIs, you need to use uuid.
+
+resourceAccess.id property is for different permissions, for Microsoft Graph and Office 365 SharePoint Online, you can input the permission name directly instead of uuid, and for other APIs, you need to use uuid.
+
+resourceAccess.type property is used for delegated permission or application permission. Scope means delegated permission and Role means application permission.
+
+### Customize preAuthorizedApplications
+
+You can use preAuthorizedApplications property to authorize a client application indicates that this API trusts the application and users should not be asked to consent when the client calls this exposed API. Here is an example for this property:
+
+```json
+    "preAuthorizedApplications": [
+        {
+            "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+            "permissionIds": [
+                "{{state.fx-resource-aad-app-for-teams.oauth2PermissionScopeId}}"
+            ]
+        }
+        ...
+    ]
+```
+
+preAuthorizedApplications.appId property is used for the application you want to authorize. If you doesn't know the application id but only knows the application name, you can go to Azure Portal following this steps to search the application to find the id:
+  1. Go to Azure Portal and open app Registrations
+
+  1. Click All applications and search the application name
+  
+  1. If you find the application that you search for, you can click the application and get the application id from the overview page
+
+### Customize redirect URLs
+
+Redirect URLs is used when returning authentication responses (tokens) after successfully authenticating. You can customize redirect URLs using property replyUrlsWithType, for example, if you want to add https://www.examples.com/auth-end.html as redirect URL, you can add it as below:
+
+```json
+"replyUrlsWithType": [
+    ...
+    {
+        "url": "https://www.examples.com/auth-end.html",
+        "type": "Spa"
+    }
+]
+```
+
+## Use existing AAD app
+
+If you want to use existing AAD app for your Teams project, you can refer this doc for more information.
+
+## Limitations
+
+1. Not all the properties listed in AAD manifest schema are supported in Teams Toolkit extension, this tab show the properties that are not supported:
+
+|**Not supported properties**|**Reason**|
+|-----------|----------|
+|passwordCredentials|Not allowed in manifest|
+|createdDateTime|Readonly and cannot change|
+|logoUrl|Readonly and cannot change|
+|publisherDomain|Readonly and cannot change|
+|oauth2RequirePostResponse|Doesn't exist in Graph API|
+|oauth2AllowUrlPathMatching|Doesn't exist in Graph API|
+|samlMetadataUrl|Doesn't exist in Graph API|
+|orgRestrictions|Doesn't exist in Graph API|
+|certification|Doesn't exist in Graph API|
+
+2. Currently requiredResourceAccess property can use user readable resource app name or permission name strings only for Microsoft Graph and Office 365 SharePoint Online APIs. For other APIs, you need to use uuid instead. You can follow these steps retrieve ids from Azure Portal:
+
+* Register a new AAD application on Azure Portal.
+* Click API permissions from the AAD application page.
+* Click Add a permission to add the permission you want.
+* Click Manifest, from the requiredResourceAccess property, you can find the ids of API and permissions.
