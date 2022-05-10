@@ -34,15 +34,16 @@ The Media Elements feature now supports consumption of media elements directly w
 
 For the MVP of the media elements feature, the following three scenarios are supported primarily for the in-line media playback for both user-sent and bot-sent:
 
-* Files of a supported type are available externally via any publicly available URL that is sanitized.
+* Files of a supported type are available externally via any publicly available URLs directly linking to a media file.
     Video or audio is linked via a URL that points to a supported video or audio file.
-* Inline YouTube video playback through Adaptive Cards SDK v1.6.
-* Files are directly uploaded to OneDrive Sharepoint within the tenant.
-    Video or audio is shared from OneDrive Sharepoint.
+* Inline YouTube video playback through an embedded YouTube player (Adaptive Cards SDK v1.6).
+    This experience looks different from the rest of the media elements that leverage one player.
+* Files are directly uploaded to OneDrive Sharepoint and are accessible within the tenant.
+    Video or audio is shared from OneDrive Sharepoint and Adaptive Card would be able to play that file through player.
 
 ### Phase 2: Support third party partner scenarios
 
-Following are the dynamic user-uploaded scenarios where users submit video or audio files:
+To improve the ability to deal with media files, following are the dynamic user-uploaded scenarios where users upload video or audio files within OneDrive, SharePoint in other tenants and be able to link to them:
 
 * Files are directly uploaded to OneDrive Sharepoint external to the tenant (potential permission issues).
 * Files on third party external players such as Vimeo, Dailymotion, Spotify, Netflix, etc.
@@ -180,3 +181,11 @@ Once the user clicks the central **Play** button, the actual player is instantia
   ]
 }
 ```
+
+## Limitations
+
+(Limitations will be shared later after categorizing by Dev design team)
+Following are the limitations:
+
+1. The MIME type, that are able to support certain file types and using the MIME type.
+1. Size limitation.
