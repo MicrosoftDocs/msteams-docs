@@ -45,7 +45,7 @@ Use `getAuthToken()` at the time when you need to validate the user identity:
 | At the time user accesses the app | From inside `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the user takes an action that requires a signed-in user. |
 
-Once Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to the Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
+When Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
 
 > [!IMPORTANT]
 > As a best practice for security of access token, always call `getAuthToken()` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.
@@ -98,6 +98,22 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
 After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
+
+### Use the access token as an identity token
+
+The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
+
+The access token returned from `getAuthToken()` contains information that can be used to establish the identity. The following claims in the token relate to identity:
+
+- name: The user's display name.
+- preferred_username: The user's email address.
+- oid: A GUID representing the ID of the user in the Microsoft identity system.
+- tid: A GUID representing the tenant tha the user is signing in to.
+
+Teams can cache this information associated with the user's identity; such as the user's preferences.
+
+> [!NOTE]
+> If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
 
 ## Pass the access token to server-side code
 
@@ -168,22 +184,6 @@ The following is a typical decoded payload of an access token.
     ver: "2.0"
 }
 ```
-
-### Use the access token as an identity token
-
-The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
-
-The access token returned from `getAuthToken()` contains information that can be used to establish the identity. The following claims in the token relate to identity:
-
-- name: The user's display name.
-- preferred_username: The user's email address.
-- oid: A GUID representing the ID of the user in the Microsoft identity system.
-- tid: A GUID representing the tenant tha the user is signing in to.
-
-Teams can cache this information associated with the user's identity; such as the user's preferences.
-
-> [!NOTE]
-> If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
 
 ## Code samples
 
