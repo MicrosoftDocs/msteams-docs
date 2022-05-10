@@ -31,7 +31,7 @@ The following list provides the limitations of while adding more capabilities in
 > [!Note]
 > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-Capabilities are adding for create an application. There are two way to add the capabilities in visual studio code:
+Adding Capabilities for creating an application. There are two way to add the capabilities:
 
    1. You can add capabilities using Teams Toolkit in Visual Studio Code
    1. You can add capabilities using open the command palette
@@ -56,7 +56,7 @@ Capabilities are adding for create an application. There are two way to add the 
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
 
-The selected capabilities are successfully added to your project. The Teams Toolkit generate source code for newly added capabilities.
+The selected capabilities are successfully added to your project. 
 
 ## Add capabilities using TeamsFx CLI
 
