@@ -31,11 +31,12 @@ The following list provides the limitations of adding more capabilities in Teams
 > [!Note]
 > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-Capabilities can added for creating the application. There are two way to added:
-* You can add capabilities using Teams Toolkit in Visual Studio Code
-* You can add capabilities using open the command palette in Visual Studio Code
+Capabilities can be added for creating an application. There are two way to add the capabilities:
 
-* You can add capabilities using Teams Toolkit in Visual Studio Code
+   1. You can add capabilities using Teams Toolkit in Visual Studio Code
+   1. You can add capabilities using open the command palette
+
+*   You can add capabilities using Teams Toolkit in Visual Studio Code
 
     1. Open **Microsoft Visual Studio Code**
     1. Select **Teams Toolkit** from left panel
@@ -43,7 +44,7 @@ Capabilities can added for creating the application. There are two way to added:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature1234.png" alt-text="updated one" border="true":::
 
-*   You can add capabilities using open the command palette in Visual Studio Code
+*   You can add capabilities using open the command palette
 
     1. Open the **command palette**
     1. Enter **Teams:Add features**
