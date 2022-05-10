@@ -23,7 +23,7 @@ landingContent:
 
 # - title: Explore the latest
 #  linkLists:
-#    - linkListType: concept
+#    - linkListType: whats-new
 #      links:
 #      - text: Common reasons for app validation failure
 #        url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
