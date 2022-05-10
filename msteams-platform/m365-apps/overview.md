@@ -16,7 +16,7 @@ You can test your Teams apps running in Microsoft Office and Outlook by updating
 With this preview, you can:
 
 - Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Office on the web (office.com).
-- Extend existing Teams [search-based messaging extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
+- Extend existing Teams [search-based message extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
 
 For feedback and issues, continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
 
@@ -28,11 +28,13 @@ After sideloading to Teams, your personal tab appears as one of your installed a
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in Outlook, Office, and Teams":::
 
-## Teams messaging extensions in Outlook
+## Teams message extensions in Outlook
 
-With this preview, you can extend your search-based Teams messaging extensions to Outlook on the web and Windows desktop, enabling customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
+With this preview, you can extend your search-based Teams message extensions to Outlook on the web and Windows desktop, enabling customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
-After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
+After sideloading to Teams, your message extension appears as one of your installed apps within the Outlook compose message area.
+
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Message extension running in Outlook and Teams":::
 
 ## Next steps
 

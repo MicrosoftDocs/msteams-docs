@@ -21,7 +21,7 @@ items:
 
     For this tutorial, start Microsoft Teams app development with SPFx by building your first app with a tab capability.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="true":::
 
     > [!NOTE]
     > Currently, Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities are not available.
@@ -59,7 +59,7 @@ items:
     1. In the search box, enter **Teams Toolkit**.
     1. Select **Install** next to the Teams Toolkit.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-install-toolkit-vscode.png" alt-text="microsoft tool kit" border="true":::" alt-text="microsoft tool kit" border="true":::
 
         The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
 
@@ -111,8 +111,7 @@ items:
     1. Select **Manage your apps**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
-
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new.png" alt-text="bot home" border="true":::
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
 
@@ -123,9 +122,9 @@ items:
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
     1. In the welcome screen, select **Set up E5 subscription**.
-    1. Set up your administrator account. After you finish, the following screen appears.
+    1. Set up your administrator account. After you finish, the following screen appears:
 
-        :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-microsoft-365.png" alt-text="Microsoft 365" border="true":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -158,41 +157,40 @@ items:
 
     1. Select **Create a new Teams app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-    1. Deselect **Tab**, select **Tab(SPFx)**, and select **OK**.
+    1. Deselect **Tab**, select **Tab (SPFx)**, and select **OK**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/new-spfxTab-spfx.png" alt-text="new spfx tab spfx" border="true":::
 
     1. Select **React** in the **Framework** section.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-react-page.png" alt-text="bot home" border="true":::
 
     1. Select **Enter** to accept the default **Web Part Name**.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/webpart-name.png" alt-text="Enter Webpart name":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-helloworld.png" alt-text="bot home" border="true":::
 
-    1. Select **Enter** to accept the default **Web Part Description**.
+    1. Enter a suitable name for your app, such as `HelloWorld`. Ensure that the name of the app is alphanumeric. 
+       Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/webpart-description.png" alt-text="Enter Webpart description":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home" border="true":::
 
-    1. Select a workspace folder. The Toolkit creates a folder in the workspace folder for the project.
+        Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
+        
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" border="true":::
+ 
+        The scaffolding takes a couple of minutes.
 
-    1. Enter a suitable name for your app, like `HelloWorld`. Ensure that the name of the app is alphanumeric.  Select **Enter** to continue.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-name.png" alt-text="Enter SPFx app name":::
-
-        Your Teams app is created within a few seconds.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-created.png" alt-text="SPFx app created":::
-
-        After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This is the default location specified in Visual Studio Code.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="Location message":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/sbs-share-point.png" alt-text="bot home" border="true":::
+        
+        After your app is created, the Teams Toolkit displays a message to indicate the location where the project workspace is created. This is the default location specified in Visual Studio Code
+        
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/location-change-new.png" alt-text="location" border="true":::
 
         The message offers two options:
         
@@ -206,9 +204,8 @@ items:
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
-    Watch this short recap for creating a Teams app.
-
-    ![Create a Teams app](~/assets/videos/spfx-tab-app.gif)
+    
+    ![Create a Teams app](~/assets/videos/spfx-tab-source.gif)
     </details>
 
     # [Command line](#tab/cli)
@@ -222,15 +219,14 @@ items:
     The CLI walks through some questions to create the project. Every question includes an instruction on answering it, for example, Use arrow keys to select an option. When you've answered the question, select **Enter** to confirm it.
 
     1. Select **Create a new Teams app**.
-    1. Select **Tab**.
-    1. Select **SharePoint Framework (SPFx)** frontend hosting.
-    1. Select **React** framework.
-    1. Press **Enter** for the **Web Part Name**.
-    1. Press **Enter** for the **Web Part Description**.
-    1. Press **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
+    2. Select **Tab**.
+    3. Select **SharePoint Framework (SPFx)** frontend hosting.
+    4. Select **React** Framework.
+    5. Press **Enter** for the **Web Part Name**.
+    6. Enter a suitable name for your app, like `helloworld`. The name of the app must be alphanumeric.
 
-      After all the questions have been answered, your project will be created.
+
+       Your project is created after all the questions are answered.
 
     ---
 
@@ -287,19 +283,20 @@ items:
 
     # [Command line](#tab/cline)
 
-    - Sign in to Microsoft 365 with the TeamsFx CLI:
+       Sign in to Microsoft 365 with the TeamsFx CLI.
 
-        ``` bash
+    ``` bash
         teamsfx account login m365
-        ```
+    ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+    Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
+ 
+    The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+    Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
-    ---
+     ---
 
     ## Build and run your app locally in Visual Studio Code
 
@@ -312,7 +309,7 @@ items:
         - **Teams workbench (Edge)**
         - **Teams workbench (Chrome)**
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-teams-workbench.png" alt-text="Screenshot showing how to run and debug an SPFx app in a Teams workbench.":::
+            :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-debug.png" alt-text="bot home" border="true":::
 
     1. Select the play button or select the **F5** key to start debugging.
         > [!NOTE]
@@ -322,7 +319,7 @@ items:
         
     1. Select **Yes** when the following dialog appears:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Microsoft 365" border="true":::
 
         Teams web client opens in a browser window.
 
@@ -476,4 +473,4 @@ items:
 
         Congratulations! Your app is now added to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::"

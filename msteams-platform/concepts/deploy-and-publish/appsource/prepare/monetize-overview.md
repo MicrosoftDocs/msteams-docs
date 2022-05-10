@@ -4,13 +4,13 @@ description: Learn how to monetize your Microsoft Teams app.
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal 
+ms.localizationpriority: high 
 ---
 
 # Monetize your app
 
-Microsoft Teams app Store provide features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
-
+Microsoft Teams app Store provides features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
+ 
 ## Choose a pricing model
 
 :::row:::
@@ -19,7 +19,7 @@ Microsoft Teams app Store provide features that enable you to monetize your apps
     :::column-end:::
     :::column span="2":::
 
-Include a SaaS offer with your app:
+**Include a SaaS offer with your app**
 
 With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md), you can monetize your Teams app by selling subscription plans directly from your Teams store listing.
 
@@ -32,7 +32,7 @@ With a transactable [Software-as-a-Service (SaaS) offer](~/concepts/deploy-and-p
     :::column-end:::
     :::column span="2":::
 
-Free trials:
+**Free trials**
 
 You can offer a free trial version of your app to get more customers to try it. To entice customers to buy the full version, you can limit the features in the trial version (for example, only including limited number of responses for a week) or specify a time period for the trial.
 
@@ -43,6 +43,7 @@ You can offer a free trial version of your app to get more customers to try it. 
         ![In-app purchases](~/assets/images/saas-offer/pricing-in-app-purchases.png)
     :::column-end:::
     :::column span="2":::
+
 **In-app purchases**
 
 Whether you charge a price for your app or offer it for free, you can use in-app purchases in your app to provide an ongoing revenue stream. Use in-app purchases to let customers upgrade from a free to a paid version of your app.
@@ -56,7 +57,7 @@ Whether you charge a price for your app or offer it for free, you can use in-app
     :::column-end:::
     :::column span="2":::
 
-Test preview for monetized app:
+**Test preview for monetized app**
 
 With a transactable Software as a Service (SaaS) offer, you can test the end-to-end purchase experience for your monetized apps in Teams before you publish.
 

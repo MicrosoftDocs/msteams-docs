@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build search based messaging extension
+title: Build search based message extension
 metadata:
-  title: Build search based messaging extension
-  description: In this tutorial, you'll learn to build a search-based messaging extension.
+  title: Build search based message extension
+  description: In this tutorial, you'll learn to build a search-based messageextension.
   audience: Developer
   level: Beginner
   ms.date: 01/27/2022
@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Messaging extensions allow users to interact with web services in the Microsoft Teams client. They help to search in an external system from the compose message area, the command box, or directly from a message. 
+    Message extensions allow users to interact with web services in the Microsoft Teams client. They help to search in an external system from the compose message area, the command box, or directly from a message. 
     
-    **Key features of search based messaging extension**
+    **Key features of search based message extension**
 
     * Allow users to search external systems.
     * Insert search results into a message in the form of a card.
 
-    This step-by-step guide helps you to build a search based messaging extension. You'll see the following output:
+    This step-by-step guide helps you to build a search based message extension. You'll see the following output:
 
     ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
@@ -75,8 +75,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
-    1. From the **Resource group** dropdown list, select your existing resource group. 
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list.
     
         ![Select resource Azure bot](~/assets/images/Teams-Messaging-Extensions-Search/review-plus-create.png) 
     
@@ -347,11 +347,11 @@ items:
 
         ![App settings](~/assets/images/Teams-Messaging-Extensions-Search/appsettings.png)
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation.png)
     
-    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
+    1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
          * Replace `<<YOUR-BASE-URL-DOMAIN>>` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.
@@ -405,7 +405,7 @@ items:
    
     ![Dotnet](~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.png)
 
-- title: Add Search Messaging Extension app
+- title: Add Search Message Extension app
   durationInMinutes: 1
   content: |
     1. In your cloned repository, navigate to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
@@ -469,5 +469,5 @@ items:
     ![Final](~/assets/images/Teams-Messaging-Extensions-Search/final_output.png)
 
 - content: |
-    You've completed the tutorial to get started with Teams messaging extensions search!
+    You've completed the tutorial to get started with Teams message extensions search!
 

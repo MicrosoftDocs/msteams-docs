@@ -531,25 +531,25 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 **Optional**—array
 
-Defines a messaging extension for the app.
+Defines a message extension for the app.
 
 > [!NOTE]
-> The name of the feature was changed from "compose extension" to "messaging extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
+> The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the manifest name remains the same so that existing extensions continue to function.
 
-The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a messaging extension.
+The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
-|`botId`|string|64|✔|The unique Microsoft app ID for the bot that backs the messaging extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
-|`commands`|array of objects|10|✔|Array of commands the messaging extension supports.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a messaging extension can be updated by the user. Default: **false**.|
+|`botId`|string|64|✔|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
+|`commands`|array of objects|10|✔|Array of commands the message extension supports.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|array of Strings|||Array of domains that the link message handler can register for.|
 
 ### composeExtensions.commands
 
-Your messaging extension must declare one or more commands with a maximum of 10 commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
+Your message extension must declare one or more commands with a maximum of 10 commands. Each command appears in Microsoft Teams as a potential interaction from the UI-based entry point.
 
 Each command item is an object with the following structure:
 
@@ -562,7 +562,7 @@ Each command item is an object with the following structure:
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
-|`taskInfo`|object|||Specify the task module to pre-load when using a messaging extension command.|
+|`taskInfo`|object|||Specify the task module to pre-load when using a message extension command.|
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
 |`taskInfo.width`|string|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|string|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -803,6 +803,9 @@ Specify meeting extension definition. For more information, see [custom Together
 ## authorization
 
 **Optional** — object
+
+> [!NOTE]
+> If you set the `manifestVersion` property to 1.12, the authorization property is incompatible with the older versions (version 1.11 or earlier) of the manifest. Authorization is supported for manifest version 1.12.
 
 Specify and consolidate authorization related information for the app.
 

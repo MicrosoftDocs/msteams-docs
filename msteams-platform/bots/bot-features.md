@@ -31,7 +31,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 * Use specialized card types like the Office 365 connector card.
 * Set Teams-specific channel data on activities.
-* Process messaging extension requests.
+* Process message extension requests.
 
 > [!IMPORTANT]
 > You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
@@ -45,7 +45,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ## Bots with webhooks and connectors
 
-Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a simple bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## Advantages of bots
 
@@ -187,9 +187,10 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js |
-|----------------|-----------------|--------------|----------------|
-| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+|Sample name | Description | .NETCore | Node.js | Python|
+|----------------|-----------------|--------------|----------------|-------|
+| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+| Bot samples | Set of bot samples | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
 
 ## Next step
 

@@ -61,15 +61,15 @@ You can use the `\r` or `\n` escape sequences for newlines in lists. Using `\n\n
 
 On the desktop, Adaptive Card Markdown formatting appears as shown in the following image in both web browsers and in the Teams client application:
 
-![Adaptive Card Markdown formatting in the desktop client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="adaptive markdown desktop client":::
 
 On iOS, Adaptive Card Markdown formatting appears as shown in the following image:
 
-![Adaptive Card Markdown formatting in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Adaptive Card Markdown formatting in iOS":::
 
 On Android, Adaptive Card Markdown formatting appears as shown in the following image:
 
-![Adaptive Card Markdown formatting in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Adaptive Card Markdown formatting in Android":::
 
 For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
 
@@ -118,13 +118,13 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="Adaptive card with an emoji" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive card emoji":::
 
 ### Mention support within Adaptive Cards
 
-You can add @mentions within an Adaptive Card body for bots and messaging extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
+You can add @mentions within an Adaptive Card body for bots and message extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
-Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
+Bots and message extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
 > [!NOTE]
 >
@@ -183,7 +183,7 @@ The following table describes the newly supported user mention IDs:
 
 #### User mention in bots with Adaptive Cards
 
-Bots support user mention with the Azure AD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and messaging extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs.
+Bots support user mention with the Azure AD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and message extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs.
 
 > [!NOTE]
 > Schema update and UI/UX changes are not required for user mentions with Adaptive Cards in Bot.
@@ -228,7 +228,7 @@ Example for user mention in bots with Adaptive Cards as follows:
 
 Following image illustrates the user mention with Adaptive Card in Bot:
 
-![User mention in bot with Adaptive Card](~/assets/images/authentication/user-mention-in-bot.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="User mention in bot with Adaptive Card":::
 
 #### User mention in Incoming Webhook with Adaptive Cards
 
@@ -292,7 +292,7 @@ Example for user mention in Incoming Webhook as follows:
 
 Following image illustrates user mention in Incoming Webhook:
 
-![User mention in Incoming Webhook](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="User mention in Incoming Webhook":::
 
 ### Information masking in Adaptive Cards
 
@@ -317,7 +317,7 @@ The following code shows an example of Adaptive Card with masking property:
 
 The following image is an example of masking information in Adaptive Cards:
 
-![Masking information image](../../assets/images/cards/masking-information-view.png)
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Masking information view":::
 
 ### Full width Adaptive Card
 
@@ -354,11 +354,11 @@ To make a full width Adaptive Card, your app must include the elements from the 
 
 The following image shows a full width Adaptive Card:
 
-![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Full width Adaptive Card view":::
 
 The following image shows the default view of the Adaptive Card when you have not set the `width` property to **Full**:
 
-![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Small width Adaptive Card view":::
 
 ### Typeahead support
 
@@ -406,11 +406,11 @@ In an Adaptive Card, you can use the `msteams` property to add the ability to di
 
 When users hover over the image, an expand icon appears at the top right corner as shown in the following image:
 
-![Adaptive Card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Adaptive Card with expandable image":::
 
 The image appears in stage view when the user selects the expand icon as shown in the following image:
 
-![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Image expanded to stage view":::
 
 In the stage view, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
 
@@ -532,11 +532,11 @@ In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
 On the desktop, Markdown formatting for connector cards appears as shown in the following image:
 
-![Markdown formatting for connector cards in the Desktop client](../../assets/images/cards/connector-desktop-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Markdown formatting for connector cards":::
 
 On iOS, Markdown formatting for connector cards appears as shown in the following image:
 
-![Markdown formatting for connector cards in the iOS client](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Markdown formatting for connector cards in the iOS client":::
 
 Connector cards using Markdown for iOS include the following issues:
 
@@ -545,7 +545,7 @@ Connector cards using Markdown for iOS include the following issues:
 
 On Android, Markdown formatting for connector cards appears as shown in the following image:
 
-![Markdown formatting for connector cards in the Android client](../../assets/images/cards/connector-android-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Markdown formatting for connector cards in the Android client":::
 
 ### Format example for Markdown connector cards
 
@@ -630,11 +630,11 @@ In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
 On the desktop, HTML formatting for connector cards appears as shown in the following image:
 
-![HTML formatting for connector cards in the desktop client](../../assets/images/cards/Connector-desktop-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="HTML formatting for connector cards in the desktop client":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-![HTML formatting for connector cards in the iOS client](../../assets/images/cards/connector-iphone-html-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="HTML formatting for connector cards in the iOS client":::
 
 Connector cards using HTML for iOS include the following issues:
 
@@ -643,7 +643,7 @@ Connector cards using HTML for iOS include the following issues:
 
 On Android, HTML formatting appears as shown in the following image:
 
-![HTML formatting for connector cards in the Android client](../../assets/images/cards/connector-android-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="HTML formatting for connector cards in the Android client":::
 
 ### Format sample for HTML connector cards
 
@@ -720,17 +720,17 @@ As there are resolution differences between the desktop and mobile platform, for
 
 On the desktop, HTML formatting appears as shown in the following image:
 
-![HTML formatting in the desktop client](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="HTML formatting in the desktop client":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-![HTML formatting in the iOS client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="HTML formatting in the iOS client":::
 
 Character formatting, such as bold and italic are not rendered on iOS.
 
 On Android, HTML formatting appears as shown in the following image:
 
-![HTML formatting in the Android client](../../assets/images/cards/card-formatting-xml-android-60.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="HTML formatting in the Android client":::
 
 Character formatting, such as bold and italic display correctly on Android.
 
@@ -750,3 +750,4 @@ You can test formatting in your own cards by modifying this code.
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Task modules](~/task-modules-and-cards/cards/cards-format.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
+* [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)

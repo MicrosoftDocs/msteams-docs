@@ -8,31 +8,32 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Customize app manifest in Teams Toolkit
+# Customize app manifest in Toolkit
 
-Teams Toolkit consists of the following manifest template files under `templates/appPackage` folder:
+Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
-* `manifest.local.template.json` - local debug teams app
-* `manifest.remote.template.json` - shared in all environments
+* `manifest.template.json`
+* `templates/appPackage`
+
 
 ## Prerequisite
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio Code.
 
-During provision, Teams Toolkit loads manifest from `manifest.remote.template.json`, combined with configurations from `state.{env}.json` and `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+During local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`,  with configurations from `state.{env}.json`, `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
-During local debug, Teams Toolkit loads manifest from `manifest.local.template.json`, combined with configurations from `localSettings.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
-## Supported placeholder in manifest.remote.template.json
+## Placeholders supported in manifest.template.json
 
-* `{{state.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json.
-* `{{config.manifest.xx}}` is customized placeholder whose value is resolved from `config.{env}.json`.
-  * You can add a customized parameter as follows:
-    * Add a placeholder in manifest.remote.template.json with pattern: `{{config.manifest.xx}}`
-    * Add a config value in config.{env}.json
+* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in state.{env}.json
+* `{{config.manifest.xx}}` is customized placeholder and it's value is resolved from `config.{env}.json`
+
+  1. You can add a customized parameter as follows:
+      1. Add a placeholder in manifest.template.json with pattern: `{{config.manifest.xx}}`
+      2. Add a config value in config.{env}.json
 
         ```json
         {
@@ -42,14 +43,7 @@ During local debug, Teams Toolkit loads manifest from `manifest.local.template.j
         }
         ```
 
-    Besides each config placeholder in `manifest.remote.template.json`, there is a `Go to config file`. You can navigate to configuration file by selecting it.
-
-## Supported placeholder in manifest.local.template.json
-
-`{{localSettings.xx}}` is pre-defined placeholder whose value is resolved by Teams Toolkit, defined in `localSettings.json`. Ensure not to modify the values in localSettings.json.
-
- > [!NOTE]
- > Ensure not to customize the local manifest.
+   2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`
 
 ## See also
 

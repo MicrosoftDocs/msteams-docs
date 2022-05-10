@@ -77,8 +77,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
-    1. From the **Resource group** dropdown list, select your existing resource group. 
+    1. Select your **Subscription** from the dropdown list.
+    1. Select your **Resource group** from the dropdown list. 
     
         ![Select resource Azure bot](~/assets/images/Teams-task-module/review-plus-create.png) 
     
@@ -348,11 +348,11 @@ items:
 
         ![App settings](~/assets/images/Teams-task-module/appsettings.png)
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json`` in cloned repository.
 
         ![Manifest file location](~/assets/images/Teams-task-module/manifestlocation.png)
     
-    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
+    1. Open `manifest.json`` in latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `YourDeployedBotUrl.com` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.

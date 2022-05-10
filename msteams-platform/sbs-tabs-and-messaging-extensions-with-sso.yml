@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: AAD SSO for tabs and messaging extension
+title: AAD SSO for tabs and message extension
 metadata:
-  title: AAD SSO for tabs and messaging extension
+  title: AAD SSO for tabs and message extension
   description: In this tutorial, you'll learn to set up AAD SSO for tabs.
   audience: Developer
   level: Beginner
@@ -16,13 +16,13 @@ items:
   content: |
    The Azure Active Directory Single sign-on (AAD SSO) helps to authenticate users in Teams. 
 
-   **Key aspects of the step-by-step guide of AAD SSO for tabs and messaging extensions**
+   **Key aspects of the step-by-step guide of AAD SSO for tabs and message extensions**
 
     * After the first sign-in, AAD SSO allows the user to sign in automatically.
     * Allows the user to sign in to other devices without re-entering sign-in credentials.
     * Obtains token for the logged-in user.   
 
-   This step-by-step guide helps you to create tabs and messaging extensions enabling AAD SSO authentication. You'll see the following output:
+   This step-by-step guide helps you to create tabs and message extensions enabling AAD SSO authentication. You'll see the following output:
 
      ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
 
@@ -35,8 +35,8 @@ items:
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
     * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
-    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
-       
+    * [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
+
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
     
@@ -76,7 +76,7 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
+    1. Select your **Subscription** from the dropdown list.
     1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
 
         ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
@@ -353,11 +353,11 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/Tab-ME-SSO/folder-manifest.png)
     
-    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
+    1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
          * Replace all occurrences of `[DOMAIN-NAME]` with your ngrok domain name. 
          * Replace all occurrences of `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
@@ -455,9 +455,9 @@ items:
 
           ![No SSO](~/assets/images/Tab-ME-SSO/not-login11.png)
 
-      1. Select ellipses **...** to open messaging extension.
+      1. Select ellipses **...** to open message extension.
 
-          ![messaging extension](~/assets/images/Tab-ME-SSO/message-extension.png)
+          ![message extension](~/assets/images/Tab-ME-SSO/message-extension.png)
       
       1. Select your new SSO application.
 
@@ -475,7 +475,7 @@ items:
 
           ![consent box](~/assets/images/Tab-ME-SSO/concent-box.png)
 
-      1. Open messaging extension and select your application.
+      1. Open message extension and select your application.
 
       1. Select your profile under search box. You'll see something like this:
 
@@ -495,6 +495,6 @@ items:
     
 
 - content: |
-    You've completed the tutorial to get started with SSO for tab and messaging extension app.
+    You've completed the tutorial to get started with SSO for tab and message extension app.
 
 

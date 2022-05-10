@@ -30,7 +30,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and messaging extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 ![High-level diagram of a Virtual Assistant solution](../assets/images/bots/virtual-assistant/high-level-diagram.png)
@@ -244,9 +244,9 @@ The following  processing functions have been added to Virtual Assistant core:
     }
 ```
 
-### Handle messaging extensions
+### Handle message extensions
 
-The commands for a messaging extension are declared in your app manifest file. The messaging extension user interface is powered by those commands. For a Virtual Assistant to power a messaging extension command as an attached skill, a Virtual Assistant's own manifest must contain those commands. You must add the commands from an individual skill's manifest to the Virtual Assistant's manifest. The command ID provides information about an associated skill by appending the skill's app ID through a separator `:`.
+The commands for a message extension are declared in your app manifest file. The message extension user interface is powered by those commands. For a Virtual Assistant to power a message extension command as an attached skill, a Virtual Assistant's own manifest must contain those commands. You must add the commands from an individual skill's manifest to the Virtual Assistant's manifest. The command ID provides information about an associated skill by appending the skill's app ID through a separator `:`.
 
 The snippet from a skill's manifest file is shown in the following section:
 
@@ -312,7 +312,7 @@ Once the commands are invoked by a user, the Virtual Assistant can identify an a
     }
 ```
 
-Some messaging extension activities do not include the command ID. For example, `composeExtension/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
+Some message extension activities do not include the command ID. For example, `composeExtension/selectItem` contains only the value of the invoke tap action. To identify the associated skill, `skillId`  is attached to each item card while forming a response for `OnTeamsMessagingExtensionQueryAsync`. This is similar to the approach for [adding adaptive  cards to your Virtual Assistant](#add-adaptive-cards-to-your-virtual-assistant).
 
 ```csharp
     // Invoked when a 'composeExtension/selectItem' invoke activity is received for compose extension query command.
@@ -559,10 +559,10 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 * **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there is no clear state where conversation is ended. Hence we have not sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.  
 * **Card refresh**: Card refresh is not yet supported through Virtual Assistant.  
-* **Messaging extensions**:
-  * Currently, a Virtual Assistant can support a maximum of ten commands for messaging extensions.
-  * Configuration of messaging extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
-  * Messaging extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
+* **Message extensions**:
+  * Currently, a Virtual Assistant can support a maximum of ten commands for message extensions.
+  * Configuration of message extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
+  * Message extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
 
 You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Please refer to [documentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
 

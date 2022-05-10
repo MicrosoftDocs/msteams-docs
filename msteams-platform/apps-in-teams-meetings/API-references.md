@@ -16,6 +16,9 @@ The meeting extensibility provide APIs to enhance meeting experience. You can pe
 * Use APIs to make your app aware of meeting.
 * Select required APIs to improve the meeting experience.
 
+> [!NOTE]
+> Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
+
 The following table provides a list of APIs available across the Microsoft Teams Client (MSTC) and Microsoft Bot Framework (MSBF) SDKs:
 
 |Method| Description| Source|
@@ -36,6 +39,8 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ## Get participant API
 
+The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
+
 > [!NOTE]
 >
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
@@ -44,7 +49,9 @@ To identify and retrieve contextual information for your tab content, see [get c
 ### Query parameters
 
 > [!TIP]
-> Get participant IDs and tenant IDs from the Tab SSO.
+> Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+
+The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Teams Client SDK and bot activity.
 
 The following table includes the query parameters:
 
@@ -95,8 +102,6 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
----
-
 ```json
 {
    "user":{
@@ -121,6 +126,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
+---
+
 ### Response codes
 
 The following table provides the response codes:
@@ -140,9 +147,9 @@ All users in a meeting receive the notifications sent through in-meeting notific
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications and support for webapp are not supported.
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true). 
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
->
+
 ### Query parameter
 
 The following table includes the query parameters:
@@ -186,6 +193,9 @@ await context.sendActivity(replyActivity);
 
 ```http
 POST /v3/conversations/{conversationId}/activities
+```
+
+```json
 
 {
     "type": "message",
@@ -217,6 +227,8 @@ The following table includes the response codes:
 ## Get meeting details API
 
 The Meeting Details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
+
+The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
 ### Prerequisite
 
@@ -334,8 +346,6 @@ Not available
 GET /v1/meetings/{meetingId}
 ```
 
----
-
 The JSON response body for Meeting Details API is as follows:
 
 ```json
@@ -361,6 +371,8 @@ The JSON response body for Meeting Details API is as follows:
     }
 } 
 ```
+
+---
 
 ## Send real-time captions API
 
@@ -424,20 +436,21 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
+*  To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
 
-```json
-"authorization": {
-    "permissions": { 
-    "resourceSpecific": [
-      { 
-      "name": "MeetingStage.Write.Chat",
-      "type": "Delegated"
-      }
-    ]
-   }
-}
- ```
+    ```json
+    "authorization": {
+        "permissions": { 
+        "resourceSpecific": [
+        { 
+        "name": "MeetingStage.Write.Chat",
+        "type": "Delegated"
+        }
+        ]
+    }
+    }
+    ```
+*  `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else API would return 501.
 
 ### Query parameter
 
@@ -555,6 +568,8 @@ The following table provides the response codes:
 ## Get real-time Teams meeting events API
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
+
+You must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.
 
 ### Prerequisite
 

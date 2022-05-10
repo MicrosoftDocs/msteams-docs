@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples
 keywords:  location map capabilities native device permissions 
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
@@ -40,7 +40,6 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
->
 > * The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 

@@ -18,13 +18,26 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | Date | Update | Find here |
 | --- | --- | --- |
 |01/19/2022|Adaptive Cards overflow menu|Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)|
+
+|04/28/2022| Common reasons for app validation failure | Distribute your app > Publish to the Teams store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
+|04/20/2022 |  Set up CI/CD pipelines | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Set up CI/CD pipelines](toolkit/use-CICD-template.md)|
+|04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
+|04/06/2022| Share to Teams from personal app or tab (developer preview) | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+|04/01/2022| Introduced step-by-step guide to create Teams conversational bot| Build bots > Bot conversations > Channel and group conversations > [Step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml) |
+|03/30/2022| Updated the Get started module with Blazor app using tabs and bots|  Get started > [Build your first app using Blazor](sbs-gs-blazorupdate.yml)|
+|03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
+|03/29/2022 | Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)|
+|03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build message extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
+|03/22/2022| Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
+|03/14/2022| Introduced step-by-step guide to build and test a connector in Microsoft Teams | Build webhooks and connectors > Create Office 365 Connectors > [Build Teams connectors](sbs-teams-connectors.yml)|
 |03/10/2022| Added information on Moodle LMS and Microsoft 365 plugins | Integrate with Teams > Moodle LMS > [Moodle learning management system](resources/moodle-overview.md)|
 |03/03/2022 | How to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
 |02/25/2022| Introduced step-by-step guide to invoke task modules in Teams| Build cards and task modules > Build task modules > Use task modules from bots > [Invoke task module from Teams](sbs-botbuilder-taskmodule.yml)|
-|02/24/2022| Introduced step-by-step guide to build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Build action based messaging extension](sbs-meetingextension-action.yml)|
-|02/24/2022| Introduced step-by-step guide to build search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
+|02/24/2022| Introduced step-by-step guide to build action based message extension | Build Message Extensions > Action commands > Define action commands > [Build action based message extension](sbs-meetingextension-action.yml)|
+|02/24/2022| Introduced step-by-step guide to build search based message extension | Build message extensions > Search commands > Define search commands > [Build search based message extension](sbs-messagingextension-searchcommand.yml)|
 |02/24/2022| Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [Create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+|02/09/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
 | 02/18/2022 | Updated the Overview module for mapping Teams app to organizational goals, user story, and exploring Teams app features | [Overview > Teams app that fits](overview.md) |
 | 02/18/2022 | Updated the App fundamentals module to Plan your app to include mapping use cases to Teams features, and app planning checklist | [Plan your app > Overview](~/concepts/app-fundamentals-overview.md) |
@@ -34,8 +47,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/03/2022| Introduced app manifest version 1.12 | • App manifest > [App manifest schema](resources/schema/manifest-schema.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022| Test preview for monetized apps (developer preview)| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| In-app purchase flow for monetization of apps (developer preview) | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
+
 
 ## GA features
 
@@ -48,11 +60,23 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|04/22/2022| Test preview for monetized apps | Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
+|04/22/2022| In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|04/20/2022 |  Set up CI/CD pipelines | Tools and SDKs > Teams Toolkit for Visual Studio Code >  [Set up CI/CD pipelines](toolkit/use-CICD-template.md)|
+|04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
+|04/01/2022| Introduced step-by-step guide to create Teams conversational bot| Build bots > Bot conversations > Channel and group conversations > [Step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml) |
+|03/30/2022| Updated the Get started module with Blazor app using tabs and bots|  Get started > [Build your first app using Blazor](sbs-gs-blazorupdate.yml)|
+|03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
+|03/29/2022 |Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)
+|03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build message extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|  
+|03/22/2022| Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
+|03/14/2022| Introduced step-by-step guide to build and test a connector in Microsoft Teams | Build webhooks and connectors > Create Office 365 Connectors > [Build Teams connectors](sbs-teams-connectors.yml)|
 |03/10/2022 | Added information on Moodle LMS and Microsoft 365 plugins | Integrate with Teams > Moodle LMS > [Moodle learning management system](resources/moodle-overview.md)|  
 |03/03/2022 | How to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 02/25/2022| Introduced step-by-step guide to invoke task modules in Teams| Build cards and task modules > Build task modules > Use task modules from bots > [Invoke task module from Teams](sbs-botbuilder-taskmodule.yml)|
-| 02/24/2022| Introduced step-by-step guide to build action based messaging extension | Build Messaging Extensions > Action commands > Define action commands > [Build action based messaging extension](sbs-meetingextension-action.yml)|
-| 02/24/2022| Introduced step-by-step guide to build search based messaging extension | Build messaging extensions > Search commands > Define search commands > [Build search based messaging extension](sbs-messagingextension-searchcommand.yml)|
+| 02/24/2022| Introduced step-by-step guide to build action based message extension | Build Message Extensions > Action commands > Define action commands > [Build action based message extension](sbs-meetingextension-action.yml)|
+| 02/24/2022| Introduced step-by-step guide to build search based message extension | Build message extensions > Search commands > Define search commands > [Build search based message extension](sbs-messagingextension-searchcommand.yml)|
 | 02/24/2022| Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [Create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
 | 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
@@ -85,7 +109,7 @@ Explore updates from the previous GA releases listed here.
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions | App fundamentals > Device capabilities > [Step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
 |12/23/2021| Introduced step-by-step guide to create Tabs with Adaptive Cards| Add authentication > Tabs > Use SSO authentication > [Step-by-step guide to create Tabs with Adaptive Cards](sbs-tab-with-adaptive-cards.yml) |
 |12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0 | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
-|12/20/2021| Introduced step-by-step guide for tabs and messaging extensions with Single sign-on (SSO) | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and messaging extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+|12/20/2021| Introduced step-by-step guide for tabs and message extensions with Single sign-on (SSO) | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and message extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
 |12/20/2021| Introduced step-by-step guide to create meeting content bubble | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting content bubble](sbs-meeting-content-bubble.yml) |
 |12/09/2021| Introduced step-by-step guide to meeting stage view | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meetings stage view](sbs-meetings-stage-view.yml)|
 |12/13/2021 | Introduced guidelines for app linked to SaaS offer | Distribute your app > Publish to the Teams store > Review store validation guidelines > [Guidelines for apps linked to SaaS offer](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
@@ -97,7 +121,6 @@ Explore updates from the previous GA releases listed here.
 |11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |10/28/2021| Monetize your Teams app with a transactable SaaS offer | Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide | Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
-|10/21/2021| Add a `registerOnFocused` API for tabs or personal apps | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| Meeting stage is now available in GA | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
 |10/20/2021| Meeting Details API and real-time Teams meeting events | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |10/18/2021| Tabs link unfurling and stage view | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
@@ -152,7 +175,7 @@ Explore updates from the previous GA releases listed here.
 |11/10/2020|Teams bot design guidelines |[Bot design guidelines](bots/design/bots.md)|
 |09/30/2020|Sending and receiving files to bots on mobile devices is now supported |[Send and receive files through your bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|New information for getting started with Teams development |[Build your first Teams app overview](build-your-first-app/build-first-app-overview.md)|
-|09/18/2020|Support for in-meeting Teams apps (Release Preview) |[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|09/18/2020|Support for in-meeting Teams apps (Release Preview) |[Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|Import Teams messages with Microsoft Graph |[Import third-party platform messages to Teams using Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 |08/12/2020 |Adaptive Cards support in incoming webhook moved to GA |[Send adaptive cards using an incoming webhook](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Get started building Teams apps with the Visual Studio Toolkit |[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-overview.md) |
@@ -183,9 +206,9 @@ Explore updates from the previous GA releases listed here.
 | -------- | --------- | ------------------ |
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
-| 10/31/2019 | Conversational bots and messaging extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and messaging extension documentation |
+| 10/31/2019 | Conversational bots and message extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and message extension documentation |
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue. | All of them! |
-| 09/13/2019 | Request bot is installed from action-based messaging extension. | [Initiate actions with messaging extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
+| 09/13/2019 | Request bot is installed from action-based message extension. | [Initiate actions with message extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 08/28/2019 | Support for private channels in tabs and Connectors. | [Get context for your tab](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 06/20/2019 | Share an external website, from an external website, into a Teams channel. | [Share to Teams](~/share-to-teams.md) |
 | 05/25/2019 | Respond with bot message from task module. | [Respond with bot message from task module](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
@@ -195,7 +218,7 @@ Explore updates from the previous GA releases listed here.
 | 05/20/2019 | Link unfurling (custom URL previews). | [Link unfurling](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | Application Certification program for store apps. | [Application Certification](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | App Templates are now available | [App Templates](~/samples/app-templates.md) |
-| 04/23/2019 | Action-based Messaging Extensions are now available. | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
+| 04/23/2019 | Action-based Message Extensions are now available. | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | Creating deep links to private chat. | [Deep linking to a chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context. | [Tab Context](~/concepts/tabs/tabs-context.md) |
 |
@@ -218,7 +241,7 @@ Explore updates from the previous GA releases listed here.
 | 09/11/2018 | Tab configuration pages are now significantly taller. | [Tab Design](tabs/design/tabs.md) |
 | 08/15/2018 | Adaptive cards are now supported in Teams.|[Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | Client support for DevTools.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
-| 08/08/2018 | Messaging extensions now supports multiple commands. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
+| 08/08/2018 | Message extensions now supports multiple commands. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | Inline configuration is now supported in Connectors. The Connectors documentation has also been revised and expanded for clarity.| [Connectors](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | Your bot can now send and receive files. | [Send and receive files through your bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Information about app re-certification has been added to the Publishing section. |[Manifest permissions](resources/schema/manifest-schema.md#permissions)|
@@ -248,17 +271,14 @@ Developer preview is a public program that provides early access to unreleased T
 | -------- | --------- | ------------------ |
 |11/22/2021| Adaptive Cards overflow menu |Build cards and task modules > Build cards > [Formatting cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
 | 11/30/2021 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
+|04/06/2022| Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/02/2022| Introduced app manifest version 1.12 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022| Test preview for monetized apps| Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |01/17/2022| People Picker in Adaptive cards for mobile  | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Teams Toolkit for Visual Studio Code | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit fundamentals](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| Introduced step-by-step guide to grant Tab device permissions | App fundamentals > Device capabilities > [step-by-step guide to grant Tab device permissions](sbs-tab-device-permissions.yml) |
-|11/15/2021| Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
+|11/15/2021| Personal tabs and message extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
-|10/19/2021|Device permissions for the browser | App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
-|06/21/2021|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).

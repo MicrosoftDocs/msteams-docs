@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: An overview of integrating web applications and device capabilities with Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
 ---
 
@@ -102,7 +102,7 @@ You can also integrate Microsoft 365 identity to build external applications tha
 * [App templates for Microsoft Teams](~/samples/app-templates.md)
 * [Production-ready Shift Connectors](~/samples/shifts-wfm-connectors.md)
 * [Install Moodle LMS](~/resources/moodleinstructions.md)
-* [Create a Share-to-Teams button](~/concepts/build-and-test/share-to-teams.md)
+* [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Create deep links](~/concepts/build-and-test/deep-links.md)
 * [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)

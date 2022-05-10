@@ -22,6 +22,8 @@
     href: get-started/get-started-overview.md  
   - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
+  - name: Build your first app using Blazor
+    href: sbs-gs-blazorupdate.yml
   - name: Build your first app using SPFx
     href: sbs-gs-spfx.yml
   - name: Build your first app using C# or .NET
@@ -42,6 +44,8 @@
     href: concepts/design/planning-checklist.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+  - name: Plan to monetize your app
+    href: concepts/design/plan-to-monetize.md
 - name: Design your app
   items:
   - name: Overview
@@ -60,7 +64,7 @@
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
-    - name: Messaging extensions
+    - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md  
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
@@ -82,12 +86,16 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
-  - name: Teams Toolkit for Visual Studio Code
+  - name: Teams Toolkit for Visual Studio Code 
     items:
     - name: Teams Toolkit overview
       href: toolkit/teams-toolkit-fundamentals.md
-    - name: Create new project
+    - name: Create a new Teams app
       href: toolkit/create-new-project.md
+    - name: Debug your Teams app locally
+      href: toolkit/debug-local.md
+    - name: Debug background processes
+      href: toolkit/debug-background-process.md
     - name: Prepare accounts to build Teams app
       href: toolkit/accounts.md
     - name: Provision cloud resources
@@ -108,12 +116,12 @@
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
       href: toolkit/TeamsFx-collaboration.md
-    - name: CI/CD guide
-      href: toolkit/use-CICD-template.md
-    - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
+    - name: Set up CI/CD pipelines
+      href: toolkit/use-CICD-template.md  
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
+  - name: Teams Toolkit CLI
+    href: toolkit/TeamsFx-CLI.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
   - name: Yeoman generator for Teams (GitHub)
@@ -126,12 +134,12 @@
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Teams JavaScript client SDK v2 Preview
     href: m365-apps/using-teams-client-sdk-preview.md
-  - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
+  - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
-  - name: .NET Bot Framework for bots and messaging extensions (GitHub)
+  - name: .NET Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-dotnet
   - name: Microsoft Graph SDKs
-    href: https://docs.microsoft.com/graph/sdks/sdks-overview
+    href: /graph/sdks/sdks-overview
   - name: Legacy SDKs
     items:
     - name: Bots SDK (v3)
@@ -168,9 +176,9 @@
         href: resources/bot-v3/bots-text-formats.md  
       - name: Test a bot
         href: resources/bot-v3/bots-test.md
-    - name: Messaging extensions SDK (v3)
+    - name: Message extensions SDK (v3)
       items:
-      - name: Messaging extensions SDK (v3)
+      - name: Message extensions SDK (v3)
         href: resources/messaging-extension-v3/messaging-extensions-overview.md
       - name: Search extensions
         href: resources/messaging-extension-v3/search-extensions.md
@@ -257,7 +265,7 @@
       href: resources/media-formats.md
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md
-- name: Build messaging extensions
+- name: Build message extensions
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
@@ -283,8 +291,6 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Unified meetings apps
     href: apps-in-teams-meetings/meeting-app-extensibility.md
-  - name: Prerequisites for apps in Teams meetings
-    href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
@@ -369,11 +375,11 @@
       href: bots/how-to/authentication/add-authentication.md
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
-  - name: Messaging extensions
+  - name: Message extensions
     items:
-    - name: Add authentication to your messaging extension
+    - name: Add authentication to your message extension
       href: messaging-extensions/how-to/add-authentication.md
-    - name: Enable SSO for messaging extensions
+    - name: Enable SSO for message extensions
       href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Integrate device capabilities
   items:
@@ -392,11 +398,11 @@
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
-    href: https://docs.microsoft.com/graph/teams-concept-overview
+    href: /graph/teams-concept-overview
   - name: Microsoft Graph Toolkit
-    href: https://docs.microsoft.com/graph/toolkit/overview
+    href: /graph/toolkit/overview
   - name: Get started
-    href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
+    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
   - name: Proactive installation of apps using Graph API to send messages
@@ -413,7 +419,7 @@
     href: m365-apps/prerequisites.md
   - name: Enable a Teams personal tab for Office and Outlook
     href: m365-apps/extend-m365-teams-personal-tab.md
-  - name: Enable a Teams messaging extension for Outlook
+  - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
 - name: Test your app
   items:
@@ -475,16 +481,18 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
-  - name: Monetize your app
-    items:
-    - name: Overview
-      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: Include a SaaS offer with your app
-      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    - name: In-app purchases
-      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-    - name: Test preview for monetized apps
-      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+    -  name: Common reasons for app validation failure
+       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
+- name: Monetize your app
+  items:
+  - name: Overview
+    href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+  - name: Include a SaaS offer with your app
+    href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+  - name: In-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+  - name: Test preview for monetized apps
+    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: App manifest
   items:
     - name: App manifest schema
@@ -517,22 +525,26 @@
     items:
     - name: Overview
       href: resources/moodle-overview.md
-    - name: Moodle LTI apps
-      href: resources/moodle-lti-apps.md
     - name: Microsoft 365 plugins
       href: resources/m365-plugins/m365-plugins-overview.md
     - name: Partner apps for Moodle
       href: resources/partner-apps-for-moodle.md
     - name: Moodle FAQ
       href: resources/faqs.md
-  - name: Create Share-to-Teams button
-    href: concepts/build-and-test/share-to-teams.md
+  - name: Share to Teams
+    items:
+    - name: Overview
+      href: concepts/build-and-test/share-to-teams-overview.md
+    - name: Share to Teams from web apps
+      href: concepts/build-and-test/share-to-teams-from-web-apps.md
+    - name: Share to Teams from personal app or tab
+      href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
   - name: Integrate People Picker  
-    href: concepts/device-capabilities/people-picker-capability.md   
+    href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
   items:
   - name: Localization

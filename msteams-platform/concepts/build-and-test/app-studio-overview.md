@@ -9,7 +9,7 @@ ms.topic: overview
 # Manage your apps with App Studio for Microsoft Teams
 
 > [!TIP]
-> **Try the Developer Portal**: App Studio has evolved. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+> **Try the Developer Portal**: App Studio has evolved. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/). <br> App Studio will be deprecated by June 30, 2022.
 
 App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
 
@@ -88,13 +88,13 @@ After you have supplied your bot's information, you can now optionally define a 
 
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose **Set up** and enter the name and ID of the connector. If you want a new connector click **Register** to be taken to the Connector Developer Dashboard in your browser.
 
-##### Messaging Extensions
+##### Message Extensions
 
-[Messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) are a powerful way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
+[Message extensions](~/messaging-extensions/what-are-messaging-extensions.md) are a powerful way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
 
-Messaging extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the messaging extension, enter it. Otherwise, click **Register** to create one and enter the information afterward. Select whether the configuration of a messaging extension can be updated by the user.
+Message extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the message extension, enter it. Otherwise, click **Register** to create one and enter the information afterward. Select whether the configuration of a message extension can be updated by the user.
 
-Once you have the underlying bot configured, define the commands and parameters which the messaging extension can accept.
+Once you have the underlying bot configured, define the commands and parameters which the message extension can accept.
 
 Each command requires a title and an ID. The command can optionally contain a description for the user. Each command can support up to five parameters, each of which requires:
 
@@ -103,7 +103,7 @@ Each command requires a title and an ID. The command can optionally contain a de
 * An optional description.
 
 > [!NOTE]
-> To create messaging extension using app studio, see [create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
+> To create message extension using app studio, see [create message extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### Test and Distribute
 

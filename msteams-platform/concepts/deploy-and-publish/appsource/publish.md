@@ -45,7 +45,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **Deep functional and experience tests**
 
-  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients.
+  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you a detailed test report in 24 working hours post submission.
 
 * **Guided app publish through concierge service**
 

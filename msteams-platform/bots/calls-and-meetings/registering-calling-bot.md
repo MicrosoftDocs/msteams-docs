@@ -9,7 +9,7 @@ keywords: calling bot audio/video audio video media
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There is a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
+* There's a new version of the Teams app manifest with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [Manifest schema for Microsoft Teams](../../resources/schema/manifest-schema.md).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
@@ -72,19 +72,25 @@ The following table provides a list of application permissions for online meetin
 
 ### Assign permissions
 
-You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://aka.ms/aadapplist) if you prefer to use the [Microsoft Azure Active Directory (Azure AD) V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
+You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://portal.azure.com) if you prefer to use the [Microsoft Azure Active Directory (Azure AD) V1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
 ### Get tenant administrator consent
 
 For apps using the Azure AD V1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Azure AD, your app can request tokens without having to request consent again.
 
-You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/uth-v2-service#3-get-administrator-consent).
+You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > To construct the tenant Admin consent URL, a configured redirect URI or reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
+
+## Code sample
+
+| **Sample name** | **Description** | **Graph** |
+|---------------|----------|--------|
+| Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## Step-by-step guide
 
@@ -99,3 +105,4 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up cal
 
 * [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)

@@ -17,7 +17,7 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 >
 > ✔Teams for iOS (_Version_: 2.0.18 and later)  
 >
-> ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
+> ✔Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
 >
 > For the best experience with Teams, use the latest version of iOS and Android.
 > [!NOTE]
@@ -79,7 +79,10 @@ To register your app through the Azure AD portal, follow these steps:
 1. Under **Manage**, select **Expose an API**.
 
     > [!NOTE]
-    > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+    >
+    > * Use lower case letters for domain name, don't use upper case. For example, to create an app service or web app, enter base resource name as `demoapplication`, then the URL will be `https://demoapplication.azurewebsites.net`. But if you use base resource name as `DemoApplication`, then the URL will be `https://DemoApplication.azurewebsites.net` and this supports in desktop, web, and iOS, but not in android.
 
 1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. ² For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
 1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
@@ -270,7 +273,7 @@ The above-described authentication solution only works for apps and services tha
 
 ## Step-by-step guides
 
-* Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) to authenticate tabs and messaging extensions.
+* Follow the [step-by-step guide](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) to authenticate tabs and message extensions.
 * Follow the [step-by-step guide](../../../sbs-tab-with-adaptive-cards.yml) to create tab with adaptive cards.
 
 ## See also

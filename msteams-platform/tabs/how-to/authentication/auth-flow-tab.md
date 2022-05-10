@@ -35,6 +35,9 @@ Similar to other application auth flows in Teams, the start page must be on a do
 8. Teams closes the pop-up window.
 9. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on where the user started from.
 
+> [!NOTE]
+> If the application supports SAML SSO, then tab SSO generated JWT token cannot be used as it isn't supported.
+
 ## Treat tab context as hints
 
 Although the tab context provides helpful information regarding the user, do not use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context as a  hint and validate it before using. Refer to the notes in [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).

@@ -4,7 +4,7 @@ description: FAQs for creating a Partner Center developer account for publishing
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 # Create a Partner Center developer account
 

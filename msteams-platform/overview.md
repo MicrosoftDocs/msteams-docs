@@ -9,7 +9,7 @@ ms.date: 05/24/2021
 ---
 # Teams app that fits
 
-Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or messaging extensions or any combination of the three. These apps expand the value of your Teams collaborative experience.
+Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the three. These apps expand the value of your Teams collaborative experience.
 
 Apps can be personal or shared. A personal app enables a one-on-one communication, and a shared app lets multiple users share app space to collaborate.
 

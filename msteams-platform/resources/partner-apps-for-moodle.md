@@ -33,5 +33,4 @@ The mConnect app integrates Moodle courses and activities into Teams to enhance 
 ## See also
 
 * [Moodle FAQ](faqs.md)
-* [Get help](getting-help.md)
 * [Skooler](https://skooler.com/mconnect/how-to/)

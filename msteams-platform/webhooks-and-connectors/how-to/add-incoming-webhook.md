@@ -13,7 +13,7 @@ ms.author: lajanuar
 An Incoming Webhook lets external applications to share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL, to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single topic. You can use cards in the following capabilities:
 
 * Bots
-* Messaging extensions
+* Message extensions
 * Connectors
 
 ## Key features of an Incoming Webhook
@@ -34,7 +34,7 @@ The following table provides the features and description of an Incoming Webhook
 
 > [!NOTE]
 >
-> * Teams bots, messaging extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Cards is an open cross card platform framework that is used in all platforms such as Windows, Android, iOS, and so on. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
+> * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Cards is an open cross card platform framework that is used in all platforms such as Windows, Android, iOS, and so on. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 > * For more information on cards and webhooks, see [Adaptive cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## Create an Incoming Webhook
@@ -90,5 +90,5 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 * [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Create Share-to-Teams button](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
