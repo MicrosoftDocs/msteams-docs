@@ -484,7 +484,7 @@ Once the provisioning and deployment steps are complete:
   1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
   1. Select the Play button to launch your app from Azure.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely." border="false":::
+  :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely." border="false":::
 
   1. Select **Add**.
 
