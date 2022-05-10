@@ -480,27 +480,27 @@ In your terminal window:
 
 Once the provisioning and deployment steps are complete:
 
-    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-    1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-    1. Select the Play button to launch your app from Azure.
+  1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+  1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
+  1. Select the Play button to launch your app from Azure.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely." border="false":::
 
-    1. Select **Add**.
+  1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot showing the app being installed." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot showing the app being installed." border="false":::
 
-    Your app is loaded on the Azure site.
+  Your app is loaded on the Azure site.
 
-     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the app being installed." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the app being installed." border="false":::
 
-    Congratulations! Your tab app is now running remotely from Azure!
+  Congratulations! Your tab app is now running remotely from Azure!
 
     <!-- markdownlint-disable MD033 -->
     <details>
     <summary>Learn what happens when you deployed your app to Azure</summary>
 
-    Before deployment, the application has been running locally:
+  Before deployment, the application has been running locally:
 
     * The backend runs using **Azure Functions Core Tools**.
     * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
@@ -510,7 +510,7 @@ Once the provisioning and deployment steps are complete:
     * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
     * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
 
-      </details>
+    </details>
 
 - title: Congratulations!
   durationInMinutes: 1
