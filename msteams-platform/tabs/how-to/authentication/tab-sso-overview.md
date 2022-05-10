@@ -116,15 +116,15 @@ After the iOS 14 update, Apple has blocked the [third-party cookie](https://webk
 Here's a list of best practices:
 
 - **Don't store access token on client-side code**: Don’t cache or store the access token in your app's client-side code. Always call `getAuthToken()` when you need an access token. Teams Client caches the access token (or request a new one if it expires). This makes sure that there's no accidental leak of your token from your web app.
-- **Use server-side code for Microsoft Graph calls**: Always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](/tabs/how-to/authentication/auth-flow-tab).
+- **Use server-side code for Microsoft Graph calls**: Always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](auth-flow-tab.md).
 
 ## Known limitations
 
 - Currently, SSO only supports OAuth 2.0 token. It doesn't support SAML token.
 - SSO in Teams works only with OAuth 2.0 protocol.  
-- SSO works only with Azure AD. To extend it to other OAuth Identity providers, the flow needs to be implemented. For more information, please see, [Microsoft Teams authentication flow for tabs](/tabs/how-to/authentication/auth-flow-tab) and [Authenticate a user in a Microsoft Teams tab](/tabs/how-to/authentication/auth-tab-aad).
+- SSO works only with Azure AD. To extend it to other OAuth Identity providers, the flow needs to be implemented. For more information, please see, [Microsoft Teams authentication flow for tabs](auth-flow-tab.md) and [Authenticate a user in a Microsoft Teams tab](auth-tab-aad).
 - Multiple domains per app is not supported. For this, please read about [LOB apps](tab-sso-register-aad.md#before-you-register-with-azure-ad).
-- Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID).
+- Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent.md#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID).
   
     You can ask for consent using the Auth API. Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
