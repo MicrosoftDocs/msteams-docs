@@ -140,10 +140,10 @@ Add new capabilities to the current application.
 |:----------------  |:-------------|
 | `teamsfx capability add tab` | Add tab |
 | `teamsfx capability add bot` | Add bot |
-| `teamsfx capability add messaging-extension`| Add messaging extension |
+| `teamsfx capability add messaging-extension`| Add messagE extension |
 
 > [!NOTE]
-> If your project includes a bot, messaging extension can't be added and it applies vice versa. You can include both bot and messaging extensions in your project while creating a new Teams app project.
+> If your project includes a bot, message extension can't be added and it applies vice versa. You can include both bot and message extensions in your project while creating a new Teams app project.
 
 ## `teamsfx resource`
 

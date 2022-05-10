@@ -17,7 +17,7 @@ When building your conversational bots for Microsoft Teams, you can work with co
 * Trigger a welcome message when your bot is added to a team.
 * Trigger a welcome message when a new team member is added or removed.
 * Trigger a notification when a channel is created, renamed, or deleted.
-* When a bot message is liked by a user.
+* Trigger a notification when a bot message is liked by a user.
 
 ## Conversation update events
 
@@ -1398,12 +1398,9 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## Uninstall behavior for personal app with bot
 
-> [!NOTE]
-> Uninstall behavior for personal app with bot is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-
 When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You cannot send or receive messages after an app has been uninstalled.
 
-<img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
+:::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
 ## Event handling for install and uninstall events
 

@@ -41,7 +41,7 @@ Complete the following steps to update the app package:
     [13:39:27] Finished 'default' after 62 μs
     ```
 
-    The name of the generated app package is **helloworldapp.zip**. You can search for this file if the location is not clear in the tool you are using.
+    The name of the generated app package is `helloworldapp.zip`. You can search for this file if the location is not clear in the tool you are using.
 
 1. Now to modify this app package, select **Import an existing app** in the **Manifest editor**:
 
@@ -117,19 +117,19 @@ Complete the following steps to setup your bot:
 1. Update the **Bot endpoint address** to `https://yourteamsapp.ngrok.io/api/messages`, and replace `yourteamsapp.ngrok.io` with the URL that you used when hosting your app.
 1. Now save your text file as you must add the information from the file to your hosted app to allow secure communication with your bot.
 
-#### Messaging extensions
+#### Message extensions
 
-Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
+Message extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Message extensions appear at the bottom of the compose box.
 
-Complete the following steps to setup your messaging extension:
+Complete the following steps to setup your message extension:
 
-1. Select **Messaging extensions** under **Capabilities** in the left-hand pane of App Studio to configure the messaging extension:
+1. Select **Message extensions** under **Capabilities** in the left-hand pane of App Studio to configure the message extension:
 
-    <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
+    <img  width="450px" alt="Adding a message extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
-    The sample messaging extension is listed in the **Messaging Extensions** pane.
+    The sample message extension is listed in the **Message Extensions** pane.
 
-1. Select **Delete** to remove the messaging extension, select **Set up**, and follow the same steps used for [bots](#bots). The **Messaging Extension** dialog box is displayed.
+1. Select **Delete** to remove the message extension, select **Set up**, and follow the same steps used for [bots](#bots). The **Message Extension** dialog box is displayed.
 1. Select the **Use existing bot** tab and **Select from one of my existing bots**.
 1. Select the bot you created from the drop-down menu. Add a **Bot name** and select **Save** to close the dialog box.
 1. Under the **Command** section, select **Add**. To add a search-based command, select the **Allow users to query your service for information and insert that into a message** option.
@@ -154,14 +154,14 @@ Complete the following steps to setup your messaging extension:
 After entering the details of your app, complete the following steps to register your app in Teams:
 
 1. Use **Test and distribute** of App Studio to install your app in Teams. 
-1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension. 
+1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and message extension. 
 1. Select **Test and distribute**  under **Finish** in the left-hand pane of App Studio:
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
 1. To upload your app to Teams, select the **Install** button under **Test and Distribute**:
 
-    <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
+    <img  width="450px" alt="Adding a message extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
     
     > [!NOTE]
     > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
@@ -169,6 +169,6 @@ After entering the details of your app, complete the following steps to register
 1. Select the **Search** box in the **Add to a team** section and select a team to add the sample app. You can set up a special team for testing.
 1. Select the **Install** button at the bottom of the dialog box.
 
-    Your app is now available in Teams. However, the bot and the messaging extension will not work until you update the hosted applications environment with the App IDs and passwords.
+    Your app is now available in Teams. However, the bot and the message extension will not work until you update the hosted applications environment with the App IDs and passwords.
 
     <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>

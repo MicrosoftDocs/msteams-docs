@@ -348,11 +348,11 @@ items:
 
         ![App settings](~/assets/images/Teams-task-module/appsettings.png)
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Navigate to `manifest.json`` in cloned repository.
 
         ![Manifest file location](~/assets/images/Teams-task-module/manifestlocation.png)
     
-    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
+    1. Open `manifest.json`` in latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `YourDeployedBotUrl.com` with your `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with your bot's **Microsoft App ID**.

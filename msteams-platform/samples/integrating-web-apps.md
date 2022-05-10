@@ -29,8 +29,8 @@ Your Teams app must include required and expected collaborative features. To wor
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
 |Embedded webpage, homepage, or webview  |[Tabs](../tabs/what-are-tabs.md)  |
-|Share shortcuts and extensions  |[Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
-|Action shortcuts and extensions  |[Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
+|Action shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
@@ -52,7 +52,7 @@ The following are the prerequisites to integrate your app with Teams.
 
 ***Integration scenarios**: SharePoint*
 
-To integrate an existing [SharePoint page](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) as a Teams tab, you must consider the following:
+To integrate an existing [SharePoint page](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model) as a Teams tab, you must consider the following:
 
 * It must be a *modern* SharePoint online page.
 * Only personal tabs are supported. You cannot integrate your page as a channel tab.
@@ -124,6 +124,6 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
-* [Create a Share-to-Teams button](../concepts/build-and-test/share-to-teams.md)
+* [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [SameSite cookie attributes](~/resources/samesite-cookie-update.md)
 * [Integrate Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

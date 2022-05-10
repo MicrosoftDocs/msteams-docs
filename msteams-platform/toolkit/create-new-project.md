@@ -20,7 +20,7 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar.
 1. Select **Create a new Teams app**.
-1. Select from the available capabilities tab, bot, messaging extension, or a tab using SharePoint Framework (SPFx). 
+1. Select from the available capabilities tab, bot, message extension, or a tab using SharePoint Framework (SPFx). 
 1. Select at least one option to start creating the Teams app.
 
 ### Create a new Teams app using view samples
@@ -39,7 +39,7 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 
 ## Step-by-step guides using Teams Toolkit
 
-* [Build a Teams app with Blazor](../sbs-gs-blazorapp.yml)
+* [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 * [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 * [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
@@ -48,6 +48,6 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Publish your Teams app](TeamsFx-collaboration.md)
+* [Publish your Teams app](../concepts/deploy-and-publish/appsource/publish.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

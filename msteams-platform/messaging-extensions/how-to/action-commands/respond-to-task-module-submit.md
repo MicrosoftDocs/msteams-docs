@@ -23,7 +23,7 @@ You have the following options to respond:
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
-For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension:
+For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the message extension:
 
 |Response Type | Compose | Command bar | Message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -67,7 +67,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is an example of the JSON object that you receive. The `commandContext` parameter indicates where your messaging extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object highlights the most relevant fields.
+This is an example of the JSON object that you receive. The `commandContext` parameter indicates where your message extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object highlights the most relevant fields.
 
 ```json
 {
@@ -199,7 +199,7 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 ## Bot response with Adaptive Card
 
 > [!NOTE]
-> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your messaging extension for your bot.
+> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 
 You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. This is useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it.
 
@@ -207,7 +207,7 @@ The following scenario shows how the app Polly configures a poll without includi
 
 To configure the poll:
 
-1. The user selects the messaging extension to invoke the task module.
+1. The user selects the message extension to invoke the task module.
 1. The user configures the poll with the task module.
 1. After submitting the task module, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not a member of the channel, select `Send` to add it.
@@ -330,7 +330,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### The botMessagePreview send and edit events
 
-Your messaging extension must respond to two new types of the `composeExtension/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.
+Your message extension must respond to two new types of the `composeExtension/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -543,7 +543,7 @@ In scenarios where a bot sends messages on behalf of a user, attributing the mes
 
 In the following image, on the left is a card message sent by a bot without user attribution and on the right is a card sent by a bot with user attribution.
 
-![user attribution bots](../../../assets/images/messaging-extension/user-attribution-bots.png)
+:::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="User attribution bots":::
 
 To use the user attribution in teams, you must add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
@@ -596,8 +596,8 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## Next Step
 

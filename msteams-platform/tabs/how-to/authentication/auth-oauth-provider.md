@@ -109,7 +109,7 @@ The following image provides the flow to add authentication to external browsers
          return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
       }
       else {
-      // continue redirecting to a web-page that will call notifySuccsss() – usually this method is used in Teams-Web
+      // continue redirecting to a web-page that will call notifySuccess() – usually this method is used in Teams-Web
       …
       ```
 

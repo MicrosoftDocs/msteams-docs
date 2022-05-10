@@ -167,9 +167,9 @@ You can pin the app for quick access, or you can find your app in the ellipses (
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
-When you upgrade your Teams personal tab and sideload it in Teams, it will also run in Outlook desktop and web clients and Office on the web (office.com). Here's how to preview it from those Microsoft 365 experiences.
+When you upgrade your Teams personal tab and sideload it in Teams, it runs in Outlook on Windows, on the web, Office on Windows and on the web (office.com). Here's how to preview it from those Microsoft 365 experiences.
 
-### Outlook
+### Outlook on Windows
 
 To view your app running in Outlook on Windows desktop:
 
@@ -189,7 +189,7 @@ To view your app in Outlook on the web:
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
 
-### Office
+### Office on Windows
 
 To view your app running in Office on Windows desktop:
 

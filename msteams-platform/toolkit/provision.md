@@ -54,7 +54,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 | Web app for simple auth | Host simple auth server to gain access to other services in your single page application | Adds user assigned identity to access other Azure resources |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
-### Resource creation for Teams bot or messaging extension application
+### Resource creation for Teams bot or message extension application
 
 |Resource|Purpose| Description |
 |----------|--------------------------------|-----|
@@ -99,7 +99,7 @@ When you create a new project, you can use all the Azure resources. The ARM temp
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep.md).
+Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters and templates:
 
