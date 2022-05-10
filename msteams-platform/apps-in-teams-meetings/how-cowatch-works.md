@@ -31,12 +31,11 @@ Partner client will receive play, pause and seek commands for each user, allowin
 
 1. Tenant ID, User ID and Meeting ID:
 
-    * To check with Bot API if user is part of the meeting in Cloud API
-    * To check if user is part of CollabSpace on subsequent calls to Cloud API
+    * To check with Bot API if user is part of the meeting in Cloud API.
 
 1. Name of user from AAD token:  
 
-    * To greet and tag users inside Cowatch app.  (From token)
+    * To greet and tag users inside Cowatch app. (From token)
     * microsoftTeams.authentication.getAuthToken()  
     * 1p AAD  app
 
