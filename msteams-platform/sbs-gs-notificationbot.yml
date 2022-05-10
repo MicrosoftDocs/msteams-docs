@@ -457,28 +457,28 @@ items:
 
     # [Command Line](#tab/cli)
 
-   In your terminal window:
+In your terminal window:
 
-   1. Run `teamsfx provision`.
+    1. Run `teamsfx provision`.
 
-    ``` bash
-    teamsfx provision
-    ```
+       ``` bash
+       teamsfx provision
+      ```
 
-    When prompted, select an Azure subscription to use Azure resources.
+      When prompted, select an Azure subscription to use Azure resources.
 
-    > [!NOTE]
-    > There are always some Azure resources used for hosting your app.
+      > [!NOTE]
+      > There are always some Azure resources used for hosting your app.
 
-   1. Run `teamsfx deploy`.
+    1. Run `teamsfx deploy`.
 
-    ``` bash
-    teamsfx deploy
-    ```
+       ``` bash
+       teamsfx deploy
+       ```
 
-     ## Run the deployed app
+## Run the deployed app
 
-  Once the provisioning and deployment steps are complete:
+Once the provisioning and deployment steps are complete:
 
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
