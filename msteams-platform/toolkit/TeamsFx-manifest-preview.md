@@ -43,7 +43,7 @@ During some operations like `Zip Teams metadata package`, Teams Toolkit implicit
 
 * Trigger `Teams: Validate manifest file` from command palette
 
- :::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate" alt-text="Validate file":::
+ :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
 
 * CLI command
 
@@ -143,7 +143,7 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
 ``` bash
         teamsfx deploy manifest --include-app-manifest yes
-        ```
+```
 
 ---
 If the manifest file is outdated due to configuration file change or template change, select any one of the following action:
