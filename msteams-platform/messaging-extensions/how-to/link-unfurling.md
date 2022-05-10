@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are paste into the compose message area. The invoke contains the URLs and you can respond to it with a card. User can unfurl the link using message extension with additional information to get an enhanced experience. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.</br> Now link unfurling is supports for both Teams mobile and desktop.
+In link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The invoke contains the URLs and you can respond to it with a card. User can unfurl the link using message extension with additional information to get an enhanced experience. This works similar to a search command with the URL serving as the search term. You can add link unfurling to your app manifest using the developer portal or manually.</br> Now link unfurling supports both in Teams mobile and desktop.
 
 ## Advantages of link unfurling 
 
