@@ -29,7 +29,7 @@ The following limitations are while adding more capabilities in teamsFx:
 ## Add capabilities
 
 > [!Note]
-> You need to perform the provision for each environment, after capabilities are successfully added to your Teams app.
+> You need to perform the provision for the each environment, after capabilities are successfully added in to your Teams app.
 
 * You can add capabilities using Teams Toolkit in Visual Studio Code
 
@@ -48,7 +48,7 @@ The following limitations are while adding more capabilities in teamsFx:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
 
-The selected capabilities are successfully added to your project. The Teams Toolkit generate source code for newly added capabilities
+The selected capabilities are successfully added to your project. The Teams Toolkit generate source code for newly added capabilities.
 
 ## Add capabilities using TeamsFx CLI
 
