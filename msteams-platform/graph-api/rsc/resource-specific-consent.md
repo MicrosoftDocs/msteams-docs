@@ -1,7 +1,7 @@
 ---
 title: Enable resource-specific consent in Teams
 description: Describes resource-specific consent in Teams and how to make advantage of it.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference

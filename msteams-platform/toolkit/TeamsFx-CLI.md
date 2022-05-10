@@ -3,7 +3,7 @@ title: TeamsFx Command Line Interface
 author: MuyangAmigo
 description:  Describes TeamsFx Command Line Interface
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
