@@ -97,9 +97,27 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
+When the app user access your tab app and your tab app makes the `getAuthToken` call, the app user must give consent to Teams. The following consent dialogs appear to the user:
+
+1. **Teams consent dialog**:
+  It's the first dialog that appears. The app user must give consent to Teams for using Teams identity.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams consent dialog":::
+
+    To consent to Teams, the app user should select **Continue**.
+
+1. **Azure AD consent dialog**:
+  After the app user consents to Teams using the identity token for obtaining access token, Azure AD dialog appears. This dialog seeks the user consent for permissions that you've configured as scope in Azure AD.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog":::
+
+    To consent, the app user should select **Accept**.
+
+The app user will be able to access your app after they've consented to Teams and Azure AD dialogs.
+
 After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
-### Use the access token as an identity token
+#### Use the access token as an identity token
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
