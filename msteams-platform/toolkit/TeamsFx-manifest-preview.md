@@ -43,7 +43,7 @@ During some operations like `Zip Teams metadata package`, Teams Toolkit implicit
 
 * Trigger `Teams: Validate manifest file` from command palette
 
- :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
 
 * CLI command
 
