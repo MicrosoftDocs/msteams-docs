@@ -1,12 +1,12 @@
 ---
-title: Teams live share
-description: overview of Teams live share
+title: cowatch overview
+description: overview of cowatch
 ms.topic: overview
 ms.localizationpriority: high
 keywords: teams live share cowatch  
 ---
 
-# Overview
+# Cowatch
 
 Cowatch allows users to watch content together in Teams. Users can watch together in one-on-one, group calls, scheduled meetings, meet now and also across desktop, mobile, TV.
 
