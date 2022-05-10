@@ -3,7 +3,7 @@ title: Teams Toolkit Overview
 author: zyxiaoyuer
 description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour of Toolkit features
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
