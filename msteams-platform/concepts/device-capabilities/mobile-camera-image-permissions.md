@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: Learn how to use Teams JavaScript client SDK to enable media capabilities using code examples
 keywords: camera image microphone capabilities native device permissions media api
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 ---
 

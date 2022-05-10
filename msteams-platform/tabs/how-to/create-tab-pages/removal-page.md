@@ -3,7 +3,7 @@ title: Create a tab removal page
 author: surbhigupta
 description: How to create a tab removal page
 keywords: teams tabs group channel configurable remove delete
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
 ---
