@@ -10,22 +10,20 @@ ms.author: surbhigupta
 
 # Overview
 
- You can integrate the location capabilities within your Teams app using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides well-defined APIs and the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as `getLocation` and `showLocation` to integrate location capabilities within your app. The location capability is available for the web browsers, desktop apps, and mobile apps.
+ You can integrate the location capabilities within your Teams app using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides well-defined APIs and the necessary tools for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as `getLocation` and `showLocation` to integrate location capabilities within your app. The location capability is available for the Teams web client, desktop, and mobile.
 
 ## Advantages
 
-The advantage of integrating location capabilities in your Teams apps is to leverage location functionality in web, desktop, and mobile app using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The following list provides the advantages of location capabilities:
+The advantage of integrating location capabilities in your Teams apps is to leverage location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The following list provides the advantages of location capabilities:
 
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
-<!-- * Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area. After the permission is granted, the search results are filtered near that particular location and support staff profiles get displayed. -->
-* Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area, the support staff profiles gets displayed after you grant the permission.
-<!-- * Report the location after completing a job in the field. The job processing app asks for permission to  find the location. Once the app has found the location, you can drag a pin to the exact location where the job is completed. -->
-* Report the location after completing a job in the field. The job processing app asks for permission to find the location. After you grant the permission, the app finds the location, and you can drag a pin to the exact location where the job is completed.
-* Track attendance by using a selfie in the vicinity of the area. The location data also gets captured and sent along with the image. This scenario is specific for mobile apps.
+* Locate technical support staff in a particular area. The app asks for permission to use the location to find support staffs near the specified area, the support staff profiles get displayed after the user grants the permission.
+* Report the location after completing a job in the field. The job processing app asks for permission to find the location. After the user grants the permission, the app finds the location, and the user can drag a pin to the exact location where the job has completed.
+* Track attendance by using a selfie in the vicinity of the area. The location data gets captured and is sent along with the image. This scenario is specific for Teams mobile.
 
 # [Mobile](#tab/mobile)
 
-The location capabilities allows the user to get locations on mobile using the following steps:
+The location capabilities allow the user to get locations on mobile using the following steps:
 
 1. Select `getLocation`.
 1. Select `showLocation` to show the location on map corresponding to the given coordinates.
@@ -38,7 +36,7 @@ Your location detail displays:
 
 # [Desktop](#tab/desktop)
 
-The location capabilities allows the user to get locations on desktop using the following steps:
+The location capabilities allow the user to get locations on desktop using the following steps:
 
 1. Select `getLocation`.
 1. Select `showLocation` to show the location on map corresponding to the given coordinates.
@@ -75,8 +73,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 ## Location APIs
 
-
-You must use the following set of APIs to enable your device's location capabilities:
+The following table lists set of APIs to enable your device's location capabilities:
 
 | API      | Description |Input configuration `allowChooseLocation` |Input configuration `showMap` |
 | --- | --- |--- |--- |
@@ -91,7 +88,7 @@ For more information on `getLocation` and `showLocation`, see [Location](/javasc
 
 ## Error handling
 
-You must ensure to handle errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
+Ensure to handle errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
@@ -105,7 +102,8 @@ You must ensure to handle errors appropriately in your Teams app. The following 
 
 ### Code snippets
 
-Call `getLocation` API to retrieve the location:
+
+* Call `getLocation` API to retrieve the location:
 
 ```javascript
 let locationProps = {"allowChooseLocation":true,"showMap":true};
@@ -118,7 +116,8 @@ microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError
 });
 ```
 
-Call `showLocation` API to display the location:
+
+* Call `showLocation` API to display the location:
 
 ```javascript
 let location = {"latitude":17,"longitude":17};
