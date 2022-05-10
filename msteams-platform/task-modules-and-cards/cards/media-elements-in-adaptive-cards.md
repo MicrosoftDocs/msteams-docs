@@ -35,10 +35,10 @@ The Media Elements feature now supports consumption of media elements directly w
 For the MVP of the media elements feature, the following three scenarios are supported primarily for the in-line media playback for both user-sent and bot-sent:
 
 * Files of a supported type are available externally via any publicly available URL that is sanitized.
-* Video or audio is linked via a URL that points to a supported video or audio file.
+    Video or audio is linked via a URL that points to a supported video or audio file.
 * Inline YouTube video playback through Adaptive Cards SDK v1.6.
 * Files are directly uploaded to OneDrive Sharepoint within the tenant.
-* Video or audio is shared from OneDrive Sharepoint.
+    Video or audio is shared from OneDrive Sharepoint.
 
 ### Phase 2: Support third party partner scenarios
 
