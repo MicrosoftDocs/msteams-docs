@@ -12,30 +12,35 @@ Cowatch allows users to watch content together in Teams. Users can watch togethe
 
 ## Start Cowatch
 
-1. Start a watch party from meetings:
-   * In a Teams meeting/call
-   * Open co-watch app
-   * Select a channel + client
-   * Select content Play
+Following are cowatch experiences in different platform:
 
-2. Start a Cowatch session from a 3P app during a meeting
-   * In a Teams meeting/call
-   * Open channel’s client
-   * Start watch session dialog
-   * Select content
-   * Play
+* Start a watch party from meetings:
 
-3. Start a meeting and Cowatch session from a 3P app
-   * Rom partner app, you can start a co-watch session
-   * A deep link to the Teams client is opened through our SDK to request a token, if needed
-   * A meeting is started with information about how to invite others
-   * Once everyone is ready, press play
+   1. In a Teams meeting/call, open cowatch app.
+   1. Select a channel + client.
+   1. Select the content play.
+
+* Start a Cowatch session from a 3P app during a meeting:
+
+   1. In a Teams meeting/call, open channel’s client.
+   1. Start watch session dialog.
+   1. Select the content play.
+
+* Start a meeting and Cowatch session from a 3P app:
+
+   1. On the rom partner app, you can start a co-watch session.
+   1. A deep link to the Teams client is opened through our SDK to request a token, if needed.
+   1. A meeting is started with information about how to invite others.
+   1. Once everyone is ready, select play.
 
 ## Where to watch
 
-Co-watch meeting tab – side bar app : The co-watch meeting tab app is where users go to see what content is supported through our co-watch feature.  
+**Cowatch meeting tab – side bar app**
+The cowatch meeting tab app is where users go to see what content is supported through our cowatch feature.  
 
-The co-watch meeting tab app is where users go to see what content is supported through our co-watch feature. The app is pre-pinned in TFL only.
+The cowatch meeting tab app is where users go to see what content is supported through our cowatch feature. The app is pre-pinned in TFL only.
 
-Co-watch home (L1) : The L1 of the co-watch meeting tab is the hub of all co-watch content, such as search, pinned channels, etc.
- 
+:::image type="content" source="../assets/images/cowatch/cowatch-meeting-tab.png" alt-text="meeting-tab":::
+
+**Co-watch home (L1)**
+The L1 of the cowatch meeting tab is the hub of all co-watch content, such as search, pinned channels, etc.
