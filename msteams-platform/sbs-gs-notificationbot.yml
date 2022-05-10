@@ -342,7 +342,7 @@ items:
 
     Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
 
-    # [Visual Studio Code](#tab/viscode)
+    # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the tab app.
@@ -441,7 +441,29 @@ items:
 
          Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
 
-         ## Run the deployed app
+         
+    # [Command Line](#tab/cli)
+
+    In your terminal window:
+
+    1. Run `teamsfx provision`.
+
+       ``` bash
+       teamsfx provision
+      ```
+
+      When prompted, select an Azure subscription to use Azure resources.
+
+      > [!NOTE]
+      > There are always some Azure resources used for hosting your app.
+
+    1. Run `teamsfx deploy`.
+
+       ``` bash
+       teamsfx deploy
+       ```
+
+    ## Run the deployed app
 
     Once the provisioning and deployment steps are complete:
 
@@ -477,26 +499,6 @@ items:
 
     Congratulations! Your Notification bot app is now running locally from Azure!
 
-    # [Command Line](#tab/cli)
-
-    In your terminal window:
-
-    1. Run `teamsfx provision`.
-
-       ``` bash
-       teamsfx provision
-      ```
-
-      When prompted, select an Azure subscription to use Azure resources.
-
-      > [!NOTE]
-      > There are always some Azure resources used for hosting your app.
-
-    1. Run `teamsfx deploy`.
-
-       ``` bash
-       teamsfx deploy
-       ```
 
     <!-- markdownlint-disable MD033 -->
     <details>
