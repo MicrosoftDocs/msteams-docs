@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Overview
 
-The Media Elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams does not provide media support and similarly does not support audio or video or animation cards from Bot Framework and there is no workaround. However, efforts are done to drive parity with SDK, that already support media elements so that it will increase engagement with cards and bring new experiences in the media elements.
+The Media Elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams doesn't provide media support and similarly doesn't support audio or video or animation cards from Bot Framework and there is no workaround. However, efforts are done to drive parity with SDK, that already supports media elements so that it will increase engagement with cards and bring new experiences in the media elements.
 
 The Media Elements feature now supports consumption of media elements directly within Teams Adaptive Cards without force exit from Teams to view media. Following are the example scenarios:
 
@@ -80,7 +80,7 @@ To improve the ability to deal with media files, following are the dynamic user-
 
 ## Inline YouTube playback
 
-Playing YouTube videos inline in any app requires the use of the YouTube embedded player, that relies on an IFrame. So, it is not possible to implement a custom inline player for YouTube videos or Vimeo, Dailymotion and more. For that reason, there is no necessity to come up with a video player design when it comes to YouTube; the only design we can implement is provided by YouTube, which does not allow for look and feel customization.
+Playing YouTube videos inline in any app requires the use of the YouTube embedded player, that relies on an IFrame. So, it is not possible to implement a custom inline player for YouTube videos or Vimeo, Dailymotion and more. For that reason, there is no necessity to come up with a video player design when it comes to YouTube; the only design we can implement is provided by YouTube, which doesn't allow for look and feel customization.
 
 YouTube, Vimeo and Dailymotion playback are implemented in the latest version of the Adaptive Cards JavaScript SDK (schema 1.6)(not released). It relies on the existing Adaptive Card Media element. Following is an example of a card embedding a YouTube video:
 
@@ -170,5 +170,5 @@ Once the user clicks the central **Play** button, the actual player is instantia
 (Limitations will be shared later after categorizing by Dev design team)
 Following are the limitations:
 
-1. The MIME type, that are able to support certain file types and using the MIME type.
+1. The MIME type, that is able to support certain file types and using the MIME type.
 1. Size limitation.
