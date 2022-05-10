@@ -3,7 +3,7 @@ title: Format your bot messages
 author: surbhigupta
 description: Add rich formatting to your bot messages, such as strikethrough, ordered and unordered list, hyperlink, image link, and more.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 # Format your bot messages
