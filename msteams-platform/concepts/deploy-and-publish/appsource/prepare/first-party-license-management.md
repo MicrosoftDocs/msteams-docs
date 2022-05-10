@@ -39,7 +39,7 @@ Following are the pre-requisites for enabling third-party app license management
 
 * A test tenant with a Teams environment in it. This is to simulate how a customer will experience the license management or enforcement for your solution.  
 
-## Chapter 1: Defining an offer in Partner Center
+## Defining an offer in Partner Center
 
 1. Create an offer in Partner Center.
 1. Define the licensing options.
@@ -108,11 +108,11 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
 (Content and image needs to be added)
 
-## Chapter 2: Offer availability in Teams and Appsource
+## Offer availability in Teams and Appsource
 
 (Need content)
 
-## Chapter 3: Purchase offer in Teams or Appsource
+## Purchase offer in Teams or Appsource
 
 1. In Teams, go to the Appstore and select your app.
 1. Select **Buy a subscription**.
@@ -131,7 +131,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/configure-now.png" alt-text="Configure button":::
 
-## Chapter 4: Manage third-party licenses in Teams
+## Manage third-party licenses in Teams
 
 1. On Teams client, subscription purchaser can manage license assignments from within the Teams. From **Manage your apps**, you can go to **Subscriptions** tab to view the list of purchases.
 
@@ -173,7 +173,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/pending-status.png" alt-text="Pending status":::
 
-## Chapter 5: Test the app by launching in Teams environment
+## Test the app by launching in Teams environment
 
 ### App runtime consent flow for user
 
@@ -195,8 +195,8 @@ APIs are managed by commerce team for license management. If a user is assigned 
 
 If a license is assigned to multiple users, you build a queue to the commerce team to add the licenses.
 
-* Partial failures - A user may or may not have approval, or their matrix may be a failure in the API assignment action, so there could be a partial failure in assigning licenses.
+* Partial failures: A user may or may not have approval, or their matrix may be a failure in the API assignment action, so there could be a partial failure in assigning licenses.
 
-* Time lag based on the queue - There may be a lag based on number of users in the queue that needs to be assigned.
+* Time lag based on the queue: There may be a lag based on number of users in the queue that needs to be assigned.
 
 You'll see a pending status if the license has failed to assign and there is an opportunity to **Retry**.
