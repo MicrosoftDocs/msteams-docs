@@ -12,13 +12,13 @@ ms.date: 05/10/2022
 
 You usually want to access data or information when building Teams application. If you do not have an appropriate SDK that helps you make an API request, Teams Toolkit is here to help you bootstrap sample code which handles authentication for your API requests.
 
-## How to use this feature
+## Connect to an API
 
 Teams Toolkit helps you connect to an API easily from a computing resource (Azure Functions or Bot). By adding an API connection, Teams Toolkit will:
 
 * Generate sample code under `./bot` or `./api` folder
-* Add the appropriate version of `@microsoft/teamsfx` package to `package.json` if this does not exist.
-* Add new app settings for your API to `.env.teamsfx.local`, which is used during local debugging.
+* Add the appropriate version of `@microsoft/teamsfx` package to `package.json` if this does not exist
+* Add new app settings for your API to `.env.teamsfx.local`, which is used during local debugging
 
 ### Add API connection using Visual Studio Code
 
