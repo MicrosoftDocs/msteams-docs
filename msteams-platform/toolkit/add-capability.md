@@ -21,15 +21,19 @@ The following table provides the list of Teams app capabilities:
 
 ## Limitations
 
-The following limitations are while adding more capabilities in teamsFx:
+The following list provides the limitations of adding more capabilities in TeamsFx:
 
 * You can add tabs up to 16 instances
-* You can add bot and message extension in one instance
+* You can add bot and message extension for one instance each
 
 ## Add capabilities
 
 > [!Note]
-> You need to perform the provision for the each environment, after capabilities are successfully added in to your Teams app.
+> You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
+
+Capabilities can added for creating the application. There are two way to added:
+* You can add capabilities using Teams Toolkit in Visual Studio Code
+* You can add capabilities using open the command palette in Visual Studio Code
 
 * You can add capabilities using Teams Toolkit in Visual Studio Code
 
@@ -37,23 +41,26 @@ The following limitations are while adding more capabilities in teamsFx:
     1. Select **Teams Toolkit** from left panel
     1. Select **Add features**
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature1234.png" alt-text="updated one" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature1234.png" alt-text="updated one" border="true":::
 
-*   You can also open the command palette and enter Teams: Add features:
+*   You can add capabilities using open the command palette in Visual Studio Code
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="team feature" border="true":::
+    1. Open the **command palette**
+    1. Enter **Teams:Add features**
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="team feature" border="true":::
 
 
     1. From the pop-up, select the capabilities to include in your project:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
 
 The selected capabilities are successfully added to your project. The Teams Toolkit generate source code for newly added capabilities.
 
 ## Add capabilities using TeamsFx CLI
 
 1. Change directory to your **project directory**
-1. Execute the following command to add different capabilities to your project:
+1. The following table provides capabilities and the required commands:
 
    |Capability and Scenario| Command|
    |-----------------------|----------|
