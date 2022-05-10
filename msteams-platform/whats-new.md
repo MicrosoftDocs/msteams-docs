@@ -13,7 +13,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 > [!IMPORTANT]
 > You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
-## Build features
+## Build features - 2022
 
 / placeholder for infographic and content/
 
