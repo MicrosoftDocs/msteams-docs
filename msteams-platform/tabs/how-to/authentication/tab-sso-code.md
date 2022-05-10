@@ -21,7 +21,6 @@ This section covers:
 - [Configure client-side code to get an access token](#configure-client-side-code-to-get-an-access-token)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 - [Decode and validate the access token](#decode-and-validate-the-access-token)
-- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
 ## Configure client-side code to get an access token
 
@@ -31,6 +30,13 @@ Your app user must give consent to Teams for using the Teams identity token to g
 - **Access token**: An access token is an artifact that contains app user's identity and permission scopes. For enabling SSO in tab, it's granted through Azure AD.
 
 To achieve app access for the current Teams user, your client-side code must make a call to Teams for getting an access token.
+
+This section includes:
+
+- [Client-side code to obtain access token](#client-side-code-to-obtain-access-token)
+- [Teams mobile client support](#teams-mobile-client-support)
+- [Consent dialog for getting access token](#consent-dialog-for-getting-access-token)
+- [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
 ### Client-side code to obtain access token
 
@@ -81,9 +87,9 @@ You should also pass `allowSignInPrompt: true` in the options parameter of `getA
 > To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
 > For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
 
-### Teams mobile client
+### Teams mobile client support
 
-For Teams mobile client version that support SSO are:
+For Teams mobile, client versions that support SSO are:
 
 - Teams for Android (1416/1.0.0.2020073101 and later)
 - Teams for iOS (_Version_: 2.0.18 and later)  
@@ -91,7 +97,7 @@ For Teams mobile client version that support SSO are:
 
 For the best experience with Teams, use the latest version of iOS and Android.
 
-### User consent for getting access token
+### Consent dialog for getting access token
 
 When you call `getAuthToken()` and user consent is required for user-level permissions, a dialog is shown to the user to seek consent.
 
@@ -117,7 +123,7 @@ The app user will be able to access your app after they've consented to Teams an
 
 After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
-#### Use the access token as an identity token
+### Use the access token as an identity token
 
 The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
@@ -138,6 +144,11 @@ Teams can cache this information associated with the user's identity; such as th
 If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
 
 If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
+
+This section includes:
+
+- [Code for passing access token to server-side](#code-for-passing-access-token-to-server-side)
+- [Decode and validate the access token](#decode-and-validate-the-access-token)
 
 ### Code for passing access token to server-side
 
