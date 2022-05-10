@@ -325,11 +325,11 @@ items:
 
     1. Select **Provision in the Cloud**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands" border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands" border="true":::
 
     1. Select a subscription to use for the Azure resources.
     
-        :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
 
        > [!NOTE]
        > There are always some Azure resources used for hosting your app.
@@ -338,27 +338,27 @@ items:
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog." border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog." border="true":::
 
        The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
 
          If you want you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
          The provisioned resource appears in the **Environment** section.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
 
     1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="true":::
 
           A dialog confirms the deploy resources in dev environments.
 
     1. Select **Deploy**
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
           As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
          
@@ -389,17 +389,15 @@ items:
 
     Once the provisioning and deployment steps are complete:
 
-    1. Select the **Local Debug** in environment section from Visual Studio Code.
+    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+    1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
+    1. Select the Play button to launch your app from Azure.
 
-         :::image type="content" source="~/assets/images/sbs-notification-bot/local-debug.png" alt-text="Local Debug." border="true":::
-
-    1. Select **Debug Edge** from the drop-down.
-
-        :::image type="content" source="~/assets/images/sbs-notification-bot/debug-cloud.png" alt-text="Local Debug." border="true":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Remote Debug." border="true":::
 
         You'll get the following output in Teams
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/app-cloud-output.png" alt-text="App cloud output." border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="App cloud output." border="true":::
 
     1. Select any of the following in the drop-down list:
     
@@ -407,17 +405,15 @@ items:
          * **Add to a chat** 
          * **Add to a meeting**
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/app-cloud-output1.png" alt-text="App cloud output1" border="true":::
-    
-    1. Open **Windows PowerShell**.
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output1.png" alt-text="App cloud output1" border="true":::
 
-    1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
+        You'll get the following helloWorld command in the app:
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/windows-powershell1.png" alt-text="Windows Powershell" border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Hello World Command" border="true":::
 
-        You'll get the notification in Teams:
+    1. Select the command and select **Enter**.  
 
-        :::image type="content" source="~/assets/images/sbs-notification-bot/cloud-final-output.png" alt-text="Cloud Final Output" border="true":::
+         :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output" border="true":::
 
     Congratulations! Your Notification bot app is now running locally from Azure!
 
