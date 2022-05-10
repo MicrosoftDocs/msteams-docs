@@ -4,7 +4,7 @@ description: Learn about the benefits of using Workforce management Shifts conne
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
 ---
