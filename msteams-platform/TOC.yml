@@ -371,7 +371,7 @@
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
     - name: Enable third party OAuth provider authentication
       items:
-      - name: Authentication flow in tabs
+      - name: Overview
         href: tabs/how-to/authentication/auth-flow-tab.md
       - name: Configure third party OAuth authentication
         href: tabs/how-to/authentication/auth-tab-aad.md
