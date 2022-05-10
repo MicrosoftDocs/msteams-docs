@@ -334,9 +334,9 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Notification bot capabilities. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with Notification bot capability on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 
@@ -360,8 +360,8 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created three types of Teams apps! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+        Congratulations, you have created Notification bot in Teams apps! 
+        Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
 
@@ -383,32 +383,12 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created three types of Teams apps! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
-
-    ---
-
-      [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
-
-      <!-- markdownlint-disable MD033 -->
-      <details>
-      <summary>Learn what happens when you deployed your app to Azure</summary>
-
-      Before deployment, the application has been running locally:
-
-      * The backend runs using **Azure Functions Core Tools**.
-      * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-      Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-      * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
-
-      </details>
+        Congratulations, you have created Notification bot in Teams apps! 
+        Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
 
     ## Deploy your app to Azure
 
-        Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the tab app.
+      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the tab app.
 
      > <details>
      > <summary>What's the difference between Provision and Deploy?</summary>
@@ -422,11 +402,11 @@ items:
 
     1. Select **Provision in the Cloud**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands" border="false":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands" border="true":::
 
     1. Select a subscription to use for the Azure resources.
     
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning" border="false":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
 
      > [!NOTE]
      > There are always some Azure resources used for hosting your app.
@@ -435,25 +415,67 @@ items:
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot of the provisioning dialog." border="false":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog." border="true":::
 
        The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="false":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
 
          If you want you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
          The provisioned resource appears in the **Environment** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog." border="false":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
 
     1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="false":::
+        :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="true":::
+
+          A dialog confirms the deploy resources in dev environments.
+
+    1. Select **Deploy**
+
+        :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
           As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
          Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
+
+         ## Run the deployed app
+
+    Once the provisioning and deployment steps are complete:
+
+    1. Select the **Local Debug** in environment section from Visual Studio Code.
+
+         :::image type="content" source="~/assets/images/sbs-notification-bot/local-debug.png" alt-text="Local Debug." border="true":::
+
+    1. Select **Debug Edge** from the drop-down.
+
+        :::image type="content" source="~/assets/images/sbs-notification-bot/debug-cloud.png" alt-text="Local Debug." border="true":::
+
+        You'll get the following output in Teams
+
+        :::image type="content" source="~/assets/images/sbs-notification-bot/app-cloud-output.png" alt-text="App cloud output." border="true":::
+
+    1. Select any of the following in the drop-down list:
+    
+         * **Add to a team**
+         * **Add to a chat** 
+         * **Add to a meeting**
+
+        :::image type="content" source="~/assets/images/sbs-notification-bot/app-cloud-output1.png" alt-text="App cloud output1" border="true":::
+    
+    1. Open **Windows PowerShell**.
+
+    1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
+
+        :::image type="content" source="~/assets/images/sbs-notification-bot/windows-powershell1.png" alt-text="Windows Powershell" border="true":::
+
+        You'll get the notification in Teams:
+
+        :::image type="content" source="~/assets/images/sbs-notification-bot/cloud-final-output.png" alt-text="Cloud Final Output" border="true":::
+
+    Congratulations! Your Notification bot app is now running locally from Azure!
 
     # [Command Line](#tab/cli)
 
@@ -475,26 +497,6 @@ items:
        ``` bash
        teamsfx deploy
        ```
-
-    ## Run the deployed app
-
-    Once the provisioning and deployment steps are complete:
-
-    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-    1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-    1. Select the Play button to launch your app from Azure.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely." border="false":::
-
-    1. Select **Add**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot showing the app being installed." border="false":::
-
-       Your app is loaded on the Azure site.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Screenshot showing the app being installed." border="false":::
-
-    Congratulations! Your tab app is now running remotely from Azure!
 
     <!-- markdownlint-disable MD033 -->
     <details>
