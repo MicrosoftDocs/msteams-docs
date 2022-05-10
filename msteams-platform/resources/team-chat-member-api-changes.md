@@ -3,7 +3,7 @@ title: Bot API changes for team and chat members
 author: ojasvichoudhary 
 description: Describes upcoming and in-progress changes to the Bot APIs used for retrieving members of teams and chats
 keywords: bot framework apis team members roster
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
 ---

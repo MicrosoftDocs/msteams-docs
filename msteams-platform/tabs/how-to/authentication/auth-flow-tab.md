@@ -2,7 +2,7 @@
 title: Authentication flow for tabs
 description: Describes authentication flow in tabs, OAuth by Azure AD, and provides code sample 
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams authentication flow tabs
 ---
 # Microsoft Teams authentication flow for tabs
