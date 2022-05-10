@@ -386,6 +386,8 @@ items:
         Congratulations, you have created Notification bot in Teams apps! 
         Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
 
+    ---
+
     ## Deploy your app to Azure
 
       Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the tab app.
@@ -462,6 +464,8 @@ items:
        ``` bash
        teamsfx deploy
        ```
+
+    ---
 
     ## Run the deployed app
 
