@@ -18,13 +18,13 @@ Partner app uses Cowatch SDK to join the WebSocket connection to send/receive Co
 
 Partner client will receive play, pause and seek commands for each user, allowing for a seamless Cowatch experience
 
-## Platforms and SDK's
+## Platforms and SDKs
 
 | Platform | SDK |
 | --- | --- |
 | iOS & iPadOS | Swift + Objective C |
 | Android | Java |
-| Web/PWA | Javascript |
+| Web/PWA | JavaScript |
 | Windows UWP | .NET |
 
 ## Prerequisites
@@ -33,15 +33,15 @@ Partner client will receive play, pause and seek commands for each user, allowin
 
     * To check with Bot API if user is part of the meeting in Cloud API.
 
-1. Name of user from AAD token:  
+1. Name of user from Microsoft Azure Active Directory (Azure AD) token:  
 
     * To greet and tag users inside Cowatch app. (From token)
     * microsoftTeams.authentication.getAuthToken()  
-    * 1p AAD  app
+    * 1p Azure AD  app
 
 ## Manifest update
 
-To enable Teams Live Share, update your manifest.json file (starting May 25, 2022). If you want audio ducking and meeting stage support, additional RSC permissions are needed as well (starting May 25, 2022).
+To enable Teams Live Share, update your manifest.json file (starting May 25, 2022). If you want audio ducking and meeting stage support, more RSC permissions are needed as well (starting May 25, 2022).
 
 ```json
 {
