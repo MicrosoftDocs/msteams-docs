@@ -3,7 +3,7 @@ title: Plan for Teams mobile
 author: surbhigupta
 description: Guide to plan for creating an app on Teams mobile 
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: v-abirade
 ---
 # Plan responsive tabs for Teams mobile

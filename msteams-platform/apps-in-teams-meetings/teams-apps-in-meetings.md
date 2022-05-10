@@ -4,7 +4,7 @@ author: surbhigupta
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api  
 ---
 

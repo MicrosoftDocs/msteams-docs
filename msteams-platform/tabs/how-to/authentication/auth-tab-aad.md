@@ -2,7 +2,7 @@
 title: Configure third party OAuth authentication
 description: Describes authentication in Teams and how to use it in tabs
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
 ---
 # Configure third party OAuth authentication
