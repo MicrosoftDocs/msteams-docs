@@ -16,19 +16,29 @@ You can add the cloud resources optionally, that fit your development needs.
 ## Add cloud resources using Teams Toolkit
 
 > [!IMPORTANT]
-> You need to provision for the each environment after successfully added a resource.
+> You need to provision for each environment, after you have successfully added a resource.
 
-1. Open **Microsoft Visual Studio Code**.
-1. Select **Teams Toolkit** from left pane.
-1. In the Teams Toolkit side bar panel, select **Add features**:
+Cloud resources can added for creating an application. There are two way to add the resources in visual studio code:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="add feature" border="true":::
+  1. You can add the cloud resources using Teams Toolkit in Visual Studio Code
+  1. You can add the cloud resources using open the command palette
+  
+* You can add the cloud resources using Teams Toolkit in Visual Studio Code
 
-   You can also open the command palette and enter **Teams: Add add features**:
+     1. Open **Microsoft Visual Studio Code**.
+     1. Select **Teams Toolkit** from left pane.
+     1. In the Teams Toolkit side bar panel, select **Add features**:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/addcloud-updated1234.png" alt-text="cloud" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="add feature" border="true":::
 
-1. From the pop-up, select the cloud resources to include in your project:
+*  You can add the cloud resources using open the command palette
+
+     1. Open **command palette**
+     1. Enter **Teams:Add features**
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/addcloud-updated1234.png" alt-text="cloud" border="true":::
+
+From the pop-up, select the cloud resources to include in your project:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
 
@@ -37,7 +47,7 @@ You can add the cloud resources optionally, that fit your development needs.
 ## Add cloud resources using TeamsFx CLI
 
 1. Change directory to your **project directory**.
-1. Execute the following command and add different resources in your project:
+1. The following table provides capabilities and the required commands:
 
 |Cloud Resource|Command|
 |---------------|----------|
