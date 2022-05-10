@@ -9,7 +9,7 @@ ms.date: 11/29/2021
 ---
 
 
-## Customize app manifest
+# Customize app manifest
 
 Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
@@ -43,11 +43,11 @@ During some operations like `Zip Teams metadata package`, Teams Toolkit implicit
 
 * Trigger `Teams: Validate manifest file` from command palette
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate-manifest1" alt-text="Validate":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate-manifest" alt-text="Validate":::
 
 * CLI command
 
-       ``` bash
+     ``` bash
         teamsfx validate --env local
         teamsfx validate --env dev
         ```
@@ -58,17 +58,17 @@ During some operations like `Zip Teams metadata package`, Teams Toolkit implicit
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Codelens":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
 
 > [!NOTE] 
 > If you have not provisioned the environment, or not executed local debug, the values for placeholder are not generated. Hence, the values are undefined in codelens.
 You can navigate to state file or configuration file by selecting the codelens, which pops up a drop down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Codelens":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If the environment has not been provisioned, or the local debug has not been executed, you can click `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Hover":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
 
 ## Preview app manifest in Toolkit
@@ -141,7 +141,7 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
  CLI command
 
-       ``` bash
+   ``` bash
         teamsfx deploy manifest --include-app-manifest yes
         ```
 
@@ -155,5 +155,6 @@ If the manifest file is outdated due to configuration file change or template ch
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 
-> [!NOTE]: The changes will be updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
+> [!NOTE]
+> The changes will be updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
 
