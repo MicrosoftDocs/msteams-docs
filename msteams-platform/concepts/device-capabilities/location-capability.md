@@ -140,4 +140,4 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-* [Integrate People Picker in Teams](people-picker-capability.md)
+
