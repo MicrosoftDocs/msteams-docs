@@ -35,13 +35,13 @@ You can incrementally add SSO to the following project:
 
 You can add SSO using Teams Toolkit in Visual Studio Code
 
-1. Open **Microsoft Visual Studio Code**
-1. Select **Teams Toolkit** from left panel
-1. Select **Add features** or open command palette and select **Teams: Add features**
+   1. Open **Microsoft Visual Studio Code**
+   1. Select **Teams Toolkit** from left panel
+   1. Select **Add features** or open command palette and select **Teams: Add features**
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
 
-1. Select **Single Sign-On**
+   1. Select **Single Sign-On**
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="sso select":::
 
