@@ -9,12 +9,7 @@ ms.topic: reference
 
 The Media Elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams does not provide media support and similarly does not support audio or video or animation cards from Bot Framework and there is no workaround. However, efforts are done to drive parity with SDK, that already support media elements so that it will increase engagement with cards and bring new experiences in the media elements.
 
-## User problems
-
-- Embed Media Elements in Adaptive Cards within the Teams experience. This feature request has come from partners such as Accenture, Workday, Chata.ai, Inditex, ServiceNow, Blinkist.
-- Force exit from Teams to view media.
-
-The Media Elements feature now supports consumption of media elements directly within Teams Adaptive Cards. Following are the example scenarios:
+The Media Elements feature now supports consumption of media elements directly within Teams Adaptive Cards without force exit from Teams to view media. Following are the example scenarios:
 
 ### User scenarios
 
@@ -34,12 +29,9 @@ The Media Elements feature now supports consumption of media elements directly w
 
 For the MVP of the media elements feature, the following three scenarios are supported primarily for the in-line media playback for both user-sent and bot-sent:
 
-* Files of a supported type are available externally via any publicly available URLs directly linking to a media file.
-    Video or audio is linked via a URL that points to a supported video or audio file.
-* Inline YouTube video playback through an embedded YouTube player (Adaptive Cards SDK v1.6).
-    This experience looks different from the rest of the media elements that leverage one player.
-* Files are directly uploaded to OneDrive Sharepoint and are accessible within the tenant.
-    Video or audio is shared from OneDrive Sharepoint and Adaptive Card would be able to play that file through player.
+* Files of a supported type are available externally via any publicly available URLs directly linking to a media file. Video or audio is linked via a URL that points to a supported video or audio file.
+* Inline YouTube video playback through an embedded YouTube player (Adaptive Cards SDK v1.6). This experience looks different from the rest of the media elements that leverage one player.
+* Files are directly uploaded to OneDrive Sharepoint and are accessible within the tenant. Video or audio is shared from OneDrive Sharepoint and Adaptive Card would be able to play that file through player.
 
 ### Phase 2: Support third party partner scenarios
 
@@ -53,15 +45,6 @@ To improve the ability to deal with media files, following are the dynamic user-
 > [!NOTE]
 > On desktop or web, support for Dailymotion and Vimeo should not induce any cost beyond supporting YouTube, as all three providers are supported out of the box in the latest Adaptive Cards JavaScript SDK.
 > Currently Vimeo and Dailymotion are in the “phase 2” bucket, and there are plans to promote them to “phase 1”.
-
-## Out of scope considerations
-
-1. Phase 1 doesn't support specific third party media players, for example, Vimeo. Following is the fallback:
-
-  * Desktop links externally via browser.
-  * Mobile deep-links into the native app (potentially through browser).
-
-1. Teams is not responsible for content moderation.
 
 **Media Elements-Video (Channel)**:
 
