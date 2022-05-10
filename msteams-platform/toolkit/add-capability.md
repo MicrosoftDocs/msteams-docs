@@ -21,7 +21,7 @@ The following table provides the list of Teams app capabilities:
 
 ## Limitations
 
-The following list provides the limitations of adding more capabilities in TeamsFx:
+The following list provides the limitations of while adding more capabilities in TeamsFx:
 
 * You can add tabs up to 16 instances
 * You can add bot and message extension for one instance each
@@ -31,7 +31,7 @@ The following list provides the limitations of adding more capabilities in Teams
 > [!Note]
 > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-Capabilities can be added for creating an application. There are two way to add the capabilities:
+Capabilities can be added for creating an application. There are two way to add the capabilities in visual studio code:
 
    1. You can add capabilities using Teams Toolkit in Visual Studio Code
    1. You can add capabilities using open the command palette
