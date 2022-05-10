@@ -23,7 +23,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 \* The [M365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option requires admin opt-in for the entire organization or selected users.
 
-For guidance on Teams app manifest and SDK versioning guidance and further details on current Teams platform capability support across M365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
+For guidance on Teams app manifest and SDK versioning guidance and further details on current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
 
 > [!NOTE]
 > We welcome your feedback and issue reporting as you expand Teams apps to run across Microsoft 365 ecosystem! Please use the regular [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
@@ -59,9 +59,9 @@ To learn more, see [Teams manifest for Office Add-ins (preview)](/office/dev/add
 
 ## Microsoft AppSource submission
 
-Join the growing number of production Teams apps in the [Microsoft AppSource](https://appsource.microsoft.com/) store with expanded support for Outlook and Office preview (Targeted Release) audiences. The app [submission process for  Teams apps enabled for Outlook and Office](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps; the only difference is you'll [reference version 1.13](../tabs/how-to/using-teams-client-sdk.md) of the Teams app manifest schema in your app package, which introduces support for Teams apps that run across M365.
+Join the growing number of production Teams apps in the [Microsoft AppSource](https://appsource.microsoft.com/) store with expanded support for Outlook and Office preview (Targeted Release) audiences. The app [submission process for  Teams apps enabled for Outlook and Office](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps; the only difference is you'll [reference version 1.13](../tabs/how-to/using-teams-client-sdk.md) of the Teams app manifest schema in your app package, which introduces support for Teams apps that run across Microsoft 365.
 
-Once published as a M365-enabled Teams app, your app will be discoverable as an installable app from the Outlook and Office app stores in addition to Teams. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
+Once published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app from the Outlook and Office app stores in addition to Teams. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
 
 :::image type="content" source="images/outlook-office-app-install.png" alt-text="Outlook and Office.com install screens for the SurveyMonkey and MURAL Teams apps":::
 
