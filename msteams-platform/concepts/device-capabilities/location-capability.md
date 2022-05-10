@@ -23,7 +23,7 @@ The advantage of integrating location capabilities in your Teams apps is to leve
 
 # [Mobile](#tab/mobile)
 
-The location capabilities allow the user to get locations on mobile using the following steps:
+The location capabilities allow users to get locations on mobile using the following steps:
 
 1. Select `getLocation`.
 1. Select `showLocation` to show the location on map corresponding to the given coordinates.
@@ -36,11 +36,14 @@ Your location detail displays:
 
 # [Desktop](#tab/desktop)
 
-The location capabilities allow the user to get locations on desktop using the following steps:
+The location capabilities allow users to get locations on desktop using the following steps:
 
 1. Select `getLocation`.
 1. Select `showLocation` to show the location on map corresponding to the given coordinates.
 
+> [!NOTE]
+> The desktop support for `getLocation` and  `showLocation` is available after the user grants the device permission.
+ 
 Your location detail displays:
 
   <!-- ![Desktop app experience for location capabilities](../../assets/images/tabs/location-picker-desktop.png) -->
@@ -49,7 +52,7 @@ Your location detail displays:
 
 ---
 
-To integrate location capabilities, you must do the following:
+To integrate location capabilities, you must:
 
 * [Update the app manifest file](#update-manifest) and call the APIs.
 * Have working knowledge of [code snippets](#code-snippets) for calling the [location APIs](#location-apis).
@@ -66,19 +69,17 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
-> * The request permissions prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
+> * The request permissions prompt is automatically displayed when relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).</br>
 > * The device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * The desktop support for `getLocation` and  `showLocation` is available after you grant the device permission.
-
 
 ## Location APIs
 
-The following table lists set of APIs to enable your device's location capabilities:
+The following table lists the set of APIs to enable your device's location capabilities:
 
 | API      | Description |Input configuration `allowChooseLocation` |Input configuration `showMap` |
 | --- | --- |--- |--- |
-|`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | - True: Users can choose any location of their choice.</br> - False: Users cannot change their current location. |False: The current location is fetched without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
-|`showLocation`| Shows location on map. |- True: Users can choose any location of their choice.</br> - False: users cannot change their current location.| False: The current location is fetched without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
+|`getLocation`|Provides user’s current device location or opens native location picker and returns the location chosen by the user. | - True: Users can choose any location of their choice.</br> - False: Users cannot change their current location. |False: Fetches the current location without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
+|`showLocation`| Shows location on map. |- True: Users can choose any location of their choice.</br> - False: Users cannot change their current location.| False: Fetches the current location without displaying the map. If `allowChooseLocation` is set to *true*, the `showMap` is ignored.|
 
 For more information on `getLocation` and `showLocation`, see [Location](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
