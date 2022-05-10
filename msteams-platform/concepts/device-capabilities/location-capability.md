@@ -17,8 +17,8 @@ ms.author: surbhigupta
 The advantage of integrating location capabilities in your Teams apps is to leverage location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The following list provides the advantages of location capabilities:
 
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
-* Locate technical support staff in a specified area. The app asks for permission to use the location to find support staffs. The user grants permission and can view the support staff profiles.
-* Report the location after completing a job in the field. The job processing app asks for permission to find the location. The user grants permission and the app finds the location. The user can drag a pin to the job completion location.
+* Locate technical support staff in a specified area. The app asks for permission to use the location to find support staffs. After the user grants permission they can view the support staff profiles.
+* Report the location after completing a job in the field. The job processing app asks for permission to find the location. After the user grants permission, the app finds the exact location. The user can drag a pin to the job completion location.
 * Track attendance by using a selfie in the vicinity of the area. The location data gets captured and is sent along with the image. This scenario is specific for Teams mobile.
 
 # [Mobile](#tab/mobile)
