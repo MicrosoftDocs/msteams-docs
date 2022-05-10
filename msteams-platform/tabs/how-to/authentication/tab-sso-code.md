@@ -12,7 +12,7 @@ Before you configure code to enable SSO, ensure that you've registered your app 
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
 
-You need to configure your app's code to handle access tokens. Configure the client-side code to obtain an access token from Azure AD using Teams identity of the app user. After the access token is received from, you need to pass it to the server side and validate the token. You can also use the access token as an identity token for authenticating and authorizing your users.
+You need to configure your app's code to handle access tokens. Configure the client-side code to obtain an access token from Azure AD using Teams identity of the app user. Teams caches this access token. You can also use the access token as an identity token for authenticating and authorizing your users. If your app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side and validate the token for Graph permissions.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
 
@@ -25,12 +25,12 @@ This section covers:
 
 ## Configure client-side code to get an access token
 
-Your app user must give consent to Teams for using the Teams identity token to get user-level permission. Azure AD receives the user's identity token (ID token) and sends an access token to Teams.
+Your app user must give consent to Teams for using the Teams identity token to get user-level permission. Azure AD receives the app user's Teams identity token (ID token) and sends an access token to Teams.
 
-- **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the user who is currently logged into Teams.
-- **Access token**: An access token is an artifact contains user identity and permission scopes. For enabling SSO in tab, it's granted through Azure AD.
+- **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the app user who is currently logged into Teams.
+- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. For enabling SSO in tab, it's granted through Azure AD.
 
-To achieve this access, your app code must make a call to Teams for getting an access token for the current Teams user.
+To achieve app access for the current Teams user, your client-side code must make a call to Teams for getting an access token.
 
 ### Client-side code to obtain access token
 
@@ -146,8 +146,6 @@ Keep in mind the following guidelines when validating the token:
 #### Example access token
 
 The following is a typical decoded payload of an access token.
-
-/ Need an updated example /
 
 ```javascript
 {
