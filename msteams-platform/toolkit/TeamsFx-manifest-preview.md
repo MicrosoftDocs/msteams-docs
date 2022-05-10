@@ -1,5 +1,5 @@
 ---
-title: Preview Teams App Manifest in Teams Toolkit
+title: Teams App Manifest in Teams Toolkit
 author: zyxiaoyuer
 description:  Preview Teams App Manifest
 ms.author: nliu
@@ -8,7 +8,70 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Preview app manifest in Toolkit
+
+## Customize app manifest
+
+Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
+
+* `manifest.template.json`
+* `templates/appPackage`
+
+During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+
+## Supported placeholders in manifest.template.json
+
+* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
+* `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
+
+  1. You can add a customized parameter as follows:
+      1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`
+      2. Add a config value in `config.{env}.json`
+
+        ```json
+        {
+            "manifest": {
+                "KEY": "VALUE"
+            }
+        }
+        ```
+
+  2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`:
+
+### Validate manifest
+
+During some operations like `Zip Teams metadata package`, Teams Toolkit implicitly validates the manifest against its schema. The following are two ways to explicitly validate manifest:
+
+* Trigger `Teams: Validate manifest file` from command palette
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate-manifest" alt-text="Validate manifest":::
+
+* CLI command
+
+``` bash
+        teamsfx validate --env local
+        teamsfx validate --env dev
+        ```
+
+
+### Codelenses and hovers
+
+In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Codelens":::
+
+> [!NOTE] 
+> If you have not provisioned the environment, or not executed local debug, the values for placeholder are not generated. Hence, the values are undefined in codelens.
+You can navigate to state file or configuration file by selecting the codelens, which pops up a drop down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Codelens":::
+
+To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If the environment has not been provisioned, or the local debug has not been executed, you can click `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
+
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Hover":::
+
+
+## Preview app manifest in Toolkit
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The Template file with placeholders, and the actual values is resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
 
@@ -34,9 +97,7 @@ To preview manifest with actual content, Teams Toolkit generates preview manifes
 
 ### Preview manifest file in local environment
 
-To preview manifest file in local teams app, you can press **F5** to run local debug. It generates default local settings for you, then the app package and preview manifest builds under `build/appPackage` folder.
-
-To preview manifest file of remote teams app, you need to click `Provision in the cloud` in DEVELOPMENT panel of Teams Toolkit extension Treeview, or trigger `Teams: Provision in the cloud` from command palette first. This step will generate configurations for remote teams app, then the app package and preview manifest will be built under `build/appPackage` folder.
+To preview manifest file in local environment, you can press **F5** to run local debug. It generates default local settings for you, then the app package and preview manifest builds under `build/appPackage` folder.
 
 You can also preview local manifest file by following the steps:
 
@@ -50,7 +111,7 @@ The preview local appears as shown in the image:
 
 ### Preview manifest file in remote environment
 
-To preview manifest file in remote teams app, select **Provision in the cloud** in **DEVELOPMENT** panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette. It generates configuration for remote teams app, and builds package and preview manifest under `build/appPackage` folder.
+To preview manifest file in remote environment, select **Provision in the cloud** in **DEVELOPMENT** panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette. It generates configuration for remote teams app, and builds package and preview manifest under `build/appPackage` folder.
 
 You can also preview manifest file in remote environment by following steps:
 
@@ -64,44 +125,43 @@ If there are more than one environment, you need to select the environment you w
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 
 ### Sync local changes to Dev Portal
+
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
-- Right click on `manifest.template.json` file, and click `Deploy Teams app manifest` from context menu
-- 
-    ![deploy-manifest](../images/deploy-manifest.png)
+1. Select **Update to Teams platform** on the top left corner of `manifest.{env}.json`
+2. Select **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
+
+ You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
+
+> [!NOTE]
+> Trigger from editor codelens or **title**  updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
 
 
-- Trigger `Teams: Deploy Teams app manifest` from command palette
-- 
-    ![deploy-command](../images/deploy-command.png)
+ CLI command
 
-- Click `Update to Teams platform` at the top left corner of `manifest.{env}.json`
-- 
-- Click `Teams: Deploy Teams app manifest` at the menu bar of `manifest.{env}.json`
-- 
-    ![update](../images/updatetoteamsplatform.png)
+``` bash
+        teamsfx deploy manifest --include-app-manifest yes
+        ```
+   
 
-s marked this conversation as resolved.
-Show resolved
-- CLI command
-    ```bash
-    teamsfx deploy manifest --include-app-manifest yes
-    ```
 
-> [!NOTE]: Trigger from editor codelens or menu bar will update current manifest file to Teams platform. Trigger from command palette will require selecting target environment.
-If the manifest file is outdated due to configuration file change or template change, user will be asked to confirm their action:
-![manifest-outdated](../images/manifest_outdated_dialog.png)
+If the manifest file is outdated due to configuration file change or template change, select any one of the following action:
 
-- `Preview only`: local manifest file will be overwritten according to current configuration
-- `Preview and update`: local manifest file will be overwritten according to current configration and also updated to Teams platform at the same time
-- `Cancel`: do nothing
+* **Preview only**: Local manifest file is overwritten according to current configuration
+* **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform
+* **Cancel**: No action is taken
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
+
 
 > [!NOTE]: The changes will be updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
 
 
 ## Customize app manifest
 
-Teams Toolkit has the following manifest template files under `manifest.template.json` folder across local and remote environments:
+Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
 * `manifest.template.json`
 * `templates/appPackage`
@@ -125,67 +185,39 @@ During the local debug or provision, Teams Toolkit loads manifest from `manifest
         }
         ```
 
-   2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`:
+  2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`:
 
 ### Validate manifest
 
 During some operations like `Zip Teams metadata package`, Teams Toolkit implicitly validates the manifest against its schema. The following are two ways to explicitly validate manifest:
 
-- Trigger `Teams: Validate manifest file` from command palette
-- 
-    ![validate](../images/validate.png)
+* Trigger `Teams: Validate manifest file` from command palette
 
-- CLI command
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate-manifest" alt-text="Validate manifest":::
 
-   ```
-    bash
-    teamsfx validate --env local
-    teamsfx validate --env dev
-    ```
+* CLI command
+
+``` bash
+        teamsfx validate --env local
+        teamsfx validate --env dev
+        ```
+
 
 ### Codelenses and hovers
 
-Besides each placeholder in `manifest.template.json`, there is a codelens to preview the values for `local` and `dev` environment.
+In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 
 ![preview placeholder values](../images/codelens.png)
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Codelens":::
 
 > [!NOTE] 
-> If the environment has not been provisioned, or local debug has not been executed, it means the values for placeholder has not been generated. So the value will be undefined in codelens.
+> If you have not provisioned the environment, or not executed local debug, the values for placeholder are not generated. Hence, the values are undefined in codelens.
 You can navigate to state file or configuration file by selecting the codelens, which pops up a drop down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
 ![select environment](../images/select-env-with-local.png)
 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If the environment has not been provisioned, or the local debug has not been executed, you can click `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
-![hover](../images/hover.png)
 
-## Sync local changes to Developer Portal
-
-After previewing the manifest file, you can sync your local changes to Developer Portal by following the steps:
-
-1. Select **Update to Teams platform** on the top left corner of `manifest.{env}.json`
-2. Select **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
-
- You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
-
-> [!NOTE]
->  Trigger from editor codelens or **title**  updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment
-
-  
-
-If the manifest file is outdated due to configuration file change or template change, select any one of the following action:
-
-* **Preview only**: Local manifest file is overwritten according to current configuration
-* **Preview and update**: Local manifest file is overwritten according to current configuration and also updated to Teams platform
-* **Cancel**: No action is taken
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
-
-
-
-> [!NOTE]
-> The changes are updated in Dev Portal. Any manual updates in Dev portal are  overwritten.
-
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Hover":::
 
