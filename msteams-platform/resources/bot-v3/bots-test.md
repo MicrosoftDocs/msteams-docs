@@ -3,7 +3,7 @@ title: Test and debug your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 03/20/2019
 ---
 # Test and debug your Microsoft Teams bot
