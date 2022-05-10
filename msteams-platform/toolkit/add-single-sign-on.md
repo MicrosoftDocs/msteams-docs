@@ -10,14 +10,14 @@ ms.date: 05/09/2022
 
 # Add single sign-on to your Teams app
 
-Microsoft Teams offers to minimize the number of times a user needs to enter their sign in credentials. This is called SSO or single sign-on. Teams Framework (TeamsFx) added support on top of this mechanism to help developers build single sign feature easily.
+Single sign-on minimizes the number of times a user needs to enter their sign-in credentials. This is called SSO or single sign-on. Teams Framework (TeamsFx) added support on top of this mechanism to help developers build single sign feature easily.
 
 > [!Note]
-> This feature is currently under developers preview.
+> This feature is currently under developer preview.
 
 ## Prerequisite
 
-* Install the [latest version of Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+* Install the latest version of [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 > [!TIP]
 > Ensure you have Teams app project opened in VS code.
@@ -33,7 +33,7 @@ You can incrementally add SSO to the following project:
 
 ### Add SSO using Visual Studio Code
 
-* You can add SSO using Teams Toolkit in Visual Studio Code
+You can add SSO using Teams Toolkit in Visual Studio Code
 
     1. Open **Microsoft Visual Studio Code**
     1. Select **Teams Toolkit** from left panel
@@ -45,7 +45,7 @@ You can incrementally add SSO to the following project:
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="sso select":::
 
-### Add SSO using TeamsFx CLI in command window
+### Add SSO using TeamsFx CLI
 
 1. Change directory to your **project directory**
 1. Execute the `teamsfx add sso` command to add SSO to your project
@@ -53,21 +53,21 @@ You can incrementally add SSO to the following project:
 > [!Note]
 > The feature enables SSO for all applicable capabilities. If you add an SSO-applicable capability later to the project, you can follow the same steps to enable SSO for that capability.
 
-## Phases after 'Add SSO' command execution
+## Changes after 'Add SSO' command execution
 
 After command execution, the additional changes in the project are as follows:
 
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
    |Create|`aad.template.json` under `template\appPackage`|This is the Azure Active Directory application manifest used to represent AAD app. This template will be used to register an AAD app during local debug or provision stage.|
-   |Modify|`manifest.template.json` under `template\appPackage`|An `webApplicationInfo` object will be added into Teams app manifest template. This field is required by Teams to enable SSO. This change is effective when local debug or provision is triggered.|
-   |Create|`auth/tab`|reference code, auth redirect pages and a `README.md` file will be generated in this path for a tab project.|
-   |Create|`auth/bot`|reference code, auth redirect pages and a `README.md` file will be generated in this path for a bot project.|
+   |Modify|`manifest.template.json` under `template\appPackage`|An `webApplicationInfo` object will be added into Teams app manifest template. This field is required by Teams to enable SSO. The change is effective when local debug or provision is triggered.|
+   |Create|`auth/tab`|Reference code, auth redirect pages and a `README.md` file will be generated in this path for a tab project.|
+   |Create|`auth/bot`|Reference code, auth redirect pages and a `README.md` file will be generated in this path for a bot project.|
 
 > [!Note]
-> By adding SSO, Teams Toolkit won't change anything in the cloud until local debug or provision is triggered. You also need to update your code to ensure SSO works in your project.
+> By adding SSO, Teams Toolkit won't change anything in the cloud until local debug or provision is triggered. Update your code to ensure SSO is activated/runs/implemented in your project.
 
-## Phases after triggering 'Add SSO' command
+## Changes after triggering 'Add SSO' command
 
 You can follow the steps below to add SSO in your Teams app based on your Teams app capabilities.
 
@@ -97,11 +97,11 @@ import { InitTeamsFx } from "../../sso/InitTeamsFx";
  
 ### Update source code for Bot project
     
- 1. Copy `auth/bot/public` folder to `bot/src`. These folder contains HTML pages used for auth redirect, please note that you need to modify `bot/src/index` file to add routing to these pages.
+ 1. Copy `auth/bot/public` folder to `bot/src`. These folders contains HTML pages used for auth redirect, you need to modify `bot/src/index` file to add routing to these pages.
  
- 2. Copy `auth/bot/sso` folder to `bot/src`. These folder contains three files as reference for SSO implementation:
+ 2. Copy `auth/bot/sso` folder to `bot/src`. These folders contains three files as reference for SSO implementation:
  
-      1. `showUserInfo`: This implements a function to get user info with SSO token. You can follow this method and create your own method that requires SSO token.
+      1. `showUserInfo`: This implements a function to get user info with SSO token. You can follow this and create your own method that requires SSO token.
       
       1. `ssoDialog`: This creates a ComponentDialog that used for SSO.
       
@@ -127,7 +127,7 @@ with
 
 ```
 
-  The HTML pages used for auth redirect will be copied when building this bot project after updating this command.
+  The HTML pages used for auth redirect will be copied while building this bot project after updating this command.
 
  6. After adding the following files, you need to create a new `teamsSsoBot` instance in `bot/src/index` file. Replace the following code:
  
@@ -166,7 +166,7 @@ server.get(
 );
 
 ```
- 8. Add the following lines to `bot/src/index` to import teamsSsoBot and path:
+ 8. Add the following lines to `bot/src/index` to import `teamsSsoBot` and path:
  
 ```Javascript
 
@@ -184,9 +184,9 @@ const path = require("path");
 
 Press F5 to debug your application.
 
-Teams Toolkit will use the Azure Active Directory (Azure AD) manifest file to register a Azure Active Directory (Azure AD) application for SSO.
+Teams Toolkit will use the Azure Active Directory (Azure AD) manifest file to register an Azure Active Directory (Azure AD) application for SSO.
 
-For Teams Toolkit local debug functionalities, see [Debug your Teams app locally](debug-local.md).
+For Teams Toolkit local debug functionalities refer [Debug your Teams app](debug-local.md) locally.
 
 ## Customize the Azure Active Directory (Azure AD) applications
 
@@ -194,13 +194,13 @@ The Azure Active Directory (Azure AD) manifest lets you customize various aspect
 
 Follow this document if you need to include other API permissions to access your desired APIs.
 
-For more information, see:
+For more information refer:
 
 ## SSO authentication concepts
 
 ### Working of SSO in Teams
 
-Single sign-on (SSO) authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times a user needs to enter their sign in credentials. If users agree to use the app, then they don't have to provide consent repeatedly on another device as they're signed in automatically.
+Single sign-on (SSO) authentication in Microsoft Azure Active Directory (Azure AD) silently refreshes the authentication token to minimize the number of times a user needs to enter their sign-in credentials. If users agree to use the app, then they don't have to provide consent repeatedly on another device as they're signed in automatically.
 
 Teams tabs and bots have similar flow for SSO support, for more information, see:
 
