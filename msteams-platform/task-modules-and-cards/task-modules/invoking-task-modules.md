@@ -3,7 +3,7 @@ title: Invoke and dismiss task modules
 description: Learn about invoking and dismissing task modules, task info object, task module sizing, task module deep link syntax using Code samples
 author: surbhigupta12
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 
 # Invoke and dismiss task modules
