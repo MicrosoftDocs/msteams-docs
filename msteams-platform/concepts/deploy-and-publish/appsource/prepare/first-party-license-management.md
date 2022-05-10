@@ -54,6 +54,10 @@ Following are the pre-requisites for enabling third-party app license management
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Partner Center Homepage":::
 
+1. In the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
+
+    :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="Homepage":::
+
 1. Select **Commercial Marketplace** or **Overview** on left pane and then select **New Offer**. Now select **Software as a Service** to create a new offer.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="Commercial marketplace":::
