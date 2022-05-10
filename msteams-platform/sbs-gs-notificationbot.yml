@@ -345,7 +345,7 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Open the project folder in which you created the tab app.
+    1. Open the project folder in which you created the Notification bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure**.
 
@@ -390,7 +390,7 @@ items:
 
     ## Deploy your app to Azure
 
-      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the tab app.
+      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the Notification bot app.
 
      > <details>
      > <summary>What's the difference between Provision and Deploy?</summary>
@@ -410,10 +410,10 @@ items:
     
         :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
 
-     > [!NOTE]
-     > There are always some Azure resources used for hosting your app.
+       > [!NOTE]
+       > There are always some Azure resources used for hosting your app.
 
-     A dialog warns you that costs may be incurred when running resources in Azure.
+       A dialog warns you that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
@@ -440,9 +440,6 @@ items:
         :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
           As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
-
-         Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
-
          
     # [Command Line](#tab/cli)
 
@@ -454,10 +451,10 @@ items:
        teamsfx provision
       ```
 
-      When prompted, select an Azure subscription to use Azure resources.
+    When prompted, select an Azure subscription to use Azure resources.
 
-      > [!NOTE]
-      > There are always some Azure resources used for hosting your app.
+    > [!NOTE]
+    > There are always some Azure resources used for hosting your app.
 
     1. Run `teamsfx deploy`.
 
