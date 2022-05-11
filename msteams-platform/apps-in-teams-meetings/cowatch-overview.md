@@ -8,7 +8,7 @@ keywords: teams live share cowatch
 
 # Cowatch
 
-Cowatch allows users to watch content together in Teams. Users can watch together in one-on-one, group calls, scheduled meetings, meet now and also across desktop, mobile, TV.
+Cowatch allows users to watch content together in Teams one-on-one, group calls, scheduled meetings, meet now.
 
 :::image type="content" source="../assets/images/cowatch/cowatch.PNG" alt-text="cowatch-teams":::
 
@@ -39,10 +39,9 @@ Following are cowatch experiences in different platform:
 
 **Cowatch meeting tab – side bar app**
 The cowatch meeting tab app is where users go to see what content is supported through our cowatch feature.  
-
-The cowatch meeting tab app is where users go to see what content is supported through our cowatch feature. The app is pre-pinned in TFL only.
+The app is pre-pinned in TFL only.
 
 :::image type="content" source="../assets/images/cowatch/cowatch-meeting-tab.png" alt-text="meeting-tab":::
 
-**Co-watch home (L1)**
-The L1 of the cowatch meeting tab is the hub of all co-watch content, such as search, pinned channels, etc.
+**Cowatch home (L1)**
+The L1 of the cowatch meeting tab is the hub of all cowatch content, such as search, pinned channels, etc.

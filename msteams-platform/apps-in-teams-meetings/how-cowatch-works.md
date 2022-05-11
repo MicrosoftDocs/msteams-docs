@@ -41,7 +41,7 @@ Cowatch works with partner apps and on web through SDK (iOS, Android, JS, .NET).
 
 ## Manifest update
 
-To enable Teams Live Share, update your manifest.json file (starting May 25, 2022). If you want audio ducking and meeting stage support, more RSC permissions are needed as well (starting May 25, 2022).
+To enable Teams Live Share, update your manifest.json file. If you want audio ducking and meeting stage support, more RSC permissions are needed as well.
 
 ```json
 {
