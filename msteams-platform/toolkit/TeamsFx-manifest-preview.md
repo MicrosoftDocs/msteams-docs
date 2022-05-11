@@ -16,7 +16,7 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 * `manifest.template.json`
 * `templates/appPackage`
 
-During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 ## Supported placeholders in manifest.template.json
 
@@ -41,11 +41,11 @@ During the local debug or provision, Teams Toolkit loads manifest from `manifest
 
 During some operations like `Zip Teams metadata package`, Teams Toolkit validates the manifest against its schema. The following are two ways to validate manifest:
 
-* Trigger `Teams: Validate manifest file` from command palette
+* Trigger `Teams: Validate manifest file` from command palette:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
 
-* CLI command
+* CLI command:
 
      ``` bash
         teamsfx validate --env local
@@ -64,9 +64,7 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 > If you have not provisioned the environment, or not executed local debug, the values for placeholder are not generated. Hence, the values are undefined in codelens.
 You can navigate to state file or configuration file by selecting the codelens, which pops up a drop down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
-
-To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If the environment has not been provisioned, or the local debug has not been executed, you can click `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
+To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you have'nt provisioned the environment or not executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
