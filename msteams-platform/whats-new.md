@@ -11,11 +11,12 @@ keywords: teams what's new latest updates or developer preview and features
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
 :::row:::
-    :::column span="1":::
+    :::column span="2":::
         &nbsp;
     :::column-end:::
     :::column span="1":::
-        Connect with us: [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)
+        | **Subscribe:** | :::image type="content" source="assets/images/RSSfeeds.png" alt-text="Link to RSS Feed" link="#get-latest-updates"::: | :::image type="content" source="assets/images/twitter.png" alt-text="Link to Twitter" link="https://twitter.com/Microsoft365Dev"::: |
+        | --- | --- | --- |
     :::column-end:::
 :::row-end:::
 
