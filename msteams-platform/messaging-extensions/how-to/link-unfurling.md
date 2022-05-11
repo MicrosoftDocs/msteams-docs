@@ -29,6 +29,8 @@ Schema.org is a collaborative, community based activity with a mission to create
 
 When metadata of the webpage is tagged to a type of product it unfurls to an adaptive card. App type plays an crucial role, each type will have a designated template. The adaptive card is upgraded with lot more action buttons
 
+Following screenshot displays metadata of how an adaptive card unfurls.
+
 :::image type="content" source="../../assets/images/messaging-extension/meta.png" alt-text="Meta data"border="true"lightbox="../../assets/images/messaging-extension/meta-data.png":::
 
 ### Adding meta data to the website
@@ -65,10 +67,12 @@ Following is an instance of adding structured schema.org JSON-LD metadata to the
 
 ### Limitation
 
+Following are the limitations for app less adaptive card preview with schema.org templates:
+
 1. The new templates will not render in meeting chats or windows
 
 1. If a matching template is not found, the link defaults to current URL preview unfurling.
-s
+
 ## Add link unfurling to your app manifest
 
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array either with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
