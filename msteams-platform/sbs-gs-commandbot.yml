@@ -133,8 +133,7 @@ items:
 - title: Build command response bot
   durationInMinutes: 1
   content: |
-
-    # [Visual Studio Code](#tab/vsc)
+   To build command response bot using Visual Studio Code
 
     1. Open Visual Studio Code.
 
@@ -176,11 +175,9 @@ items:
         
         - **Change location**
         - **Local Debug**
-        
-        For this tutorial, you don't need to use these options.
 
         > [!NOTE]
-        > If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
+        > For this tutorial, you don't need to use these options. If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
@@ -188,51 +185,17 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
-       You'll get the following output in Teams:
+    1. Select **Add**
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App" border="true":::     
 
-    1. Select any of the following in drop-down list:
-    
-        * **Add to a team**
-        * **Add to a chat**
-        * **Add to a meeting**
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app-drop-down.png" alt-text="Add an App drop-down" border="true":::
-
-       You'll get the following helloWorld command in the app:
+    1. Select the command and select **Enter**.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App drop-down" border="true":::  
-
-    1. Select the command and select **Enter**.
 
        You'll receive the following command response in adaptive card:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output" border="true":::      
-
-    # [Command line](#tab/cli)
-
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
-
-    ``` bash
-    teamsfx new
-    ```
-
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
-
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
-
-    1. Select **Create a new Teams app**.
-    1. Select the **Tab** capability.
-    1. Select **Azure** frontend hosting.
-    1. Don't select any cloud resources.
-    1. Select **JavaScript** as the programming language.
-    1. Press **Enter** to select the default workspace folder.
-    1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
-
-      After you've answered all the questions, your project is created.
-
-    ---
 
     ## Take a tour of the tab app source code
 
@@ -240,9 +203,7 @@ items:
 
       :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure.png" alt-text="structure tab" border="true":::
 
-    Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
-
-    Among other items in this directory structure, the Toolkit maintains:
+    Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.The Toolkit maintains:
 
     | File name | Contents |
     | --- | --- |
@@ -263,8 +224,6 @@ items:
 
     Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
 
-    # [Visual Studio Code](#tab/viscode)
-
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the Command bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
@@ -284,44 +243,11 @@ items:
         Congratulations, you have created Command bot in Teams apps! 
         Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
 
-    # [Command line](#tab/cline)
-
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login m365
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-        Congratulations, you have created Command bot in Teams apps! 
-        Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
-
-    ---
-
     ## Deploy your app to Azure
 
-      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the Command bot app.
+      In Deployment, necessary cloud resources are created in provisioning and your app's code is copied into the created cloud resources.
 
-     > <details>
-     > <summary>What's the difference between Provision and Deploy?</summary>
-     >
-     > The **Provision** step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The **Deploy** step copies the code for your app to the resources you created during the provision step. It is common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it is separate from the deployment step.
-     </details>
-
-    # [Visual Studio Code](#tab/vscode)
-
-      Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision in the Cloud**.
 
@@ -330,9 +256,6 @@ items:
     1. Select a subscription to use for the Azure resources.
     
         :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
-
-       > [!NOTE]
-       > There are always some Azure resources used for hosting your app.
 
        A dialog warns you that costs may be incurred when running resources in Azure.
 
@@ -361,29 +284,6 @@ items:
         :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
           As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
-         
-    # [Command Line](#tab/cli)
-
-    In your terminal window:
-
-    1. Run `teamsfx provision`.
-
-       ``` bash
-       teamsfx provision
-       ```
-
-       When prompted, select an Azure subscription to use Azure resources.
-
-       > [!NOTE]
-       > There are always some Azure resources used for hosting your app.
-
-    1. Run `teamsfx deploy`.
-
-       ``` bash
-       teamsfx deploy
-       ```
-
-    ---
 
     ## Run the deployed app
 
@@ -391,7 +291,7 @@ items:
 
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-    1. Select the Play button to launch your app from Azure.
+    1. Select the **Play** button to launch your app from Azure.
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Remote Debug." border="true":::
 
@@ -399,12 +299,8 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="App cloud output." border="true":::
 
-    1. Select any of the following in the drop-down list:
+    1. Select **Add to a team** from the drop-down list:
     
-         * **Add to a team**
-         * **Add to a chat** 
-         * **Add to a meeting**
-
         :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output1.png" alt-text="App cloud output1" border="true":::
 
         You'll get the following helloWorld command in the app:
@@ -417,34 +313,13 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output" border="true":::
 
-       Congratulations! Your Notification bot app is now running remotely from Azure!
 
-
-    <!-- markdownlint-disable MD033 -->
-    <details>
-    <summary>Learn what happens when you deployed your app to Azure</summary>
-
-    Before deployment, the application has been running locally:
-
-    * The backend runs using **Azure Functions Core Tools**.
-    * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-    Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-    * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-    * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
-
-    </details>
-
-- title: Congratulations!
+- title: Complete challenge
   durationInMinutes: 1
   content: |
-
-    You've done it!
-
-    You've completed the tutorial to build command response bot with JavaScript.
-
     Did you come up with something like this?
 
-      :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output" border="true":::
-    
+    :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output" border="true":::
+  
+- content: |
+    You've completed the tutorial to build command response app.   
