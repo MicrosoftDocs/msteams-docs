@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document describes how to add link unfurling to your Teams without app installation. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
+This document describes how to enable link unfurling to your Teams without app installation. Users will be prompted to unfurl links even if they do not have the associated Message Extension installed. The capability allows developers to create pre-authentication Adaptive Card previews for users to view before they install or authenticate.  With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
 
 > [!NOTE]
 >
