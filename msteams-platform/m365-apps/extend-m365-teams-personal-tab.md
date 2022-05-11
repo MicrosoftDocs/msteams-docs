@@ -3,7 +3,7 @@ title: Extend a Teams personal tab app across Microsoft 365
 description: Extend a Teams personal tab app across Microsoft 365
 ms.date: 05/24/2022
 ms.topic: tutorial
-ms.custom: Microsoft 365 apps
+ms.custom: m365apps
 ms.localizationpriority: high
 ---
 # Extend a Teams personal tab across Microsoft 365
@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Office on the web (office.com).
 
-Updating your personal app to run in Outlook and Office Home involves these steps:
+Updating your personal app to run in Outlook and Office involves these steps:
 
 > [!div class="checklist"]
 >
@@ -215,11 +215,11 @@ To preview your app running in Office on the web:
 
 ## Next steps
 
-Outlook- and Office-enabled personal tabs are in preview and are not supported for production use. Here's how to distribute your personal tab app to preview audiences for testing purposes.
+Outlook- and Office-enabled personal tabs are supported for production use in Microsoft Teams and can be distributed to preview audiences running *Targeted Release* versions of Outlook and Office. Distribution options and processes for Outlook- and Office-enabled personal tabs are the same as with traditional Team apps.
 
 ### Single-tenant distribution
 
-Outlook- and Office-enabled personal tabs can be distributed to a preview audience across a test (or production) tenant in one of three ways:
+Outlook- and Office-enabled personal tabs can be distributed to test and production tenants in one of three ways:
 
 #### Teams client
 
@@ -235,4 +235,4 @@ As a global admin, you can upload and pre-install the app package from [Microsof
 
 ### Multitenant distribution
 
-Distribution to Microsoft AppSource is not supported during this early developer preview of Outlook- and Office-enabled Teams personal tabs.
+The app [submission process for  Teams apps enabled for Outlook and Office](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps; the only difference is you'll [reference version 1.13](../tabs/how-to/using-teams-client-sdk.md) of the Teams app manifest schema in your app package, which introduces support for Teams apps that run across Microsoft 365.

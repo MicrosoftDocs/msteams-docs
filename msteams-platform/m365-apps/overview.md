@@ -16,12 +16,12 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 |          | App manifest element | Teams support |Outlook* support | Office* support | Notes |
 |--|--|--|--|--|--|
-| [**Tabs**](../tabs/what-are-tabs.md) (personal scope)    |`staticTabs`  | Desktop, Web, Mobile | Desktop (Beta Channel), Web (Targeted Release) | Desktop, Web (Targeted Release)| Channel and group scope not yet supported for M365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) (search-based)| `composeExtensions` | Desktop, Web, Mobile| Desktop (Beta Channel), Web (Targeted Release)| - |Action-based not yet supported for M365. See [notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
-| [**Graph connectors**](/microsoftsearch/connectors-overview)| `graphConnector` | Desktop, Web, Mobile| | | See [notes](#graph-connectors-preview)
-| [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | | Desktop, Web | | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
+| [**Tabs**](../tabs/what-are-tabs.md) (personal scope)    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release)| Channel and group scope not yet supported for M365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) (search-based)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| |Action-based not yet supported for M365. See [notes](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). |
+| [**Graph connectors**](/microsoftsearch/connectors-overview)| `graphConnector` | Web, Desktop, Mobile| Web, Desktop | Web| See [notes](#graph-connectors-preview)
+| [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | | Web, Desktop  | | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
-\* The [M365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option requires admin opt-in for the entire organization or selected users.
+\* The [M365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) enrollment require admin opt-in for the entire organization or selected users.
 
 For guidance on Teams app manifest and SDK versioning guidance and further details on current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
 

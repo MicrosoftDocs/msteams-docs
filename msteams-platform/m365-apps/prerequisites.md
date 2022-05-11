@@ -1,13 +1,11 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
 description: Here are the prerequisites for extending your Teams apps across Microsoft 365
-ms.date: 05/24/2022 
+ms.date: 05/24/2022
+ms.custom: m365apps
 ms.localizationpriority: high
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
-
-> [!NOTE]
-> Extend teams app across Microsoft 365 is currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 The development environment for extending Teams apps across Microsoft 365 is similar to Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft Office applications in order to preview Teams apps running in Outlook and Office.
 
@@ -17,7 +15,7 @@ To set up your development environment:
 >
 > * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
 > * [Enroll your Microsoft 365 tenant in *Office 365 Targeted Releases*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
-> * [Configure your account to access preview versions of Outlook and Office](#install-office-apps-in-your-test-environment)
+> * [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-office-apps-in-your-test-environment)
 > * [Switch to the Developer Preview version of Teams](#switch-to-the-developer-preview-version-of-teams)
 > * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
@@ -30,9 +28,6 @@ After you have a tenant, you need to enable sideloading for your tenant, see [en
 :::image type="content" source="images/teams-sideloading-enabled.png" alt-text="Upload a custom app option":::
 
 ## Enroll your developer tenant for Office 365 Targeted releases
-
-> [!IMPORTANT]
-> Refer to the latest updates on [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) to check if Outlook.com and Office.com support for Teams apps is available to your test tenant.
 
 To enroll your test tenant for Office 365 targeted releases:
 
