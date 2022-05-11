@@ -70,9 +70,9 @@ Following image shows error state if a video or audio is not found or not suppor
 
 ## Inline YouTube playback
 
-Playing YouTube videos inline in any app requires the use of the YouTube embedded player, that relies on an IFrame. Following is an example of a card embedding a YouTube video:
+Playing YouTube videos inline in any app requires the use of the YouTube embedded player, that relies on an IFrame.
 
-### Example
+Following is an example of a card embedded in a YouTube video:
 
 ``` json
 {
