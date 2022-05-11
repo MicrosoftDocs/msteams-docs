@@ -205,7 +205,7 @@ items:
 
       :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure.png" alt-text="structure tab" border="true":::
 
-    Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.The Toolkit maintains:
+    Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components. The Toolkit maintains:
 
     | File name | Contents |
     | --- | --- |
