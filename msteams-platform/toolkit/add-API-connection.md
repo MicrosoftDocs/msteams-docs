@@ -1,31 +1,31 @@
 ---
-title: Add API connection to Your Teams apps
+title: Connect to existing APIs
 author: MuyangAmigo
-description:  Describes Add API connection
+description:  Describes connection to existing APIs
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/10/2022
+ms.date: 05/11/2022
 ---
 
-# Add API connection
+# Connect to existing APIs
 
-You usually want to access data or information when building Teams application. If you do not have an appropriate SDK that helps you make an API request, Teams Toolkit is here to help you bootstrap sample code which handles authentication for your API requests.
+While developing a Teams application, you'll frequently wish to use existing APIs, that could be internal or third-party APIs. The Teams Toolkit helps you in bootstrapping sample code to use these APIs if you don't have the proper SDKs.
 
-## Connect to an API
+## Connect to the API
 
-Teams Toolkit helps you connect to an API easily from a computing resource (Azure Functions or Bot). By adding an API connection, Teams Toolkit will:
+When you link Teams Toolkit to an existing API, it'll do the following:
 
 * Generate sample code under `./bot` or `./api` folder
-* Add the appropriate version of `@microsoft/teamsfx` package to `package.json` if this does not exist
-* Add new app settings for your API to `.env.teamsfx.local`, which is used during local debugging
+* Add a reference to the `@microsoft/teamsfx` package to `package.json`
+* Add application settings for your API in  `.env.teamsfx.local`, which configures local debugging
 
 ### Add API connection using Visual Studio Code
 
 * You can add API connection using Teams Toolkit in Visual Studio Code
 
     1. Open **Microsoft Visual Studio Code**
-    2. Select **Teams Toolkit** from left panel
+    2. Select **Teams Toolkit** from left activity bar
     3. Select **Add features** or open command palette and select **Teams: Add features**
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/sso-add features.png" alt-text="API add features":::
@@ -34,55 +34,55 @@ Teams Toolkit helps you connect to an API easily from a computing resource (Azur
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/API-select features.png" alt-text="API select":::
 
-    5. Input endpoint for your API. The endpoint should be a valid http(s) url. It will be added to your project's local app setting and used as base url when making requests. This means you don't need to input full api url for every request.
+    5. You can use a valid http (s) URL as the input endpoint for your API. It is the base URL for API requests that is added to your project's local application settings.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/API-endpoint.png" alt-text="API endpoint":::
 
-    6. Choose which component needs to invoke the API.
+    6. Select the component that will use the API.
     
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/API-invoke.png" alt-text="API invoke":::
 
-    7. Input alias for your API. The alias is used to generate app setting names for your API, which will be added to your project's local app setting.
+    7. Enter an alias for your API. The alias  generates an app setting names for your API, that is added to your project's local app setting.
     
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/API-alias.png" alt-text="API alias":::
 
-    8. Select how you want to authenticate the API requests. We will generate appropriate sample code and add corresponding local app settings based on your selection.
+    8. Select how the API requests will be authenticated. Depending on your pick, we'll produce the required sample code and add the corresponding local application settings.
     
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/API-auth.png" alt-text="sso auth":::
 
-    9. There will be some additional questions based on your selection of an authentication type. Provide information for each question to complete the flow.
+    9. Depending on the authentication type used, some further configuration will be required.
 
-### Add API connection using TeamsFx CLI in command window
+### Add API connection using TeamsFx CLI
 
-The base command of this feature is `teamsfx add api-connection [authentication type]`. Here is the list of available authentication type and corresponding sample command. You can use `teamsfx add api-connection [authentication type] -h` to get help document.
+The basic command of this feature is `teamsfx add api-connection [authentication type]`. The following is a list of the different authentication types and their sample commands. You can use `teamsfx add api-connection [authentication type] -h` to get help document.
 
    |**Authentication type**|**Sample command**|
    |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic --endpoint (https://example.com) --component bot --alias example --user-name exampleuser --interactive false|
-   |ModAPI Keyify|teamsfx add api-connection apikey --endpoint (https://example.com) --component bot --alias example --key-location header --key-name example-key-name --interactive false|
+   |Basic|teamsfx add api-connection basic --endpoint(https://example.com) --component bot --alias example --user-name exampleuser --interactive false|
+   |API Key|teamsfx add api-connection apikey --endpoint (https://example.com) --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |AAD|teamsfx add api-connection aad --endpoint (https://example.com) --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |Certificate|teamsfx add api-connection cert --endpoint (https://example.com) --component bot --alias example --interactive false|
    |Custom|teamsfx add api-connection custom --endpoint (https://example.com) --component bot --alias example --interactive false|
 
-## How this feature changes your project
+## Understanding your project's updates
 
-After you successfully triggered the command, the tooling will make following changes to `bot` or `api` folder based on selected component(s):
+ Teams Toolkit will make the following modifications to the `bot` or `api` folder based on your selections:
 
-1. Generate `{your_api_alias}.js/ts`. The file demostrates how to initialize an API client for your API with support of `@microsoft/teamsfx` package, as well as exported the API client to be consumed in other source code files.
+1. Create your `{your_api_alias}.js/ts` file. The file creates an API client for your API and then exports it.
 
-2. Add `@microsoft/teamsfx` package to `package.json` if your project does not have this package. The package provides support for common API authentication methods.
+2. Add the `@microsoft/teamsfx` package to `package.json`. The package provides support for common API authentication methods.
  
-3. Add several environment variables to `.env.teamsfx.local` to provide necessary information for selected authentication type. The generated code will read values from these environment variables. You can rename the environment variables and update generated code to use your favorite names.
+3. Add environment variables to `.env.teamsfx.local`. These are the configuration for the selected authentication type. The generated code reads values from these environment variables.
 
-## Invoke API in local environment
+## Testing API connection in the Teams Toolkit local environment
     
-After the command updated your project, please follow the instructions displayed by the tooling to invoke your APIs. Generally, you need to do following things. You can visit the generated file to get more details for these action items.
+After adding an API connection follow the steps below:
 
  1. Run npm install
  
-You need to run `npm install` under `bot` or `api` folder to install added packages. This ensures you can have Intellisense support when coding. 
+You need to run `npm install` under `bot` or `api` folder to install added packages.
 
- 2. Add your API credentials to local app settings
+ 2. Add your API credentials to local application settings
  
 The command will not ask any credentials when generating sample code and adding local app settings. But it will leave some placeholders for you to fill your credentials. Please fill your API credentials to `.env.teamsfx.local` under `bot` or `api` folder to avoid authentication failures for your API requests.
  
