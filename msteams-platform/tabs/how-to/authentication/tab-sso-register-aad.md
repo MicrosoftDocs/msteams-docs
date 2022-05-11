@@ -63,7 +63,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 2. Select the **App registrations** icon.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal page." border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal page." border="true":::
 
    The **App registrations** page appears.
 
