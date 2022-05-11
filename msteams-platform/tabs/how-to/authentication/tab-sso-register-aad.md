@@ -255,7 +255,7 @@ The redirect URI you defined on the **Register an application** page for Web pla
 
 1. Select **Manage** > **Authentication** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
 
     The **Platform configurations** page appears.
 
@@ -263,7 +263,7 @@ The redirect URI you defined on the **Register an application** page for Web pla
 
 1. Select **+ Add a platform**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms" border="true":::
 
     The **Configure platforms** page appears.
 
