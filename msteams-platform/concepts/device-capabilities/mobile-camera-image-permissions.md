@@ -20,9 +20,9 @@ The following list provides the advantages of media capabilities:
 
 * Leverages native Teams controls to provide a rich and immersive experience to your users.
 
-* Allows the user to create logo design with rough mockups on whiteboard in the cell phone and post a poll with scans of whiteboard designs as poll options on the group chat in Teams. 
+* Allows the user to create logo design with rough mockups on whiteboard in the cell phone and post a poll with scans of whiteboard designs as poll options on the group chat in Teams.
 
-* Allows the user to scan the physical documents from the smartphone to claim a car insurance to the insurance company. 
+* Allows the user to scan the physical documents from the smartphone to claim a car insurance to the insurance company.
 
 
 > [!NOTE]

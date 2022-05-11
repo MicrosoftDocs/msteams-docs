@@ -12,9 +12,9 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 > [!NOTE]
 >
-> * To integrate media capabilities within your Microsoft Teams app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
+> * To integrate media capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate media capabilities](mobile-camera-image-permissions.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
-> * To integrate location capabilities within your Microsoft Teams app, see [Integrate location capabilities](location-capability.md).
+> * To integrate location capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
 
 ## Native device permissions
 
@@ -37,7 +37,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 
 The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
 
-While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop client.
+While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop.
 
 ## Manage permissions
 
