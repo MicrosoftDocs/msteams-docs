@@ -32,7 +32,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | --- | --- | --- | --- |
 | /date/ | /Feature name/ | /Description/ | /breadcrumb link to the page/ |
 
-
+<!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
 
 | Date | Update | Find here |
@@ -45,6 +45,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| Share to Teams from personal app or tab (developer preview) | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |04/01/2022| Introduced step-by-step guide to create Teams conversational bot| Build bots > Bot conversations > Channel and group conversations > [Step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml) |
+-->
 
 ## GA features
 
