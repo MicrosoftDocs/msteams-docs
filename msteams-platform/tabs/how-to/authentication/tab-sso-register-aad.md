@@ -137,13 +137,13 @@ To configure scope and the OBO flow, you'll need:
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option." border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option." border="true":::
 
     The **Expose an API** page appears.
 
 1. Select **Set** to generate app ID URI in the form of `api://{AppID}`.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI" border="true":::
 
     The section for setting app ID URI appears.
 
@@ -177,7 +177,7 @@ To configure scope and the OBO flow, you'll need:
 
     The app ID URI displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App ID URI updated" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App ID URI updated" border="true":::
 
 ### To configure API scope
 
