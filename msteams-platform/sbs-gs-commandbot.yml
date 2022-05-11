@@ -18,7 +18,7 @@ items:
 
     In this tutorial, you'll learn:
 
-    - How to create a command bot with Teams Toolkit
+    - How to build command bot with Teams Toolkit
     - About the directory structure of your app
     
     This step-by-step guide helps you to build command bot with Teams Toolkit. You'll see the following output:
@@ -237,7 +237,7 @@ items:
 
     Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure.png" alt-text="structure tab" border="true":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure.png" alt-text="structure tab" border="true":::
 
 
     Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
