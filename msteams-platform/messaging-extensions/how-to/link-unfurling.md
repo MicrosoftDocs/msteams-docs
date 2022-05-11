@@ -37,29 +37,20 @@ Following screenshot displays metadata of how an adaptive card unfurls.
 
 Add structured schema.org JSON-LD metadata to the website. Few of the templates with @types:
 
-Creative works: [CreativeWork](https://schema.org/CreativeWork), [Book](https://schema.org/Book), [Movie](https://schema.org/Movie), [MusicRecording](https://schema.org/MusicRecording), [Recipe](https://schema.org/Recipe) and [TVSeries](https://schema.org/TVSeries).
-
-Embedded non-text objects: [AudioObject](https://schema.org/AudioObject), [ImageObject](https://schema.org/ImageObject) and [VideoObject](https://schema.org/VideoObject)​
-
-[Event​](https://schema.org/Event)
-
-[Health and medical types](https://schema.org/docs/meddocs.html): notes on the health and medical types under [MedicalEntity](https://schema.org/MedicalEntity).​
-
-[Organization​](https://schema.org/Organization)
-
-[Person​](https://schema.org/Person)
-
-[Place](https://schema.org/Place)
-
-[LocalBusiness](https://schema.org/LocalBusiness)
-
-[Restaurant](https://schema.org/Restaurant)
-
-[Product](https://schema.org/Product), [Offer](https://schema.org/Offer), [AggregateOffer​](https://schema.org/AggregateOffer)
-
-[Review](https://schema.org/Review), [AggregateRating​](https://schema.org/AggregateRating)
-
-[Action](https://schema.org/Action)
+| App type | schema.org meta data |
+|---|---|
+| Creative works | [Book](https://schema.org/Book), [Movie](https://schema.org/Movie), [MusicRecording](https://schema.org/MusicRecording), [Recipe](https://schema.org/Recipe) and [TVSeries](https://schema.org/TVSeries) |
+| Embedded non-text objects | [AudioObject](https://schema.org/AudioObject), [ImageObject](https://schema.org/ImageObject) and [VideoObject](https://schema.org/VideoObject)​ |
+| Event | [Event​](https://schema.org/Event) |
+| Health and medical | [Health and medical types](https://schema.org/docs/meddocs.html): notes on the health and medical types under [MedicalEntity](https://schema.org/MedicalEntity).​|
+| Organization | [Organization​](https://schema.org/Organization) |
+| Person | [Person​](https://schema.org/Person) |
+| Place | [Place](https://schema.org/Place) |
+| LocalBusiness | [LocalBusiness](https://schema.org/LocalBusiness) |
+| Restaurant | [Restaurant](https://schema.org/Restaurant) |
+| Product | [Product](https://schema.org/Product), [Offer](https://schema.org/Offer), [AggregateOffer​](https://schema.org/AggregateOffer)
+| Review | [Review](https://schema.org/Review), [AggregateRating​](https://schema.org/AggregateRating) |
+| Action | [Action](https://schema.org/Action) |
 
 Following is an instance of adding structured schema.org JSON-LD metadata to the website.
 
