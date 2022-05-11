@@ -302,11 +302,9 @@ items:
     
         :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output1.png" alt-text="App cloud output1" border="true":::
 
-        You'll get the following helloWorld command in the app:
+    1. Select the command and select **Enter**.  
 
         :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Hello World Command" border="true":::
-
-    1. Select the command and select **Enter**.  
 
         You'll receive the following command response in adaptive card:
 
