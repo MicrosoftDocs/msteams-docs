@@ -83,16 +83,16 @@ To preview manifest with actual content, Teams Toolkit generates preview manifes
 ```text
 └───build
     └───appPackage
-        ├───appPackage.{env}.zip - Zipped app package of remote teams app
-        ├───appPackage.local.zip - Zipped app package of local team app
-        ├───manifest.{env}.json  - Previewed manifest of remote teams app
-        └───manifest.local.json  - Previewed manifest of local teams app
+        ├───appPackage.{env}.zip - Zipped app package of remote Teams app
+        ├───appPackage.local.zip - Zipped app package of local Teams app
+        ├───manifest.{env}.json  - Previewed manifest of remote Teams app
+        └───manifest.local.json  - Previewed manifest of local Teams app
 ```
 
 You can preview manifest file in  local and remote environments.
 
-* Preview manifest file in local environment (#preview-manifest-file-in-local- environment)
-* Preview manifest file in remote environment (#preview-manifest-file-in-remote-environment)
+* [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
+* [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
  
 ### Preview manifest file in local environment
 
