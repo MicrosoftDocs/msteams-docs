@@ -10,13 +10,13 @@ keywords: teams live share Cowatch
 
 Cowatch works with partner apps and on web through SDK (iOS, Android, JS, .NET).
 
-Cowatch SDK enables synchronization of video between users in a Teams meeting in partner.
+* Cowatch SDK enables synchronization of video between users in a Teams meeting in partner.
 
-Teams Client launches partner app with an app-link including relevant context (session-id, token).
+* Teams Client launches partner app with an app-link including relevant context (session-id, token).
 
-Partner app uses Cowatch SDK to join the WebSocket connection to send/receive Cowatch events.
+* Partner app uses Cowatch SDK to join the WebSocket connection to send/receive Cowatch events.
 
-Partner client will receive play, pause and seek commands for each user, allowing for a seamless Cowatch experience
+* Partner client will receive play, pause and seek commands for each user, allowing for a seamless Cowatch experience.
 
 ## Platforms and SDKs
 
@@ -31,7 +31,7 @@ Partner client will receive play, pause and seek commands for each user, allowin
 
 1. Tenant ID, User ID and Meeting ID:
 
-    * To check with Bot API if user is part of the meeting in Cloud API.
+    * To check with Bot API, if user is part of the meeting in Cloud API.
 
 1. Name of user from Microsoft Azure Active Directory (Azure AD) token:  
 
