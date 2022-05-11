@@ -181,7 +181,9 @@ items:
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select **F5**.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
+
+    1. Select the **Play** button to start debugging.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
@@ -216,7 +218,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Command bot capabilities. The final step is to deploy your app on Azure.
+    You've learned to build, and run Teams app with Command bot capabilities. The final step is to deploy your app on Azure.
 
     Let's deploy the first app with Command bot capability on Azure using Teams Toolkit.
 
@@ -236,12 +238,9 @@ items:
     1. Sign in to your Azure account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available.
 
         Now you're ready to deploy your app to Azure!
-
-        Congratulations, you have created Command bot in Teams apps! 
-        Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
 
     ## Deploy your app to Azure
 
@@ -291,7 +290,7 @@ items:
 
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-    1. Select the **Play** button to launch your app from Azure.
+    1. Select the **Play** button to start debugging.
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Remote Debug." border="true":::
 
@@ -319,7 +318,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output" border="true":::
+    :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Cloud final output" border="true":::
   
 - content: |
     You've completed the tutorial to build command response app.   
