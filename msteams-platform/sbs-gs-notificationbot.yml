@@ -155,7 +155,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
 
-    1. Select **HTTP Trigger** as the trigger. Select **OK**.
+    1. Select **HTTP Trigger Restify Server** as the trigger. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language." border="true":::  
 
