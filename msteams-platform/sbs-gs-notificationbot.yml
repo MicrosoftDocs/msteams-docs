@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 05/04/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: ~/get-started/get-started-overview.md
-  nextTutorialTitle: Back to Get started overview
+  nextTutorialHref: toolkit/add-capability.md
+  nextTutorialTitle: Back to Add Capability
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -133,7 +133,7 @@ items:
 - title: Create a new notification bot app
   durationInMinutes: 1
   content: |
-   # [Visual Studio Code](#tab/vsc)
+   To create new notification bot app using Visual Studio Code
 
     1. Open Visual Studio Code.
     
@@ -175,29 +175,21 @@ items:
         
         - **Change location**
         - **Local Debug**
-        
-        For this tutorial, you don't need to use these options.
 
         > [!NOTE]
-        > If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
+        > For this tutorial, you don't need to use these options. If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
     
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select **F5**.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true":::
+    1. Select the **Play** button to start debugging.
 
-       You'll get the following output in Teams:
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true"::: 
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output"border="true"::: 
+    1. Select **Add**
 
-    1. Select any of the following in the drop-down list:
-    
-         * **Add to a team**
-         * **Add to a chat** 
-         * **Add to a meeting**
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output1.png" alt-text="My Notification Output1"border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output1"border="true":::
 
     **Run PowerShell to trigger to Teams**
 
@@ -210,30 +202,6 @@ items:
         You'll get the following output in Teams:
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
-
-    # [Command line](#tab/cli)
-
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
-
-    ``` bash
-    teamsfx new
-    ```
-
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
-
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
-
-    1. Select **Create a new Teams app**.
-    1. Select the **Tab** capability.
-    1. Select **Azure** frontend hosting.
-    1. Don't select any cloud resources.
-    1. Select **JavaScript** as the programming language.
-    1. Press **Enter** to select the default workspace folder.
-    1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
-
-      After you've answered all the questions, your project is created.
-
-    ---
 
     ## Take a tour of the source code
 
@@ -275,7 +243,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" border="true":::
 
-    1. Use the following code after `for (const target of await bot.notification.installations()) { ` in Visual studio code.
+    1. Use the following code after `for (const target of await bot.notification.installations()) { ` in Visual Studio Code.
 
          ```bash
          if (target.type === "Channel") {
@@ -292,7 +260,9 @@ items:
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down or select **F5**.
+    1. Select **Debug(Edge)** or **Debug(Chrome)** from the drop-down.
+
+    1. Select the **Play** button to start debugging.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging" border="true":::
 
@@ -300,11 +270,7 @@ items:
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation" border="true":::
 
-    1. Select any of the following in the drop-down list:
-    
-         * **Add to a team**
-         * **Add to a chat** 
-         * **Add to a meeting**
+    1. Select **Add to a team** in the drop-down list:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation1.png" alt-text="My Notification Output1" border="true":::
 
@@ -342,8 +308,6 @@ items:
 
     Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
 
-    # [Visual Studio Code](#tab/viscode)
-
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the Notification bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
@@ -360,47 +324,11 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created Notification bot in Teams apps! 
-        Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
-
-    # [Command line](#tab/cline)
-
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login m365
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-        Congratulations, you have created Notification bot in Teams apps! 
-        Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
-
-    ---
-
     ## Deploy your app to Azure
 
-      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the Notification bot app.
+      In Deployment, necessary cloud resources are created in provisioning and your app's code is copied into the created cloud resources.
 
-     > <details>
-     > <summary>What's the difference between Provision and Deploy?</summary>
-     >
-     > The **Provision** step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The **Deploy** step copies the code for your app to the resources you created during the provision step. It is common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it is separate from the deployment step.
-     </details>
-
-    # [Visual Studio Code](#tab/vscode)
-
-      Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision in the Cloud**.
 
@@ -441,29 +369,6 @@ items:
 
           As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
          
-    # [Command Line](#tab/cli)
-
-    In your terminal window:
-
-    1. Run `teamsfx provision`.
-
-       ``` bash
-       teamsfx provision
-      ```
-
-    When prompted, select an Azure subscription to use Azure resources.
-
-    > [!NOTE]
-    > There are always some Azure resources used for hosting your app.
-
-    1. Run `teamsfx deploy`.
-
-       ``` bash
-       teamsfx deploy
-       ```
-
-    ---
-
     ## Run the deployed app
 
     Once the provisioning and deployment steps are complete:
@@ -498,36 +403,12 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/cloud-final-output.png" alt-text="Cloud Final Output" border="true":::
 
-    Congratulations! Your Notification bot app is now running locally from Azure!
-
-
-    <!-- markdownlint-disable MD033 -->
-    <details>
-    <summary>Learn what happens when you deployed your app to Azure</summary>
-
-    Before deployment, the application has been running locally:
-
-    * The backend runs using **Azure Functions Core Tools**.
-    * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-    Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-    * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-    * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
-
-    </details>
-
-- title: Congratulations!
+- title: Complete challenge
   durationInMinutes: 1
   content: |
-
-    You've done it!
-
-    You've created a new notification bot with Teams Toolkit.
-
-    You've completed the tutorial to create notification bot with JavaScript.
-
     Did you come up with something like this?
 
      :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
-    
+
+- content: |
+    You've completed the tutorial to create notification bot app!    
