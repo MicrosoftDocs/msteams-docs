@@ -255,9 +255,9 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Notification bot capabilities. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Command bot capabilities. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with Notification bot capability on Azure using Teams Toolkit.
+    Let's deploy the first app with Command bot capability on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 
@@ -266,7 +266,7 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Open the project folder in which you created the Notification bot app.
+    1. Open the project folder in which you created the Command bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure**.
 
@@ -281,7 +281,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created Notification bot in Teams apps! 
+        Congratulations, you have created Command bot in Teams apps! 
         Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -304,14 +304,14 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created Notification bot in Teams apps! 
+        Congratulations, you have created Command bot in Teams apps! 
         Now let's go ahead and learn how to deploy app to Azure using the Teams Toolkit.
 
     ---
 
     ## Deploy your app to Azure
 
-      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the Notification bot app.
+      Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you will deploy the Command bot app.
 
      > <details>
      > <summary>What's the difference between Provision and Deploy?</summary>
@@ -354,7 +354,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="true":::
 
-          A dialog confirms the deploy resources in dev environments.
+          A dialog confirms the deploy resources in dev environment.
 
     1. Select **Deploy**
 
@@ -372,10 +372,10 @@ items:
        teamsfx provision
       ```
 
-    When prompted, select an Azure subscription to use Azure resources.
+       When prompted, select an Azure subscription to use Azure resources.
 
-    > [!NOTE]
-    > There are always some Azure resources used for hosting your app.
+       > [!NOTE]
+       > There are always some Azure resources used for hosting your app.
 
     1. Run `teamsfx deploy`.
 
@@ -415,7 +415,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output" border="true":::
 
-    Congratulations! Your Notification bot app is now running locally from Azure!
+       Congratulations! Your Notification bot app is now running remotely from Azure!
 
 
     <!-- markdownlint-disable MD033 -->
