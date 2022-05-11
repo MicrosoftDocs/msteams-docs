@@ -29,7 +29,7 @@ To improve the ability to deal with media files, following are the dynamic user-
 * Inline Vimeo and Dailymotion playback and other media providers.
 
 **Media Elements-Video (Channel)**:
-The media playback lives within the Adaptive Card. Users need to press **play** button and videos are directly replayed back. For example, video is within the channel in the following image:
+The media playback lives within the Adaptive Card. Users need to press **play** button and videos are directly replayed. For example, video is within the channel in the following image:
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/design-video-channel.png" alt-text="Video channel design":::
 
@@ -105,7 +105,7 @@ The above card renders as follows:
 
 Initially, as depicted above, only the poster of the video is displayed. For YouTube, the poster or thumbnail is automatically pulled from YouTube, but the card author can technically provide their own poster to explicitly specify the `Media.poster` property.
 
-Once the user selects the central **Play** button, the actual player is instantiated, and video playback starts:
+After user selects the central **Play** button, the actual player is instantiated, and video playback starts.
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo-telegraph-road.png" alt-text="Inline youtube video player demo":::
 
@@ -155,7 +155,6 @@ Once the user selects the central **Play** button, the actual player is instanti
 
 ## Limitations
 
-(Limitations will be shared later after categorizing by Dev design team)
 Following are the limitations:
 
 1. The MIME type, that is able to support certain file types and using the MIME type.
