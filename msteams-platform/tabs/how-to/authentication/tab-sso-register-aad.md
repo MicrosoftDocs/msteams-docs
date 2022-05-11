@@ -48,11 +48,8 @@ The tasks involved in registering your app that uses SSO are language- and frame
 In this section, you'll learn:
 
 - [How to register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
-
 - [How to configure scope for access token.](#configure-scope-for-access-token)
-
 - [How to configure authentication for different platforms.](#configure-authentication-for-different-platforms)
-
 - [How to configure access token version.](#configure-access-token-version)
 
 ## Create an app registration in Azure AD

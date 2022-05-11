@@ -26,10 +26,12 @@ This section covers:
 
 Your app user must give consent to Teams for using the Teams identity token to get user-level permission. Azure AD receives the app user's Teams identity token (ID token) and sends an access token to Teams.
 
+Here's a quick look at types of tokens:
+
 - **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the app user who is currently logged into Teams.
 - **Access token**: An access token is an artifact that contains app user's identity and permission scopes. For enabling SSO in tab, it's granted through Azure AD.
 
-To achieve app access for the current Teams user, your client-side code must make a call to Teams for getting an access token.
+To obtain app access for the current Teams app user, your client-side code must make a call to Teams for getting an access token.
 
 This section includes:
 
@@ -40,7 +42,7 @@ This section includes:
 
 ### Client-side code to obtain access token
 
-The tab app needs to make a JavaScript call towards Teams to obtain access token in exchange for the identity token of the app user. You need to configure the client-side code for using `getAuthToken()` to initiate the validation process.
+The tab app needs to make a JavaScript call towards Teams to obtain access token in exchange for the identity token of the current app user. You need to configure the client-side code for using `getAuthToken()` to initiate the validation process.
 
 #### When to call getAuthToken
 
