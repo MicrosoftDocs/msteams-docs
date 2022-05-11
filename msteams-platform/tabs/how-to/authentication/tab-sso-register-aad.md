@@ -37,7 +37,7 @@ The tasks involved in registering your app that uses SSO are language- and frame
 
 > [!NOTE]
 > The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
-
+<br>
 > [!IMPORTANT]
 > There are some important restrictions that you must know:
 >
@@ -230,7 +230,7 @@ To configure scope and the OBO flow, you'll need:
 
     > [!NOTE]
     > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
-
+<br>
     > [!IMPORTANT]
     > For a Teams tab, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams. You might need this detail, if you're using the same Azure AD app for a mobile or desktop client also.
 
