@@ -63,7 +63,7 @@ To enable your message extension to interact with links, first you must add the 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
 You can also enable your link to be unfurled even when your app is not installed at user end.
-To add link unfurling experience for your app without app installation update your manifest with `composeExtension` payload request with `anonymousQueryLink` as shown in the following example
+To add link unfurling experience for your app without app installation, update your app manifest with `composeExtension` payload request with `anonymousQueryLink` as shown in the following example:
 
 :::image type="content" source="~/assets/images/link-unfurling-without-app.png" alt-text="Manifest update":::
 
