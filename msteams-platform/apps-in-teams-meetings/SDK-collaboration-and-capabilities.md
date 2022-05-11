@@ -118,7 +118,7 @@ function changeDisplayName(userName) {
 
 Library: @fluidframework/ fluid-ephemeral-media
 
-Our EphemeralMediaSession and MediaSynchronizer objects work together to synchronize any HTML5 <video> or <audio> element.
+Our EphemeralMediaSession and MediaSynchronizer objects work together to synchronize any HTML5 `video` or `audio` element.
 If your player doesn’t match the interface of an HTML5 media element, one of our samples shows how to create a lightweight “shiv” to make it compatible.
 Required to intercept user clicks or actions, usually in the form of custom media controls.
 

@@ -301,11 +301,11 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/cowatch-overview.md
-  - name: How cowatch works
+  - name: How Cowatch works
     href: apps-in-teams-meetings/how-cowatch-works.md
-  - name: cowatch authentication
+  - name: Cowatch authentication
     href: apps-in-teams-meetings/cowatch-authentication.md
-  - name: cowatch authentication
+  - name: SDK collaboration and capabilities
     href: apps-in-teams-meetings/SDK-collaboration-and-capabilities.md 
 - name: Build webhooks and connectors
   items:
