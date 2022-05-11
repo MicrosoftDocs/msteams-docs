@@ -8,8 +8,6 @@ keywords: teams what's new latest updates or developer preview and features
 
 # What's new for developers in Microsoft Teams
 
-Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
-
 :::row:::
     :::column span="2":::
         &nbsp;
@@ -20,6 +18,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
     :::column-end:::
 :::row-end:::
 
+Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
+
 <!--
 > [!IMPORTANT]
 > You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates). -->
@@ -28,9 +28,9 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 / placeholder for infographic and content/
 
-| Feature | Feature description | Find it here |
-| --- | --- | --- |
-| /Feature name/ | /Description/ | /breadcrumb link to the page/ |
+ Date | Feature | Feature description | Find it here |
+| --- | --- | --- | --- |
+| /date/ | /Feature name/ | /Description/ | /breadcrumb link to the page/ |
 
 
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
