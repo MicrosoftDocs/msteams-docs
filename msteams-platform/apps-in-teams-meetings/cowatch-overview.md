@@ -10,6 +10,8 @@ keywords: teams live share cowatch
 
 Cowatch allows users to watch content together in Teams. Users can watch together in one-on-one, group calls, scheduled meetings, meet now and also across desktop, mobile, TV.
 
+:::image type="content" source="../assets/images/cowatch/cowatch.PNG" alt-text="cowatch-teams":::
+
 ## Start Cowatch
 
 Following are cowatch experiences in different platform:
