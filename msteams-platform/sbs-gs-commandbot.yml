@@ -196,7 +196,7 @@ items:
     
         * **Add to a team**
         * **Add to a chat**
-        * **Add to a meeting**.
+        * **Add to a meeting**
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app-drop-down.png" alt-text="Add an App drop-down" border="true":::
 
@@ -356,7 +356,7 @@ items:
 
           A dialog confirms the deploy resources in dev environment.
 
-    1. Select **Deploy**
+    1. Select **Deploy**.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
