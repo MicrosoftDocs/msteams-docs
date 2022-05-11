@@ -37,8 +37,8 @@ The `selectMedia` API allows the user to capture or select media on mobile using
 
 You can capture or select media using any one of the following:
 
-1. Select **Camera**, then select **PHOTO** to capture the image, and select **Done**.
-1. Select **Open photo library** to pick images as attachments from your device, and select **Done**.
+* Select **Camera**, then select **PHOTO** to capture the image, and select **Done**
+* Select **Open photo library** to pick images as attachments from your device, and select **Done**
 
 <!-- ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png) -->
 
@@ -60,8 +60,8 @@ The `selectMedia` API allows the user to capture or select media on desktop usin
 
 You can capture or select media using any one of the following:
 
-1. Select **Camera** to capture image and then select **Attach**.
-1. Select **Attach** to pick images as attachments from your device.
+* Select **Camera** to capture image and then select **Attach**
+* Select **Attach** to pick images as attachments from your device
 
 :::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop." border="true":::
 
