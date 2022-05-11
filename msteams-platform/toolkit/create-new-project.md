@@ -48,6 +48,6 @@ For more information, see [Create a new Teams Tab app (React)](/microsoftteams/p
 
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
-* [Publish your Teams app](TeamsFx-collaboration.md)
+* [Publish your Teams app](../concepts/deploy-and-publish/appsource/publish.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

@@ -1,7 +1,7 @@
 ---
 title: Create and send the task module
 author: surbhigupta
-description: Learn how to handle the initial invoke action and respond with a task module from an action message extension command using code examples and samples. 
+description: Learn how to handle the initial invoke action and respond with a task module from an action messaging extension command using code examples and samples. 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear

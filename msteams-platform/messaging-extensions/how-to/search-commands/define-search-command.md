@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about message extension search commands for Microsoft Teams apps, to create a search command through app manifest and manually using code examples and sample.
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
+ms.localizationpriority: medium
 ---
 # Define message extension search commands
 
@@ -26,7 +26,7 @@ The search command is invoked from any one or both of the following locations:
 
 The following image displays the invoke locations of the search command:
 
-![search command invoke locations](~/assets/images/messaging-extension/search-command-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Search command invoke locations":::
 
 ## Add the search command to your app manifest
 
@@ -43,24 +43,29 @@ To create a search command:
 1. After importing app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
 1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up page:
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Messaging extension set up":::
 
 1. To create the message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Create bot for messaging extension":::
+
+1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
+
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
 
 1. Select **Add** in the **Command section** of the message extensions page to include the commands which decides the behaviour of message extension.
 The following image displays command addition for message extension:
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::
+
 1. Select **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
 
-    <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="Search command parameter selection":::
 
 1. Add a **Command Id** and a **Title**.
 1. Select the location from where your search command must be invoked. The following image displays the search command invoke location:
 
-    <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="Search command invoke location selection":::
 
 1. Add your search parameter and select **Save**.
 
