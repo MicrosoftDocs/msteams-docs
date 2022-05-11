@@ -155,7 +155,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
 
-    1. Select **HTTP Trigger** as the trigger. Select **OK**.
+    1. Select **HTTP Trigger Restify Server** as the trigger. Select **OK**.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-trigger.png" alt-text="Select Trigger" border="true":::
 
@@ -187,7 +187,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
-       You'll get the following output in Teams.
+       You'll get the following output in Teams:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App" border="true":::     
 
@@ -395,7 +395,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Remote Debug." border="true":::
 
-        You'll get the following output in Teams
+        You'll get the following output in Teams:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="App cloud output." border="true":::
 
@@ -412,6 +412,8 @@ items:
         :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Hello World Command" border="true":::
 
     1. Select the command and select **Enter**.  
+
+        You'll receive the following command response in adaptive card:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output" border="true":::
 
