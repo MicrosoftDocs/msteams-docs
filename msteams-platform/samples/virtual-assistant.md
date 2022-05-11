@@ -1,7 +1,7 @@
 ---
 title: Create Virtual Assistant 
 description: Learn how to create Virtual Assistant bot for Microsoft Teams using Code examples and snippets with features such as, Adaptive cards; handling interruptions, task module requests, collaborative app scopes, and message extensions; using skill manifest; Support for multiple languages, claim validation, LUIS integration, and mode.
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams virtual assistant bots
 ---
