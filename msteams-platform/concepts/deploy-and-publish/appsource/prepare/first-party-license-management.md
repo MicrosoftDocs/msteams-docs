@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # First party license management enabled in Teams for third-party SaaS offers
 
-The Microsoft Teams Third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This article details on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration. With first party license management of third party SaaS offers in the Teams surface area, the license management happens post-purchase of the said app (the associated SaaS offer) via Teams surface areas or AppSource. The app is unusable if the licenses aren't assigned.
+The Microsoft Teams third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This article details on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration. With first party license management of third party SaaS offers in the Teams surface area, the license management happens post-purchase of the said app (the associated SaaS offer) via Teams surface areas or AppSource. The app is unusable if the licenses aren't assigned.
 
 Third-party app license management enables independent software vendors (ISVs) to manage and enforce licenses for their solutions using systems provided by Microsoft. By adopting this, ISVs can:
 
@@ -37,7 +37,7 @@ Following are the pre-requisites for enabling third-party app license management
 
 * Access to development environments and tools required to create Teams Add-ons.
 
-* A test tenant with a Teams environment in it. This is to simulate how a customer will experience the license management or enforcement for your solution.  
+* A test tenant with a Teams environment in it. This is to simulate how a customer experience the license management or enforcement for your solution.  
 
 ## Defining an offer in Partner Center
 
@@ -58,7 +58,7 @@ Following are the pre-requisites for enabling third-party app license management
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="Homepage":::
 
-1. Select **Commercial Marketplace** or **Overview** on left pane and then select **New Offer**. Now select **Software as a Service** to create a new offer.
+1. In **Marketplace offers** page, select **Overview** on the left pane. In **Commercial Marketplace**, select **New Offer** and then select **Software as a Service** to create a new offer.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="Commercial marketplace":::
 
