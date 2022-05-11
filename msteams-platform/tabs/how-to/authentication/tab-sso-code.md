@@ -143,7 +143,7 @@ Teams can cache this information associated with the user's identity; such as th
 
 If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The access token provides access (for the authenticated user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
 
-If you need to pass the access token to get Microsoft Graph data, see [Acquire token for MS Graph](tab-sso-token-graph.md).
+If you need to pass the access token to get Microsoft Graph data, see [Extend tab app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 This section includes:
 

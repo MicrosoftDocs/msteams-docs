@@ -122,7 +122,7 @@ Here's a list of best practices:
 
 - Currently, SSO only supports OAuth 2.0 token. It doesn't support SAML token.
 - SSO in Teams works only with OAuth 2.0 protocol.  
-- SSO works only with Azure AD. To extend it to other OAuth Identity providers, the flow needs to be implemented. For more information, please see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad).
+- SSO works only with Azure AD. To extend it to other OAuth Identity providers, the flow needs to be implemented. For more information, please see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad.md).
 - Multiple domains per app is not supported. For this, please read about [LOB apps](tab-sso-register-aad.md#before-you-register-with-azure-ad).
 - Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent.md#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID).
   
