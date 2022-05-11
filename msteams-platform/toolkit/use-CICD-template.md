@@ -3,7 +3,7 @@ title: Learn how to use CI/CD pipeline templates in GitHub, Azure DevOps, and Je
 author: MuyangAmigo
 description:  CI/CD templates
 ms.author: ruhe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
 ---
@@ -16,8 +16,8 @@ TeamsFx helps to automate your development workflow while building Teams applica
 |Tools and Templates | Description |
 |---|---|
 |[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub Action that integrates with TeamsFx CLI.|
-|[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app as well as automation workflows for GitHub, Azure DevOps, and Jenkins. |
-|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app as well as automation workflows for GitHub, Azure DevOps, and Jenkins.|
+|[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
+|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) and [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
 
 
@@ -74,7 +74,7 @@ To set up pipelines with GitHub for CI/CD:
 You can change or remove the test scripts to customize CI/CD workflow:
 
 1. By default, the CD workflow is triggered, when new commits are made to the `main` branch.
-1. Change the build scripts if required.
+1. Change the build scripts if necessary.
 1. Remove the test scripts as required.
 
 ### Set up pipelines with Azure DevOps
@@ -120,14 +120,14 @@ To set up pipelines with Azure DevOps for CI/CD:
 The following are the changes you can make for the script or workflow definition:
 
 1. Use npm build script or customize the way you build in the automation code.
-1. Use npm test script which returns zero for success, and change the test commands.
+1. Use npm test script, which returns zero for success, and change the test commands.
 
 ### Customize CD workflow
 
 The following are the changes you can make for the script or workflow definition:
 
-1. Ensure you have a npm build script or customize the way you build in the automation code.
-1. Ensure you have a npm test script which returns zero for success or change the test commands.
+1. Ensure you have an npm build script or customize the way you build in the automation code.
+1. Ensure you have an npm test script, which returns zero for success or change the test commands.
 
 ### Set up pipelines with Jenkins
 
@@ -171,8 +171,8 @@ To set up pipelines with Jenkins for CI/CD:
 The following are some of the changes you can make to your project:
 
 1. Change how the CI flow is triggered. The default is to use the triggers of **pollSCM** when a new change is pushed into the **dev** branch.
-1. Ensure you have a npm build script or customize the way you build in the automation code.
-1. Ensure you have a npm test script which returns zero for success or change the test commands.
+1. Ensure you have an npm build script or customize the way you build in the automation code.
+1. Ensure you have an npm test script, which returns zero for success or change the test commands.
 
 
 ### Customize CD workflow
@@ -198,7 +198,7 @@ The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI
 > * To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI/CD.
 > * To enable `@microsoft/teamsfx-cli` running in the non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In the non-interactive mode, `@microsoft/teamsfx-cli` does not prompt for inputs.
 
-Ensure to set up Azure and Microsoft 365 credentials in your environment variables safely. For example, if you are using GitHub as your source code repository, see [Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+Ensure to set up Azure and Microsoft 365 credentials in your environment variables safely. For example, if you're using GitHub as your source code repository, see [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
 
 ## Provision and deploy resources
@@ -238,4 +238,4 @@ Perform the following steps to publish your app:
 * [Quick Start for GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Create your first Jenkins Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [Manage your apps with the Developer Portal for Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
+* [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md)

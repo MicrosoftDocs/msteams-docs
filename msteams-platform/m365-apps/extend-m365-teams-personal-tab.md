@@ -4,7 +4,7 @@ description: Extend a Teams personal tab app across Microsoft 365
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 # Extend a Teams personal tab across Microsoft 365
 

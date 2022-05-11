@@ -4,7 +4,7 @@ author: surbhigupta
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api  
 ---
 
@@ -33,7 +33,7 @@ The new custom Together Mode scenes feature enables users to collaborate in a me
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Meeting app extensibility](meeting-app-extensibility.md)
+> [Unified meetings apps](meeting-app-extensibility.md)
 
 ## See also
 
