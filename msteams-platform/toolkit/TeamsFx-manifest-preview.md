@@ -68,6 +68,9 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
+Select **View the state file** to select your environment:
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
 
 ## Preview app manifest in Toolkit
 
