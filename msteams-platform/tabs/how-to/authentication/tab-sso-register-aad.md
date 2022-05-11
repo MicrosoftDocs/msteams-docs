@@ -176,7 +176,7 @@ To configure scope and the OBO flow, you'll need:
 
     A message pops up on the browser stating that the app ID URI was updated.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message" border="true":::
 
     The app ID URI displays on the page.
 
@@ -205,7 +205,7 @@ To configure scope and the OBO flow, you'll need:
 
     A message pops up on the browser stating that the scope was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message" border="true":::
 
     The new scope you defined displays on the page.
 
@@ -239,7 +239,7 @@ To configure scope and the OBO flow, you'll need:
 
     A message pops up on the browser stating that the client app was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message" border="true":::
 
     The client app ID displays on the page.
 
