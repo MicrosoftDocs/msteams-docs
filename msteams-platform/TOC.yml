@@ -304,7 +304,9 @@
   - name: How cowatch works
     href: apps-in-teams-meetings/how-cowatch-works.md
   - name: cowatch authentication
-    href: apps-in-teams-meetings/cowatch-authentication.md  
+    href: apps-in-teams-meetings/cowatch-authentication.md
+  - name: cowatch authentication
+    href: apps-in-teams-meetings/SDK-collaboration-and-capabilities.md 
 - name: Build webhooks and connectors
   items:
   - name: Overview
