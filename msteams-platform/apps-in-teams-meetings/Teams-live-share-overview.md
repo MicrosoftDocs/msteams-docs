@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Teams live share allows users to watch content together in Teams one-on-one, group calls, scheduled meetings, and meet now.
 
-:::image type="content" source="../assets/images/cowatch/cowatch.PNG" alt-text="teams-live-share":::
+(image to be added)
 
 Using Teams live share, users can collaborate with others in the following ways:
 

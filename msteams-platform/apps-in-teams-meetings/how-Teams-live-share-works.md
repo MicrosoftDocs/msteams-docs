@@ -11,7 +11,7 @@ Teams live share SDK helps you integrate applications and websites with Teams to
 
 Teams fluid clients capabilities:
 
-<Content to be added>
+(content to be added)
 
 ## Platforms and SDKs
 
@@ -25,6 +25,8 @@ The following are the supported platforms and its SDKs:
 | Windows UWP | .NET |
 
 ## Add Teams live share to your app
+
+(content to be added)
 
 <!--- prerequisites to be added. --->
 
@@ -69,7 +71,19 @@ The app manifest must include the following code snippet:
 
 ```
 
-<!--- Resource specific names from the above manifest should be added resource specific consent article. --->
+## Resource-specific consent
+
+The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively.
+
+### Resource-specific permissions for Teams live share
+
+|Application permission| Action |
+| ----- | ----- |
+|LiveShareSession.ReadWrite.Chat| <!--- Need to check with SME ---> |
+|MeetingStage.Write.Chat| <!--- Need to check with SME ---> |
+|OnlineMeetingIncomingAudio.Detect.Chat| <!--- Need to check with SME ---> |
+
+For more details, see [resource specific consent](/graph/permissions-reference).
 
 ## SDK authentication and access
 
@@ -77,23 +91,32 @@ You can authenticate the SDK in several ways. All requests made through the SDK 
 
 The following are the different types of authentication:
 
-* **Teams live share app - SDK authentication**
-* **SDK - Teams live share app authentication**
-* **Server OAuth 2.0**
-* **Refresh token**
-* **Invalidate token**
+### Teams live share app - SDK authentication
+
+When a user opens a channel through Teams live share meeting tab or interstitial, included in the URI is a parameter for a local access token. The SDK validates the token, and if valid, marks the user as authenticated.
+
+Once the user is confirmed to be authenticated, if the URI also includes session identifier, the SDK begins that process according to the requirements. If the URI indicates the user should be redirected back to Teams once complete, the SDK opens the URI for the Teams app.
+
+### SDK - Teams live share app authentication
+
+You can connect the channel to Teams through an API in the SDK. In this case, SDK opens a URI to the Teams app, then it generates a local access token and opens the channel URI with the token included. The SDK validates the token, and if valid, marks the user as authenticated.
+
+### Server OAuth 2.0
+
+You can optionally use a valid local access token to generate a single-use authorization code that you can send to your server to convert into an access token and refresh token, per the OAuth 2.0 standard. You can use a method in the SDK’s API to set the access token manually and it is used as the primary access token.
+If the server token is about to expire or is expired, the SDK will provide a proper error informing you to request a new access token from your server.
+
+### Refresh token
+
+If a local access token is about to expire or is expired, the SDK will automatically refresh it (either before a request fails by checking the expiration timestamp, waiting for the request to give the related error code, or both).
+
+### Invalidate token
+
+Partners should be able to include the ability to invalidate a token from their app (For example, user wants to opt out of the Teams integration). If the user is to continue using the Teams integration after invalid token, they must reauthenticate the SDK.
 
 ## SDK collaboration and capabilities
 
 You can use Teams client media libraries and work with Fluid framework to make your applications more interactive, when using the Teams meeting stage, or working with media.
-
-**Meeting collaboration on stage**
-
-:::image type="content" source="../assets/images/cowatch/meeting-collabration.png" alt-text="meeting-collabration-cowatch":::
-
-**Meeting collaboration for external apps**
-
-:::image type="content" source="../assets/images/cowatch/meeting-collabration-external-app.png" alt-text="meeting-collabration-ext-apps":::
 
 ### Teams live share SDK packages
 
@@ -105,9 +128,9 @@ You can use Teams client media libraries and work with Fluid framework to make y
 
 #### Teams-js-fluid
 
-**TeamsContainer**: Teams managed fluid client for creating a container scoped to a specific context for example, meeting. Teams Collaboration Service verifies roster membership and maintains the mapping of conversation ID to container ID.
+**TeamsContainer**: Teams managed fluid client for creating a container scoped to a specific context for example, meeting. Teams collaboration service verifies roster membership and maintains the mapping of conversation ID to container ID.
 
-TeamsFluidClient can join a container mapped to a meeting with the following code.
+**TeamsFluidClient** can join a container mapped to a meeting with the following code.
 
 **Sample code**
 
@@ -212,11 +235,11 @@ suspension.end(); // Calling end will auto resume sync
 
 ### fluid-stored-objects
 
-<Content to be added>
+(content to be added)
 
 ### EphemeralEvent
 
-<Content to be added>
+(content to be added)
 
 **Sample code - EphemeralEvent**
 
@@ -248,7 +271,7 @@ function sendNotification(text, senderName) {
 
 ### Role-based state
 
-<Content to be added>
+(content to be added)
 
 **Sample code**
 
@@ -279,7 +302,7 @@ function changeState(state: string, value: T | undefined) {
 
 ### Building a playlist
 
-<Content to be added>
+(content to be added)
 
 **Sample code**
 
