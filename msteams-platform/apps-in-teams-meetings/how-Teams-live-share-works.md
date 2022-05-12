@@ -7,26 +7,30 @@ ms.localizationpriority: high
 
 # Enable and configure your app for Teams live share
 
-Teams live share SDK helps you integrate applications and websites with Teams to watch and browse content in a Teams meeting stage and collaborate with other users in a Teams meeting.
+Teams live share SDK helps you integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
 
-Teams fluid clients capabilities
+Teams fluid clients capabilities:
+
+<Content to be added>
 
 ## Platforms and SDKs
 
+The following are the supported platforms and its SDKs:
+
 | Platform | SDK |
 | --- | --- |
-| iOS & iPadOS | Swift + Objective C |
+| iOS & iPadOS | Swift and Objective C |
 | Android | Java |
 | Web/PWA | JavaScript |
 | Windows UWP | .NET |
 
-## Prerequisites
+## Add Teams live share to your app
 
 <!--- prerequisites to be added. --->
 
-## Update your app manifest
+### Update your app manifest
 
-To enable your app for Teams Live Share, update your app manifest file use the context properties to determine where your app must appear.
+To enable your app for Teams live share, update your app manifest and use the context properties to determine where your app must appear.
 <!--- If you want audio ducking and meeting stage support, more RSC permissions are needed as well. --->
 
 The app manifest must include the following code snippet:
@@ -67,6 +71,18 @@ The app manifest must include the following code snippet:
 
 <!--- Resource specific names from the above manifest should be added resource specific consent article. --->
 
+## SDK authentication and access
+
+You can authenticate the SDK in several ways. All requests made through the SDK must have a valid API key, provided to the channel. The access token should only give access to the minimum number of data or capabilities.
+
+The following are the different types of authentication:
+
+* **Teams live share app - SDK authentication**
+* **SDK - Teams live share app authentication**
+* **Server OAuth 2.0**
+* **Refresh token**
+* **Invalidate token**
+
 ## SDK collaboration and capabilities
 
 You can use Teams client media libraries and work with Fluid framework to make your applications more interactive, when using the Teams meeting stage, or working with media.
@@ -81,11 +97,11 @@ You can use Teams client media libraries and work with Fluid framework to make y
 
 ### Teams live share SDK packages
 
-* **teams-js-fluid** – Components to simplify building collaborative experiences for Teams.
-* **fluid-events** – Base helper classes to enable creation of cross platform fluid components.
-* **fluid-presence** – Cross platform component for sharing presence.
-* **fluid-media** – Cross platform components for synchronizing media playback.
-* **fluid-stored-objects** – Cross platform components for notifying clients of changes to large objects stored in a no-sql database.
+* **teams-js-fluid**: Components to simplify building collaborative experiences for Teams.
+* **fluid-events**: Base helper classes to enable creation of cross platform fluid components.
+* **fluid-presence**: Cross platform component for sharing presence.
+* **fluid-media**: Cross platform components for synchronizing media playback.
+* **fluid-stored-objects**: Cross platform components for notifying clients of changes to large objects stored in a no SQL database.
 
 #### Teams-js-fluid
 
@@ -113,27 +129,21 @@ const { mediaSession } = container.initialObjects;
 
 ```
 
-**TeamsTimestampProvider** – Synchronizes each client's clock with the Teams Collaboration Service clock. Needed by fluid-events for event ordering.
+**TeamsTimestampProvider** – Synchronizes each client's clock with the Teams Collaboration Service clock.
 
 Package: <@microsoft/teams-js-fluid>
 
 ### fluid-events
 
-* `SharedEventScope` – Sends/receives events for a component within a container.
-* `SharedEventSource` – Class to simplify sending events to other instances of a component.
-* `SharedEventTarget` – Class to simplify receiving events sent by a source.
-* `SharedEventTimer` – Class to simplify sending events at regular intervals.
-* `LocalTimestampProvider` – Generates timestamps using the local clock. Only used for local testing.
+* **SharedEventScope**: Send and receive events for a component within a container.
+* **SharedEventSource**: Class to simplify sending events to other instances of a component.
+* **SharedEventTarget**:  Class to simplify receiving events sent by a source.
+* **SharedEventTimer**: Class to simplify sending events at regular intervals.
+* **LocalTimestampProvider**: Generates timestamps using the local clock. Only used for local testing.
 
-**fluid-presence**
+### fluid-presence
 
 **SharedPresence**: Publishes and subscribes to presence information across all clients currently connected to a container.
-
-* Apps provide their own anonymized user ID to avoid PII issues.
-
-* Apps can customize the information published using a JSON data object.
-
-* The same user ID can be connected to the container from multiple clients and their presence data will be collapsed to a single entry in the presence list.
 
 Package: <@fluidframework/ fluid-ephemeral>
 
@@ -167,13 +177,9 @@ function changeDisplayName(userName) {
 
 ### fluid-media
 
-**SharedMediaSession** Synchronizes media playback across clients connected to a container.
+**SharedMediaSession**: Synchronizes media playback across clients connected to a container.
 
-* Supports playing, pausing, seeking, and changing tracks by any client.
-* Apps can disable individual transport operations on a per client basis.
-* Wait points can be used to temporarily pause all clients within the group for ad playback.
-
-**MediaPlayerSynchronizer** Helper class to simplify synchronizing an HTML Media Element with the SharedMediaSession.
+**MediaPlayerSynchronizer**: Helper class to simplify synchronizing an HTML media element with the SharedMediaSession.
 
 Package: @fluidframework/ fluid-ephemeral-media
 
@@ -204,11 +210,13 @@ const suspension = mediaSession.coordinator.beginSuspension();
 suspension.end(); // Calling end will auto resume sync
 ```
 
+### fluid-stored-objects
+
+<Content to be added>
+
 ### EphemeralEvent
 
-* Show how to send use EphemeralEvent through a simple notification example.
-* EphemeralEvent makes sending any JSON message to every client in the session.
-* This isn't a stateful component, meaning if messages are missed, they're gone for good.
+<Content to be added>
 
 **Sample code - EphemeralEvent**
 
@@ -240,9 +248,7 @@ function sendNotification(text, senderName) {
 
 ### Role-based state
 
-show how to create a state machine into your app. If you want a stateful object that maps to meeting roles, EphemeralState is a great choice.
-
-State is lost once the last user disconnects from the session.
+<Content to be added>
 
 **Sample code**
 
@@ -273,10 +279,7 @@ function changeState(state: string, value: T | undefined) {
 
 ### Building a playlist
 
-* Any SharedObject built for Fluid Framework works with Teams Live Share.
-* SharedMap is a key/value stateful object, where key is a string and value is any JSON serializable value.
-* Only Ephemeral SharedObject types support role verification.
-* All data stored in sessions this way is deleted within 24 hours.
+<Content to be added>
 
 **Sample code**
 
