@@ -18,7 +18,7 @@ Registering your tab app in Azure AD and enabling it for SSO requires making app
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets app users access your tab app without any further need of consent when your tab app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
-Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
+Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user. User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 
 You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app.
 
@@ -39,15 +39,12 @@ It's helpful to know about the configuration required for registering your app o
 > - **LOB applications**: Your organization can make LOB applications available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
 > - **Customer-owned apps**: SSO is supported also for customer-owned apps within the Azure AD B2C tenants.
 
-> [!IMPORTANT]
-> Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
+To create and configure your app in Azure AD for enabling SSO:
 
-In this section, you'll learn:
-
-- [How to register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
-- [How to configure scope for access token.](#configure-scope-for-access-token)
-- [How to configure authentication for different platforms.](#configure-authentication-for-different-platforms)
-- [How to configure access token version.](#configure-access-token-version)
+- [Register and configure the Azure AD app.](#create-an-app-registration-in-azure-ad)
+- [Configure scope for access token.](#configure-scope-for-access-token)
+- [Configure authentication for different platforms.](#configure-authentication-for-different-platforms)
+- [Configure access token version.](#configure-access-token-version)
 
 ## Create an app registration in Azure AD
 
