@@ -50,6 +50,12 @@ You can add UPN as an [optional claim](/azure/active-directory/develop/active-di
 </details>
 <br>
 <details>
+<summary>How can I fix the error `Teams SDK Error: resourceDisabled`?</summary>
+<br>
+To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
+
+For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
+<details>
 <summary>Does Graph API work in Postman?</summary>
 <br>
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.

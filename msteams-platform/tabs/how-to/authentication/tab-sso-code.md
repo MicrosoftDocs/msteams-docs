@@ -85,10 +85,6 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken()`.
 
-> [!NOTE]
-> To avoid errors, such as `Teams SDK Error: resourceDisabled`, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
-> For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
-
 ### Teams mobile client support
 
 For Teams mobile, client versions that support SSO are:
@@ -108,20 +104,20 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 When the app user access your tab app and your tab app makes the `getAuthToken` call, the app user must give consent to Teams. The following consent dialogs appear to the user:
 
 1. **Teams consent dialog**:
-  It's the first dialog that appears. The app user must give consent to Teams for using Teams identity.
+  It's the first consent dialog that appears. The app user must give consent to Teams for using Teams identity.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams consent dialog":::
 
-    To consent to Teams, the app user should select **Continue**.
+    To consent to Teams, the app user selects **Continue**.
 
 1. **Azure AD consent dialog**:
-  After the app user consents to Teams using the identity token for obtaining access token, Azure AD dialog appears. This dialog seeks the user consent for permissions that you've configured as scope in Azure AD.
+  After the app user consents to Teams for using the identity token to obtain access token, Azure AD consent dialog appears. It seeks app user's consent for permissions that you've configured as scope in Azure AD.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog":::
 
-    To consent, the app user should select **Accept**.
+    To consent, the app user selects **Accept**.
 
-The app user will be able to access your app after they've consented to Teams and Azure AD dialogs.
+The app user is able to access your app after they've consented to Teams and Azure AD dialogs.
 
 After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
