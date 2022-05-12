@@ -365,15 +365,15 @@
         href: tabs/how-to/authentication/tab-sso-code.md
       - name: Update Teams app manifest
         href: tabs/how-to/authentication/tab-sso-manifest.md
-      - name: Extend tab app for Microsoft Graph permissions
+      - name: Configure Microsoft Graph permissions
         href: tabs/how-to/authentication/tab-sso-graph-api.md
       - name: Troubleshooting
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-    - name: Enable third party OAuth provider authentication
+    - name: Use third party OAuth IdP authentication
       items:
       - name: Overview
         href: tabs/how-to/authentication/auth-flow-tab.md
-      - name: Configure third party OAuth authentication
+      - name: Configure third party OAuth IdP authentication
         href: tabs/how-to/authentication/auth-tab-aad.md
       - name: Use external OAuth providers
         href: tabs/how-to/authentication/auth-oauth-provider.md 
