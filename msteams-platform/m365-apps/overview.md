@@ -38,7 +38,7 @@ You can also extend your search-based Teams message extensions to Outlook on the
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Message extension running in Outlook and Teams":::
 
-Building your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client SDK](using-teams-client-sdk-preview.md) provides you with a consolidated development process. By enabling you to deliver a streamlined deployment, installation, and admin experience for your customers, you can expand the potential reach and usage of your app.
+Building your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) provides you with a consolidated development process. By enabling you to deliver a streamlined deployment, installation, and admin experience for your customers, you can expand the potential reach and usage of your app.
 
 ## Use Teams app manifest across Microsoft 365
 
