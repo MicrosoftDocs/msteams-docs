@@ -28,6 +28,12 @@ To improve the ability to deal with media files, following are the dynamic user-
 * Files hidden behind external SSO or authentication. For example, Google Drive, Dropbox, etc.
 * Inline Vimeo and Dailymotion playback and other media providers.
 
+## Enable Media Elements in Teams
+
+(Content)
+
+## End user Media Elements experience
+
 **Media Elements-Video (Channel)**:
 The media playback lives within the Adaptive Card. Users need to press **play** button and videos are directly replayed. For example, video is within the channel in the following image:
 
@@ -108,50 +114,6 @@ Initially, as depicted above, only the poster of the video is displayed. For You
 After user selects the central **Play** button, the actual player is instantiated, and video playback starts.
 
 :::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/inline-youtube-video-player-demo-telegraph-road.png" alt-text="Inline youtube video player demo":::
-
-## Dev design
-
-[TODO: Need to add link to Dev Design Doc when it is ready]
-
-``` json
-{
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "type": "AdaptiveCard",
-  "version": "1.5",
-  "body": [
-      {
-      // Video Media on ODSP
-      "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
-      "altText": "Adaptive Cards overview video",
-      "sources": [{
-        "mimeType": "video/mp4",
-        "url": "https://microsoft-my.sharepoint-df.com/personal/stkong_microsoft_com/_layouts/15/stream.aspx?id=%VideoRecording.mp4 "
-      }]
-      },
-      {
-      // Video Media
-      "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
-      "altText": "Adaptive Cards overview video",
-      "sources": [{
-        "mimeType": "video/mp4",
-        "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4"
-      }]
-      },
-      {
-      // Audio Media
-      "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-audio.jpg",
-      "altText": "Adaptive Cards overview audio",
-      "sources": [{
-        "mimeType": "audio/mpeg",
-        "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp3"
-      }]
-    }
-  ]
-}
-```
 
 ## Limitations
 
