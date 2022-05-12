@@ -278,7 +278,7 @@ The `https://` URL referencing the JSON Schema for the manifest.
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. Use `m365DevPreview` only if you are previewing [Teams apps running in Office and Outlook](../../m365-apps/overview.md). Otherwise, use `devPreview` for all other Teams preview features.
+The version of the manifest schema this manifest is using.
 
 ## version
 
