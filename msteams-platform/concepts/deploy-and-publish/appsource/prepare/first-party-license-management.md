@@ -126,9 +126,7 @@ Sample code to build this URL is in Appendix A
 
 **App Launch**
 
-Integrate with Graph Usage Right API to manage user permissions at the time of app launch.
-
-At the time of app launch by a customer who has a purchase license, you will be required to  to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
+Integrate with Graph Usage Right API to manage user permissions at the time of app launch by a customer who has a purchase license. You are required to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
 
 Sample code for Usage Right API integration in Appendix B.
 
@@ -199,13 +197,13 @@ Sample code for Usage Right API integration in Appendix B.
 
 ## Test the app by launching in Teams environment
 
-### App runtime consent flow for user
+**App runtime consent flow for user**
 
 (Content)
 
 ## Check license usage in Partner Center analytics
 
-### Check license usage of ISV apps in the Partner Center analytics section
+**Check license usage of ISV apps in the Partner Center analytics section**
 
 1. Sign into [Partner Center](https://partner.microsoft.com/) with your partner account.
 1. In the left pane, select **Commercial Marketplace > Analyze > Licensing** to go to licensing dashboard.
