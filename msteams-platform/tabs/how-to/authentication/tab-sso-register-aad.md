@@ -34,7 +34,7 @@ It's helpful to know about the configuration required for registering your app o
 > [!NOTE]
 >
 > - **LOB applications**: Your organization can make line-of-business (LOB) applications available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
-> - SSO is supported also for customer owned apps within the Azure AD B2C tenants.
+> - SSO is supported also for customer-owned apps within the Azure AD B2C tenants.
 <br>
 > [!NOTE]
 > The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
