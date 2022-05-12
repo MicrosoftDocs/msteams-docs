@@ -5,7 +5,9 @@ ms.topic: overview
 ms.localizationpriority: high
 ---
 
-# How Teams live share works
+# Enable and configure your app for Teams live share
+
+
 
 Teams live share works with partner apps and on web through SDK (iOS, Android, JS, .NET).
 
@@ -28,19 +30,14 @@ Teams live share works with partner apps and on web through SDK (iOS, Android, J
 
 ## Prerequisites
 
-1. Tenant ID, User ID and Meeting ID:
+<!--- prerequisites to be added. --->
 
-    * To check with Bot API, if user is part of the meeting in Cloud API.
+## Update your app manifest
 
-1. Name of user from Microsoft Azure Active Directory (Azure AD) token:  
+To enable your app for Teams Live Share, update your app manifest file use the context properties to determine where your app must appear.
+<!--- If you want audio ducking and meeting stage support, more RSC permissions are needed as well. --->
 
-    * To greet and tag users inside Teams live share app. (From token)
-    * microsoftTeams.authentication.getAuthToken()  
-    * 1p Azure AD  app
-
-## Manifest update
-
-To enable Teams Live Share, update your manifest.json file. If you want audio ducking and meeting stage support, more RSC permissions are needed as well.
+The app manifest must include the following code snippet:
 
 ```json
 {
@@ -75,3 +72,5 @@ To enable Teams Live Share, update your manifest.json file. If you want audio du
 }
 
 ```
+
+<!--- Resource specific names from the above manifest should be added resource specific consent article. --->
