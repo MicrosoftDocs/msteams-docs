@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Teams live share allows users to watch content together in Teams one-on-one, group calls, scheduled meetings, meet now.
 
-:::image type="content" source="../assets/images/Teams live share/Teams live share.PNG" alt-text="Teams live share-teams":::
+:::image type="content" source="../assets/images/cowatch/cowatch.PNG" alt-text="teams-live-share":::
 
 Using Teams live share, you can collaborate with others in the following ways:
 
@@ -19,18 +19,10 @@ Using Teams live share, you can collaborate with others in the following ways:
 
 * Start a meeting and Teams live share session from a third party app.
 
-## Capabilities
+You can find Teams live share in the meeting window:
 
-### Teams live share meeting tab – side bar app**
-The Teams live share meeting tab app is where users go to see what content is supported through our Teams live share feature.  
-The app is pre-pinned in TFL only.
+* Teams live share meeting tab: Users can see the supported channels list.
 
-:::image type="content" source="../assets/images/Teams live share/Teams live share-meeting-tab.png" alt-text="meeting-tab":::
+:::image type="content" source="../assets/images/cowatch/cowatch-meeting-tab.png" alt-text="teams-live-share-tab":::
 
-#### Channel list (L1)
-
-The L1 of the Teams live share meeting tab is the hub of all Teams live share content, such as search bar, pinned channels list, etc.
-
-:::image type="content" source="../assets/images/Teams live share/channel-list.PNG" alt-text="channel":::
-
-### Co-watch meeting stage app (Interactive Mode)
+* Teams live share meeting stage app: Users can start a Teams live share session from the meeting stage.

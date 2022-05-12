@@ -1,9 +1,9 @@
 ---
 title: Teams live share
-author: 
+author: v-sdhakshina
 description: overview of Teams live share
 ms.topic: overview
-ms.author:
+ms.author: v-sdhakshina
 ms.localizationpriority: high  
 ---
 
