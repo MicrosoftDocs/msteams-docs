@@ -297,14 +297,14 @@
     href: apps-in-teams-meetings/API-references.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
-- name: Cowatch Teams live share
+- name: Teams-live-share
   items:
   - name: Overview
-    href: apps-in-teams-meetings/cowatch-overview.md
-  - name: How Cowatch works
-    href: apps-in-teams-meetings/how-cowatch-works.md
-  - name: Cowatch authentication
-    href: apps-in-teams-meetings/cowatch-authentication.md
+    href: apps-in-teams-meetings/Teams-live-share-overview.md
+  - name: How Teams-live-share works
+    href: apps-in-teams-meetings/how-Teams-live-share-works.md
+  - name: Teams-live-share authentication
+    href: apps-in-teams-meetings/Teams-live-share-authentication.md
   - name: SDK collaboration and capabilities
     href: apps-in-teams-meetings/SDK-collaboration-and-capabilities.md 
 - name: Build webhooks and connectors

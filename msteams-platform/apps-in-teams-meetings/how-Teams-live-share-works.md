@@ -1,22 +1,21 @@
 ---
-title: Cowatch
-description: Cowatch works
+title: Teams live share
+description: Teams live share works
 ms.topic: overview
 ms.localizationpriority: high
-keywords: teams live share Cowatch  
 ---
 
-# How Cowatch works
+# How Teams live share works
 
-Cowatch works with partner apps and on web through SDK (iOS, Android, JS, .NET).
+Teams live share works with partner apps and on web through SDK (iOS, Android, JS, .NET).
 
-* Cowatch SDK enables synchronization of video between users in a Teams meeting in partner.
+* Teams live share SDK enables synchronization of video between users in a Teams meeting in partner.
 
 * Teams Client launches partner app with an app-link including relevant context (session-id, token).
 
-* Partner app uses Cowatch SDK to join the WebSocket connection to send/receive Cowatch events.
+* Partner app uses Teams live share SDK to join the WebSocket connection to send/receive Teams live share events.
 
-* Partner client will receive play, pause and seek commands for each user, allowing for a seamless Cowatch experience.
+* Partner client will receive play, pause and seek commands for each user, allowing for a seamless Teams live share experience.
 
 ## Platforms and SDKs
 
@@ -35,7 +34,7 @@ Cowatch works with partner apps and on web through SDK (iOS, Android, JS, .NET).
 
 1. Name of user from Microsoft Azure Active Directory (Azure AD) token:  
 
-    * To greet and tag users inside Cowatch app. (From token)
+    * To greet and tag users inside Teams live share app. (From token)
     * microsoftTeams.authentication.getAuthToken()  
     * 1p Azure AD  app
 

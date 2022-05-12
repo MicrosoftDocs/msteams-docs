@@ -1,9 +1,10 @@
 ---
 title: SDK collaboration and capabilities
+author:
 description: overview ofSDK collaboration and capabilities
 ms.topic: overview
+ms.author:
 ms.localizationpriority: high
-keywords: SDK collaboration and capabilities cowatch  
 ---
 
 # SDK collaboration and capabilities
