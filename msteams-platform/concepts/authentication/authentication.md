@@ -17,31 +17,7 @@ Choose to add authentication for your app in one of the two ways:
 - **Enable authentication using third-party OAuth provider**
   You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. This is a non-SSO authentication method. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them access to the app. Azure AD is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
 
-These authentication methods are available for tabs, bots, and messaging extension.
-
-You can implement authentication in your app using one of the following methods:
-
-<!--
-| Authentication method | Tab | Bot | Message extension |
-| --- | --- | --- | --- |
-|**Single sign-on** | [SSO in a tab](../../tabs/how-to/authentication/tab-sso-overview.md) | [SSO in a bot](../../bots/how-to/authentication/auth-aad-sso-bots.md) | [SSO in a message extension](../../messaging-extensions/how-to/enable-SSO-auth-me.md) |
-
-| **Third party OAuth provider authentication** | [Third party authentication in a tab](../../tabs/how-to/authentication/auth-tab-aad.md) | [Third party authentication in a bot](../../bots/how-to/authentication/add-authentication.md) | [Third party authentication in a message extension](../../messaging-extensions/how-to/add-authentication.md) |
--->
-
-<!--
-:::row:::
-    :::column span="":::
-        **Enable SSO**
-    :::column-end:::
-    :::column span="":::
-        &nbsp;
-    :::column-end:::
-    :::column span="":::
-        **Use third party OAuth provider**
-    :::column-end:::
-:::row-end:::
--->
+These authentication methods are available for tabs, bots, and messaging extension. You can implement authentication in your app using one of the following methods:
 
 :::row:::
     :::column span="":::
