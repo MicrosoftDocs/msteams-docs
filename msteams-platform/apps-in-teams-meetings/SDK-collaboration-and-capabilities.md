@@ -63,8 +63,6 @@ const { mediaSession } = container.initialObjects;
 
 ### fluid-ephemeral
 
-<content to be added>
-
 * `SharedEventScope` – Sends/receives events for a component within a container.
 * `SharedEventSource` – Class to simplify sending events to other instances of a component.
 * `SharedEventTarget` – Class to simplify receiving events sent by a source.

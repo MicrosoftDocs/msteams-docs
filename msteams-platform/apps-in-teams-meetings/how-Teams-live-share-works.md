@@ -1,5 +1,5 @@
 ---
-title: Teams live share
+title: Teams live share works
 description: Teams live share works
 ms.topic: overview
 ms.localizationpriority: high

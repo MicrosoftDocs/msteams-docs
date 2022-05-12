@@ -1,5 +1,5 @@
 ---
-title: Teams live share
+title: Teams live share authentication
 author: v-sdhakshina
 description: Teams live share authentication
 ms.topic: overview
