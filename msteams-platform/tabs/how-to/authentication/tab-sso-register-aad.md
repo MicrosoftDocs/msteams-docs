@@ -295,7 +295,7 @@ You must define the access token version that is acceptable for your app. This c
 
 1. Select **Manage** > **Manifest** from the left pane.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal Manifest" border="true*:::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal Manifest" border="true":::
 
     The Azure AD application manifest appears.
 
