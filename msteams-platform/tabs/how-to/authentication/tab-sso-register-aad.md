@@ -18,7 +18,7 @@ Registering your tab app in Azure AD and enabling it for SSO requires making app
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets app users access your tab app without any further need of consent when your tab app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
-These configurations enable SSO for your tab app in Teams. Azure AD responds with an access token for the validating the app user.
+Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
 
 You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app.
 
@@ -29,14 +29,14 @@ You may also need to configure additional configuration for authenticating app u
 
 It's helpful to know about the configuration required for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details before you start registering your app:
 
-- **Single- or multi-tenant options**: Your app can be line-of-business app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
+- **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
 - **App platform**: Note the platform where your app is available. It also includes noting the URL from where your app is accessible.
 - **App ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name should be the same as the domain name you've registered for your Azure AD application. Currently, multiple domains per app are not supported.
 - **Scope**: These are the permissions that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
 >
-> - **LOB applications**: Your organization can make line-of-business (LOB) applications available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
+> - **LOB applications**: Your organization can make LOB applications available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
 > - **Customer-owned apps**: SSO is supported also for customer-owned apps within the Azure AD B2C tenants.
 
 > [!IMPORTANT]
