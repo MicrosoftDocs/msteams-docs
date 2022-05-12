@@ -24,7 +24,7 @@ landingContent:
   linkLists:
     - linkListType: concept
       links:
-      - text: Cowatch
+      - text: Teams live share
         url: ~/apps-in-teams-meetings/Teams-live-share-overview.md
       - text: Common reasons for app validation failure
         url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md

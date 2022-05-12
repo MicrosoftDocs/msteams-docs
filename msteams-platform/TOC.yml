@@ -301,7 +301,7 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/Teams-live-share-overview.md
-  - name: How Teams-live-share works
+  - name: Enable and configure your app for Teams live share
     href: apps-in-teams-meetings/how-Teams-live-share-works.md
   - name: Teams-live-share authentication
     href: apps-in-teams-meetings/Teams-live-share-authentication.md
