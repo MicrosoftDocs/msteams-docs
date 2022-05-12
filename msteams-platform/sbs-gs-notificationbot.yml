@@ -88,7 +88,7 @@ items:
    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
    > [!CAUTION]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+   > Before you can run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.
 
    ---
 
@@ -98,7 +98,7 @@ items:
 
    ### Check for sideloading option
 
-   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
     > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
@@ -128,7 +128,7 @@ items:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
 
-   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+   1. Sign-in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
 - title: Create a new notification bot 
   durationInMinutes: 1
@@ -296,20 +296,20 @@ items:
 
     Let's deploy the first app with Notification bot capability on Azure using Teams Toolkit.
 
-    ## Sign in to your Azure account
+    ## Sign-in to your Azure account
 
     Use this account to access the Microsoft Azure portal and to provide provision new cloud resources to support your app.
 
     1. Open Visual Studio Code.
     1. Open the project folder that you created the Notification bot.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to Azure**.
+    1. Select **Sign-in to Azure**.
 
         > [!TIP]
         > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as in other extensions.
 
-        Your default web browser opens to let you sign in to the account.
-    1. Sign in to your Azure account using your credentials.
+        Your default web browser opens to let you sign-in to the account.
+    1. Sign-in to your Azure account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available.
@@ -356,7 +356,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
-       As with provisioning, deployment takes some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
+       As with provisioning, deployment takes some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice.
         
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation." border="true":::
     
@@ -394,4 +394,4 @@ items:
      :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
 - content: |
-    You've completed the tutorial to create notification bot app!    
+    You've completed the tutorial to create notification bot!    
