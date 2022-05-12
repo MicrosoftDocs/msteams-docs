@@ -35,13 +35,18 @@ Following are cowatch experiences in different platform:
    1. A meeting is started with information about how to invite others.
    1. Once everyone is ready, select play.
 
-## Where to watch
+## Capabilities
 
-**Cowatch meeting tab – side bar app**
+### Cowatch meeting tab – side bar app**
 The cowatch meeting tab app is where users go to see what content is supported through our cowatch feature.  
 The app is pre-pinned in TFL only.
 
 :::image type="content" source="../assets/images/cowatch/cowatch-meeting-tab.png" alt-text="meeting-tab":::
 
-**Cowatch home (L1)**
-The L1 of the cowatch meeting tab is the hub of all cowatch content, such as search, pinned channels, etc.
+#### Channel list (L1)
+
+The L1 of the cowatch meeting tab is the hub of all cowatch content, such as search bar, pinned channels list, etc.
+
+:::image type="content" source="../assets/images/cowatch/channel-list.PNG" alt-text="channel":::
+
+### Co-watch meeting stage app (Interactive Mode)
