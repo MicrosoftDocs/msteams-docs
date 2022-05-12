@@ -47,10 +47,12 @@ You can implement authentication in your app using one of the following methods:
     :::column span="":::
         :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         :::image type="content" source="../../assets/images/authentication/tab-app.png" alt-text="tab app authentication" border="false":::
+        <!--**Tab app**
+        -->
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Authentication with third-party OAuth provider for tab app." link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false":::
     :::column-end:::
 :::row-end:::
@@ -58,10 +60,10 @@ You can implement authentication in your app using one of the following methods:
     :::column span="":::
         :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
     :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../assets/images/authentication/bot-app.png" alt-text="Bot app authentication" border="false":::
+    :::column span="2":::
+       :::image type="content" source="../../assets/images/authentication/bot-app.png" alt-text="Bot app authentication" border="false":::
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Authentication with third-party OAuth provider for bot app." link="../../bots/how-to/authentication/add-authentication.md" border="false":::
     :::column-end:::
 :::row-end:::
@@ -69,10 +71,10 @@ You can implement authentication in your app using one of the following methods:
     :::column span="":::
         :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         :::image type="content" source="../../assets/images/authentication/mex-app.png" alt-text="message extension app authentication" border="false":::
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md" border="false":::
     :::column-end:::
 :::row-end:::
