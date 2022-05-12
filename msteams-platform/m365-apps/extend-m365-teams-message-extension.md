@@ -96,7 +96,7 @@ For users to interact with your message extension from Outlook, you'll need to a
 
 1. From *Settings*, select **Channels**.
 
-1. Under *Available channels*, click on **Outlook**. Select the **Message extensions** tab, then click **Apply**.
+1. Under *Available channels*, select **Outlook**. Select the **Message extensions** tab, then **Apply**.
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Add an Outlook 'Message Extensions' channel for your bot from the Azure Bot Channels pane":::
 
@@ -134,11 +134,11 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code":::
 
-1. Log in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Click on the ellipsis (**...**) menu by your user profile, then select: About > **Developer preview**.
+1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: About > **Developer preview**.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="From Teams ellipses menu, open 'About', and select 'Developer Preview' option":::
 
-1. Click on *Apps* to open the **Manage your apps** pane. Then select **Publish an app**.
+1. Select *Apps* to open the **Manage your apps** pane. Then select **Publish an app**.
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Open the 'Manage your apps' pane and select 'Publish an app'":::
 
@@ -156,7 +156,7 @@ Here's how to test your message extension running in Outlook on Windows desktop 
 
 To preview your app running in Outlook on the web:
 
-1. Log in to [outlook.com](https://www.outlook.com) using credentials for your test tenant.
+1. Sign in to [outlook.com](https://www.outlook.com) using credentials for your test tenant.
 1. Select **New message**.
 1. Open **More apps** flyout menu on the bottom of the composition window.
 
@@ -169,7 +169,7 @@ Your message extension will be listed. You can invoke it from there and use it j
 To preview your app running in Outlook on Windows desktop:
 
 1. Launch Outlook logged in with credentials for your test tenant.
-1. Click on **New Email**.
+1. Select **New Email**.
 1. Open the **More Apps** flyout menu on the top ribbon.
 
 :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="Click on 'More Apps' on the composition window ribbon to use your message extension":::
@@ -180,12 +180,12 @@ Your message extension will be listed. Invoking it will open an adjacent pane to
 
  While your updated message extension will continue to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), there are limitations in this early preview of the Outlook-enabled experience to be aware of:
 
-* Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box is not supported.
-* [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands are not supported in Outlook. If your app has both search- and action-based commands, it will surface in Outlook but the action menu will not be available.
-* Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email is not supported; Adaptive Cards v1.4 and later are not supported.
-* [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` are not supported for inserted cards. Support is limited to `openURL`: on click, the user will be redirected to the specified URL in a new tab.
+* Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
+* [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) command aren't supported in Outlook. If your app has both search- and action-based commands, it will surface in Outlook but the action menu won't be available.
+* Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.4 and later aren't supported.
+* [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: on click, the user will be redirected to the specified URL in a new tab.
 
-Please use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ### Debugging
 
