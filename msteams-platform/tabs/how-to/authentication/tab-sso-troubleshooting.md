@@ -34,6 +34,20 @@ The server-side code should send a 403 Forbidden response to the client to s
 </details>
 <br>
 <details>
+<summary>What does the error that the host name must not be based on an already owned domain mean, and how can I fix it?</summary>
+<br>
+You can get this error in one of the two scenarios:
+
+1. The custom domain is not added to Azure AD. To add custom domain to Azure AD and register it, follow the [add a custom domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain) procedure, and then follow the steps to [Configure scope for access token](tab-sso-register-aad.md#configure-scope-for-access-token) again.
+1. You are not signed in with Administrator credentials in the Microsoft 365 tenancy. Sign-in to Microsoft 365 as an administrator.
+
+</details>
+<br>
+<details>
+<summary>I didn't receive the  user principal name (UPN) in the returned access token. How can I fix it?</summary>
+<br>
+You can add UPN as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
+<details>
 <summary>Does Graph API work in Postman?</summary>
 <br>
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.

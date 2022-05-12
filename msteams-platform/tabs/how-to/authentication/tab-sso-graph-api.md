@@ -101,9 +101,9 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ```Node.js
 
-// Exchange cliend side token with server token
+// Exchange client Id side token with server token
   app.post('/getProfileOnBehalfOf', function(req, res) {
-        var tid = < "Tenand id" >
+        var tid = < "Tenant id" >
     var token = < "Client side token" >
     var scopes = ["https://graph.microsoft.com/User.Read"];
 

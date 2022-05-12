@@ -33,6 +33,10 @@ You can view here an example of user experience with SSO in a tab app:
 
 ### Enhance user experience with SSO
 
+You can enable SSO in Teams for all apps that support Azure AD as an identity provider.
+
+Here's what your app users get with SSO experience:
+
 - Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user. It translates to app access for the user without having to leave Teams environment.
 - After consenting to Teams the first time, the app user can use your tab app with no further need of consent, even on any other device. For this reason, it's true SSO and a better user experience.
 - The access token is pre-fetched by Teams. This is done to improve performance and load time of the app in Teams environment.
@@ -121,8 +125,8 @@ Here's a list of best practices:
 ## Known limitations
 
 - Currently, SSO only supports OAuth 2.0 token. It doesn't support SAML token.
-- SSO in Teams works only with OAuth 2.0 protocol.  
-- SSO works only with Azure AD. To extend it to other OAuth Identity providers, the flow needs to be implemented. For more information, please see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad.md).
+- SSO in Teams works only with OAuth 2.0 protocol.
+- SSO works only with apps that support Azure AD as identity provider. For implementing authentication with other OAuth identity providers, the OAuth flow needs to be implemented. For more information, please see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad.md).
 - Multiple domains per app is not supported. For this, please read about [LOB apps](tab-sso-register-aad.md#before-you-register-with-azure-ad).
 - Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent.md#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID).
   
