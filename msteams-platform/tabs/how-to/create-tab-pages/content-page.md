@@ -10,19 +10,19 @@ ms.author: lajanuar
 
 # Create a content page for your tab
 
-A content page is a webpage that is rendered within the Teams client. These are part of:
+A content page is a webpage that is rendered within the Teams client, which is a part of:
 
 * A personal-scoped custom tab: In this case, the content page is the first page the user encounters.
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [task module](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a task module. The page is rendered inside the modal pop-up.
 
-This article is specific to using content pages as tabs; however the majority of the guidance here applies regardless of how the content page is presented to the user.
+This article is specific to using content pages as tabs; however most of the guidance here applies regardless of how the content page is presented to the user.
 
 ## Tab content and design guidelines
 
-Your tab's overall objective is to provide access to meaningful and engaging content that has practical value and an evident purpose. You must focus on making your tab design clean, navigation intuitive, and content immersive.
+Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose. 
 
-For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+You need to focus on making your tab design clean, navigation intuitive, and content immersive.For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## Integrate your code with Teams
 
@@ -58,11 +58,11 @@ The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provi
 
 ### Deep links
 
-You can create deep links to entities in Teams. These are used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
+You can create deep links to entities in Teams. They're used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
 ### Task modules
 
-A task module is a modal pop-up experience that you can trigger from your tab. In a content page, you can use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+A task module is a modal pop-up experience that you can trigger from your tab. In a content page, use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### Valid domains
 
@@ -77,7 +77,7 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 
 > [!NOTE]
 >
-> * The behavior on mobile clients is not configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
+> * The behavior on mobile clients isn't configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
 If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 
@@ -85,8 +85,8 @@ To show the loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your manifest.
 1. Call `microsoftTeams.initialize();`.
-1. As a **mandatory** step, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams then hides the loading indicator, if applicable. If `notifySuccess`  is not called within 30 seconds, it is assumed that your app timed out and an error screen with a retry option appears.
-1. **Optionally**, if you are ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`.
+1. As a **mandatory** step, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams then hides the loading indicator, if applicable. If `notifySuccess`  isn't called within 30 seconds, then it's assumed that your app timed out and an error screen with a retry option appears.
+1. **Optionally**, if you're ready to print to the screen and wish to lazy load the rest of your application's content, then you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`.
 1. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error. An error screen is shown to the user. The following code provides an example of application failure reasons:
 
     ```typescript
