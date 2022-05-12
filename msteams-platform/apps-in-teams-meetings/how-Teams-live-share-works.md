@@ -69,7 +69,7 @@ The app manifest must include the following code snippet:
 
 ## SDK collaboration and capabilities
 
-You can use Teams client media libraries and work with Fluid framework and Teams together to make your applications more interactive, when using the Teams meeting stage, or working with media.
+You can use Teams client media libraries and work with Fluid framework to make your applications more interactive, when using the Teams meeting stage, or working with media.
 
 **Meeting collaboration on stage**
 
@@ -89,7 +89,7 @@ You can use Teams client media libraries and work with Fluid framework and Teams
 
 #### Teams-js-fluid
 
-**TeamsContainer**: Teams managed fluid client for creating a container scoped to a specific context (e.g., meeting). Teams Collaboration Service verifies roster membership and maintains the mapping of conversation ID to container ID.
+**TeamsContainer**: Teams managed fluid client for creating a container scoped to a specific context for example, meeting. Teams Collaboration Service verifies roster membership and maintains the mapping of conversation ID to container ID.
 
 TeamsFluidClient can join a container mapped to a meeting with the following code.
 
@@ -208,7 +208,7 @@ suspension.end(); // Calling end will auto resume sync
 
 * Show how to send use EphemeralEvent through a simple notification example.
 * EphemeralEvent makes sending any JSON message to every client in the session.
-* This is not a stateful component, meaning if messages are missed, they are gone for good.
+* This isn't a stateful component, meaning if messages are missed, they're gone for good.
 
 **Sample code - EphemeralEvent**
 
@@ -240,7 +240,7 @@ function sendNotification(text, senderName) {
 
 ### Role-based state
 
-show how to create a simple state machine into your app. If you want a stateful object that maps to meeting roles, EphemeralState is a great choice.
+show how to create a state machine into your app. If you want a stateful object that maps to meeting roles, EphemeralState is a great choice.
 
 State is lost once the last user disconnects from the session.
 
@@ -276,7 +276,7 @@ function changeState(state: string, value: T | undefined) {
 * Any SharedObject built for Fluid Framework works with Teams Live Share.
 * SharedMap is a key/value stateful object, where key is a string and value is any JSON serializable value.
 * Only Ephemeral SharedObject types support role verification.
-* Note that all data stored in sessions this way will be deleted in less than 24hrs.
+* All data stored in sessions this way is deleted within 24 hours.
 
 **Sample code**
 
