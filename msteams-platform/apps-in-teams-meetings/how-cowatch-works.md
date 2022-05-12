@@ -1,6 +1,6 @@
 ---
-title: cowatch
-description: cowatch works
+title: Cowatch
+description: Cowatch works
 ms.topic: overview
 ms.localizationpriority: high
 keywords: teams live share Cowatch  
