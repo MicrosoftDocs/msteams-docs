@@ -28,7 +28,23 @@ The following are the supported platforms and its SDKs:
 
 (content to be added)
 
-<!--- prerequisites to be added. --->
+### Prerequisites
+
+* [Get context for your tab](/microsoftteams/platform/tabs/how-to/access-teams-context)
+
+* Tenant ID, User ID and Meeting ID:  
+
+  * To check with Bot API if user is part of the meeting in Cloud API.
+
+  * To check if user is part of CollabSpace on subsequent calls to Cloud API.
+
+* Name of user from AAD token:
+
+  * To address and tag users inside Cowatch app (From token).
+
+* microsoftTeams.authentication.getAuthToken()
+
+  * 1p AAD  app
 
 ### Update your app manifest
 
