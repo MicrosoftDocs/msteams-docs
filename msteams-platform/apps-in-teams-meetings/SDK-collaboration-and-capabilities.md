@@ -1,9 +1,9 @@
 ---
 title: SDK collaboration and capabilities
-author:
-description: overview ofSDK collaboration and capabilities
+author: v-sdhakshina
+description: overview of SDK collaboration and capabilities
 ms.topic: overview
-ms.author:
+ms.author: v-sdhakshina
 ms.localizationpriority: high
 ---
 
