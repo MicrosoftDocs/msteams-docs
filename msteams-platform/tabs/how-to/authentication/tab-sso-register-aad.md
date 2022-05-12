@@ -20,7 +20,10 @@ Create a new app registration in Azure AD, and expose its (web) API using scopes
 
 These configurations enable SSO for your tab app in Teams. Azure AD responds with an access token for the validating the app user.
 
-You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app, or for more Graph permissions.
+You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app.
+
+> [!NOTE]
+> The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
 
 ### Before you register with Azure AD
 
@@ -28,23 +31,16 @@ It's helpful to know about the configuration required for registering your app o
 
 - **Single- or multi-tenant options**: Your app can be line-of-business app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
 - **App platform**: Note the platform where your app is available. It also includes noting the URL from where your app is accessible.
-- **App ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted.
+- **App ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name should be the same as the domain name you've registered for your Azure AD application. Currently, multiple domains per app are not supported.
 - **Scope**: These are the permissions that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
 >
 > - **LOB applications**: Your organization can make line-of-business (LOB) applications available through Microsoft Store. These apps are custom to your organization. They are internal or specific within your organization or business.
-> - SSO is supported also for customer-owned apps within the Azure AD B2C tenants.
-<br>
-> [!NOTE]
-> The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
-<br>
+> - **Customer-owned apps**: SSO is supported also for customer-owned apps within the Azure AD B2C tenants.
+
 > [!IMPORTANT]
-> There are some important restrictions that you must know:
->
-> - Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
-> - Your application's domain name should be the same as the domain name you've registered for your Azure AD application.
-> - Currently, multiple domains per app are not supported.
+> Only user-level Graph API permissions are supported, that is, email, profile, offline_access, OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 
 In this section, you'll learn:
 
@@ -100,7 +96,8 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
     1. Select the platform where your app will be accessible. You can choose from **Public client/native (mobile & desktop)**, **Web**, **Single-page application (SPA)**.
-    2. Enter the URL for your app. After user authentication is successful, Teams uses this URL to open your app.
+    2. Enter the URL for your app.
+       After user authentication is successful, Azure AD sends the access token to this URL.
        You can change this URL at a later stage, if needed.
     <br>
 
