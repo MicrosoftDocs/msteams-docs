@@ -79,7 +79,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 <details>
 <summary>Here's an example of the client-side code:</summary>
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configure client code":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configure client code" lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
 
 </details>
 
