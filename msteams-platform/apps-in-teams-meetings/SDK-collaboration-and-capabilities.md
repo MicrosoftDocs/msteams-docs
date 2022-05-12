@@ -36,7 +36,11 @@ TeamsTimestampProvider – Synchronizes each client's clock with the Teams Colla
 
 Library: <@microsoft/teams-js-fluid>
 
-**Sample code**
+#### Container Creation
+
+TeamsFluidClient can join a container mapped to a meeting with the following code.
+
+**Sample code - container creation**
 
 ```javascript
 // Initialize Teams Client SDK
@@ -57,6 +61,8 @@ const { mediaSession } = container.initialObjects;
 ```
 
 ### fluid-ephemeral
+
+<content to be added>
 
 * `SharedEventScope` – Sends/receives events for a component within a container.
 * `SharedEventSource` – Class to simplify sending events to other instances of a component.
