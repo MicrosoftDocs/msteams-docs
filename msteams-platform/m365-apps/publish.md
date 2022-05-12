@@ -1,0 +1,44 @@
+---
+title: Publish Teams apps for Microsoft 365
+description: Make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Office
+ms.date: 05/24/2022
+ms.topic: conceptual
+ms.custom: m365apps
+ms.localizationpriority: medium
+---
+# Publish Teams apps for Microsoft 365
+
+Microsoft 365-enabled Teams apps are supported for production use in Microsoft Teams and can be distributed to preview audiences running the *Targeted Release* versions of outlook.com and office.com, and the *Beta Channel* build of Outlook for Windows desktop. Distribution options and processes for Microsoft 365-enabled Teams apps are the same as with traditional Teams apps.
+
+Once published, your app will be discoverable as an installable app from the Outlook and Office app stores in addition to Teams. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
+
+:::image type="content" source="images/outlook-office-app-store.png" alt-text="Outlook and Office.com install screens for the SurveyMonkey and MURAL Teams apps":::
+
+## Single-tenant distribution
+
+Outlook-enabled message extensions can be distributed to test and production tenants in several ways:
+
+### Teams client
+
+From the *Apps* menu, select *Manage your apps* > *Publish an app* > **Submit an app to your org**. This requires approval from your IT admin.
+
+### Teams Developer Portal
+
+Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and publish an app to your organization. This requires approval from your IT admin. See [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md) for details.
+
+### Microsoft Teams Admin Center
+
+As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
+
+### Microsoft Admin Center
+
+As a global admin, you can upload and pre-install the app package from [Microsoft admin](https://admin.microsoft.com/). See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+
+## Multitenant distribution
+
+The [Microsoft AppSource](https://appsource.microsoft.com/) submission process for Teams apps enabled for Outlook and Office is the same as for traditional Teams apps; the only difference is you'll [reference version 1.13](../tabs/how-to/using-teams-client-sdk.md) of the Teams app manifest schema in your app package, which introduces support for Teams apps that run across Microsoft 365.
+
+> [!TIP]
+> Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting to the Teams store (via [Microsoft Partner Network](https://partner.microsoft.com/)).
+
+To get started, see [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md).

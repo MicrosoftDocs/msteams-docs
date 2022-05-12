@@ -421,6 +421,8 @@
     href: m365-apps/extend-m365-teams-personal-tab.md
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
+  - name: Publish Teams apps for Microsoft 365
+    href: m365-apps/publish.md
 - name: Test your app
   items:
   - name: Overview
