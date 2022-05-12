@@ -96,7 +96,7 @@ Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.
 
 > [!div class="checklist"]
 > * Import statements for teams-js@2.0.0
-> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20s) for teams-js@2.0.0
+> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.0.0
 > * `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) interface changes
 > * `TODO` comment reminders to ensure [conversion to promises functions from callback style functions](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises) has gone well at every call site the tool found
 

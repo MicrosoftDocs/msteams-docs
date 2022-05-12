@@ -132,8 +132,6 @@
     href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
-  - name: Teams JavaScript client SDK v2 Preview
-    href: m365-apps/using-teams-client-sdk-preview.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
