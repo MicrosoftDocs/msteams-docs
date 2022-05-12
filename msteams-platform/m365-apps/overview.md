@@ -55,7 +55,7 @@ To get started with graph connectors in Teams apps, check out the [Teams Toolkit
 
 You can now define and deploy Office Add-ins in the [developer preview version](../resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently this preview is limited to Outlook Add-ins running on subscription Office for Windows.
 
-To learn more, see [Teams manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview). Get started and [Build an Outlook add-in with a Teams manifest(preview)](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest).
+To learn more, see [Teams manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
 
 ## Microsoft AppSource submission
 
@@ -63,7 +63,7 @@ Join the growing number of production Teams apps in the [Microsoft AppSource](ht
 
 Once published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app from the Outlook and Office app stores in addition to Teams. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
 
-:::image type="content" source="images/outlook-office-app-install.png" alt-text="Outlook and Office.com install screens for the SurveyMonkey and MURAL Teams apps":::
+To learn more, see [Publish Teams apps for Microsoft 365](publish.md)
 
 ## Next steps
 
