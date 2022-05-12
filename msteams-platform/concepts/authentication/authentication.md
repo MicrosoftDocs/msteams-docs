@@ -41,23 +41,21 @@ You can implement authentication in your app using one of the following methods:
         **Use third party OAuth provider**
     :::column-end:::
 :::row-end:::
--->
 
-:::row::: <!--For tab app -->
-    :::column span=""::: <!--For tab app with SSO -->
+:::row::: 
+    :::column span=""::: 
         :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
     :::column-end:::
     :::column span="2":::
         <br>
-
         :::image type="content" source="../../assets/images/authentication/tab-app.png" alt-text="tab app authentication" border="false":::
     :::column-end:::
-    :::column span=""::: <!--For tab app with other OAuth IdPs -->
+    :::column span=""::: 
         :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Authentication with third-party OAuth provider for tab app." link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false":::
     :::column-end:::
 :::row-end:::
-:::row::: <!--For bot app -->
-    :::column span=""::: <!--For bot app with SSO -->
+:::row:::
+    :::column span=""::: 
         :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
     :::column-end:::
     :::column span="2":::
@@ -66,11 +64,11 @@ You can implement authentication in your app using one of the following methods:
         :::image type="content" source="../../assets/images/authentication/bot-app.png" alt-text="Bot app authentication" border="false":::
         
     :::column-end:::
-    :::column span=""::: <!--For bot app with other OAuth IdPs -->
+    :::column span=""::: 
         :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Authentication with third-party OAuth provider for bot app." link="../../bots/how-to/authentication/add-authentication.md" border="false":::
     :::column-end:::
 :::row-end:::
-:::row::: <!--For message extension app -->
+:::row::: 
     :::column span="":::
         :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
     :::column-end:::
@@ -82,7 +80,13 @@ You can implement authentication in your app using one of the following methods:
     :::column span="":::
         :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md" border="false":::
     :::column-end:::
-:::row-end:::
+:::row-end::: -->
+
+| &nbsp; | &nbsp; | &nbsp; |
+| --- | --- | --- |
+| :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false"::: | :::image type="content" source="../../assets/images/authentication/tab-app.png" alt-text="tab app authentication" border="false"::: | :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="Authentication with third-party OAuth provider for tab app." link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false"::: |
+| :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false"::: | :::image type="content" source="../../assets/images/authentication/bot-app.png" alt-text="Bot app authentication" border="false"::: | :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="Authentication with third-party OAuth provider for bot app." link="../../bots/how-to/authentication/add-authentication.md" border="false"::: |
+| :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false"::: | :::image type="content" source="../../assets/images/authentication/mex-app.png" alt-text="message extension app authentication" border="false"::: | :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md" border="false"::: |
 
 > [!NOTE]
 > Please note that the Silent authentication page is moved to Resources. For more information, please see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
