@@ -55,6 +55,8 @@ You can add UPN as an [optional claim](/azure/active-directory/develop/active-di
 To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
 
 For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
+</details>
+<br>
 <details>
 <summary>Does Graph API work in Postman?</summary>
 <br>
