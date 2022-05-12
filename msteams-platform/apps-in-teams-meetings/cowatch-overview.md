@@ -22,13 +22,13 @@ Following are cowatch experiences in different platform:
    1. Select a channel + client.
    1. Select the content play.
 
-* Start a Cowatch session from a 3P app during a meeting:
+* Start a Cowatch session from a third party app during a meeting:
 
    1. In a Teams meeting/call, open channel’s client.
    1. Start watch session dialog.
    1. Select the content play.
 
-* Start a meeting and Cowatch session from a 3P app:
+* Start a meeting and Cowatch session from a third party app:
 
    1. On the rom partner app, you can start a co-watch session.
    1. A deep link to the Teams client is opened through our SDK to request a token, if needed.
