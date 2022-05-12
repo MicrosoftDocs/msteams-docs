@@ -47,8 +47,10 @@ Following are the pre-requisites for enabling third-party app license management
 1. Copy service IDs from offer details and update your Teams app to map to the paid functionality.
 1. Map your Teams app to your offer and publish.
 1. Best practices on ISV logic to determine ISV managed offers vs Microsoft managed offers for license management.
+1. Post purchase.
+1. App launch
 
-### Create an offer in Partner Center
+**Create an offer in Partner Center**
 
 1. Log in to [Partner Center](https://partner.microsoft.com/) and click on “Partner Center” to open your dashboard.
 
@@ -67,46 +69,68 @@ Following are the pre-requisites for enabling third-party app license management
     > [!NOTE]
     > If you're creating an offer for testing purpose, add the text **-ISVPILOT** to the end of your offer alias. This indicates the certification team that the offer is for testing purposes. Microsoft delete offers with **-ISVPILOT** periodically. So, don't use this tag for reasons other than testing the license management capability.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="Software as a service":::
 
-### Define the licensing options
+**Define the licensing options**
 
 To enable license management for your offer, select the checkbox (Placeholder).
 
 > [!NOTE]
 > This is a one-time setting, and you cannot change it once your offer is published.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Software as a service ISVPILOT":::
 
-### Add one or more plans
+> [!NOTE]
+> Choose the license management solution that is suitable for all plans within your offer in the app. Only one offer is supported in the App manifest and you cannot edit the option after selection.
+
+**Add one or more plans**
 
 1. Select **Plan overview** on left pane and then select **Create new plan** to define the plans you want to enable for the offer. You're required to define *at least* one plan.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="Plan Overview":::
 
-1. Select **Create** and enter your plan description in the page. Now select **Save draft** to save the plan information. This plan information displays on Teams marketplace and [Appsource](https://appsource.microsoft.com/) under offer listing (plans section).
+1. Select **Create** and enter your plan description in the page. Now select **Save draft** to save the plan information. The plan information displays on Teams marketplace and [Appsource](https://appsource.microsoft.com/) under offer listing (plans section).
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Plan Listing":::
 
 1. Add pricing and availability details (placeholder).
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="Pricing and Availability details":::
 
 1. Select **Plan overview** to go to the listing page that shows all the plans you've created for this offer.
 
-(Image)
+    :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="List of plans created":::
 
-### Copy service IDs from offer details and update your Teams app to map to the paid functionality
+**Copy service IDs from offer details and update your Teams app to map to the paid functionality**
 
 (Content and image needs to be added)
 
-### Map your Teams app to your offer and publish
-
+**Map your Teams app to your offer and publish**
 (content and image needs to be added)
 
-### Best practice on ISV logic
+**Best practice on ISV logic**
+
+ISV managed offers vs Microsoft managed offers for License Management.
 
 (Content and image needs to be added)
+
+**Post purchase**
+
+1. After activation, customer is redirected from landing page to Teams License Management.
+
+1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing monetized apps in Teams.
+
+1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a redirect URL link or button that the customer clicks on the publisher landing page.  
+
+Sample code to build this URL is in Appendix A
+
+**App Launch**
+
+Integrate with Graph Usage Right API to manage user permissions at the time of app launch.
+
+At the time of app launch by a customer who has a purchase license, you will be required to  to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
+
+Sample code for Usage Right API integration in Appendix B.
 
 ## Offer availability in Teams and Appsource
 
