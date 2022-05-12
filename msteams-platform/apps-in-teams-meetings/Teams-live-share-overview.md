@@ -21,8 +21,8 @@ Using Teams live share, you can collaborate with others in the following ways:
 
 You can find Teams live share in the meeting window:
 
-* Teams live share meeting tab: Users can see the supported channels list.
+* **Teams live share meeting tab**: Users can see the supported channels list.
 
 :::image type="content" source="../assets/images/cowatch/cowatch-meeting-tab.png" alt-text="teams-live-share-tab":::
 
-* Teams live share meeting stage app: Users can start a Teams live share session from the meeting stage.
+* **Teams live share meeting stage app**: Users can start a Teams live share session from the meeting stage.
