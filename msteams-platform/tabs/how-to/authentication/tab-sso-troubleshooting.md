@@ -47,6 +47,8 @@ You can get this error in one of the two scenarios:
 <summary>I didn't receive the  user principal name (UPN) in the returned access token. How can I fix it?</summary>
 <br>
 You can add UPN as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
+</details>
+<br>
 <details>
 <summary>Does Graph API work in Postman?</summary>
 <br>
