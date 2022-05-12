@@ -13,7 +13,7 @@ You can extend and enhance the user experience by supporting removal and modific
 
 ## Enable your tab to be reconfigured after installation
 
-Your `manifest.json` defines your tab's features and capabilities. The tab instance `canUpdateConfiguration` property takes a Boolean value that indicates whether a user can modify or reconfigure the tab after it is created. The following table provides the property details:
+Your `manifest.json` defines your tab's features and capabilities. The tab instance `canUpdateConfiguration` property takes a Boolean value that indicates whether a user can modify or reconfigure the tab after it's created. The following table provides the property details:
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -25,7 +25,7 @@ When your tab is uploaded to a channel or group chat, Teams adds a right-click d
 | ----------------------- | :----: | ----- | ----------- |
 |     Settings            |   √    |       |The `configurationUrl` page is reloaded in an IFrame allowing the user to reconfigure the tab. |
 |     Rename              |   √    |   √   | The user can change the tab name as it appears in the tab bar.          |
-|     Remove              |   √    |   √   |  If the  `removeURL` property and value are included in the **configuration page**, the **removal page** is loaded into an IFrame and presented to the user. If a removal page is not included, the user is presented with a confirm dialog box.          |
+|     Remove              |   √    |   √   |  If the  `removeURL` property and value are included in the **configuration page**, the **removal page** is loaded into an IFrame and presented to the user. If a removal page isn't included, the user is presented with a confirm dialog box.          |
 
 ## Create a tab removal page for your application
 
@@ -33,7 +33,7 @@ The optional removal page is an HTML page that you host and is displayed when th
 
 ### Register a remove handler
 
-Optionally, within your removal page logic, you can  invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The method takes in the [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interface and executes the code in the handler when a user attempts to remove content. The method is used to perform cleanup operations such as removing the underlying resource powering the tab content. At a time only one remove handler can be registered.
+Optionally, within your removal page logic, you can  invoke the `registerOnRemoveHandler((RemoveEvent) => {}` event handler when the user removes an existing tab configuration. The method takes in the [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) interface and executes the code in the handler when a user attempts to remove content. The method is used to perform cleanup operations such as removing the underlying resource powering the tab content. Only one remove handler can be registered at a time.
 
 The `RemoveEvent` interface describes an object with two methods:
 
