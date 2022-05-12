@@ -8,57 +8,84 @@ ms.topic:
 ms.date: 05/10/2022
 ---
 
-# Add manifest
+# Add AAD manifest
 
-The AAD manifest contains a definition of all the attributes of an AAD application object in the Microsoft identity platform. There is a document to introduce AAD manifest schema and definitions. You can also find AAD manifest from AAD application page on Azure Portal.
+The AAD manifest in the Microsoft identity platform defines all the attributes of an AAD application object. The AAD manifest schema and definitions are described in a document. The AAD manifest can also be viewed on the Azure Portal's AAD application page.
 
-Before enabling AAD manifest features in Teams Toolkit extension, AAD application is created/update by the extension, and users can only modify/update AAD application from Azure portal, and some update may conflict with extension. With the latest version of Teams Toolkit extension, we added AAD manifest build-in support in the extension, which make it easier for user to customize AAD application.
+The Teams Toolkit extension creates/updates an AAD application before activating AAD manifest features, and users can only modify/update an AAD application from the Azure portal, and some updates may conflict with the extension. We added AAD manifest build-in support to the Teams Toolkit extension in the newest release, making it easier for users to customize AAD apps.
 
-## AAD manifest in VSCode Teams Toolkit extension
+## Limitations
 
-When create app using Teams Toolkit with SSO support, or after adding SSO support in a non-SSO project, AAD manifest template will be added to templates\appPackage\aad.template.json. Extension will use this AAD manifest template file to create/update AAD application for these scenarios:
+The Teams Toolkit extension does not support all of the properties provided in the AAD manifest format. You can see the properties that aren't supported are listed on this tab:
+
+|**Not supported properties**|**Reason**|
+|-----------|----------|
+|passwordCredentials|Not allowed in manifest|
+|createdDateTime|Readonly and cannot change|
+|logoUrl|Readonly and cannot change|
+|publisherDomain|Readonly and cannot change|
+|oauth2RequirePostResponse|Doesn't exist in Graph API|
+|oauth2AllowUrlPathMatching|Doesn't exist in Graph API|
+|samlMetadataUrl|Doesn't exist in Graph API|
+|orgRestrictions|Doesn't exist in Graph API|
+|certification|Doesn't exist in Graph API|
+
+Currently requiredResourceAccess property can use user readable resource app name or permission name strings only for Microsoft Graph and Office 365 SharePoint Online APIs. For other APIs, you can use uuid instead. 
+
+The following steps guides you to retrieve ids from Azure Portal:
+
+* Register a new AAD application on Azure Portal.
+* Select API permissions from the AAD application page.
+* Select add a permission to add the permission you want.
+* Select manifest, from the requiredResourceAccess property, you can find the ids of API and permissions.
+
+## VSCode Teams Toolkit addon with AAD manifest
+
+An AAD manifest template is created to templatesappPackageaad.template.json while using Teams Toolkit to create an app with SSO support, or while adding SSO functionality to a non-SSO project.
+
+You can see the extension using an AAD manifest template file to create/update an AAD application in the following scenarios:
 
 ### AAD manifest lifecycle in F5 local debug command
 
-  1. Read state.local.json file to check whether AAD application for local debug has already been created, if yes then use the existing AAD application instead of creating new one.
+  1. Check the state.local.json file for the confirmation of AAD application for local debug creation. You can use the existing AAD application instead of building a new one.
   
-  2. If need to create a new AAD application, extension will create it using AAD manifest template file, and for some properties which required additional context (such as replyUrls property need to know current local debug endpoint), it will ignore it during this creating stage.
+  2. You can create a new AAD application, the extension creates it using the AAD manifest template file, and for some properties that requires additional context (such as the replyUrls property, that needs to know the current local debug endpoint), it ignores during the creation stage.
   
-  3. After local dev environment startup successfully, update AAD application's identifierUris, replyUrls and other properties which are not available during create stage according to local dev environment endpoint.
+  3. Update the AAD application's identifierUris, replyUrls, and other properties that were not available during the construction stage according to the local dev environment endpoint after the local dev environment starts successfully.
   
 ### AAD manifest lifecycle in provision command
 
-  1. Read state.xxx.json file to check whether AAD application for the environment has already been created, if yes then use the existing AAD application instead of creating a new one.
+  1. Check the state.xxx.json file for the confirmation of AAD application for the environment. You can use the existing AAD application instead of building a new one.
   
-  2. If need to create a new AAD application, extension will create it using AAD manifest template file, and for some properties which required additional context (such as replyUrls property need to know frontend or bot endpoint), it will ignore it during this creating stage.
+  2. You can create a new AAD application, the extension creates it using the AAD manifest template file, and for some properties that requires additional context (such as the replyUrls property, that needs to know the current local debug endpoint), it ignores during the creation stage.
   
-  3. After other resources have successfully provisioned, update AAD application's identifierUris and replyUrls according to frontend hosting / bot endpoint.
+  3. Update the AAD application's identifierUris and replyUrls according to frontend hosting / bot endpoint after other resources provisions successfully.
 
 ### AAD manifest lifecycle in Deploy command
 
-  1. Deploy resource to cloud command will not handle AAD application, you need to use Deploy Azure Active Directory app manifest instead if you want to update AAD application.
+  1. As `deploy resource to cloud` command does'nt handle AAD application, you need to use `Deploy Azure Active Directory app manifest` instead if you want to update AAD application.
   
-  2. Deploy Azure Active Directory app manifest will update the AAD application according to the AAD manifest template file, if current environment hasn't provisioned and AAD application is not existed, it will throw errors. If your project has already been provisioned and you want to update your AAD application, you can use this command.
+  2. `Deploy Azure Active Directory app manifest` updates the AAD application according to the AAD manifest template file, if current environment hasn't provisioned and AAD application is not existed, it throws some errors. If your project has already been provisioned and you want to update your AAD application, you can use the command.
   
-After the AAD application has successfully deployed, you can follow steps below to find the AAD app:
+You can see the following steps to find the AAD app after the AAD application has successfully deployed.
 
-#### How to view AAD app on Azure portal
+#### AAD app on Azure portal
 
   1. Copy AAD app client id from state.xxx.json (xxx is the environment name that you have deployed the AAD app) file in fx-resource-aad-app-for-teams property.
   
-  2. Go to Azure portal and login your M365 account which used for the Teams app.
+  2. Log in to the Azure portal with the M365 account you use for the Teams app.
   
-  3. Open app registrations page, search the AAD app using client id which copied from step 1. 
+  3. Open registrations page and search for the AAD app using the client id that was copied.
 . 
-  4. If everything works fine, you can find your AAD app.
+  4. If everything is in order, you should be able to locate your AAD app.
   
-## Placeholders in AAD manifest template
+## AAD manifest template placeholders
 
-AAD manifest file contains placeholder arguments with {{...}} statements which will be replaced at build time according to different environment. Placeholder argument supports config file, state file and environment variables.
+The AAD manifest file contains placeholder arguments with {{...}} statements that will be replaced at build time according to different environment. Placeholder argument supports config file, state file and environment variables.
 
 ### Referencing state file values in AAD manifest template
 
-State file is located in .fx\states\state.xxx.json (xxx is represent different environment). A typical state file is as below:
+State file is located in .fx\states\state.xxx.json (xxx is represent different environment). The typical state file is given in the following:
 
 
    ```json
@@ -75,11 +102,11 @@ State file is located in .fx\states\state.xxx.json (xxx is represent different e
 }
    ```
 
-If you want to reference applicationIdUris value in fx-resource-aad-app-for-teams property, you can use this placeholder argument in the AAD manifest: {{state.fx-resource-aad-app-for-teams.applicationIdUris}}
+You can use this placeholder argument in the AAD manifest: {{state.fx-resource-aad-app-for-teams.applicationIdUris}} to refer applicationIdUris value in fx-resource-aad-app-for-teams property.
 
 ### Referencing config file values in AAD manifest template
 
-Config file is located in .fx\configs\config.xxx.json (xxx is represent different environment). A typical config file is as below:
+Config file is located in .fx\configs\config.xxx.json (xxx is represent different environment). The typical state file is given in the following:
 
 
    ```json
@@ -95,7 +122,7 @@ Config file is located in .fx\configs\config.xxx.json (xxx is represent differen
 }
    ```
 
-If you want to reference short value, you can use this placeholder argument in the AAD manifest: {{config.manifest.appName.short}}
+You can use the placeholder argument in the AAD manifest: {{config.manifest.appName.short}} to refer short value.
 
 ### Referencing environment variable in AAD manifest template
 
@@ -103,39 +130,39 @@ Some times you may not want to hardcode the values in AAD manifest template. For
 
 ## AAD manifest authoring supports
 
-AAD manifest template file has codelens to help you better reviewing and editing it.
+AAD manifest template file has codelens to review and edit.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-#### Preview codelens
+### Preview codelens
 
-At the beginning of the AAD manifest template file, there is a preview codelens. Click this codelens, it will generate AAD manifest based on the environment you selected.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
-
-#### Placeholder argument codelens
-
-Placeholder argument has codelens to help you take quick look of the values for local debug and develop environment. If your mouse hover on the placeholder argument, it will show tooltip box for the values of all the environment.
+Navigate to **preview codelens** at the beginning of the AAD manifest template file. Select the codelens, it generates AAD manifest based on the environment you selected.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-#### Required resource access codelens
+### Placeholder argument codelens
 
-Different from official AAD manifest schema that resourceAppId and resourceAccess id in requiredResourceAccess property only support uuid, AAD manifest template in Teams Toolkit also support user readable strings for Microsoft Graph and Office 365 SharePoint Online permissions. If you input uuid, codelens will show user readable strings, otherwise, codelens will show uuid.
+Placeholder argument codelens helps you take quick look of the values for local debug and develop environment. If your mouse hover on the placeholder argument, it shows tooltip box for the values of all the environment.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-#### Pre-authorized applications codelens
+### Required resource access codelens
 
-For preAuthorizedApplications property, codelens will show the application name for the per-authorized application id.
+It is different from official AAD manifest schema that resourceAppId and resourceAccess id in requiredResourceAccess property only supports uuid, AAD manifest template in Teams Toolkit also supports user readable strings for Microsoft Graph and Office 365 SharePoint Online permissions. If you input uuid, codelens  shows user readable strings, otherwise, it shows uuid.
 
-### Customize AAD manifest template
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-User can customize AAD manifest template to update AAD application.
+### Pre-authorized applications codelens
 
-#### Customize requiredResourceAccess
+Codelens shows the application name for the per-authorized application id for the preAuthorizedApplications property.
 
-If your Teams app required more permissions to call API with additional permissions, you need to update requiredResourceAccess property in the AAD manifest template. Here is an example for this property:
+## Customize AAD manifest template
+
+You can customize AAD manifest template to update AAD application.
+
+### Customize requiredResourceAccess
+
+You need to update requiredResourceAccess property in the AAD manifest template if your Teams app requires more permissions to call API with additional permissions. The following code is an example for this property:
 
 ```json
    "requiredResourceAccess": [
@@ -164,15 +191,15 @@ If your Teams app required more permissions to call API with additional permissi
 ]
    ```
 
-resourceAppId property is for different APIs, for Microsoft Graph and Office 365 SharePoint Online, you can input the name directly instead of uuid, and for other APIs, you need to use uuid.
+resourceAppId property is for different APIs, for Microsoft Graph and Office 365 SharePoint Online, you can use the name directly instead of uuid, and for other APIs, you can use uuid.
 
-resourceAccess.id property is for different permissions, for Microsoft Graph and Office 365 SharePoint Online, you can input the permission name directly instead of uuid, and for other APIs, you need to use uuid.
+resourceAccess.id property is for different permissions, for Microsoft Graph and Office 365 SharePoint Online, you can use the permission name directly instead of uuid, and for other APIs, you can use uuid.
 
-resourceAccess.type property is used for delegated permission or application permission. Scope means delegated permission and Role means application permission.
+resourceAccess.type property is used for delegated permission or application permission. The terms Scope and role refer to delegated authority and application permission, respectively.
 
 ### Customize preAuthorizedApplications
 
-You can use preAuthorizedApplications property to authorize a client application indicates that this API trusts the application and users should not be asked to consent when the client calls this exposed API. Here is an example for this property:
+You can use preAuthorizedApplications property to authorize a client application indicates that this API trusts the application and users should not be asked to consent while the client calls this exposed API. Here is an example for this property:
 
 ```json
     "preAuthorizedApplications": [
@@ -187,11 +214,12 @@ You can use preAuthorizedApplications property to authorize a client application
 ```
 
 preAuthorizedApplications.appId property is used for the application you want to authorize. If you doesn't know the application id but only knows the application name, you can go to Azure Portal following this steps to search the application to find the id:
-  1. Go to Azure Portal and open app Registrations
 
-  1. Click All applications and search the application name
+  1. Log in to  Azure Portal and open app Registrations
+
+  1. Select All applications and search the application name
   
-  1. If you find the application that you search for, you can click the application and get the application id from the overview page
+  1. You can select the application and get the application id from the overview page if you find the application that you search for.
 
 ### Customize redirect URLs
 
@@ -209,27 +237,4 @@ Redirect URLs is used when returning authentication responses (tokens) after suc
 
 ## Use existing AAD app
 
-If you want to use existing AAD app for your Teams project, you can refer this doc for more information.
-
-## Limitations
-
-1. Not all the properties listed in AAD manifest schema are supported in Teams Toolkit extension, this tab show the properties that are not supported:
-
-|**Not supported properties**|**Reason**|
-|-----------|----------|
-|passwordCredentials|Not allowed in manifest|
-|createdDateTime|Readonly and cannot change|
-|logoUrl|Readonly and cannot change|
-|publisherDomain|Readonly and cannot change|
-|oauth2RequirePostResponse|Doesn't exist in Graph API|
-|oauth2AllowUrlPathMatching|Doesn't exist in Graph API|
-|samlMetadataUrl|Doesn't exist in Graph API|
-|orgRestrictions|Doesn't exist in Graph API|
-|certification|Doesn't exist in Graph API|
-
-2. Currently requiredResourceAccess property can use user readable resource app name or permission name strings only for Microsoft Graph and Office 365 SharePoint Online APIs. For other APIs, you need to use uuid instead. You can follow these steps retrieve ids from Azure Portal:
-
-* Register a new AAD application on Azure Portal.
-* Click API permissions from the AAD application page.
-* Click Add a permission to add the permission you want.
-* Click Manifest, from the requiredResourceAccess property, you can find the ids of API and permissions.
+You can use existing AAD app for your Teams project, see for more info.
