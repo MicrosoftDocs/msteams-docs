@@ -144,7 +144,7 @@ function onSubmit()
 </html>
 ```
 
-The response from the configuration page is also handled by onQuery. The sole exception is when the configuration page is called by the handler for onQuerySettingsUrl. The handler for onQuerySettingsUrl returns the URL for the configuration page. After the configuration page closes, the handler for onSettingsUpdate accepts and saves the returned state as shown in the following example
+The response from the configuration page is also handled by onQuery. The sole exception is when the configuration page is called by the handler for onQuerySettingsUrl. The handler for onQuerySettingsUrl returns the URL for the configuration page. After the configuration page closes, the handler for onSettingsUpdate accepts and saves the returned state as shown in the following example:
 
 ```csharp
 
@@ -181,11 +181,11 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 
 ### `auth` response type
 
-If your service requires user authentication, the users must sign in before they use the message extension. For more information, see [authentication](~/messaging-extensions/how-to/add-authentication.md#authentication)
+If your service requires user authentication, the users must sign in before they use the message extension. For more information, see [authentication](~/messaging-extensions/how-to/add-authentication.md#authentication).
 
 ### `message` response type
 
-`message` is used when your extension needs to display a plain text message
+`message` is used when your extension needs to display a plain text message.
 
 ```csharp
 
