@@ -1,22 +1,25 @@
 ---
-title: AAD manifest customization to your Teams apps
-author: 
-description:  Describes AAD manifest customization on of Teams Toolkit
-ms.author: 
-ms.localizationpriority: 
-ms.topic: 
-ms.date: 05/10/2022
+title: Manage Azure Active Directory application in Teams Toolkit
+author: zyxiaoyuer
+description:  Describes Managing Azure Active Directory application in Teams Toolkit customization on of Teams Toolkit
+ms.author: surbhigupta
+ms.localizationpriority: medium 
+ms.topic: overview
+ms.date: 05/12/2022
 ---
 
 # AAD manifest
 
-The AAD manifest in the Microsoft identity platform defines all the attributes of an AAD application object. The AAD manifest schema and definitions are described in a document. The AAD manifest can also be viewed on the Azure Portal's AAD application page.
+The [Azure Active Directory manifest](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-app-manifest) contains a definition of all the attributes of an Azure AD application object in the Microsoft identity platform.
 
-The Teams Toolkit extension creates or updates an AAD application before activating AAD manifest features, and users can only modify or update an AAD application from the Azure portal, and some updates may conflict with the extension. We added AAD manifest build-in support to the Teams Toolkit extension in the newest release, making it easier for users to customize AAD apps.
+Teams Toolkit now manages Azure AD application with the manifest file as the source of truth during your Teams application development lifecycles.
+
+> [!Note]
+> This feature is currently under developer preview. Report any issues to us [here](https://github.com/OfficeDev/TeamsFx/issues/new/choose).
 
 ## Limitations
 
-The Teams Toolkit extension does not support all of the properties provided in the AAD manifest format. You can see the properties that aren't supported are listed in this table:
+  1. Not all the properties listed in [AAD manifest schema](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-app-manifest) are supported in Teams Toolkit extension, this tab shows the properties that are not supported:
 
 |**Not supported properties**|**Reason**|
 |-----------|----------|
@@ -30,20 +33,26 @@ The Teams Toolkit extension does not support all of the properties provided in t
 |orgRestrictions|Doesn't exist in Graph API|
 |certification|Doesn't exist in Graph API|
 
-Currently requiredResourceAccess property can use user readable resource app name or permission name strings only for Microsoft Graph and Office 365 SharePoint Online APIs. For other APIs, you can use uuid instead. 
+  2. Currently `requiredResourceAccess` property can use user readable resource app name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. For other APIs, you need to use uuid instead. You can follow these steps to retrieve ids from Azure Portal:
 
-The following steps guides you to retrieve ids from Azure Portal:
+   * Register a new AAD application on Azure Portal.
+   * Select `API permissions` from the AAD application page.
+   * Select `add a permission` to add the permission you want.
+   * Select `Manifest`, from the `requiredResourceAccess` property, you can find the ids of API and permissions.
 
-* Register a new AAD application on Azure Portal.
-* Select API permissions from the AAD application page.
-* Select add a permission to add the permission you want.
-* Select manifest, from the requiredResourceAccess property, you can find the ids of API and permissions.
+## Customize Azure AD manifest template
 
-## VSCode Teams Toolkit addon with AAD manifest
+  User can customize AAD manifest template to update AAD application.
 
-An AAD manifest template is created to templatesappPackageaad.template.json while using Teams Toolkit to create an app with SSO support, or while adding SSO functionality to a non-SSO project.
+  1. Open aad.template.json in your project.
+  
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add template.png" alt-text="template":::
 
-You can see the extension using an AAD manifest template file to create/update an AAD application in the following scenarios:
+  2. Update the template directly or reference values from another file. Below we have provided several customization scenarios:
+  
+    * Add an application permission
+    * Preauthorize a client application
+    * Update redirect URL for authentication response
 
 ### AAD manifest lifecycle in F5 local debug command
 
@@ -88,7 +97,7 @@ The AAD manifest file contains placeholder arguments with {{...}} statements tha
 State file is located in .fx\states\state.xxx.json (xxx is represent different environment). The typical state file is given in the following:
 
 
-   ```json
+   ```
    {
     "solution": {
         "teamsAppTenantId": "uuid",
@@ -109,7 +118,7 @@ You can use this placeholder argument in the AAD manifest: {{state.fx-resource-a
 Config file is located in .fx\configs\config.xxx.json (xxx is represent different environment). The typical state file is given in the following:
 
 
-   ```json
+   ```
    {
   "$schema": "https://aka.ms/teamsfx-env-config-schema",
   "description": "description.",
@@ -164,7 +173,7 @@ You can customize AAD manifest template to update AAD application.
 
 You need to update requiredResourceAccess property in the AAD manifest template if your Teams app requires more permissions to call API with additional permissions. The following code is an example for this property:
 
-```json
+```
    "requiredResourceAccess": [
     {
         "resourceAppId": "Microsoft Graph",
@@ -201,7 +210,7 @@ resourceAccess.type property is used for delegated permission or application per
 
 You can use preAuthorizedApplications property to authorize a client application indicates that this API trusts the application and users should not be asked to consent while the client calls this exposed API. Here is an example for this property:
 
-```json
+```
     "preAuthorizedApplications": [
         {
             "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -225,7 +234,7 @@ preAuthorizedApplications.appId property is used for the application you want to
 
 Redirect URLs is used when returning authentication responses (tokens) after successfully authenticating. You can customize redirect URLs using property replyUrlsWithType, for example, if you want to add https://www.examples.com/auth-end.html as redirect URL, you can add it as below:
 
-```json
+```
 "replyUrlsWithType": [
     ...
     {
