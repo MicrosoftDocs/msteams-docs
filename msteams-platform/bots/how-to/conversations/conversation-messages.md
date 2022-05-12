@@ -221,7 +221,7 @@ The following is an example for implementation and experience of suggested actio
 
 > [!NOTE]
 > * `SuggestedActions` are only supported for one-to-one chat bots and text based messages and not for Adaptive Cards or attachments.
-> * Currently `imBack` is the only supported action type and Teams display upto three suggested actions.
+> * Currently `imBack` is the only supported action type and Teams display up to three suggested actions.
 
 ## Teams channel data
 
