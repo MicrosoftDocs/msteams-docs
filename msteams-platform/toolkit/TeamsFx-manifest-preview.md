@@ -147,7 +147,7 @@ You can also trigger **Teams: Update manifest to Teams platform** from the comma
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
 
 > [!NOTE]
-> Trigger from editor codelens or menu bar  updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
+> Trigger from editor codelens or menu bar updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
 
 
  CLI command
