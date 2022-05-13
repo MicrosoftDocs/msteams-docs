@@ -77,7 +77,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 <br>
 
-As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the options parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in the first time.
+As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in the first time.
 
 <br>
 <details>
@@ -103,7 +103,7 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-When the app user access your tab app and your tab app makes the `getAuthToken` call, the app user must give consent, if it's the first time to access the app. The following consent dialogs appear to the user at runtime:
+When an app user access your tab app for the first time and your tab app makes the `getAuthToken` call, the app user must give consent. The following consent dialogs appear to the app user at runtime:
 
 1. **Teams consent dialog**:
   It's the first consent dialog that appears. The app user must give consent to Teams for using Teams identity.
@@ -111,7 +111,7 @@ When the app user access your tab app and your tab app makes the `getAuthToken` 
 1. **Azure AD consent dialog**:
   After the app user consents to Teams for using the identity token to obtain access token, Azure AD consent dialog appears. It seeks app user's consent for permissions that you've configured as scope in Azure AD.
 
-This consent is to be given only once. The app user is able to access your app after consenting to Teams and Azure AD dialogs.
+This consent is to be given only once. The app user is able to access your tab app after consenting to Teams and Azure AD dialogs.
 
 After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms.
 
@@ -119,16 +119,16 @@ If you encounter any errors, please see [Troubleshooting SSO authentication in T
 
 ### Use the access token as an identity token
 
-The token returned to the tab app is both an access token and an identity token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
+The token returned to the tab app is both an access token and an ID token. The tab app can use the token as an access token to make authenticated HTTPS requests to APIs on the server-side.
 
-The access token returned from `getAuthToken()` contains information that can be used to establish the identity. The following claims in the token relate to identity:
+The access token returned from `getAuthToken()` can be used to establish an app user's identity using the following claims in the token:
 
-- name: The user's display name.
-- preferred_username: The user's email address.
-- oid: A GUID representing the ID of the user in the Microsoft identity system.
-- tid: A GUID representing the tenant tha the user is signing in to.
+- `name`: The app user's display name.
+- `preferred_username`: The app user's email address.
+- `oid`: A GUID representing the ID of the app user.
+- `tid`: A GUID representing the tenant that the app user is signing in to.
 
-Teams can cache this information associated with the user's identity; such as the user's preferences.
+Teams can cache this information associated with the app user's identity, such as the user's preferences.
 
 > [!NOTE]
 > If you need to construct a unique ID to represent the user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
@@ -170,7 +170,7 @@ $.ajax({
 
 Web APIs on your server must decode and validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
-There are a number of libraries available that can handle JWT validation, but the basics include:
+There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
 - Checking that the token is well-formed
 - Checking that the token was issued by the intended authority
@@ -179,7 +179,7 @@ There are a number of libraries available that can handle JWT validation, but th
 Keep in mind the following guidelines when validating the token:
 
 - Valid SSO tokens are issued by the Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the application ID of the add-in's Azure app registration.
+- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
 - The token's `scp` parameter will be set to `access_as_user`.
 
 #### Example access token
