@@ -10,7 +10,7 @@ ms.date: 05/13/2022
 
 # Connect to existing APIs
 
-While developing a Teams application, you'll frequently wish to use existing APIs that could be internal or third-party APIs. If you do not have language appropriate SDKs to access these APIs. Teams Toolkit helps you in bootstrapping sample code to use these APIs if you don't have the proper SDKs.
+While developing a Teams application, you'll frequently wish to use existing APIs that could be internal or third-party APIs. If you don't have language appropriate SDKs to access these APIs. Teams Toolkit helps you in bootstrapping sample code to use these APIs if you don't have the proper SDKs.
 
 > [!NOTE]
 > This feature is currently under [public developer preview](../resources/dev-preview/developer-preview-intro.md). Report any issues to us [here](https://github.com/OfficeDev/TeamsFx/issues/new/choose).
@@ -37,7 +37,7 @@ If you link Teams Toolkit to an existing API, it will:
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
 
-    5. Input endpoint for the API. The endpoint should be a valid http(s) url. It is added to the project's local application settings and it is the base url for API requests.
+    5. Input endpoint for the API. The endpoint should be a valid http(s) url. It's added to the project's local application settings and it's the base url for API requests.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
 
@@ -76,7 +76,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 2. Add `@microsoft/teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
  
-3. Add environment variables to `.env.teamsfx.local`. These are the configurations for the selected authentication type. The generated code reads values from these environment variables.
+3. Add environment variables to `.env.teamsfx.local`. These are the configurations for the selected authentication type. The generated code reads values from the environment variables.
 
 ## Test API connection in local environment
     
@@ -169,15 +169,15 @@ You can follow the steps to access these APIs while using:
  }
 
 ```
-   2. Start local debug or provision a cloud environment for your project. It will create an Azure AD Application Registration your Teams application.
+   2. Start local debug a cloud environment for your project. It will create an Azure AD Application Registration your Teams application.
    
-   3. Open `.fx/states/state.{env}.json` and note the value of `clientId` under `fx-resource-aad-app-for-teams` property. It is the application client ID.
+   3. Open `.fx/states/state.{env}.json` and note the value of `clientId` under `fx-resource-aad-app-for-teams` property. It's the application client ID.
    
    4. See [Grant admin consent in App registrations](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations) to get admin consent for the required application permission. You'll need your application client ID.
    
 #### Access Control Lists (ACsL)
 
-   1. Start local debug or provision a cloud environment for your project. It creates an Azure AD Application Registration your Teams application.
+   1. Start local debug a cloud environment for your project. It creates an Azure AD Application Registration your Teams application.
   
    2. Open `.fx/states/state.{env}.json`, and note the value of `clientId` under `fx-resource-aad-app-for-teams` property.
    
