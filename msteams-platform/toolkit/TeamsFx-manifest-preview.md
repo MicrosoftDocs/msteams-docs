@@ -54,7 +54,7 @@ During some operations like `Zip Teams metadata package`, Teams Toolkit validate
 
 ---
 
-### Codelenses and hovers
+## Codelenses and hovers
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 
@@ -72,7 +72,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
 
-## Preview app manifest in Toolkit
+## Preview app manifest in Teams Toolkit
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The Template file with placeholders, and the actual values is resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
 To preview manifest with actual content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
