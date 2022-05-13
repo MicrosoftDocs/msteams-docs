@@ -1,7 +1,7 @@
 ---
 title: Define message extension action commands
 author: surbhigupta
-description: An overview of message extension action commands with app manifest example
+description: An overview of messaging extension action commands with app manifest example
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -43,7 +43,7 @@ First, you must decide the location from where your action command must be invok
 
 The following image displays the locations from where action command is invoked:
 
-![action command invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="Action command invoke locations":::
 
 ## Select how to create your task module
 
@@ -73,7 +73,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 You can create an action command using **App Studio** or **Developer Portal**.
 
 > [!NOTE]
-> App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+ > If you have been using App Studio, we recommend that you'd try the Developer Portal [Developer Portal](https://dev.teams.microsoft.com/) to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022.
 
 # [App Studio](#tab/AS)
 
@@ -87,43 +87,47 @@ You can create an action command using **App Studio** or **Developer Portal**.
 1. After importing an app package, select **Message extensions** under **Capabilities**. You get a pop-up window to set up the message extension.
 1. Select **Set up** in the window to include the message extension in your app experience. The following image displays the message extension set up window:
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="Messaging extension set up":::
 
 1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for message extension:
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="Create bot for messaging extension":::
+
+1. To use an existing bot, select **Use existing bot** and select **Select from one of my existing bots** to choose the existing bots from the dropdown, give a **Bot name** and select **Save** or select **Connect to a different bot id** if you have a bot id created already, give a **Bot name** and select **Save**.
+
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="Use existing bot for messaging extension":::
 
 1. Select **Add** in the **Command section** of the message extensions page to include the commands which decides the behaviour of message extension.
 The following image displays command addition for message extension:
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="Include command":::
 
 1. Select **Allow users to trigger actions in external services while inside of Teams**. The following image displays the action command selection:
 
-    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="Action command selection":::
 
 1. To use a static set of parameters to create your task module, select **Define a set of static parameters for the command**.
 
     The following image displays the action command static parameter selection:
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="Action command static parameter selection":::
 
-    The following image displays an example static parameter set-up:
+    The following image displays an example for static parameter set-up:
 
-   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="Action command static parameter set-up":::
 
-    The following image displays an example static parameter testing:
+    The following image displays an example for static parameter testing:
 
-   <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="Action command static parameter testing":::
 
 1. To use dynamic parameters, select to **Fetch a dynamic set of parameters from your bot**. The following image displays the action command parameter selection:
 
-    <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="Action command dynamic parameter selection":::
 
 1. Add a **Command Id** and a **Title**.
 1. Select the location from where you want to invoke the action command. The following image displays the action command invoke location:
 
-    <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="Action command invoke location":::
 
 1. Select **Save**.
 1. To add more parameters, select the **Add** button in the **Parameters** section.

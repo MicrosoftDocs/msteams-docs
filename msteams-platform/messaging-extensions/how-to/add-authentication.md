@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your message extension
 author: surbhigupta
-description: Learn how to add authentication to a message extension using code examples and sample
+description: Learn how to add authentication to a messaging extension using code examples and sample
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -64,7 +64,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 > [!NOTE]
 >
 > * For the sign in experience to be hosted in a Teams pop-up window, the domain portion of the URL must be in your app’s list of valid domains. For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.
-> * The size of the authentication pop-up can be defined by including query string parameters of width and height, `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`.
+> * The size of the authentication pop-up can be defined by including query string parameters of width and height, `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"`.
 
 ### Start the sign in flow
 

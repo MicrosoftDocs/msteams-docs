@@ -57,7 +57,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 ## See also
 
-* [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+* [Create a bot for Teams](../resources/bot-v3/bots-create.md)
 * [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams)
 * [Register calls and meetings bot for Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [Add authentication to your Teams bot](~/bots/how-to/authentication/add-authentication.md)

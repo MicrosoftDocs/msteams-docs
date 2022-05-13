@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: Describes how to respond to the task module submit action from a message extension action command with Proactive message, another task module, Adaptive card bot, and more using Code samples.
+description: Describes how to respond to the task module submit action from a messaging extension action command with Proactive message, another task module, Adaptive card bot, and more using Code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -543,7 +543,7 @@ In scenarios where a bot sends messages on behalf of a user, attributing the mes
 
 In the following image, on the left is a card message sent by a bot without user attribution and on the right is a card sent by a bot with user attribution.
 
-![user attribution bots](../../../assets/images/messaging-extension/user-attribution-bots.png)
+:::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="User attribution bots":::
 
 To use the user attribution in teams, you must add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 

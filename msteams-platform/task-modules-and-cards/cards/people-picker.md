@@ -1,7 +1,7 @@
 ---
 title: People Picker in Adaptive Cards
 description: Describes how to use the People Picker control in Adaptive Cards
-localization_priority: Normal
+localization_priority: Medium
 keywords: Adaptive Cards People Picker
 ms.topic: reference
 author: Rajeshwari-v

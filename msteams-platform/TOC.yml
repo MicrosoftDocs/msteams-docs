@@ -481,6 +481,8 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Microsoft Teams store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+    -  name: Common reasons for app validation failure
+       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 - name: Monetize your app
   items:
   - name: Overview
