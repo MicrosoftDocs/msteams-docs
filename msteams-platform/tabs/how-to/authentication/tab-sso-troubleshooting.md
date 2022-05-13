@@ -49,7 +49,9 @@ Your code must tell the client (for example, in the body of a 403 Forbidden 
 <details>
 <summary>2. Error: Missing scope (permission).</summary>
 <br>
-This error is seen only in development. To handle this error, your server-side code should send a 403 Forbidden response to the client, which should log the error to the console or record it in a log.
+This error is seen only during development.
+
+To handle this error, your server-side code should send a 403 Forbidden response to the client. It should log the error to the console or record it in a log.
 </details>
 <br>
 <details>
@@ -71,11 +73,13 @@ You can get this error in one of the two scenarios:
 <details>
 <summary>5. Error: User Principal Name (UPN) not received in the returned access token.</summary>
 <br>
-You can add UPN as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
+You can add UPN as an optional claim in Azure AD.
+
+For more information, please see [optional claim](/azure/active-directory/develop/active-directory-optional-claims)
 </details>
 <br>
 <details>
-<summary>6. Error: `Teams SDK Error: resourceDisabled`.</summary>
+<summary>6. Error: Teams SDK Error: resourceDisabled.</summary>
 <br>
 To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
 
@@ -92,6 +96,8 @@ The following image shows an example of the app details configured in Azure AD.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD" border="false":::
 
+Check that the following values match between Azure AD, client-side code, and Teams app manifest:
+
 - **App ID**: The app ID you generated in Azure AD should be the same in the code and in Teams manifest file. Check the app ID in Teams manifest matches the **Application (client) ID** in Azure AD.
 
 - **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Azure AD.
@@ -103,7 +109,7 @@ The following image shows an example of the app details configured in Azure AD.
 
 - **Admin consent**: If any scope requires admin consent, check if the consent was granted for the particular scope to the user.
 
-In addition, inspect the access token that was sent to the tab if the following values are correct:
+In addition, inspect the access token that was sent to the tab app to verify if the following values are correct:
 
 - **Audience (aud)**: Check if the app ID in the token is correct as given in Azure AD.
 - **Tenant Id(tid)**: Check if the tenant mentioned in the token is correct.
