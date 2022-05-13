@@ -19,7 +19,7 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 
 ## Prerequisite
 
-* Install the [Teams Toolkit version 3.8.1](https://github.com/OfficeDev/TeamsFx/releases/tag/vscode-extension-3.8.1-beta.adb483893).
+* Install the [Teams Toolkit version 3.8.1](https://github.com/OfficeDev/TeamsFx/releases/tag/vscode-extension-3.8.1-beta.adb483893.0).
 
 > [!TIP]
 > Ensure you have Teams app project opened in Visual Studio Code.
