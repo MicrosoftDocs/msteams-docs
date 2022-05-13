@@ -1,14 +1,14 @@
 ### YamlMime:Tutorial
-title: Send notification with JavaScript
+title: Build notification bot with JavaScript
 metadata:
-  title: Send notification with JavaScript
+  title: Build notification bot with JavaScript
   description: In this tutorial, you'll learn to send notification with JavaScript.
   audience: Developer
   level: Beginner
   ms.date: 05/04/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/add-capability.md
-  nextTutorialTitle: Back to Add Capability
+  nextTutorialTitle: Back to Add capability
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -22,7 +22,7 @@ items:
     - About the directory structure of your app
     - How to send multiple notifications
 
-    This step-by-step guide helps you to send notification to Teams. You'll see the following output:
+    This step-by-step guide helps you to build notification bot with Teams Toolkit. You'll see the following output:
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
@@ -35,13 +35,16 @@ items:
    | &nbsp; | Install | For using |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 3.8.1. |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meeting, call, and all in one place.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest version.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, or TypeScript, build environments. Use latest version. |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, or TypeScript, build environments. Use the latest version. |
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
+   > [!NOTE]
+   > The guide is tested on Teams Toolkit version 3.8.1 and Nodejs version 16. The steps in this guide may work with other versions, but that has not been tested.
+
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.
@@ -87,17 +90,17 @@ items:
    You can use the CLI with the `teamsfx` command. Test the command is working by running `teamsfx -h`.
 
    > [!NOTE]
-   > Before you run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.
+   > Before you run TeamsFx in PowerShell terminals, ensure you enable the **remote signed** execution policy for PowerShell.
 
    ---
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. This space is also where you sideload and test the app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
 
-   ### Check sideloading option
+   ### Check for sideloading option
 
-   After creating the app, you must load your app in Teams. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without disturbing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
     > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
@@ -106,7 +109,7 @@ items:
 
    To verify sideload apps in Teams:
 
-    1. In the Teams client, select the **Store** icon.
+    1. In the Teams client, select **Store**.
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
@@ -132,7 +135,7 @@ items:
 - title: Create a new notification bot 
   durationInMinutes: 1
   content: |
-   To create new notification bot using Visual Studio Code:
+   **To create notification bot using Visual Studio Code**
 
     1. Open Visual Studio Code.
     
@@ -146,7 +149,8 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="true":::
 
-    1. Ensure that **Notification Bot** is selected as the capability that you want to build in your app. Select **OK**.
+    1. Ensure that **Notification Bot** is selected as the capability that you want to build in your app. 
+    1. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability" border="true":::
 
@@ -154,13 +158,18 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
 
-    1. Select **HTTP Trigger Restify Server** as the trigger. Select **OK**.
+    1. Select **HTTP Trigger Restify Server** as the trigger. 
+    1. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language." border="true":::  
 
-    1. Enter a suitable name for your app, such as `mynotificationbot`. Ensure that you use only alphanumeric characters. Select **Enter**.
+    1. Enter a suitable name for your app, such as mynotificationbot as the application name. 
+    1. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name." border="true":::
+
+       > [!NOTE]
+       > Ensure that you use only alphanumeric characters in the application name.
 
         The Notification bot app is created in a few seconds.
 
@@ -201,9 +210,9 @@ items:
 
     :::image type="content" source="~/assets/images/sbs-notification-bot/folder-structure.png" alt-text="structure tab" border="true":::
 
-    If you choose to use UI framework, this sample template code provides a scaffolding with React components.
+    If you choose to use UI framework, following sample template code provides a scaffolding with React components.
 
-    This new project folder structure looks like:
+    The new project folder contains following content:
 
     | Folder name | Contents |
     | --- | --- |
@@ -214,7 +223,7 @@ items:
     
      The core notification implementation in **bot** folder and it contains:
 
-    | File or Folder name | Contents |
+    | File name | Contents |
     | --- | --- |
     | `src/adaptiveCards/` | Templates for Adaptive card  |
     | `src/internal/` | Generated initialize code for notification functionality |
@@ -225,7 +234,7 @@ items:
 - title: Send notification to Teams channel
   durationInMinutes: 1
   content: |
-    To send notification to Teams channel:
+    **To send notification to Teams channel**
     
     1. In Visual Studio Code, select **Explorer> My Notification app> bot> src> index.js**.
 
@@ -266,7 +275,8 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation1.png" alt-text="My Notification Output1" border="true":::
 
-    1. In **Search box**, add any **channel** and select **Set up a bot**.
+    1. In **Search box**, add any **channel**.
+    1. Select **Set up a bot**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/setup-bot.png" alt-text="Setup Bot" border="true":::
 
@@ -292,81 +302,75 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learnt to create, build, and run Teams app with Notification bot capability. The final step is to deploy your app on Azure.
+    You've learnt to build, and run Teams app with notification bot capability. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with Notification bot capability on Azure using Teams Toolkit.
+    Let's deploy the first app with notification bot capability on Azure using Teams Toolkit.
 
     ## Sign-in to your Azure account
 
-    Use this account to access the Microsoft Azure portal and to provide provision new cloud resources to support your app.
+    Use your account to access the Microsoft Azure portal and to provide provision new cloud resources to support your app.
 
     1. Open Visual Studio Code.
-    1. Open the project folder that you created the Notification bot.
+    1. Open the project folder that you created the notification bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign-in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as in other extensions.
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step.
 
         Your default web browser opens to let you sign-in to the account.
     1. Sign-in to your Azure account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available.
+        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. 
+        
+        > [!NOTE]
+        > Ensure you have at least one usable Azure subscription available.
 
         Now you're ready to deploy your app to Azure!
 
     ## Deploy your app to Azure
 
-      In Deployment, necessary cloud resources are created in provisioning and your app's code is copied into the created cloud resources.
+      Under DEPLOYMENT you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
 
     # [Visual Studio Code](#tab/vscode)
 
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    1. Select **Provision in the Cloud**.
+    1. Select **Provision in the Cloud** under **DEPLOYMENT**.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands" border="true":::
 
-    1. Select a subscription for the Azure resources.
+    1. Select an existing or create new resource group.
     
         :::image type="content" source="~/assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
 
-       A dialog warns that costs may be incurred when running resources in Azure.
+       > [!NOTE]
+       > A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog." border="true":::
 
-       The provisioning process creates resources in Azure cloud. It may take some time. You can monitor the progress by observing the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+       The provisioning process creates resources in Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
 
          You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
-         The provisioned resource is displayed under **Environment**.
-
-        :::image type="content" source="~/assets/images/sbs-notification-bot/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
-
-    1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
+    1. Select **Deploy to the Cloud** under **DEPLOYMENT** after provisioning is complete.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="true":::
-
-          A dialog confirms the deploy resources in dev environments.
 
     1. Select **Deploy**
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
-       As with provisioning, deployment takes some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice.
+       Deployment takes some time. You can monitor the progress in the dialogs in lower-right corner.
         
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation." border="true":::
-    
-    ## Run the deployed app
 
-    After the provisioning and deployment steps are complete:
-
-    1. Select the **Local Debug** in environment section from Visual Studio Code.
+    1. Select **Local Debug** under **ENVIRONMENT** from Visual Studio Code.
 
          :::image type="content" source="~/assets/images/sbs-notification-bot/local-debug.png" alt-text="Local Debug." border="true":::
 
