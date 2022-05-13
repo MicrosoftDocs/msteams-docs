@@ -212,25 +212,33 @@ To preview your tab app in Teams:
 
    The app package is a zip file that contains the app manifest and app icons.
 
-2. Open Teams.
+1. Open Teams.
 
-3. Select **Teams Store** > **Manage your apps** > **Publish an app**.
+1. Select **Teams Store** > **Manage your apps** > **Upload an app**.
 
-    The **Publish an app** options appear.
+    The **Publish an app** option appears.
 
-4. Select **Upload a custom app** to sideload the tab app to Teams.
+1. Select **Upload a custom app** to sideload the tab app to Teams.
 
-5. Select your app package to upload.
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="Sideload tab app into Teams":::
 
-6. Select **Add**.
+1. Select your app package zip file, and select **Add**.
 
-    The Tab app is loaded and the consent form appears.
+    The Tab app is sideloaded and the Teams consent dialog appears.
 
-7. Select **Accept**.
+1. Select **Continue**.
 
-    The tab app is loaded and you can use it.
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams consent dialog box" border="true":::
 
-    Congratulations! You have enabled SSO for your tab app.
+    The Azure AD consent dialog appears.
+
+1. Select **Accept**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog" border="true":::
+
+    Teams opens the tab app and you can use it.
+
+    Congratulations! You've enabled SSO for your tab app.
 
 ## See also
 
