@@ -8,18 +8,21 @@ metadata:
   ms.date: 05/05/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/add-capability.md
-  nextTutorialTitle: Back to Add Capability
+  nextTutorialTitle: Back to Add capability
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams allows you to automate simple and repetitive tasks within a conversation. You can build a Teams bot that can respond to simple commands sent in chats with adaptive cards. 
+    Microsoft Teams allows you to automate simple and repetitive tasks using a command bot which responds to simple commands sent in chats with adaptive cards. 
 
     In this tutorial, you'll learn:
 
     - How to build command bot with Teams Toolkit
     - About the directory structure of your app
+
+    > [!NOTE]
+    > The built command bot is available only for Teams desktop client.
     
     This step-by-step guide helps you to build command bot with Teams Toolkit. You'll see the following output:
 
@@ -34,13 +37,16 @@ items:
    | &nbsp; | Install | For using |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 3.8.1. |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version  |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest version.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
    | &nbsp; | [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
+   > [!NOTE]
+   > This document is tested on Teams Toolkit version 3.8.1 and Nodejs version 16.
+
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.
@@ -94,7 +100,7 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test your app.
 
    ### Check for sideloading option
 
@@ -130,10 +136,10 @@ items:
 
    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
-- title: Build command response bot
+- title: Build command bot
   durationInMinutes: 1
   content: |
-   To build command response bot using Visual Studio Code
+   **To build command bot using Visual Studio Code**
 
     1. Open Visual Studio Code.
 
@@ -159,9 +165,12 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-trigger.png" alt-text="Select Trigger" border="true":::
 
-    1. Enter a suitable name for your app, such as `commandbot` as the application name. Ensure that you use only alphanumeric characters. Select **Enter**.
+    1. Enter a suitable name for your app, such as `commandbot` as the application name. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Application name." border="true":::
+
+        > [!NOTE]
+        > Ensure that you use only alphanumeric characters in the application name.
 
         The Command bot app is created in a few seconds.
 
@@ -178,7 +187,7 @@ items:
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 
-    1. Select **Play** to start debugging.
+    1. Select **Play**  to start debugging.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
@@ -194,13 +203,13 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output" border="true":::      
 
-    ## Take a tour of the tab app source code
+    ## Take tour of source code
 
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
       :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure.png" alt-text="structure tab" border="true":::
 
-    If you choose to use UI framework, this sample template code provides a scaffolding with React components. The Toolkit looks like:
+    If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
 
     | File name | Contents |
     | --- | --- |
@@ -213,80 +222,75 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learnt to build, and run Teams app with Command bot capability. The final step is to deploy your app on Azure.
+    You've learnt to build, and run Teams app with command bot capability. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with Command bot capability on Azure using Teams Toolkit.
+    Let's deploy the first app with command bot capability on Azure using Teams Toolkit.
 
     ## Sign-in to your Azure account
 
-    Use this account to access the Microsoft Azure portal and to provide provision new cloud resources to support your app.
+    Use your account to access the Microsoft Azure portal and to provide provision new cloud resources to support your app.
 
     1. Open Visual Studio Code.
-    1. Open the project folder that you created the Command bot app.
+    1. Open the project folder that you created the command bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign-in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as in other extensions.
+        > If you have the Azure Account extension installed and is using the same account, you can skip this step. Use the same account as in other extensions.
 
         Your default web browser opens to let you sign-in to the account.
     1. Sign-in to your Azure account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available.
+        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you.
+        
+        > [!NOTE]
+        > Ensure you have at least one usable Azure subscription available.
 
         Now you're ready to deploy your app to Azure!
 
     ## Deploy your app to Azure
 
-      In Deployment, necessary cloud resources are created in provisioning and your app's code is copied into the created cloud resources.
+      **DEPLOYMENT**, consists of two steps. First, necessary cloud resources are created also known as provisioning. Then, your app's code is copied into the created cloud resources.
 
     # [Visual Studio Code](#tab/vscode)
 
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    1. Select **Provision in the Cloud**.
+    1. Select **Provision in the Cloud** under **DEPLOYMENT**.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands" border="true":::
 
-    1. Select a subscription for the Azure resources.
+    1. Select an existing or create new resource group.
     
         :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning" border="true":::
 
-       A dialog warns that costs may be incurred when running resources in Azure.
+        > [!NOTE]
+        > A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/provision-confirm.png" alt-text="Screenshot of the provisioning dialog." border="true":::
 
-       The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by observing the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+       The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner. After few minutes, you see the following notice:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
 
          You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
-         The provisioned resource is displayed under **Environment**.
-
-        :::image type="content" source="~/assets/images/sbs-command-bot/provisioned-resources-env.png" alt-text="Screenshot showing the provisioning complete dialog." border="true":::
-
-    1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
+    1. Select **Deploy to the cloud** under **DEPLOYMENT** after provisioning is complete.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="true":::
-
-          A dialog confirms the deploy resources in dev environment.
 
     1. Select **Deploy**.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
-       As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice.
+       Deploy takes some time. You can monitor the progress in the dialog in lower-right corner. After a few minutes, you see the following notice.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/command-deploy-confirm.png" alt-text="Deploy confirm." border="true":::
     
-    ## Run the deployed app
-
-    Once the provisioning and deployment steps are complete:
-
+    
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
     1. Select **Play** to start debugging.
@@ -297,7 +301,8 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="App cloud output." border="true":::
 
-    1. Select the command and select **Enter**.  
+    1. Select the command bot.
+    1. Select **Enter**.  
 
         :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Hello World Command" border="true":::
 
