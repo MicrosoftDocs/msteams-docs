@@ -74,7 +74,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 5. Select the types of user accounts that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
 
     <details>
-    <summary>Options for supported account types</summary>
+    <summary><b>Options for supported account types</b></summary>
 
     | Option | Select this to... |
     | --- | --- |
@@ -99,7 +99,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     <br>
 
     <details>
-    <summary>Platform and redirect URI options</summary>
+    <summary><b>Platform and redirect URI options</b></summary>
 
     | Option | Select this to... |
     | --- | --- |
@@ -172,7 +172,7 @@ To configure scope and the OBO flow, you'll need:
     >   | *demoapplication* | **<https://demoapplication.azurewebsites.net>** | All platforms.|
     >   | *DemoApplication* | **<https://DemoApplication.azurewebsites.net>** | Desktop, web, and iOS only. It isn't supported in android. |
     >
-    >    Don't use *DemoApplication* as base resource name.
+    >    Use the lower case option *demoapplication* as base resource name.
 
 2. Select **Save**.
 
