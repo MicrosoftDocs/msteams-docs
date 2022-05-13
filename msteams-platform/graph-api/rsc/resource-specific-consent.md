@@ -39,9 +39,6 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 |TeamsTab.Delete.Group|Delete this team's tabs. |
 |TeamMember.Read.Group|Get this team's members. |
 |TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. |
-|LiveShareSession.ReadWrite.Chat| <!--- Need to check with SME ---> |
-|MeetingStage.Write.Chat| <!--- Need to check with SME ---> |
-|OnlineMeetingIncomingAudio.Detect.Chat| <!--- Need to check with SME ---> |
 
 For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
 
@@ -72,6 +69,8 @@ For more details, see [chat resource-specific consent permissions](/graph/permis
 > Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory (AAD) portal.
 
 ### Resource-specific permissions for Teams live share
+
+The following table provides resource-specific permissions for Teams live share:
 
 |Application permission| Action |
 | ----- | ----- |
