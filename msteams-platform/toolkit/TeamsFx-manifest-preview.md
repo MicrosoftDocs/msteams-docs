@@ -1,11 +1,11 @@
 ---
 title: Teams App Manifest in Teams Toolkit
 author: zyxiaoyuer
-description:  Preview Teams App Manifest
+description: Teams App Manifest
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 05/13/2022
 ---
 
 
@@ -62,23 +62,19 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 
 > [!NOTE] 
 > If you have not provisioned the environment, or not executed local debug, the values for placeholder are not generated. Hence, the values are undefined in codelens.
+
 You can navigate to state file or configuration file by selecting the codelens, which pops up a drop down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you have'nt provisioned the environment or not executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
-Select **View the state file** to select your environment:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
 
 ## Preview app manifest in Toolkit
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The Template file with placeholders, and the actual values is resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
-
-
-## Preview manifest
-
 To preview manifest with actual content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
 
 ```text
@@ -131,9 +127,9 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 1. Select **Update to Teams platform** on the top left corner of `manifest.{env}.json`.
 2. Select **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
 
- You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
+You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
 
 > [!NOTE]
 > Trigger from editor codelens or **title**  updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
