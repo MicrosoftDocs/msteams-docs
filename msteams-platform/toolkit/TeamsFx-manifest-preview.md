@@ -124,15 +124,30 @@ If there are more than one environment, you need to select the environment you w
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
-1. Select **Update to Teams platform** on the top left corner of `manifest.{env}.json`.
-2. Select **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
+Deploy Teams app manifest in any of the following ways:
+
+1. Go to `manifest.template.json` file, and select `Deploy Teams app manifest` from context menu.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
+
+1. Trigger `Teams: Deploy Teams app manifest` from command palette.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
+
+Update to Teams platform in any of the following ways:
+
+1. Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`.
+
+1. Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
 
 You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="tree view":::
 
 > [!NOTE]
-> Trigger from editor codelens or **title**  updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
+> Trigger from editor codelens or menu bar  updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
 
 
  CLI command
