@@ -75,8 +75,9 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-If the app user is not yet signed in yet, your client-side code should ensure that they sign-in first.
-Pass `allowSignInPrompt: true` in the options parameter of `getAuthToken()`to ensure that Teams prompts the app user through the UI to sign in the first time.
+<br>
+
+As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the options parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in the first time.
 
 <br>
 <details>
