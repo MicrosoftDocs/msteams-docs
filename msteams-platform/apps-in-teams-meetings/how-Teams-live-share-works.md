@@ -93,6 +93,8 @@ The RSC permissions model enables **team owners** and **chat owners** to grant c
 
 ### Resource-specific permissions for Teams live share
 
+The following table provides resource-specific permissions for Teams live share:
+
 |Application permission| Action |
 | ----- | ----- |
 |LiveShareSession.ReadWrite.Chat| <!--- Need to check with SME ---> |
