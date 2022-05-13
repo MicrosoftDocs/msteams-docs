@@ -77,7 +77,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 <br>
 
-As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in the first time.
+As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in.
 
 <br>
 <details>
@@ -103,7 +103,7 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-When an app user access your tab app for the first time and your tab app makes the `getAuthToken` call, the app user must give consent. The following consent dialogs appear to the app user at runtime:
+When an app user accesses your tab app for the first time and your tab app makes the `getAuthToken` call, the app user must give consent. The following consent dialogs appear to the app user at runtime:
 
 1. **Teams consent dialog**:
   It's the first consent dialog that appears. The app user must give consent to Teams for using Teams identity.
@@ -168,7 +168,7 @@ $.ajax({
 
 ### Decode and validate the access token
 
-Web APIs on your server must decode and validate the access token if it's sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
+Web APIs on your server must decode and validate if the access token is sent from the client. The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows.
 
 There are a number of libraries available that can handle JWT validation. Basic validation includes:
 

@@ -11,6 +11,8 @@ Single sign-on (SSO) allows a user sign-in only once to access an application or
 
 With SSO in Teams, app users have an added advantage. After logging into Teams using Microsoft or Microsoft 365 account, app users don't need to sign in again to use your app. App users can access your app within Teams even on any other device with access granted through Azure AD.
 
+You can enable SSO in Teams for all apps that support Azure AD as an identity provider.
+
 Here's what you'll learn in this section:
 
 1. **SSO user experience**: Teams offers your app users a true SSO experience can use your app without signing in again.
@@ -33,20 +35,18 @@ You can view here an example of user experience with SSO in a tab app:
 
 ### Enhance user experience with SSO
 
-You can enable SSO in Teams for all apps that support Azure AD as an identity provider.
-
 Here's what your app users get with SSO experience:
 
 - Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user. It translates to app access for the user without having to leave Teams environment.
-- After consenting to Teams the first time, the app user can use your tab app with no further need of consent, even on any other device. For this reason, it's true SSO and a better user experience.
+- After consenting to Teams the first time, the app user can use your tab app with no further need of consent, even on any other device. For this reason, it's true SSO and offers a better user experience.
 - The access token is pre-fetched by Teams. This is done to improve performance and load time of the app in Teams environment.
-- The user doesn't need to memorize or record several passwords to access and use apps in Teams environment.
+- App users don't need to memorize or record several passwords to access and use apps in Teams environment.
 
 Now, let's see what happens at the backend during runtime to achieve true SSO user experience within Teams.
 
 ## SSO in Teams at runtime
 
-You can achieve SSO in a tab app by obtaining access token for the Teams user who's currently logged in. This process involves the tab app, Teams, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
+You can achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app, Teams, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
@@ -70,27 +70,27 @@ sequenceDiagram
 | --- | --- | --- |
 | 1 | Tab app -> Teams Client | The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token. |
 | 2 | Teams Client - > Consent form | If the current app user is using your tab app for the first time, Teams displays request prompt to consent, if it's required. The app user must provide consent to Teams for using Teams identity to obtain access token from Azure AD. <br> Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication. |
-| 3 | Teams Client -> Azure AD | Teams requests Azure AD endpoint for the access token for the current user based on the app user's Teams identity. |
+| 3 | Teams Client -> Azure AD | Teams requests Azure AD endpoint for the access token for the current app user based on Teams identity. |
 | 4 | Azure AD -> Teams Client | Azure AD sends the access token to the Teams Client. The token is a JSON Web Token (JWT), and it's validation works just like token validation in most standard OAuth flows. Teams will cache the token on your behalf so that future calls to `getAuthToken()` return the cached token. |
 | 5 | Teams Client -> Tab app | Teams sends the access token to the tab app as part of the result object returned by the `getAuthToken()` call. |
-| 6 | Tab app | The tab app parses the token using JavaScript to extract required information, such as the app user's email address. The token returned to the tab app is both an access token and an identity token. |
+| 6 | Tab app | The tab app parses the access token using JavaScript to extract required information, such as the app user's email address. The token returned to the tab app is both an access token and an identity token. |
 
 > [!IMPORTANT]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 ### Use cases for enabling SSO for tab app
 
 Here are some use cases where enabling SSO is beneficial. Call `getAuthToken()` in these scenarios to use Teams identity for obtaining access token for your app users:
 
-- To get user’s teams identity from Teams if you have an existing app that you want to be available within a tab app in Teams for your app users.
+- To get an app user’s identity from Teams if you have an existing app that you want to be available within a tab app in Teams for your app users.
 
-- To authenticate a user by reusing the team’s identity inside your tab app.
+- To authenticate an app user by reusing the Team’s identity inside your tab app.
 
-- To authenticate and get user’s teams identity without having them to signing in again inside configurable tabs. This is applicable to some settings that need to be configured at a config stage.
+- To authenticate and get user’s Teams identity inside configurable tabs. The app users don't need to signing in again. This is applicable to some settings that need to be configured at a configuration stage.
 
 - To obtain an access token inside a task module, when it's invoked from a tab app, a bot app, a messaging extension app, or adaptive cards.
 
-- To authenticate a user in stage view.
+- To authenticate an app user in Stage view.
 
 - To authenticate users for [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
@@ -107,9 +107,9 @@ To enable SSO for a tab app:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
-1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and app ID URI. You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current user logged into Teams. For generating access token, you configure scopes and OBO flow.
-2. **Configure code**: Update the code to handle access token, calling it when a user accesses your app and validating it when received.
-3. **Update Teams app manifest**: Update your Teams Client manifest with the app ID generated on Azure AD and the app ID URI to ensure secure connection between Azure AD and your app.
+1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current app user logged into Teams. For generating access token, you configure scopes and OBO flow.
+2. **Configure code**: Update the code to handle access token, calling it when an app user accesses your tab app, and validating it when received.
+3. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID generated on Azure AD and the application ID URI to ensure secure connection between Azure AD and your app.
 
 ## Third-party cookies on iOS
 
