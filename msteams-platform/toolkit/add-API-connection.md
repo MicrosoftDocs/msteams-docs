@@ -173,7 +173,7 @@ You can follow the steps to access these APIs while using:
    
    3. Open `.fx/states/state.{env}.json` and note the value of `clientId` under `fx-resource-aad-app-for-teams` property. It's the application client ID.
    
-   4. See [Grant admin consent in App registrations](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations) to get admin consent for the required application permission. You'll need your application client ID.
+   4. See [Grant admin consent in App registrations](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations) to get admin consent for the required application permission. You'll need your application client ID.
    
 #### Access Control Lists (ACsL)
 
