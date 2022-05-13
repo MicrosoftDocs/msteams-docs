@@ -28,29 +28,29 @@ During the local debug or provision, Teams Toolkit loads manifest from `manifest
 
 ## Supported placeholders in manifest.template.json
 
-The following list provides...
+The following list provides supported placeholders in `manifest.template.json`:
 
 * `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
 * `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
 
-**To add customixes parameter**
+**To add customized parameter**
 
-  1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`
-  2. Add a config value in `config.{env}.json`
+1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}.
+1. Add a config value in `config.{env}.json`.
 
-        ```json
-        {
-            "manifest": {
-                "KEY": "VALUE"
-            }
-        }
-        ```
+    ```json
+    {
+         "manifest": {
+          "KEY": "VALUE"
+          }
+    }
+    ```
 
-  2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
+1. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
 
 ### Validate manifest
 
-During operations such as, `Zip Teams metadata package`, Teams Toolkit validates the manifest against its schema. The following lost provides different ways to validate manifest:
+During operations such as, **Zip Teams metadata package**, Teams Toolkit validates the manifest against its schema. The following list provides different ways to validate manifest:
 
 * In VSC, trigger `Teams: Validate manifest file` from command palette:
 
@@ -72,7 +72,7 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
 
 > [!NOTE] 
-> If you haven't provisioned the environment or executed local debug, the values for placeholders are not generated. Hence, the values are undefined in codelens.
+> Provision the environment or execute local debug to generate values for placeholders. 
 
 You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
@@ -118,7 +118,7 @@ The preview local appears as shown in the image:
 
 ### Preview manifest file in remote environment
 
-To preview manifest file in remote environment, select **Provision in the cloud** in **DEVELOPMENT** panel of Teams Toolkit extension Treeview, or trigger **Teams: Provision in the cloud** from command palette. It generates configuration for remote teams app, and builds package and preview manifest under `build/appPackage` folder.
+To preview manifest file in remote environment, select **Provision in the cloud** in **DEVELOPMENT** panel of Teams Toolkit extension or trigger **Teams: Provision in the cloud** from command palette. It generates configuration for remote teams app, and builds package and preview manifest under `build/appPackage` folder.
 
 You can also preview manifest file in remote environment by following steps:
 
@@ -135,21 +135,24 @@ If there are more than one environment, you need to select the environment you w
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
+1. Deploy Teams app manifest
+
 You can deploy Teams app manifest in any of the following ways:
 
-1. Go to `manifest.template.json` file, and select `Deploy Teams app manifest` from context menu.
+* Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
 
-1. Trigger `Teams: Deploy Teams app manifest` from command palette.
+* Trigger `Teams: Deploy Teams app manifest` from command palette
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
 
+2. Update to Teams platform
 You can update to Teams platform in any of the following ways:
 
-1. Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`.
+* Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`
 
-1. Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
+* Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
 
@@ -168,6 +171,10 @@ You can also trigger **Teams: Update manifest to Teams platform** from the comma
 ```
 
 ---
+
+> [!NOTE]
+> The changes will be updated to Dev Portal. If you have some manual updates in Dev Portal, it will be overwritten.
+
 If the manifest file is outdated due to configuration file change or template change, select any one of the following action:
 
 * **Preview only**: Local manifest file is overwritten according to current configuration
@@ -177,9 +184,8 @@ If the manifest file is outdated due to configuration file change or template ch
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 
-> [!NOTE]
-> The changes will be updated to Dev Portal. If you have some manual updates in Dev Portal, it will be overwritten.
-
 ## See also
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
+* [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md) 
