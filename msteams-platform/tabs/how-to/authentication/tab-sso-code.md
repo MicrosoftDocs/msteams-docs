@@ -101,7 +101,7 @@ When you call `getAuthToken()` and user consent is required for user-level permi
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-When the app user access your tab app and your tab app makes the `getAuthToken` call, the app user must give consent to Teams. The following consent dialogs appear to the user:
+When the app user access your tab app and your tab app makes the `getAuthToken` call, the app user must give consent, if it's the first time to access the app. The following consent dialogs appear to the user at runtime:
 
 1. **Teams consent dialog**:
   It's the first consent dialog that appears. The app user must give consent to Teams for using Teams identity.
@@ -109,9 +109,11 @@ When the app user access your tab app and your tab app makes the `getAuthToken` 
 1. **Azure AD consent dialog**:
   After the app user consents to Teams for using the identity token to obtain access token, Azure AD consent dialog appears. It seeks app user's consent for permissions that you've configured as scope in Azure AD.
 
-The app user is able to access your app after consenting to Teams and Azure AD dialogs.
+This consent is to be given only once. The app user is able to access your app after consenting to Teams and Azure AD dialogs.
 
-After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
+After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms.
+
+If you encounter any errors, please see [Troubleshooting SSO authentication in Teams](tab-sso-troubleshooting.md).
 
 ### Use the access token as an identity token
 
