@@ -84,7 +84,7 @@ For more information on application ID URI, please see [To expose an API](/tabs/
 <br>
 
 <details>
-<summary>9. Error: Generic error when running the tab app.</summary>
+<summary>7. Error: Generic error when running the tab app.</summary>
 <br>
 A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
 
