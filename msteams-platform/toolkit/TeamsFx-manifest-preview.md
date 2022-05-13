@@ -9,7 +9,7 @@ ms.date: 05/13/2022
 ---
 
 
-# Customize app manifest
+# Customize Teams app manifest
 
 Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
 
@@ -28,12 +28,15 @@ During the local debug or provision, Teams Toolkit loads manifest from `manifest
 
 ## Supported placeholders in manifest.template.json
 
+The following list provides...
+
 * `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
 * `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
 
-  1. You can add a customized parameter as follows:
-      1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`
-      2. Add a config value in `config.{env}.json`
+**To add customixes parameter**
+
+  1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`
+  2. Add a config value in `config.{env}.json`
 
         ```json
         {
@@ -47,13 +50,13 @@ During the local debug or provision, Teams Toolkit loads manifest from `manifest
 
 ### Validate manifest
 
-During some operations like `Zip Teams metadata package`, Teams Toolkit validates the manifest against its schema. The following are two ways to validate manifest:
+During operations such as, `Zip Teams metadata package`, Teams Toolkit validates the manifest against its schema. The following lost provides different ways to validate manifest:
 
-* Trigger `Teams: Validate manifest file` from command palette:
+* In VSC, trigger `Teams: Validate manifest file` from command palette:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
 
-* CLI command:
+* In CLI, use command:
 
      ``` bash
         teamsfx validate --env local
@@ -69,9 +72,9 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
 
 > [!NOTE] 
-> If you haven't provisioned the environment or executed local debug, the values for placeholder are not generated. Hence, the values are undefined in codelens.
+> If you haven't provisioned the environment or executed local debug, the values for placeholders are not generated. Hence, the values are undefined in codelens.
 
-You can navigate to state file or configuration file by selecting the codelens, which pops up a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
 
@@ -82,7 +85,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 ## Preview app manifest in Teams Toolkit
 
-The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The Template file with placeholders and the actual values are resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
+The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders and the actual values are resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
 To preview manifest with actual content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
 
 ```text
