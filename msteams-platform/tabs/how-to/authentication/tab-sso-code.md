@@ -28,8 +28,8 @@ Your app user must give consent to Teams for using the Teams identity token to g
 
 Here's a quick look at types of tokens:
 
-- **ID token**: An ID token is granted for an app user after successful validation . It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the app user who is currently logged into Teams.
-- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. For enabling SSO in tab, it's granted through Azure AD.
+- **ID token**: An ID token is granted for an app user after successful validation. It's used to cache user profile information. Teams uses this token to pre-fetch access token for an app user who is currently logged into Teams.
+- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD for enabling SSO in a tab app.
 
 To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token.
 
@@ -46,12 +46,12 @@ The tab app needs to make a JavaScript call towards Teams to obtain access token
 
 #### When to call getAuthToken
 
-Use `getAuthToken()` at the time when you need to validate the user identity:
+Use `getAuthToken()` at the time when you need to validate the app user's identity:
 
-| If user validation is needed... | Call getAuthToken()... |
+| If app user validation is needed... | Call getAuthToken()... |
 | --- | --- |
 | At the time user accesses the app | From inside `microsoftTeams.initialize()`. |
-| To use a particular functionality of the app | When the user takes an action that requires a signed-in user. |
+| To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
 When Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
 
@@ -60,12 +60,12 @@ When Teams obtains the access token, it's cached and reused as needed. This toke
 
 #### Code for getAuthToken
 
-Add the following code to the Teams Client to:
+Add the following code snippet to the client-side code to:
 
 - Call `getAuthToken()`.
 - Parse the access token or pass it to the server-side code.
 
-The following code shows a simple example of calling `getAuthToken()` and parsing the token for the user name and other credentials.
+The following code snippet shows an example of calling `getAuthToken()` and parsing the token for user name and other credentials.
 
 ```javascript
 var authTokenRequest = {
@@ -75,6 +75,9 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
+If the app user is not yet signed in yet, your client-side code should ensure that they sign-in first.
+Pass `allowSignInPrompt: true` in the options parameter of `getAuthToken()`to ensure that Teams prompts the app user through the UI to sign in the first time.
+
 <br>
 <details>
 <summary>Here's an example of the client-side code:</summary>
@@ -82,8 +85,6 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configure client code" lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
 
 </details>
-
-You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken()`.
 
 ### Teams mobile client support
 
