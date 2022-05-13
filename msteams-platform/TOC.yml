@@ -363,7 +363,7 @@
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Configure code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
-      - name: Update Teams app manifest
+      - name: Update app manifest and preview app
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Configure Microsoft Graph permissions
         href: tabs/how-to/authentication/tab-sso-graph-api.md
