@@ -195,7 +195,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/add-app.png" alt-text="Add an App" border="true":::     
 
-    1. Select the command and select **Enter**.
+    1. Select the command bot.
+    
+    1. Select **Enter**.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App dropdown" border="true":::  
 
@@ -251,7 +253,7 @@ items:
 
     ## Deploy your app to Azure
 
-      **DEPLOYMENT**, consists of two steps. First, necessary cloud resources are created also known as provisioning. Then, your app's code is copied into the created cloud resources.
+      **DEPLOYMENT** consists of two steps. First, necessary cloud resources are created also known as provisioning. Then, your app's code is copied into the created cloud resources.
 
     # [Visual Studio Code](#tab/vscode)
 
