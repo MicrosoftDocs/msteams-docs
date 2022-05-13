@@ -1,16 +1,41 @@
 ---
-title: Troubleshooting authentication for tabs using Teams SSO with Azure AD
+title: Troubleshooting authentication for tabs using SSO in Teams
 description: Troubleshooting SSO authentication in Teams and how to use it in tabs
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD)
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO errors questions
 ---
-# Troubleshooting authentication for using Teams SSO for tabs
+# Troubleshooting authentication for using SSO in Teams
 
+Here's a list of issues and questions about SSO, and how you can fix them.
 <br>
 
+## Support for Microsoft Graph
+
+<br>
 <details>
-<summary>1. What is a 'consent missing' error, and how can I fix it?</summary>
+<summary>1. Does Graph API work in Postman?</summary>
+<br>
+You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
+
+For more information, please see [Use Postman with the Microsoft Graph API](/graph/use-postman).
+</details>
+<br>
+<details>
+<summary>2. Does Graph API work in Microsoft Graph explorer?</summary>
+<br>
+Yes, Graph API works in Microsoft Graph explorer.
+
+For more information, please see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
+
+</details>
+<br>
+
+## Error messages and how to handle them
+
+<br>
+<details>
+<summary>1. Error: consent missing.</summary>
 <br>
 When Azure AD receives a request for accessing a Microsoft Graph resource, it checks if the user (or tenant administrator) have given consent for this resource. If there's no record of consent from the user or administrator, Azure AD sends an error message to your web service.
 
@@ -22,19 +47,19 @@ Your code must tell the client (for example, in the body of a 403 Forbidden 
 </details>
 <br>
 <details>
-<summary>2. What is a missing scope (permission) error, and how should I handle it?</summary>
+<summary>2. Error: Missing scope (permission).</summary>
 <br>
 This error is seen only in development. To handle this error, your server-side code should send a 403 Forbidden response to the client, which should log the error to the console or record it in a log.
 </details>
 <br>
 <details>
-<summary>3. What is an Invalid Audience error in the access token for Microsoft Graph, and how should I handle it?</summary>
+<summary>3. Error: Invalid Audience in the access token for Microsoft Graph.</summary>
 <br>
 The server-side code should send a 403 Forbidden response to the client to show a message to the user. It is recommended that it should also log the error to the console, or record it in a log.
 </details>
 <br>
 <details>
-<summary>4. What does the error that the host name must not be based on an already owned domain mean, and how can I fix it?</summary>
+<summary>4. Error: Host name must not be based on an already owned domain.</summary>
 <br>
 You can get this error in one of the two scenarios:
 
@@ -44,38 +69,22 @@ You can get this error in one of the two scenarios:
 </details>
 <br>
 <details>
-<summary>5. I didn't receive the  User Principal Name (UPN) in the returned access token. How can I fix it?</summary>
+<summary>5. Error: User Principal Name (UPN) not received in the returned access token.</summary>
 <br>
 You can add UPN as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
 </details>
 <br>
 <details>
-<summary>6. How can I fix the error `Teams SDK Error: resourceDisabled`?</summary>
+<summary>6. Error: `Teams SDK Error: resourceDisabled`.</summary>
 <br>
 To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
 
 For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
 </details>
 <br>
-<details>
-<summary>7. Does Graph API work in Postman?</summary>
-<br>
-You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
-For more information, please see [Use Postman with the Microsoft Graph API](/graph/use-postman).
-</details>
-<br>
 <details>
-<summary>8. Does Graph API work in Microsoft Graph explorer?</summary>
-<br>
-Yes, Graph API works in Microsoft Graph explorer.
-
-For more information, please see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
-
-</details>
-<br>
-<details>
-<summary>9. How can I resolve the generic error I get when I run the tab app?</summary>
+<summary>9. Error: Generic error when running the tab app.</summary>
 <br>
 A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and Teams manifest matches the values in Azure AD.
 
