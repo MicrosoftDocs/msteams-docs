@@ -131,7 +131,7 @@ If there are more than one environment, you need to select the environment you w
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Add env":::
 
-### Sync local changes to Dev Portal
+## Sync local changes to Dev Portal
 
 After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
