@@ -132,10 +132,10 @@ items:
 
    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
-- title: Create a new notification bot 
+- title: Build notification bot 
   durationInMinutes: 1
   content: |
-   **To create notification bot using Visual Studio Code**
+   **To build notification bot using Visual Studio Code**
 
     1. Open Visual Studio Code.
     
@@ -150,7 +150,6 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project" border="true":::
 
     1. Ensure that **Notification Bot** is selected as the capability that you want to build in your app. 
-    1. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability" border="true":::
 
@@ -171,7 +170,7 @@ items:
        > [!NOTE]
        > Ensure that you use only alphanumeric characters in the application name.
 
-        The Notification bot app is created in a few seconds.
+        The notification bot app is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created." border="true":::
 
@@ -236,7 +235,7 @@ items:
   content: |
     **To send notification to Teams channel**
     
-    1. In Visual Studio Code, select **Explorer> My Notification app> bot> src> index.js**.
+    1. In Visual Studio Code, under **EXPLORER**, select **MyNOTIFICATIONBOT> bot> src> index.js**.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path" border="true":::
 
@@ -331,7 +330,7 @@ items:
 
     ## Deploy your app to Azure
 
-      Under DEPLOYMENT you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
+      Under **DEPLOYMENT** you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
 
     # [Visual Studio Code](#tab/vscode)
 
