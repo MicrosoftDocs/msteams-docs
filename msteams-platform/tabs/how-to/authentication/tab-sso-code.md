@@ -28,10 +28,10 @@ Your app user must give consent to Teams for using the Teams identity token to g
 
 Here's a quick look at types of tokens:
 
-- **ID token**: An ID token is granted for a user when they have been verified successfully. It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the app user who is currently logged into Teams.
+- **ID token**: An ID token is granted for an app user after successful validation . It's used to cache user profile information. Teams uses this token to pre-fetch the access token for the app user who is currently logged into Teams.
 - **Access token**: An access token is an artifact that contains app user's identity and permission scopes. For enabling SSO in tab, it's granted through Azure AD.
 
-To obtain app access for the current Teams app user, your client-side code must make a call to Teams for getting an access token.
+To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token.
 
 This section includes:
 
@@ -106,20 +106,10 @@ When the app user access your tab app and your tab app makes the `getAuthToken` 
 1. **Teams consent dialog**:
   It's the first consent dialog that appears. The app user must give consent to Teams for using Teams identity.
 
-    <!--
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams consent dialog":::
-
-    To consent to Teams, the app user selects **Continue**. -->
-
 1. **Azure AD consent dialog**:
   After the app user consents to Teams for using the identity token to obtain access token, Azure AD consent dialog appears. It seeks app user's consent for permissions that you've configured as scope in Azure AD.
 
-    <!--
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog":::
-
-    To consent, the app user selects **Accept**.-->
-
-The app user is able to access your app after they've consented to Teams and Azure AD dialogs.
+The app user is able to access your app after consenting to Teams and Azure AD dialogs.
 
 After you receive access token in success callback, web APIs on your server must decode access token to view claims for that token. Optionally, copy and paste access token manually into a tool, such as jwt.ms. If you aren't receiving the UPN in the returned access token, add it as an optional claim in Azure AD.
 
@@ -243,7 +233,7 @@ The following is a typical decoded payload of an access token.
 
 Call `getAuthToken` at the time when you need to validate the user identity.
 
-- If your tab app requires the user identity to be validated at the time they access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
+- If your tab app requires the user identity to be validated at the time app users access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
 - If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
 
 You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
