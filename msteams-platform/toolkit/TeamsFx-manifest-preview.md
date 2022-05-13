@@ -36,9 +36,8 @@ The following list provides supported placeholders in `manifest.template.json`:
 **To add customized parameter**
 
 1. Add a customized parameter
-
-  a. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.
-  b. Add a config value in `config.{env}.json`.
+   a. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.</br>
+   b. Add a config value in `config.{env}.json`.
 
      ```json
      {
