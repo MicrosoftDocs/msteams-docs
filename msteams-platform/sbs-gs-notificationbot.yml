@@ -367,21 +367,28 @@ items:
 
     In your terminal window:
 
-    1. Run `teamsfx provision`.
+    1. Run `teamsfx new` to create new project.
+
+       ``` bash
+       teamsfx new
+       ```
+
+    1. Run `teamsfx provision` to create azure resource.
 
        ``` bash
        teamsfx provision
        ```
 
-       When prompted, select an Azure subscription to use Azure resources.
-
-       > [!NOTE]
-       > There are always some Azure resources used for hosting your app.
-
-    1. Run `teamsfx deploy`.
+    1. Run `teamsfx deploy` to deploy the app.
 
        ``` bash
        teamsfx deploy
+       ```
+
+    1. Run `teamsfx preview` to run the app.
+
+       ``` bash
+       teamsfx preview
        ```
 
     ---
