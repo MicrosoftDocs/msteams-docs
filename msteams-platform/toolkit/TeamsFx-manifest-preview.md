@@ -35,16 +35,18 @@ The following list provides supported placeholders in `manifest.template.json`:
 
 **To add customized parameter**
 
-1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.
-1. Add a config value in `config.{env}.json`.
+1. Add a customized parameter
 
-    ```json
-    {
+  1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.
+  1. Add a config value in `config.{env}.json`.
+
+     ```json
+     {
          "manifest": {
           "KEY": "VALUE"
           }
-    }
-    ```
+     }
+     ```
 
 1. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
 
