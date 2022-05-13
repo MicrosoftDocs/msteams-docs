@@ -18,9 +18,9 @@ Registering your tab app in Azure AD and enabling it for SSO requires making app
 
 Create a new app registration in Azure AD, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Azure AD and your app. It lets app users access your tab app without any further need of consent when your tab app calls the API using On-behalf-of (OBO) flow. You can add client IDs for the trusted mobile, desktop, and web application that you want to pre-authorize.
 
-Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user. User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
+Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user. You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app.
 
-You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app.
+User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 
 > [!NOTE]
 > The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
@@ -31,7 +31,7 @@ It's helpful to know about the configuration required for registering your app o
 
 - **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
 - **App platform**: Note the platform where your app is available. It also includes noting the URL from where your app is accessible.
-- **App ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app are not supported.
+- **Application ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app are not supported.
 - **Scope**: These are the permissions that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
@@ -123,7 +123,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
 ## Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client.
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and the OBO flow to enable SSO.
 
 To configure scope and the OBO flow, you'll need:
 
@@ -147,14 +147,15 @@ To configure scope and the OBO flow, you'll need:
 
 1. Enter the app ID URI in the format explained here.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="App ID URI" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI" border="true":::
 
-    - The **App ID URI** displays pre-filled with application ID (GUID) in the format `api://{AppID}`.
+    - The **Application ID URI** displays pre-filled with application ID (GUID) in the format `api://{AppID}`.
     - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
     - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
     where,
     - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served. Your application's domain name and the domain name you register for your Azure AD application should be the same.
+
       If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
     - `AppID` is the **Application (client) ID** (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
@@ -169,7 +170,7 @@ To configure scope and the OBO flow, you'll need:
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
     >   | *demoapplication* | **<https://demoapplication.azurewebsites.net>** | All platforms.|
-    >   | *DemoApplication* | **<https://DemoApplication.azurewebsites.net>** | desktop, web, and iOS only. It isn't supported in android. |
+    >   | *DemoApplication* | **<https://DemoApplication.azurewebsites.net>** | Desktop, web, and iOS only. It isn't supported in android. |
     >
     >    Don't use *DemoApplication* as base resource name.
 
@@ -177,11 +178,11 @@ To configure scope and the OBO flow, you'll need:
 
     A message pops up on the browser stating that the app ID URI was updated.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="App ID URI message" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Application ID URI message" border="true":::
 
     The app ID URI displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="App ID URI updated" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
 
 ### To configure API scope
 
