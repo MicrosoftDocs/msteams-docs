@@ -20,9 +20,6 @@ items:
 
     - How to build command bot with Teams Toolkit
     - About the directory structure of your app
-
-    > [!NOTE]
-    > The built command bot is available only for Teams desktop client.
     
     This step-by-step guide helps you to build command bot with Teams Toolkit. You'll see the following output:
 
@@ -45,7 +42,7 @@ items:
    | &nbsp; | [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > This document is tested on Teams Toolkit version 3.8.1 and Nodejs version 16.
+   > The guide is tested on Teams Toolkit version 3.8.1 and Nodejs version 16. The steps in this guide may work with other versions, but that has not been tested.
 
    ## Prepare development environment
 
@@ -94,7 +91,7 @@ items:
    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
    > [!NOTE]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.
+   > Before you run TeamsFx in PowerShell terminals, ensure you enable the **remote signed** execution policy for PowerShell.
 
    ---
 
@@ -113,7 +110,7 @@ items:
 
    To verify sideload apps in Teams:
 
-    1. In the Teams client, select the **Store** icon.
+    1. In the Teams client, select **Store** .
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
@@ -161,18 +158,20 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
 
-    1. Select **HTTP Trigger Restify Server** as the trigger. Select **OK**.
+    1. Select **HTTP Trigger Restify Server** as the trigger.
+    1. Select **OK**.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-trigger.png" alt-text="Select Trigger" border="true":::
 
-    1. Enter a suitable name for your app, such as `commandbot` as the application name. Select **Enter**.
+    1. Enter a suitable name for your app, such as commandbot as the application name. 
+    1. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Application name." border="true":::
 
         > [!NOTE]
         > Ensure that you use only alphanumeric characters in the application name.
 
-        The Command bot app is created in a few seconds.
+        The command bot app is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot showing the app created." border="true":::
 
@@ -238,7 +237,7 @@ items:
     1. Select **Sign-in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and is using the same account, you can skip this step. Use the same account as in other extensions.
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step.
 
         Your default web browser opens to let you sign-in to the account.
     1. Sign-in to your Azure account using your credentials.
@@ -253,7 +252,7 @@ items:
 
     ## Deploy your app to Azure
 
-      **DEPLOYMENT** consists of two steps. First, necessary cloud resources are created also known as provisioning. Then, your app's code is copied into the created cloud resources.
+     Under **DEPLOYMENT** you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -288,7 +287,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Deploy to confirm." border="true":::
 
-       Deploy takes some time. You can monitor the progress in the dialog in lower-right corner. After a few minutes, you see the following notice.
+       Deployment takes some time. You can monitor the progress in the dialog in lower-right corner. After a few minutes, you see the following notice.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/command-deploy-confirm.png" alt-text="Deploy confirm." border="true":::
     
