@@ -16,6 +16,14 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 * `manifest.template.json`
 * `templates/appPackage`
 
+
+## Prerequisite
+
+* Install the [Teams Toolkit version 3.8.1](https://github.com/OfficeDev/TeamsFx/releases/tag/vscode-extension-3.8.1-beta.adb483893).
+
+> [!TIP]
+> Ensure you have Teams app project opened in Visual Studio Code.
+
 During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
 
 ## Supported placeholders in manifest.template.json
@@ -169,3 +177,6 @@ If the manifest file is outdated due to configuration file change or template ch
 > [!NOTE]
 > The changes will be updated to Dev Portal. If you have some manual updates in Dev Portal, it will be overwritten.
 
+## See also
+
+* [Manage multiple environments](TeamsFx-multi-env.md)
