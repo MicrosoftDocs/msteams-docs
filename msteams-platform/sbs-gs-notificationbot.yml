@@ -321,6 +321,8 @@ items:
 
       In Deployment, necessary cloud resources are created in provisioning and your app's code is copied into the created cloud resources.
 
+    # [Visual Studio Code](#tab/vscode)
+
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision in the Cloud**.
@@ -361,6 +363,29 @@ items:
         
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation." border="true":::
     
+    # [Command Line](#tab/cli)
+
+    In your terminal window:
+
+    1. Run `teamsfx provision`.
+
+       ``` bash
+       teamsfx provision
+       ```
+
+       When prompted, select an Azure subscription to use Azure resources.
+
+       > [!NOTE]
+       > There are always some Azure resources used for hosting your app.
+
+    1. Run `teamsfx deploy`.
+
+       ``` bash
+       teamsfx deploy
+       ```
+
+    ---
+
     ## Run the deployed app
 
     After the provisioning and deployment steps are complete:
