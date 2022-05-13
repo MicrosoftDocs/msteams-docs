@@ -38,7 +38,7 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
   :::column-end:::
 :::row-end:::
 
-The app ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
+The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
 
 For more information, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
 <br>
@@ -46,10 +46,10 @@ For more information, please see [webApplicationInfo](/resources/schema/manifest
 <details>
 <summary><b>Learn to create a manifest file</b></summary>
 
-If your tab app doesn't have a Teams app manifest file, you'll need to create it. To create a Teams app manifest file, use the content shown below to create a .json file named, `manifest.json`.
+If your tab app doesn't have a Teams app manifest file, you'll need to create it. To create a Teams app manifest file, use the content given below to create a .json file named, `manifest.json`.
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses an ngrok url for subdomain address. For more information, please see [Manifest schema](/resources/schema/manifest-schema).
+> The manifest example content shown here is only for a tab app. It uses example values for subdomain url and package name. For more information, please see [Manifest schema](/resources/schema/manifest-schema).
 
   ```json
 { 
@@ -128,7 +128,7 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
 
     where,
     - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It is the GUID.
-    - {{Subdomain}.app ID URI} is the  domain and subdomain of your application. This is the same URI that you registered when creating scope in Azure AD.
+    - {{Subdomain}.app ID URI} is the  domain and subdomain of your application. This is the same application ID URI that you registered when creating scope in Azure AD.
 
 4. Update the Azure app ID in the **id** property.
 5. Update the subdomain URL in the following properties:
