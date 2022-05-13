@@ -230,7 +230,7 @@ const profile = await graphClient.api("/me").get();
 <details>
 <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
  
-1. Select **Add Features** under **DEVELOPMENT**.</br>
+1. Select <b> **Add Features** </b> under **DEVELOPMENT**.</br>
 2. Select **API Connection**.</br>
 3. Enter API endpoint for local debugging.</br>
 4. Select your project that requires to invoke this API.</br>
