@@ -37,8 +37,8 @@ The following list provides supported placeholders in `manifest.template.json`:
 
 1. Add a customized parameter
 
-  1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.
-  1. Add a config value in `config.{env}.json`.
+  a. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.
+  b. Add a config value in `config.{env}.json`.
 
      ```json
      {
@@ -48,7 +48,7 @@ The following list provides supported placeholders in `manifest.template.json`:
      }
      ```
 
-1. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
+2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
 
 ### Validate manifest
 
