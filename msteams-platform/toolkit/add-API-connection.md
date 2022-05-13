@@ -14,7 +14,7 @@ Teams Toolkit helps you to access existing APIs for building Teams applications.
 
 ## Advantages
 
-   * If you do not have language appropriate SDKs to access these APIs, Teams Toolkit helps you bootstrap sample code to access these APIs.
+   * If you don't have language appropriate SDKs to access these APIs, Teams Toolkit helps you bootstrap sample code to access these APIs.
    
 ## Connect to the API
 
@@ -36,7 +36,7 @@ Link Teams Toolkit to an existing API to:
 
     4. Open command palette and select **Teams: Add features**.
     
-    5. Select **API Connection** from the drop down.
+    5. Select **API Connection** from the drop-down.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
 
@@ -189,4 +189,8 @@ You can follow the steps to access these APIs while using:
    
    3. Open `.fx/states/state.{env}.json` and note the value of `clientId` under `fx-resource-aad-app-for-teams` property. It's the application client ID.
    
-   4. Get grant admin consent for the required applicaton permission.You'll need your application client ID. for more information,see [grant admin consent](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+
+   4. Grant admin consent for the required application permission, for more information, see [grant admin consent](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
+
+   > [!NOTE]
+   > For application permission use your client ID.
