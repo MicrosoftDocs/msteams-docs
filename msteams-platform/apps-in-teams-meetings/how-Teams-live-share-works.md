@@ -284,6 +284,7 @@ function sendNotification(text, senderName) {
   });
 };
 ```
+
 ### Role-based state
 
 (content to be added)
