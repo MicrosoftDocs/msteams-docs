@@ -241,6 +241,8 @@ items:
 
       In Deployment, necessary cloud resources are created in provisioning and your app's code is copied into the created cloud resources.
 
+    # [Visual Studio Code](#tab/vscode)
+
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision in the Cloud**.
@@ -303,6 +305,35 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output" border="true":::
 
+    # [Command Line](#tab/cli)
+
+    In your terminal window:
+
+    1. Run `teamsfx new` to create new project.
+
+       ``` bash
+       teamsfx new
+       ```
+
+    1. Run `teamsfx provision` to create azure resource.
+
+       ``` bash
+       teamsfx provision
+       ```
+
+    1. Run `teamsfx deploy` to deploy the app.
+
+       ``` bash
+       teamsfx deploy
+       ```
+
+    1. Run `teamsfx preview` to run the app.
+
+       ``` bash
+       teamsfx preview
+       ```
+
+    ---
 
 - title: Complete challenge
   durationInMinutes: 1
