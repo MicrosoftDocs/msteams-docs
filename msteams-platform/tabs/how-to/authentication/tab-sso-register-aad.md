@@ -31,7 +31,7 @@ It's helpful to know about the configuration required for registering your app o
 
 - **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
 - **App platform**: Note the platform where your app is available. It also includes noting the URL from where your app is accessible.
-- **App ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name should be the same as the domain name you've registered for your Azure AD application. Currently, multiple domains per app are not supported.
+- **App ID URI**: It's a globally-unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The app ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app are not supported.
 - **Scope**: These are the permissions that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
@@ -154,7 +154,7 @@ To configure scope and the OBO flow, you'll need:
     - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
     where,
-    - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served.
+    - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served. Your application's domain name and the domain name you register for your Azure AD application should be the same.
       If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
     - `AppID` is the **Application (client) ID** (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
