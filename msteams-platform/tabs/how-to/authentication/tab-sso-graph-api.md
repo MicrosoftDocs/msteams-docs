@@ -14,7 +14,7 @@ You can extend your tab app with additional Graph scopes such as `User.Read` or 
 
 ## Configure API permissions in Azure AD
 
-You can configure additional Graph scopes in Azure AD for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in user or admin must consent to them. The app can consent on behalf of the signed-in user when it calls Microsoft Graph.
+You can configure additional Graph scopes in Azure AD for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
 ### To configure API permissions
 

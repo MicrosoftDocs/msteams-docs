@@ -20,7 +20,7 @@ Create a new app registration in Azure AD, and expose its (web) API using scopes
 
 Azure AD configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user. You may also need to configure additional configuration for authenticating app users on the platform or device where you want to target your app.
 
-User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
+User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to additional Graph scopes, such as User.Read or Mail.Read, see [Get an access token with Graph permissions](tab-sso-graph-api.md).
 
 > [!NOTE]
 > The Microsoft Teams Toolkit registers the Azure AD application in an SSO project.
