@@ -238,6 +238,8 @@ To preview your tab app in Teams:
 
     Teams opens the tab app and you can use it.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="Example of Teams tab app with SSO enabled" border="false":::
+
     Congratulations! You've enabled SSO for your tab app.
 
 ## See also
