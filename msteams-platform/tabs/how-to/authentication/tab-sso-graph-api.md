@@ -70,7 +70,7 @@ After you've configured Graph permissions in Azure AD:
 
 ### Configure code to fetch access token using MSAL
 
-The following code provides an example of OBO flow to fetch access token from the client side using MSAL.
+The following code provides an example of OBO flow to fetch access token from the Teams client using MSAL.
 
 ### [C#](#tab/dotnet)
 

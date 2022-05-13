@@ -67,7 +67,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
     The **Register an application** page appears.
 
-4. Enter the name of your app that you want to be displayed to the user. You can change this name at a later stage, if you want to.
+4. Enter the name of your app that you want to be displayed to the app user. You can change this name at a later stage, if you want to.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Azure AD Portal." border="true":::
 
@@ -117,9 +117,9 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful." border="true":::
 
-8. Note and save the **Application ID**. You'll need it for updating the Teams Client manifest later.
+8. Note and save the **Application ID**. You'll need it for updating the Teams app manifest later.
 
-    Your app is registered in Azure AD. You should now have application ID for your tab app.
+    Your app is registered in Azure AD. You should now have app ID for your tab app.
 
 ## Configure scope for access token
 
@@ -269,7 +269,7 @@ The redirect URI you defined on the **Register an application** page for Web pla
 
     The **Platform configurations** page appears.
 
-    The Platform and redirect URI that you configured while registering your app on Azure AD already displays on this page.
+    The platform and redirect URI that you configured while registering your app on Azure AD already displays on this page.
 
 1. Select **+ Add a platform**.
 
@@ -277,7 +277,7 @@ The redirect URI you defined on the **Register an application** page for Web pla
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure. You can choose the platform type from web, SPA, and mobile/desktop applications.
+1. Select the platform that you want to configure. You can choose the platform type from web, SPA, and mobile or desktop applications.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
 
