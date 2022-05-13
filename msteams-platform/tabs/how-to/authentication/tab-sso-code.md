@@ -106,16 +106,18 @@ When the app user access your tab app and your tab app makes the `getAuthToken` 
 1. **Teams consent dialog**:
   It's the first consent dialog that appears. The app user must give consent to Teams for using Teams identity.
 
+    <!--
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="Teams consent dialog":::
 
-    To consent to Teams, the app user selects **Continue**.
+    To consent to Teams, the app user selects **Continue**. -->
 
 1. **Azure AD consent dialog**:
   After the app user consents to Teams for using the identity token to obtain access token, Azure AD consent dialog appears. It seeks app user's consent for permissions that you've configured as scope in Azure AD.
 
+    <!--
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD consent dialog":::
 
-    To consent, the app user selects **Accept**.
+    To consent, the app user selects **Accept**.-->
 
 The app user is able to access your app after they've consented to Teams and Azure AD dialogs.
 
