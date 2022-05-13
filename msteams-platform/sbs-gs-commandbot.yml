@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams allows you to automate simple and repetitive tasks using a command bot which responds to simple commands sent in chats with adaptive cards. 
+    Microsoft Teams allows you to automate simple and repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. 
 
     In this tutorial, you'll learn:
 
