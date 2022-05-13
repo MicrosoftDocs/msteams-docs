@@ -75,7 +75,7 @@ You can get this error in one of the two scenarios:
 <br>
 You can add UPN as an optional claim in Azure AD.
 
-For more information, please see [optional claim](/azure/active-directory/develop/active-directory-optional-claims)
+For more information, please see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims).
 </details>
 <br>
 <details>
