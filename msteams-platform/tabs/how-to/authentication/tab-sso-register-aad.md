@@ -160,12 +160,18 @@ To configure scope and the OBO flow, you'll need:
 
     > [!IMPORTANT]
     >
-    > - If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
-    > - Use lower case letters for domain name. Don't use upper case.
+    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
     >
-    >   For example, to create an app service or web app, enter base resource name as *demoapplication*. Then, the URL will be **<https://demoapplication.azurewebsites.net>**. This format is supported for all platforms.
+    > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
     >
-    >   If you use base resource name as *DemoApplication*, the URL will be **<https://DemoApplication.azurewebsites.net>**>**. This format is supported in desktop, web, and iOS only. It isn't supported in android.
+    >   For example, to create an app service or web app with resource name as demoapplication:
+    >
+    >   | If base resource name used is | URL will be... | Format is supported on... |
+    >   | --- | --- | --- |
+    >   | *demoapplication* | **<https://demoapplication.azurewebsites.net>** | All platforms.|
+    >   | *DemoApplication* | **<https://DemoApplication.azurewebsites.net>** | desktop, web, and iOS only. It isn't supported in android. |
+    >
+    >    Don't use *DemoApplication* as base resource name.
 
 2. Select **Save**.
 
