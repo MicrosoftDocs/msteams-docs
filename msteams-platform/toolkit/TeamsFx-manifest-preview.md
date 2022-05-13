@@ -35,7 +35,7 @@ The following list provides supported placeholders in `manifest.template.json`:
 
 **To add customized parameter**
 
-1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}.
+1. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.
 1. Add a config value in `config.{env}.json`.
 
     ```json
@@ -137,24 +137,25 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
 1. Deploy Teams app manifest
 
-You can deploy Teams app manifest in any of the following ways:
+   You can deploy Teams app manifest in any of the following ways:
 
-* Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu
+   * Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
 
-* Trigger `Teams: Deploy Teams app manifest` from command palette
+   * Trigger `Teams: Deploy Teams app manifest` from command palette
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
 
 2. Update to Teams platform
-You can update to Teams platform in any of the following ways:
 
-* Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`
+   You can update to Teams platform in any of the following ways:
 
-* Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
+   * Select **Update to Teams platform** on the upper left-corner of `manifest.{env}.json`
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
+   * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
 
 You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
