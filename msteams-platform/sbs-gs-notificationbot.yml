@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The notification bot proactively sends messages in Teams channel or group chat or personal chat. Trigger it to sends text or cards to Teams.
+    The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot using PowerShell to send notifications, such as cards or texts.
     
     In this tutorial, you'll learn:
 
@@ -45,7 +45,6 @@ items:
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.
-
 
    ### Install the Teams Toolkit
 
