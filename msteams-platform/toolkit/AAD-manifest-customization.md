@@ -8,18 +8,15 @@ ms.topic: overview
 ms.date: 05/13/2022
 ---
 
-# AAD manifest introduction
+# Azure AD manifest
 
 The [Azure Active Directory manifest](https://docs.microsoft.com/azure/active-directory/develop/reference-app-manifest) contains a definition of all the attributes of an Azure AD application object in the Microsoft identity platform.
 
 Teams Toolkit now manages Azure AD application with the manifest file as the source of truth during your Teams application development lifecycles.
 
-> [!Note]
-> This feature is currently under developer preview, for more information, see [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md). [Report issues](https://github.com/OfficeDev/TeamsFx/issues/new/choose).
-
 ## Customize Azure AD manifest template
 
-  You can customize AAD manifest template to update AAD application.
+  You can customize Azure AD manifest template to update Azure AD application.
 
   1. Open `aad.template.json` in your project.
   
@@ -31,15 +28,15 @@ Teams Toolkit now manages Azure AD application with the manifest file as the sou
     * [Preauthorize a client application](#customize-preauthorizedapplications)
     * [Update redirect URL for authentication response](#customize-redirect-urls)
 
-  3. To deploy your AAD application changes for local environment, see [Deploy AAD application changes for local environment](#deploy-aad-application-changes-for-local-environment).
+  3. Deploy your Azure AD application changes for local environment, see [Deploy AAD application changes for local environment](#deploy-aad-application-changes-for-local-environment).
   
-  4. To deploy your AAD application changes for remote environment, see [Deploy AAD application changes for remote environment](#deploy-aad-application-changes-for-remote-environment).
+  4. Deploy your Azure AD application changes for remote environment, see [Deploy AAD application changes for remote environment](#deploy-aad-application-changes-for-remote-environment).
 
-### Customize requiredResourceAccess
+### Customize `requiredResourceAccess`
 
-  You can update `requiredResourceAccess` property in the AAD manifest template if the Teams app required more permissions to call API with additional permissions. You can see the following example for this property:
+  If the Teams application required more permissions to call API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
 
-     ```JSON
+  ```JSON
 
    "requiredResourceAccess": [
     {
@@ -67,15 +64,15 @@ Teams Toolkit now manages Azure AD application with the manifest file as the sou
 ]
    ```
 
-  * `resourceAppId` property is for different APIs, for `Microsoft Graph` and `Office 365` `SharePoint Online`, you can input the name directly instead of uuid, and for other APIs, you need to use uuid.
+  * `resourceAppId` property is for different APIs, for `Microsoft Graph` and `Office 365` `SharePoint Online`, you can enter the name directly instead of uuid, and for other APIs, you need to use uuid.
 
-  * `resourceAccess.id` property is for different permissions, for `Microsoft Graph` and `Office 365 SharePoint Online`, you can input the permission name directly instead of uuid, and for other APIs, you can use uuid.
+  * `resourceAccess.id` property is for different permissions, for `Microsoft Graph` and `Office 365 SharePoint Online`, you can enter the permission name directly instead of uuid, and for other APIs, you can use uuid.
 
   * `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
-### Customize preAuthorizedApplications
+### Customize `preAuthorizedApplications`
 
-  You can use `preAuthorizedApplications` property to authorize a client application to  indicate that the API trusts the application and users should'nt be asked to consent when the client calls it exposed API. You can see the following example for this property:
+  You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application and users should'nt be asked to consent when the client calls it exposed API. You can see the following example for this property:
 
    ```JSON
 
@@ -102,9 +99,9 @@ Teams Toolkit now manages Azure AD application with the manifest file as the sou
 
 ### Customize redirect URLs
 
-  Redirect URLs is used while returning authentication responses (tokens) after successfully authenticating. You can customize redirect URLs using property `replyUrlsWithType`, for example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as following:
+  Redirect URLs are used while returning authentication responses (tokens) after successfull authentication. You can customize redirect URLs using property `replyUrlsWithType`, for example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as following example:
 
-   ```
+   ``` JSON
 
      "replyUrlsWithType": [
     ...
