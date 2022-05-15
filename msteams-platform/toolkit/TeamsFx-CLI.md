@@ -25,7 +25,6 @@ Here's a list of main TeamsFx features:
 TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 For more information, see:
-
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
@@ -142,9 +141,7 @@ The following table lists the different environments.
 
 The following list provides scenarios for `teamsfx env`:
 
-Create a new environment
-
-Add a new environment by copying from the existing dev environment:
+Create a new environment by copying from the existing dev environment:
 
 ```bash
 teamsfx env add staging --env dev
