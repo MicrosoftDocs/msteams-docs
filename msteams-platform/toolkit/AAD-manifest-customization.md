@@ -305,3 +305,8 @@ You need to interact with Azure AD application during various stages of your Tea
     * Select `API permissions` from the Azure AD application page
     * Select `add a permission` to add the permission you want
     * Select `Manifest`, from the `requiredResourceAccess` property, you can find the IDs of API and permissions
+
+## See also
+
+* [Customize app manifest in Toolkit](TeamsFx-manifest-customization.md)
+* [Preview app manifest in Toolkit](TeamsFx-manifest-preview.md)
