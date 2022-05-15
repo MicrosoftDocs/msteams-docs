@@ -18,7 +18,7 @@ Teams Toolkit helps you bootstrap sample code to access the APIs if you don't ha
 
 ## Connect to the API
 
-When you use Teams Toolkit to connect to an existing API, Teams Toolkit does the following:
+When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
 
 * Generate sample code under `./bot` or `./api` folder
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`
