@@ -370,44 +370,44 @@ The following list provides required permissions for `TeamsFx` projects:
 
 * E2E Collaboration work flow in CLI
 
-  As a project creator:
+  * As a project creator:
 
-  * To create a new TeamsFx tab or bot project, and select Azure as the host type:
+    * To create a new TeamsFx tab or bot project, and select Azure as the host type:
 
-    ```bash
-    teamsfx new --interactive false --app-name newapp --host-type azure
-    ```
+      ```bash
+      teamsfx new --interactive false --app-name newapp --host-type azure
+      ```
 
-  * To login to Microsoft 365 account and Azure account:
+    * To login to Microsoft 365 account and Azure account:
 
-    ```bash
-    teamsfx account login azure
-    teamsfx account login Microsoft 365
-    ```
+      ```bash
+      teamsfx account login azure
+      teamsfx account login Microsoft 365
+      ```
 
-  * To provision your project:
+    * To provision your project:
 
-    ```bash
-    teamsfx provision
-    ```
+      ```bash
+      teamsfx provision
+      ```
 
-  * To view collaborators:
+    * To view collaborators:
 
-    ```bash
-    teamsfx permission status --env dev --list-all-collaborators
-    ```
+      ```bash
+      teamsfx permission status --env dev --list-all-collaborators
+      ```
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
 
-  * To add another account as collaborator. Ensure the added account is under the same tenant:
+    * To add another account as collaborator. Ensure the added account is under the same tenant:
 
-    ```bash
-    teamsfx permission grant --env dev --email user-email@user-tenant.com
-    ```
+      ```bash
+      teamsfx permission grant --env dev --email user-email@user-tenant.com
+      ```
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
 
-  * To push your project to GitHub
+    * To push your project to GitHub
 
   * As a Project Collaborator:
 
