@@ -196,3 +196,7 @@ You can follow the steps to access these APIs while using:
 
         > [!NOTE]
         > For application permission use your client ID.
+
+## See also
+
+* [Publish Teams apps using Teams Toolkit](publish.md)
