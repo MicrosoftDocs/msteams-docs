@@ -276,7 +276,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
   * After other resources provision completes, the Azure AD application's identifierUris and replyUrls are updated accordingly to the correct endpoints
 
-  5. **Application deployment** 
+  5. **Application deployment**
 
   * Deploy to the cloud command deploys your application to the provisioned resources. It doesn't include deploying Azure AD application changes you made
 
