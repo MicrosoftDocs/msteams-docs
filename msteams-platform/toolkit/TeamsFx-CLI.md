@@ -57,9 +57,9 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## `teamsfx new`
 
-By default, `teamsfx new` goes into interactive mode and guides you to create new Teams application. You can work in the non-interactive mode by setting `--interactive` flag to `false`.
+By default, `teamsfx new` is in interactive mode and guides to create new Teams application. You can work in the non-interactive mode by setting `--interactive` flag to `false`.
 
-| `teamsFx new` Command | Description |
+| Command | Description |
 |:----------------  |:-------------|
 | `teamsfx new template <template-name>`     | Create an app from an existing template |
 | `teamsfx new template list`     | List all the available templates |
@@ -101,16 +101,16 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 ## `teamsfx add`
 
-Adds features to your Teams application.
+The following table lists diffetent features to your Teams application along with their descrition.
 
-|`teamsfx add` Command | Description |
+| Command | Description |
 |:----------------  |:-------------|
-| `teamsfx add notification` | Send notification to Microsoft Teams via various triggers. |
+| `teamsfx add notification` | Send notification to Microsoft Teams through various triggers. |
 | `teamsfx add command-and-response` | Respond to simple commands in Microsoft Teams chat.|
 | `teamsfx add sso-tab` | Teams identity aware webpages embedded in Microsoft Teams.|
 | `teamsfx add tab` | Hello world webpages embedded in Microsoft Teams.|
 | `teamsfx add bot` | Hello world chatbot to run simple and repetitive tasks by user. |
-| `teamsfx add message-extension` | Hello world message extension allowing interactions via buttons and forms. |
+| `teamsfx add message-extension` | Hello world message extension allowing interactions through buttons and forms. |
 | `teamsfx add azure-function`| A serverless, event-driven compute solution that allows you to write less code. |
 | `teamsfx add azure-apim` | A hybrid, multicloud management platform for APIs across all environments.|
 | `teamsfx add azure-sql` | An always-up-to-date relational database service built for the cloud. |
@@ -121,9 +121,9 @@ Adds features to your Teams application.
 
 ## `teamsfx account`
 
-Manage cloud service accounts. The supported cloud services are `Azure` and `Microsoft 365`.
+The following table lists the cloud service accounts,such as Azure and Microsoft 365.
 
-| `teamsFx account` Command | Description |
+| Command | Description |
 |:----------------  |:-------------|
 | `teamsfx account login <service>`  | Log in to the selected cloud service. |
 | `teamsfx account logout <service>`  | log out of selected cloud service. |
@@ -131,9 +131,9 @@ Manage cloud service accounts. The supported cloud services are `Azure` and `Mic
 
 ## `teamsfx env`
 
-Manage the environments.
+The following table lists the different environments.
 
-| `teamsfx env` Command  | Description |
+|  Command  | Description |
 |:----------------  |:-------------|
 | `teamsfx env add <new_env_name> --env <existing_env_name>` | Add a new environment by copying from the specified environment. |
 | `teamsfx env list` | List all environments. |
@@ -250,9 +250,9 @@ The following list provides the common scenarios for`teamsfx preview:
 
 ## `teamsfx config`
 
-Manage the configuration data either in user scope or project scope.
+The configuration data is either in user scope or project scope.
 
-| `teamsfx config` Command  | Description |
+|  Command  | Description |
 |:----------------  |:-------------|
 | `teamsfx config get [option]` | View the configuration value of option |
 | `teamsfx config set <option> <value>` | Update the configuration value of option |
@@ -317,9 +317,9 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 ## `teamsfx permission`
 
-TeamsFx CLI provides `teamsFx permission` commands for collaboration scenario.
+TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
 
-| `teamsFx permission` command | Description |
+|  command | Description |
 |:------------------------------|-------------|
 | `teamsfx permission grant --env --email` | Grant permission for collaborator's Microsoft 365 account for the project of a specified environment. |
 | `teamsfx permission status` | Show permission status for the project |
