@@ -168,7 +168,7 @@ Azure AD manifest template file has code lens to review and edit.
 
 At the beginning of the Azure AD manifest template file, there's a preview code lens. Select the code lens, it generates Azure AD manifest based on the environment you selected.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add manifest codelens.png" alt-text="addcodelens":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add codelens.png" alt-text="addcodelens":::
 
 
 ### Placeholder argument code lens
@@ -179,7 +179,7 @@ Placeholder argument code lens helps you to take quick look of the values for lo
 
 ### Required resource access code lens
 
-It's different from official [Azure AD manifest schema](https://docs.microsoft.com/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID, Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, code lens shows user readable strings, otherwise, it shows UUID.
+It's different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID, Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, code lens shows user readable strings, otherwise, it shows UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="addresource":::
 
@@ -230,7 +230,7 @@ Code lens shows the application name for the per-authorized application ID for t
 
   4. Select Azure AD application from search result to view the detail information.
   
-  5. In Azure AD app information page, select `Manifest` menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file, for more information about manifest, see [Azure Active Directory application manifest](https://docs.microsoft.com/azure/active-directory/develop/reference-app-manifest).
+  5. In Azure AD app information page, select `Manifest` menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file, for more information about manifest, see [Azure Active Directory application manifest](/azure/active-directory/develop/reference-app-manifest).
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
@@ -246,7 +246,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
   1. **Project creation**
 
-  You can create a project with Teams Toolkit that comes with SSO support by default such as `SSO-enabled tab`. See [Create a new Teams application using Teams Toolkit](https://docs.microsoft.com/microsoftteams/platform/toolkit/create-new-project) to create a new Teams application with Teams Toolkit. An Azure AD manifest file is automatically created for you: `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
+  You can create a project with Teams Toolkit that comes with SSO support by default such as `SSO-enabled tab`. See Create a new [Teams application using Teams Toolkit](create-new-project.md) to create a new Teams application with Teams Toolkit. An Azure AD manifest file is automatically created for you: `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
   2. **Add SSO to your Bot or Tab capability**
 
