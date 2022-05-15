@@ -46,10 +46,10 @@ Access Teams Toolkit to an existing API to:
 
     6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
     
-     > [!NOTE]
-     > Ensure the endpoint is a valid http(s) URL.
+    > [!NOTE]
+    > Ensure the endpoint is a valid http(s) URL.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
 
     7. Select the component that accesses the API.
 
@@ -63,10 +63,10 @@ Access Teams Toolkit to an existing API to:
 
     10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
     
-     > [!NOTE]
-     > Based on the authentication type selected, additional configuration is needed.
+    > [!NOTE]
+    > Based on the authentication type selected, additional configuration is needed.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
 
 ### API connection in TeamsFx CLI
 
