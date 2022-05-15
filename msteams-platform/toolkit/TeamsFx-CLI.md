@@ -142,13 +142,13 @@ Manage the environments.
 
 The following list provides scenarios for `teamsfx env`:
 
-* Create a new environment
+Create a new environment
 
-  Add a new environment by copying from the existing dev environment:
+Add a new environment by copying from the existing dev environment:
 
-  ```bash
-  teamsfx env add staging --env dev
-  ```
+```bash
+teamsfx env add staging --env dev
+```
 
 ## `teamsfx provision`
 
@@ -303,11 +303,11 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 * View all the configuration in project
 
-The secret is automatically decrypted:
+  The secret is automatically decrypted:
 
-  ```bash
-  teamsfx config get --env dev
-  ```
+    ```bash
+    teamsfx config get --env dev
+    ```
 
 * Update the secret configuration in project
 
@@ -409,31 +409,31 @@ The following list provides required permissions for `TeamsFx` projects:
 
   * To push your project to GitHub
 
-  As a Project Collaborator:
+  * As a Project Collaborator:
 
-  * Clone the project from GitHub.
-  * Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
+    * Clone the project from GitHub.
+    * Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
 
-    ```bash
-    teamsfx account login Microsoft 365
-    ```
+      ```bash
+      teamsfx account login Microsoft 365
+      ```
 
-  * Login to Azure account with contributor permission for all Azure resources.
+    * Login to Azure account with contributor permission for all Azure resources.
 
-    ```bash
-    teamsfx account login azure
-    ```
+      ```bash
+      teamsfx account login azure
+      ```
 
-  * Check permission status. You should find yourself have the owner permission of the project:
+    * Check permission status. You should find yourself have the owner permission of the project:
 
-    ```bash
-    teamsfx permission status --env dev
-    ```
+      ```bash
+      teamsfx permission status --env dev
+      ```
 
-    ![permission status](./images/permission-status.png)
+      ![permission status](./images/permission-status.png)
 
-  * Update Tab code, and deploy the project to remote.
-  * Launch remote and the project should work fine.
+    * Update Tab code, and deploy the project to remote.
+    * Launch remote and the project should work fine.
 
 ## See also
 
