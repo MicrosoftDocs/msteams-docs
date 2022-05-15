@@ -10,15 +10,15 @@ ms.date: 11/29/2021
 
 # TeamsFx Library
 
-Microsoft Teams Framework (TeamsFx) is a library encapsulating common functionality and integration patterns (like simplified access to Microsoft Identity). You can build apps for Microsoft Teams with zero configuration.
+Microsoft Teams Framework (TeamsFx) is a library encapsulating common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
 
 Here's a list of main TeamsFx features:
 
-* **TeamsFx Collaboration**: Let developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
+* **TeamsFx Collaboration**: Lets developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
 
-* **TeamsFx CLI**: It accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+* **TeamsFx CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
-* **TeamsFx SDK**: TeamsFx Software Development Kit (SDK) is the main TeamsFx code library encapsulating simple authentication for both client and server-side code tailored for Teams developers.
+* **TeamsFx SDK**: Provides access to database, such as the primary TeamsFx code library containing simple authentication for both client and server-side code tailored for Teams developers.
 
 ## TeamsFx command line interface
 
@@ -57,7 +57,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## `teamsfx new`
 
-By default, `teamsfx new` goes into interactive mode and guides you through the process of creating a new Teams application. You can also work with non-interactive mode by setting `--interactive` flag to `false`.
+By default, `teamsfx new` goes into interactive mode and guides you to create new Teams application. You can work in the non-interactive mode by setting `--interactive` flag to `false`.
 
 | `teamsFx new` Command | Description |
 |:----------------  |:-------------|
@@ -79,25 +79,25 @@ By default, `teamsfx new` goes into interactive mode and guides you through the 
 
 ### Scenarios for `teamsfx new`
 
-You can use interactive mode to create a Teams app. Some scenarios on controlling all the parameters with `teamsfx new` are as follows:
+You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsfx new`:
 
-#### Http triggered notification bot with restify server
+* Http triggered notification bot with restify server
 
-```bash
-teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-restify" --programming-language "typescript" --folder "./" --app-name MyAppName
-```
+  ```bash
+  teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-restify" --programming-language "typescript" --folder "./" --app-name       MyAppName
+  ```
 
-#### Teams command and response bot
+* Teams command and response bot
 
-```bash
-teamsfx new --interactive false --capabilities "command-bot" --programming-language "typescript" --folder "./" --app-name myAppName
-```
+  ```bash
+  teamsfx new --interactive false --capabilities "command-bot" --programming-language "typescript" --folder "./" --app-name myAppName
+  ```
 
-#### Tab app hosted on SPFx using React
+* Tab app hosted on SPFx using React
 
-```bash
-teamsfx new --interactive false --app-name newspfxapp --capabilities tab-spfx --spfx-framework-type react
-```
+  ```bash
+  teamsfx new --interactive false --app-name newspfxapp --capabilities tab-spfx --spfx-framework-type react
+  ```
 
 ## `teamsfx add`
 
@@ -140,15 +140,15 @@ Manage the environments.
 
 ### Scenarios for `teamsfx env`
 
-The scenarios for `teamsfx env` are as follows:
+The following list provides scenarios for `teamsfx env`:
 
-#### Create a new environment
+* Create a new environment
 
-Add a new environment by copying from the existing dev environment:
+  Add a new environment by copying from the existing dev environment:
 
-```bash
-teamsfx env add staging --env dev
-```
+  ```bash
+  teamsfx env add staging --env dev
+  ```
 
 ## `teamsfx provision`
 
@@ -223,28 +223,30 @@ Preview the current application from local or remote.
 
 ### Scenarios for `teamsfx preview`
 
-#### Local Preview
+The following list provides the common scenarios for`teamsfx preview:
 
-Dependencies:
+* Local Preview
 
-* Node.js
-* .NET SDK
-* Azure Functions Core Tools
+  Dependencies:
 
-```bash
-teamsfx preview --local
-teamsfx preview --local --browser chrome
-```
+  * Node.js
+  * .NET SDK
+  * Azure Functions Core Tools
 
-#### Remote Preview
+  ```bash
+  teamsfx preview --local
+  teamsfx preview --local --browser chrome
+  ```
 
-```bash
-teamsfx preview --remote
-teamsfx preview --remote --browser edge
-```
+* Remote Preview
 
-> [!NOTE]
-> The logs of the background services, such as React is saved in `~/.fx/cli-log/local-preview/`.
+  ```bash
+  teamsfx preview --remote
+  teamsfx preview --remote --browser edge
+  ```
+
+  > [!NOTE]
+  > The logs of the background services, such as React is saved in `~/.fx/cli-log/local-preview/`.
 
 ## `teamsfx config`
 
@@ -265,53 +267,53 @@ Manage the configuration data either in user scope or project scope.
 
 ### Scenarios for `teamsfx config`
 
-Secrets in `.userdata` file are encrypted, `teamsfx config` and can help you to view or update the values.
+The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you view or update required values.
 
-#### Stop sending telemetry data
+* Stop sending telemetry data
 
-```bash
-teamsfx config set telemetry off
-```
+  ```bash
+  teamsfx config set telemetry off
+  ```
 
-#### Disable environment checker
+* Disable environment checker
 
-There are three configuration to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
+  There are three configuration to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the   configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
 
-* [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
-* [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
-* [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools).
+  * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
+  * [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
+  * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-   functions-core-tools).
 
-To disable .NET SDK validation, you can use the following command:
+  To disable .NET SDK validation, you can use the following command:
 
-```bash
-teamsfx config set validate-dotnet-sdk off
-```
+  ```bash
+  teamsfx config set validate-dotnet-sdk off
+  ```
 
-To enable .NET SDK validation, you can use the following command:
+  To enable .NET SDK validation, you can use the following command:
 
-```bash
-teamsfx config set validate-dotnet-sdk on
-```
+  ```bash
+  teamsfx config set validate-dotnet-sdk on
+  ```
 
-#### View all the user scope configuration
+* View all the user scope configuration
 
-```bash
-teamsfx config get -g
-```
+  ```bash
+  teamsfx config get -g
+  ```
 
-#### View all the configuration in project
+* View all the configuration in project
 
 The secret is automatically decrypted:
 
-```bash
-teamsfx config get --env dev
-```
+  ```bash
+  teamsfx config get --env dev
+  ```
 
-#### Update the secret configuration in project
+* Update the secret configuration in project
 
-```bash
-teamsfx config set fx-resource-aad-app-for-teams.clientSecret xxx --env dev
-```
+  ```bash
+  teamsfx config set fx-resource-aad-app-for-teams.clientSecret xxx --env dev
+  ```
 
 ## `teamsfx permission`
 
@@ -338,100 +340,100 @@ TeamsFx CLI provides `teamsFx permission` commands for collaboration scenario.
 
 ### Scenarios for `teamsfx permission`
 
-The permissions for `TeamsFx` projects are as follows:
+The following list provides required permissions for `TeamsFx` projects:
 
-#### Grant Permission
+* Grant Permission
 
-Project creator and collaborators can use `teamsfx permission grant` command to add a new collaborator to the project:
-
-```bash
-teamsfx permission grant --env dev --email user-email@user-tenant.com
-```
-
-After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all permission for Microsoft 365 account.
-
-#### Show Permission Status
-
-Project creator and collaborators can use `teamsfx permission status` command to view his Microsoft 365 account permission for specific env:
-
-```bash
-teamsfx permission status --env dev
-```
-
-#### List All Collaborators
-
-Project creator and collaborators can use `teamsfx permission status` command to view all collaborators for specific env:
-
-```bash
-teamsfx permission status --env dev --list-all-collaborators
-```
-
-#### E2E Collaboration work flow in CLI
-
-As a project creator:
-
-* To create a new TeamsFx tab or bot project, and select Azure as the host type:
-
-  ```bash
-  teamsfx new --interactive false --app-name newapp --host-type azure
-  ```
-
-* To login to Microsoft 365 account and Azure account:
-
-  ```bash
-  teamsfx account login azure
-  teamsfx account login Microsoft 365
-  ```
-
-* To provision your project:
-
-  ```bash
-  teamsfx provision
-  ```
-
-* To view collaborators:
-
-  ```bash
-  teamsfx permission status --env dev --list-all-collaborators
-  ```
-
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
-
-* To add another account as collaborator. Ensure the added account is under the same tenant:
+  Project creator and collaborators can use `teamsfx permission grant` command to add a new collaborator to the project:
 
   ```bash
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
+  After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have     all permission for Microsoft 365 account.
 
-* To push your project to GitHub
+* Show Permission Status
 
-As a Project Collaborator:
-
-* Clone the project from GitHub.
-* Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
-
-  ```bash
-  teamsfx account login Microsoft 365
-  ```
-
-* Login to Azure account with contributor permission for all Azure resources.
-
-  ```bash
-  teamsfx account login azure
-  ```
-
-* Check permission status. You should find yourself have the owner permission of the project:
+  Project creator and collaborators can use `teamsfx permission status` command to view his Microsoft 365 account permission for specific env:
 
   ```bash
   teamsfx permission status --env dev
   ```
 
-  ![permission status](./images/permission-status.png)
+* List All Collaborators
 
-* Update Tab code, and deploy the project to remote.
-* Launch remote and the project should work fine.
+  Project creator and collaborators can use `teamsfx permission status` command to view all collaborators for specific env:
+
+  ```bash
+  teamsfx permission status --env dev --list-all-collaborators
+  ```
+
+* E2E Collaboration work flow in CLI
+
+  As a project creator:
+
+  * To create a new TeamsFx tab or bot project, and select Azure as the host type:
+
+    ```bash
+    teamsfx new --interactive false --app-name newapp --host-type azure
+    ```
+
+  * To login to Microsoft 365 account and Azure account:
+
+    ```bash
+    teamsfx account login azure
+    teamsfx account login Microsoft 365
+    ```
+
+  * To provision your project:
+
+    ```bash
+    teamsfx provision
+    ```
+
+  * To view collaborators:
+
+    ```bash
+    teamsfx permission status --env dev --list-all-collaborators
+    ```
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
+
+  * To add another account as collaborator. Ensure the added account is under the same tenant:
+
+    ```bash
+    teamsfx permission grant --env dev --email user-email@user-tenant.com
+    ```
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
+
+  * To push your project to GitHub
+
+  As a Project Collaborator:
+
+  * Clone the project from GitHub.
+  * Login to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
+
+    ```bash
+    teamsfx account login Microsoft 365
+    ```
+
+  * Login to Azure account with contributor permission for all Azure resources.
+
+    ```bash
+    teamsfx account login azure
+    ```
+
+  * Check permission status. You should find yourself have the owner permission of the project:
+
+    ```bash
+    teamsfx permission status --env dev
+    ```
+
+    ![permission status](./images/permission-status.png)
+
+  * Update Tab code, and deploy the project to remote.
+  * Launch remote and the project should work fine.
 
 ## See also
 
