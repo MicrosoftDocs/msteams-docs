@@ -139,8 +139,6 @@ The following table lists the different environments.
 
 ### Scenarios for `teamsfx env`
 
-The following list provides scenarios for `teamsfx env`:
-
 Create a new environment by copying from the existing dev environment:
 
 ```bash
