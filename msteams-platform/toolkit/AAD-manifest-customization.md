@@ -24,9 +24,9 @@ You can customize Azure AD manifest template to update Azure AD application.
 
   2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
   
-    * [Add an application permission](#customize-requiredresourceaccess)
-    * [Preauthorize a client application](#customize-preauthorizedapplications)
-    * [Update redirect URL for authentication response](#customize-redirect-urls)
+  *  [Add an application permission](#customize-requiredresourceaccess)
+  * [Preauthorize a client application](#customize-preauthorizedapplications)
+  * [Update redirect URL for authentication response](#customize-redirect-urls)
 
   3. Deploy your Azure AD application changes for local environment, see [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
   
