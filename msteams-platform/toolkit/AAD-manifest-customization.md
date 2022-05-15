@@ -20,17 +20,17 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 1. Open `aad.template.json` in your project.
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add template.png" alt-text="template":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add template.png" alt-text="template":::
 
-1. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
+2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
   
 * [Add an application permission](#customize-requiredresourceaccess)
 * [Preauthorize a client application](#customize-preauthorizedapplications)
 * [Update redirect URL for authentication response](#customize-redirect-urls)
 
-1. Deploy your Azure AD application changes for local environment, see [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
+3. Deploy your Azure AD application changes for local environment, see [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
   
-1. Deploy your Azure AD application changes for remote environment, see [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
+4. Deploy your Azure AD application changes for remote environment, see [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
 
 ### Customize requiredResourceAccess
 
@@ -188,50 +188,50 @@ Code lens shows the application name for the per-authorized application ID for t
 
 1. Select `Preview` code lens in `aad.template.json`.
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
 
-1. Select `local` environment.
+2. Select `local` environment.
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
 
-1. Select `Deploy Azure AD Manifest` code lens in `aad.local.json`.
+3. Select `Deploy Azure AD Manifest` code lens in `aad.local.json`.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3":::
 
-1. The changes for Azure AD application used in local environment are deployed.
+4. The changes for Azure AD application used in local environment are deployed.
   
 ## Deploy Azure AD application changes for remote environment
 
 1. Open the command palette and select: `Teams: Deploy Azure Active Directory application manifest`.
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.png" alt-text="deploy4":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.png" alt-text="deploy4":::
 
-1. You can also right click on the `aad.template.json` and select `Deploy Azure Active Directory application manifest` from the context menu.
+2. You can also right click on the `aad.template.json` and select `Deploy Azure Active Directory application manifest` from the context menu.
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
 
 ## View Azure AD application on the Azure portal
 
 1. Copy the Azure AD application client ID from `state.xxx.json` (xxx is the environment name that you have deployed the Azure AD application) file in the `fx-resource-aad-app-for-teams` property.
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
 
-1. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and log-in to Microsoft 365 account.
+2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and log-in to Microsoft 365 account.
   
 > [!NOTE]
 > Ensure that login credentials of Teams application and M365 account are same.
 
-1. Open [app registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), search the Azure AD application using client ID that you copied before.
+3. Open [app registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), search the Azure AD application using client ID that you copied before.
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view2.png" alt-text="view2":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view2.png" alt-text="view2":::
 
-1. Select Azure AD application from search result to view the detail information.
+4. Select Azure AD application from search result to view the detail information.
   
-1. In Azure AD app information page, select `Manifest` menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file, for more information about manifest, see [Azure Active Directory application manifest](/azure/active-directory/develop/reference-app-manifest).
+5. In Azure AD app information page, select `Manifest` menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file, for more information about manifest, see [Azure Active Directory application manifest](/azure/active-directory/develop/reference-app-manifest).
   
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
-1. You can also select other menu to view or configure Azure AD application through portal.
+6. You can also select other menu to view or configure Azure AD application through portal.
   
 ## Use an existing Azure AD application
 
@@ -245,13 +245,13 @@ You need to interact with Azure AD application during various stages of your Tea
 
 You can create a project with Teams Toolkit that comes with SSO support by default such as `SSO-enabled tab`. See Create a new [Teams application using Teams Toolkit](create-new-project.md) to create a new Teams application with Teams Toolkit. An Azure AD manifest file is automatically created for you: `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
-1. **Add SSO to your Bot or Tab capability**
+2. **Add SSO to your Bot or Tab capability**
 
 After you create a Teams application without SSO built-in, Teams Toolkit incrementally helps you to add SSO for the project. As a result, An Azure AD manifest file is automatically created for you: `templates\appPackage\aad.template.json`.
 
 Teams Toolkit creates or updates the Azure AD application during next local debug session or while you move the application to the cloud.
 
-1. **Local development**
+3. **Local development**
 
 Teams Toolkit performs the following functions during local development (known as F5):
 
