@@ -14,8 +14,6 @@ Teams Toolkit helps you to access existing APIs for building Teams applications.
 
 ## Advantage
 
-The advantage to access the existing APIs is as follows:
-
 * Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
 
 ## Connect to the API
