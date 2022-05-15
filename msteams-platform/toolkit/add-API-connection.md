@@ -45,9 +45,8 @@ Access Teams Toolkit to an existing API to:
     5. Select **OK**.
 
     6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
-    
-      > [!NOTE]
-      > Ensure the endpoint is a valid http(s) URL.
+    > [!NOTE]
+    > Ensure the endpoint is a valid http(s) URL.
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
 
