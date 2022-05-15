@@ -24,9 +24,9 @@ You can customize Azure AD manifest template to update Azure AD application.
 
   2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
   
-  *  [Add an application permission](#customize-requiredresourceaccess)
-  * [Preauthorize a client application](#customize-preauthorizedapplications)
-  * [Update redirect URL for authentication response](#customize-redirect-urls)
+* [Add an application permission](#customize-requiredresourceaccess)
+* [Preauthorize a client application](#customize-preauthorizedapplications)
+* [Update redirect URL for authentication response](#customize-redirect-urls)
 
   3. Deploy your Azure AD application changes for local environment, see [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
   
@@ -64,11 +64,11 @@ If the Teams application requires more permissions to call API with additional p
 ]
 ```
 
-  * `resourceAppId` property is for different APIs, for `Microsoft Graph` and `Office 365` `SharePoint Online`, enter the name directly instead of UUID, and for other APIs, use UUID.
+* `resourceAppId` property is for different APIs, for `Microsoft Graph` and `Office 365` `SharePoint Online`, enter the name directly instead of UUID, and for other APIs, use UUID.
 
-  * `resourceAccess.id` property is for different permissions, for `Microsoft Graph` and `Office 365 SharePoint Online`, enter the permission name directly instead of UUID, and for other APIs, use UUID.
+* `resourceAccess.id` property is for different permissions, for `Microsoft Graph` and `Office 365 SharePoint Online`, enter the permission name directly instead of UUID, and for other APIs, use UUID.
 
-  * `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
+* `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
 ### Customize preAuthorizedApplications
 
@@ -117,7 +117,6 @@ The Azure AD manifest file contains placeholder arguments with {{...}} statement
 
 State file is located in `.fx\states\state.xxx.json` (xxx represents different environment). See the following typical state file.
 
-
 ``` JSON
 {
     "solution": {
@@ -137,7 +136,6 @@ You can use this placeholder argument in the Azure AD manifest: `{{state.fx-reso
 ### Reference config file values in Azure AD manifest template
 
 Config file is located in `.fx\configs\config.xxx.json` (xxx represents different environment). See the following typical config file:
-
 
 ``` JSON
 {
@@ -169,7 +167,6 @@ Azure AD manifest template file has code lens to review and edit.
 At the beginning of the Azure AD manifest template file, there's a preview code lens. Select the code lens, it generates Azure AD manifest based on the environment you selected.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add codelens.png" alt-text="addcodelens":::
-
 
 ### Placeholder argument code lens
 
@@ -258,13 +255,13 @@ You need to interact with Azure AD application during various stages of your Tea
 
   Teams Toolkit performs the following functions during local development (known as F5):
 
-    * Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application otherwise you need to create a new application using the `aad.template.json` file
+* Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application otherwise you need to create a new application using the `aad.template.json` file
 
-    * Initially ignores some properties in the manifest file that requires additional context (such as replyUrls property that requires a local debug endpoint) during the creation of a new Azure AD application with the manifest file.
+* Initially ignores some properties in the manifest file that requires additional context (such as replyUrls property that requires a local debug endpoint) during the creation of a new Azure AD application with the manifest file.
 
-    * After the local dev environment startup successfully, the Azure AD application's identifierUris, replyUrls, and other properties that are not available during creation stage are updated accordingly
+  * After the local dev environment startup successfully, the Azure AD application's identifierUris, replyUrls, and other properties that are not available during creation stage are updated accordingly
 
-    * The changes you have done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) if you want to manually apply Azure AD application changes
+  * The changes you have done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) if you want to manually apply Azure AD application changes
 
   4. **Provision cloud resources**
 
@@ -304,7 +301,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
   2. Currently `requiredResourceAccess` property can use user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. For other APIs, you need to use UUID instead. You can follow these steps to retrieve IDs from Azure portal:
 
-  * Register a new Azure AD application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
-  * Select `API permissions` from the Azure AD application page
-  * Select `add a permission` to add the permission you want
-  * Select `Manifest`, from the `requiredResourceAccess` property, you can find the IDs of API and permissions
+* Register a new Azure AD application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
+* Select `API permissions` from the Azure AD application page
+* Select `add a permission` to add the permission you want
+* Select `Manifest`, from the `requiredResourceAccess` property, you can find the IDs of API and permissions
