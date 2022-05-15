@@ -29,7 +29,7 @@ Access Teams Toolkit to an existing API to:
 * You can add API connection using Teams Toolkit in Visual Studio Code:
 
     1. Open Microsoft Visual Studio Code.
-    2. Select Teams Toolkit from left navigation bar.
+    2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the left navigation bar.
     3. Select **Add features** under **DEVELOPMENT**:
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
@@ -81,7 +81,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
    |Certificate|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
    |Custom|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
 
-## Understand Toolkit updates to the project
+## Understand Toolkit updates to your project
 
  Teams Toolkit does the following modifications to the `bot` or `api` folder based on your selections:
 
