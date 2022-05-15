@@ -14,7 +14,7 @@ Teams Toolkit helps you to access existing APIs for building Teams applications.
 
 ## Advantage
 
-The advantage to access the existing APIs is as follow:
+The advantage to access the existing APIs is as follows:
 
 * Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
 
@@ -129,15 +129,15 @@ Teams Toolkit configures your local environment. The bootstrapped sample code co
 
 ## Advanced scenarios
 
-  The following section explains you the advanced scenarios:
+  The following section explains to to you the advanced scenarios:
 
 ### Custom authentication provider
 
 Besides the authentication provider included in `@microsoft/teamsfx` package, you can also implement customized authentication provider that implements `AuthProvider` interface and use it in `createApiClient(..)` function:
 
      ```Bash
-
-import { AuthProvider } from '@microsoft/teamsfx'
+        
+       import { AuthProvider } from '@microsoft/teamsfx'
 
 class CustomAuthProvider implements AuthProvider {
     constructor() {
@@ -155,8 +155,8 @@ class CustomAuthProvider implements AuthProvider {
         */
     };
 }
-
-```
+      
+     ```
 
 ### Connect to APIs for Azure AD permissions
 
