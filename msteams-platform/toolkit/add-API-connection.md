@@ -10,15 +10,15 @@ ms.date: 05/15/2022
 
 # Connect to existing APIs
 
-Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or even third-party.
+Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party.
 
 ## Advantage
 
-* Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
+Teams Toolkit helps you bootstrap sample code to access the APIs if you don't have language appropriate SDKs to access these APIs.
 
 ## Connect to the API
 
-Access Teams Toolkit to an existing API to:
+When you use Teams Toolkit to connect to an existing API, Teams Toolkit does the following:
 
 * Generate sample code under `./bot` or `./api` folder
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`
@@ -34,7 +34,7 @@ Access Teams Toolkit to an existing API to:
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
 
-       You can also open the command palette and enter **Teams: Add cloud resources**.
+       * You can also open the command palette and enter **Teams: Add cloud resources**.
 
     4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
 
@@ -68,7 +68,7 @@ Access Teams Toolkit to an existing API to:
 
 ### API connection in TeamsFx CLI
 
-The base command of this feature is `teamsfx add api-connection [authentication type]`. You can see list of the different authentication types and corresponding sample commands in the following table.
+The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides list of different authentication types and their corresponding sample commands:
 
  > [!Tip]
  > You can use `teamsfx add api-connection [authentication type] -h` to get help document.
@@ -83,7 +83,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 ## Understand Toolkit updates to your project
 
- Teams Toolkit does the following modifications to the `bot` or `api` folder based on your selections:
+ Teams Toolkit modifies `bot` or `api` folder based on your selections:
 
 1. Generate `{your_api_alias}.js/ts` file. The file initializes an API client for your API and exports the API client.
 
@@ -93,7 +93,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 ## Test API connection in local environment
 
-Follow the steps to test the API connection in the Teams Toolkit local environment:
+The following steps help to test the API connection in the Teams Toolkit local environment:
 
  1. **Run npm install**
 
@@ -116,7 +116,7 @@ Follow the steps to test the API connection in the Teams Toolkit local environme
     The generated API client is an Axios API client. Use the Axios client to make requests to the API.
 
      > [!Note]
-     >[Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you make http(s) requests. For more information, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s) requests with it.
+     >[Axios](https://www.npmjs.com/package/axios) is a popular nodejs package that helps you with http(s) requests. For more information on how to make http(s) requests, see [Axios example documentation](https://axios-http.com/docs/example) to learn how to make http(s).
 
 ## Deploy your application to Azure
 
@@ -155,7 +155,7 @@ class CustomAuthProvider implements AuthProvider {
 
 ### Connect to APIs for Azure AD permissions
 
-Some services are authenticated by Microsoft Azure Active Directory (Azure AD). To access these services, there are two ways to configure the API permissions:
+Azure AD authenticates some services. The following list helps to access these services for configuring API permissions.
 
 * [Use Access Control Lists (ACLs)](#access-control-lists-acls)
 * [Use Azure AD application permissions](#azure-ad-application-permissions)
@@ -166,7 +166,7 @@ You can follow the steps to access these APIs while using:
 
 #### Access Control Lists (ACLs)
 
-   1. Start local debug a cloud environment for your project. It creates an Azure AD Application Registration your Teams application.
+   1. Start local debug on cloud environment for your project. It creates an Azure AD Application Registration your Teams application.
   
    2. Open `.fx/states/state.{env}.json`, and note the value of `clientId` under `fx-resource-aad-app-for-teams` property.
 
@@ -194,5 +194,5 @@ You can follow the steps to access these APIs while using:
 
    4. Grant admin consent for the required application permission, for more information, see [grant admin consent](/azure/active-directory/manage-apps/grant-admin-consent#grant-admin-consent-in-app-registrations).
 
-   > [!NOTE]
-   > For application permission use your client ID.
+        > [!NOTE]
+        > For application permission use your client ID.
