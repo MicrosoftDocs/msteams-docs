@@ -45,10 +45,11 @@ Access Teams Toolkit to an existing API to:
     5. Select **OK**.
 
     6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
-    > [!NOTE]
-    > Ensure the endpoint is a valid http(s) URL.
+    
+     > [!NOTE]
+     > Ensure the endpoint is a valid http(s) URL.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
 
     7. Select the component that accesses the API.
 
@@ -62,10 +63,10 @@ Access Teams Toolkit to an existing API to:
 
     10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
     
-       > [!NOTE]
-       > Based on the authentication type selected, additional configuration is needed.
+     > [!NOTE]
+     > Based on the authentication type selected, additional configuration is needed.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-auth.png" alt-text="api auth":::
 
 ### API connection in TeamsFx CLI
 
@@ -90,7 +91,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 2. Add `@microsoft/teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
 
-3. Add environment variables to `.env.teamsfx.local`. These are the configurations for the selected authentication type. The generated code reads values from the environment variables.
+3. Add environment variables to `.env.teamsfx.local`. They are the configurations for the selected authentication type. The generated code reads values from the environment variables.
 
 ## Test API connection in local environment
 
@@ -102,17 +103,15 @@ Follow the steps to test the API connection in the Teams Toolkit local environme
 
  2. **Add API credentials to the local application settings**
 
-    Teams Toolkit does't ask for credentials but it leaves placeholders in the local application settings file. Replace these placeholders with the appropriate credentials to access the API. The local application settings file is the `.env.teamsfx.local` file in the `bot` or `api` folder.
+    Teams Toolkit does't ask for credentials but it leaves placeholders in the local application settings file. Replace the placeholders with the appropriate credentials to access the API. The local application settings file is the `.env.teamsfx.local` file in the `bot` or `api` folder.
 
  3. **Use the API client to make API requests**
 
     Import the API client from the source code that needs access to the API:
 
-           ```BASH
-
-              import { yourApiClient } from '{relative path to the generated file}'
-
-           ```
+    ```BASH
+    import { yourApiClient } from '{relative path to the generated file}'
+    ```
 
  4. **Generate http(s) requests to target API (with Axios)**
 
@@ -129,15 +128,14 @@ Teams Toolkit configures your local environment. The bootstrapped sample code co
 
 ## Advanced scenarios
 
-  The following section explains to to you the advanced scenarios:
+  You can see the following section for advanced scenarios:
 
 ### Custom authentication provider
 
 Besides the authentication provider included in `@microsoft/teamsfx` package, you can also implement customized authentication provider that implements `AuthProvider` interface and use it in `createApiClient(..)` function:
 
-     ```Bash
-        
-       import { AuthProvider } from '@microsoft/teamsfx'
+```Bash
+import { AuthProvider } from '@microsoft/teamsfx'
 
 class CustomAuthProvider implements AuthProvider {
     constructor() {
@@ -155,8 +153,7 @@ class CustomAuthProvider implements AuthProvider {
         */
     };
 }
-      
-     ```
+```
 
 ### Connect to APIs for Azure AD permissions
 
@@ -182,8 +179,8 @@ You can follow the steps to access these APIs while using:
   1. Open `templates/appPackage/aad.template.json` and add following content to `requiredResourceAccess` property:
 
 ```JSON
-{
-    "resourceAppId": "The AAD App Id for the service providing the API you are connecting to",
+ {
+     "resourceAppId": "The AAD App Id for the service providing the API you are connecting to",
      "resourceAccess": [
          {
              "id": "Target API's application permission Id",
