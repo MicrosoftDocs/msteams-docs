@@ -3,7 +3,7 @@ title: Create a configuration page
 author: surbhigupta
 description: Learn how to create a configuration page to configure a channel or group chat for settings, such as, getting context data, inserting placeholders, and authentication using code examples.
 keywords: teams tabs group channel configurable
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
 ---

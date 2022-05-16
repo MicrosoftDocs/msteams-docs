@@ -3,7 +3,7 @@ title: Use Teams Toolkit to provision cloud resources
 author: MuyangAmigo
 description: Provision cloud resources
 ms.author: shenwe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---

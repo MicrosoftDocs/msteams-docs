@@ -3,7 +3,7 @@ title: TeamsFX multiple environments in Teams Toolkit
 author: MuyangAmigo
 description:  About TeamsFX multi environment
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
 ---
