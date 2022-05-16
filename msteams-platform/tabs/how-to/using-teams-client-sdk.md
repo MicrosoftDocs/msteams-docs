@@ -20,7 +20,7 @@ Here's the current versioning guidance for various app scenarios:
 
 |                  |[TeamsJS](/javascript/api/overview/msteams-client) version | [App manifest](../../resources/schema/manifest-schema.md) version| Next steps|
 |------------------|---------|--------|---|
-|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across M365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new M365 app](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
+|**Teams apps extended to Office/Outlook**| TeamsJS v.2.0 or later  | **1.13** or later | [Extend a Teams app to run across Microsoft 365](../../m365-apps/extend-m365-teams-personal-tab.md) or [Create a new Microsoft 365 app](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
 |**Existing Teams-only apps**| Update to TeamsJS v.2.0 when possible (v.1.12 is still supported*)  | 1.12 | [Understand TeamsJS backwards compatibility](#backwards-compatibility) and [Update to TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
 |**New Teams-only apps**| TeamsJS v.2.0 or later | 1.12 | [Create a new Teams app using Teams Toolkit](../../toolkit/create-new-project.md) |
 
@@ -30,7 +30,7 @@ The remainder of this article will walk you through the structure and latest upd
 
 ### Microsoft 365 support (running Teams apps in Office and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 (M365) ecosystem. Currently, other M365 application hosts (including Office and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of M365 host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365  application hosts (including Office and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 The following table lists Teams tabs and dialogs (task modules) capabilities (public namespaces) with expanded support to run in other Microsoft 365 hosts.
 
@@ -131,7 +131,7 @@ Even if you intend your app to only run in Teams (and not Office and Outlook), b
 
 Once you're able, the next step is to [update existing application code](#2-update-sdk-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
-#### Teams apps running across M365
+#### Teams apps running across Microsoft 365
 
 Enabling an existing Teams app to run in Outlook and Office requires all of the following:
 
@@ -453,8 +453,8 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 ```json
 {
-    "$schema" : "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-    "manifestVersion" : "m365DevPreview"
+    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion" : "1.13"
 }
 ```
 
