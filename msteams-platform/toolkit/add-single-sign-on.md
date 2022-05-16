@@ -28,14 +28,14 @@ Teams Toolkit helps to add SSO to the following Teams capabilities:
 Follow the steps to add SSO using Teams Toolkit in Visual Studio Code
 
 1. Open **Microsoft Visual Studio Code**.
-1. Select Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: left navigation bar.
-1. Select **Add features**.
+2. Select Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
+3. Select **Add features**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
 
-* You can also open command palette and select **Teams: Add features**
+     * You can also open command palette and select **Teams: Add features**
 
-1. Scroll down and select **Single Sign-On**.
+4. Select **Single Sign-On**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-select features.png" alt-text="sso select":::
 
@@ -73,19 +73,19 @@ You can follow the steps to add SSO in the Teams app based on the Teams app capa
 
 2. Copy `sso` folder under `auth/tab` to `tabs/src/sso/`.
 
-* `InitTeamsFx`: The file implements a function that initializes TeamsFx SDK and opens `GetUserProfile` component after SDK is initialized
+     * `InitTeamsFx`: The file implements a function that initializes TeamsFx SDK and opens `GetUserProfile` component after SDK is initialized
 
-* `GetUserProfile`: The file implements a function that calls Microsoft Graph API to get user info
+     * `GetUserProfile`: The file implements a function that calls Microsoft Graph API to get user info
 
 3. Execute `npm install @microsoft/teamsfx-react` under `tabs/`.
 
 4. Add the following lines to `tabs/src/components/sample/Welcome.tsx` to import `InitTeamsFx`:
 
-```Bash
+    ```Bash
 
-import { InitTeamsFx } from "../../sso/InitTeamsFx";
+    import { InitTeamsFx } from "../../sso/InitTeamsFx";
 
-```
+    ```
 
 5. Replace the following line: `<AddSSO />` with `<InitTeamsFx />` to replace the `AddSso` component with `InitTeamsFx` component.
 
@@ -95,11 +95,11 @@ import { InitTeamsFx } from "../../sso/InitTeamsFx";
 
 2. Copy `auth/bot/sso` folder to `bot/src`. The two folders contain three files as reference for SSO implementation:
 
-* `showUserInfo`: It implements a function to get user info with SSO token. You can follow this to create your own method that requires SSO token.
+    * `showUserInfo`: It implements a function to get user info with SSO token. You can follow this to create your own method that requires SSO token.
 
-* `ssoDialog`: It creates a [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
+    * `ssoDialog`: It creates a [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
 
-* `teamsSsoBot`: It creates a [TeamsActivityHandler](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest) with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
+    * `teamsSsoBot`: It creates a [TeamsActivityHandler](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest) with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
 
 3. Follow the code sample and register your own command with `addCommand` in this file (optional).
 
