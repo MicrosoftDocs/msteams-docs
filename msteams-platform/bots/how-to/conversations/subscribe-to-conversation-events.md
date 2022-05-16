@@ -1307,7 +1307,7 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
-#### Limitations of installationupdate
+### Limitations of installationupdate event
 
 * Channel ID isn't persisted anywhere
 * Bots fail to receive the channel ID when other users or bots are added to the    conversation
