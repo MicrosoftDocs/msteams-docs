@@ -26,7 +26,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 ## Microsoft Build - 2022
 
-:::image type="content" source="assets/images/Build-example-5.png" alt-text="Build features 2022 - example 5" border="false":::
+:::image type="content" source="assets/images/Build-features-2022.png" alt-text="Build features 2022" border="false":::
 
 <br><br><br><br>
 
