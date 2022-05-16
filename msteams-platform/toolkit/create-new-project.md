@@ -23,6 +23,15 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Select from the available capabilities tab, bot, message extension, or a tab using SharePoint Framework (SPFx). 
 1. Select at least one option to start creating the Teams app.
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/create-a-app.png" alt-text="Create new teams app":::
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams toolkit sidebar":::
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app:::
+
+
 ### Create a new Teams app using view samples
 
 You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
@@ -33,9 +42,7 @@ You can create a new app by exploring **View samples** and selecting an existing
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-You can explore and download samples and either run your app locally or remotely to preview in Teams web client. Follow the instructions for each sample, or select **View on GitHub** to open the sample within the `TeamsFx Samples repository` and browse the source code.
-
-For more information, see [Create a new Teams Tab app (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2).
+To explore the sample gallery and select a sample to browse detailed information about each sample, download a sample by selecting on the “create” button in information page of each sample. Run your app locally or remotely to preview in Teams web client by following the instructions which automatically opens after you download the sample. If you don’t want to download the samples, you can select “View on GitHub” button to open the sample in the GitHub Samples repository and browse the source code.
 
 ## Step-by-step guides using Teams Toolkit
 
