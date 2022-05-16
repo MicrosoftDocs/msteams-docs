@@ -1,7 +1,7 @@
 ---
-title: Teams live share works
-description: Teams live share works
-ms.topic: overview
+title: Enable and configure your app for Teams live share
+description: use Teams live share SDK to integrate your experiences with Microsoft Teams
+ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
