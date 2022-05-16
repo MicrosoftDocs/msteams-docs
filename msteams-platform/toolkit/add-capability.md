@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to your Teams apps
 
-Using Teams app capability, you can create a new Teams app in app development. </br>
+By using Teams app capability, you can create a new Teams app in app development. </br>
 The following table provides the list of Teams app capabilities:
 
 |**Capability**|**Description**|
@@ -21,30 +21,30 @@ The following table provides the list of Teams app capabilities:
 
 ## Limitations
 
-The following list provides the limitations of while adding more capabilities in TeamsFx:
+The following list provides the limitations for adding more capabilities in TeamsFx:
 
 * You can add tabs up to 16 instances
 * You can add bot and message extension for one instance each
 
 ## Add capabilities
 
+You can add capabilities in the following methods:
+
+* Add capabilities by using Teams Toolkit in Visual Studio Code
+* Add capabilities by using open the command palette
+
 > [!Note]
 > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-Adding Capabilities for creating an application. There are two way to add the capabilities:
+To add capabilities by using Teams Toolkit in Visual Studio Code:
 
-   1. You can add capabilities using Teams Toolkit in Visual Studio Code
-   1. You can add capabilities using open the command palette
-
-*   You can add capabilities using Teams Toolkit in Visual Studio Code
-
-    1. Open **Microsoft Visual Studio Code**
-    1. Select **Teams Toolkit** from left panel
-    1. Select **Add features**
+    1. Open **Microsoft Visual Studio Code**.
+    1. Select **Teams Toolkit** from left panel.
+    1. Select **Add features**.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature1234.png" alt-text="updated one" border="true":::
 
-*   You can add capabilities using open the command palette
+To add capabilities by using open the command palette
 
     1. Open the **command palette**
     1. Enter **Teams:Add features**
@@ -52,11 +52,9 @@ Adding Capabilities for creating an application. There are two way to add the ca
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="team feature" border="true":::
 
 
-    1. From the pop-up, select the capabilities to include in your project:
+    1. From the pop-up, select the capability to add in your project:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification" border="true":::
-
-The selected capabilities are successfully added to your project. 
 
 ## Add capabilities using TeamsFx CLI
 
@@ -67,9 +65,9 @@ The selected capabilities are successfully added to your project.
    |-----------------------|----------|
    |To add notification bot |`teamsfx add notification `|
    |To add command bot  |`teamsfx add command-and-response `|
-   |To add sso-enabled tab |`teamsfx add`|
+   |To add sso-enabled tab |`teamsfx add sso-tab`|
    |To add tab |`teamsfx add tab`|
-   |To add bot  |`teamsfx add`|
+   |To add bot  |`teamsfx add bot`|
    |To add message extension   |`teamsfx add message extension`|
 
 ## Supported capabilities
