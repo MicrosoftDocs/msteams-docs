@@ -399,7 +399,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed, `ConversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. After this change  bots posts welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed, `ConversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. Bots post welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following code shows an example of team members added event:
 
@@ -544,23 +544,23 @@ async def on_teams_members_added(
  return
 ```
 
-#### Advantages of setting the channel id as the conversation id
+#### Advantages of setting the channel ID as the conversation id
 
 * Consistency with changes on conversationUpdate when developers switch to `installationUpdate`.
-* SDK updates are not required for create reply functionality for the event.
-* Developers training is not required. In lieu of SDK support, developers need to write code to get channel id from the channel data
-* Default behavior is to post back into the channel. Developers can dig into the channelData for team id if they really want it.
+* SDK updates aren't required for create reply functionality for the event.
+* Developers training isn't required. In lieu of SDK support, developers need to write code to get channel ID from the channel data
+* Default behavior is to post back into the channel. Developers can dig into the channelData for team ID if they really want it.
 
-#### Disdvantages of setting the channel id as the conversation id
+#### Disadvantages of setting the channel ID as the conversation ID
 
-* Observe channel id properties to ensure all values are set correctly.
-* Conversation id only be set to the channel id on installation or app upgrade with bot as data is not persisted.
+* Observe channel ID properties to ensure all values are set correctly.
+* Conversation ID only be set to the channel ID on installation or app upgrade with bot as data isn't persisted.
 
 ---
 
 ### Team members removed
 
-The `teamMemberRemoved` event is sent to your bot if it is removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it is a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
+The `teamMemberRemoved` event is sent to your bot if it's removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it's a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -1066,11 +1066,11 @@ async def on_teams_team_unarchived(
 
 ---
 
-Now that you have worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
+Now that you've worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event does not contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message that was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1414,16 +1414,16 @@ async def on_installation_update(self, turn_context: TurnContext):
 ```
 ### Limitations of installationupdate
 
-* Channel Id is not persisted anywhere
-* Bots fail to receive the channel id when other users or bots are added to the    conversation
-* Bots fail to receive channel id when it is uninstalled
+* Channel ID isn't persisted anywhere
+* Bots fail to receive the channel ID when other users or bots are added to the    conversation
+* Bots fail to receive channel ID when it's uninstalled
 * Same issue continues after application upgrades
 
 ---
 
 ## Uninstall behavior for personal app with bot
 
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You cannot send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
 
 :::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
@@ -1434,7 +1434,7 @@ When you use these install and uninstall events, there are some instances where 
 * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-It is important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you do not choose to handle.
+It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
 
 ## Code sample
 
