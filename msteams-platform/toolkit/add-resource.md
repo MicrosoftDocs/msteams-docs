@@ -30,7 +30,7 @@ To add cloud resources by using Teams Toolkit in Visual Studio Code
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from left panel.
-   1. Select **Add features**.
+   1. Select **Add features** under **DEVELOPMENT**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="add feature" border="true":::
 
@@ -59,7 +59,7 @@ To add cloud resources by using open the command palette
 
 ## Types of cloud resources
 
-The following scenarios for TeamsFx to integrates with Azure services :
+The following scenarios for TeamsFx to integrates with Azure services:
 
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
 - [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
