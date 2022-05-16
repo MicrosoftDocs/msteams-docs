@@ -43,8 +43,8 @@ The following code is an example of corresponding code for the configuration pag
     <script>
         app.initialize();
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                microsoftTeams.settings.setSettings({
+            app.pages.config.registerOnSaveHandler((saveEvent) => {
+                app.pages.config..setSettings({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
                     entityId: "grayIconTab",
@@ -54,8 +54,8 @@ The following code is an example of corresponding code for the configuration pag
             });
         }
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                microsoftTeams.settings.setSettings({
+            app.pages.config.registerOnSaveHandler((saveEvent) => {
+                app.pages.config.setSettings({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
                     entityId: "redIconTab",

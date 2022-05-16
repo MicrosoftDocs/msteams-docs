@@ -623,8 +623,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     }
     
     let saveRed = () => {
-        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-            microsoftTeams.settings.setSettings({
+        app.pages.config.registerOnSaveHandler(function (saveEvent) {
+            app.pages.config.setSettings({
                 websiteUrl: `https://y8rCgT2b.ngrok.io`,
                 contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                 entityId: "redIconTab",
