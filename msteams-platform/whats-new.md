@@ -28,11 +28,16 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 :::image type="content" source="assets/images/build-features.png" alt-text="Build 2022 features" border="false":::
 <br><br><br>
+
 :::image type="content" source="assets/images/Build-example-2.png" alt-text="Build features 2022 - example 2" border="false":::
 <br><br><br>
+
 :::image type="content" source="assets/images/Build-example-3.png" alt-text="Build features 2022 - example 3" border="false":::
+<br><br><br>
 
+:::image type="content" source="assets/images/Build-example-4.png" alt-text="Build features 2022 - example 4" border="false":::
 
+<br><br><br><br>
  Date | Feature | Feature description | Find it here |
 | --- | --- | --- | --- |
 | /date/ | /Feature name/ | /Description/ | /breadcrumb link to the page/ |
