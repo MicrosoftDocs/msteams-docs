@@ -18,17 +18,15 @@ Before you begin, you must fulfill the following prerequisites:
 
 * Update the app manifest
 * create a container
-* RSC permissions
+* Enable RSC permissions
 
-## Update the app manifest.
+## Update the app manifest
 
  To Enable your aTeams live share for Teams meetings, update your app manifest and use the context properties to determine where your app must appear.
 
 The app manifest must include the following code snippet:
 
 ```json
-
-  {,
 
 "configurableTabs": [​
 {​
