@@ -67,7 +67,7 @@ You have two options for updating your app manifest:
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the command palette: `Ctrl+Shift+P`
-1. Run the `Teams: Upgrade Teams manifest to support Outlook and Office apps` command and select your app manifest file. Changes will be made in place.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be made in place.
 
 # [Manual steps](#tab/manifest-manual)
 

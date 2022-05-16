@@ -64,7 +64,7 @@ You have two options for updating your app manifest:
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the command palette: `Ctrl+Shift+P`
-1. Run the `Teams: Upgrade Teams manifest to support Outlook and Office apps` command and select your app manifest file. Changes will be made in place.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be made in place.
 
 # [Manual steps](#tab/manifest-manual)
 
@@ -90,7 +90,7 @@ To run in Outlook and Office, your app will need to reference the npm package `@
 You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.0.0. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
-1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
+1. Run the command `Teams: Upgrade Teams JS SDK and code references`
 
 Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.0.0` (or higher) and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
