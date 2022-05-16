@@ -26,7 +26,7 @@ These authentication methods are available for tabs, bots, and messaging extensi
     :::column span="2":::
         <br>
 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tab app**
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tab app**
         
     :::column-end:::
     :::column span="2":::
@@ -40,7 +40,7 @@ These authentication methods are available for tabs, bots, and messaging extensi
     :::column span="2":::
         <br>
 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot app**
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot app**
         
     :::column-end:::
     :::column span="2":::
@@ -54,7 +54,7 @@ These authentication methods are available for tabs, bots, and messaging extensi
     :::column span="2":::
         <br>
 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Message extension app**
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Message extension app**
         
     :::column-end:::
     :::column span="2":::
