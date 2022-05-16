@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/16/2022
 ---
 
-# Add single sign-on
+# Add Single sign-on
 
 Microsoft Teams provides single sign-on function for the application to obtain signed-in Teams user token to access Microsoft Graph (and other APIs). Teams Toolkit facilitates this interaction by abstracting some of the Azure Active Directory (AAD) flows and integrations behind some simple APIs. It enables you to add single sign-on (SSO) features easily to your Teams application.
 
@@ -107,88 +107,88 @@ You can follow the steps to add SSO in the Teams app based on the Teams app capa
 
 5. Execute `npm install copyfiles` under `bot/` and replace following line in package.json:
   
-```JSON
+   ```JSON
 
-"build": "tsc --build",
+   "build": "tsc --build",
 
-```
+    ```
 
 with
 
-```JSON
+   ```JSON
 
-"build": "tsc --build && copyfiles public/*.html lib/",
+   "build": "tsc --build && copyfiles public/*.html lib/",
 
-```
+   ```
 
-The HTML pages used for auth redirect are copied while building this bot project.
+   The HTML pages used for auth redirect are copied while building this bot project.
 
 6. After you add the following files, you need to create a new `teamsSsoBot` instance in `bot/src/index` file. Replace the following code:
 
-```Bash
+   ```Bash
+  
+   // Process Teams activity with Bot Framework.
+   server.post("/api/messages", async (req, res) => {
+   await commandBot.requestHandler(req, res);
+   });  
 
-// Process Teams activity with Bot Framework.
-server.post("/api/messages", async (req, res) => {
-    await commandBot.requestHandler(req, res);
-});
-
-```
+   ```
 
 with
 
-```Bash
+   ```Bash
 
-const handler = new TeamsSsoBot();
-// Process Teams activity with Bot Framework.
-server.post("/api/messages", async (req, res) => {
-    await commandBot.requestHandler(req, res, async (context)=> {
-        await handler.run(context);
-    });
-});
+   const handler = new TeamsSsoBot();
+   // Process Teams activity with Bot Framework.
+   server.post("/api/messages", async (req, res) => {
+       await commandBot.requestHandler(req, res, async (context)=> {
+           await handler.run(context);
+       });
+   });
 
-```
+   ```
 
 7. Add routing in `bot/src/index` file as below:
 
-```Bash
+   ```Bash
 
-server.get(
-    "/auth-*.html",
-    restify.plugins.serveStatic({
-        directory: path.join(__dirname, "public"),
-    })
-);
+   server.get(
+       "/auth-*.html",
+       restify.plugins.serveStatic({
+           directory: path.join(__dirname, "public"),
+       })
+   );
 
-```
+   ```
 
 8. Add the following lines to `bot/src/index` to import `teamsSsoBot` and `path`:
 
-```Bash
+   ```Bash
 
-// For ts:
-import { TeamsSsoBot } from "./sso/teamsSsoBot";
-const path = require("path");
+   // For ts:
+   import { TeamsSsoBot } from "./sso/teamsSsoBot";
+   const path = require("path");
 
-// For js:
-const { TeamsSsoBot } = require("./sso/teamsSsoBot");
-const path = require("path");
+   // For js:
+   const { TeamsSsoBot } = require("./sso/teamsSsoBot");
+   const path = require("path");
 
-```
+   ```
 
 9. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `command` in `commandLists` of your bot:
 
-```JSON
+   ```JSON
 
-{
-    "title": "show",
-    "description": "Show user profile using Single Sign On feature"
-}
+   {
+       "title": "show",
+       "description": "Show user profile using Single Sign On feature"
+   }
 
-```
+   ```
 
 ### Add a new command to the bot (optional)
 
-After you add SSO in your project, you can also add a new command.
+Follow thw steps to add a new command, after you add SSO in your project.
 
 1. Create a new file (example `todo.ts` or `todo.js`) under `bot/src/` and add your own business logic to call Graph API:
 
@@ -266,33 +266,33 @@ export async function showUserImage(context, ssoToken, param) {
 
 2. Register a new command using `addCommand` in `teamsSsoBot` use the following line:
 
-```bash
+   ```bash
 
-this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
+   this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
 
-```
+   ```
 
 and add following lines after the above line to register a new command `photo` and hook up with method `showUserImage` added above:
 
-```bash
+   ```bash
 
-// As shown here, you can add your own parameter into the `showUserImage` method
-// You can also use regular expression for the command here
-const scope = ["User.Read"];
-this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
+   // As shown here, you can add your own parameter into the `showUserImage` method
+   // You can also use regular expression for the command here
+   const scope = ["User.Read"];
+   this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
 
-```
+   ```
 
 3. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `command` in `commandLists` of your bot:
 
-```JSON
+   ```JSON
 
-{
-    "title": "photo",
-    "description": "Show user photo using Single Sign On feature"
-}
+   {
+       "title": "photo",
+       "description": "Show user photo using Single Sign On feature"
+   }
 
-```
+   ```
 
 ## Debug application
 
@@ -309,6 +309,8 @@ The [Azure Active Directory app manifest](/azure/active-directory/develop/refere
 For more information, see [API permissions to access your desired APIs](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template).
 
 ## SSO authentication concepts
+
+You can see the following steps for authentication concepts of SSO
 
 ### Working of SSO in Teams
 
@@ -340,4 +342,3 @@ For more information about TeamsFx SDK, see:
 ## See also
 
 * [Prepare accounts to build Teams apps](accounts.md)
-
