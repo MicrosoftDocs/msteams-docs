@@ -20,11 +20,11 @@ You can't add the resources, if you created SPFx based tab project.
 
 You can add cloud resources in the following methods:
 
-    * Add cloud resources by using Teams Toolkit in Visual Studio Code
-    * Add cloud resources by using open the command palette
+* Add cloud resources by using Teams Toolkit in Visual Studio Code
+* Add cloud resources by using open the command palette
 
-      > [!NOTE]
-      > You need to provision for each environment, after you have successfully added a resource.
+  > [!NOTE]
+  > You need to provision for each environment, after you have successfully added a resource.
   
 To add cloud resources by using Teams Toolkit in Visual Studio Code
 
