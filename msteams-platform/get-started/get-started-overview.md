@@ -36,7 +36,7 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
 > [!NOTE]
-> If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps.
+> If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. <br> App studio will be deprecated by June 30, 2022.
 
 ## Build your first Teams app
 

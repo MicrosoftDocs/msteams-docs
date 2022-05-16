@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce the developer tasks by leveraging Teams SSO and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
+TeamsFx helps to reduce the developer tasks by using Teams SSO and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK is built to be used in browser and Node.js environment, common scenarios include:
 
 * Teams tab application
 * Azure Function
@@ -100,7 +100,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### TeamsFx class
 
-TeamsFx class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Please check [override configuration](#override-configuration) for details. 
+TeamsFx class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Check [override configuration](#override-configuration) for details. 
 When creating a TeamsFx instance, you also need to specify the identity type. 
 There are two identity types:
 
@@ -114,7 +114,7 @@ There are two identity types:
 | `new TeamsFx(IdentityType.User)`| Application is authenticated as current Teams user. |
 | `TeamsFx:setSsoToken()`| User identity in Node.js environment (without browser). |
 | `TeamsFx:getUserInfo()` | To get user's basis information. |
-| `TeamsFx:login()` | It is used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
+| `TeamsFx:login()` | It's used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
 
 > [!NOTE]
 > You can access resources on behalf of current Teams user.
@@ -123,7 +123,7 @@ There are two identity types:
 
 | Command | Description |
 |----------------|-------------|
-| `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application.The permission usually needs administrator's approval.|
+| `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application. The permission usually needs administrator's approval.|
 | `TeamsFx:getCredential()`| Its provides credential instances automatically corresponding to identity type. |
 
 > [!NOTE]
@@ -131,24 +131,24 @@ There are two identity types:
 
 ### Credential
 
-You must choose identity type when initializing TeamsFx. After you have specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
+You must choose identity type when initializing TeamsFx. After you've specified the identity type when initializing TeamsFx, SDK uses different kinds of credential class to represent the identity and get access token by corresponding auth flow.
 
-There are three credential classes to simplify authentication. [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs, designed to provide access tokens for specific scopes. Other APIs relies on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
+There are three credential classes to simplify authentication. [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential). Credential classes implement `TokenCredential` interface, which is broadly used in Azure library APIs, designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`.
 
-Here's the corresponding scenarios for each credential class targets.
+Here's the corresponding scenarios for each credential class target.
 
 #### User Identity in browser environment
-`TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It leverages the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developer choose user identity in browser environment.
+`TeamsUserCredential` represents Teams current user's identity. Using this credential will request user consent at the first time. It leverages the Teams SSO and On-Behalf-Of flow to do token exchange. SDK uses this credential when developers choose user identity in browser environment.
 
 Required configuration: `initiateLoginEndpoint`, `clientId`.
 
 #### User Identity in Node.js environment
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. It's designed to be used in Azure Function or bot scenarios. SDK uses this credential when developer choose user identity in Node.js environment.
+`OnBehalfOfUserCredential` uses On-Behalf-Of flow and need Teams SSO token. It's designed to be used in Azure Function or bot scenarios. SDK uses this credential when developers choose user identity in Node.js environment.
 
 Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 
 #### Application Identity in Node.js environment
-`AppCredential` represents the application identity. It is usually used when user is not involved like time-triggered automation job. SDK uses this credential when developer choose App identity in Node.js environment.
+`AppCredential` represents the application identity. It's used when user isn't involved like time-triggered automation job. SDK uses this credential when developers choose App identity in Node.js environment.
 
 Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
 
@@ -162,7 +162,7 @@ Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `ap
 
 ### Supported functions
 
-TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They are located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
+TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 *  Microsoft Graph Service:`createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
 *  SQL:`getTediousConnectionConfig` returns a tedious connection config.
@@ -416,7 +416,7 @@ You can pass custom config when creating TeamsFx instance to override default co
 
 ## Upgrade latest SDK version
 
-If you are using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
+If you're using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version.
 1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`
 2. Replace `new TeamsUserCredential()` with `new TeamsFx()`
 3. Replace `new M365TenantCredential()` with `new TeamsFx(IdentityType.App)`
