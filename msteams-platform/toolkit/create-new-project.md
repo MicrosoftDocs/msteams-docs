@@ -20,16 +20,19 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: icon in the Visual Studio Code sidebar.
 1. Select **Create a new Teams app**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams toolkit sidebar":::
+
+1. You can select **Create a new Teams app** or **Start from a sample**.
+   
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
+   
 1. Select from the available capabilities tab, bot, message extension, or a tab using SharePoint Framework (SPFx). 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app":::
+
 1. Select at least one option to start creating the Teams app.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/create-a-app.png" alt-text="Create new teams app":::
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams toolkit sidebar":::
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app":::
 
 
 ### Create a new Teams app using view samples
@@ -42,7 +45,7 @@ You can create a new app by exploring **View samples** and selecting an existing
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-To explore the sample gallery and select a sample to browse detailed information about each sample, download a sample by selecting on the “create” button in information page of each sample. Run your app locally or remotely to preview in Teams web client by following the instructions which automatically opens after you download the sample. If you don’t want to download the samples, you can select “View on GitHub” button to open the sample in the GitHub Samples repository and browse the source code.
+To explore the sample gallery and select a sample to browse detailed information about each sample, download a sample by selecting on the **create** in information page of each sample. Run your app locally or remotely to preview in Teams web client by following the instructions which automatically opens after you download the sample. If you don’t want to download the samples, you can select **View on GitHub** button to open the sample in the GitHub Samples repository and browse the source code.
 
 ## Step-by-step guides using Teams Toolkit
 
