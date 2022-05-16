@@ -10,8 +10,6 @@ ms.date: 11/29/2021
 
 # Teams Toolkit Overview
 
-> [!NOTE]
-> Currently, this feature is available in **public developer preview** only.
 
 Teams Toolkit for Microsoft Visual Studio Code helps you to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with zero-configuration approach. For Teams app development, similar to Teams Toolkit for Visual Studio, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 Teams Toolkit lets you create, debug, and deploy your Teams app right from Visual Studio Code. App development with the toolkit has the advantages of:
@@ -23,7 +21,6 @@ Teams Toolkit lets you create, debug, and deploy your Teams app right from Visua
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
 
-For Teams app development, similar to Teams Toolkit for Visual Studio Code, you can use [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md), which consists of Toolkit `teamsfx`.
 
 ## User journey of Teams Toolkit
 
@@ -61,12 +58,11 @@ The main milestones of this journey are:
 
 After Toolkit installation, you'll see the Teams Toolkit UI as shown in following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="mini functions":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini functions":::
 
-You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. If you have a Teams project created by Teams Toolkit v2.+ opened in Visual Studio Code, you will see Teams Toolkit UI with all functionalities as shown in the following image:
-You can select **Quick Start** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. You can view a list of all Toolkit features when you create or open an existing project in Visual Studio Code sidebar.
+You can select **Get Started** to explore the Teams Toolkit, or select **Create a new Teams App** to create one Teams project. If you have a Teams project created by Teams Toolkit v2.+ opened in Visual Studio Code, you will see Teams Toolkit UI with all functionalities as shown in the following image:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="functions":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstoolkit1.png" alt-text="functions":::
 
 Let's take a tour of the topics covered in this document:
 
@@ -82,6 +78,8 @@ Teams Toolkit helps you to create and manage multiple environments, provision, a
 
 It allows developers and project owner to invite other collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Teamsfx project":::
+
 ## Development
 
 Teams Toolkit helps you to create and customize your Teams app project that makes the Teams app development work simpler.
@@ -90,9 +88,9 @@ Teams Toolkit helps you to create and customize your Teams app project that make
 
 It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
 
-### Add capabilities
+### Add Features
 
-It helps to add other required Teams capabilities to Teams app during development process.
+It helps you to incrementally add additional Teams capabilities such as tab or bot or optionally add Azure resources such as Azure SQL Database, Azure Key Vault, which fits your development needs to your current Teams app. You can also add Single Sign on or CICD workflows for your Teams app. 
 
 ### Add cloud resources
 
@@ -117,10 +115,6 @@ It integrates with Azure resource manager that enables you to provision Azure re
 ### Publish to Teams
 
 After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. Publish to Teams helps you to publish your developed app.
-
-### CI/CD guide
-
-It helps to automate your development workflow while building Teams application. CI/CD guide provides tools and templates for you to get started while setting up CI or CD pipelines.
 
 #### TeamsFx CLI
 
@@ -147,8 +141,7 @@ Let's explore Teams Toolkit features.
 | **Development** | &nbsp; | &nbsp; |
 | &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
 | &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
-| &nbsp; | Add capabilities | Add other required Teams capabilities to Teams app during development process. |
-| &nbsp; | Add cloud resources | Add optional cloud resources suitable for your app. |
+| &nbsp; | Add Features | * Add other required Teams capabilities to Teams app during development process. </br> * Add optional cloud resources suitable for your app. |
 | &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
 | **Deployment** | &nbsp; | &nbsp; |
 | &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
@@ -156,7 +149,6 @@ Let's explore Teams Toolkit features.
 | &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
 | &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
 | &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
-| &nbsp; | CI/CD guide | Automate your development workflow while building Teams application. |
 | **Help and Feedback** | &nbsp; | &nbsp; |
 | &nbsp; | Quick Start | View the Teams Toolkit Quick Start help within Visual Studio Code.  |
 | &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
