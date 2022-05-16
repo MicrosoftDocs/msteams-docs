@@ -34,7 +34,6 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 1. Select at least one option to start creating the Teams app.
 
 
-
 ### Create a new Teams app using view samples
 
 You can create a new app by exploring **View samples** and selecting an existing sample. The selected sample may already have some functionality, for example a to-do list with an Azure backend, or an integration with the Microsoft Graph Toolkit.
@@ -49,12 +48,12 @@ You can create a new app by exploring **View samples** and selecting an existing
    
     :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Sample gallery":::
 
-You can explore the sample gallery as follows:
+  You can explore the sample gallery as follows:
 
-1. Select a sample to browse detailed information.
-1. Select **create** in information page of each sample to download it. 
-1. Run your app locally or remotely to preview in Teams web client by following the instructions which automatically opens after you download the sample.
-1. If you don’t want to download the samples, you can select **View on GitHub** to open the sample in the GitHub Samples repository and browse the source code.
+  1. Select a sample to browse detailed information.
+  1. Select **create** in information page of each sample to download it. 
+  1. Run your app locally or remotely to preview in Teams web client by following the instructions which automatically opens after you download the sample.
+  1. If you don’t want to download the samples, you can select **View on GitHub** to open the sample in the GitHub Samples repository and browse the source code.
 
 ## Step-by-step guides using Teams Toolkit
 
