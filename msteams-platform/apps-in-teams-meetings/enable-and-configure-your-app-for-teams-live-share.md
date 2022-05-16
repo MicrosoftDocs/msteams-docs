@@ -10,7 +10,16 @@ ms.author: v-ypalikila
 
 Teams live share SDK helps you integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
 
-Teams fluid clients capabilities:
+capabilities:
+
+* Leverage content across multiple channel platforms and devices.
+
+* Hassle-free collaboration with friends and easy access to channel partners.
+
+* Media synchronization for any media player in web.
+
+
+
 
 (content to be added)
 
@@ -25,17 +34,17 @@ The following are the supported platforms and its SDKs:
 | Web/PWA | JavaScript |
 | Windows UWP | .NET |
 
-## Add Teams live share to your app
-
-(content to be added)
 
 ### Prerequisites
 
-* [Get context for your tab](/microsoftteams/platform/tabs/how-to/access-teams-context)
+With Teams live share, you can watch content with friends with easy access to content channel partners across mobile, TV, desktop and browser. Before you can work with Teams live share, you must fulfill the following prerequisites:
 
-* Tenant ID, User ID and Meeting ID:  
+* Install Teams live share SDK.
 
-  * To check with Bot API if user is part of the meeting in Cloud API.
+* Use your app that supports context tab. For more information, see [Get context for your tab](/microsoftteams/platform/tabs/how-to/access-teams-context)
+
+* For your app to check if user is part of the meeting, use the [GetParticipant API](API-references.md#get-participant-api) to Get Tenant ID, User ID and Meeting ID. 
+
 
   * To check if user is part of CollabSpace on subsequent calls to Cloud API.
 
@@ -47,50 +56,71 @@ The following are the supported platforms and its SDKs:
 
   * 1p AAD  app
 
+
+## Add Teams live share to your app
+
+To Enable your aTeams live share for Teams meetings, update your app manifest and use the context properties to determine where your app must appear.
+
 ### Update your app manifest
 
-To enable your app for Teams live share, update your app manifest and use the context properties to determine where your app must appear.
-<!--- If you want audio ducking and meeting stage support, more RSC permissions are needed as well. --->
 
 The app manifest must include the following code snippet:
 
 ```json
-{
-  …rest of your app manifest,
-  "configurableTabs": [
-    {
-      "configurationUrl": “{YOUR_URL}/config?inTeams=true",
-      "canUpdateConfiguration": false,
-      "scopes": ["groupchat"],
-      "context": ["meetingSidePanel", "meetingStage"]
-    }
-  ],
-  "validDomains": [“{YOUR_DOMAIN}"],
-  "authorization": {
-    "permissions": {
-      "resourceSpecific": [
-        {
-          "name": “LiveShareSession.ReadWrite.Chat",
-          "type": "Delegated“
-        },
-        {
-          "name": "MeetingStage.Write.Chat",
-          "type": "Delegated“
-        },
-        {
-          "name": “OnlineMeetingIncomingAudio.Detect.Chat",
-          "type": "Delegated“
-        }
-      ]
-    }
-  }
-}
 
+  {,
+
+"configurableTabs": [​
+{​
+      "configurationUrl": “(YOUR_URL)/config?inTeams=true",​
+      "canUpdateConfiguration": false,​
+      "scopes": ["groupchat"],​
+      "context": ["meetingSidePanel", "meetingStage"]​
+  ],​
+
+  "validDomains": [“{YOUR_DOMAIN}"],​
+
+  "authorization": {​
+
+    "permissions": {​
+
+      "resourceSpecific": [​
+
+        {​
+          "name": “LiveShareSession.ReadWrite.Chat",​
+          "type": "Delegated“​
+        },​
+
+        {​
+          "name": “LiveShareSession.ReadWrite.Channel",​
+          "type": "Delegated“​
+        },​
+
+        {​
+          "name": "MeetingStage.Write.Chat",​
+          "type": "Delegated“​
+        },​
+
+        {​
+          "name": “OnlineMeetingIncomingAudio.Detect.Chat",​
+          "type": "Delegated“​
+        }​
+
+      ]​
+
+    }​
+
+  }​
+
+}​
+
+​
 ```
+
 
 ## Resource-specific consent
 
-The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively.
+The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively.If you want audio ducking and meeting stage support, more RSC permissions are required.
 
 ### Resource-specific permissions for Teams live share
 
@@ -133,7 +163,11 @@ If a local access token is about to expire or is expired, the SDK will automatic
 
 Partners should be able to include the ability to invalidate a token from their app (For example, user wants to opt out of the Teams integration). If the user is to continue using the Teams integration after invalid token, they must reauthenticate the SDK.
 
-## SDK collaboration and capabilities
+### Tab SSO and OBO flow to contact Graph API
+
+[Tab SSO and OBO flow](https://microsoft-my.sharepoint-df.com/:w:/p/pradan/EacY-Rbj6VJFtQz9Bg-tO2sBemxhOAqxkmjqXSd1APcoMQ?e=oTBc5f)
+
+## SDK capabilities
 
 You can use Teams client media libraries and work with Fluid framework to make your applications more interactive, when using the Teams meeting stage, or working with media.
 
