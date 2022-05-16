@@ -399,7 +399,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed, `ConversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. This change results in bots posting welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed, `ConversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. After this change  bots posts welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following code shows an example of team members added event:
 
@@ -543,6 +543,18 @@ async def on_teams_members_added(
   )
  return
 ```
+
+#### Advantages of setting the channel id as the conversation id
+
+* Consistency with changes on conversationUpdate when developers switch to `installationUpdate`.
+* SDK updates are not required for create reply functionality for the event.
+* Developers training is not required. In lieu of SDK support, developers need to write code to get channel id from the channel data
+* Default behavior is to post back into the channel. Developers can dig into the channelData for team id if they really want it.
+
+#### Disdvantages of setting the channel id as the conversation id
+
+* Observe channel id properties to ensure all values are set correctly.
+* Conversation id only be set to the channel id on installation or app upgrade with bot as data is not persisted.
 
 ---
 
@@ -1377,7 +1389,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
     }, 
     "team": { 
       "aadGroupId": "sample aadGroup ID",
-      "name": AnotherVuTestTeam",
+      "name": "NameTestTeam",
       "id": "sample channel ID@thread.skype" 
     }, 
     "tenant": { 
