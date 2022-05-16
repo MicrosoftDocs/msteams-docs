@@ -1,12 +1,12 @@
 ---
-title: Enable and configure your app for Teams live share
-description: use Teams live share SDK to integrate your experiences with Microsoft Teams.
+title: Get started
+description: Use Teams live share SDK to integrate your experiences with Microsoft Teams.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
 
-# Enable and configure your app for Teams live share
+# Get started
 
 You can use Teams live share SDK to integrate your experiences with Microsoft Teams. To get started, use the JavaScript samples.
 
@@ -15,6 +15,10 @@ Learn [how to build collaborative experiences using the SDK](https://github.com/
 ### Prerequisites
 
 Before you begin, you must fulfill the following prerequisites:
+
+* Update the app manifest
+* create a container
+* RSC permissions
 
 ## Update the app manifest.
 
@@ -78,7 +82,7 @@ Fluid data is stored within containers, and these containers need to be created 
 
 ## Resource-specific consent
 
-The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively.If you want audio ducking and meeting stage support, more RSC permissions are required.
+The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively. Enable RSC permissions for Audio ducking and meeting stage support.
 
 ### Resource-specific permissions for Teams live share
 
@@ -86,8 +90,6 @@ The following table provides resource-specific permissions for Teams live share:
 
 |Application permission| Action |
 | ----- | ----- |
-|LiveShareSession.ReadWrite.Chat| <!--- Need to check with SME ---> |
-|MeetingStage.Write.Chat| <!--- Need to check with SME ---> |
-|OnlineMeetingIncomingAudio.Detect.Chat| <!--- Need to check with SME ---> |
+|Interactive.ReadWrite.Meeting|<!--- need info --->|
 
 For more details, see [resource specific consent](/graph/permissions-reference).
