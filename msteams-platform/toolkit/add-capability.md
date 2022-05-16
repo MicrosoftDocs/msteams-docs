@@ -73,15 +73,15 @@ To add capabilities by using open the command palette
 You can choose to add different capabilities in your Teams app.
 The following table provides the different Teams app capabilities:
 
-      |Existing capabilities|Other supported capabilities|
-      |--------------------|--------------------|
-      |SPFx tab |None|
-      |SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
-      |Notification bot |SSO-enabled tab, tab|
-      |Command bot |SSO-enabled tab, tab|
-      |Tab |Tab, notification bot, command bot, bot, message extension|
-      |Bot |Message extension, SSO-enabled tab, tab|
-      |Message extension |Bot, SSO-enabled tab, tab |
+    |Existing capabilities|Other supported capabilities|
+    |--------------------|--------------------|
+    |SPFx tab |None|
+    |SSO-enabled tab |SSO-enabled tab, notification bot, command bot, bot, message extension|
+    |Notification bot |SSO-enabled tab, tab|
+    |Command bot |SSO-enabled tab, tab|
+    |Tab |Tab, notification bot, command bot, bot, message extension|
+    |Bot |Message extension, SSO-enabled tab, tab|
+    |Message extension |Bot, SSO-enabled tab, tab |
 
 ## See also
 
