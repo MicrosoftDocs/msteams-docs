@@ -399,7 +399,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed, `ConversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. This change results in bots posting welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following code shows an example of team members added event:
 
@@ -450,7 +450,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is the message your bot receives when the bot is added to a team.
+This is the message your bot receives when the bot is added to a team channel.
 
 ```json
 {
@@ -478,6 +478,11 @@ This is the message your bot receives when the bot is added to a team.
         "name": "SongsuggesterBot"
     },
     "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.v2"
+            }
+        },
         "team": {
             "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
         },
@@ -1347,7 +1352,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
     "isGroup": true, 
     "conversationType": "channel", 
     "tenantId": "sample tenant ID", 
-    "id": "sample conversation Id@thread.skype" 
+    "id": "sample conversation Id@thread.tacv2" 
   }, 
 
   "recipient": { 
@@ -1356,7 +1361,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
   }, 
   "entities": [ 
     { 
-      "locale": "en", 
+      "locale": "en-US", 
       "platform": "Windows", 
       "type": "clientInfo" 
     } 
@@ -1364,14 +1369,16 @@ async onInstallationUpdateActivity(context: TurnContext) {
   "channelData": { 
     "settings": { 
       "selectedChannel": { 
-        "id": "sample channel ID@thread.skype" 
+        "id": "sample channel ID@thread.tacv2" 
       } 
-    }, 
+  }, 
     "channel": { 
-      "id": "sample channel ID" 
+      "id": "sample channel ID@thread.tacv2" 
     }, 
     "team": { 
-      "id": "sample team ID" 
+      "aadGroupId": "sample aadGroup ID",
+      "name": AnotherVuTestTeam",
+      "id": "sample channel ID@thread.skype" 
     }, 
     "tenant": { 
       "id": "sample tenant ID" 
@@ -1380,7 +1387,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
       "name": "message" 
     } 
   }, 
-  "locale": "en" 
+  "locale": "en-US" 
 }
 ```
 
@@ -1393,6 +1400,12 @@ async def on_installation_update(self, turn_context: TurnContext):
    else:
        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
 ```
+### Limitations of installationupdate
+
+* Channel Id is not persisted anywhere
+* Bots fail to receive the channel id when other users or bots are added to the    conversation
+* Bots fail to receive channel id when it is uninstalled
+* Same issue continues after application upgrades
 
 ---
 
