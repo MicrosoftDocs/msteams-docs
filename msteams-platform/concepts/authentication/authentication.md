@@ -24,8 +24,9 @@ These authentication methods are available for tabs, bots, and messaging extensi
         :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
     :::column-end:::
     :::column span="2":::
+        <br>
 
-        :::image type="content" source="../../assets/images/authentication/tab-app.png" alt-text="tab app authentication" border="false":::
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tab app**
         
     :::column-end:::
     :::column span="2":::
@@ -37,8 +38,9 @@ These authentication methods are available for tabs, bots, and messaging extensi
         :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
     :::column-end:::
     :::column span="2":::
+        <br>
 
-        :::image type="content" source="../../assets/images/authentication/bot-app.png" alt-text="Bot app authentication" border="false":::
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot app**
         
     :::column-end:::
     :::column span="2":::
@@ -50,8 +52,9 @@ These authentication methods are available for tabs, bots, and messaging extensi
         :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
     :::column-end:::
     :::column span="2":::
+        <br>
 
-        :::image type="content" source="../../assets/images/authentication/mex-app.png" alt-text="message extension app authentication" border="false":::
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Message extension app**
         
     :::column-end:::
     :::column span="2":::
