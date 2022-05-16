@@ -10,18 +10,9 @@ ms.author: v-ypalikila
 
 Teams live share SDK helps you integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
 
-capabilities:
+Capabilities:
 
-* Leverage content across multiple channel platforms and devices.
-
-* Hassle-free collaboration with friends and easy access to channel partners.
-
-* Media synchronization for any media player in web.
-
-
-
-
-(content to be added)
+* Media synchronization allows users to watch videos and listen music together during Teams meetings.
 
 ## Platforms and SDKs
 
@@ -29,15 +20,14 @@ The following are the supported platforms and its SDKs:
 
 | Platform | SDK |
 | --- | --- |
-| iOS & iPadOS | Swift and Objective C |
+| iOS and iPadOS | Swift and Objective C |
 | Android | Java |
-| Web/PWA | JavaScript |
+| Web or PWA | JavaScript |
 | Windows UWP | .NET |
-
 
 ### Prerequisites
 
-With Teams live share, you can watch content with friends with easy access to content channel partners across mobile, TV, desktop and browser. Before you can work with Teams live share, you must fulfill the following prerequisites:
+With Teams live share, you can watch content with friends with easy access to content channel partners across mobile, TV, desktop, and browser. Before you can work with Teams live share, you must fulfill the following prerequisites:
 
 * Install Teams live share SDK.
 
