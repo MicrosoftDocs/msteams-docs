@@ -41,11 +41,20 @@ You can create a new app by exploring **View samples** and selecting an existing
 
  1. Open **Teams Toolkit** from Microsoft Visual Studio Code.
  1. Select **DEVELOPMENT** section in Treeview.
- 1. Select **View samples**. The sample gallery appears as shown in the following image:
+ 1. Select **View samples**. 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="View samples":::
 
-To explore the sample gallery and select a sample to browse detailed information about each sample, download a sample by selecting on the **create** in information page of each sample. Run your app locally or remotely to preview in Teams web client by following the instructions which automatically opens after you download the sample. If you don’t want to download the samples, you can select **View on GitHub** button to open the sample in the GitHub Samples repository and browse the source code.
+    The sample gallery appears as shown in the following image:
+   
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="Sample gallery":::
+
+You can explore the sample gallery as follows:
+
+1. Select a sample to browse detailed information.
+1. Select **create** in information page of each sample to download it. 
+1. Run your app locally or remotely to preview in Teams web client by following the instructions which automatically opens after you download the sample.
+1. If you don’t want to download the samples, you can select **View on GitHub** to open the sample in the GitHub Samples repository and browse the source code.
 
 ## Step-by-step guides using Teams Toolkit
 
