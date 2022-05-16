@@ -27,7 +27,7 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
    
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
    
-1. Select from the available capabilities tab, bot, message extension, or a tab using SharePoint Framework (SPFx). 
+1. If you select **Create a new Teams app**, the following image displays with templates from three categories: Scenario-based Teams app, Basic type of Teams app, and Teams app that can run in Outlook and Office: 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app":::
 
