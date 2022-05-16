@@ -19,21 +19,18 @@ The Teams Live share SDK contains a collection of classes for building collabora
 ## Collaboration Spaces
 Everything starts with the `TeamsCollaborationSpace` or `CollaborationSpace` classes. Clients join collaboration spaces and are then able to exchange messages and share objects with other clients connected to the same space. Each space exposes a `BroadcastSocket` which can be used to message other clients within the space, a `SharedObjects` collection which can be used persist objects that are synchronized across all of the clients within the space, and a `SharedClock` which provides a synchronized clock for the space.
 
-To learn more about seamlessly joining a space in a given Teams context (e.g., meeting), consult the [TeamsCollaborationSpace](./TeamsCollaborationSpace.md) doc.
-
-Consult the [Collaboration Space Service](./CollaborationSpaceService.md) doc for additional details about the services exposed to a collaboration space.
 
 ## Shared Components
 While it's completely possible to use the `CollaborationSpace` object directly to build collaborative experiences, the SDK provides of set of pre-built components that dramatically simplify the task.
 
 | Component      | Description                                  |
 | -------------- | -------------------------------------------- |
-| [MediaPlayerSynchronizer](./MediaPlayerSynchronizer.md) | A component that uses `SharedMediaSession` for HTML5 video sync. |
-| [SharedMediaSession](./SharedMediaSession.md) | A component used to synchronize media playback. |
-| [SharedPresence](./SharedPresence.md) | Tracks presence information for members of a space. |
-| [SharedEvent](./SharedEvent.md) | A component that simplifies broadcasting an event to other clients within the space. |
-| [SharedMap](./SharedMap.md) | A distributed map that's synchronized across all clients within a space. |
-| [SharedList](./SharedList.md) | A distributed list that's synchronized across all clients within a space. |
+| MediaPlayerSynchronizer | A component that uses `SharedMediaSession` for HTML5 video sync. |
+| SharedMediaSession | A component used to synchronize media playback. |
+| SharedPresence | Tracks presence information for members of a space. |
+| SharedEvent | A component that simplifies broadcasting an event to other clients within the space. |
+| SharedMap| A distributed map that's synchronized across all clients within a space. |
+| SharedList | A distributed list that's synchronized across all clients within a space. |
 
 ## Building Custom Components
 In addition to the pre-built components, the SDK makes it easy to build your own custom components. Custom components come in two flavors: 

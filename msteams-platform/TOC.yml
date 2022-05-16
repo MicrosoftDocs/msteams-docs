@@ -303,6 +303,8 @@
     href: apps-in-teams-meetings/teams-live-share-overview.md
   - name: Enable and configure your app for Teams live share
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-live-share.md
+  - name: Teams live share SDK capabilities
+    href: apps-in-teams-meetings/teams-live-share-sdk-capabilities.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
