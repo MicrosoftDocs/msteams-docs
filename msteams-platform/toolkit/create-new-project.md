@@ -29,7 +29,7 @@ To create a new Teams app using Teams Toolkit, you can select from one of the fo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="Create an app":::
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app:::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Capabilties for Teams app":::
 
 
 ### Create a new Teams app using view samples
