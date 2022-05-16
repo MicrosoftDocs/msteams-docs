@@ -74,42 +74,26 @@ Sending proactive messages to the users is an effective way to communicate with 
 
 When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first time users interact with your app. It's an opportunity to create a good first impression. The best welcome messages must include:
 
-* Why a user is receiving the message?
+* Why a user is receiving the message? It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
- It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
+* What do you offer? Users must be able to identify what they can do with your app and what value can you bring to them.
 
-* What do you offer?
-
- Users must be able to identify what they can do with your app and what value can you bring to them.
-
-* What should they do next?
-
- Invite users to try out a command, or interact with your app.
+* What should they do next? Invite users to try out a command, or interact with your app.
 Poor welcome messages can lead the users to block your bot. Write to the point and clear welcome messages. Iterate on the welcome messages if they aren't having the desired effect.
 
 ### Notification messages
 
 To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following:
 
-* What happened?
+* What happened? A clear indication of what happened to cause the notification.
 
- A clear indication of what happened to cause the notification.
+* What was the result? It must be clear, what item is updated to get the notification.
 
-* What was the result?
+* Who or what triggered it? Who or what took action, that caused the notification to be sent.
 
- It must be clear, what item is updated to get the notification.
+* What can users do in response? Make it easy for your users to take actions based on your notifications.
 
-* Who or what triggered it?
-
- Who or what took action, that caused the notification to be sent.
-
-* What can users do in response?
-
- Make it easy for your users to take actions based on your notifications.
-
-* How can users opt-out?
-
- You must provide a path for users to opt-out of additional notifications.
+* How can users opt-out? You must provide a path for users to opt-out of additional notifications.
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
@@ -117,13 +101,9 @@ To send messages to a large group of users, for example to your organization, pr
 
 When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
 
-* Why is the user receiving the message?
+* Why is the user receiving the message? Make it easy for your users to understand the reason for which they're receiving the message.
 
- Make it easy for your users to understand the reason for which they're receiving the message.
-
-* What can user do next?
-
- Users can take the required action based on the message content.
+* What can user do next? Users can take the required action based on the message content.
 
 ## Proactively install your app using Graph
 
