@@ -97,9 +97,9 @@ You can follow the steps to add SSO in the Teams app based on the Teams app capa
 
     * `showUserInfo`: It implements a function to get user info with SSO token. You can follow this to create your own method that requires SSO token.
 
-    * `ssoDialog`: It creates a [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
+    * `ssoDialog`: It creates a `ComponentDialog` that is used for SSO.
 
-    * `teamsSsoBot`: It creates a [TeamsActivityHandler](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest) with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
+    * `teamsSsoBot`: It creates a `TeamsActivityHandler` with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
 
 3. Follow the code sample and register your own command with `addCommand` in this file (optional).
 
@@ -229,9 +229,9 @@ export async function showUserImage(
 }
 ```
 
-# [Javascript](#tab/javascript)
+# [JavaScript](#tab/javascript)
 
-```javascript
+```javaScript
 // for JavaScript:
 export async function showUserImage(context, ssoToken, param) {
     await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
@@ -261,6 +261,8 @@ export async function showUserImage(context, ssoToken, param) {
     return;
 }
 ```
+
+---
 
 2. Register a new command using `addCommand` in `teamsSsoBot` use the following line:
 
@@ -329,10 +331,13 @@ With TeamsFx SDK, you can write user authentication code in a simplified way usi
 
 For more information about TeamsFx SDK, see:
 
-* [TeamsFx SDK](TeamsFx-SDK.md) or check out the API [@microsoft/teamsfx package](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest)
+* [TeamsFx SDK](TeamsFx-SDK.md) or check out the API reference
 
 * [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
 * [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
+## See also
+
+* [Prepare accounts to build Teams apps](accounts.md)
 
