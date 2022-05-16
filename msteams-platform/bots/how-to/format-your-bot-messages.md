@@ -10,6 +10,9 @@ ms.author: anclear
 
 Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards that are attachments that contain interactive elements, such as buttons, text, images, audio, video, and so on.
 
+> [!NOTE]
+> The bot message size limit is 50 KB. The bot message is not sent if its size exceeds 50 KB.
+
 ## Format text content
 
 To format your bot messages, you can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your bot message's text content is rendered.
