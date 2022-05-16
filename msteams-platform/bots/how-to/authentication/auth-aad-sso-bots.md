@@ -381,4 +381,4 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-bots-with-sso.yml), which helps you to create a bot with SSO authentication enabled.
+Follow the [step-by-step guide](../../../sbs-bots-with-sso.yml), to build a bot with SSO authentication.

@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Teams Bot with Single sign-on
+title: Build a bot with SSO authentication
 metadata:
-  title: Teams Bot with SSO
-  description: In this tutorial, you'll learn to set up SSO in a bot for Teams.
+  title: Build a bot with SSO authentication
+  description: In this tutorial, you'll learn to built a bot with SSO authentication.
   audience: Developer
   level: Beginner
   ms.date: 08/24/2021
@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times to perform repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory silently refreshes the authentication token. So users aren't required to use their sign-in credentials multiple times. 
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times. The Single sign-on (SSO) authentication method in Azure Active Directory (Azure AD) silently refreshes the authentication token. Users don't require to use their sign-in credentials multiple times. 
     
     A bot behaves differently depending on the conversation it's involved in:
 
-    * Bots in channel and group chat conversations require the user to @mention the bot
+    * Bots in channel and group chat conversations require the users to @mention the bot
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot
     
-    This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
+    This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
      :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot" border="true":::
 
@@ -200,7 +200,7 @@ items:
 
     1. Select **Manage**.
 
-         :::image type="content" source="~/assets/images/bots/select-manage.png" alt-text="Manage app ID" border="true":::
+         :::image type="content" source="~/assets/images/bots/MicrosoftAppID.png" alt-text="Manage app ID" border="true":::
 
     1. From the left pane, select **Authentication**.
 
@@ -264,6 +264,8 @@ items:
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://your ngrok/botid-00000000-0000-0000-0000-000000000000/access_as_user`
+
+       Your Application ID URI is created with Scope Name**.
 
           :::image type="content" source="~/assets/images/bots/ExposeAPIandaddscope.png" alt-text="API exposed and scope added" border="true":::
 
@@ -334,7 +336,7 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**.
     
        > [!NOTE]
-       > If you're already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.</br>
+       > If you're already in testing your bot in Teams, you must sign out this app and Teams. Then sign in again to see this change.</br>
         
           :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Update manifest" border="true":::
 
@@ -445,23 +447,23 @@ items:
     
         :::image type="content" source="~/assets/images/bots/upload-custom-app.png" alt-text="Upload custom app" border="true":::
 
-    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+    1. Select **Open** to upload the .zip file that you have created in the **Manifest** folder.
 
         :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Open app" border="true":::
 
     1. Select **Add** to add the conversation bot to your chat.
 
-        You can interact with this bot by sending it a message. The Bot exchanges an SSO token and makes a call to the Graph API on your behalf and returns the results. It keeps you signed in unless you send a message to **sign-out**.
+        You can interact with the bot by sending it a message. The bot exchanges an SSO token and call to the Graph API on your behalf.It results to keeps you signed in unless you send a message to **sign-out**.
 
     1. Send a message to the bot. The conversation bot asks for permissions for the first time.
 
-         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Permissions to bot" border="true":::
-
     1. Select **Continue** to accept the permissions.
+
+         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Permissions to bot" border="true":::
 
     1. Select **Accept** for **Permissions requested**.
 
-        :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot" border="true":::
+        :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Mobile signed in to bot" border="true":::
 
 - title: Complete challenge
   durationInMinutes: 1
