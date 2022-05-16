@@ -39,7 +39,7 @@ To add cloud resources by using open the command palette
    1. Open **command palette**.
    1. Enter **Teams:Add features**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/addcloud-updated1234.png" alt-text="cloud" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="cloud" border="true":::
 
    1. From the pop-up, select the cloud resources to add in your project.
 
