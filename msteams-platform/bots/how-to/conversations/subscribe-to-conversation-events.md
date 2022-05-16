@@ -408,7 +408,7 @@ The `teamMemberAdded` event is sent to your bot the first time it's added to a c
 * Developers training isn't required. In lieu of SDK support, developers need to write code to get channel ID from the channel data
 * Default behavior is to post back into the channel. Developers can dig into the channelData for team ID if they really want it.
 
-#### Disadvantages of setting the channel ID as the conversation ID
+#### Limitations of setting the channel ID as the conversation ID
 
 * Observe channel ID properties to ensure all values are set correctly.
 * Conversation ID only be set to the channel ID on installation or app upgrade with bot as data isn't persisted.
@@ -1307,6 +1307,13 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
+#### Limitations of installationupdate
+
+* Channel ID isn't persisted anywhere
+* Bots fail to receive the channel ID when other users or bots are added to the    conversation
+* Bots fail to receive channel ID when it's uninstalled
+* Same issue continues after application upgrades
+
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -1411,13 +1418,6 @@ async def on_installation_update(self, turn_context: TurnContext):
    else:
        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
 ```
-### Limitations of installationupdate
-
-* Channel ID isn't persisted anywhere
-* Bots fail to receive the channel ID when other users or bots are added to the    conversation
-* Bots fail to receive channel ID when it's uninstalled
-* Same issue continues after application upgrades
-
 ---
 
 ## Uninstall behavior for personal app with bot
