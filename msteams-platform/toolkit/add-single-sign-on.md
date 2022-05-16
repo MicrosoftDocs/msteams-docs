@@ -97,9 +97,9 @@ import { InitTeamsFx } from "../../sso/InitTeamsFx";
 
 * `showUserInfo`: It implements a function to get user info with SSO token. You can follow this to create your own method that requires SSO token.
 
-* `ssoDialog`: It creates a [ComponentDialog](https://docs.microsoft.com/en-us/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
+* `ssoDialog`: It creates a [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
 
-* `teamsSsoBot`: It creates a [TeamsActivityHandler](https://docs.microsoft.com/en-us/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest) with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
+* `teamsSsoBot`: It creates a [TeamsActivityHandler](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest) with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
 
 3. Follow the code sample and register your own command with `addCommand` in this file (optional).
 
@@ -329,7 +329,7 @@ With TeamsFx SDK, you can write user authentication code in a simplified way usi
 
 For more information about TeamsFx SDK, see:
 
-* [TeamsFx SDK](TeamsFx-SDK.md) or check out the API [@microsoft/teamsfx package](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest)
+* [TeamsFx SDK](TeamsFx-SDK.md) or check out the API [@microsoft/teamsfx package](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest)
 
 * [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
