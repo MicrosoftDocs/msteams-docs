@@ -1,6 +1,6 @@
 ---
-title: Teams live share overview
-description: overview of Teams live share
+title: Teams lives share overview
+description: overview of Teams live share.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila

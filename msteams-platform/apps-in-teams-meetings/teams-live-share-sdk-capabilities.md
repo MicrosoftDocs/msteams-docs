@@ -1,6 +1,6 @@
 ---
 title: Teams live share SDK capabilities
-description: overview of Teams live share
+description: integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -8,6 +8,8 @@ ms.author: v-ypalikila
 ---
 
 # Teams live share SDK
+
+Teams live share SDK helps you integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
 
 The Teams Live share SDK contains a collection of classes for building collaborative applications. While there's a heavy focus on building collaborative media applications, any number of collaborative experiences can be built using the components of the SDK.
 
