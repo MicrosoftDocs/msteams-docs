@@ -297,6 +297,12 @@
     href: apps-in-teams-meetings/API-references.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
+- name: Teams Live Share
+  items:
+  - name: Overview
+    href: apps-in-teams-meetings/teams-live-share-overview.md
+  - name: Enable and configure your app for Teams live share
+    href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-live-share.md
 - name: Build webhooks and connectors
   items:
   - name: Overview
