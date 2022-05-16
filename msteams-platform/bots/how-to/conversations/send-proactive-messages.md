@@ -50,7 +50,7 @@ After you have the user or channel information, you must create the conversation
 
 ## Create the conversation
 
-You must create the conversation if it does not exist or you don't know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
+You must create the conversation if it doesn't exist or you don't know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
 After the conversation is created, you must get the conversation ID.
 
