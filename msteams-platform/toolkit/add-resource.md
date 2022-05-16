@@ -13,48 +13,50 @@ ms.date: 11/29/2021
 TeamsFx helps to provision the cloud resources for your application hosting. </br>
 You can add the cloud resources optionally, that fit your development needs.
 
-## Add cloud resources using Teams Toolkit
+## Limitation
 
-> [!IMPORTANT]
-> You need to provision for each environment, after you have successfully added a resource.
+You can't add the resources, if you created SPFx based tab project.
+
+## Add cloud resources
 
 Cloud resources can added for creating an application. There are two way to add the resources in visual studio code:
 
-  1. You can add the cloud resources using Teams Toolkit in Visual Studio Code
-  1. You can add the cloud resources using open the command palette
+  1. Add cloud resources by using Teams Toolkit in Visual Studio Code
+  1. Add cloud resources by using open the command palette
+
+> [!NOTE]
+> You need to provision for each environment, after you have successfully added a resource.
   
-* You can add the cloud resources using Teams Toolkit in Visual Studio Code
+* To add cloud resources using Teams Toolkit in Visual Studio Code
 
      1. Open **Microsoft Visual Studio Code**.
-     1. Select **Teams Toolkit** from left pane.
-     1. In the Teams Toolkit side bar panel, select **Add features**:
+     1. Select **Teams Toolkit** from left panel.
+     1. Select **Add features**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="add feature" border="true":::
 
-*  You can add the cloud resources using open the command palette
+* To add cloud resources using open the command palette
 
      1. Open **command palette**
      1. Enter **Teams:Add features**
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/addcloud-updated1234.png" alt-text="cloud" border="true":::
 
-        From the pop-up, select the cloud resources to include in your project:
+     1. From the pop-up, select the cloud resources to add in your project.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final" border="true":::
-
-    The selected resources are successfully added in to your project.
 
 ## Add cloud resources using TeamsFx CLI
 
 1. Change directory to your **project directory**.
-1. The following table provides capabilities and the required commands:
+1. The following table provide capabilities and the required commands:
 
-|Cloud Resource|Command|
-|---------------|----------|
-| Azure function|`teamsfx resource add azure-function --function-name your-func-name`|
-| Azure SQL database|`teamsfx resource add --function-name your-func-name`|
-| Azure API management|`teamsfx resource add azure-apim`|
-| Azure Key Vault|`teamsfx resource add azure-keyvault`|
+   |Cloud Resource|Command|
+   |---------------|----------|
+   | Azure function|`teamsfx resource add azure-function --function-name your-func-name`|
+   | Azure SQL database|`teamsfx resource add --function-name your-func-name`|
+   | Azure API management|`teamsfx resource add azure-apim`|
+   | Azure Key Vault|`teamsfx resource add azure-keyvault`|
 
 ## Types of cloud resources
 
@@ -80,10 +82,6 @@ After adding resources, the following additional changes are appears in your pro
 |---------------|---------------|-----------------------------|
 |Azure functions|An Azure functions template code is added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.visual studio code` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your application locally.|
 |Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder/openapi`|Defines your API after publishing, it's the API specification file.|
-
-## Limitation
-
-If you created SPFx based tab project, then you can't add the resources.
 
 ## See also
 
