@@ -77,7 +77,7 @@ For complete instructions, see [build the landing page for your SaaS offer](/azu
 
 When someone finishes buying a subscription plan for your app and want to stay in the Teams, without directing them to your landing page, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
-For complete instructions, see .
+For complete instructions, see [first party license management](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/first-party-license-management).
 
 ### Best practices for landing pages
 

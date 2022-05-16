@@ -72,9 +72,6 @@ First party license management allows customers to manage SaaS licenses purcha
 
 [First party license management](first-party-license-management.md)
 
-    :::column-end:::
-:::row-end:::
-
 ## Next step
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

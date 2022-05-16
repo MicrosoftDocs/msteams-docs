@@ -37,9 +37,11 @@ Following are the pre-requisites for enabling third-party app license management
 
 * Access to development environments and tools required to create Teams Add-ons.
 
-* A test tenant with a Teams environment in it. This is to simulate how a customer experience the license management or enforcement for your solution.  
+* A test tenant with a Teams environment in it. This is to simulate how a customer experience the license management or enforcement for your solution.
 
 ## Defining an offer in Partner Center
+
+## End user license management experience
 
 1. Create an offer in Partner Center.
 1. Define the licensing options.
@@ -196,6 +198,10 @@ Sample code for Usage Right API integration in Appendix B.
     :::image type="content" source="~/assets/images/first-party-license-mgt/pending-status.png" alt-text="Pending status":::
 
 ## Test the app by launching in Teams environment
+
+When a new user is launching the app for the first time, they are requested to provide consent to the ISV to access their permissions in Graph for that app.
+
+:::image type="content" source="~/assets/images/first-party-license-mgt/test-the-app.png" alt-text="Test the app":::
 
 **App runtime consent flow for user**
 
