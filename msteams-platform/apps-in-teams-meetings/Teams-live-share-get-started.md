@@ -1,18 +1,18 @@
 ---
-title: Get started
+title: Get started with Teams live share
 description: Use Teams live share SDK to integrate your experiences with Microsoft Teams.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
 
-# Get started
+# Get started with teams live share
 
 You can use Teams live share SDK to integrate your experiences with Microsoft Teams. To get started, use the JavaScript samples.
 
 Learn [how to build collaborative experiences using the SDK](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/docs#readme).
 
-### Prerequisites
+## Prerequisites
 
 Before you begin, you must fulfill the following prerequisites:
 
