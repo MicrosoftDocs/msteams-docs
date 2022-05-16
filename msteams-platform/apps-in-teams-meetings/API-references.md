@@ -137,7 +137,7 @@ The following table provides the response codes:
 | **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the tenant admin disables or blocks the app during live site migration, it triggers the error response 403. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
-| **404** | The meeting has either expired or participants are not available.|
+| **404** | The meeting has either expired or participants aren't available.|
 
 ## Send an in-meeting notification
 
@@ -483,8 +483,8 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **500** | Internal error. |
-| **501** | API is not supported in the current context.|
-| **1000** | App does not have proper permissions to allow share to stage.|
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Get app content stage sharing state API
 
@@ -523,8 +523,8 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **500** | Internal error. |
-| **501** | API is not supported in the current context.|
-| **1000** | App does not have proper permissions to allow share to stage.|
+| **501** | API isn't supported in the current context.|
+| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 ## Get app content stage sharing capabilities API
 
@@ -563,7 +563,7 @@ The following table provides the response codes:
 |Response code|Description|
 |---|---|
 | **500** | Internal error. |
-| **1000** | App does not have permissions to allow share to stage.|
+| **1000** | App doesn't have permissions to allow share to stage.|
 
 ## Get real-time Teams meeting events API
 
