@@ -32,8 +32,8 @@ You can add capabilities in the following methods:
 * Add capabilities by using Teams Toolkit in Visual Studio Code
 * Add capabilities by using open the command palette
 
-> [!Note]
-> You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
+  > [!Note]
+  > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
 To add capabilities by using Teams Toolkit in Visual Studio Code:
 
