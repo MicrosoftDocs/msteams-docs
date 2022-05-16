@@ -33,7 +33,7 @@ Follow the steps to add SSO using Teams Toolkit in Visual Studio Code
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
 
-     * You can also open command palette and select **Teams: Add features**
+    * You can also open command palette and select **Teams: Add features**
 
 4. Select **Single Sign-On**.
 
@@ -73,9 +73,9 @@ You can follow the steps to add SSO in the Teams app based on the Teams app capa
 
 2. Copy `sso` folder under `auth/tab` to `tabs/src/sso/`.
 
-     * `InitTeamsFx`: The file implements a function that initializes TeamsFx SDK and opens `GetUserProfile` component after SDK is initialized
+    * `InitTeamsFx`: The file implements a function that initializes TeamsFx SDK and opens `GetUserProfile` component after SDK is initialized
 
-     * `GetUserProfile`: The file implements a function that calls Microsoft Graph API to get user info
+    * `GetUserProfile`: The file implements a function that calls Microsoft Graph API to get user info
 
 3. Execute `npm install @microsoft/teamsfx-react` under `tabs/`.
 
@@ -113,7 +113,7 @@ You can follow the steps to add SSO in the Teams app based on the Teams app capa
 
     ```
 
-with
+   with
 
    ```JSON
 
@@ -134,7 +134,7 @@ with
 
    ```
 
-with
+   with
 
    ```Bash
 
@@ -194,8 +194,8 @@ Follow thw steps to add a new command, after you add SSO in your project.
 
 # [TypeScript](#tab/typescript)
 
-```typescript
- // for TypeScript:
+   ```typescript
+   // for TypeScript:
 export async function showUserImage(
     context: TurnContext,
     ssoToken: string,
@@ -226,13 +226,13 @@ export async function showUserImage(
     // }
 
     return;
-}
-```
+}  
+   ```
 
 # [JavaScript](#tab/javascript)
 
-```javaScript
-// for JavaScript:
+   ```javaScript
+   // for JavaScript:
 export async function showUserImage(context, ssoToken, param) {
     await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
 
@@ -260,7 +260,7 @@ export async function showUserImage(context, ssoToken, param) {
 
     return;
 }
-```
+   ```
 
 ---
 
@@ -272,7 +272,7 @@ export async function showUserImage(context, ssoToken, param) {
 
    ```
 
-and add following lines after the above line to register a new command `photo` and hook up with method `showUserImage` added above:
+   and add following lines after the above line to register a new command `photo` and hook up with method `showUserImage` added above:
 
    ```bash
 
@@ -294,7 +294,7 @@ and add following lines after the above line to register a new command `photo` a
 
    ```
 
-## Debug application
+## Debug your application
 
 Press F5 to debug your application.
 
