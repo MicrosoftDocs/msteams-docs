@@ -70,7 +70,7 @@ These authentication methods are available for tabs, bots, and messaging extensi
 | :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false"::: | <br> :::image type="content" source="../../assets/images/authentication/mex-app.png" alt-text="message extension app authentication" border="false"::: | :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md" border="false"::: |-->
 
 > [!NOTE]
-> Please note that the [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md) page is moved to Resources.
+> Please note that the [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md) page is moved to the Resources module.
 
 ## See also
 
