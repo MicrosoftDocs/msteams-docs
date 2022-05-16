@@ -48,7 +48,7 @@ To add cloud resources by using open the command palette
 ## Add cloud resources using TeamsFx CLI
 
    1. Change directory to your **project directory**.
-   1. The following table provide capabilities and the required commands:
+   1. The following table provides capabilities and the required commands:
 
        |Cloud Resource|Command|
        |---------------|----------|
@@ -59,7 +59,7 @@ To add cloud resources by using open the command palette
 
 ## Types of cloud resources
 
-The following scenarios for TeamsFx to integrates with Azure services:
+The following scenarios for TeamsFx to integrate with Azure services:
 
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
 - [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
@@ -68,14 +68,14 @@ The following scenarios for TeamsFx to integrates with Azure services:
 
 ## Add Cloud resources
 
-After adding the resource, the following changes are appears in your project:
+The following changes appear after adding resources in your project:
 
 - New parameters added to azure.parameter.{env}.json to provide required information for provision.
 - New content is included to ARM template under `templates/azure`, except the files are in `templates/azure/teamsfx` folder for added the Azure resources.
 - The files under `templates/azure/teamsfx` folder are regenerated to ensure TeamsFx required configuration are up to date for added Azure resources.
 - `.fx/projectSettings.json` is updated to track the available resources in your project.
 
-After adding resources, the following additional changes are appears in your project:
+The following additional changes appear after adding resources in your project:
 
 |Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
