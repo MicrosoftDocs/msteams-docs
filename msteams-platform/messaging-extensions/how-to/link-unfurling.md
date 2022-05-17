@@ -21,48 +21,17 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
 
-## App less adaptive card preview with schema.org templates
+## App less Adaptive Card
+
+User can add metadata tags to the website, after adding user can copy the link and paste it into the compose box, the adaptive card will take the template of the tag and unfurls into an Adaptive Card based on the type of product it is tagged.
+
+### Schema.org
 
 Schema.org is a collaborative, community based activity with a mission to create, maintain, and promote schemas for the structured data on the internet, web pages, email and beyond.
-
-### How does it work
-
-When metadata of the webpage is tagged to a type of product it unfurls to an adaptive card. App type plays an crucial role, each type will have a designated template. The adaptive card is upgraded with lot more action buttons
 
 Following screenshot displays metadata of how an adaptive card unfurls.
 
 :::image type="content" source="../../assets/images/messaging-extension/meta.png" alt-text="Meta data"border="true"lightbox="../../assets/images/messaging-extension/meta-data.png":::
-
-### Adding meta data to the website
-
-Add structured schema.org JSON-LD metadata to the website. Few of the templates with @types:
-
-| App type | schema.org meta data |
-|---|---|
-| Creative works | [Book](https://schema.org/Book), [Movie](https://schema.org/Movie), [MusicRecording](https://schema.org/MusicRecording), [Recipe](https://schema.org/Recipe) and [TVSeries](https://schema.org/TVSeries) |
-| Embedded non-text objects | [AudioObject](https://schema.org/AudioObject), [ImageObject](https://schema.org/ImageObject) and [VideoObject](https://schema.org/VideoObject)​ |
-| Event | [Event​](https://schema.org/Event) |
-| Health and medical | [Health and medical types](https://schema.org/docs/meddocs.html): notes on the health and medical types under [MedicalEntity](https://schema.org/MedicalEntity).​|
-| Organization | [Organization​](https://schema.org/Organization) |
-| Person | [Person​](https://schema.org/Person) |
-| Place | [Place](https://schema.org/Place) |
-| LocalBusiness | [LocalBusiness](https://schema.org/LocalBusiness) |
-| Restaurant | [Restaurant](https://schema.org/Restaurant) |
-| Product | [Product](https://schema.org/Product), [Offer](https://schema.org/Offer), [AggregateOffer​](https://schema.org/AggregateOffer)
-| Review | [Review](https://schema.org/Review), [AggregateRating​](https://schema.org/AggregateRating) |
-| Action | [Action](https://schema.org/Action) |
-
-Following is an instance of adding structured schema.org JSON-LD metadata to the website.
-
-:::image type="content" source="../../assets/images/messaging-extension/metadata-1.png" alt-text="structured schema.org"border="true":::
-
-### Limitation
-
-Following are the limitations for app less adaptive card preview with schema.org templates:
-
-1. The new templates will not render in meeting chats or windows
-
-1. If a matching template is not found, the link defaults to current URL preview unfurling.
 
 ## Add link unfurling to your app manifest
 
