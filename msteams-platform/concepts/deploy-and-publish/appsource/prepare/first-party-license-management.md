@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # First party license management enabled in Teams for third-party SaaS offers
 
-The Microsoft Teams third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This article details on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration. With first party license management of third party SaaS offers in the Teams surface area, the license management happens post-purchase of the said app (the associated SaaS offer) via Teams surface areas or AppSource. The app is unusable if the licenses aren't assigned.
+Microsoft Teams third-party app license management provides the flexibility for customers to assign, use, and track SaaS licenses purchased from Team Storefront. This article details on the critical task of license management – the ability to authorize specific users to use a particular ISV application for the paid duration. With first party license management of third party SaaS offers in the Teams surface area, the license management happens post-purchase of the said app (the associated SaaS offer) via Teams surface areas or AppSource. The app is unusable if the licenses aren't assigned.
 
 Third-party app license management enables independent software vendors (ISVs) to manage and enforce licenses for their solutions using systems provided by Microsoft. By adopting this, ISVs can:
 
@@ -69,8 +69,6 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/number-of-licenses-determined.png" alt-text="Number of licenses determined":::
 
-## Defining an offer in Partner Center
-
 ## End user license management experience
 
 1. Create an offer in Partner Center.
@@ -110,7 +108,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 > [!NOTE]
 > This is a one-time setting, and you cannot change it once your offer is published.
 
-    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Software as a service ISVPILOT":::
+:::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Software as a service ISVPILOT":::
 
 > [!NOTE]
 > Choose the license management solution that is suitable for all plans within your offer in the app. Only one offer is supported in the App manifest and you cannot edit the option after selection.
@@ -224,7 +222,7 @@ Sample code for Usage Right API integration in Appendix B.
 > [!Note]
 > We cannot unassign licenses to a team.
 
-    :::image type="content" source="~/assets/images/first-party-license-mgt/unassign-button.png" alt-text="Unassign button":::
+:::image type="content" source="~/assets/images/first-party-license-mgt/unassign-button.png" alt-text="Unassign button":::
 
 1. If there is a delay in a multi user assignment or un-assignment action, the purchaser sees a **Pending** status while the action completes on the Microsoft services.
 
