@@ -51,7 +51,7 @@ You can achieve SSO in a tab app by obtaining access token for the Teams app use
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 <!--
 ```mermaid
