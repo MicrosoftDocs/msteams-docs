@@ -7,16 +7,16 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Enable SSO in Teams app manifest and preview app
 
-Before you update Teams app manifest, ensure that you've configure code to enable SSO.
+Before you update Teams app manifest, ensure that you've configure code to enable SSO in your tab app.
 
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)
 
-You've registered your app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
+You've registered your tab app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your tab app. The Teams app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
-Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app, and invokes the OBO flow to help users seamlessly access your tab app.
+Configure the `webApplicationInfo` property in the Teams app manifest file. This property enables SSO for your app, and invokes the OBO flow to help app users access your tab app seamlessly.
 
 &nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams app manifest configuration" border="false":::
 
@@ -27,14 +27,14 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
     | Element | Description |
     | --- | --- |
     | id | Enter the app ID (GUID) that you created in Azure AD. |
-    | resource | Enter your app's subdomain and the application ID URI that you created in Azure AD when creating scope. You can copy the value from **Azure AD** > **Expose an API** section. |
+    | resource | Enter your app's subdomain URI and the application ID URI that you created in Azure AD when creating scope. You can copy the value from the **Azure AD** > **Expose an API** section. |
 
   :::column-end:::
   :::column span="1":::
     <br>
 
     > [!NOTE]
-    > Use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
+    > Use manifest version 1.5 or higher to implement the `webApplicationInfo` property.
   :::column-end:::
 :::row-end:::
 
@@ -49,7 +49,7 @@ For more information, please see [webApplicationInfo](/resources/schema/manifest
 If your tab app doesn't have a Teams app manifest file, you'll need to create it. To create a Teams app manifest file, use the content given below to create a .json file named, `manifest.json`.
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain url and package name. For more information, please see [Manifest schema](/resources/schema/manifest-schema).
+> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI and package name. For more information, please see [Manifest schema](/resources/schema/manifest-schema).
 
   ```json
 { 
@@ -117,7 +117,7 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
 
 1. Open the app project.
 2. Open manifest.json.
-3. Append the following code snippet to the manifest to add the new property:
+3. Append the following code snippet to the manifest file to add the new property:
 
     ```json
     "webApplicationInfo": {
@@ -128,9 +128,9 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
 
     where,
     - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It is the GUID.
-    - {{Subdomain}.app ID URI} is the  domain and subdomain of your application. This is the same application ID URI that you registered when creating scope in Azure AD.
+    - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
 
-4. Update the Azure app ID in the **id** property.
+4. Update the app ID from Azure AD in the **id** property.
 5. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
@@ -198,11 +198,11 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
 </details>
 
 > [!NOTE]
-> During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok url. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok url. You'll need to update the url whenever your ngrok subdomain changes For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
 ## Sideload and Preview in Teams
 
-You've configured the app to enable SSO in Azure, code, and in Teams manifest file. You can now sideload your app in Teams and preview it in Teams environment.
+You've configured the tab app to enable SSO in Azure AD, in app code, and in Teams manifest file. You can now sideload your tab app in Teams, and preview it in Teams environment.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO app" border="false":::
 
@@ -210,7 +210,7 @@ To preview your tab app in Teams:
 
 1. Create an app package.
 
-   The app package is a zip file that contains the app manifest and app icons.
+   The app package is a zip file that contains the app manifest file and app icons.
 
 1. Open Teams.
 
@@ -224,7 +224,7 @@ To preview your tab app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The Tab app is sideloaded and the Teams consent dialog appears.
+    The tab app is sideloaded and the Teams consent dialog appears.
 
 1. Select **Continue**.
 
