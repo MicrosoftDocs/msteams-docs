@@ -1,12 +1,12 @@
 ---
-title: Teams live share prerequisites
+title: Integrate SDK to your app
 description: Use Teams live share SDK to integrate your experiences with Microsoft Teams.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
 
-# Teams live share Prerequisites
+# Integrate SDK to your app
 
 You can use Teams live share SDK to integrate your experiences with Microsoft Teams. Before you begin, you must fulfill the following prerequisites:
 
