@@ -61,7 +61,7 @@ When Teams obtains the access token, it's cached and reused as needed. This toke
 > - Always call `getAuthToken()` only when you need an access token.
 > - Teams will cache access token for you. Don't cache or store the access token in your app's code.
 
-#### Code for getAuthToken()
+#### Code for getAuthToken
 
 Add the following code snippet to the client-side code to:
 
@@ -234,18 +234,3 @@ The following is a typical decoded payload of an access token.
 - [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
 - [Microsoft identity platform ID tokens](/azure/active-directory/develop/id-tokens)
 - [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#validating-tokens)
-
-<!--
-### When to call getAuthToken
-
-Call `getAuthToken` at the time when you need to validate the user identity.
-
-- If your tab app requires the user identity to be validated at the time app users access the app, call `getAuthToken` from inside `microsoftTeams.initialize()`.
-- If the user can access your app but needs validation to use some functionality, then you can call `getAuthToken` when the user takes an action that requires a signed-in user.
-
-You should also pass `allowSignInPrompt: true` in the options parameter of `getAuthToken`.
-
-Teams caches the access token and will reuse it. This token can be used until it expires, without making another call to the Azure AD whenever `getAuthToken` is called. So you can add calls of `getAuthToken` to all functions and handlers that initiate an action where the token is needed.
-
-> [!IMPORTANT]
-> As a best security practice, always call `getAuthToken` when you need an access token. Teams will cache it for you. Don't cache or store the access token using your own code.-->

@@ -12,7 +12,7 @@ Before you update Teams app manifest, ensure that you've configure code to enabl
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)
 
-You've registered your tab app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your tab app. The Teams app manifest describes how an app integrates into Teams.
+You've registered your tab app in Azure AD, and obtained an app ID. You've also configured your code to call `getAuthToken()` and handle the access token. Now, you must update the Teams app manifest to enable SSO for your tab app. The Teams app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
