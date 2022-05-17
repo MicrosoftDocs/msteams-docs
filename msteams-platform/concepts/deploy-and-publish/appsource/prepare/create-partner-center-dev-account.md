@@ -207,7 +207,7 @@ The following resources can also assist:
 To enable your users to install the app on Teams iOS platform, you must update your Apple Developer ID on the Microsoft Partner Center. Follow the steps to update:
 
 1. Login to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
-1. Select &nbsp;:::image type="content" source="../../../../assets/icons/gear-icon.png" alt-text="setting"border="false":::&nbsp; on the top right for the settings.
+1. Select &nbsp;:::image type="content" source="../../../../assets/icons/gear-icon.png" alt-text="setting"border="false":::&nbsp; in the upper right for the settings.
 1. Go to **Legal info** section under **Organization profile** from the left pane.
 1. Select the **Developer** tab.
 1. Enter your Apple Developer ID.
