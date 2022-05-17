@@ -85,11 +85,11 @@ Teams Toolkit helps you to create and customize your Teams app project that make
 
 ### Create a new Teams app
 
-It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Create from samples**.
+It helps you to start with Teams app development by creating new Teams project using Teams Toolkit either by using **Create new project** or **Start from a sample**.
 
 ### Add Features
 
-It helps you to incrementally add additional Teams capabilities such as tab or bot or optionally add Azure resources such as Azure SQL Database, Azure Key Vault, which fits your development needs to your current Teams app. You can also add Single Sign on or CICD workflows for your Teams app. 
+It helps you to incrementally add additional Teams capabilities such as **Tab** or **Bot** or optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, which fits your development needs to your current Teams app. You can also add **Single Sign-on** or **CI/CD workflows** for your Teams app. 
 
 ### Add cloud resources
 
@@ -149,7 +149,7 @@ Let's explore Teams Toolkit features.
 | &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
 | &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
 | **Help and Feedback** | &nbsp; | &nbsp; |
-| &nbsp; | Quick Start | View the Teams Toolkit Quick Start help within Visual Studio Code.  |
+| &nbsp; | Get started | View the Teams Toolkit Get started help within Visual Studio Code.  |
 | &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
 | &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 |
