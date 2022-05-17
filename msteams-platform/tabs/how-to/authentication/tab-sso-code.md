@@ -50,7 +50,7 @@ Use `getAuthToken()` at the time when you need to obtain access token for the cu
 
 | If access token is needed... | Call getAuthToken()... |
 | --- | --- |
-| At the time app user accesses the app | From inside `microsoftTeams.initialize()`. |
+| When app user accesses the app | From inside `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
 When Teams obtains the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD. You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.

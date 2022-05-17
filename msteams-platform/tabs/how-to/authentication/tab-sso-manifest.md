@@ -127,7 +127,7 @@ If your tab app doesn't have a Teams app manifest file, you'll need to create it
     ```
 
     where,
-    - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It is the GUID.
+    - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
     - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
 
 4. Update the app ID from Azure AD in the **id** property.
