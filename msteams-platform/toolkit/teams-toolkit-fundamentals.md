@@ -149,7 +149,8 @@ Let's explore Teams Toolkit features.
 | &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
 | &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
 | **Help and Feedback** | &nbsp; | &nbsp; |
-| &nbsp; | Get started | View the Teams Toolkit Get started help within Visual Studio Code.  |
+| &nbsp; | Quick start | View the Teams Toolkit Quick start help within Visual Studio Code.  |
+| &nbsp; | Tutorial | Select to access different tutorials. |
 | &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
 | &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 |
