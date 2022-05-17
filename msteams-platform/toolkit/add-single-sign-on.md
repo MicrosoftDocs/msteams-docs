@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/16/2022
 ---
 
-# Add Single sign-on
+# Add Single sign-on experience
 
 Microsoft Teams provides single sign-on function for the application to obtain signed-in Teams user token to access Microsoft Graph (and other APIs). Teams Toolkit facilitates this interaction by abstracting some of the Azure Active Directory (AAD) flows and integrations behind some simple APIs. It enables you to add single sign-on (SSO) features easily to your Teams application.
 
@@ -16,7 +16,7 @@ For applications that interact with the user in a chat, a Team, or a channel, SS
 
 ## Enable SSO support
 
-Teams Toolkit helps to add SSO to the following Teams capabilities:
+Teams Toolkit helps you to add SSO to the following Teams capabilities:
 
 * Tab
 * Bot
@@ -46,7 +46,7 @@ You can run `teamsfx add sso`  command in your **project root directory**
 > [!Note]
 > The feature enables SSO for all existing applicable capabilities. If you add capability later to the project, follow the same steps to enable SSO for that capability.
 
-## Changes Teams Toolkit makes to your project
+## Understand the Changes Teams Toolkit makes to your project
 
 Teams Toolkit makes the following changes to your project:
 
@@ -60,7 +60,7 @@ Teams Toolkit makes the following changes to your project:
 > [!Note]
 > By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
 
-## After you trigger 'Add SSO' command
+## Steps after you trigger 'Add SSO' command
 
 Follow the steps to add SSO in the Teams app based on the Teams app capabilities.
 
@@ -97,7 +97,7 @@ Follow the steps to add SSO in the Teams app based on the Teams app capabilities
 
     * `showUserInfo`: It implements a function to get user info with SSO token. You can follow this to create your own method that requires SSO token.
 
-    * `ssoDialog`: It creates a `ComponentDialog` that is used for SSO.
+    * `ssoDialog`: It creates a [ComponentDialog](https://docs.microsoft.com/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
 
     * `teamsSsoBot`: It creates a `TeamsActivityHandler` with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
 
