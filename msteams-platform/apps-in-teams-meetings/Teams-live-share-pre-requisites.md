@@ -1,20 +1,14 @@
 ---
-title: Get started with Teams live share
+title: Teams live share prerequisites
 description: Use Teams live share SDK to integrate your experiences with Microsoft Teams.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
 
-# Get started with teams live share
+# Prerequisites
 
-You can use Teams live share SDK to integrate your experiences with Microsoft Teams. To get started, use the [JavaScript samples](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/javascript/packages#readme).
-
-Learn [how to build collaborative experiences using the SDK](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/docs#readme).
-
-## Prerequisites
-
-Before you begin, you must fulfill the following prerequisites:
+You can use Teams live share SDK to integrate your experiences with Microsoft Teams. Before you begin, you must fulfill the following prerequisites:
 
 * [Update the app manifest](#update-the-app-manifest)
 * [Create a container](#create-a-container)
@@ -95,3 +89,8 @@ The following table provides resource-specific permissions for Teams live share:
 |OnlineMeetingIncomingAudio.Detect.Chat|<!--- need info --->|
 
 For more information, see [resource specific consent](/graph/permissions-reference).
+
+
+To get started, use the [JavaScript samples](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/javascript/packages#readme).
+
+Learn [how to build collaborative experiences using the SDK](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/docs#readme).
