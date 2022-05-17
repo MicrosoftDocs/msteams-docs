@@ -56,7 +56,7 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/estimate-by-team.png" alt-text="Estimate by team":::
 
-1. Enter the team name in the search string **Quantity** if you are unsure about the number of people in a team.
+1. Enter the team name in the search string **Quantity** if you're unsure about the number of people in a team.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/search-for-the-team.png" alt-text="Search for the team":::
 
@@ -65,7 +65,7 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 > [!Note]
 > Here the licenses are not assigned automatically. Only the number of licenses are estimated. The user or the purchaser still needs to go and assign licenses to the team after purchase.
 
-1. The number of licenses required are automatically determined upon selecting the team. Now select **Place order**.
+1. The number of licenses required is automatically determined upon selecting the team. Now select **Place order**.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/number-of-licenses-determined.png" alt-text="Number of licenses determined":::
 
@@ -123,7 +123,7 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Plan Listing":::
 
-1. Add pricing and availability details (placeholder).
+1. Add pricing and availability details.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="Pricing and Availability details":::
 
@@ -219,18 +219,18 @@ Sample code for Usage Right API integration in Appendix B.
 
 1. Purchaser can unassign licenses from one or multiple users from the license page. The purchaser can select the users and select **Unassign**.
 
-> [!Note]
-> We cannot unassign licenses to a team.
+    > [!Note]
+    > We cannot unassign licenses to a team.
 
-:::image type="content" source="~/assets/images/first-party-license-mgt/unassign-button.png" alt-text="Unassign button":::
+    :::image type="content" source="~/assets/images/first-party-license-mgt/unassign-button.png" alt-text="Unassign button":::
 
-1. If there is a delay in a multi user assignment or un-assignment action, the purchaser sees a **Pending** status while the action completes on the Microsoft services.
+1. If there is a delay in a multi-user assignment or un-assignment action, the purchaser sees a **Pending** status while the action completes on the Microsoft services.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/pending-status.png" alt-text="Pending status":::
 
 ## Test the app by launching in Teams environment
 
-When a new user is launching the app for the first time, they are requested to provide consent to the ISV to access their permissions in Graph for that app.
+When a new user is launching the app for the first time, they're requested to provide consent to the ISV to access their permissions in Graph for that app.
 
 :::image type="content" source="~/assets/images/first-party-license-mgt/test-the-app.png" alt-text="Test the app":::
 
@@ -256,6 +256,6 @@ If a license is assigned to multiple users, you build a queue to the commerce te
 
 * Partial failures: A user may or may not have approval, or their matrix may be a failure in the API assignment action, so there could be a partial failure in assigning licenses.
 
-* Time lag based on the queue: There may be a lag based on number of users in the queue that needs to be assigned.
+* Time lags based on the queue: There may be a lag based on number of users in the queue that needs to be assigned.
 
-You'll see a pending status if the license has failed to assign and there is an opportunity to **Retry**.
+You'll see a pending status if the license has failed to assign and there's an opportunity to **Retry**.
