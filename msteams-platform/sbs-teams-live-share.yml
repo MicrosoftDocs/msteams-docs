@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 05/17/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: Teams live share
+  nextTutorialHref: 
   nextTutorialTitle: Read more on Teams live share
   ms.custom: mvc
   ms.localizationpriority: high
@@ -140,7 +140,7 @@ items:
     
         > [!NOTE]
         > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
-        > Upload your manifest in your demo tenant for organisation or your Teams account and run your solution in Visual Studio.
+        > Upload your manifest in your demo tenant for organization or your Teams account and run your solution in Visual Studio.
     
       1. Go to Teams.
       1. Schedule a meeting to test the tab from calendar in Teams.
@@ -151,6 +151,7 @@ items:
       1. Select **Add** and the app is added to the meeting.
       1. Select **+ Apps** and select the app**.
       1. Select **Save**.
+      1. Select Share to stage icon from the tab.
 
 - title: Test your tab
   durationInMinutes: 1
