@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
 
-# Prerequisites
+# Teams live share Prerequisites
 
 You can use Teams live share SDK to integrate your experiences with Microsoft Teams. Before you begin, you must fulfill the following prerequisites:
 

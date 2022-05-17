@@ -304,7 +304,7 @@
   - name: Teams live share SDK capabilities
     href: apps-in-teams-meetings/teams-live-share-sdk-capabilities.md
   - name: Prerequisites
-    href: apps-in-teams-meetings/Teams-live-share-get-started.md
+    href: apps-in-teams-meetings/Teams-live-share-pre-requisites.md
   - name: Step-by-step guide
     href: sbs-teams-live-share.yml
 - name: Build webhooks and connectors
