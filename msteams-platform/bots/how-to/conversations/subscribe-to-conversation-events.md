@@ -410,7 +410,7 @@ The `teamMemberAdded` event is sent to your bot the first time it's added to a c
 
 #### Limitations of setting the channel ID as the conversation ID
 
-* Observe channel ID properties to ensure all values are set correctly.
+* You need to observe channel ID properties to ensure all values are set correctly.
 * Conversation ID only be set to the channel ID on installation or app upgrade with bot as data isn't persisted.
 
 The following code shows an example of team members added event:
@@ -1314,9 +1314,10 @@ Use the `installationUpdate` event to send an introductory message from your bot
 ### Limitations of installationupdate event
 
 * Channel ID isn't persisted anywhere
-* Bots fail to receive the channel ID when other users or bots are added to the    conversation
+* Bots fail to receive the channel ID when other users or bots are added to the conversation
 * Bots fail to receive channel ID when it's uninstalled
-* Same issue continues after application upgrades
+
+The following code shows an example of `installationupdate` event:
 
 # [C#](#tab/dotnet)
 
