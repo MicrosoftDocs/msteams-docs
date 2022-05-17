@@ -40,14 +40,14 @@ Here's what your app users get with SSO experience:
 
 - Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user. It translates to app access for the user without having to leave Teams environment.
 - After consenting to Teams the first time, the app user can use your tab app with no further need of consent, even on any other device. For this reason, it's true SSO and offers a better user experience.
-- The access token is pre-fetched by Teams. This is done to improve performance and load time of the app in Teams environment.
+- The access token is pre-fetched by Teams to improve performance and load time of the app in Teams environment.
 - App users don't need to memorize or record several passwords to access and use apps in Teams environment.
 
 Now, let's see what happens at the backend during runtime to achieve true SSO user experience within Teams.
 
 ## SSO in Teams at runtime
 
-You can achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app, Teams, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
+Achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app, Teams, and Azure AD. During this interaction, the app user must give consent for using identity to obtain the access token.
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
@@ -85,9 +85,9 @@ Here are some use cases where enabling SSO is beneficial. Call `getAuthToken()` 
 
 - To get an app user’s identity from Teams if you have an existing app that you want to be available within a tab app in Teams.
 
-- To authenticate an app user by re-using the Team’s identity inside your tab app.
+- To authenticate an app user by reusing the Team’s identity inside your tab app.
 
-- To authenticate and get an app user’s Teams identity inside configurable tabs. The app users don't need to sign in again. This is applicable to some settings that need to be configured at a configuration stage.
+- To authenticate and get an app user’s Teams identity inside configurable tabs. The app users don't need to sign in again. It's applicable to some settings that need to be configured at a configuration stage.
 
 - To obtain an access token inside a task module, when it's invoked from a tab app, a bot app, a messaging extension app, or adaptive cards.
 
@@ -108,19 +108,19 @@ To enable SSO for a tab app:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
-1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current app user logged into Teams. For generating access token, you configure scopes and OBO flow.
-2. **Configure code**: Update the code to handle access token, calling `getAuthToken()` when an app user accesses your tab app, and validating access token when it is received.
+1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. Configure redirect URI where Azure AD would send the access token in exchange for identity token for the current app user logged into Teams. For generating access token, you configure scopes and OBO flow.
+2. **Configure code**: Update the code to handle access token, calling `getAuthToken()` when an app user accesses your tab app, and validating access token when it's received.
 3. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID generated on Azure AD and the application ID URI to ensure secure connection between Azure AD and your app.
 
 ## Third-party cookies on iOS
 
-After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps will not be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps won't be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
 
 ## Best practices
 
 Here's a list of best practices:
 
-- **Call access token only when you need it**: Call `getAuthToken()` only when you need an access token. You can call it when an app user attempts to access your tab app, or for using a particular function that requires app user validation.
+- **Call access token only when you need it**: Call `getAuthToken()` only when you need an access token. You can call it when an app user accesses your tab app, or for using a particular function that requires app user validation.
 - **Don't store access token on client-side code**: Don’t cache or store the access token in your app's client-side code. Always call `getAuthToken()` when you need an access token. Teams Client caches the access token (or request a new one if it expires). This makes sure that there's no accidental leak of your token from your web app.
 - **Use server-side code for Microsoft Graph calls**: Always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked. For more information on the proper protocol flow, see the [OAuth 2.0 protocol diagram](auth-flow-tab.md).
 
