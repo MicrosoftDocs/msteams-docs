@@ -14,7 +14,7 @@ keywords: events bot channel message reaction conversation
 
 When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
-* Trigger a welcome message when your bot is added to a team or channel in the preferred or selected channel
+* Trigger a welcome message when your bot is added to a channel in the preferred or selected channel
 * Trigger a welcome message when a new team member is added or removed
 * Trigger a notification when a channel is created, renamed, or deleted
 * Trigger a notification when a bot message is liked by a user
