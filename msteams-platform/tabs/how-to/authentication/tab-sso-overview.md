@@ -51,7 +51,7 @@ You can achieve SSO in a tab app by obtaining access token for the Teams app use
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/teams-runtime-seq.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Tab single sign-on SSO diagram" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 <!--
 ```mermaid
@@ -106,7 +106,7 @@ This section describes the tasks involved in implementing SSO for a tab app. The
 
 To enable SSO for a tab app:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Steps to enable SSO for tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current app user logged into Teams. For generating access token, you configure scopes and OBO flow.
 2. **Configure code**: Update the code to handle access token, calling it when an app user accesses your tab app, and validating it when received.
