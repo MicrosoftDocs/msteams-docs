@@ -142,11 +142,11 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
    * Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Deploy manifest":::
 
    * Trigger `Teams: Deploy Teams app manifest` from command palette
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Deploy from command palette":::
 
 2. Update to Teams platform
 
@@ -156,7 +156,7 @@ After previewing the manifest file, you can sync your local changes to Dev Porta
 
    * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Update to teams":::
 
 You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
