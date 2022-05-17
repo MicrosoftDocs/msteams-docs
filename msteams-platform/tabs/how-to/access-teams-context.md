@@ -152,6 +152,12 @@ You can register your app to be informed if the theme changes by calling `micros
 
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
 
+> [!NOTE]
+>
+> A new sessionId is generated if a customer restarts the Teams desktop or reloads the Teams web client.The Teams session tracks the lifetime of the Teams client.
+>
+> A new app sessionId is generated when a  customer navigates away from the app and refreshes it via the reload button.The App session tracks the lifetime of the platform app.
+
 ## Next step
 
 > [!div class="nextstepaction"]
