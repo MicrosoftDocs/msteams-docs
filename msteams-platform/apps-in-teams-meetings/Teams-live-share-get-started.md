@@ -8,7 +8,7 @@ ms.author: v-ypalikila
 
 # Get started with teams live share
 
-You can use Teams live share SDK to integrate your experiences with Microsoft Teams. To get started, use the JavaScript samples.
+You can use Teams live share SDK to integrate your experiences with Microsoft Teams. To get started, use the [JavaScript samples](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/javascript/packages#readme).
 
 Learn [how to build collaborative experiences using the SDK](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/docs#readme).
 
@@ -16,13 +16,13 @@ Learn [how to build collaborative experiences using the SDK](https://github.com/
 
 Before you begin, you must fulfill the following prerequisites:
 
-* Update the app manifest
-* create a container
-* Enable RSC permissions
+* [Update the app manifest](#update-the-app-manifest)
+* [Create a container](#create-a-container)
+* [Enable RSC permissions](#enable-resource-specific-consent)
 
 ## Update the app manifest
 
- To Enable your aTeams live share for Teams meetings, update your app manifest and use the context properties to determine where your app must appear.
+ To enable Teams live share for Teams meetings, update your app manifest and use the context properties to determine where your app must appear.
 
 The app manifest must include the following code snippet:
 
@@ -74,20 +74,24 @@ The app manifest must include the following code snippet:
 
 ​
 ```
-## Create a fluid container
 
-Fluid data is stored within containers, and these containers need to be created before other users can load them. Since creation and loading of containers both happen in the browser, a Fluid application needs to be capable of handling both paths
+## Create a container
 
-## Resource-specific consent
+Fluid data is stored within containers, and these containers need to be created before other users can load them. Since creation and loading of containers both happen in the browser, a Fluid application needs to be capable of handling both paths.
 
-The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively. Enable RSC permissions for Audio ducking and meeting stage support.
+## Enable resource-specific consent
+
+The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively.
 
 ### Resource-specific permissions for Teams live share
 
 The following table provides resource-specific permissions for Teams live share:
 
-|Application permission| Action |
+|Name| Description |
 | ----- | ----- |
-|Interactive.ReadWrite.Meeting|<!--- need info --->|
+|LiveShareSession.ReadWrite.Chat|<!--- need info --->|
+|LiveShareSession.ReadWrite.Channel|<!--- need info --->|
+|MeetingStage.Write.Chat|<!--- need info --->|
+|OnlineMeetingIncomingAudio.Detect.Chat|<!--- need info --->|
 
-For more details, see [resource specific consent](/graph/permissions-reference).
+For more information, see [resource specific consent](/graph/permissions-reference).

@@ -13,15 +13,16 @@ Teams live share SDK helps you integrate applications and websites with Teams to
 
 The Teams Live share SDK contains a collection of classes for building collaborative applications. While there's a heavy focus on building collaborative media applications, any number of collaborative experiences can be built using the components of the SDK.
 
-- [Collaboration Spaces](#collaboration-spaces)
-- [Shared Components](#shared-components)
-- [Building Custom Components](#building-custom-components)
+* [Collaboration Spaces](#collaboration-spaces)
+* [Shared Components](#shared-components)
+* [Building Custom Components](#building-custom-components)
 
 ## Collaboration Spaces
+
 Everything starts with the `TeamsCollaborationSpace` or `CollaborationSpace` classes. Clients join collaboration spaces and are then able to exchange messages and share objects with other clients connected to the same space. Each space exposes a `BroadcastSocket` which can be used to message other clients within the space, a `SharedObjects` collection which can be used persist objects that are synchronized across all of the clients within the space, and a `SharedClock` which provides a synchronized clock for the space.
 
-
 ## Shared Components
+
 While it's completely possible to use the `CollaborationSpace` object directly to build collaborative experiences, the SDK provides of set of pre-built components that dramatically simplify the task.
 
 | Component      | Description                                  |
@@ -34,10 +35,11 @@ While it's completely possible to use the `CollaborationSpace` object directly t
 | SharedList | A distributed list that's synchronized across all clients within a space. |
 
 ## Building Custom Components
+
 In addition to the pre-built components, the SDK makes it easy to build your own custom components. Custom components come in two flavors:
 
-- Peer-to-peer messaging based components like `SharedMediaSession`, `SharedPresence`, and `SharedEvent`. The Building Shared Components guide will walk you through building a custom `SharedCursor` component. 
-- Distributed data structures like `SharedMap`, `SharedList`, and `SharedCounter`. The Building Shared Objects guide will walk you through building a custom `SharedCounter` component.
+* Peer-to-peer messaging based components like `SharedMediaSession`, `SharedPresence`, and `SharedEvent`. The Building Shared Components guide will walk you through building a custom `SharedCursor` component. 
+* Distributed data structures like `SharedMap`, `SharedList`, and `SharedCounter`. The Building Shared Objects guide will walk you through building a custom `SharedCounter` component.
 
 ## SDK capabilities
 
@@ -244,5 +246,3 @@ function addToList(video, id) {
 * **SharedEventTimer**: Class to simplify sending events at regular intervals.
 * **LocalTimestampProvider**: Generates timestamps using the local clock. Only used for local testing.
 * **TeamsTimestampProvider** – Synchronizes each client's clock with the Teams Collaboration Service clock.
-
-
