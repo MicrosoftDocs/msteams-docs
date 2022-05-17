@@ -48,13 +48,12 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 | chat |Teams||
 | dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
 | location |Teams| See notes on [App permissions](#app-permissions).|
-| mail | Teams, Outlook||
+| mail | Outlook||
 | media |Teams| See notes on [App permissions](#app-permissions).|
 | pages | Teams, Outlook, Office | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
 | settings || Deprecated. Replaced by `pages.config`.|
 | sharing | Teams||
-| stageView | Teams||
 | tasks | | Deprecated. Replaced by `dialog` capability. See notes on [Dialogs](#dialogs).|
 | teamsCore | Teams | Namespace containing Teams-specific functionality.|
 | video | Teams||
