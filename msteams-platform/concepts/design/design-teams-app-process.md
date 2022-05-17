@@ -2,7 +2,7 @@
 title: App design process
 author: heath-hamilton
 description: Get a general idea of how and when you might use Microsoft tools and resources to design an effective Microsoft Teams app.
-ms.localizationpriority: high
+ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
 ---

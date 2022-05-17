@@ -2,7 +2,7 @@
 title: Work with Universal Actions for Adaptive Cards
 description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility using Code samples.
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 
 # Work with Universal Actions for Adaptive Cards
