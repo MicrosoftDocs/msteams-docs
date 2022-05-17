@@ -29,7 +29,7 @@ Follow the steps to add SSO using Teams Toolkit in Visual Studio Code
 
 1. Open **Microsoft Visual Studio Code**.
 2. Select Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: from left navigation bar.
-3. Select **Add features**.
+3. Select **Add features** under **DEVELOPMENT**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso add features":::
 
@@ -44,7 +44,7 @@ Follow the steps to add SSO using Teams Toolkit in Visual Studio Code
 You can run `teamsfx add sso`  command in your **project root directory**
 
 > [!Note]
-> The feature enables SSO for all existing applicable capabilities. If you add an capability later to the project, you can follow the same steps to enable SSO for that capability.
+> The feature enables SSO for all existing applicable capabilities. If you add capability later to the project, follow the same steps to enable SSO for that capability.
 
 ## Changes Teams Toolkit makes to your project
 
@@ -53,7 +53,7 @@ Teams Toolkit makes the following changes to your project:
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
    |Create|`aad.template.json` under `template\appPackage`|This is the Azure Active Directory application manifest used to represent your Azure AD app. This template is used to register an Azure AD app during local debug or provision stage.|
-   |Modify|`manifest.template.json` under `template\appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change effects when you trigger local debug or provision.|
+   |Modify|`manifest.template.json` under `template\appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
    |Create|`auth/tab`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a tab project.|
    |Create|`auth/bot`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a bot project.|
 
@@ -62,7 +62,7 @@ Teams Toolkit makes the following changes to your project:
 
 ## After you trigger 'Add SSO' command
 
-You can follow the steps to add SSO in the Teams app based on the Teams app capabilities.
+Follow the steps to add SSO in the Teams app based on the Teams app capabilities.
 
 > [!Note]
 > The changes are based on the scaffold of the templates.
@@ -188,7 +188,7 @@ You can follow the steps to add SSO in the Teams app based on the Teams app capa
 
 ### Add a new command to the bot (optional)
 
-Follow thw steps to add a new command, after you add SSO in your project.
+Follow the steps to add a new command, after you add SSO in your project:
 
 1. Create a new file (example `todo.ts` or `todo.js`) under `bot/src/` and add your own business logic to call Graph API:
 
@@ -272,7 +272,7 @@ export async function showUserImage(context, ssoToken, param) {
 
    ```
 
-   and add following lines after the above line to register a new command `photo` and hook up with method `showUserImage` added above:
+   Add following lines after the above line to register a new command `photo` and hook up with method `showUserImage` added above:
 
    ```bash
 
