@@ -18,13 +18,13 @@ You can't add the resources, if you created SPFx based tab project.
 
 ## Add cloud resources
 
-You can add cloud resources in the following methods:
+You can add cloud resources by the following methods:
 
 * Add cloud resources by using Teams Toolkit in Visual Studio Code
 * Add cloud resources by using the command palette
 
   > [!NOTE]
-  > You need to provision for each environment, after you have successfully added a resource.
+  > You need to provision for each environment, after you have successfully added the resource in your Teams app.
   
 To add cloud resources by using Teams Toolkit in Visual Studio Code
 
@@ -48,7 +48,7 @@ To add cloud resources by using the command palette
 ## Add cloud resources using TeamsFx CLI
 
    1. Change directory to your **project directory**.
-   1. The following table provides capabilities and the required commands:
+   1. The following table lists the capabilities and required commands:
 
        |Cloud Resource|Command|
        |---------------|----------|
@@ -59,7 +59,7 @@ To add cloud resources by using the command palette
 
 ## Types of cloud resources
 
-The following scenarios for TeamsFx to integrate with Azure services:
+In the following scenarios, TeamsFx integrates with Azure services:
 
 - [Azure functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams applications backend.
 - [Azure SQL database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams applications data store.
