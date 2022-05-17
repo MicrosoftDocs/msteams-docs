@@ -77,17 +77,17 @@ sequenceDiagram
 | 6 | Tab app | The tab app parses the access token using JavaScript to extract required information, such as the app user's email address. The token returned to the tab app is both an access token and an identity token. |
 
 > [!IMPORTANT]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
+> The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, please see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 ### Use cases for enabling SSO for tab app
 
 Here are some use cases where enabling SSO is beneficial. Call `getAuthToken()` in these scenarios to use Teams identity for obtaining access token for your app users:
 
-- To get an app user’s identity from Teams if you have an existing app that you want to be available within a tab app in Teams for your app users.
+- To get an app user’s identity from Teams if you have an existing app that you want to be available within a tab app in Teams.
 
 - To authenticate an app user by reusing the Team’s identity inside your tab app.
 
-- To authenticate and get user’s Teams identity inside configurable tabs. The app users don't need to signing in again. This is applicable to some settings that need to be configured at a configuration stage.
+- To authenticate and get an app user’s Teams identity inside configurable tabs. The app users don't need to sign in again. This is applicable to some settings that need to be configured at a configuration stage.
 
 - To obtain an access token inside a task module, when it's invoked from a tab app, a bot app, a messaging extension app, or adaptive cards.
 
@@ -96,7 +96,7 @@ Here are some use cases where enabling SSO is beneficial. Call `getAuthToken()` 
 - To authenticate users for [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 > [!NOTE]
-> Tabs are Teams-aware web pages. To enable SSO in a web-page hosted inside a tab app, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. Once you've initialized Microsoft Teams, call `microsoftTeams.getAuthToken()` to get the access token for your app.
+> Tabs are Teams-aware web pages. To enable SSO in a web-page hosted inside a tab app, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. After you've initialized Microsoft Teams, call `microsoftTeams.getAuthToken()` to get the access token for your app.
 
 To achieve Teams SSO at runtime, configure your app to enable SSO for authenticating and authorizing app users.
 
@@ -109,7 +109,7 @@ To enable SSO for a tab app:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Register with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. You also configure redirect URI where Azure AD would send the access token in exchange for identity token for the current app user logged into Teams. For generating access token, you configure scopes and OBO flow.
-2. **Configure code**: Update the code to handle access token, calling it when an app user accesses your tab app, and validating it when received.
+2. **Configure code**: Update the code to handle access token, calling getAuthToken when an app user accesses your tab app, and validating access token when it is received.
 3. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID generated on Azure AD and the application ID URI to ensure secure connection between Azure AD and your app.
 
 ## Third-party cookies on iOS
@@ -142,8 +142,8 @@ Here's a list of best practices:
     4. When asking for more consent from Azure AD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to Azure AD, otherwise Azure AD wouldn't ask for other scopes.
 
         - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
-        - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
-    1. Once the user has granted more permissions, retry the On-behalf-of flow to get access to these other APIs.
+        - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, `Mail.Read` or `User.Read`.
+    1. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
 
     </details>
 
