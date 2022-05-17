@@ -141,19 +141,22 @@ items:
       1. Join the meeting.
       1. In the meeting window, select **+ Apps** and select **Manage apps**.
 
-      (image to be added)
+       (image to be added)
 
       1. Select **Upload a custom app**.
       1. Upload the manifest.json.
       1. Select **Add** and the app is added to the meeting.
 
-      (image to be added)
+       (image to be added)
 
       1. Select **+ Apps** and select the app**.
       1. Select **Save**.
+
+       (image to be added)
+       
       1. Select Share to stage icon from the meeting side panel.
 
-      (image to be added)
+       (image to be added)
 
 - title: Test your app
   durationInMinutes: 1
