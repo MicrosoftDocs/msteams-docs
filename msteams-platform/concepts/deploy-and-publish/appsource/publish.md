@@ -45,23 +45,24 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **Deep functional and experience tests**
 
-  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies) with a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you a detailed test report in 24 working hours post submission.
+  Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies). 
+  There will be a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you a detailed test report in 24 working hours post submission.
 
 * **Guided app publish through concierge service**
 
-  If there are no issues observed with your app, your app will be approved and published to the Teams store. If there are issues, you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
+  If there are no issues observed with your app, then your app will be approved and published to the Teams store. On the other hand, if the issues are present, then you'll receive an automated validation report from Partner Center with the failure details. To help you successfully publish your app to the Teams store and guide you through this process, the validation team will send you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
 
   * Summary of all issues
 
   * Details of failures or issues with policy links and categorization:
 
-    * Mandatory fix: These issues must be fixed prior to app approval.
+    * Mandatory fix: Issues must be fixed prior to app approval.
 
-    * Suggested fix: These issues can be fixed post app approval as these are recommendations to improve your app’s experience.
+    * Suggested fix: Issues can be fixed post app approval as the issues are recommendations to improve your app’s experience.
 
-    * Blocker: These issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
+    * Blocker: Issues prevent the validation team from testing your app functionality further and must be resolved for validation to continue.
 
-    * Query: These queries can be shared to get answers to specific questions related to your app.
+    * Query: Queries can be shared to get answers to specific questions related to your app.
 
   * Steps to recreate issues through written instructions or video format.
 
@@ -83,13 +84,13 @@ When you feel your app is production ready, you can begin the process of getting
 
 * **During design phase**
 
-  Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirements. If you build your app in line with these guidelines, this will prevent any rework due to non-adherence to store policies.
+  Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the store requirement guidelines to prevent any rework due to non-adherence to store policies.
 
 * **Prior to app submission**
 
   1. [Create your Partner Center account](prepare/create-partner-center-dev-account.md) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
 
-  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and consequently, the time taken to approve your app.
+  1. Review the [store validation guidelines](prepare/teams-store-validation-guidelines.md) again to ensure that your app is in alignment with the store requirements. This helps reduce the number of issues observed in your app and so, the time taken to approve your app.
 
   1. Test and re-test your app:
 
@@ -119,11 +120,11 @@ When you feel your app is production ready, you can begin the process of getting
 
   * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report or if you need any additional support to resolve the reported issues.
 
-  * Ensure that you've adequate developer bandwidth to resolve any reported issues till the app is approved.
+  * Ensure that you've adequate developer bandwidth to resolve any reported issues until the app is approved.
 
-  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and consequently, the time taken to approve your app.
+  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing. This helps reduce the number of iterations required to validate your app and so, the time taken to approve your app.
   
-  * Avoid changing app functionality during the validation process. This might lead to discovery of new issues and increase the time it takes to approve your app.
+  * Avoid changing app functionality during the validation process that might lead to discovery of new issues and increase the time it takes to approve your app.
 
 ## See also
 
