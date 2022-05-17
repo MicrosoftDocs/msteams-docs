@@ -72,8 +72,7 @@ Endpoints for government cloud are:
 |-------------|---------|---|---|
 |Teams client|[Teams](https://teams.microsoft.com)|[Teams](https://gov.teams.microsoft.us/)|[Teams](https://dod.teams.microsoft.us/) |
 |Teams admin |[Teams](https://admin.teams.microsoft.com/)|[Teams](https://admin.gov.teams.microsoft.us/)|[Teams](https://admin.dod.teams.microsoft.us)|
-|CDN statics |[Teams](https://statics.teams.cdn.office.net/)|[Teams](https://statics.gov.teams.microsoft.us/)|[Teams](https://statics.dod.teams.microsoft.us/)|
-|Microsoft Graph |[Teams]()|[Teams]()|[Teams]()|
+|Microsoft Graph |[Teams](https://graph.microsoft.com)|[Teams](https://graph.microsoft.us)|[Teams](https://dod-graph.microsoft.us)|
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
