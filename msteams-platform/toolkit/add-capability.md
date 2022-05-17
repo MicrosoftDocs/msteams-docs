@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities to your Teams apps
+# Add capabilities to Teams apps
 
 Teams app capability helps you to create a new Teams app in app development. The following table lists the Teams app capabilities:
 
