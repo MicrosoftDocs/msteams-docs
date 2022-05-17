@@ -97,7 +97,7 @@ Follow the steps to add SSO in the Teams app based on the Teams app capabilities
 
     * `showUserInfo`: It implements a function to get user info with SSO token. You can follow this to create your own method that requires SSO token.
 
-    * `ssoDialog`: It creates a [ComponentDialog](https://docs.microsoft.com/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
+    * `ssoDialog`: It creates a [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest) that is used for SSO.
 
     * `teamsSsoBot`: It creates a `TeamsActivityHandler` with `ssoDialog` and add `showUserInfo` as a command that can be triggered.
 
