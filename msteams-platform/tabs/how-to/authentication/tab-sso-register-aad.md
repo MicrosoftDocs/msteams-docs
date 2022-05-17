@@ -127,9 +127,9 @@ After you've created a new app registration, configure scope (permission) option
 
 To configure scope and the OBO flow, you'll need:
 
-- [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. To do this, you'll expose a web API, and configure the app ID URI.
-- [To configure API scope](#to-configure-api-scope): Define scope for the API, and configure the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-- [To configure authorized client application](#to-configure-authorized-client-application): Create an authorized client ID for the applications that you want to pre-authorize for your app’s web application. It lets the user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your users won't have the opportunity to decline consent.
+- [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
+- [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your app users won't have the opportunity to decline consent.
 
 ### To expose an API
 
@@ -139,25 +139,25 @@ To configure scope and the OBO flow, you'll need:
 
     The **Expose an API** page appears.
 
-1. Select **Set** to generate app ID URI in the form of `api://{AppID}`.
+1. Select **Set** to generate application ID URI in the form of `api://{AppID}`.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI" border="true":::
 
-    The section for setting app ID URI appears.
+    The section for setting application ID URI appears.
 
-1. Enter the app ID URI in the format explained here.
+1. Enter the application ID URI in the format explained here.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI" border="true":::
 
-    - The **Application ID URI** displays pre-filled with application ID (GUID) in the format `api://{AppID}`.
-    - The app ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
+    - The **Application ID URI** is pre-filled with app ID (GUID) in the format `api://{AppID}`.
+    - The application ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
     - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
     where,
-    - `fully-qualified-domain-name.com` is the human-readable domain name from which your app is served. Your application's domain name and the domain name you register for your Azure AD application should be the same.
+    - `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Azure AD application should be the same.
 
       If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
-    - `AppID` is the **Application (client) ID** (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
+    - `AppID` is the app ID (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
     > [!IMPORTANT]
     >
@@ -165,22 +165,22 @@ To configure scope and the OBO flow, you'll need:
     >
     > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
     >
-    >   For example, to create an app service or web app with resource name as demoapplication:
+    >   For example, to create an app service or web app with resource name, 'demoapplication':
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
     >   | *demoapplication* | **<https://demoapplication.azurewebsites.net>** | All platforms.|
-    >   | *DemoApplication* | **<https://DemoApplication.azurewebsites.net>** | Desktop, web, and iOS only. It isn't supported in android. |
+    >   | *DemoApplication* | **<https://DemoApplication.azurewebsites.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lower case option *demoapplication* as base resource name.
 
 2. Select **Save**.
 
-    A message pops up on the browser stating that the app ID URI was updated.
+    A message pops up on the browser stating that the application ID URI was updated.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Application ID URI message" border="true":::
 
-    The app ID URI displays on the page.
+    The application ID URI displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated" border="true":::
 
@@ -192,12 +192,12 @@ To configure scope and the OBO flow, you'll need:
 
     The **Add a scope** page appears.
 
-1. Enter the app details for configuring scope.
+1. Enter the details for configuring scope.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details" border="true":::
 
     1. Enter the scope name. This is a mandatory field.
-    2. Select the users who can give consent for this scope. The default option is **Admins only**.
+    2. Select the user who can give consent for this scope. The default option is **Admins only**.
     3. Enter the **Admin consent display name**. This is a mandatory field.
     4. Enter the description for admin consent. This is a mandatory field.
     5. Enter the **User consent display name**.
@@ -234,32 +234,33 @@ To configure scope and the OBO flow, you'll need:
     > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
 <br>
     > [!IMPORTANT]
-    > For a Teams tab, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams. You might need this detail, if you're using the same Azure AD app for a mobile or desktop client also.
+    > For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams. You might need this detail, if you're using the same Azure AD app for a mobile or desktop client also.
 
-1. Select the app ID URI you created for your app for the **Authorized scopes**.
-2. Select **Add application**.
+1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
-    A message pops up on the browser stating that the client app was added.
+1. Select **Add application**.
+
+    A message pops up on the browser stating that the authorized client app was added.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message" border="true":::
 
-    The client app ID displays on the page.
+    The client ID displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed" border="true":::
 
 > [!NOTE]
-> You can authorize more than one client application. Repeat the steps for configuring another authorized client application.
+> You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
 ## Configure authentication for different platforms
 
-Depending on the platform or device on which you want to target your your app, additional configuration may be required such as redirect URIs, specific authentication settings, or fields specific to the platform.
+Depending on the platform or device where you want to target your app, additional configuration may be required such as redirect URIs, specific authentication settings, or details specific to the platform.
 
 > [!NOTE]
 >
 > - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
-> - Implicit grant is not required for tab SSO.
+> - Implicit grant is not required if SSO is enabled on a tab app.
 
-The redirect URI you defined on the **Register an application** page for Web platform appears on this page. You can configure authentication for more platforms also.
+The redirect URI, which you defined on the **Register an application** page for Web platform, appears on this page. You can configure authentication for other platforms also.
 
 ### To configure authentication for a platform
 
@@ -277,11 +278,11 @@ The redirect URI you defined on the **Register an application** page for Web pla
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure. You can choose the platform type from web, SPA, and mobile or desktop applications.
+1. Select the platform that you want to configure for your tab app. You can choose the platform type from web, SPA, and mobile or desktop applications.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
 
-    You can configure multiple platform options for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
+    You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
 
     The configuration page appears.
 
