@@ -8,29 +8,11 @@ keywords: teams what's new latest updates or developer preview and features
 
 # What's new for developers in Microsoft Teams
 
-<!--
-:::row:::
-    :::column span="2":::
-        &nbsp;
-    :::column-end:::
-    :::column span="1":::
-        | **Subscribe:** | :::image type="content" source="assets/images/RSSfeeds.png" alt-text="Link to RSS Feed" link="#get-latest-updates"::: | :::image type="content" source="assets/images/twitter.png" alt-text="Link to Twitter" link="https://twitter.com/Microsoft365Dev"::: |
-        | --- | --- | --- |
-    :::column-end:::
-:::row-end::: -->
+Discover Microsoft Teams platform features that are generally available (GA) and in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
-Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
+## Microsoft Build 2022 ![bullhorn icon](~/assets/images/bullhorn.png)
 
-> [!IMPORTANT]
-> You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
-
-## Microsoft Build - 2022
-
-:::image type="content" source="assets/images/Build-features-2022.png" alt-text="Build features 2022" border="false":::
-
-<br><br><br><br>
-
- Date | Feature | Feature description | Find it here |
+| Date | Feature | Feature description | Find it here |
 | --- | --- | --- | --- |
 | /date/ | /Feature name/ | /Description/ | /breadcrumb link to the page/ |
 
