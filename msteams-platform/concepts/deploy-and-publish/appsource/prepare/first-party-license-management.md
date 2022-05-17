@@ -175,11 +175,11 @@ Sample code for Usage Right API integration in Appendix B.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/checkout-button.png" alt-text="Checkout button":::
 
-1. Enter the number of licenses you would like to purchase, update sold to address and payment information. Select “place order”. This completes the purchase of the subscription.
+1. Enter the number of licenses you would like to purchase in the **Quantity** field, update **Sold to** address and **Payment method** information. Select **Place order**. This completes the purchase of the subscription.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/place-order.png" alt-text="Place order":::
 
-1. Once subscription is purchased successfully, purchaser is redirected to the ISV site to complete configuration steps required to activate the subscription.
+1. Once subscription is purchased successfully, purchaser is redirected to the ISV site to complete configuration steps required to activate the subscription. Select **Configure now**.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/configure-now.png" alt-text="Configure button":::
 
