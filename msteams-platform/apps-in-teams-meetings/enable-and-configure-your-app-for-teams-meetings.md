@@ -146,29 +146,31 @@ Shared meeting stage allows meeting participants to interact with and collaborat
 
 ##### Share entire app to stage
 
-Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
+1. Participants can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel.
 
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+    <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
+    To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
+    
+    ```json
+    "configurableTabs": [
+        {
+          "configurationUrl": "https://contoso.com/teamstab/configure",
+          "canUpdateConfiguration": true,
+          "scopes": [
+            "groupchat"
+          ],
+          "context":[
+            "meetingSidePanel",
+            "meetingStage"
+         ]
+        }
+      ]
+    ```
+    
+    For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
 
-```json
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "groupchat"
-      ],
-      "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
-```
-
-For more information, see [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs).
+1. Participants can also share the entire app to the collaborative meeting stage using the  open in Teams meeting button in the app.
 
 ##### Share specific parts of the app to stage
 
