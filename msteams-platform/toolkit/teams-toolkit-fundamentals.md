@@ -5,7 +5,7 @@ description:  Overview of Teams Toolkit, Installation of Teams Toolkit, and Tour
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 05/17/2022
 ---
 
 # Teams Toolkit Overview
@@ -20,7 +20,6 @@ Teams Toolkit lets you create, debug, and deploy your Teams app right from Visua
 * Azure and Microsoft 365 services with zero-configuration approach
 
 Teams Toolkit brings all tools needed for building a Teams app in one place.
-
 
 ## User journey of Teams Toolkit
 
@@ -141,7 +140,7 @@ Let's explore Teams Toolkit features.
 | **Development** | &nbsp; | &nbsp; |
 | &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
 | &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
-| &nbsp; | Add Features | * Add other required Teams capabilities to Teams app during development process. </br> * Add optional cloud resources suitable for your app. |
+| &nbsp; | Add Features | - Add other required Teams capabilities to Teams app during development process. </br> - Add optional cloud resources suitable for your app. |
 | &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
 | **Deployment** | &nbsp; | &nbsp; |
 | &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
