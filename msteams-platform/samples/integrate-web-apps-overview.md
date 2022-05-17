@@ -41,11 +41,11 @@ Microsoft Power platform combines four robust Microsoft technologies, such as Po
 
 ### Power Apps
 
-With Power Apps, you can build business apps that connect to your business data and are tailored to your organization's needs. Power Apps enable a wide range of app scenarios to solve business challenges through canvas apps. After building the app, you can export it from the Power Apps maker portal and embed in Microsoft Teams.
+With Power Apps, you can build business apps that connect to your business data and are tailored to your organization's needs. Power Apps enables a wide range of app scenarios to solve business challenges through canvas apps. After building the app, you can export it from the Power Apps maker portal and embed in Microsoft Teams.
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no code, guided graphical interface solution. It is built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
+Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
 
 ### Create Virtual Assistant
 
@@ -61,7 +61,7 @@ Teams Shifts Work Force Management connectors are production-ready, open-source,
 
 ## Install Moodle LMS
 
-Moodle is a popular open-source Learning Management System (LMS). It is now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
+Moodle is a popular open-source Learning Management System (LMS). It's now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
 
 ## Create a Share-to-Teams button for your website
 
