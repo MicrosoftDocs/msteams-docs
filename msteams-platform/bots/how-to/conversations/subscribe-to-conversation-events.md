@@ -14,7 +14,6 @@ keywords: events bot channel message reaction conversation
 
 When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
-* Trigger a welcome message when your bot is added to a team
 * Trigger a welcome message when your bot is added to a channel in the preferred or selected channel
 * Trigger a welcome message when a new team member is added or removed
 * Trigger a notification when a channel is created, renamed, or deleted
@@ -36,7 +35,7 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 * Other members are added to or removed from a conversation.
 * Conversation metadata has changed.
 
-The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
+The `conversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. Bots post welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following table shows a list of Teams conversation update events with more details:
 
