@@ -44,22 +44,22 @@ items:
 
     1. Select **Clone**. 
      
-- title: Build and run the tab using npm
+- title: Build and run the app using npm
   durationInMinutes: 1
   content: | 
     After you have cloned the repo for Teams live share SDK, you can build and test the Teams live share tab in your local environment.
 
     In this page, you'll learn to:
-    1. [Build and run your first tab](#build-and-run-the-sample)
-    1. [Test your sample tab](#test-your-sample-tab-in-local-environment)
+    1. [Build and run the sample](#build-and-run-the-sample)
+    1. [Create ngrok tunnel](#create-ngrok-tunnel)
 
 
     ## Build and run the sample
 
-    After the repository is cloned, you can build the sample tab.
+    After the repository is cloned, you can build the sample app.
 
     1. Open a terminal window.
-    1. Run the change directory command in the terminal to change to the sample tab directory:
+    1. Run the change directory command in the terminal to change to the sample app directory:
 
         ```bash
         cd live-share-sdk
@@ -78,7 +78,7 @@ items:
         ```bash
         npm run build
         ```
-    1. Select and run the sample tab directory command in the terminal:
+    1. Select and run the sample app directory command in the terminal:
 
         ```bash
         npm run build
@@ -89,21 +89,14 @@ items:
         npm start
         ```
 
-    When the Teams live share tab starts, it displays `dice rolling on the localhost port 8080` in the browser window.
+    When the Teams live share app starts, it displays `dice rolling on the localhost port 8080` in the browser window.
 
+    ## Create ngrok tunnel
 
-    ## Test your sample tab in local environment
-
-    Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. Make your tab available on the internet so that the Teams platform can load it. To make your tab reachable from the internet, you need to *host* your tab.
-
-    For local testing, you can run the tab on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok*, you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in the `PATH`.
-
-    ### Create ngrok tunnel
-
-    After you install ngrok, you can create a tunnel to deploy your tab locally.
+    After you install ngrok, you can create a tunnel to deploy your app locally.
 
     1. Open a new ngrok terminal window.
-    1. Run the following command to create a tunnel. The sample tab uses port 8080:
+    1. Run the following command to create a tunnel. The sample app uses port 8080:
 
         ```bash
         ngrok http 8080 --host-header=localhost
@@ -112,10 +105,10 @@ items:
 
         (image to be added)
 
-        *Ngrok* listens to requests from the internet and will route them to your tab running on port 8080.
+        *Ngrok* listens to requests from the internet and will route them to your app running on port 8080.
 
 
-- title: Set up manifest file
+- title: Set up manifest file and upload your app
   durationInMinutes: 1
   content: |
      1. Navigate to **manifest.json** in cloned repository.
@@ -140,32 +133,42 @@ items:
         > [!NOTE]
         > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         > Upload your manifest in your demo tenant for organization or your Teams account and run your solution in Visual Studio.
-    
+     
+     ## Upload your app in Teams meeting
+
       1. Go to Teams.
-      1. Schedule a meeting to test the tab from calendar in Teams.
+      1. Schedule a meeting from the calendar in Teams.
       1. Join the meeting.
       1. In the meeting window, select **+ Apps** and select **Manage apps**.
+
+      (image to be added)
+
       1. Select **Upload a custom app**.
       1. Upload the manifest.json.
       1. Select **Add** and the app is added to the meeting.
+
+      (image to be added)
+
       1. Select **+ Apps** and select the app**.
       1. Select **Save**.
-      1. Select Share to stage icon from the tab.
+      1. Select Share to stage icon from the meeting side panel.
 
-- title: Test your tab
+      (image to be added)
+
+- title: Test your app
   durationInMinutes: 1
   content: |
-    To ensure that the tab added in the Teams meeting and meeting participants can access and play together.
+    Ensure that the app added in the Teams meeting and meeting participants can access and play together.
 
-    
+    (image to be added)
     
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    
+    (image to be added)
 
 - content: |
-    You've completed the tutorial and now you can grant tab device permission at Teams.
+    You've completed the tutorial and now you share the content and play.
 
