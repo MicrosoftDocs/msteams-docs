@@ -14,7 +14,7 @@ keywords: events bot channel message reaction conversation
 
 When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
-* Trigger a welcome message when your bot is added to a team
+* Trigger a welcome message when your bot is added to a team or channel in the preferred or selected channel
 * Trigger a welcome message when a new team member is added or removed
 * Trigger a notification when a channel is created, renamed, or deleted
 * Trigger a notification when a bot message is liked by a user
@@ -399,19 +399,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed, `ConversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. Bots post welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
-
-#### Advantages of setting the channel ID as the conversation id
-
-* Consistency with changes on conversationUpdate when developers switch to `installationUpdate`.
-* SDK updates aren't required for create reply functionality for the event.
-* Developers training isn't required. In lieu of SDK support, developers need to write code to get channel ID from the channel data
-* Default behavior is to post back into the channel. Developers can dig into the channelData for team ID if they really want it.
-
-#### Limitations of setting the channel ID as the conversation ID
-
-* You need to observe channel ID properties to ensure all values are set correctly.
-* Conversation ID only be set to the channel ID on installation or app upgrade with bot as data isn't persisted.
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The `ConversationUpdate` activities sent to bots are modified to send the channel ID as the conversation ID. Bots post welcome message into the selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following code shows an example of team members added event:
 
@@ -1309,13 +1297,7 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 
 ### Install update event
 
-Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
-
-### Limitations of installationupdate event
-
-* Channel ID isn't persisted anywhere
-* Bots fail to receive the channel ID when other users or bots are added to the conversation
-* Bots fail to receive channel ID when it's uninstalled
+Use the `installationUpdate` event to send an introductory message from your bot on installation in the preferred or selected Channel. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
 The following code shows an example of `installationupdate` event:
 
