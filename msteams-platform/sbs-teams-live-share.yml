@@ -17,6 +17,8 @@ items:
   
     This step-by-step guide helps you to create a Teams live share sample app. You'll see the following output:
 
+    (image to be added)
+    
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -153,7 +155,7 @@ items:
       1. Select **Save**.
 
        (image to be added)
-       
+
       1. Select Share to stage icon from the meeting side panel.
 
        (image to be added)
