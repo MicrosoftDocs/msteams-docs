@@ -64,16 +64,16 @@ The following is a sample tab removal code block:
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
   <script>
     app.initialize();
-    app.pages.config.registerOnRemoveHandler((removeEvent) => {
+    pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
-        app.pages.config.getConfig((settings) => {
+        pages.config.getConfig((settings) => {
         pages.config.contentUrl = "..."
         });
         removeEvent.notifySuccess();
     });
 
     const onClick() => {
-        app.pages.config.setValidityState(true);
+        pages.config.setValidityState(true);
     }
   </script>
 </body>
@@ -103,7 +103,7 @@ The following is a sample tab removal code block:
 
 ***
 
-When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an IFrame. The user is shown a button loaded with the `onClick()` function that calls `app.pages.config.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page IFrame.
+When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an IFrame. The user is shown a button loaded with the `onClick()` function that calls `pages.config.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page IFrame.
 
 After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 

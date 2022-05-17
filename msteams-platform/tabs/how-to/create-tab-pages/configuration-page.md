@@ -157,7 +157,7 @@ The following image displays the tab content with **Red** icon selected:
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
 * Set `pages.config.setValidityState(true)` to true.
-* The `app.pages.config.registerOnSaveHandler()` event handler is triggered.
+* The `pages.config.registerOnSaveHandler()` event handler is triggered.
 * **Save** on the app's configuration page, is enabled.
 
 The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.Config()` are set, as defined by the `Settings` interface. For more information, see [settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
@@ -278,14 +278,14 @@ Authenticate before allowing a user to configure your app. Otherwise, your conte
 
 ## Modify or remove a tab
 
-Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a channel or group tab. Also, indicate what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the `setConfig()` (formally `setSettings()`) configuration. The user can uninstall personal tabs but cannot modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a channel or group tab. Also, indicate what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but cannot modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-Microsoft Teams `setConfig()` (formally `setSettings()`) configuration for removal page:
+Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for removal page:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
-app.pages.config.setConfig({
+pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",

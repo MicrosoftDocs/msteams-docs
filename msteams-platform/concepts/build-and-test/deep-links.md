@@ -30,7 +30,7 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 > ✔ Text message hyperlink markdown: Directly navigates to deep link url.  
 > ✔ Link pasted in general chat conversation: Directly navigates to deep link url.
 >
-> For Teams apps extended across M365 (Outlook/Office) behavior is dependent upon where the deep link is pointing relative to where the Teams app is running. If the Teams app is running within the host the deep link is pointing to it will open directly within the host. If the Teams app is running in a host that differs from where the link is pointing, it will open first in the browser.
+> For Teams apps extended across Microsoft 365 (Outlook/Office) behavior is dependent upon where the deep link is pointing relative to where the Teams app is running. If the Teams app is running within the host the deep link is pointing to it will open directly within the host. If the Teams app is running in a host that differs from where the link is pointing, it will open first in the browser.
 
 ## Deep linking with the Teams JavaScript client SDK
 
