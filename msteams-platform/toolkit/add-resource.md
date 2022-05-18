@@ -14,7 +14,7 @@ TeamsFx helps to provision the cloud resources for your application hosting. You
 
 ## Limitation
 
-You can't add the resources, if you created SPFx based tab project.
+If you created SPFx based tab project, you can't add the resources.
 
 ## Add cloud resources
 
