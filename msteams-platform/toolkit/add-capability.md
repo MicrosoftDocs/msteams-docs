@@ -18,24 +18,26 @@ Teams app capability helps you to create a new Teams app in app development. The
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
 | Message extensions | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
 
+## Advantages
+
 ## Limitations
 
-The following is the list of limitations for adding more capabilities in TeamsFx:
+The following lists provides limitations to add more capabilities in TeamsFx:
 
 * You can add tabs up to 16 instances
 * You can add a bot and message extension for one instance each
 
 ## Add capabilities
 
-You can add capabilities by the following methods:
+* **You can add capabilities by the following methods:**
 
-* Add capabilities by using Teams Toolkit in Visual Studio Code
-* Add capabilities by using the command palette
+* To add capabilities by using Teams Toolkit in Visual Studio Code
+* To add capabilities by using command palette
 
   > [!Note]
   > You need to provision for each environment, after you have successfully added the capabilities in your Teams app.
 
-To add capabilities by using Teams Toolkit in Visual Studio Code:
+* **To add capabilities by using Teams Toolkit in Visual Studio Code:**
 
    1. Open **Visual Studio Code**.
    1. Select **Teams Toolkit** from left panel.
@@ -43,10 +45,11 @@ To add capabilities by using Teams Toolkit in Visual Studio Code:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature1234.png" alt-text="updated one" border="true":::
 
-To add capabilities by using the command palette:
+* **To add capabilities by using command palette:**
 
    1. Open **command palette**.
    1. Enter **Teams:Add features**.
+   1. Press **Enter**.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="team feature" border="true":::
 
@@ -56,17 +59,17 @@ To add capabilities by using the command palette:
 
 ## Add capabilities using TeamsFx CLI
 
-   1. Change directory to your **project directory**.
-   1. The following table lists the capabilities and required commands:
+* Change directory to your **project directory**
+* The following table lists the capabilities and required commands:
 
-      |Capability and Scenario| Command|
-      |-----------------------|----------|
-      |To add notification bot |`teamsfx add notification `|
-      |To add command bot  |`teamsfx add command-and-response `|
-      |To add sso-enabled tab |`teamsfx add sso-tab`|
-      |To add tab |`teamsfx add tab`|
-      |To add bot  |`teamsfx add bot`|
-      |To add message extension   |`teamsfx add message extension`|
+  |Capability and Scenario| Command|
+  |-----------------------|----------|
+  |To add notification bot |`teamsfx add notification `|
+  |To add command bot |`teamsfx add command-and-response `|
+  |To add sso-enabled tab |`teamsfx add sso-tab`|
+  |To add tab |`teamsfx add tab`|
+  |To add bot |`teamsfx add bot`|
+  |To add message extension |`teamsfx add message extension`|
 
 ## Supported capabilities
 
