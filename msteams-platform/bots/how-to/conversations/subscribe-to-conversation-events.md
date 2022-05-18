@@ -30,7 +30,7 @@ You can use conversation update events to provide better notifications and more 
 > * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
-[Test](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest)
+[Test](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 
 * When bot is added to a conversation
 * Other members are added to or removed from a conversation
