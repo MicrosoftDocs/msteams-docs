@@ -73,7 +73,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | What happens when a user first configures your tab in a channel? |
-| 2 | If you are sharing cards with a message extension, does it make sense to add a small link to a learn more page to help introduce users to what else your app can do? |
+| 2 | If you're sharing cards with a message extension, does it make sense to add a small link to a learn more page to help introduce users to what else your app can do? |
 | 3 | Do you expect most people to already have some context of what your app is for, or to have already used your services in another context? |
 | 4 | Are they coming to your app with no prior knowledge? |
 
@@ -85,8 +85,8 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information. |
-| 2 | Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company. |
-| 3 | Are there any personalized notifications or messages that needs to be sent to a user throughout the Teams app experience? |
+| 2 | Is they're going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company. |
+| 3 | Are there any personalized notifications or messages that need to be sent to a user throughout the Teams app experience? |
 
 </details>
 <br>
@@ -96,7 +96,7 @@ Here's a checklist of questions to consider when you plan your app. Use it as a 
 | # | Consider... |
 | --- | --- |
 | 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
-| 2 | Could the app’s context change depending on the team in which it is added to? For example, Planner’s tasks are different in different teams. |
+| 2 | Could the app’s context change depending on the team in which it's added to? For example, Planner’s tasks are different in different teams. |
 | 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
