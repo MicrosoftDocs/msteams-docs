@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot using PowerShell to send notifications, such as cards or texts.
+    The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts.
     
     In this tutorial, you'll learn:
 
@@ -35,16 +35,13 @@ items:
    | &nbsp; | Install | For using |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0. |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meeting, call, and all in one place.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest version.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use version 14 or 16.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, or TypeScript, build environments. Use the latest version. |
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
-   > [!NOTE]
-   > The guide is tested on Teams Toolkit version 3.8.1 and Nodejs version 16. The steps in this guide may work with other versions, but that has not been tested.
-
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.
@@ -153,15 +150,20 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability" border="true":::
 
-    1. Select **JavaScript** as the programming language.
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
-
     1. Select **HTTP Trigger Restify Server** as the trigger. 
     1. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language." border="true":::  
 
+    1. Select **JavaScript** as the programming language.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::    
+
+    1. Select the location for project workspace.
+    1. Select **Select Folder**.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder" border="true":::
+    
     1. Enter a suitable name for your app, such as mynotificationbot as the application name. 
     1. Select **Enter**.
 
@@ -173,19 +175,12 @@ items:
         The notification bot app is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created." border="true":::
-
-        After the app is created, Teams Toolkit displays the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings. It gives options to **Change Location** or **Local Debug**.
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/location-change.png" alt-text="Location message"border="true":::
-
-        > [!NOTE]
-        > For this tutorial, don't use Change Location and Local Debug options. If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
-    
+  
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 
-    1. Select **Play** to start debugging.
+    1. Select **Start Debugging** button.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true"::: 
 
@@ -216,7 +211,7 @@ items:
     | Folder name | Contents |
     | --- | --- |
     | `.fx` | Project level settings, configuration, and environment information |
-    | `vs code` | VS code files for local debug |
+    | `.vs code` | VS code files for local debug |
     | `bot` | The bot source code |
     | `templates` | Templates for Teams app manifest and corresponding Azure resources |
     
@@ -235,7 +230,7 @@ items:
   content: |
     **To send notification to Teams channel**
     
-    1. In Visual Studio Code, under **EXPLORER**, select **MyNOTIFICATIONBOT> bot> src> index.js**.
+    1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> index.js**.
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path" border="true":::
 
@@ -258,11 +253,28 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" border="true":::
 
+        **To customize storage:**
+
+        1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> bot> src> internal> initialize.js**.
+
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize" border="true":::
+        
+           You'll see the following page:
+
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" border="true":::
+
+        1. You need to add `storage: ` your own storage location after `enabled: true`      
+
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code1.png" alt-text="Storage Code1" border="true":::
+
+            > [!NOTE]
+            > It is required to use your own storage for production environment. If storage is not provided, default local file storage is considered.
+
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 
-    1. Select **Play** to start debugging.
+    1. Select **Start Debugging** button.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging" border="true":::
 
