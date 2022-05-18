@@ -263,9 +263,29 @@ items:
 
             :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" border="true":::
 
-        1. You need to add `storage: ` your own storage location after `enabled: true`.     
+        1. Update the following code in **initialize.js** file to customize the storage.
 
-            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code1.png" alt-text="Storage Code1" border="true":::
+             ```bash
+             // implement your own storage
+             class MyStorage implements NotificationTargetStorage {...}
+             const myStorage = new MyStorage(...);
+
+             // initialize ConversationBot with notification enabled and customized storage
+             const bot = new ConversationBot({
+                 // The bot id and password to create BotFrameworkAdapter.
+                 // See https://aka.ms/about-bot-adapter to learn more about adapters.
+                 adapterConfig: {
+                     appId: process.env.BOT_ID,
+                     appPassword: process.env.BOT_PASSWORD,
+                 },
+                 // Enable notification
+                 notification: {
+                     enabled: true,
+                     storage: myStorage,
+                 },
+              });
+             ```  
+        1. Use your own storage location instead of **myStorage**.
 
             > [!NOTE]
             > It is required to use your own storage for production environment. If storage is not provided, default local file storage is considered.
