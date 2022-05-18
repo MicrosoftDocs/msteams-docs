@@ -87,7 +87,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Sideloading apps | ✔️ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
-****Compliance UI***: By enabling third-party communications, customers accept that such communication is processed through the third-party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting third-party bots in their services. Microsoft doesn’t endorse and make no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR and so on and to evaluate the risk and compliance of any endpoint and URL that you want to connect.
+****Compliance UI***: By enabling third-party communications, customers accept that such communication is processed through the third-party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting third-party bots in their services. Microsoft doesn’t endorse and make no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on and to evaluate the risk and compliance of any endpoint and URL that you want to connect.
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
