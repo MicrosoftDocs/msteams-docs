@@ -8,11 +8,11 @@ keywords: teams manifest schema
 
 # Reference: Manifest schema for Microsoft Teams
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,..., and 1.13 are also supported (using "v1.x" in the URL).
+The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.12 and the current 1.13 version (see note below) are also supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 > [!Important]
-> Version `1.13` of the Microsoft Teams app manifest schema enables support for [extending Teams apps to Outlook and Office](../../m365-apps/overview.md). For Teams-only apps, use version `1.12` (or earlier). Refer to [Teams JavaScript client SDK](../../m365-apps/overview.md) overview for further guidance.
+> Version `1.13` of the Microsoft Teams app manifest schema enables support for [extending Teams apps to Outlook and Office](../../m365-apps/overview.md). For Teams-only apps, use version `1.12` (or earlier). The 1.12 and 1.13 schemas are otherwise the same. Refer to [Teams JavaScript client SDK](../../m365-apps/overview.md) overview for further guidance.
 
 The following schema sample shows all extensibility options:
 
