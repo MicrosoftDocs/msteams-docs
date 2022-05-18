@@ -35,7 +35,7 @@ The contributors guide provides direction to create, publish, and update technic
 
 * **[Microsoft Writing Style Guide](/style-guide/welcome)**: Microsoft Writing Style Guide is a comprehensive resource for technical writing and reflects Microsoft's modern approach to voice and style. For easy reference, add this online guide to your browser's **Favorites** menu.
 
-* **[Writing developer content](/style-guide/developer-content/)**: Teams specific content is aimed at a developer audience with a fundamental understanding of programming concepts and processes. It is important that you must provide clear, technically accurate information in a compelling manner while maintaining Microsoft's tone and style.
+* **[Writing developer content](/style-guide/developer-content/)**: Teams specific content is aimed at a developer audience with a fundamental understanding of programming concepts and processes. It's important that you must provide clear, technically accurate information in a compelling manner while maintaining Microsoft's tone and style.
 
 * **[Writing step-by-step instructions](/style-guide/procedures-instructions/writing-step-by-step-instructions)**: Applied and interactive experiences are a great way for developers to learn about Microsoft products and technologies. Presenting complex or simple procedures in a progressive format is natural and user friendly.
 
@@ -45,7 +45,7 @@ The contributors guide provides direction to create, publish, and update technic
 
 ## File Paths
 
-When using relative paths and creating links to other docsets, it is important to set a valid file path for hyperlinks in your documentation. Your build succeeds on GitHub only if the file path is correct or valid.
+When using relative paths and creating links to other docsets, it's important to set a valid file path for hyperlinks in your documentation. Your build succeeds on GitHub only if the file path is correct or valid.
 
 For more information on hyperlinks and file paths, see [use links in documentation](/contribute/how-to-write-links).
 
