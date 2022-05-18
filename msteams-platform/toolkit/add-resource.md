@@ -12,6 +12,8 @@ ms.date: 11/29/2021
 
 TeamsFx helps to provision the cloud resources for your application hosting. You can add the cloud resources optionally, that fit your development needs.
 
+## Advantages
+
 ## Limitation
 
 If you have created SPFx based tab project, you can't add the resources.
@@ -20,8 +22,8 @@ If you have created SPFx based tab project, you can't add the resources.
 
 **You can add cloud resources by the following methods:**
 
-* To add cloud resources by using Teams Toolkit in Visual Studio Code
-* To add cloud resources by using command palette
+     * To add cloud resources by using Teams Toolkit in Visual Studio Code
+     * To add cloud resources by using command palette
 
   > [!NOTE]
   > You need to provision for each environment, after you have successfully added the resource in your Teams app.
@@ -85,7 +87,7 @@ The following additional changes appear after adding resources in your project:
 
 ## See also
 
-[Provision cloud resources](provision.md)
-[Create a new Teams app](create-new-project.md)
-[Add capabilities to Teams apps](add-capability.md)
-[Deploy to the cloud](deploy.md)
+* [Provision cloud resources](provision.md)
+* [Create a new Teams app](create-new-project.md)
+* [Add capabilities to Teams apps](add-capability.md)
+* [Deploy to the cloud](deploy.md)
