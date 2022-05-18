@@ -166,7 +166,7 @@ items:
     1. Select the location for project workspace.
     1. Select **Select Folder**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-folder.png" alt-text="Select Folder." border="true":::
     
     1. Enter a suitable name for your app, such as commandbot as the application name. 
     1. Select **Enter**.
