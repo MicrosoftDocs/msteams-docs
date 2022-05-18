@@ -42,6 +42,9 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, or TypeScript, build environments. Use the latest version. |
    | &nbsp; | [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
    
+   > [!NOTE]
+   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that has not been tested.
+   
    ## Prepare development environment
 
    After you've installed the required tools, set up the development environment.
