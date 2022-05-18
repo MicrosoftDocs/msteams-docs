@@ -10,7 +10,7 @@ ms.date: 05/16/2022
 
 # Add Single sign-on experience
 
-Microsoft Teams provides single sign-on function for the application to obtain signed-in Teams user token to access Microsoft Graph (and other APIs). Teams Toolkit facilitates this interaction by abstracting some of the Azure Active Directory (AAD) flows and integrations behind some simple APIs. It enables you to add single sign-on (SSO) features easily to your Teams application.
+Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph (and other APIs). Teams Toolkit facilitates this interaction by abstracting some of the Azure Active Directory (AAD) flows and integrations behind some simple APIs. It enables you to add single sign-on (SSO) features easily to your Teams application.
 
 For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card that the user can interact with to invoke the Azure AD consent flow.
 
