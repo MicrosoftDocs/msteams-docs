@@ -1343,6 +1343,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
 
 ```json
 {
+    {
     "type": "installationUpdate",
     "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
     "timestamp": "2021-11-09T04:47:30.91Z",
