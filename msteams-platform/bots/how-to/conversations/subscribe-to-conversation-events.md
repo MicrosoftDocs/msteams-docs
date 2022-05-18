@@ -399,7 +399,9 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. Bots receive `ConversationUpdate` activities and modify it to send the channel ID as the conversation ID. As the conversation Id is set to the user selected channel, bots post welcome message into the user selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed.
+
+Bots receive `ConversationUpdate` activities and modify it to send the channel ID as the conversation ID. As the conversation ID is set to the user selected channel, bots post welcome message into the user selected channel by default in place of the general channel. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following code shows an example of team members added event:
 
