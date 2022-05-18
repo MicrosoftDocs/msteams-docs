@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times. The Single sign-on (SSO) authentication method in Azure Active Directory (Azure AD) silently refreshes the authentication token. Users don't require to use their sign-in credentials multiple times. 
+    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in with their credentials multiple times. The Single sign-on (SSO) authentication method in Azure Active Directory (Azure AD) silently refreshes the authentication token. The users don't require to use their sign-in credentials multiple times. 
     
     A bot behaves differently depending on the conversation it's involved in:
 
