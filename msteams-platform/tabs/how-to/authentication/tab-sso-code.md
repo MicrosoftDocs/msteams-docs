@@ -116,7 +116,7 @@ When an app user accesses your tab app for the first time and your tab app makes
 
 This consent is to be given only once. The app user is able to access your tab app after consenting to Teams and Azure AD dialogs.
 
-If you encounter any errors, please see [Troubleshooting SSO authentication in Teams](tab-sso-troubleshooting.md).
+If you encounter any errors, see [Troubleshooting SSO authentication in Teams](tab-sso-troubleshooting.md).
 
 ### Use the access token as an identity token
 
@@ -132,7 +132,7 @@ The access token returned from `getAuthToken()` can be used to establish an app 
 Teams can cache this information associated with the app user's identity, such as the user's preferences.
 
 > [!NOTE]
-> If you need to construct a unique ID to represent the app user in your system, please see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
+> If you need to construct a unique ID to represent the app user in your system, see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
 
 ## Pass the access token to server-side code
 

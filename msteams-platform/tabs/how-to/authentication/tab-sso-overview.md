@@ -75,7 +75,7 @@ sequenceDiagram
 | 6 | Tab app | The tab app parses the access token using JavaScript to extract required information, such as the app user's email address. The token returned to the tab app is both an access token and an identity token. |
 
 > [!IMPORTANT]
-> The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, please see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
+> The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 Tabs are Teams-aware web pages. To enable SSO in a web-page hosted inside a tab app, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. After you've initialized Microsoft Teams, call `microsoftTeams.getAuthToken()` to get the access token for your app.
 
@@ -124,8 +124,8 @@ Here's a list of best practices:
 
 - Currently, SSO only supports OAuth 2.0 token. It doesn't support SAML token.
 - SSO in Teams works only with OAuth 2.0 protocol.
-- SSO works only with apps that support Azure AD as identity provider. For implementing authentication with other OAuth identity providers, the OAuth flow needs to be implemented. For more information, please see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad.md).
-- Multiple domains per app are not supported. For more information, please see [LOB apps](tab-sso-register-aad.md#before-you-register-with-azure-ad).
+- SSO works only with apps that support Azure AD as identity provider. For implementing authentication with other OAuth identity providers, the OAuth flow needs to be implemented. For more information, see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad.md).
+- Multiple domains per app are not supported. For more information, see [LOB apps](tab-sso-register-aad.md#before-you-register-with-azure-ad).
 - Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent.md#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID).
   
     You can ask for consent using the Auth API. Another approach for getting Graph scopes is to present a consent dialog using our existing [third party OAuth provider authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.

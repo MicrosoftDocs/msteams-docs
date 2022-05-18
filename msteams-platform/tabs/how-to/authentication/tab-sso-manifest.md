@@ -40,7 +40,7 @@ Configure the `webApplicationInfo` property in the Teams app manifest file. This
 
 The application ID URI that you registered in Azure AD is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in Teams app manifest.
 
-For more information, please see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
+For more information, see [webApplicationInfo](/resources/schema/manifest-schema.md#webapplicationinfo).
 <br>
 <br>
 <details>
@@ -49,7 +49,7 @@ For more information, please see [webApplicationInfo](/resources/schema/manifest
 If your tab app doesn't have a Teams app manifest file, you'll need to create it. To create a Teams app manifest file, use the content given below to create a .json file named, `manifest.json`.
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI and package name. For more information, please see [Manifest schema](/resources/schema/manifest-schema).
+> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI and package name. For more information, see [Manifest schema](/resources/schema/manifest-schema).
 
   ```json
 { 

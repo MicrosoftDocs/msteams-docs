@@ -18,7 +18,7 @@ Here's a list of issues and questions about SSO, and how you can fix them.
 <br>
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
-For more information, please see [Use Postman with the Microsoft Graph API](/graph/use-postman).
+For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
 </details>
 <br>
 <details>
@@ -26,7 +26,7 @@ For more information, please see [Use Postman with the Microsoft Graph API](/gra
 <br>
 Yes, Graph API works in Microsoft Graph explorer.
 
-For more information, please see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
+For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 
 </details>
 <br>
@@ -75,7 +75,7 @@ You can get this error in one of the two scenarios:
 <br>
 You can add UPN as an optional claim in Azure AD.
 
-For more information, please see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims).
+For more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims).
 </details>
 <br>
 <details>
@@ -83,7 +83,7 @@ For more information, please see [Provide optional claims to your app](/azure/ac
 <br>
 To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
 
-For more information on application ID URI, please see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
+For more information on application ID URI, see [To expose an API](/tabs/how-to/authentication/tab-sso-register-aad.md#to-expose-an-api).
 </details>
 <br>
 
