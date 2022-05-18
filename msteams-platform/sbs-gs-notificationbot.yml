@@ -263,7 +263,7 @@ items:
 
             :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" border="true":::
 
-        1. You need to add `storage: ` your own storage location after `enabled: true`      
+        1. You need to add `storage: ` your own storage location after `enabled: true`.     
 
             :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code1.png" alt-text="Storage Code1" border="true":::
 
