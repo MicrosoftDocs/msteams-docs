@@ -34,15 +34,15 @@ items:
    | &nbsp; | Install | For using |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version  |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.  |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest version.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use version 14 or 16.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
    | &nbsp; | [Microsoft 365 developer account](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Teams Toolkit version 3.8.1 and Nodejs version 16. The steps in this guide may work with other versions, but that has not been tested.
+   > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that has not been tested.
 
    ## Prepare development environment
 
@@ -154,15 +154,20 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-bot.png" alt-text="Select App Capability" border="true":::
 
-    1. Select **JavaScript** as the programming language.
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
-
     1. Select **HTTP Trigger Restify Server** as the trigger.
     1. Select **OK**.
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-trigger.png" alt-text="Select Trigger" border="true":::
 
+    1. Select **JavaScript** as the programming language.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
+    
+    1. Select the location for project workspace.
+    1. Select **Select Folder**.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language." border="true":::
+    
     1. Enter a suitable name for your app, such as commandbot as the application name. 
     1. Select **Enter**.
 
@@ -175,18 +180,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot showing the app created." border="true":::
 
-        After the app is created, Teams Toolkit displays the location where the project workspace is created. This folder is the default location specified in Visual Studio Code settings. It gives options to **Change Location** or **Local Debug**.
-
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/location-change.png" alt-text="Location message" border="true":::
-
-        > [!NOTE]
-        > For this tutorial, don't use Change Location and Local Debug options. If you choose to change the location for workspace, it's reflected only for projects you create after reloading Visual Studio Code. No change is made to the location of existing projects.
-
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 
-    1. Select **Play**  to start debugging.
+    1. Select **Start Debugging** button.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Debugging application" border="true":::
 
@@ -294,7 +292,7 @@ items:
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select **Play** to start debugging.
+    1. Select **Start Debugging** button.
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Remote Debug." border="true":::
 
