@@ -135,6 +135,14 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.name** | Name of the user. |
 | **user.givenName** | First Name of the user.|
 | **user.surname** | Last Name of the user. |
+| **user.email** | Mail Id of the user. |
+| **user.userPrincipalName** | UPN of the user. |
+| **user.tenantId** | Azure Active Directory tenant ID. |
+| **user.userRole** | Role of the user e.g. 'admin' or 'user'. |
+| **meeting.role** | The participant's role in the meeting. e.g. 'Organizer' or 'Presenter' or 'Attendee'. |
+| **meeting.inMeeting** | The value indicating if the participant is in the meeting. |
+| **conversation.id** | The meeting chat ID. |
+| **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 
 ### Response codes
 
@@ -220,6 +228,15 @@ POST /v3/conversations/{conversationId}/activities
 ```
 
 ---
+
+| Property name | Purpose |
+|---|---|
+| **type** | Type of activity. |
+| **text** | The text content of the message. |
+| **summary** | The summary text of the message. |
+| **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
+| **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
+| **replyToId** | The ID of the parent or root message of the thread. |
 
 ### Response codes
 
@@ -381,6 +398,28 @@ The JSON response body for Meeting Details API is as follows:
 ```
 
 ---
+
+| Property name | Purpose |
+|---|---|
+| **details.id** | The meeting's Id, encoded as a BASE64 string. |
+| **details.msGraphResourceId** | The MsGraphResourceId, used specifically for MS Graph API calls. |
+| **details.scheduledStartTime** | The meeting's scheduled start time, in UTC. |
+| **details.scheduledEndTime** | The meeting's scheduled end time, in UTC. |
+| **details.joinUrl** | The URL used to join the meeting. |
+| **details.title** | The title of the meeting. |
+| **details.type** | The meeting's type MeetingType enum - Teams | Microsoft Docs. |
+| **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
+| **conversation.conversationType** | The conversation type. |
+| **conversation.id** | The meeting chat ID. |
+| **organizer.id** | The Organizer's user ID. |
+| **organizer.aadObjectId** | The Organizer's Azure Active Directory object ID. |
+| **organizer.tenantId** | The Organizer's Azure Active Directory tenant ID. |
+
+In case of Recurring meeting type,
+
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it does not fit the pattern.
+
+**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it does not fit the pattern.
 
 ## Send real-time captions API
 
@@ -763,6 +802,35 @@ The following code provides an example of meeting end event payload:
     "locale": "en-US" 
 }
 ```
+
+| Property name | Purpose |
+|---|---|
+| **name** | Name of the user.|
+| **type** | Activity type. |
+| **timestamp** | Local date and time of the message, expressed in ISO-8601 format. |
+| **id** | ID for the activity. |
+| **channelId** | Channel this activity is associated with. |
+| **serviceUrl** | Service URL where responses to this activity should be sent. |
+| **from.id** | ID of the user that sent the request. |
+| **from.aadObjectId** | Azure Active Directory object ID of the user that sent the request. |
+| **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
+| **conversation.tenantId** | Azure Active Directory tenant ID of the conversation or meeting. |
+| **conversation.id** | The meeting chat ID. |
+| **recipient.id** | ID of the user that receive the request. |
+| **recipient.name** | Name of the user that receive the request. |
+| **entities.locale** | entity which contains metadata about locale. |
+| **entities.country** | entity which contains metadata about country. |
+| **entities.type** | entity which contains metadata about client. |
+| **channelData.tenant.id** | Azure Active Directory tenant ID. |
+| **channelData.source** | The source name from where event is fired or invoked. |
+| **channelData.meeting.id** | The default ID associated with the meeting. |
+| **value.MeetingType** | The type of meeting. |
+| **value.Title** | The subject of the meeting. |
+| **value.Id** | The default ID associated with the meeting. |
+| **value.JoinUrl** | The join URL of the meeting. |
+| **value.StartTime** | The meeting start time in UTC. |
+| **value.EndTime** | The meeting end time in UTC. |
+| **locale**| The locale of the message set by the client. |
 
 ## Code sample
 
