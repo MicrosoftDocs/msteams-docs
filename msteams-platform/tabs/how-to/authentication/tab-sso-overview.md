@@ -11,8 +11,6 @@ Single sign-on (SSO) allows a user to access an application or a web service aft
 
 With SSO in Teams, app users have an added advantage. After logging into Teams using Microsoft or Microsoft 365 account, app users don't need to sign in again to use your app. App users can access your app within Teams even on any other device with access granted through Azure AD.
 
-You can enable SSO in Teams for all apps that support Azure AD as an identity provider.
-
 Here's what you'll learn in this section:
 
 1. **SSO user experience**: Teams offers your app users a true SSO experience. App users can use your app without signing in again.
@@ -80,6 +78,18 @@ sequenceDiagram
 > The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, please see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 Tabs are Teams-aware web pages. To enable SSO in a web-page hosted inside a tab app, add [Teams Javascript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), and call `microsoftTeams.initialize()`. After you've initialized Microsoft Teams, call `microsoftTeams.getAuthToken()` to get the access token for your app.
+
+### Use cases for enabling SSO
+
+You can enable SSO in Teams for all apps that support Azure AD as an identity provider. In addition to using SSO for authenticating app users in a tab app, you can also use it to enable seamless access across Teams. Some scenarios where you can use `getAuthToken()` to use Teams ID token for allowing access to your app users:
+
+- If your app already exists and you want it to be available in Teams within a tab app, you can use SSO to allow your users access to your app from within the tab app. Based on the app user's identity within Teams, you can obtain access token for them using `getAuthToken()`.
+
+- If your app has configurable tabs, you can use `getAuthToken()` to allow app users into the tab app without signing in again. SSO is applicable to some settings that need to be configured at a configuration stage.
+
+- Your app may have a bot, a tab, a message extension, or Adaptive Cards, and allows your app users to invoke task module from within a bot or a tab. Enabling SSO and using `getAuthToken()` will let your app users access task module from within a bot app without having to sign in again. Teams can use the app user's Teams identity and obtain an access token from Azure AD.
+
+- You can also use SSO to allow your app users to obtain access to Stage view without need to be authenticated again. The access token obtained for the app user when they first used your app can be used to allow them to use Stage view.
 
 > [!TIP]
 > You can use also SSO API to authenticate app users in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
