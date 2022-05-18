@@ -23,7 +23,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 |Method| Description| Source|
 |---|---|----|
-|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Teams tab.| [MSTC SDK](.../tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library&preserve-view=true )|
+|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Teams tab.| [MSTC SDK](~/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library&preserve-view=true )|
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -399,7 +399,7 @@ The JSON response body for Meeting Details API is as follows:
 
 ---
 
-|Property name|Purpose|
+| Property name | Purpose |
 |---|---|
 | **details.id** | The meeting's Id, encoded as a BASE64 string. |
 | **details.msGraphResourceId** | The MsGraphResourceId, used specifically for MS Graph API calls. |
