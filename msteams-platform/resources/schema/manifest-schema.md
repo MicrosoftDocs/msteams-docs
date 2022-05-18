@@ -341,7 +341,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required**—string
 
-The version of manifest schema this manifest is using. Use `1.13` to enable Teams app support in Outlook and Office; use `1.12` (or earlier) for Teams-only apps.
+The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Office; use `1.12` (or earlier) for Teams-only apps.
 
 ## version
 
