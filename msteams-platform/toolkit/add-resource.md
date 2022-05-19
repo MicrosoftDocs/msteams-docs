@@ -14,6 +14,11 @@ TeamsFx helps to provision the cloud resources for your application hosting. You
 
 ## Advantages
 
+The following list provides advantages to add more cloud resources in TeamsFx:
+
+* Provides convenience
+* Autogenerates all configuration files and connect to Teams app by using Teams Toolkit
+
 ## Limitation
 
 If you have created SPFx based tab project, you can't add the resources.
