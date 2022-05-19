@@ -3,11 +3,15 @@ title: Extend tab app with Microsoft Graph permissions
 description: Describes configuring API permissions with Microsoft Graph
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
 ---
-# Extend tab app with Microsoft Graph permissions
+# Extend tab app with Microsoft Graph permissions and scope
 
-You can extend your tab app with additional Graph scopes such as `User.Read` or `Mail.Read`. In this section, you'll learn to:
+You can extend your tab app by using Microsoft Graph to allow users additional permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens upon app user's consent.
+
+Graph scopes, such as User.Read or Mail.Read, lets you specify how your app accesses a Teams user's account. You need to specify your scopes in the authorization request.
+
+In this section, you'll learn to:
 
 - [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad)
 - [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)
