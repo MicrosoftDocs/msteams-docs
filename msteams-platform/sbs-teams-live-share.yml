@@ -28,7 +28,6 @@ items:
  
     * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) with a valid account
     * [Visual Studio Code](https://code.visualstudio.com/download)
-    * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
