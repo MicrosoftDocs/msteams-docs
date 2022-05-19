@@ -7,6 +7,7 @@ metadata:
   level: Beginner
   ms.date: 05/17/2022
   ms.topic: interactive-tutorial
+  nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Read more on Teams live share
   ms.custom: mvc
   ms.localizationpriority: high
@@ -26,10 +27,9 @@ items:
 
  
     * [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in) with a valid account
-    * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
+    * [Visual Studio Code](https://code.visualstudio.com/download)
     * [Latest version of nodejs](https://nodejs.org/en/download/)
-    * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
-    
+    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
@@ -64,7 +64,7 @@ items:
     1. Run the change directory command in the terminal to change to the sample app directory:
 
         ```bash
-        cd live-share-sdk
+        cd live-share-sdk\samples\01.dice-roller
         ```
 
     1. Install all dependencies using the following command:
@@ -80,15 +80,11 @@ items:
         ```bash
         npm run build
         ```
-    1. Select and run the sample app directory command in the terminal:
 
-        ```bash
-        npm run build
-        ```
     1. Run the following start command  in the terminal:
 
         ```bash
-        npm start
+        npm run start
         ```
 
     When the Teams live share app starts, it displays `dice rolling on the localhost port 8080` in the browser window.
