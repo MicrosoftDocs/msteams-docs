@@ -85,9 +85,8 @@ The following steps helps you to enable SSO in your application.
     ```
 
 5. Replace the following line: `<AddSSO />` with `<InitTeamsFx />` to replace the `AddSso` component with `InitTeamsFx` component.
-</details>
-<br>
 
+</details>
 <details>
 <summary><b>Update source code for Bot project
 </b></summary>
