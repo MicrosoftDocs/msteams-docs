@@ -39,7 +39,7 @@ items:
 
 To download the sample:
 
-For this tutorial, use the [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) sample to get started. You can download and clone it from GitHub:
+For this tutorial, use the [Dice roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample to get started. You can download and clone it from GitHub:
     
     To use Git Bash to clone the sample repo:
 
