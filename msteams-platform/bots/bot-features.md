@@ -63,9 +63,9 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 >    <summary><b>If you want to do bot registration only</b></summary>
 >     1. Go to the resource group to and manually delete the unused resources . Such as the app service, app service plan (if you created during bot registration) and the application insights (if you choose to enable it during bot registration).<br>
 >     2. You can also use az-cli to do bot registration:<br>
->         a. Sign into azure and set the subscription az cloud set –name  "AzureUSGovernment" and az account set –name "`subscriptionname/id`".<br>
->         b. Create app registration, az ad app create --display-name "`name`" and    --password "`password`" --available-to-other-tenants. Your appid would be created here.<br>
->         c. Create bot resource az bot create –resource-group "`resource-group`", --appid "`appid`", --name "`botid`" and --kind "registration".<br>
+>         &nbsp; - Sign into azure and set the subscription az cloud set –name  "AzureUSGovernment" and az account set –name "`subscriptionname/id`".<br>
+>         &nbsp; - Create app registration, az ad app create --display-name "`name`" and    --password "`password`" --available-to-other-tenants. Your appid would be created here.<br>
+>         &nbsp; - Create bot resource az bot create –resource-group "`resource-group`", --appid "`appid`", --name "`botid`" and --kind "registration".<br>
 > </details>
 
 For GCCH environment, you need to register a bot using [Azure Government portal](https://portal.azure.us).
