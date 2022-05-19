@@ -30,7 +30,7 @@ For guidance about the Teams app manifest and SDK versioning guidance, as well a
 
 ## Personal tabs and messaging extensions in Outlook and Office
 
-Reach your users where they are, right in the context of their work by extending your web app as a Teams personal tab application that runs in both Outlook and Office.
+Reach your users where they are, right in the context of their work by extending your web app as a Teams personal tab application that also runs in both Outlook and Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in Outlook, Office, and Teams":::
 
