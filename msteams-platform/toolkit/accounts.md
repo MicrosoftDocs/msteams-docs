@@ -35,15 +35,15 @@ To get a free Teams developer account, join the Microsoft 365 developer program 
 
 ### Microsoft 365 developer account types
 
-You can sign-up for the developer program by using one of the following account types:
+You can sign up for the developer program by using one of the following account types:
 
 - **Microsoft account for personal use**
 
-    The Microsoft account provides you access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign-up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
+    The Microsoft account provides you access to Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. You can sign up for an Outlook.com mailbox to create a Microsoft account, which can be used to access consumer-related Microsoft cloud services or Azure.
 
 - **Microsoft work account for business**
 
-     This account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign-up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
+     This account provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure AD to represent your organization.
 
 - **Visual Studio user id**
 
@@ -68,7 +68,7 @@ If you want to host your application related resources or access resources withi
 
     1. Open **Visual Studio Code**.
     1. Select **Teams Toolkit** from the left panel. If you're unable to see the option ensure that you have installed Teams Toolkit extension.
-    1. Select **Accounts** and log-in to your Microsoft 365 account.
+    1. Select **Accounts** and log in to your Microsoft 365 account.
     1. Check whether you can view the option **Sideloading enabled** as shown in the following image:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading" border="true":::
@@ -85,7 +85,7 @@ If you want to host your application related resources or access resources withi
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="Upload a custom app" border="true":::
 
-        If you are unable to view the option Upload a custom app,** then, it indicates that you don't have the required permission for sideloading.
+        If you're unable to view the option Upload a custom app,** then, it indicates that you don't have the required permission for sideloading.
         * For a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
         * If you aren't a tenant admin, you'll need to contact your tenant admin to enable sideloading.
 
