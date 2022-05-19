@@ -59,20 +59,13 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 > * Bots in GCCH only support  up to manifest version v1.10.
 > * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 > * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service).
-> <details>
-> <summary><b>If you want to do bot registration only</b></summary>
-> 1. Go to the resource group to and manually delete the unused resources . Such as the app service, app service plan (if you created during bot registration) and the application insights (if you choose to enable it during bot registration).
-> 1. You can also use az-cli to do bot registration:
->     a. Sign into azure and set the subscription 
->            az cloud set –name  "AzureUSGovernment"
->            az account set –name "`<subscriptionname/id>`”
->      b. Create app registration, 
->            az ad app create --display-name "<name>" 
->            --password "<password>" --available-to-other-tenants
->         Your appid would be craeted here.
->      c. Create bot resource 
->            az bot create –resource-group "<resource-group>"
->            --appid "<appid>" --name "<botid>" --kind "registration"
+>     <details>
+>    <summary><b>If you want to do bot registration only</b></summary>
+>     1. Go to the resource group to and manually delete the unused resources . Such as the app service, app service plan (if you created during bot registration) and the application insights (if you choose to enable it during bot registration).<br>
+>     1. You can also use az-cli to do bot registration:
+>         a. Sign into azure and set the subscription az cloud set –name  "AzureUSGovernment" and az account set –name "`subscriptionname/id`".<br>
+>         b. Create app registration az ad app create --display-name "<name>" and    --password "<password>" --available-to-other-tenants. Your appid would be created here.<br>
+>         c. Create bot resource az bot create –resource-group "<resource-group>", --appid "<appid>", --name "<botid>" and --kind "registration".<br>
 > </details>
 
 
