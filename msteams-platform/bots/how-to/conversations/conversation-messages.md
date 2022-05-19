@@ -417,3 +417,4 @@ Following are the status codes and their error code and message values:
 * [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
 * [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [[User attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1)
