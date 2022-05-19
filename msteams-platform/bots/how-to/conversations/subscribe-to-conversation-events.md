@@ -399,9 +399,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed.
-
-The bots receives unique channel ID as a conversation ID using the [conversationUpdate](#conversation-update-events) and [installationUpdate](#installation-update-event) events. You can also cache for future use, such as sending a message to a specific user.bots. The bot posts welcome message in the same channel by default instead.
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. After a team member is added, the bots receives unique channel ID as a conversation ID using the [conversationUpdate](#conversation-update-events) and [installationUpdate](#installation-update-event) events. You can also cache for future use, such as sending a message to a specific user.bots. The bot posts welcome message in the same channel by default instead.
 
 > [!NOTE]
 > The conversation ID is set to the user selected channel.
@@ -1300,7 +1298,7 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 > [!NOTE]
 > When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
 
-When a new team member is added to a channel, the `installationUpdate` event along with [conversationUpdate event](#team-members-added) send an introductory message from your bot on installation. the bot posts the message in the same channel, the user is added. This event helps you to meet your privacy and retain data requirements. You can delete user or the thread data when the bot is uninstalled.
+When a new member is added to a channel, the `installationUpdate` event send an introductory message from your bot on installation. The bot also posts the message in the same channel using [conversationUpdate event](#team-members-added). This event helps you to meet your privacy and retain data requirements. You can delete user or the thread data when the bot is uninstalled.
 
 The following code shows an example of `installationupdate` event:
 
