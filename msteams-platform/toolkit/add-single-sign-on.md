@@ -63,7 +63,7 @@ The following table lists the changes Teams Toolkit makes to your project:
 The following steps helps you to enable SSO in your application.
 > [!NOTE]
 > These changes are based on the templates we scaffold.
----
+
 <br>
 <br><details>
 <summary><b>Tab project
@@ -189,7 +189,6 @@ The following steps helps you to enable SSO in your application.
 
    ```
 </details>
-<br>
 <details>
 <summary><b>Add a new command to the bot
 </b></summary>
