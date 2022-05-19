@@ -20,6 +20,11 @@ Teams app capability helps you to create a new Teams app in app development. The
 
 ## Advantages
 
+The following list provides advantages to add more capabilities in TeamsFx:
+
+* Provides convenience
+* Adds more function to your app by automatically adding source codes using Teams Toolkit
+
 ## Limitations
 
 The following list provides limitations to add more capabilities in TeamsFx:
