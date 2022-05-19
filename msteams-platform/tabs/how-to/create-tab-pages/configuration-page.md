@@ -43,8 +43,8 @@ The following code is an example of corresponding code for the configuration pag
     <script>
         app.initialize();
         let saveGray = () => {
-            app.pages.config.registerOnSaveHandler((saveEvent) => {
-                app.pages.config..setSettings({
+            pages.config.registerOnSaveHandler((saveEvent) => {
+                pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
                     entityId: "grayIconTab",
@@ -54,8 +54,8 @@ The following code is an example of corresponding code for the configuration pag
             });
         }
         let saveRed = () => {
-            app.pages.config.registerOnSaveHandler((saveEvent) => {
-                app.pages.config.setSettings({
+            pages.config.registerOnSaveHandler((saveEvent) => {
+                pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
                     entityId: "redIconTab",
@@ -71,14 +71,14 @@ The following code is an example of corresponding code for the configuration pag
         const colorClickGray = () => {
             gr.display = "block";
             rd.display = "none";
-            microsoftTeams.settings.setValidityState(true);
+            pages.config.setValidityState(true);
             saveGray()
         }
 
         const colorClickRed = () => {
             rd.display = "block";
             gr.display = "none";
-            microsoftTeams.settings.setValidityState(true);
+            pages.config.setValidityState(true);
             saveRed();
         }
     </script>
@@ -165,18 +165,18 @@ The configuration page code informs Teams that the configuration requirements ar
 >[!NOTE]
 >
 >* You have 30 seconds to complete the save operation (the callback to registerOnSaveHandler) before the timeout. After the timeout, a generic error message appears.
->* If you register a save handler using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
+>* If you register a save handler using `registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 
 ### Get context data for your tab settings
 
 Your tab requires contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
+For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
 * Insert URL query string placeholders in your manifest's `configurationURL`.
 
-* Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` method.
+* Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `app.getContext()` method.
 
 #### Insert placeholders in the `configurationUrl`
 
@@ -234,7 +234,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-The `app.getContext((context) => {})` function retrieves the [context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) when invoked.
+The `app.getContext()` function retrieves the [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) when invoked.
 
 The following code provides an example of adding this function to the configuration page to retrieve context values:
 
@@ -246,10 +246,13 @@ The following code provides an example of adding this function to the configurat
 <span id="user"></span>
 ...
 <script>
-    app.getContext((context) =>{
-        let userId = document.getElementById('user');
-        userId.innerHTML = context.userPrincipalName;
-    });
+    const contextPromise = app.getContext();
+    contextPromise.
+        then((context) => {
+            let userId = document.getElementById('user');
+            userId.innerHTML = context.user.userPrincipalName;
+        }).
+        catch((error) => {/*Unsuccessful operation*/});
 </script>
 ...
 ```
