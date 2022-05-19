@@ -269,8 +269,6 @@ items:
         1. Update the following code in **initialize.js** file to customize the storage.
 
              ```bash
-             // implement your own storage
-             class MyStorage implements NotificationTargetStorage {...}
              const myStorage = new MyStorage(...);
 
              // initialize ConversationBot with notification enabled and customized storage
@@ -288,7 +286,7 @@ items:
                  },
               });
              ```  
-        1. Use your own storage location instead of **myStorage**.
+        1. Use your own storage location instead of **MyStorage**.
 
             > [!NOTE]
             > It is required to use your own storage for production environment. If storage is not provided, default local file storage is considered.
