@@ -37,15 +37,20 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. Open [Live-share-SDK](https://github.com/microsoft/live-share-sdk).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+## Download the sample
 
-       (image to be added)
+    For this tutorial, use the [Dice roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample to get started. You can download and clone it from GitHub.
 
-    1. Select **Clone**. 
+    **To use Git Bash to clone the sample repo**:
+    
+    1. Open a terminal window.
+    1. Run the following command to clone the sample repository to your computer:
+
+        ```bash
+        git clone https://github.com/microsoft/live-share-sdk.git
+        ```
      
-- title: Build and run the app using npm
+- title: Build and run the sample app
   durationInMinutes: 1
   content: | 
     After you have cloned the repo for Teams live share SDK, you can build and test the Teams live share tab in your local environment.
