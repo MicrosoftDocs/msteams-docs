@@ -58,12 +58,14 @@ The following table lists the changes Teams Toolkit makes to your project:
 > [!Note]
 > By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
 
-## Enable SSO
+## Update your application to use SSO
 
 The following steps helps you to enable SSO in your application.
+> [!NOTE]
+> These changes are based on the templates we scaffold.
 <br>
 <br><details>
-<summary><b>Update source code for Tab project
+<summary><b>Tab project
 </b></summary>
 
 1. Copy `auth-start.html` and `auth-end.htm`** in `auth/public` folder to `tabs/public/`. The two HTML files are used for auth redirects.
@@ -88,7 +90,7 @@ The following steps helps you to enable SSO in your application.
 
 </details>
 <details>
-<summary><b>Update source code for Bot project
+<summary><b>Bot project
 </b></summary>
 
 1. Copy `auth/bot/public` folder to `bot/src`. The two folders contain HTML pages used for auth redirect, you need to modify `bot/src/index` file to add routing to these pages.
@@ -187,10 +189,11 @@ The following steps helps you to enable SSO in your application.
    ```
 </details>
 <br>
+<details>
+<summary><b>Add a new command to the bot
+</b></summary>
 
-### Add a new command to the bot
-
-The following steps helps you to add a new command, after you add SSO in your project:
+The following steps helps you to add a new command, after you add SSO in your project but it is not mandatory:
 
 1. Create a new file (example `todo.ts` or `todo.js`) under `bot/src/` and add your own business logic to call Graph API:
 
