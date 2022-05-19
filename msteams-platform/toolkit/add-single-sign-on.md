@@ -63,6 +63,7 @@ The following table lists the changes Teams Toolkit makes to your project:
 The following steps helps you to enable SSO in your application.
 > [!NOTE]
 > These changes are based on the templates we scaffold.
+---
 <br>
 <br><details>
 <summary><b>Tab project
@@ -300,6 +301,8 @@ export async function showUserImage(context, ssoToken, param) {
    }
 
    ```
+</details>
+<br>
 
 ## Debug your application
 
