@@ -178,7 +178,6 @@ To preview values for all the environments, you can hover over the placeholder. 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
 
 
-
 ## See also
 
 * [Manage multiple environments](TeamsFx-multi-env.md)

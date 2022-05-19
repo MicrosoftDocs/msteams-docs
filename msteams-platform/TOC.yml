@@ -109,7 +109,7 @@
     - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
     - name: Preview and customize Teams app manifest
-      href: toolkit/Preview and customize Teams app manifest.md
+      href: toolkit/TeamsFx-Preview and customize Teams app manifest.md
     - name: Manage multiple environments
       href: toolkit/TeamsFx-multi-env.md
     - name: Collaborating with other developers on Teams Toolkit
