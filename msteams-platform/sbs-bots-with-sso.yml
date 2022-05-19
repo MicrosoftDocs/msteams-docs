@@ -265,7 +265,7 @@ items:
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://your ngrok/botid-00000000-0000-0000-0000-000000000000/access_as_user`
 
-       Your Application ID URI is created with Scope Name**.
+       Your Application ID URI is created with **Scope name**.
 
           :::image type="content" source="~/assets/images/bots/ExposeAPIandaddscope.png" alt-text="API exposed and scope added" border="true":::
 
@@ -336,7 +336,7 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**.
     
        > [!NOTE]
-       > If you're already in testing your bot in Teams, you must sign out this app and Teams. Then sign in again to see this change.</br>
+       > If you're already in testing your bot in Teams, you must sign out from this app and Teams. Then sign in again to see this change.</br>
         
           :::image type="content" source="~/assets/images/bots/update-manifest.png" alt-text="Update manifest" border="true":::
 
@@ -459,7 +459,7 @@ items:
 
     1. Select **Continue** to accept the permissions.
 
-         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Permissions to bot" border="true":::
+         :::image type="content" source="~/assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Permissions to bot" border="true":::
 
     1. Select **Accept** for **Permissions requested**.
 
