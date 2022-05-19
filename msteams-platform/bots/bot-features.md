@@ -62,8 +62,8 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 >   <details>
 >   <summary><b>If you want to do bot registration only</b></summary>
 >
->   * Go to the resource group to and manually delete the unused resources . Such as the app service, app service plan (if you created during bot registration) and the application insights (if you choose to enable it during bot registration).<br>
->   * You can also use az-cli to do bot registration:<br>
+>   * Go to the resource group to and manually delete the unused resources . Such as the app service, app service plan (if you created during bot registration) and the application insights (if you choose to enable it during bot registration).
+>   * You can also use az-cli to do bot registration:
 >
 >     1. Sign into azure and set the subscription <br> 
 >           &nbsp; az cloud set –name  "AzureUSGovernment" <br> 
