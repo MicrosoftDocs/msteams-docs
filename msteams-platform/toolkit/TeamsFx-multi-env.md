@@ -77,7 +77,7 @@ The following table lists the common scenarios for customized resource provision
 | Reuse existing Azure AD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`</li> </ul> |  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database) |
-| Customize app manifest | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` section in `.fx/config.<envName>.json`</li>  </ul> | [Preview app manifest in Teams Toolkit](Preview%20and%20customize%20Teams%20app%20manifest.md) |
+| Customize app manifest | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` section in `.fx/config.<envName>.json`</li>  </ul> | [Preview app manifest](Preview%20and%20customize%20Teams%20app%20manifest.md) |
 
 ## Scenarios
 
