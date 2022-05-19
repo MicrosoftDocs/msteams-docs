@@ -8,83 +8,8 @@ ms.topic: overview
 ms.date: 05/13/2022
 ---
 
+# Preview app manifest in Teams Toolkit
 
-# Customize Teams app manifest
-
-Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
-
-* `manifest.template.json`
-* `templates/appPackage`
-
-
-## Prerequisite
-
-* Install the [Teams Toolkit version 3.8.1](https://github.com/OfficeDev/TeamsFx/releases/tag/vscode-extension-3.8.1-beta.adb483893.0).
-
-> [!TIP]
-> Ensure you have Teams app project opened in Visual Studio Code.
-
-During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
-
-## Supported placeholders in manifest.template.json
-
-The following list provides supported placeholders in `manifest.template.json`:
-
-* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
-* `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
-
-**To add customized parameter**
-
-1. Add a customized parameter as follows:</br>
-   a. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.</br>
-   b. Add a config value in `config.{env}.json`.
-
-     ```json
-     {
-         "manifest": {
-          "KEY": "VALUE"
-          }
-     }
-     ```
-
-2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
-
-### Validate manifest
-
-During operations such as, **Zip Teams metadata package**, Teams Toolkit validates the manifest against its schema. The following list provides different ways to validate manifest:
-
-* In VSC, trigger `Teams: Validate manifest file` from command palette:
-
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
-
-* In CLI, use command:
-
-     ``` bash
-        teamsfx validate --env local
-        teamsfx validate --env dev
-        ```
-
----
-
-## Codelenses and hovers
-
-In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
-
-> [!NOTE] 
-> Provision the environment or execute local debug to generate values for placeholders. 
-
-You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
-
-To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
-
-
-## Preview app manifest in Teams Toolkit
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders and the actual values are resolved by Teams Toolkit from files under `.fx/configs` and `.fx/states` for different environments.
 To preview manifest with actual content, Teams Toolkit generates preview manifest files under `build/appPackage` folder:
@@ -184,6 +109,75 @@ If the manifest file is outdated due to configuration file change or template ch
 * **Cancel**: No action is taken
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
+
+
+## Customize Teams app manifest
+
+Teams Toolkit consists of the following manifest template files under `manifest.template.json` folder across local and remote environments:
+
+* `manifest.template.json`
+* `templates/appPackage`
+
+
+During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Dev Portal](https://dev.teams.microsoft.com/apps).
+
+## Supported placeholders in manifest.template.json
+
+The following list provides supported placeholders in `manifest.template.json`:
+
+* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
+* `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
+
+**To add customized parameter**
+
+1. Add a customized parameter as follows:</br>
+   a. Add a placeholder in `manifest.template.json` with pattern `{{config.manifest.xx}}`.</br>
+   b. Add a config value in `config.{env}.json`.
+
+     ```json
+     {
+         "manifest": {
+          "KEY": "VALUE"
+          }
+     }
+     ```
+
+2. You can navigate to configuration file by selecting any one of the config placeholder **Go to config file** or **View the state file** in `manifest.template.json`.
+
+### Validate manifest
+
+During operations such as, **Zip Teams metadata package**, Teams Toolkit validates the manifest against its schema. The following list provides different ways to validate manifest:
+
+* In VSC, trigger `Teams: Validate manifest file` from command palette:
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="Validate file":::
+
+* In CLI, use command:
+
+     ``` bash
+        teamsfx validate --env local
+        teamsfx validate --env dev
+        ```
+
+---
+
+## Codelenses and hovers
+
+In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
+
+> [!NOTE] 
+> Provision the environment or execute local debug to generate values for placeholders. 
+
+You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
+
+To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
+
 
 
 ## See also
