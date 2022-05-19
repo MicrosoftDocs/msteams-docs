@@ -88,7 +88,7 @@ The following steps helps you to enable SSO in your application.
 </details>
 <br>
 
-<br><details>
+<details>
 <summary><b>Update source code for Bot project
 </b></summary>
 
