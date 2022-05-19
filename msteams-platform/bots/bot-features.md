@@ -60,12 +60,14 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 > * Image URL's in Adaptive Cards are not supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 > * Bot channel registration in Azure Government will provision web app bot, app service (app service plan), and application insights also but it doesn't support to provision the azure bot service only (no app service).
 >     <details>
->    <summary><b>If you want to do bot registration only</b></summary>
+>     <summary><b>If you want to do bot registration only</b></summary>
 >     * Go to the resource group to and manually delete the unused resources . Such as the app service, app service plan (if you created during bot registration) and the application insights (if you choose to enable it during bot registration).<br>
->     * You can also use az-cli to do bot registration:<br>
->         1. Sign into azure and set the subscription az cloud set –name  "AzureUSGovernment" and az account set –name "`subscriptionname/id`".<br>
->         2. Create app registration, az ad app create --display-name "`name`" and    --password "`password`" --available-to-other-tenants. Your appid would be created here.<br>
->         3. Create bot resource az bot create –resource-group "`resource-group`", --appid "`appid`", --name "`botid`" and --kind "registration".<br>
+>    * You can also use az-cli to do bot registration:<br>
+>
+>     1. Sign into azure and set the subscription az cloud set –name  "AzureUSGovernment" and az account set –name "`subscriptionname/id`".<br>
+>     1. Create app registration, az ad app create --display-name "`name`" and    --password "`password`" --available-to-other-tenants. Your appid would be created here.<br>
+>     1. Create bot resource az bot create –resource-group "`resource-group`", --appid "`appid`", --name "`botid`" and --kind "registration".<br>
+>
 > </details>
 
 For GCCH environment, you need to register a bot using [Azure Government portal](https://portal.azure.us).
