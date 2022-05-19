@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in VS Code, then the VS Code launches the debuggers, and Microsoft Edge or Chrome debugger launches a new browser instance as follows:
+The local debug workflow involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debugger in VS Code, then the VS Code launches the debuggers, and Microsoft Edge or Chrome debugger launches a new browser instance as follows
 
 1. The `launch.json` file configures the debugger in VS Code
 
