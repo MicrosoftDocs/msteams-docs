@@ -83,7 +83,7 @@ Users can choose to block your bot from sending personal chat messages. They may
 
 ## Remove a bot from a team
 
-Users can delete the bot by choosing the trash-can icon on the bots list in their team's view. This only removes the bot from that team's use, individual users can still interact in personal context. Bots in personal context cannot be disabled or removed by users.
+Users can delete the bot by choosing the trash-can icon on the bots list in their team's view. This only removes the bot from that team's use, individual users can still interact in personal context. Bots in personal context can't be disabled or removed by users.
 
 ## Disable a bot in Teams
 
