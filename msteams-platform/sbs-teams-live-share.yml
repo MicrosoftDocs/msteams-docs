@@ -39,10 +39,10 @@ items:
 
 ## Download the sample
 
-    For this tutorial, use the [Dice roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample to get started. You can download and clone it from GitHub.
-
-    **To use Git Bash to clone the sample repo**:
+For this tutorial, use the [Dice roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample to get started. You can download and clone it from GitHub.
     
+To use Git Bash to clone the sample repo:
+
     1. Open a terminal window.
     1. Run the following command to clone the sample repository to your computer:
 
