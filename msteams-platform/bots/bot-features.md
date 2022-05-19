@@ -65,7 +65,7 @@ The Azure bot service, along with the Bot Framework, provides tools to build, te
 > 1. You can also use az-cli to do bot registration:
 >     a. Sign into azure and set the subscription 
 >            az cloud set –name  "AzureUSGovernment"
->            az account set –name "<subscriptionname/id>”
+>            az account set –name "`<subscriptionname/id>`”
 >      b. Create app registration, 
 >            az ad app create --display-name "<name>" 
 >            --password "<password>" --available-to-other-tenants
