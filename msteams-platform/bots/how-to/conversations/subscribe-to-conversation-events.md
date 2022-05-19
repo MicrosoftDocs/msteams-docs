@@ -35,7 +35,7 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 * Other members are added to or removed from a conversation
 * Conversation metadata has changed
 
- If a new team member is added to a channel, bot receives the information with help of `conversationUpdate` event. For more information to add new team members to a channel and receive messages in the same, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
+ If a new member is added to a channel, the bot receives information with help of `conversationUpdate` event. For more information to add new team members to a channel and receive messages in the same, see [Team members added](#team-members-added) and [Installation update event](#installation-update-event).
 
 The following table provides a list of Teams conversation update events with more details:
 
