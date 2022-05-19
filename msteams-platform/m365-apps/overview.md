@@ -26,7 +26,7 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 For guidance about the Teams app manifest and SDK versioning guidance, as well as further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client SDK overview](../tabs/how-to/using-teams-client-sdk.md).
 
 > [!NOTE]
-> We welcome your feedback and issue reporting as you expand Teams apps to run across Microsoft 365 ecosystem! Please use the regular [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
+> We welcome your feedback and issue reporting as you expand Teams apps to run across the Microsoft 365 ecosystem! Please use the regular [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to send feedback.
 
 ## Personal tabs and messaging extensions in Outlook and Office
 
