@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Enable SSO in Teams app manifest and preview app
+# Update app manifest for SSO and preview app
 
 Before you update Teams app manifest, ensure that you've configure code to enable SSO in your tab app.
 

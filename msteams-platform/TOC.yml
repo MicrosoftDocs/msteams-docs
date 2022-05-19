@@ -361,11 +361,11 @@
         href: tabs/how-to/authentication/tab-sso-overview.md
       - name: Register tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
-      - name: Configure code to enable SSO
+      - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
-      - name: Update app manifest and preview
+      - name: Update app manifest for SSO and preview
         href: tabs/how-to/authentication/tab-sso-manifest.md
-      - name: Extend for Microsoft Graph permissions
+      - name: Granting Microsoft Graph permission & scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
       - name: Troubleshooting
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md

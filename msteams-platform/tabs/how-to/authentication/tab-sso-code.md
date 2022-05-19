@@ -5,24 +5,24 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Configure code to enable SSO
+# Add code to enable SSO
 
-Before you configure code to enable SSO, ensure that you've registered your app with Azure AD.
+Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
 
-You need to configure your app's code to handle access tokens. Configure the client-side code to obtain an access token from Azure AD using Teams identity of the app user. Teams caches this access token for future use. You can also use the access token as an identity token for authenticating and authorizing your app users. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side, and validate the token for Graph permissions.
+You need to configure your app's code to handle access tokens. Add the client-side code to obtain an access token from Azure AD using Teams identity of the app user. Teams caches this access token for future use. You can also use the access token as an identity token for authenticating and authorizing your app users. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side, and validate the token for Graph permissions.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
 
 This section covers:
 
-- [Configure client-side code to get an access token](#configure-client-side-code-to-get-an-access-token)
+- [Add client-side code to get an access token](#add-client-side-code-to-get-an-access-token)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 - [Decode and validate the access token](#decode-and-validate-the-access-token)
 
-## Configure client-side code to get an access token
+## Add client-side code to get an access token
 
 Your app user must give consent to Teams for using the Teams identity token (ID token) to get user-level permission. Azure AD receives the app user's Teams ID token, and sends an access token to Teams.
 
@@ -61,7 +61,7 @@ When Teams obtains the access token, it's cached and reused as needed. This toke
 > - Always call `getAuthToken()` only when you need an access token.
 > - Teams will cache access token for you. Don't cache or store the access token in your app's code.
 
-#### Code for getAuthToken
+#### Add code for getAuthToken
 
 Add the following code snippet to the client-side code to:
 
