@@ -96,7 +96,7 @@ The following code provides an example of context variable:
     "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
     "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
-    "userLicenseType": "The license type for the current user",
+    "userLicenseType": "The license type for the current user, Possible values are E1, E3, and E5 enterprise plans",
     "parentMessageId": "The parent message ID from which this task module is launched",
     "ringId": "The current ring ID",
     "appSessionId": "The unique ID for the current session used for correlating telemetry data",
