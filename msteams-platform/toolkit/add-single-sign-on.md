@@ -61,9 +61,10 @@ The following table lists the changes Teams Toolkit makes to your project:
 ## Update your application to use SSO
 
 The following steps helps you to enable SSO in your application.
+
 > [!NOTE]
 > These changes are based on the templates we scaffold.
-
+---
 <br>
 <br><details>
 <summary><b>Tab project
