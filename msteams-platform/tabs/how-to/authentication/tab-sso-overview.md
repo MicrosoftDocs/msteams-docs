@@ -38,8 +38,12 @@ Here's what your app users get with SSO experience:
 
 - Teams gets the access token for the current user from Azure AD. This interaction with Azure AD is invisible to the user. It translates to app access for the user without having to leave Teams environment.
 - After consenting to Teams the first time, the app user can use your tab app with no further need of consent, even on any other device. For this reason, it's true SSO and offers a better user experience.
+  - Alternatively, the tenant administrator can grant consent on behalf of the tenant. In this scenario, when the tenant administrator consents for all app users in the tenant, the app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs, and can access the app seamlessly.
 - The access token is pre-fetched by Teams to improve performance and load time of the app in Teams environment.
 - App users don't need to memorize or record several passwords to access and use apps in Teams environment.
+
+> [!NOTE]
+> App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write all SharePoint and OneDrive assets in the tenant. For such scopes, only the administrator than grant consent on a user's behalf.
 
 Now, let's see what happens at the backend during runtime to achieve true SSO user experience within Teams.
 
