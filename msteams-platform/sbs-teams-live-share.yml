@@ -110,7 +110,7 @@ items:
 - title: Set up the manifest file and upload your app
   durationInMinutes: 1
   content: |
-   You need to setup the manifest file and upload the file to Teams.
+   You need to setup the manifest file and upload the zip package to Teams.
 
      1. Go to the **manifest.json** file in your sample app folder.
   
