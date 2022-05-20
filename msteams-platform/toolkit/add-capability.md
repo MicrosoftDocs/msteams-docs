@@ -76,10 +76,10 @@ The following list provides limitations to add more capabilities in TeamsFx:
   |To add bot |`teamsfx add bot`|
   |To add message extension |`teamsfx add message extension`|
 
-## Supported capabilities
+## Available capabilities to add for different Teams project
 
-You can choose to add different capabilities in your Teams app.
-The following table lists the different Teams app capabilities:
+You can choose to add different capabilities depends on project you have created in your Teams app.
+The following table lists the available capabilities to add in your project:
 
 |Existing capabilities|Other supported capabilities|
 |--------------------|--------------------|
