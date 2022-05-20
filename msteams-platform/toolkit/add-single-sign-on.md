@@ -66,6 +66,7 @@ The following steps helps you to enable SSO in your application.
 
 > [!NOTE]
 > These changes are based on the templates we scaffold.
+
 ---
 <br>
 <br><details>
