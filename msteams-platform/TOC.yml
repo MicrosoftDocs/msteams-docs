@@ -365,7 +365,7 @@
         href: tabs/how-to/authentication/tab-sso-code.md
       - name: Update app manifest for SSO and preview
         href: tabs/how-to/authentication/tab-sso-manifest.md
-      - name: Granting Microsoft Graph permission & scopes
+      - name: Granting Microsoft Graph permissions & scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
       - name: Troubleshooting
         href: tabs/how-to/authentication/tab-sso-troubleshooting.md

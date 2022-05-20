@@ -78,6 +78,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
 <br>
+As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.
 
 <br>
 <details>
@@ -89,20 +90,17 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 #### ID token and access token
 
-As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.
+Here's a quick look at types of tokens used in the authentication and authorization process:
 
-Here's a quick look at types of tokens:
-
-- **ID token**: An ID token is granted for an app user after successful validation. It's used to cache user profile information. Teams uses this token to pre-fetch access token for an app user who is currently logged into Teams.
-- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD when you enable SSO in a tab app.
-  This token is an access token for calling your own back-end API. The audience claim is set to your app's client ID). This allows your app to authenticate the user and authorize access to its own API.
+- **ID token**: An ID token is granted for an app user after successful validation. It's used to cache user profile information. Teams uses ID token to pre-fetch access token for an app user who is currently logged into Teams.
+- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD when you enable SSO in a tab app. This token is an access token for calling your own back-end API. (The audience claim is set to your app's client ID). This allows your tab app to authenticate the app user and authorize access to its own API.
 
 > [!NOTE]
 > If the application needs additional Microsoft Graph permissions, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 ### Consent dialog for getting access token
 
-When you call `getAuthToken()` and user consent is required for user-level permissions, a dialog is shown to the app user to seek consent.
+When you call `getAuthToken()` and user consent is required for user-level permissions, a dialog is shown to the app user who is currently signed in.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
@@ -112,9 +110,15 @@ When an app user accesses your tab app for the first time and your tab app makes
   It's the first consent dialog that appears. The app user must give consent to Teams for using Teams ID token.
 
 1. **Azure AD consent dialog**:
-  After the app user consents to Teams for using the ID token to obtain access token, Azure AD consent dialog appears. It seeks app user's consent for permissions that you've configured as scope in Azure AD.
+  After Teams receives the app user's consent for using the ID token to obtain access token, it displays the Azure AD consent dialog. It seeks the app user's consent for user-level permissions that you've configured as scope in Azure AD.
 
-This consent is to be given only once. The app user is able to access your tab app after consenting to Teams and Azure AD dialogs.
+The consent given in these two dialogs is to be given only once. The app user is able to access and use your tab app for the granted permissions and scopes.
+
+> [!IMPORTANT]
+> Scenarios where consent dialogs are not needed:
+>
+> - If the tenant administrator has granted consent on behalf of the tenant, the app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs, and can access the app seamlessly.
+> - If your Azure AD app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Azure AD app is registered in a different tenant.
 
 If you encounter any errors, see [Troubleshooting SSO authentication in Teams](tab-sso-troubleshooting.md).
 

@@ -82,21 +82,18 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can support app users who have personal Microsoft accounts also. |
     | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
 
-    > [!NOTE]
-    > If your Azure AD app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Azure AD app is registered in a different tenant.
-
     </details>
 
 6. Select the **Redirect URI** details.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/redirect-uri.png" alt-text="redirect URI." border="true":::
 
-    1. Select the platform where your app is accessible. You can choose from **Public client/native (mobile & desktop)**, **Web**, **Single-page application (SPA)**.
+    1. Select **Web** as the platform from where your app is accessible.
     2. Enter the URL for your app.
        After user authentication is successful, Azure AD sends the access token to this URL after successful authentication.
        You can change this URL at a later stage, if needed.
     <br>
-
+    <!--
     <details>
     <summary><b>Platform and redirect URI options</b></summary>
 
@@ -105,7 +102,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     | Web | Configure a redirect URI for your app where client app is redirected. It's also where Azure AD sends the access token. <br> Select this platform for standard web applications that run on a server. |
     | Mobile and desktop applications | Configure a redirect URI for mobile applications that aren't using the latest Microsoft Authentication Library (MSAL) or for desktop applications. |
     | Single-page application | Configure a redirect URI for a client-side web app by using JavaScript or a framework like Angular, Vue.js, React.js, or Blazor WebAssembly. |
-    </details>
+    </details>-->
 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
