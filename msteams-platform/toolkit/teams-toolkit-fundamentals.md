@@ -91,10 +91,6 @@ It helps you to start with Teams app development by creating new Teams project u
 
 It helps you to incrementally add additional Teams capabilities such as **Tab** or **Bot** or optionally add Azure resources such as **Azure SQL Database** or **Azure Key Vault**, which fits your development needs to your current Teams app. You can also add **Single Sign-on** or **CI/CD workflows** for your Teams app. 
 
-### Add cloud resources
-
-It helps you to optionally add cloud resources that fits your development needs.
-
 ### Edit manifest file
 
 It helps you to edit the Teams app integration with Teams client.
@@ -153,7 +149,7 @@ Let's explore Teams Toolkit features.
 | &nbsp; | Tutorial | Select to access different tutorials. |
 | &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
 | &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
-|
+
 
 > [!TIP]
 > Browse existing issues before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to submit feedback.
