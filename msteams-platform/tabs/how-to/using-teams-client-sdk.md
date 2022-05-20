@@ -48,7 +48,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 | chat |Teams||
 | dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
 | location |Teams| See notes on [App permissions](#app-permissions).|
-| mail | Outlook||
+| mail | Outlook (Windows desktop only)||
 | media |Teams| See notes on [App permissions](#app-permissions).|
 | pages | Teams, Outlook, Office | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
@@ -147,7 +147,7 @@ For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/over
 Teams APIs that previously took a callback parameter have been updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
 
 ```js
-app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
+app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
 ```
 
 You'll need to update the way your code calls any of these APIs to use Promises. For example, if your code is calling a Teams API like this:
@@ -281,7 +281,6 @@ The `pages` namespace includes functionality for running and navigating webpages
 | Original namespace `settings` | New namespace `pages`  |
 | - | - |
 | `settings.getSettings` | `pages.getConfig` (renamed)
-| `settings.setSettings` | `pages.setConfig` (renamed)
 
 ###### *pages.tabs*
 
@@ -299,7 +298,6 @@ The `pages` namespace includes functionality for running and navigating webpages
 | Original namespace `settings` | New namespace `pages.config`  |
 | - | - |
 | `settings.setSettings` | `pages.config.setConfig` (renamed)
-| `settings.getSettings` | `pages.config.getConfig` (renamed)
 | `settings.setValidityState`| `pages.config.setValidityState`
 | `settings.initialize` | `pages.config.initialize`
 | `settings.registerOnSaveHandler`| `pages.config.registerOnSaveHandler`
