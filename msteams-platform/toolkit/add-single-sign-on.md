@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 05/16/2022
 ---
 
-# Add Single sign-on
+# Add single sign-on experience
 
 Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by removing some of the Azure AD flows and integrations behind some simple APIs. It enables you to add single sign-on (SSO) features easily to your Teams application.
 
@@ -50,8 +50,8 @@ The following table lists the changes Teams Toolkit makes to your project:
 
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
-   |Create|`aad.template.json` under `template\appPackage`|Azure AD application manifest represents your Azure AD app. `template\appPackage` helps to register an Azure AD app during local debug or provision stage.|
-   |Modify|`manifest.template.json` under `template\appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
+   |Create|`aad.template.json` under `template/appPackage`|Azure AD application manifest represents your Azure AD app. `template/appPackage` helps to register an Azure AD app during local debug or provision stage.|
+   |Modify|`manifest.template.json` under `template/appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
    |Create|`auth/tab`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a tab project.|
    |Create|`auth/bot`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a bot project.|
 
@@ -193,7 +193,10 @@ The following steps helps you to enable SSO in your application.
 <summary><b>Add a new command to the bot
 </b></summary>
 
-The following steps helps you to add a new command, after you add SSO in your project but it is not mandatory:
+> [!NOTE]
+> Currently, this instructions applies to `command bot`. If you start with a `bot`, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso).
+
+The following steps helps you to add a new command, after you add SSO in your project:
 
 1. Create a new file (example `todo.ts` or `todo.js`) under `bot/src/` and add your own business logic to call Graph API:
 
@@ -339,7 +342,6 @@ For more information about TeamsFx SDK, see:
 
 * [TeamsFx SDK](TeamsFx-SDK.md) or [API reference](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Microsoft Teams Framework (TeamsFx) Sample Gallery](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
-* [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2)
 
 ## See also
 
