@@ -387,7 +387,7 @@ After you've configured the authentication mechanism, you can perform the actual
 
     ![auth bot login emulator](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
-1. If you select **Yes** when the bot asks *Would you like to view your token?*, you'll get a response similar to the following:
+1. If you select **Yes** when the bot asks *Would you like to view your token?* you'll get a response similar to the following:
 
     ![auth bot login emulator token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 
