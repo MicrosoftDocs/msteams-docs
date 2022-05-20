@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Build agile poker using Live Share SDK
+title: Build Agile Poker using Live Share SDK
 metadata:
-  title: Build agile poker using Live Share SDK
+  title: Build Agile Poker using Live Share SDK
   description: In this tutorial, you'll learn to build a sample app using Live Share SDK.
   audience: Developer
   level: Beginner
@@ -15,11 +15,11 @@ items:
 - durationInMinutes: 1
   content: |
 
-   Live share SDK now allows you to build collaborative apps and discover more ways to collaborate and connect through teams. Developers can now build apps where you can share content together such as watching a movie, playing live games etc. in Teams one-on-one calls, group calls, schedule meetings, and meet now.
+   Live Share SDK allows you to build collaborative apps and discover more ways to collaborate and connect through Teams. You can build apps to share content such as watching movies, playing live games,and so on in Teams one-on-one calls, group calls, schedule meetings, and meet now.
   
-   This step-by-step guide helps you to create a Live Share sample app. You'll see the following output:
+   This step-by-step guide helps you to create a Agile Poker sample app using Live Share SDK. You'll see the following output:
 
-    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-start-game.png" alt-text="start game":::
+    :::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile Poker gif":::
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -29,131 +29,113 @@ items:
  
     * [Microsoft Teams](https://www.microsoft.com/microsoft-teams/log-in) with a valid account
     * [Latest version of Visual Studio Code](https://code.visualstudio.com/download)
-    * [Latest version on nodejs](https://nodejs.org/en/download/)
+    * [Latest version of nodejs](https://nodejs.org/en/download/)
     * [Latest version of ngrok](https://ngrok.com/download) or equivalent tunneling solution
       
       > [!NOTE]
       > If you are downloading ngrok for the first time, sign up and install [authtoken](https://ngrok.com/download).
 
-- title: Build and run the sample app
+- title: Build and run the Agile Poker sample app
   durationInMinutes: 1
   content: |
 
-    For this tutorial, use the [Agile poker](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) sample to get started. You can clone the Live Share sdk repository using the following commands:
+    1. Go to the [Agile Poker](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) sample app.
 
-    1. Clone the Live Share SDK repository to test the sample.
-
-    ```
-     git clone https://github.com/microsoft/live-share-sdk.git
-   
-    ```
-
-    After you've cloned the Live Share SDK repository, you can build and test the Agile poker app in your local environment.
-
-    In this page, you'll learn to:
-
-    1. [Build and run the sample](#build-and-run-the-sample)
-
-    1. [Create ngrok tunnel](#create-ngrok-tunnel)
-
-    ## Build and run the sample
-
-    After the repository is cloned, start building the Agile poker app.
-
+    1. Clone the Live Share SDK repository to test the sample app:
+       ```
+         git clone https://github.com/microsoft/live-share-sdk.git
+    
+       ```
     1. Open a terminal window.
 
-    1. Go to the Agile poker app sample folder.
+    1. Run the following command to go to the Agile Poker sample app folder:
 
         ```
         cd live-share-sdk\samples\22.react-agile-poker
         ```
-    1. Install the dependency package.
+    1. Run the following command to install the dependency package:
 
         ```
         npm install
         ```
         
-    1. Start the client and a local server.
+    1. Run the following command to start the client and the local server:
 
         ```
         npm run start
         ```
 
-    A new browser tab opens a http://localhost:3000 window and the agile poker game appears.
+       A new browser tab opens a http://localhost:3000 window and the Agile Poker game appears.
 
-     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-browser.png" alt-text="ngrok tunnel":::
-    
+       :::image type="content" source="~/assets/images/teams-live-share/agile-poker-browser.png" alt-text="ngrok tunnel":::
 
-    ## Create ngrok tunnel
+    1. Open a new ngrok terminal window to create a tunnel and deploy your app locally.
 
-    After you install ngrok, you have to create a tunnel to deploy your app locally.
-
-    1. Open a new ngrok terminal window.
-
-    1. Run the following command to create a tunnel. The sample app uses port 3000.
+    1. Run the following command to create a tunnel. The sample app uses port 3000:
 
         ```
         ngrok http 3000 --host-header=localhost
         ```
-        ngrok tunnel is created. Here's an example of ngrok tunnel.
+        ngrok tunnel is created.
         
           :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
 
-- title: Set up the manifest file and upload your app
+- title: Set up manifest file and upload your app
   durationInMinutes: 1
   content: |
-   You need to setup the manifest file and upload the zip package to Teams.
+   You need to setup the manifest file and upload the manifest.zip package to Teams.
 
      1. Go to the **manifest.json** file in your sample app folder.
   
      1. Open **manifest.json** in Visual Studio Code and update the configuration URL.
        
-        Replace `https://<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok
+        Replace `https://<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok.
 
          :::image type="content" source="~/assets/images/teams-live-share/agile-poker-configuration-url.png" alt-text="update configuration url":::
       
      1. Zip the contents of the **manifest** folder to create `manifest.zip`.
 
-      > [!NOTE]
-      > Ensure that the `manifest.zip` contains only `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        > [!NOTE]
+        > Ensure that the `manifest.zip` contains only the `manifest.json` source file, `color` icon, and  the `outline` icon.
      
-     ## Upload your app in Teams meeting
+     ## Upload your app to the Teams meeting
 
-      1. Go to **Teams**.
+      1. Open Teams.
 
       1. Schedule a meeting from the calendar in Teams.
-         Ensure you invite minimum 1 attendee to the meeting.
+         Ensure you invite atleast one attendee to the meeting.
 
       1. Join the meeting.
 
-      1. In the meeting window, select **+ Apps** and select **Manage apps**.
+      1. In the meeting window, select **+ Apps** > **Manage apps**.
 
          :::image type="content" source="~/assets/images/teams-live-share/agile-poker-manage-apps.png" alt-text="Manage apps":::
 
       1. Select **Upload a custom app**.
 
-      1. Upload the manifest.zip file.
+      1. Upload the `manifest.zip` file.
 
-      1. Select **Add** and the app is added to the meeting.
+      1. Select **Add** to add the app to the meeting.
 
          :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-add-manifest.png" alt-text="Add manifest":::
          
-      1. Select **+ Apps** and then select **Agile poker**.
+      1. Select **+ Apps** and then select **Agile Poker**.
 
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-select-agile-poker.png" alt-text="select agile poker":::
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-select-agile-poker.png" alt-text="select Agile Poker":::
 
       1. Select **Save**.
       
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Save agile poker app":::
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Save Agile Poker app":::
          
-      The agile poker app is added to the Teams meeting side panel.
+         The Agile Poker app is added to the Teams meeting side panel.
 
-      :::image type="content" source="~/assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add to teams meeting panel":::
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add to teams meeting panel":::
 
 - title: Test your app
   durationInMinutes: 1
   content: |
-   Select a **User Story** from the in-meeting side panel and select **Plan together**. Teams starts a live sync with the users in the meeting.
+   Select a user story from **User Stories** in the meeting side panel and select **Plan together**.
+   Teams starts a live sync with the users in the meeting.
 
     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="start presenting":::
 
@@ -167,6 +149,6 @@ items:
      :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="play game":::
 
 - content: |
-    You've completed the tutorial to get started with building collaborative apps for Microsoft Teams using Live Share SDk.
+    You've completed the tutorial to build collaborative apps for Microsoft Teams using Live Share SDk.
 
-    :::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile poker gif":::
+    :::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile Poker gif":::
