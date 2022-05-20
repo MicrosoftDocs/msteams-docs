@@ -102,7 +102,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
     </details>
 
     > [!NOTE]
-    > Mobile and desktop applications option isn't aavailable for tab apps.
+    > Mobile and desktop applications option isn't available for tab apps.
 
     <!--
     <details>
@@ -176,8 +176,8 @@ To configure scope and the OBO flow, you'll need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.azurewebsites.net>** | All platforms.|
-    >   | *DemoApplication* | **<https://DemoApplication.azurewebsites.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *demoapplication* | **<https://demoapplication.example.net>** | All platforms.|
+    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lower case option *demoapplication* as base resource name.
 
