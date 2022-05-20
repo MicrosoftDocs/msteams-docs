@@ -61,8 +61,8 @@ You can create a new app by exploring **View samples** and selecting an existing
 * [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 * [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
-*  Build notification bot with JavaScript
-*  Build command bot with JavaScript
+* [Build notification bot with JavaScript](../sbs-send-notification.yml)
+* [Build command bot with JavaScript](../sbs-command-bot/yml)
 
 ## See also
 
