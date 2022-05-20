@@ -305,7 +305,7 @@
     href: apps-in-teams-meetings/teams-live-share-sdk-capabilities.md
   - name: Integrate Live Share SDK to your app
     href: apps-in-teams-meetings/integrate-sdk-to-your-app.md
-  - name: Build agile poker using Live Share SDK
+  - name: Build Agile Poker using Live Share SDK
     href: sbs-teams-live-share.yml
 - name: Build webhooks and connectors
   items:

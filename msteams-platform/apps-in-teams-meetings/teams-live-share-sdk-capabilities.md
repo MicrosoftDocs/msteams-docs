@@ -1,21 +1,24 @@
 ---
-title: Teams live share SDK capabilities
-description: integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
+title: Live Share SDK capabilities
+description: Integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
 ---
 
-# Teams live share SDK
+# Live Share SDK
 
-Teams live share SDK helps you integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
+> [!NOTE]
+> Live Share SDK is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-The Teams Live share SDK contains a collection of classes for building collaborative applications. While there's a heavy focus on building collaborative media applications, any number of collaborative experiences can be built using the components of the SDK.
+Live Share SDK helps you to integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting.
 
-* [Collaboration Spaces](#collaboration-spaces)
-* [Shared Components](#shared-components)
-* [Building Custom Components](#building-custom-components)
+The Live Share SDK contains a collection of classes for building collaborative applications. While there's a heavy focus on building collaborative media applications, any number of collaborative experiences can be built using the SDK components.
+
+* [Collaboration spaces](#collaboration-spaces)
+* [Shared components](#shared-components)
+* [Building custom Components](#building-custom-components)
 
 ## Collaboration Spaces
 
@@ -45,7 +48,7 @@ In addition to the pre-built components, the SDK makes it easy to build your own
 
 You can use Teams client media libraries and work with Fluid framework to make your applications more interactive, when using the Teams meeting stage, or working with media.
 
-### Teams live share SDK packages
+### Live Share SDK packages
 
 * **teams-js-fluid**: Components to simplify building collaborative experiences for Teams.
 * **fluid-events**: Base helper classes to enable creation of cross platform fluid components.

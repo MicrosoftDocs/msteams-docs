@@ -1,5 +1,5 @@
 ---
-title: Integrate SDK to your app
+title: Integrate Live Share SDK to your app
 description: Use Live Share SDK to integrate your experiences with Microsoft Teams.
 ms.topic: concept
 ms.localizationpriority: high
@@ -8,7 +8,8 @@ ms.author: v-ypalikila
 
 # Integrate Live Share SDK to your app
 
-The Live Share SDK is in preview. You will need to be part of the [Developer Preview Program](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) for Microsoft Teams to use this feature.
+> [!NOTE]
+> Live Share SDK is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 The Live Share SDK builds on the [Fluid Framework](https://fluidframework.com/) to enable the creation of collaborative experiences for Microsoft Teams and M365. This preview version focuses on building collaborative meeting applications for Microsoft Teams using Fluid. The SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Container associated with each meeting. A collection of Live Share specific Distributed Data Structure classes are a`lso provided to simplify building applications for common meeting scenarios like shared media playback.
 
