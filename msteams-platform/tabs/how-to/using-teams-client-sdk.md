@@ -103,7 +103,7 @@ Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module
 
 This new dialog capability is split into a main capability (`dialog`) for supporting HTML-based dialogs and a subcapability, `dialog.bot`, for bot-based dialog development.
 
-The dialog capability doesn't yet support [Adaptive card dialogs](task-modules-and-cards/cards/design-teams-task-modules.md). Adaptive card-based dialogs still need to be invoked using `tasks.startTask()`.
+The dialog capability doesn't yet support [Adaptive card dialogs](../../task-modules-and-cards/cards/design-teams-task-modules.md). Adaptive card-based dialogs still need to be invoked using `tasks.startTask()`.
 
 The `dialog.open` function currently only works for opening HTMl-based dialogs, and it returns a callback function (`PostMessageChannel`) you can use to pass messages (`ChildAppWindow.postMessage`) to the newly opened dialog.  `dialog.open` returns a callback (rather than a Promise) because it doesn't require app execution to pause waiting for the dialog to close (thus providing more flexibility for various user interaction patterns).
 
