@@ -18,13 +18,13 @@ The Live Share SDK contains a collection of classes for building collaborative a
 
 * [Collaboration spaces](#collaboration-spaces)
 * [Shared components](#shared-components)
-* [Building custom Components](#building-custom-components)
+* [Building custom components](#building-custom-components)
 
-## Collaboration Spaces
+## Collaboration spaces
 
 Everything starts with the `TeamsCollaborationSpace` or `CollaborationSpace` classes. Clients join collaboration spaces and are then able to exchange messages and share objects with other clients connected to the same space. Each space exposes a `BroadcastSocket` which can be used to message other clients within the space, a `SharedObjects` collection which can be used persist objects that are synchronized across all of the clients within the space, and a `SharedClock` which provides a synchronized clock for the space.
 
-## Shared Components
+## Shared components
 
 While it's completely possible to use the `CollaborationSpace` object directly to build collaborative experiences, the SDK provides of set of pre-built components that dramatically simplify the task.
 
@@ -37,7 +37,7 @@ While it's completely possible to use the `CollaborationSpace` object directly t
 | SharedMap| A distributed map that's synchronized across all clients within a space. |
 | SharedList | A distributed list that's synchronized across all clients within a space. |
 
-## Building Custom Components
+## Building custom components
 
 In addition to the pre-built components, the SDK makes it easy to build your own custom components. Custom components come in two flavors:
 

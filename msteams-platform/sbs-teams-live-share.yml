@@ -8,7 +8,7 @@ metadata:
   ms.date: 05/17/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/teams-live-share-overview.md
-  nextTutorialTitle: Read more on Live Share
+  nextTutorialTitle: Read more on Live Share SDK
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -17,7 +17,7 @@ items:
    > [!NOTE]
    > Live Share SDK is currently available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-   Live Share SDK allows you to build collaborative apps and discover more ways to collaborate and connect through Teams. You can build apps to share content such as watching movies, playing live games,and so on in Teams one-on-one calls, group calls, schedule meetings, and meet now.
+   Live Share SDK allows you to build collaborative apps and discover more ways to collaborate and connect through Teams. You can build apps to share content such as watching movies, playing live games, and so on in Teams one-on-one calls, group calls, schedule meetings, and meet now.
   
    This step-by-step guide helps you to create a Agile Poker sample app using Live Share SDK. You'll see the following output:
 
@@ -137,6 +137,7 @@ items:
   durationInMinutes: 1
   content: |
    Select a user story from **User Stories** in the meeting side panel and select **Plan together**.
+
    Teams starts a live sync with the users in the meeting.
 
     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="start presenting":::
