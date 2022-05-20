@@ -60,8 +60,8 @@ If you have created SPFx based tab project, you can't add Azure cloud resources.
 
   |Cloud Resource|Command|
   |---------------|----------|
-  | Azure function|`teamsfx resource add azure-function --function-name your-func-name`|
-  | Azure SQL database|`teamsfx resource add --function-name your-func-name`|
+  | Azure function|`teamsfx add azure-function`|
+  | Azure SQL database|`teamsfx add azure-sql`|
   | Azure API management|`teamsfx resource add azure-apim`|
   | Azure Key Vault|`teamsfx resource add azure-keyvault`|
 
