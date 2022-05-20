@@ -157,11 +157,11 @@ Integrate with Graph Usage Right API to manage user permissions at the time of a
 
 1. Your Graph integration to call for license check is as follows:
 
-    * Get user OBO token: [Get access on behalf of a user - Microsoft Graph | Microsoft Docs](https://docs.microsoft.com/en-us/graph/auth-v2-user).
+    * Get user OBO token: [Get access on behalf of a user - Microsoft Graph | Microsoft Docs](/graph/auth-v2-user).
 
-    * Call Graph to get user’s object id: [Use the Microsoft Graph API - Microsoft Graph | Microsoft Docs](https://docs.microsoft.com/en-us/graph/use-the-api).
+    * Call Graph to get user’s object id: [Use the Microsoft Graph API - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
 
-    * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](https://docs.microsoft.com/en-us/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http).
+    * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http).
 
 > [!Note]
 > You need to have minimum `User.Read` permissions to be able to call UsageRights.
