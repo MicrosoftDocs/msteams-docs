@@ -1,7 +1,6 @@
 ---
 title: Cards and task modules
-description: Learn about types of cards supported in bots for Teams, such as, Adaptive cards, Hero card, Thumbnail card, and more. 
-Learn about card actions and invoking task modules in channels, bots, or deep links.
+description: Learn about types of cards supported in bots for Teams, such as, Adaptive cards, Hero card, Thumbnail card, and more. Learn about card actions and invoking task modules in channels, bots, or deep links.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
