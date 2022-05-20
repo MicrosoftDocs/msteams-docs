@@ -29,6 +29,7 @@ User-level Graph API permissions are supported, that is, email, profile, offline
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
 - **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
+- **App platform**: Note the platform where your app is available. It includes noting the URL from where your app is accessible. For tab apps, you can choose from web or Single-page application (SPA) platform. Mobile and desktop applications isn't available.
 - **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
@@ -240,8 +241,8 @@ To configure scope and the OBO flow, you'll need:
     > [!NOTE]
     > The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
 <br>
-    > [!IMPORTANT]
-    > For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams. You might need this detail, if you're using the same Azure AD app for a mobile or desktop client also.
+    > [!NOTE]
+    > For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
 1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
@@ -285,7 +286,7 @@ The redirect URI, which you defined on the **Register an application** page for 
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your tab app. You can choose the platform type from web, SPA, and mobile or desktop applications.
+1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform" border="true":::
 
