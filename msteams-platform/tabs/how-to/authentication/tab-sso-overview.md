@@ -74,6 +74,8 @@ sequenceDiagram
 | 5 | Teams Client -> Tab app | Teams sends the access token to the tab app as part of the result object returned by the `getAuthToken()` call. |
 | 6 | Tab app | The tab app parses the access token using JavaScript to extract required information, such as the app user's email address. The token returned to the tab app is both an access token and an identity token. |
 
+For more information, see [Update code to enable SSO](tab-sso-code.md).
+
 > [!IMPORTANT]
 > The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
@@ -133,7 +135,6 @@ Here's a list of best practices:
 ## Known limitations
 
 - Currently, SSO in Teams supports only OAuth 2.0 token. It doesn't support SAML token.
-- SSO works only with apps that support Azure AD as identity provider. For implementing authentication with other OAuth identity providers, the OAuth flow needs to be implemented. For more information, see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad.md).
 - Azure websites.net doesn't work with Teams apps.
 - Multiple domains per app are not supported. For more information, see [LOB apps](tab-sso-register-aad.md#before-you-register-with-azure-ad).
 - Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent.md#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
