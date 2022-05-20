@@ -21,7 +21,7 @@ The following list provides advantages to add more cloud resources in TeamsFx:
 
 ## Limitation
 
-If you have created SPFx based tab project, you can't add the resources.
+If you have created SPFx based tab project, you can't add Azure cloud resources.
 
 ## Add cloud resources
 
