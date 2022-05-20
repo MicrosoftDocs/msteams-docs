@@ -18,8 +18,8 @@ items:
    Teams live share now enables users to discover more ways to collaborate and connect through teams. Users can now share content such as watch a movie, play live games etc. with each other in Teams one-on-one calls, group calls, schedule meetings, and meet now.
   
    This step-by-step guide helps you to create a Teams live share sample app. You'll see the following output:
-
-    ![Start game](~/assets/images/teams-live-share/agile-poker-start-game.png)
+   
+    :::image type="content" source="~/assets/images/teams-live-share/~/assets/images/teams-live-share/agile-poker-start-game.png" alt-text="start game":::
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -89,7 +89,7 @@ items:
 
     A new browser tab opens a http://localhost:3000 window and the agile poker game appears.
 
-      :::image type="content" source="~/assets/images/teams-live-share/agile-poker-browser.png" alt-text="ngrok tunnel":::
+     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-browser.png" alt-text="ngrok tunnel":::
     
 
     ## Create ngrok tunnel
@@ -157,7 +157,7 @@ items:
          
       The agile poker app is added to the Teams meeting side panel.
 
-         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add manifest":::
+       :::image type="content" source="~/assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add manifest":::
 
 - title: Test your app
   durationInMinutes: 1
@@ -173,7 +173,7 @@ items:
 
     Did you come up with something like this?
     
-      :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="Add manifest":::
+     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="Add manifest":::
 
 - content: |
     You've completed the tutorial and now you can play the game together.
