@@ -148,9 +148,9 @@ If your page makes use of any of these values, the value of `channelType` field 
 
 > [!NOTE]
 >
-> A new sessionID is generated if a customer restarts the Teams desktop or reloads the Teams web client. The Teams session tracks the lifetime of the Teams client.
+> If a user restarts Teams desktop client or the Teams web client, a new sessionId is created. The Teams client's lifetime is tracked by the Team's session.
 >
-> A new app sessionID is generated when a customer navigates away from the app and refreshes it via the reload button. The App session tracks the lifetime of the platform app.
+> When a user exits the app and reloads it, a new sessionId is created. The lifetime of the platform app is tracked by the app session.
 
 ## Handle theme change
 
