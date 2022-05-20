@@ -17,38 +17,48 @@ items:
     Teams live share now enables users to discover more ways to collaborate and connect through teams. Users can now share content such as watch a movie, play live games etc. with each other in Teams One-on-one calls, group calls, schedule meetings, and meet now.
   
     This step-by-step guide helps you to create a Teams live share sample app. You'll see the following output:
-    (image to be added)
+
+    :::image type="content" source="../assets/images/teams-live-share/agile-poker-start-game.png" alt-text="Start game":::
+    
 - title: Prerequisites
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:
  
     * [Microsoft Teams](https://www.microsoft.com/microsoft-teams/log-in) with a valid account
-    * [Latest version of Visual Studio](https://code.visualstudio.com/Download)
-    * [Latest version of nodejs](https://nodejs.org/en/download/)
-    * [Latest version of ngrok](https://ngrok.com/download) (only for devbox testing) or any equivalent tunneling solution
-
-      > [!NOTE]
-      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-
+    * [Visual Studio Code](https://code.visualstudio.com/download)
+    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
 
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-    1. Open [Live-share-SDK](https://github.com/microsoft/live-share-sdk).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
-       (image to be added)
-    1. Select **Clone**. 
-     
-- title: Build and run the app using npm
+To download the sample:
+
+For this tutorial, use the [Agile Poker](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) sample to get started. You can download and clone it from GitHub:
+
+ 1. Add the latest version of the SDK to your application using NPM.
+
+   ```bash
+
+   npm install @microsoft/live-share --save
+
+   ```
+
+ 1. Clone the repository to test samples and/or build the packages.
+
+   ```bash
+   git clone https://github.com/microsoft/live-share-sdk.git
+
+   ```
+
+
+- title: Build and run the sample app
   durationInMinutes: 1
-  content: | 
+  content: |
+
     After you have cloned the repo for Teams live share SDK, you can build and test the Teams live share tab in your local environment.
     In this page, you'll learn to:
-
     1. [Build and run the sample](#build-and-run-the-sample)
-
     1. [Create ngrok tunnel](#create-ngrok-tunnel)
 
     ## Build and run the sample
@@ -56,64 +66,56 @@ items:
     After the repository is cloned, you can build the sample app.
 
     1. Open a terminal window.
+    1. Navigate to the sample of your choice.
 
-    1. Run the change directory command in the terminal to change to the sample app directory:
-
-        ```bash
-        cd .\live-share-sdk\samples\01.dice-roller\
         ```
-    1. Install all dependencies using the following command:
+        cd live-share-sdk\samples\22.react-agile-poker
+        ```
+    1. Install the dependency package.
 
-        ```bash
+        ```
         npm install
         ```
-        You should see a bunch of dependencies getting installed.
+        
+    1. Start both the client and a local server.
 
-    1. Run the following commands after installation is complete:
-
-        ```bash
-        npm run build
         ```
-    
-    1. Run the following start command  in the terminal:
-
-        ```bash
-        npm start
+        npm run start
         ```
 
-    When the Teams live share app starts, it displays `dice rolling on the localhost port 8080` in the browser window.
+    A new browser tab will open to http://localhost:3000 and you will see the agile poker appear in the browser.
 
     ## Create ngrok tunnel
 
     After you install ngrok, you can create a tunnel to deploy your app locally.
 
     1. Open a new ngrok terminal window.
-    1. Run the following command to create a tunnel. The sample app uses port 8080:
 
-        ```bash
+    1. Run the following command to create a tunnel. The sample app uses port 8080.
+
+        ```
         ngrok http 8080 --host-header=localhost
         ```
-
         The ngrok tunnel is created. Here's an example of ngrok tunnel.
-
-        (image to be added)
+        
+        :::image type="content" source="../assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
 
         *Ngrok* listens to requests from the internet and will route them to your app running on port 8080.
 
 - title: Set up manifest file and upload your app
   durationInMinutes: 1
   content: |
+
      1. Navigate to **manifest.json** in cloned repository.
   
-        (image to be added)
-
-     1. Open **manifest.json** in Visual Studio and make the following changes:
+     1. Open **manifest.json** in Visual Studio and update the configuration URL.
        
         Replace `https://<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok excluding the https:// part in all the places.
 
-        (image to be added)
-      
+        :::image type="content" source="../assets/images/teams-live-share/agile-poker-configuration-url.png" alt-text="update configuration url":::
+
       1. Update the following in the manifest:
+
           * Set `developer.name` to your name.
           * Update `developer.websiteUrl` with your website.
           * Update `developer.privacyUrl` with your privacy policy.
@@ -126,41 +128,50 @@ items:
         > Upload your manifest in your demo tenant for organization or your Teams account and run your solution in Visual Studio.
      
      ## Upload your app in Teams meeting
+
       1. Go to Teams.
       1. Schedule a meeting from the calendar in Teams.
       1. Join the meeting.
       1. In the meeting window, select **+ Apps** and select **Manage apps**.
 
-         (image to be added)
+      :::image type="content" source="../assets/images/teams-live-share/agile-poker-manage-apps.png" alt-text="Manage apps":::
 
       1. Select **Upload a custom app**.
+
       1. Upload the manifest.json.
+
       1. Select **Add** and the app is added to the meeting.
 
-         (image to be added)
-
+        :::image type="content" source="../assets/images/teams-live-share/teams-live-share-add-manifest.png" alt-text="Add manifest":::
+         
       1. Select **+ Apps** and select the app.
+
       1. Select **Save**.
-
-         (image to be added)
-
-      1. Select Share to stage icon from the meeting side panel.
       
-         (image to be added)
+         :::image type="content" source="../assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Add manifest":::
+         
+     The agile poker app is added to the Teams meeting side panel.
+
+     :::image type="content" source="../assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add manifest":::
 
 - title: Test your app
   durationInMinutes: 1
   content: |
-    Ensure that the app added in the Teams meeting and meeting participants can access and play together.
+   
 
-    (image to be added)
+    Select Start presenting icon from the meeting side panel.
+
+    :::image type="content" source="../assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="Add manifest":::
+
     
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with something like this?
 
-    (image to be added)
+    Did you come up with something like this?
+    
+    :::image type="content" source="../assets/images/teams-live-share/agile-poker-play-game.png" alt-text="Add manifest":::
+    
 
 - content: |
-    You've completed the tutorial and now you share the content and play.
+    You've completed the tutorial and now you can play the game together.
