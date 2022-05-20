@@ -5,9 +5,9 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
-# Add code to enable SSO
+# Update code to enable SSO
 
-Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
+Before you update code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
@@ -18,11 +18,11 @@ You need to configure your app's code to handle access tokens. Add the client-si
 
 This section covers:
 
-- [Add client-side code to get an access token](#add-client-side-code-to-get-an-access-token)
+- [Update client-side code to get an access token](#update-client-side-code-to-get-an-access-token)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
 - [Decode and validate the access token](#decode-and-validate-the-access-token)
 
-## Add client-side code to get an access token
+## Update client-side code to get an access token
 
 Your app user must give consent to Teams for using the Teams identity token (ID token) to get user-level permission. Azure AD receives the app user's Teams ID token, and sends an access token to Teams.
 
