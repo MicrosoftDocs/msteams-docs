@@ -13,6 +13,8 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 > [!IMPORTANT]
 > Currently, custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
+>
+> We recommend you to use the Teams client SDK via [npm package](https://www.npmjs.com/package/@microsoft/teams-js) and bundle it with your app as currently Teams client SDK is not available in Government Cloud CDN.
 
 The following image shows personal tabs:
 
