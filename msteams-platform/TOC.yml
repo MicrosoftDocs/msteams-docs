@@ -108,6 +108,8 @@
       href: toolkit/add-capability.md
     - name: Add cloud resources to Teams app
       href: toolkit/add-resource.md
+    - name: Add API connection to Teams app
+      href: toolkit/add-API-connection.md
     - name: Customize Teams app manifest
       href: toolkit/TeamsFx-manifest-customization.md
     - name: Preview Teams app manifest
