@@ -5,7 +5,7 @@ description:  Describes Managing Azure Active Directory application in Teams Too
 ms.author: surbhigupta
 ms.localizationpriority: medium 
 ms.topic: overview
-ms.date: 05/15/2022
+ms.date: 05/20/2022
 ---
 
 # Azure AD manifest
