@@ -17,9 +17,9 @@ items:
 
    Teams live share now enables users to discover more ways to collaborate and connect through teams. Users can now share content such as watch a movie, play live games etc. with each other in Teams One-on-one calls, group calls, schedule meetings, and meet now.
   
-    This step-by-step guide helps you to create a Teams live share sample app. You'll see the following output:
+   This step-by-step guide helps you to create a Teams live share sample app.
 
-    :::image type="content" source="../assets/images/teams-live-share/agile-poker-start-game.png" alt-text="Start game":::
+    ![Start game](../assets/images/teams-live-share/agile-poker-start-game.png)
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -102,7 +102,7 @@ items:
         ```
         ngrok tunnel is created. Here's an example of ngrok tunnel.
         
-        :::image type="content" source="../assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
+            :::image type="content" source="../assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
 
         *Ngrok* listens to requests from the internet and will route them to your app running on port 8080.
 
