@@ -14,7 +14,8 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams live share now enables users to discover more ways to collaborate and connect through teams. Users can now share content such as watch a movie, play live games etc. with each other in Teams One-on-one calls, group calls, schedule meetings, and meet now.
+
+   Teams live share now enables users to discover more ways to collaborate and connect through teams. Users can now share content such as watch a movie, play live games etc. with each other in Teams One-on-one calls, group calls, schedule meetings, and meet now.
   
     This step-by-step guide helps you to create a Teams live share sample app. You'll see the following output:
 
@@ -23,6 +24,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
+
     Ensure you install the following tools and set up your development environment:
  
     * [Microsoft Teams](https://www.microsoft.com/microsoft-teams/log-in) with a valid account
@@ -32,33 +34,34 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-To download the sample:
 
-For this tutorial, use the [Agile Poker](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) sample to get started. You can download and clone it from GitHub:
+   To download the sample:
+  
+    For this tutorial, use the [Agile Poker](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) sample to get started. You can download and clone it from GitHub.
 
- 1. Add the latest version of the SDK to your application using NPM.
+    1. Add the latest version of the SDK to your application using NPM.
 
-   ```bash
+     ```
+     npm install @microsoft/live-share --save
 
-   npm install @microsoft/live-share --save
+     ```
 
-   ```
+    1. Clone the repository to test samples and/or build the packages.
 
- 1. Clone the repository to test samples and/or build the packages.
-
-   ```bash
-   git clone https://github.com/microsoft/live-share-sdk.git
-
-   ```
-
-
+    ```
+     git clone https://github.com/microsoft/live-share-sdk.git
+   
+    ```
 - title: Build and run the sample app
   durationInMinutes: 1
   content: |
 
     After you have cloned the repo for Teams live share SDK, you can build and test the Teams live share tab in your local environment.
+
     In this page, you'll learn to:
+
     1. [Build and run the sample](#build-and-run-the-sample)
+
     1. [Create ngrok tunnel](#create-ngrok-tunnel)
 
     ## Build and run the sample
@@ -66,6 +69,7 @@ For this tutorial, use the [Agile Poker](https://github.com/microsoft/live-share
     After the repository is cloned, you can build the sample app.
 
     1. Open a terminal window.
+
     1. Navigate to the sample of your choice.
 
         ```
