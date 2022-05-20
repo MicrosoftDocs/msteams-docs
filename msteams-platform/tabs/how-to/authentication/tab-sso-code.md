@@ -24,19 +24,18 @@ This section covers:
 
 ## Update client-side code to get an access token
 
-Your app user must give consent to Teams for using the Teams identity token (ID token) to get user-level permission. Azure AD receives the app user's Teams ID token, and sends an access token to Teams.
+<!--Your app user must give consent to Teams for using the Teams identity token (ID token) to get user-level permission. Azure AD receives the app user's Teams ID token, and sends an access token to Teams.
 
 Here's a quick look at types of tokens:
 
 - **ID token**: An ID token is granted for an app user after successful validation. It's used to cache user profile information. Teams uses this token to pre-fetch access token for an app user who is currently logged into Teams.
-- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD when you enable SSO in a tab app.
+- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD when you enable SSO in a tab app.-->
 
 To obtain app access for the current app user, your client-side code must make a call to Teams for getting an access token.
 
 This section includes:
 
 - [Client-side code to obtain access token](#client-side-code-to-obtain-access-token)
-- [Teams mobile client support](#teams-mobile-client-support)
 - [Consent dialog for getting access token](#consent-dialog-for-getting-access-token)
 - [Use the access token as an identity token](#use-the-access-token-as-an-identity-token)
 
@@ -80,8 +79,6 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 <br>
 
-As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.
-
 <br>
 <details>
 <summary>Here's an example of the client-side code:</summary>
@@ -89,6 +86,15 @@ As Teams uses the app user's ID token, the app user should have signed in to Tea
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png" alt-text="Configure client code" lightbox="../../../assets/images/authentication/teams-sso-tabs/config-client-code.png":::
 
 </details>
+
+#### ID token and access token
+
+As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.
+
+Here's a quick look at types of tokens:
+
+- **ID token**: An ID token is granted for an app user after successful validation. It's used to cache user profile information. Teams uses this token to pre-fetch access token for an app user who is currently logged into Teams.
+- **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD when you enable SSO in a tab app.
 
 ### Consent dialog for getting access token
 
