@@ -214,7 +214,7 @@ items:
     | Folder name | Contents |
     | --- | --- |
     | `.fx` | Project level settings, configuration, and environment information |
-    | `.vs code` | VS code files for local debug |
+    | `.vscode` | VS code files for local debug |
     | `bot` | The bot source code |
     | `templates` | Templates for Teams app manifest and corresponding Azure resources |
     
