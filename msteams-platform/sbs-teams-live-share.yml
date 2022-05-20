@@ -153,7 +153,7 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-   Select the Start presenting icon from the meeting side panel.
+   Select a **User Story** from the in-meeting side panel and select **Plan together**. Teams starts a live sync with the users in the meeting.
 
     :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="start presenting":::
 
@@ -168,3 +168,5 @@ items:
 
 - content: |
     You've completed the tutorial to get started with building collaborative apps for Microsoft Teams using Live Share SDk.
+
+    :::image type="content" source="../assets/videos/agile-poker-gif.gif" alt-text="Agile poker gif":::
