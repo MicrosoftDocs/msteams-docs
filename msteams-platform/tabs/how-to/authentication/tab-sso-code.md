@@ -95,6 +95,10 @@ Here's a quick look at types of tokens:
 
 - **ID token**: An ID token is granted for an app user after successful validation. It's used to cache user profile information. Teams uses this token to pre-fetch access token for an app user who is currently logged into Teams.
 - **Access token**: An access token is an artifact that contains app user's identity and permission scopes. It's granted through Azure AD when you enable SSO in a tab app.
+  This token is an access token for calling your own back-end API. The audience claim is set to your app's client ID). This allows your app to authenticate the user and authorize access to its own API.
+
+> [!NOTE]
+> If the application needs additional Microsoft Graph permissions, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 
 ### Consent dialog for getting access token
 
