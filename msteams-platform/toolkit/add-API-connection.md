@@ -5,7 +5,7 @@ description:  Describes connection to existing APIs
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/15/2022
+ms.date: 05/20/2022
 ---
 
 # Connect to existing APIs
@@ -126,9 +126,12 @@ Teams Toolkit configures your local environment. The bootstrapped sample code co
 
 ## Advanced scenarios
 
-  You can see the following section for advanced scenarios:
+  The following section explains you advanced scenarios:
 
-### Custom authentication provider
+<br>
+
+<details>
+<summary><b>Custom authentication provider</b></summary>
 
 Besides the authentication provider included in `@microsoft/teamsfx` package, you can also implement customized authentication provider that implements `AuthProvider` interface and use it in `createApiClient(..)` function:
 
@@ -152,9 +155,9 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
-
-### Connect to APIs for Azure AD permissions
-
+</details>
+<details>
+<summary><b>Connect to APIs for Azure AD permissions</b></summary>
 Azure AD authenticates some services. The following list helps to access these services for configuring API permissions.
 
 * [Use Access Control Lists (ACLs)](#access-control-lists-acls)
@@ -196,6 +199,7 @@ You can follow the steps to access these APIs while using:
 
         > [!NOTE]
         > For application permission use your client ID.
+</details>
 
 ## See also
 
