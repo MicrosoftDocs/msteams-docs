@@ -92,7 +92,7 @@ Register a new app in Azure AD, and configure the tenancy and app's platform and
        After user authentication is successful, Azure AD sends the access token to this URL after successful authentication.
        You can change this URL at a later stage, if needed.
     <br>
-        <details>
+    <details>
     <summary><b>Platform and redirect URI options</b></summary>
 
     | Option | Select this to... |
