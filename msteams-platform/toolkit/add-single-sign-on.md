@@ -195,7 +195,7 @@ The following steps helps you to enable SSO in your application.
 </b></summary>
 
 > [!NOTE]
-> Currently, this instructions applies to `command bot`. If you start with a `bot`, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso).
+> Currently, these instructions applies to `command bot`. If you start with a `bot`, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso).
 
 The following steps helps you to add a new command, after you add SSO in your project:
 
