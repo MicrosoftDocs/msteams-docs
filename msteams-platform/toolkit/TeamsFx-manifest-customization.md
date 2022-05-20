@@ -47,4 +47,4 @@ During local debug or provision, Teams Toolkit loads manifest from `manifest.tem
 
 ## See also
 
-[Preview Teams App Manifest in Teams Toolkit](TeamsFx-manifest-preview.md)
+[Preview app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
