@@ -78,7 +78,7 @@ The following list provides limitations to add more capabilities in TeamsFx:
 
 ## Available capabilities to add for different Teams project
 
-You can choose to add different capabilities depends on project you have created in your Teams app.
+You can choose to add different capabilities depends on project you have created in Teams app.
 The following table lists the available capabilities to add in your project:
 
 |Existing capabilities|Other supported capabilities|
