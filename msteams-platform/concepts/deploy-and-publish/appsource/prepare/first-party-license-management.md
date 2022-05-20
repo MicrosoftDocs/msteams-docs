@@ -74,9 +74,7 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 1. Create an offer in Partner Center.
 1. Define the licensing options.
 1. Add one or more plans.
-1. Copy service IDs from offer details and update your Teams app to map to the paid functionality.
-1. Map your Teams app to your offer and publish.
-1. Best practices on ISV logic to determine ISV managed offers vs Microsoft managed offers for license management.
+1. Update your Teams app.
 1. Post purchase.
 1. App launch
 
@@ -103,10 +101,10 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 
 **Define the licensing options**
 
-To enable license management for your offer, select the checkbox (Placeholder).
+To enable license management for your offer, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
 > [!NOTE]
-> This is a one-time setting, and you cannot change it once your offer is published.
+> This is a one-time setting, and you cannot change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
 
 :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Software as a service ISVPILOT":::
 
@@ -131,40 +129,52 @@ To enable license management for your offer, select the checkbox (Placeholder).
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="List of plans created":::
 
-**Copy service IDs from offer details and update your Teams app to map to the paid functionality**
+1. Copy the service ID for your integration with Microsoft Graph Usage Rights API.
 
-(Content and image needs to be added)
+**Update your Teams app**
 
-**Map your Teams app to your offer and publish**
-(content and image needs to be added)
+Update your Teams app to map to the paid functionality and map your Teams app to your offer and publish.
 
-**Best practice on ISV logic**
-
-ISV managed offers vs Microsoft managed offers for License Management.
-
-(Content and image needs to be added)
+Refer to [Monetization guide](https://aka.ms/TMTG) on how to map your Teams app to your offer and publish.
 
 **Post purchase**
 
 1. After activation, customer is redirected from landing page to Teams License Management.
 
-1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing monetized apps in Teams.
+1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [monetized apps in Teams](https://aka.ms/TMTG).
 
 1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a redirect URL link or button that the customer clicks on the publisher landing page.  
 
-Sample code to build this URL is in Appendix A
+(Sample URL for redirection)
 
 **App Launch**
 
 Integrate with Graph Usage Right API to manage user permissions at the time of app launch by a customer who has a purchase license. You are required to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
 
-Sample code for Usage Right API integration in Appendix B.
+**For more information on how to call Graph UsageRight API to check user permissions, follow the links**:
 
-## Offer availability in Teams and Appsource
+1. You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your App.
 
-(Need content)
+1. Your Graph integration to call for license check is as follows:
 
-## Purchase offer in Teams or Appsource
+    * Get user OBO token: [Get access on behalf of a user - Microsoft Graph | Microsoft Docs](https://docs.microsoft.com/en-us/graph/auth-v2-user).
+
+    * Call Graph to get user’s object id: [Use the Microsoft Graph API - Microsoft Graph | Microsoft Docs](https://docs.microsoft.com/en-us/graph/use-the-api).
+
+    * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](https://docs.microsoft.com/en-us/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http).
+
+> [!Note]
+> You need to have minimum `User.Read` permissions to be able to call UsageRights.
+
+**Check license usage in Partner Center Analytics**
+
+1. Sign into [Partner Center](https://partner.microsoft.com/) with your partner account.
+1. In the left pane, select **Commercial Marketplace > Analyze > Licensing** to go to licensing dashboard.
+1. Select the **Plan** and **Tenant** in the reporting widget to see the month wise usage.
+
+## Teams customer experience with Microsoft app license management
+
+**Purchase offer in Teams or Appsource**
 
 1. In Teams, go to the Appstore and select your app.
 1. Select **Buy a subscription**.
@@ -233,20 +243,6 @@ Sample code for Usage Right API integration in Appendix B.
 When a new user is launching the app for the first time, they're requested to provide consent to the ISV to access their permissions in Graph for that app.
 
 :::image type="content" source="~/assets/images/first-party-license-mgt/test-the-app.png" alt-text="Test the app":::
-
-**App runtime consent flow for user**
-
-(Content)
-
-## Check license usage in Partner Center analytics
-
-**Check license usage of ISV apps in the Partner Center analytics section**
-
-1. Sign into [Partner Center](https://partner.microsoft.com/) with your partner account.
-1. In the left pane, select **Commercial Marketplace > Analyze > Licensing** to go to licensing dashboard.
-1. Select the **Plan** and **Tenant** in the reporting widget to see the month wise usage.
-
-(Image)
 
 ## Limitations
 
