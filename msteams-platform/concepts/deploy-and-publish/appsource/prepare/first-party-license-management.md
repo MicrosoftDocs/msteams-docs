@@ -161,7 +161,7 @@ Integrate with Graph Usage Right API to manage user permissions at the time of a
 
     * Call Graph to get user’s object id: [Use the Microsoft Graph API - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
 
-    * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http).
+    * Call UsageRights API to determine the user has License to the plan. [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
 > [!Note]
 > You need to have minimum `User.Read` permissions to be able to call UsageRights.
