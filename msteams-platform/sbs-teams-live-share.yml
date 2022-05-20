@@ -19,7 +19,7 @@ items:
   
    This step-by-step guide helps you to create a Teams live share sample app.
 
-    ![Start game](../assets/images/teams-live-share/agile-poker-start-game.png)
+    ![Start game](~/assets/images/teams-live-share/agile-poker-start-game.png)
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -102,7 +102,7 @@ items:
         ```
         ngrok tunnel is created. Here's an example of ngrok tunnel.
         
-            :::image type="content" source="../assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
+            :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
 
         *Ngrok* listens to requests from the internet and will route them to your app running on port 8080.
 
@@ -116,7 +116,7 @@ items:
        
         Replace `https://<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok excluding the https:// part in all the places.
 
-        :::image type="content" source="../assets/images/teams-live-share/agile-poker-configuration-url.png" alt-text="update configuration url":::
+        :::image type="content" source="~/assets/images/teams-live-share/agile-poker-configuration-url.png" alt-text="update configuration url":::
 
       1. Update the following in the manifest:
 
@@ -138,7 +138,7 @@ items:
       1. Join the meeting.
       1. In the meeting window, select **+ Apps** and select **Manage apps**.
 
-      :::image type="content" source="../assets/images/teams-live-share/agile-poker-manage-apps.png" alt-text="Manage apps":::
+      :::image type="content" source="~/assets/images/teams-live-share/agile-poker-manage-apps.png" alt-text="Manage apps":::
 
       1. Select **Upload a custom app**.
 
@@ -146,23 +146,23 @@ items:
 
       1. Select **Add** and the app is added to the meeting.
 
-        :::image type="content" source="../assets/images/teams-live-share/teams-live-share-add-manifest.png" alt-text="Add manifest":::
+        :::image type="content" source="~/assets/images/teams-live-share/teams-live-share-add-manifest.png" alt-text="Add manifest":::
          
       1. Select **+ Apps** and select the app.
 
       1. Select **Save**.
       
-         :::image type="content" source="../assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Add manifest":::
+         :::image type="content" source="~/assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Add manifest":::
          
       The agile poker app is added to the Teams meeting side panel.
 
-      :::image type="content" source="../assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add manifest":::
+      :::image type="content" source="~/assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add manifest":::
 
 - title: Test your app
   durationInMinutes: 1
   content: |
    Select Start presenting icon from the meeting side panel.
-    :::image type="content" source="../assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="Add manifest":::
+    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="Add manifest":::
 
     
 - title: Complete challenge
@@ -171,7 +171,7 @@ items:
 
     Did you come up with something like this?
     
-    :::image type="content" source="../assets/images/teams-live-share/agile-poker-play-game.png" alt-text="Add manifest":::
+    :::image type="content" source="~/assets/images/teams-live-share/agile-poker-play-game.png" alt-text="Add manifest":::
 
 - content: |
     You've completed the tutorial and now you can play the game together.
