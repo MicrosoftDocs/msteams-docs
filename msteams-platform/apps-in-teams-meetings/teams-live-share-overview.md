@@ -10,7 +10,7 @@ ms.author: v-ypalikila
 # Overview
 
 > [!NOTE]
-> Live Share SDK is currently available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Live Share SDK is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Live Share SDK helps you to integrate applications and websites with Teams to collaborate, watch, and browse content in a Teams meeting. 
 Live Share SDK enables users to discover more ways to collaborate and connect through Teams. Users can share content such as watch a movie, play live games, and so on with each other in Teams one-on-one calls, group calls, schedule meetings, and meet now.
