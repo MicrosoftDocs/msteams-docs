@@ -1,7 +1,7 @@
 ---
 title: Add single sign-on to your Teams apps
 author: zyxiaoyuer
-description:  Describes Add single sign-on of Teams Toolkit
+description:  Describes Add single sign on of Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
