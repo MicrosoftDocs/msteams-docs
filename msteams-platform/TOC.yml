@@ -110,6 +110,8 @@
       href: toolkit/add-resource.md
     - name: Add single sign on to Teams app
       href: toolkit/add-single-sign-on.md
+    - name: Add single sign on to Teams app
+      href: 
     - name: Customize Teams app manifest
       href: toolkit/TeamsFx-manifest-customization.md
     - name: Manage multiple environments
