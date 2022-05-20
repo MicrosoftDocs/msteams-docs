@@ -26,4 +26,4 @@ Teams live share helps enable developers to build a unique collaborative experie
 * [Role-based state](teams-live-share-sdk-capabilities.md#role-based-state)
 * [Build a playlist](teams-live-share-sdk-capabilities.md#build-a-playlist)
 
-:::image type="content" source="../assets/videos/agile-poker-gif.gif" alt-text="Agile poker gif":::
+:::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile poker gif":::

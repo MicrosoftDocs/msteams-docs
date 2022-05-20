@@ -169,4 +169,4 @@ items:
 - content: |
     You've completed the tutorial to get started with building collaborative apps for Microsoft Teams using Live Share SDk.
 
-    :::image type="content" source="../assets/videos/agile-poker-gif.gif" alt-text="Agile poker gif":::
+    :::image type="content" source="~/assets/videos/agile-poker-gif.gif" alt-text="Agile poker gif":::
