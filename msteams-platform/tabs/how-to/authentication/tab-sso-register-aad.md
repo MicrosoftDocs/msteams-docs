@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Register your app in Azure AD
 
-Your app users are authenticated and authorized by Azure AD for using your tab app. Azure AD provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
+Azure AD provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
 ## Enabling SSO on Azure AD
 
@@ -29,7 +29,6 @@ User-level Graph API permissions are supported, that is, email, profile, offline
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
 - **Single- or multi-tenant options**: Your app can be line-of-business (LOB) app, public app, or software-as-a-service (SaaS) application. The tenancy options may differ based on the type of your app and how you want to distribute it.
-- **App platform**: Note the platform where your app is available. It includes noting the URL from where your app is accessible.
 - **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
@@ -256,7 +255,7 @@ Depending on the platform or device where you want to target your app, additiona
 > - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
 > - Implicit grant is not required if SSO is enabled on a tab app.
 
-The redirect URI, which you defined on the **Register an application** page for Web platform, appears on this page. You can configure authentication for other platforms also.
+The redirect URI, which you defined on the **Register an application** page for Web platform, appears on this page. You can configure authentication for other Web platforms also as long as the URL is unique.
 
 ### To configure authentication for a platform
 
