@@ -90,16 +90,6 @@ As Teams uses the app user's ID token, the app user should have signed in to Tea
 
 </details>
 
-### Teams mobile client support
-
-For Teams mobile, client versions that support SSO are:
-
-- Teams for Android (1416/1.0.0.2020073101 and later)
-- Teams for iOS (_Version_: 2.0.18 and later)  
-- Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
-
-For the best experience with Teams, use the latest version of iOS and Android.
-
 ### Consent dialog for getting access token
 
 When you call `getAuthToken()` and user consent is required for user-level permissions, a dialog is shown to the app user to seek consent.

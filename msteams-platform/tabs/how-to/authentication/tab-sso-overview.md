@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Enable single sign-on in a tab app
 
-Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.
+<!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
 With SSO in Teams, app users have an added advantage. After logging into Teams using Microsoft or Microsoft 365 account, app users don't need to sign in again to use your app. App users can access your app within Teams even on any other device with access granted through Azure AD.
 
@@ -112,6 +112,16 @@ To enable SSO for a tab app:
 
 After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps won't be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
 
+### Teams mobile client support
+
+For Teams mobile, client versions that support SSO are:
+
+- Teams for Android (1416/1.0.0.2020073101 and later)
+- Teams for iOS (_Version_: 2.0.18 and later)  
+- Teams JavaScript SDK (_Version_: 1.11 and later) for SSO to work in meeting side panel.
+
+For the best experience with Teams, use the latest version of iOS and Android.
+
 ## Best practices
 
 Here's a list of best practices:
@@ -123,8 +133,8 @@ Here's a list of best practices:
 ## Known limitations
 
 - Currently, SSO in Teams supports only OAuth 2.0 token. It doesn't support SAML token.
-- SSO in Teams works only with OAuth 2.0 protocol.
 - SSO works only with apps that support Azure AD as identity provider. For implementing authentication with other OAuth identity providers, the OAuth flow needs to be implemented. For more information, see, [Enable authentication using third-party OAuth provider](auth-flow-tab.md) and [Configure third party OAuth authentication](auth-tab-aad.md).
+- Azure websites.net doesn't work with Teams apps.
 - Multiple domains per app are not supported. For more information, see [LOB apps](tab-sso-register-aad.md#before-you-register-with-azure-ad).
 - Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/develop/v2-permissions-and-consent.md#requesting-consent-for-an-entire-tenant) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
   
