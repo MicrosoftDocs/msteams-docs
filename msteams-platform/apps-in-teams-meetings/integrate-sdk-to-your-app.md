@@ -1,12 +1,12 @@
 ---
 title: Integrate SDK to your app
-description: Use Teams live share SDK to integrate your experiences with Microsoft Teams.
+description: Use Live Share SDK to integrate your experiences with Microsoft Teams.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
 
-# Integrate SDK to your app
+# Integrate Live Share SDK to your app
 
 The Live Share SDK is in preview. You will need to be part of the [Developer Preview Program](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) for Microsoft Teams to use this feature.
 
@@ -14,72 +14,17 @@ The Live Share SDK builds on the [Fluid Framework](https://fluidframework.com/) 
 
 To get started, we recommend first familiarizing yourself with the [Fluid Framework](https://fluidframework.com/docs/) and building Teams Meeting Apps. You can then follow our Quick Start Guide to build your first [Teams Meeting App](teams-apps-in-meetings.md) that uses Live Share.
 
-## Setup you development environment
-
-To get started, ensure that you install the following tools and set up your development environment:
-
-|Install|	For using...|
-|-------|--------------|
-| [Node.js](https://nodejs.org/en/download)|	Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
-|[ngrok](https://ngrok.com/download)|	Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies).|
-|Visual Studio 2019 or the latest version.|	JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later.|
-|[Git](https://git-scm.com/downloads)|Git to use the Sample Node.js app repo from GitHub.|
-
-
-## Get started
-
-Open a new command window and navigate to the folder you where you want to install the project, and then clone the live share sdk repo with the following commands.
-
-1. Add the latest version of the SDK to your application using NPM.
-
-   ```bash
-
-   npm install @microsoft/live-share --save
-
-   ```
-
-1. Clone the repository to test samples and/or build the packages.
-
-   ```bash
-   git clone https://github.com/microsoft/live-share-sdk.git
-
-   ```
-
-1. Change to the live-share-sdk directory.
-
-   ```bash
-   cd live-share-sdk
-
-   ```
-
-1. Install the dependency package.
-
-   ```bash
-    npm install
-
-   ```
-
-1. Start both the client and a local server.
-
-   ```bash
-   npm start
-
-   ```
-
-A new browser tab will open to http://localhost:8080 and you will see the dice roller appear! To see collaboration in action copy the full URL in the browser, including the ID, into a new window or even a different browser. This opens a second client for your dice roller application. With both windows open, click the Roll button in either and note that the state of the dice changes in both clients.
-
-## A
-
-In the DiceRoller app, users are shown a die with a button to roll it. When the die is rolled, the Fluid Framework syncs the data across clients so everyone sees the same result
-
 Before you begin, you must fulfill the following prerequisites:
 
-* [Update the app manifest](#update-the-app-manifest)
-* [Enable RSC permissions](#enable-resource-specific-consent)
+1. [Update the app manifest](#update-the-app-manifest)
+1. [Create a Teams Fluid client](#create-a-teams-fluid-client)
+1. [Define a container schema](#define-a-container-schema)
+1. [Join container](#join-container)
+1. [Handled valueChanged event to update UI](#handled-valuechanged-event-to-update-ui)
 
 ## Update the app manifest
 
- To enable Teams live share for Teams meetings, update your app manifest and use the context properties to determine where your app must appear.
+ To enable Live Share for Teams meetings, update your app manifest and use the context properties to determine where your app must appear.
 
 The app manifest must include the following code snippet:
 
@@ -132,15 +77,11 @@ The app manifest must include the following code snippet:
 ​
 ```
 
-## Enable resource-specific consent
+### Resource-specific permissions for Live Share
 
-The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively.
+The RSC permissions model enables **team owners** and **chat owners** to grant consent for an application to access and modify a Teams data and a chat's data, respectively. Delegated permissions allow the app to access data on behalf of the signed-in user.
 
-### Resource-specific permissions for Teams live share
-
-Delegated permissions allow the app to access data on behalf of the signed-in user.
-
-The following table provides resource-specific permissions for Teams live share:
+The following table provides resource-specific permissions for Live Share:
 
 |Name| Description |
 | ----- | ----- |
@@ -149,7 +90,106 @@ The following table provides resource-specific permissions for Teams live share:
 |`MeetingStage.Write.Chat`|Show content on the meeting stage of meetings associated with this chat.|
 |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
+## Create a Teams Fluid client
+
+```javascript
+let client;
+
+  if (!!searchParams.get('inTeams')) {
+
+      // Create client
+
+      client = new TeamsFluidClient();
+
+  } else {
+
+      // Create client and configure for testing
+
+      client = new TeamsFluidClient({
+
+        connection: {
+
+          tenantId: LOCAL_MODE_TENANT_ID,
+
+          tokenProvider: new InsecureTokenProvider("", { id: "123", name: "Test User" }),
+
+          orderer: "http://localhost:7070",
+
+          storage: "http://localhost:7070",
+
+        }
+
+      });
+
+  }
+```
+
+## Define a container schema
+
+```javascript
+const diceValueKey = "dice-value-key";
+
+
+const containerSchema = {
+
+  initialObjects: { diceMap: SharedMap }
+
+};
+
+
+function onContainerFirstCreated(container) {
+
+  // Set initial state of the rolled dice to 1.
+
+  container.initialObjects.diceMap.set(diceValueKey, 1);
+
+}
+```
+
+## Join container
+
+```javascript
+function onContainerFirstCreated(container) {
+
+  // Set initial state of the rolled dice to 1.
+
+  container.initialObjects.diceMap.set(diceValueKey, 1);
+
+}
+
+
+await client.joinContainer(containerSchema, onContainerFirstCreated);
+
+```
+
+## Handled valueChanged event to update UI
+
+
+```javascript
+const updateDice = () => {
+
+        const diceValue = diceMap.get(diceValueKey);
+
+        // Unicode 0x2680-0x2685 are the sides of a dice (⚀⚁⚂⚃⚄⚅)
+
+        dice.textContent = String.fromCodePoint(0x267f + diceValue);
+
+        dice.style.color = `hsl(${diceValue * 60}, 70%, 30%)`;
+
+    };
+
+
+// Use the changed event to trigger the re-render whenever the value changes.
+
+diceMap.on("valueChanged", updateDice);
+
+```
 
 ## Samples
 
-* [JavaScript samples](https://github.com/OfficeDev/Teams-Collaboration-SDK/tree/main/javascript/packages#readme).
+|Name|Description|Javascript|
+|---------|----------|
+|Dice roller||[View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)|
+|React video||[View](https://github.com/microsoft/live-share-sdk/tree/main/samples/02.react-video)|
+|React media template|||
+|Agile poker|||
