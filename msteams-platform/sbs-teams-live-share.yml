@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Teams live share
+title: Teams lives share
 metadata:
   title: Teams live share
   description: In this tutorial, you'll learn to create a Teams live share session.
@@ -29,7 +29,7 @@ items:
  
     * [Microsoft Teams](https://www.microsoft.com/microsoft-teams/log-in) with a valid account
     * [Visual Studio Code](https://code.visualstudio.com/download)
-    * [Ngrok](https://ngrok.com/) or equivalent tunnelling solution
+    * [Ngrok](https://ngrok.com/) or equivalent tunneling solution
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -42,7 +42,7 @@ items:
     1. Add the latest version of the SDK to your application using NPM.
 
      ```
-     npm install @microsoft/live-share --save
+     npm install @microsoft/live-share--save
 
      ```
 
@@ -56,7 +56,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you have cloned the repo for Teams live share SDK, you can build and test the Teams live share tab in your local environment.
+    After you've cloned the repo for Teams live share SDK, you can build and test the Teams live share tab in your local environment.
 
     In this page, you'll learn to:
 
@@ -95,12 +95,12 @@ items:
 
     1. Open a new ngrok terminal window.
 
-    1. Run the following command to create a tunnel. The sample app uses port 8080.
+    1. Run the following command to create a tunnel. The sample app uses port 3000.
 
         ```
-        ngrok http 8080 --host-header=localhost
+        ngrok http 3000 --host-header=localhost
         ```
-        The ngrok tunnel is created. Here's an example of ngrok tunnel.
+        ngrok tunnel is created. Here's an example of ngrok tunnel.
         
         :::image type="content" source="../assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png" alt-text="ngrok tunnel":::
 
@@ -128,7 +128,7 @@ items:
       1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
     
         > [!NOTE]
-        > The `manifest.zip` should not contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        > The `manifest.zip` shouldn't contain any additional folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         > Upload your manifest in your demo tenant for organization or your Teams account and run your solution in Visual Studio.
      
      ## Upload your app in Teams meeting
@@ -154,17 +154,14 @@ items:
       
          :::image type="content" source="../assets/images/teams-live-share/agile-poker-save-app.png" alt-text="Add manifest":::
          
-     The agile poker app is added to the Teams meeting side panel.
+      The agile poker app is added to the Teams meeting side panel.
 
-     :::image type="content" source="../assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add manifest":::
+      :::image type="content" source="../assets/images/teams-live-share/agile-poker-meeting-bar.png" alt-text="Add manifest":::
 
 - title: Test your app
   durationInMinutes: 1
   content: |
-   
-
-    Select Start presenting icon from the meeting side panel.
-
+   Select Start presenting icon from the meeting side panel.
     :::image type="content" source="../assets/images/teams-live-share/agile-poker-side-panel.png" alt-text="Add manifest":::
 
     
@@ -175,7 +172,6 @@ items:
     Did you come up with something like this?
     
     :::image type="content" source="../assets/images/teams-live-share/agile-poker-play-game.png" alt-text="Add manifest":::
-    
 
 - content: |
     You've completed the tutorial and now you can play the game together.
