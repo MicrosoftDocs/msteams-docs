@@ -41,19 +41,19 @@ To enable Live Share for your meeting extension, you must first add the followin
       "resourceSpecific": [
         // ...other permissions here​
         {​
-          "name": LiveShareSession.ReadWrite.Chat",​
+          "name": "LiveShareSession.ReadWrite.Chat",​
           "type": "Delegated“​
         },
         {​
-          "name": LiveShareSession.ReadWrite.Group",​
+          "name": "LiveShareSession.ReadWrite.Group",​
           "type": "Delegated“​
         },
         {​
-          "name": MeetingStage.Write.Chat",​
+          "name": "MeetingStage.Write.Chat",​
           "type": "Delegated“​
         },
         {​
-          "name": ChannelMeetingStage.Write.Group",​
+          "name": "ChannelMeetingStage.Write.Group",​
           "type": "Delegated“​
         }
       ]​

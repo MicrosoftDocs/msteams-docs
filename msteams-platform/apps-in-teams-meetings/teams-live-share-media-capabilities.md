@@ -165,7 +165,7 @@ To enable audio ducking, you must also add the following RSC permissions into yo
       "resourceSpecific": [
         // ...other permissions here​
         {​
-          "name": “OnlineMeetingIncomingAudio.Detect.Chat",​
+          "name": "OnlineMeetingIncomingAudio.Detect.Chat",​
           "type": "Delegated“​
         },
         {​
