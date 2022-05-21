@@ -295,18 +295,20 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
     href: apps-in-teams-meetings/API-references.md
+  - name: Live Share SDK
+    items:
+    - name: Overview
+      href: apps-in-teams-meetings/teams-live-share-overview.md
+    - name: Live Share capabilities
+      href: apps-in-teams-meetings/teams-live-share-capabilities.md
+    - name: Live Share Media capabilities
+      href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+    - name: Integrate Live Share to your app
+      href: apps-in-teams-meetings/integrate-sdk-to-your-app.md
+    - name: Build Agile Poker using Live Share SDK
+      href: sbs-teams-live-share.yml
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
-- name: Live Share SDK
-  items:
-  - name: Overview
-    href: apps-in-teams-meetings/teams-live-share-overview.md
-  - name: Live Share SDK capabilities
-    href: apps-in-teams-meetings/teams-live-share-sdk-capabilities.md
-  - name: Integrate Live Share SDK to your app
-    href: apps-in-teams-meetings/integrate-sdk-to-your-app.md
-  - name: Build Agile Poker using Live Share SDK
-    href: sbs-teams-live-share.yml
 - name: Build webhooks and connectors
   items:
   - name: Overview
