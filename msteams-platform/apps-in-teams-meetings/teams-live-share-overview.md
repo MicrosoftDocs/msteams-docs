@@ -27,7 +27,7 @@ Here are a few key benefits of the SDK:
 * Zero-hassle session management & security
 * Stateful and stateless distributed data structures
 * Media package to easily synchronize video and audio
-* Tailor experience to the context & roles of the meeting
+* Tailor experiences to the context & roles of the meeting
 * Free, fully managed service with low latency
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share.png" alt-text="Teams Live Share":::
@@ -36,11 +36,11 @@ Here are a few key benefits of the SDK:
 
 | Scenario         | Example          |
 |:-----------------|:-----------------|
-|You and your coworker are scheduled to present an early edit of a 4K marketing video at an upcoming leadership review meeting and want to highlight specific sections for feedback. |You share the video to the meeting stage and start the video. As needed, you pause the video to discuss the scene. You and your colleague take turns drawing over the parts of the to emphasize key points.|
-|You are a project manager for an agile team and are using a costing poker activity to estimate the amount of work needed for user stories in an upcoming sprint.|You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until consensus is met.|
+|You and your coworker are scheduled to present an early edit of a 4K marketing video at an upcoming leadership review meeting and want to highlight specific sections for feedback. |You share the video to the meeting stage and start the video. As needed, you pause the video to discuss the scene. You and your colleague take turns drawing over parts of the screen to emphasize key points.|
+|You are a project manager for an agile team and are using a costing poker group activity to estimate the amount of work needed for user stories in an upcoming sprint.|You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until a team consensus is met.|
 
 > [!Important]
->Any data sent/stored through Live Share's hosted Azure Fluid Relay service is only accessible for a maximum of 24 hours.
+>Any data sent or stored through Live Share's hosted Azure Fluid Relay service is stored for maximum of 24 hours.
 
 ## Next step
 
