@@ -436,7 +436,7 @@ After completion, the utility will have updated your `package.json` file with th
 > * Import statements for TeamsJS v.2.0
 > * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS v.2.0
 > * `TODO` comment reminders to review areas that might be impacted by [Context](#updates-to-the-context-interface) interface changes
-> * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
+> * `TODO` comment reminders to [convert callback functions to promises](#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
 > Code inside html files is not supported by the upgrade tooling and will require manual changes.
