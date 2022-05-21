@@ -149,7 +149,7 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler(
         }, 250);
         } else if (volumeTimer) {
             clearInterval(volumeTimer);
-            volumeTimer.current = undefined;
+            volumeTimer = undefined;
         }
     }
 );
