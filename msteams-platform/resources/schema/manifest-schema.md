@@ -650,7 +650,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 
  **Optional**—Boolean
 
-Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
+Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
 
 > [!NOTE]
 > `isFullScreen` works only for apps published to your organization.

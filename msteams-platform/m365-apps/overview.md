@@ -61,7 +61,7 @@ To learn more, see [Teams manifest for Office Add-ins (preview)](/office/dev/add
 
 Join the growing number of production Teams apps in the [Microsoft AppSource](https://appsource.microsoft.com/) store with expanded support for Outlook and Office preview (Targeted Release) audiences. The app [submission process for Teams apps enabled for Outlook and Office](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps; the only difference is you'll use Teams app manifest [version 1.13](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
 
-Once published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app from the Outlook and Office app stores in addition to Teams. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
+Once published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app from the Outlook and Office app stores, in addition to the Teams store. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
 
 To learn more, see [Publish Teams apps for Microsoft 365](publish.md)
 
