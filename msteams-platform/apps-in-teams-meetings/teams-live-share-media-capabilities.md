@@ -154,7 +154,7 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler(speakingState => {
 });
 ```
 
-To enable audio ducking, you must also add the following [RSC](https://docs.microsoft.com/en-us/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions into your app manifest:
+To enable audio ducking, you must also add the following [RSC](https://docs.microsoft.com/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions into your app manifest:
 
 ```json
 {
