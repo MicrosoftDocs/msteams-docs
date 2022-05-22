@@ -32,7 +32,6 @@ The meetings app capabilities are declared in your app manifest using the `confi
 
 > [!NOTE]
 >
-> * You must update your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
 > * Apps in meetings require `groupchat` scope. The `team` scope works for tabs in channels only.
 > * Apps in meetings can use the following contexts: `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel` and `meetingStage`.
 
