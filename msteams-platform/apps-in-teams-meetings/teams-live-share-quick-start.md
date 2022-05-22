@@ -7,9 +7,9 @@ ms.author: stevenic
 ---
 ---
 
-This Quick Start is an evolution of the [Fluidframework Quick Start](https://fluidframework.com/docs/start/quick-start/), and is designed to quickly get a Live Share based dice roller application up and running on your computers localhost.
+This Quick Start is an evolution of the [Fluidframework Quick Start](https://fluidframework.com/docs/start/quick-start/), and is designed to quickly get a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) up and running on your computers localhost.
 
-:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller Image":::
+:::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 
 ## Set up your development environment
 
