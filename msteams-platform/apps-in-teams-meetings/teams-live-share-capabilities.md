@@ -15,7 +15,7 @@ For complete API-level documentation, please visit the Live Share [API reference
 Live Share can be added to your meeting side panel and/or stage tab app in just a few simple steps. Let's start with the basics.
 
 > [!Note]
-> At this time, only scheduled meetings are supported and you would need to ensure that all the participants are on the Calendar for that meeting. Support for other meeting types are coming soon. 
+> At this time, only scheduled meetings are supported, and you will need to ensure that all the participants are on the Calendar for that meeting. Support for other meeting types are coming soon. 
 
 ## Register Live Share RSC permission
 
