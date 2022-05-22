@@ -21,13 +21,13 @@ The SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Co
 
 ## Why Live Share?
 
-Not only is building collaborative apps hard, it can require expensive infrastructure and has complex compliance requirements at scale. Teams users spend significant amount of times reviewing work with teammates, watching videos together, and brainstorming new ideas. If your customers screen share your content in Teams, Live Share can help transform your app into something more collaborative in Teams with minimal investment.
+Building collaborative apps can be difficult and time-consuming, requiring expensive infrastructure and complex compliance requirements at scale. Teams users spend significant amounts of time reviewing work with teammates, watching videos together, and brainstorming new ideas. If your customers frequently screen-share content in Teams, Live Share can help transform your app into something more collaborative with minimal investment.
 
 Here are a few key benefits of the SDK:
 
 - Zero-hassle session management & security
 - Stateful and stateless distributed data structures
-- Media package to easily synchronize video and audio
+- A media package to easily synchronize video and audio
 - Tailor experiences to the context & roles of the meeting
 - Free, fully managed service with low latency
 
