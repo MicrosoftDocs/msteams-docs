@@ -184,8 +184,8 @@ To enable audio ducking, you must also add the following [RSC](https://docs.micr
 
 | Sample name          | Description                                                                                                                               | Javascript                                                                                    |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| React video          | Explains how the EphemeralMediaSession object works with HTML5 video.                                                                     | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/02.react-video)          |
-| React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/21.react-media-template) |
+| React video          | Basic example showing how the EphemeralMediaSession object works with HTML5 video.                                                                     | [View](https://aka.ms/liveshare-reactvideo)          |
+| React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
 
