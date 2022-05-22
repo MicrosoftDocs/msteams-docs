@@ -267,3 +267,8 @@ function renderSettings(elem) {
 ## Run the app
 
 The [full code for this application is available](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) for you to try out. Try opening it in multiple browser windows to see the changes reflected between clients.
+
+## Next step
+
+> [!div class="nextstepaction"] > [Teams Live Share Capabilities](teams-live-share-capabilities.md)
+
