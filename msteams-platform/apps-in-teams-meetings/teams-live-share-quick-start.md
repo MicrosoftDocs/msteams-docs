@@ -7,7 +7,7 @@ ms.author: stevenic
 ---
 ---
 
-This Quick Start is an evolution of the [Fluidframework Quick Start](https://fluidframework.com/docs/start/quick-start/), and is designed to quickly get a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) up and running on your computers localhost.
+This Quick Start is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/), and is designed to quickly get a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) up and running on your computers localhost.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 
@@ -56,3 +56,8 @@ that the state of the dice changes in both clients.
 
 
 🥳**Congratulations**🎉 You have successfully taken the first step towards unlocking the world of Live Share based collaboration.
+
+## Next step
+
+> [!div class="nextstepaction"] > [Tutorial: DiceRoller Teams app](teams-live-share-tutorial.md)
+
