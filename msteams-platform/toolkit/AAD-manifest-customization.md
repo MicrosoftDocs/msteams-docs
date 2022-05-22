@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Azure AD manifest
 
-The [Azure Active Directory manifest](/azure/active-directory/develop/reference-app-manifest) contains definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+The [Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest) contains definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
 
 Teams Toolkit now manages Azure AD application with the manifest file as the source of truth during your Teams application development lifecycles.
 
