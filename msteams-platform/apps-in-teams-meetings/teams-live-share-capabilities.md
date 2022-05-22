@@ -249,8 +249,8 @@ function onSelectPresentMode(documentId) {
 
 | Sample name | Description                                                      | Javascript                                                                                 |
 | ----------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Dice roller | Enable all connected clients to roll a dice and view the result. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)       |
-| Agile Poker | Enable all connected clients to play Agile Poker.                | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) |
+| Dice Roller | Enable all connected clients to roll a dice and view the result. | [View](https://aka.ms/liveshare-diceroller)                                                |
+| Agile Poker | Enable all connected clients to play Agile Poker.                | [View](https://aka.ms/liveshare-agilepoker)                                                |
 
 ## Next step
 
