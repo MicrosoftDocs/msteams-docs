@@ -33,3 +33,13 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 <br>
 
 </details>
+
+<details>
+
+<summary><b>What meeting types does Live Share support?</b></summary>
+
+At this time, only scheduled meetings are supported and all participants must be on the meeting calendar. Support for other meeting types – including one-on-one calls, group calls, and meet now – are coming soon.
+
+<br>
+
+</details>
