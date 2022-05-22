@@ -32,7 +32,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * If you choose to have your channel or group tab to appear on Teams mobile client, the `setConfig()` configuration must have a value for the `websiteUrl` property.
 
-* Microsoft Teams tab does'nt support the ability to load intranet websites that use self-signed certificates.
+* Microsoft Teams tab doesn't support the ability to load intranet websites that use self-signed certificates.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

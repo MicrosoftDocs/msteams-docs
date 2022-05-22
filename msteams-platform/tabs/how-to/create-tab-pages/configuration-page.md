@@ -44,24 +44,29 @@ The following code is an example of corresponding code for the configuration pag
         app.initialize();
         let saveGray = () => {
             pages.config.registerOnSaveHandler((saveEvent) => {
-                pages.config.setConfig({
+                const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
                     entityId: "grayIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
-                saveEvent.notifySuccess();
+                configPromise.
+                    then((result) => {saveEvent.notifySuccess()}).
+                    catch((error) => {saveEvent.notifyFailure("failure message")});
             });
         }
+
         let saveRed = () => {
             pages.config.registerOnSaveHandler((saveEvent) => {
-                pages.config.setConfig({
+                const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
                     entityId: "redIconTab",
                     suggestedDisplayName: "MyNewTab"
                 });
-                saveEvent.notifySuccess();
+                configPromise.
+                    then((result) => {saveEvent.notifySuccess();}).
+                    catch((error) => {saveEvent.notifyFailure("failure message")});
             });
         }
 
@@ -160,7 +165,7 @@ Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and
 * The `pages.config.registerOnSaveHandler()` event handler is triggered.
 * **Save** on the app's configuration page, is enabled.
 
-The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.Config()` are set, as defined by the `Settings` interface. For more information, see [settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.setConfig()` are set, as defined by the `Config` interface. For more information, see [config interface](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
@@ -234,7 +239,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-The `app.getContext()` function retrieves the [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) when invoked.
+The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) object.
 
 The following code provides an example of adding this function to the configuration page to retrieve context values:
 
@@ -288,13 +293,16 @@ Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for remov
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
-pages.config.setConfig({
+const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",
     websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
     removeUrl: "add removal page URL here"
 });
+configPromise.
+    then((result) => {/*Successful operation*/).
+    catch((error) => {/*Unsuccessful operation*/});
 ```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
@@ -313,7 +321,7 @@ microsoftTeams.settings.setSettings({
 
 ## Mobile clients
 
-If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for `websiteUrl`. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
+If you choose to have your channel or group tab appear on the Teams mobile clients, the `setConfig()` configuration must have a value for `websiteUrl`. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
 ## Next step
 
