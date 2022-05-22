@@ -30,7 +30,12 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 > ✔ Text message hyperlink markdown: Directly navigates to deep link url.  
 > ✔ Link pasted in general chat conversation: Directly navigates to deep link url.
 >
-> For Teams apps extended across Microsoft 365 (Outlook/Office) behavior is dependent upon where the deep link is pointing relative to where the Teams app is running. If the Teams app is running within the host the deep link is pointing to it will open directly within the host. If the Teams app is running in a host that differs from where the link is pointing, it will open first in the browser.
+The behavior of a Teams app extended across Microsoft 365 (Outlook/Office) is dependent on two factors:
+
+- The target that the deep link points to
+- The host where Teams app is running
+
+If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
 
 ## Deep linking with the Teams JavaScript client SDK
 
@@ -42,7 +47,7 @@ You can create deep links to entities in Teams apps. This method is used to crea
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
+To implement this, add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, call [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -239,7 +244,7 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 The query parameters are:
 
-* `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName, typically an email address.
+* `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. Currently, the User ID field supports only the Azure AD UserPrincipalName, typically an email address.
 * `startTime`: The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
 * `endTime`: The optional end time of the event, also in ISO 8601 format.
 * `subject`: An optional field for the meeting subject.
@@ -267,7 +272,7 @@ if(appInstallDialog.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-For more information about the install dialog see, the [appInstallDialog.openAppInstallDialog()](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest#@microsoft-teams-js-appinstalldialog-openappinstalldialog&preserve-view=true) function in the API reference documentation.
+For more information about the install dialog. see the [appInstallDialog.openAppInstallDialog()](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest#@microsoft-teams-js-appinstalldialog-openappinstalldialog&preserve-view=true) function in the API reference documentation.
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
