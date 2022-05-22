@@ -12,10 +12,10 @@ ms.author: v-ypalikila
 
 For complete API-level documentation, please visit the Live Share [API reference docs](https://www.github.com/microsoft/live-share-sdk).
 
-Live Share can be added to your meeting side panel and/or stage tab app in just a few simple steps. Let's start with the basics.
+Live Share can be added to your meeting extension's side panel and stage contexts with minimal effort. Let's start with the basics.
 
 > [!Note]
-> At this time, only scheduled meetings are supported, and you will need to ensure that all the participants are on the Calendar for that meeting. Support for other meeting types are coming soon. 
+> At this time, only scheduled meetings are supported and all participants must be on the meeting calendar. Support for other meeting types are coming soon.
 
 ## Register Live Share RSC permission
 
@@ -68,7 +68,7 @@ To enable Live Share for your meeting extension, you must first add the followin
 
 ## Joining a meeting session
 
-To join a session associated with the user's current meeting, you must first do the following:
+Joining a session associated with the user's current meeting can be done in just a few simple steps.
 
 1. Initialize the Teams Client SDK
 2. Initialize the `TeamsFluidClient`
