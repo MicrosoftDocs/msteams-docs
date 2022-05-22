@@ -38,7 +38,6 @@ Let's look at an example of this in the code.
 ```javascript
 import * as microsoftTeams from "@microsoft/teams-js";
 import { TeamsFluidClient } from "@microsoft/live-share";
-import { SharedMap } from "fluid-framework";
 import { EphemeralMediaSession } from "@microsoft/live-share-media";
 
 // Initialize the Teams Client SDK
