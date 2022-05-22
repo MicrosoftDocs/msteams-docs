@@ -21,7 +21,7 @@ The SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Co
 
 ## Why Live Share?
 
-Not only is building collaborative apps hard, it can require expensive infrastructure and has complex compliance requirements at scale. Teams users spend significant amount of times reviewing work with teammates, watching videos together, and brainstorming new ideas. If your customers spend screen share your content in Teams, Live Share can help transform your app into something more collaborative in Teams with minimal investment.
+Not only is building collaborative apps hard, it can require expensive infrastructure and has complex compliance requirements at scale. Teams users spend significant amount of times reviewing work with teammates, watching videos together, and brainstorming new ideas. If your customers screen share your content in Teams, Live Share can help transform your app into something more collaborative in Teams with minimal investment.
 
 Here are a few key benefits of the SDK:
 
@@ -41,7 +41,7 @@ Here are a few key benefits of the SDK:
 | You are a project manager for an agile team and are using a costing poker group activity to estimate the amount of work needed for user stories in an upcoming sprint.              | You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until a team consensus is met.                                                                      |
 
 > [!Important]
-> Any data sent or stored through Live Share's hosted Azure Fluid Relay service is stored for maximum of 24 hours.
+> Any data sent or stored through Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to learn about storing data beyond 24 hours, visit our [FAQ page](teams-live-share-faq).
 
 ## Next step
 
