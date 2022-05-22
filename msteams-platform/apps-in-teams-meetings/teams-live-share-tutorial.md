@@ -17,7 +17,7 @@ In the Dice Roller sample, users are shown a die with a button to roll it. When 
 2. Join a Fluid container.
 3. Write the stage view.
 4. Connect the stage view to Fluid data.
-5. Write the sidebar view
+5. Write the side panel view
 6. Write the settings view
 
 All of the work in this demo will be done in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file.
@@ -28,7 +28,7 @@ Start by importing the required modules. The sample uses the [SharedMap DDS](htt
   
 Applications create Fluid containers using a schema that defines a set of *initial objects* that will be available to the container. The sample uses a SharedMap to store the most recent die value that was rolled. Learn more about initial objects in [Data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
-Teams Meeting Apps require multiple views; content, config, and stage. We'll create a start() function to help identify teh view to render and to perform any initialization that's required. We want our app to support running both locally in a web browser and from within a Teams Meeting so the start() function looks for an `inTeams=true` query parameter to determine if it's running in Teams. When running in Teams your application need to call `app.initialize()` prior to calling any other teams-js methods.
+Teams Meeting Apps require multiple views; content, config, and stage. We'll create a start() function to help identify the view to render and to perform any initialization that's required. We want our app to support running both locally in a web browser and from within a Teams Meeting so the `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams. When running in Teams your application need to call `app.initialize()` prior to calling any other teams-js methods.
 
 In addition to the `inTeams=true` query parameter, we can use a `view=content|config|stage` query parameter to determine the view that should be rendered.
 
@@ -79,7 +79,7 @@ async function start() {
   // Load the requested view
   switch (view) {
     case 'content':
-      renderSideBar(root);
+      renderSidePanel(root);
       break;
     case 'config':
       renderSettings(root);
@@ -97,9 +97,9 @@ start().catch((error) => console.error(error));
 
 ## Join a Fluid container
 
-Not all of your apps views will need to be collaborative. The `stage` view will always need collaborative features, the `content` view may need collaborative features, and the `config` view should never need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
+Not all of your apps views will need to be collaborative. The `stage` view will _always_ need collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as sample as creating a new [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html) and then calling it's [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
+Joining the container for the meeting is as simple as creating a new [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html) and then calling it's [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) method.  When running locally you'll need to pass in a custom connection config with a special `LOCAL_MODE_TENANT_ID` but otherwise, join a local container is the same as joining a container in Teams.
 
 ```js
 async function joinContainer() {
@@ -130,7 +130,7 @@ async function joinContainer() {
 
 ## Write the stage view
 
-Most Teams Meeting Extensibility applications will be designed to use React for their view framework. To keep things simple, this sample uses standard HTML/DOM methods to render a view.
+Many Teams Meeting Extensibility applications will be designed to use React for their view framework, but it isn't required. To keep things simple, this sample uses standard HTML/DOM methods to render a view.
 
 ### Start with a static view
 
@@ -191,20 +191,20 @@ The next change that needs to be made is to change the `updateDice` function so 
 
 The values returned from `diceMap` are only a snapshot in time. To keep the data up to date as it changes an event handler must be set on the `diceMap` to call `updateDice` each time that the `valueChanged` event is sent. See the [documentation for SharedMap](https://fluidframework.com/docs/data-structures/map/) to get a list of events fired and the values passed to those events.
 
-```js
+```js 
     diceMap.on("valueChanged", updateDice);
 ```
 
-## Write the sidebar view
+## Write the side panel view
 
-The sidebar view, also called the `content` view, is displayed to the user in a side bar when they click on your apps icon within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the stage. For Live Share apps, the sidebar view can also be used as a remote control of sorts for the app. Calling [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) from the sidebar view will connect to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Just keep in mind that you're communicating with every ones stage view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For Live Share apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) from the side panel view will connect to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Just keep in mind that you're communicating with everyone's stage view _and_ side panel view.
 
-The samples sidebar view simply prompts the user to press the share to stage button.
+The sample's side panel view simply prompts the user to press the share to stage button.
 
 ```js
-const sideBarTemplate = document.createElement("template");
+const sidePanelTemplate = document.createElement("template");
 
-sideBarTemplate["innerHTML"] = `
+sidePanelTemplate["innerHTML"] = `
   <style>
     .wrapper { text-align: center }
     .title { font-size: large; font-weight: bolder; }
@@ -216,16 +216,19 @@ sideBarTemplate["innerHTML"] = `
   </div>
 `;
 
-function renderSideBar(elem) {
-    elem.appendChild(sideBarTemplate.content.cloneNode(true));
+function renderSidePanel(elem) {
+    elem.appendChild(sidePanelTemplate.content.cloneNode(true));
 }
 ```
 
 ## Write the settings view
 
-The settings view, also called the `config` view, is shown to a user when they first add your app to a Teams Meeting. This view lets the user configure the app globally for a meeting and is currently required to be displayed, even if there aren't any settings to configure. You are not allowed to call [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) from this view as you're not in an actual meeting yet.
+The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams Meeting. This view lets the developer configure the `contentUrl` for the tab that will be pinned to the meeting, usually based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
-The samples settings view simply prompts the user to press the save button.
+> [!Important]
+> Live Share's [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) is not supported in the tab `settings` context.
+
+The sample's settings view simply prompts the user to press the save button.
 
 ```js
 const settingsTemplate = document.createElement("template");
