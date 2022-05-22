@@ -5,12 +5,13 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ---
+
 ---
 
 # Overview
 
 > [!Note]
->The Live Share SDK is in preview. You will need to be part of the [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md) for Microsoft Teams to use this feature.
+> The Live Share SDK is in preview. You will need to be part of the [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md) for Microsoft Teams to use this feature.
 
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated backend code. Live Share seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/), a collection of client libraries for distributing and synchronizing shared state. This service is free, fully managed, and ready to use today.
 
@@ -24,31 +25,30 @@ Not only is building collaborative apps hard, it can require expensive infrastru
 
 Here are a few key benefits of the SDK:
 
-* Zero-hassle session management & security
-* Stateful and stateless distributed data structures
-* Media package to easily synchronize video and audio
-* Tailor experiences to the context & roles of the meeting
-* Free, fully managed service with low latency
+- Zero-hassle session management & security
+- Stateful and stateless distributed data structures
+- Media package to easily synchronize video and audio
+- Tailor experiences to the context & roles of the meeting
+- Free, fully managed service with low latency
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share.png" alt-text="Teams Live Share":::
 
 ## Example user scenarios
 
-| Scenario         | Example          |
-|:-----------------|:-----------------|
-|You and your coworker are scheduled to present an early edit of a 4K marketing video at an upcoming leadership review meeting and want to highlight specific sections for feedback. |You share the video to the meeting stage and start the video. As needed, you pause the video to discuss the scene. You and your colleague take turns drawing over parts of the screen to emphasize key points.|
-|You are a project manager for an agile team and are using a costing poker group activity to estimate the amount of work needed for user stories in an upcoming sprint.|You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until a team consensus is met.|
+| Scenario                                                                                                                                                                            | Example                                                                                                                                                                                                        |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| You and your coworker are scheduled to present an early edit of a 4K marketing video at an upcoming leadership review meeting and want to highlight specific sections for feedback. | You share the video to the meeting stage and start the video. As needed, you pause the video to discuss the scene. You and your colleague take turns drawing over parts of the screen to emphasize key points. |
+| You are a project manager for an agile team and are using a costing poker group activity to estimate the amount of work needed for user stories in an upcoming sprint.              | You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until a team consensus is met.                                                                      |
 
 > [!Important]
->Any data sent or stored through Live Share's hosted Azure Fluid Relay service is stored for maximum of 24 hours.
+> Any data sent or stored through Live Share's hosted Azure Fluid Relay service is stored for maximum of 24 hours.
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Getting started](teams-live-share-getting-started.md)
+> [!div class="nextstepaction"] > [Getting started](teams-live-share-getting-started.md)
 
 ## See also
 
-* [Reference docs](https://www.github.com/microsoft/live-share-sdk)
-* [Live Share capabilities](teams-apps-in-meetings.md)
-* [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Reference docs](https://www.github.com/microsoft/live-share-sdk)
+- [Live Share capabilities](teams-apps-in-meetings.md)
+- [Teams apps in meetings](teams-apps-in-meetings.md)
