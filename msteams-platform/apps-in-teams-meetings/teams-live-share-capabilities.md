@@ -156,7 +156,7 @@ The Live Share SDK includes a set of new ephemeral `SharedObject` classes, which
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | [EphemeralPresence](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralPresence.html) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
 | [EphemeralEvent](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralEvent.html)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
-| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter |
+| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter.|
 
 ### EphemeralPresence example
 

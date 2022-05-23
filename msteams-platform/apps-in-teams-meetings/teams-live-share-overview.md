@@ -28,11 +28,12 @@ It can be difficult, time consuming, require expensive infrastructure and comple
 
 Here are some key benefits of the Live Share SDK:
 
-- Zero-hassle session management and security
-- Stateful and stateless distributed data structures
-- Media extensions to easily synchronize video and audio
-- Respect meeting privileges using role verification
-- Free and fully managed service with low latency
+* Zero-hassle session management and security
+* Stateful and stateless distributed data structures
+* Media extensions to easily synchronize video and audio
+* Respect meeting privileges using role verification
+* Free and fully managed service with low latency
+* Audio ducking
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share.png" alt-text="Teams Live Share":::
 
