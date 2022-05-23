@@ -12,7 +12,7 @@ Before you add code to enable SSO, ensure that you've registered your app with A
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
 
-You need to configure your app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. It's acquired from cache, if it isn't expired. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side, and exchange it for Microsoft Graph token.
+You need to configure your tab app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side, and exchange it for Microsoft Graph token.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
 
@@ -43,6 +43,11 @@ To obtain app access for the current app user, your client-side code must make a
 
 You need to add the client-side code for using `getAuthToken()` to initiate the validation process.
 
+> [!NOTE]
+> `getAuthToken()` is a method in Microsoft Teams JavaScript SDK. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
+>
+> For more information, see [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken).
+
 #### When to call getAuthToken
 
 Use `getAuthToken()` at the time when you need access token for the current app user:
@@ -70,17 +75,15 @@ Add the following code snippet to the client-side code to:
 The following code snippet shows an example of calling `getAuthToken()`.
 
 ```javascript
+microsoftTeams.initialize();
 var authTokenRequest = {
   successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Failure: " + error); }
+  failureCallback: function(error) { console.log("Error getting token: " + error); }
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
-<!--
-<br>
-As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.-->
 
-<br><br>
+<br>
 <details>
 <summary>Here's an example of the client-side code:</summary>
 
@@ -238,3 +241,16 @@ The following is a typical decoded payload of an access token.
 - [Overview of the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
 - [Microsoft identity platform ID tokens](/azure/active-directory/develop/id-tokens)
 - [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#validating-tokens)
+
+<!--
+```javascript
+var authTokenRequest = {
+  successCallback: function(result) { console.log("Success: " + result); },
+  failureCallback: function(error) { console.log("Failure: " + error); }
+};
+microsoftTeams.authentication.getAuthToken(authTokenRequest);
+```-->
+
+<!--
+<br>
+As Teams uses the app user's ID token, the app user should have signed in to Teams. Pass `allowSignInPrompt: true` in the `options` parameter of `getAuthToken()` in your client-side code to ensure that Teams prompts the app user through the UI to sign in, if needed.-->
