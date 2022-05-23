@@ -300,14 +300,14 @@
     - name: Overview
       href: apps-in-teams-meetings/teams-live-share-overview.md
     - name: Quick start
-      href: apps-in-teams-meetings/teams-live-quick-start.md
+      href: apps-in-teams-meetings/teams-live-share-quick-start.md
     - name: DiceRoller tutorial
-      href: apps-in-teams-meetings/teams-live-tutorial.md
+      href: apps-in-teams-meetings/teams-live-share-tutorial.md
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
     - name: Media capabilities
       href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-    - name: FAQ
+    - name: Live ShareFAQ
       href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Agile Poker tutorial
       href: sbs-teams-live-share.yml

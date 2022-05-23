@@ -56,12 +56,12 @@ action copy the full URL in the browser, including the ID, into a new window or 
 second client for your dice roller application. With both windows open, click the **Roll** button in either and note
 that the state of the dice changes in both clients.
 
-
 🥳**Congratulations**🎉 You have successfully taken the first step towards unlocking the world of Live Share based collaboration.
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Tutorial: DiceRoller Teams app](teams-live-share-tutorial.md)
+> [!div class="nextstepaction"] 
+> [Tutorial: DiceRoller Teams app](teams-live-share-tutorial.md)
 
 ## See also
 

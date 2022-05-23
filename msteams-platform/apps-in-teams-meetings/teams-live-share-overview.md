@@ -15,7 +15,8 @@ ms.author: v-ypalikila
 
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated backend code. Live Share seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/), a collection of client libraries for distributing and synchronizing shared state. This service is free, fully managed, and ready to use today.
 
-> [!div class="nextstepaction"] > [Get started](teams-live-share-quick-start.md)
+> [!div class="nextstepaction"]
+> [Get started](teams-live-share-quick-start.md)
 
 The SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Container associated with each meeting in just a few lines of code. Live Share also supports a new set of Distributed Data Structure classes to simplify building applications for common meeting scenarios, such as shared media playback.
 
@@ -42,12 +43,13 @@ Here are some key benefits of the SDK:
 | You and your coworker are scheduled to present an early edit of a marketing video at an upcoming leadership review meeting and want to highlight specific sections for feedback. | You share the video to the meeting stage and start the video. As needed, you pause the video to discuss the scene. You and your colleague take turns drawing over parts of the screen to emphasize key points. |
 | You are a project manager for an agile team play agile poker with your team to estimate the amount of work needed for an upcoming sprint.                                        | You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until a team consensus is met.                                                                      |
 
-> [!Important]
-> Any data sent or stored through Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to learn about storing data beyond 24 hours, visit our [FAQ page](teams-live-share-faq).
+> [!IMPORTANT]
+> Any data sent or stored through Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to learn about storing data beyond 24 hours, visit our [FAQ page](teams-live-share-faq.md).
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Quick start](teams-live-share-quick-start.md)
+> [!div class="nextstepaction"]
+> [Quick start](teams-live-share-quick-start.md)
 
 ## See also
 

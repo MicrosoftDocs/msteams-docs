@@ -272,7 +272,8 @@ function onSelectPresentMode(documentId) {
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Live Share Media Capabilities](teams-live-share-media-capabilities.md)
+> [!div class="nextstepaction"]
+> [Live Share Media Capabilities](teams-live-share-media-capabilities.md)
 
 ## See also
 

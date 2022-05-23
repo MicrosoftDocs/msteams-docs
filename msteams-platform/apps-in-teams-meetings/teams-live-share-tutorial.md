@@ -26,7 +26,7 @@ All of the work in this demo will be done in the [app.js](https://github.com/mic
 
 ## Set up the application
 
-Start by importing the required modules. The sample uses the [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html) from the Live Share SDK. The sample supports Teams Meeting Extensibility so we'll need to include the [Teams JavaScript SDK](https://docs.microsoft.com/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest). Finally, the sample is designed to run both locally and in a Teams meeting so we'll need to include some additional Fluid Framework pieces needed to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+Start by importing the required modules. The sample uses the [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html) from the Live Share SDK. The sample supports Teams Meeting Extensibility so we'll need to include the [Teams JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). Finally, the sample is designed to run both locally and in a Teams meeting so we'll need to include some additional Fluid Framework pieces needed to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
   
 Applications create Fluid containers using a schema that defines a set of *initial objects* that will be available to the container. The sample uses a SharedMap to store the most recent die value that was rolled. Learn more about initial objects in [Data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
@@ -272,7 +272,8 @@ The [full code for this application is available](https://github.com/microsoft/l
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Teams Live Share Capabilities](teams-live-share-capabilities.md)
+> [!div class="nextstepaction"] 
+> [Teams Live Share Capabilities](teams-live-share-capabilities.md)
 
 ## See also
 
