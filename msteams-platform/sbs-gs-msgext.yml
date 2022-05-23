@@ -17,9 +17,9 @@ items:
     Start Microsoft Teams app development with your first Teams app. 
     You'll create a message extension Teams app. 
 
-    Each of your app will have a capability, which comes with its own UI and UX:
+   Your app will have a capability, which comes with its own UI and UX:
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features." border="false":::
     
     
     In this tutorial, you'll learn:
@@ -601,5 +601,5 @@ items:
 
     That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
 
-    You've completed the tutorial to build apps with JavaScript.
+    You've completed the tutorial to build messaging extension app with JavaScript.
     
