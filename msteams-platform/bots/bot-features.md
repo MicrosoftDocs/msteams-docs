@@ -15,7 +15,7 @@ You can create a bot that works in Microsoft Teams with one of the following too
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [Virtual Assistant](~/samples/virtual-assistant.md)
 * [Webhooks and connectors](#bots-with-webhooks-and-connectors)
-* [Azure bot service](#azure-bot-service)
+* [Azure Bot Service](#azure-bot-service)
 
 ## Bots with the Microsoft Bot Framework
 
