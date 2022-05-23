@@ -45,7 +45,6 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
-Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
 
 # [Command Line](#tab/cli)
 
