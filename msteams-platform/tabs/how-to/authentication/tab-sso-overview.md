@@ -141,7 +141,7 @@ Here's a list of best practices:
 
         - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
         - Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, `Mail.Read` or `User.Read`.
-    1. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
+    5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
 
     </details>
 
