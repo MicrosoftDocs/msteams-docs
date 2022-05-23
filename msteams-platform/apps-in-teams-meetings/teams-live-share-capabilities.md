@@ -10,14 +10,15 @@ ms.author: v-ypalikila
 
 # Live Share Capabilities
 
-> For complete documentation, please visit the Live Share [API reference docs](https://livesharesdk.z5.web.core.windows.net/).
+> [!NOTE]
+> For more information, see Live Share [API reference docs](https://livesharesdk.z5.web.core.windows.net/).
 
-Live Share can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This page will focus on how to integrate Live Share into your app, as well as key capabilities of the SDK.
+Live Share can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This page will focus on how to integrate Live Share into your app and key capabilities of the SDK.
 
 > [!Note]
 > At this time, only scheduled meetings are supported, and all participants must be on the meeting calendar. Support for other meeting types is coming soon.
 
-## Installing the JavaScript SDK
+## Install the JavaScript SDK
 
 Live Share is a JavaScript package published on NPM, and can be downloaded through NPM or Yarn.
 
@@ -88,7 +89,7 @@ Joining a session associated with a user's meeting can be done in a few simple s
 
 1. Initialize the Teams Client SDK
 2. Initialize the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html)
-3. Define the data structures you want to synchronize (e.g., `SharedMap`)
+3. Define the data structures you want to synchronize. For example, `SharedMap`.
 4. Join the container
 
 Let's look at the code.
@@ -115,7 +116,7 @@ That's all it took to setup your container and join the meeting's session. Now, 
 
 ## Fluid distributed data structures (DDS)
 
-Live Share supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here is a quick overview of a few of the different types of objects available to you:
+Live Share supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available to you:
 
 | Shared Object                                                                       | Description                                                                                                                                  |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -152,17 +153,17 @@ function onClickAddToPlaylist(video) {
 
 ## Live Share ephemeral data structures
 
-Live Share includes a set of new ephemeral `SharedObject` classes which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – such as the popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
+Live Share includes a set of new ephemeral `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – such as the popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | [EphemeralPresence](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralPresence.html) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
 | [EphemeralEvent](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralEvent.html)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
-| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role (e.g. the presenter) |
+| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role (for example, the presenter) |
 
 ### EphemeralPresence example
 
-The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, developers can assign custom metadata for that user, such as an unique identifier or name.
+The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, developers can assign custom metadata for that user, such as a unique identifier or name.
 
 ```javascript
 import { EphemeralPresence, PresenceState } from "@microsoft/live-share";
@@ -194,7 +195,7 @@ function onUserDidLogIn(userName, profilePicture) {
 
 ### EphemeralEvent example
 
-`EphemeralEvent` is a great way to send simple events to other clients in a meeting. It is useful for scenarios like sending session notifications.
+`EphemeralEvent` is a great way to send simple events to other clients in a meeting. It's useful for scenarios like sending session notifications.
 
 ```javascript
 import { EphemeralEvent } from "@microsoft/live-share";
@@ -229,7 +230,7 @@ notifications.sendEvent({
 
 Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. We've designed our ephemeral objects to support role verification, allowing developers to define the roles that are allowed to send messages for each individual ephemeral object. For example, developers could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
-We recommend listening to your customers to understand their scenarios before implementing role verification into your app, particularly for the "Organizer" role. There is no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either "Organizer" or "Presenter" when collaborating within an organization. If a user is an "Attendee", it is usually an intentional decision on behalf of a meeting organizer.
+We recommend listening to your customers to understand their scenarios before implementing role verification into your app, particularly for the "Organizer" role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either "Organizer" or "Presenter" when collaborating within an organization. If a user is an "Attendee", it's usually an intentional decision on behalf of a meeting organizer.
 
 ```javascript
 import { EphemeralState, UserMeetingRole } from "@microsoft/live-share";
@@ -265,14 +266,14 @@ function onSelectPresentMode(documentId) {
 
 ## Code samples
 
-| Sample name | Description                                                      | Javascript                                  |
+| Sample name | Description                                                      | JavaScript                                  |
 | ----------- | ---------------------------------------------------------------- | ------------------------------------------- |
 | Dice Roller | Enable all connected clients to roll a dice and view the result. | [View](https://aka.ms/liveshare-diceroller) |
 | Agile Poker | Enable all connected clients to play Agile Poker.                | [View](https://aka.ms/liveshare-agilepoker) |
 
 ## Next step
 
-> [!div class="nextstepaction"]
+> [!div class="nextstepaction"] 
 > [Live Share Media Capabilities](teams-live-share-media-capabilities.md)
 
 ## See also
