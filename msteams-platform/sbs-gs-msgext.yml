@@ -19,17 +19,14 @@ items:
 
     Your app will have a capability, which comes with its own UI and UX:
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features." border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
     
     
     In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a message extension app.
-    - The structure of the app:
-        - The tab portion with JavaScript using React.
-        - The rest of the features with Node.js.
-    - How to deploy your app
+    - How to deploy your app.
 
 - title: Prerequisites
   durationInMinutes: 1
