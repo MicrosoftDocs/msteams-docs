@@ -1,6 +1,6 @@
 ---
 title: Live Share quick start
-description:  In this module, learn how to get started with Live Share SDK and how to build Dice Roller sample using Live Share SDK
+description:  In this module, learn how to quickly try the Dice Roller sample
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic

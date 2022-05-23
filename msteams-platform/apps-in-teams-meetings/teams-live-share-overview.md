@@ -16,7 +16,7 @@ ms.author: v-ypalikila
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. The Live Share SDK seamlessly integrates meetings with [Fluid Framework](https://fluidframework.com/). Fluid Framework is a collection of client libraries for distributing and synchronizing shared state. This service is free, fully managed, and ready to use.
 
 > [!div class="nextstepaction"]
-> [Get started](teams-live-share-quick-start)
+> [Get started](teams-live-share-quick-start.md)
 
 The Live Share SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Container associated with each meeting in a few lines of code. The Live Share SDK also supports a new set of distributed data structure (DDS) classes to simplify building applications for common meeting scenarios, such as shared media playback.
 
