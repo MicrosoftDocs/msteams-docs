@@ -71,7 +71,7 @@ To enable Live Share for your meeting extension, you must first add the followin
 Joining a session associated with the user's current meeting can be done in just a few simple steps.
 
 1. Initialize the Teams Client SDK
-2. Initialize the `TeamsFluidClient`
+2. Initialize the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html)
 3. Define the data structures you want to synchronize (e.g., `SharedMap`)
 4. Join the container
 
@@ -88,7 +88,7 @@ await microsoftTeams.app.initialize();
 // Setup the Fluid container
 const client = new TeamsFluidClient();
 const schema = {
-  initialObjects: { exampleMap: SharedMap }
+  initialObjects: { exampleMap: SharedMap },
 };
 const { container } = await client.joinContainer(schema);
 
@@ -115,7 +115,7 @@ Let's look at a quick example of `SharedMap` as a playlist:
 import { SharedMap } from "fluid-framework";
 // ...
 const schema = {
-  initialObjects: { playlistMap: SharedMap }
+  initialObjects: { playlistMap: SharedMap },
 };
 const { container } = await client.joinContainer(schema);
 const { playlistMap } = container.initialObjects;
@@ -140,11 +140,11 @@ function onClickAddToPlaylist(video) {
 
 Live Share provides a set of new **ephemeral** DDS classes to create transient stateful and stateless objects that don't need to be stored in the Fluid container. For example, if you wanted to create a laser-pointer like effect into your app such as our popular PowerPoint Live integration, it is often easier to use our `EphemeralEvent` or `EphemeralState` objects.
 
-| Ephemeral Object  | Description                                                                                                                     |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| EphemeralPresence | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
-| EphemeralEvent    | Broadcast individual events with any custom data attributes in the payload.                                                     |
-| EphemeralState    | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role (e.g. the presenter) |
+| Ephemeral Object                                                                                                       | Description                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [EphemeralPresence](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralPresence.html) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                       |
+| [EphemeralEvent](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralEvent.html)       | Broadcast individual events with any custom data attributes in the payload.                                                     |
+| [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role (e.g. the presenter) |
 
 ### EphemeralPresence example
 
@@ -152,7 +152,7 @@ Live Share provides a set of new **ephemeral** DDS classes to create transient s
 import { EphemeralPresence, PresenceState } from "live-share";
 // ...
 const schema = {
-  initialObjects: { presence: EphemeralPresence }
+  initialObjects: { presence: EphemeralPresence },
 };
 const { container } = await client.joinContainer(schema);
 const { presence } = container.initialObjects;
@@ -165,13 +165,13 @@ presence.on("presenceChanged", (userPresence, local) => {
 // Start tracking presence
 presence.start("YOUR_CUSTOM_USER_ID", {
   name: "Anonymous",
-  picture: "DEFAULT_PROFILE_PICTURE_URL"
+  picture: "DEFAULT_PROFILE_PICTURE_URL",
 });
 
 function onUserDidLogIn(userName, profilePicture) {
   presence.updatePresence(PresenceState.online, {
     name: userName,
-    picture: profilePicture
+    picture: profilePicture,
   });
 }
 ```
@@ -182,7 +182,7 @@ function onUserDidLogIn(userName, profilePicture) {
 import { EphemeralEvent } from "live-share";
 // ...
 const schema = {
-  initialObjects: { notifications: EphemeralEvent }
+  initialObjects: { notifications: EphemeralEvent },
 };
 const { container } = await client.joinContainer(schema);
 const { notifications } = container.initialObjects;
@@ -203,7 +203,7 @@ await notifications.start();
 
 notifications.sendEvent({
   senderName: "LOCAL_USER_NAME",
-  text: "joined the session"
+  text: "joined the session",
 });
 ```
 
@@ -217,7 +217,7 @@ We recommend listening to your customers to understand their scenarios before im
 import { EphemeralState, UserMeetingRole } from "live-share";
 // ...
 const schema = {
-  initialObjects: { appState: EphemeralState }
+  initialObjects: { appState: EphemeralState },
 };
 const { container } = await client.joinContainer(schema);
 const { appState } = container.initialObjects;
@@ -233,24 +233,24 @@ appState.start(allowedRoles);
 
 function onSelectEditMode(documentId) {
   appState.changeState("editing", {
-    documentId
+    documentId,
   });
 }
 
 function onSelectPresentMode(documentId) {
   appState.changeState("presenting", {
     documentId,
-    presentingUserId: "LOCAL_USER_ID"
+    presentingUserId: "LOCAL_USER_ID",
   });
 }
 ```
 
 ## Code samples
 
-| Sample name | Description                                                      | Javascript                                                                                 |
-| ----------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Dice Roller | Enable all connected clients to roll a dice and view the result. | [View](https://aka.ms/liveshare-diceroller)                                                |
-| Agile Poker | Enable all connected clients to play Agile Poker.                | [View](https://aka.ms/liveshare-agilepoker)                                                |
+| Sample name | Description                                                      | Javascript                                  |
+| ----------- | ---------------------------------------------------------------- | ------------------------------------------- |
+| Dice Roller | Enable all connected clients to roll a dice and view the result. | [View](https://aka.ms/liveshare-diceroller) |
+| Agile Poker | Enable all connected clients to play Agile Poker.                | [View](https://aka.ms/liveshare-agilepoker) |
 
 ## Next step
 

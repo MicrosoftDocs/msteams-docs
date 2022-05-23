@@ -20,10 +20,10 @@ Live Share makes enabling **media synchronization** into any HTML `<video>` and 
 
 Live Share has two primary classes related to media synchronization:
 
-| Classes                   | Description                                                                                                              |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `EphemeralMediaSession`   | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
-| `MediaPlayerSynchronizer` | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
+| Classes                                                                                                                                  | Description                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| [EphemeralMediaSession](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSession.html)     | Custom ephemeral object designed to coordinate media transport controls and playback state in independent media streams. |
+| [MediaPlayerSynchronizer](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.MediaPlayerSynchronizer.html) | Synchronizes a local HTML Media Element with a group of remote HTML Media Elements for an `EphemeralMediaSession`.       |
 
 Let's look at an example of this in the code.
 
@@ -46,7 +46,7 @@ await microsoftTeams.app.initialize();
 // Setup the Fluid container
 const client = new TeamsFluidClient();
 const schema = {
-  initialObjects: { mediaSession: EphemeralMediaSession }
+  initialObjects: { mediaSession: EphemeralMediaSession },
 };
 const { container } = await client.joinContainer(schema);
 const { mediaSession } = container.initialObjects;
@@ -95,7 +95,7 @@ document.getElementById("restart-button").onclick = () => {
 
 document.getElementById("change-track-button").onclick = () => {
   synchronizer.setTrack({
-    trackIdentifier: "SOME_OTHER_VIDEO_SRC"
+    trackIdentifier: "SOME_OTHER_VIDEO_SRC",
   });
 };
 ```
@@ -105,7 +105,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 ## Suspensions and wait points
 
-If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A `MediaSessionCoordinatorSuspension` object is local by default, which can be helpful in cases where a user may want to catch up on something they missed, take a break, etc. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `EphemeralMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share_media.EphemeralMediaSessionCoordinatorSuspension.html) object is local by default, which can be helpful in cases where a user may want to catch up on something they missed, take a break, etc. If the user ends the suspension, synchronization resumes automatically.
 
 ```javascript
 // Suspend the media session coordinator
@@ -115,13 +115,13 @@ const suspension = mediaSession.coordinator.beginSuspension();
 suspension.end();
 ```
 
-When beginning a suspension, you can also include an optional `CoordinationWaitPoint` parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
+When beginning a suspension, you can also include an optional [CoordinationWaitPoint](https://livesharesdk.z5.web.core.windows.net/interfaces/_microsoft_live_share_media.CoordinationWaitPoint.html) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point. This is useful for things like adding a quiz or survey at certain points in the video.
 
 ```javascript
 // Suspend the media session coordinator
 const waitPoint = {
   position: 0,
-  reason: "ReadyUp" // Optional.
+  reason: "ReadyUp", // Optional.
 };
 const suspension = mediaSession.coordinator.beginSuspension();
 // End the suspension when the user readies up
@@ -141,7 +141,7 @@ import * as microsoftTeams from "@microsoft/teams-js";
 // ...
 
 let volumeTimer;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler(speakingState => {
+microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     volumeTimer = setInterval(() => {
       synchronizer.volumeLimiter?.lowerVolume();
@@ -181,9 +181,9 @@ To enable audio ducking, you must also add the following [RSC](https://docs.micr
 
 ## Code samples
 
-| Sample name          | Description                                                                                                                               | Javascript                                                                                    |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| React video          | Basic example showing how the EphemeralMediaSession object works with HTML5 video.                                                                     | [View](https://aka.ms/liveshare-reactvideo)          |
+| Sample name          | Description                                                                                                                               | Javascript                                     |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| React video          | Basic example showing how the EphemeralMediaSession object works with HTML5 video.                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
 | React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
