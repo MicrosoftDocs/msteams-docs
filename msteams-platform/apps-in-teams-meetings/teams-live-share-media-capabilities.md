@@ -204,7 +204,7 @@ To enable audio ducking, you must also add the following [RSC](https://docs.micr
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Getting started](teams-live-share-getting-started.md)
+> [!div class="nextstepaction"] > [Live Share FAQ](teams-live-share-faq.md)
 
 ## See also
 
