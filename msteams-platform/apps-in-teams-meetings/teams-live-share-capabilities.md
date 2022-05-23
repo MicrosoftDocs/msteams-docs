@@ -162,7 +162,7 @@ Live Share includes a set of new ephemeral `SharedObject` classes which provide 
 
 ### EphemeralPresence example
 
-The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, developers can assign a custom metadata, such as an unique identifier or name.
+The `EphemeralPresence` class makes tracking who is attending a meeting easier than ever. When calling the `.start()` or `.updatePresence()` methods, developers can assign custom metadata for that user, such as an unique identifier or name.
 
 ```javascript
 import { EphemeralPresence, PresenceState } from "live-share";
