@@ -24,7 +24,7 @@ From the *Apps* menu, select *Manage your apps* > *Publish an app* > **Submit an
 
 ### Teams Developer Portal
 
-Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and publish an app to your organization. This requires approval from your IT admin. See [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md) for details.
+Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and publish an app to your organization. This requires approval from your IT admin. For more information, see [Manage your apps with the Developer Portal for Microsoft Teams](../concepts/build-and-test/teams-developer-portal.md).
 
 ### Microsoft Teams Admin Center
 
