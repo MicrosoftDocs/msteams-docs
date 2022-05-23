@@ -28,7 +28,7 @@ Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and
 
 ### Microsoft Teams Admin Center
 
-As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
+As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). For more information, see [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps).
 
 ### Microsoft Admin Center
 
