@@ -83,7 +83,7 @@ Once the provisioning and deployment steps are complete:
 1. Select **Add**.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot showing the app being installed." border="false":::
-   
+
    The toolkit displays a message to indicate that the app is added to Teams.
 
    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
