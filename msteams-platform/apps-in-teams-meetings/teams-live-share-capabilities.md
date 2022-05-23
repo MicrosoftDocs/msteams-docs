@@ -15,7 +15,7 @@ ms.author: v-ypalikila
 Live Share can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This page will focus on how to integrate Live Share into your app, as well as key capabilities of the SDK.
 
 > [!Note]
-> At this time, only scheduled meetings are supported and all participants must be on the meeting calendar. Support for other meeting types are coming soon.
+> At this time, only scheduled meetings are supported, and all participants must be on the meeting calendar. Support for other meeting types is coming soon.
 
 ## Installing the JavaScript SDK
 
@@ -84,7 +84,7 @@ To enable Live Share for your meeting extension, you must first add the followin
 
 ## Joining a meeting session
 
-Joining a session associated with the user's current meeting can be done in just a few simple steps.
+Joining a session associated with a user's meeting can be done in a few simple steps, as follows:
 
 1. Initialize the Teams Client SDK
 2. Initialize the [TeamsFluidClient](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html)
@@ -111,17 +111,17 @@ const { container } = await client.joinContainer(schema);
 // ... ready to start app sync logic
 ```
 
-That's all it took to setup your container and join the session for the meeting. Now, let's review the different types of **Distributed Data Objects** that you can use with Live Share.
+That's all it took to setup your container and join the session for the meeting. Now, let's review the different types of _distributed-data structures_ that you can use with Live Share.
 
 ## Fluid distributed data structures (DDS)
 
-Live Share supports any of the [types of distributed data structures](https://fluidframework.com/docs/data-structures/overview/) in Fluid Framework. Here is a quick overview of a few of the different types of objects available to you:
+Live Share supports any [distributed-data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here is a quick overview of a few of the different types of objects available to you:
 
 | Shared Object                                                                       | Description                                                                                                                                  |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone else in the session. |
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                                    |
-| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed string sequence optimized for editing document text editing.                                                                     |
+| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing document text editing.                                                                     |
 
 Let's see how `SharedMap` works. In this example, we've used `SharedMap` to build a simple playlist feature.
 
@@ -148,11 +148,11 @@ function onClickAddToPlaylist(video) {
 ```
 
 > [!Note]
-> Core Fluid Framework DDS objects do not support meeting role verification. Anyone in the meeting will be able to change data stored through these objects.
+> Core Fluid Framework DDS objects do not support meeting role verification. Everyone in the meeting will be able to change data stored through these objects.
 
 ## Live Share ephemeral data structures
 
-Live Share provides a set of new **ephemeral** DDS classes to create transient stateful and stateless objects that don't need to be stored in the Fluid container. For example, if you wanted to create a laser-pointer feature into your app similar to our popular PowerPoint Live integration, it may be easier to use our `EphemeralEvent` or `EphemeralState` objects.
+Live Share includes a set of new ephemeral `SharedObject` classes which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app – like our popular PowerPoint Live integration – it may be better to use our `EphemeralEvent` or `EphemeralState` objects.
 
 | Ephemeral Object                                                                                                       | Description                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -162,7 +162,7 @@ Live Share provides a set of new **ephemeral** DDS classes to create transient s
 
 ### EphemeralPresence example
 
-`EphemeralPresence` makes knowing whom is present in a meeting easier than ever. Presence updates are periodically sent so that each client can keep track of who is online, away, or offline. When you call the `.start()` or `.updatePresence()` functions, you can assign a custom `userId`, as well as custom metadata (e.g., name).
+The `EphemeralPresence` class makes knowing whom is attending a meeting easier than ever. Presence updates are periodically sent so that each client can keep track of who is online, away, or offline. When you call the `.start()` or `.updatePresence()` functions, you can assign a custom `userId`, as well as custom metadata (e.g., name).
 
 ```javascript
 import { EphemeralPresence, PresenceState } from "live-share";
@@ -194,7 +194,7 @@ function onUserDidLogIn(userName, profilePicture) {
 
 ### EphemeralEvent example
 
-`EphemeralEvent` is a great way to send simple JSON payloads to other clients in a meeting. This is useful for synchronizing data that is only relevant for a set point in time, such as session notifications.
+`EphemeralEvent` is a great way to send simple events to other clients in a meeting. It is useful for scenarios like sending session notifications.
 
 ```javascript
 import { EphemeralEvent } from "live-share";
@@ -227,7 +227,7 @@ notifications.sendEvent({
 
 ## Role verification for ephemeral data structures
 
-Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. We've designed these **ephemeral** components to support role verification, allowing developers to define the roles that are allowed to send messages for each individual ephemeral object. For example, developers could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. We've designed our ephemeral objects to support role verification, allowing developers to define the roles that are allowed to send messages for each individual ephemeral object. For example, developers could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
 We recommend listening to your customers to understand their scenarios before implementing role verification into your app, particularly for the "Organizer" role. There is no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either "Organizer" or "Presenter" when collaborating within an organization. If a user is an "Attendee", it is usually an intentional decision on behalf of a meeting organizer.
 
