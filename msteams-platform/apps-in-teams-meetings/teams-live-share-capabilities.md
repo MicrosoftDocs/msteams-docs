@@ -121,8 +121,6 @@ Live Share supports any of the [types of distributed data structures](https://fl
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                                    |
 | [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed string sequence optimized for editing document text editing.                                                                     |
 
-> See the Fluid Frameowork docs to learn about other data structures.
-
 Let's look at a quick example of `SharedMap` as a playlist:
 
 ```javascript
@@ -161,6 +159,8 @@ Live Share provides a set of new **ephemeral** DDS classes to create transient s
 | [EphemeralState](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.EphemeralState.html)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role (e.g. the presenter) |
 
 ### EphemeralPresence example
+
+`EphemeralPresence` makes knowing whom is present in a meeting easier than ever. Presence updates are periodically sent so that each client can keep track of who is online, away, or offline. When you call the `.start()` or `.updatePresence()` functions, you can assign a custom user ID and additional metadata, such as name or profile picture.
 
 ```javascript
 import { EphemeralPresence, PresenceState } from "live-share";

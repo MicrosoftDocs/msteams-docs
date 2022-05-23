@@ -23,14 +23,14 @@ The SDK provides a `TeamsFluidClient` class for connecting to a special Fluid Co
 
 ## Why Live Share?
 
-Building collaborative apps can be difficult and time-consuming, requiring expensive infrastructure and complex compliance requirements at scale. Teams users spend significant amounts of time reviewing work with teammates, watching videos together, and brainstorming new ideas. If your customers frequently screen-share content in Teams, Live Share can help transform your app into something more collaborative with minimal investment.
+Building collaborative apps can be difficult and time consuming, requiring expensive infrastructure and complex compliance requirements at scale. Teams users spend significant amounts of time reviewing work with teammates, watching videos together, and brainstorming new ideas through screen sharing. Now, Live Share can transform your app into something more collaborative with minimal investment.
 
-Here are a few key benefits of the SDK:
+Here are some key benefits of the SDK:
 
 - Zero-hassle session management & security
 - Stateful and stateless distributed data structures
-- A media package to easily synchronize video and audio
-- Tailor experiences to the context & roles of the meeting
+- Media extensions to easily synchronize video and audio
+- Respect meeting privileges using role verification
 - Free, fully managed service with low latency
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share.png" alt-text="Teams Live Share":::
@@ -40,7 +40,7 @@ Here are a few key benefits of the SDK:
 | Scenario                                                                                                                                                                         | Example                                                                                                                                                                                                        |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | You and your coworker are scheduled to present an early edit of a marketing video at an upcoming leadership review meeting and want to highlight specific sections for feedback. | You share the video to the meeting stage and start the video. As needed, you pause the video to discuss the scene. You and your colleague take turns drawing over parts of the screen to emphasize key points. |
-| You are a project manager for an agile team and are using a costing poker group activity to estimate the amount of work needed for user stories in an upcoming sprint.           | You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until a team consensus is met.                                                                      |
+| You are a project manager for an agile team play agile poker with your team to estimate the amount of work needed for an upcoming sprint.                                        | You share an agile poker planning app to the meeting stage that uses Live Share and play the planning game until a team consensus is met.                                                                      |
 
 > [!Important]
 > Any data sent or stored through Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to learn about storing data beyond 24 hours, visit our [FAQ page](teams-live-share-faq).
