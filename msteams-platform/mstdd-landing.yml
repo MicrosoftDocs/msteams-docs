@@ -6,7 +6,7 @@ summary: Welcome to overview of Microsoft Teams developer documentation. Microso
 metadata:
   title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Introducing building apps for Teams # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: service #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: msteams
   ms.subservice: subservice # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
