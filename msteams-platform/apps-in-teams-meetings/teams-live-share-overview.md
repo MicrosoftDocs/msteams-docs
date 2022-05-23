@@ -35,7 +35,7 @@ Here are some key benefits of the Live Share SDK:
 * Free and fully managed service with low latency
 * Audio ducking
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 
 ## User scenarios
 

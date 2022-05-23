@@ -1,6 +1,6 @@
 ---
-title: Live Share getting started
-description: Getting started with Live Share for Teams.
+title: Live Share SDK capabilities
+description: Learn about the core capabilities of Microsoft Live Share.
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -14,6 +14,8 @@ The Live Share SDK can be added to your meeting extension's `sidePanel` and `mee
 
 > [!Note]
 > Currently, only scheduled meetings are supported, and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
+
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-dashboard.png" alt-text="Teams Live Share":::
 
 ## Install the JavaScript SDK
 
@@ -229,8 +231,6 @@ notifications.sendEvent({
 
 Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. Ephemeral objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual ephemeral object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
 
-You must listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
-
 Example:
 
 ```javascript
@@ -264,6 +264,8 @@ function onSelectPresentMode(documentId) {
   });
 }
 ```
+
+Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
 ## Code samples
 
