@@ -9,7 +9,7 @@ ms.author: stevenic
 
 # Get started with Live Share SDK
 
-Get started with Live Share SDK using the Dice Roller sample. This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
+Get started with Live Share SDK using the Dice Roller sample. This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share SDK based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 
@@ -57,9 +57,9 @@ To get started, install the following:
 
 1. Open both the windows and select the **Roll** button in one window. The state of the dice changes in both clients.
 
-   **Congratulations** you have successfully taken the first step towards unlocking the world of Live Share based collaboration.
-
-   :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller multiple tabs":::
+    :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller multiple tabs":::
+  
+ **Congratulations** you have learned how to build and run an app using the Live Share SDk.
 
 ## Dice Roller app code walkthrough
 
@@ -247,7 +247,7 @@ The values returned from `diceMap` are only a snapshot in time. To keep the data
 
 ### Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For Live Share apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) from the side panel view will connect to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of this view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](https://livesharesdk.z5.web.core.windows.net/classes/_microsoft_live_share.TeamsFluidClient.html#joinContainer) from the side panel view will connect to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
 
 The sample's side panel view prompts the user to press the share to stage button.
 
