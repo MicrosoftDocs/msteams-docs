@@ -9,11 +9,13 @@ ms.author: stevenic
 
 # Get started with Live Share SDK
 
+## Quick start guide
+
 Get started with Live Share SDK using the Dice Roller sample. This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share SDK based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 
-## Set up your development environment
+### Set up your development environment
 
 To get started, install the following:
 
@@ -21,7 +23,7 @@ To get started, install the following:
 * [Latest version of Visual Studio Code](https://code.visualstudio.com/).
 * [Git](https://git-scm.com/downloads)
 
-## Build and run the Dice Roller app
+### Build and run the Dice Roller app
 
 1. Go to the [Dice Roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) sample app.
 
