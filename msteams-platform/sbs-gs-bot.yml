@@ -402,9 +402,9 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Bot capability. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with Bot capability on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 
