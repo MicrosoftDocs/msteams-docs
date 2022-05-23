@@ -10,14 +10,14 @@ ms.author: v-ypalikila
 
 # Live Share Capabilities
 
-For complete API-level documentation, please visit the Live Share [API reference docs](https://www.github.com/microsoft/live-share-sdk).
+For complete API-level documentation, please visit the Live Share [API reference docs](https://livesharesdk.z5.web.core.windows.net/).
 
 Live Share can be added to your meeting extension's side panel and stage contexts with minimal effort. Let's start with the basics.
 
 > [!Note]
 > At this time, only scheduled meetings are supported and all participants must be on the meeting calendar. Support for other meeting types are coming soon.
 
-## Register Live Share RSC permission
+## Register RSC permissions
 
 To enable Live Share for your meeting extension, you must first add the following RSC permissions into your app manifest:
 
@@ -258,6 +258,6 @@ function onSelectPresentMode(documentId) {
 
 ## See also
 
-- [Reference docs](https://www.github.com/microsoft/live-share-sdk)
-- [Live Share on GitHub](https://www.github.com/microsoft/live-share-sdk)
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Reference docs](https://aka.ms/livesharedocs)
 - [Teams apps in meetings](teams-apps-in-meetings.md)

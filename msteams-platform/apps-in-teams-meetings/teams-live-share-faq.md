@@ -43,3 +43,9 @@ At this time, only scheduled meetings are supported and all participants must be
 <br>
 
 </details>
+
+## See also
+
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Reference docs](https://aka.ms/livesharedocs)
+- [Teams apps in meetings](teams-apps-in-meetings.md)

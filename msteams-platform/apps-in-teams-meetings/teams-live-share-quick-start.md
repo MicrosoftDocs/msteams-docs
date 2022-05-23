@@ -61,3 +61,8 @@ that the state of the dice changes in both clients.
 
 > [!div class="nextstepaction"] > [Tutorial: DiceRoller Teams app](teams-live-share-tutorial.md)
 
+## See also
+
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Reference docs](https://aka.ms/livesharedocs)
+- [Teams apps in meetings](teams-apps-in-meetings.md)

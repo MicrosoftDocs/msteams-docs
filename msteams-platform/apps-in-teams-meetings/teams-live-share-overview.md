@@ -45,10 +45,13 @@ Here are a few key benefits of the SDK:
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Getting started](teams-live-share-getting-started.md)
+> [!div class="nextstepaction"] > [Quick start](teams-live-share-quick-start.md)
 
 ## See also
 
-- [Reference docs](https://www.github.com/microsoft/live-share-sdk)
-- [Live Share capabilities](teams-apps-in-meetings.md)
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Reference docs](https://aka.ms/livesharedocs)
+- [Live Share capabilities](teams-live-share-capabilities.md)
+- [Live Share media capabilities](teams-live-share-media-capabilities.md)
+- [Live Share FAQ](teams-live-share-faq.md)
 - [Teams apps in meetings](teams-apps-in-meetings.md)

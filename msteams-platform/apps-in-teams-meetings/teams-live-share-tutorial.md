@@ -272,3 +272,8 @@ The [full code for this application is available](https://github.com/microsoft/l
 
 > [!div class="nextstepaction"] > [Teams Live Share Capabilities](teams-live-share-capabilities.md)
 
+## See also
+
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Reference docs](https://aka.ms/livesharedocs)
+- [Teams apps in meetings](teams-apps-in-meetings.md)

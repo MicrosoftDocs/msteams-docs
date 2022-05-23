@@ -10,7 +10,7 @@ ms.author: v-ypalikila
 
 # Live Share media capabilities
 
-For complete API-level documentation, please visit the Live Share [API reference docs](https://www.github.com/microsoft/live-share-sdk).
+For complete API-level documentation, please visit the Live Share [API reference docs](https://aka.ms/livesharedocs).
 
 Video and audio are instrumental parts of the modern world and workplace. We've heard wide ranging feedback that there is more we can do to increase the quality, accessibility, and license protections of watching videos together in meetings.
 
@@ -192,7 +192,6 @@ To enable audio ducking, you must also add the following [RSC](https://docs.micr
 
 ## See also
 
-- [Reference docs](https://www.github.com/microsoft/live-share-sdk)
-- [Live Share on GitHub](https://www.github.com/microsoft/live-share-sdk)
-- [Live Share capabilities](teams-apps-in-meetings.md)
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Reference docs](https://aka.ms/livesharedocs)
 - [Teams apps in meetings](teams-apps-in-meetings.md)
