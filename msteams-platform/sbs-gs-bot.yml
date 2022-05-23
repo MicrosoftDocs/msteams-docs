@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Build your first app using JavaScript
+title: Build your first bot app using JavaScript
 metadata:
   title: Hello World with JavaScript
   description: In this tutorial, you'll learn to build Hello World app with JavaScript.
@@ -28,9 +28,6 @@ items:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a bot app.
-    - The structure of the app:
-        - The tab portion with JavaScript using React.
-        - The rest of the features with Node.js.
     - How to deploy your app.
 
 - title: Prerequisites
