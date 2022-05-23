@@ -22,10 +22,21 @@ Choose to add authentication for your app in one of the two ways:
 Enable authentication with SSO or third party OAuth IdPs in your tab app, bot app, and messaging extension app. Select one of the two methods for your app:
 
 :::row:::
-    :::column span="":::
-        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
+    :::column span="2":::
+        SSO
+    :::column-end:::
+    :::column span="1":::
+        &nbsp;
     :::column-end:::
     :::column span="2":::
+        OAuth
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="2":::
+        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="SSO for tab app" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
+    :::column-end:::
+    :::column span="1":::
         <br>
 
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tab app**
@@ -36,10 +47,10 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
     :::column-end:::
 :::row-end:::
 :::row:::
-    :::column span="":::
+    :::column span="2":::
         :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         <br>
 
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Bot app**
@@ -50,10 +61,10 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
     :::column-end:::
 :::row-end:::
 :::row:::
-    :::column span="":::
+    :::column span="2":::
         :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         <br>
 
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Message extension app**
