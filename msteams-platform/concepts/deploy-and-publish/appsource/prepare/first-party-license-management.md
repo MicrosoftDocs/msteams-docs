@@ -76,7 +76,7 @@ For information on [end-user-in-app-purchasing-experience](/platform/concepts/de
 1. Add one or more plans.
 1. Update your Teams app.
 1. Post purchase.
-1. App launch
+1. App launch.
 
 **Create an offer in Partner Center**
 
