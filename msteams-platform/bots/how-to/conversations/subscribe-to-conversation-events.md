@@ -402,7 +402,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. After a team member is added, the bots receives unique channel ID as a conversation ID using the [conversationUpdate](#conversation-update-events) and [installationUpdate](#installation-update-event) events. To determine how bot receives the team information, see [Teams channel data](../../../resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). You can also cache for future use, such as sending a message to a specific user.bots. The bot posts welcome message in the same channel by default instead.
+The `teamMemberAdded` event is sent to your bot the first time it's added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. After a team member is added, the bots receives unique channel Id as a conversation Id using the [conversationUpdate](#conversation-update-events) and [installationUpdate](#installation-update-event) events. To determine how bot receives the team information, see [Teams channel data](../../../resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). You can also cache for future use, such as sending a message to a specific user bots. The bot posts welcome message in the same channel by default instead.
 
 > [!NOTE]
 > When bot is added, the conversation Id is set to the channel Id, where the team member is added during the installation process or the channel where the installation occurred. Conversation Id is set to team Id for all other conversation update scenarios.
@@ -1069,7 +1069,7 @@ Now that you've worked with the conversation update events, you can understand t
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message that was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message that was sent by your bot. The `replyToId` contains the Id of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
