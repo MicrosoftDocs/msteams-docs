@@ -484,7 +484,7 @@ items:
 
     You've created a tab app.
 
-    Now that you've learned to create basic apps, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
+    Now that you've learned to create a basic app, you can move on to creating more complex apps. To start with, try adding capabilities to your existing apps.
 
     To add capabilities to your existing app:
 
@@ -494,5 +494,5 @@ items:
 
     That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
 
-    You've completed the tutorial to build apps with JavaScript.
+    You've completed the tutorial to build tab app with JavaScript.
     
