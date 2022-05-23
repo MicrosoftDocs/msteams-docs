@@ -147,10 +147,7 @@ In addition to these field changes, there are two new fields available for share
 If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 > [!NOTE]
->
-> If a user restarts Teams desktop client or the Teams web client, a new sessionId is created. The Teams client's lifetime is tracked by the Team's session.
->
-> When a user exits the app and reloads it, a new sessionId is created. The lifetime of the platform app is tracked by the app session.
+> Every time a user restarts or reloads the Teams desktop or web client, a new sessionId is created, which is tracked by Teams session, inversely, when a user exits the Teams apps and reloads them in Teams platform a new app session ID is created which is tracked by app session.
 
 ## Handle theme change
 
