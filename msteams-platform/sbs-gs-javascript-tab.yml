@@ -430,7 +430,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created three types of Teams apps! 
+        Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -453,7 +453,7 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created three types of Teams apps! 
+        Congratulations, you have created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---
