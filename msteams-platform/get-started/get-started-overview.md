@@ -52,6 +52,8 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 > [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
+> [!div class="nextstepaction"]
+> [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
 
 ## See also
 
