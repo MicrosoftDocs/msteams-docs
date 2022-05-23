@@ -3,7 +3,7 @@ title: Access meeting transcript using Graph API
 description: How to access meeting transcript using Graph API
 ms.localizationpriority: medium
 author: akjo
-ms.author: Surbhigupta12
+ms.author: surbhigupta
 ms.topic: Overview
 keywords: Access meeting transcript using Graph API
 ---
@@ -66,7 +66,7 @@ Do not supply a request body for this method.
 
 **Response**
 
-If successful, this method returns a `200 OK` response code and a collection of [callTranscript](../resources/callTranscript.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of callTranscript objects in the response body.
 
 **Example: List of callTranscript**
 
@@ -123,19 +123,19 @@ GET me/onlineMeetings({meetingId})/transcripts({transcriptId})
 GET users({userId})/onlineMeetings({meetingId})/transcripts({transcriptId})
 ```
 
-## Request headers
+**Request headers**
 
 | Header       | Value |
 |:---------------|:--------|
 | Authorization  | Bearer {token}. Required.  |
 
-## Request body
+**Request body**
 
 Do not supply a request body for this method.
 
-## Response
+**Response**
 
-If successful, this method returns a `200 OK` response code and a [callTranscript](../resources/callTranscript.md) object in the response body.
+If successful, this method returns a `200 OK` response code and a callTranscript object in the response body.
 
 **Example: Get a callTranscript**
 
