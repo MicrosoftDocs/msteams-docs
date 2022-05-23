@@ -44,7 +44,6 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |02/15/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [Step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
 |02/11/2022| Shared meeting stage| • Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
-|02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |02/03/2022| Introduced app manifest version 1.12 | • App manifest > [App manifest schema](resources/schema/manifest-schema.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 
 
@@ -59,6 +58,13 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|05/23/2022|Updated Teams app manifest| Tools and SDKs > Teams Toolkit for Visual Studio Code > [Preview app manifest in Toolkit](toolkit/TeamsFx.md) |
+|05/23/2022|Added information on how to connect to existing APIs| Tools and SDKs > Teams Toolkit for Visual Studio Code > [Add API connection](Add/api.md) |
+|05/23/2022|Updated information on add capabilities to Teams app| Tools and SDKs > Teams Toolkit for Visual Studio Code > [Add capabilities to your Teams apps](toolkit/add-capability.md) |
+|05/23/2022|Added information on single sign-on experience| Tools and SDKs > Teams Toolkit for Visual Studio Code > [Add single sign-on experience](toolkit/sign on.md) |
+|05/23/2022|Introduced step-by-step guide to build command bot with JavaScript| Tools and SDKs > Teams Toolkit for Visual Studio Code > [Add capabilities to your Teams apps](toolkit/add-capability.md) |
+|05/23/2022|Introduced step-by-step guide to build notification bot with JavaScript| Tools and SDKs > Teams Toolkit for Visual Studio Code > [Add capabilities to your Teams apps](toolkit/add-capability.md) |
+|05/23/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
 |05/19/2022|Bots and Message extensions for GCC and GCCH| • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |04/22/2022| Test preview for monetized apps | Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
