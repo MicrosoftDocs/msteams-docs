@@ -25,15 +25,15 @@ We also recommend that you install the following:
 ## Getting started
 
 Open a new command window and navigate to the folder where you want to install the project, and then clone the
-[Live Share repo](https://github.com/officeDev/live-share) with the following commands. The cloning process
+[Live Share repo](https://github.com/microosoft/live-share-sdk) with the following commands. The cloning process
 will create a subfolder named `live-share` with the project files in it.
 
 ```bash
-$ git clone https://github.com/officeDev/live-share.git
+$ git clone https://github.com/microsoft/live-share-sdk.git
 ```
 
 > [!NOTE]
-> If you don't have Git installed you can [click here](https://github.com/officeDev/live-share/archive/main.zip) to
+> If you don't have Git installed you can [click here](https://github.com/microosoft/live-share-sdk/archive/main.zip) to
 download a zip of the Live Share repo. Once the file downloads, extract the contents of the .zip file and run the following steps.
 
 Navigate to the newly created folder and install required dependencies.
