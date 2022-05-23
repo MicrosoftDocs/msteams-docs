@@ -316,13 +316,13 @@ function renderSettings(elem) {
 
 ## Code samples
 
-|Sample name|Description|JavaScript|
-|:----------- |:------ |:------ |
-|Dice Roller|Enable all connected clients to roll a dice and view the result.|[View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)|.
+|Sample name |Description |JavaScript |
+|:------------ |---------------|-------|
+|Dice Roller|Enable all connected clients to roll a dice and view the result.|[View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)|
 
 ## Next step
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Core capabilities](teams-live-share-capabilities.md)
 
 ## See also
