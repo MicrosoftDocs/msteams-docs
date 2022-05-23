@@ -44,6 +44,16 @@ At this time, only scheduled meetings are supported and all participants must be
 
 </details>
 
+<details>
+
+<summary><b>Will Live Share's media package work with DRM content?</b></summary>
+
+No. While we hope to eventually support DRM-licensed content such as WideVine and FairPlay, Teams does not currently support encrypted media for tab applications.
+
+<br>
+
+</details>
+
 ## See also
 
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
