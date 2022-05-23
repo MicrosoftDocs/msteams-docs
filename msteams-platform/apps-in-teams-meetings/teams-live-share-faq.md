@@ -18,7 +18,7 @@ Get answers to common questions when using Live Share.<br>
 
 <summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
 
-Yes! When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share will still associate containers you create with meetings, but you will need to create your own Azure `ITokenProvider` to sign tokens for your containers and regional requirements. You can learn more by reading the Azure [Fluid Relay documentation](/azure/azure-fluid-relay/).
+Yes! When constructing the `TeamsFluidClient` class, you can define your own `AzureConnectionConfig`. Live Share will still associate containers you create with meetings, but you'll need to create your own Azure `ITokenProvider` to sign tokens for your containers and regional requirements. For more information, see Azure [Fluid Relay documentation](/azure/azure-fluid-relay/).
 
 <br>
 
@@ -38,7 +38,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <summary><b>What meeting types does Live Share support?</b></summary>
 
-At this time, only scheduled meetings are supported and all participants must be on the meeting calendar. Support for other meeting types – including one-on-one calls, group calls, and meet now – are coming soon.
+At this time, only scheduled meetings are supported and all participants must be on the meeting calendar. Meeting types such as, one-on-one calls, group calls, and meet now are currently not supported.
 
 <br>
 
@@ -48,7 +48,7 @@ At this time, only scheduled meetings are supported and all participants must be
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-No. While we hope to eventually support DRM-licensed content such as WideVine and FairPlay, Teams does not currently support encrypted media for tab applications.
+No. While we hope to eventually support DRM-licensed content such as WideVine and FairPlay, Teams currently doesn't support encrypted media for tab applications.
 
 <br>
 
