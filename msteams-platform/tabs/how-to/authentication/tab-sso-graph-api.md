@@ -139,7 +139,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 If you need to access Microsoft Graph data, configure your server-side code to:
 
-1. Validate the access token. For more information, see [Decode and validate the access token](tab-sso-code.md#decode-and-validate-the-access-token).
+1. Validate the access token. For more information, see [Validate the access token](tab-sso-code.md#validate-the-access-token).
 1. Initiate the OAuth 2.0 OBO flow with a call to the Microsoft identity platform that includes the access token, some metadata about the user, and the credentials of the tab app (its app ID and client secret). The Microsoft identity platform will return a new access token that can be used to access Microsoft Graph.
 1. Get data from Microsoft Graph by using the new token.
 1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if required.

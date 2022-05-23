@@ -12,7 +12,7 @@ Before you add code to enable SSO, ensure that you've registered your app with A
 > [!div class="nextstepaction"]
 > [Register with Azure AD](tab-sso-register-aad.md)
 
-You need to configure your tab app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server side, and exchange it for Microsoft Graph token.
+You need to configure your tab app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
 
@@ -20,7 +20,7 @@ This section covers:
 
 - [Update client-side code to get an access token](#update-client-side-code-to-get-an-access-token)
 - [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
-- [Validate the access token](#Validate-the-access-token)
+- [Validate the access token](#validate-the-access-token)
 
 ## Update client-side code to get an access token
 
@@ -142,14 +142,13 @@ Teams can cache this information associated with the app user's identity, such a
 
 If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The web APIs must decode access token to view claims for that token.
 
+> [!NOTE]
+> If you don't receive User Principal Name (UPN) in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
+> For more information, see [Access tokens](/azure/active-directory/develop/access-tokens).
+
 The access token received in success callback of `getAuthToken()` provides access (for the authenticated app user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
 
 If you need to pass the access token to get Microsoft Graph data, see [Extend tab app with Microsoft Graph permissions](tab-sso-graph-api.md).
-
-This section includes:
-
-- [Code for passing access token to server-side](#code-for-passing-access-token-to-server-side)
-- [Decode and validate the access token](#decode-and-validate-the-access-token)
 
 ### Code for passing access token to server-side
 
