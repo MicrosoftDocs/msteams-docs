@@ -7,7 +7,7 @@ ms.author: stevenic
 ---
 ---
 
-# Get started
+# Get started with the Live Share SDK
 
 This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share based [DiceRoller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
