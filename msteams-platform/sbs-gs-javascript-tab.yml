@@ -488,11 +488,11 @@ items:
 
     To add capabilities to your existing app:
 
-    1. Select **Add capability** from the **Development** section of the Teams Toolkit sidebar.
+    1. Select **Add features** from the **Development** section of the Teams Toolkit sidebar.
 
-    1. Select the capability you want to add to your app.
+    1. Select the feature you want to add to your app.
 
-    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple capabilities. 
+    That's it! Teams Toolkit adds the scaffolding for the new feature to your app's directory structure. Follow the procedures to build and deploy the app, and your app will have multiple features. 
 
     You've completed the tutorial to build apps with JavaScript.
     
