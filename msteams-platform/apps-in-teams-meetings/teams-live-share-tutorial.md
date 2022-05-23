@@ -7,6 +7,8 @@ ms.author: stevenic
 ---
 ---
 
+# Live Share: DiceRoller Tutorial
+
 In this walkthrough, you'll learn about using the Live Share SDK by examining the SDKs [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller). To get started, go through the [Quick Start](teams-live-share-quick-start.md) guide.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller Sample":::
